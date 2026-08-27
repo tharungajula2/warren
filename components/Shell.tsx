@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Sidebar } from "./Sidebar";
 import { CommandPalette } from "./CommandPalette";
 import { KeyboardShortcuts } from "./KeyboardShortcuts";
@@ -18,10 +19,24 @@ const JURISDICTION_OPTIONS: { code: JurisdictionCode; label: string; flag: strin
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   const [selectedJur, setSelectedJur] = useState<JurisdictionCode>("universal");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const searchButtonRef = useRef<HTMLButtonElement>(null);
+
+  // On home page, default sidebar to closed for full-bleed edge-to-edge layout
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    // Return sidebar on non-home routes by default
+    if (pathname !== "/") {
+      setIsSidebarOpen(true);
+    } else {
+      setIsSidebarOpen(false);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const handleOpenSearch = () => setIsSearchOpen(true);
@@ -94,7 +109,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
       {/* MAIN CONTAINER (Sidebar + Main Content Area) */}
       <div className="flex-1 flex w-full relative min-w-0">
-        {/* Collapsible Sidebar */}
+        {/* Collapsible Sidebar (Hidden on Home / by default for full-bleed graph) */}
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
         {/* Primary Page Content Wrapper */}

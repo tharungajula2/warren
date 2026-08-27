@@ -96,11 +96,11 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return synth;
   }, [atoms, syntheticCount]);
 
-  // Compute Domain Centroids
+  // Compute Domain Centroids on a smaller radius (180px) so clusters sit closer together
   const domainCentroids = useMemo(() => {
     const domains = Array.from(new Set(Object.values(effectiveAtoms).map((a) => a.domain)));
     const centroids: Record<string, { x: number; y: number }> = {};
-    const radius = 300;
+    const radius = 180;
     domains.forEach((d, idx) => {
       const angle = (2 * Math.PI * idx) / domains.length;
       centroids[d] = {
@@ -111,13 +111,14 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return centroids;
   }, [effectiveAtoms]);
 
-  // Build Graph Nodes & Edges
+  // Build Graph Nodes & Edges (Radius 5px - 11px)
   const { nodes, edges, nodeMap } = useMemo(() => {
     const nMap: Record<string, GraphNode> = {};
     const nodeList: GraphNode[] = [];
 
     Object.values(effectiveAtoms).forEach((atom) => {
-      const r = Math.min(7, Math.max(3, atom.reading_minutes + 2));
+      // Radius scale: 5px to 11px
+      const r = Math.min(11, Math.max(5, atom.reading_minutes + 4));
       const initialX = atom.initialX ?? (domainCentroids[atom.domain]?.x || 0);
       const initialY = atom.initialY ?? (domainCentroids[atom.domain]?.y || 0);
 
@@ -162,50 +163,99 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return map;
   }, [nodes, edges]);
 
-  // D3 Simulation setup (Settles quickly & freezes)
+  // Compute Domain Cluster Bounding Boxes for Label Offset
+  const domainClusterBounds = useMemo(() => {
+    const bounds: Record<string, { minX: number; maxX: number; minY: number; maxY: number; count: number }> = {};
+
+    nodes.forEach((node) => {
+      if (!bounds[node.domain]) {
+        bounds[node.domain] = {
+          minX: node.x,
+          maxX: node.x,
+          minY: node.y,
+          maxY: node.y,
+          count: 1,
+        };
+      } else {
+        const b = bounds[node.domain];
+        b.minX = Math.min(b.minX, node.x);
+        b.maxX = Math.max(b.maxX, node.x);
+        b.minY = Math.min(b.minY, node.y);
+        b.maxY = Math.max(b.maxY, node.y);
+        b.count++;
+      }
+    });
+
+    return bounds;
+  }, [nodes]);
+
+  // Auto-fit 90% Canvas Fill Bounding Box Scaling
+  const fitGraphToCanvas = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || nodes.length === 0) return;
+
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+
+    nodes.forEach((n) => {
+      if (n.x < minX) minX = n.x;
+      if (n.x > maxX) maxX = n.x;
+      if (n.y < minY) minY = n.y;
+      if (n.y > maxY) maxY = n.y;
+    });
+
+    const graphWidth = maxX - minX || 1;
+    const graphHeight = maxY - minY || 1;
+    const centerX = (minX + maxX) / 2;
+    const centerY = (minY + maxY) / 2;
+
+    const scaleX = (canvas.width * 0.88) / graphWidth;
+    const scaleY = (canvas.height * 0.88) / graphHeight;
+    const scale = Math.min(scaleX, scaleY, 2.5);
+
+    // Apply centered transform
+    const t = zoomIdentity.translate(-centerX * scale, -centerY * scale).scale(scale);
+    transformRef.current = t;
+  }, [nodes]);
+
+  // Simulation setup with increased forceManyBody repulsion (-140)
   useEffect(() => {
-    const prefersReducedMotion =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (prefersReducedMotion) {
-      setIsSettled(true);
-      return;
-    }
-
     const sim = forceSimulation(nodes as any)
       .force(
         "link",
         forceLink(edges as any)
           .id((d: any) => d.id)
-          .distance(55)
-          .strength(0.2)
+          .distance(65)
+          .strength(0.25)
       )
-      .force("charge", forceManyBody().strength(-60))
+      .force("charge", forceManyBody().strength(-140))
       .force(
         "x",
-        forceX((d: any) => domainCentroids[d.domain]?.x || 0).strength(0.25)
+        forceX((d: any) => domainCentroids[d.domain]?.x || 0).strength(0.3)
       )
       .force(
         "y",
-        forceY((d: any) => domainCentroids[d.domain]?.y || 0).strength(0.25)
+        forceY((d: any) => domainCentroids[d.domain]?.y || 0).strength(0.3)
       );
 
-    sim.alpha(0.3);
+    sim.alpha(0.25);
 
     let tickCount = 0;
     sim.on("tick", () => {
       tickCount++;
-      if (tickCount >= 100) {
+      if (tickCount >= 80) {
         sim.stop();
         setIsSettled(true);
+        fitGraphToCanvas();
       }
     });
 
     return () => {
       sim.stop();
     };
-  }, [nodes, edges, domainCentroids]);
+  }, [nodes, edges, domainCentroids, fitGraphToCanvas]);
 
   // Canvas Render Loop
   const renderCanvas = useCallback(() => {
@@ -233,14 +283,14 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     const activeHoverNeighbors = activeHoverId ? neighborMap[activeHoverId] : null;
     const qLower = searchQuery.toLowerCase().trim();
 
-    // 1. Draw Edges
+    // 1. Draw Edges (0.35 opacity, #333940 --color-border-strong)
     edges.forEach((edge) => {
       const isConnectedToHover =
         activeHoverId && (edge.source.id === activeHoverId || edge.target.id === activeHoverId);
 
-      let edgeAlpha = 0.15;
+      let edgeAlpha = 0.35;
       if (activeHoverId) {
-        edgeAlpha = isConnectedToHover ? 0.8 : 0.04;
+        edgeAlpha = isConnectedToHover ? 0.85 : 0.12;
       }
 
       ctx.beginPath();
@@ -252,23 +302,42 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       ctx.stroke();
     });
 
-    // 2. Draw Nodes
+    // 2. Draw Domain Labels Offset Above Cluster Bounding Box at 0.6 Opacity
+    Object.entries(domainClusterBounds).forEach(([domain, bounds]) => {
+      ctx.save();
+      const isSel = !selectedDomain || selectedDomain === domain;
+      ctx.globalAlpha = isSel ? 0.6 : 0.15;
+      ctx.font = "bold 11px monospace";
+      ctx.fillStyle = DOMAIN_COLORS[domain] || "#9AA3AD";
+      ctx.textAlign = "center";
+
+      const labelX = (bounds.minX + bounds.maxX) / 2;
+      const labelY = bounds.minY - 18; // Offset above cluster bounding box
+
+      ctx.fillText(domain.toUpperCase(), labelX, labelY);
+      ctx.restore();
+    });
+
+    // 3. Draw Nodes (Floor 0.75 opacity for draft/fixture, 1.0 for published; hover fade to 0.20)
     nodes.forEach((node) => {
       const isHovered = activeHoverId === node.id;
       const isNeighbor = activeHoverNeighbors?.has(node.id);
       const isDomainSelected = !selectedDomain || node.domain === selectedDomain;
-      const isSearchMatched = !qLower || node.id.toLowerCase().includes(qLower) || node.title.toLowerCase().includes(qLower);
+      const isSearchMatched =
+        !qLower || node.id.toLowerCase().includes(qLower) || node.title.toLowerCase().includes(qLower);
 
-      let alpha = node.status === "published" && node.verified ? 1.0 : 0.4;
+      // Task 10 Fix: Opacity Floor 0.75 for draft/fixture, 1.0 for published
+      let alpha = node.status === "published" && node.verified ? 1.0 : 0.75;
 
+      // Task 10 Fix: Hover fade 0.20
       if (activeHoverId) {
         if (!isHovered && !isNeighbor) {
-          alpha = 0.06;
+          alpha = 0.20;
         } else {
           alpha = 1.0;
         }
       } else if (!isDomainSelected || !isSearchMatched) {
-        alpha = 0.06;
+        alpha = 0.20;
       }
 
       ctx.save();
@@ -281,37 +350,25 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       ctx.fillStyle = color;
       ctx.fill();
 
-      // Published node ring
+      // Published node ring (1.0 opacity with 1px ring)
       if (node.status === "published" && node.verified) {
         ctx.strokeStyle = "#E6E8EB";
-        ctx.lineWidth = 1;
+        ctx.lineWidth = 1.5;
         ctx.stroke();
       }
 
       // Hovered node highlight ring
       if (isHovered) {
         ctx.strokeStyle = "#C9711F";
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2.5;
         ctx.stroke();
       }
 
       ctx.restore();
     });
 
-    // 3. Draw Domain Centroid Labels
-    Object.entries(domainCentroids).forEach(([domain, pos]) => {
-      ctx.save();
-      const isSel = !selectedDomain || selectedDomain === domain;
-      ctx.globalAlpha = isSel ? 0.7 : 0.2;
-      ctx.font = "bold 10px monospace";
-      ctx.fillStyle = DOMAIN_COLORS[domain] || "#9AA3AD";
-      ctx.textAlign = "center";
-      ctx.fillText(domain.toUpperCase(), pos.x, pos.y - 45);
-      ctx.restore();
-    });
-
     ctx.restore();
-  }, [nodes, edges, hoveredNode, neighborMap, selectedDomain, searchQuery, domainCentroids]);
+  }, [nodes, edges, hoveredNode, neighborMap, selectedDomain, searchQuery, domainClusterBounds]);
 
   // RequestAnimationFrame loop & FPS monitoring
   useEffect(() => {
@@ -345,7 +402,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     if (!canvas) return;
 
     const zoomBehavior = d3Zoom<HTMLCanvasElement, unknown>()
-      .scaleExtent([0.3, 4])
+      .scaleExtent([0.2, 5])
       .on("zoom", (event) => {
         transformRef.current = event.transform;
       });
@@ -365,7 +422,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       for (const node of nodes) {
         const dx = node.x - worldX;
         const dy = node.y - worldY;
-        if (dx * dx + dy * dy <= (node.radius + 4) * (node.radius + 4)) {
+        if (dx * dx + dy * dy <= (node.radius + 6) * (node.radius + 6)) {
           found = node;
           break;
         }
@@ -379,7 +436,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       }
     };
 
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = () => {
       if (hoveredNode) {
         router.push(`/atom/${hoveredNode.id}`);
       }
@@ -394,7 +451,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     };
   }, [nodes, hoveredNode, router]);
 
-  // Handle Resize
+  // Handle Resize & Bounding Box Fit
   useEffect(() => {
     const handleResize = () => {
       const canvas = canvasRef.current;
@@ -402,18 +459,16 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       if (!canvas || !container) return;
       canvas.width = container.clientWidth;
       canvas.height = container.clientHeight;
+      fitGraphToCanvas();
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [fitGraphToCanvas]);
 
   const resetZoom = () => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    d3Select(canvas).transition().duration(400).call(d3Zoom().transform as any, zoomIdentity);
-    transformRef.current = zoomIdentity;
+    fitGraphToCanvas();
   };
 
   // Domain stats breakdown for Legend
@@ -457,7 +512,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       </div>
 
       {/* Bottom Left Legend */}
-      <div className="absolute bottom-3 left-3 bg-[#121417]/90 border border-[#23272D] p-2.5 rounded-[3px] font-mono text-[10px] space-y-1 z-10 max-w-[240px]">
+      <div className="absolute bottom-3 left-3 bg-[#121417]/95 border border-[#23272D] p-2.5 rounded-[3px] font-mono text-[10px] space-y-1 z-10 max-w-[240px]">
         <div className="text-[#6B747E] font-bold uppercase tracking-wider mb-1 flex items-center justify-between">
           <span>DOMAINS ({Object.keys(domainStats).length})</span>
           {selectedDomain && (
