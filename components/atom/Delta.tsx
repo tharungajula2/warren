@@ -43,7 +43,6 @@ const JURISDICTION_STYLES: Record<
 export function Delta({ j, children }: DeltaProps) {
   const { jurisdiction } = useJurisdiction();
 
-  // Only render when that jurisdiction is active or when reader is in 'all' mode
   const isVisible = jurisdiction === "all" || jurisdiction === j;
 
   if (!isVisible) {
@@ -54,11 +53,11 @@ export function Delta({ j, children }: DeltaProps) {
 
   return (
     <div
-      className={`border border-[#23272D] border-l-4 ${style.border} bg-[#121417] p-4 rounded-[3px] my-5`}
+      className={`border border-[#23272D] border-l-2 ${style.border} bg-[#121417] p-4 rounded-[3px] my-5`}
       data-jurisdiction={j}
     >
       <div className="flex items-center justify-between mb-2">
-        <div className={`font-mono text-[11px] uppercase tracking-wider ${style.text} font-bold select-none`}>
+        <div className={`font-mono text-[12px] uppercase tracking-wider ${style.text} font-bold select-none`}>
           {style.label}
         </div>
         <span className={`font-mono text-[10px] px-1.5 py-0.5 rounded-[3px] ${style.bg} ${style.text} font-bold`}>

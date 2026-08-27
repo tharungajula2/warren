@@ -1,0 +1,26 @@
+{
+  "credit-risk": {
+    "title": "Credit Risk",
+    "description": "Measurement, provisioning, and portfolio modeling of obligor probability of default, loss severity, and exposure."
+  },
+  "foundation": {
+    "title": "Quantitative Foundations",
+    "description": "Deterministic financial mathematics, discounting, present value, and fundamental probability distributions."
+  },
+  "legal-framework": {
+    "title": "Legal Framework",
+    "description": "Contractual enforceability of netting agreements, collateral arrangements, and jurisdictional bankruptcy laws."
+  },
+  "market-risk": {
+    "title": "Market Risk",
+    "description": "Statistical loss estimation across trading books under normal and extreme market stress scenarios."
+  },
+  "operational-risk": {
+    "title": "Operational Risk",
+    "description": "Capital quantification for inadequate internal processes, system failures, human error, and legal events."
+  },
+  "regulatory": {
+    "title": "Regulatory Standards",
+    "description": "Basel III/IV international capital adequacy frameworks, liquidity coverage requirements, and prudential ratios."
+  }
+}

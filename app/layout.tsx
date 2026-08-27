@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { JurisdictionProvider } from "@/components/atom/JurisdictionContext";
+import { Shell } from "@/components/Shell";
+import { getCorpusManifest } from "@/lib/corpus";
 
 const sourceSans = Source_Sans_3({
   variable: "--font-sans",
@@ -25,10 +28,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const manifest = getCorpusManifest();
+
   return (
     <html lang="en" className={`${sourceSans.variable} ${ibmPlexMono.variable}`}>
       <body className="bg-[#0B0C0E] text-[#E6E8EB] antialiased selection:bg-[#2A1D10] selection:text-[#C9711F]">
-        {children}
+        <JurisdictionProvider>
+          <Shell manifest={manifest}>
+            {children}
+          </Shell>
+        </JurisdictionProvider>
       </body>
     </html>
   );

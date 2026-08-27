@@ -213,9 +213,57 @@ export function generateCorpusManifest(): CorpusManifest {
  */
 export function getCorpusManifest(): CorpusManifest {
   if (!fs.existsSync(MANIFEST_PATH)) {
-    // If manifest doesn't exist yet, build it
     return generateCorpusManifest();
   }
   const raw = fs.readFileSync(MANIFEST_PATH, "utf-8");
   return JSON.parse(raw) as CorpusManifest;
 }
+
+export interface PrerequisiteTrailResult {
+  trail: AtomManifestItem[];
+  totalAtoms: number;
+  totalReadingMinutes: number;
+}
+
+export function getPrerequisiteTrail(targetIds: string[]): PrerequisiteTrailResult {
+  const manifest = getCorpusManifest();
+  const collectedIds = new Set<string>();
+
+  function collectAncestors(id: string) {
+    if (collectedIds.has(id)) return;
+    const atom = manifest.atoms[id];
+    if (!atom) return;
+    collectedIds.add(id);
+    for (const prereqId of atom.prerequisites) {
+      collectAncestors(prereqId);
+    }
+  }
+
+  for (const id of targetIds) {
+    collectAncestors(id);
+  }
+
+  const trailAtoms = Array.from(collectedIds)
+    .map((id) => manifest.atoms[id])
+    .filter(Boolean);
+
+  // Sort topologically: lower depth first; if equal depth, sort by ID
+  trailAtoms.sort((a, b) => {
+    if (a.depth !== b.depth) {
+      return a.depth - b.depth;
+    }
+    return a.id.localeCompare(b.id);
+  });
+
+  const totalReadingMinutes = trailAtoms.reduce(
+    (sum, item) => sum + item.reading_minutes,
+    0
+  );
+
+  return {
+    trail: trailAtoms,
+    totalAtoms: trailAtoms.length,
+    totalReadingMinutes,
+  };
+}
+
