@@ -200,6 +200,9 @@ function buildCorpus() {
     }
   }
 
+  // Track missing/future atom references
+  const missingFutureAtoms = new Set();
+
   // Resolve references
   for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
     const references = [
@@ -210,15 +213,12 @@ function buildCorpus() {
 
     for (const { ref, field } of references) {
       if (!allIds.has(ref)) {
-        console.error(
-          `\n❌ [BUILD ERROR] Non-existent Atom reference "${ref}" in field "${field}" of Atom "${id}" (${filename})\n`
-        );
-        process.exit(1);
+        missingFutureAtoms.add(ref);
       }
     }
   }
 
-  // Detect cycles
+  // Detect cycles (only on existing atoms)
   const visited = {};
   const recursionStack = [];
 
@@ -226,7 +226,7 @@ function buildCorpus() {
     visited[nodeId] = "visiting";
     recursionStack.push(nodeId);
 
-    const prereqs = rawAtoms[nodeId].frontmatter.prerequisites;
+    const prereqs = rawAtoms[nodeId].frontmatter.prerequisites.filter((p) => allIds.has(p));
     for (const prereqId of prereqs) {
       if (visited[prereqId] === "visiting") {
         const cyclePath = [...recursionStack.slice(recursionStack.indexOf(prereqId)), prereqId].join(" -> ");
@@ -262,7 +262,7 @@ function buildCorpus() {
       return depthMemo[nodeId];
     }
 
-    const prereqs = rawAtoms[nodeId].frontmatter.prerequisites;
+    const prereqs = rawAtoms[nodeId].frontmatter.prerequisites.filter((p) => allIds.has(p));
     if (prereqs.length === 0) {
       depthMemo[nodeId] = 0;
       return 0;

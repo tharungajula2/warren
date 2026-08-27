@@ -1,0 +1,121 @@
+---
+id: IMP-19
+title: US CECL Under ASC 326
+type: reference
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  CECL and IFRS 9 are both forward-looking expected-loss frameworks, but CECL is
+  not “IFRS 9 without stage labels”. For amortised-cost assets, CECL recognises
+  lifetime expected credit losses from initial recognition, eliminating the IFRS
+  9 SICR gateway between 12-month and lifetime ECL.
+prerequisites:
+  - IMP-01
+  - IMP-02
+  - IMP-05
+  - IMP-06
+  - IMP-14
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      FASB, *ASU 2016-13, Financial Instruments—Credit Losses (Topic 326):
+      Measurement of Credit Losses on Financial Instruments*, June 16, 2016
+    url: 'https://www.fasb.org/projects/current-projects/credit-losses'
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, FDIC, OCC and NCUA, *Frequently Asked Questions on the
+      New Accounting Standard on Financial Instruments—Credit Losses*
+    url: >-
+      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, OCC, FDIC and NCUA, *Interagency Policy Statement on
+      Allowances for Credit Losses*, revised April 2023
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
+    accessed: '2026'
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, Section 5.5'
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+ASC Topic 326’s **current expected credit losses (CECL)** methodology measures expected credit losses on financial assets carried at amortised cost using information about historical experience, current conditions and reasonable and supportable forecasts. An allowance is established when an asset is originated or acquired; for assets in CECL scope, the objective is the net amount expected to be collected over the relevant contractual term.
+
+The structural contrast with IFRS 9 is the allowance horizon. IFRS 9 starts a non-credit-impaired asset in Stage 1 with 12-month ECL and moves to lifetime ECL after SICR. CECL generally starts at **lifetime expected loss**. Consequently, CECL has no SICR test, no Stage 1-to-Stage 2 allowance cliff and no 30-DPD staging presumption. Deterioration still changes the allowance, but it changes a lifetime estimate that already exists.
+
+CECL is also method-neutral. Topic 326 does not require one prescribed technique; acceptable approaches can include loss-rate, roll-rate, vintage, discounted-cash-flow and PD/LGD methods when they reasonably estimate expected collectability and are consistently supported.
+
+The lifetime concept is not identical to IFRS 9’s revolving-facility rule. CECL generally measures expected losses over the contractual term, considering expected prepayments but not expected extensions, renewals or modifications unless specified by the guidance. For off-balance-sheet commitments, expected losses are measured over the contractual period of exposure, but no allowance is recorded for commitments the institution can unconditionally cancel.
+
+Purchased credit-deteriorated assets use PCD gross-up accounting: the initial allowance is added to purchase price to establish amortised cost rather than charged as an ordinary acquisition-date provision expense.
+
+&lt;Flow&gt;
+IFRS 9
++---------+   SICR   +---------+
+| Stage 1 | -------&amp;gt; | Stage 2 |
+| 12m ECL |          | Life ECL|
++---------+          +---------+
+
+CECL
++------------------------------+
+| Initial recognition          |
+| Lifetime expected credit loss|
++------------------------------+
+               |
+               v
++------------------------------+
+| Re-estimate lifetime loss    |
+| every reporting date         |
++------------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+The difference between CECL and IFRS 9 is structural measurement architecture, not merely terminology.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Recreating IFRS 9 stages inside CECL and using them to decide whether lifetime ECL applies imports a threshold ASC 326 does not contain.
+</Trap>
+
+<NeverConfuse a="CECL lifetime allowance" b="IFRS 9 lifetime ECL">
+**CECL lifetime allowance** — lifetime expected credit loss recognised from initial recognition for in-scope amortised-cost assets.
+
+---
+**IFRS 9 lifetime ECL** — lifetime expected loss that ordinarily applies after SICR, to credit-impaired assets, and in specified other cases.
+</NeverConfuse>
+
+<Delta j="IN">
+— CECL does not govern Indian statutory bank provisioning. Indian scheduled commercial banks remain under RBI IRACP through March 31, 2027 and transition to RBI’s own three-stage ECL framework from April 1, 2027; relevant NBFCs may apply Ind AS 109, not ASC 326. [RBI 2025 IRACP; RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted IFRS 9 uses staging and therefore differs structurally from CECL. [UK-adopted IFRS 9]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 likewise retains 12-month versus lifetime staging. [Regulation (EU) 2023/1803]
+</Delta>
+
+<Delta j="US">
+— ASC 326 CECL is the applicable US GAAP expected-loss model for in-scope amortised-cost financial assets; it recognises lifetime expected losses from initial recognition without IFRS 9 staging. [ASU 2016-13; Interagency CECL FAQ]
+</Delta>
+
+<Recall
+  q="What is the biggest structural difference between IFRS 9 and CECL?"
+  a="CECL generally recognises lifetime expected loss from initial recognition; IFRS 9 uses a 12-month/lifetime staging threshold."
+/>
+
+<Recall
+  q="Does CECL prescribe PD/LGD as the required calculation method?"
+  a="No. Topic 326 permits multiple reasonable, supportable estimation methods."
+/>

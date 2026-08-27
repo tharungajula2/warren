@@ -1,0 +1,116 @@
+---
+id: IMP-04
+title: Effective Interest Rate Discounting
+type: mechanism
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  IFRS 9 discounts expected cash shortfalls using the effective interest rate
+  established from the instrument’s own economics, not a current market yield
+  selected at the reporting date. The rule prevents changes in market discount
+  rates from being mistaken for changes in credit loss.
+prerequisites:
+  - IMP-02
+  - FND-08
+  - FND-09
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A and paragraphs
+      B5.5.44–B5.5.45
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, *Chapter 8: Special Topics*, ASC 326 credit-loss
+      measurement methods, updated January 9, 2026
+    url: 'https://www.federalreserve.gov/aboutthefed/chapter-8-special-topics.htm'
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 50–53
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+The **effective interest rate (EIR)** is the rate that discounts estimated contractual cash flows over the expected life of a financial instrument to its initial gross carrying amount, incorporating relevant fees, transaction costs, premiums and discounts. For ordinary IFRS 9 ECL measurement, expected credit losses are discounted to the reporting date using the EIR determined at initial recognition, or an approximation where permitted. Variable-rate instruments use the applicable effective rate under the standard’s requirements.
+
+Why not use today’s market lending rate? Because ECL is intended to measure deterioration in expected contractual collection, not revalue the asset to current market terms. Assume a fixed-rate loan was originated when its EIR was 6%, but equivalent new lending later yields 9% because general interest rates increased. Discounting expected cash shortfalls at 9% would mix a market-rate change into the credit-loss measurement. Retaining the instrument-specific EIR keeps the impairment estimate connected to the economics on which amortised cost was established.
+
+Discounting matters even when the nominal recovery amount is unchanged. A recovery of 100 expected in one year is worth more at the reporting date than 100 expected after five years. Recovery timing, foreclosure delays, restructuring schedules and collection costs can therefore materially affect loss severity.
+
+Purchased or originated credit-impaired assets are different: IFRS 9 uses a **credit-adjusted effective interest rate**, because expected credit losses are incorporated into estimated cash flows when that rate is established at initial recognition.
+
+&lt;Flow&gt;
++-----------------------+
+| Expected future       |
+| cash shortfalls       |
++-----------------------+
+           |
+           v
++-----------------------+
+| Instrument EIR from   |
+| initial recognition   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Discount shortfalls   |
+| to reporting date     |
++-----------------------+
+           |
+           v
++-----------------------+
+| Present-value ECL     |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A credit-loss discount rate must be consistent with the accounting measurement basis of the asset; changing the discount rate can change measured loss even when expected collections do not change.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Replacing the original EIR with a current market yield in IFRS 9 ECL turns part of a market-rate movement into an apparent credit-loss movement.
+</Trap>
+
+<NeverConfuse a="Effective interest rate" b="Current market rate">
+**Effective interest rate** — the instrument-specific yield used in amortised-cost accounting and IFRS 9 ECL discounting.
+
+---
+**Current market rate** — the yield currently demanded for comparable new risk; it can move without any change in the borrower’s expected cash payments.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current scheduled-commercial-bank IRACP provisioning does not use an Ind AS 109 EIR-based ECL framework. RBI’s 2026 bank ECL Directions require EIR discounting for instruments originated or invested from April 1, 2027 and provide a transition path for existing loans through March 31, 2030. [RBI 2026 ECL Directions, paragraphs 50–53]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted IFRS 9 follows the original-EIR requirement. [IFRS 9 B5.5.44]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 follows the same EIR measurement rule. [Regulation (EU) 2023/1803; IFRS 9 B5.5.44]
+</Delta>
+
+<Delta j="US">
+— CECL permits multiple estimation techniques; when a discounted-cash-flow method is used, Topic 326 uses the asset’s effective interest rate, but DCF is not mandatory for all amortised-cost assets. [ASC 326; Federal Reserve guidance]
+</Delta>
+
+<Recall
+  q="Why does IFRS 9 normally use the original EIR rather than a current market rate?"
+  a="To measure credit cash shortfalls consistently with amortised cost without importing current market repricing into impairment."
+/>
+
+<Recall
+  q="What rate is special for POCI assets?"
+  a="The credit-adjusted effective interest rate."
+/>

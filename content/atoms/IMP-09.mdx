@@ -1,0 +1,120 @@
+---
+id: IMP-09
+title: The Thirty-Day Past-Due Backstop
+type: reference
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  More than 30 days past due creates a rebuttable IFRS 9 presumption that SICR
+  has occurred. It is a backstop, not the normal definition of Stage 2, and
+  rebuttal requires reasonable and supportable evidence rather than routine
+  policy.
+prerequisites:
+  - IMP-08
+  - CR-04
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph 5.5.11 and
+      B5.5.19–B5.5.20
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      RBI, *Implementation of Indian Accounting Standards*, DOR
+      (NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020, paragraphs 1.5–1.6
+      of Annex
+    url: 'https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=11818&Mode=0&fn=14'
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 33–36
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+IFRS 9 contains a rebuttable presumption that credit risk has increased significantly since initial recognition when contractual payments are **more than 30 days past due**. “Rebuttable” matters: the presumption is strong but not irrebuttable. An entity may rebut it when reasonable and supportable information demonstrates that credit risk has not increased significantly despite the delinquency.
+
+The equally important point is what the rule does **not** mean. An entity must not wait for day 31 when other reasonable and supportable information identifies SICR earlier. IFRS 9 explicitly treats the delinquency presumption as a backstop. A rating downgrade, worsening liquidity, adverse covenant information or relevant macro deterioration can trigger Stage 2 before any payment is missed.
+
+Rebuttal should be evidence-based. A temporary administrative failure may support rebuttal where credible historical and current evidence shows that it does not signal higher lifetime default risk. A blanket policy that all 30–59 DPD cases remain Stage 1 would invert the presumption and is inconsistent with its purpose.
+
+Past-due status also must be computed consistently. Data-quality errors around due dates, payment allocation, moratoria, restructurings and account-level versus borrower-level delinquency can cause false stage transfers or conceal genuine ones. The backstop is simple conceptually but operationally dependent on reliable delinquency data.
+
+&lt;Flow&gt;
++----------------------+
+| More than 30 DPD?    |
++----------------------+
+      |           |
+     No          Yes
+      |           |
+      v           v
++---------+  +------------------+
+| Use all |  | SICR presumed    |
+| SICR    |  +------------------+
+| evidence|          |
++---------+          v
+             +------------------+
+             | Strong evidence  |
+             | to rebut?        |
+             +------------------+
+               |           |
+              No          Yes
+               |           |
+               v           v
+          +---------+  +---------+
+          | Stage 2 |  | Continue|
+          |         |  | full SICR|
+          +---------+  | assessment|
+                       +---------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A backstop catches deterioration missed by earlier indicators; it does not replace those indicators.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling 30 DPD “the Stage 2 trigger” causes late recognition because it turns an outer backstop into the primary staging rule.
+</Trap>
+
+<NeverConfuse a="Rebuttable presumption" b="Optional indicator">
+**Rebuttable presumption** — a default conclusion that stands unless supported evidence demonstrates otherwise.
+
+---
+**Optional indicator** — a factor that may simply be ignored; the 30-DPD presumption is not optional.
+</NeverConfuse>
+
+<Delta j="IN">
+— For Ind AS-implementing NBFCs, RBI reiterates the 30-DPD rebuttable presumption and additionally says exposures overdue beyond 60 days must not have SICR recognition deferred. Current scheduled-commercial-bank IRACP is different. RBI’s bank ECL Directions effective April 1, 2027 adopt a more-than-30-DPD rebuttable presumption, with a specific revolving-facility backstop. [RBI 2020 NBFC guidance; RBI 2026 ECL Directions, paragraphs 33–36]
+</Delta>
+
+<Delta j="UK">
+— UK IFRS 9 applies the more-than-30-DPD rebuttable SICR presumption. [IFRS 9 5.5.11]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 applies the same presumption. [Regulation (EU) 2023/1803; IFRS 9 5.5.11]
+</Delta>
+
+<Delta j="US">
+— CECL has no 30-DPD staging backstop because there is no Stage 1-to-Stage 2 lifetime-loss switch. Delinquency remains relevant credit information within allowance estimation and credit administration. [ASC 326]
+</Delta>
+
+<Recall
+  q="Does IFRS 9 require waiting until 30 DPD before recognising SICR?"
+  a="No. SICR must be recognised earlier when other evidence identifies it."
+/>
+
+<Recall
+  q="Can the 30-DPD presumption be rebutted routinely?"
+  a="No. Rebuttal requires reasonable and supportable evidence."
+/>

@@ -1,0 +1,131 @@
+---
+id: IMP-15
+title: Accounting LGD Versus Regulatory LGD
+type: concept
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  Accounting LGD estimates the loss severity needed to satisfy an accounting ECL
+  measurement objective; regulatory LGD is calibrated for prudential capital
+  objectives. Regulatory parameters can be useful starting points, but they are
+  not interchangeable because horizon, cyclicality, conservatism and prescribed
+  floors can differ.
+prerequisites:
+  - IMP-02
+  - IMP-05
+  - CR-12
+  - CR-17
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework — CRE36: IRB
+      approach: minimum requirements*, LGD requirements
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: '2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Guidance on credit risk and
+      accounting for expected credit losses*, BCBS 350, December 2015
+    url: 'https://www.bis.org/bcbs/publ/d350.htm'
+    accessed: '2026'
+  - label: >-
+      Bank for International Settlements, *The new era of expected credit loss
+      provisioning*, BIS Quarterly Review, March 2017
+    url: 'https://www.bis.org/publ/qtrpdf/r_qt1703f.htm'
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 82–95
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+**Loss given default (LGD)** is the proportion of exposure lost if default occurs. In accounting ECL models, LGD is a modelling component used to represent expected discounted cash shortfalls conditional on default. It should therefore capture expected recoveries, their timing, collateral and guarantee effects where appropriate, workout costs and forward-looking conditions consistently with the accounting framework.
+
+Regulatory-capital LGD answers a different question. Under the Basel internal-ratings-based framework, a bank’s LGD must reflect economic-downturn conditions where necessary to capture relevant risk. Basel capital parameters also operate within prudential calibration rules designed to protect solvency against unexpected loss.
+
+That difference is not semantic. A downturn-calibrated regulatory LGD may be deliberately more conservative than a neutral probability-weighted accounting estimate at a particular reporting date. Basel analysis has explicitly noted that regulatory-capital models can be useful starting points for accounting ECL but may require adjustment because regulatory PD and LGD have different objectives and inputs; for example, Basel regulatory LGD reflects downturn economic conditions, whereas accounting ECL is intended to produce an unbiased expectation rather than a permanently stressed estimate.
+
+Other mismatches can arise from prescribed regulatory floors, definitions of default, cure treatment, collateral eligibility, recovery costs and discounting conventions. Therefore, a mapping from regulatory LGD to accounting LGD needs an explicit bridge showing which prudential adjustments remain relevant and which must be removed or recalibrated.
+
+&lt;Flow&gt;
++-----------------------+
+| Recovery experience   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Regulatory objective  |
+| downturn / prudential |
++-----------------------+
+           |
+           v
++-----------------------+
+| Regulatory LGD        |
++-----------------------+
+
++-----------------------+
+| Recovery experience   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Accounting objective  |
+| unbiased expected     |
+| cash shortfall        |
++-----------------------+
+           |
+           v
++-----------------------+
+| Accounting LGD        |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A risk parameter inherits the objective and calibration rules of the framework for which it was built.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Copying downturn regulatory LGD directly into accounting ECL without adjustment can embed prudential conservatism twice—once in the parameter and again in scenario weighting or overlays.
+</Trap>
+
+<NeverConfuse a="Accounting LGD" b="Regulatory LGD">
+**Accounting LGD** — expected loss severity calibrated to the financial-reporting ECL objective.
+
+---
+**Regulatory LGD** — loss severity calibrated under prudential capital rules, potentially including downturn requirements and regulatory constraints.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current scheduled-commercial-bank IRACP uses prescribed prudential provisioning rather than accounting LGD-based ECL. RBI’s ECL Directions from April 1, 2027 introduce PD/LGD modelling but overlay it with RBI prudential ECL floors, so modelled accounting-style loss and regulatory minimum provision remain distinct concepts. [RBI 2026 ECL Directions, paragraphs 82–95]
+</Delta>
+
+<Delta j="UK">
+— IFRS 9 ECL measurement and PRA capital-model requirements serve different objectives; regulatory parameters should not be imported into accounting without an accounting-consistent bridge. [IFRS 9; BCBS guidance]
+</Delta>
+
+<Delta j="EU">
+— EU banks applying IFRS 9 also operate under prudential capital requirements; EBA has separate guidance for IRB PD/LGD estimation, reinforcing the distinction between accounting and regulatory parameter frameworks. [EBA PD/LGD Guidelines; EBA ECL Guidelines]
+</Delta>
+
+<Delta j="US">
+— CECL likewise measures accounting expected losses under Topic 326, while US regulatory-capital parameters and capital rules have separate prudential purposes. [ASC 326; Interagency ACL policy]
+</Delta>
+
+<Recall
+  q="Can regulatory LGD always be used unchanged for accounting ECL?"
+  a="No. Different calibration objectives can require adjustments."
+/>
+
+<Recall
+  q="What is a defining Basel regulatory-LGD feature?"
+  a="LGD must reflect economic-downturn conditions where necessary to capture relevant risks."
+/>

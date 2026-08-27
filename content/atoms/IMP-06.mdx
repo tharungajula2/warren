@@ -1,0 +1,127 @@
+---
+id: IMP-06
+title: The IFRS 9 Three-Stage Architecture
+type: mechanism
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  IFRS 9 staging changes the horizon of loss recognition as credit risk changes:
+  Stage 1 carries 12-month ECL, Stage 2 lifetime ECL after significant
+  deterioration, and Stage 3 lifetime ECL once the asset is credit-impaired.
+  Stage is a credit-risk state, not simply an arrears bucket.
+prerequisites:
+  - IMP-01
+  - IMP-05
+  - CR-02
+  - CR-03
+  - CR-10
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, Section 5.5 and Appendix
+      A
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      UK Endorsement Board, *Text by Standard 2026 — IFRS 9 Financial
+      Instruments*, March 11, 2026
+    url: >-
+      https://www.endorsement-board.uk/standards/text-by-standard/text-by-standard-2026/
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 25–26
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, *Frequently Asked Questions on the New Accounting
+      Standard on Financial Instruments—Credit Losses*
+    url: >-
+      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+At each reporting date, IFRS 9 asks whether credit risk has increased significantly since initial recognition and whether the asset is credit-impaired. Those two assessments create the familiar three-stage architecture. Stage 1 generally contains instruments without a significant increase in credit risk and carries **12-month ECL**. Stage 2 contains instruments with a significant increase in credit risk (SICR) that are not credit-impaired and carries **lifetime ECL**. Stage 3 contains credit-impaired assets and also carries lifetime ECL.
+
+The jump from Stage 1 to Stage 2 is intentionally substantial: the allowance moves from losses associated with defaults possible in the next twelve months to losses associated with defaults over the remaining life. That makes staging economically important even if PD, LGD and EAD models themselves remain unchanged.
+
+Stage 2 is not “30–89 days past due”. Arrears are one indicator and the 30-day rule is a backstop, but SICR can and should be identified earlier when reasonable and supportable information indicates material deterioration. Similarly, Stage 3 is not defined merely by one delinquency count; it reflects evidence that the financial asset is credit-impaired, with IFRS 9 listing events such as significant financial difficulty, breach of contract or concessions related to financial difficulty.
+
+Stage assignment therefore depends on both **relative deterioration** and **current credit condition**. The reference point for Stage 2 is risk at initial recognition; the reference for Stage 3 is whether the asset is credit-impaired now.
+
+&lt;Flow&gt;
++-----------------------+
+| Initial recognition   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Stage 1               |
+| 12-month ECL          |
++-----------------------+
+           |
+        SICR
+           v
++-----------------------+
+| Stage 2               |
+| Lifetime ECL          |
++-----------------------+
+           |
+   Credit-impaired
+           v
++-----------------------+
+| Stage 3               |
+| Lifetime ECL          |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Stage 1 versus Stage 2 determines **which default-event horizon feeds ECL**; Stage 3 additionally identifies credit impairment.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Building stages directly from delinquency bands and treating forward-looking SICR indicators as optional reverses IFRS 9’s logic.
+</Trap>
+
+<NeverConfuse a="Stage 2" b="Stage 3">
+**Stage 2** — significant deterioration since initial recognition without current credit impairment.
+
+---
+**Stage 3** — a financial asset that is credit-impaired at the reporting date.
+</NeverConfuse>
+
+<Delta j="IN">
+— Scheduled commercial banks do not currently apply the IFRS 9 stage model. RBI’s final 2026 ECL Directions introduce a regulatory three-stage framework from April 1, 2027; relevant Ind AS NBFCs already operate under Ind AS 109-style ECL requirements. [RBI 2026 ECL Directions, paragraphs 25–26; RBI 2020 NBFC guidance]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted IFRS 9 applies the three-stage model. [IFRS 9 5.5; UK-adopted IFRS 9]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 applies the same accounting staging structure, with EBA supervisory guidance. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+</Delta>
+
+<Delta j="US">
+— CECL has no Stage 1/Stage 2/Stage 3 architecture for amortised-cost assets: lifetime expected loss is recognised from initial recognition. [ASC 326; Federal Reserve CECL FAQ]
+</Delta>
+
+<Recall
+  q="What changes when an IFRS 9 asset moves from Stage 1 to Stage 2?"
+  a="The allowance horizon changes from 12-month ECL to lifetime ECL."
+/>
+
+<Recall
+  q="Is Stage 2 defined as 30–89 DPD?"
+  a="No. SICR is the primary concept; past due status is a backstop and indicator."
+/>

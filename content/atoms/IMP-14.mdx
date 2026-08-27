@@ -1,0 +1,125 @@
+---
+id: IMP-14
+title: Lifetime EAD and Revolving Behavioural Life
+type: mechanism
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  Lifetime EAD is a path through time, not today’s balance copied into every
+  future period. Revolving facilities are special because future drawdowns and
+  the period of credit exposure can depend on borrower behaviour and the
+  lender’s practical risk-management actions, sometimes extending beyond a
+  nominal cancellation notice period.
+prerequisites:
+  - IMP-13
+  - CR-12
+  - CR-13
+  - CR-14
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraphs 5.5.19–5.5.20
+      and B5.5.39–B5.5.40
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, *Frequently Asked Questions on the New Accounting
+      Standard on Financial Instruments—Credit Losses*, off-balance-sheet credit
+      exposures
+    url: >-
+      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraph 46
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+**Exposure at default (EAD)** represents the amount expected to be exposed when default occurs. For an amortising term loan, future EAD normally changes as scheduled principal is repaid, prepayments occur, additional drawings are made or interest and fees accumulate. A lifetime ECL model therefore needs an exposure profile aligned with each possible default period rather than one static balance.
+
+Undrawn commitments create another dimension. The borrower may draw additional funds before default, especially as financial condition weakens. Expected future utilisation must therefore be consistent with contractual rights, historical behaviour and the institution’s credit-management practices.
+
+Revolving products require special attention under IFRS 9. Ordinarily, the maximum ECL measurement period is the maximum contractual period over which the entity is exposed to credit risk. IFRS 9 contains a specific exception for certain financial instruments containing both a loan and an undrawn commitment component where contractual cancellation does not in practice limit exposure. For qualifying revolving products, ECL is measured over the period during which the entity is exposed to credit risk and expected losses would not be mitigated by credit-risk-management actions, even if that period extends beyond the contractual notice period.
+
+This is **behavioural life**, not licence to assume an unlimited horizon. The estimate should reflect observed account survival, drawdown patterns, limit management, cancellation practices and other actions that genuinely terminate or mitigate credit exposure.
+
+&lt;Flow&gt;
++-----------------------+
+| Current drawn balance |
++-----------------------+
+           |
+           v
++-----------------------+
+| Scheduled repayment   |
+| / prepayment          |
++-----------------------+
+           |
+           v
++-----------------------+
+| Possible future       |
+| drawdowns             |
++-----------------------+
+           |
+           v
++-----------------------+
+| EAD by future period  |
++-----------------------+
+           |
+           v
++-----------------------+
+| Combine with period   |
+| PD and LGD            |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+EAD must correspond to the exposure expected at the time of each modelled default, not merely the exposure reported today.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using the contractual cancellation notice period as behavioural life for a revolving portfolio without testing whether limits are actually cancelled in practice can materially understate ECL.
+</Trap>
+
+<NeverConfuse a="Contractual maturity" b="Behavioural exposure period">
+**Contractual maturity** — the legal endpoint or cancellation period specified by the contract.
+
+---
+**Behavioural exposure period** — the period during which credit exposure is expected to persist given actual borrower behaviour and credit-risk-management actions.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current bank IRACP does not implement an IFRS behavioural-life ECL model. RBI’s ECL Directions from April 1, 2027 specify different lifetime treatments for drawn facilities, revolving commitments and auto-renewing products, including analysis of default, drawdown and limit-management behaviour. [RBI 2026 ECL Directions, paragraph 46]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted IFRS 9 applies the contractual-period rule and revolving-facility exception in paragraph 5.5.20. [IFRS 9 5.5.19–5.5.20]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 applies the same revolving exposure-period requirements. [Regulation (EU) 2023/1803]
+</Delta>
+
+<Delta j="US">
+— CECL estimates off-balance-sheet expected losses over the contractual period in which the entity is exposed to credit risk, but no allowance is recorded for an unfunded commitment that can be unconditionally cancelled by the institution; this differs structurally from IFRS 9’s revolving-product exception. [ASC 326; Interagency CECL FAQ]
+</Delta>
+
+<Recall
+  q="Why is current balance not necessarily lifetime EAD?"
+  a="Because balances can amortise, prepay, redraw or increase before a future default."
+/>
+
+<Recall
+  q="What makes revolving products special under IFRS 9?"
+  a="For qualifying instruments, practical exposure may persist beyond the contractual cancellation period."
+/>

@@ -1,0 +1,121 @@
+---
+id: IMP-07
+title: Twelve-Month ECL
+type: concept
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  Twelve-month ECL is not the cash loss expected during the next twelve months.
+  It is the lifetime credit loss arising from default events that are possible
+  within the next twelve months, weighted by the probability of those defaults.
+prerequisites:
+  - IMP-02
+  - IMP-06
+  - CR-10
+  - CR-17
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.43'
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, definition of
+      “12-month ECL”
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, *Frequently Asked Questions on the New Accounting
+      Standard on Financial Instruments—Credit Losses*
+    url: >-
+      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+This is one of the most persistent IFRS 9 misunderstandings. Stage 1 does **not** estimate only cash shortfalls occurring during the next year. IFRS 9 defines 12-month ECL as the portion of lifetime expected credit losses representing losses resulting from default events that are possible within twelve months after the reporting date.
+
+Consider a five-year loan. A default could occur nine months from today, followed by restructuring and collateral recovery over the next three years. If that default event lies within the relevant twelve-month default horizon, the ECL calculation includes the full discounted loss consequences of that default, including cash shortfalls occurring after month twelve. Conversely, a default expected only in year four is outside Stage 1’s 12-month default-event horizon even though it may enter lifetime ECL after SICR.
+
+This also means 12-month ECL is not simply “lifetime ECL for loans expected to default within a year”. Every exposure can contribute through the probability that a default event occurs in the next twelve months, multiplied by the loss consequences if it occurs. IFRS 9’s application guidance explicitly distinguishes these concepts.
+
+For an instrument with less than twelve months remaining, the relevant period cannot exceed the remaining exposure period. The term “12-month” therefore describes the maximum default-event horizon for Stage 1, not a requirement to manufacture risk beyond contractual exposure.
+
+&lt;Flow&gt;
+Reporting date
+      |
+      v
++----------------------+
+| Next 12 months       |
+| Which defaults can   |
+| occur?               |
++----------------------+
+      |
+      v
++----------------------+
+| For each such        |
+| default, measure     |
+| full loss consequence|
++----------------------+
+      |
+      v
++----------------------+
+| Probability-weight   |
+| and discount         |
++----------------------+
+      |
+      v
++----------------------+
+| 12-month ECL         |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+“Twelve months” limits the **default-event window**, not the timing of subsequent cash shortfalls caused by those defaults.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Truncating recoveries and losses at month twelve systematically misstates Stage 1 ECL on instruments whose post-default workout extends beyond a year.
+</Trap>
+
+<NeverConfuse a="12-month ECL" b="Twelve months of cash loss">
+**12-month ECL** — lifetime loss consequences of defaults possible during the next twelve months.
+
+---
+**Twelve months of cash loss** — cash shortfalls physically occurring during the next year; this is not the IFRS 9 definition.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current bank IRACP has no Stage 1 12-month-ECL concept. RBI’s bank ECL framework effective April 1, 2027 adopts the same default-event-horizon definition of 12-month ECL. [RBI 2026 ECL Directions, definition of 12-month ECL]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted IFRS 9 uses the IFRS definition. [IFRS 9 B5.5.43]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 uses the same definition. [Regulation (EU) 2023/1803; IFRS 9 B5.5.43]
+</Delta>
+
+<Delta j="US">
+— CECL does not use a 12-month Stage 1 allowance for amortised-cost assets; expected losses are measured over the contractual term, subject to Topic 326’s treatment of expected prepayments and other scope rules. [ASC 326; Interagency CECL FAQ]
+</Delta>
+
+<Recall
+  q="Does 12-month ECL ignore losses occurring after month twelve?"
+  a="No, if those losses result from a default event possible within the twelve-month default horizon."
+/>
+
+<Recall
+  q="What does the twelve-month horizon constrain?"
+  a="The set of possible default events included, not the post-default loss timeline."
+/>

@@ -1,0 +1,118 @@
+---
+id: IMP-08
+title: Significant Increase in Credit Risk
+type: mechanism
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  SICR is principally a relative test: compare the risk of default over the
+  remaining life at the reporting date with that risk at initial recognition.
+  Absolute thresholds can operationalise or conservatively supplement the test,
+  but they must not erase the origination benchmark.
+prerequisites:
+  - IMP-05
+  - IMP-06
+  - CR-10
+  - CR-11
+  - CR-16
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraphs 5.5.9–5.5.11
+      and B5.5.5–B5.5.23
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 25–37
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+  - label: >-
+      RBI, *Implementation of Indian Accounting Standards*, DOR
+      (NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020
+    url: 'https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=11818&Mode=0&fn=14'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+An IFRS 9 instrument moves to lifetime ECL when credit risk has increased significantly since initial recognition. The standard focuses on the **change in the risk of default**, not the change in the amount of ECL. The comparison is between default risk over the expected life at the reporting date and the corresponding risk at initial recognition.
+
+That makes SICR a **relative** concept. A movement from very low risk to moderate risk can be significant even though the current absolute PD remains below a portfolio-level “high risk” threshold. Conversely, a borrower originated at high risk may show a high current PD without having deteriorated significantly relative to origination. IFRS 9 specifically notes that an identical absolute change in default risk can have different significance depending on the starting level of risk.
+
+Practitioners nevertheless use **absolute indicators**: internal rating grades, watchlists, forbearance events, PD thresholds, pricing changes, sector stress or other risk signals. These can be useful operational triggers, particularly when they identify deterioration conservatively. They are not a licence to replace the IFRS 9 objective with a single current-risk cut-off. The design must still identify significant change since origination.
+
+IFRS 9 also permits a low-credit-risk practical expedient: where an instrument has low credit risk at the reporting date, an entity may assume credit risk has not increased significantly. “Low credit risk” concerns default risk and capacity to meet obligations; strong collateral alone does not make an otherwise weak borrower low risk.
+
+&lt;Flow&gt;
++-----------------------+
+| Risk at origination   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Risk at reporting     |
+| date                  |
++-----------------------+
+           |
+           v
++-----------------------+
+| Compare change over   |
+| remaining life        |
++-----------------------+
+      |             |
+      v             v
++----------+   +----------+
+| No SICR  |   | SICR     |
+| Stage 1  |   | Stage 2  |
++----------+   +----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+SICR is about deterioration relative to the credit risk accepted at initial recognition.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using one absolute current-PD threshold for every exposure can leave initially low-risk borrowers in Stage 1 after a proportionately severe deterioration.
+</Trap>
+
+<NeverConfuse a="Relative SICR test" b="Absolute risk threshold">
+**Relative SICR test** — measures deterioration from the asset’s origination risk benchmark.
+
+---
+**Absolute risk threshold** — measures the current level of risk without necessarily considering where the exposure started.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current scheduled-commercial-bank IRACP does not use IFRS 9 SICR. RBI’s final bank ECL framework from April 1, 2027 requires a relative lifetime-risk comparison and allows documented operational parameters; relevant Ind AS NBFCs apply SICR requirements with RBI prudential guidance. [RBI 2026 ECL Directions, paragraphs 25–31; RBI 2020 NBFC guidance]
+</Delta>
+
+<Delta j="UK">
+— IFRS 9 SICR applies; PRA supervision expects robust and timely recognition of credit deterioration. [IFRS 9 5.5; PRA 2025]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 provides the SICR test; EBA/GL/2017/06 supplements bank supervisory expectations. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+</Delta>
+
+<Delta j="US">
+— CECL has no SICR threshold controlling a switch from 12-month to lifetime allowance because lifetime expected losses are recognised from initial recognition. [ASC 326]
+</Delta>
+
+<Recall
+  q="Is SICR primarily an absolute or relative test?"
+  a="Relative: current default risk is compared with default risk at initial recognition."
+/>
+
+<Recall
+  q="Can absolute triggers still be useful?"
+  a="Yes, as operational or conservative indicators, provided they do not defeat the relative SICR objective."
+/>

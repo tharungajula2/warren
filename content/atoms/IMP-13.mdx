@@ -1,0 +1,120 @@
+---
+id: IMP-13
+title: Lifetime PD Term Structures
+type: mechanism
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  Lifetime ECL needs the timing of default risk, not merely one lifetime default
+  percentage. Marginal PD measures default probability in a particular future
+  interval conditional on survival to that interval; cumulative PD measures the
+  probability of having defaulted by a stated horizon.
+prerequisites:
+  - IMP-06
+  - IMP-07
+  - CR-10
+  - CR-11
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraphs
+      B5.5.10–B5.5.13
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 45–46
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+  - label: >-
+      Federal Reserve, *Frequently Asked Questions on the New Accounting
+      Standard on Financial Instruments—Credit Losses*, measurement-method
+      guidance
+    url: >-
+      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+A **PD term structure** distributes default risk through time. This matters because ECL depends not only on whether default eventually occurs but also on when it occurs: exposure, recoveries and discount factors can all differ by period.
+
+Let cumulative PD to year 1 be 2%, to year 2 be 5%, and to year 3 be 9%. The unconditional probability of default specifically during year 2 is approximately `5% − 2% = 3%`; during year 3 it is `9% − 5% = 4%`. Those are **marginal** or interval default probabilities on an unconditional basis. A conditional hazard rate asks a slightly different question: given survival to the start of the interval, what is the probability of default during it? The denominator therefore excludes exposures that already defaulted.
+
+The distinctions matter operationally. Adding cumulative PDs across years double-counts earlier defaults because a borrower counted in the year-2 cumulative PD remains included in year 3. ECL engines normally need mutually exclusive default timing probabilities when they sum period-specific loss contributions.
+
+IFRS 9 does not mandate a `PD × LGD × EAD` implementation, but where that architecture is used, lifetime PD must represent default risk over the relevant lifetime and be consistent with forward-looking information. IFRS 9 also warns that changes in 12-month default risk are only an approximation for changes in lifetime risk when the circumstances make that approximation reasonable; concentrated risk beyond twelve months can make the shortcut inappropriate.
+
+&lt;Flow&gt;
++----------------------+
+| Cumulative PD        |
+| Y1 = 2%              |
++----------------------+
+          |
+          v
++----------------------+
+| Cumulative PD        |
+| Y2 = 5%              |
++----------------------+
+          |
+          v
++----------------------+
+| Y2 marginal default  |
+| probability ≈ 3%     |
++----------------------+
+          |
+          v
++----------------------+
+| Apply Y2 EAD, LGD,   |
+| discount factor      |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Default probabilities used across periods must be mutually consistent so that an obligor cannot be counted as newly defaulting more than once.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Summing one-year cumulative PD figures to construct lifetime PD overstates default risk by repeatedly counting defaults already included in earlier horizons.
+</Trap>
+
+<NeverConfuse a="Cumulative PD" b="Marginal PD">
+**Cumulative PD** — probability of default at any time from the starting date up to a stated horizon.
+
+---
+**Marginal PD** — probability allocated to a particular future interval rather than all preceding intervals combined.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current commercial-bank IRACP does not require lifetime PD term structures. RBI’s ECL Directions effective April 1, 2027 require 12-month PD for Stage 1 and lifetime PD for Stage 2 under a PD–LGD approach, and prohibit mechanically extending Stage 1 PD parameters without adjustment for lifetime and higher-risk characteristics. [RBI 2026 ECL Directions, paragraphs 45–46]
+</Delta>
+
+<Delta j="UK">
+— IFRS 9 governs the measurement objective but does not prescribe one PD-term-structure methodology. [IFRS 9 5.5 and B5.5]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 has the same accounting position; EBA supervisory work addresses sound ECL methodology. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+</Delta>
+
+<Delta j="US">
+— CECL may use PD/LGD methods but does not require them; any selected method must estimate lifetime expected collectability consistently with Topic 326. [ASC 326; Interagency CECL FAQ]
+</Delta>
+
+<Recall
+  q="Why cannot cumulative PDs simply be added across years?"
+  a="Because later cumulative PDs already include defaults counted in earlier years."
+/>
+
+<Recall
+  q="What does marginal PD contribute to ECL modelling?"
+  a="It allocates default probability to a specific interval so period-specific EAD, LGD and discounting can be applied."
+/>

@@ -1,0 +1,129 @@
+---
+id: IMP-18
+title: Staging Validation and ECL Disclosures
+type: procedure
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  Staging needs its own validation because a well-calibrated PD model can still
+  produce wrong allowances if SICR thresholds move exposures too early or too
+  late. Disclosures then make the framework observable by explaining staging
+  policies, assumptions, forward-looking information, allowance movements and
+  credit-risk concentrations.
+prerequisites:
+  - IMP-08
+  - IMP-09
+  - IMP-12
+  - IMP-17
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 7 Financial Instruments: Disclosures*, paragraphs
+      35F–35M
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs7.html
+    accessed: '2026'
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, Section 5.5'
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      EBA, *Guidelines on credit institutions’ credit risk management practices
+      and accounting for expected credit losses*, EBA/GL/2017/06, May 12, 2017
+    url: >-
+      https://www.eba.europa.eu/guidelines-credit-risk-management-practices-and-accounting-expected-credit-losses
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, disclosure and
+      transition provisions
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+**Staging validation** tests the decision layer that determines whether IFRS 9 ECL uses a 12-month or lifetime horizon. It should therefore be separated analytically from PD model validation. An excellent lifetime PD term structure cannot compensate for a SICR framework that systematically leaves deteriorated exposures in Stage 1.
+
+Useful tests include migration analysis, transition rates between stages, the proportion of exposures entering Stage 3 directly from Stage 1, arrears status by stage, rating migration before Stage 2 transfer, Stage 2 cure behaviour, 30-DPD rebuttals and outcomes after cure. A high Stage 1-to-Stage 3 “cliff” can indicate that SICR recognition is too late, although the conclusion requires portfolio context rather than a mechanical threshold. Collective assessment also matters: IFRS 9 requires lifetime ECL where SICR is identifiable on a collective basis even when borrower-specific information has not yet emerged.
+
+IFRS 7 turns much of this judgement into required disclosure. Entities must explain how SICR is determined, including use of the low-credit-risk expedient and rebuttal of the 30-DPD presumption; define default; explain grouping for collective ECL; describe how credit-impaired assets are identified; and explain write-off and modification policies. IFRS 7 also requires disclosure of inputs, assumptions and estimation techniques, including forward-looking macroeconomic information, and reconciliations of loss allowances across 12-month, lifetime non-credit-impaired, credit-impaired and POCI categories.
+
+Disclosures are therefore a governance output, not merely a reporting appendix: unexplained stage migrations, opaque overlays or large assumption changes become visible to financial-statement users.
+
+&lt;Flow&gt;
++----------------------+
+| Staging rules        |
++----------------------+
+          |
+          v
++----------------------+
+| Migration / cure /   |
+| backstop testing     |
++----------------------+
+          |
+          v
++----------------------+
+| Validate timing of   |
+| SICR recognition     |
++----------------------+
+          |
+          v
++----------------------+
+| IFRS 7 explanations  |
+| and reconciliations  |
++----------------------+
+          |
+          v
++----------------------+
+| External visibility  |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Staging validation must test **when** lifetime loss recognition begins and ends, not merely whether the underlying risk model predicts default.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Validating PD calibration but never testing Stage 1→2→3 migration can leave the dominant source of ECL volatility and delayed recognition unchallenged.
+</Trap>
+
+<NeverConfuse a="Model-performance disclosure" b="Model validation">
+**Model-performance disclosure** — information explaining assumptions, methods and allowance movements.
+
+---
+**Model validation** — independent evidence that the underlying process is fit for purpose; disclosure does not substitute for validation.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current scheduled-commercial-bank IRACP has different classification and disclosure rules. RBI’s ECL Directions effective April 1, 2027 prescribe extensive methodology disclosures and first ECL reporting based on June 30, 2027 positions, with comparative presentation beginning from March 31, 2028; Ind AS NBFCs also face Ind AS/RBI disclosures. [RBI 2026 ECL Directions, disclosure chapter; RBI 2020 NBFC guidance]
+</Delta>
+
+<Delta j="UK">
+— IFRS 7 disclosure requirements accompany UK-adopted IFRS 9; PRA supervision adds prudential scrutiny of staging and model governance. [IFRS 7 35F–35M; PRA 2025]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 7/IFRS 9 apply, with EBA monitoring and supervisory guidance for institutions. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+</Delta>
+
+<Delta j="US">
+— CECL has no staging disclosures; Topic 326 instead requires allowance and credit-quality information, including vintage-based credit-quality disclosures for relevant public business entities. [ASC 326-20-50; Interagency CECL FAQ]
+</Delta>
+
+<Recall
+  q="What does staging validation test that PD validation does not?"
+  a="Whether exposures enter and leave lifetime-ECL treatment at the right time."
+/>
+
+<Recall
+  q="What broad areas do IFRS 7 ECL disclosures expose?"
+  a="SICR/default policies, assumptions and FLI, allowance movements, credit quality and related judgement."
+/>

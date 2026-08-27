@@ -1,0 +1,119 @@
+---
+id: IMP-10
+title: Stage Three and Credit-Impaired Assets
+type: concept
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  Stage 3 means the financial asset is credit-impaired at the reporting date,
+  not merely that its risk has increased. Lifetime ECL remains the allowance
+  basis, while IFRS 9 changes interest recognition for assets that became
+  credit-impaired after origination.
+prerequisites:
+  - IMP-06
+  - CR-03
+  - CR-04
+  - CR-05
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, paragraph
+      5.4.1 and B5.5.37
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning) Directions, 2025*, updated through July
+      1, 2026
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+IFRS 9 defines a financial asset as **credit-impaired** when one or more events have occurred that have a detrimental impact on estimated future cash flows. Evidence can include significant financial difficulty of the borrower, breach of contract such as default or delinquency, a concession granted for financial difficulty, probable bankruptcy or disappearance of an active market because of financial difficulties.
+
+Stage 3 therefore represents more than elevated probability of default. Stage 2 says risk has increased significantly but the asset is not yet credit-impaired; Stage 3 says impairment evidence has crystallised. IFRS 9 also contains a rebuttable operational presumption that default does not occur later than 90 days past due unless reasonable and supportable information justifies a more lagging criterion. The accounting definition still cannot be reduced to one DPD threshold.
+
+Both Stage 2 and Stage 3 carry lifetime ECL, but Stage 3 has an additional interest consequence. For a financial asset that was not credit-impaired when originated but later becomes credit-impaired, IFRS 9 calculates interest revenue by applying the original EIR to **amortised cost**, meaning the gross carrying amount net of the loss allowance, rather than to the gross carrying amount used for non-credit-impaired assets.
+
+That distinction prevents recognition of interest income on amounts the accounting measurement already expects not to collect. It is separate from the question of whether contractual interest remains legally due.
+
+&lt;Flow&gt;
++-----------------------+
+| Performing / elevated |
+| risk                  |
++-----------------------+
+           |
+           v
++-----------------------+
+| Credit-impairment     |
+| evidence occurs       |
++-----------------------+
+           |
+           v
++-----------------------+
+| Stage 3               |
+| Lifetime ECL          |
++-----------------------+
+           |
+           v
++-----------------------+
+| IFRS interest on      |
+| amortised cost        |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Credit impairment concerns detrimental effects on expected cash flows, not merely a high risk score.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Equating Stage 3 mechanically with “90 DPD” misses borrowers that become credit-impaired before 90 days and misunderstands the default backstop.
+</Trap>
+
+<NeverConfuse a="SICR" b="Credit-impaired">
+**SICR** — material deterioration in default risk since initial recognition.
+
+---
+**Credit-impaired** — evidence exists that events have detrimentally affected estimated future cash flows.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current commercial-bank IRACP uses NPA, substandard, doubtful and loss-asset classifications rather than IFRS Stage 3; common NPA mechanics include 90-day overdue/out-of-order criteria. RBI’s ECL Directions from April 1, 2027 introduce Stage 3 while retaining prudential floors and specific income-recognition rules. [RBI 2025 IRACP; RBI 2026 ECL Directions]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted IFRS 9 applies the credit-impaired definition and Stage 3 lifetime ECL/interest mechanics. [IFRS 9 Appendix A and 5.4.1]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 applies the same accounting definition; prudential default concepts remain separate regulatory concepts even where operational alignment is sought. [Regulation (EU) 2023/1803; EBA guidance]
+</Delta>
+
+<Delta j="US">
+— CECL has no Stage 3 allowance category. US nonaccrual and regulatory classification practices are separate from Topic 326’s lifetime expected-loss measurement. [ASC 326; Interagency CECL policy]
+</Delta>
+
+<Recall
+  q="Does a high PD automatically make an asset Stage 3?"
+  a="No. Stage 3 requires the asset to be credit-impaired."
+/>
+
+<Recall
+  q="What changes in IFRS 9 interest recognition after a non-POCI asset becomes credit-impaired?"
+  a="Interest is generally calculated using the original EIR on amortised cost rather than gross carrying amount."
+/>

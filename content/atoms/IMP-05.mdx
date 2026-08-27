@@ -1,0 +1,123 @@
+---
+id: IMP-05
+title: Forward-Looking Information and Macroeconomic Scenarios
+type: mechanism
+domain: impairment
+subdomain: unsorted
+one_screen: >-
+  ECL must respond to information about the future when that information is
+  relevant, reasonable and supportable. Macroeconomic forecasts are inputs to
+  credit-risk expectations, not independent reserves added on top of modelled
+  loss.
+prerequisites:
+  - IMP-03
+  - CR-11
+  - CR-16
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraphs 5.5.17 and
+      B5.5.49–B5.5.54
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
+    accessed: '2026'
+  - label: >-
+      FASB, *Staff Q&A—Topic 326, No. 2: Developing an Estimate of Expected
+      Credit Losses*
+    url: >-
+      https://www.fasb.org/page/PageContent?pageId=%2Fprojects%2Fother-staff-projects%2Ffasb-staff-qatopic-326-no-2developing-an-estimate-of-expect.html
+    accessed: '2026'
+  - label: >-
+      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
+      Provisioning and Income Recognition) Directions, 2026*, paragraphs 47–49
+      and 124
+    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
+    accessed: '2026'
+import_source: 03_IMP_impairment_ecl.md
+---
+Historical default and recovery experience is a starting point, not the destination. IFRS 9 requires ECL to incorporate reasonable and supportable information available without undue cost or effort, including forecasts of future economic conditions. Forward-looking information (FLI) can affect the probability of default, expected exposure, recovery rates, staging, or several of these simultaneously.
+
+Relevant variables depend on the portfolio. Employment conditions may be important for unsecured household credit; property prices and interest rates may affect mortgage affordability and collateral recoveries; output, commodity prices or sector-specific demand can matter for corporate borrowers. The modelling question is not “Which macro variables are fashionable?” but “Which variables have a defensible causal or predictive relationship with the credit outcomes being estimated?”
+
+The **forecast horizon** and the **credit horizon** are different. A five-year loan can require lifetime ECL even when detailed macro forecasts are credible for only a shorter period. Beyond a reasonable and supportable forecasting horizon, models need a disciplined method for extrapolation or reversion rather than pretending to possess precise long-range forecasts. Under US CECL, Topic 326 expressly contemplates reversion to historical loss information for periods beyond the reasonable-and-supportable forecast horizon.
+
+FLI also influences staging. A borrower can experience a significant increase in credit risk before missing a payment when forward-looking evidence indicates material deterioration. That is why a purely arrears-driven staging system defeats the purpose of expected-loss accounting.
+
+&lt;Flow&gt;
++----------------------+
+| Historical credit    |
+| behaviour            |
++----------------------+
+          |
+          v
++----------------------+
+| Current conditions   |
++----------------------+
+          |
+          v
++----------------------+
+| Reasonable and       |
+| supportable forecasts|
++----------------------+
+          |
+          v
++----------------------+
+| PD / LGD / EAD /     |
+| staging effects      |
++----------------------+
+          |
+          v
++----------------------+
+| Forward-looking ECL  |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Forward-looking information belongs in ECL only through a defensible connection to expected credit outcomes.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Adding a generic “macroeconomic buffer” after already incorporating the same macro deterioration in modelled PD or LGD can double-count the risk.
+</Trap>
+
+<NeverConfuse a="Forecast horizon" b="ECL horizon">
+**Forecast horizon** — the period over which specific forward-looking economic estimates remain reasonable and supportable.
+
+---
+**ECL horizon** — the period over which expected credit losses must be measured; it can extend beyond the detailed forecast horizon.
+</NeverConfuse>
+
+<Delta j="IN">
+— Current bank IRACP remains primarily classification- and provisioning-rule based. RBI’s ECL Directions effective April 1, 2027 require macroeconomic variables and multiple scenarios, including documented treatment beyond standard forecast horizons; Ind AS NBFC ECL already requires forward-looking measurement. [RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
+</Delta>
+
+<Delta j="UK">
+— IFRS 9 governs FLI; PRA’s 2025 review stressed monitoring model boundaries and risks not adequately captured by existing models. [IFRS 9 5.5.17; PRA 2025]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS 9 applies, with EBA guidance and monitoring focused on sound forward-looking ECL implementation. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+</Delta>
+
+<Delta j="US">
+— CECL uses historical experience, current conditions and reasonable and supportable forecasts, with reversion to historical information when forecasting beyond the supportable period. [ASC 326; FASB Staff Q&amp;A Topic 326 No. 2]
+</Delta>
+
+<Recall
+  q="Can historical average loss rates alone satisfy a forward-looking ECL framework?"
+  a="Only if no adjustment is needed for relevant current conditions and reasonable, supportable forecasts; ordinarily the historical starting point must be assessed and adjusted."
+/>
+
+<Recall
+  q="Must the macro forecast horizon equal the lifetime ECL horizon?"
+  a="No. Lifetime measurement can extend beyond the period of detailed supportable forecasting."
+/>
