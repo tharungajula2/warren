@@ -9,6 +9,7 @@
     "import": "node scripts/import-markdown.mjs",
     "suggest-prereqs": "node scripts/suggest-prerequisites.mjs",
     "suggest-subdomains": "node scripts/suggest-subdomains.mjs",
+    "stats": "node scripts/corpus-stats.mjs",
     "prebuild": "node scripts/build-corpus.mjs",
     "build": "next build",
     "start": "next start",
