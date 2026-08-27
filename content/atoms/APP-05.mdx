@@ -1,0 +1,169 @@
+---
+id: APP-05
+title: "Best Simulated NIFTY Portfolio"
+type: mechanism
+domain: quantitative
+subdomain: unsorted
+one_screen: "Not: - highest return - lowest volatility Instead: **best return-per-unit-risk among simulated portfolios. ** Every simulated portfolio: Upper-left boundary: → increasingly efficient risk-return combinations.  --- **Portfolio construction is mainly a covariance problem."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03 — Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet.md > # 15. Best Simulated NIFTY Portfolio"
+import_headings: ["Best Simulated NIFTY Portfolio","NIFTY100 — What to Retain","Cross-Sectional Equity Strategies — Client / Work Framework","Cross-Sectional Strategy Machine"]
+---
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Metric | Result |
+|---|---:|
+| Usable stocks | **82** |
+| Simulations | **10,000** |
+| Score | **0.7707** |
+| Return | **15.27%** |
+| Volatility | **19.81%** |
+
+### What was optimised?
+
+Not:
+
+- highest return
+- lowest volatility
+
+Instead:
+
+> **best return-per-unit-risk among simulated portfolios.**
+
+### Efficient frontier intuition
+
+Every simulated portfolio:
+
+```text
+one point
+(volatility, return)
+```
+
+Upper-left boundary:
+
+→ increasingly efficient risk-return combinations.
+
+
+
+---
+
+## NIFTY100 — What to Retain
+
+### Biggest idea
+
+> **Portfolio construction is mainly a covariance problem.**
+
+### Why equal weight?
+
+Simple benchmark.
+
+### Why Monte Carlo?
+
+Easy way to:
+
+- explore weight space
+- visualise possible portfolios
+- understand efficient-frontier intuition
+
+### Limitation
+
+This is an educational MPT implementation.
+
+No:
+
+- transaction costs
+- turnover constraints
+- sector limits
+- robust covariance estimation
+- exact constrained optimiser
+- benchmark-relative optimisation
+
+### Claim
+
+> Built NIFTY100 portfolio optimisation across **82 usable stocks**, evaluating **10,000 long-only weight combinations** to identify the strongest simulated risk-adjusted portfolio.
+
+
+
+---
+
+## Cross-Sectional Equity Strategies — Client / Work Framework
+
+> **Keep this mentally separate from the personal portfolio projects.**
+
+This is the most institutional investment process among the five.
+
+Resume framing:
+
+<Flow>
+Cross-sectional equity strategies
+~500-stock universe
+~10-year backtest
+</Flow>
+
+Supporting work documentation explicitly describes:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+- **2012–2022** performance-analysis period
+- CRSP universe
+- survivorship handling
+- fundamental / factor ranking
+- portfolio construction
+- turnover control
+- tracking-error control
+- robustness analytics
+
+
+
+---
+
+## Cross-Sectional Strategy Machine
+
+<Flow>
+Historical investable universe
+        ↓
+Survivorship handling
+        ↓
+Prices + Fundamentals + Sector data
+        ↓
+Optional AI signals
+        ↓
+Filters
+        ↓
+Value / Quality / Momentum / etc.
+        ↓
+Cross-sectional ranking
+        ↓
+Sector-neutral adjustments
+        ↓
+Stock selection
+        ↓
+Portfolio weights
+        ↓
+Rank / weight buffers
+        ↓
+Turnover control
+        ↓
+Tracking-error control
+        ↓
+Rebalance
+        ↓
+Daily portfolio returns
+        ↓
+Performance + robustness
+        ↓
+Attribution / regressions / reporting
+</Flow>
+
+This is much closer to an actual **systematic investment research framework** than the NIFTY MPT exercise.
+
+---

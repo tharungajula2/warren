@@ -1,0 +1,127 @@
+---
+id: ML-03
+title: "Initial Data Audit"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "Before EDA: --- Regression: - distribution - skew - zeros - tails Classification: - class proportions - rare-event severity Numeric: `distribution` → `relationship` → `non-linearity` → `outliers` Categorical: `category frequency` → `target rate by category` Check: - correlation - redundant variables - multicollinearity - duplicate information - interaction opportunities --- Missingness itself can contain information.  Blindly drop rows without checking whether removal changes population.  --- Three possibilities: `Data error` → correct / remove `Valid extreme` → retain `Valid but destabilising` → transform / winsorise / robust model - Linear Regression - Logistic Regression - KNN - SVM - ANN Much less sensitive to scaling and monotonic transformations."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 5. Initial Data Audit"
+import_headings: ["Initial Data Audit","EDA — Only Questions That Change Modelling","Missing Values","Outliers"]
+---
+
+Before EDA:
+
+| Check | Question |
+|---|---|
+| Shape | rows × columns |
+| Grain | what does one row represent? |
+| Target | class balance / distribution |
+| IDs | true feature or identifier? |
+| Missing | random or informative? |
+| Duplicates | duplicate entity / observation? |
+| Dates | chronological consistency? |
+| Categories | rare / unseen levels? |
+| Numeric ranges | impossible values? |
+| Outliers | error or real extreme? |
+| Leakage | available at prediction time? |
+| Sampling | representative population? |
+
+---
+
+## EDA — Only Questions That Change Modelling
+
+## Target
+
+Regression:
+
+- distribution
+- skew
+- zeros
+- tails
+
+Classification:
+
+- class proportions
+- rare-event severity
+
+## Feature → Target
+
+Numeric:
+
+`distribution`
+→ `relationship`
+→ `non-linearity`
+→ `outliers`
+
+Categorical:
+
+`category frequency`
+→ `target rate by category`
+
+## Feature → Feature
+
+Check:
+
+- correlation
+- redundant variables
+- multicollinearity
+- duplicate information
+- interaction opportunities
+
+---
+
+## Missing Values
+
+Missingness itself can contain information.
+
+| Situation | Approach |
+|---|---|
+| Small random numeric missingness | median |
+| Numeric with meaningful missingness | median + missing flag |
+| Categorical | explicit `"Missing"` |
+| Highly missing variable | challenge usefulness |
+| Tree models | some implementations handle missingness natively |
+
+### Never
+
+Blindly drop rows without checking whether removal changes population.
+
+---
+
+## Outliers
+
+Three possibilities:
+
+`Data error`
+→ correct / remove
+
+`Valid extreme`
+→ retain
+
+`Valid but destabilising`
+→ transform / winsorise / robust model
+
+### Models sensitive to scale/extremes
+
+- Linear Regression
+- Logistic Regression
+- KNN
+- SVM
+- ANN
+
+### Trees
+
+Much less sensitive to scaling and monotonic transformations.
+
+---

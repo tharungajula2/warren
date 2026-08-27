@@ -1,0 +1,179 @@
+---
+id: ML-14
+title: "Hyperparameter Tuning"
+type: concept
+domain: quantitative
+subdomain: unsorted
+one_screen: "Try every combination.  Good: → small search space Bad: → expensive --- Sample combinations.  Often more efficient when only a few dimensions truly matter."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 63. Hyperparameter Tuning"
+import_headings: ["Hyperparameter Tuning","Correct Tuning Flow","Model Selection Ladder","Iterative Diagnostic Loop"]
+---
+
+## Grid Search
+
+Try every combination.
+
+Good:
+
+→ small search space
+
+Bad:
+
+→ expensive
+
+---
+
+## Random Search
+
+Sample combinations.
+
+Often more efficient when only a few dimensions truly matter.
+
+---
+
+## Bayesian Optimisation
+
+Uses previous trials to choose promising next combinations.
+
+Useful for expensive models.
+
+---
+
+## Correct Tuning Flow
+
+**Never tune against test set.**
+
+Correct:
+
+`Train`
+→ CV tuning
+→ select hyperparameters
+→ refit on Train
+→ evaluate once on Test
+
+If validation set exists:
+
+`Train`
+→ tune
+
+`Validation`
+→ model selection
+
+`Test`
+→ final untouched assessment
+
+---
+
+## Model Selection Ladder
+
+Use complexity progressively.
+
+## Regression
+
+`Mean baseline`
+→ `Linear`
+→ `Regularised Linear`
+→ `Tree`
+→ `Random Forest`
+→ `Gradient Boosting`
+→ `ANN`
+
+## Classification
+
+`Class-rate baseline`
+→ `Logistic`
+→ `Regularised Logistic`
+→ `Tree`
+→ `Random Forest`
+→ `Gradient Boosting`
+→ `ANN`
+
+### At every step ask
+
+> **What failure of the previous model am I fixing?**
+
+---
+
+## Iterative Diagnostic Loop
+
+## Case 1 — Train poor + Validation poor
+
+**Underfitting**
+
+Try:
+
+- better features
+- non-linear transformations
+- interactions
+- deeper tree
+- boosting
+- ANN
+
+---
+
+## Case 2 — Train excellent + Validation poor
+
+**Overfitting**
+
+Try:
+
+- regularisation
+- shallower models
+- larger leaves
+- fewer features
+- dropout
+- early stopping
+- more data
+
+---
+
+## Case 3 — Ranking strong + probability wrong
+
+**Calibration issue**
+
+Try:
+
+- intercept recalibration
+- Platt
+- isotonic
+
+---
+
+## Case 4 — Metrics good, business results bad
+
+**Threshold/objective issue**
+
+Try:
+
+- cost-sensitive metric
+- threshold optimisation
+- segment thresholds
+- expected value optimisation
+
+---
+
+## Case 5 — CV good, OOT poor
+
+**Population drift / temporal instability**
+
+Investigate:
+
+- leakage
+- concept drift
+- feature drift
+- new categories
+- changed process
+- changed target mechanism
+
+---

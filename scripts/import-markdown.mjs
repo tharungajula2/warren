@@ -7,6 +7,9 @@ function parseArgs() {
     file: "",
     prefix: "",
     domain: "",
+    minWords: 250,
+    maxWords: 1200,
+    merge: true,
     dryRun: true,
     write: false,
   };
@@ -21,6 +24,14 @@ function parseArgs() {
     } else if (args[i] === "--domain" && args[i + 1]) {
       params.domain = args[i + 1];
       i++;
+    } else if (args[i] === "--min-words" && args[i + 1]) {
+      params.minWords = parseInt(args[i + 1], 10) || 250;
+      i++;
+    } else if (args[i] === "--max-words" && args[i + 1]) {
+      params.maxWords = parseInt(args[i + 1], 10) || 1200;
+      i++;
+    } else if (args[i] === "--no-merge") {
+      params.merge = false;
     } else if (args[i] === "--write") {
       params.write = true;
       params.dryRun = false;
@@ -44,23 +55,30 @@ function getExistingAtomIds() {
   return existing;
 }
 
+function countWords(str) {
+  if (!str) return 0;
+  return str.split(/\s+/).filter(Boolean).length;
+}
+
 function extractOneScreen(body) {
-  // Check for blockquote
-  const bqMatch = body.match(/^>\s*(.+)$/m);
-  if (bqMatch) {
-    return bqMatch[1].trim().replace(/\s+/g, " ");
-  }
+  // Strip blockquote symbols, tables, headers, math, and code fences
+  let cleanText = body
+    .replace(/^>\s*/gm, "")
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/\$\$[\s\S]*?\$\$/g, "")
+    .replace(/\$[^\$\n]+\$/g, "")
+    .replace(/\|.*\|/g, "")
+    .replace(/^#+.*$/gm, "")
+    .replace(/\\/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
-  // Else first non-heading paragraph
-  const paragraphs = body
-    .split("\n\n")
-    .map((p) => p.trim())
-    .filter((p) => p && !p.startsWith("#") && !p.startsWith("<") && !p.startsWith("```"));
-
-  if (paragraphs.length > 0) {
-    const firstPara = paragraphs[0].replace(/\n/g, " ");
-    const sentences = firstPara.match(/[^.!?]+[.!?]+/g) || [firstPara];
-    return sentences.slice(0, 3).join(" ").trim();
+  if (cleanText.length > 0) {
+    const sentences = cleanText.match(/[^.!?]+[.!?]+/g) || [cleanText];
+    const summary = sentences.slice(0, 3).join(" ").trim();
+    if (summary.length > 10) {
+      return summary;
+    }
   }
 
   return "Placeholder one_screen summary for candidate atom.";
@@ -80,6 +98,34 @@ function inferType(body, components) {
     return "reference";
   }
   return "concept";
+}
+
+function insertUnverifiedClaimMarkers(rawBody) {
+  const claimRegex = /\b(Basel|RBI|PRA|EBA|FCA|IFRS|Ind AS|CECL|FASB|SEBI|Fed|OCC|FRTB|BCBS|SA-CCR|CRR)\b|\d+(\.\d+)?%|\b(19|20)\d{2}\b/i;
+  
+  const paragraphs = rawBody.split("\n\n");
+  let claimCount = 0;
+
+  const processed = paragraphs.map((para) => {
+    if (para.trim().startsWith("<") || para.trim().startsWith("{/*")) {
+      return para;
+    }
+    if (claimRegex.test(para)) {
+      claimCount++;
+      return `{/* UNVERIFIED CLAIM — check primary source before publishing */}\n${para}`;
+    }
+    return para;
+  });
+
+  return {
+    bodyWithClaims: processed.join("\n\n"),
+    claimCount,
+  };
+}
+
+function checkPersonalLanguage(rawBody) {
+  const personalRegex = /\b(my|I\s|our project|this project|in my|my team|my role)\b/i;
+  return personalRegex.test(rawBody);
 }
 
 function transformBodyPatterns(rawBody) {
@@ -170,11 +216,11 @@ function transformBodyPatterns(rawBody) {
   };
 }
 
-export function parseMarkdownFile(filePath, prefix, domain) {
+export function parseMarkdownFile(filePath, prefix, domain, minWords = 250, maxWords = 1200, enableMerge = true) {
   const rawText = fs.readFileSync(filePath, "utf-8");
   const existingIds = getExistingAtomIds();
 
-  // Split on H1 headings: # 1. Title or # 1 Title or # 1: Title
+  // Step 1: Split on H1 headings: # 1. Title or # 1 Title or # 1: Title
   const headingRegex = /^#\s+(\d+)[\.\:]?\s*(.+)$/gm;
   const matches = Array.from(rawText.matchAll(headingRegex));
 
@@ -182,9 +228,7 @@ export function parseMarkdownFile(filePath, prefix, domain) {
     return [];
   }
 
-  const candidates = [];
-  let nextSeqNumber = 1;
-
+  const rawSegments = [];
   for (let i = 0; i < matches.length; i++) {
     const currentMatch = matches[i];
     const candidateTitle = currentMatch[2].trim();
@@ -193,7 +237,68 @@ export function parseMarkdownFile(filePath, prefix, domain) {
     const endIdx = i < matches.length - 1 ? matches[i + 1].index : rawText.length;
     const rawBody = rawText.substring(startIdx, endIdx).trim();
 
-    // Assign sequential ID skipping existing IDs
+    rawSegments.push({
+      headingNum: currentMatch[1],
+      title: candidateTitle,
+      body: rawBody,
+      wordCount: countWords(rawBody),
+    });
+  }
+
+  // Step 2: MERGE PASS
+  let mergedSegments = [];
+  if (enableMerge) {
+    let currentAcc = null;
+
+    for (const seg of rawSegments) {
+      if (!currentAcc) {
+        currentAcc = {
+          primaryTitle: seg.title,
+          headingNum: seg.headingNum,
+          headings: [seg.title],
+          bodyParts: [seg.body],
+          wordCount: seg.wordCount,
+        };
+      } else {
+        const canMerge =
+          currentAcc.wordCount < minWords &&
+          currentAcc.wordCount + seg.wordCount <= maxWords;
+
+        if (canMerge) {
+          currentAcc.headings.push(seg.title);
+          currentAcc.bodyParts.push(`## ${seg.title}\n\n${seg.body}`);
+          currentAcc.wordCount += seg.wordCount;
+        } else {
+          mergedSegments.push(currentAcc);
+          currentAcc = {
+            primaryTitle: seg.title,
+            headingNum: seg.headingNum,
+            headings: [seg.title],
+            bodyParts: [seg.body],
+            wordCount: seg.wordCount,
+          };
+        }
+      }
+    }
+    if (currentAcc) {
+      mergedSegments.push(currentAcc);
+    }
+  } else {
+    mergedSegments = rawSegments.map((seg) => ({
+      primaryTitle: seg.title,
+      headingNum: seg.headingNum,
+      headings: [seg.title],
+      bodyParts: [seg.body],
+      wordCount: seg.wordCount,
+    }));
+  }
+
+  // Step 3: Process segments into final candidate atoms
+  const candidates = [];
+  let nextSeqNumber = 1;
+  const filename = path.basename(filePath);
+
+  for (const seg of mergedSegments) {
     let candidateId = `${prefix}-${String(nextSeqNumber).padStart(2, "0")}`;
     while (existingIds.has(candidateId)) {
       nextSeqNumber++;
@@ -201,19 +306,22 @@ export function parseMarkdownFile(filePath, prefix, domain) {
     }
     nextSeqNumber++;
 
-    const oneScreen = extractOneScreen(rawBody);
-    const { transformedBody, componentsMatched, todoMarkers } = transformBodyPatterns(rawBody);
+    const combinedRawBody = seg.bodyParts.join("\n\n");
+    const oneScreen = extractOneScreen(combinedRawBody);
 
-    const type = inferType(rawBody, new Set(componentsMatched));
-    const wordCount = rawBody.split(/\s+/).filter(Boolean).length;
+    const { transformedBody, componentsMatched, todoMarkers } = transformBodyPatterns(combinedRawBody);
+    const { bodyWithClaims, claimCount } = insertUnverifiedClaimMarkers(transformedBody);
+    const isPersonal = checkPersonalLanguage(combinedRawBody);
+
+    const type = inferType(combinedRawBody, new Set(componentsMatched));
+    const wordCount = countWords(combinedRawBody);
     const readingMinutes = Math.max(1, Math.ceil(wordCount / 200));
 
-    const filename = path.basename(filePath);
-    const importSource = `${filename} > # ${i + 1}. ${candidateTitle}`;
+    const importSource = `${filename} > # ${seg.headingNum}. ${seg.primaryTitle}`;
 
     candidates.push({
       id: candidateId,
-      title: candidateTitle,
+      title: seg.primaryTitle,
       type,
       domain,
       subdomain: "unsorted",
@@ -230,10 +338,13 @@ export function parseMarkdownFile(filePath, prefix, domain) {
       reading_minutes: readingMinutes,
       sources: [],
       import_source: importSource,
+      import_headings: seg.headings.length > 1 ? seg.headings : [],
       wordCount,
       componentsMatched,
       todoMarkers,
-      body: transformedBody,
+      claimCount,
+      isPersonal,
+      body: bodyWithClaims,
     });
   }
 
@@ -244,7 +355,7 @@ function runImporter() {
   const params = parseArgs();
 
   if (!params.file) {
-    console.error("\n❌ [ERROR] Missing argument '--file'. Example: npm run import -- --file \"01_Credit_Risk_Core_End_to_End_Masterclass.md\" --prefix CRX --domain credit-risk --dry-run\n");
+    console.error("\n❌ [ERROR] Missing argument '--file'. Example: node scripts/import-markdown.mjs --file \"01_Credit_Risk_Core_End_to_End_Masterclass.md\" --prefix CRX --domain credit-risk --dry-run\n");
     process.exit(1);
   }
 
@@ -257,26 +368,41 @@ function runImporter() {
   const prefix = params.prefix || "IMP";
   const domain = params.domain || "credit-risk";
 
-  const candidates = parseMarkdownFile(importFilePath, prefix, domain);
+  const candidates = parseMarkdownFile(
+    importFilePath,
+    prefix,
+    domain,
+    params.minWords,
+    params.maxWords,
+    params.merge
+  );
 
-  console.log(`\n=== WARREN MARKDOWN IMPORTER & SPLITTER ===`);
+  const totalClaims = candidates.reduce((sum, c) => sum + c.claimCount, 0);
+  const totalPersonal = candidates.filter((c) => c.isPersonal).length;
+
+  console.log(`\n=== WARREN MARKDOWN IMPORTER & ADAPTIVE SPLITTER ===`);
   console.log(`Source File: ${params.file}`);
-  console.log(`Prefix: ${prefix} | Domain: ${domain} | Mode: ${params.write ? "WRITE (PERSISTING)" : "DRY-RUN (SIMULATION)"}`);
-  console.log(`Candidate Atoms Extracted: ${candidates.length}\n`);
+  console.log(`Prefix: ${prefix} | Domain: ${domain} | MinWords: ${params.minWords} | MaxWords: ${params.maxWords}`);
+  console.log(`Mode: ${params.write ? "WRITE (PERSISTING)" : "DRY-RUN (SIMULATION)"}`);
+  console.log(`Candidate Atoms Extracted: ${candidates.length}`);
+  console.log(`Unverified Claim Markers Inserted: ${totalClaims}`);
+  console.log(`Personal Narrative Flagged Atoms: ${totalPersonal}\n`);
 
   if (params.dryRun) {
     console.table(
       candidates.map((c) => ({
         "Proposed ID": c.id,
-        "Candidate Title": c.title.substring(0, 32),
+        "Candidate Title": c.title.substring(0, 30),
         Type: c.type,
         "Word Count": c.wordCount,
+        "Merged Headings": c.import_headings.length > 0 ? c.import_headings.length : 1,
         "Components Matched": c.componentsMatched.join(", ") || "Prose",
-        "TODO Markers": c.todoMarkers.join(", ") || "None",
+        Claims: c.claimCount,
+        Personal: c.isPersonal ? "PERSONAL ⚠️" : "Clean",
       }))
     );
-    console.log(`\n✅ Dry-run complete. No files were written to disk.`);
-    return;
+    console.log(`\n✅ Dry-run complete for ${params.file}. No files were written to disk.`);
+    return candidates;
   }
 
   if (params.write) {
@@ -290,14 +416,15 @@ function runImporter() {
         continue;
       }
 
+      const headingsJson = JSON.stringify(c.import_headings);
+
       const frontmatterStr = `---
 id: ${c.id}
 title: "${c.title.replace(/"/g, '\\"')}"
 type: ${c.type}
 domain: ${c.domain}
 subdomain: ${c.subdomain}
-one_screen: >
-  ${c.one_screen.replace(/\n/g, " ")}
+one_screen: "${c.one_screen.replace(/"/g, '\\"').replace(/\n|\r/g, " ")}"
 prerequisites: []
 see_also: []
 contrast_with: []
@@ -310,6 +437,7 @@ verified: false
 reading_minutes: ${c.reading_minutes}
 sources: []
 import_source: "${c.import_source.replace(/"/g, '\\"')}"
+import_headings: ${headingsJson}
 ---
 
 ${c.body}
@@ -319,7 +447,8 @@ ${c.body}
       writtenCount++;
     }
 
-    console.log(`\n🎉 Successfully written ${writtenCount} draft atom files to /content/atoms/!`);
+    console.log(`\n🎉 Successfully written ${writtenCount} draft atom files from ${params.file} to /content/atoms/!`);
+    return candidates;
   }
 }
 

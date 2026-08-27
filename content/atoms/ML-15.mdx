@@ -1,0 +1,212 @@
+---
+id: ML-15
+title: "Class Imbalance"
+type: concept
+domain: quantitative
+subdomain: unsorted
+one_screen: "Example: 99% negative 1% positive Predict everything negative: **99% accuracy** but model is useless.  - recall - precision - F1 - PR-AUC - ROC-AUC - confusion matrix - cost-based metrics --- Options: Increase penalty for minority errors.  Reduce majority class."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 67. Class Imbalance"
+import_headings: ["Class Imbalance","Handling Imbalance","Explainability","Feature Importance","SHAP","Partial Dependence","Error Analysis — Where Models Actually Improve","Robustness / Stress Testing"]
+---
+
+Example:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+99% negative  
+1% positive
+
+Predict everything negative:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**99% accuracy**
+
+but model is useless.
+
+### Use
+
+- recall
+- precision
+- F1
+- PR-AUC
+- ROC-AUC
+- confusion matrix
+- cost-based metrics
+
+---
+
+## Handling Imbalance
+
+Options:
+
+### Class weighting
+
+Increase penalty for minority errors.
+
+### Under-sampling
+
+Reduce majority class.
+
+### Over-sampling
+
+Increase minority representation.
+
+### SMOTE
+
+Generate synthetic minority samples.
+
+### Threshold adjustment
+
+Often powerful without altering training distribution.
+
+### Critical
+
+Sampling/SMOTE must occur **inside training folds only**.
+
+Never before train-test split.
+
+---
+
+## Explainability
+
+Three questions:
+
+## Global
+
+> What generally drives the model?
+
+## Local
+
+> Why this prediction?
+
+## Direction
+
+> How does prediction change as feature changes?
+
+---
+
+## Feature Importance
+
+Tree impurity importance:
+
+easy but potentially biased.
+
+Permutation importance:
+
+shuffle one feature
+→ measure performance drop.
+
+Greater drop:
+
+→ greater predictive dependence.
+
+---
+
+## SHAP
+
+Conceptually distributes prediction difference across features.
+
+<Formula math="\Large \displaystyle Prediction = Baseline + \sum Feature\ Contributions" />
+
+Useful for:
+
+- local explanation
+- global importance
+- direction
+- interaction investigation
+
+### Remember
+
+SHAP explains:
+
+> **model behaviour**
+
+Not necessarily:
+
+> **causal effect**
+
+---
+
+## Partial Dependence
+
+Shows average model prediction as one feature changes.
+
+Useful for:
+
+- nonlinear shape
+- threshold behaviour
+
+Caution:
+
+correlated features can make unrealistic combinations.
+
+---
+
+## Error Analysis — Where Models Actually Improve
+
+After every candidate model:
+
+Split errors by:
+
+- class
+- segment
+- geography
+- product
+- time
+- score band
+- missingness
+- feature ranges
+
+Ask:
+
+> Where exactly is the model failing?
+
+Then decide:
+
+`Data issue?`
+`Feature issue?`
+`Model issue?`
+`Threshold issue?`
+`Population issue?`
+
+---
+
+## Robustness / Stress Testing
+
+Before declaring winner:
+
+## Stability
+
+Train vs validation vs test vs OOT
+
+## Segment stability
+
+Performance by meaningful subgroup
+
+## Missingness
+
+What happens if key variable unavailable?
+
+## Outliers
+
+Sensitivity to extremes
+
+## Noise
+
+Small input change → huge prediction change?
+
+## Temporal drift
+
+Does performance decay through time?
+
+---

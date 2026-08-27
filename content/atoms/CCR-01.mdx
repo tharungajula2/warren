@@ -1,0 +1,83 @@
+---
+id: CCR-01
+title: "— Wholesale & Specialist Credit Risk — End-to-End Masterclass"
+type: reference
+domain: counterparty-risk
+subdomain: unsorted
+one_screen: "**UK banking lens:** Counterparty Credit Risk + derivatives + repo/SFT + netting/collateral + CVA + large exposures + concentration/country risk + limits + workout/governance.  **Master mental model** **Permanent rule:** **In wholesale markets, the contractual notional can be enormous while the actual credit exposure is driven by replacement value, netting, collateral and how the trade may move before default."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03_Wholesale_Specialist_Credit_Risk_Masterclass.md > # 03. — Wholesale & Specialist Credit Risk — End-to-End Masterclass"
+import_headings: ["— Wholesale & Specialist Credit Risk — End-to-End Masterclass","Wholesale Credit — What Changes","Instrument Map"]
+---
+
+> **UK banking lens:** Counterparty Credit Risk + derivatives + repo/SFT + netting/collateral + CVA + large exposures + concentration/country risk + limits + workout/governance.
+>
+> **Master mental model**
+>
+> ```text
+> COUNTERPARTY
+> → TRADE / FACILITY
+> → CURRENT VALUE
+> → NETTING
+> → COLLATERAL
+> → FUTURE EXPOSURE
+> → CCR / CVA
+> → LIMITS / CONCENTRATION
+> → DEFAULT / CLOSE-OUT / RECOVERY
+> ```
+>
+> **Permanent rule:**  
+> **In wholesale markets, the contractual notional can be enormous while the actual credit exposure is driven by replacement value, netting, collateral and how the trade may move before default.**
+
+---
+
+## Wholesale Credit — What Changes
+
+| Traditional Lending | Wholesale / Counterparty Credit |
+|---|---|
+| Bank advances cash | Exposure may arise from market value |
+| Loan balance usually positive | Derivative value can move + / − |
+| Exposure often account/facility based | Exposure often netting-set based |
+| Collateral usually static / periodic | Collateral can move daily |
+| EAD linked to balance + undrawn | EAD linked to current + future market exposure |
+| Borrower repayment | Counterparty contractual performance |
+| Default → workout | Default → close-out + netting + collateral + recovery |
+
+{/* TODO: split into NeverConfuse */}
+<Trap label="DISTINCTION">
+```text
+Loan credit risk
+→ borrower may not repay money already lent
+
+Counterparty credit risk
+→ counterparty may default while a market contract has positive replacement value
+```
+
+---
+</Trap>
+
+
+## Instrument Map
+
+| Instrument | Economic purpose | Main specialist credit issue |
+|---|---|---|
+| Bond | Lend to issuer | Issuer credit risk |
+| Interest-rate swap | Exchange fixed / floating cash flows | Counterparty exposure changes with rates |
+| FX forward / swap | Exchange currencies | Counterparty + settlement exposure |
+| Option | Contingent market payoff | PFE can be asymmetric |
+| Credit derivative | Transfer credit risk | Counterparty + reference-name risk |
+| Repo | Secured cash borrowing / lending | Collateral + haircut + counterparty risk |
+| Securities lending | Borrow / lend securities | Collateral + return obligation |
+| RCF / guarantee | Funding / contingent support | Drawdown / EAD + single-name risk |
+
+---

@@ -1,0 +1,158 @@
+---
+id: DAT-12
+title: "Decision Rights"
+type: reference
+domain: risk-data
+subdomain: unsorted
+one_screen: "Every ambiguous point needs an accountable owner.  Examples: --- **This chain is the profession."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: "02_Credit_Risk_Data_Reporting_Change_Masterclass.md > # 50. Decision Rights"
+import_headings: ["Decision Rights","The End-to-End Proof Chain","Full Credit-Risk Data Spine","Final “Never Confuse” Board"]
+---
+
+Every ambiguous point needs an accountable owner.
+
+Examples:
+
+```text
+What counts as default?
+→ Credit Risk / approved policy owner
+
+How is ECL accounted?
+→ Finance / Accounting Policy
+
+Is model valid?
+→ Independent Validation
+
+How is system built?
+→ Technology
+
+What does requirement mean?
+→ BA coordinates + accountable business owner signs
+```
+
+<Rule label="PERMANENT RULE">
+```text
+Stakeholder consulted
+≠
+stakeholder accountable
+```
+
+---
+</Rule>
+
+
+## The End-to-End Proof Chain
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+```text
+RULE
+PRA / Basel / IFRS / Bank Policy
+        ↓
+INTERPRETATION
+approved meaning
+        ↓
+REQUIREMENT
+testable behaviour
+        ↓
+DATA
+source + grain + date
+        ↓
+MAPPING
+transformation + exception
+        ↓
+BUILD
+system behaviour
+        ↓
+TEST
+expected = actual
+        ↓
+CONTROL
+DQ + reconciliation
+        ↓
+OUTPUT
+ECL / RWA / MI / return
+        ↓
+SIGN-OFF
+accountable approval
+        ↓
+BAU
+repeatable operation
+```
+
+> **This chain is the profession.**
+
+---
+
+## Full Credit-Risk Data Spine
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+```text
+CUSTOMER / OBLIGOR
+        ↓
+ACCOUNT / FACILITY
+        ↓
+BALANCE / LIMIT / COLLATERAL
+        ↓
+BEHAVIOUR / FINANCIALS
+        ↓
+RATING / DEFAULT / WATCHLIST
+        ↓
+PD / LGD / EAD
+        ↓
+STAGE / ECL
+        ↓
+EXPOSURE CLASS / RWA
+        ↓
+ICAAP / STRESS / MI
+        ↓
+COREP / FINREP / PRA / PILLAR 3
+```
+
+For every layer:
+
+```text
+Source
+Grain
+Date
+Rule
+Control
+Owner
+```
+
+---
+
+## Final “Never Confuse” Board
+
+| Never confuse | Correct distinction |
+|---|---|
+| Field name vs definition | Label ≠ governed meaning |
+| Latest vs effective value | Current record ≠ reporting-date record |
+| Architecture vs lineage | Components ≠ data journey |
+| Lineage vs mapping | End-to-end path ≠ field-level specification |
+| Mapping vs requirement | How data moves ≠ why behaviour is required |
+| CDE vs any field | Material governed element ≠ ordinary attribute |
+| DQ check vs reconciliation | Field quality test ≠ agreement between views |
+| Record count vs control total | Row completeness ≠ value completeness |
+| COREP vs FINREP | Prudential ≠ financial reporting |
+| Correct total vs correct data | Aggregate can hide duplication / omissions |
+| BRD vs solution | Requirement ≠ implemented system |
+| SIT vs UAT | Technical integration ≠ business acceptance |
+| Defect vs data issue | Wrong build ≠ wrong input |
+| BA vs policy owner | Translation ≠ accountable judgement |
+| BA vs data engineer | Specification / analysis ≠ pipeline coding |
+| Agile vs no governance | Iterative build ≠ absence of controls |
+| Go-live vs completion | Release ≠ stable BAU |
+| Vendor system vs bank accountability | Outsourcing technology ≠ outsourcing responsibility |
+
+---

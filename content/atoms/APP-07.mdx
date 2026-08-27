@@ -1,0 +1,216 @@
+---
+id: APP-07
+title: "L1 / L2 Portfolio Control"
+type: mechanism
+domain: quantitative
+subdomain: unsorted
+one_screen: "Problem: Need: Move toward target without excessive trading.  Focus: → absolute weight changes.  Focus: → squared deviations."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03 — Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet.md > # 24. L1 / L2 Portfolio Control"
+import_headings: ["L1 / L2 Portfolio Control","Tracking Error Control","Strategy Validation Was Multi-Dimensional","Effective Number of Stocks","Cross-Sectional Work — What to Retain"]
+---
+
+Problem:
+
+```text
+Desired target weights
+vs
+Existing drifted weights
+```
+
+Need:
+
+> Move toward target without excessive trading.
+
+## L1
+
+<Formula math="\Large \displaystyle \min ||w-w^*||_1" />
+
+Focus:
+
+→ absolute weight changes.
+
+## L2
+
+<Formula math="\Large \displaystyle \min ||w-w^*||_2^2" />
+
+Focus:
+
+→ squared deviations.
+
+Subject to constraints such as:
+
+<Formula math="\Large \displaystyle \sum_i w_i=1" />
+
+and:
+
+<Formula math="\Large \displaystyle Turnover \le Limit" />
+
+---
+
+## Tracking Error Control
+
+Tracking Error:
+
+<Formula math="\Large \displaystyle TE=\sigma(R_{strategy}-R_{benchmark})" />
+
+Framework:
+
+<Flow>
+Relative returns
+        ↓
+EWMA volatility
+        ↓
+Forecast TE
+        ↓
+Compare with TE target
+        ↓
+Reduce/increase strategy tilt
+</Flow>
+
+Purpose:
+
+> Keep active risk within intended limits.
+
+### Difference
+
+<Flow>
+Turnover control
+→ trading cost / implementation
+
+Tracking-error control
+→ benchmark-relative risk
+</Flow>
+
+---
+
+## Strategy Validation Was Multi-Dimensional
+
+Absolute metrics:
+
+- annualised return
+- volatility
+- Sharpe
+- Sortino
+- maximum drawdown
+- time under water
+
+Relative:
+
+- excess return
+- tracking error
+- information ratio
+- relative drawdown
+- benchmark outperformance probability
+
+Factor analysis:
+
+- CAPM alpha / beta
+- multifactor coefficients
+- t-statistics
+- $R^2$
+
+Robustness:
+
+- rolling 1Y / 3Y metrics
+- calendar-year results
+- monthly results
+- rolling alpha / beta
+- drawdown periods
+
+Portfolio construction:
+
+- turnover
+- sector exposures
+- Effective Number of Stocks
+
+ 
+---
+
+## Effective Number of Stocks
+
+Diversification measure:
+
+<Formula math="\Large \displaystyle ENS= \frac{1} {\sum_i w_i^2}" />
+
+Examples:
+
+Equal 100-stock portfolio:
+
+<Formula math="\Large \displaystyle ENS=100" />
+
+Highly concentrated portfolio:
+
+<Formula math="\Large \displaystyle ENS \ll Number\ of\ holdings" />
+
+Therefore:
+
+> Stock count alone does not measure diversification.
+
+---
+
+## Cross-Sectional Work — What to Retain
+
+### This project proves
+
+Not just:
+
+> I know factor investing.
+
+It demonstrates:
+
+<Flow>
+Signal construction
++
+historical universe handling
++
+portfolio construction
++
+implementation controls
++
+risk controls
++
+backtesting
++
+robustness analysis
++
+attribution
+</Flow>
+
+### Most important distinction from NIFTY MPT
+
+**NIFTY MPT**
+
+<Flow>
+Given expected returns + covariance
+→ find allocation
+</Flow>
+
+**Cross-sectional strategy**
+
+```text
+Generate signal repeatedly through time
+→ select stocks
+→ construct portfolio
+→ trade
+→ control costs/risk
+→ validate strategy
+```
+
+### Claim boundary
+
+Do not invent a strategy return or Sharpe unless separately documented.
+
+The source material strongly supports the **framework and methodology**, but the provided summary does not give one single headline strategy-performance number.
+
+---

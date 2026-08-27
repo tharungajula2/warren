@@ -1,0 +1,134 @@
+---
+id: ML-16
+title: "Choosing the Winner"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "Do **not** automatically choose highest AUC.  Final selection should balance: --- Suppose: Do not conclude ANN automatically wins.  Ask: Is 0."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 75. Choosing the Winner"
+import_headings: ["Choosing the Winner","Complexity Must Earn Its Place","Final Model Validation","Deployment Pipeline","What to Save"]
+---
+
+Do **not** automatically choose highest AUC.
+
+Final selection should balance:
+
+| Dimension | Question |
+|---|---|
+| Performance | does it predict well? |
+| Calibration | are probabilities trustworthy? |
+| Stability | does it generalise? |
+| Interpretability | can it be explained? |
+| Complexity | worth the gain? |
+| Latency | fast enough? |
+| Data dependency | features available reliably? |
+| Governance | can it be validated? |
+| Business value | does improvement matter financially? |
+
+---
+
+## Complexity Must Earn Its Place
+
+Suppose:
+
+| Model | AUC |
+|---|---:|
+| Logistic | 0.78 |
+| Random Forest | 0.80 |
+| Boosting | 0.81 |
+| ANN | 0.811 |
+
+Do not conclude ANN automatically wins.
+
+Ask:
+
+> Is 0.001 incremental AUC worth additional infrastructure, instability and explainability cost?
+
+Sometimes yes.
+
+Often no.
+
+---
+
+## Final Model Validation
+
+Once modelling decisions are frozen:
+
+evaluate **untouched test/OOT**.
+
+Report:
+
+### Performance
+
+- primary metric
+- secondary metrics
+- confidence/variation where useful
+
+### Calibration
+
+- predicted vs observed
+- calibration curve
+
+### Stability
+
+- train vs validation vs test
+- segment performance
+
+### Business outcome
+
+- threshold
+- confusion matrix
+- cost / value
+
+---
+
+## Deployment Pipeline
+
+`Raw production data`
+→ `same validation`
+→ `same feature engineering`
+→ `same preprocessing`
+→ `model`
+→ `probability / prediction`
+→ `threshold / policy`
+→ `business action`
+
+### Best practice
+
+Bundle transformations and model into one reproducible pipeline.
+
+Training and production transformations must be identical.
+
+---
+
+## What to Save
+
+- model
+- preprocessing
+- feature list/order
+- category maps
+- imputation values
+- scalers
+- model version
+- hyperparameters
+- training population date
+- metric results
+- threshold
+- code version
+
+Prediction without versioning:
+
+→ not reproducible.
+
+---

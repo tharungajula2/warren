@@ -1,0 +1,181 @@
+---
+id: CCR-07
+title: "Pre-Settlement vs Settlement Exposure"
+type: reference
+domain: counterparty-risk
+subdomain: unsorted
+one_screen: "--- Wholesale risk must aggregate correctly: Different controls operate at different levels.  --- Possible limits: Core flow: --- But usage may include: The bank needs **total counterparty view**.  --- Possible actions: A breach is not merely a reporting issue."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03_Wholesale_Specialist_Credit_Risk_Masterclass.md > # 32. Pre-Settlement vs Settlement Exposure"
+import_headings: ["Pre-Settlement vs Settlement Exposure","Counterparty Hierarchy","Limits Framework","Limit Usage","Limit Breach","Large Exposures","Group of Connected Clients — GCC"]
+---
+
+| Pre-Settlement | Settlement |
+|---|---|
+| Replacement / market exposure before settlement | Principal / delivery exposure during settlement |
+| PFE relevant | Timing of payment legs critical |
+| Derivative CCR | FX / securities settlement |
+
+---
+
+## Counterparty Hierarchy
+
+Wholesale risk must aggregate correctly:
+
+```text
+Trade
+        ↓
+Netting Set
+        ↓
+Legal Counterparty
+        ↓
+Group of Connected Clients
+        ↓
+Sector / Country
+        ↓
+Bank Portfolio
+```
+
+Different controls operate at different levels.
+
+---
+
+## Limits Framework
+
+Possible limits:
+
+```text
+Trade limit
+Product limit
+Settlement limit
+Counterparty limit
+Group limit
+Country limit
+Sector limit
+Tenor limit
+Wrong-way-risk restriction
+```
+
+Core flow:
+
+```text
+Risk appetite
+→ Limit
+→ Usage
+→ Headroom
+→ Breach / escalation
+```
+
+---
+
+## Limit Usage
+
+```text
+Approved limit
+− Current utilized exposure
+=
+Headroom
+```
+
+But usage may include:
+
+```text
+loans
+derivatives
+SFTs
+guarantees
+settlement exposure
+```
+
+The bank needs **total counterparty view**.
+
+---
+
+## Limit Breach
+
+```text
+Usage > Limit
+```
+
+Possible actions:
+
+```text
+stop new trades
+reduce exposure
+seek collateral
+hedge
+temporary excess approval
+escalate
+```
+
+A breach is not merely a reporting issue.
+
+It is a risk decision.
+
+---
+
+## Large Exposures
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+> **Large-exposure framework controls excessive loss from one client / group of connected clients.**
+
+Core UK prudential memory:
+
+```text
+Exposure after applicable CRM
+vs
+Tier 1 Capital
+```
+
+General limit:
+
+```text
+25% of Tier 1 Capital
+```
+
+subject to the applicable rules / exemptions / special treatments.
+
+<Rule label="PERMANENT IDEA">
+```text
+Capital can be strong
+but
+one giant counterparty can still threaten the bank
+```
+
+---
+</Rule>
+
+
+## Group of Connected Clients — GCC
+
+Separate legal entities may need to be treated as one concentration where they are:
+
+```text
+controlled together
+or
+economically interdependent
+```
+
+Core question:
+
+> If one fails, are the others likely to fail too?
+
+So:
+
+```text
+Legal entity separation
+≠
+risk independence
+```
+
+---

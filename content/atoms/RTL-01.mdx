@@ -1,0 +1,115 @@
+---
+id: RTL-01
+title: "— Retail Credit Risk — Project Masterclass"
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: "**System:** End-to-end retail credit risk modelling framework **Portfolio:** LendingClub unsecured consumer term loans **Period:** 2007–2014 **Loans:** **466,285** **Raw variables:** **75** `Raw loans` → `Default target` → `Dev / Test / OOT` → `WoE + IV` → `Logistic PD` → `600-point scorecard` → `Validation + Calibration` → `PSI / CSI` → `LGD hurdle model` → `EAD` → `Lifetime PD` → `IFRS 9 staging` → `ECL + CECL` → `Basel IRB RWA` → `Portfolio monitoring` → `Dashboard + RAG` --- **PD model question:** Does the borrower default within **12 months** of origination?  --- Dataset had **no explicit default date**.  `Defaulted status` → use `last_pymnt_d` → if missing, use `last_credit_pull_d` → calculate months from `issue_d` → floor negative values at 0 → derive `default_12m` Without default timing: - cannot construct fixed 12-month performance window - cannot distinguish early vs later defaults - cannot build a defensible 12m PD target **Default date is inferred — not directly observed."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 01. — Retail Credit Risk — Project Masterclass"
+import_headings: ["— Retail Credit Risk — Project Masterclass","Data → Modelling Population"]
+---
+
+## 0. Project in One Screen
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**System:** End-to-end retail credit risk modelling framework  
+**Portfolio:** LendingClub unsecured consumer term loans  
+**Period:** 2007–2014  
+**Loans:** **466,285**  
+**Raw variables:** **75**
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+`Raw loans`
+→ `Default target`
+→ `Dev / Test / OOT`
+→ `WoE + IV`
+→ `Logistic PD`
+→ `600-point scorecard`
+→ `Validation + Calibration`
+→ `PSI / CSI`
+→ `LGD hurdle model`
+→ `EAD`
+→ `Lifetime PD`
+→ `IFRS 9 staging`
+→ `ECL + CECL`
+→ `Basel IRB RWA`
+→ `Portfolio monitoring`
+→ `Dashboard + RAG`
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Headline | Project result |
+|---|---:|
+| 12-month default rate | **3.44%** |
+| Model B OOT Gini | **0.3845** |
+| Model B OOT KS | **0.2843** |
+| Mean LGD | **93.01%** |
+| OOT portfolio EAD | **$1.827B** |
+| IFRS 9 ECL | **$278.48M** |
+| US CECL | **$327.47M** |
+| Basel IRB RWA | **$2.295B** |
+
+---
+
+## Data → Modelling Population
+
+## Raw portfolio
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Item | Value |
+|---|---:|
+| Loans | **466,285** |
+| Columns | **75** |
+| Origination vintages | **2007–2014** |
+| Asset class | **Unsecured consumer term loans** |
+| Ever defaults | **50,968 / 10.93%** |
+| 12m defaults | **16,018 / 3.44%** |
+
+### Why two default measures?
+
+| Target | Role |
+|---|---|
+| `ever_default` | LGD / recovery / lifetime analysis |
+| `default_12m` | PD model target |
+
+**PD model question:**  
+> Does the borrower default within **12 months** of origination?
+
+---
+
+## Default timing problem
+
+Dataset had **no explicit default date**.
+
+### Implemented hierarchy
+
+`Defaulted status`
+→ use `last_pymnt_d`
+→ if missing, use `last_credit_pull_d`
+→ calculate months from `issue_d`
+→ floor negative values at 0
+→ derive `default_12m`
+
+### Why this mattered
+
+Without default timing:
+
+- cannot construct fixed 12-month performance window
+- cannot distinguish early vs later defaults
+- cannot build a defensible 12m PD target
+
+### Limitation
+
+**Default date is inferred — not directly observed.**
+
+---

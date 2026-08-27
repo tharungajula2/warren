@@ -1,0 +1,155 @@
+---
+id: RTL-05
+title: "Lifetime PD"
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: "A **60-month discrete-time hazard structure** was built.  Monthly hazard: Survival: Cumulative PD: 12m cumulative PD: **3. 4352%** ≈ portfolio 12m default rate: **3."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 12. Lifetime PD"
+import_headings: ["Lifetime PD","IFRS 9 Staging","IFRS 9 ECL"]
+---
+
+A **60-month discrete-time hazard structure** was built.
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Horizon | Cumulative PD |
+|---|---:|
+| 1 month | 0.0806% |
+| 12 months | **3.4352%** |
+| 24 months | 6.3462% |
+| 36 months | 9.3156% |
+| 60 months | **10.9306%** |
+
+### Core logic
+
+Monthly hazard:
+
+<Formula math="\Large \displaystyle h_t=P(Default_t \mid survived\ to\ t)" />
+
+Survival:
+
+<Formula math="\Large \displaystyle S_t=\prod_{j=1}^{t}(1-h_j)" />
+
+Cumulative PD:
+
+<Formula math="\Large \displaystyle PD_{0,t}=1-S_t" />
+
+### Project consistency
+
+12m cumulative PD:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**3.4352%**
+
+≈ portfolio 12m default rate:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**3.4352%**
+
+60m cumulative PD:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**10.9306%**
+
+≈ portfolio ever-default rate:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**10.9307%**
+
+---
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+## IFRS 9 Staging
+
+OOT portfolio:
+
+**235,628 accounts**
+
+Target staging logic used:
+
+### Stage 3
+
+`Default status`
+or
+`90+ DPD`
+
+### Stage 2
+
+SICR when any trigger met:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+- PD ratio ≥ **2.0**
+- current 12m PD > **6%**
+- 30+ DPD backstop
+
+### Stage 1
+
+Everything else.
+
+---
+
+## Resulting portfolio
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Stage | Accounts | % | EAD |
+|---|---:|---:|---:|
+| Stage 1 | **189,633** | 80.48% | **$1.417B** |
+| Stage 2 | **26,554** | 11.27% | **$169.37M** |
+| Stage 3 | **19,441** | 8.25% | **$240.00M** |
+| **Total** | **235,628** | 100% | **$1.827B** |
+
+---
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+## IFRS 9 ECL
+
+Core structure:
+
+<Formula math="\Large \displaystyle ECL = PD \times LGD \times EAD" />
+
+extended for:
+
+- staging
+- lifetime horizon
+- discounting / term structure
+- scenario treatment
+
+## Portfolio result
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Stage | ECL | Coverage |
+|---|---:|---:|
+| Stage 1 | **$30.27M** | 2.14% |
+| Stage 2 | **$24.40M** | 14.41% |
+| Stage 3 | **$223.80M** | 93.25% |
+| **Total** | **$278.48M** | **15.25%** |
+
+### What drives the shape?
+
+Stage 3:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+only **8.25% of accounts**
+
+but contributes roughly **$224M** of the **$278M** provision.
+
+Reason:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+`Default`
+→ PD effectively 100%
+→ very high LGD
+→ very high coverage
+
+---

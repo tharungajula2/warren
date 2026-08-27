@@ -1,0 +1,190 @@
+---
+id: CCR-03
+title: "Potential Future Exposure — PFE"
+type: mechanism
+domain: counterparty-risk
+subdomain: unsorted
+one_screen: "**PFE = allowance for how much exposure could increase before the counterparty defaults / position is closed out. ** Driven by: Core idea: --- For derivatives under the Standardised Approach for Counterparty Credit Risk: where: --- Counterparty has two trades: If legally enforceable close-out netting applies: Without netting: With netting: --- **Netting set = group of transactions with one counterparty that can legally be closed out and netted together under the relevant agreement. ** Key fields: Exposure aggregation must respect the legal netting perimeter."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03_Wholesale_Specialist_Credit_Risk_Masterclass.md > # 7. Potential Future Exposure — PFE"
+import_headings: ["Potential Future Exposure — PFE","SA-CCR — Core Prudential Intuition","Netting — Why Trade-by-Trade Exposure Is Wrong","Netting Set","Close-Out Netting","Legal Enforceability"]
+---
+
+> **PFE = allowance for how much exposure could increase before the counterparty defaults / position is closed out.**
+
+Driven by:
+
+```text
+market volatility
+maturity
+product type
+direction
+netting
+collateral
+```
+
+Core idea:
+
+```text
+Today's exposure
++
+possible future movement
+=
+future counterparty risk
+```
+
+---
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+## SA-CCR — Core Prudential Intuition
+
+For derivatives under the Standardised Approach for Counterparty Credit Risk:
+
+```text
+Exposure Value
+=
+α × (RC + PFE)
+```
+
+where:
+
+```text
+RC
+→ Replacement Cost
+
+PFE
+→ Potential Future Exposure
+
+α
+→ regulatory multiplier
+```
+
+<Flow>
+```text
+What is owed today?
++
+What could become owed before default?
+→ regulatory counterparty exposure
+```
+
+---
+</Flow>
+
+
+## Netting — Why Trade-by-Trade Exposure Is Wrong
+
+Counterparty has two trades:
+
+```text
+Trade A
+positive to bank
+
+Trade B
+negative to bank
+```
+
+If legally enforceable close-out netting applies:
+
+```text
+offset values
+→ one net claim
+```
+
+Without netting:
+
+```text
+gross exposure
+```
+
+With netting:
+
+```text
+net exposure
+```
+
+<Rule label="PERMANENT RULE">
+```text
+Gross positive MTM
+≠
+net counterparty exposure
+```
+
+---
+</Rule>
+
+
+## Netting Set
+
+> **Netting set = group of transactions with one counterparty that can legally be closed out and netted together under the relevant agreement.**
+
+Key fields:
+
+```text
+counterparty
+legal entity
+master agreement
+netting-set ID
+currency / product attributes
+collateral agreement
+```
+
+Exposure aggregation must respect the legal netting perimeter.
+
+---
+
+## Close-Out Netting
+
+If counterparty defaults:
+
+```text
+Terminate covered trades
+        ↓
+Value each trade
+        ↓
+Offset receivables and payables
+        ↓
+One net amount owed
+```
+
+This can materially reduce loss.
+
+But only if enforceable.
+
+---
+
+## Legal Enforceability
+
+Netting / collateral benefit depends on legal certainty.
+
+Need:
+
+```text
+valid master agreement
+eligible jurisdiction
+legal opinion
+correct entity
+correct product scope
+enforceable close-out
+```
+
+<Rule label="PERMANENT RULE">
+```text
+Economic offset
+≠
+prudentially / legally recognized netting
+```
+
+---
+</Rule>
+
+

@@ -1,0 +1,146 @@
+---
+id: RTL-04
+title: "LGD — The Recovery Problem"
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: "LGD base: **50,968 defaulted loans** Portfolio recovery behaviour: Recovery distribution had a large point mass at **zero recovery**.  One ordinary regression would have to model two different questions simultaneously: 1.  **Will anything be recovered?"
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 9. LGD — The Recovery Problem"
+import_headings: ["LGD — The Recovery Problem","Two-Stage LGD Hurdle Model","EAD"]
+---
+
+LGD base:
+
+**50,968 defaulted loans**
+
+Portfolio recovery behaviour:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Metric | Result |
+|---|---:|
+| Mean recovery | **6.99%** |
+| Mean LGD | **93.01%** |
+| Median LGD | **100%** |
+| No post-default recovery / LGD = 100% | **52.18%** |
+| Has recovery | **47.82%** |
+
+### Core modelling problem
+
+Recovery distribution had a large point mass at **zero recovery**.
+
+One ordinary regression would have to model two different questions simultaneously:
+
+1. **Will anything be recovered?**
+2. **If yes, how much?**
+
+---
+
+## Two-Stage LGD Hurdle Model
+
+## Stage 1 — Recovery incidence
+
+**Logistic Regression**
+
+<Formula math="\Large \displaystyle P(\text{recovery}>0)" />
+
+Answers:
+
+> Will the account recover anything?
+
+---
+
+## Stage 2 — Recovery magnitude
+
+**Gradient Boosting Regressor**
+
+trained only on loans with positive recovery.
+
+Answers:
+
+> Conditional on recovering something, how much?
+
+---
+
+## Combined recovery
+
+<Formula math="\Large \displaystyle Expected\ Recovery = P(Recovery) \times RR_{positive}" />
+
+<Formula math="\Large \displaystyle LGD = 1 - Expected\ Recovery" />
+
+### Why this architecture?
+
+Because:
+
+**0 recovery**  
+and  
+**positive recovery magnitude**
+
+are structurally different behaviours.
+
+### Result
+
+Mean LGD:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**93.01%**
+
+High — but consistent with the observed unsecured defaulted-loan recovery profile.
+
+---
+
+## EAD
+
+For actual LendingClub term loans:
+
+<Formula math="\Large \displaystyle EAD = \max(Funded\ Amount - Principal\ Repaid,\ 0)" />
+
+### Defaulted portfolio
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Metric | Value |
+|---|---:|
+| Mean EAD | **$10,781.56** |
+| Median EAD | **$9,141.37** |
+| Mean EAD / funded amount | **71.93%** |
+
+### Why no empirical CCF?
+
+These are **fixed-term loans**.
+
+There is no undrawn revolving commitment to convert.
+
+---
+
+## CCF — Separate Synthetic Demonstration
+
+A **5,000-account synthetic revolving portfolio** was built to demonstrate CCF methodology.
+
+<Formula math="\Large \displaystyle EAD = Drawn + CCF \times Undrawn" />
+
+Synthetic mean realised CCF:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**42.88%**
+
+### Interview-safe distinction
+
+**Actual project data**
+→ term-loan EAD from outstanding principal
+
+**Synthetic demo**
+→ revolving-credit CCF regression
+
+Never merge the two claims.
+
+---

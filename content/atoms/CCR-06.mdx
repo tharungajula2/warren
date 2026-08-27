@@ -1,0 +1,157 @@
+---
+id: CCR-06
+title: "Repo / Securities Financing Transactions — SFTs"
+type: reference
+domain: counterparty-risk
+subdomain: unsorted
+one_screen: "Repo economic flow: Main risks: --- The difference is haircut protection.  Higher haircut: Haircuts may rise in stress: --- --- Once asset is pledged: This creates a direct connection to liquidity: One asset can connect: --- **Settlement risk = one party delivers cash / asset but does not receive the other leg because counterparty fails during settlement. ** Typical in: Distinct from longer-term CCR."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03_Wholesale_Specialist_Credit_Risk_Masterclass.md > # 26. Repo / Securities Financing Transactions — SFTs"
+import_headings: ["Repo / Securities Financing Transactions — SFTs","Repo Haircut","Repo vs Derivative Collateral","Encumbrance","Settlement Risk","Herstatt / Principal Risk"]
+---
+
+Repo economic flow:
+
+```text
+Cash lender
+→ provides cash
+
+Cash borrower
+→ provides securities collateral
+
+Later:
+cash + repo interest returned
+securities returned
+```
+
+Main risks:
+
+```text
+counterparty
+collateral value
+haircut
+margin
+liquidity
+settlement
+encumbrance
+```
+
+---
+
+## Repo Haircut
+
+```text
+Collateral value
+>
+cash lent
+```
+
+The difference is haircut protection.
+
+Higher haircut:
+
+```text
+more collateral cushion
+```
+
+Haircuts may rise in stress:
+
+```text
+funding capacity ↓
+liquidity pressure ↑
+```
+
+---
+
+## Repo vs Derivative Collateral
+
+| Repo | Derivative |
+|---|---|
+| Collateral is central to secured funding structure | Collateral covers MTM / future exposure |
+| Security exchanged for cash | Margin posted against changing value |
+| GMRA common | ISDA + CSA common |
+| Haircut key | VM / IM + haircut key |
+
+---
+
+## Encumbrance
+
+Once asset is pledged:
+
+```text
+encumbered
+→ not freely available elsewhere
+```
+
+This creates a direct connection to liquidity:
+
+```text
+Repo / margin
+→ collateral encumbered
+→ usable liquidity buffer ↓
+```
+
+One asset can connect:
+
+```text
+CCR
++
+liquidity
++
+collateral management
+```
+
+---
+
+## Settlement Risk
+
+> **Settlement risk = one party delivers cash / asset but does not receive the other leg because counterparty fails during settlement.**
+
+Typical in:
+
+```text
+FX
+securities settlement
+```
+
+Distinct from longer-term CCR.
+
+Memory:
+
+```text
+CCR
+→ contract exposure over life
+
+Settlement risk
+→ failure during exchange of settlement legs
+```
+
+---
+
+## Herstatt / Principal Risk
+
+Classic FX risk:
+
+```text
+Currency A paid
+        ↓
+Counterparty fails
+        ↓
+Currency B never received
+```
+
+The full principal can be at risk.
+
+This is why payment-versus-payment mechanisms matter.
+
+---

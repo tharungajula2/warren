@@ -1,0 +1,153 @@
+---
+id: ML-09
+title: "Controlling Tree Complexity"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "Important parameters: Smaller tree: → more bias → less variance Larger tree: → less bias → more variance --- Core idea: **Combine weak / unstable models into a stronger predictor. ** Two major families: Models built **independently / parallel** Goal: → reduce variance Models built **sequentially** Goal: → correct previous errors --- **Bootstrap Aggregating** Process: `Original Train` → sample with replacement → fit Model 1 → another bootstrap → Model 2 → ...  Predictions: Regression: Classification: → average probabilities / vote."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 35. Controlling Tree Complexity"
+import_headings: ["Controlling Tree Complexity","Ensemble Learning","Bagging","Random Forest","Random Forest Characteristics"]
+---
+
+Important parameters:
+
+| Parameter | Controls |
+|---|---|
+| `max_depth` | tree depth |
+| `min_samples_split` | minimum samples to split |
+| `min_samples_leaf` | leaf size |
+| `max_leaf_nodes` | total leaves |
+| `max_features` | variables considered |
+| pruning alpha | post-growth pruning |
+
+Smaller tree:
+
+→ more bias  
+→ less variance
+
+Larger tree:
+
+→ less bias  
+→ more variance
+
+---
+
+## Ensemble Learning
+
+Core idea:
+
+> **Combine weak / unstable models into a stronger predictor.**
+
+Two major families:
+
+## Bagging
+
+Models built **independently / parallel**
+
+Goal:
+
+→ reduce variance
+
+## Boosting
+
+Models built **sequentially**
+
+Goal:
+
+→ correct previous errors
+
+---
+
+## Bagging
+
+**Bootstrap Aggregating**
+
+Process:
+
+`Original Train`
+→ sample with replacement
+→ fit Model 1
+
+→ another bootstrap
+→ Model 2
+
+→ ...
+
+Predictions:
+
+Regression:
+
+<Formula math="\Large \displaystyle \hat y= \frac{1}{B}\sum_b \hat y_b" />
+
+Classification:
+
+→ average probabilities / vote.
+
+### Why it works
+
+Individual trees:
+
+**high variance**
+
+Averaging many:
+
+→ variance falls.
+
+---
+
+## Random Forest
+
+Random Forest =
+
+**Bagging + random feature subsets**
+
+At each tree split:
+
+only a random subset of predictors is considered.
+
+### Why random features?
+
+Without feature randomness:
+
+strong predictor dominates every tree  
+→ trees become highly correlated  
+→ averaging helps less
+
+Random subsets:
+
+→ decorrelate trees  
+→ stronger ensemble.
+
+---
+
+## Random Forest Characteristics
+
+### Strengths
+
+- excellent tabular baseline
+- nonlinearities
+- interactions
+- little preprocessing
+- robust
+- handles many predictors
+
+### Weaknesses
+
+- less interpretable
+- large models
+- probability calibration may need checking
+- poor extrapolation in regression
+- often beaten by tuned boosting on structured tabular data
+
+---

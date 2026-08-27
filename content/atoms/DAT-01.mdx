@@ -1,0 +1,99 @@
+---
+id: DAT-01
+title: "— Credit Risk Data, Reporting & Change — End-to-End Masterclass"
+type: reference
+domain: risk-data
+subdomain: unsorted
+one_screen: "**UK banking lens:** BCBS 239 + PRA regulatory reporting + credit-risk data lineage + controlled change delivery.  **Master mental model** **Permanent rule:** **A correct number that cannot be traced, reconciled, explained, controlled and reproduced is not a defensible bank number. ** --- Underneath every arrow: That is the real data job."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02_Credit_Risk_Data_Reporting_Change_Masterclass.md > # 02. — Credit Risk Data, Reporting & Change — End-to-End Masterclass"
+import_headings: ["— Credit Risk Data, Reporting & Change — End-to-End Masterclass","The Credit-Risk Data Machine — One Screen","Why Data Governance Matters"]
+---
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+> **UK banking lens:** BCBS 239 + PRA regulatory reporting + credit-risk data lineage + controlled change delivery.
+>
+> **Master mental model**
+>
+> ```text
+> RULE
+> → BUSINESS MEANING
+> → SOURCE DATA
+> → TRANSFORMATION
+> → CALCULATION
+> → CONTROL
+> → REPORT
+> → TEST EVIDENCE
+> → SIGN-OFF
+> → BAU
+> ```
+>
+> **Permanent rule:**  
+> **A correct number that cannot be traced, reconciled, explained, controlled and reproduced is not a defensible bank number.**
+
+---
+
+## The Credit-Risk Data Machine — One Screen
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+```text
+CUSTOMER / OBLIGOR / GROUP
+        ↓
+ACCOUNT / FACILITY / PRODUCT
+        ↓
+TRANSACTION / BALANCE / LIMIT / COLLATERAL
+        ↓
+RATING / SCORE / DEFAULT / WATCHLIST
+        ↓
+PD / LGD / EAD
+        ↓
+IFRS 9 ECL / RWA / STRESS / MI
+        ↓
+REGULATORY + FINANCE + RISK REPORTING
+```
+
+Underneath every arrow:
+
+```text
+Source
+→ Definition
+→ Grain
+→ Date
+→ Transformation
+→ Control
+→ Owner
+```
+
+That is the real data job.
+
+---
+
+## Why Data Governance Matters
+
+The bank must be able to answer:
+
+| Question | What must exist |
+|---|---|
+| Where did this number come from? | Lineage |
+| What exactly does this field mean? | Business definition / metadata |
+| Which system is authoritative? | Golden / authoritative source |
+| At what level does the row exist? | Grain |
+| Which value was valid on reporting date? | Effective dating |
+| What happened between source and output? | Transformation rules |
+| How do we know nothing was lost? | Controls + reconciliation |
+| Who owns the meaning / quality? | Data ownership |
+| Can we reproduce last quarter? | Version + historical traceability |
+
+> **Bank data is not just values. It is values + meaning + time + ownership + evidence.**
+
+---

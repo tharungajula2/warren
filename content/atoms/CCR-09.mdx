@@ -1,0 +1,131 @@
+---
+id: CCR-09
+title: "Default — Wholesale Workflow"
+type: reference
+domain: counterparty-risk
+subdomain: unsorted
+one_screen: "This differs from retail collections.  --- Conceptually: Legal documentation and valuation determine the amount.  --- For loans / large wholesale exposures: Objective: not: --- Same obligor can produce: because ranking differs."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03_Wholesale_Specialist_Credit_Risk_Masterclass.md > # 46. Default — Wholesale Workflow"
+import_headings: ["Default — Wholesale Workflow","Close-Out Amount","Workout / Restructuring","Recovery Waterfall","Governance — Who Owns What"]
+---
+
+```text
+Counterparty default / failure
+        ↓
+Stop / restrict trading
+        ↓
+Determine legal default event
+        ↓
+Close-out covered transactions
+        ↓
+Net positions
+        ↓
+Apply collateral
+        ↓
+Value residual claim
+        ↓
+Recovery / insolvency process
+```
+
+This differs from retail collections.
+
+---
+
+## Close-Out Amount
+
+Conceptually:
+
+```text
+Net replacement value
+− usable collateral
+± contractual adjustments
+=
+Residual close-out claim
+```
+
+Legal documentation and valuation determine the amount.
+
+---
+
+## Workout / Restructuring
+
+For loans / large wholesale exposures:
+
+```text
+amend tenor
+waive / reset covenant
+reduce debt
+asset sale
+equity injection
+debt-for-equity
+new collateral
+refinance
+```
+
+Objective:
+
+```text
+maximize economic recovery
+```
+
+not:
+
+```text
+delay recognition of failure
+```
+
+---
+
+## Recovery Waterfall
+
+```text
+Secured / priority claims
+        ↓
+Senior unsecured
+        ↓
+Subordinated
+        ↓
+Equity
+```
+
+Same obligor can produce:
+
+```text
+same PD
++
+different LGD
+```
+
+because ranking differs.
+
+---
+
+## Governance — Who Owns What
+
+| Team | Main role |
+|---|---|
+| Front Office / Markets | Originate / trade within limits |
+| Counterparty Credit Risk | Assess counterparties + set / monitor limits |
+| Market Risk | Price / market-movement risk |
+| Collateral / Margin Operations | Margin calls + collateral movement |
+| Legal | Netting / collateral enforceability |
+| Treasury | Funding / liquidity / repo |
+| Model Risk / Validation | Challenge CCR / CVA models |
+| Finance | Valuation / accounting |
+| Regulatory Reporting | CCR / CVA / large-exposure returns |
+| Technology / Data | Trade + agreement + exposure data |
+| Credit Committee | Material credit decisions |
+| Workout | Distressed / defaulted counterparties |
+
+---

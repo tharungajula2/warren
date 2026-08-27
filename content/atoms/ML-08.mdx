@@ -1,0 +1,198 @@
+---
+id: ML-08
+title: "Regularisation"
+type: concept
+domain: quantitative
+subdomain: unsorted
+one_screen: "Controls model complexity.  General objective: --- Effect: → shrinks coefficients → usually retains all predictors Best when: - many correlated variables - stability needed --- Effect: → some coefficients become exactly zero Useful for: - sparse model - embedded feature selection --- Useful when: - many predictors - correlated groups - some sparsity desired --- **High bias** - train poor - validation poor Need: → more flexible model → better features → less regularisation --- **High variance** - train excellent - validation poor Need: → simpler model → more data → stronger regularisation → pruning → bagging → early stopping --- Compare performance as training data increases.  Train poor + Validation poor → **underfitting** Train strong + Validation weak, gap remains → **overfitting** Both improve and converge → healthy Validation still improving strongly with more data → more data may help --- Tree recursively asks: `Feature` → `Split` → `Branch` → `Leaf prediction` Example: `Income < threshold?"
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 29. Regularisation"
+import_headings: ["Regularisation","Bias–Variance Trade-off","Learning Curves","Decision Tree","How Trees Choose Splits","Why Trees Are Powerful"]
+---
+
+Controls model complexity.
+
+General objective:
+
+<Formula math="\Large \displaystyle Loss+\lambda Penalty" />
+
+---
+
+## Ridge — L2
+
+<Formula math="\Large \displaystyle Penalty= \lambda\sum\beta_j^2" />
+
+Effect:
+
+→ shrinks coefficients  
+→ usually retains all predictors
+
+Best when:
+
+- many correlated variables
+- stability needed
+
+---
+
+## Lasso — L1
+
+<Formula math="\Large \displaystyle Penalty= \lambda\sum|\beta_j|" />
+
+Effect:
+
+→ some coefficients become exactly zero
+
+Useful for:
+
+- sparse model
+- embedded feature selection
+
+---
+
+## Elastic Net
+
+<Formula math="\Large \displaystyle L1+L2" />
+
+Useful when:
+
+- many predictors
+- correlated groups
+- some sparsity desired
+
+---
+
+## Bias–Variance Trade-off
+
+## Underfitting
+
+**High bias**
+
+- train poor
+- validation poor
+
+Need:
+
+→ more flexible model  
+→ better features  
+→ less regularisation
+
+---
+
+## Overfitting
+
+**High variance**
+
+- train excellent
+- validation poor
+
+Need:
+
+→ simpler model  
+→ more data  
+→ stronger regularisation  
+→ pruning  
+→ bagging  
+→ early stopping
+
+---
+
+## Learning Curves
+
+Compare performance as training data increases.
+
+### Pattern
+
+Train poor + Validation poor
+
+→ **underfitting**
+
+Train strong + Validation weak, gap remains
+
+→ **overfitting**
+
+Both improve and converge
+
+→ healthy
+
+Validation still improving strongly with more data
+
+→ more data may help
+
+---
+
+## Decision Tree
+
+Tree recursively asks:
+
+`Feature`
+→ `Split`
+→ `Branch`
+→ `Leaf prediction`
+
+Example:
+
+`Income < threshold?`
+→ yes/no
+→ another split
+→ final prediction
+
+---
+
+## How Trees Choose Splits
+
+## Classification — Gini Impurity
+
+<Formula math="\Large \displaystyle Gini= 1-\sum_k p_k^2" />
+
+## Entropy
+
+<Formula math="\Large \displaystyle Entropy= -\sum_k p_k\log p_k" />
+
+Best split:
+
+→ greatest impurity reduction.
+
+---
+
+## Regression
+
+Often minimise:
+
+**MSE / variance within children**
+
+---
+
+## Why Trees Are Powerful
+
+Naturally capture:
+
+- non-linearity
+- interactions
+- thresholds
+- mixed feature effects
+
+Usually no need for:
+
+- scaling
+- polynomial terms
+- linearity assumptions
+
+### Weakness
+
+Single trees have **high variance**.
+
+Small data change:
+
+→ very different tree.
+
+---

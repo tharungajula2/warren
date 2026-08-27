@@ -1,0 +1,94 @@
+---
+id: ML-04
+title: "Categorical Encoding"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "--- Needed when model depends on **distance or coefficient optimisation**.  Common: --- Before sophisticated modelling, establish something deliberately simple.  - mean prediction - median prediction - simple Linear Regression - majority class - observed positive rate - Logistic Regression **Does complexity produce meaningful out-of-sample improvement?"
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 9. Categorical Encoding"
+import_headings: ["Categorical Encoding","Scaling","The Baseline","Statistical Modelling vs Machine Learning"]
+---
+
+| Method | Best use | Risk |
+|---|---|---|
+| One-hot | low/moderate cardinality | dimensional explosion |
+| Ordinal encoding | genuinely ordered categories | false ordering otherwise |
+| Frequency | high cardinality | weak target relationship |
+| Target encoding | strong high-cardinality option | leakage |
+| WoE | binary risk modelling | must fit train only |
+
+---
+
+## Scaling
+
+Needed when model depends on **distance or coefficient optimisation**.
+
+| Model | Scaling? |
+|---|---|
+| Linear Regression | recommended |
+| Logistic Regression | recommended, especially regularisation |
+| KNN | **Yes** |
+| SVM | **Yes** |
+| ANN | **Yes** |
+| PCA | **Yes** |
+| Decision Tree | No |
+| Random Forest | No |
+| Gradient Boosted Trees | No |
+
+Common:
+
+<Formula math="\Large \displaystyle z = \frac{x-\mu}{\sigma}" />
+
+---
+
+## The Baseline
+
+Before sophisticated modelling, establish something deliberately simple.
+
+## Regression
+
+- mean prediction
+- median prediction
+- simple Linear Regression
+
+## Classification
+
+- majority class
+- observed positive rate
+- Logistic Regression
+
+### Baseline question
+
+> **Does complexity produce meaningful out-of-sample improvement?**
+
+Without a baseline, “good performance” has no context.
+
+---
+
+## Statistical Modelling vs Machine Learning
+
+| Statistical modelling | Predictive ML |
+|---|---|
+| Explain relationships | Predict accurately |
+| Coefficient inference | Generalisation |
+| Assumptions important | Out-of-sample performance dominant |
+| p-values / CI | CV / validation |
+| parsimonious model | complexity acceptable |
+| causal questions sometimes | usually predictive |
+
+They overlap.
+
+**Linear and Logistic Regression can be both statistical models and ML algorithms.**
+
+---

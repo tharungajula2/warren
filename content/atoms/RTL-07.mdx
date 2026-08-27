@@ -1,0 +1,111 @@
+---
+id: RTL-07
+title: "Portfolio Monitoring"
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: "Implemented monitoring: `Origination cohort` → months on book → cumulative default behaviour Useful for: - seasoning - vintage comparison - identifying weaker origination periods --- Implemented from the available snapshot structure.  **Not a true monthly account-level roll matrix. ** --- Built: **Origination rating grade** → **eventual outcome** Not: **Month t grade** → **Month t+1 grade** --- Pipeline outputs also feed: Automated reporting of project risk metrics."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 20. Portfolio Monitoring"
+import_headings: ["Portfolio Monitoring","Dashboard + AI Layer","The Project as a Risk System"]
+---
+
+Implemented monitoring:
+
+### Vintage / MOB curves
+
+`Origination cohort`
+→ months on book
+→ cumulative default behaviour
+
+Useful for:
+
+- seasoning
+- vintage comparison
+- identifying weaker origination periods
+
+---
+
+### Delinquency roll-rate proxy
+
+Implemented from the available snapshot structure.
+
+**Not a true monthly account-level roll matrix.**
+
+---
+
+### Transition matrix
+
+Built:
+
+**Origination rating grade**
+→ **eventual outcome**
+
+Not:
+
+**Month t grade**
+→ **Month t+1 grade**
+
+---
+
+## Dashboard + AI Layer
+
+Pipeline outputs also feed:
+
+### HTML risk dashboard
+
+Automated reporting of project risk metrics.
+
+### Offline vector index / RAG
+
+Project artefacts:
+
+→ embeddings  
+→ semantic retrieval  
+→ risk analyst interface
+
+Live LLM inference requires:
+
+`GEMINI_API_KEY`
+
+### Position correctly
+
+These are the **consumption/reporting layer** of the risk system.
+
+They do not replace the underlying models.
+
+---
+
+## The Project as a Risk System
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Layer | Project component |
+|---|---|
+| Data | Cleaning + target engineering |
+| Development | Train / Test / OOT |
+| PD | WoE + Logistic Regression |
+| Decisioning | 600-point scorecard |
+| Validation | AUC / Gini / KS / Brier / HL |
+| Monitoring | PSI / CSI |
+| LGD | Two-stage hurdle model |
+| EAD | Outstanding principal |
+| Lifetime risk | Hazard term structure |
+| Accounting | IFRS 9 staging + ECL |
+| Comparison | US CECL |
+| Capital | Basel IRB RWA |
+| Stress | Downturn LGD |
+| Portfolio | Vintage + transition analytics |
+| Reporting | HTML dashboard |
+| AI | RAG analyst |
+
+---

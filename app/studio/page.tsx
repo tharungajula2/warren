@@ -17,6 +17,12 @@ interface PrereqSuggestion {
   confidence: string;
 }
 
+interface SubdomainSuggestion {
+  proposedSubdomain: string;
+  confidenceScore: number;
+  matchedKeywords: string;
+}
+
 export default function StudioPage() {
   if (process.env.NODE_ENV === "production") {
     notFound();
@@ -25,14 +31,25 @@ export default function StudioPage() {
   const manifest = getCorpusManifest();
   const { atoms, domainTree, lintWarnings } = manifest;
 
-  // Load prerequisite suggestions if file exists
+  // Load prerequisite suggestions
   let prereqSuggestions: Record<string, PrereqSuggestion[]> = {};
-  const suggestionsPath = path.join(process.cwd(), "public", "prereq-suggestions.json");
-  if (fs.existsSync(suggestionsPath)) {
+  const prereqPath = path.join(process.cwd(), "public", "prereq-suggestions.json");
+  if (fs.existsSync(prereqPath)) {
     try {
-      prereqSuggestions = JSON.parse(fs.readFileSync(suggestionsPath, "utf-8"));
+      prereqSuggestions = JSON.parse(fs.readFileSync(prereqPath, "utf-8"));
     } catch (e) {
       console.error("Failed to parse prereq-suggestions.json", e);
+    }
+  }
+
+  // Load subdomain suggestions
+  let subdomainSuggestions: Record<string, SubdomainSuggestion> = {};
+  const subPath = path.join(process.cwd(), "public", "subdomain-suggestions.json");
+  if (fs.existsSync(subPath)) {
+    try {
+      subdomainSuggestions = JSON.parse(fs.readFileSync(subPath, "utf-8"));
+    } catch (e) {
+      console.error("Failed to parse subdomain-suggestions.json", e);
     }
   }
 
@@ -67,27 +84,22 @@ export default function StudioPage() {
       if (hasSources) score++;
       if (atom.reading_minutes > 0) score++;
 
+      const isPersonal = /\b(my|I\s|our project|this project|in my)\b/i.test(atom.one_screen || "");
+
       return {
         atom,
         hasOneScreen,
         hasPrereqs,
         hasSources,
+        isPersonal,
         score,
-        suggestions: prereqSuggestions[atom.id] || [],
+        prereqSugs: prereqSuggestions[atom.id] || [],
+        subSug: subdomainSuggestions[atom.id] || null,
       };
     });
 
-  // Sort drafts by score descending then import_source / ID
+  // Sort drafts by score descending then ID
   draftAtoms.sort((a, b) => b.score - a.score || a.atom.id.localeCompare(b.atom.id));
-
-  // Currentness breakdown
-  const currentnessCounts = {
-    fresh: allAtomsList.filter((a) => a.currentness === "fresh").length,
-    ageing: allAtomsList.filter((a) => a.currentness === "ageing").length,
-    stale: allAtomsList.filter((a) => a.currentness === "stale").length,
-    future: allAtomsList.filter((a) => a.currentness === "future").length,
-    durable: allAtomsList.filter((a) => a.currentness === "durable").length,
-  };
 
   // Domain counts
   const domainCounts = domainTree
@@ -116,11 +128,11 @@ export default function StudioPage() {
         </div>
 
         <h1 className="text-2xl font-bold text-[#E6E8EB] font-sans tracking-tight">
-          Corpus Diagnostics, Draft Importer & Review Queue
+          Corpus Diagnostics, Draft Review Queue & Subdomain Assigner
         </h1>
       </div>
 
-      {/* Metrics Summary Bar (Part 2 Summary) */}
+      {/* Metrics Summary Bar */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 font-mono text-xs">
         {/* Drafts Summary */}
         <div className="border border-[#C9711F] bg-[#2A1D10]/30 p-4 rounded-[3px] space-y-1">
@@ -169,14 +181,14 @@ export default function StudioPage() {
         </div>
       </div>
 
-      {/* PART 2: DRAFT ATOMS REVIEW QUEUE */}
+      {/* DRAFT ATOMS REVIEW QUEUE */}
       <section className="space-y-4 font-mono text-xs">
         <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
           <div className="flex items-center gap-2">
             <h2 className="uppercase tracking-wider text-[#C9711F] font-bold">
               DRAFT REVIEW QUEUE ({draftAtoms.length})
             </h2>
-            <span className="text-[#6B747E] text-[10px]">SORTED BY COMPLETENESS SCORE DESCENDING</span>
+            <span className="text-[#6B747E] text-[10px]">SORTED BY COMPLETENESS SCORE</span>
           </div>
           <span className="text-[#9AA3AD] text-[11px]">
             {draftsMissingPrereqs} DRAFTS NEED PREREQUISITES
@@ -189,7 +201,7 @@ export default function StudioPage() {
           </div>
         ) : (
           <div className="space-y-3">
-            {draftAtoms.map(({ atom, hasOneScreen, hasPrereqs, hasSources, score, suggestions }) => (
+            {draftAtoms.map(({ atom, hasOneScreen, hasPrereqs, hasSources, isPersonal, score, prereqSugs, subSug }) => (
               <div
                 key={atom.id}
                 className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] space-y-3 hover:border-[#333940] transition-colors"
@@ -201,6 +213,11 @@ export default function StudioPage() {
                     <span className="bg-[#C9711F]/10 border border-[#C9711F]/30 text-[#C9711F] px-2 py-0.5 rounded-[3px] font-bold text-[10px]">
                       SCORE: {score}/6
                     </span>
+                    {isPersonal && (
+                      <span className="bg-[#A6503C]/20 border border-[#A6503C] text-[#A6503C] px-2 py-0.5 rounded-[3px] font-bold text-[10px]">
+                        PERSONAL ⚠️
+                      </span>
+                    )}
                     {atom.import_source && (
                       <span className="text-[#6B747E] text-[10px] truncate max-w-[280px]" title={atom.import_source}>
                         FROM: {atom.import_source}
@@ -241,93 +258,77 @@ export default function StudioPage() {
                   </div>
                 </div>
 
-                {/* Prerequisite Candidate Suggestions (Part 3) */}
-                {!hasPrereqs && suggestions.length > 0 && (
-                  <div className="border border-[#315F7D] bg-[#315F7D]/10 p-3 rounded-[3px] space-y-1 font-mono text-[11px]">
-                    <div className="text-[#315F7D] font-bold uppercase text-[10px]">
-                      💡 AUTOMATED PREREQUISITE SUGGESTIONS ({suggestions.length}):
+                {/* Subdomain & Prerequisite Suggestions */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                  {/* Proposed Subdomain */}
+                  {subSug && (
+                    <div className="border border-[#7D5A31] bg-[#7D5A31]/10 p-2.5 rounded-[3px] font-mono text-[11px]">
+                      <span className="text-[#C9711F] font-bold uppercase text-[10px]">
+                        PROPOSED SUBDOMAIN:
+                      </span>{" "}
+                      <code className="text-[#E6E8EB] font-bold">{subSug.proposedSubdomain}</code>
+                      <span className="text-[#6B747E] ml-2 text-[10px]">({subSug.matchedKeywords})</span>
                     </div>
-                    <div className="flex flex-wrap gap-2">
-                      {suggestions.map((sug, i) => (
-                        <span
-                          key={i}
-                          className="bg-[#191C20] border border-[#315F7D] text-[#E6E8EB] px-2 py-0.5 rounded-[3px]"
-                        >
-                          <strong className="text-[#C9711F] mr-1">{sug.prereqId}</strong>
-                          <span className="text-[#6B747E]">({sug.evidence})</span>
+                  )}
+
+                  {/* Prerequisite Candidates */}
+                  {!hasPrereqs && prereqSugs.length > 0 && (
+                    <div className="border border-[#315F7D] bg-[#315F7D]/10 p-2.5 rounded-[3px] font-mono text-[11px]">
+                      <span className="text-[#315F7D] font-bold uppercase text-[10px]">
+                        PREREQ CANDIDATES ({prereqSugs.length}):
+                      </span>{" "}
+                      {prereqSugs.map((sug, i) => (
+                        <span key={i} className="inline-block bg-[#191C20] text-[#C9711F] font-bold px-1.5 py-0.5 rounded-[3px] mr-1">
+                          {sug.prereqId}
                         </span>
                       ))}
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             ))}
           </div>
         )}
       </section>
 
-      {/* Lower Grid: Diagnostics */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Compiler Lint Warnings */}
-        <section className="space-y-3 font-mono text-xs">
-          <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
-            <h2 className="uppercase tracking-wider text-[#C9711F] font-bold">
-              COMPILER LINT REPORT ({lintWarnings.length})
-            </h2>
-            <span className="text-[#6B747E]">PASSED BUILD</span>
-          </div>
+      {/* Diagnostics */}
+      <section className="space-y-3 font-mono text-xs">
+        <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
+          <h2 className="uppercase tracking-wider text-[#C9711F] font-bold">
+            COMPILER LINT REPORT ({lintWarnings.length})
+          </h2>
+          <span className="text-[#6B747E]">PASSED BUILD</span>
+        </div>
 
-          <div className="divide-y divide-[#23272D] border border-[#23272D] bg-[#121417] rounded-[3px] max-h-[480px] overflow-y-auto">
-            {lintWarnings.length === 0 ? (
-              <div className="p-4 text-center text-[#3E7D5A]">
-                ✓ Zero lint warnings detected across corpus.
-              </div>
-            ) : (
-              lintWarnings.map((warning, idx) => (
-                <div key={idx} className="p-3 space-y-1 hover:bg-[#191C20] transition-colors">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#C9711F] font-bold text-[10px] border border-[#C9711F]/40 px-1.5 py-0.2 rounded-[3px] bg-[#2A1D10]">
-                      {warning.rule}
-                    </span>
-                    {warning.atomId && (
-                      <Link
-                        href={`/atom/${warning.atomId}`}
-                        className="text-[#E6E8EB] hover:underline font-bold"
-                      >
-                        {warning.atomId} →
-                      </Link>
-                    )}
-                  </div>
-                  <p className="text-[#9AA3AD] font-sans text-xs">
-                    {warning.message}
-                  </p>
+        <div className="divide-y divide-[#23272D] border border-[#23272D] bg-[#121417] rounded-[3px] max-h-[400px] overflow-y-auto">
+          {lintWarnings.length === 0 ? (
+            <div className="p-4 text-center text-[#3E7D5A]">
+              ✓ Zero lint warnings detected across corpus.
+            </div>
+          ) : (
+            lintWarnings.map((warning, idx) => (
+              <div key={idx} className="p-3 space-y-1 hover:bg-[#191C20] transition-colors">
+                <div className="flex items-center justify-between">
+                  <span className="text-[#C9711F] font-bold text-[10px] border border-[#C9711F]/40 px-1.5 py-0.2 rounded-[3px] bg-[#2A1D10]">
+                    {warning.rule}
+                  </span>
+                  {warning.atomId && (
+                    <Link
+                      href={`/atom/${warning.atomId}`}
+                      className="text-[#E6E8EB] hover:underline font-bold"
+                    >
+                      {warning.atomId} →
+                    </Link>
+                  )}
                 </div>
-              ))
-            )}
-          </div>
-        </section>
-
-        {/* Domains by Atom Count */}
-        <section className="space-y-3 font-mono text-xs">
-          <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
-            <h2 className="uppercase tracking-wider text-[#9AA3AD] font-bold">
-              DOMAINS BY ATOM COUNT (FEWEST FIRST)
-            </h2>
-            <span className="text-[#6B747E]">AUTHOR TARGETS</span>
-          </div>
-
-          <div className="divide-y divide-[#23272D] border border-[#23272D] bg-[#121417] rounded-[3px]">
-            {domainCounts.map((item) => (
-              <div key={item.domain} className="p-3 flex items-center justify-between">
-                <span className="text-[#E6E8EB] uppercase font-bold">{item.domain}</span>
-                <span className="text-[#C9711F] tabular-nums font-semibold bg-[#191C20] border border-[#23272D] px-2 py-0.5 rounded-[3px]">
-                  {item.count} {item.count === 1 ? "ATOM" : "ATOMS"}
-                </span>
+                <p className="text-[#9AA3AD] font-sans text-xs">
+                  {warning.message}
+                </p>
               </div>
-            ))}
-          </div>
-        </section>
-      </div>
+            ))
+          )}
+        </div>
+      </section>
     </div>
   );
 }

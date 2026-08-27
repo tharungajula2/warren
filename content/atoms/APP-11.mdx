@@ -1,0 +1,111 @@
+---
+id: APP-11
+title: "Hostile Questions — One-Line Answers"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "--- Never: “SMOTE made the model universally better. ” Correct: Recall improved materially, but precision fell.  --- Never: “SARIMA predicts demand with 92."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03 — Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet.md > # 40. Hostile Questions — One-Line Answers"
+import_headings: ["Hostile Questions — One-Line Answers","What Never to Overclaim"]
+---
+
+| Question | Answer |
+|---|---|
+| Why SMOTE? | Minority recall was weak; SMOTE increased churn capture from **0.48 to 0.75**, at the cost of precision. |
+| Why not accuracy for churn? | Majority-class accuracy hides missed churners; business cost was concentrated in false negatives. |
+| Why SARIMA? | Univariate monthly data showed trend + annual seasonality and no external regressors. |
+| Why 625 SARIMA models? | Systematic grid across $p,q,P,Q=0..4$; AIC shortlisted structure before residual/out-of-sample validation. |
+| Why chronological split? | Future observations cannot inform past model training. |
+| Why covariance in MPT? | Portfolio risk depends on how assets co-move, not only individual volatility. |
+| Is 0.7707 a true Sharpe? | It is a **Sharpe-style return/volatility score**; no explicit risk-free rate was subtracted. |
+| Why cross-sectional ranking? | Objective is to choose securities relative to contemporaneous peers at each rebalance date. |
+| Why survivorship handling? | Today's survivors cannot be allowed to leak into historical investment universes. |
+| Why turnover controls? | Gross backtest alpha may disappear after unnecessary trading and transaction costs. |
+| Is LOC-IQ ML? | No. It is a graph-based concept console using rule-based signal weighting and static demo traces. |
+| Are 46 APIs live? | No. They are an architectural source catalogue; the current prototype uses synthetic static data. |
+
+---
+
+## What Never to Overclaim
+
+## Churn
+
+Never:
+
+> “SMOTE made the model universally better.”
+
+Correct:
+
+> Recall improved materially, but precision fell.
+
+---
+
+## Forecasting
+
+Never:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+> “SARIMA predicts demand with 92.1% accuracy.”
+
+Correct:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+> Out-of-sample MAPE was **7.90%**.
+
+---
+
+## NIFTY
+
+Never:
+
+> “I found the mathematically optimal NIFTY portfolio.”
+
+Correct:
+
+> Identified the **best of 10,000 simulated long-only portfolios** under the notebook objective.
+
+---
+
+## Cross-sectional equities
+
+Never:
+
+> Invent performance numbers not documented.
+
+Correct:
+
+> Discuss the **research/backtesting framework, controls, robustness and methodology**.
+
+---
+
+## LOC-IQ
+
+Never:
+
+> “Built live integrations across 46 APIs.”
+
+Correct:
+
+> Architected and visualised a **46-source data universe** in an interactive prototype.
+
+Never:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+> “95% model accuracy.”
+
+Correct:
+
+> Demo confidence scores are static scenario outputs.
+
+---

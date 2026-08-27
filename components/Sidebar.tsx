@@ -14,18 +14,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
   const [manifest, setManifest] = useState<CorpusManifest | null>(null);
   const [expandedDomains, setExpandedDomains] = useState<Record<string, boolean>>({});
+  const [expandedSubdomains, setExpandedSubdomains] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     fetch("/corpus-manifest.json")
       .then((res) => res.json())
       .then((data: CorpusManifest) => {
         setManifest(data);
-        // Expand first 2 domains by default
-        const initial: Record<string, boolean> = {};
+        const initialDom: Record<string, boolean> = {};
         data.domainTree.slice(0, 3).forEach((d) => {
-          initial[d.domain] = true;
+          initialDom[d.domain] = true;
         });
-        setExpandedDomains(initial);
+        setExpandedDomains(initialDom);
       })
       .catch((err) => console.error("Failed to load corpus manifest:", err));
   }, []);
@@ -34,6 +34,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     setExpandedDomains((prev) => ({
       ...prev,
       [domain]: !prev[domain],
+    }));
+  };
+
+  const toggleSubdomain = (key: string) => {
+    setExpandedSubdomains((prev) => ({
+      ...prev,
+      [key]: !prev[key],
     }));
   };
 
@@ -142,44 +149,68 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 {/* Subdomains & Atom Items */}
                 {isExpanded && (
                   <div className="pl-2 border-l border-[#23272D] ml-1.5 space-y-2 pt-1">
-                    {domainNode.subdomains.map((subNode) => (
-                      <div key={subNode.subdomain} className="space-y-1">
-                        <div className="text-[10px] text-[#6B747E] uppercase tracking-wider font-semibold px-1">
-                          {subNode.subdomain}
+                    {domainNode.subdomains.map((subNode) => {
+                      const isUnsorted = subNode.subdomain === "unsorted";
+                      const subKey = `${domainNode.domain}:${subNode.subdomain}`;
+                      const isSubExpanded = isUnsorted ? !!expandedSubdomains[subKey] : true;
+
+                      return (
+                        <div key={subNode.subdomain} className="space-y-1">
+                          {isUnsorted ? (
+                            <button
+                              onClick={() => toggleSubdomain(subKey)}
+                              className="w-full flex items-center justify-between text-[10px] text-[#8A6D2F] font-bold uppercase tracking-wider px-1 py-0.5 bg-[#191C20] border border-[#8A6D2F]/30 rounded-[3px]"
+                            >
+                              <span>UNSORTED DRAFTS [{subNode.atoms.length}]</span>
+                              <span>{isSubExpanded ? "▼" : "▶"}</span>
+                            </button>
+                          ) : (
+                            <div className="text-[10px] text-[#6B747E] uppercase tracking-wider font-semibold px-1">
+                              {subNode.subdomain}
+                            </div>
+                          )}
+
+                          {isSubExpanded && (
+                            <ul className="space-y-0.5">
+                              {subNode.atoms.map((atomItem) => {
+                                const isCurrent = pathname === `/atom/${atomItem.id}`;
+                                const isFixture = atomItem.status === "fixture";
+                                const isDraft = atomItem.status === "draft";
+
+                                return (
+                                  <li key={atomItem.id}>
+                                    <Link
+                                      href={`/atom/${atomItem.id}`}
+                                      className={`block px-2 py-1 rounded-[3px] text-[11px] leading-snug transition-colors line-clamp-2 ${
+                                        isCurrent
+                                          ? "bg-[#2A1D10] text-[#C9711F] font-bold border border-[#C9711F]/40"
+                                          : "text-[#9AA3AD] hover:text-[#E6E8EB] hover:bg-[#191C20]"
+                                      }`}
+                                      title={atomItem.title}
+                                    >
+                                      <span className="text-[#C9711F] font-bold mr-1">
+                                        {atomItem.id}:
+                                      </span>
+                                      <span>{atomItem.title}</span>
+                                      {isFixture && (
+                                        <span className="ml-1 text-[9px] text-[#8A6D2F] font-bold">
+                                          [FIXTURE]
+                                        </span>
+                                      )}
+                                      {isDraft && (
+                                        <span className="ml-1 text-[9px] text-[#C9711F] font-bold">
+                                          [DRAFT]
+                                        </span>
+                                      )}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          )}
                         </div>
-
-                        <ul className="space-y-0.5">
-                          {subNode.atoms.map((atomItem) => {
-                            const isCurrent = pathname === `/atom/${atomItem.id}`;
-                            const isFixture = atomItem.status === "fixture" || atomItem.verified === false;
-
-                            return (
-                              <li key={atomItem.id}>
-                                <Link
-                                  href={`/atom/${atomItem.id}`}
-                                  className={`block px-2 py-1 rounded-[3px] text-[11px] leading-snug transition-colors line-clamp-2 ${
-                                    isCurrent
-                                      ? "bg-[#2A1D10] text-[#C9711F] font-bold border border-[#C9711F]/40"
-                                      : "text-[#9AA3AD] hover:text-[#E6E8EB] hover:bg-[#191C20]"
-                                  }`}
-                                  title={atomItem.title}
-                                >
-                                  <span className="text-[#C9711F] font-bold mr-1">
-                                    {atomItem.id}:
-                                  </span>
-                                  <span>{atomItem.title}</span>
-                                  {isFixture && (
-                                    <span className="ml-1 text-[9px] text-[#8A6D2F] font-bold">
-                                      [FIXTURE]
-                                    </span>
-                                  )}
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 )}
               </div>

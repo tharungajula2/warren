@@ -1,0 +1,89 @@
+---
+id: ML-01
+title: "— Machine Learning — End-to-End Modelling Masterclass"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "**Problem → Data → Baseline → Diagnose → Model → Validate → Tune → Explain → Stress → Deploy → Monitor** --- `Business problem` → `Target + prediction unit` → `Metric` → `Data audit` → `Train / Validation / Test` → `EDA` → `Pre-processing` → `Simple baseline` → `Linear / Logistic` → `Regularisation` → `Decision Tree` → `Bagging / Random Forest` → `Boosting / Gradient Boosting` → `ANN` → `Cross-validation` → `Hyperparameter tuning` → `Calibration / Threshold` → `Explainability` → `Error analysis` → `Stress / robustness` → `Final untouched test` → `Deployment` → `Monitoring / retraining` **Never jump to the most complex model first. ** Start simple → understand errors → add complexity only when it solves a demonstrated problem.  --- **Observation unit** → customer / loan / transaction / month?"
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 02. — Machine Learning — End-to-End Modelling Masterclass"
+import_headings: ["— Machine Learning — End-to-End Modelling Masterclass","The Entire ML Process in One Screen","First Question — What Kind of ML Problem?"]
+---
+
+> **Problem → Data → Baseline → Diagnose → Model → Validate → Tune → Explain → Stress → Deploy → Monitor**
+
+---
+
+## The Entire ML Process in One Screen
+
+`Business problem`
+→ `Target + prediction unit`
+→ `Metric`
+→ `Data audit`
+→ `Train / Validation / Test`
+→ `EDA`
+→ `Pre-processing`
+→ `Simple baseline`
+→ `Linear / Logistic`
+→ `Regularisation`
+→ `Decision Tree`
+→ `Bagging / Random Forest`
+→ `Boosting / Gradient Boosting`
+→ `ANN`
+→ `Cross-validation`
+→ `Hyperparameter tuning`
+→ `Calibration / Threshold`
+→ `Explainability`
+→ `Error analysis`
+→ `Stress / robustness`
+→ `Final untouched test`
+→ `Deployment`
+→ `Monitoring / retraining`
+
+## Golden rule
+
+> **Never jump to the most complex model first.**
+
+Start simple → understand errors → add complexity only when it solves a demonstrated problem.
+
+---
+
+## First Question — What Kind of ML Problem?
+
+| Question | Problem | Typical output |
+|---|---|---|
+| Predict continuous number? | **Regression** | price, loss, demand |
+| Predict class / probability? | **Classification** | default / fraud / churn |
+| No target; discover groups? | **Clustering** | segments |
+| Compress correlated dimensions? | **Dimensionality reduction** | PCA components |
+| Predict ordered class? | **Ordinal classification** | risk grade |
+| Predict event + timing? | **Survival modelling** | time to default |
+| Ordered observations over time? | **Time-series / temporal ML** | next-period demand |
+
+### Then define
+
+**Observation unit**  
+→ customer / loan / transaction / month?
+
+**Target**  
+→ exactly what are we predicting?
+
+**Prediction horizon**  
+→ next 30 days / 12 months / lifetime?
+
+**Prediction time**  
+→ what information actually exists when prediction is made?
+
+That final question prevents **data leakage**.
+
+---

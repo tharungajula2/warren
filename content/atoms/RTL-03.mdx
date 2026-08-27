@@ -1,0 +1,161 @@
+---
+id: RTL-03
+title: "Scorecard Scaling"
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: "Logistic output was converted into a traditional retail scorecard.  - **Base score:** 600 - **Base odds:** 50:1 - **PDO:** 20 **PDO = Points to Double the Odds** Every **+20 points** → odds of good:bads double.  Conceptually: `Borrower characteristics` → `WoE` → `Logit` → `Odds` → `Score` Same risk information, but easier for: - underwriting - policy cut-offs - rating bands - portfolio segmentation - business communication --- A model can rank well but predict the **wrong probability level**."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 5. Scorecard Scaling"
+import_headings: ["Scorecard Scaling","Validation ≠ One Metric","Recalibration","Population Stability"]
+---
+
+Logistic output was converted into a traditional retail scorecard.
+
+### Scaling
+
+- **Base score:** 600
+- **Base odds:** 50:1
+- **PDO:** 20
+
+**PDO = Points to Double the Odds**
+
+Every **+20 points**
+→ odds of good:bads double.
+
+Conceptually:
+
+`Borrower characteristics`
+→ `WoE`
+→ `Logit`
+→ `Odds`
+→ `Score`
+
+### Why convert PD into score?
+
+Same risk information, but easier for:
+
+- underwriting
+- policy cut-offs
+- rating bands
+- portfolio segmentation
+- business communication
+
+---
+
+## Validation ≠ One Metric
+
+A model can rank well but predict the **wrong probability level**.
+
+Therefore:
+
+## Discrimination
+
+`AUC / Gini / KS`
+
+vs
+
+## Calibration
+
+`Brier / Hosmer-Lemeshow / observed vs predicted`
+
+---
+
+## Hosmer-Lemeshow result
+
+Model B:
+
+| Sample | HL p-value |
+|---|---:|
+| Train | 0.00040 |
+| Test | **0.49418** |
+| OOT | **0.00117** |
+
+OOT therefore shows **calibration weakness despite good discrimination**.
+
+{/* TODO: split into NeverConfuse */}
+<Trap label="DISTINCTION">
+This is exactly why both dimensions were tested.
+
+---
+</Trap>
+
+
+## Recalibration
+
+Implemented:
+
+- **Intercept recalibration**
+- **Platt scaling**
+
+### Objective
+
+Keep ranking largely intact while adjusting probability estimates.
+
+`Raw score`
+→ `recalibration`
+→ better alignment of predicted PD with observed default rate
+
+### Project lesson
+
+Model development is not complete at:
+
+> “AUC looks good.”
+
+A usable PD model needs:
+
+**Discrimination + Calibration + Stability**
+
+---
+
+## Population Stability
+
+## Score PSI
+
+| Model | Train → OOT PSI |
+|---|---:|
+| Model A | 0.0046 |
+| **Model B** | **0.0071** |
+
+Very small population shift at total score level.
+
+## Characteristic CSI
+
+Largest observed:
+
+| Variable | CSI |
+|---|---:|
+| `dti` | **0.0416** |
+| `purpose` | 0.0362 |
+| `term` | 0.0258 |
+| `annual_inc` | 0.0057 |
+
+### Difference
+
+| Measure | Monitors |
+|---|---|
+| PSI | Overall score / population shift |
+| CSI | Drift in individual characteristics |
+
+<Flow>
+does not imply
+`Stable population`
+
+Therefore both:
+
+**Performance monitoring + population monitoring**
+
+---
+</Flow>
+
+

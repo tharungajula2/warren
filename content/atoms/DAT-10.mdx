@@ -1,0 +1,177 @@
+---
+id: DAT-10
+title: "UAT — What Good Looks Like"
+type: reference
+domain: risk-data
+subdomain: unsorted
+one_screen: "A UAT case needs: Strong UAT tests: --- Do not test by asking: Test against: Then compare: Difference: --- Correct classification saves time.  --- Defect record: not: --- The BA uses SQL to answer: Core SQL thinking: The goal is not developer-level SQL.  The goal is: **independent evidence-based investigation."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02_Credit_Risk_Data_Reporting_Change_Masterclass.md > # 39. UAT — What Good Looks Like"
+import_headings: ["UAT — What Good Looks Like","Predefined Expected Results","Defect vs Requirement Gap vs Data Issue","Defect Lifecycle","SQL — The BA's Investigation Tool","SQL Diagnostic Pattern"]
+---
+
+A UAT case needs:
+
+```text
+Requirement
+Population
+Input
+Precondition
+Expected result
+Actual result
+Pass / Fail
+Evidence
+Tester
+```
+
+Strong UAT tests:
+
+```text
+happy path
+boundary
+exception
+missing data
+rule precedence
+historical date
+duplicate
+reconciliation
+```
+
+---
+
+## Predefined Expected Results
+
+Do not test by asking:
+
+```text
+Does this output look reasonable?
+```
+
+Test against:
+
+```text
+known input
++
+approved rule
+=
+predefined expected result
+```
+
+Then compare:
+
+```text
+Expected vs Actual
+```
+
+Difference:
+
+```text
+→ defect or requirement issue
+```
+
+---
+
+## Defect vs Requirement Gap vs Data Issue
+
+| Type | Meaning |
+|---|---|
+| Defect | Built behaviour differs from approved requirement |
+| Requirement Gap | Requirement itself was incomplete / wrong |
+| Data Issue | Input is missing / inaccurate / late |
+| Environment Issue | Test platform / feed failure |
+| Expected Behaviour | Result is correct but misunderstood |
+
+Correct classification saves time.
+
+---
+
+## Defect Lifecycle
+
+```text
+Log
+→ Triage
+→ Severity
+→ Owner
+→ Fix
+→ Retest
+→ Regression
+→ Close
+```
+
+Defect record:
+
+```text
+expected
+actual
+evidence
+impact
+root cause
+```
+
+not:
+
+```text
+“number wrong”
+```
+
+---
+
+## SQL — The BA's Investigation Tool
+
+The BA uses SQL to answer:
+
+```text
+Is population complete?
+Which rows duplicated?
+Where did value change?
+Which rule fired?
+Why do source and report differ?
+```
+
+Core SQL thinking:
+
+```text
+SELECT
+FROM
+JOIN
+WHERE
+GROUP BY
+CASE
+COUNT
+SUM
+DISTINCT
+```
+
+The goal is not developer-level SQL.
+
+The goal is:
+
+> **independent evidence-based investigation.**
+
+---
+
+## SQL Diagnostic Pattern
+
+```text
+1. Count rows
+2. Count distinct business keys
+3. Sum exposure
+4. Check null CDEs
+5. Compare source vs target
+6. Segment exceptions
+7. Trace one record end to end
+```
+
+This pattern solves a large share of BA data investigations.
+
+---

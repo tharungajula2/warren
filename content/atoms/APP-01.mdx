@@ -1,0 +1,146 @@
+---
+id: APP-01
+title: "— Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet"
+type: mechanism
+domain: quantitative
+subdomain: unsorted
+one_screen: "**Purpose:** Remember exactly what I did, why each method was used, the numbers worth owning, and the claim boundaries.  **Theory lives elsewhere.  This note = portfolio recall + interview defence."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03 — Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet.md > # 03. — Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet"
+import_headings: ["— Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet","All 5 in One Screen","Bank Churn — Neural-Network Classification"]
+---
+
+> **Purpose:** Remember exactly what I did, why each method was used, the numbers worth owning, and the claim boundaries.  
+> **Theory lives elsewhere. This note = portfolio recall + interview defence.**
+
+---
+
+## All 5 in One Screen
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| # | Workstream | Problem | Core method | Number to remember |
+|---|---|---|---|---:|
+| **1** | Bank Churn | Binary classification | ANN + SMOTE | Recall **0.48 → 0.75** |
+| **2** | Prescription Forecasting | Time series | SARIMA | MAPE **7.90%** |
+| **3** | NIFTY100 Optimisation | Asset allocation | MPT + Monte Carlo | **82 stocks**, 10k portfolios |
+| **4** | Cross-Sectional Equities | Systematic investing | Factor ranking + portfolio controls | **~10Y / 500-stock framing** |
+| **5** | LOC-IQ | Risk/fraud product concept | Weighted graph | **6 → 46 → 42** |
+
+## Mental progression
+
+<Flow>
+Customer
+   ↓
+Classification
+   ↓
+Time
+   ↓
+Forecasting
+   ↓
+Multiple Assets
+   ↓
+Portfolio Optimisation
+   ↓
+Repeated Investment Process
+   ↓
+Systematic Strategy Framework
+   ↓
+Multiple Data Sources + Product Workflow
+   ↓
+LOC-IQ
+</Flow>
+
+---
+
+## Bank Churn — Neural-Network Classification
+
+## The problem
+
+**10,000 bank customers**
+
+Target:
+
+<Flow>
+Exited = 1
+→ customer churned
+
+Exited = 0
+→ customer stayed
+</Flow>
+
+Churn rate:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**20.37%**
+
+So:
+
+```text
+Binary classification
++
+moderate class imbalance
+```
+
+
+
+---
+
+## Data → Model
+
+<Flow>
+10,000 × 14 raw data
+        ↓
+Drop IDs / surname
+        ↓
+EDA
+        ↓
+Encode categoricals
+        ↓
+Scale features
+        ↓
+Stratified Train / Test
+        ↓
+ANN
+        ↓
+SGD
+        ↓
+Adam
+        ↓
+Dropout
+        ↓
+Hyperparameter tuning
+        ↓
+SMOTE
+        ↓
+Business-metric comparison
+</Flow>
+
+### Model architecture
+
+<Flow>
+11 inputs
+   ↓
+64 ReLU
+   ↓
+32 ReLU
+   ↓
+1 Sigmoid
+   ↓
+P(Churn)
+</Flow>
+
+Binary cross-entropy:
+
+<Formula math="\Large \displaystyle L=-[y\log(p)+(1-y)\log(1-p)]" />
+
+---

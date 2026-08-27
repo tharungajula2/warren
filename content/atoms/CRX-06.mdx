@@ -1,0 +1,174 @@
+---
+id: CRX-06
+title: "Pillar 2, ICAAP & Stress Testing"
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: "simultaneously: therefore: --- Liquidity is not credit risk, but severe credit stress and liquidity stress can trigger each other."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01_Credit_Risk_Core_End_to_End_Masterclass.md > # 11. Pillar 2, ICAAP & Stress Testing"
+import_headings: ["Pillar 2, ICAAP & Stress Testing","Liquidity — The Credit-Risk Interaction"]
+---
+
+## Pillar 1 vs Pillar 2
+
+| Pillar 1 | Pillar 2 |
+|---|---|
+| Formula-based minimum | Firm-specific risk assessment |
+| Credit / market / operational risk | Concentration, IRRBB, pension, model, strategic / other risks |
+| Common baseline | Bank-specific overlay |
+
+## ICAAP
+
+```text
+Identify material risks
+        ↓
+Quantify
+        ↓
+Stress
+        ↓
+Project capital
+        ↓
+Management actions
+        ↓
+Board assessment
+        ↓
+Supervisory review
+```
+
+## Stress transmission
+
+```text
+Macro / sector shock
+        ↓
+PD ↑
+LGD ↑
+EAD ↑
+        ↓
+Credit losses ↑
+        ↓
+Provisions ↑
+        ↓
+CET1 ↓
+```
+
+simultaneously:
+
+```text
+Rating migration
+→ RWA ↑
+```
+
+therefore:
+
+```text
+CET1 Ratio
+=
+smaller numerator
+───────────────
+larger denominator
+```
+
+### Stress concepts
+
+| Concept | Meaning |
+|---|---|
+| Base Case | Expected path |
+| Stress Case | Severe but plausible downside |
+| Sensitivity | One assumption shocked |
+| Scenario | Multiple coherent shocks |
+| Reverse Stress | Start with failure; work backward |
+| Capital Trough | Lowest stressed capital ratio |
+| Management Action | Credible action reducing stress impact |
+
+<Trap label="ICAAP TRAPS">
+```text
+ICAAP ≠ RWA calculation
+ICAAP ≠ Stress Test
+Stress ≠ Forecast
+Pillar 2 ≠ only credit risk
+Buffer ≠ minimum requirement
+```
+
+---
+</Trap>
+
+
+## Liquidity — The Credit-Risk Interaction
+
+> Liquidity is not credit risk, but severe credit stress and liquidity stress can trigger each other.
+
+| Capital / Solvency | Liquidity |
+|---|---|
+| Can losses be absorbed? | Can cash obligations be met? |
+| CET1 / RWA | Cash / HQLA / funding |
+| ICAAP | ILAAP |
+| Stress loss | Stress outflow |
+
+## Core liquidity metrics
+
+```text
+LCR
+=
+HQLA / 30-day stressed net cash outflows
+```
+
+```text
+NSFR
+=
+Available Stable Funding / Required Stable Funding
+```
+
+Core memory:
+
+```text
+LCR
+→ short-term survival
+
+NSFR
+→ structural funding stability
+
+ILAAP
+→ full internal liquidity adequacy assessment
+```
+
+## Credit ↔ liquidity link
+
+```text
+Borrower stress
+→ RCF / card / OD drawdown
+→ EAD ↑
++
+Bank cash outflow ↑
+```
+
+```text
+Bank funding stress
+→ lending / refinancing tightens
+→ borrower PD ↑
+```
+
+{/* TODO: split into NeverConfuse */}
+<Trap label="DISTINCTION">
+```text
+Capital ≠ Liquidity
+ICAAP ≠ ILAAP
+HQLA ≠ all assets
+Owned asset ≠ usable liquidity
+Undrawn commitment ≠ no risk
+```
+
+---
+</Trap>
+
+

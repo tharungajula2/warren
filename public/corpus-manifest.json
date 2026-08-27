@@ -1,5 +1,605 @@
 {
   "atoms": {
+    "APP-01": {
+      "id": "APP-01",
+      "title": "— Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "**Purpose:** Remember exactly what I did, why each method was used, the numbers worth owning, and the claim boundaries.  **Theory lives elsewhere.  This note = portfolio recall + interview defence.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-01.mdx"
+    },
+    "APP-02": {
+      "id": "APP-02",
+      "title": "Why Accuracy Was the Wrong Main Metric",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Class distribution: A model predicting everyone stays: → already gets **79. 63% accuracy** Therefore focus shifted to: - Recall - Precision - ROC-AUC - Confusion matrix **Missing an actual churner = lost retention opportunity. ** Therefore: became especially important.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-02.mdx"
+    },
+    "APP-03": {
+      "id": "APP-03",
+      "title": "Antidiabetic Prescription Forecasting — SARIMA",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Monthly prescription demand: **July 1991 → June 2008** Goal: Forecast future monthly antidiabetic prescription demand.  Unlike classification: --- --- Raw series: First difference: Regular + seasonal difference: Therefore: Model family: --- Search: Total: candidate structures.  Selected: using **AIC**.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-03",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-03.mdx"
+    },
+    "APP-04": {
+      "id": "APP-04",
+      "title": "Forecasting — What to Retain",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Data showed: **Time-series evaluation must preserve chronology. ** Never: Fancy forecast only earns its place if: Forecast monthly demand by evaluating **625 SARIMA structures** and selected `SARIMA(2,1,3)(1,1,3)12`, reducing MAPE from **12. 69% seasonal-naive to 7.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-04.mdx"
+    },
+    "APP-05": {
+      "id": "APP-05",
+      "title": "Best Simulated NIFTY Portfolio",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Not: - highest return - lowest volatility Instead: **best return-per-unit-risk among simulated portfolios. ** Every simulated portfolio: Upper-left boundary: → increasingly efficient risk-return combinations.  --- **Portfolio construction is mainly a covariance problem.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-05",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-05.mdx"
+    },
+    "APP-06": {
+      "id": "APP-06",
+      "title": "Cross-Sectional Ranking",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "At each rebalance date: Possible inputs described: - valuation - quality - momentum - leverage / debt - earnings quality - market capitalisation - AI prediction filters Time-series strategy asks: What happens to this asset over time?  Cross-sectional strategy asks: **Which stocks look best relative to the other stocks right now? ** --- The framework explicitly loads historical survivorship information.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-06",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-06.mdx"
+    },
+    "APP-07": {
+      "id": "APP-07",
+      "title": "L1 / L2 Portfolio Control",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Problem: Need: Move toward target without excessive trading.  Focus: → absolute weight changes.  Focus: → squared deviations.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-07",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-07.mdx"
+    },
+    "APP-08": {
+      "id": "APP-08",
+      "title": "LOC-IQ — Location Intelligence for Credit / Fraud",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Applicant states: “I live at location X. ” Traditional credit/fraud data may contain many indirect geographic traces.  Question: **Do the available digital footprints support the declared physical location?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-08",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-08.mdx"
+    },
+    "APP-09": {
+      "id": "APP-09",
+      "title": "LOC-IQ — Critical Truth Boundary",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "The UI and graph are real.  The following are **not live production functionality**: - live calls to 46 APIs - backend location-scoring engine - ML-trained confidence model - production consent gating - custom-input scoring Demo traces are loaded from **static synthetic JSON**.  The displayed location confidence values are **pre-computed demo values**.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-09",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-09.mdx"
+    },
+    "APP-10": {
+      "id": "APP-10",
+      "title": "Numbers I Actually Need to Memorise",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Everything else: understand — do not memorise.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-10",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-10.mdx"
+    },
+    "APP-11": {
+      "id": "APP-11",
+      "title": "Hostile Questions — One-Line Answers",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "--- Never: “SMOTE made the model universally better. ” Correct: Recall improved materially, but precision fell.  --- Never: “SARIMA predicts demand with 92.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "app-11",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-11.mdx"
+    },
+    "APP-12": {
+      "id": "APP-12",
+      "title": "The Five Core Lessons",
+      "type": "mechanism",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "**Optimise the metric that reflects the business mistake that matters. ** **Respect time and beat a simple temporal baseline. ** **Diversification comes from covariance, not just number of holdings.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [],
+      "slug": "app-12",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "APP-12.mdx"
+    },
+    "CCR-01": {
+      "id": "CCR-01",
+      "title": "— Wholesale & Specialist Credit Risk — End-to-End Masterclass",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**UK banking lens:** Counterparty Credit Risk + derivatives + repo/SFT + netting/collateral + CVA + large exposures + concentration/country risk + limits + workout/governance.  **Master mental model** **Permanent rule:** **In wholesale markets, the contractual notional can be enormous while the actual credit exposure is driven by replacement value, netting, collateral and how the trade may move before default.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-01.mdx"
+    },
+    "CCR-02": {
+      "id": "CCR-02",
+      "title": "Issuer Credit Risk vs Counterparty Credit Risk",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "--- A derivative creates two different risk questions: Do not combine them.  --- Derivative notional: It is **not automatically the amount the bank loses**.  Core chain: --- If a derivative is worth money to the bank: This is the intuition behind: If trade value is negative to the bank: but future exposure can still arise.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-02.mdx"
+    },
+    "CCR-03": {
+      "id": "CCR-03",
+      "title": "Potential Future Exposure — PFE",
+      "type": "mechanism",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**PFE = allowance for how much exposure could increase before the counterparty defaults / position is closed out. ** Driven by: Core idea: --- For derivatives under the Standardised Approach for Counterparty Credit Risk: where: --- Counterparty has two trades: If legally enforceable close-out netting applies: Without netting: With netting: --- **Netting set = group of transactions with one counterparty that can legally be closed out and netted together under the relevant agreement. ** Key fields: Exposure aggregation must respect the legal netting perimeter.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-03",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-03.mdx"
+    },
+    "CCR-04": {
+      "id": "CCR-04",
+      "title": "ISDA / CSA / GMRA — What to Remember",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Names matter because legal agreement determines: --- Collateral reduces unsecured replacement exposure.  Core flow: But treatment depends on: --- Memory: --- After counterparty failure: Market can move during this period.  That interval creates: Collateral cannot eliminate all market movement instantly.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-04.mdx"
+    },
+    "CCR-05": {
+      "id": "CCR-05",
+      "title": "CCR Exposure Stack",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "This is the wholesale exposure spine.  --- **CVA = market-value adjustment reflecting counterparty credit risk in a derivative portfolio. ** Intuition: CVA is a **valuation concept**.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-05",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-05.mdx"
+    },
+    "CCR-06": {
+      "id": "CCR-06",
+      "title": "Repo / Securities Financing Transactions — SFTs",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Repo economic flow: Main risks: --- The difference is haircut protection.  Higher haircut: Haircuts may rise in stress: --- --- Once asset is pledged: This creates a direct connection to liquidity: One asset can connect: --- **Settlement risk = one party delivers cash / asset but does not receive the other leg because counterparty fails during settlement. ** Typical in: Distinct from longer-term CCR.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-06",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-06.mdx"
+    },
+    "CCR-07": {
+      "id": "CCR-07",
+      "title": "Pre-Settlement vs Settlement Exposure",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "--- Wholesale risk must aggregate correctly: Different controls operate at different levels.  --- Possible limits: Core flow: --- But usage may include: The bank needs **total counterparty view**.  --- Possible actions: A breach is not merely a reporting issue.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-07",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-07.mdx"
+    },
+    "CCR-08": {
+      "id": "CCR-08",
+      "title": "Concentration Risk",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Main dimensions: Portfolio diversification must be economic, not cosmetic.  --- **Country risk = risk that conditions in a country impair repayment / recovery across exposures. ** Drivers: --- --- Risk can multiply when exposures share the same driver.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-08",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-08.mdx"
+    },
+    "CCR-09": {
+      "id": "CCR-09",
+      "title": "Default — Wholesale Workflow",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "This differs from retail collections.  --- Conceptually: Legal documentation and valuation determine the amount.  --- For loans / large wholesale exposures: Objective: not: --- Same obligor can produce: because ranking differs.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-09",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-09.mdx"
+    },
+    "CCR-10": {
+      "id": "CCR-10",
+      "title": "Wholesale Data Spine",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Critical fields: --- These distinctions drive mapping and reporting.  --- One missing: can materially change exposure.  --- This requires cross-system aggregation.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-10",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-10.mdx"
+    },
+    "CCR-11": {
+      "id": "CCR-11",
+      "title": "UK Prudential Position — 25 August 2026",
+      "type": "reference",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Current UK framework points to retain: For derivatives under SA-CCR, PRA disclosure instructions use: from the Counterparty Credit Risk part of the PRA Rulebook.  The PRA also maintains: and: UK large-exposure framework: subject to applicable exemptions and special rules.  **Regulatory mechanics are durable; precise permissions, exemptions and reporting rules must always be checked against the operative PRA Rulebook for the reporting date.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-11",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-11.mdx"
+    },
+    "CCR-12": {
+      "id": "CCR-12",
+      "title": "Full Credit-Risk Library — Final Integration",
+      "type": "concept",
+      "domain": "counterparty-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Together: **One sentence to retain:** **Wholesale and specialist credit risk extends ordinary borrower-default thinking into market contracts where exposure moves with valuation: the bank must aggregate trades into legally enforceable netting sets, recognize collateral and future exposure, control CCR/CVA/wrong-way/settlement risks, enforce counterparty and concentration limits, and be able to close out and recover value if the counterparty fails.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ccr-12",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CCR-12.mdx"
+    },
     "CR-03": {
       "id": "CR-03",
       "title": "Credit Exposure and Expected Loss",
@@ -169,6 +769,556 @@
       "currentness": "durable",
       "filepath": "CR-09.mdx"
     },
+    "CRX-01": {
+      "id": "CRX-01",
+      "title": "— Credit Risk — Core End-to-End Masterclass",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**UK banking lens:** PRA prudential framework + IFRS 9 accounting + Basel capital + ICAAP/ILAAP + governed model risk.  **Master mental model** --- **Credit risk = risk that a borrower / counterparty does not meet contractual obligations and the bank does not recover the full economic amount owed.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "crx-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-01.mdx"
+    },
+    "CRX-02": {
+      "id": "CRX-02",
+      "title": "Credit Objects — Never Mix the Levels",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "--- Collateral protects downside.  It does **not** replace sustainable repayment capacity.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "crx-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-02.mdx"
+    },
+    "CRX-03": {
+      "id": "CRX-03",
+      "title": "Product Mechanics — What Actually Drives Risk",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "--- **Profit ≠ cash.  EBITDA ≠ free cash flow.  Cash services debt.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "crx-03",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-03.mdx"
+    },
+    "CRX-04": {
+      "id": "CRX-04",
+      "title": "Deterioration, Arrears, Default, Cure, Write-off",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "--- Main logic: ---",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "crx-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-04.mdx"
+    },
+    "CRX-05": {
+      "id": "CRX-05",
+      "title": "IFRS 9 — Staging & Expected Credit Loss",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Possible evidence: then: --- plus: Key themes: ---",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "crx-05",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-05.mdx"
+    },
+    "CRX-06": {
+      "id": "CRX-06",
+      "title": "Pillar 2, ICAAP & Stress Testing",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "simultaneously: therefore: --- Liquidity is not credit risk, but severe credit stress and liquidity stress can trigger each other.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "crx-06",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-06.mdx"
+    },
+    "CRX-07": {
+      "id": "CRX-07",
+      "title": "Model Risk — Can the Bank Trust the Numbers?",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**Model risk = wrong model + wrong implementation + wrong use.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "crx-07",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-07.mdx"
+    },
+    "CRX-08": {
+      "id": "CRX-08",
+      "title": "Framework Map — One Table",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Placeholder one_screen summary for candidate atom.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "crx-08",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-08.mdx"
+    },
+    "CRX-09": {
+      "id": "CRX-09",
+      "title": "Final Recall — 60 Seconds",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**One sentence to retain:** **Credit risk is the end-to-end discipline of deciding who to lend to and on what structure, measuring how likely default is, how much exposure and loss would exist if it occurs, recognizing expected loss, holding sufficient capital for worse outcomes, monitoring deterioration continuously, and governing the models and recovery processes that make those decisions reliable.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [],
+      "slug": "crx-09",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CRX-09.mdx"
+    },
+    "DAT-01": {
+      "id": "DAT-01",
+      "title": "— Credit Risk Data, Reporting & Change — End-to-End Masterclass",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "**UK banking lens:** BCBS 239 + PRA regulatory reporting + credit-risk data lineage + controlled change delivery.  **Master mental model** **Permanent rule:** **A correct number that cannot be traced, reconciled, explained, controlled and reproduced is not a defensible bank number. ** --- Underneath every arrow: That is the real data job.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-01.mdx"
+    },
+    "DAT-02": {
+      "id": "DAT-02",
+      "title": "BCBS 239 — The Compressed Framework",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "**BCBS 239 = Principles for effective risk data aggregation and risk reporting. ** --- **CDE = field whose failure can materially affect risk calculation, reporting, decisioning or regulatory compliance. ** Typical credit-risk CDEs: CDE governance should define: --- For every important field ask: If these five are unclear: **the field is not production-ready.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-02.mdx"
+    },
+    "DAT-03": {
+      "id": "DAT-03",
+      "title": "Effective Dating — Which Value Was True Then?",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Credit-risk values change: Need: Core rule: --- **Authoritative source = system formally designated as the trusted origin for a governed field. ** Examples: One field may physically exist in many places.  Only one should be authoritative for a defined use.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-03",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-03.mdx"
+    },
+    "DAT-04": {
+      "id": "DAT-04",
+      "title": "Data Lineage — The Proof Chain",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "For every hop retain: --- A good mapping is buildable **and** testable.  --- Modern platforms may transform after loading: The BA does not need to be the data engineer.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-04.mdx"
+    },
+    "DAT-05": {
+      "id": "DAT-05",
+      "title": "Reference Data",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Examples: Reference data looks small.  But wrong mappings can change: So reference data requires governance too.  --- Bad: Good: --- Example form: No narrative needed.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-05",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-05.mdx"
+    },
+    "DAT-06": {
+      "id": "DAT-06",
+      "title": "Reconciliation — Four Permanent Types",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Unexplained residual: --- Need both.  Why?  Multiple controls create confidence.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-06",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-06.mdx"
+    },
+    "DAT-07": {
+      "id": "DAT-07",
+      "title": "Reporting Grain",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Regulatory outputs often aggregate.  But the bank must be able to move both directions: and: This is **drill-down + trace-back**.  --- The bank must map internal meaning to external reporting meaning.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-07",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-07.mdx"
+    },
+    "DAT-08": {
+      "id": "DAT-08",
+      "title": "The BA's Core Role",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "**The Credit Risk BA preserves approved meaning from decision to production. ** The BA is the: --- --- This is the core BA delivery chain.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-08",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-08.mdx"
+    },
+    "DAT-09": {
+      "id": "DAT-09",
+      "title": "Business Rule Precedence",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Rules can conflict.  Example structure: Without precedence: So every ruleset needs: --- Never leave: as an accidental technical outcome.  Define: Missing-data treatment is a **business rule**.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-09",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-09.mdx"
+    },
+    "DAT-10": {
+      "id": "DAT-10",
+      "title": "UAT — What Good Looks Like",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "A UAT case needs: Strong UAT tests: --- Do not test by asking: Test against: Then compare: Difference: --- Correct classification saves time.  --- Defect record: not: --- The BA uses SQL to answer: Core SQL thinking: The goal is not developer-level SQL.  The goal is: **independent evidence-based investigation.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-10",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-10.mdx"
+    },
+    "DAT-11": {
+      "id": "DAT-11",
+      "title": "Change Delivery — Real Bank Hybrid",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Real regulatory / risk change often behaves like: Think: as a practical description.  Not a regulatory methodology.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "dat-11",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-11.mdx"
+    },
+    "DAT-12": {
+      "id": "DAT-12",
+      "title": "Decision Rights",
+      "type": "reference",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "Every ambiguous point needs an accountable owner.  Examples: --- **This chain is the profession.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "dat-12",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-12.mdx"
+    },
+    "DAT-13": {
+      "id": "DAT-13",
+      "title": "Final Recall — 60 Seconds",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "unsorted",
+      "one_screen": "**One sentence to retain:** **Credit-risk data and change management is the discipline of turning an approved risk, accounting or regulatory meaning into traceable source data, controlled transformations, reproducible calculations, reconciled reporting, testable requirements and signed production evidence — so every important number can be explained from source to regulator and operated reliably by BAU.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [],
+      "slug": "dat-13",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-13.mdx"
+    },
     "FND-18": {
       "id": "FND-18",
       "title": "Fundamental Financial Mathematics",
@@ -291,6 +1441,506 @@
       "currentness": "durable",
       "filepath": "MKT-02.mdx"
     },
+    "ML-01": {
+      "id": "ML-01",
+      "title": "— Machine Learning — End-to-End Modelling Masterclass",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "**Problem → Data → Baseline → Diagnose → Model → Validate → Tune → Explain → Stress → Deploy → Monitor** --- `Business problem` → `Target + prediction unit` → `Metric` → `Data audit` → `Train / Validation / Test` → `EDA` → `Pre-processing` → `Simple baseline` → `Linear / Logistic` → `Regularisation` → `Decision Tree` → `Bagging / Random Forest` → `Boosting / Gradient Boosting` → `ANN` → `Cross-validation` → `Hyperparameter tuning` → `Calibration / Threshold` → `Explainability` → `Error analysis` → `Stress / robustness` → `Final untouched test` → `Deployment` → `Monitoring / retraining` **Never jump to the most complex model first. ** Start simple → understand errors → add complexity only when it solves a demonstrated problem.  --- **Observation unit** → customer / loan / transaction / month?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-01.mdx"
+    },
+    "ML-02": {
+      "id": "ML-02",
+      "title": "Business Objective ≠ ML Metric",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Example: “Identify borrowers likely to default. ” Still incomplete.  Need: `Business decision` → `Prediction` → `Cost of errors` → `Metric` → `Threshold` --- `Train` → learn parameters `Validation` → choose models / hyperparameters `Test` → final unbiased estimate Typical conceptual split: **Train / Validation / Test** or **Train + Cross-validation / Test** --- Never randomly mix future and past.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-02.mdx"
+    },
+    "ML-03": {
+      "id": "ML-03",
+      "title": "Initial Data Audit",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Before EDA: --- Regression: - distribution - skew - zeros - tails Classification: - class proportions - rare-event severity Numeric: `distribution` → `relationship` → `non-linearity` → `outliers` Categorical: `category frequency` → `target rate by category` Check: - correlation - redundant variables - multicollinearity - duplicate information - interaction opportunities --- Missingness itself can contain information.  Blindly drop rows without checking whether removal changes population.  --- Three possibilities: `Data error` → correct / remove `Valid extreme` → retain `Valid but destabilising` → transform / winsorise / robust model - Linear Regression - Logistic Regression - KNN - SVM - ANN Much less sensitive to scaling and monotonic transformations.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-03",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-03.mdx"
+    },
+    "ML-04": {
+      "id": "ML-04",
+      "title": "Categorical Encoding",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "--- Needed when model depends on **distance or coefficient optimisation**.  Common: --- Before sophisticated modelling, establish something deliberately simple.  - mean prediction - median prediction - simple Linear Regression - majority class - observed positive rate - Logistic Regression **Does complexity produce meaningful out-of-sample improvement?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-04.mdx"
+    },
+    "ML-05": {
+      "id": "ML-05",
+      "title": "Linear Regression",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Prediction: Fit by minimising: ≈ expected change in for one-unit increase in , **holding other variables constant**.  --- Think **LINE + X**: Normality of **features** is not required.  The classical assumption concerns **residuals**, primarily for inference.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-05",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-05.mdx"
+    },
+    "ML-06": {
+      "id": "ML-06",
+      "title": "Multicollinearity",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Predictors explain each other.  Consequences: - unstable coefficients - large standard errors - coefficient signs can flip - interpretation becomes difficult Higher VIF: → stronger multicollinearity.  - remove redundant variable - combine variables - PCA - Ridge - accept if prediction is good and inference is not priority --- Easy interpretation.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-06",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-06.mdx"
+    },
+    "ML-07": {
+      "id": "ML-07",
+      "title": "Logistic Statistical Tests",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Tests individual coefficient.  Compare: `Restricted model` vs `Larger model` Tests whether added parameters meaningfully improve likelihood.  --- Of predicted positives, how many were correct?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-07",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-07.mdx"
+    },
+    "ML-08": {
+      "id": "ML-08",
+      "title": "Regularisation",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Controls model complexity.  General objective: --- Effect: → shrinks coefficients → usually retains all predictors Best when: - many correlated variables - stability needed --- Effect: → some coefficients become exactly zero Useful for: - sparse model - embedded feature selection --- Useful when: - many predictors - correlated groups - some sparsity desired --- **High bias** - train poor - validation poor Need: → more flexible model → better features → less regularisation --- **High variance** - train excellent - validation poor Need: → simpler model → more data → stronger regularisation → pruning → bagging → early stopping --- Compare performance as training data increases.  Train poor + Validation poor → **underfitting** Train strong + Validation weak, gap remains → **overfitting** Both improve and converge → healthy Validation still improving strongly with more data → more data may help --- Tree recursively asks: `Feature` → `Split` → `Branch` → `Leaf prediction` Example: `Income < threshold?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-08",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-08.mdx"
+    },
+    "ML-09": {
+      "id": "ML-09",
+      "title": "Controlling Tree Complexity",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Important parameters: Smaller tree: → more bias → less variance Larger tree: → less bias → more variance --- Core idea: **Combine weak / unstable models into a stronger predictor. ** Two major families: Models built **independently / parallel** Goal: → reduce variance Models built **sequentially** Goal: → correct previous errors --- **Bootstrap Aggregating** Process: `Original Train` → sample with replacement → fit Model 1 → another bootstrap → Model 2 → ...  Predictions: Regression: Classification: → average probabilities / vote.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-09",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-09.mdx"
+    },
+    "ML-10": {
+      "id": "ML-10",
+      "title": "Random Forest Tuning",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "General pattern: More trees: → lower ensemble variance → more computation → usually not more overfitting in the same way as deeper individual trees.  --- Each bootstrap tree excludes some training observations.  Those excluded cases: → **OOB observations** Use them to estimate performance without a separate validation prediction for that tree.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-10",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-10.mdx"
+    },
+    "ML-11": {
+      "id": "ML-11",
+      "title": "Gradient Boosting Regularisation",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Main controls: --- Family includes: - Gradient Boosting Machines - XGBoost - LightGBM - CatBoost Same broad concept: sequential tree ensemble minimising a loss function.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-11",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-11.mdx"
+    },
+    "ML-12": {
+      "id": "ML-12",
+      "title": "Artificial Neural Network",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Basic unit: Activation: Network: `Inputs` → `Hidden Layer` → `Hidden Layer` → `Output` Each layer learns a representation of previous layer.  --- Common hidden-layer default.  Useful binary output.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-12",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-12.mdx"
+    },
+    "ML-13": {
+      "id": "ML-13",
+      "title": "Feature Engineering",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "A model only sees the representation given to it.  Useful transformations: Every engineered feature must exist at **prediction time**.  --- Three families.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-13",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-13.mdx"
+    },
+    "ML-14": {
+      "id": "ML-14",
+      "title": "Hyperparameter Tuning",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Try every combination.  Good: → small search space Bad: → expensive --- Sample combinations.  Often more efficient when only a few dimensions truly matter.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-14",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-14.mdx"
+    },
+    "ML-15": {
+      "id": "ML-15",
+      "title": "Class Imbalance",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Example: 99% negative 1% positive Predict everything negative: **99% accuracy** but model is useless.  - recall - precision - F1 - PR-AUC - ROC-AUC - confusion matrix - cost-based metrics --- Options: Increase penalty for minority errors.  Reduce majority class.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-15",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-15.mdx"
+    },
+    "ML-16": {
+      "id": "ML-16",
+      "title": "Choosing the Winner",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Do **not** automatically choose highest AUC.  Final selection should balance: --- Suppose: Do not conclude ANN automatically wins.  Ask: Is 0.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-16",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-16.mdx"
+    },
+    "ML-17": {
+      "id": "ML-17",
+      "title": "Monitoring After Deployment",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "Four separate things.  Are inputs arriving correctly?  Has changed?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-17",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-17.mdx"
+    },
+    "ML-18": {
+      "id": "ML-18",
+      "title": "p-Values — Correct Interpretation",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "A p-value is: Probability of observing data at least this inconsistent with , **assuming and model assumptions are true**.  It is **not**: - probability that null is true - probability result happened by chance - measure of business importance - model-performance metric Large datasets can make tiny, practically meaningless effects statistically significant.  --- Prediction only requires association.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-18",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-18.mdx"
+    },
+    "ML-19": {
+      "id": "ML-19",
+      "title": "If Model Performance Is Bad — Decision Tree",
+      "type": "reference",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "**Both train and validation poor? ** → Underfit → improve representation / complexity **Train strong, validation poor? ** → Overfit → regularise / simplify / more data **AUC strong, calibration poor?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ml-19",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-19.mdx"
+    },
+    "ML-20": {
+      "id": "ML-20",
+      "title": "Final Interview Cheat Sheet",
+      "type": "concept",
+      "domain": "quantitative",
+      "subdomain": "unsorted",
+      "one_screen": "**Continuous target → linear conditional mean → OLS → coefficients → residual assumptions → MAE/RMSE/R²** **Binary target → log-odds → probability → odds ratios → discrimination + calibration → threshold** **L1 = sparse** **L2 = shrink** **Elastic Net = both** **Recursive splits → nonlinear + interactions → interpretable → high variance** **Independent bootstrap models → average → variance ↓** **Bagging + random features → decorrelated trees → robust ensemble** **Sequential weak learners → correct previous errors** **Fit residuals/gradients → learning rate × trees → powerful tabular model** **Weighted layers → activations → loss → backprop → gradient optimisation → deep nonlinear representation** **Train learns** **CV/Validation chooses** **Test proves** **Best model ≠ most complex model.  Best model = strongest repeatable out-of-sample solution to the actual business problem.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [],
+      "slug": "ml-20",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "ML-20.mdx"
+    },
     "OPS-01": {
       "id": "OPS-01",
       "title": "Operational Risk Standardised Approach",
@@ -383,9 +2033,308 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "REG-02.mdx"
+    },
+    "RTL-01": {
+      "id": "RTL-01",
+      "title": "— Retail Credit Risk — Project Masterclass",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**System:** End-to-end retail credit risk modelling framework **Portfolio:** LendingClub unsecured consumer term loans **Period:** 2007–2014 **Loans:** **466,285** **Raw variables:** **75** `Raw loans` → `Default target` → `Dev / Test / OOT` → `WoE + IV` → `Logistic PD` → `600-point scorecard` → `Validation + Calibration` → `PSI / CSI` → `LGD hurdle model` → `EAD` → `Lifetime PD` → `IFRS 9 staging` → `ECL + CECL` → `Basel IRB RWA` → `Portfolio monitoring` → `Dashboard + RAG` --- **PD model question:** Does the borrower default within **12 months** of origination?  --- Dataset had **no explicit default date**.  `Defaulted status` → use `last_pymnt_d` → if missing, use `last_credit_pull_d` → calculate months from `issue_d` → floor negative values at 0 → derive `default_12m` Without default timing: - cannot construct fixed 12-month performance window - cannot distinguish early vs later defaults - cannot build a defensible 12m PD target **Default date is inferred — not directly observed.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-01.mdx"
+    },
+    "RTL-02": {
+      "id": "RTL-02",
+      "title": "Development Strategy",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Development sample: **230,657** → stratified **80 / 20** → Train + Test Latest vintage: **2014** → held out completely → **Out-of-Time validation** Random test answers: Does the model generalise to unseen observations from the same development period?  OOT answers: Does it still work on a later population?  That second question is closer to real model deployment.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "rtl-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-02.mdx"
+    },
+    "RTL-03": {
+      "id": "RTL-03",
+      "title": "Scorecard Scaling",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Logistic output was converted into a traditional retail scorecard.  - **Base score:** 600 - **Base odds:** 50:1 - **PDO:** 20 **PDO = Points to Double the Odds** Every **+20 points** → odds of good:bads double.  Conceptually: `Borrower characteristics` → `WoE` → `Logit` → `Odds` → `Score` Same risk information, but easier for: - underwriting - policy cut-offs - rating bands - portfolio segmentation - business communication --- A model can rank well but predict the **wrong probability level**.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-03",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-03.mdx"
+    },
+    "RTL-04": {
+      "id": "RTL-04",
+      "title": "LGD — The Recovery Problem",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "LGD base: **50,968 defaulted loans** Portfolio recovery behaviour: Recovery distribution had a large point mass at **zero recovery**.  One ordinary regression would have to model two different questions simultaneously: 1.  **Will anything be recovered?",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-04.mdx"
+    },
+    "RTL-05": {
+      "id": "RTL-05",
+      "title": "Lifetime PD",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "A **60-month discrete-time hazard structure** was built.  Monthly hazard: Survival: Cumulative PD: 12m cumulative PD: **3. 4352%** ≈ portfolio 12m default rate: **3.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-05",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-05.mdx"
+    },
+    "RTL-06": {
+      "id": "RTL-06",
+      "title": "IFRS 9 vs US CECL",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**IFRS 9** Stage 1 → 12-month ECL Stage 2/3 → lifetime ECL **CECL** → lifetime expected loss from initial recognition CECL produced the larger allowance in the implemented comparison.  --- Implemented scenarios: - Baseline - Upside - Downside Probability-weighted structure: This scenario framework was executed on a **3-loan micro-sample fixture**, not across the complete OOT portfolio.  Therefore claim: Implemented multi-scenario probability-weighted ECL methodology.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-06",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-06.mdx"
+    },
+    "RTL-07": {
+      "id": "RTL-07",
+      "title": "Portfolio Monitoring",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Implemented monitoring: `Origination cohort` → months on book → cumulative default behaviour Useful for: - seasoning - vintage comparison - identifying weaker origination periods --- Implemented from the available snapshot structure.  **Not a true monthly account-level roll matrix. ** --- Built: **Origination rating grade** → **eventual outcome** Not: **Month t grade** → **Month t+1 grade** --- Pipeline outputs also feed: Automated reporting of project risk metrics.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-07",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-07.mdx"
+    },
+    "RTL-08": {
+      "id": "RTL-08",
+      "title": "Numbers I Own",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Placeholder one_screen summary for candidate atom.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-08",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-08.mdx"
+    },
+    "RTL-09": {
+      "id": "RTL-09",
+      "title": "Limitations I Should Volunteer",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "LendingClub data is predominantly snapshot-style.  Therefore: - no genuine month-to-month DPD transitions - no true cure / roll-forward matrix - roll-rate work = proxy --- Fixed-term loans: → no undrawn line Therefore empirical CCF could not be estimated from this portfolio.  --- Historical point-in-time origination scorecards were unavailable.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-09",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-09.mdx"
+    },
+    "RTL-10": {
+      "id": "RTL-10",
+      "title": "Six Questions I Must Defend",
+      "type": "procedure",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Because the project is a **credit scorecard framework**: - interpretability - WoE compatibility - direct PD estimation - coefficient transparency - score scaling - easier governance The objective was not maximum predictive power at any cost.  --- Observed Model B: - Train Gini = **0. 3678** - OOT Gini = **0.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "rtl-10",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-10.mdx"
+    },
+    "RTL-11": {
+      "id": "RTL-11",
+      "title": "The Entire Project in One Line",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "**Borrower data → 12m default → WoE scorecard → PD → validation → LGD + EAD → lifetime PD → IFRS 9 ECL / CECL → Basel RWA → portfolio monitoring → reporting.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [],
+      "slug": "rtl-11",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "RTL-11.mdx"
     }
   },
   "reverseIndex": {
+    "APP-01": [],
+    "APP-02": [],
+    "APP-03": [],
+    "APP-04": [],
+    "APP-05": [],
+    "APP-06": [],
+    "APP-07": [],
+    "APP-08": [],
+    "APP-09": [],
+    "APP-10": [],
+    "APP-11": [],
+    "APP-12": [],
+    "CCR-01": [],
+    "CCR-02": [],
+    "CCR-03": [],
+    "CCR-04": [],
+    "CCR-05": [],
+    "CCR-06": [],
+    "CCR-07": [],
+    "CCR-08": [],
+    "CCR-09": [],
+    "CCR-10": [],
+    "CCR-11": [],
+    "CCR-12": [],
     "CR-03": [
       "CR-07",
       "CR-08",
@@ -397,6 +2346,28 @@
     ],
     "CR-08": [],
     "CR-09": [],
+    "CRX-01": [],
+    "CRX-02": [],
+    "CRX-03": [],
+    "CRX-04": [],
+    "CRX-05": [],
+    "CRX-06": [],
+    "CRX-07": [],
+    "CRX-08": [],
+    "CRX-09": [],
+    "DAT-01": [],
+    "DAT-02": [],
+    "DAT-03": [],
+    "DAT-04": [],
+    "DAT-05": [],
+    "DAT-06": [],
+    "DAT-07": [],
+    "DAT-08": [],
+    "DAT-09": [],
+    "DAT-10": [],
+    "DAT-11": [],
+    "DAT-12": [],
+    "DAT-13": [],
     "FND-18": [
       "CR-03",
       "CR-07",
@@ -411,11 +2382,370 @@
       "MKT-02"
     ],
     "MKT-02": [],
+    "ML-01": [],
+    "ML-02": [],
+    "ML-03": [],
+    "ML-04": [],
+    "ML-05": [],
+    "ML-06": [],
+    "ML-07": [],
+    "ML-08": [],
+    "ML-09": [],
+    "ML-10": [],
+    "ML-11": [],
+    "ML-12": [],
+    "ML-13": [],
+    "ML-14": [],
+    "ML-15": [],
+    "ML-16": [],
+    "ML-17": [],
+    "ML-18": [],
+    "ML-19": [],
+    "ML-20": [],
     "OPS-01": [],
     "REG-01": [],
-    "REG-02": []
+    "REG-02": [],
+    "RTL-01": [],
+    "RTL-02": [],
+    "RTL-03": [],
+    "RTL-04": [],
+    "RTL-05": [],
+    "RTL-06": [],
+    "RTL-07": [],
+    "RTL-08": [],
+    "RTL-09": [],
+    "RTL-10": [],
+    "RTL-11": []
   },
   "domainTree": [
+    {
+      "domain": "quantitative",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "APP-01",
+              "title": "— Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-02",
+              "title": "Why Accuracy Was the Wrong Main Metric",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-03",
+              "title": "Antidiabetic Prescription Forecasting — SARIMA",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-04",
+              "title": "Forecasting — What to Retain",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-05",
+              "title": "Best Simulated NIFTY Portfolio",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-06",
+              "title": "Cross-Sectional Ranking",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-07",
+              "title": "L1 / L2 Portfolio Control",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-08",
+              "title": "LOC-IQ — Location Intelligence for Credit / Fraud",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-09",
+              "title": "LOC-IQ — Critical Truth Boundary",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-10",
+              "title": "Numbers I Actually Need to Memorise",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-11",
+              "title": "Hostile Questions — One-Line Answers",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "APP-12",
+              "title": "The Five Core Lessons",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-01",
+              "title": "— Machine Learning — End-to-End Modelling Masterclass",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-02",
+              "title": "Business Objective ≠ ML Metric",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-03",
+              "title": "Initial Data Audit",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-04",
+              "title": "Categorical Encoding",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-05",
+              "title": "Linear Regression",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-06",
+              "title": "Multicollinearity",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-07",
+              "title": "Logistic Statistical Tests",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-08",
+              "title": "Regularisation",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-09",
+              "title": "Controlling Tree Complexity",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-10",
+              "title": "Random Forest Tuning",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-11",
+              "title": "Gradient Boosting Regularisation",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-12",
+              "title": "Artificial Neural Network",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-13",
+              "title": "Feature Engineering",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-14",
+              "title": "Hyperparameter Tuning",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-15",
+              "title": "Class Imbalance",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-16",
+              "title": "Choosing the Winner",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-17",
+              "title": "Monitoring After Deployment",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-18",
+              "title": "p-Values — Correct Interpretation",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-19",
+              "title": "If Model Performance Is Bad — Decision Tree",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "ML-20",
+              "title": "Final Interview Cheat Sheet",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "counterparty-risk",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "CCR-01",
+              "title": "— Wholesale & Specialist Credit Risk — End-to-End Masterclass",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-02",
+              "title": "Issuer Credit Risk vs Counterparty Credit Risk",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-03",
+              "title": "Potential Future Exposure — PFE",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-04",
+              "title": "ISDA / CSA / GMRA — What to Remember",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-05",
+              "title": "CCR Exposure Stack",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-06",
+              "title": "Repo / Securities Financing Transactions — SFTs",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-07",
+              "title": "Pre-Settlement vs Settlement Exposure",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-08",
+              "title": "Concentration Risk",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-09",
+              "title": "Default — Wholesale Workflow",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-10",
+              "title": "Wholesale Data Spine",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-11",
+              "title": "UK Prudential Position — 25 August 2026",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CCR-12",
+              "title": "Full Credit-Risk Library — Final Integration",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
     {
       "domain": "credit-risk",
       "subdomains": [
@@ -455,6 +2785,252 @@
               "title": "Exposure at Default",
               "type": "mechanism",
               "status": "fixture",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "CRX-01",
+              "title": "— Credit Risk — Core End-to-End Masterclass",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-02",
+              "title": "Credit Objects — Never Mix the Levels",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-03",
+              "title": "Product Mechanics — What Actually Drives Risk",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-04",
+              "title": "Deterioration, Arrears, Default, Cure, Write-off",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-05",
+              "title": "IFRS 9 — Staging & Expected Credit Loss",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-06",
+              "title": "Pillar 2, ICAAP & Stress Testing",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-07",
+              "title": "Model Risk — Can the Bank Trust the Numbers?",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-08",
+              "title": "Framework Map — One Table",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CRX-09",
+              "title": "Final Recall — 60 Seconds",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-01",
+              "title": "— Retail Credit Risk — Project Masterclass",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-02",
+              "title": "Development Strategy",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-03",
+              "title": "Scorecard Scaling",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-04",
+              "title": "LGD — The Recovery Problem",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-05",
+              "title": "Lifetime PD",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-06",
+              "title": "IFRS 9 vs US CECL",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-07",
+              "title": "Portfolio Monitoring",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-08",
+              "title": "Numbers I Own",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-09",
+              "title": "Limitations I Should Volunteer",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-10",
+              "title": "Six Questions I Must Defend",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "RTL-11",
+              "title": "The Entire Project in One Line",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "risk-data",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "DAT-01",
+              "title": "— Credit Risk Data, Reporting & Change — End-to-End Masterclass",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-02",
+              "title": "BCBS 239 — The Compressed Framework",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-03",
+              "title": "Effective Dating — Which Value Was True Then?",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-04",
+              "title": "Data Lineage — The Proof Chain",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-05",
+              "title": "Reference Data",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-06",
+              "title": "Reconciliation — Four Permanent Types",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-07",
+              "title": "Reporting Grain",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-08",
+              "title": "The BA's Core Role",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-09",
+              "title": "Business Rule Precedence",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-10",
+              "title": "UAT — What Good Looks Like",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-11",
+              "title": "Change Delivery — Real Bank Hybrid",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-12",
+              "title": "Decision Rights",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-13",
+              "title": "Final Recall — 60 Seconds",
+              "type": "concept",
+              "status": "draft",
               "verified": false
             }
           ]
@@ -1019,8 +3595,6 @@
     "CR-10",
     "CR-11",
     "CR-12",
-    "DAT-01",
-    "DAT-02",
     "ECL-01",
     "FIN-01",
     "REG-03",
@@ -1032,6 +3606,486 @@
     "TR-04"
   ],
   "lintWarnings": [
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-01",
+      "message": "Atom \"APP-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-01",
+      "message": "Atom \"APP-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-01",
+      "message": "Atom \"APP-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-01",
+      "message": "Orphan Atom \"APP-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-02",
+      "message": "Atom \"APP-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-02",
+      "message": "Atom \"APP-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-02",
+      "message": "Atom \"APP-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-02",
+      "message": "Orphan Atom \"APP-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-03",
+      "message": "Atom \"APP-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-03",
+      "message": "Atom \"APP-03\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-03",
+      "message": "Atom \"APP-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-03",
+      "message": "Orphan Atom \"APP-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-04",
+      "message": "Atom \"APP-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-04",
+      "message": "Atom \"APP-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-04",
+      "message": "Atom \"APP-04\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-04",
+      "message": "Orphan Atom \"APP-04\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-05",
+      "message": "Atom \"APP-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-05",
+      "message": "Atom \"APP-05\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-05",
+      "message": "Atom \"APP-05\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-05",
+      "message": "Orphan Atom \"APP-05\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-06",
+      "message": "Atom \"APP-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-06",
+      "message": "Atom \"APP-06\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-06",
+      "message": "Atom \"APP-06\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-06",
+      "message": "Orphan Atom \"APP-06\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-07",
+      "message": "Atom \"APP-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-07",
+      "message": "Atom \"APP-07\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-07",
+      "message": "Atom \"APP-07\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-07",
+      "message": "Orphan Atom \"APP-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-08",
+      "message": "Atom \"APP-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-08",
+      "message": "Atom \"APP-08\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-08",
+      "message": "Atom \"APP-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-08",
+      "message": "Orphan Atom \"APP-08\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-09",
+      "message": "Atom \"APP-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-09",
+      "message": "Atom \"APP-09\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-09",
+      "message": "Atom \"APP-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-09",
+      "message": "Orphan Atom \"APP-09\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-10",
+      "message": "Atom \"APP-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-10",
+      "message": "Atom \"APP-10\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-10",
+      "message": "Atom \"APP-10\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-10",
+      "message": "Orphan Atom \"APP-10\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-11",
+      "message": "Atom \"APP-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-11",
+      "message": "Atom \"APP-11\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-11",
+      "message": "Atom \"APP-11\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-11",
+      "message": "Orphan Atom \"APP-11\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "APP-12",
+      "message": "Atom \"APP-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "APP-12",
+      "message": "Atom \"APP-12\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "APP-12",
+      "message": "Atom \"APP-12\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "APP-12",
+      "message": "Orphan Atom \"APP-12\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-01",
+      "message": "Atom \"CCR-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-01",
+      "message": "Atom \"CCR-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-01",
+      "message": "Atom \"CCR-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-01",
+      "message": "Orphan Atom \"CCR-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-02",
+      "message": "Atom \"CCR-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-02",
+      "message": "Atom \"CCR-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-02",
+      "message": "Atom \"CCR-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-02",
+      "message": "Orphan Atom \"CCR-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-03",
+      "message": "Atom \"CCR-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-03",
+      "message": "Atom \"CCR-03\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-03",
+      "message": "Atom \"CCR-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-03",
+      "message": "Orphan Atom \"CCR-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-04",
+      "message": "Atom \"CCR-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-04",
+      "message": "Atom \"CCR-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-04",
+      "message": "Atom \"CCR-04\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-04",
+      "message": "Orphan Atom \"CCR-04\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-05",
+      "message": "Atom \"CCR-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-05",
+      "message": "Atom \"CCR-05\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-05",
+      "message": "Atom \"CCR-05\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-05",
+      "message": "Orphan Atom \"CCR-05\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-06",
+      "message": "Atom \"CCR-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-06",
+      "message": "Atom \"CCR-06\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-06",
+      "message": "Atom \"CCR-06\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-06",
+      "message": "Orphan Atom \"CCR-06\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-07",
+      "message": "Atom \"CCR-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-07",
+      "message": "Atom \"CCR-07\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-07",
+      "message": "Atom \"CCR-07\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-07",
+      "message": "Orphan Atom \"CCR-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-08",
+      "message": "Atom \"CCR-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-08",
+      "message": "Atom \"CCR-08\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-08",
+      "message": "Atom \"CCR-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-08",
+      "message": "Orphan Atom \"CCR-08\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-09",
+      "message": "Atom \"CCR-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-09",
+      "message": "Atom \"CCR-09\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-09",
+      "message": "Atom \"CCR-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-09",
+      "message": "Orphan Atom \"CCR-09\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-10",
+      "message": "Atom \"CCR-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-10",
+      "message": "Atom \"CCR-10\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-10",
+      "message": "Atom \"CCR-10\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-10",
+      "message": "Orphan Atom \"CCR-10\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-11",
+      "message": "Atom \"CCR-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-11",
+      "message": "Atom \"CCR-11\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-11",
+      "message": "Atom \"CCR-11\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-11",
+      "message": "Orphan Atom \"CCR-11\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CCR-12",
+      "message": "Atom \"CCR-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CCR-12",
+      "message": "Atom \"CCR-12\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CCR-12",
+      "message": "Atom \"CCR-12\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CCR-12",
+      "message": "Orphan Atom \"CCR-12\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
     {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-03",
@@ -1076,6 +4130,446 @@
       "rule": "MISSING_RECALL_BLOCK",
       "atomId": "CR-09",
       "message": "Atom \"CR-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-01",
+      "message": "Atom \"CRX-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-01",
+      "message": "Atom \"CRX-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-01",
+      "message": "Atom \"CRX-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-01",
+      "message": "Orphan Atom \"CRX-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-02",
+      "message": "Atom \"CRX-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-02",
+      "message": "Atom \"CRX-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-02",
+      "message": "Atom \"CRX-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-02",
+      "message": "Orphan Atom \"CRX-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-03",
+      "message": "Atom \"CRX-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-03",
+      "message": "Atom \"CRX-03\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-03",
+      "message": "Atom \"CRX-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-03",
+      "message": "Orphan Atom \"CRX-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-04",
+      "message": "Atom \"CRX-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-04",
+      "message": "Atom \"CRX-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-04",
+      "message": "Atom \"CRX-04\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-04",
+      "message": "Orphan Atom \"CRX-04\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-05",
+      "message": "Atom \"CRX-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-05",
+      "message": "Atom \"CRX-05\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-05",
+      "message": "Atom \"CRX-05\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-05",
+      "message": "Orphan Atom \"CRX-05\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-06",
+      "message": "Atom \"CRX-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-06",
+      "message": "Atom \"CRX-06\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-06",
+      "message": "Atom \"CRX-06\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-06",
+      "message": "Orphan Atom \"CRX-06\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-07",
+      "message": "Atom \"CRX-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-07",
+      "message": "Atom \"CRX-07\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-07",
+      "message": "Atom \"CRX-07\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-07",
+      "message": "Orphan Atom \"CRX-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-08",
+      "message": "Atom \"CRX-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-08",
+      "message": "Atom \"CRX-08\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-08",
+      "message": "Atom \"CRX-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-08",
+      "message": "Orphan Atom \"CRX-08\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CRX-09",
+      "message": "Atom \"CRX-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CRX-09",
+      "message": "Atom \"CRX-09\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CRX-09",
+      "message": "Atom \"CRX-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "CRX-09",
+      "message": "Orphan Atom \"CRX-09\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-01",
+      "message": "Atom \"DAT-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-01",
+      "message": "Atom \"DAT-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-01",
+      "message": "Atom \"DAT-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-01",
+      "message": "Orphan Atom \"DAT-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-02",
+      "message": "Atom \"DAT-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-02",
+      "message": "Atom \"DAT-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-02",
+      "message": "Atom \"DAT-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-02",
+      "message": "Orphan Atom \"DAT-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-03",
+      "message": "Atom \"DAT-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-03",
+      "message": "Atom \"DAT-03\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-03",
+      "message": "Atom \"DAT-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-03",
+      "message": "Orphan Atom \"DAT-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-04",
+      "message": "Atom \"DAT-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-04",
+      "message": "Atom \"DAT-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-04",
+      "message": "Atom \"DAT-04\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-04",
+      "message": "Orphan Atom \"DAT-04\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-05",
+      "message": "Atom \"DAT-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-05",
+      "message": "Atom \"DAT-05\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-05",
+      "message": "Atom \"DAT-05\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-05",
+      "message": "Orphan Atom \"DAT-05\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-06",
+      "message": "Atom \"DAT-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-06",
+      "message": "Atom \"DAT-06\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-06",
+      "message": "Atom \"DAT-06\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-06",
+      "message": "Orphan Atom \"DAT-06\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-07",
+      "message": "Atom \"DAT-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-07",
+      "message": "Atom \"DAT-07\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-07",
+      "message": "Atom \"DAT-07\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-07",
+      "message": "Orphan Atom \"DAT-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-08",
+      "message": "Atom \"DAT-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-08",
+      "message": "Atom \"DAT-08\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-08",
+      "message": "Atom \"DAT-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-08",
+      "message": "Orphan Atom \"DAT-08\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-09",
+      "message": "Atom \"DAT-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-09",
+      "message": "Atom \"DAT-09\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-09",
+      "message": "Atom \"DAT-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-09",
+      "message": "Orphan Atom \"DAT-09\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-10",
+      "message": "Atom \"DAT-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-10",
+      "message": "Atom \"DAT-10\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-10",
+      "message": "Atom \"DAT-10\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-10",
+      "message": "Orphan Atom \"DAT-10\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-11",
+      "message": "Atom \"DAT-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-11",
+      "message": "Atom \"DAT-11\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-11",
+      "message": "Atom \"DAT-11\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-11",
+      "message": "Orphan Atom \"DAT-11\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-12",
+      "message": "Atom \"DAT-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-12",
+      "message": "Atom \"DAT-12\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-12",
+      "message": "Atom \"DAT-12\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-12",
+      "message": "Orphan Atom \"DAT-12\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-13",
+      "message": "Atom \"DAT-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-13",
+      "message": "Atom \"DAT-13\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "DAT-13",
+      "message": "Atom \"DAT-13\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "DAT-13",
+      "message": "Orphan Atom \"DAT-13\": no other atom lists it as prerequisite, see_also, or contrast_with."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -1124,6 +4618,406 @@
     },
     {
       "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-01",
+      "message": "Atom \"ML-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-01",
+      "message": "Atom \"ML-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-01",
+      "message": "Atom \"ML-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-01",
+      "message": "Orphan Atom \"ML-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-02",
+      "message": "Atom \"ML-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-02",
+      "message": "Atom \"ML-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-02",
+      "message": "Atom \"ML-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-02",
+      "message": "Orphan Atom \"ML-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-03",
+      "message": "Atom \"ML-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-03",
+      "message": "Atom \"ML-03\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-03",
+      "message": "Atom \"ML-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-03",
+      "message": "Orphan Atom \"ML-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-04",
+      "message": "Atom \"ML-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-04",
+      "message": "Atom \"ML-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-04",
+      "message": "Atom \"ML-04\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-04",
+      "message": "Orphan Atom \"ML-04\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-05",
+      "message": "Atom \"ML-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-05",
+      "message": "Atom \"ML-05\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-05",
+      "message": "Atom \"ML-05\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-05",
+      "message": "Orphan Atom \"ML-05\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-06",
+      "message": "Atom \"ML-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-06",
+      "message": "Atom \"ML-06\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-06",
+      "message": "Atom \"ML-06\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-06",
+      "message": "Orphan Atom \"ML-06\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-07",
+      "message": "Atom \"ML-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-07",
+      "message": "Atom \"ML-07\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-07",
+      "message": "Atom \"ML-07\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-07",
+      "message": "Orphan Atom \"ML-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-08",
+      "message": "Atom \"ML-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-08",
+      "message": "Atom \"ML-08\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-08",
+      "message": "Atom \"ML-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-08",
+      "message": "Orphan Atom \"ML-08\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-09",
+      "message": "Atom \"ML-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-09",
+      "message": "Atom \"ML-09\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-09",
+      "message": "Atom \"ML-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-09",
+      "message": "Orphan Atom \"ML-09\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-10",
+      "message": "Atom \"ML-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-10",
+      "message": "Atom \"ML-10\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-10",
+      "message": "Atom \"ML-10\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-10",
+      "message": "Orphan Atom \"ML-10\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-11",
+      "message": "Atom \"ML-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-11",
+      "message": "Atom \"ML-11\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-11",
+      "message": "Atom \"ML-11\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-11",
+      "message": "Orphan Atom \"ML-11\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-12",
+      "message": "Atom \"ML-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-12",
+      "message": "Atom \"ML-12\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-12",
+      "message": "Atom \"ML-12\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-12",
+      "message": "Orphan Atom \"ML-12\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-13",
+      "message": "Atom \"ML-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-13",
+      "message": "Atom \"ML-13\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-13",
+      "message": "Atom \"ML-13\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-13",
+      "message": "Orphan Atom \"ML-13\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-14",
+      "message": "Atom \"ML-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-14",
+      "message": "Atom \"ML-14\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-14",
+      "message": "Atom \"ML-14\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-14",
+      "message": "Orphan Atom \"ML-14\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-15",
+      "message": "Atom \"ML-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-15",
+      "message": "Atom \"ML-15\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-15",
+      "message": "Atom \"ML-15\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-15",
+      "message": "Orphan Atom \"ML-15\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-16",
+      "message": "Atom \"ML-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-16",
+      "message": "Atom \"ML-16\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-16",
+      "message": "Atom \"ML-16\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-16",
+      "message": "Orphan Atom \"ML-16\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-17",
+      "message": "Atom \"ML-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-17",
+      "message": "Atom \"ML-17\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-17",
+      "message": "Atom \"ML-17\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-17",
+      "message": "Orphan Atom \"ML-17\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-18",
+      "message": "Atom \"ML-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-18",
+      "message": "Atom \"ML-18\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-18",
+      "message": "Atom \"ML-18\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-18",
+      "message": "Orphan Atom \"ML-18\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-19",
+      "message": "Atom \"ML-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-19",
+      "message": "Atom \"ML-19\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-19",
+      "message": "Atom \"ML-19\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-19",
+      "message": "Orphan Atom \"ML-19\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "ML-20",
+      "message": "Atom \"ML-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "ML-20",
+      "message": "Atom \"ML-20\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "ML-20",
+      "message": "Atom \"ML-20\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "ML-20",
+      "message": "Orphan Atom \"ML-20\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "OPS-01",
       "message": "Atom \"OPS-01\" is unverified (fixture). Displays development banner."
     },
@@ -1151,7 +5045,227 @@
       "rule": "MISSING_RECALL_BLOCK",
       "atomId": "REG-02",
       "message": "Atom \"REG-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-01",
+      "message": "Atom \"RTL-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-01",
+      "message": "Atom \"RTL-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-01",
+      "message": "Atom \"RTL-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-01",
+      "message": "Orphan Atom \"RTL-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-02",
+      "message": "Atom \"RTL-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-02",
+      "message": "Atom \"RTL-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-02",
+      "message": "Atom \"RTL-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-02",
+      "message": "Orphan Atom \"RTL-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-03",
+      "message": "Atom \"RTL-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-03",
+      "message": "Atom \"RTL-03\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-03",
+      "message": "Atom \"RTL-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-03",
+      "message": "Orphan Atom \"RTL-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-04",
+      "message": "Atom \"RTL-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-04",
+      "message": "Atom \"RTL-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-04",
+      "message": "Atom \"RTL-04\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-04",
+      "message": "Orphan Atom \"RTL-04\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-05",
+      "message": "Atom \"RTL-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-05",
+      "message": "Atom \"RTL-05\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-05",
+      "message": "Atom \"RTL-05\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-05",
+      "message": "Orphan Atom \"RTL-05\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-06",
+      "message": "Atom \"RTL-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-06",
+      "message": "Atom \"RTL-06\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-06",
+      "message": "Atom \"RTL-06\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-06",
+      "message": "Orphan Atom \"RTL-06\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-07",
+      "message": "Atom \"RTL-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-07",
+      "message": "Atom \"RTL-07\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-07",
+      "message": "Atom \"RTL-07\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-07",
+      "message": "Orphan Atom \"RTL-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-08",
+      "message": "Atom \"RTL-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-08",
+      "message": "Atom \"RTL-08\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-08",
+      "message": "Atom \"RTL-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-08",
+      "message": "Orphan Atom \"RTL-08\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-09",
+      "message": "Atom \"RTL-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-09",
+      "message": "Atom \"RTL-09\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-09",
+      "message": "Atom \"RTL-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-09",
+      "message": "Orphan Atom \"RTL-09\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-10",
+      "message": "Atom \"RTL-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-10",
+      "message": "Atom \"RTL-10\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-10",
+      "message": "Atom \"RTL-10\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-10",
+      "message": "Orphan Atom \"RTL-10\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "RTL-11",
+      "message": "Atom \"RTL-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "RTL-11",
+      "message": "Atom \"RTL-11\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "RTL-11",
+      "message": "Atom \"RTL-11\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "RTL-11",
+      "message": "Orphan Atom \"RTL-11\": no other atom lists it as prerequisite, see_also, or contrast_with."
     }
   ],
-  "generatedAt": "2026-08-27T19:42:30.552Z"
+  "generatedAt": "2026-08-27T19:48:01.385Z"
 }

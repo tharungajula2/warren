@@ -1,0 +1,141 @@
+---
+id: DAT-08
+title: "The BA's Core Role"
+type: reference
+domain: risk-data
+subdomain: unsorted
+one_screen: "**The Credit Risk BA preserves approved meaning from decision to production. ** The BA is the: --- --- This is the core BA delivery chain."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02_Credit_Risk_Data_Reporting_Change_Masterclass.md > # 30. The BA's Core Role"
+import_headings: ["The BA's Core Role","What the BA Owns vs Does Not Own","Rule → Requirement → Build → Proof","Requirement Quality — Five Tests"]
+---
+
+> **The Credit Risk BA preserves approved meaning from decision to production.**
+
+```text
+REGULATION / POLICY / METHODOLOGY
+              ↓
+             BA
+              ↓
+REQUIREMENTS / DATA / RULES / TEST EVIDENCE
+              ↓
+TECHNOLOGY / VENDOR / REPORTING / BAU
+```
+
+The BA is the:
+
+```text
+semantic integrator
++
+traceability owner
++
+delivery evidence coordinator
+```
+
+---
+
+## What the BA Owns vs Does Not Own
+
+| BA owns / drives | BA does not independently own |
+|---|---|
+| Requirement clarity | Regulatory policy decision |
+| Current / target-state understanding | Credit approval judgement |
+| Data requirement | Model validation conclusion |
+| Mapping specification | Accounting-policy sign-off |
+| Traceability | Technology coding |
+| Test coverage / coordination | Independent audit opinion |
+| Defect clarity | Final risk ownership |
+| Stakeholder sign-off process | Every stakeholder decision |
+
+<Rule label="PERMANENT RULE">
+```text
+BA owns translation
+≠
+BA owns the underlying risk judgement
+```
+
+---
+</Rule>
+
+
+## Rule → Requirement → Build → Proof
+
+```text
+1. REGULATION / POLICY
+What must happen?
+        ↓
+2. INTERPRETATION
+What does it mean for this bank?
+        ↓
+3. METHODOLOGY
+Which approved rule will be used?
+        ↓
+4. BUSINESS REQUIREMENT
+What must system/process do?
+        ↓
+5. FUNCTIONAL / DATA SPEC
+How must behaviour/data work?
+        ↓
+6. BUILD
+Technology implements
+        ↓
+7. TEST
+Prove requirement
+        ↓
+8. SIGN-OFF
+Accountable owner accepts
+```
+
+This is the core BA delivery chain.
+
+---
+
+## Requirement Quality — Five Tests
+
+A good requirement is:
+
+```text
+Unambiguous
+Buildable
+Testable
+Traceable
+Approved
+```
+
+Bad:
+
+```text
+System should calculate RWA correctly.
+```
+
+Good requirement structure:
+
+```text
+Population
++
+Input
++
+Rule
++
+Precedence
++
+Output
++
+Exception
++
+Control
++
+Acceptance result
+```
+
+---

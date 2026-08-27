@@ -1,0 +1,167 @@
+---
+id: APP-08
+title: "LOC-IQ — Location Intelligence for Credit / Fraud"
+type: mechanism
+domain: quantitative
+subdomain: unsorted
+one_screen: "Applicant states: “I live at location X. ” Traditional credit/fraud data may contain many indirect geographic traces.  Question: **Do the available digital footprints support the declared physical location?"
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "03 — Applied ML, Forecasting & Quant Projects — 5-Workstream Portfolio Cheatsheet.md > # 29. LOC-IQ — Location Intelligence for Credit / Fraud"
+import_headings: ["LOC-IQ — Location Intelligence for Credit / Fraud","LOC-IQ in One Line","Six-Layer Graph","Signal Weighting","Candidate Ranking Concept"]
+---
+
+## The problem
+
+Applicant states:
+
+> “I live at location X.”
+
+Traditional credit/fraud data may contain many indirect geographic traces.
+
+Question:
+
+> **Do the available digital footprints support the declared physical location?**
+
+LOC-IQ structures those traces into a graph.
+
+
+
+---
+
+## LOC-IQ in One Line
+
+<Flow>
+6 Primary Identifiers
+        ↓
+46 External Source Catalogue
+        ↓
+42 Fetched Data Fields
+        ↓
+Derived Signals
+        ↓
+Weighted Graph
+        ↓
+Candidate Locations
+        ↓
+GREEN / AMBER / RED
+</Flow>
+
+## Numbers to own
+
+| Component | Count |
+|---|---:|
+| Primary identifiers | **6** |
+| External source catalogue | **46** |
+| Fetched fields | **42** |
+| Graph layers | **6** |
+| Demo scenarios | **3** |
+
+---
+
+## Six-Layer Graph
+
+<Flow>
+1. Primary Identifiers
+       ↓
+2. External APIs / Sources
+       ↓
+3. Data Fields
+       ↓
+4. Derived Signals
+       ↓
+5. Candidate Locations
+       ↓
+6. Output / Truth Flag
+</Flow>
+
+Built with:
+
+- Next.js
+- React
+- TypeScript
+- ReactFlow
+
+Main challenge:
+
+> Display a large directed intelligence network without visual collapse.
+
+---
+
+## Signal Weighting
+
+Implemented edge-weight logic:
+
+<Formula math="\Large \displaystyle EffectiveWeight= BaseWeight \times RecencyFactor \times IPTrustFactor" />
+
+Interpretation:
+
+<Flow>
+Signal quality
++
+how recent?
++
+is the network location trustworthy?
+</Flow>
+
+Example:
+
+VPN / proxy IP:
+
+<Flow>
+IP trust factor ↓
+→ location evidence down-weighted
+</Flow>
+
+### Important
+
+This is **rule-based weighting**, not a statistically trained ML model.
+
+
+
+---
+
+## Candidate Ranking Concept
+
+Multiple sources may suggest:
+
+```text
+Bengaluru
+Delhi
+Mumbai
+Frankfurt proxy
+...
+```
+
+Signals converge onto candidate locations.
+
+Conceptually:
+
+<Formula math="\Large \displaystyle Score(Location_j) = \sum_i EvidenceWeight_{ij}" />
+
+Then candidates:
+
+```text
+ranked by confidence
+```
+
+and compared with the declared location.
+
+Output:
+
+```text
+GREEN
+AMBER
+RED
+```
+
+---

@@ -1,0 +1,183 @@
+---
+id: ML-12
+title: "Artificial Neural Network"
+type: reference
+domain: quantitative
+subdomain: unsorted
+one_screen: "Basic unit: Activation: Network: `Inputs` → `Hidden Layer` → `Hidden Layer` → `Output` Each layer learns a representation of previous layer.  --- Common hidden-layer default.  Useful binary output."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02 — Machine Learning — End-to-End Modelling Masterclass.md > # 50. Artificial Neural Network"
+import_headings: ["Artificial Neural Network","Activation Functions","Forward Propagation","Backpropagation","Epoch / Batch / Iteration","ANN Optimizers","ANN Regularisation","When ANN Makes Sense"]
+---
+
+Basic unit:
+
+<Formula math="\Large \displaystyle z= w_1x_1+\cdots+w_px_p+b" />
+
+Activation:
+
+<Formula math="\Large \displaystyle a=f(z)" />
+
+Network:
+
+`Inputs`
+→ `Hidden Layer`
+→ `Hidden Layer`
+→ `Output`
+
+Each layer learns a representation of previous layer.
+
+---
+
+## Activation Functions
+
+## ReLU
+
+<Formula math="\Large \displaystyle ReLU(x)=\max(0,x)" />
+
+Common hidden-layer default.
+
+## Sigmoid
+
+<Formula math="\Large \displaystyle \sigma(x)=\frac{1}{1+e^{-x}}" />
+
+Useful binary output.
+
+## Softmax
+
+<Formula math="\Large \displaystyle P(Y=k)= \frac{e^{z_k}} {\sum_j e^{z_j}}" />
+
+Multiclass output.
+
+---
+
+## Forward Propagation
+
+Data moves through network:
+
+`X`
+→ weighted sums
+→ activations
+→ prediction
+
+Then loss measured.
+
+Classification:
+
+**Cross-Entropy**
+
+Regression:
+
+**MSE / MAE etc.**
+
+---
+
+## Backpropagation
+
+Compute:
+
+<Formula math="\Large \displaystyle \frac{\partial Loss}{\partial w}" />
+
+for each weight using chain rule.
+
+Then optimizer updates:
+
+<Formula math="\Large \displaystyle w_{new} = w_{old} - \eta \frac{\partial Loss}{\partial w}" />
+
+That repeated process:
+
+→ **training**
+
+---
+
+## Epoch / Batch / Iteration
+
+| Term | Meaning |
+|---|---|
+| Epoch | one complete pass through training data |
+| Batch | subset processed together |
+| Iteration | one parameter update |
+
+Example:
+
+10,000 rows  
+batch size 100
+
+→ **100 iterations per epoch**
+
+---
+
+## ANN Optimizers
+
+## Gradient Descent
+
+Entire dataset per update.
+
+## SGD
+
+One / small sample.
+
+## Mini-batch GD
+
+Practical standard.
+
+## Adam
+
+Adaptive learning rates + momentum-style behaviour.
+
+Common strong default.
+
+---
+
+## ANN Regularisation
+
+### Dropout
+
+Randomly deactivate neurons during training.
+
+→ prevents co-adaptation
+
+### L1 / L2
+
+Penalise weights.
+
+### Early stopping
+
+Monitor validation loss.
+
+Stop when improvement stops.
+
+### Batch normalisation
+
+Normalises intermediate activations and can stabilise training.
+
+---
+
+## When ANN Makes Sense
+
+Strong when:
+
+- huge datasets
+- image
+- text
+- audio
+- complex high-dimensional interactions
+- representation learning needed
+
+For ordinary structured tabular data:
+
+> **Do not assume ANN beats boosting.**
+
+Compare empirically.
+
+---

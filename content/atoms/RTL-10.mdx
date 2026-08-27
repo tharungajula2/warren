@@ -1,0 +1,119 @@
+---
+id: RTL-10
+title: "Six Questions I Must Defend"
+type: procedure
+domain: credit-risk
+subdomain: unsorted
+one_screen: "Because the project is a **credit scorecard framework**: - interpretability - WoE compatibility - direct PD estimation - coefficient transparency - score scaling - easier governance The objective was not maximum predictive power at any cost.  --- Observed Model B: - Train Gini = **0. 3678** - OOT Gini = **0."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 28. Six Questions I Must Defend"
+import_headings: []
+---
+
+## Why logistic regression instead of a black-box model?
+
+Because the project is a **credit scorecard framework**:
+
+- interpretability
+- WoE compatibility
+- direct PD estimation
+- coefficient transparency
+- score scaling
+- easier governance
+
+The objective was not maximum predictive power at any cost.
+
+---
+
+## Why did OOT perform better than Train?
+
+Observed Model B:
+
+- Train Gini = **0.3678**
+- OOT Gini = **0.3845**
+
+Possible sample/vintage composition effect.
+
+Key point:
+
+> OOT did not deteriorate materially; temporal rank-ordering remained stable.
+
+Do not imply this proves future performance will always improve.
+
+---
+
+## Doesn't low OOT HL p-value mean the model failed?
+
+It signals **calibration mismatch**, not necessarily poor discrimination.
+
+OOT:
+
+- AUC = **0.6923**
+- Gini = **0.3845**
+- HL p = **0.00117**
+
+Therefore:
+
+> good ranking + imperfect probability calibration
+
+which is why recalibration was separately implemented.
+
+---
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+## Why is LGD 93%?
+
+Because:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+- unsecured consumer portfolio
+- average recovery only **6.99%**
+- median recovery = **0**
+- **52.18%** of defaults had 100% loss
+
+The model reflects the observed recovery distribution.
+
+---
+
+## Why hurdle LGD?
+
+Because two behaviours coexist:
+
+`Will anything be recovered?`
+
+and
+
+`How much if recovery occurs?`
+
+Separating them fits the zero-heavy recovery distribution better than forcing one regression across both regimes.
+
+---
+
+## Why is IRB RWA above Standardised?
+
+Because IRB incorporates the portfolio's very high LGD.
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+Mean LGD ≈ **93%**
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+→ IRB risk weight **125.63%**
+
+vs standardised assumption:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**75%**
+
+Internal models can produce **higher**, not automatically lower, regulatory capital.
+
+---

@@ -1,0 +1,147 @@
+---
+id: RTL-02
+title: "Development Strategy"
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: "Development sample: **230,657** → stratified **80 / 20** → Train + Test Latest vintage: **2014** → held out completely → **Out-of-Time validation** Random test answers: Does the model generalise to unseen observations from the same development period?  OOT answers: Does it still work on a later population?  That second question is closer to real model deployment."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: "01 — Retail Credit Risk — Project Masterclass.md > # 2. Development Strategy"
+import_headings: ["Development Strategy","PD Model — From Characteristics to Score","Logistic PD Model"]
+---
+
+## Temporal structure
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+| Population | Vintage | Rows | Defaults | Default rate |
+|---|---|---:|---:|---:|
+| Train | 2007–2013 | **184,525** | 6,329 | 3.43% |
+| Test | 2007–2013 | **46,132** | 1,582 | 3.43% |
+| OOT | **2014** | **235,628** | 8,107 | 3.44% |
+
+Development sample:
+
+**230,657**
+→ stratified **80 / 20**
+→ Train + Test
+
+Latest vintage:
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**2014**
+→ held out completely
+→ **Out-of-Time validation**
+
+### Why OOT?
+
+Random test answers:
+
+> Does the model generalise to unseen observations from the same development period?
+
+OOT answers:
+
+> Does it still work on a later population?
+
+That second question is closer to real model deployment.
+
+### Critical project truth
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+**OOT = 2014.**
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+Never say **2015**.
+
+---
+
+## PD Model — From Characteristics to Score
+
+## Architecture
+
+`48 candidate variables`
+→ `WoE binning`
+→ `IV review`
+→ `Logistic Regression`
+→ `PD`
+→ `Scorecard points`
+→ `Rating grades`
+
+---
+
+## Why WoE?
+
+**Weight of Evidence**
+
+<Formula math="\Large \displaystyle WoE_i = \ln \left( \frac{\%Good_i}{\%Bad_i} \right)" />
+
+### Project role
+
+- converts raw characteristics into risk-ordered bins
+- handles non-linear relationships
+- makes effects interpretable
+- fits naturally with logistic scorecards
+
+## Why IV?
+
+**Information Value**
+
+<Formula math="\Large \displaystyle IV = \sum (\%Good_i-\%Bad_i)\times WoE_i" />
+
+Used to assess **predictive separation** of candidate characteristics.
+
+**IV ≠ model performance.**
+
+It evaluates an individual characteristic, not the complete scorecard.
+
+---
+
+## Logistic PD Model
+
+Two specifications were trained:
+
+| Model | Features | Train Gini | Test Gini | OOT Gini |
+|---|---:|---:|---:|---:|
+| Model A | 7 | 0.3013 | 0.2969 | 0.2715 |
+| **Model B** | **10** | **0.3678** | **0.3634** | **0.3845** |
+
+Model B:
+
+| Metric | Train | Test | OOT |
+|---|---:|---:|---:|
+| AUROC | 0.6839 | 0.6817 | **0.6923** |
+| Gini | 0.3678 | 0.3634 | **0.3845** |
+| KS | 0.2736 | 0.2728 | **0.2843** |
+
+### Relationship
+
+<Formula math="\Large \displaystyle Gini = 2 \times AUC - 1" />
+
+### What the metrics answer
+
+| Metric | Question |
+|---|---|
+| AUC | Can model rank risky above safe borrowers? |
+| Gini | Same discrimination expressed on credit-risk scale |
+| KS | Maximum separation between good/bad distributions |
+
+### Project interpretation
+
+Model B shows **stable discrimination across Train → Test → OOT**.
+
+OOT discrimination is slightly stronger than development.
+
+**Do not describe this as proof that OOT is “better data.”**
+
+It is an observed sample result.
+
+---

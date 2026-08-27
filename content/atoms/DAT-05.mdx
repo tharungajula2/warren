@@ -1,0 +1,170 @@
+---
+id: DAT-05
+title: "Reference Data"
+type: reference
+domain: risk-data
+subdomain: unsorted
+one_screen: "Examples: Reference data looks small.  But wrong mappings can change: So reference data requires governance too.  --- Bad: Good: --- Example form: No narrative needed."
+prerequisites: []
+see_also: []
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources: []
+import_source: "02_Credit_Risk_Data_Reporting_Change_Masterclass.md > # 15. Reference Data"
+import_headings: ["Reference Data","Data Quality — Six Core Dimensions","Data Quality Rule Structure","Data Issue Lifecycle","Controls — Prevent, Detect, Correct"]
+---
+
+Examples:
+
+```text
+Product hierarchy
+Country code
+Currency
+Industry / sector
+Legal entity
+Exposure class
+Risk grade
+Collateral type
+Reporting taxonomy
+```
+
+Reference data looks small.
+
+But wrong mappings can change:
+
+```text
+classification
+aggregation
+RWA
+reporting
+```
+
+So reference data requires governance too.
+
+---
+
+## Data Quality — Six Core Dimensions
+
+| Dimension | Question |
+|---|---|
+| **Accuracy** | Does value reflect reality / authoritative source? |
+| **Completeness** | Is required data present? |
+| **Timeliness** | Is it available in time and current enough? |
+| **Consistency** | Does it agree across systems / reports? |
+| **Uniqueness** | Are duplicate records absent? |
+| **Validity** | Is format / range / domain allowed? |
+
+### Turn quality into rules
+
+Bad:
+
+```text
+PD should be good quality
+```
+
+Good:
+
+```text
+PD must be non-null
+for all performing IRB obligors
+at reporting snapshot
+```
+
+---
+
+## Data Quality Rule Structure
+
+{/* UNVERIFIED CLAIM — check primary source before publishing */}
+```text
+CDE
++
+Population
++
+Condition
++
+Threshold
++
+Severity
++
+Owner
++
+Action
+```
+
+Example form:
+
+```text
+Field          default_flag
+Population     active facilities
+Rule           value ∈ {Y,N}
+Threshold      100%
+Severity       Critical
+Owner          Credit Risk Data
+Action         reject / investigate
+```
+
+No narrative needed.
+
+The rule itself is the control.
+
+---
+
+## Data Issue Lifecycle
+
+```text
+Detection
+→ Triage
+→ Root Cause
+→ Impact
+→ Owner
+→ Remediation
+→ Retest
+→ Closure
+```
+
+Root-cause families:
+
+```text
+Source data
+Mapping
+Transformation
+Reference data
+Timing
+Duplicate
+Missing population
+System defect
+Manual process
+Business-rule ambiguity
+```
+
+---
+
+## Controls — Prevent, Detect, Correct
+
+| Control | Purpose |
+|---|---|
+| Preventive | Stop error entering process |
+| Detective | Identify error after occurrence |
+| Corrective | Repair / contain error |
+
+Examples of control forms:
+
+```text
+mandatory field
+valid-value rule
+record-count check
+control total
+duplicate check
+reconciliation
+exception report
+maker-checker
+approval
+```
+
+---
