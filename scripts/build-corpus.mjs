@@ -110,6 +110,32 @@ function buildCorpus() {
   const files = fs.readdirSync(CONTENT_DIR).filter((file) => file.endsWith(".mdx"));
   console.log(`Found ${files.length} MDX files in ${CONTENT_DIR}`);
 
+  if (files.length === 0) {
+    let roles = [];
+    if (fs.existsSync(ROLES_PATH)) {
+      roles = JSON.parse(fs.readFileSync(ROLES_PATH, "utf-8"));
+    }
+    const missingAtoms = roles.flatMap((r) => r.atoms.map((a) => a.id));
+
+    const manifest = {
+      atoms: {},
+      reverseIndex: {},
+      domainTree: [],
+      roles,
+      missingAtoms,
+      lintWarnings: [],
+      generatedAt: new Date().toISOString(),
+    };
+
+    const publicDir = path.join(process.cwd(), "public");
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
+    }
+    fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), "utf-8");
+    console.log(`✅ Corpus Manifest (EMPTY) successfully written to ${MANIFEST_PATH}`);
+    return;
+  }
+
   const rawAtoms = {};
 
   for (const filename of files) {

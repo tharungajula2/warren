@@ -547,6 +547,18 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
         </div>
       </div>
 
+      {/* Empty State Overlay */}
+      {nodes.length === 0 && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none font-mono text-xs text-center space-y-2 z-20">
+          <div className="text-[#C9711F] font-bold text-sm tracking-wider uppercase">
+            NO ATOMS INDEXED YET
+          </div>
+          <p className="text-[#6B747E] max-w-[40ch]">
+            No atoms yet. Run importer to populate corpus graph.
+          </p>
+        </div>
+      )}
+
       {/* Hover Tooltip */}
       {hoveredNode && tooltipPos && (
         <div

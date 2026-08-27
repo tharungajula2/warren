@@ -117,45 +117,53 @@ export default function HomePage() {
             <div className="uppercase tracking-wider text-[#C9711F] font-bold">
               02 // THE JURISDICTION MECHANIC PREVIEW
             </div>
-            <Link
-              href={`/compare/${previewAtom.id}`}
-              className="text-[#C9711F] hover:underline font-bold"
-            >
-              COMPARE MATRICES →
-            </Link>
+            {previewAtom && (
+              <Link
+                href={`/compare/${previewAtom.id}`}
+                className="text-[#C9711F] hover:underline font-bold"
+              >
+                COMPARE MATRICES →
+              </Link>
+            )}
           </div>
 
-          <div className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] space-y-3">
-            <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
-              <span className="text-[#C9711F] font-bold text-sm">{previewAtom.id}: {previewAtom.title}</span>
-              <TypeBadge type={previewAtom.type} />
+          {!previewAtom ? (
+            <div className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] text-[#6B747E]">
+              No atoms in corpus yet. Import content to view live jurisdiction variant matrices.
             </div>
+          ) : (
+            <div className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] space-y-3">
+              <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
+                <span className="text-[#C9711F] font-bold text-sm">{previewAtom.id}: {previewAtom.title}</span>
+                <TypeBadge type={previewAtom.type} />
+              </div>
 
-            <div className="space-y-1 font-sans text-xs text-[#9AA3AD]">
-              <span className="font-mono text-[10px] uppercase text-[#6B747E] font-bold">UNIVERSAL BASELINE:</span>
-              <p className="text-[#E6E8EB] line-clamp-1">{previewAtom.one_screen}</p>
-            </div>
+              <div className="space-y-1 font-sans text-xs text-[#9AA3AD]">
+                <span className="font-mono text-[10px] uppercase text-[#6B747E] font-bold">UNIVERSAL BASELINE:</span>
+                <p className="text-[#E6E8EB] line-clamp-1">{previewAtom.one_screen}</p>
+              </div>
 
-            {/* 4 Jurisdiction Side-by-Side Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2">
-              <div className="border border-[#7D5A31] bg-[#7D5A31]/10 p-2 rounded-[3px] space-y-1">
-                <span className="text-[#C9711F] font-bold text-[10px]">IN (RBI)</span>
-                <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">IRACP provisions based on 90-day delinquency threshold.</p>
-              </div>
-              <div className="border border-[#315F7D] bg-[#315F7D]/10 p-2 rounded-[3px] space-y-1">
-                <span className="text-[#315F7D] font-bold text-[10px]">UK (PRA)</span>
-                <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">SS11/13 PD calibration requires downturn cycle adjustment.</p>
-              </div>
-              <div className="border border-[#51518A] bg-[#51518A]/10 p-2 rounded-[3px] space-y-1">
-                <span className="text-[#51518A] font-bold text-[10px]">EU (EBA)</span>
-                <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">CRR Article 178 mandate default definition harmonisation.</p>
-              </div>
-              <div className="border border-[#6D4545] bg-[#6D4545]/10 p-2 rounded-[3px] space-y-1">
-                <span className="text-[#6D4545] font-bold text-[10px]">US (FED/OCC)</span>
-                <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">CECL FASB ASC 326 mandates lifetime ECL from day one.</p>
+              {/* 4 Jurisdiction Side-by-Side Cards */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2">
+                <div className="border border-[#7D5A31] bg-[#7D5A31]/10 p-2 rounded-[3px] space-y-1">
+                  <span className="text-[#C9711F] font-bold text-[10px]">IN (RBI)</span>
+                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">IRACP provisions based on 90-day delinquency threshold.</p>
+                </div>
+                <div className="border border-[#315F7D] bg-[#315F7D]/10 p-2 rounded-[3px] space-y-1">
+                  <span className="text-[#315F7D] font-bold text-[10px]">UK (PRA)</span>
+                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">SS11/13 PD calibration requires downturn cycle adjustment.</p>
+                </div>
+                <div className="border border-[#51518A] bg-[#51518A]/10 p-2 rounded-[3px] space-y-1">
+                  <span className="text-[#51518A] font-bold text-[10px]">EU (EBA)</span>
+                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">CRR Article 178 mandate default definition harmonisation.</p>
+                </div>
+                <div className="border border-[#6D4545] bg-[#6D4545]/10 p-2 rounded-[3px] space-y-1">
+                  <span className="text-[#6D4545] font-bold text-[10px]">US (FED/OCC)</span>
+                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">CECL FASB ASC 326 mandates lifetime ECL from day one.</p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </section>
 
         {/* 3. ROLE FAMILIES */}

@@ -127,6 +127,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         {!manifest ? (
           <div className="text-[11px] text-[#6B747E] px-1">Loading tree...</div>
+        ) : manifest.domainTree.length === 0 ? (
+          <div className="space-y-1">
+            {["credit-risk", "counterparty-risk", "foundation", "legal-framework", "market-risk", "operational-risk", "quantitative", "regulatory", "risk-data"].map((domKey) => (
+              <div key={domKey} className="px-2 py-1 bg-[#191C20] border border-[#23272D] rounded-[3px] text-[#9AA3AD] text-[11px]">
+                <span className="font-bold uppercase tracking-wider text-[#C9711F]">{domKey}</span>
+                <span className="block text-[9px] text-[#6B747E]">0 ATOMS INDEXED</span>
+              </div>
+            ))}
+          </div>
         ) : (
           manifest.domainTree.map((domainNode: DomainTreeNode) => {
             const isExpanded = !!expandedDomains[domainNode.domain];
