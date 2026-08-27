@@ -91,10 +91,26 @@ export interface LintWarning {
   message: string;
 }
 
+export interface RoleRequirementItem {
+  id: string;
+  weight: 3 | 2 | 1;
+}
+
+export interface RoleFamily {
+  id: string;
+  label: string;
+  description: string;
+  jurisdiction_hint: Jurisdiction | null;
+  signals: string[];
+  atoms: RoleRequirementItem[];
+}
+
 export interface CorpusManifest {
   atoms: Record<string, AtomManifestItem>;
   reverseIndex: Record<string, string[]>;
   domainTree: DomainTreeNode[];
+  roles: RoleFamily[];
+  missingAtoms: string[];
   lintWarnings: LintWarning[];
   generatedAt: string;
 }

@@ -1,0 +1,273 @@
+[
+  {
+    "id": "credit-model-validation",
+    "label": "Credit Model Validation",
+    "description": "Independent validation, backtesting, benchmarking, and model risk governance for credit risk models under SR 11-7 and SS1/23.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "model validation",
+      "independent validation",
+      "model risk",
+      "backtesting",
+      "benchmarking",
+      "SR 11-7",
+      "SS1/23",
+      "validation report"
+    ],
+    "atoms": [
+      { "id": "CR-03", "weight": 3 },
+      { "id": "CR-07", "weight": 3 },
+      { "id": "CR-08", "weight": 3 },
+      { "id": "FND-18", "weight": 2 },
+      { "id": "CR-10", "weight": 2 },
+      { "id": "CR-11", "weight": 1 }
+    ]
+  },
+  {
+    "id": "credit-model-development",
+    "label": "Credit Model Development",
+    "description": "Scorecard building, PD/LGD/EAD model quantification, rating scale calibration, and segmentation analysis.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "scorecard",
+      "PD model",
+      "LGD model",
+      "model development",
+      "rating model",
+      "segmentation",
+      "WoE",
+      "discriminatory power"
+    ],
+    "atoms": [
+      { "id": "CR-07", "weight": 3 },
+      { "id": "CR-08", "weight": 3 },
+      { "id": "CR-09", "weight": 3 },
+      { "id": "CR-07-EX", "weight": 2 },
+      { "id": "FND-18", "weight": 2 },
+      { "id": "CR-12", "weight": 1 }
+    ]
+  },
+  {
+    "id": "ifrs9-ecl",
+    "label": "IFRS 9 & ECL Modelling",
+    "description": "Expected Credit Loss calculation, staging classification, SICR triggers, and impairment provisioning under IFRS 9 / Ind AS 109.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "IFRS 9",
+      "Ind AS 109",
+      "ECL",
+      "expected credit loss",
+      "staging",
+      "SICR",
+      "impairment",
+      "CECL",
+      "provision"
+    ],
+    "atoms": [
+      { "id": "CR-03", "weight": 3 },
+      { "id": "CR-07", "weight": 3 },
+      { "id": "CR-08", "weight": 3 },
+      { "id": "CR-09", "weight": 3 },
+      { "id": "REG-01", "weight": 2 },
+      { "id": "ECL-01", "weight": 2 }
+    ]
+  },
+  {
+    "id": "basel-capital-reporting",
+    "label": "Basel Capital & RWA Reporting",
+    "description": "Basel III/IV capital adequacy calculation, RWA computation across IRB and Standardised approaches, and COREP reporting.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "Basel",
+      "RWA",
+      "capital adequacy",
+      "CRR",
+      "COREP",
+      "capital calculation",
+      "output floor",
+      "IRB",
+      "standardised approach"
+    ],
+    "atoms": [
+      { "id": "REG-01", "weight": 3 },
+      { "id": "CR-03", "weight": 3 },
+      { "id": "CR-07", "weight": 3 },
+      { "id": "OPS-01", "weight": 2 },
+      { "id": "FND-18", "weight": 2 },
+      { "id": "REG-03", "weight": 1 }
+    ]
+  },
+  {
+    "id": "treasury-alm-liquidity",
+    "label": "Treasury ALM & Liquidity Risk",
+    "description": "Asset-liability management, interest rate risk in the banking book (IRRBB), LCR/NSFR compliance, and ILAAP liquidity stress.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "ALM",
+      "IRRBB",
+      "LCR",
+      "NSFR",
+      "liquidity risk",
+      "ILAAP",
+      "balance sheet management",
+      "funding"
+    ],
+    "atoms": [
+      { "id": "REG-02", "weight": 3 },
+      { "id": "FND-18", "weight": 2 },
+      { "id": "MKT-01", "weight": 2 },
+      { "id": "TR-01", "weight": 3 },
+      { "id": "TR-02", "weight": 2 }
+    ]
+  },
+  {
+    "id": "funds-transfer-pricing",
+    "label": "Funds Transfer Pricing (FTP)",
+    "description": "Internal balance sheet funding curves, liquidity premium allocation, and transfer pricing governance across business units.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "FTP",
+      "funds transfer pricing",
+      "transfer pricing curve",
+      "liquidity premium"
+    ],
+    "atoms": [
+      { "id": "FND-18", "weight": 3 },
+      { "id": "REG-02", "weight": 2 },
+      { "id": "TR-03", "weight": 3 },
+      { "id": "TR-04", "weight": 1 }
+    ]
+  },
+  {
+    "id": "capital-markets-ba",
+    "label": "Capital Markets Business Analysis",
+    "description": "Trade lifecycle execution, OTC derivative settlement, collateral management, and trading book risk (VaR/ES).",
+    "jurisdiction_hint": null,
+    "signals": [
+      "trade life cycle",
+      "collateral",
+      "derivatives",
+      "front office",
+      "Murex",
+      "Calypso",
+      "settlement",
+      "capital markets"
+    ],
+    "atoms": [
+      { "id": "LEG-01", "weight": 3 },
+      { "id": "MKT-01", "weight": 3 },
+      { "id": "MKT-02", "weight": 3 },
+      { "id": "FND-18", "weight": 2 },
+      { "id": "CM-01", "weight": 2 }
+    ]
+  },
+  {
+    "id": "regulatory-reporting-change",
+    "label": "Regulatory Reporting & Change",
+    "description": "Regulatory return preparation (FINREP/RBI), business requirements analysis (BRD), and change management for prudential mandates.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "regulatory reporting",
+      "returns",
+      "FINREP",
+      "MAS",
+      "RBI returns",
+      "change management",
+      "BRD",
+      "requirements"
+    ],
+    "atoms": [
+      { "id": "REG-01", "weight": 3 },
+      { "id": "REG-02", "weight": 3 },
+      { "id": "LEG-01", "weight": 2 },
+      { "id": "REG-04", "weight": 2 }
+    ]
+  },
+  {
+    "id": "risk-data-bcbs239",
+    "label": "Risk Data & BCBS 239",
+    "description": "Risk data aggregation principles, data lineage tracing, critical data element (CDE) governance, and data quality frameworks.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "BCBS 239",
+      "data lineage",
+      "data quality",
+      "data governance",
+      "golden source",
+      "metadata",
+      "Collibra",
+      "CDE"
+    ],
+    "atoms": [
+      { "id": "REG-01", "weight": 2 },
+      { "id": "CR-03", "weight": 2 },
+      { "id": "DAT-01", "weight": 3 },
+      { "id": "DAT-02", "weight": 3 }
+    ]
+  },
+  {
+    "id": "sql-python-risk-analytics",
+    "label": "Risk Analytics & Automation (SQL/Python)",
+    "description": "Data extraction, ETL automation, pandas analytics, and dashboard reporting for risk management.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "SQL",
+      "Python",
+      "pandas",
+      "data analysis",
+      "Power BI",
+      "Tableau",
+      "automation",
+      "ETL"
+    ],
+    "atoms": [
+      { "id": "FND-18", "weight": 3 },
+      { "id": "CR-07-EX", "weight": 3 },
+      { "id": "CR-03", "weight": 2 },
+      { "id": "ANL-01", "weight": 2 }
+    ]
+  },
+  {
+    "id": "fintech-lending-product",
+    "label": "Fintech Lending Product",
+    "description": "Digital underwriting policies, credit bureau integration, digital loan origination, and retail portfolio monitoring.",
+    "jurisdiction_hint": "IN",
+    "signals": [
+      "underwriting",
+      "loan origination",
+      "credit policy",
+      "digital lending",
+      "NBFC",
+      "bureau",
+      "collections",
+      "product manager"
+    ],
+    "atoms": [
+      { "id": "CR-07", "weight": 3 },
+      { "id": "CR-03", "weight": 3 },
+      { "id": "CR-07-EX", "weight": 2 },
+      { "id": "FIN-01", "weight": 3 }
+    ]
+  },
+  {
+    "id": "lending-risk-platform-ba",
+    "label": "Lending Platform Business Analyst",
+    "description": "Functional specification writing, Loan IQ / LOS platform configuration, and UAT testing for commercial lending operations.",
+    "jurisdiction_hint": null,
+    "signals": [
+      "loan IQ",
+      "origination platform",
+      "LOS",
+      "UAT",
+      "functional specification",
+      "business analyst",
+      "core banking"
+    ],
+    "atoms": [
+      { "id": "CR-03", "weight": 3 },
+      { "id": "CR-09", "weight": 3 },
+      { "id": "LEG-01", "weight": 2 },
+      { "id": "SYS-01", "weight": 2 }
+    ]
+  }
+]

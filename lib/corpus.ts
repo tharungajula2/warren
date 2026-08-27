@@ -8,9 +8,11 @@ import {
   DomainTreeNode,
   LintWarning,
   CurrentnessStatus,
+  RoleFamily,
 } from "./schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "atoms");
+const ROLES_PATH = path.join(process.cwd(), "content", "roles.json");
 const MANIFEST_PATH = path.join(process.cwd(), "public", "corpus-manifest.json");
 
 function computeCurrentness(frontmatter: any, buildDate = new Date("2026-08-28")): CurrentnessStatus {
@@ -231,6 +233,23 @@ export function generateCorpusManifest(): CorpusManifest {
     })
   );
 
+  // Roles Registry & Missing Atoms Validation
+  let roles: RoleFamily[] = [];
+  const missingAtomsSet = new Set<string>();
+
+  if (fs.existsSync(ROLES_PATH)) {
+    roles = JSON.parse(fs.readFileSync(ROLES_PATH, "utf-8"));
+    for (const role of roles) {
+      for (const req of role.atoms) {
+        if (!allIds.has(req.id)) {
+          missingAtomsSet.add(req.id);
+        }
+      }
+    }
+  }
+
+  const missingAtoms = Array.from(missingAtomsSet).sort();
+
   // Lint warnings pass
   const lintWarnings: LintWarning[] = [];
   const inboundLinksCount: Record<string, number> = {};
@@ -297,6 +316,8 @@ export function generateCorpusManifest(): CorpusManifest {
     atoms: atomsManifest,
     reverseIndex,
     domainTree,
+    roles,
+    missingAtoms,
     lintWarnings,
     generatedAt: new Date().toISOString(),
   };

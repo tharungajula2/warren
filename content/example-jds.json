@@ -1,0 +1,20 @@
+[
+  {
+    "id": "credit-risk-ba-luxoft",
+    "title": "Credit Risk Business Analyst (Luxoft / UK Bank)",
+    "role_family": "basel-capital-reporting",
+    "text": "Luxoft is seeking a Senior Credit Risk Business Analyst for a leading UK Investment Bank based in London. The candidate will work on Basel 3.1 capital adequacy implementation, RWA computation, and risk data aggregation under BCBS 239 standards. Must have deep understanding of PD, LGD, EAD model parameters, Funds Transfer Pricing (FTP) curves, and SQL querying capabilities for regulatory reporting change programs."
+  },
+  {
+    "id": "treasury-alm-analyst",
+    "title": "Treasury ALM & Liquidity Risk Specialist",
+    "role_family": "treasury-alm-liquidity",
+    "text": "Seeking a Treasury ALM Specialist responsible for balance sheet management, interest rate risk in the banking book (IRRBB), and liquidity risk monitoring. The role requires daily calculation of Liquidity Coverage Ratio (LCR) and Net Stable Funding Ratio (NSFR) metrics, preparing ILAAP documentation, and analyzing funds transfer pricing (FTP) liquidity premiums across commercial banking portfolios."
+  },
+  {
+    "id": "ifrs9-ecl-specialist",
+    "title": "IFRS 9 & Ind AS 109 Provisioning Analyst",
+    "role_family": "ifrs9-ecl",
+    "text": "Leading NBFC in Mumbai is hiring an IFRS 9 / Ind AS 109 Credit Risk Specialist for Expected Credit Loss (ECL) provisioning and staging modeling. The candidate will define Significant Increase in Credit Risk (SICR) triggers, model 12-month and lifetime PD, LGD, and EAD parameters, and interface with RBI regulatory inspection teams."
+  }
+]

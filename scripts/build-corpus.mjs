@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { z } from "zod";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "atoms");
+const ROLES_PATH = path.join(process.cwd(), "content", "roles.json");
 const MANIFEST_PATH = path.join(process.cwd(), "public", "corpus-manifest.json");
 
 const AtomTypeSchema = z.enum([
@@ -113,10 +114,9 @@ function buildCorpus() {
     const fileContent = fs.readFileSync(filepath, "utf-8");
     const { data, content } = matter(fileContent);
 
-    // Rule: Throw error if <OneScreen> tag exists in body
     if (/<OneScreen[\s/>]/i.test(content)) {
       console.error(
-        `\n❌ [BUILD ERROR] <OneScreen> tag found in body of "${filename}". <OneScreen> must NOT be used inside MDX bodies; one_screen is rendered automatically under the header.\n`
+        `\n❌ [BUILD ERROR] <OneScreen> tag found in body of "${filename}". <OneScreen> must NOT be used inside MDX bodies.\n`
       );
       process.exit(1);
     }
@@ -282,10 +282,25 @@ function buildCorpus() {
     })),
   }));
 
+  // Roles Registry & Missing Atoms Validation
+  let roles = [];
+  const missingAtomsSet = new Set();
+
+  if (fs.existsSync(ROLES_PATH)) {
+    roles = JSON.parse(fs.readFileSync(ROLES_PATH, "utf-8"));
+    for (const role of roles) {
+      for (const req of role.atoms) {
+        if (!allIds.has(req.id)) {
+          missingAtomsSet.add(req.id);
+        }
+      }
+    }
+  }
+
+  const missingAtoms = Array.from(missingAtomsSet).sort();
+
   // LINT PASS: Generate warnings report
   const lintWarnings = [];
-
-  // Track inbound links for orphan detection
   const inboundLinksCount = {};
   for (const id of allIds) {
     inboundLinksCount[id] = 0;
@@ -303,7 +318,6 @@ function buildCorpus() {
   for (const [id, atom] of Object.entries(atomsManifest)) {
     const rawData = rawAtoms[id];
 
-    // 1. Published atoms with no sources
     if (atom.status === "published" && (!atom.sources || atom.sources.length === 0)) {
       lintWarnings.push({
         rule: "MISSING_SOURCES",
@@ -312,7 +326,6 @@ function buildCorpus() {
       });
     }
 
-    // 2. Perishable atoms with as_of older than 365 days
     if (atom.perishable && atom.currentness === "stale") {
       lintWarnings.push({
         rule: "STALE_REGULATION",
@@ -321,7 +334,6 @@ function buildCorpus() {
       });
     }
 
-    // 3. Root atoms (depth 0)
     if (atom.prerequisites.length === 0) {
       lintWarnings.push({
         rule: "ROOT_ATOM_NOTE",
@@ -330,7 +342,6 @@ function buildCorpus() {
       });
     }
 
-    // 4. Missing <Recall> block in MDX body
     if (!/<Recall[\s/>]/i.test(rawData.content)) {
       lintWarnings.push({
         rule: "MISSING_RECALL_BLOCK",
@@ -339,7 +350,6 @@ function buildCorpus() {
       });
     }
 
-    // 5. one_screen longer than 3 sentences
     const sentenceCount = (atom.one_screen.match(/[.!?]+/g) || []).length;
     if (sentenceCount > 3) {
       lintWarnings.push({
@@ -349,7 +359,6 @@ function buildCorpus() {
       });
     }
 
-    // 6. Orphan atom detection
     if (inboundLinksCount[id] === 0 && atom.prerequisites.length === 0) {
       lintWarnings.push({
         rule: "ORPHAN_ATOM",
@@ -363,6 +372,8 @@ function buildCorpus() {
     atoms: atomsManifest,
     reverseIndex,
     domainTree,
+    roles,
+    missingAtoms,
     lintWarnings,
     generatedAt: new Date().toISOString(),
   };
@@ -376,7 +387,8 @@ function buildCorpus() {
 
   console.log(`✅ Corpus Manifest successfully written to ${MANIFEST_PATH}`);
   console.log(`   Atoms compiled: ${Object.keys(atomsManifest).length}`);
-  console.log(`   Domains indexed: ${domainTree.length}`);
+  console.log(`   Role Families indexed: ${roles.length}`);
+  console.log(`   Missing Atom Gaps tracked: ${missingAtoms.length} (${missingAtoms.join(", ")})`);
   console.log(`\n⚠️  LINT WARNING REPORT (${lintWarnings.length} warnings):`);
   lintWarnings.forEach((w) => {
     console.log(`   [${w.rule}] ${w.atomId ? w.atomId + ": " : ""}${w.message}`);

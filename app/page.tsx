@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import { getCorpusManifest } from "@/lib/corpus";
-import { AtomManifestItem } from "@/lib/schema";
 
 export const metadata = {
   title: "WARREN — Banking Risk & Regulatory Knowledge Map",
@@ -16,16 +15,14 @@ interface DomainInfo {
 
 export default function HomePage() {
   const manifest = getCorpusManifest();
-  const { atoms, domainTree } = manifest;
+  const { atoms, domainTree, roles } = manifest;
 
-  // Load domain descriptions from content/domains.json
   const domainsPath = path.join(process.cwd(), "content", "domains.json");
   let domainDetails: Record<string, DomainInfo> = {};
   if (fs.existsSync(domainsPath)) {
     domainDetails = JSON.parse(fs.readFileSync(domainsPath, "utf-8"));
   }
 
-  // All published atoms
   const publishedAtoms = Object.values(atoms).filter((a) => a.status !== "draft");
 
   // 1. DOMAINS: compute atom count for each domain
@@ -60,11 +57,27 @@ export default function HomePage() {
 
   return (
     <div className="max-w-[68ch] mx-auto px-4 py-10 space-y-12">
-      {/* Top Positioning Line */}
-      <div className="border-b border-[#23272D] pb-6">
+      {/* Top Positioning Line & Quick Compiler Callout */}
+      <div className="border-b border-[#23272D] pb-6 space-y-4">
         <p className="text-lg text-[#9AA3AD] font-sans leading-relaxed">
           The connected map of banking risk, regulation and the work built on it.
         </p>
+
+        {/* Primary Action Buttons: Compile & Roles */}
+        <div className="flex flex-wrap gap-3 font-mono text-xs pt-1">
+          <Link
+            href="/compile"
+            className="bg-[#C9711F] hover:bg-[#b06118] text-[#0B0C0E] font-bold px-4 py-2 rounded-[3px] transition-colors uppercase"
+          >
+            COMPILE JOB DESCRIPTION →
+          </Link>
+          <Link
+            href="/roles"
+            className="bg-[#191C20] hover:bg-[#23272D] border border-[#23272D] text-[#E6E8EB] font-bold px-4 py-2 rounded-[3px] transition-colors uppercase"
+          >
+            BROWSE 12 ROLE FAMILIES ({roles.length}) →
+          </Link>
+        </div>
       </div>
 
       {/* SECTION 1: DOMAINS */}
