@@ -1,0 +1,122 @@
+---
+id: TLM-30
+title: The integrated ALM decision cycle
+type: procedure
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  ALM is the repeated process of converting the balance sheet into risk
+  measures, comparing them with appetite and constraints, changing pricing,
+  funding or hedges, and then measuring again. The decisive skill is
+  understanding that capital, liquidity, IRRBB and FTP are different views of
+  one evolving balance sheet rather than separate regulatory exercises.
+prerequisites:
+  - TLM-05
+  - TLM-10
+  - TLM-14
+  - TLM-15
+  - TLM-17
+  - TLM-20
+  - TLM-26
+  - TLM-27
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10
+    url: 'https://www.bis.org/fsi/fsipapers10.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
+      to Funding and Contingent Liquidity Risks*, March 2016
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+The cycle starts with positions and behavioural assumptions. Assets, liabilities and off-balance-sheet exposures are mapped by maturity, repricing date, currency, rate basis and option characteristics. Non-maturity deposits, prepayments and contingent draws require models because contractual schedules alone do not describe their economic behaviour.
+
+The same balance sheet is then viewed through multiple lenses. **IRRBB** produces EVE and NII sensitivities. **Liquidity analysis** produces cash-flow gaps, LCR, NSFR, intraday requirements and internal stress survival. **Capital analysis** asks how losses and valuation changes interact with available loss-absorbing resources. **FTP** converts those system-level costs and benefits into business-level prices.
+
+Management then compares the outputs with risk appetite, regulatory minima, internal limits and strategic objectives. A breach or undesirable trend can be addressed through several levers: change product pricing, alter origination mix, attract a different funding tenor, issue wholesale funding, change liquid-asset holdings, hedge interest-rate exposure, reduce commitments or adjust business limits.
+
+The key is to analyse side effects. Raising long-term funding can improve structural liquidity but reduce margin. Selling liquid assets to repay funding can change LCR and market-risk capacity. Extending deposit behavioural tenor may improve one measure only if the assumption is genuinely supportable. A derivative hedge can reduce EVE while altering NII or basis risk.
+
+Basel’s liquidity principles require liquidity costs and risks to enter pricing, stress testing and contingency planning, while IRRBB standards require both economic-value and earnings views. Integrated ALM is the governance mechanism that forces these views to reconcile before action is taken.
+
+&lt;Flow&gt;
++----------------------+
+| Positions + behaviour|
++----------------------+
+          |
+          v
++----------------------+
+| Measure              |
+| EVE / NII / liquidity|
+| capital / FTP        |
++----------------------+
+          |
+          v
++----------------------+
+| Compare with         |
+| appetite + limits    |
++----------------------+
+          |
+          v
++----------------------+
+| Choose action        |
+| price/fund/hedge/mix |
++----------------------+
+          |
+          v
++----------------------+
+| Recalculate effects  |
++----------------------+
+          |
+          +-------------&amp;gt; back to measure
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+No ALM action should be judged on a single metric when it materially changes another part of the balance-sheet risk profile.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Fixing the metric that appears on the current committee dashboard while shifting the underlying risk into another horizon, legal entity, basis, liquidity bucket or accounting presentation.
+</Trap>
+
+<NeverConfuse a="ALM optimisation" b="Single-metric optimisation">
+**ALM optimisation** — choosing a balance-sheet configuration that jointly respects risk appetite, liquidity, capital, earnings and strategic constraints.
+---
+**Single-metric optimisation** — improving one ratio or sensitivity without accounting for the risk transferred elsewhere.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Regulatory constraints differ, but the integrated decision logic is universal: measure the same balance sheet from multiple risk perspectives, act, and remeasure.
+</Rule>
+
+<Recall
+  q="Why should an ALM action be recalculated across EVE, NII and liquidity?"
+  a="The action can improve one measure while worsening another because all are generated by the same balance sheet."
+/>
+
+<Recall
+  q="What connects business pricing to ALM?"
+  a="FTP, which transmits funding and liquidity economics from the central balance sheet into product-level decisions."
+/>

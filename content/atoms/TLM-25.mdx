@@ -1,0 +1,108 @@
+---
+id: TLM-25
+title: How bad FTP distorts behaviour
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  FTP is a behavioural control disguised as an internal price. Set it wrongly
+  and rational business lines will optimise the wrong objective—creating
+  excessive maturity transformation, unstable funding, cheap commitments or
+  artificial deposit growth while reported product profitability still looks
+  attractive.
+prerequisites:
+  - TLM-20
+  - TLM-21
+  - TLM-23
+  - TLM-24
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
+      to Funding and Contingent Liquidity Risks*, March 2016
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
+    accessed: 28 August 2026
+  - label: >-
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10
+    url: 'https://www.bis.org/fsi/fsipapers10.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Consider a flat FTP curve. A five-year loan and a three-month loan receive the same funding charge. The longer asset earns more customer spread without paying for its extra funding commitment, so the business is incentivised to originate long-duration assets. The balance sheet accumulates structural mismatch even if every individual transaction passes its profitability hurdle.
+
+Now suppose all deposits receive the same FTP credit. A highly rate-sensitive deposit that disappears quickly in stress can look as valuable as a stable operating balance. The business is then rewarded for volume rather than funding quality.
+
+A third distortion appears when undrawn commitments receive no contingent liquidity charge. The business earns fees while treasury bears the cost of liquidity needed if customers draw during stress. Rational behaviour is to create more commitments than the bank would choose if their liquidity cost were visible.
+
+FTP can also distort behaviour through stale curves. If market funding costs rise sharply but FTP updates slowly, businesses continue originating assets at yesterday’s internal cost. The reported margin becomes an accounting artefact. Federal Reserve guidance specifically warns that failure to apply FTP effectively can misalign business incentives and lead to excessive on-balance-sheet asset growth or off-balance-sheet commitments because funding and contingent liquidity are mispriced.
+
+FSI research similarly found that average-rate transfer pricing failed to penalise longer-term asset commitments, failed to reward longer-term funding and encouraged risky maturity transformation.
+
+The diagnostic question is therefore not merely whether the FTP calculation is mathematically correct. It is: **what transaction would a rational business produce more of because of this price?** If that behaviour is inconsistent with the bank’s risk appetite, the FTP design is wrong or incomplete.
+
+&lt;Flow&gt;
++------------------+
+| FTP signal       |
++------------------+
+        |
+        v
++------------------+
+| Product economics|
+| seen by business |
++------------------+
+        |
+        v
++------------------+
+| Origination /    |
+| deposit behaviour|
++------------------+
+        |
+        v
++------------------+
+| Balance-sheet    |
+| composition      |
++------------------+
+        |
+        v
++------------------+
+| Actual liquidity |
+| and funding risk |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+The quality of FTP should be judged partly by the behaviour it incentivises, not only by the elegance of its calculation.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating an FTP model as a finance-allocation exercise and failing to test which products become artificially profitable under its assumptions.
+</Trap>
+
+<NeverConfuse a="FTP accuracy" b="Accounting allocation accuracy">
+**FTP accuracy** — economic faithfulness of the internal funding and liquidity signal.
+---
+**Accounting allocation accuracy** — whether internal revenue and cost mechanically reconcile; reconciliation alone cannot prove incentives are correct.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Incentive distortion from mispricing is an economic mechanism independent of jurisdiction.
+</Rule>
+
+<Recall
+  q="What happens if all tenors receive the same FTP charge?"
+  a="Longer-term assets become undercharged and businesses are incentivised to create excess maturity transformation."
+/>
+
+<Recall
+  q="What is the most useful practical test of an FTP design?"
+  a="Ask what behaviour becomes rationally more attractive because of the transfer price."
+/>

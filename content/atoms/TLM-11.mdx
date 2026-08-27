@@ -1,0 +1,119 @@
+---
+id: TLM-11
+title: Hedging IRRBB and hedge accounting
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  An economic hedge changes the bank’s risk; hedge accounting changes how
+  qualifying hedge effects appear in financial statements. A hedge can be
+  economically effective without receiving hedge-accounting treatment, and
+  accounting treatment must never determine whether the underlying risk is
+  actually controlled.
+prerequisites:
+  - TLM-04
+  - TLM-05
+  - TLM-10
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, *Deferral of Implementation of Indian Accounting
+      Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Implementation of Indian Accounting Standards —
+      NBFCs and ARCs*, DOR (NBFC) circular, 13 March 2020
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+IRRBB can be hedged by changing the balance sheet or adding derivatives. Treasury may raise longer-term fixed funding against fixed-rate assets, issue floating funding where asset income floats, alter securities holdings or use interest-rate swaps and other derivatives. The objective is to change the cash-flow or value sensitivity of the consolidated banking book.
+
+Suppose a bank holds long fixed-rate assets and is exposed to rising rates. In a stylised swap hedge, it may receive floating and pay fixed. As market rates rise, the floating receipts increase and offset part of the asset/funding mismatch. The useful hedge quantity is therefore not derivative notional alone but the sensitivity offset: tenor, curve point, index, optionality and cash-flow profile must line up sufficiently with the exposure.
+
+**Hedge effectiveness** is economic: does the hedge offset the intended risk under relevant scenarios? **Hedge accounting** is an accounting mechanism governing when and how gains and losses from a qualifying hedge relationship are recognised. It exists partly because the accounting timing or measurement of the hedging instrument and hedged item can otherwise differ.
+
+ALM must therefore run two conversations simultaneously. Risk management asks whether EVE, NII, basis and option exposures are reduced. Finance asks whether designation, documentation and accounting eligibility are met. Optimising the second while worsening the first is not sound hedging.
+
+There is a critical Indian accounting constraint. RBI deferred Ind AS implementation for scheduled commercial banks until further notice in March 2019. Therefore, Indian scheduled commercial banks must not be described as applying Ind AS 109 merely because IRRBB or hedge accounting is being discussed. RBI has separately issued Ind AS implementation guidance relevant to applicable NBFCs.
+
+&lt;Flow&gt;
++------------------+
+| IRRBB exposure   |
++------------------+
+        |
+        v
++------------------+
+| Economic hedge   |
+| design           |
++------------------+
+        |
+        v
++------------------+
+| EVE / NII offset |
++------------------+
+        |
+        +----------------+
+        |                |
+        v                v
++----------------+ +----------------+
+| Risk outcome   | | Accounting     |
+| effectiveness  | | eligibility    |
++----------------+ +----------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Economic hedge effectiveness and hedge-accounting qualification are separate tests.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Rejecting a sound economic hedge because its accounting presentation is inconvenient, or accepting a poor risk hedge because it produces desirable accounting treatment.
+</Trap>
+
+<NeverConfuse a="Economic hedge" b="Hedge accounting">
+**Economic hedge** — a position designed to offset financial risk.
+---
+**Hedge accounting** — accounting treatment for a qualifying designated hedge relationship; it does not itself reduce risk.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI deferred Ind AS implementation for scheduled commercial banks until further notice; do not equate Indian bank hedge accounting with Ind AS 109. Relevant Ind AS NBFCs are a different population. [RBI/2018-2019/146; RBI NBFC Ind AS guidance]
+</Delta>
+
+<Delta j="UK">
+— hedge-accounting treatment depends on the applicable UK accounting framework; specific designation rules should be verified against current accounting standards.
+</Delta>
+
+<Delta j="EU">
+— hedge-accounting treatment depends on the EU-adopted accounting framework applicable to the institution; specific designation rules should be verified against current standards.
+</Delta>
+
+<Delta j="US">
+— US GAAP hedge-accounting requirements differ from IFRS-based frameworks; specific qualification and presentation rules should be verified against current US accounting standards.
+</Delta>
+
+<Recall
+  q="Can a derivative reduce IRRBB without qualifying for hedge accounting?"
+  a="Yes; economic effectiveness and accounting qualification are separate."
+/>
+
+<Recall
+  q="Are Indian scheduled commercial banks on Ind AS 109?"
+  a="No. RBI deferred Ind AS implementation for those banks until further notice."
+/>

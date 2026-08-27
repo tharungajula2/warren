@@ -1,0 +1,125 @@
+---
+id: TLM-10
+title: IRRBB stress tests and supervisory outliers
+type: procedure
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  An IRRBB stress test asks whether the balance sheet remains tolerable under
+  severe rate paths and stressed customer behaviour; a supervisory outlier test
+  is a regulatory screening device, not the bank’s complete risk appetite.
+  Passing the outlier test does not prove IRRBB is safe.
+prerequisites:
+  - TLM-05
+  - TLM-08
+  - TLM-09
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Forthcoming Instructions) Directions, 2025*, Chapter V paragraphs 78–89
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      European Banking Authority, *Regulatory Technical Standards on IRRBB
+      supervisory outlier tests*, 2024
+    url: >-
+      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-and
+    accessed: 28 August 2026
+  - label: 'Federal Reserve, *Interest Rate Risk: Interagency Advisory*, January 2010'
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interest-rate-risk-interagency-advisory.htm
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+A robust test begins with a base cash-flow and behavioural model, then applies multiple shocks. A **parallel up** or **parallel down** scenario shifts the curve broadly in one direction. **Steepener** and **flattener** scenarios change the relationship between short and long rates. **Short-rate shocks** isolate the front of the curve. Basis and option stresses should be layered where material.
+
+Each scenario is translated into ΔEVE and, where relevant, ΔNII. Behaviour should not automatically remain at the base case: deposit stability, deposit beta, loan prepayments and term-deposit redemption may change under stress. Reverse stress testing asks a different question: what combination of rate and behavioural assumptions would breach a critical risk or capital limit?
+
+Basel’s supervisory outlier test uses six prescribed interest-rate shock scenarios for EVE and identifies banks with a maximum EVE decline exceeding a supervisory threshold calibrated at 15% of Tier 1 capital. The threshold is a supervisory trigger for attention rather than a statement that exposure immediately below 15% is acceptable.
+
+RBI’s November 2025 forthcoming framework adopts a six-shock EVE structure and identifies a bank as an outlier if ΔEVE decline exceeds 15% of Tier 1 capital in any prescribed scenario. It places IRRBB capital assessment in ICAAP under Pillar 2 and permits supervisory responses including additional capital, hedging, exposure reduction, parameter constraints or risk-management improvements. Its implementation date, however, remains to be communicated; the Directions explicitly describe interim preparedness and reporting.
+
+&lt;Flow&gt;
++------------------+
+| Base IRRBB model |
++------------------+
+        |
+        v
++------------------+
+| Rate + behaviour |
+| stress scenarios |
++------------------+
+        |
+        v
++------------------+
+| Delta EVE / NII  |
++------------------+
+        |
+        v
++------------------+
+| Internal limits  |
+| + outlier tests  |
++------------------+
+        |
+        v
++------------------+
+| Capital / hedge /|
+| risk response    |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A supervisory outlier threshold is a screening threshold, not a target risk appetite.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Managing ΔEVE to sit just below the regulatory outlier threshold while ignoring NII, basis risk, optionality and internal stress scenarios.
+</Trap>
+
+<NeverConfuse a="Stress test" b="Supervisory outlier test">
+**Stress test** — a broad internal or supervisory assessment under severe scenarios and assumptions.
+---
+**Supervisory outlier test** — a prescribed screen used to identify unusually high exposure under standardised shocks.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s November 2025 forthcoming framework places IRRBB in Pillar 2/ICAAP and uses a 15% of Tier 1 ΔEVE outlier threshold; implementation date remains to be notified. [RBI 2025, Chapter V]
+</Delta>
+
+<Delta j="UK">
+— IRRBB is addressed through supervisory/Pillar 2 assessment rather than a universal Pillar 1 IRRBB capital charge; current PRA-specific calibration should be checked against applicable rules. [Bank of England, 2025 capital assessment discussion]
+</Delta>
+
+<Delta j="EU">
+— EBA standards implement supervisory outlier testing for IRRBB, including the 15% Tier 1 EVE threshold architecture and EBA/GL/2022/14 governance. [EBA IRRBB RTS; EBA/GL/2022/14]
+</Delta>
+
+<Delta j="US">
+— US supervisory guidance requires sound IRR measurement and stress analysis but does not use the EU-style ILAAP/IRRBB rule package as its naming architecture. [Federal Reserve interagency IRR guidance]
+</Delta>
+
+<Recall
+  q="What does exceeding the 15% ΔEVE threshold mean?"
+  a="It identifies a supervisory outlier; it does not mechanically define insolvency or a universal capital charge."
+/>
+
+<Recall
+  q="Why are multiple curve shapes required?"
+  a="A bank can be protected against a parallel move but exposed to steepening, flattening or short-rate shocks."
+/>

@@ -1,0 +1,103 @@
+---
+id: TLM-21
+title: Matched-maturity FTP
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Matched-maturity FTP prices each asset or liability against internal funding
+  of a comparable effective tenor rather than against one pooled average funding
+  rate. It removes the accidental subsidy that otherwise makes long-dated assets
+  look as cheap to fund as short-dated ones.
+prerequisites:
+  - TLM-20
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10
+    url: 'https://www.bis.org/fsi/fsipapers10.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
+      to Funding and Contingent Liquidity Risks*, March 2016
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Assume treasury can raise three-month funds at one internal cost and five-year funds at a higher cost. A flat FTP rate would charge both a three-month asset and a five-year asset the same amount, despite the longer asset creating substantially more refinancing and liquidity exposure.
+
+Under **matched-maturity FTP**, the internal rate is selected from the FTP curve at the product’s effective funding tenor. A five-year bullet loan is therefore charged an internal five-year transfer rate; a shorter exposure receives a shorter rate. Amortising assets can be decomposed into cash-flow strips or assigned a blended rate reflecting their repayment profile.
+
+On the liability side, a stable source of funding receives a credit related to the tenor of funding value it provides. A long-term issued liability can therefore earn a higher transfer credit than unstable overnight funding if the term structure and liquidity economics warrant it.
+
+The critical word is **effective**. Contractual maturity is appropriate only when contractual cash flows reasonably represent economic behaviour. Prepayable loans require expected prepayment assumptions. Non-maturity deposits require behavioural tenor. Revolving commitments require contingent rather than simply funded treatment.
+
+The FSI’s liquidity transfer-pricing work identifies matched-maturity marginal funding costs as better practice and notes that amortising and non-maturing products require blended marginal rates. It specifically criticises one-average-rate approaches because they fail to penalise longer-term funding commitments or reward longer-term funding benefits.
+
+Matched-maturity FTP does not mean treasury actually issues an external bond matching every customer transaction. The transfer is a pricing construct: it allocates the economic cost of the tenor while treasury centrally optimises the actual funding portfolio.
+
+&lt;Flow&gt;
++------------------+
+| Product cash     |
+| flows            |
++------------------+
+        |
+        v
++------------------+
+| Effective tenor  |
++------------------+
+        |
+        v
++------------------+
+| FTP curve point /|
+| blended strip    |
++------------------+
+        |
+        v
++------------------+
+| Transfer charge  |
+| or credit        |
++------------------+
+        |
+        v
++------------------+
+| Business margin  |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Funding cost should follow the effective tenor of the exposure, not the accounting period in which profitability is reported.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Charging every asset the current overnight funding rate because treasury happens to be funding the bank overnight today.
+</Trap>
+
+<NeverConfuse a="Matched-maturity FTP" b="Matched external funding">
+**Matched-maturity FTP** — internal pricing against funding economics of comparable effective tenor.
+---
+**Matched external funding** — actually issuing external funding that mirrors an individual asset’s cash flows.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Matched-maturity pricing is an economic allocation principle rather than a jurisdiction-specific formula.
+</Rule>
+
+<Recall
+  q="Why is a flat FTP rate dangerous?"
+  a="It underprices long-tenor assets and overprices some short-tenor assets, distorting business incentives."
+/>
+
+<Recall
+  q="Does matched-maturity FTP require one external borrowing for every loan?"
+  a="No. It is an internal pricing mechanism; actual funding remains centrally managed."
+/>

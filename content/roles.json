@@ -15,12 +15,12 @@
       "validation report"
     ],
     "atoms": [
-      { "id": "CR-03", "weight": 3 },
-      { "id": "CR-07", "weight": 3 },
-      { "id": "CR-08", "weight": 3 },
-      { "id": "FND-18", "weight": 2 },
-      { "id": "CR-10", "weight": 2 },
-      { "id": "CR-11", "weight": 1 }
+      { "id": "CR-05", "weight": 3 },
+      { "id": "CR-12", "weight": 3 },
+      { "id": "CR-13", "weight": 3 },
+      { "id": "CAP-14", "weight": 2 },
+      { "id": "MRM-01", "weight": 2 },
+      { "id": "FND-18", "weight": 1 }
     ]
   },
   {
@@ -39,12 +39,12 @@
       "discriminatory power"
     ],
     "atoms": [
-      { "id": "CR-07", "weight": 3 },
-      { "id": "CR-08", "weight": 3 },
-      { "id": "CR-09", "weight": 3 },
-      { "id": "CR-07-EX", "weight": 2 },
-      { "id": "FND-18", "weight": 2 },
-      { "id": "CR-12", "weight": 1 }
+      { "id": "CR-12", "weight": 3 },
+      { "id": "CR-19", "weight": 3 },
+      { "id": "CR-20", "weight": 3 },
+      { "id": "CR-21", "weight": 2 },
+      { "id": "CAP-14", "weight": 2 },
+      { "id": "CR-23", "weight": 1 }
     ]
   },
   {
@@ -64,12 +64,12 @@
       "provision"
     ],
     "atoms": [
-      { "id": "CR-03", "weight": 3 },
-      { "id": "CR-07", "weight": 3 },
-      { "id": "CR-08", "weight": 3 },
-      { "id": "CR-09", "weight": 3 },
-      { "id": "REG-01", "weight": 2 },
-      { "id": "ECL-01", "weight": 2 }
+      { "id": "IMP-01", "weight": 3 },
+      { "id": "IMP-06", "weight": 3 },
+      { "id": "IMP-08", "weight": 3 },
+      { "id": "IMP-05", "weight": 2 },
+      { "id": "IMP-13", "weight": 2 },
+      { "id": "IMP-20", "weight": 1 }
     ]
   },
   {
@@ -89,12 +89,12 @@
       "standardised approach"
     ],
     "atoms": [
-      { "id": "REG-01", "weight": 3 },
-      { "id": "CR-03", "weight": 3 },
-      { "id": "CR-07", "weight": 3 },
-      { "id": "OPS-01", "weight": 2 },
-      { "id": "FND-18", "weight": 2 },
-      { "id": "REG-03", "weight": 1 }
+      { "id": "CAP-04", "weight": 3 },
+      { "id": "CAP-09", "weight": 3 },
+      { "id": "CAP-12", "weight": 3 },
+      { "id": "CAP-13", "weight": 2 },
+      { "id": "CAP-16", "weight": 2 },
+      { "id": "CAP-30", "weight": 1 }
     ]
   },
   {
@@ -113,11 +113,12 @@
       "funding"
     ],
     "atoms": [
-      { "id": "REG-02", "weight": 3 },
-      { "id": "FND-18", "weight": 2 },
-      { "id": "MKT-01", "weight": 2 },
-      { "id": "TR-01", "weight": 3 },
-      { "id": "TR-02", "weight": 2 }
+      { "id": "TLM-01", "weight": 3 },
+      { "id": "TLM-04", "weight": 3 },
+      { "id": "TLM-14", "weight": 3 },
+      { "id": "TLM-15", "weight": 2 },
+      { "id": "TLM-17", "weight": 2 },
+      { "id": "TLM-19", "weight": 1 }
     ]
   },
   {
@@ -132,10 +133,12 @@
       "liquidity premium"
     ],
     "atoms": [
-      { "id": "FND-18", "weight": 3 },
-      { "id": "REG-02", "weight": 2 },
-      { "id": "TR-03", "weight": 3 },
-      { "id": "TR-04", "weight": 1 }
+      { "id": "TLM-20", "weight": 3 },
+      { "id": "TLM-21", "weight": 3 },
+      { "id": "TLM-22", "weight": 3 },
+      { "id": "TLM-23", "weight": 2 },
+      { "id": "TLM-24", "weight": 2 },
+      { "id": "TLM-25", "weight": 1 }
     ]
   },
   {
@@ -154,11 +157,12 @@
       "capital markets"
     ],
     "atoms": [
-      { "id": "LEG-01", "weight": 3 },
-      { "id": "MKT-01", "weight": 3 },
-      { "id": "MKT-02", "weight": 3 },
-      { "id": "FND-18", "weight": 2 },
-      { "id": "CM-01", "weight": 2 }
+      { "id": "CR-01", "weight": 3 },
+      { "id": "CAP-18", "weight": 3 },
+      { "id": "TRD-01", "weight": 3 },
+      { "id": "CCR-01", "weight": 2 },
+      { "id": "MRK-01", "weight": 2 },
+      { "id": "BA-01", "weight": 1 }
     ]
   },
   {
@@ -177,10 +181,12 @@
       "requirements"
     ],
     "atoms": [
-      { "id": "REG-01", "weight": 3 },
-      { "id": "REG-02", "weight": 3 },
-      { "id": "LEG-01", "weight": 2 },
-      { "id": "REG-04", "weight": 2 }
+      { "id": "FND-24", "weight": 3 },
+      { "id": "CAP-04", "weight": 3 },
+      { "id": "CAP-30", "weight": 3 },
+      { "id": "IMP-18", "weight": 2 },
+      { "id": "BA-01", "weight": 2 },
+      { "id": "TEC-01", "weight": 1 }
     ]
   },
   {
@@ -199,10 +205,12 @@
       "CDE"
     ],
     "atoms": [
-      { "id": "REG-01", "weight": 2 },
-      { "id": "CR-03", "weight": 2 },
+      { "id": "CR-03", "weight": 3 },
       { "id": "DAT-01", "weight": 3 },
-      { "id": "DAT-02", "weight": 3 }
+      { "id": "DAT-02", "weight": 3 },
+      { "id": "FND-06", "weight": 2 },
+      { "id": "CAP-11", "weight": 2 },
+      { "id": "DAT-03", "weight": 1 }
     ]
   },
   {
@@ -221,10 +229,12 @@
       "ETL"
     ],
     "atoms": [
-      { "id": "FND-18", "weight": 3 },
-      { "id": "CR-07-EX", "weight": 3 },
-      { "id": "CR-03", "weight": 2 },
-      { "id": "ANL-01", "weight": 2 }
+      { "id": "FND-16", "weight": 3 },
+      { "id": "FND-17", "weight": 3 },
+      { "id": "CR-23", "weight": 3 },
+      { "id": "QNT-01", "weight": 2 },
+      { "id": "TEC-01", "weight": 2 },
+      { "id": "FND-18", "weight": 1 }
     ]
   },
   {
@@ -243,10 +253,12 @@
       "product manager"
     ],
     "atoms": [
-      { "id": "CR-07", "weight": 3 },
-      { "id": "CR-03", "weight": 3 },
-      { "id": "CR-07-EX", "weight": 2 },
-      { "id": "FIN-01", "weight": 3 }
+      { "id": "CR-06", "weight": 3 },
+      { "id": "CR-20", "weight": 3 },
+      { "id": "CR-22", "weight": 3 },
+      { "id": "IND-01", "weight": 2 },
+      { "id": "CR-02", "weight": 2 },
+      { "id": "FND-02", "weight": 1 }
     ]
   },
   {
@@ -264,10 +276,12 @@
       "core banking"
     ],
     "atoms": [
+      { "id": "CR-02", "weight": 3 },
       { "id": "CR-03", "weight": 3 },
-      { "id": "CR-09", "weight": 3 },
-      { "id": "LEG-01", "weight": 2 },
-      { "id": "SYS-01", "weight": 2 }
+      { "id": "CR-04", "weight": 3 },
+      { "id": "CR-10", "weight": 2 },
+      { "id": "BA-01", "weight": 2 },
+      { "id": "TEC-01", "weight": 1 }
     ]
   }
 ]

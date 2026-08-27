@@ -1,0 +1,130 @@
+---
+id: TLM-14
+title: The Liquidity Coverage Ratio
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  LCR asks whether a bank has enough recognised HQLA to withstand modelled net
+  cash outflows over a severe 30-calendar-day stress period. It is a
+  standardised short-horizon resilience test, not a forecast of the bank’s
+  actual next 30 days.
+prerequisites:
+  - TLM-12
+  - TLM-13
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Calculation of the LCR*, Basel
+      Framework LCR20
+    url: 'https://www.bis.org/basel_framework/chapter/LCR/20.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *High-quality liquid assets*,
+      Basel Framework LCR30
+    url: 'https://www.bis.org/basel_framework/chapter/LCR/30.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off
+      Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      Office of the Comptroller of the Currency, *Applicability Thresholds for
+      Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52
+    url: >-
+      https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Conceptually:
+
+`LCR = stock of HQLA / total net cash outflows over 30 days`
+
+Under the Basel architecture, the ratio is calibrated around a 30-calendar-day stress horizon and a 100% minimum in ordinary conditions. Net outflows are not simply contractual maturities. Liability and off-balance-sheet categories receive regulatory **run-off rates** representing assumed stressed withdrawals or draws, while eligible inflows receive prescribed recognition subject to limits.
+
+The question is therefore: after applying the rulebook’s stress assumptions, can the recognised liquid-asset stock cover the resulting net cash requirement for 30 days?
+
+A stable retail deposit may receive a lower assumed run-off than a less stable or certain wholesale balance because their stressed behaviour is assumed to differ. An undrawn commitment can generate a contingent outflow even though no cash is owed today. Contractual receivables can generate inflows, but the framework prevents a bank from treating unlimited expected inflows as a substitute for a liquidity buffer.
+
+LCR is intentionally stylised. An actual crisis can last longer than 30 days, run-off rates can exceed regulatory assumptions, liquidity can be trapped by currency or legal entity and intraday settlement demands can arise even when the end-of-day LCR looks comfortable. Basel explicitly treats intraday liquidity separately from the original LCR calibration.
+
+India’s current framework follows the Basel architecture but has local calibrations. RBI’s April 2025 amendments, effective 1 April 2026, add 2.5 percentage points to run-off rates for internet/mobile-enabled retail deposits, producing 7.5% for qualifying stable balances and 12.5% for less-stable balances, and revise government-security HQLA valuation.
+
+&lt;Flow&gt;
++----------------------+
+| 30-day stress inputs |
++----------------------+
+     |             |
+     v             v
++-----------+ +-----------+
+| Stressed  | | Eligible  |
+| outflows  | | inflows   |
++-----------+ +-----------+
+     \             /
+      v           v
++----------------------+
+| Net cash outflows    |
++----------------------+
+          ^
+          |
++----------------------+
+| Recognised HQLA      |
++----------------------+
+          |
+          v
++----------------------+
+| LCR = HQLA / net     |
+| stressed outflows    |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+LCR measures standardised 30-day stressed liquidity coverage, not long-term funding stability.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Reading a 110% LCR as “the bank can survive exactly 33 days”; the ratio is based on prescribed stress assumptions, not a linear survival clock.
+</Trap>
+
+<NeverConfuse a="LCR" b="Survival horizon">
+**LCR** — HQLA relative to standardised net stressed cash outflows over 30 days.
+---
+**Survival horizon** — the modelled time until available liquidity is exhausted under a particular internal stress scenario.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI uses the Basel LCR architecture with Indian calibrations and SLR/FALLCR interaction; revised digital-deposit run-offs and government-security haircut rules are effective 1 April 2026. [RBI/2025-26/27]
+</Delta>
+
+<Delta j="UK">
+— PRA-supervised firms operate under the UK liquidity framework, with LCR embedded alongside broader liquidity supervision and ILAAP. [PRA SS24/15]
+</Delta>
+
+<Delta j="EU">
+— LCR is a binding CRR liquidity requirement supplemented by Delegated Regulation (EU) 2015/61. [CRR Part Six, Title I]
+</Delta>
+
+<Delta j="US">
+— LCR applicability is category-based rather than universal: the tailoring framework applies full, reduced or no LCR depending on firm category and specified risk indicators. [OCC Bulletin 2019-52]
+</Delta>
+
+<Recall
+  q="What is LCR fundamentally testing?"
+  a="Whether recognised HQLA can cover modelled net stressed cash outflows over 30 calendar days."
+/>
+
+<Recall
+  q="Why is LCR not a survival-horizon calculation?"
+  a="It uses a standardised 30-day regulatory stress rather than asking the first day a specific internal scenario exhausts liquidity."
+/>

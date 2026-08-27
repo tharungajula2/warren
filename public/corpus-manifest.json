@@ -40,8 +40,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 322.1,
-      "initialY": 1.8
+      "initialX": 291.7,
+      "initialY": 46.3
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +80,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 297.6,
-      "initialY": 54.3
+      "initialX": 284.4,
+      "initialY": -13.6
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 272.2,
-      "initialY": 0.2
+      "initialX": 328.1,
+      "initialY": 10
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +161,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 306.7,
-      "initialY": 34.9
+      "initialX": 371.5,
+      "initialY": -22.7
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +201,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 351.7,
-      "initialY": 65.1
+      "initialX": 379.8,
+      "initialY": 38.5
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +249,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 364.9,
-      "initialY": 38.4
+      "initialX": 315.5,
+      "initialY": -24.1
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +297,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 417.4,
-      "initialY": 11.1
+      "initialX": 361.8,
+      "initialY": -51.3
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +346,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 344.2,
-      "initialY": -9.1
+      "initialX": 350.9,
+      "initialY": 35.2
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 326.9,
-      "initialY": 54.5
+      "initialX": 300,
+      "initialY": 7.6
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +431,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 300.8,
-      "initialY": 8.1
+      "initialX": 296.6,
+      "initialY": -45.5
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +477,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 373.6,
-      "initialY": 22.8
+      "initialX": 339,
+      "initialY": -28.2
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +526,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 327.6,
-      "initialY": -21.1
+      "initialX": 364.9,
+      "initialY": 15.5
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +574,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 339.1,
-      "initialY": 34.4
+      "initialX": 345.1,
+      "initialY": 61
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +622,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 362,
-      "initialY": 81.7
+      "initialX": 381,
+      "initialY": 79.4
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +665,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 399.1,
-      "initialY": 56.2
+      "initialX": 331.5,
+      "initialY": 74.2
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +715,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 387.9,
-      "initialY": 2.1
+      "initialX": 394.3,
+      "initialY": 61.7
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +759,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 401.3,
-      "initialY": 34.3
+      "initialX": 307.8,
+      "initialY": 60.4
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +799,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 327.8,
-      "initialY": -76.7
+      "initialX": 420.3,
+      "initialY": -18.9
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -839,8 +839,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 289.1,
-      "initialY": -42.9
+      "initialX": 424.9,
+      "initialY": 38.1
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +879,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 341.3,
-      "initialY": -53.9
+      "initialX": 376.3,
+      "initialY": -1.1
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +920,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 355.6,
-      "initialY": -30.5
+      "initialX": 347.8,
+      "initialY": -76.9
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +960,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 417.4,
-      "initialY": -34.3
+      "initialX": 390.6,
+      "initialY": -36.5
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 372.7,
-      "initialY": -79.9
+      "initialX": 326.8,
+      "initialY": -52.8
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1040,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 403.6,
-      "initialY": -17.1
+      "initialX": 399.6,
+      "initialY": -53.8
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1080,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 352,
-      "initialY": 5.9
+      "initialX": 349.8,
+      "initialY": -5.4
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1123,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 368.1,
-      "initialY": -57.7
+      "initialX": 423.6,
+      "initialY": 11
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1175,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 385.5,
-      "initialY": -52.3
+      "initialX": 327,
+      "initialY": 38
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1230,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 285.9,
-      "initialY": -19.3
+      "initialX": 405.7,
+      "initialY": 36.7
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +1283,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 385,
-      "initialY": -29.7
+      "initialX": 378.1,
+      "initialY": -65.7
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +1360,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 319.8,
-      "initialY": -53.2
+      "initialX": 394.6,
+      "initialY": -12.9
     },
     "CR-01": {
       "id": "CR-01",
@@ -1399,8 +1399,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": -59.5,
-      "initialY": 257
+      "initialX": 27.2,
+      "initialY": 282.8
     },
     "CR-02": {
       "id": "CR-02",
@@ -1438,8 +1438,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": -34.8,
-      "initialY": 195.7
+      "initialX": 16.9,
+      "initialY": 217.4
     },
     "CR-03": {
       "id": "CR-03",
@@ -1483,8 +1483,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": -10.9,
-      "initialY": 151.7
+      "initialX": -1.6,
+      "initialY": 179.3
     },
     "CR-04": {
       "id": "CR-04",
@@ -1536,8 +1536,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": -37.7,
-      "initialY": 167.1
+      "initialX": 30.5,
+      "initialY": 178.8
     },
     "CR-05": {
       "id": "CR-05",
@@ -1589,8 +1589,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CR-05.mdx",
-      "initialX": -10,
-      "initialY": 179.1
+      "initialX": 41.6,
+      "initialY": 195
     },
     "CR-06": {
       "id": "CR-06",
@@ -1637,8 +1637,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": -29.2,
-      "initialY": 303.8
+      "initialX": 93.5,
+      "initialY": 291
     },
     "CR-07": {
       "id": "CR-07",
@@ -1690,8 +1690,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 24.3,
-      "initialY": 302.8
+      "initialX": 127,
+      "initialY": 299.8
     },
     "CR-08": {
       "id": "CR-08",
@@ -1738,8 +1738,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 22.9,
-      "initialY": 244
+      "initialX": 54.1,
+      "initialY": 268
     },
     "CR-09": {
       "id": "CR-09",
@@ -1787,8 +1787,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": -21.3,
-      "initialY": 227.7
+      "initialX": 62.2,
+      "initialY": 229.9
     },
     "CR-10": {
       "id": "CR-10",
@@ -1836,8 +1836,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -9.7,
-      "initialY": 52.8
+      "initialX": -55.8,
+      "initialY": 107.5
     },
     "CR-11": {
       "id": "CR-11",
@@ -1890,8 +1890,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": 3.9,
-      "initialY": 78.2
+      "initialX": -31.7,
+      "initialY": 115.7
     },
     "CR-12": {
       "id": "CR-12",
@@ -1929,8 +1929,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 23.1,
-      "initialY": 194.6
+      "initialX": 3.6,
+      "initialY": 228.7
     },
     "CR-13": {
       "id": "CR-13",
@@ -1968,8 +1968,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 0.1,
-      "initialY": 208.2
+      "initialX": -14.8,
+      "initialY": 251.4
     },
     "CR-14": {
       "id": "CR-14",
@@ -2007,8 +2007,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 25.2,
-      "initialY": 157.1
+      "initialX": -14.9,
+      "initialY": 204
     },
     "CR-15": {
       "id": "CR-15",
@@ -2047,8 +2047,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": -8.8,
-      "initialY": 243.5
+      "initialX": 35.5,
+      "initialY": 258.1
     },
     "CR-16": {
       "id": "CR-16",
@@ -2087,8 +2087,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -27.9,
-      "initialY": 49.4
+      "initialX": -72.2,
+      "initialY": 106.1
     },
     "CR-17": {
       "id": "CR-17",
@@ -2128,8 +2128,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": -25.6,
-      "initialY": 84.7
+      "initialX": -63.5,
+      "initialY": 143.7
     },
     "CR-18": {
       "id": "CR-18",
@@ -2167,8 +2167,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": -20.5,
-      "initialY": 263.4
+      "initialX": 67.6,
+      "initialY": 266.2
     },
     "CR-19": {
       "id": "CR-19",
@@ -2208,8 +2208,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": -8.7,
-      "initialY": 301.8
+      "initialX": 80,
+      "initialY": 309.1
     },
     "CR-20": {
       "id": "CR-20",
@@ -2248,8 +2248,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 39.7,
-      "initialY": 333.6
+      "initialX": 70.1,
+      "initialY": 355.3
     },
     "CR-21": {
       "id": "CR-21",
@@ -2289,8 +2289,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 10.2,
-      "initialY": 325
+      "initialX": 46.3,
+      "initialY": 334.1
     },
     "CR-22": {
       "id": "CR-22",
@@ -2330,8 +2330,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": -15.6,
-      "initialY": 326.2
+      "initialX": 98.4,
+      "initialY": 317.8
     },
     "CR-23": {
       "id": "CR-23",
@@ -2366,8 +2366,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": -9.1,
-      "initialY": 375.2
+      "initialX": 128.3,
+      "initialY": 361.2
     },
     "CR-24": {
       "id": "CR-24",
@@ -2420,8 +2420,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": -39,
-      "initialY": 290.1
+      "initialX": 101.6,
+      "initialY": 270.2
     },
     "CR-25": {
       "id": "CR-25",
@@ -2461,8 +2461,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 22.7,
-      "initialY": 326
+      "initialX": 88.2,
+      "initialY": 335
     },
     "CR-26": {
       "id": "CR-26",
@@ -2513,8 +2513,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 17.2,
-      "initialY": 268.1
+      "initialX": 38.2,
+      "initialY": 300.4
     },
     "FND-01": {
       "id": "FND-01",
@@ -2550,8 +2550,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -256.5,
-      "initialY": -13.8
+      "initialX": -253.1,
+      "initialY": 148.8
     },
     "FND-02": {
       "id": "FND-02",
@@ -2589,8 +2589,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -260.1,
-      "initialY": -51.3
+      "initialX": -287.7,
+      "initialY": 131.2
     },
     "FND-03": {
       "id": "FND-03",
@@ -2634,8 +2634,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -306.1,
-      "initialY": 21.2
+      "initialX": -317.3,
+      "initialY": 185.9
     },
     "FND-04": {
       "id": "FND-04",
@@ -2674,8 +2674,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -331.8,
-      "initialY": -5.7
+      "initialX": -300.2,
+      "initialY": 205.3
     },
     "FND-05": {
       "id": "FND-05",
@@ -2719,8 +2719,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -321.6,
-      "initialY": -21.1
+      "initialX": -281.9,
+      "initialY": 206.9
     },
     "FND-06": {
       "id": "FND-06",
@@ -2782,8 +2782,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -311,
-      "initialY": -56.8
+      "initialX": -320,
+      "initialY": 153.2
     },
     "FND-07": {
       "id": "FND-07",
@@ -2827,8 +2827,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -314.7,
-      "initialY": 2.7
+      "initialX": -257.2,
+      "initialY": 205.2
     },
     "FND-08": {
       "id": "FND-08",
@@ -2866,8 +2866,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -225.9,
-      "initialY": -100
+      "initialX": -316.8,
+      "initialY": 76.1
     },
     "FND-09": {
       "id": "FND-09",
@@ -2924,8 +2924,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -245.3,
-      "initialY": -120
+      "initialX": -286.9,
+      "initialY": 76.5
     },
     "FND-10": {
       "id": "FND-10",
@@ -2976,8 +2976,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -362,
-      "initialY": -12.8
+      "initialX": -316.2,
+      "initialY": 227.6
     },
     "FND-11": {
       "id": "FND-11",
@@ -3008,8 +3008,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -388.8,
-      "initialY": -46.9
+      "initialX": -268.2,
+      "initialY": 250.7
     },
     "FND-12": {
       "id": "FND-12",
@@ -3042,8 +3042,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -367.2,
-      "initialY": 19.1
+      "initialX": -338,
+      "initialY": 241.4
     },
     "FND-13": {
       "id": "FND-13",
@@ -3077,8 +3077,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -407.7,
-      "initialY": -10.4
+      "initialX": -299.3,
+      "initialY": 258.8
     },
     "FND-14": {
       "id": "FND-14",
@@ -3131,8 +3131,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -339.2,
-      "initialY": -61.3
+      "initialX": -296.2,
+      "initialY": 174.8
     },
     "FND-15": {
       "id": "FND-15",
@@ -3165,8 +3165,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -252.4,
-      "initialY": 83.4
+      "initialX": -187.3,
+      "initialY": 231.6
     },
     "FND-16": {
       "id": "FND-16",
@@ -3197,8 +3197,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -396.8,
-      "initialY": 40.1
+      "initialX": -333.2,
+      "initialY": 210.3
     },
     "FND-17": {
       "id": "FND-17",
@@ -3236,8 +3236,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -350.2,
-      "initialY": 41.7
+      "initialX": -362.2,
+      "initialY": 237.9
     },
     "FND-18": {
       "id": "FND-18",
@@ -3276,8 +3276,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -384.6,
-      "initialY": -12.8
+      "initialX": -316.3,
+      "initialY": 269.3
     },
     "FND-19": {
       "id": "FND-19",
@@ -3322,8 +3322,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -330.8,
-      "initialY": 27.1
+      "initialX": -272.6,
+      "initialY": 230.1
     },
     "FND-20": {
       "id": "FND-20",
@@ -3362,8 +3362,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -359.9,
-      "initialY": -36.7
+      "initialX": -237.8,
+      "initialY": 238.6
     },
     "FND-21": {
       "id": "FND-21",
@@ -3406,8 +3406,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -395.2,
-      "initialY": 14.5
+      "initialX": -274.5,
+      "initialY": 190.7
     },
     "FND-22": {
       "id": "FND-22",
@@ -3445,8 +3445,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -363.9,
-      "initialY": 60.5
+      "initialX": -345.5,
+      "initialY": 189.6
     },
     "FND-23": {
       "id": "FND-23",
@@ -3509,8 +3509,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -272,
-      "initialY": -38.6
+      "initialX": -235.6,
+      "initialY": 157
     },
     "FND-24": {
       "id": "FND-24",
@@ -3588,8 +3588,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -239.6,
-      "initialY": -60.9
+      "initialX": -264.8,
+      "initialY": 120
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -3650,8 +3650,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -79.7,
-      "initialY": -128.5
+      "initialX": -211.1,
+      "initialY": -7.2
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -3700,8 +3700,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -73.7,
-      "initialY": -192.5
+      "initialX": -251.2,
+      "initialY": -54.5
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -3756,8 +3756,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -51.2,
-      "initialY": -126.7
+      "initialX": -186.8,
+      "initialY": -16.8
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -3805,8 +3805,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -119.7,
-      "initialY": -253.2
+      "initialX": -314.1,
+      "initialY": -87.3
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -3854,8 +3854,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -20.7,
-      "initialY": -190.9
+      "initialX": -197,
+      "initialY": -96.2
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -3910,8 +3910,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -9.2,
-      "initialY": -118.5
+      "initialX": -148.3,
+      "initialY": -35.5
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -3960,8 +3960,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -25.7,
-      "initialY": -145.8
+      "initialX": -181.6,
+      "initialY": -34.7
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -4011,8 +4011,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": 16.3,
-      "initialY": -160.9
+      "initialX": -172.2,
+      "initialY": -66.8
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -4059,8 +4059,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -5.6,
-      "initialY": -202.4
+      "initialX": -167.7,
+      "initialY": -111.1
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -4109,8 +4109,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -16.2,
-      "initialY": -65.3
+      "initialX": -112.6,
+      "initialY": 7.7
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -4158,8 +4158,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -76.7,
-      "initialY": -234.2
+      "initialX": -261.2,
+      "initialY": -89.6
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -4208,8 +4208,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -17,
-      "initialY": -164.9
+      "initialX": -138.1,
+      "initialY": -78.9
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -4258,8 +4258,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": 20.3,
-      "initialY": -176
+      "initialX": -188.6,
+      "initialY": -77.4
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -4308,8 +4308,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": 20.2,
-      "initialY": -106.3
+      "initialX": -162.1,
+      "initialY": -8.4
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -4363,8 +4363,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": 1.8,
-      "initialY": -144
+      "initialX": -189.3,
+      "initialY": -46
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -4418,8 +4418,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -19.4,
-      "initialY": -272.3
+      "initialX": -242.9,
+      "initialY": -154.6
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -4474,8 +4474,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": 28.6,
-      "initialY": -266.7
+      "initialX": -269.6,
+      "initialY": -142
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -4529,8 +4529,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -0.1,
-      "initialY": -294.1
+      "initialX": -228.5,
+      "initialY": -175.9
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -4585,8 +4585,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -2.6,
-      "initialY": -239.8
+      "initialX": -249.5,
+      "initialY": -117
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -4647,8 +4647,1403 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -27.2,
-      "initialY": -247.1
+      "initialX": -221.9,
+      "initialY": -133.7
+    },
+    "TLM-01": {
+      "id": "TLM-01",
+      "title": "What a bank treasury actually does",
+      "type": "concept",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Bank treasury is the balance-sheet control centre that converts customer activity into managed funding, liquidity, interest-rate and market positions. Unlike a corporate treasury, it does not merely finance an operating business: maturity transformation and financial intermediation are themselves part of the bank’s business model.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TLM-01.mdx",
+      "initialX": 151.4,
+      "initialY": -379.3
+    },
+    "TLM-02": {
+      "id": "TLM-02",
+      "title": "Banking book versus trading book",
+      "type": "concept",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "The banking-book/trading-book boundary is not shorthand for “held long term” versus “traded frequently”; it is a regulatory classification determining which risk framework applies. Moving an exposure across that boundary can change valuation, capital treatment, risk measurement, governance and permissible hedging recognition.",
+      "prerequisites": [
+        "TLM-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Interest rate risk in the banking book*, Basel Framework SRP31",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Guidelines on IRRBB and CSRBB*, EBA/GL/2022/14",
+          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-02",
+      "depth": 1,
+      "currentness": "fresh",
+      "filepath": "TLM-02.mdx",
+      "initialX": 102.2,
+      "initialY": -327.7
+    },
+    "TLM-03": {
+      "id": "TLM-03",
+      "title": "The balance sheet as a set of mismatches",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "ALM begins by discarding accounting labels and viewing the balance sheet as dated cash flows and repricing events. Risk appears because the timing, rate basis, optionality and liquidity characteristics of assets do not line up perfectly with those of liabilities.",
+      "prerequisites": [
+        "TLM-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-03",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TLM-03.mdx",
+      "initialX": 109,
+      "initialY": -394.1
+    },
+    "TLM-04": {
+      "id": "TLM-04",
+      "title": "Where IRRBB comes from",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "IRRBB is not one risk but four interacting mechanisms: repricing gap, yield-curve shape, basis and optionality. A balance sheet can appear matched against one mechanism and remain materially exposed to another.",
+      "prerequisites": [
+        "TLM-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Interest rate risk in the banking book*, Basel Framework SRP31",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-04",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TLM-04.mdx",
+      "initialX": 46.5,
+      "initialY": -363.2
+    },
+    "TLM-05": {
+      "id": "TLM-05",
+      "title": "Economic value of equity versus net interest income",
+      "type": "concept",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "EVE asks how interest-rate shocks change the present value of the banking book; NII asks how they change near-term interest earnings and expense. Neither dominates the other because they expose different parts of the same balance-sheet risk.",
+      "prerequisites": [
+        "TLM-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Interest rate risk in the banking book*, Basel Framework SRP31",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V paragraphs 46–50 and 84–89",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-05",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "TLM-05.mdx",
+      "initialX": 30.5,
+      "initialY": -305.4
+    },
+    "TLM-06": {
+      "id": "TLM-06",
+      "title": "Duration and its limits",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Duration compresses a stream of cash flows into an approximate first-order sensitivity to interest rates. It is powerful for intuition and dangerous when treated as a complete model of a bank balance sheet.",
+      "prerequisites": [
+        "TLM-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-06",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "TLM-06.mdx",
+      "initialX": 85.7,
+      "initialY": -278
+    },
+    "TLM-07": {
+      "id": "TLM-07",
+      "title": "Gap analysis and repricing buckets",
+      "type": "procedure",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Repricing gap analysis places rate-sensitive assets and liabilities into the periods when they next reprice, then compares the two sides. It is a map of timing mismatch, not a complete forecast of earnings or value.",
+      "prerequisites": [
+        "TLM-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-07",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "TLM-07.mdx",
+      "initialX": 56.7,
+      "initialY": -411.5
+    },
+    "TLM-08": {
+      "id": "TLM-08",
+      "title": "Behavioural modelling of non-maturity deposits",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "A non-maturity deposit has an overnight contractual withdrawal right but may behave like multi-year funding. ALM therefore models both how long balances remain and how their administered rates respond to market rates; those assumptions can dominate measured IRRBB.",
+      "prerequisites": [
+        "TLM-03",
+        "TLM-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Guidelines on IRRBB and CSRBB*, EBA/GL/2022/14",
+          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Interest Rate Risk: Interagency Advisory*, January 2010",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interest-rate-risk-interagency-advisory.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-08",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "TLM-08.mdx",
+      "initialX": 67.9,
+      "initialY": -364.8
+    },
+    "TLM-09": {
+      "id": "TLM-09",
+      "title": "Prepayment, early redemption and pipeline risk",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Customer and business options make future banking-book cash flows conditional rather than fixed. Prepayments shorten assets, early withdrawals shorten liabilities, and pipeline commitments can create exposure before an instrument has even reached the balance sheet.",
+      "prerequisites": [
+        "TLM-04",
+        "TLM-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-09",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TLM-09.mdx",
+      "initialX": 78.6,
+      "initialY": -405
+    },
+    "TLM-10": {
+      "id": "TLM-10",
+      "title": "IRRBB stress tests and supervisory outliers",
+      "type": "procedure",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "An IRRBB stress test asks whether the balance sheet remains tolerable under severe rate paths and stressed customer behaviour; a supervisory outlier test is a regulatory screening device, not the bank’s complete risk appetite. Passing the outlier test does not prove IRRBB is safe.",
+      "prerequisites": [
+        "TLM-05",
+        "TLM-08",
+        "TLM-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Interest rate risk in the banking book*, Basel Framework SRP31",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*, Chapter V paragraphs 78–89",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Regulatory Technical Standards on IRRBB supervisory outlier tests*, 2024",
+          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-and",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Interest Rate Risk: Interagency Advisory*, January 2010",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interest-rate-risk-interagency-advisory.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-10",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "TLM-10.mdx",
+      "initialX": 28,
+      "initialY": -355.6
+    },
+    "TLM-11": {
+      "id": "TLM-11",
+      "title": "Hedging IRRBB and hedge accounting",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "An economic hedge changes the bank’s risk; hedge accounting changes how qualifying hedge effects appear in financial statements. A hedge can be economically effective without receiving hedge-accounting treatment, and accounting treatment must never determine whether the underlying risk is actually controlled.",
+      "prerequisites": [
+        "TLM-04",
+        "TLM-05",
+        "TLM-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Deferral of Implementation of Indian Accounting Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards — NBFCs and ARCs*, DOR (NBFC) circular, 13 March 2020",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-11",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "TLM-11.mdx",
+      "initialX": 78.3,
+      "initialY": -314.7
+    },
+    "TLM-12": {
+      "id": "TLM-12",
+      "title": "Funding liquidity risk versus market liquidity risk",
+      "type": "concept",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Funding liquidity risk is the risk that the bank cannot obtain cash when obligations fall due without unacceptable loss; market liquidity risk is the risk that an asset cannot be sold or financed quickly near its expected value. One can trigger the other, but they are not the same risk.",
+      "prerequisites": [
+        "TLM-01",
+        "TLM-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *High-quality liquid assets*, Basel Framework LCR30",
+          "url": "https://www.bis.org/basel_framework/chapter/LCR/30.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-12",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TLM-12.mdx",
+      "initialX": 88.6,
+      "initialY": -352.4
+    },
+    "TLM-13": {
+      "id": "TLM-13",
+      "title": "High-quality liquid assets",
+      "type": "concept",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "HQLA are not simply “safe securities”; they are assets that the liquidity framework recognises as capable of generating cash rapidly under stress with little loss. Eligibility, operational availability, encumbrance, haircut and portfolio composition all matter.",
+      "prerequisites": [
+        "TLM-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *High-quality liquid assets*, Basel Framework LCR30",
+          "url": "https://www.bis.org/basel_framework/chapter/LCR/30.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Basel III Framework on Liquidity Standards – LCR*, RBI/2022-23/25, DOR.LRG.REC.19/21.04.098/2022-23",
+          "url": "https://www.rbi.org.in/scripts/BS_CircularIndexDisplay.aspx?Id=12291",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Office of the Comptroller of the Currency, *Applicability Thresholds for Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52",
+          "url": "https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-13",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "TLM-13.mdx",
+      "initialX": 159.8,
+      "initialY": -316.7
+    },
+    "TLM-14": {
+      "id": "TLM-14",
+      "title": "The Liquidity Coverage Ratio",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "LCR asks whether a bank has enough recognised HQLA to withstand modelled net cash outflows over a severe 30-calendar-day stress period. It is a standardised short-horizon resilience test, not a forecast of the bank’s actual next 30 days.",
+      "prerequisites": [
+        "TLM-12",
+        "TLM-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Calculation of the LCR*, Basel Framework LCR20",
+          "url": "https://www.bis.org/basel_framework/chapter/LCR/20.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *High-quality liquid assets*, Basel Framework LCR30",
+          "url": "https://www.bis.org/basel_framework/chapter/LCR/30.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Office of the Comptroller of the Currency, *Applicability Thresholds for Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52",
+          "url": "https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-14",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "TLM-14.mdx",
+      "initialX": 124,
+      "initialY": -295
+    },
+    "TLM-15": {
+      "id": "TLM-15",
+      "title": "The Net Stable Funding Ratio",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "NSFR asks whether the bank’s longer-term assets and activities are supported by sufficiently stable funding over a one-year structural horizon. Where LCR is a short-term stress-buffer test, NSFR is a balance-sheet funding-structure test.",
+      "prerequisites": [
+        "TLM-12",
+        "TLM-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Net Stable Funding Ratio*, Basel Framework NSF30",
+          "url": "https://www.bis.org/basel_framework/chapter/NSF/30.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Financial Stability Institute, *Net Stable Funding Ratio — Executive Summary*",
+          "url": "https://www.bis.org/fsi/fsisummaries/nsfr.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net Stable Funding Ratio*, RBI/2020-21/95, DOR.No.LRG.BC.40/21.04.098/2020-21",
+          "url": "https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=3268",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Agencies issue final rule to strengthen resilience of large banks*, 20 October 2020",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20201020b.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-15",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "TLM-15.mdx",
+      "initialX": 64.1,
+      "initialY": -291
+    },
+    "TLM-16": {
+      "id": "TLM-16",
+      "title": "Intraday liquidity",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "A bank can end the day liquid and still fail during the day if payments arrive before offsetting receipts. Intraday liquidity is the capacity to meet payment and settlement obligations at the required time, not merely by the reporting cut-off.",
+      "prerequisites": [
+        "TLM-12",
+        "TLM-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Monitoring tools for intraday liquidity management*, BCBS 248",
+          "url": "https://www.bis.org/publ/bcbs248.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-16",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TLM-16.mdx",
+      "initialX": 52.1,
+      "initialY": -314.9
+    },
+    "TLM-17": {
+      "id": "TLM-17",
+      "title": "Survival horizon and liquidity stress testing",
+      "type": "procedure",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Liquidity stress testing converts a scenario into daily cash needs and monetisable resources; survival horizon is the time until the bank can no longer meet obligations under that scenario without prohibited or extraordinary assumptions. Unlike LCR, it is institution-specific and can span multiple phases of stress.",
+      "prerequisites": [
+        "TLM-12",
+        "TLM-13",
+        "TLM-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Liquidity risk monitoring metrics*, Basel Framework SRP50",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/50.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-17",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "TLM-17.mdx",
+      "initialX": 104.8,
+      "initialY": -301.1
+    },
+    "TLM-18": {
+      "id": "TLM-18",
+      "title": "Contingency funding plans",
+      "type": "procedure",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "A contingency funding plan converts liquidity stress analysis into an executable crisis playbook: triggers, decision rights, funding actions, collateral, communications and escalation. A list of theoretical funding sources is not a CFP unless those sources can actually be mobilised under stress.",
+      "prerequisites": [
+        "TLM-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*",
+          "url": "https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *The PRA’s approach to supervising liquidity and funding risks*, SS24/15, January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-18",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "TLM-18.mdx",
+      "initialX": 160.9,
+      "initialY": -289.6
+    },
+    "TLM-19": {
+      "id": "TLM-19",
+      "title": "ILAAP and the naming trap",
+      "type": "reference",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "ILAAP is the formal internal liquidity adequacy assessment terminology used in UK and EU supervisory architecture; it is not the universal global name for bank liquidity assessment. India and the US require liquidity-risk governance, stress testing and contingency planning through their own frameworks without universally relabelling that architecture “ILAAP”.",
+      "prerequisites": [
+        "TLM-14",
+        "TLM-15",
+        "TLM-17",
+        "TLM-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Prudential Regulation Authority, *The PRA’s approach to supervising liquidity and funding risks*, SS24/15, January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Guidelines on ICAAP and ILAAP information*",
+          "url": "https://www.eba.europa.eu/guidelines-icaap-and-ilaap-information",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*",
+          "url": "https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net Stable Funding Ratio*, RBI/2020-21/95",
+          "url": "https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=3268",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-19",
+      "depth": 8,
+      "currentness": "fresh",
+      "filepath": "TLM-19.mdx",
+      "initialX": 110.2,
+      "initialY": -259.8
+    },
+    "TLM-20": {
+      "id": "TLM-20",
+      "title": "What funds transfer pricing solves",
+      "type": "concept",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "FTP gives each business an internal price for the funding and liquidity consequences it creates, separating customer-product performance from centrally managed balance-sheet risk. Without FTP, business profitability can look strongest precisely where the bank is taking the most hidden maturity and liquidity risk.",
+      "prerequisites": [
+        "TLM-01",
+        "TLM-03",
+        "TLM-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-20",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "TLM-20.mdx",
+      "initialX": 131.7,
+      "initialY": -318.2
+    },
+    "TLM-21": {
+      "id": "TLM-21",
+      "title": "Matched-maturity FTP",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Matched-maturity FTP prices each asset or liability against internal funding of a comparable effective tenor rather than against one pooled average funding rate. It removes the accidental subsidy that otherwise makes long-dated assets look as cheap to fund as short-dated ones.",
+      "prerequisites": [
+        "TLM-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-21",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "TLM-21.mdx",
+      "initialX": 153.2,
+      "initialY": -360.8
+    },
+    "TLM-22": {
+      "id": "TLM-22",
+      "title": "The FTP curve and its components",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "An FTP curve converts tenor into the bank’s internal marginal value or cost of funding; it normally combines a reference-rate component with institution-specific term-liquidity economics, while contingent liquidity costs are allocated to exposures that can create stressed funding needs. The components must remain interpretable or business behaviour cannot be controlled.",
+      "prerequisites": [
+        "TLM-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-22",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TLM-22.mdx",
+      "initialX": 147.2,
+      "initialY": -409.6
+    },
+    "TLM-23": {
+      "id": "TLM-23",
+      "title": "Charging liquidity to the business that consumes it",
+      "type": "procedure",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Liquidity cost belongs with the activity that creates the need to fund or hold a buffer, even when treasury centrally executes the funding. Central execution without decentralised pricing hides the risk from the business decision that created it.",
+      "prerequisites": [
+        "TLM-20",
+        "TLM-22"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-23",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "TLM-23.mdx",
+      "initialX": 173.6,
+      "initialY": -363.7
+    },
+    "TLM-24": {
+      "id": "TLM-24",
+      "title": "FTP for non-maturity deposits",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "NMD FTP is difficult because the product has no contractual term from which to select a transfer rate. The transfer credit must be built from a governed behavioural replication of stable balances and repricing behaviour, not from either overnight maturity or an arbitrary long-term tenor.",
+      "prerequisites": [
+        "TLM-08",
+        "TLM-21",
+        "TLM-22"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Application guidance on interest rate risk in the banking book*, Basel Framework SRP98",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/98.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-24",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "TLM-24.mdx",
+      "initialX": 102.6,
+      "initialY": -414.8
+    },
+    "TLM-25": {
+      "id": "TLM-25",
+      "title": "How bad FTP distorts behaviour",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "FTP is a behavioural control disguised as an internal price. Set it wrongly and rational business lines will optimise the wrong objective—creating excessive maturity transformation, unstable funding, cheap commitments or artificial deposit growth while reported product profitability still looks attractive.",
+      "prerequisites": [
+        "TLM-20",
+        "TLM-21",
+        "TLM-23",
+        "TLM-24"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-25",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "TLM-25.mdx",
+      "initialX": 102.7,
+      "initialY": -369.8
+    },
+    "TLM-26": {
+      "id": "TLM-26",
+      "title": "Why a solvent bank can fail",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Solvency is about whether assets ultimately cover liabilities with adequate capital; liquidity is about whether cash is available when payment is due. A bank can possess positive economic net worth yet fail if it cannot monetise assets or obtain funding fast enough to settle immediate obligations.",
+      "prerequisites": [
+        "TLM-12",
+        "TLM-13",
+        "TLM-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *High-quality liquid assets*, Basel Framework LCR30",
+          "url": "https://www.bis.org/basel_framework/chapter/LCR/30.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-26",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "TLM-26.mdx",
+      "initialX": 128.5,
+      "initialY": -374.3
+    },
+    "TLM-27": {
+      "id": "TLM-27",
+      "title": "The credit-liquidity feedback loop",
+      "type": "mechanism",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Credit deterioration can create liquidity stress, and liquidity stress can create additional credit losses; the loop runs through collateral, funding confidence, asset sales and customer drawdowns. Stress models that shock credit and liquidity independently can therefore miss the mechanism that makes combined crises severe.",
+      "prerequisites": [
+        "TLM-12",
+        "TLM-17",
+        "TLM-26"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*",
+          "url": "https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-27",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "TLM-27.mdx",
+      "initialX": 146.3,
+      "initialY": -333.5
+    },
+    "TLM-28": {
+      "id": "TLM-28",
+      "title": "India’s SLR, MSF, FALLCR and LCR interaction",
+      "type": "reference",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "India’s distinctive feature is that specified government securities held within the mandatory SLR can also receive LCR HQLA recognition through the MSF and FALLCR carve-outs. SLR and LCR are different requirements, but RBI deliberately permits overlap so qualifying statutory holdings can provide recognised stress liquidity.",
+      "prerequisites": [
+        "TLM-13",
+        "TLM-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Basel III Framework on Liquidity Standards – LCR*, RBI/2022-23/25, DOR.LRG.REC.19/21.04.098/2022-23",
+          "url": "https://www.rbi.org.in/scripts/BS_CircularIndexDisplay.aspx?Id=12291",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Annual Report 2025-26 — Amendments to Liquidity Coverage Ratio Framework*",
+          "url": "https://rbi.org.in/scripts/PublicationsView.aspx?Id=23638",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *The PRA’s approach to supervising liquidity and funding risks*, SS24/15, January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-28",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "TLM-28.mdx",
+      "initialX": 178.6,
+      "initialY": -342.4
+    },
+    "TLM-29": {
+      "id": "TLM-29",
+      "title": "Cross-jurisdiction liquidity and IRRBB architecture",
+      "type": "reference",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "Basel supplies the common LCR, NSFR and IRRBB architecture, but national implementation is not identical: India has the SLR/FALLCR overlay and a forthcoming 2025 IRRBB regime; the UK embeds liquidity adequacy in PRA ILAAP supervision; the EU combines CRR liquidity ratios with EBA IRRBB/CSRBB standards; the US tailors LCR/NSFR by firm category and uses liquidity-risk/CFP terminology rather than a universal ILAAP label.",
+      "prerequisites": [
+        "TLM-10",
+        "TLM-14",
+        "TLM-15",
+        "TLM-19",
+        "TLM-28"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — LCR, NSFR and IRRBB*",
+          "url": "https://www.bis.org/basel_framework/",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Directions, 2025*",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *The PRA’s approach to supervising liquidity and funding risks*, SS24/15, January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Guidelines on IRRBB and CSRBB*, EBA/GL/2022/14",
+          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Office of the Comptroller of the Currency, *Applicability Thresholds for Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52",
+          "url": "https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-29",
+      "depth": 9,
+      "currentness": "fresh",
+      "filepath": "TLM-29.mdx",
+      "initialX": 108.7,
+      "initialY": -342.5
+    },
+    "TLM-30": {
+      "id": "TLM-30",
+      "title": "The integrated ALM decision cycle",
+      "type": "procedure",
+      "domain": "treasury-alm",
+      "subdomain": "unsorted",
+      "one_screen": "ALM is the repeated process of converting the balance sheet into risk measures, comparing them with appetite and constraints, changing pricing, funding or hedges, and then measuring again. The decisive skill is understanding that capital, liquidity, IRRBB and FTP are different views of one evolving balance sheet rather than separate regulatory exercises.",
+      "prerequisites": [
+        "TLM-05",
+        "TLM-10",
+        "TLM-14",
+        "TLM-15",
+        "TLM-17",
+        "TLM-20",
+        "TLM-26",
+        "TLM-27"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for Sound Liquidity Risk Management and Supervision*, BCBS 144",
+          "url": "https://www.bis.org/publ/bcbs144.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Interest rate risk in the banking book*, Basel Framework SRP31",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Financial Stability Institute, *Liquidity transfer pricing: a guide to better practice*, FSI Occasional Paper No. 10",
+          "url": "https://www.bis.org/fsi/fsipapers10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related to Funding and Contingent Liquidity Risks*, March 2016",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "tlm-30",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "TLM-30.mdx",
+      "initialX": 74.3,
+      "initialY": -341.1
     }
   },
   "reverseIndex": {
@@ -5067,6 +6462,128 @@
       "IMP-20"
     ],
     "IMP-20": [],
+    "TLM-01": [
+      "TLM-02",
+      "TLM-03",
+      "TLM-12",
+      "TLM-20"
+    ],
+    "TLM-02": [],
+    "TLM-03": [
+      "TLM-04",
+      "TLM-08",
+      "TLM-12",
+      "TLM-20"
+    ],
+    "TLM-04": [
+      "TLM-05",
+      "TLM-07",
+      "TLM-09",
+      "TLM-11"
+    ],
+    "TLM-05": [
+      "TLM-06",
+      "TLM-10",
+      "TLM-11",
+      "TLM-30"
+    ],
+    "TLM-06": [],
+    "TLM-07": [
+      "TLM-08"
+    ],
+    "TLM-08": [
+      "TLM-09",
+      "TLM-10",
+      "TLM-24"
+    ],
+    "TLM-09": [
+      "TLM-10"
+    ],
+    "TLM-10": [
+      "TLM-11",
+      "TLM-29",
+      "TLM-30"
+    ],
+    "TLM-11": [],
+    "TLM-12": [
+      "TLM-13",
+      "TLM-14",
+      "TLM-15",
+      "TLM-16",
+      "TLM-17",
+      "TLM-20",
+      "TLM-26",
+      "TLM-27"
+    ],
+    "TLM-13": [
+      "TLM-14",
+      "TLM-17",
+      "TLM-26",
+      "TLM-28"
+    ],
+    "TLM-14": [
+      "TLM-15",
+      "TLM-16",
+      "TLM-19",
+      "TLM-28",
+      "TLM-29",
+      "TLM-30"
+    ],
+    "TLM-15": [
+      "TLM-19",
+      "TLM-29",
+      "TLM-30"
+    ],
+    "TLM-16": [
+      "TLM-17"
+    ],
+    "TLM-17": [
+      "TLM-18",
+      "TLM-19",
+      "TLM-26",
+      "TLM-27",
+      "TLM-30"
+    ],
+    "TLM-18": [
+      "TLM-19"
+    ],
+    "TLM-19": [
+      "TLM-29"
+    ],
+    "TLM-20": [
+      "TLM-21",
+      "TLM-23",
+      "TLM-25",
+      "TLM-30"
+    ],
+    "TLM-21": [
+      "TLM-22",
+      "TLM-24",
+      "TLM-25"
+    ],
+    "TLM-22": [
+      "TLM-23",
+      "TLM-24"
+    ],
+    "TLM-23": [
+      "TLM-25"
+    ],
+    "TLM-24": [
+      "TLM-25"
+    ],
+    "TLM-25": [],
+    "TLM-26": [
+      "TLM-27",
+      "TLM-30"
+    ],
+    "TLM-27": [
+      "TLM-30"
+    ],
+    "TLM-28": [
+      "TLM-29"
+    ],
+    "TLM-29": [],
+    "TLM-30": [],
     "MRM-01": [
       "IMP-16",
       "IMP-17"
@@ -5812,6 +7329,226 @@
           ]
         }
       ]
+    },
+    {
+      "domain": "treasury-alm",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "TLM-01",
+              "title": "What a bank treasury actually does",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-02",
+              "title": "Banking book versus trading book",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-03",
+              "title": "The balance sheet as a set of mismatches",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-04",
+              "title": "Where IRRBB comes from",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-05",
+              "title": "Economic value of equity versus net interest income",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-06",
+              "title": "Duration and its limits",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-07",
+              "title": "Gap analysis and repricing buckets",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-08",
+              "title": "Behavioural modelling of non-maturity deposits",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-09",
+              "title": "Prepayment, early redemption and pipeline risk",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-10",
+              "title": "IRRBB stress tests and supervisory outliers",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-11",
+              "title": "Hedging IRRBB and hedge accounting",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-12",
+              "title": "Funding liquidity risk versus market liquidity risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-13",
+              "title": "High-quality liquid assets",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-14",
+              "title": "The Liquidity Coverage Ratio",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-15",
+              "title": "The Net Stable Funding Ratio",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-16",
+              "title": "Intraday liquidity",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-17",
+              "title": "Survival horizon and liquidity stress testing",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-18",
+              "title": "Contingency funding plans",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-19",
+              "title": "ILAAP and the naming trap",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-20",
+              "title": "What funds transfer pricing solves",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-21",
+              "title": "Matched-maturity FTP",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-22",
+              "title": "The FTP curve and its components",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-23",
+              "title": "Charging liquidity to the business that consumes it",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-24",
+              "title": "FTP for non-maturity deposits",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-25",
+              "title": "How bad FTP distorts behaviour",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-26",
+              "title": "Why a solvent bank can fail",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-27",
+              "title": "The credit-liquidity feedback loop",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-28",
+              "title": "India’s SLR, MSF, FALLCR and LCR interaction",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-29",
+              "title": "Cross-jurisdiction liquidity and IRRBB architecture",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TLM-30",
+              "title": "The integrated ALM decision cycle",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "roles": [
@@ -5832,27 +7569,27 @@
       ],
       "atoms": [
         {
-          "id": "CR-03",
+          "id": "CR-05",
           "weight": 3
         },
         {
-          "id": "CR-07",
+          "id": "CR-12",
           "weight": 3
         },
         {
-          "id": "CR-08",
+          "id": "CR-13",
           "weight": 3
+        },
+        {
+          "id": "CAP-14",
+          "weight": 2
+        },
+        {
+          "id": "MRM-01",
+          "weight": 2
         },
         {
           "id": "FND-18",
-          "weight": 2
-        },
-        {
-          "id": "CR-10",
-          "weight": 2
-        },
-        {
-          "id": "CR-11",
           "weight": 1
         }
       ]
@@ -5874,27 +7611,27 @@
       ],
       "atoms": [
         {
-          "id": "CR-07",
-          "weight": 3
-        },
-        {
-          "id": "CR-08",
-          "weight": 3
-        },
-        {
-          "id": "CR-09",
-          "weight": 3
-        },
-        {
-          "id": "CR-07-EX",
-          "weight": 2
-        },
-        {
-          "id": "FND-18",
-          "weight": 2
-        },
-        {
           "id": "CR-12",
+          "weight": 3
+        },
+        {
+          "id": "CR-19",
+          "weight": 3
+        },
+        {
+          "id": "CR-20",
+          "weight": 3
+        },
+        {
+          "id": "CR-21",
+          "weight": 2
+        },
+        {
+          "id": "CAP-14",
+          "weight": 2
+        },
+        {
+          "id": "CR-23",
           "weight": 1
         }
       ]
@@ -5917,28 +7654,28 @@
       ],
       "atoms": [
         {
-          "id": "CR-03",
+          "id": "IMP-01",
           "weight": 3
         },
         {
-          "id": "CR-07",
+          "id": "IMP-06",
           "weight": 3
         },
         {
-          "id": "CR-08",
+          "id": "IMP-08",
           "weight": 3
         },
         {
-          "id": "CR-09",
-          "weight": 3
-        },
-        {
-          "id": "REG-01",
+          "id": "IMP-05",
           "weight": 2
         },
         {
-          "id": "ECL-01",
+          "id": "IMP-13",
           "weight": 2
+        },
+        {
+          "id": "IMP-20",
+          "weight": 1
         }
       ]
     },
@@ -5960,27 +7697,27 @@
       ],
       "atoms": [
         {
-          "id": "REG-01",
+          "id": "CAP-04",
           "weight": 3
         },
         {
-          "id": "CR-03",
+          "id": "CAP-09",
           "weight": 3
         },
         {
-          "id": "CR-07",
+          "id": "CAP-12",
           "weight": 3
         },
         {
-          "id": "OPS-01",
+          "id": "CAP-13",
           "weight": 2
         },
         {
-          "id": "FND-18",
+          "id": "CAP-16",
           "weight": 2
         },
         {
-          "id": "REG-03",
+          "id": "CAP-30",
           "weight": 1
         }
       ]
@@ -6002,24 +7739,28 @@
       ],
       "atoms": [
         {
-          "id": "REG-02",
+          "id": "TLM-01",
           "weight": 3
         },
         {
-          "id": "FND-18",
-          "weight": 2
-        },
-        {
-          "id": "MKT-01",
-          "weight": 2
-        },
-        {
-          "id": "TR-01",
+          "id": "TLM-04",
           "weight": 3
         },
         {
-          "id": "TR-02",
+          "id": "TLM-14",
+          "weight": 3
+        },
+        {
+          "id": "TLM-15",
           "weight": 2
+        },
+        {
+          "id": "TLM-17",
+          "weight": 2
+        },
+        {
+          "id": "TLM-19",
+          "weight": 1
         }
       ]
     },
@@ -6036,19 +7777,27 @@
       ],
       "atoms": [
         {
-          "id": "FND-18",
+          "id": "TLM-20",
           "weight": 3
         },
         {
-          "id": "REG-02",
+          "id": "TLM-21",
+          "weight": 3
+        },
+        {
+          "id": "TLM-22",
+          "weight": 3
+        },
+        {
+          "id": "TLM-23",
           "weight": 2
         },
         {
-          "id": "TR-03",
-          "weight": 3
+          "id": "TLM-24",
+          "weight": 2
         },
         {
-          "id": "TR-04",
+          "id": "TLM-25",
           "weight": 1
         }
       ]
@@ -6070,24 +7819,28 @@
       ],
       "atoms": [
         {
-          "id": "LEG-01",
+          "id": "CR-01",
           "weight": 3
         },
         {
-          "id": "MKT-01",
+          "id": "CAP-18",
           "weight": 3
         },
         {
-          "id": "MKT-02",
+          "id": "TRD-01",
           "weight": 3
         },
         {
-          "id": "FND-18",
+          "id": "CCR-01",
           "weight": 2
         },
         {
-          "id": "CM-01",
+          "id": "MRK-01",
           "weight": 2
+        },
+        {
+          "id": "BA-01",
+          "weight": 1
         }
       ]
     },
@@ -6108,20 +7861,28 @@
       ],
       "atoms": [
         {
-          "id": "REG-01",
+          "id": "FND-24",
           "weight": 3
         },
         {
-          "id": "REG-02",
+          "id": "CAP-04",
           "weight": 3
         },
         {
-          "id": "LEG-01",
+          "id": "CAP-30",
+          "weight": 3
+        },
+        {
+          "id": "IMP-18",
           "weight": 2
         },
         {
-          "id": "REG-04",
+          "id": "BA-01",
           "weight": 2
+        },
+        {
+          "id": "TEC-01",
+          "weight": 1
         }
       ]
     },
@@ -6142,12 +7903,8 @@
       ],
       "atoms": [
         {
-          "id": "REG-01",
-          "weight": 2
-        },
-        {
           "id": "CR-03",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-01",
@@ -6156,6 +7913,18 @@
         {
           "id": "DAT-02",
           "weight": 3
+        },
+        {
+          "id": "FND-06",
+          "weight": 2
+        },
+        {
+          "id": "CAP-11",
+          "weight": 2
+        },
+        {
+          "id": "DAT-03",
+          "weight": 1
         }
       ]
     },
@@ -6176,20 +7945,28 @@
       ],
       "atoms": [
         {
+          "id": "FND-16",
+          "weight": 3
+        },
+        {
+          "id": "FND-17",
+          "weight": 3
+        },
+        {
+          "id": "CR-23",
+          "weight": 3
+        },
+        {
+          "id": "QNT-01",
+          "weight": 2
+        },
+        {
+          "id": "TEC-01",
+          "weight": 2
+        },
+        {
           "id": "FND-18",
-          "weight": 3
-        },
-        {
-          "id": "CR-07-EX",
-          "weight": 3
-        },
-        {
-          "id": "CR-03",
-          "weight": 2
-        },
-        {
-          "id": "ANL-01",
-          "weight": 2
+          "weight": 1
         }
       ]
     },
@@ -6210,20 +7987,28 @@
       ],
       "atoms": [
         {
-          "id": "CR-07",
+          "id": "CR-06",
           "weight": 3
         },
         {
-          "id": "CR-03",
+          "id": "CR-20",
           "weight": 3
         },
         {
-          "id": "CR-07-EX",
+          "id": "CR-22",
+          "weight": 3
+        },
+        {
+          "id": "IND-01",
           "weight": 2
         },
         {
-          "id": "FIN-01",
-          "weight": 3
+          "id": "CR-02",
+          "weight": 2
+        },
+        {
+          "id": "FND-02",
+          "weight": 1
         }
       ]
     },
@@ -6243,45 +8028,44 @@
       ],
       "atoms": [
         {
+          "id": "CR-02",
+          "weight": 3
+        },
+        {
           "id": "CR-03",
           "weight": 3
         },
         {
-          "id": "CR-09",
+          "id": "CR-04",
           "weight": 3
         },
         {
-          "id": "LEG-01",
+          "id": "CR-10",
           "weight": 2
         },
         {
-          "id": "SYS-01",
+          "id": "BA-01",
           "weight": 2
+        },
+        {
+          "id": "TEC-01",
+          "weight": 1
         }
       ]
     }
   ],
   "missingAtoms": [
-    "ANL-01",
-    "CM-01",
-    "CR-07-EX",
+    "BA-01",
+    "CCR-01",
     "DAT-01",
     "DAT-02",
-    "ECL-01",
-    "FIN-01",
-    "LEG-01",
-    "MKT-01",
-    "MKT-02",
-    "OPS-01",
-    "REG-01",
-    "REG-02",
-    "REG-03",
-    "REG-04",
-    "SYS-01",
-    "TR-01",
-    "TR-02",
-    "TR-03",
-    "TR-04"
+    "DAT-03",
+    "IND-01",
+    "MRK-01",
+    "MRM-01",
+    "QNT-01",
+    "TEC-01",
+    "TRD-01"
   ],
   "lintWarnings": [
     {
@@ -6828,7 +8612,162 @@
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "IMP-20",
       "message": "Atom \"IMP-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-01",
+      "message": "Atom \"TLM-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TLM-01",
+      "message": "Atom \"TLM-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-02",
+      "message": "Atom \"TLM-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-03",
+      "message": "Atom \"TLM-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-04",
+      "message": "Atom \"TLM-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-05",
+      "message": "Atom \"TLM-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-06",
+      "message": "Atom \"TLM-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-07",
+      "message": "Atom \"TLM-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-08",
+      "message": "Atom \"TLM-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-09",
+      "message": "Atom \"TLM-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-10",
+      "message": "Atom \"TLM-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-11",
+      "message": "Atom \"TLM-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-12",
+      "message": "Atom \"TLM-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-13",
+      "message": "Atom \"TLM-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-14",
+      "message": "Atom \"TLM-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-15",
+      "message": "Atom \"TLM-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-16",
+      "message": "Atom \"TLM-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-17",
+      "message": "Atom \"TLM-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-18",
+      "message": "Atom \"TLM-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-19",
+      "message": "Atom \"TLM-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-20",
+      "message": "Atom \"TLM-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-21",
+      "message": "Atom \"TLM-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-22",
+      "message": "Atom \"TLM-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-23",
+      "message": "Atom \"TLM-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-24",
+      "message": "Atom \"TLM-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-25",
+      "message": "Atom \"TLM-25\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-26",
+      "message": "Atom \"TLM-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-27",
+      "message": "Atom \"TLM-27\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-28",
+      "message": "Atom \"TLM-28\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-29",
+      "message": "Atom \"TLM-29\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TLM-30",
+      "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-27T21:15:53.614Z"
+  "generatedAt": "2026-08-27T21:31:51.600Z"
 }

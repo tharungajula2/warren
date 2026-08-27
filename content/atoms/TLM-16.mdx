@@ -1,0 +1,102 @@
+---
+id: TLM-16
+title: Intraday liquidity
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  A bank can end the day liquid and still fail during the day if payments arrive
+  before offsetting receipts. Intraday liquidity is the capacity to meet payment
+  and settlement obligations at the required time, not merely by the reporting
+  cut-off.
+prerequisites:
+  - TLM-12
+  - TLM-14
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Monitoring tools for intraday
+      liquidity management*, BCBS 248
+    url: 'https://www.bis.org/publ/bcbs248.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Bank cash flows are not synchronised. A large payment may need to settle at 10:00 while the cash inflow expected to fund it arrives at 15:00. The bank therefore needs intraday sources of liquidity: opening cash, central-bank balances, incoming payments, intraday credit, collateralised facilities or other immediately available resources.
+
+The key metric is not simply net daily cash flow but the **timing profile** within the day. A bank can receive 100 and pay 100 during the same day yet need substantial liquidity if most payments occur before receipts. The maximum cumulative net outflow is therefore a useful conceptual measure of the day’s peak funding requirement.
+
+Settlement systems make this operationally critical. Failure to settle can delay counterparties’ receipts, which can in turn impair their ability to make payments. Intraday liquidity risk can therefore propagate through payment and settlement networks even when institutions appear solvent on an end-of-day basis.
+
+Collateral management is inseparable from intraday liquidity. Securities may need to be pre-positioned before they can support central-bank or secured intraday credit. An asset technically eligible but not operationally positioned may be useless at the moment a payment queue builds.
+
+The Basel Committee developed seven quantitative intraday monitoring tools and explicitly stated that intraday liquidity management is a key element of overall liquidity risk management. It also noted that intraday liquidity was not included in the calibration of the original LCR. This means a healthy LCR cannot be treated as proof that settlement liquidity is adequate.
+
+&lt;Flow&gt;
+Start of day
+    |
+    v
++------------------+
+| Opening liquidity|
++------------------+
+    |
+    v
++------------------+
+| Payments -       |
+| receipts by time |
++------------------+
+    |
+    v
++------------------+
+| Cumulative net   |
+| position         |
++------------------+
+    |
+    v
++------------------+
+| Peak intraday    |
+| liquidity need   |
++------------------+
+    |
+    v
+End of day
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Intraday liquidity is about having cash at the required settlement time, not merely sufficient cash by day-end.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using daily net cash flow or LCR as a proxy for peak intraday funding needs.
+</Trap>
+
+<NeverConfuse a="Intraday liquidity" b="End-of-day liquidity">
+**Intraday liquidity** — resources needed to settle obligations during the business day.
+---
+**End-of-day liquidity** — the closing cash position after that day’s receipts and payments have occurred.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Payment-system structures and reporting details differ, but the timing mechanism is universal.
+</Rule>
+
+<Recall
+  q="How can a bank with zero net daily outflow still need large intraday liquidity?"
+  a="Outgoing payments may settle hours before offsetting incoming payments."
+/>
+
+<Recall
+  q="Is intraday liquidity captured completely by LCR?"
+  a="No; Basel explicitly treats intraday monitoring separately from LCR calibration."
+/>

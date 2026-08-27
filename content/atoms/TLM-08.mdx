@@ -1,0 +1,125 @@
+---
+id: TLM-08
+title: Behavioural modelling of non-maturity deposits
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  A non-maturity deposit has an overnight contractual withdrawal right but may
+  behave like multi-year funding. ALM therefore models both how long balances
+  remain and how their administered rates respond to market rates; those
+  assumptions can dominate measured IRRBB.
+prerequisites:
+  - TLM-03
+  - TLM-07
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Forthcoming Instructions) Directions, 2025*, Chapter V
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      European Banking Authority, *Guidelines on IRRBB and CSRBB*,
+      EBA/GL/2022/14
+    url: >-
+      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0
+    accessed: 28 August 2026
+  - label: 'Federal Reserve, *Interest Rate Risk: Interagency Advisory*, January 2010'
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interest-rate-risk-interagency-advisory.htm
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+A **non-maturity deposit (NMD)** has no fixed contractual maturity at which the entire balance must be repaid. Transaction and savings balances are typical economic forms. Contractually, customers may be able to withdraw quickly. Behaviourally, a portion of an aggregate portfolio can remain persistent.
+
+Two models are required. The **balance model** estimates how much funding is stable and for how long. The **repricing model** estimates how the administered deposit rate responds when market rates change. A useful concept is deposit **beta**: the proportion of a market-rate change eventually passed through to the customer rate. **Lag** describes how quickly that pass-through occurs.
+
+Suppose market rates rise 100 basis points and a deposit rate historically rises only 40 basis points after a delay. Treating the deposit as instantly repricing by 100 basis points overstates funding-cost sensitivity. Treating the entire balance as fixed for five years can make the opposite error. Stability and repricing must be estimated separately.
+
+Segmentation matters. Operational transaction balances can behave differently from rate-sensitive surplus balances; retail behaviour can differ from wholesale behaviour. Models therefore group accounts with sufficiently similar economic characteristics, estimate decay or stability and test behaviour under changing rate environments.
+
+The danger is false precision. Historical stability observed during calm periods may not survive intense competition, digital withdrawals or customer concentration. Behavioural assumptions must therefore be governed, validated and stressed rather than treated as contractual facts. Basel IRRBB standards specifically recognise NMD optionality. RBI’s forthcoming framework prescribes behavioural treatment and, for its standardised methodology, caps core-deposit proportions and average maturities by category.
+
+&lt;Flow&gt;
++------------------+
+| NMD balances     |
++------------------+
+        |
+        v
++------------------+
+| Segment          |
++------------------+
+    |         |
+    v         v
++---------+ +---------+
+| Balance | | Deposit |
+| stability| | repricing|
++---------+ +---------+
+    |         |
+    v         v
++---------+ +---------+
+|Behav.  | |Beta /   |
+|tenor   | |lag      |
++---------+ +---------+
+    \         /
+     v       v
++------------------+
+| EVE / NII profile|
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+An NMD’s contractual overnight maturity is not its behavioural ALM tenor.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using a single “average life” for NMDs without separately modelling rate beta, lag and stressed balance decay.
+</Trap>
+
+<NeverConfuse a="Core deposit assumption" b="Contractual maturity">
+**Core deposit assumption** — the estimated stable portion of an NMD portfolio used for behavioural modelling.
+---
+**Contractual maturity** — the legal withdrawal horizon, which for an NMD may be immediate despite behavioural stability.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s forthcoming 2025 IRRBB framework specifies NMD modelling constraints in its standardised methodology, including category-specific caps on core proportions and average maturity; implementation date remains to be notified. [RBI 2025, Chapter V]
+</Delta>
+
+<Delta j="UK">
+— PRA-supervised firms are expected to manage structural liquidity and interest-rate assumptions within their prudential risk frameworks; exact NMD model constraints should be verified against current PRA requirements.
+</Delta>
+
+<Delta j="EU">
+— EBA/GL/2022/14 and related technical standards prescribe detailed IRRBB behavioural treatment, including NMD assumptions. [EBA/GL/2022/14]
+</Delta>
+
+<Delta j="US">
+— supervisory IRR guidance emphasises supportable assumptions for deposit behaviour; institution-specific modelling remains central. [Federal Reserve interagency IRR guidance]
+</Delta>
+
+<Recall
+  q="What two separate behaviours must an NMD model estimate?"
+  a="Balance persistence and interest-rate repricing."
+/>
+
+<Recall
+  q="Why is an NMD not simply an overnight liability for IRRBB?"
+  a="Aggregate balances and administered rates may behave over much longer horizons than the contractual withdrawal right."
+/>

@@ -1,0 +1,118 @@
+---
+id: TLM-19
+title: ILAAP and the naming trap
+type: reference
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  ILAAP is the formal internal liquidity adequacy assessment terminology used in
+  UK and EU supervisory architecture; it is not the universal global name for
+  bank liquidity assessment. India and the US require liquidity-risk governance,
+  stress testing and contingency planning through their own frameworks without
+  universally relabelling that architecture “ILAAP”.
+prerequisites:
+  - TLM-14
+  - TLM-15
+  - TLM-17
+  - TLM-18
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
+    accessed: 28 August 2026
+  - label: 'European Banking Authority, *Guidelines on ICAAP and ILAAP information*'
+    url: 'https://www.eba.europa.eu/guidelines-icaap-and-ilaap-information'
+    accessed: 28 August 2026
+  - label: 'Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*'
+    url: >-
+      https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net
+      Stable Funding Ratio*, RBI/2020-21/95
+    url: 'https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=3268'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+The **Internal Liquidity Adequacy Assessment Process (ILAAP)** is a structured assessment of whether an institution has adequate liquidity and funding resources relative to its risks. A credible assessment integrates risk appetite, cash-flow mismatch analysis, stress tests, liquid-asset capacity, funding concentrations, intraday risk, contingency planning and governance. It is broader than proving compliance with LCR and NSFR.
+
+The key practitioner point is linguistic as much as technical. In UK prudential supervision, ILAAP is an explicit formal term. The PRA’s current SS24/15 states that its liquidity and funding supervisory approach covers the Internal Liquidity Adequacy Assessment Process and the Liquidity Supervisory Review and Evaluation Process. The version confirmed final in January 2026 took effect on 20 January 2026.
+
+The term is also embedded in EU supervisory vocabulary; EBA has issued guidance specifically concerning ICAAP and ILAAP information.
+
+That does **not** mean every jurisdiction calls its internal liquidity assessment an ILAAP. Indian banks are subject to RBI liquidity standards, ALM, LCR, NSFR and supervisory risk-management requirements, but practitioners should not import a UK/EU label into an RBI rule unless the RBI text itself uses it. Likewise, the US uses formal liquidity-risk-management, stress-testing, liquidity-buffer and contingency-funding constructs. Regulation YY, for example, prescribes liquidity-risk management and CFP requirements without framing them as an EU-style ILAAP.
+
+For cross-border roles, the right translation is functional rather than lexical: ask which local process performs internal liquidity adequacy assessment, not whether every regulator uses the same acronym.
+
+&lt;Flow&gt;
++----------------------+
+| Internal liquidity   |
+| adequacy assessment  |
++----------------------+
+          |
+          v
++----------------------+
+| Risk + stress +      |
+| buffer + funding +   |
+| CFP + governance     |
++----------------------+
+     |              |
+     v              v
++------------+ +-------------+
+| UK / EU    | | IN / US     |
+| "ILAAP"    | | local terms |
++------------+ +-------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+ILAAP describes a formal UK/EU supervisory construct; internal liquidity adequacy is a universal problem, but the acronym is not a universal regulatory label.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Writing “the bank submits its ILAAP” in an India or US procedure merely because that is what the equivalent process is called in a UK or EU entity.
+</Trap>
+
+<NeverConfuse a="ILAAP" b="Liquidity-risk framework">
+**ILAAP** — the formal Internal Liquidity Adequacy Assessment Process terminology used in UK/EU prudential supervision.
+---
+**Liquidity-risk framework** — the broader universal set of risk governance, stress, buffers and contingency processes, whatever the local regulator calls it.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI has LCR, NSFR, ALM, liquidity stress and related prudential requirements, but “ILAAP” should not be assumed to be RBI’s universal formal naming convention. [RBI LCR/NSFR framework]
+</Delta>
+
+<Delta j="UK">
+— ILAAP is an explicit PRA supervisory construct under SS24/15 and the Internal Liquidity Adequacy Assessment part of the PRA framework. [PRA SS24/15, January 2026]
+</Delta>
+
+<Delta j="EU">
+— ILAAP is established supervisory terminology and is addressed in EBA guidance on ICAAP/ILAAP information. [EBA ILAAP guidance]
+</Delta>
+
+<Delta j="US">
+— US rules use liquidity-risk management, stress-testing, buffer and CFP constructs rather than an EU-style universal “ILAAP” label. [12 CFR 252.34]
+</Delta>
+
+<Recall
+  q="Is ILAAP a universal Basel naming convention used identically everywhere?"
+  a="No. It is formal UK/EU terminology; India and the US use different regulatory naming architectures."
+/>
+
+<Recall
+  q="Is ILAAP merely an LCR calculation?"
+  a="No. It is a broader assessment of liquidity and funding adequacy relative to the institution’s risks."
+/>

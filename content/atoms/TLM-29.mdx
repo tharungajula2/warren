@@ -1,0 +1,131 @@
+---
+id: TLM-29
+title: Cross-jurisdiction liquidity and IRRBB architecture
+type: reference
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Basel supplies the common LCR, NSFR and IRRBB architecture, but national
+  implementation is not identical: India has the SLR/FALLCR overlay and a
+  forthcoming 2025 IRRBB regime; the UK embeds liquidity adequacy in PRA ILAAP
+  supervision; the EU combines CRR liquidity ratios with EBA IRRBB/CSRBB
+  standards; the US tailors LCR/NSFR by firm category and uses
+  liquidity-risk/CFP terminology rather than a universal ILAAP label.
+prerequisites:
+  - TLM-10
+  - TLM-14
+  - TLM-15
+  - TLM-19
+  - TLM-28
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework — LCR, NSFR and
+      IRRBB*
+    url: 'https://www.bis.org/basel_framework/'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Forthcoming Instructions) Directions, 2025*
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
+    accessed: 28 August 2026
+  - label: >-
+      European Banking Authority, *Guidelines on IRRBB and CSRBB*,
+      EBA/GL/2022/14
+    url: >-
+      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0
+    accessed: 28 August 2026
+  - label: >-
+      Office of the Comptroller of the Currency, *Applicability Thresholds for
+      Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52
+    url: >-
+      https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+The common core makes cross-border work look deceptively uniform. LCR asks about 30-day stressed liquidity; NSFR asks about structural stable funding; IRRBB measures banking-book exposure from adverse interest-rate movements. Basel provides the international architecture, but each jurisdiction determines legal scope, local calibration and supervisory process.
+
+India implements Basel-style LCR and NSFR but overlays LCR with the statutory SLR and MSF/FALLCR mechanism. NSFR has applied to covered commercial banks since 1 October 2021. RBI’s November 2025 consolidated “forthcoming” Directions place the new IRRBB framework in Pillar 2/ICAAP, require ΔEVE and ΔNII, prescribe stress testing and use the 15% Tier 1 EVE outlier threshold; as of the current Directions, the implementation date is still to be communicated.
+
+The UK’s PRA framework explicitly uses ILAAP as a formal supervisory construct. Current SS24/15, effective 20 January 2026, sets out the PRA’s approach to supervising liquidity and funding risks.
+
+In the EU, LCR and NSFR sit in CRR Part Six, while EBA/GL/2022/14 addresses IRRBB and **credit spread risk in the banking book (CSRBB)**, with associated technical standards for supervisory outlier tests and standardised approaches.
+
+The US adopts LCR and NSFR for covered large organisations through a tailoring framework rather than imposing identical requirements on every bank. US liquidity supervision also uses explicit liquidity-risk management and CFP requirements rather than adopting ILAAP as the universal regulatory label.
+
+&lt;Flow&gt;
++--------------------+
+| Basel architecture |
+| LCR / NSFR / IRRBB |
++--------------------+
+          |
+          v
++--------------------+
+| National adoption  |
++--------------------+
+ |        |       |        |
+ v        v       v        v
++------+ +------+ +------+ +------+
+| IN   | | UK   | | EU   | | US   |
++------+ +------+ +------+ +------+
+|SLR/ | |PRA   | |CRR + | |Tailor|
+|FALL | |ILAAP | |EBA   | |scope |
+|CR   | |      | |CSRBB | |CFP   |
++------+ +------+ +------+ +------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Basel comparability does not eliminate jurisdiction-specific legal scope, calibration or supervisory vocabulary.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Copying an EU or UK policy into India or the US by changing the regulator name while leaving ILAAP terminology, scope assumptions and local liquidity mechanics unchanged.
+</Trap>
+
+<NeverConfuse a="Basel standard" b="Local rule">
+**Basel standard** — international prudential architecture produced by the Basel Committee.
+---
+**Local rule** — the legally applicable national or regional implementation, which may tailor scope, calibration and supervisory process.
+</NeverConfuse>
+
+<Delta j="IN">
+— LCR includes the SLR/MSF/FALLCR interaction; NSFR has applied since 1 October 2021; RBI’s November 2025 IRRBB Directions place the forthcoming regime in Pillar 2/ICAAP but state that implementation date will be communicated separately. [RBI/2020-21/95; RBI/2022-23/25; RBI 2025 Directions]
+</Delta>
+
+<Delta j="UK">
+— PRA SS24/15 explicitly supervises liquidity and funding through an ILAAP/LSREP architecture; the current version became effective 20 January 2026. [PRA SS24/15]
+</Delta>
+
+<Delta j="EU">
+— CRR Part Six contains LCR/NSFR requirements; EBA/GL/2022/14 addresses IRRBB and CSRBB with related technical standards. [CRR; EBA/GL/2022/14]
+</Delta>
+
+<Delta j="US">
+— LCR/NSFR requirements are tailored by firm risk category rather than uniform across banks; liquidity-risk management and contingency funding are formal supervisory constructs without a universal ILAAP label. [OCC Bulletin 2019-52; Federal Reserve NSFR final rule; 12 CFR 252.34]
+</Delta>
+
+<Recall
+  q="Which jurisdiction in this pack has the distinctive SLR/FALLCR interaction?"
+  a="India."
+/>
+
+<Recall
+  q="Which jurisdictions formally use ILAAP terminology?"
+  a="The UK and EU; it should not be assumed as the universal India or US label."
+/>

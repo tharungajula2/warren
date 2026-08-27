@@ -1,0 +1,111 @@
+---
+id: TLM-20
+title: What funds transfer pricing solves
+type: concept
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  FTP gives each business an internal price for the funding and liquidity
+  consequences it creates, separating customer-product performance from
+  centrally managed balance-sheet risk. Without FTP, business profitability can
+  look strongest precisely where the bank is taking the most hidden maturity and
+  liquidity risk.
+prerequisites:
+  - TLM-01
+  - TLM-03
+  - TLM-12
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
+      to Funding and Contingent Liquidity Risks*, March 2016
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
+    accessed: 28 August 2026
+  - label: >-
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10
+    url: 'https://www.bis.org/fsi/fsipapers10.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Suppose a business originates a five-year fixed-rate loan at 8%. Calling 8% its revenue ignores the fact that somebody must fund the loan for five years or bear refinancing risk. Conversely, a stable deposit business creates funding value that should not disappear inside a central treasury result.
+
+**Funds transfer pricing (FTP)** solves this allocation problem. Treasury or another central function applies an internal transfer charge to funding-consuming assets and an internal transfer credit to funding-providing liabilities. The business then sees a margin after recognising the balance-sheet resources it consumes or supplies.
+
+For a simplified loan:
+
+`Customer yield − FTP charge = business spread before other costs`
+
+For a deposit:
+
+`FTP credit − customer deposit rate = business funding spread before other costs`
+
+The transfer price is internal; it is not an external cash transaction with a customer. Its purpose is managerial economics and risk allocation.
+
+Good FTP transfers centrally manageable funding and liquidity risks away from the originating unit while leaving that unit accountable for the risks it controls, such as customer pricing or credit decisions. Treasury can then aggregate mismatches, hedge them centrally and observe the bank-wide funding position.
+
+The Federal Reserve’s interagency FTP guidance defines FTP as a central process allocating the costs and benefits associated with funding and contingent liquidity risks to business lines, products and activities. It states that FTP influences new-business volumes and terms and can align risk-taking incentives with the institution’s risk appetite. Basel liquidity principles similarly require allocation of liquidity costs, benefits and risks to significant business activities.
+
+&lt;Flow&gt;
++------------------+
+| Customer business|
++------------------+
+   | asset    | deposit
+   v          v
++--------+ +--------+
+| FTP    | | FTP    |
+| charge | | credit |
++--------+ +--------+
+     \       /
+      v     v
++------------------+
+| Central treasury |
++------------------+
+        |
+        v
++------------------+
+| Aggregate funding|
+| + liquidity risk |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+FTP should make the originating business economically accountable for the funding and liquidity consequences it creates.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Judging product profitability from customer rate minus direct operating cost while leaving funding tenor and contingent liquidity cost in treasury.
+</Trap>
+
+<NeverConfuse a="FTP rate" b="Customer rate">
+**FTP rate** — an internal transfer price used to allocate funding/liquidity economics.
+---
+**Customer rate** — the contractual interest rate charged to or paid to the external customer.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** FTP methodology is an internal-management mechanism; supervisory expectations vary in detail, but its economic allocation problem is universal.
+</Rule>
+
+<Recall
+  q="Why does FTP exist?"
+  a="To allocate funding and liquidity costs or benefits to the businesses that create them."
+/>
+
+<Recall
+  q="What happens if a five-year loan is evaluated without a five-year funding cost?"
+  a="Its apparent profitability is overstated and maturity transformation becomes underpriced."
+/>

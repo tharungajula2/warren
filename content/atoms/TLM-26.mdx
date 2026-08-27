@@ -1,0 +1,106 @@
+---
+id: TLM-26
+title: Why a solvent bank can fail
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Solvency is about whether assets ultimately cover liabilities with adequate
+  capital; liquidity is about whether cash is available when payment is due. A
+  bank can possess positive economic net worth yet fail if it cannot monetise
+  assets or obtain funding fast enough to settle immediate obligations.
+prerequisites:
+  - TLM-12
+  - TLM-13
+  - TLM-17
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *High-quality liquid assets*,
+      Basel Framework LCR30
+    url: 'https://www.bis.org/basel_framework/chapter/LCR/30.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Imagine a bank with long-term assets worth 110 in an orderly valuation and liabilities of 100. Economically it has positive net worth of 10. If 30 of liabilities must be repaid today but the bank has only 10 of immediate cash, it needs to raise another 20.
+
+If markets will lend against the assets, or the assets can be sold near their orderly value, the timing mismatch can be bridged. If funding markets close and buyers demand a severe fire-sale discount, the bank may be unable to raise 20 without crystallising large losses. A liquidity problem has now become a solvency problem.
+
+Banks are particularly exposed because maturity transformation is central to intermediation: shorter or withdrawable funding supports assets that often return cash over longer horizons. Basel’s liquidity principles explicitly recognise this structural vulnerability.
+
+Capital does not mechanically solve the timing problem. Equity absorbs losses and protects creditors from asset-value deterioration, but it is not a pile of settlement cash. A well-capitalised bank still needs immediately usable liquidity, collateral and access to payment systems. Conversely, holding liquidity does not cure true negative net worth: cash can postpone but not erase losses exceeding capital.
+
+This distinction explains why bank resilience requires both capital and liquidity frameworks. Capital absorbs unexpected losses; liquidity buffers and funding arrangements bridge cash-flow timing under stress. Treasury and ALM must therefore ask both questions whenever stress appears: **what is the value loss?** and **when is cash needed?**
+
+&lt;Flow&gt;
++------------------+
+| Assets &amp;gt; debts   |
+| economically     |
++------------------+
+        |
+        v
++------------------+
+| Cash due now     |
++------------------+
+        |
+        v
++------------------+
+| Immediate cash   |
+| sufficient?      |
++------------------+
+   | yes       | no
+   v           v
++------+ +----------------+
+|Pay   | | Borrow / sell  |
++------+ +----------------+
+             |
+             v
+      +----------------+
+      | Market access? |
+      +----------------+
+        | yes    | no
+        v        v
+      +------+ +--------+
+      |Bridge| | Failure|
+      +------+ +--------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Positive net worth cannot substitute for cash at the moment an obligation must settle.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Answering a liquidity challenge by pointing to a strong capital ratio without demonstrating how the next cash obligation will actually be paid.
+</Trap>
+
+<NeverConfuse a="Solvency" b="Liquidity">
+**Solvency** — adequacy of asset value and loss-absorbing resources relative to liabilities.
+---
+**Liquidity** — ability to obtain cash in time to meet obligations without unacceptable loss.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The distinction follows balance-sheet economics, not jurisdiction.
+</Rule>
+
+<Recall
+  q="Why is equity not the same as liquidity?"
+  a="Equity absorbs losses but is not itself necessarily immediately spendable cash."
+/>
+
+<Recall
+  q="How can a liquidity event destroy solvency?"
+  a="Forced funding or asset sales at severe discounts can crystallise losses that consume capital."
+/>

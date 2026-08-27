@@ -1,0 +1,121 @@
+---
+id: TLM-18
+title: Contingency funding plans
+type: procedure
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  A contingency funding plan converts liquidity stress analysis into an
+  executable crisis playbook: triggers, decision rights, funding actions,
+  collateral, communications and escalation. A list of theoretical funding
+  sources is not a CFP unless those sources can actually be mobilised under
+  stress.
+prerequisites:
+  - TLM-17
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: 'Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*'
+    url: >-
+      https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm
+    accessed: 28 August 2026
+  - label: >-
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+A **contingency funding plan (CFP)** begins before the crisis. It defines early-warning indicators such as deposit outflows, widening funding spreads, falling unencumbered collateral, unusual drawdowns, reduced market access or rapid deterioration in liquidity metrics. Thresholds escalate the issue to named decision-makers rather than relying on ad hoc judgement.
+
+The plan then maps actions to stress severity. Early actions might shorten asset deployment or increase secured funding. More severe stages may involve monetising liquidity buffers, raising term funding where markets remain open, mobilising collateral, reducing new commitments or using available central-bank facilities subject to eligibility and internal governance.
+
+Each funding source needs an operational dossier: amount, currency, haircut, settlement time, legal entity, pre-positioning requirement, documentation, counterparty capacity and any constraint created by using it. The same asset cannot support two independent actions simultaneously.
+
+Governance is as important as funding capacity. A usable CFP identifies who can invoke it, who executes transactions, who communicates with supervisors and counterparties and how information is produced during fast-moving stress. Periodic testing should verify that access channels, collateral movements and communication trees work in practice.
+
+Basel’s sound liquidity principles call for robust, operational contingency funding plans tied to stress-test results. In the US, Regulation YY requires covered bank holding companies to maintain a CFP addressing identified stress events, available and alternative funding sources, invocation triggers, a liquidity-event management process, communication, early-warning monitoring and periodic operational testing.
+
+&lt;Flow&gt;
++------------------+
+| Early-warning    |
+| indicators       |
++------------------+
+        |
+        v
++------------------+
+| Trigger breached |
++------------------+
+        |
+        v
++------------------+
+| Crisis governance|
+| invoked          |
++------------------+
+        |
+        v
++------------------+
+| Funding / buffer |
+| actions          |
++------------------+
+        |
+        v
++------------------+
+| Monitor + escalate|
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A contingency funding source is useful only to the extent it can be operationally accessed in the stress in which it is being counted.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Listing “sell securities” or “raise secured funding” without identifying haircuts, settlement time, collateral availability and responsible execution teams.
+</Trap>
+
+<NeverConfuse a="CFP" b="Liquidity stress test">
+**CFP** — the executable response plan for liquidity stress.
+---
+**Liquidity stress test** — the analytical scenario that quantifies the liquidity problem the CFP must address.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI liquidity-risk requirements use contingency funding and stress-management principles; precise current commercial-bank requirements should be verified against applicable RBI consolidated directions.
+</Delta>
+
+<Delta j="UK">
+— CFP capability forms part of the broader PRA liquidity and ILAAP supervisory framework. [PRA SS24/15]
+</Delta>
+
+<Delta j="EU">
+— contingency planning sits within the EU liquidity-risk and ILAAP supervisory architecture; detailed requirements should be verified against current CRR/CRD and EBA guidance.
+</Delta>
+
+<Delta j="US">
+— Regulation YY expressly requires covered firms to maintain, update and periodically test contingency funding plans with triggers, action plans and alternative funding sources. [12 CFR 252.34(f)]
+</Delta>
+
+<Recall
+  q="What makes a CFP operational rather than theoretical?"
+  a="Defined triggers, decision rights, executable funding sources, collateral readiness, communications and testing."
+/>
+
+<Recall
+  q="How should a CFP relate to stress testing?"
+  a="The actions and resources in the CFP should address liquidity needs revealed by the stress scenarios."
+/>

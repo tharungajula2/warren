@@ -429,8 +429,8 @@ function extractNextEffectiveDate(text) {
     validationWarnings.push(`Atom "${id}" missing '### Sources' section.`);
   }
 
-  // First-person check (case-sensitive for 'I', case-insensitive for my/our/me/we)
-  const firstPersonMatch = cleanText.match(/\b(I|I'm|I've|I'll|my|our|me|we|myself|ourself)\b/);
+  // First-person check (avoid Roman numerals like Title I, Part I, Tier I)
+  const firstPersonMatch = cleanText.match(/\b(I'm|I've|I'll|my|our|me|we|myself|ourself)\b|\bI\s+(?:am|have|was|had|think|feel|believe|built|made|wrote|created|modelled|found)\b/i);
   if (firstPersonMatch) {
     validationWarnings.push(`Atom "${id}" contains first-person language ("${firstPersonMatch[0]}").`);
   }

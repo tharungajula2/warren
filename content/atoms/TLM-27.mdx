@@ -1,0 +1,108 @@
+---
+id: TLM-27
+title: The credit-liquidity feedback loop
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Credit deterioration can create liquidity stress, and liquidity stress can
+  create additional credit losses; the loop runs through collateral, funding
+  confidence, asset sales and customer drawdowns. Stress models that shock
+  credit and liquidity independently can therefore miss the mechanism that makes
+  combined crises severe.
+prerequisites:
+  - TLM-12
+  - TLM-17
+  - TLM-26
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: 'Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*'
+    url: >-
+      https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Begin with declining credit quality. Expected losses rise and the market value of affected assets can fall. Securities or loans used as collateral may attract larger haircuts, reducing secured borrowing capacity. At the same time, creditors and depositors can become less willing to fund the bank, increasing withdrawals or shortening available funding tenor.
+
+Liquidity stress then forces actions that can worsen credit and capital. Selling less-liquid assets rapidly may crystallise losses. Cutting new lending can weaken borrowers that were relying on refinancing. Drawing on committed credit lines can increase precisely when customers themselves are under stress, creating new funded exposures while the bank is trying to preserve cash.
+
+Derivatives and secured funding can add another channel. Falling asset values or ratings can generate collateral demands. More collateral becomes encumbered, leaving fewer unpledged assets available for alternative funding. A funding problem therefore reduces balance-sheet flexibility.
+
+This is a **feedback loop** because each round changes the starting point for the next. Credit loss weakens funding confidence; weaker funding forces asset monetisation; monetisation crystallises losses; losses further weaken confidence.
+
+Basel’s liquidity principles require banks to consider institution-specific and market-wide stress, contingent obligations and the possibility that funding sources close during severe conditions. The Federal Reserve’s liquidity-risk framework similarly requires stress cash-flow projections and CFP assessment of alternative funding sources rather than assuming normal-market access.
+
+The ALM implication is that a combined stress cannot be built by simply adding a credit loss number to a liquidity outflow number. Assumptions must interact: haircuts, funding availability, drawdowns, collateral requirements and asset-sale discounts should respond to the deteriorating state of the institution.
+
+&lt;Flow&gt;
++------------------+
+| Credit quality   |
+| deteriorates     |
++------------------+
+        |
+        v
++------------------+
+| Losses / lower   |
+| collateral value |
++------------------+
+        |
+        v
++------------------+
+| Funding confidence|
+| weakens          |
++------------------+
+        |
+        v
++------------------+
+| Outflows / forced|
+| asset sales      |
++------------------+
+        |
+        v
++------------------+
+| More losses and  |
+| weaker credit    |
++------------------+
+        |
+        +----------&amp;gt; back to top
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Credit and liquidity stresses are endogenous to one another once confidence, collateral and forced transactions begin to interact.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Running a “combined” stress by adding independently modelled credit and liquidity outputs without changing funding, haircut or drawdown assumptions as credit quality deteriorates.
+</Trap>
+
+<NeverConfuse a="Credit loss" b="Liquidity loss">
+**Credit loss** — loss caused by deterioration or default of an obligor or exposure.
+---
+**Liquidity loss** — cost or failure arising from obtaining cash or monetising assets under stress; it can amplify credit losses without being the same risk.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The feedback mechanism is economic and appears across banking systems.
+</Rule>
+
+<Recall
+  q="How can credit deterioration reduce liquidity before default losses fully crystallise?"
+  a="Through lower collateral values, higher haircuts, reduced market access and confidence-driven outflows."
+/>
+
+<Recall
+  q="Why are customer commitments important in a combined stress?"
+  a="Customers may draw them during credit stress, converting contingent exposures into immediate funding needs."
+/>

@@ -1,0 +1,100 @@
+---
+id: TLM-01
+title: What a bank treasury actually does
+type: concept
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Bank treasury is the balance-sheet control centre that converts customer
+  activity into managed funding, liquidity, interest-rate and market positions.
+  Unlike a corporate treasury, it does not merely finance an operating business:
+  maturity transformation and financial intermediation are themselves part of
+  the bank’s business model.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10
+    url: 'https://www.bis.org/fsi/fsipapers10.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
+      to Funding and Contingent Liquidity Risks*, March 2016
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+A corporate treasury primarily raises funding, manages surplus cash, foreign-exchange exposures and financing risks created by a non-financial operating business. A bank treasury sits inside a financial intermediary whose assets and liabilities are largely financial claims. Deposits arrive with one pattern of tenor, optionality and repricing; loans and securities create another. Treasury must make the aggregate balance sheet fundable and liquid while controlling the resulting risks.
+
+The exact organisational split differs, but four functions recur. **Funding** obtains wholesale or internal funding and manages the liability structure. **Liquidity management** ensures cash obligations can be met, maintains liquid-asset buffers and manages collateral. **Asset-liability management (ALM)** measures structural mismatches in maturity and interest-rate repricing. **Markets activity** executes transactions used to invest liquidity, raise funding or hedge exposures. Basel liquidity principles explicitly require banks to identify the full range of liquidity risks, maintain a liquid-asset cushion and allocate liquidity costs, benefits and risks to significant business activities.
+
+Treasury therefore sees customer businesses differently from the customer-facing unit. A lending desk sees an asset earning a customer rate. Treasury sees a stream of cash flows requiring funding for a particular behavioural tenor, consuming liquidity under stress and potentially creating interest-rate risk. A deposit business sees a product margin. Treasury sees a funding source whose stability, repricing behaviour and withdrawal risk must be estimated.
+
+Treasury normally acts within limits rather than trying to eliminate every mismatch. Some maturity transformation is intrinsic to banking. The objective is to decide which risks the bank is willing and able to retain, which should be transferred internally through funds transfer pricing, and which should be hedged or funded externally.
+
+&lt;Flow&gt;
++------------------+
+| Customer assets  |
+| loans, securities|
++------------------+
+         |
+         v
++------------------+
+| Bank treasury /  |
+| ALM centre       |
++------------------+
+   |      |      |
+   v      v      v
++------+ +------+ +------+
+|Fund- | |Liquid| |IRR / |
+|ing   | |ity   | |hedge |
++------+ +------+ +------+
+         ^
+         |
++------------------+
+| Customer funding |
+| deposits, debt   |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A bank treasury manages the consequences of the whole balance sheet, not merely a portfolio of securities.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating treasury profit as the objective and forgetting that treasury is also the bank’s central allocator and controller of funding and liquidity risk.
+</Trap>
+
+<NeverConfuse a="Bank treasury" b="Corporate treasury">
+**Bank treasury** — the function managing structural funding, liquidity, balance-sheet risk and related market execution.
+---
+**Corporate treasury** — the function financing and managing financial risks of a primarily non-financial operating business.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Organisational charts vary, but the economic role arises from banking intermediation rather than jurisdiction-specific mathematics.
+</Rule>
+
+<Recall
+  q="Why is bank treasury more central to the business model than corporate treasury?"
+  a="Because the bank’s core assets and liabilities themselves create funding, liquidity and repricing risks that treasury must transform and control."
+/>
+
+<Recall
+  q="What does treasury see when a business originates a loan?"
+  a="A cash-flow stream that requires funding, consumes liquidity and may create interest-rate risk."
+/>

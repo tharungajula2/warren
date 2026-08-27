@@ -1,0 +1,131 @@
+---
+id: TLM-15
+title: The Net Stable Funding Ratio
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  NSFR asks whether the bank’s longer-term assets and activities are supported
+  by sufficiently stable funding over a one-year structural horizon. Where LCR
+  is a short-term stress-buffer test, NSFR is a balance-sheet funding-structure
+  test.
+prerequisites:
+  - TLM-12
+  - TLM-14
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Net Stable Funding Ratio*, Basel
+      Framework NSF30
+    url: 'https://www.bis.org/basel_framework/chapter/NSF/30.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Financial Stability Institute, *Net Stable Funding Ratio — Executive
+      Summary*
+    url: 'https://www.bis.org/fsi/fsisummaries/nsfr.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net
+      Stable Funding Ratio*, RBI/2020-21/95, DOR.No.LRG.BC.40/21.04.098/2020-21
+    url: 'https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=3268'
+    accessed: 28 August 2026
+  - label: >-
+      Federal Reserve, *Agencies issue final rule to strengthen resilience of
+      large banks*, 20 October 2020
+    url: 'https://www.federalreserve.gov/newsevents/pressreleases/bcreg20201020b.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+Conceptually:
+
+`NSFR = Available Stable Funding / Required Stable Funding`
+
+**Available Stable Funding (ASF)** assigns greater value to liabilities and capital expected to remain available over the relevant horizon. Long-term debt, capital and stable deposit categories generally provide more ASF than very short or unstable wholesale funding.
+
+**Required Stable Funding (RSF)** reflects how much stable funding the bank’s assets and certain off-balance-sheet exposures are judged to require. Cash and highly liquid short-term assets require relatively little stable funding; longer-dated or less-liquid assets require more. The Basel standard requires NSFR of at least 100%, meaning ASF must be no less than RSF.
+
+The structural question is different from LCR. A bank could carry enough HQLA to pass a 30-day LCR while financing a large portfolio of long-dated assets with funding that matures shortly after that horizon. NSFR constrains that reliance on unstable maturity transformation. Conversely, a bank can have strong long-term funding and still face a severe immediate run that threatens its LCR.
+
+NSFR is also not the same as contractual one-year matching. ASF and RSF are weighted prudential constructs. A liability maturing inside a year can still receive some stable-funding recognition, while an asset’s RSF depends on more than contractual maturity.
+
+India’s final NSFR rules were issued earlier but implementation was deferred during the pandemic; RBI made them effective from 1 October 2021 for covered commercial banks. The US final rule became effective 1 July 2021 and applies on a tailored basis to large banking organisations.
+
+&lt;Flow&gt;
++------------------+
+| Liabilities +    |
+| capital          |
++------------------+
+        |
+        v
++------------------+
+| ASF factors      |
++------------------+
+        |
+        v
++------------------+
+| Available Stable |
+| Funding          |
++------------------+
+        |
+        v
++------------------+
+| ASF / RSF &amp;gt;= 100%|
++------------------+
+        ^
+        |
++------------------+
+| Required Stable  |
+| Funding from     |
+| assets/OBS       |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+LCR addresses short-term liquidity stress; NSFR addresses structural funding stability.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling NSFR a “one-year LCR”; its numerator and denominator are stable-funding weights, not one-year cash inflows and outflows.
+</Trap>
+
+<NeverConfuse a="ASF" b="RSF">
+**ASF** — regulatory measure of funding expected to be sufficiently stable.
+---
+**RSF** — regulatory measure of the stable funding required by assets and specified exposures.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI NSFR guidelines for covered commercial banks have applied since 1 October 2021. [RBI/2020-21/95]
+</Delta>
+
+<Delta j="UK">
+— the UK prudential framework implements stable-funding requirements alongside PRA liquidity supervision; current scope must be checked against the PRA Rulebook. [PRA SS24/15]
+</Delta>
+
+<Delta j="EU">
+— CRR contains the NSFR in Part Six, including Articles 413 and 428b. [Regulation (EU) No 575/2013, as amended]
+</Delta>
+
+<Delta j="US">
+— the interagency NSFR rule is tailored to large banking organisations, has a one-year structural focus and became effective 1 July 2021. [Federal Reserve final rule, 2020]
+</Delta>
+
+<Recall
+  q="What structural question does NSFR ask?"
+  a="Whether the asset and activity profile is supported by sufficiently stable funding."
+/>
+
+<Recall
+  q="Can a bank have a strong LCR and weak NSFR?"
+  a="Yes; ample 30-day liquidity does not guarantee stable longer-term funding."
+/>

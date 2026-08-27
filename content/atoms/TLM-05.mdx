@@ -1,0 +1,97 @@
+---
+id: TLM-05
+title: Economic value of equity versus net interest income
+type: concept
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  EVE asks how interest-rate shocks change the present value of the banking
+  book; NII asks how they change near-term interest earnings and expense.
+  Neither dominates the other because they expose different parts of the same
+  balance-sheet risk.
+prerequisites:
+  - TLM-04
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Forthcoming Instructions) Directions, 2025*, Chapter V paragraphs 46–50
+      and 84–89
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+**Economic value of equity (EVE)** is an economic-value perspective. Conceptually, expected interest-rate-sensitive asset cash flows are discounted to present value, expected liability cash flows are deducted, and relevant off-balance-sheet cash flows are incorporated. **ΔEVE** compares that value under a rate shock with the base value. Long-dated fixed-rate exposures can create large EVE sensitivity even when next year’s accounting earnings move little.
+
+**Net interest income (NII)** is an earnings measure: interest income minus interest expense over a defined projection horizon. **ΔNII** compares projected NII under a rate scenario with a base projection. It is particularly sensitive to which assets and liabilities reprice during that horizon, how deposit rates are assumed to respond and what replacement-business assumptions are used.
+
+The distinction is easiest through a long fixed-rate asset funded by a short-reset liability. A rate rise can increase funding expense quickly, reducing NII. It also increases discount rates applied to the fixed asset’s distant cash flows, reducing its economic value. Both perspectives identify risk, but they measure different manifestations and time horizons.
+
+Conversely, exposures can look benign in one metric. A position with favourable one-year NII after a rate rise can still lose substantial economic value beyond the projection horizon. Optimising exclusively to EVE can also produce an earnings profile management finds unacceptable. Basel therefore treats both economic-value and earnings perspectives as important to IRRBB management. RBI’s forthcoming directions require ΔEVE and ΔNII and specify, for disclosure, a run-off balance sheet for EVE and a rolling twelve-month constant-balance-sheet projection for NII.
+
+The practical discipline is not to reconcile the two metrics into one number. Their disagreement is information: it reveals which horizon, cash-flow assumption or exposure is driving the risk.
+
+&lt;Flow&gt;
++------------------+
+| Rate scenario    |
++------------------+
+      |       |
+      v       v
++----------+ +----------+
+| Present- | | Earnings |
+| value    | | horizon  |
+| effect   | | effect   |
++----------+ +----------+
+      |       |
+      v       v
++----------+ +----------+
+| Delta    | | Delta    |
+| EVE      | | NII      |
++----------+ +----------+
+      \       /
+       \     /
+        v   v
++------------------+
+| Full IRRBB view  |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+EVE is a value perspective and NII is an earnings perspective; a sound IRRBB framework needs both.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Choosing whichever metric shows the smaller risk and treating the other as redundant.
+</Trap>
+
+<NeverConfuse a="ΔEVE" b="ΔNII">
+**ΔEVE** — change in the present economic value of rate-sensitive banking-book cash flows under a shock.
+---
+**ΔNII** — change in projected net interest earnings over a specified horizon under a scenario.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The two-perspective mental model is common; regulators differ in prescribed shock, horizon and modelling details.
+</Rule>
+
+<Recall
+  q="Why can EVE be large when one-year NII risk is small?"
+  a="EVE captures discounted cash flows beyond the near-term earnings horizon."
+/>
+
+<Recall
+  q="What does disagreement between EVE and NII tell an ALM practitioner?"
+  a="It reveals differences in horizon, cash-flow timing and behavioural or replacement assumptions."
+/>

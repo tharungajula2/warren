@@ -1,0 +1,104 @@
+---
+id: TLM-17
+title: Survival horizon and liquidity stress testing
+type: procedure
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Liquidity stress testing converts a scenario into daily cash needs and
+  monetisable resources; survival horizon is the time until the bank can no
+  longer meet obligations under that scenario without prohibited or
+  extraordinary assumptions. Unlike LCR, it is institution-specific and can span
+  multiple phases of stress.
+prerequisites:
+  - TLM-12
+  - TLM-13
+  - TLM-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Liquidity risk monitoring
+      metrics*, Basel Framework SRP50
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/50.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+The exercise begins with **contractual cash flows** and then replaces normal assumptions with stressed behaviour. Retail deposits may run faster, wholesale funding may cease to roll, committed facilities may be drawn, secured-funding haircuts may rise, derivatives may require collateral, asset sales may incur discounts and some contingent funding sources may disappear.
+
+Scenarios should separate **idiosyncratic stress**, where confidence in the bank deteriorates; **market-wide stress**, where funding and asset markets are disrupted generally; and a **combined stress**, where both happen together. Basel liquidity principles expressly call for severe stress scenarios and contingency funding plans linked to the resulting liquidity needs.
+
+For each day or time band, treasury calculates stressed inflows, outflows and available liquidity. Cumulative net outflow is compared with the liquidity buffer and other credible counterbalancing capacity. The **survival horizon** is the point at which available resources cease to cover cumulative needs under the assumptions.
+
+The word “credible” matters. A funding source should not be counted merely because it exists in normal markets. Monetisation capacity must consider haircuts, settlement timing, operational readiness, legal-entity location and whether several actions compete for the same collateral. Management actions can be incorporated only where they are sufficiently executable within the stress horizon.
+
+Stress testing is therefore more informative than a single ratio. It shows the path to failure: which day, currency, entity or funding source causes the breach. It can also expose cliffs—a stable profile for ten days followed by a large wholesale maturity on day eleven.
+
+&lt;Flow&gt;
++------------------+
+| Stress scenario  |
++------------------+
+        |
+        v
++------------------+
+| Stressed inflows |
+| and outflows     |
++------------------+
+        |
+        v
++------------------+
+| Counterbalancing |
+| liquidity        |
++------------------+
+        |
+        v
++------------------+
+| Cumulative cash  |
+| position by day  |
++------------------+
+        |
+        v
++------------------+
+| First shortfall  |
+| = survival limit |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Survival horizon is scenario-dependent; there is no meaningful survival-horizon number without stated assumptions.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Counting an asset sale, secured borrowing and central-bank borrowing simultaneously when all three rely on the same collateral.
+</Trap>
+
+<NeverConfuse a="LCR horizon" b="Survival horizon">
+**LCR horizon** — a standardised 30-calendar-day regulatory stress window.
+---
+**Survival horizon** — the institution-specific time until liquidity resources are exhausted in a defined stress.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Supervisory specifications vary, but institution-specific cash-flow stress and survival analysis are common liquidity-risk tools.
+</Rule>
+
+<Recall
+  q="What determines survival horizon?"
+  a="The stressed timing of cash flows compared with credible available liquidity under a specified scenario."
+/>
+
+<Recall
+  q="Why must management actions be constrained?"
+  a="Actions may be operationally impossible, too slow or mutually dependent on the same liquidity resources."
+/>

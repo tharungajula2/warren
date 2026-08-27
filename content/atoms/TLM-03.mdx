@@ -1,0 +1,94 @@
+---
+id: TLM-03
+title: The balance sheet as a set of mismatches
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  ALM begins by discarding accounting labels and viewing the balance sheet as
+  dated cash flows and repricing events. Risk appears because the timing, rate
+  basis, optionality and liquidity characteristics of assets do not line up
+  perfectly with those of liabilities.
+prerequisites:
+  - TLM-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144
+    url: 'https://www.bis.org/publ/bcbs144.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+A bank can be balanced in the accounting sense—assets equal liabilities plus equity—while remaining heavily mismatched economically. A long fixed-rate loan funded by a deposit that can reprice tomorrow creates no accounting imbalance, but it creates **repricing risk**. A five-year asset funded by three-month wholesale debt creates a **maturity mismatch** because the funding must be renewed before the asset returns cash.
+
+Four clocks matter. **Contractual maturity** is when principal is legally due. **Behavioural maturity** is when cash is realistically expected to leave or return after considering customer behaviour. **Repricing maturity** is when the interest rate can next reset. **Liquidity horizon** asks when cash must actually be available under stress. These dates can differ sharply for the same product.
+
+Consider a nominally overnight deposit. Contractually it can leave immediately. Behaviourally, a stable portion may remain for years. Its administered rate may reprice only gradually when market rates move. For liquidity stress, however, some portion may run off within days. One liability therefore occupies different positions in contractual, behavioural, interest-rate and liquidity analyses.
+
+ALM maps these dimensions across the balance sheet, then asks which mismatches the institution wants to retain. Basel notes that maturity transformation—funding longer-term assets with shorter-term liabilities—is fundamental to banking and makes banks inherently exposed to liquidity risk. The same transformation also creates interest-rate sensitivity where repricing dates differ.
+
+This is why a single “average maturity” cannot describe a bank’s balance sheet. The useful representation is a collection of cash flows, reset dates and options allocated across time buckets, currencies and rate bases. From that map emerge gap analysis, duration, EVE, NII, liquidity stress testing and FTP.
+
+&lt;Flow&gt;
++---------------------+
+| Balance-sheet item  |
++---------------------+
+          |
+          v
++---------------------+
+| Decompose cash flows|
++---------------------+
+  |       |       |       |
+  v       v       v       v
++------+ +------+ +------+ +------+
+|Legal | |Behav.| |Rate  | |Cash  |
+|matur.| |matur.| |reset | |need  |
++------+ +------+ +------+ +------+
+  \       |       |       /
+   \      |       |      /
+    v     v       v     v
++-------------------------+
+| ALM mismatch profile    |
++-------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Accounting balance does not imply economic matching.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using contractual maturity as the universal time axis for deposits, prepayable loans and other products whose behavioural or repricing dates differ.
+</Trap>
+
+<NeverConfuse a="Maturity mismatch" b="Repricing mismatch">
+**Maturity mismatch** — assets and liabilities return principal on different effective horizons.
+---
+**Repricing mismatch** — asset and liability interest rates reset at different times, even if principal maturities match.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The cash-flow logic is economic; supervisors may prescribe different measurement assumptions, but the underlying mismatch does not change.
+</Rule>
+
+<Recall
+  q="Can a perfectly balanced accounting balance sheet have large ALM risk?"
+  a="Yes; accounting equality says nothing about timing, repricing, optionality or liquidity."
+/>
+
+<Recall
+  q="Why can one deposit have several different “maturities”?"
+  a="Contractual withdrawal rights, expected behaviour, rate repricing and stressed liquidity treatment answer different questions."
+/>

@@ -1,0 +1,101 @@
+---
+id: TLM-06
+title: Duration and its limits
+type: mechanism
+domain: treasury-alm
+subdomain: unsorted
+one_screen: >-
+  Duration compresses a stream of cash flows into an approximate first-order
+  sensitivity to interest rates. It is powerful for intuition and dangerous when
+  treated as a complete model of a bank balance sheet.
+prerequisites:
+  - TLM-05
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Forthcoming Instructions) Directions, 2025*, Chapter V
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
+    accessed: 28 August 2026
+import_source: 05_TLM_treasury_alm_liquidity.md
+---
+**Macaulay duration** is a present-value-weighted average time to cash flow. **Modified duration** converts that timing concept into approximate price sensitivity. For a small yield change, the familiar approximation is:
+
+`ΔP / P ≈ −Dmod × Δy`
+
+where `P` is value, `Dmod` is modified duration and `Δy` is the change in yield. A position with modified duration five therefore loses approximately 5% for a one-percentage-point rise in yield, before allowing for curvature.
+
+A bank can compare the rate sensitivity of assets and liabilities using duration concepts. If the economic value and duration of assets are much greater than those of liabilities, rising rates can reduce asset value more than liability value and therefore reduce economic equity.
+
+The approximation has strict limits. First, duration is local: it is most accurate for small changes around the current curve. **Convexity** captures second-order curvature ignored by the linear approximation. Second, a single duration often assumes a parallel movement in rates, whereas yield curves twist. Third, cash flows may not be fixed. Loan prepayments, deposit withdrawals, early redemption and embedded caps or floors can change cash flows as rates change, making effective duration scenario-dependent. Fourth, instruments linked to different indices introduce basis risk that one duration number cannot capture.
+
+For banks, the most dangerous limitation is behavioural optionality. A non-maturity deposit does not possess an economically useful long duration merely because a modeller assigns one. The duration emerges from assumptions about stability and repricing behaviour, which must be validated and stressed. Basel and RBI IRRBB frameworks therefore require richer scenario analysis and behavioural assumptions rather than relying only on a duration-gap statistic.
+
+&lt;Flow&gt;
++------------------+
+| Cash flows       |
++------------------+
+        |
+        v
++------------------+
+| Present-value    |
+| weighting        |
++------------------+
+        |
+        v
++------------------+
+| Duration         |
++------------------+
+        |
+        v
++------------------+
+| Approx. rate     |
+| sensitivity      |
++------------------+
+        |
+        v
++------------------+
+| Add curve, basis,|
+| options, convexity|
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Duration is a sensitivity approximation, not a complete description of IRRBB.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Interpreting a low aggregate duration gap as proof that the balance sheet is hedged without testing non-parallel shocks and behavioural options.
+</Trap>
+
+<NeverConfuse a="Duration" b="Maturity">
+**Duration** — first-order sensitivity derived from the timing and present value of cash flows.
+---
+**Maturity** — the date principal is contractually or behaviourally expected to return; it does not directly measure value sensitivity.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Duration mathematics does not change across jurisdictions.
+</Rule>
+
+<Recall
+  q="What does modified duration approximate?"
+  a="The percentage change in value for a small change in yield."
+/>
+
+<Recall
+  q="Why is duration especially fragile for non-maturity deposits?"
+  a="Their effective cash-flow timing and repricing are behavioural rather than contractually fixed."
+/>
