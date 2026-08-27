@@ -55,6 +55,7 @@ export const AtomFrontmatterSchema = z
     verified: z.boolean({
       message: "Field 'verified' is required (boolean: true | false)",
     }),
+    import_source: z.string().nullable().optional(),
     reading_minutes: z.number().positive(),
     sources: z.array(SourceSchema).default([]),
   })

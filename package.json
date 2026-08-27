@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build-corpus": "node scripts/build-corpus.mjs",
     "new-atom": "node scripts/new-atom.mjs",
+    "import": "node scripts/import-markdown.mjs",
+    "suggest-prereqs": "node scripts/suggest-prerequisites.mjs",
     "prebuild": "node scripts/build-corpus.mjs",
     "build": "next build",
     "start": "next start",
