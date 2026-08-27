@@ -1,0 +1,97 @@
+---
+id: CAP-04
+title: The Regulatory Capital Stack
+type: reference
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Regulatory capital is a quality hierarchy: CET1 is the first and strongest
+  loss absorber, AT1 supplements going-concern capital, and Tier 2 provides
+  lower-ranking gone-concern capacity. Basel total regulatory capital is CET1
+  plus AT1 plus Tier 2, after applicable regulatory adjustments.
+prerequisites:
+  - CAP-03
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
+      Definition of eligible capital*
+    url: 'https://www.bis.org/basel_framework/chapter/CAP/10.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+**Common Equity Tier 1** is the highest-quality layer. It centres on ordinary common equity and retained earnings, subject to eligibility rules and deductions. Because accounting losses reduce retained earnings, CET1 responds directly to deterioration in the bank’s net asset value.
+
+**Additional Tier 1** consists of eligible instruments that are sufficiently permanent and loss absorbing to qualify as Tier 1 but do not meet all CET1 criteria. AT1 is therefore not “better debt”; it is a regulatory category whose instruments must satisfy restrictions concerning permanence, distributions, subordination and loss absorption. Basel treats CET1 plus AT1 as Tier 1 capital.
+
+**Tier 2** sits below Tier 1 in regulatory quality. It may include eligible subordinated instruments meeting Basel’s criteria and is principally gone-concern capital. Total capital is the sum of Tier 1 and Tier 2 after regulatory adjustments.
+
+Basel’s global minima are 4.5% CET1, 6% Tier 1 and 8% total capital as percentages of risk-weighted assets, before capital buffers and jurisdictional additions. Those Basel percentages are standards rather than universally binding statutory ratios: national authorities may impose higher minima or additional requirements.
+
+A crucial nesting rule follows from the hierarchy. CET1 can satisfy the CET1 minimum and, to the extent available beyond that need, higher-level Tier 1 or total-capital requirements. AT1 cannot satisfy CET1. Tier 2 cannot satisfy either CET1 or Tier 1. Quality therefore flows upward through the requirement stack; lower-quality capital cannot be substituted downward into a higher-quality requirement.
+
+&lt;Flow&gt;
++---------------------------+
+| CET1                      |
+| highest quality           |
++---------------------------+
+              |
+              v
++---------------------------+
+| AT1                       |
+| + CET1 = Tier 1           |
++---------------------------+
+              |
+              v
++---------------------------+
+| Tier 2                    |
+| gone-concern layer        |
++---------------------------+
+              |
+              v
++---------------------------+
+| Total regulatory capital  |
+| CET1 + AT1 + Tier 2       |
++---------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Capital categories are nested by quality: Tier 2 cannot cure a CET1 shortfall, and AT1 cannot cure a CET1 shortfall.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Adding CET1, Tier 1 and total-capital percentages as though they were independent requirements triple-counts capital because the ratios are nested.
+</Trap>
+
+<NeverConfuse a="Tier 1 capital" b="Total capital">
+**Tier 1 capital** — CET1 plus eligible AT1.
+
+---
+**Total capital** — Tier 1 plus eligible Tier 2; it is not an additional layer equal to the sum of three minimum percentages.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The CET1–AT1–Tier 2 hierarchy is the common Basel architecture; numerical national minima can differ.
+</Rule>
+
+<Recall
+  q="What comprises Tier 1 capital?"
+  a="CET1 plus AT1."
+/>
+
+<Recall
+  q="Can Tier 2 satisfy a CET1 requirement?"
+  a="No."
+/>

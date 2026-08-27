@@ -199,6 +199,7 @@ for (const seg of rawSegments) {
   let recallPairs = [];
   let sourcesList = [];
   let isPerishable = false;
+  let nextEffectiveDate = null;
 
   for (let i = 1; i < h3Sections.length; i++) {
     const sec = h3Sections[i];
@@ -227,8 +228,48 @@ for (const seg of rawSegments) {
       }
       sectionStats.NeverConfuse++;
     } else if (secTitle.includes("jurisdiction variants")) {
+// Function to extract earliest future effective date (2027 or later) from text
+function extractNextEffectiveDate(text) {
+  if (!text) return null;
+  const monthMap = {
+    jan: "01", january: "01", feb: "02", february: "02", mar: "03", march: "03",
+    apr: "04", april: "04", may: "05", jun: "06", june: "06", jul: "07", july: "07",
+    aug: "08", august: "08", sep: "09", september: "09", oct: "10", october: "10",
+    nov: "11", november: "11", dec: "12", december: "12"
+  };
+
+  const dates = [];
+
+  // Match e.g. "1 January 2027", "1 Jan 2027", "1 April 2027", "31 December 2027"
+  const regex1 = /\b(\d{1,2})\s+([A-Za-z]+)\s+(202[7-9]|203[0-9])\b/g;
+  let match;
+  while ((match = regex1.exec(text)) !== null) {
+    const day = match[1].padStart(2, "0");
+    const mStr = match[2].toLowerCase();
+    const year = match[3];
+    if (monthMap[mStr]) {
+      dates.push(`${year}-${monthMap[mStr]}-${day}`);
+    }
+  }
+
+  // Match e.g. "2027-01-01"
+  const regex2 = /\b(202[7-9]|203[0-9])-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\b/g;
+  while ((match = regex2.exec(text)) !== null) {
+    dates.push(match[0]);
+  }
+
+  if (dates.length === 0) return null;
+  dates.sort();
+  return dates[0];
+}
+
       jurisdictionContent = secBody;
       if (!secBody.startsWith("**No delta.**")) {
+        isPerishable = true;
+      }
+      const futureDate = extractNextEffectiveDate(secBody);
+      if (futureDate) {
+        nextEffectiveDate = futureDate;
         isPerishable = true;
       }
       sectionStats.Jurisdiction++;
@@ -359,6 +400,7 @@ for (const seg of rawSegments) {
     jurisdictions,
     perishable: isPerishable,
     as_of: isPerishable ? new Date().toISOString().split("T")[0] : null,
+    next_effective_date: nextEffectiveDate || null,
     status: "draft",
     verified: false,
     reading_minutes: readingMinutes,
@@ -372,13 +414,6 @@ for (const seg of rawSegments) {
     frontmatter,
     body: finalMdxBody,
     wordCount,
-  });
-
-  // Validation Checks
-  prereqs.forEach((p) => {
-    if (!existingCorpusIds.has(p) && !parsedAtoms.some((a) => a.id === p)) {
-      validationWarnings.push(`Atom "${id}" declares prerequisite "${p}" which is not yet in corpus.`);
-    }
   });
 
   if (!oneScreen) {
@@ -405,6 +440,16 @@ for (const seg of rawSegments) {
     validationWarnings.push(`❌ [FAIL] Atom "${id}" contains surviving citation token.`);
   }
 }
+
+// Perform prerequisite validation across entire corpus + pack
+const allPackAtomIds = new Set([...existingCorpusIds, ...parsedAtoms.map((a) => a.id)]);
+parsedAtoms.forEach((atom) => {
+  atom.frontmatter.prerequisites.forEach((p) => {
+    if (!allPackAtomIds.has(p)) {
+      validationWarnings.push(`Atom "${atom.id}" declares prerequisite "${p}" which is not yet in corpus.`);
+    }
+  });
+});
 
 // DRY-RUN REPORT OUTPUT
 console.log("\n===========================================================");

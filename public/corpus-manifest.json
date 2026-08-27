@@ -1,5 +1,1368 @@
 {
   "atoms": {
+    "CAP-01": {
+      "id": "CAP-01",
+      "title": "Why Regulatory Capital Exists",
+      "type": "concept",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Expected loss is the recurring, statistically anticipated cost of taking risk; unexpected loss is the adverse tail beyond that expectation. Provisions and pricing address expected loss, while capital exists principally to keep the bank solvent when realised losses exceed what was expected.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Modifications to the capital treatment for expected and unexpected credit losses*, BCBS 104, 30 January 2004",
+          "url": "https://www.bis.org/publ/bcbs104.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE30 — IRB approach: overview and asset class definitions*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/30.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Bank for International Settlements, *Forecasting expected and unexpected losses*, Working Papers No 913, 2020",
+          "url": "https://www.bis.org/publ/work913.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "CAP-01.mdx",
+      "initialX": 322.1,
+      "initialY": 1.8
+    },
+    "CAP-02": {
+      "id": "CAP-02",
+      "title": "Solvency and Liquidity in a Capital Context",
+      "type": "concept",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Solvency asks whether the value of the bank’s assets can absorb losses and still cover its liabilities; liquidity asks whether cash obligations can be met when due. Capital protects solvency, while liquidity resources protect payment capacity, and a bank can fail either test without initially failing the other.",
+      "prerequisites": [
+        "CAP-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework*, capital and liquidity standards",
+          "url": "https://www.bis.org/basel_framework/",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, RBC20 — Calculation of minimum risk-based capital requirements*",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/20.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-02",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "CAP-02.mdx",
+      "initialX": 297.6,
+      "initialY": 54.3
+    },
+    "CAP-03": {
+      "id": "CAP-03",
+      "title": "Going-Concern and Gone-Concern Capital",
+      "type": "concept",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Going-concern capital absorbs losses while the bank remains operating; gone-concern capital protects creditors and supports resolution once viability has been lost. Basel places CET1 and AT1 in Tier 1 going-concern capital and characterises Tier 2 as gone-concern capital.",
+      "prerequisites": [
+        "CAP-01",
+        "CAP-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CAP10 — Definition of eligible capital*",
+          "url": "https://www.bis.org/basel_framework/chapter/CAP/10.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Bank for International Settlements Financial Stability Institute, *Strengthening the going-concern role of AT1: options and trade-offs*, FSI Briefs No 32, 11 June 2026",
+          "url": "https://www.bis.org/fsi/fsibriefs32.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-03",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "CAP-03.mdx",
+      "initialX": 272.2,
+      "initialY": 0.2
+    },
+    "CAP-04": {
+      "id": "CAP-04",
+      "title": "The Regulatory Capital Stack",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Regulatory capital is a quality hierarchy: CET1 is the first and strongest loss absorber, AT1 supplements going-concern capital, and Tier 2 provides lower-ranking gone-concern capacity. Basel total regulatory capital is CET1 plus AT1 plus Tier 2, after applicable regulatory adjustments.",
+      "prerequisites": [
+        "CAP-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CAP10 — Definition of eligible capital*",
+          "url": "https://www.bis.org/basel_framework/chapter/CAP/10.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, RBC20 — Calculation of minimum risk-based capital requirements*",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/20.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-04",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "CAP-04.mdx",
+      "initialX": 306.7,
+      "initialY": 34.9
+    },
+    "CAP-05": {
+      "id": "CAP-05",
+      "title": "Regulatory Adjustments and Deductions",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Accounting equity is not automatically regulatory capital. Prudential deductions and adjustments remove or limit balance-sheet items whose value may be unavailable, uncertain or double-counted precisely when the bank needs loss-absorbing capital most.",
+      "prerequisites": [
+        "CAP-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CAP30 — Regulatory adjustments*",
+          "url": "https://www.bis.org/basel_framework/chapter/CAP/30.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CAP10 — Definition of eligible capital*",
+          "url": "https://www.bis.org/basel_framework/chapter/CAP/10.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-05",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "CAP-05.mdx",
+      "initialX": 351.7,
+      "initialY": 65.1
+    },
+    "CAP-06": {
+      "id": "CAP-06",
+      "title": "The Capital Buffer Stack",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Minimum capital is the line a bank must not normally cross; buffers are deliberately placed above that line so capital can absorb stress before minimum requirements are breached. Conservation, countercyclical and systemic buffers serve different purposes even when all are expressed as additional CET1 requirements.",
+      "prerequisites": [
+        "CAP-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, RBC30 — Buffers above the regulatory minimum*",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/30.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital Adequacy Directions, 2025*, 28 November 2025",
+          "url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Federal Reserve Board, *Supervision and Regulation*, 2023 Annual Report",
+          "url": "https://www.federalreserve.gov/publications/2023-ar-supervision-and-regulation.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-06",
+      "depth": 4,
+      "currentness": "future",
+      "filepath": "CAP-06.mdx",
+      "initialX": 364.9,
+      "initialY": 38.4
+    },
+    "CAP-07": {
+      "id": "CAP-07",
+      "title": "Distribution Constraints and Maximum Distributable Amount",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Buffers bite before minimums because entering the buffer restricts distributions while the bank can still remain legally capitalised above minimum requirements. The maximum distributable amount mechanism turns buffer depletion into progressively stronger limits on dividends, variable remuneration and other discretionary payouts.",
+      "prerequisites": [
+        "CAP-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *The capital buffers in Basel III — Executive Summary*, 28 November 2019",
+          "url": "https://www.bis.org/fsi/fsisummaries/b3_capital.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *CP9/24 — Streamlining the Pillar 2A capital framework and the capital communications process*, 12 September 2024",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/streamlining-the-pillar-2a-setting-and-capital-consultation-paper",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *EBA calls for more certainty and consistency in the application of restrictions on distributions*, 18 December 2015",
+          "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-calls-more-certainty-and-consistency-application",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-07",
+      "depth": 5,
+      "currentness": "future",
+      "filepath": "CAP-07.mdx",
+      "initialX": 417.4,
+      "initialY": 11.1
+    },
+    "CAP-08": {
+      "id": "CAP-08",
+      "title": "The Leverage Ratio Backstop",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "The leverage ratio ignores most risk weights and compares Tier 1 capital with a broad exposure measure. It is a deliberately blunt backstop: risk-based models can change the measured riskiness of assets, but they cannot make the underlying exposure disappear.",
+      "prerequisites": [
+        "CAP-04",
+        "CAP-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, LEV20 — Calculation of the leverage ratio*",
+          "url": "https://www.bis.org/basel_framework/chapter/LEV/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital Adequacy Directions, 2025*, para 262, 28 November 2025",
+          "url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Bank of England, *Financial Stability in Focus: The FPC's assessment of bank capital requirements*, 2 December 2025",
+          "url": "https://www.bankofengland.co.uk/financial-stability-in-focus/2025/fsif-the-fpcs-assessment-of-bank-capital-requirements",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-08",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "CAP-08.mdx",
+      "initialX": 344.2,
+      "initialY": -9.1
+    },
+    "CAP-09": {
+      "id": "CAP-09",
+      "title": "Risk Weights and Risk-Weighted Assets",
+      "type": "concept",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "A risk weight converts an exposure amount into a regulatory risk measure: exposure × risk weight = RWA under the basic standardised credit-risk logic. The weight is a prudential calibration of relative risk, not a forecast that the stated percentage of the exposure will be lost.",
+      "prerequisites": [
+        "CAP-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE20 — Standardised approach: individual exposures*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, RBC20 — Calculation of minimum risk-based capital requirements*",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/20.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-09",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "CAP-09.mdx",
+      "initialX": 326.9,
+      "initialY": 54.5
+    },
+    "CAP-10": {
+      "id": "CAP-10",
+      "title": "Basel’s Three Pillars",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Pillar 1 supplies minimum quantitative capital rules, Pillar 2 adds bank-specific risk assessment and supervisory review, and Pillar 3 uses public disclosure to strengthen market discipline. A complete capital framework therefore asks not only “what does the formula require?” but also “what risks did the formula miss?” and “what must outsiders be told?”",
+      "prerequisites": [
+        "CAP-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework*, supervisory review and disclosure modules",
+          "url": "https://www.bis.org/basel_framework/",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key principles of supervisory review*",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, DIS10 — Scope and application of Pillar 3*",
+          "url": "https://www.bis.org/basel_framework/chapter/DIS/10.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-10",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "CAP-10.mdx",
+      "initialX": 300.8,
+      "initialY": 8.1
+    },
+    "CAP-11": {
+      "id": "CAP-11",
+      "title": "The Four RWA Components",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Total RWA aggregates distinct prudential risk engines: credit risk, market risk, operational risk and credit valuation adjustment risk. They share the same capital denominator only after each component has been measured under its own rules.",
+      "prerequisites": [
+        "CAP-09",
+        "CAP-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, RBC20 — Calculation of minimum risk-based capital requirements*",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, MAR50 — Credit valuation adjustment framework*",
+          "url": "https://www.bis.org/basel_framework/chapter/MAR/50.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, OPE25 — Standardised approach*",
+          "url": "https://www.bis.org/basel_framework/chapter/OPE/25.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-11",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "CAP-11.mdx",
+      "initialX": 373.6,
+      "initialY": 22.8
+    },
+    "CAP-12": {
+      "id": "CAP-12",
+      "title": "The Standardised Approach to Credit Risk",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Under the standardised approach, the regulator prescribes the exposure classes, eligibility conditions and risk-weight rules instead of allowing the bank to generate the core credit-risk capital requirement from its own PD/LGD models. Revised Basel rules make this approach more granular and risk-sensitive while retaining external ratings only where the framework permits them.",
+      "prerequisites": [
+        "CAP-09",
+        "CAP-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE20 — Standardised approach: individual exposures*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397, 27 April 2026",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1: Final rules*, 20 January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-12",
+      "depth": 4,
+      "currentness": "future",
+      "filepath": "CAP-12.mdx",
+      "initialX": 327.6,
+      "initialY": -21.1
+    },
+    "CAP-13": {
+      "id": "CAP-13",
+      "title": "Foundation and Advanced IRB",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "IRB allows approved banks to use internal estimates for specified credit-risk parameters, but the bank never owns the whole capital formula. Under Foundation IRB the supervisor supplies more of the loss parameters; under Advanced IRB the bank estimates more of them, subject to permission, constraints and validation.",
+      "prerequisites": [
+        "CAP-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB approach: risk-weight functions*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB approach: risk components*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-13",
+      "depth": 5,
+      "currentness": "future",
+      "filepath": "CAP-13.mdx",
+      "initialX": 339.1,
+      "initialY": 34.4
+    },
+    "CAP-14": {
+      "id": "CAP-14",
+      "title": "The IRB Risk-Weight Function",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "The IRB function turns PD, LGD, EAD and maturity into a capital measure while applying a supervisory correlation structure. Higher default likelihood, larger loss severity, larger exposure or longer effective maturity generally increase capital, but the function is nonlinear because it is designed around adverse portfolio loss rather than a simple PD × LGD calculation.",
+      "prerequisites": [
+        "CAP-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB approach: risk-weight functions*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB approach: risk components*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE30 — IRB approach: overview and asset class definitions*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/30.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-14",
+      "depth": 6,
+      "currentness": "future",
+      "filepath": "CAP-14.mdx",
+      "initialX": 362,
+      "initialY": 81.7
+    },
+    "CAP-15": {
+      "id": "CAP-15",
+      "title": "IRB Input Floors and Parameter Constraints",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Input floors stop internally estimated risk parameters from falling below prudential lower bounds even when a model produces a smaller number. They constrain the ingredients of the IRB calculation; the output floor constrains the final aggregate RWA result.",
+      "prerequisites": [
+        "CAP-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB approach: risk components*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-15",
+      "depth": 7,
+      "currentness": "future",
+      "filepath": "CAP-15.mdx",
+      "initialX": 399.1,
+      "initialY": 56.2
+    },
+    "CAP-16": {
+      "id": "CAP-16",
+      "title": "The Output Floor",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "The output floor prevents approved internal models from reducing total RWA below 72.5% of the amount produced by the prescribed standardised comparison at full implementation. It is an aggregate backstop against model risk and excessive RWA variability, not a rule that replaces internal models with a 72.5% risk weight.",
+      "prerequisites": [
+        "CAP-12",
+        "CAP-13",
+        "CAP-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, RBC20 — Calculation of minimum risk-based capital requirements*",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PS9/24 — Implementation of the Basel 3.1 standards: near-final policy statement, Part 2*, 12 September 2024",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/implementation-of-the-basel-3-1-standards-near-final-policy-statement-part-2",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Commission, *Commission Staff Working Document, SWD(2026) 615*, output-floor implementation table",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0615",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-16",
+      "depth": 8,
+      "currentness": "future",
+      "filepath": "CAP-16.mdx",
+      "initialX": 387.9,
+      "initialY": 2.1
+    },
+    "CAP-17": {
+      "id": "CAP-17",
+      "title": "Specialised Lending and Supervisory Slotting",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Slotting converts a specialised-lending exposure into a supervisory quality category and assigns the corresponding regulatory treatment rather than relying on an ordinary corporate PD/LGD model. It is designed for financing whose repayment depends materially on the performance of a specific asset, project or cash-flow structure.",
+      "prerequisites": [
+        "CAP-13",
+        "CAP-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE33 — IRB approach: supervisory slotting approach for specialised lending*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/33.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-17",
+      "depth": 7,
+      "currentness": "future",
+      "filepath": "CAP-17.mdx",
+      "initialX": 401.3,
+      "initialY": 34.3
+    },
+    "CAP-18": {
+      "id": "CAP-18",
+      "title": "Credit Risk Mitigation: Collateral, Guarantees and Netting",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Credit risk mitigation reduces regulatory exposure only when the protection is eligible, legally effective and recognised by the applicable capital rules. Collateral changes the loss available from pledged assets, guarantees transfer specified credit risk to a protection provider, and netting reduces exposure by recognising enforceable offsetting claims.",
+      "prerequisites": [
+        "CAP-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE22 — Standardised approach: credit risk mitigation*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/22.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, Chapter V, RBI/DOR/2026-27/397",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-18",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "CAP-18.mdx",
+      "initialX": 327.8,
+      "initialY": -76.7
+    },
+    "CAP-19": {
+      "id": "CAP-19",
+      "title": "Substitution and Comprehensive CRM Approaches",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Substitution changes whose credit quality drives the protected portion of an exposure; the comprehensive collateral approach changes the exposure value after recognising collateral and prescribed valuation adjustments. One changes the relevant risk weight, the other changes the amount to which risk weighting is applied.",
+      "prerequisites": [
+        "CAP-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE22 — Standardised approach: credit risk mitigation*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/22.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, Chapter V",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-19",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "CAP-19.mdx",
+      "initialX": 289.1,
+      "initialY": -42.9
+    },
+    "CAP-20": {
+      "id": "CAP-20",
+      "title": "Haircuts",
+      "type": "mechanism",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "A haircut is a prudential valuation adjustment that recognises that exposure and collateral values can move before a position is closed or collateral is realised. It deliberately prevents yesterday’s collateral market value from being treated as perfectly certain protection against tomorrow’s exposure.",
+      "prerequisites": [
+        "CAP-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE22 — Standardised approach: credit risk mitigation*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/22.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, supervisory haircut provisions",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-20",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "CAP-20.mdx",
+      "initialX": 341.3,
+      "initialY": -53.9
+    },
+    "CAP-21": {
+      "id": "CAP-21",
+      "title": "Pillar 1 and Pillar 2",
+      "type": "concept",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Pillar 1 standardises minimum capital for risks that can be captured through common formulas; Pillar 2 asks whether those formulas leave material institution-specific risk uncovered. Pillar 2 is therefore the deliberate completeness check on Pillar 1.",
+      "prerequisites": [
+        "CAP-10",
+        "CAP-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key principles of supervisory review*",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework*, Supervisory Review Process",
+          "url": "https://www.bis.org/basel_framework/",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-21",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "CAP-21.mdx",
+      "initialX": 355.6,
+      "initialY": -30.5
+    },
+    "CAP-22": {
+      "id": "CAP-22",
+      "title": "ICAAP and the Supervisory Review Process",
+      "type": "procedure",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "ICAAP is the bank’s own disciplined assessment of how much capital it needs for its actual risk profile and strategy; supervisory review tests whether that assessment is credible. It is not a worksheet for reproducing regulatory minima.",
+      "prerequisites": [
+        "CAP-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key principles of supervisory review*",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/20.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, SRP30 — Risk management*",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/30.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-22",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "CAP-22.mdx",
+      "initialX": 417.4,
+      "initialY": -34.3
+    },
+    "CAP-23": {
+      "id": "CAP-23",
+      "title": "Stress Testing and Capital Transmission",
+      "type": "procedure",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "A capital stress test is a causal chain: define an adverse scenario, translate it into risk drivers and financial losses, project earnings and RWA, then recalculate capital resources and ratios. Reverse stress testing runs the chain backwards from failure to identify combinations of events capable of breaking the business model.",
+      "prerequisites": [
+        "CAP-22"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Stress testing principles*, 17 October 2018",
+          "url": "https://www.bis.org/bcbs/publ/d450.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, SRP30 — Risk management*",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/30.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-23",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "CAP-23.mdx",
+      "initialX": 372.7,
+      "initialY": -79.9
+    },
+    "CAP-24": {
+      "id": "CAP-24",
+      "title": "Supervisory and Internal Stress Tests",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Internal stress tests are management tools tailored to the bank’s own vulnerabilities; supervisory stress tests are authority-led or authority-specified exercises designed to assess prudential resilience and comparability. The same scenario can serve both purposes, but ownership, objectives and consequences are different.",
+      "prerequisites": [
+        "CAP-23"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Stress testing principles*, 17 October 2018",
+          "url": "https://www.bis.org/bcbs/publ/d450.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Federal Reserve Board, *Federal Reserve Board finalizes hypothetical scenarios for its annual stress test and votes to maintain the current stress test-related capital requirements until public feedback can be considered*, 4 February 2026",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-24",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "CAP-24.mdx",
+      "initialX": 403.6,
+      "initialY": -17.1
+    },
+    "CAP-25": {
+      "id": "CAP-25",
+      "title": "Basel Does Not Bind Banks Directly",
+      "type": "concept",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "Basel is an international prudential standard, not a supranational banking statute. The Basel Committee expressly has no formal supranational authority and its decisions have no legal force; binding obligations arise only when competent jurisdictions implement the standards through their own law and supervisory rulebooks.",
+      "prerequisites": [
+        "CAP-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Committee Charter*, section 3 “Legal status”, 5 June 2018",
+          "url": "https://www.bis.org/bcbs/charter.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework*",
+          "url": "https://www.bis.org/basel_framework/",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-25",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "CAP-25.mdx",
+      "initialX": 352,
+      "initialY": 5.9
+    },
+    "CAP-26": {
+      "id": "CAP-26",
+      "title": "UK Basel 3.1 and the SDDT Regime",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "**Perishable — final rules, pending commencement.** The PRA’s Basel 3.1 package takes effect on **1 January 2027**; the FRTB Internal Models Approach is delayed separately to **1 January 2028**. Small Domestic Deposit Takers enter the PRA’s simplified capital regime on **1 January 2027**, creating a deliberately different domestic framework for eligible smaller firms.",
+      "prerequisites": [
+        "CAP-12",
+        "CAP-16",
+        "CAP-22",
+        "CAP-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "UK"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1: Final rules*, 20 January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PS4/26 — The Strong and Simple Framework: The simplified capital regime for Small Domestic Deposit Takers — final*, 20 January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/the-strong-and-simple-framework-final-policy-statement",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-26",
+      "depth": 9,
+      "currentness": "future",
+      "filepath": "CAP-26.mdx",
+      "initialX": 368.1,
+      "initialY": -57.7
+    },
+    "CAP-27": {
+      "id": "CAP-27",
+      "title": "EU CRR3 Implementation",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "**Perishable — partially implemented with a pending market-risk date.** CRR3 has applied major Basel-finalisation reforms since **1 January 2025**; the output floor is **55% during 2026** and reaches **72.5% on 1 January 2030**. Binding FRTB market-risk own-funds requirements have been postponed to **1 January 2027**, while specified FRTB calculations continue to matter for the output floor.",
+      "prerequisites": [
+        "CAP-12",
+        "CAP-16",
+        "CAP-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "EU"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "European Union, *Regulation (EU) 2024/1623 (CRR3)*, 31 May 2024",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1623/oj",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Commission, *Banking package — Questions and answers*, 24 July 2024",
+          "url": "https://finance.ec.europa.eu/news/banking-package-questions-and-answers-2024-07-24_en",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Commission, *Commission Staff Working Document, SWD(2026) 615*, output-floor transition",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0615",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Market, counterparty and CVA risk*, FRTB implementation status",
+          "url": "https://www.eba.europa.eu/regulation-and-policy/market-counterparty-and-cva-risk",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-27",
+      "depth": 9,
+      "currentness": "future",
+      "filepath": "CAP-27.mdx",
+      "initialX": 385.5,
+      "initialY": -52.3
+    },
+    "CAP-28": {
+      "id": "CAP-28",
+      "title": "India’s Commercial-Bank Capital Framework",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "**Perishable — a final revised credit-risk framework is pending commencement.** Indian commercial banks have higher domestic Basel-style minimums of **5.5% CET1, 7% Tier 1 and 9% total capital**; leverage minima are **4% for D-SIBs and 3.5% for other banks**. RBI’s final revised **Standardised Approach** for banking-book credit risk becomes effective on **1 April 2027**.",
+      "prerequisites": [
+        "CAP-04",
+        "CAP-08",
+        "CAP-12",
+        "CAP-18",
+        "CAP-20",
+        "CAP-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-04-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital Adequacy Directions, 2025*, 28 November 2025",
+          "url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397, DOR.CRE.REC.5/21.06.201/2026-27, 27 April 2026",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Deferral of Implementation of Indian Accounting Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19, 22 March 2019",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards*, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, 13 March 2020",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-28",
+      "depth": 8,
+      "currentness": "future",
+      "filepath": "CAP-28.mdx",
+      "initialX": 285.9,
+      "initialY": -19.3
+    },
+    "CAP-29": {
+      "id": "CAP-29",
+      "title": "The US March 2026 Capital Reproposal and Stress Capital Buffer",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "**Perishable — proposal, not rule.** On **19 March 2026** the US federal banking agencies issued a new capital package, including a proposal for the largest and most internationally active organisations, a broader standardised-capital proposal and a Federal Reserve GSIB-surcharge proposal. As at 27 August 2026, the package must be treated as **proposed**, while the existing stress capital buffer architecture remains the operative large-bank stress-capital mechanism.",
+      "prerequisites": [
+        "CAP-06",
+        "CAP-11",
+        "CAP-23",
+        "CAP-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Board of Governors of the Federal Reserve System, FDIC and OCC, *Agencies request comment on proposals to modernize the regulatory capital framework and maintain the strength of the banking system*, 19 March 2026",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260319a.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Federal Reserve Board, *Supervision and Regulation Report — Regulatory Developments*, June 2026",
+          "url": "https://www.federalreserve.gov/publications/2026-june-supervision-and-regulation-report-regulatory-developments.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Federal Reserve Board, *Federal Reserve Board finalizes hypothetical scenarios for its annual stress test and votes to maintain the current stress test-related capital requirements until public feedback can be considered*, 4 February 2026",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Federal Reserve Board, *Supervision and Regulation*, 2023 Annual Report",
+          "url": "https://www.federalreserve.gov/publications/2023-ar-supervision-and-regulation.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-29",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "CAP-29.mdx",
+      "initialX": 385,
+      "initialY": -29.7
+    },
+    "CAP-30": {
+      "id": "CAP-30",
+      "title": "Cross-Jurisdiction Basel Implementation Map",
+      "type": "reference",
+      "domain": "regulatory-capital",
+      "subdomain": "unsorted",
+      "one_screen": "**Perishable — status as at 27 August 2026.** Basel supplies the common vocabulary, but the live rule differs sharply by jurisdiction: EU CRR3 is already in application, UK Basel 3.1 starts 1 January 2027, India’s revised credit-risk Standardised Approach starts 1 April 2027, and the US March 2026 capital package remains proposed.",
+      "prerequisites": [
+        "CAP-25",
+        "CAP-26",
+        "CAP-27",
+        "CAP-28",
+        "CAP-29"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Committee Charter*, 5 June 2018",
+          "url": "https://www.bis.org/bcbs/charter.htm",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1: Final rules*, 20 January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PS4/26 — The Strong and Simple Framework: The simplified capital regime for Small Domestic Deposit Takers — final*, 20 January 2026",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/the-strong-and-simple-framework-final-policy-statement",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Union, *Regulation (EU) 2024/1623 (CRR3)*, 31 May 2024",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1623/oj",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "European Commission, *Commission Staff Working Document, SWD(2026) 615*",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0615",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital Adequacy Directions, 2025*, 28 November 2025",
+          "url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397, 27 April 2026",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399",
+          "accessed": "27 August 2026"
+        },
+        {
+          "label": "Federal Reserve Board, FDIC and OCC, *Agencies request comment on proposals to modernize the regulatory capital framework and maintain the strength of the banking system*, 19 March 2026",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260319a.htm",
+          "accessed": "27 August 2026"
+        }
+      ],
+      "slug": "cap-30",
+      "depth": 10,
+      "currentness": "future",
+      "filepath": "CAP-30.mdx",
+      "initialX": 319.8,
+      "initialY": -53.2
+    },
     "CR-01": {
       "id": "CR-01",
       "title": "Obligor, borrower and counterparty",
@@ -36,8 +1399,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 239.3,
-      "initialY": 26.6
+      "initialX": -59.5,
+      "initialY": 257
     },
     "CR-02": {
       "id": "CR-02",
@@ -75,8 +1438,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 211.3,
-      "initialY": -28.7
+      "initialX": -34.8,
+      "initialY": 195.7
     },
     "CR-03": {
       "id": "CR-03",
@@ -120,8 +1483,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": 184,
-      "initialY": -60.9
+      "initialX": -10.9,
+      "initialY": 151.7
     },
     "CR-04": {
       "id": "CR-04",
@@ -173,8 +1536,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 210.6,
-      "initialY": -81.9
+      "initialX": -37.7,
+      "initialY": 167.1
     },
     "CR-05": {
       "id": "CR-05",
@@ -226,8 +1589,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CR-05.mdx",
-      "initialX": 212.6,
-      "initialY": -57.9
+      "initialX": -10,
+      "initialY": 179.1
     },
     "CR-06": {
       "id": "CR-06",
@@ -274,8 +1637,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 314.6,
-      "initialY": -22.3
+      "initialX": -29.2,
+      "initialY": 303.8
     },
     "CR-07": {
       "id": "CR-07",
@@ -327,8 +1690,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 306.5,
-      "initialY": 27.1
+      "initialX": 24.3,
+      "initialY": 302.8
     },
     "CR-08": {
       "id": "CR-08",
@@ -375,8 +1738,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 254.8,
-      "initialY": -11.6
+      "initialX": 22.9,
+      "initialY": 244
     },
     "CR-09": {
       "id": "CR-09",
@@ -424,8 +1787,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 263.1,
-      "initialY": -62.9
+      "initialX": -21.3,
+      "initialY": 227.7
     },
     "CR-10": {
       "id": "CR-10",
@@ -473,8 +1836,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": 113.7,
-      "initialY": -105.5
+      "initialX": -9.7,
+      "initialY": 52.8
     },
     "CR-11": {
       "id": "CR-11",
@@ -527,8 +1890,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": 142.7,
-      "initialY": -120.3
+      "initialX": 3.9,
+      "initialY": 78.2
     },
     "CR-12": {
       "id": "CR-12",
@@ -566,8 +1929,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 237.8,
-      "initialY": -72.9
+      "initialX": 23.1,
+      "initialY": 194.6
     },
     "CR-13": {
       "id": "CR-13",
@@ -605,8 +1968,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 252.9,
-      "initialY": -107.1
+      "initialX": 0.1,
+      "initialY": 208.2
     },
     "CR-14": {
       "id": "CR-14",
@@ -644,8 +2007,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 211.9,
-      "initialY": -104.7
+      "initialX": 25.2,
+      "initialY": 157.1
     },
     "CR-15": {
       "id": "CR-15",
@@ -684,8 +2047,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 260.9,
-      "initialY": -28.5
+      "initialX": -8.8,
+      "initialY": 243.5
     },
     "CR-16": {
       "id": "CR-16",
@@ -724,8 +2087,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": 100.3,
-      "initialY": -93.2
+      "initialX": -27.9,
+      "initialY": 49.4
     },
     "CR-17": {
       "id": "CR-17",
@@ -765,8 +2128,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": 128.6,
-      "initialY": -76
+      "initialX": -25.6,
+      "initialY": 84.7
     },
     "CR-18": {
       "id": "CR-18",
@@ -804,8 +2167,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 270,
-      "initialY": 9.2
+      "initialX": -20.5,
+      "initialY": 263.4
     },
     "CR-19": {
       "id": "CR-19",
@@ -845,8 +2208,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 307,
-      "initialY": 3.5
+      "initialX": -8.7,
+      "initialY": 301.8
     },
     "CR-20": {
       "id": "CR-20",
@@ -885,8 +2248,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 352.1,
-      "initialY": -34.1
+      "initialX": 39.7,
+      "initialY": 333.6
     },
     "CR-21": {
       "id": "CR-21",
@@ -926,8 +2289,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 331.4,
-      "initialY": -51.1
+      "initialX": 10.2,
+      "initialY": 325
     },
     "CR-22": {
       "id": "CR-22",
@@ -967,8 +2330,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 324.6,
-      "initialY": 11.8
+      "initialX": -15.6,
+      "initialY": 326.2
     },
     "CR-23": {
       "id": "CR-23",
@@ -1003,8 +2366,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 372,
-      "initialY": 20.1
+      "initialX": -9.1,
+      "initialY": 375.2
     },
     "CR-24": {
       "id": "CR-24",
@@ -1057,8 +2420,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 295.7,
-      "initialY": -20.7
+      "initialX": -39,
+      "initialY": 290.1
     },
     "CR-25": {
       "id": "CR-25",
@@ -1098,8 +2461,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 343.2,
-      "initialY": -11.4
+      "initialX": 22.7,
+      "initialY": 326
     },
     "CR-26": {
       "id": "CR-26",
@@ -1150,8 +2513,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 287.5,
-      "initialY": -51
+      "initialX": 17.2,
+      "initialY": 268.1
     },
     "FND-01": {
       "id": "FND-01",
@@ -1187,8 +2550,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -116.1,
-      "initialY": 180.9
+      "initialX": -256.5,
+      "initialY": -13.8
     },
     "FND-02": {
       "id": "FND-02",
@@ -1226,8 +2589,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -155.1,
-      "initialY": 165.1
+      "initialX": -260.1,
+      "initialY": -51.3
     },
     "FND-03": {
       "id": "FND-03",
@@ -1271,8 +2634,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -162,
-      "initialY": 248.3
+      "initialX": -306.1,
+      "initialY": 21.2
     },
     "FND-04": {
       "id": "FND-04",
@@ -1311,8 +2674,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -147.5,
-      "initialY": 258.2
+      "initialX": -331.8,
+      "initialY": -5.7
     },
     "FND-05": {
       "id": "FND-05",
@@ -1356,8 +2719,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -132,
-      "initialY": 249.4
+      "initialX": -321.6,
+      "initialY": -21.1
     },
     "FND-06": {
       "id": "FND-06",
@@ -1419,8 +2782,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -177.2,
-      "initialY": 206.3
+      "initialX": -311,
+      "initialY": -56.8
     },
     "FND-07": {
       "id": "FND-07",
@@ -1464,8 +2827,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -189.5,
-      "initialY": 242.5
+      "initialX": -314.7,
+      "initialY": 2.7
     },
     "FND-08": {
       "id": "FND-08",
@@ -1503,8 +2866,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -147.5,
-      "initialY": 96.3
+      "initialX": -225.9,
+      "initialY": -100
     },
     "FND-09": {
       "id": "FND-09",
@@ -1561,8 +2924,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -174.1,
-      "initialY": 97.2
+      "initialX": -245.3,
+      "initialY": -120
     },
     "FND-10": {
       "id": "FND-10",
@@ -1613,8 +2976,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -177.2,
-      "initialY": 287.7
+      "initialX": -362,
+      "initialY": -12.8
     },
     "FND-11": {
       "id": "FND-11",
@@ -1645,8 +3008,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -200.6,
-      "initialY": 310.1
+      "initialX": -388.8,
+      "initialY": -46.9
     },
     "FND-12": {
       "id": "FND-12",
@@ -1679,8 +3042,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -127.4,
-      "initialY": 332.6
+      "initialX": -367.2,
+      "initialY": 19.1
     },
     "FND-13": {
       "id": "FND-13",
@@ -1714,8 +3077,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -162.8,
-      "initialY": 312.7
+      "initialX": -407.7,
+      "initialY": -10.4
     },
     "FND-14": {
       "id": "FND-14",
@@ -1768,8 +3131,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -180.1,
-      "initialY": 231.7
+      "initialX": -339.2,
+      "initialY": -61.3
     },
     "FND-15": {
       "id": "FND-15",
@@ -1802,8 +3165,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -32.6,
-      "initialY": 206
+      "initialX": -252.4,
+      "initialY": 83.4
     },
     "FND-16": {
       "id": "FND-16",
@@ -1834,8 +3197,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -205.8,
-      "initialY": 291.5
+      "initialX": -396.8,
+      "initialY": 40.1
     },
     "FND-17": {
       "id": "FND-17",
@@ -1873,8 +3236,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -138.6,
-      "initialY": 310.5
+      "initialX": -350.2,
+      "initialY": 41.7
     },
     "FND-18": {
       "id": "FND-18",
@@ -1913,8 +3276,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -179.7,
-      "initialY": 335.8
+      "initialX": -384.6,
+      "initialY": -12.8
     },
     "FND-19": {
       "id": "FND-19",
@@ -1959,8 +3322,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -126.1,
-      "initialY": 278.4
+      "initialX": -330.8,
+      "initialY": 27.1
     },
     "FND-20": {
       "id": "FND-20",
@@ -1999,8 +3362,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -189.3,
-      "initialY": 268
+      "initialX": -359.9,
+      "initialY": -36.7
     },
     "FND-21": {
       "id": "FND-21",
@@ -2043,8 +3406,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -213.1,
-      "initialY": 327.6
+      "initialX": -395.2,
+      "initialY": 14.5
     },
     "FND-22": {
       "id": "FND-22",
@@ -2082,8 +3445,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -159.9,
-      "initialY": 349.2
+      "initialX": -363.9,
+      "initialY": 60.5
     },
     "FND-23": {
       "id": "FND-23",
@@ -2146,8 +3509,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -133.8,
-      "initialY": 176.4
+      "initialX": -272,
+      "initialY": -38.6
     },
     "FND-24": {
       "id": "FND-24",
@@ -2225,8 +3588,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -133.7,
-      "initialY": 137
+      "initialX": -239.6,
+      "initialY": -60.9
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -2287,8 +3650,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -69.7,
-      "initialY": -98.3
+      "initialX": -79.7,
+      "initialY": -128.5
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -2337,8 +3700,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -109.1,
-      "initialY": -137.7
+      "initialX": -73.7,
+      "initialY": -192.5
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -2393,8 +3756,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -49,
-      "initialY": -141.3
+      "initialX": -51.2,
+      "initialY": -126.7
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -2442,8 +3805,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -177.7,
-      "initialY": -111.1
+      "initialX": -119.7,
+      "initialY": -253.2
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -2491,8 +3854,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -72.9,
-      "initialY": -222.7
+      "initialX": -20.7,
+      "initialY": -190.9
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -2547,8 +3910,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -19.2,
-      "initialY": -175.4
+      "initialX": -9.2,
+      "initialY": -118.5
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -2597,8 +3960,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -51,
-      "initialY": -184.8
+      "initialX": -25.7,
+      "initialY": -145.8
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -2648,8 +4011,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -43.1,
-      "initialY": -212.7
+      "initialX": 16.3,
+      "initialY": -160.9
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -2696,8 +4059,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -50.2,
-      "initialY": -260.2
+      "initialX": -5.6,
+      "initialY": -202.4
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -2746,8 +4109,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": 29.9,
-      "initialY": -167.4
+      "initialX": -16.2,
+      "initialY": -65.3
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -2795,8 +4158,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -141.9,
-      "initialY": -155.1
+      "initialX": -76.7,
+      "initialY": -234.2
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -2845,8 +4208,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -15.5,
-      "initialY": -235.2
+      "initialX": -17,
+      "initialY": -164.9
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -2895,8 +4258,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -39.7,
-      "initialY": -235.7
+      "initialX": 20.3,
+      "initialY": -176
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -2945,8 +4308,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": 14,
-      "initialY": -210.5
+      "initialX": 20.2,
+      "initialY": -106.3
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -3000,8 +4363,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -26.8,
-      "initialY": -199.7
+      "initialX": 1.8,
+      "initialY": -144
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -3055,8 +4418,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -136.8,
-      "initialY": -248.6
+      "initialX": -19.4,
+      "initialY": -272.3
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -3111,8 +4474,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -101.1,
-      "initialY": -287.4
+      "initialX": 28.6,
+      "initialY": -266.7
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -3166,8 +4529,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -134.5,
-      "initialY": -282.6
+      "initialX": -0.1,
+      "initialY": -294.1
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -3222,8 +4585,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -122.2,
-      "initialY": -212.3
+      "initialX": -2.6,
+      "initialY": -239.8
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -3284,11 +4647,120 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -112,
-      "initialY": -237.9
+      "initialX": -27.2,
+      "initialY": -247.1
     }
   },
   "reverseIndex": {
+    "CAP-01": [
+      "CAP-02",
+      "CAP-03",
+      "CAP-09"
+    ],
+    "CAP-02": [
+      "CAP-03"
+    ],
+    "CAP-03": [
+      "CAP-04"
+    ],
+    "CAP-04": [
+      "CAP-05",
+      "CAP-06",
+      "CAP-08",
+      "CAP-28"
+    ],
+    "CAP-05": [],
+    "CAP-06": [
+      "CAP-07",
+      "CAP-29"
+    ],
+    "CAP-07": [],
+    "CAP-08": [
+      "CAP-28"
+    ],
+    "CAP-09": [
+      "CAP-08",
+      "CAP-10",
+      "CAP-11",
+      "CAP-12"
+    ],
+    "CAP-10": [
+      "CAP-11",
+      "CAP-21",
+      "CAP-25"
+    ],
+    "CAP-11": [
+      "CAP-12",
+      "CAP-21",
+      "CAP-29"
+    ],
+    "CAP-12": [
+      "CAP-13",
+      "CAP-16",
+      "CAP-18",
+      "CAP-26",
+      "CAP-27",
+      "CAP-28"
+    ],
+    "CAP-13": [
+      "CAP-14",
+      "CAP-16",
+      "CAP-17"
+    ],
+    "CAP-14": [
+      "CAP-15",
+      "CAP-17"
+    ],
+    "CAP-15": [
+      "CAP-16"
+    ],
+    "CAP-16": [
+      "CAP-26",
+      "CAP-27"
+    ],
+    "CAP-17": [],
+    "CAP-18": [
+      "CAP-19",
+      "CAP-28"
+    ],
+    "CAP-19": [
+      "CAP-20"
+    ],
+    "CAP-20": [
+      "CAP-28"
+    ],
+    "CAP-21": [
+      "CAP-22"
+    ],
+    "CAP-22": [
+      "CAP-23",
+      "CAP-26"
+    ],
+    "CAP-23": [
+      "CAP-24",
+      "CAP-29"
+    ],
+    "CAP-24": [],
+    "CAP-25": [
+      "CAP-26",
+      "CAP-27",
+      "CAP-28",
+      "CAP-29",
+      "CAP-30"
+    ],
+    "CAP-26": [
+      "CAP-30"
+    ],
+    "CAP-27": [
+      "CAP-30"
+    ],
+    "CAP-28": [
+      "CAP-30"
+    ],
+    "CAP-29": [
+      "CAP-30"
+    ],
+    "CAP-30": [],
     "CR-01": [
       "CR-02",
       "CR-03",
@@ -3601,6 +5073,226 @@
     ]
   },
   "domainTree": [
+    {
+      "domain": "regulatory-capital",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "CAP-01",
+              "title": "Why Regulatory Capital Exists",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-02",
+              "title": "Solvency and Liquidity in a Capital Context",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-03",
+              "title": "Going-Concern and Gone-Concern Capital",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-04",
+              "title": "The Regulatory Capital Stack",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-05",
+              "title": "Regulatory Adjustments and Deductions",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-06",
+              "title": "The Capital Buffer Stack",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-07",
+              "title": "Distribution Constraints and Maximum Distributable Amount",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-08",
+              "title": "The Leverage Ratio Backstop",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-09",
+              "title": "Risk Weights and Risk-Weighted Assets",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-10",
+              "title": "Basel’s Three Pillars",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-11",
+              "title": "The Four RWA Components",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-12",
+              "title": "The Standardised Approach to Credit Risk",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-13",
+              "title": "Foundation and Advanced IRB",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-14",
+              "title": "The IRB Risk-Weight Function",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-15",
+              "title": "IRB Input Floors and Parameter Constraints",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-16",
+              "title": "The Output Floor",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-17",
+              "title": "Specialised Lending and Supervisory Slotting",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-18",
+              "title": "Credit Risk Mitigation: Collateral, Guarantees and Netting",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-19",
+              "title": "Substitution and Comprehensive CRM Approaches",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-20",
+              "title": "Haircuts",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-21",
+              "title": "Pillar 1 and Pillar 2",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-22",
+              "title": "ICAAP and the Supervisory Review Process",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-23",
+              "title": "Stress Testing and Capital Transmission",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-24",
+              "title": "Supervisory and Internal Stress Tests",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-25",
+              "title": "Basel Does Not Bind Banks Directly",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-26",
+              "title": "UK Basel 3.1 and the SDDT Regime",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-27",
+              "title": "EU CRR3 Implementation",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-28",
+              "title": "India’s Commercial-Bank Capital Framework",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-29",
+              "title": "The US March 2026 Capital Reproposal and Stress Capital Buffer",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CAP-30",
+              "title": "Cross-Jurisdiction Basel Implementation Map",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
     {
       "domain": "credit-risk",
       "subdomains": [
@@ -4594,6 +6286,186 @@
   "lintWarnings": [
     {
       "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-01",
+      "message": "Atom \"CAP-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "CAP-01",
+      "message": "Atom \"CAP-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-02",
+      "message": "Atom \"CAP-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-03",
+      "message": "Atom \"CAP-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-04",
+      "message": "Atom \"CAP-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-05",
+      "message": "Atom \"CAP-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-06",
+      "message": "Atom \"CAP-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-07",
+      "message": "Atom \"CAP-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-08",
+      "message": "Atom \"CAP-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-09",
+      "message": "Atom \"CAP-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-10",
+      "message": "Atom \"CAP-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "CAP-10",
+      "message": "one_screen in \"CAP-10\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-11",
+      "message": "Atom \"CAP-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-12",
+      "message": "Atom \"CAP-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-13",
+      "message": "Atom \"CAP-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-14",
+      "message": "Atom \"CAP-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-15",
+      "message": "Atom \"CAP-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-16",
+      "message": "Atom \"CAP-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "CAP-16",
+      "message": "one_screen in \"CAP-16\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-17",
+      "message": "Atom \"CAP-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-18",
+      "message": "Atom \"CAP-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-19",
+      "message": "Atom \"CAP-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-20",
+      "message": "Atom \"CAP-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-21",
+      "message": "Atom \"CAP-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-22",
+      "message": "Atom \"CAP-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-23",
+      "message": "Atom \"CAP-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-24",
+      "message": "Atom \"CAP-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-25",
+      "message": "Atom \"CAP-25\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-26",
+      "message": "Atom \"CAP-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "CAP-26",
+      "message": "one_screen in \"CAP-26\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-27",
+      "message": "Atom \"CAP-27\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "CAP-27",
+      "message": "one_screen in \"CAP-27\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-28",
+      "message": "Atom \"CAP-28\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "CAP-28",
+      "message": "one_screen in \"CAP-28\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-29",
+      "message": "Atom \"CAP-29\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CAP-30",
+      "message": "Atom \"CAP-30\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-01",
       "message": "Atom \"CR-01\" is unverified (draft). Displays development banner."
     },
@@ -4958,5 +6830,5 @@
       "message": "Atom \"IMP-20\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-27T20:58:20.832Z"
+  "generatedAt": "2026-08-27T21:15:53.614Z"
 }

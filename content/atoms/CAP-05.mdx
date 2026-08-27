@@ -1,0 +1,100 @@
+---
+id: CAP-05
+title: Regulatory Adjustments and Deductions
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Accounting equity is not automatically regulatory capital. Prudential
+  deductions and adjustments remove or limit balance-sheet items whose value may
+  be unavailable, uncertain or double-counted precisely when the bank needs
+  loss-absorbing capital most.
+prerequisites:
+  - CAP-04
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CAP30 —
+      Regulatory adjustments*
+    url: 'https://www.bis.org/basel_framework/chapter/CAP/30.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
+      Definition of eligible capital*
+    url: 'https://www.bis.org/basel_framework/chapter/CAP/10.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+The starting point for CET1 resembles accounting equity, but the prudential question is narrower: **can this amount genuinely absorb losses for the banking group under stress?** Regulatory adjustments convert accounting measures into the capital amounts recognised by the supervisor.
+
+A straightforward example is goodwill and certain other intangible assets. An accounting balance sheet may report them as assets, but their realisable value can be doubtful in distress and they do not provide cash or a claim against an external obligor that can absorb the bank’s losses. Basel therefore requires specified intangible amounts to be deducted from CET1, subject to the detailed framework.
+
+A second problem is **double counting**. Suppose one regulated financial institution holds capital issued by another and both count the same economic resources as loss-absorbing capital. Without consolidation or deduction, one unit of underlying equity could appear to support risks twice. Basel’s regulatory-adjustment framework therefore addresses significant investments in financial entities and related capital-recognition issues.
+
+Other adjustments can arise from deferred tax assets, own-credit effects, cash-flow hedge reserves, pension-related items and thresholds for specified investments. The exact treatment is technical and can change with local implementation; the permanent principle is that reported shareholders’ equity and regulatory CET1 are different quantities.
+
+Deductions also matter before ratios are calculated. A bank does not normally calculate CET1/RWA using gross accounting equity and then subtract the deduction from the ratio. It determines eligible regulatory capital after the prescribed adjustments and uses that amount as the numerator.
+
+&lt;Flow&gt;
++-------------------------+
+| Accounting equity       |
++-------------------------+
+             |
+             v
++-------------------------+
+| Apply prudential filters|
+| and deductions          |
++-------------------------+
+             |
+             v
++-------------------------+
+| Remove / limit amounts  |
+| not fully loss absorbing|
++-------------------------+
+             |
+             v
++-------------------------+
+| Regulatory CET1         |
++-------------------------+
+             |
+             v
++-------------------------+
+| CET1 / RWA ratio        |
++-------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Regulatory capital is an eligibility measure after prudential adjustments, not a synonym for book equity.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using the balance-sheet equity total as the CET1 numerator without applying regulatory adjustments can materially overstate prudential capital.
+</Trap>
+
+<NeverConfuse a="Accounting equity" b="Regulatory CET1">
+**Accounting equity** — equity recognised under the applicable financial-reporting framework.
+
+---
+**Regulatory CET1** — qualifying highest-quality capital after the prudential eligibility rules, filters and deductions have been applied.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Specific deductions and thresholds differ in implementation, but every Basel-style framework distinguishes eligible regulatory capital from unadjusted accounting equity.
+</Rule>
+
+<Recall
+  q="Why is goodwill commonly deducted from CET1?"
+  a="Because its value may not represent reliably available loss-absorbing resources in stress."
+/>
+
+<Recall
+  q="What problem does deduction of certain financial-sector investments help prevent?"
+  a="Double counting the same underlying capital across regulated institutions."
+/>

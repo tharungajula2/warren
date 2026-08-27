@@ -1,0 +1,96 @@
+---
+id: CAP-02
+title: Solvency and Liquidity in a Capital Context
+type: concept
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Solvency asks whether the value of the bank’s assets can absorb losses and
+  still cover its liabilities; liquidity asks whether cash obligations can be
+  met when due. Capital protects solvency, while liquidity resources protect
+  payment capacity, and a bank can fail either test without initially failing
+  the other.
+prerequisites:
+  - CAP-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework*, capital and
+      liquidity standards
+    url: 'https://www.bis.org/basel_framework/'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+Capital is a balance-sheet loss absorber. If an asset worth 100 suffers a loss of 10, that loss must ultimately reduce some claim on the bank. Deposits and senior liabilities are not intended to take ordinary going-concern losses, so equity and qualifying regulatory capital stand between asset losses and creditor impairment. That is the solvency function of capital. Basel expresses risk-based requirements as qualifying capital relative to risk-weighted assets and separately maintains liquidity standards rather than treating liquidity as another form of capital.
+
+Liquidity is different. A solvent bank may own assets whose economic value exceeds its liabilities but be unable to turn those assets into cash quickly enough to meet withdrawals or maturing obligations. Conversely, a deeply insolvent bank can temporarily remain liquid if it still has cash or funding access. The two conditions interact because forced asset sales made to obtain liquidity may crystallise losses, and doubts about solvency can cause funding to disappear.
+
+Capital ratios therefore do not answer the question “Can tomorrow’s payment be made?” A large CET1 balance cannot itself settle a payment unless the bank has cash, central-bank reserves, marketable assets or funding capacity. Likewise, a stock of liquid assets does not repair a balance sheet whose losses have exhausted equity.
+
+The regulatory architecture reflects the distinction: risk-based capital and leverage requirements address loss-bearing capacity, while liquidity requirements sit in separate Basel framework modules.
+
+&lt;Flow&gt;
++----------------------+
+| Bank under stress    |
++----------------------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Losses on | | Cash      |
+| assets    | | outflows  |
++-----------+ +-----------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Capital   | | Liquidity |
+| absorbs   | | meets     |
+| losses    | | payments  |
++-----------+ +-----------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Solvency  | | Payment   |
+| test      | | capacity  |
++-----------+ +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Capital is not cash. A capital ratio is a solvency measure, not a statement that the bank possesses an equivalent amount of immediately spendable liquidity.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling a liquidity shortfall a “capital shortfall” because both occur during stress leads to the wrong remedial action: raising equity and raising immediately available funding solve different immediate problems.
+</Trap>
+
+<NeverConfuse a="Solvency" b="Liquidity">
+**Solvency** — sufficient loss-absorbing net worth to withstand asset losses and remain viable.
+
+---
+**Liquidity** — sufficient cash or reliably monetisable resources to meet obligations when they fall due.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The distinction follows balance-sheet and cash-flow mechanics and does not depend on jurisdiction.
+</Rule>
+
+<Recall
+  q="Can a solvent bank be illiquid?"
+  a="Yes. Its assets may exceed liabilities in value while cash is unavailable when obligations fall due."
+/>
+
+<Recall
+  q="Does CET1 equal cash available for withdrawals?"
+  a="No. CET1 is regulatory capital; liquidity requires cash or assets and funding that can generate cash in time."
+/>

@@ -1,0 +1,102 @@
+---
+id: CAP-18
+title: 'Credit Risk Mitigation: Collateral, Guarantees and Netting'
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Credit risk mitigation reduces regulatory exposure only when the protection is
+  eligible, legally effective and recognised by the applicable capital rules.
+  Collateral changes the loss available from pledged assets, guarantees transfer
+  specified credit risk to a protection provider, and netting reduces exposure
+  by recognising enforceable offsetting claims.
+prerequisites:
+  - CAP-12
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE22 —
+      Standardised approach: credit risk mitigation*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/22.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
+      – Standardised Approach Directions, 2026*, Chapter V, RBI/DOR/2026-27/397
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+**Collateral** gives the bank recourse to specified assets if the borrower fails. Prudential recognition depends on the collateral type, valuation, legal enforceability, maturity, currency and method used. Economic security that cannot be recognised under the capital framework may reduce internal risk without reducing regulatory RWA.
+
+A **guarantee** is unfunded credit protection: another party undertakes to pay if the protected obligor fails under the guarantee’s terms. Under Basel’s standardised CRM framework, eligible guarantees can alter the relevant risk treatment where operational and legal requirements are satisfied.
+
+**Netting** recognises that two legally enforceable offsetting claims need not create the same exposure as their gross amounts. For example, where the capital rules recognise an enforceable on-balance-sheet netting arrangement, the exposure can be measured on the prescribed net basis rather than simply summing gross claims. Netting recognition is conditional; informal commercial expectations that parties will “settle net” are not enough.
+
+The sequence matters. Start with the regulatory exposure, identify an eligible CRM technique, verify documentation and enforceability, apply the prescribed valuation or substitution treatment, then determine the protected exposure used for RWA. A practitioner should never reduce exposure merely because collateral exists operationally.
+
+Basel CRE22 codifies the standardised approach’s permitted CRM techniques and conditions, including collateral, guarantees and applicable haircut methodologies.
+
+&lt;Flow&gt;
++----------------------+
+| Gross exposure       |
++----------------------+
+           |
+           v
++----------------------+
+| Eligible CRM?        |
++----------------------+
+      | yes
+      v
++----------------------+
+| Collateral /         |
+| guarantee / netting  |
++----------------------+
+           |
+           v
++----------------------+
+| Legal + operational  |
+| requirements met?    |
++----------------------+
+           |
+           v
++----------------------+
+| Adjusted exposure /  |
+| risk treatment       |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Risk mitigation reduces regulatory capital only to the extent the prudential framework recognises the protection.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Subtracting the market value of every pledged asset from EAD ignores eligibility, haircuts, maturity mismatch, currency mismatch and legal-enforceability requirements.
+</Trap>
+
+<NeverConfuse a="Collateral" b="Guarantee">
+**Collateral** — funded protection provided through an asset or right available against the exposure.
+
+---
+**Guarantee** — unfunded protection in which an eligible protection provider assumes specified credit risk.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Eligibility lists and calculations differ locally, but collateral, guarantees and enforceable netting are distinct CRM mechanisms across Basel-style frameworks.
+</Rule>
+
+<Recall
+  q="Does economic collateral automatically reduce regulatory RWA?"
+  a="No. It must meet the applicable prudential recognition conditions."
+/>
+
+<Recall
+  q="What makes netting prudentially useful?"
+  a="Legally enforceable offsetting reduces the exposure recognised under the prescribed method."
+/>

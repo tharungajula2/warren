@@ -1,0 +1,100 @@
+---
+id: CAP-20
+title: Haircuts
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  A haircut is a prudential valuation adjustment that recognises that exposure
+  and collateral values can move before a position is closed or collateral is
+  realised. It deliberately prevents yesterday’s collateral market value from
+  being treated as perfectly certain protection against tomorrow’s exposure.
+prerequisites:
+  - CAP-19
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE22 —
+      Standardised approach: credit risk mitigation*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/22.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
+      – Standardised Approach Directions, 2026*, supervisory haircut provisions
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+Suppose eligible financial collateral has a current market value of 100. If the applicable supervisory haircut is 10%, only 90 is recognised for the relevant calculation before other adjustments. The 10 is not a forecasted loss on the collateral; it is a prudential allowance for value volatility over the regulatory holding period.
+
+Haircuts may apply on both sides of the calculation. An exposure in a security can be adjusted upward for potential price movement, while collateral can be adjusted downward. A further adjustment may apply when the exposure and collateral are denominated in different currencies because exchange-rate movements can reduce the effective protection.
+
+The **holding period** matters because collateral cannot always be liquidated instantaneously after default or margin failure. The longer the period during which values can move, the greater the potential mismatch. Basel therefore links supervisory haircut structures to transaction characteristics and prescribed holding periods.
+
+Haircuts are distinct from credit risk weights. The haircut adjusts the value recognised for CRM; the risk weight subsequently calibrates the credit risk of the remaining exposure. A highly rated security can therefore have both a low risk weight when held as an exposure and a non-zero haircut when serving as collateral.
+
+The same word “haircut” also appears in market practice for financing discounts, but a contractual repo haircut and a regulatory supervisory haircut need not be numerically identical.
+
+&lt;Flow&gt;
++----------------------+
+| Collateral MV = 100  |
++----------------------+
+           |
+           v
++----------------------+
+| Supervisory haircut  |
+| = 10%                |
++----------------------+
+           |
+           v
++----------------------+
+| Recognised value = 90|
++----------------------+
+           |
+           v
++----------------------+
+| Offset against       |
+| adjusted exposure    |
++----------------------+
+           |
+           v
++----------------------+
+| Residual exposure    |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A regulatory haircut adjusts recognised value for potential change during the relevant risk period; it is not the collateral’s credit risk weight.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Subtracting the full current market value of volatile collateral assumes perfect liquidation at today’s price and defeats the purpose of the comprehensive approach.
+</Trap>
+
+<NeverConfuse a="Haircut" b="Risk weight">
+**Haircut** — valuation adjustment to an exposure or collateral amount for volatility and related risks.
+
+---
+**Risk weight** — prudential factor applied to a resulting exposure to determine RWA.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Supervisory haircut tables and eligible collateral differ by rulebook, but the valuation-adjustment principle does not.
+</Rule>
+
+<Recall
+  q="Why is collateral value haircut?"
+  a="Because its value can decline before it is realised or the exposure is closed."
+/>
+
+<Recall
+  q="Is a collateral haircut the same as a credit risk weight?"
+  a="No."
+/>

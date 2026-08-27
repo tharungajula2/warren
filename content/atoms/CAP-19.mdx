@@ -1,0 +1,96 @@
+---
+id: CAP-19
+title: Substitution and Comprehensive CRM Approaches
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Substitution changes whose credit quality drives the protected portion of an
+  exposure; the comprehensive collateral approach changes the exposure value
+  after recognising collateral and prescribed valuation adjustments. One changes
+  the relevant risk weight, the other changes the amount to which risk weighting
+  is applied.
+prerequisites:
+  - CAP-18
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE22 —
+      Standardised approach: credit risk mitigation*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/22.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
+      – Standardised Approach Directions, 2026*, Chapter V
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+Consider an eligible guarantee. If the rules permit **substitution**, the protected portion of the borrower exposure receives the prudential treatment associated with the eligible protection provider, subject to the framework’s conditions. The borrower is still the original obligor economically, but the capital calculation recognises that another eligible party bears the specified default risk.
+
+The **comprehensive approach** to eligible financial collateral works differently. Rather than merely replacing one counterparty risk weight with another, it adjusts the exposure and collateral values using regulatory haircuts and other prescribed adjustments. The resulting net exposure amount is then risk weighted. Basel’s CRM chapter sets out the recognised approaches and the requirements governing financial collateral and guarantees.
+
+A simple conceptual example makes the distinction clear. An exposure of 100 protected by an eligible sovereign guarantee on 60 may apply the guarantor’s treatment to the protected 60 and the borrower’s treatment to the residual 40 under a substitution structure. By contrast, eligible financial collateral worth 60 does not necessarily reduce exposure by exactly 60 under the comprehensive approach: haircuts can reduce the recognised collateral value or increase the effective exposure before netting.
+
+The methods therefore cannot be mixed casually. A guarantee is not “collateral with a zero haircut”, and collateral is not automatically a substitute counterparty. Each CRM instrument follows the method prescribed for its legal and risk characteristics.
+
+&lt;Flow&gt;
++----------------------+
+| Protected exposure   |
++----------------------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Guarantee | | Financial |
+|           | | collateral|
++-----------+ +-----------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Substitute| | Adjust    |
+| eligible  | | E and C   |
+| risk      | | by haircuts|
+| treatment | |           |
++-----------+ +-----------+
+       |         |
+       v         v
++----------------------+
+| Post-CRM credit RWA  |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Substitution operates on the credit-risk treatment of the protected portion; comprehensive collateral recognition operates through adjusted exposure and collateral values.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Applying a guarantor’s risk weight to collateral because both are “security” uses the wrong CRM mechanism.
+</Trap>
+
+<NeverConfuse a="Substitution approach" b="Comprehensive collateral approach">
+**Substitution approach** — replaces the original obligor’s risk treatment with that of an eligible protection provider for the protected amount.
+
+---
+**Comprehensive collateral approach** — adjusts exposure and eligible collateral values, including prescribed haircuts, before calculating the residual exposure.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Detailed eligibility differs, but the conceptual distinction between unfunded-protection substitution and collateral-value adjustment is common to Basel-style CRM.
+</Rule>
+
+<Recall
+  q="What changes under substitution?"
+  a="The relevant credit-risk treatment for the protected portion."
+/>
+
+<Recall
+  q="What changes first under the comprehensive collateral approach?"
+  a="The recognised exposure and collateral values."
+/>

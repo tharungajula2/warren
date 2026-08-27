@@ -1,0 +1,110 @@
+---
+id: CAP-06
+title: The Capital Buffer Stack
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Minimum capital is the line a bank must not normally cross; buffers are
+  deliberately placed above that line so capital can absorb stress before
+  minimum requirements are breached. Conservation, countercyclical and systemic
+  buffers serve different purposes even when all are expressed as additional
+  CET1 requirements.
+prerequisites:
+  - CAP-04
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: '2027-01-01'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC30 — Buffers
+      above the regulatory minimum*
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/30.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital
+      Adequacy Directions, 2025*, 28 November 2025
+    url: 'https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159'
+    accessed: 27 August 2026
+  - label: 'Federal Reserve Board, *Supervision and Regulation*, 2023 Annual Report'
+    url: >-
+      https://www.federalreserve.gov/publications/2023-ar-supervision-and-regulation.htm
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+The **capital conservation buffer** creates a standing cushion above minimum capital. Under the Basel standard it is 2.5% of RWA and must be met with CET1. Its purpose is usability: a bank can enter the buffer during stress, but doing so increasingly constrains distributions so earnings are conserved and capital can be rebuilt.
+
+The **countercyclical capital buffer** is macroprudential rather than permanently fixed. Authorities can raise it when system-wide credit conditions indicate excessive risk build-up and release it when conditions deteriorate. Basel sets an international framework in which the bank-specific CCyB reflects relevant jurisdictional rates and cross-border exposures.
+
+**Systemic buffers or surcharges** address the additional damage that failure of a systemically important institution could cause. Their purpose is different from the conservation buffer: the added requirement reflects systemic externality rather than merely providing the same fixed cushion to every bank.
+
+This produces a layered target. Management should distinguish minimum requirements from buffers because the consequences of breaching them differ. Entering a buffer can trigger distribution restrictions while the institution remains above minimum capital; breaching a minimum is a more severe prudential condition.
+
+The exact stack is jurisdiction-specific. The United States, in particular, uses a stress capital buffer architecture for large firms rather than simply replicating the European combined-buffer structure.
+
+&lt;Flow&gt;
++-------------------------+
+| Systemic / other buffer |
++-------------------------+
+            |
++-------------------------+
+| Countercyclical buffer  |
++-------------------------+
+            |
++-------------------------+
+| Conservation buffer     |
++-------------------------+
+            |
++-------------------------+
+| Regulatory minimums     |
++-------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A buffer sits above a minimum because it is intended to be usable before the minimum is breached.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling the conservation buffer an additional “minimum” obscures the graduated consequences that make a buffer usable in stress.
+</Trap>
+
+<NeverConfuse a="Minimum capital requirement" b="Capital buffer">
+**Minimum capital requirement** — the hard baseline prudential requirement.
+
+---
+**Capital buffer** — additional loss-absorbing capacity above the minimum, normally coupled with consequences that intensify as the buffer is used.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s 2025 commercial-bank capital directions prescribe a 2.5% CET1 capital conservation buffer and a countercyclical framework above India’s higher domestic minima. [RBI Capital Adequacy Directions 2025, Table 1 and buffer provisions]
+</Delta>
+
+<Delta j="UK">
+— The PRA framework uses a combined-buffer architecture for firms in the ordinary regime; the separate SDDT regime taking effect on 1 January 2027 introduces a simplified capital-buffer structure. [PRA SS6/14 framework; PS4/26]
+</Delta>
+
+<Delta j="EU">
+— CRD-based combined-buffer requirements include conservation and applicable countercyclical/systemic components, with distribution restrictions linked to failure to meet the combined buffer. [CRD Article 141 / EBA Single Rulebook]
+</Delta>
+
+<Delta j="US">
+— Large-bank requirements incorporate a firm-specific stress capital buffer informed by supervisory stress testing; this differs structurally from simply adding the European combined-buffer stack. [Federal Reserve Annual Report, Supervision and Regulation]
+</Delta>
+
+<Recall
+  q="Why do buffers sit above minimum capital?"
+  a="So losses can consume capital and trigger conservation measures before regulatory minima are breached."
+/>
+
+<Recall
+  q="What makes the CCyB different from the conservation buffer?"
+  a="It varies with system-wide cyclical risk rather than remaining a fixed standing cushion."
+/>

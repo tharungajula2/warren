@@ -1,0 +1,104 @@
+---
+id: CAP-01
+title: Why Regulatory Capital Exists
+type: concept
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Expected loss is the recurring, statistically anticipated cost of taking risk;
+  unexpected loss is the adverse tail beyond that expectation. Provisions and
+  pricing address expected loss, while capital exists principally to keep the
+  bank solvent when realised losses exceed what was expected.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Modifications to the capital
+      treatment for expected and unexpected credit losses*, BCBS 104, 30 January
+      2004
+    url: 'https://www.bis.org/publ/bcbs104.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE30 — IRB
+      approach: overview and asset class definitions*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/30.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Bank for International Settlements, *Forecasting expected and unexpected
+      losses*, Working Papers No 913, 2020
+    url: 'https://www.bis.org/publ/work913.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+A credit portfolio does not have one future loss number. It has a **loss distribution**: many possible outcomes, ranging from benign to severe. The mean or central estimate is expected loss. The distance from that expected amount to a sufficiently adverse loss level is unexpected loss. Basel’s IRB framework deliberately distinguishes the two: the risk-weight functions generate capital requirements for unexpected loss, while expected loss is separately compared with eligible provisions.
+
+That distinction explains why provisions and capital are complementary rather than interchangeable. A bank that expects a recurring amount of credit loss should recognise that economics through pricing, income and the applicable provisioning framework. Capital is a residual shock absorber: when losses are larger than the amount already recognised or economically anticipated, the loss reduces retained earnings and therefore Common Equity Tier 1 unless replenished. BIS research describes modern provisioning as addressing expected future losses while capital requirements provide resources against unexpected losses.
+
+The split is conceptual, not a claim that provisioning perfectly equals expected loss or that capital can never absorb an expected loss. Accounting provisions, regulatory expected-loss measures and economic estimates can differ because they use different horizons, parameters and objectives. Under the IRB framework, a shortfall of eligible provisions relative to regulatory expected loss affects regulatory capital; an excess may receive limited recognition subject to Basel rules.
+
+The practical capital question is therefore not “How much loss is expected?” but “After recognised loss allowances and earnings capacity, how much additional loss can the bank survive without becoming non-viable?”
+
+&lt;Flow&gt;
++----------------------+
+| Credit loss outcomes |
++----------------------+
+           |
+           v
++----------------------+
+| Expected loss        |
+| recurring / central  |
++----------------------+
+           |
+           v
++----------------------+
+| Provisions + pricing |
++----------------------+
+           |
+           v
++----------------------+
+| Unexpected loss      |
+| adverse tail         |
++----------------------+
+           |
+           v
++----------------------+
+| Regulatory capital   |
+| absorbs shock        |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Provisioning and capital solve different loss-absorption problems: expected loss is not a reason to eliminate capital, and capital is not a substitute for timely recognition of expected loss.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating “capital requirement” as the expected credit-loss number double-counts the centre of the loss distribution and misses the purpose of the prudential tail-loss cushion.
+</Trap>
+
+<NeverConfuse a="Expected loss" b="Unexpected loss">
+**Expected loss** — the loss anticipated over a defined horizon under stated assumptions.
+
+---
+**Unexpected loss** — adverse loss beyond the expected amount for which capital provides a solvency cushion.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The expected-loss versus unexpected-loss distinction is an economic and prudential principle; accounting and provisioning rules differ by jurisdiction, but the loss-distribution logic does not.
+</Rule>
+
+<Recall
+  q="What is capital principally designed to absorb in the credit-risk framework?"
+  a="Unexpected loss beyond the amount expected and otherwise recognised or priced."
+/>
+
+<Recall
+  q="Are provisions and capital interchangeable?"
+  a="No. Provisions address recognised or expected losses; capital provides residual loss-absorbing capacity."
+/>

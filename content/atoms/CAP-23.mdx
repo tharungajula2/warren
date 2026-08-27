@@ -1,0 +1,112 @@
+---
+id: CAP-23
+title: Stress Testing and Capital Transmission
+type: procedure
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  A capital stress test is a causal chain: define an adverse scenario, translate
+  it into risk drivers and financial losses, project earnings and RWA, then
+  recalculate capital resources and ratios. Reverse stress testing runs the
+  chain backwards from failure to identify combinations of events capable of
+  breaking the business model.
+prerequisites:
+  - CAP-22
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Stress testing principles*, 17
+      October 2018
+    url: 'https://www.bis.org/bcbs/publ/d450.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, SRP30 — Risk
+      management*
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/30.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+**Scenario design** defines the macroeconomic or idiosyncratic shock. Variables may include economic contraction, unemployment, asset prices, interest rates, exchange rates, funding conditions or sector-specific stresses. The scenario should be severe enough to reveal vulnerabilities without being mistaken for a forecast. Basel describes stress testing as a critical element of bank risk management and a core supervisory tool.
+
+The scenario must then be **transmitted** into the bank. Credit quality deteriorates, defaults increase, collateral values change, market positions revalue, operating losses may rise and funding or revenue can weaken. Those effects flow into profit and loss and the balance sheet.
+
+Capital is affected through both numerator and denominator. Losses reduce retained earnings and therefore CET1. At the same time, rating migration, defaults or market volatility can increase RWA. A bank can therefore suffer a larger decline in its capital ratio than would be inferred from losses alone.
+
+Credible management actions may then be considered under the governing framework, but actions must be feasible under the stressed environment. Assuming instant capital issuance, perfect hedging or unlimited balance-sheet reduction can make a stress test mechanically pass while providing little information.
+
+**Reverse stress testing** begins with a defined point of non-viability or business-model failure and asks what events could cause it. Its objective is vulnerability discovery, not prediction.
+
+&lt;Flow&gt;
++----------------------+
+| Adverse scenario     |
++----------------------+
+           |
+           v
++----------------------+
+| Risk-factor changes  |
++----------------------+
+           |
+           v
++----------------------+
+| Losses + lower income|
+| + RWA movement       |
++----------------------+
+           |
+           v
++----------------------+
+| Capital numerator    |
+| and denominator      |
++----------------------+
+           |
+           v
++----------------------+
+| Stressed ratios      |
++----------------------+
+
+Reverse:
++----------------------+
+| Failure condition    |
++----------------------+
+           |
+           v
++----------------------+
+| What combination of |
+| shocks could cause it|
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A capital stress test must transmit scenario variables through losses, earnings, balance-sheet behaviour and RWA before drawing a capital conclusion.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Applying a single percentage loss directly to CET1 while leaving RWA and income unchanged can miss the most important transmission channels.
+</Trap>
+
+<NeverConfuse a="Scenario stress test" b="Reverse stress test">
+**Scenario stress test** — starts with adverse events and projects their consequences.
+
+---
+**Reverse stress test** — starts with a failure condition and identifies events capable of producing it.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Scenario variables and regulatory exercises differ, but forward and reverse stress-testing logic is universal.
+</Rule>
+
+<Recall
+  q="Through which two broad channels can a stress reduce a capital ratio?"
+  a="The capital numerator can fall and RWA can rise."
+/>
+
+<Recall
+  q="Where does reverse stress testing start?"
+  a="From a defined failure or non-viability outcome."
+/>

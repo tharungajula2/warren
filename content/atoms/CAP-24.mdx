@@ -1,0 +1,94 @@
+---
+id: CAP-24
+title: Supervisory and Internal Stress Tests
+type: reference
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Internal stress tests are management tools tailored to the bank’s own
+  vulnerabilities; supervisory stress tests are authority-led or
+  authority-specified exercises designed to assess prudential resilience and
+  comparability. The same scenario can serve both purposes, but ownership,
+  objectives and consequences are different.
+prerequisites:
+  - CAP-23
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Stress testing principles*, 17
+      October 2018
+    url: 'https://www.bis.org/bcbs/publ/d450.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Federal Reserve Board, *Federal Reserve Board finalizes hypothetical
+      scenarios for its annual stress test and votes to maintain the current
+      stress test-related capital requirements until public feedback can be
+      considered*, 4 February 2026
+    url: 'https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+An **internal stress test** is designed and governed by the bank. It should reflect the institution’s particular concentrations, products, funding structure and strategic risks. Its value lies in decision-making: capital planning, risk limits, contingency actions and identification of vulnerabilities that broad industry scenarios may miss.
+
+A **supervisory stress test** is conducted or specified by a prudential authority. Basel distinguishes banks’ own internal stress testing, bank-run supervisory tests and supervisor-run tests. Common scenarios or methodologies can improve comparability across institutions and allow supervisors to evaluate system-wide vulnerabilities.
+
+The distinction is not simply “private versus published”. A bank may execute calculations itself using a supervisory scenario, while the authority determines methodology or evaluates results. Conversely, an internal exercise can use public macroeconomic variables but remain a management-owned stress test.
+
+Consequences can also differ. An internal test may lead management to change limits or capital targets. A supervisory exercise may inform formal capital requirements, buffers, supervisory expectations or remediation depending on the jurisdiction.
+
+The United States provides a clear example: the Federal Reserve’s supervisory stress test feeds the stress capital buffer architecture for large banks. In February 2026 the Board maintained then-current stress capital buffer requirements until 2027 while model feedback is considered. That is a jurisdiction-specific capital consequence, not a universal feature of all internal tests.
+
+&lt;Flow&gt;
++----------------------+
+| Stress testing       |
++----------------------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Internal  | | Supervisory|
+| bank-owned| | authority- |
+|           | | led/set    |
++-----------+ +-----------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Decisions | | Prudential |
+| + limits  | | assessment |
++-----------+ +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A bank cannot outsource understanding of its vulnerabilities to the supervisory stress test; internal stress testing must remain tailored to its own risk profile.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating the supervisory scenario as the bank’s only severe scenario can leave material institution-specific concentrations unstressed.
+</Trap>
+
+<NeverConfuse a="Internal stress test" b="Supervisory stress test">
+**Internal stress test** — management-owned assessment designed for the institution’s risks and decisions.
+
+---
+**Supervisory stress test** — authority-run or authority-specified assessment used for prudential oversight and, in some regimes, capital calibration.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Supervisory consequences differ, but Basel expressly recognises internal, bank-run supervisory and supervisor-run stress tests as distinct uses of the same stress-testing discipline.
+</Rule>
+
+<Recall
+  q="What is the principal advantage of an internal stress test?"
+  a="It can be tailored to the bank’s own concentrations and vulnerabilities."
+/>
+
+<Recall
+  q="Can supervisory stress-test results affect formal capital?"
+  a="Yes, where the domestic framework links the exercise to capital requirements or buffers."
+/>

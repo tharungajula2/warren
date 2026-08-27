@@ -1,0 +1,94 @@
+---
+id: CAP-09
+title: Risk Weights and Risk-Weighted Assets
+type: concept
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  A risk weight converts an exposure amount into a regulatory risk measure:
+  exposure × risk weight = RWA under the basic standardised credit-risk logic.
+  The weight is a prudential calibration of relative risk, not a forecast that
+  the stated percentage of the exposure will be lost.
+prerequisites:
+  - CAP-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE20 —
+      Standardised approach: individual exposures*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/20.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+Suppose a qualifying exposure amount is 100 and the applicable standardised credit risk weight is 50%. Its credit RWA is 50. If a minimum total-capital ratio were applied to that RWA, the capital requirement would be calculated from 50, not directly from the 100 exposure. This two-stage structure separates the **risk measurement** step from the **capital ratio** step.
+
+Risk weights therefore act as regulatory scaling factors. Higher weights make a unit of exposure consume more capital; lower weights make it consume less. Under the standardised approach, weights are specified through exposure classes, counterparty characteristics, collateral treatment, external credit assessments where permitted, loan-to-value measures and other criteria. Basel’s revised standardised approach deliberately increases granularity and risk sensitivity while retaining supervisor-prescribed rules.
+
+A 100% risk weight does not mean a 100% probability of default or a 100% expected loss. It means one unit of exposure creates one unit of RWA before other applicable adjustments. Similarly, a 20% weight does not mean that 20% of the exposure is expected to disappear.
+
+**RWA density** is a useful derived intuition: RWA divided by a relevant exposure measure. A portfolio with 40 of credit RWA against 100 of exposure has 40% RWA density. But density is an output of regulatory measurement, not an independent risk parameter.
+
+Risk weights also differ from provisions. Provisions reduce the carrying value or recognise expected loss under the applicable framework; risk weights determine the capital denominator used to support unexpected risk.
+
+&lt;Flow&gt;
++----------------------+
+| Exposure amount 100  |
++----------------------+
+           |
+           v
++----------------------+
+| Applicable RW = 50%  |
++----------------------+
+           |
+           v
++----------------------+
+| Credit RWA = 50      |
++----------------------+
+           |
+           v
++----------------------+
+| Capital ratio applied|
+| to RWA               |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A risk weight is a prudential scaling factor used to calculate RWA; it is not PD, LGD or expected loss.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Reading a 150% risk weight as “the regulator expects to lose 150% of the loan” confuses a capital calibration with an economic loss forecast.
+</Trap>
+
+<NeverConfuse a="Risk weight" b="Capital ratio">
+**Risk weight** — the regulatory percentage or formula output applied to an exposure for RWA purposes.
+
+---
+**Capital ratio** — qualifying capital divided by RWA; it is applied after RWA has been determined.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Jurisdictions prescribe different detailed weights, but the standardised arithmetic of exposure amount multiplied by applicable risk weight is common.
+</Rule>
+
+<Recall
+  q="If exposure is 100 and the risk weight is 50%, what is RWA before other adjustments?"
+  a="50."
+/>
+
+<Recall
+  q="Does a 100% risk weight mean expected loss is 100%?"
+  a="No."
+/>

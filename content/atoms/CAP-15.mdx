@@ -1,0 +1,115 @@
+---
+id: CAP-15
+title: IRB Input Floors and Parameter Constraints
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Input floors stop internally estimated risk parameters from falling below
+  prudential lower bounds even when a model produces a smaller number. They
+  constrain the ingredients of the IRB calculation; the output floor constrains
+  the final aggregate RWA result.
+prerequisites:
+  - CAP-14
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: '2027-01-01'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB
+      approach: risk components*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/32.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
+      – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+Internal models can generate extremely low PDs, LGDs or other parameters for portfolios with benign observed histories. That may reflect genuinely low risk, but it may also reflect limited defaults, favourable economic periods, data scarcity or model specification. Basel therefore imposes **parameter constraints**, including prescribed floors for relevant IRB inputs.
+
+An input floor works before the risk-weight function. If the model estimates a parameter below the applicable regulatory floor, the floor is used for capital purposes. The model estimate may remain useful for internal risk management, but it is not allowed to drive regulatory capital below the prescribed prudential boundary.
+
+Parameter constraints also include rules on estimation horizon, downturn treatment, eligible exposure classes, maturity and the circumstances in which bank estimates may be used. Their collective purpose is to reduce excessive model variability and make capital less dependent on sparse or optimistic data.
+
+The **output floor** operates at a different level. Input floors constrain individual parameters; the output floor compares total internally modelled RWA with a percentage of standardised RWA after the model calculations have been performed. A bank can therefore satisfy every input floor and still be constrained by the output floor.
+
+**Perishable — India’s revised commercial-bank credit framework effective 1 April 2027 is standardised, so IRB input floors are not domestic Indian credit-capital parameters.**
+
+&lt;Flow&gt;
++----------------------+
+| Internal estimate    |
+| e.g. PD or LGD       |
++----------------------+
+           |
+           v
++----------------------+
+| Compare with         |
+| regulatory input floor|
++----------------------+
+           |
+           v
++----------------------+
+| Use permitted input  |
++----------------------+
+           |
+           v
++----------------------+
+| IRB risk function    |
++----------------------+
+           |
+           v
++----------------------+
+| Modelled RWA         |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+An input floor changes or bounds a model parameter before the risk-weight calculation; it does not directly impose a percentage floor on total RWA.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling the 72.5% output floor a “PD floor” mixes an aggregate RWA backstop with parameter-level constraints.
+</Trap>
+
+<NeverConfuse a="Input floor" b="Output floor">
+**Input floor** — a lower bound on an IRB risk parameter or model input.
+
+---
+**Output floor** — an aggregate lower bound on model-based RWA relative to standardised RWA.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s covered commercial-bank framework from 1 April 2027 uses the Standardised Approach, so Basel IRB parameter floors are not the domestic method for those credit exposures. [RBI 2026 SA Directions]
+</Delta>
+
+<Delta j="UK">
+— PRA Basel 3.1 implements revised IRB constraints from 1 January 2027 for exposures remaining eligible for IRB. [PRA PS1/26]
+</Delta>
+
+<Delta j="EU">
+— CRR3 implements revised model constraints alongside the output floor from 2025, subject to transition. [CRR3]
+</Delta>
+
+<Delta j="US">
+— The March 2026 package remains proposed; proposed model constraints are not final US rules. [Federal Reserve, 19 March 2026]
+</Delta>
+
+<Recall
+  q="At what stage does an input floor operate?"
+  a="Before the IRB risk function, by bounding a model parameter."
+/>
+
+<Recall
+  q="Can a bank satisfy input floors and still be constrained by the output floor?"
+  a="Yes."
+/>

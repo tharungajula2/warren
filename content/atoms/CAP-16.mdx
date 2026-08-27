@@ -1,0 +1,112 @@
+---
+id: CAP-16
+title: The Output Floor
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  The output floor prevents approved internal models from reducing total RWA
+  below 72.5% of the amount produced by the prescribed standardised comparison
+  at full implementation. It is an aggregate backstop against model risk and
+  excessive RWA variability, not a rule that replaces internal models with a
+  72.5% risk weight.
+prerequisites:
+  - CAP-12
+  - CAP-13
+  - CAP-15
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: '2027-01-01'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Prudential Regulation Authority, *PS9/24 — Implementation of the Basel 3.1
+      standards: near-final policy statement, Part 2*, 12 September 2024
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/implementation-of-the-basel-3-1-standards-near-final-policy-statement-part-2
+    accessed: 27 August 2026
+  - label: >-
+      European Commission, *Commission Staff Working Document, SWD(2026) 615*,
+      output-floor implementation table
+    url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0615'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+The calculation requires two views of risk. First, the bank calculates RWA using the approaches it is authorised to use, including internal models where permitted. Second, it calculates a **standardised total** under the rules specified for the floor. The regulatory RWA relevant to the floor becomes the higher of the model-based amount and the applicable floor percentage of the standardised amount.
+
+Example: model-based total RWA is 60; standardised RWA is 100; fully phased floor is 72.5. The floor raises regulatory RWA from 60 to 72.5. If model-based RWA were 80, the floor would not bind.
+
+The purpose is not to declare models wrong. Basel preserves modelling incentives above the floor while limiting how far model outputs can diverge downward from a common standardised benchmark. The PRA describes the 72.5% multiplier as a backstop that maintains incentives to pursue model approval.
+
+**Perishable — phase-in is jurisdiction-specific.** In the EU the floor is 55% during 2026, rises to 60% in 2027, 65% in 2028, 70% in 2029 and 72.5% from 1 January 2030. The UK starts its Basel 3.1 implementation on 1 January 2027 and is scheduled to reach the fully phased level by January 2030. The US has not implemented the final Basel output floor as a binding rule as at 27 August 2026; the March 2026 package remains proposed.
+
+&lt;Flow&gt;
++----------------------+   +----------------------+
+| Model-based RWA      |   | Standardised RWA     |
+| 60                   |   | 100                  |
++----------------------+   +----------------------+
+             \             /
+              v           v
+          +----------------------+
+          | 72.5% x 100 = 72.5  |
+          +----------------------+
+                     |
+                     v
+          +----------------------+
+          | Higher of 60 / 72.5 |
+          | = 72.5              |
+          +----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+The 72.5% figure applies to the standardised RWA benchmark at full phase-in; it is not a universal asset risk weight.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Multiplying each individual IRB exposure by 72.5% misunderstands an aggregate RWA comparison as an exposure-level risk weight.
+</Trap>
+
+<NeverConfuse a="Output floor" b="Risk weight">
+**Output floor** — aggregate lower bound on model-based RWA relative to standardised RWA.
+
+---
+**Risk weight** — exposure-level or formula-derived scaling factor used inside an RWA methodology.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI has selected the Standardised Approach for covered commercial-bank banking-book credit risk from 1 April 2027; an IRB-versus-standardised credit output-floor architecture is therefore not the domestic Indian credit regime. [RBI 2026 SA Directions]
+</Delta>
+
+<Delta j="UK">
+— Basel 3.1 takes effect 1 January 2027; the UK output floor begins then and is scheduled to reach full 72.5% calibration by January 2030. [PRA PS1/26; European Commission 2026 comparative implementation table]
+</Delta>
+
+<Delta j="EU">
+— CRR3 output floor is **55% in 2026**, then 60%, 65%, 70%, and **72.5% from 1 January 2030**. [CRR Article 465(1); European Commission SWD 2026]
+</Delta>
+
+<Delta j="US">
+— The final Basel output floor is not a binding US rule as at 27 August 2026; the March 2026 capital package remains proposed. [Federal Reserve proposal; European Commission comparative implementation review]
+</Delta>
+
+<Recall
+  q="What does 72.5% multiply in the fully phased output-floor calculation?"
+  a="The prescribed standardised RWA benchmark."
+/>
+
+<Recall
+  q="Does the floor eliminate internal models?"
+  a="No. Model-based RWA remains relevant whenever it is above the floor."
+/>

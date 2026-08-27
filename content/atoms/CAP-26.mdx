@@ -1,0 +1,104 @@
+---
+id: CAP-26
+title: UK Basel 3.1 and the SDDT Regime
+type: reference
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  **Perishable — final rules, pending commencement.** The PRA’s Basel 3.1
+  package takes effect on **1 January 2027**; the FRTB Internal Models Approach
+  is delayed separately to **1 January 2028**. Small Domestic Deposit Takers
+  enter the PRA’s simplified capital regime on **1 January 2027**, creating a
+  deliberately different domestic framework for eligible smaller firms.
+prerequisites:
+  - CAP-12
+  - CAP-16
+  - CAP-22
+  - CAP-25
+jurisdictions:
+  - UK
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: '2027-01-01'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1:
+      Final rules*, 20 January 2026
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement
+    accessed: 27 August 2026
+  - label: >-
+      Prudential Regulation Authority, *PS4/26 — The Strong and Simple
+      Framework: The simplified capital regime for Small Domestic Deposit Takers
+      — final*, 20 January 2026
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/the-strong-and-simple-framework-final-policy-statement
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+PRA Policy Statement PS1/26, published on 20 January 2026, contains the final Basel 3.1 rules. The main implementation date is 1 January 2027. The package revises credit risk, output-floor and other Basel 3.1 elements and updates the scope and operation of internal-model permissions.
+
+Market risk has a separate timing wrinkle. The PRA delayed the **FRTB Internal Models Approach** to 1 January 2028. During the interim beginning 1 January 2027, existing IMA permissions may continue for positions within their existing scope, while positions outside those permissions move to the new standardised market-risk approaches under the PRA’s final framework. This is a delay to FRTB-IMA, not a delay of the entire Basel 3.1 package.
+
+The UK also operates the **Strong and Simple Framework** for qualifying Small Domestic Deposit Takers. PS4/26 confirms that the SDDT capital regime takes effect on 1 January 2027, although specified changes concerning ICAAP, reverse-stress-testing and ILAAP update frequency took effect when the policy was published on 20 January 2026. The simplified regime is designed to reduce prudential complexity for eligible smaller domestic firms rather than forcing the full large-bank framework onto them.
+
+The practical UK question is therefore always scope first: ordinary Basel 3.1 firm, SDDT, or another relevant category.
+
+&lt;Flow&gt;
++-------------------------+
+| UK prudential firm      |
++-------------------------+
+            |
+            v
++-------------------------+
+| Determine PRA scope     |
++-------------------------+
+      |              |
+      v              v
++-----------+   +-----------+
+| Ordinary  |   | Eligible  |
+| Basel 3.1 |   | SDDT      |
+| regime    |   | regime    |
++-----------+   +-----------+
+      |              |
+      v              v
+| 1 Jan 2027 | | 1 Jan 2027 |
+      |
+      v
++-------------------------+
+| FRTB-IMA separately     |
+| from 1 Jan 2028         |
++-------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+UK implementation dates must be read by component: 1 January 2027 is the main Basel 3.1 date, while FRTB-IMA starts on 1 January 2028.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Saying “UK Basel 3.1 was delayed to 2028” incorrectly converts the FRTB-IMA delay into a delay of the whole package.
+</Trap>
+
+<NeverConfuse a="Basel 3.1 commencement" b="FRTB-IMA commencement">
+**Basel 3.1 commencement** — main PRA final-rule commencement on 1 January 2027.
+
+---
+**FRTB-IMA commencement** — separate UK implementation date of 1 January 2028 for the new market-risk internal-model approach.
+</NeverConfuse>
+
+<Delta j="UK">
+— Final PRA Basel 3.1 rules: 1 January 2027; FRTB-IMA: 1 January 2028; SDDT simplified capital regime: 1 January 2027, with specified ICAAP/reverse-stress/ILAAP frequency changes effective 20 January 2026. [PRA PS1/26; PRA PS4/26]
+</Delta>
+
+<Recall
+  q="When do the UK’s main Basel 3.1 rules take effect?"
+  a="1 January 2027."
+/>
+
+<Recall
+  q="What UK Basel 3.1 component is delayed to 1 January 2028?"
+  a="The FRTB Internal Models Approach."
+/>

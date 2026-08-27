@@ -1,0 +1,118 @@
+---
+id: CAP-08
+title: The Leverage Ratio Backstop
+type: mechanism
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  The leverage ratio ignores most risk weights and compares Tier 1 capital with
+  a broad exposure measure. It is a deliberately blunt backstop: risk-based
+  models can change the measured riskiness of assets, but they cannot make the
+  underlying exposure disappear.
+prerequisites:
+  - CAP-04
+  - CAP-09
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, LEV20 —
+      Calculation of the leverage ratio*
+    url: 'https://www.bis.org/basel_framework/chapter/LEV/20.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital
+      Adequacy Directions, 2025*, para 262, 28 November 2025
+    url: 'https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159'
+    accessed: 27 August 2026
+  - label: >-
+      Bank of England, *Financial Stability in Focus: The FPC's assessment of
+      bank capital requirements*, 2 December 2025
+    url: >-
+      https://www.bankofengland.co.uk/financial-stability-in-focus/2025/fsif-the-fpcs-assessment-of-bank-capital-requirements
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+Risk-weighted capital requirements depend on judgements about relative risk. A low-risk exposure receives less RWA than a high-risk exposure, which improves risk sensitivity but creates dependence on classifications, parameters and models. The leverage ratio places a floor under how far that process can reduce required capital.
+
+Basel defines the leverage ratio as Tier 1 capital divided by the leverage-ratio exposure measure and establishes a 3% minimum in the global framework. The denominator is broader than accounting assets because it also captures specified off-balance-sheet and derivative exposures under prescribed measurement rules.
+
+The leverage ratio is **non-risk-sensitive** in the relevant sense: a unit of qualifying exposure generally enters the denominator without first being multiplied by its credit risk weight. That makes the measure crude, but the crudeness is intentional. It limits model risk, classification arbitrage and the possibility that a portfolio judged extremely safe under the RWA framework supports excessive balance-sheet leverage.
+
+The ratio is therefore a backstop, not a replacement for RWA. A bank can be constrained by either measure. A high-risk portfolio may be bound by risk-based capital while a very large portfolio of low-risk assets may be more constrained by leverage requirements.
+
+A practitioner should calculate both lenses rather than converting one into the other. “Low RWA density” does not imply “low leverage exposure”.
+
+&lt;Flow&gt;
++----------------------+
+| Same bank exposures  |
++----------------------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Risk-based| | Leverage  |
+| framework | | framework |
++-----------+ +-----------+
+       |         |
+       v         v
++-----------+ +-----------+
+| Apply risk| | Broad     |
+| weights   | | exposure  |
++-----------+ +-----------+
+       |         |
+       v         v
++-----------+ +-----------+
+| RWA ratio | | Tier 1 /  |
+| constraint| | exposure  |
++-----------+ +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+The leverage ratio complements rather than substitutes for risk-weighted capital requirements.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using total accounting assets as an exact leverage-ratio denominator ignores regulatory treatment of derivatives and off-balance-sheet exposures.
+</Trap>
+
+<NeverConfuse a="Risk-based capital ratio" b="Leverage ratio">
+**Risk-based capital ratio** — qualifying capital divided by RWA.
+
+---
+**Leverage ratio** — Tier 1 capital divided by a broadly measured exposure amount without ordinary credit risk weighting.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI prescribes a minimum leverage ratio of 4% for D-SIBs and 3.5% for other commercial banks. [RBI Capital Adequacy Directions 2025, para 262]
+</Delta>
+
+<Delta j="UK">
+— The UK applies its domestic leverage framework and leverage buffers to relevant firms; its design is not identical to the risk-based combined-buffer/MDA framework. [Bank of England, Financial Stability in Focus, December 2025]
+</Delta>
+
+<Delta j="EU">
+— The CRR leverage framework implements the leverage-ratio backstop alongside risk-based own-funds requirements; applicable overlays depend on institution type and current EU rules and must be checked in CRR. [Basel leverage principle; local CRR verification required]
+</Delta>
+
+<Delta j="US">
+— US capital rules use leverage requirements alongside risk-based ratios, with additional leverage requirements applying to specified large organisations; the exact requirement depends on regulatory category. [Federal Reserve capital framework; institution-specific scope must be verified]
+</Delta>
+
+<Recall
+  q="Why is a leverage ratio needed if RWA already measures risk?"
+  a="To backstop model, parameter and classification risk and constrain excessive exposure even when risk weights are low."
+/>
+
+<Recall
+  q="What is the Basel leverage-ratio numerator?"
+  a="Tier 1 capital."
+/>

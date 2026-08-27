@@ -1,0 +1,94 @@
+---
+id: CAP-11
+title: The Four RWA Components
+type: reference
+domain: regulatory-capital
+subdomain: unsorted
+one_screen: >-
+  Total RWA aggregates distinct prudential risk engines: credit risk, market
+  risk, operational risk and credit valuation adjustment risk. They share the
+  same capital denominator only after each component has been measured under its
+  own rules.
+prerequisites:
+  - CAP-09
+  - CAP-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, MAR50 — Credit
+      valuation adjustment framework*
+    url: 'https://www.bis.org/basel_framework/chapter/MAR/50.htm'
+    accessed: 27 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, OPE25 —
+      Standardised approach*
+    url: 'https://www.bis.org/basel_framework/chapter/OPE/25.htm'
+    accessed: 27 August 2026
+import_source: 04_CAP_regulatory_capital.md
+---
+**Credit risk RWA** captures the risk that borrowers, counterparties or issuers fail to perform as required. It is usually the largest RWA category in a traditional banking book and can be calculated through standardised or, where permitted, internal-ratings-based methods.
+
+**Market risk RWA** addresses losses arising from movements in market risk factors for positions within the applicable trading-book and market-risk perimeter. Its measurement is not the same as simply risk-weighting a loan.
+
+**Operational risk RWA** addresses losses arising from inadequate or failed processes, people and systems or from external events under the applicable operational-risk framework. The Basel finalisation replaced prior multiple operational-risk approaches with a standardised approach in the global standard.
+
+**Credit valuation adjustment risk**, or CVA risk, concerns changes in the market value of counterparty-credit adjustments for covered derivatives and similar transactions. It is related to counterparty credit risk but is not identical to the default-loss capital charge: one concerns mark-to-market changes in credit valuation, the other the counterparty’s failure to perform. Basel contains a separate CVA capital framework.
+
+Basel’s minimum-capital calculation aggregates the prescribed RWA components to produce the denominator against which capital ratios are measured. The calculation should therefore be visualised as several risk engines feeding one capital ratio, not as one universal risk-weight formula.
+
+&lt;Flow&gt;
++------------------+   +------------------+
+| Credit RWA       |   | Market RWA       |
++------------------+   +------------------+
+          \              /
+           v            v
+         +------------------+
+         | Total RWA        |
+         +------------------+
+           ^            ^
+          /              \
++------------------+   +------------------+
+| Operational RWA  |   | CVA RWA          |
++------------------+   +------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+The four RWA components measure different risk types before being aggregated into the common risk-based capital denominator.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating CVA risk as merely another name for counterparty default risk misses the mark-to-market credit-spread risk that the CVA framework is designed to capture.
+</Trap>
+
+<NeverConfuse a="Counterparty credit default risk" b="CVA risk">
+**Counterparty credit default risk** — risk of loss because the counterparty fails to perform.
+
+---
+**CVA risk** — risk of loss from changes in the credit valuation adjustment before or without counterparty default.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Detailed implementation dates and methods vary, but credit, market, operational and CVA risk are the core risk-based capital components in the Basel finalisation architecture.
+</Rule>
+
+<Recall
+  q="What four broad risk components feed Basel risk-based capital?"
+  a="Credit, market, operational and CVA risk."
+/>
+
+<Recall
+  q="Is operational RWA calculated by applying a loan risk weight?"
+  a="No. It has its own measurement framework."
+/>

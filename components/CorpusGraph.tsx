@@ -33,15 +33,23 @@ interface GraphEdge {
 }
 
 const DOMAIN_COLORS: Record<string, string> = {
-  "credit-risk": "#315F7D",
-  "counterparty-risk": "#51518A",
-  "risk-data": "#3E7D5A",
   foundation: "#7D5A31",
-  "legal-framework": "#6D4545",
+  "credit-risk": "#315F7D",
+  impairment: "#5A7D3E",
+  "regulatory-capital": "#A6503C",
+  "treasury-alm": "#8A456D",
+  "traded-products": "#6B5A7D",
+  "counterparty-risk": "#51518A",
   "market-risk": "#C9711F",
   "operational-risk": "#8A6D2F",
+  "model-risk": "#4A6B82",
+  "risk-data": "#3E7D5A",
+  "financial-crime": "#4A7D7D",
+  "india-lending": "#7D7D3E",
+  "business-analysis": "#6B4A82",
+  technical: "#3E5A7D",
+  quantitative: "#7D3E5A",
   regulatory: "#A6503C",
-  quantitative: "#4A6B82",
 };
 
 export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: CorpusGraphProps) {
