@@ -16,6 +16,8 @@ export type Jurisdiction = z.infer<typeof JurisdictionSchema>;
 export const AtomStatusSchema = z.enum(["draft", "published"]);
 export type AtomStatus = z.infer<typeof AtomStatusSchema>;
 
+export type CurrentnessStatus = "fresh" | "ageing" | "stale" | "future" | "durable";
+
 const DateOrStringSchema = z
   .union([z.string(), z.date()])
   .transform((val) => {
@@ -72,6 +74,7 @@ export interface AtomManifestItem extends AtomFrontmatter {
   slug: string;
   depth: number;
   filepath: string;
+  currentness: CurrentnessStatus;
 }
 
 export interface DomainTreeNode {
@@ -82,9 +85,16 @@ export interface DomainTreeNode {
   }[];
 }
 
+export interface LintWarning {
+  rule: string;
+  atomId?: string;
+  message: string;
+}
+
 export interface CorpusManifest {
   atoms: Record<string, AtomManifestItem>;
   reverseIndex: Record<string, string[]>;
   domainTree: DomainTreeNode[];
+  lintWarnings: LintWarning[];
   generatedAt: string;
 }

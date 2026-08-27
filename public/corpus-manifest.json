@@ -27,6 +27,7 @@
       "sources": [],
       "slug": "cr-03",
       "depth": 1,
+      "currentness": "durable",
       "filepath": "CR-03.mdx"
     },
     "CR-07-EX": {
@@ -54,6 +55,7 @@
       "sources": [],
       "slug": "cr-07-ex",
       "depth": 3,
+      "currentness": "durable",
       "filepath": "CR-07-EX.mdx"
     },
     "CR-07": {
@@ -100,6 +102,7 @@
       ],
       "slug": "cr-07",
       "depth": 2,
+      "currentness": "durable",
       "filepath": "CR-07.mdx"
     },
     "CR-08": {
@@ -129,6 +132,7 @@
       "sources": [],
       "slug": "cr-08",
       "depth": 2,
+      "currentness": "durable",
       "filepath": "CR-08.mdx"
     },
     "CR-09": {
@@ -157,6 +161,7 @@
       "sources": [],
       "slug": "cr-09",
       "depth": 2,
+      "currentness": "durable",
       "filepath": "CR-09.mdx"
     },
     "FND-18": {
@@ -182,6 +187,7 @@
       "sources": [],
       "slug": "fnd-18",
       "depth": 0,
+      "currentness": "durable",
       "filepath": "FND-18.mdx"
     },
     "LEG-01": {
@@ -213,6 +219,7 @@
       "sources": [],
       "slug": "leg-01",
       "depth": 1,
+      "currentness": "durable",
       "filepath": "LEG-01.mdx"
     },
     "MKT-01": {
@@ -242,6 +249,7 @@
       "sources": [],
       "slug": "mkt-01",
       "depth": 1,
+      "currentness": "durable",
       "filepath": "MKT-01.mdx"
     },
     "MKT-02": {
@@ -271,6 +279,7 @@
       "sources": [],
       "slug": "mkt-02",
       "depth": 2,
+      "currentness": "durable",
       "filepath": "MKT-02.mdx"
     },
     "OPS-01": {
@@ -298,6 +307,7 @@
       "sources": [],
       "slug": "ops-01",
       "depth": 1,
+      "currentness": "durable",
       "filepath": "OPS-01.mdx"
     },
     "REG-01": {
@@ -331,6 +341,7 @@
       ],
       "slug": "reg-01",
       "depth": 1,
+      "currentness": "future",
       "filepath": "REG-01.mdx"
     },
     "REG-02": {
@@ -358,6 +369,7 @@
       "sources": [],
       "slug": "reg-02",
       "depth": 1,
+      "currentness": "durable",
       "filepath": "REG-02.mdx"
     }
   },
@@ -518,5 +530,112 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-27T19:07:15.330Z"
+  "lintWarnings": [
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "CR-03",
+      "message": "Published atom \"CR-03\" (Credit Exposure and Expected Loss) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CR-03",
+      "message": "Atom \"CR-03\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "CR-07-EX",
+      "message": "Published atom \"CR-07-EX\" (Retail PD Estimation Worked Example) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CR-07-EX",
+      "message": "Atom \"CR-07-EX\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "CR-08",
+      "message": "Published atom \"CR-08\" (Loss Given Default) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CR-08",
+      "message": "Atom \"CR-08\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "CR-09",
+      "message": "Published atom \"CR-09\" (Exposure at Default) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "CR-09",
+      "message": "Atom \"CR-09\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "FND-18",
+      "message": "Published atom \"FND-18\" (Fundamental Financial Mathematics) has no sources listed."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "FND-18",
+      "message": "Atom \"FND-18\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "FND-18",
+      "message": "Atom \"FND-18\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "LEG-01",
+      "message": "Published atom \"LEG-01\" (Legal Netting and Enforceability) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "LEG-01",
+      "message": "Atom \"LEG-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "MKT-01",
+      "message": "Published atom \"MKT-01\" (Value at Risk (VaR)) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "MKT-01",
+      "message": "Atom \"MKT-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "MKT-02",
+      "message": "Published atom \"MKT-02\" (Expected Shortfall) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "MKT-02",
+      "message": "Atom \"MKT-02\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_SOURCES",
+      "atomId": "OPS-01",
+      "message": "Published atom \"OPS-01\" (Operational Risk Standardised Approach) has no sources listed."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "OPS-01",
+      "message": "Atom \"OPS-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "REG-01",
+      "message": "Atom \"REG-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "MISSING_RECALL_BLOCK",
+      "atomId": "REG-02",
+      "message": "Atom \"REG-02\" does not contain a <Recall> retrieval practice block."
+    }
+  ],
+  "generatedAt": "2026-08-27T19:17:59.778Z"
 }

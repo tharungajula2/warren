@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build-corpus": "node scripts/build-corpus.mjs",
+    "new-atom": "node scripts/new-atom.mjs",
     "prebuild": "node scripts/build-corpus.mjs",
     "build": "next build",
     "start": "next start",

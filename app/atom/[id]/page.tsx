@@ -6,6 +6,9 @@ import { notFound } from "next/navigation";
 import { getCorpusManifest } from "@/lib/corpus";
 import { MdxRenderer } from "@/components/atom/MdxRenderer";
 import { OneScreen } from "@/components/atom/OneScreen";
+import { TypeBadge } from "@/components/TypeBadge";
+import { CurrentnessMarker } from "@/components/CurrentnessMarker";
+import { JurisdictionCode } from "@/components/atom/Delta";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -54,18 +57,21 @@ export default async function AtomPage({ params }: PageProps) {
     (match) => match[1].trim()
   );
 
+  const nonUniversalJurs = atom.jurisdictions.filter((j) => j !== "universal");
+  const hasMultipleVariants = nonUniversalJurs.length >= 1;
+
   return (
     <div className="max-w-[1440px] mx-auto px-4 py-8 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr_240px] gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_240px] gap-8 items-start">
         
-        {/* LEFT COLUMN (240px, sticky) */}
+        {/* LEFT COLUMN (280px, sticky) */}
         <aside className="lg:sticky lg:top-20 space-y-5 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto pr-2">
           {/* Breadcrumb */}
           <div className="border border-[#23272D] bg-[#121417] p-3 rounded-[3px]">
             <div className="font-mono text-[10px] uppercase tracking-wider text-[#6B747E] mb-1">
               LOCATION
             </div>
-            <div className="font-mono text-xs text-[#9AA3AD] truncate">
+            <div className="font-mono text-xs text-[#9AA3AD] line-clamp-2 leading-snug">
               <span className="text-[#C9711F]">{atom.domain}</span> &gt;{" "}
               <span className="text-[#E6E8EB]">{atom.subdomain}</span>
             </div>
@@ -97,15 +103,15 @@ export default async function AtomPage({ params }: PageProps) {
                 None (Root Atom)
               </p>
             ) : (
-              <ul className="space-y-1.5 font-mono text-xs">
+              <ul className="space-y-2 font-mono text-xs">
                 {atom.prerequisites.map((prereqId) => {
                   const prereqAtom = manifest.atoms[prereqId];
                   return (
                     <li key={prereqId} className="flex items-start gap-1.5">
-                      <span className="text-[#C9711F] font-bold">↳</span>
+                      <span className="text-[#C9711F] font-bold shrink-0">↳</span>
                       <Link
                         href={`/atom/${prereqId}`}
-                        className="text-[#9AA3AD] hover:text-[#C9711F] transition-colors truncate"
+                        className="text-[#9AA3AD] hover:text-[#C9711F] transition-colors line-clamp-2 leading-tight"
                         title={prereqAtom ? prereqAtom.title : prereqId}
                       >
                         <span className="text-[#E6E8EB] font-semibold">{prereqId}:</span>{" "}
@@ -128,15 +134,15 @@ export default async function AtomPage({ params }: PageProps) {
                 No downstream dependents
               </p>
             ) : (
-              <ul className="space-y-1.5 font-mono text-xs">
+              <ul className="space-y-2 font-mono text-xs">
                 {dependedOnBy.map((depId) => {
                   const depAtom = manifest.atoms[depId];
                   return (
                     <li key={depId} className="flex items-start gap-1.5">
-                      <span className="text-[#3E7D5A] font-bold">↱</span>
+                      <span className="text-[#3E7D5A] font-bold shrink-0">↱</span>
                       <Link
                         href={`/atom/${depId}`}
-                        className="text-[#9AA3AD] hover:text-[#C9711F] transition-colors truncate"
+                        className="text-[#9AA3AD] hover:text-[#C9711F] transition-colors line-clamp-2 leading-tight"
                         title={depAtom ? depAtom.title : depId}
                       >
                         <span className="text-[#E6E8EB] font-semibold">{depId}:</span>{" "}
@@ -152,15 +158,14 @@ export default async function AtomPage({ params }: PageProps) {
 
         {/* CENTRE COLUMN (max 68ch) */}
         <main className="max-w-[68ch] mx-auto w-full min-w-0">
-          {/* Atom Header Block - ID, Title, Type badge, Reading time, As of stamp */}
+          {/* Atom Header Block */}
           <div className="border border-[#23272D] bg-[#121417] p-6 rounded-[3px] mb-6">
             <div className="flex flex-wrap items-center gap-2 mb-3 font-mono text-xs">
               <span className="bg-[#191C20] border border-[#333940] text-[#C9711F] px-2 py-0.5 rounded-[3px] font-bold">
                 {atom.id}
               </span>
-              <span className="bg-[#191C20] border border-[#23272D] text-[#9AA3AD] uppercase px-2 py-0.5 rounded-[3px]">
-                {atom.type}
-              </span>
+              <TypeBadge type={atom.type} />
+              <CurrentnessMarker status={atom.currentness} asOf={atom.as_of} />
               <span className="text-[#6B747E] tabular-nums ml-auto">
                 {atom.reading_minutes} MIN READ
               </span>
@@ -177,7 +182,7 @@ export default async function AtomPage({ params }: PageProps) {
 
             {/* Perishable Stamp */}
             {atom.perishable && (
-              <div className="flex items-center gap-3 border-t border-[#23272D] pt-3 mt-4 font-mono text-xs">
+              <div className="flex flex-wrap items-center gap-3 border-t border-[#23272D] pt-3 mt-4 font-mono text-xs">
                 <span className="bg-[#A6503C]/10 text-[#A6503C] border border-[#A6503C]/30 px-2 py-0.5 rounded-[3px] font-semibold">
                   TIME-SENSITIVE REGULATION
                 </span>
@@ -195,8 +200,19 @@ export default async function AtomPage({ params }: PageProps) {
             )}
           </div>
 
-          {/* Compressed Mental Model (OneScreen) */}
-          <OneScreen text={atom.one_screen} />
+          {/* Stale Atom Warning Banner */}
+          {atom.currentness === "stale" && (
+            <div className="border border-[#A6503C] bg-[#A6503C]/10 p-4 rounded-[3px] mb-6 font-mono text-xs text-[#A6503C] flex items-center gap-3">
+              <span className="text-base font-bold">⚠️</span>
+              <div>
+                <strong className="font-bold uppercase block mb-0.5">UNVERIFIED STALE CONTENT NOTICE</strong>
+                This atom was last verified on {atom.as_of} and may no longer reflect current regulatory rules.
+              </div>
+            </div>
+          )}
+
+          {/* Compressed Mental Model (OneScreen rendered automatically ONCE) */}
+          <OneScreen text={atom.one_screen} isHeader={true} />
 
           {/* MDX Body */}
           <article className="mt-6 border-t border-[#23272D] pt-6">
@@ -241,6 +257,22 @@ export default async function AtomPage({ params }: PageProps) {
 
         {/* RIGHT COLUMN (240px, sticky) */}
         <aside className="lg:sticky lg:top-20 space-y-5 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto pl-2">
+          {/* Compare Across Jurisdictions Button */}
+          {hasMultipleVariants && (
+            <div className="border border-[#7D5A31] bg-[#121417] p-3 rounded-[3px]">
+              <div className="font-mono text-[10px] uppercase tracking-wider text-[#7D5A31] font-bold mb-1.5">
+                JURISDICTION MATRIX
+              </div>
+              <Link
+                href={`/compare/${atom.id}`}
+                className="font-mono text-xs font-bold text-[#C9711F] hover:text-[#E6E8EB] block flex items-center justify-between transition-colors"
+              >
+                <span>COMPARE JURISDICTIONS</span>
+                <span className="text-[10px]">→</span>
+              </Link>
+            </div>
+          )}
+
           {/* Table of Contents / Heading Outline */}
           {headings.length > 0 && (
             <div className="border border-[#23272D] bg-[#121417] p-3 rounded-[3px]">

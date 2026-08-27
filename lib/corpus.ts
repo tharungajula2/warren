@@ -6,10 +6,41 @@ import {
   AtomManifestItem,
   CorpusManifest,
   DomainTreeNode,
+  LintWarning,
+  CurrentnessStatus,
 } from "./schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "atoms");
 const MANIFEST_PATH = path.join(process.cwd(), "public", "corpus-manifest.json");
+
+function computeCurrentness(frontmatter: any, buildDate = new Date("2026-08-28")): CurrentnessStatus {
+  if (!frontmatter.perishable) {
+    return "durable";
+  }
+
+  if (frontmatter.next_effective_date) {
+    const effDate = new Date(frontmatter.next_effective_date);
+    if (effDate > buildDate) {
+      return "future";
+    }
+  }
+
+  if (!frontmatter.as_of) {
+    return "stale";
+  }
+
+  const asOfDate = new Date(frontmatter.as_of);
+  const diffTime = buildDate.getTime() - asOfDate.getTime();
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays <= 180) {
+    return "fresh";
+  } else if (diffDays <= 365) {
+    return "ageing";
+  } else {
+    return "stale";
+  }
+}
 
 /**
  * Builds the corpus manifest by reading all .mdx files in /content/atoms/,
@@ -22,13 +53,19 @@ export function generateCorpusManifest(): CorpusManifest {
   }
 
   const files = fs.readdirSync(CONTENT_DIR).filter((file) => file.endsWith(".mdx"));
-  const rawAtoms: Record<string, { frontmatter: any; filepath: string; filename: string }> = {};
+  const rawAtoms: Record<string, { frontmatter: any; content: string; filepath: string; filename: string }> = {};
 
   // Step 1 & 2: Read files and validate frontmatter against schema
   for (const filename of files) {
     const filepath = path.join(CONTENT_DIR, filename);
     const fileContent = fs.readFileSync(filepath, "utf-8");
-    const { data } = matter(fileContent);
+    const { data, content } = matter(fileContent);
+
+    if (/<OneScreen[\s/>]/i.test(content)) {
+      throw new Error(
+        `[BUILD ERROR] <OneScreen> tag found in body of "${filename}". <OneScreen> must NOT be used inside MDX bodies.`
+      );
+    }
 
     const parseResult = AtomFrontmatterSchema.safeParse(data);
     if (!parseResult.success) {
@@ -50,6 +87,7 @@ export function generateCorpusManifest(): CorpusManifest {
 
     rawAtoms[frontmatter.id] = {
       frontmatter,
+      content,
       filepath: filename,
       filename,
     };
@@ -136,10 +174,12 @@ export function generateCorpusManifest(): CorpusManifest {
   const atomsManifest: Record<string, AtomManifestItem> = {};
   for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
     const depth = computeDepth(id);
+    const currentness = computeCurrentness(frontmatter);
     atomsManifest[id] = {
       ...frontmatter,
       slug: id.toLowerCase(),
       depth,
+      currentness,
       filepath: filename,
     };
   }
@@ -191,10 +231,73 @@ export function generateCorpusManifest(): CorpusManifest {
     })
   );
 
+  // Lint warnings pass
+  const lintWarnings: LintWarning[] = [];
+  const inboundLinksCount: Record<string, number> = {};
+  for (const id of allIds) {
+    inboundLinksCount[id] = 0;
+  }
+  for (const atom of Object.values(atomsManifest)) {
+    const refs = [...atom.prerequisites, ...atom.see_also, ...atom.contrast_with];
+    for (const ref of refs) {
+      if (inboundLinksCount[ref] !== undefined) {
+        inboundLinksCount[ref]++;
+      }
+    }
+  }
+
+  for (const [id, atom] of Object.entries(atomsManifest)) {
+    const rawData = rawAtoms[id];
+    if (atom.status === "published" && (!atom.sources || atom.sources.length === 0)) {
+      lintWarnings.push({
+        rule: "MISSING_SOURCES",
+        atomId: id,
+        message: `Published atom "${id}" (${atom.title}) has no sources listed.`,
+      });
+    }
+    if (atom.perishable && atom.currentness === "stale") {
+      lintWarnings.push({
+        rule: "STALE_REGULATION",
+        atomId: id,
+        message: `Perishable atom "${id}" has as_of date (${atom.as_of}) older than 365 days.`,
+      });
+    }
+    if (atom.prerequisites.length === 0) {
+      lintWarnings.push({
+        rule: "ROOT_ATOM_NOTE",
+        atomId: id,
+        message: `Atom "${id}" has 0 prerequisites (Depth 0 Root).`,
+      });
+    }
+    if (!/<Recall[\s/>]/i.test(rawData.content)) {
+      lintWarnings.push({
+        rule: "MISSING_RECALL_BLOCK",
+        atomId: id,
+        message: `Atom "${id}" does not contain a <Recall> retrieval practice block.`,
+      });
+    }
+    const sentenceCount = (atom.one_screen.match(/[.!?]+/g) || []).length;
+    if (sentenceCount > 3) {
+      lintWarnings.push({
+        rule: "ONE_SCREEN_LENGTH",
+        atomId: id,
+        message: `one_screen in "${id}" contains ${sentenceCount} sentences (maximum 3 recommended).`,
+      });
+    }
+    if (inboundLinksCount[id] === 0 && atom.prerequisites.length === 0) {
+      lintWarnings.push({
+        rule: "ORPHAN_ATOM",
+        atomId: id,
+        message: `Orphan Atom "${id}": no other atom lists it as prerequisite, see_also, or contrast_with.`,
+      });
+    }
+  }
+
   const manifest: CorpusManifest = {
     atoms: atomsManifest,
     reverseIndex,
     domainTree,
+    lintWarnings,
     generatedAt: new Date().toISOString(),
   };
 
@@ -247,7 +350,6 @@ export function getPrerequisiteTrail(targetIds: string[]): PrerequisiteTrailResu
     .map((id) => manifest.atoms[id])
     .filter(Boolean);
 
-  // Sort topologically: lower depth first; if equal depth, sort by ID
   trailAtoms.sort((a, b) => {
     if (a.depth !== b.depth) {
       return a.depth - b.depth;
@@ -266,4 +368,3 @@ export function getPrerequisiteTrail(targetIds: string[]): PrerequisiteTrailResu
     totalReadingMinutes,
   };
 }
-

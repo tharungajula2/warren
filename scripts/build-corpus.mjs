@@ -67,8 +67,37 @@ const AtomFrontmatterSchema = z
     }
   );
 
+function computeCurrentness(frontmatter, buildDate = new Date("2026-08-28")) {
+  if (!frontmatter.perishable) {
+    return "durable";
+  }
+
+  if (frontmatter.next_effective_date) {
+    const effDate = new Date(frontmatter.next_effective_date);
+    if (effDate > buildDate) {
+      return "future";
+    }
+  }
+
+  if (!frontmatter.as_of) {
+    return "stale";
+  }
+
+  const asOfDate = new Date(frontmatter.as_of);
+  const diffTime = buildDate.getTime() - asOfDate.getTime();
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays <= 180) {
+    return "fresh";
+  } else if (diffDays <= 365) {
+    return "ageing";
+  } else {
+    return "stale";
+  }
+}
+
 function buildCorpus() {
-  console.log("=== WARREN CORPUS COMPILER ===");
+  console.log("=== WARREN CORPUS COMPILER & LINT PASS ===");
 
   if (!fs.existsSync(CONTENT_DIR)) {
     fs.mkdirSync(CONTENT_DIR, { recursive: true });
@@ -82,7 +111,15 @@ function buildCorpus() {
   for (const filename of files) {
     const filepath = path.join(CONTENT_DIR, filename);
     const fileContent = fs.readFileSync(filepath, "utf-8");
-    const { data } = matter(fileContent);
+    const { data, content } = matter(fileContent);
+
+    // Rule: Throw error if <OneScreen> tag exists in body
+    if (/<OneScreen[\s/>]/i.test(content)) {
+      console.error(
+        `\n❌ [BUILD ERROR] <OneScreen> tag found in body of "${filename}". <OneScreen> must NOT be used inside MDX bodies; one_screen is rendered automatically under the header.\n`
+      );
+      process.exit(1);
+    }
 
     const parseResult = AtomFrontmatterSchema.safeParse(data);
     if (!parseResult.success) {
@@ -104,6 +141,7 @@ function buildCorpus() {
 
     rawAtoms[frontmatter.id] = {
       frontmatter,
+      content,
       filepath: filename,
       filename,
     };
@@ -192,10 +230,13 @@ function buildCorpus() {
   const atomsManifest = {};
   for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
     const depth = computeDepth(id);
+    const currentness = computeCurrentness(frontmatter);
+
     atomsManifest[id] = {
       ...frontmatter,
       slug: id.toLowerCase(),
       depth,
+      currentness,
       filepath: filename,
     };
   }
@@ -241,10 +282,88 @@ function buildCorpus() {
     })),
   }));
 
+  // LINT PASS: Generate warnings report
+  const lintWarnings = [];
+
+  // Track inbound links for orphan detection
+  const inboundLinksCount = {};
+  for (const id of allIds) {
+    inboundLinksCount[id] = 0;
+  }
+
+  for (const atom of Object.values(atomsManifest)) {
+    const refs = [...atom.prerequisites, ...atom.see_also, ...atom.contrast_with];
+    for (const ref of refs) {
+      if (inboundLinksCount[ref] !== undefined) {
+        inboundLinksCount[ref]++;
+      }
+    }
+  }
+
+  for (const [id, atom] of Object.entries(atomsManifest)) {
+    const rawData = rawAtoms[id];
+
+    // 1. Published atoms with no sources
+    if (atom.status === "published" && (!atom.sources || atom.sources.length === 0)) {
+      lintWarnings.push({
+        rule: "MISSING_SOURCES",
+        atomId: id,
+        message: `Published atom "${id}" (${atom.title}) has no sources listed.`,
+      });
+    }
+
+    // 2. Perishable atoms with as_of older than 365 days
+    if (atom.perishable && atom.currentness === "stale") {
+      lintWarnings.push({
+        rule: "STALE_REGULATION",
+        atomId: id,
+        message: `Perishable atom "${id}" has as_of date (${atom.as_of}) older than 365 days.`,
+      });
+    }
+
+    // 3. Root atoms (depth 0)
+    if (atom.prerequisites.length === 0) {
+      lintWarnings.push({
+        rule: "ROOT_ATOM_NOTE",
+        atomId: id,
+        message: `Atom "${id}" has 0 prerequisites (Depth 0 Root).`,
+      });
+    }
+
+    // 4. Missing <Recall> block in MDX body
+    if (!/<Recall[\s/>]/i.test(rawData.content)) {
+      lintWarnings.push({
+        rule: "MISSING_RECALL_BLOCK",
+        atomId: id,
+        message: `Atom "${id}" does not contain a <Recall> retrieval practice block.`,
+      });
+    }
+
+    // 5. one_screen longer than 3 sentences
+    const sentenceCount = (atom.one_screen.match(/[.!?]+/g) || []).length;
+    if (sentenceCount > 3) {
+      lintWarnings.push({
+        rule: "ONE_SCREEN_LENGTH",
+        atomId: id,
+        message: `one_screen in "${id}" contains ${sentenceCount} sentences (maximum 3 recommended).`,
+      });
+    }
+
+    // 6. Orphan atom detection
+    if (inboundLinksCount[id] === 0 && atom.prerequisites.length === 0) {
+      lintWarnings.push({
+        rule: "ORPHAN_ATOM",
+        atomId: id,
+        message: `Orphan Atom "${id}": no other atom lists it as prerequisite, see_also, or contrast_with.`,
+      });
+    }
+  }
+
   const manifest = {
     atoms: atomsManifest,
     reverseIndex,
     domainTree,
+    lintWarnings,
     generatedAt: new Date().toISOString(),
   };
 
@@ -254,9 +373,15 @@ function buildCorpus() {
   }
 
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), "utf-8");
+
   console.log(`✅ Corpus Manifest successfully written to ${MANIFEST_PATH}`);
   console.log(`   Atoms compiled: ${Object.keys(atomsManifest).length}`);
-  console.log(`   Domains indexed: ${domainTree.length}\n`);
+  console.log(`   Domains indexed: ${domainTree.length}`);
+  console.log(`\n⚠️  LINT WARNING REPORT (${lintWarnings.length} warnings):`);
+  lintWarnings.forEach((w) => {
+    console.log(`   [${w.rule}] ${w.atomId ? w.atomId + ": " : ""}${w.message}`);
+  });
+  console.log("\n");
 }
 
 buildCorpus();

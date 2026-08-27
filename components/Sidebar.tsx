@@ -132,7 +132,7 @@ export function Sidebar({ manifest, isMobileOpen, onMobileClose }: SidebarProps)
                                 <span className="text-[#6B747E] group-hover:text-[#9AA3AD] shrink-0 text-[11px]">
                                   {atom.id}
                                 </span>
-                                <span className="font-sans text-[12px] truncate leading-tight">
+                                <span className="font-sans text-[12px] line-clamp-2 leading-tight">
                                   {atom.title}
                                 </span>
                                 {atom.perishable && (
@@ -180,7 +180,7 @@ export function Sidebar({ manifest, isMobileOpen, onMobileClose }: SidebarProps)
       {/* Desktop Sidebar */}
       <aside
         className={`hidden lg:flex flex-col sticky top-12 h-[calc(100vh-3rem)] border-r border-[#23272D] bg-[#0B0C0E] transition-all duration-150 ${
-          isRailMode ? "w-[48px]" : "w-[260px]"
+          isRailMode ? "w-[48px]" : "w-[280px]"
         }`}
       >
         {contentNode}
