@@ -1,0 +1,130 @@
+---
+id: CR-11
+title: 'Write-off: accounting removal versus economic loss'
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  A write-off changes the carrying amount recognised on the balance sheet; it
+  does not necessarily mean the legal claim, recovery process or economic
+  history has vanished. Default, provision, write-off and recovery are separate
+  lifecycle states.
+prerequisites:
+  - CR-03
+  - CR-05
+  - CR-09
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, DBR.BP.BC.No.29/21.07.001/2018-19, “Deferral of
+      Implementation of Indian Accounting Standards”, 22 March 2019
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20,
+      “Implementation of Indian Accounting Standards”, 13 March 2020
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0'
+    accessed: 28 August 2026
+  - label: 'IFRS Foundation, IFRS 9 Financial Instruments, paragraph 5.4.4'
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html
+    accessed: 28 August 2026
+  - label: >-
+      Federal Reserve, “Interagency Policy Statement on Allowances for Credit
+      Losses”
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+An **accounting write-off** removes all or part of a financial asset's gross carrying amount when the applicable accounting framework concludes that the amount should no longer remain recognised as a receivable. Under IFRS 9, the gross carrying amount is directly reduced when there is no reasonable expectation of recovery, and the write-off is a derecognition event.
+
+An **economic loss** is different. It asks how much value was actually lost after considering recoveries, collateral proceeds, costs and the timing of cash flows. A bank can write off an account and later collect money. Such post-write-off recoveries remain economically relevant and must not disappear from LGD history.
+
+A **technical write-off** can remove the recognised balance from one accounting presentation while recovery action continues and the borrower remains liable. RBI explicitly recognises partial and technical write-offs and states that the remaining part of the loan cannot thereby be shown as a standard asset.
+
+Provisioning is also distinct. A **provision** or allowance recognises expected credit loss while the asset may remain on the balance sheet; a write-off removes carrying amount. Neither event by itself rewrites the historical default date.
+
+This distinction is especially important in India. Scheduled commercial banks have **not** been moved onto Ind AS 109: RBI deferred their Ind AS implementation until further notice in its 22 March 2019 circular. Their prudential asset classification and provisioning continue under RBI norms. Relevant NBFCs that apply Ind AS are subject to RBI's Ind AS implementation guidance, including parallel comparison with prudential IRACP requirements.
+
+&lt;Flow&gt;
++-------------+
+| Exposure    |
++-------------+
+      |
+      v
++-------------+
+| Default     |
++-------------+
+      |
+      v
++-------------------+
+| Provision/allowance|
++-------------------+
+      |
+      v
++-------------+
+| Write-off   |
++-------------+
+      |
+      v
++----------------+
+| Recovery may   |
+| still occur    |
++----------------+
+      |
+      v
++----------------+
+| Final economic |
+| loss           |
++----------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Never delete default and recovery history because an accounting write-off has occurred.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating write-off amount as LGD automatically ignores post-write-off recoveries, workout expenses and the time value of delayed collections.
+</Trap>
+
+<NeverConfuse>
+**Write-off** — reduction or removal of recognised carrying amount under the relevant accounting or prudential framework.
+
+**Debt forgiveness** — release of the debtor's legal obligation; a write-off does not necessarily forgive the debt.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI deferred Ind AS implementation for banks until further notice; commercial-bank provisioning continues under RBI prudential IRACP norms. Relevant NBFCs applying Ind AS maintain Ind AS impairment allowances while also computing the prudential IRACP floor required by RBI. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; DOR (NBFC).CC.PD.No.109/22.10.106/2019-20]
+</Delta>
+
+<Delta j="UK">
+— entities applying UK-adopted IFRS 9 use the accounting write-off principle when no reasonable expectation of recovery remains; prudential default remains a separate regulatory concept. [IFRS 9 paragraph 5.4.4; PRA default framework]
+</Delta>
+
+<Delta j="EU">
+— IFRS-reporting entities follow IFRS 9 write-off requirements while CRR regulatory default remains a separate prudential classification. [IFRS 9; CRR Article 178]
+</Delta>
+
+<Delta j="US">
+— CECL accounting recognises expected credit-loss allowances and retains charge-off guidance for amounts deemed uncollectible; regulatory default and nonaccrual classifications are separate concepts. [Interagency Policy Statement on Allowances for Credit Losses]
+</Delta>
+
+<Recall
+  q="Does accounting write-off mean collections must stop?"
+  a="No. A legal claim or recovery process may continue depending on the circumstances and applicable law."
+/>
+
+<Recall
+  q="Are Indian scheduled commercial banks on Ind AS 109?"
+  a="No. RBI deferred bank implementation of Ind AS until further notice; relevant NBFCs applying Ind AS are a different case."
+/>

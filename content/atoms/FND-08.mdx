@@ -1,0 +1,94 @@
+---
+id: FND-08
+title: Accrual Versus Cash
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Accrual accounting recognises economic effects when the recognition criteria
+  are met, not simply when cash moves.** Cash accounting asks when money moved;
+  accrual accounting asks what asset, liability, income or expense exists
+  because of what happened.
+prerequisites:
+  - FND-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters
+      4–5
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/
+    accessed: 'August 28, 2026'
+  - label: 'IFRS Foundation, *IAS 7 Statement of Cash Flows*'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+Suppose a bank earns 10 of interest during December but receives the cash in January. Under accrual accounting, December can contain the interest income even though the corresponding cash receipt occurs later. The unpaid amount is reflected in a recognised asset or in the carrying amount of the financial instrument as required by the applicable accounting framework.
+
+The opposite timing also occurs. A bank can pay cash before an expense belongs economically to the current period, creating a prepaid asset until the service is consumed. It can recognise an expense before paying the cash, creating or increasing a liability. The presence or absence of a current-period cash movement therefore does not determine whether income or expense exists.
+
+This distinction is especially important for **provisions and impairment**. A deterioration in expected recoveries can create an accounting loss before a borrower actually fails to pay cash. The financial statements are attempting to represent the changed economic value or expected collectability under the applicable measurement rules, rather than waiting for the final cash shortfall to become certain.
+
+The cash-flow statement then restores visibility over actual cash movements. Under IAS 7, cash flows are presented by operating, investing and financing activities, while the balance sheet contains the resulting closing cash and cash-equivalent positions.
+
+Accrual accounting does not permit arbitrary forecasting to be booked as profit or loss. Recognition and measurement must follow the applicable accounting requirements. The foundational point is narrower: **timing of accounting recognition and timing of cash settlement can differ**. Understanding that separation prevents provisions, accrued interest, receivables and payables from being mistaken for cash transactions.
+
+&lt;Flow&gt;
+Economic event occurs
+         |
+         v
++-----------------------+
+| Recognition criteria  |
+| satisfied?            |
++-----------------------+
+         |
+         v
++-----------------------+
+| Accrual accounting    |
+| records effect        |
++-----------------------+
+         |
+         | cash may move
+         | earlier or later
+         v
++-----------------------+
+| Cash-flow statement   |
+| records cash timing   |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+An income or expense can be recognised without an equal cash movement in the same reporting period.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Reversing a valid provision merely because "no cash has been lost yet". The absence of cash settlement does not by itself invalidate accrual recognition.
+</Trap>
+
+<NeverConfuse a="Accrual" b="Cash movement">
+**Accrual** — recognition based on the economic event and applicable recognition requirements.
+---
+**Cash movement** — settlement or transfer of cash; its date can differ from the accounting recognition date.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Specific recognition rules vary by accounting framework, but the distinction between accrual recognition and cash timing is universal.
+</Rule>
+
+<Recall
+  q="Can income be recognised before cash is received?"
+  a="Yes, where the applicable accrual accounting requirements are satisfied."
+/>
+
+<Recall
+  q="Where are actual cash movements made visible?"
+  a="In the cash-flow statement and the resulting cash balance."
+/>

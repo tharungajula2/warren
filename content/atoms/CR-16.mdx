@@ -1,0 +1,93 @@
+---
+id: CR-16
+title: Effective maturity
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Effective maturity converts the timing of an exposure's remaining contractual
+  cash flows into a maturity measure relevant to credit risk. It is not always
+  the calendar time until the final legal maturity date.
+prerequisites:
+  - CR-02
+  - CR-03
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE32, “IRB
+      approach: risk components”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/32.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      effective-maturity definition
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+**Maturity** matters because credit risk has more time to change over a longer horizon. A borrower that is sound today has more opportunity to deteriorate over five years than over three months, all else equal.
+
+The simplest maturity measure is **remaining final maturity**: time until the last contractual payment. **Effective maturity (M)** can instead reflect the timing of all expected contractual cash flows. Under Basel IRB rules, specified wholesale exposures with a determined cash-flow schedule use a cash-flow-weighted measure, subject to regulatory specifications, floors and caps. US Advanced Approaches regulation similarly defines effective maturity for ordinary wholesale exposures using the weighted-average remaining maturity of expected contractual cash flows, with undiscounted cash-flow amounts as weights and separate rules for specified transaction types.
+
+Consider two five-year loans. Loan A amortises heavily in the first two years; Loan B makes almost all principal repayment at year five. They have the same final legal maturity but not the same temporal exposure profile. A cash-flow-weighted effective maturity will generally be shorter for Loan A.
+
+Effective maturity is not EAD. EAD measures how much is exposed at default; maturity describes the time structure over which credit risk operates. Nor is it the **average life** used in every pricing or asset-liability calculation: formulas can look similar while serving different regulatory purposes.
+
+Contractual options, derivatives, netting sets and certain short-term transactions can require specialised treatment, so production implementations should never replace the applicable regulatory formula with a generic spreadsheet average.
+
+&lt;Flow&gt;
++-------------------+
+| Future cash flows |
++-------------------+
+   |      |      |
+   v      v      v
++----+  +----+  +----+
+| t1 |  | t2 |  | tn |
++----+  +----+  +----+
+   \      |      /
+    \     |     /
+     v    v    v
++--------------------+
+| Cash-flow weighting|
++--------------------+
+          |
+          v
++--------------------+
+| Effective maturity |
++--------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A maturity measure is meaningful only when its cash-flow convention and purpose are specified.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using final contractual maturity as effective maturity for every instrument ignores amortisation and specialised regulatory rules.
+</Trap>
+
+<NeverConfuse>
+**Final maturity** — time until the final contractual payment date.
+
+**Effective maturity** — a risk measure reflecting the timing of contractual cash flows under a defined methodology.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The economic concept is universal; Basel-derived regulatory frameworks can prescribe different floors, caps and special-case formulas.
+</Rule>
+
+<Recall
+  q="Can two loans with the same final maturity have different effective maturities?"
+  a="Yes, when their repayment profiles differ."
+/>
+
+<Recall
+  q="Does effective maturity measure exposure amount?"
+  a="No. Exposure amount is addressed by EAD."
+/>

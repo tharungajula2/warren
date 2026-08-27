@@ -1,0 +1,107 @@
+---
+id: CR-14
+title: Loss given default and recovery rate
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  LGD is loss severity conditional on default; recovery rate is the
+  complementary recovered share only when both are defined on a consistent
+  economic basis. Economic LGD must capture recovery cash flows, costs and
+  timing rather than merely subtracting collateral value from balance.
+prerequisites:
+  - CR-05
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, LGD
+      estimation requirements
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR 217.101, economic-loss
+      definition
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+**Loss given default (LGD)** measures the proportion of exposure lost if default occurs. If exposure at default is 100 and the present value of net recoveries attributable to that exposure is 65, economic loss is 35 and LGD is 35%.
+
+A simplified relationship is:
+
+`LGD = 1 − recovery rate`
+
+but only when the recovery rate and LGD use the same exposure base, time horizon, costs and discounting convention.
+
+Recoveries can come from borrower payments, collateral realisation, guarantees or other workout proceeds. Costs of collection, legal action, asset maintenance and collateral disposal reduce net recovery. Delayed recovery is worth less than immediate recovery because the time value of money matters. US Advanced Approaches regulation explicitly requires economic loss on defaulted exposures to reflect the net present value of post-default cash flows, including collateral proceeds, workout costs and further drawings.
+
+Collateral is therefore an input to LGD, not LGD itself. A property appraised at 80 against a 100 exposure does not imply 20% LGD. The realised sale price may differ; enforcement may take years; senior claims and costs may reduce proceeds; and some borrower payments may occur independently of collateral.
+
+LGD also varies systematically with economic conditions. When defaults are unusually high, collateral values and recovery capacity can simultaneously deteriorate. Basel consequently requires IRB LGD estimates to incorporate downturn conditions where necessary and constrains them relative to long-run default-weighted loss experience.
+
+&lt;Flow&gt;
++-------------------+
+| Exposure at default|
++-------------------+
+          |
+          v
++-------------------+
+| Gross recoveries  |
++-------------------+
+          |
+          v
++-------------------+
+| Less workout costs|
++-------------------+
+          |
+          v
++-------------------+
+| Discount to       |
+| default date      |
++-------------------+
+          |
+          v
++-------------------+
+| Net recovery      |
++-------------------+
+          |
+          v
++-------------------+
+| Economic LGD      |
++-------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+LGD is conditional on default and must use recoveries and exposure measured on a consistent economic basis.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Estimating LGD as `1 − collateral value / current balance` ignores timing, recovery costs, seniority, collateral volatility and exposure changes before default.
+</Trap>
+
+<NeverConfuse>
+**LGD** — the proportion of exposure economically lost conditional on default.
+
+**Recovery rate** — the proportion recovered on the same consistent base; it is complementary to LGD only under aligned definitions.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The economic relationship between loss and recovery is universal; prudential frameworks can prescribe floors, downturn adjustments, discounting and eligible mitigation differently.
+</Rule>
+
+<Recall
+  q="If discounted net recovery is 70% of EAD, what is economic LGD?"
+  a="30%, assuming consistent definitions."
+/>
+
+<Recall
+  q="Why is collateral value not the same as recovery?"
+  a="Realisation timing, costs, priority, market value and enforcement outcomes can all change what is actually recovered."
+/>

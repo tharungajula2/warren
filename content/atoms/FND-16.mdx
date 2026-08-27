@@ -1,0 +1,100 @@
+---
+id: FND-16
+title: Probability and Expected Value
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Probability says how likely an outcome is; expected value combines each
+  possible outcome with its probability.** A 1% probability of losing 100 is not
+  a loss of 1%, but in a two-outcome example it contributes an expected loss of
+  1.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
+      of Statistical Methods*
+    url: 'https://www.itl.nist.gov/div898/handbook/'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+A **probability** is a number between 0 and 1 representing the likelihood assigned to an event under a specified probability model. A probability of 0.01 corresponds to 1%; a probability of 1 corresponds to certainty within that model.
+
+An **expected value** is a probability-weighted average of possible numerical outcomes. For a discrete random variable \(X\) with outcomes \(x_i\) and probabilities \(p_i\):
+
+\[
+E[X]=\sum_i p_i x_i
+\]
+
+Suppose a position loses 100 with probability 1% and loses zero with probability 99%. Expected loss is:
+
+\[
+0.01\times100+0.99\times0=1
+\]
+
+Nothing in that calculation predicts that a realised loss will equal 1. In an individual period, the simplified position loses either 0 or 100. The value 1 describes the probability-weighted mean across the modelled distribution or across repeated comparable situations.
+
+That is why probability and expected loss must carry units correctly. Probability is dimensionless: 1%, 5%, 20%. Expected loss is measured in currency or another loss unit. Multiplying a probability by a loss amount can contribute to expected loss; the probability itself is never the amount of loss.
+
+Expected value is also sensitive to the modelled outcome set and assigned probabilities. Missing a severe state or mis-estimating its probability changes the answer. A mathematically correct weighted average does not rescue incorrect assumptions.
+
+This distinction forms the base for credit-risk reasoning. Default probability describes likelihood. Exposure describes what is at risk. Loss severity describes what portion is lost if the event occurs. Combining such quantities can create an expected-loss measure, but each answers a different question.
+
+&lt;Flow&gt;
+Possible outcomes
+      |
+      v
++----------------------+
+| Assign probability   |
+| p_i to each outcome  |
++----------------------+
+      |
+      v
++----------------------+
+| Multiply             |
+| p_i x outcome_i      |
++----------------------+
+      |
+      v
++----------------------+
+| Sum across outcomes  |
++----------------------+
+      |
+      v
+   Expected value
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Probability is a likelihood; expected value is a probability-weighted amount.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Reporting "1% expected loss" when the calculation actually produced a 1% probability of a monetary loss event.
+</Trap>
+
+<NeverConfuse a="Probability" b="Expected value">
+**Probability** — likelihood of an event under the stated model.
+---
+**Expected value** — the probability-weighted average amount across possible outcomes.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Probability axioms and expected-value mathematics do not depend on jurisdiction.
+</Rule>
+
+<Recall
+  q="What is the expected loss from a 1% chance of losing 100 and otherwise losing zero?"
+  a="1."
+/>
+
+<Recall
+  q="Does an expected loss of 1 mean the realised loss will be 1?"
+  a="No."
+/>

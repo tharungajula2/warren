@@ -1,0 +1,100 @@
+---
+id: CR-02
+title: 'Facility, account and product'
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  A product is a reusable commercial design, a facility is a particular
+  contractual grant of credit, and an account is an operational record through
+  which a facility may be booked or serviced. Credit decisions occur on real
+  facilities and obligors, not on abstract product labels.
+prerequisites:
+  - CR-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB
+      approach: minimum requirements to use IRB approach”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE20,
+      “Standardised approach: individual exposures”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/20.htm'
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+A **product** is a standardised commercial form of credit: for example, a term-loan structure, revolving line, overdraft or card structure. It defines broad contractual and operational characteristics but does not by itself identify a particular credit obligation.
+
+A **facility** is the actual contractual availability of credit to a particular obligor or set of obligors. It has terms such as limit, currency, maturity, repayment schedule, pricing, security and covenants. One obligor can have many facilities, and each facility can have different loss severity and exposure behaviour even when the obligor's probability of default is common.
+
+An **account** is an operational or accounting record used to book balances, payments, arrears, interest and other activity. A simple loan may have one facility and one account. More complex structures may have multiple accounts under one facility, while some operational architectures represent a single economic exposure across several ledgers.
+
+This distinction matters throughout credit risk. Probability of default is often principally associated with the obligor or homogeneous retail pool. Loss given default depends heavily on facility-specific collateral, seniority and recovery structure. Exposure at default depends on the particular facility's balance, limit and ability to draw further funds. Delinquency may first be observed on an account, while a regulatory default rule can propagate the consequence to the obligor or other facilities.
+
+Basel's IRB architecture explicitly separates borrower default risk from transaction-specific characteristics, and retail portfolios may, under applicable rules, permit default recognition at an individual facility rather than across every exposure to the obligor.
+
+&lt;Flow&gt;
++----------------------+
+| Product design       |
+| reusable template    |
++----------------------+
+           |
+           v
++----------------------+
+| Facility             |
+| contractual credit   |
++----------------------+
+       |          |
+       v          v
++-----------+ +-----------+
+| Account A | | Account B |
+| postings  | | postings  |
++-----------+ +-----------+
+       \          /
+        \        /
+         v      v
++----------------------+
+| Facility exposure    |
++----------------------+
+           |
+           v
++----------------------+
+| Obligor exposure     |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Product, facility and account describe different levels. Any risk measure must declare the level to which it attaches.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+A delinquent account is sometimes treated as though it were automatically a delinquent obligor, without checking whether the applicable default framework is facility-level or obligor-level.
+</Trap>
+
+<NeverConfuse>
+**Facility** — a specific contractual grant or commitment of credit.
+
+**Account** — an operational record used to book and service activity; it may represent all, part or more than one component of a facility.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Regulatory systems differ in when facility-level status propagates to other facilities, but the underlying object hierarchy is universal.
+</Rule>
+
+<Recall
+  q="Which object contains the contractual limit and maturity?"
+  a="The facility."
+/>
+
+<Recall
+  q="Why can one obligor have different LGDs across facilities?"
+  a="Collateral, seniority, contractual structure and recovery prospects can differ facility by facility."
+/>

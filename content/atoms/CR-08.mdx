@@ -1,0 +1,116 @@
+---
+id: CR-08
+title: Unlikeliness to pay
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Unlikeliness to pay recognises default from the substance of credit
+  deterioration before a delinquency clock necessarily reaches its backstop. It
+  is forward-looking judgement about full repayment without extraordinary
+  recovery action, not a discretionary excuse to classify whichever borrowers
+  appear weak.
+prerequisites:
+  - CR-05
+  - CR-07
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Prudential Regulation Authority, SS3/24, “Credit risk definition of
+      default”
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement
+    accessed: 28 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+**Unlikeliness to pay (UTP)** asks whether the obligor is likely to discharge its credit obligations in full without the lender having to rely on actions such as enforcing collateral. Basel and US wholesale-default rules expressly contain this concept.
+
+UTP exists because payment history is lagging information. A borrower may still be contractually current on the observation date even though events have made full repayment implausible. Waiting for 90 days of arrears in such a case would make default identification systematically late.
+
+Relevant evidence can arise from distressed restructuring, insolvency processes, severe deterioration in repayment capacity, credit-related write-downs or other well-defined indicators under the applicable framework. The point is not the name of the indicator but the inference: full repayment under the original credit obligation is no longer likely without exceptional intervention.
+
+UTP must nevertheless be governed. An internal watch-list flag, a negative news item or a rating downgrade is not automatically default. Those signals may lead to assessment, but the institution needs documented criteria that distinguish increased risk from the threshold for default. Basel minimum requirements and PRA supervisory materials place emphasis on consistency, documentation and defined indicators because uncontrolled judgement would make default rates incomparable through time and across portfolios.
+
+UTP also shows why collateral does not "prevent" default. A fully secured obligor can be unlikely to pay. Good collateral may produce a low LGD after default, but the need to realise security is itself central to the default concept in Basel-style formulations.
+
+&lt;Flow&gt;
++-----------------------+
+| Adverse information   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Assess repayment      |
+| capacity and intent   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Full payment likely   |
+| without enforcement?  |
++-----------------------+
+       |           |
+      yes          no
+       |           |
+       v           v
++-----------+  +-----------+
+| No UTP    |  | UTP       |
+| trigger   |  | default   |
++-----------+  +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+UTP evaluates the likelihood of full payment, not the expected collateral recovery after payment failure.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating a well-secured exposure as non-defaulted because collateral should cover the debt confuses default likelihood with loss severity.
+</Trap>
+
+<NeverConfuse>
+**Unlikely to pay** — the obligor is not expected to meet the credit obligation in full without qualifying recovery action.
+
+**High LGD** — a large loss severity conditional on default; an obligor can be UTP with either low or high LGD.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI commercial-bank NPA rules are not a word-for-word implementation of the Basel IRB UTP test; prudential classification follows RBI's product and stressed-asset rules. Specific Basel capital default concepts and RBI NPA classification therefore require separate mapping. [RBI IRACP Directions 2025]
+</Delta>
+
+<Delta j="UK">
+— the PRA's definition-of-default framework explicitly addresses indicators of unlikeliness to pay, including distressed restructuring. [PRA definition-of-default policy; SS3/24 framework]
+</Delta>
+
+<Delta j="EU">
+— unlikeliness to pay is an independent limb of CRR Article 178 default and can identify default before more than 90 days past due. [CRR Article 178; EBA definition-of-default Guidelines]
+</Delta>
+
+<Delta j="US">
+— Advanced Approaches wholesale obligor default expressly includes a determination that the obligor is unlikely to pay in full without recourse to actions such as realising collateral. [12 CFR Part 217 Subpart E]
+</Delta>
+
+<Recall
+  q="Can an exposure default while it is less than 90 DPD?"
+  a="Yes, where an applicable qualitative or UTP trigger is met."
+/>
+
+<Recall
+  q="Does strong collateral eliminate UTP?"
+  a="No. Collateral mainly affects recovery and LGD; needing to realise it does not prove the obligor can pay."
+/>

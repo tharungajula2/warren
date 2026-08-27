@@ -1,0 +1,100 @@
+---
+id: CR-18
+title: Unexpected loss and capital
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Expected loss is the average credit cost; unexpected loss is adverse variation
+  around that average. Capital exists to absorb sufficiently severe unexpected
+  losses and protect creditors when realised losses exceed ordinary
+  expected-loss capacity.
+prerequisites:
+  - CR-17
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB
+      approach: risk-weight functions”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/31.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment
+      of expected losses and recognition of provisions”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/35.htm'
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+Expected loss answers: **what credit loss should be anticipated on average?** Unexpected loss answers: **how bad can loss become above that average under an adverse but relevant confidence standard?**
+
+Suppose a portfolio has expected annual loss of 10. Actual loss will not equal 10 every year. It might be 3 in a benign year, 12 in an ordinary weak year or 80 in a severe systemic downturn. The distribution of possible outcomes matters.
+
+A conceptual capital quantity can be written as:
+
+`Unexpected-loss capital ≈ high loss quantile − expected loss`
+
+This is a mental model, not a universal regulatory capital formula. Regulatory frameworks incorporate risk-weighted assets, prescribed confidence assumptions, correlations, maturity adjustments, floors, buffers and other prudential elements.
+
+The reason for separating EL from UL is economic. A recurring expected cost should be reflected in pricing, margins, provisioning or other ordinary loss-absorption mechanisms. Funding a predictable average loss entirely with shareholder capital would confuse an expense of lending with protection against tail outcomes.
+
+Basel states that IRB risk-weight functions are designed to address unexpected losses, while expected losses are treated separately in the framework. Credit capital therefore cannot be understood by multiplying PD, LGD and EAD alone. The dispersion and dependence of portfolio losses are essential.
+
+Diversification narrows unexpected loss when defaults are not perfectly dependent. Concentration and systematic correlation widen the tail. This is why two portfolios with identical expected losses can require very different economic or regulatory capital.
+
+&lt;Flow&gt;
++----------------------+
+| Credit loss          |
+| distribution         |
++----------------------+
+       |          |
+       v          v
++-----------+  +----------------+
+| Expected  |  | Severe tail    |
+| loss      |  | loss quantile  |
++-----------+  +----------------+
+                    |
+                    v
+           +--------------------+
+           | Excess over EL     |
+           | = unexpected loss  |
+           +--------------------+
+                    |
+                    v
+           +--------------------+
+           | Capital protection |
+           +--------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Expected loss and unexpected loss answer different questions and require different loss-absorption logic.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling PD × LGD × EAD "capital" collapses the mean of the loss distribution into its tail.
+</Trap>
+
+<NeverConfuse>
+**Expected loss** — average probability-weighted loss.
+
+**Unexpected loss** — adverse variation above the expected level, which is the central credit-risk rationale for capital.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The expected-versus-unexpected distinction is universal; capital formulae and prudential buffers differ across regulatory regimes.
+</Rule>
+
+<Recall
+  q="Can two portfolios with equal expected loss have different capital needs?"
+  a="Yes, because concentration, correlation and loss volatility can make their tails very different."
+/>
+
+<Recall
+  q="What does Basel IRB capital principally target?"
+  a="Unexpected loss, with expected loss addressed separately."
+/>

@@ -1,7 +1,2791 @@
 {
-  "atoms": {},
-  "reverseIndex": {},
-  "domainTree": [],
+  "atoms": {
+    "CR-01": {
+      "id": "CR-01",
+      "title": "Obligor, borrower and counterparty",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "An obligor owes the credit obligation, a borrower receives or uses borrowed funds, and a counterparty is the other party to a financial transaction. The labels often describe the same legal person, but they are not interchangeable because credit risk must attach to the entity that is legally or economically responsible for performance.",
+      "prerequisites": [
+        "FND-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE50, “Counterparty credit risk”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/50.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, “Definitions”",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-01",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "CR-01.mdx",
+      "initialX": 219.7,
+      "initialY": 4.6
+    },
+    "CR-02": {
+      "id": "CR-02",
+      "title": "Facility, account and product",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "A product is a reusable commercial design, a facility is a particular contractual grant of credit, and an account is an operational record through which a facility may be booked or serviced. Credit decisions occur on real facilities and obligors, not on abstract product labels.",
+      "prerequisites": [
+        "CR-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB approach: minimum requirements to use IRB approach”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE20, “Standardised approach: individual exposures”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/20.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-02",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "CR-02.mdx",
+      "initialX": 269.4,
+      "initialY": -2.2
+    },
+    "CR-03": {
+      "id": "CR-03",
+      "title": "Exposure and aggregation levels",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Exposure is the amount or value subject to credit loss, but its meaning changes with the aggregation level and measurement purpose. Account balance, facility exposure, obligor exposure and portfolio exposure answer different questions and must never be silently substituted.",
+      "prerequisites": [
+        "CR-01",
+        "CR-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025, paragraph 5",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-03",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "CR-03.mdx",
+      "initialX": 283.1,
+      "initialY": 48.4
+    },
+    "CR-04": {
+      "id": "CR-04",
+      "title": "Group and connected-party exposure",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Legal separation does not guarantee economic independence. Connected-party rules aggregate exposures where control or economic interdependence means that trouble at one entity can transmit to another, preventing a bank from disguising one concentrated risk as several separate names.",
+      "prerequisites": [
+        "CR-01",
+        "CR-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10, “Large exposures”",
+          "url": "https://www.bis.org/basel_framework/chapter/LEX/10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, SS3/25, “Identification of groups of connected clients”",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Reserve Bank of India (Commercial Banks – Large Exposures Framework) Directions, 2025",
+          "url": "https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13152",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 32, “Lending Limits”",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-32",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-04",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "CR-04.mdx",
+      "initialX": 289.3,
+      "initialY": -9.9
+    },
+    "CR-05": {
+      "id": "CR-05",
+      "title": "Default: event before metric",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Default is a rule-defined credit state, not a synonym for loss, arrears or bankruptcy. A PD, default rate, cure rate or LGD is meaningless until the population, level of application and exact events that constitute default have been fixed.",
+      "prerequisites": [
+        "CR-01",
+        "CR-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, PS7/19, “Credit risk: the definition of default”",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-05",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "CR-05.mdx",
+      "initialX": 303.2,
+      "initialY": 31.7
+    },
+    "CR-06": {
+      "id": "CR-06",
+      "title": "Days past due, arrears and delinquency buckets",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Days past due measures elapsed time since a contractual amount became unpaid; arrears measure the unpaid amount; a delinquency bucket groups accounts by lateness. None of these is automatically the same thing as default.",
+      "prerequisites": [
+        "CR-02",
+        "CR-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025, paragraphs 31–42",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, “Prudential norms on Income Recognition, Asset Classification and Provisioning – Clarifications”, 12 November 2021",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12194&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-06",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "CR-06.mdx",
+      "initialX": 319.2,
+      "initialY": -40.3
+    },
+    "CR-07": {
+      "id": "CR-07",
+      "title": "The ninety-day backstop",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Ninety days past due is a backstop because credit can default before day 90 through unlikeliness-to-pay criteria. Waiting for the clock when evidence already shows non-payment is likely converts a maximum mechanical threshold into an unjustified grace period.",
+      "prerequisites": [
+        "CR-05",
+        "CR-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, PS7/19, “Credit risk: the definition of default”",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-07",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "CR-07.mdx",
+      "initialX": 367.2,
+      "initialY": 3.4
+    },
+    "CR-08": {
+      "id": "CR-08",
+      "title": "Unlikeliness to pay",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Unlikeliness to pay recognises default from the substance of credit deterioration before a delinquency clock necessarily reaches its backstop. It is forward-looking judgement about full repayment without extraordinary recovery action, not a discretionary excuse to classify whichever borrowers appear weak.",
+      "prerequisites": [
+        "CR-05",
+        "CR-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, SS3/24, “Credit risk definition of default”",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-08",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "CR-08.mdx",
+      "initialX": 316.5,
+      "initialY": -23.8
+    },
+    "CR-09": {
+      "id": "CR-09",
+      "title": "Cure and re-default",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Cure is the controlled transition from default back to non-default after the conditions causing default have ceased and repayment performance is sufficiently credible. Re-default is a subsequent return to default; treating temporary payment as permanent cure understates both PD and workout risk.",
+      "prerequisites": [
+        "CR-05",
+        "CR-06",
+        "CR-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025, paragraph 71",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, Guidelines on application of the definition of default, EBA/GL/2016/07 as amended by EBA/GL/2026/05",
+          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-application-definition-default",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-09",
+      "depth": 8,
+      "currentness": "fresh",
+      "filepath": "CR-09.mdx",
+      "initialX": 268.6,
+      "initialY": -30.9
+    },
+    "CR-10": {
+      "id": "CR-10",
+      "title": "Restructuring and forbearance",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Restructuring changes contractual terms; forbearance is a concession associated with a debtor's financial difficulty. Neither word is automatically identical to default, but a distressed concession can be evidence that the original obligation will not be repaid in full and can therefore trigger or prolong default.",
+      "prerequisites": [
+        "CR-05",
+        "CR-08",
+        "CR-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, PS9/24, “Implementation of the Basel 3.1 standards – near-final policy statement part 2”",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/implementation-of-the-basel-3-1-standards-near-final-policy-statement-part-2",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-10",
+      "depth": 9,
+      "currentness": "fresh",
+      "filepath": "CR-10.mdx",
+      "initialX": 263.9,
+      "initialY": 24
+    },
+    "CR-11": {
+      "id": "CR-11",
+      "title": "Write-off: accounting removal versus economic loss",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "A write-off changes the carrying amount recognised on the balance sheet; it does not necessarily mean the legal claim, recovery process or economic history has vanished. Default, provision, write-off and recovery are separate lifecycle states.",
+      "prerequisites": [
+        "CR-03",
+        "CR-05",
+        "CR-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, DBR.BP.BC.No.29/21.07.001/2018-19, “Deferral of Implementation of Indian Accounting Standards”, 22 March 2019",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, “Implementation of Indian Accounting Standards”, 13 March 2020",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "IFRS Foundation, IFRS 9 Financial Instruments, paragraph 5.4.4",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, “Interagency Policy Statement on Allowances for Credit Losses”",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-11",
+      "depth": 9,
+      "currentness": "fresh",
+      "filepath": "CR-11.mdx",
+      "initialX": 326.4,
+      "initialY": -6.7
+    },
+    "CR-12": {
+      "id": "CR-12",
+      "title": "Probability of default",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Probability of default is the probability that a defined obligor or exposure enters a defined default state over a specified future horizon, conditional on a stated information set. A PD without a horizon, default definition and unit of observation is not a complete parameter.",
+      "prerequisites": [
+        "CR-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB approach: minimum requirements”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131, Advanced Approaches risk parameters",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-12",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "CR-12.mdx",
+      "initialX": 356.5,
+      "initialY": 19.6
+    },
+    "CR-13": {
+      "id": "CR-13",
+      "title": "Point-in-time and through-the-cycle PD",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Point-in-time risk estimates move more strongly with current borrower and economic conditions; through-the-cycle approaches deliberately damp temporary cyclical variation and emphasise longer-run creditworthiness. They are different conditioning philosophies, not simply \"short horizon\" versus \"long horizon\".",
+      "prerequisites": [
+        "CR-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Bank for International Settlements, Financial Stability Institute, “Stability of a ‘through-the-cycle’ rating system during a financial crisis”, FSI Paper, 8 September 2006",
+          "url": "https://www.bis.org/fsi/awp2006.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-13",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "CR-13.mdx",
+      "initialX": 393.3,
+      "initialY": -26.5
+    },
+    "CR-14": {
+      "id": "CR-14",
+      "title": "Loss given default and recovery rate",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "LGD is loss severity conditional on default; recovery rate is the complementary recovered share only when both are defined on a consistent economic basis. Economic LGD must capture recovery cash flows, costs and timing rather than merely subtracting collateral value from balance.",
+      "prerequisites": [
+        "CR-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, LGD estimation requirements",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, economic-loss definition",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-14",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "CR-14.mdx",
+      "initialX": 348.3,
+      "initialY": 0.1
+    },
+    "CR-15": {
+      "id": "CR-15",
+      "title": "Exposure at default and credit conversion factors",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Exposure at default estimates how much will be exposed when default occurs, not merely how much is drawn today. Credit conversion factors translate eligible undrawn or contingent amounts into expected or regulatory exposure, making drawdown behaviour part of credit risk.",
+      "prerequisites": [
+        "CR-03",
+        "CR-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, EAD estimation requirements",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101 and Subpart E, risk-parameter definitions",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-15",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "CR-15.mdx",
+      "initialX": 327.1,
+      "initialY": 76.2
+    },
+    "CR-16": {
+      "id": "CR-16",
+      "title": "Effective maturity",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Effective maturity converts the timing of an exposure's remaining contractual cash flows into a maturity measure relevant to credit risk. It is not always the calendar time until the final legal maturity date.",
+      "prerequisites": [
+        "CR-02",
+        "CR-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, “IRB approach: risk components”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, effective-maturity definition",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-16",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "CR-16.mdx",
+      "initialX": 328.7,
+      "initialY": 45.8
+    },
+    "CR-17": {
+      "id": "CR-17",
+      "title": "Expected loss as PD × LGD × EAD",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "`EL = PD × LGD × EAD` is a useful one-period credit-loss decomposition only when the three parameters describe compatible events, horizons, populations and economic conditions. The multiplication is simple; obtaining coherent inputs is not.",
+      "prerequisites": [
+        "CR-12",
+        "CR-14",
+        "CR-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, “IRB approach: risk components”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment of expected losses and recognition of provisions”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-17",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "CR-17.mdx",
+      "initialX": 366.3,
+      "initialY": 61.7
+    },
+    "CR-18": {
+      "id": "CR-18",
+      "title": "Unexpected loss and capital",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Expected loss is the average credit cost; unexpected loss is adverse variation around that average. Capital exists to absorb sufficiently severe unexpected losses and protect creditors when realised losses exceed ordinary expected-loss capacity.",
+      "prerequisites": [
+        "CR-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB approach: risk-weight functions”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment of expected losses and recognition of provisions”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-18",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "CR-18.mdx",
+      "initialX": 394.4,
+      "initialY": 29.4
+    },
+    "CR-19": {
+      "id": "CR-19",
+      "title": "Retail versus wholesale credit modelling",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Retail credit is usually managed through statistically homogeneous pools because each exposure is small and there are many observations; wholesale credit is usually assessed obligor by obligor because exposures are larger, populations are smaller and information is more heterogeneous. Neither approach eliminates judgement.",
+      "prerequisites": [
+        "CR-01",
+        "CR-02",
+        "CR-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE30, “IRB approach: categorisation of exposures”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/30.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-19",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "CR-19.mdx",
+      "initialX": 293.5,
+      "initialY": -39
+    },
+    "CR-20": {
+      "id": "CR-20",
+      "title": "Application and behavioural scorecards",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Application scorecards estimate risk using information available around origination; behavioural scorecards use information generated after the credit relationship exists. Mixing their observation windows creates leakage and makes model performance look better than it really is.",
+      "prerequisites": [
+        "CR-12",
+        "CR-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Bank for International Settlements, Financial Stability Institute, “Stability of a ‘through-the-cycle’ rating system during a financial crisis”",
+          "url": "https://www.bis.org/fsi/awp2006.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.122 and 217.131, Advanced Approaches retail segmentation and risk estimation requirements",
+          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-20",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "CR-20.mdx",
+      "initialX": 347.9,
+      "initialY": -31.1
+    },
+    "CR-21": {
+      "id": "CR-21",
+      "title": "Rating grades, master scales and migration",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "A rating grade is a discrete risk class, a master scale defines the ordered meaning of all grades, and migration records movements between them through time. A rating system is useful only if grades consistently separate risk and retain enough history to test how borrowers move and default.",
+      "prerequisites": [
+        "CR-12",
+        "CR-13",
+        "CR-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, rating-system requirements",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, “Estimation Methodologies for Losses, Revenues, and Expenses”, August 2013",
+          "url": "https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-21",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "CR-21.mdx",
+      "initialX": 348.5,
+      "initialY": -53.2
+    },
+    "CR-22": {
+      "id": "CR-22",
+      "title": "Bureau data",
+      "type": "reference",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Bureau data describe reported credit relationships and repayment history; they are powerful evidence of external indebtedness and past behaviour, not a complete statement of current income, assets, intentions or future ability to pay. Absence of adverse bureau information is not evidence of low risk when coverage is incomplete or the borrower has little history.",
+      "prerequisites": [
+        "CR-01",
+        "CR-12",
+        "CR-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, “Report of the High Level Task Force on Public Credit Registry for India”, 2018",
+          "url": "https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=895",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Federal Reserve, “Credit Scoring”, report to Congress",
+          "url": "https://www.federalreserve.gov/boarddocs/rptcongress/creditscore/general.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-22",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "CR-22.mdx",
+      "initialX": 295.5,
+      "initialY": 12.2
+    },
+    "CR-23": {
+      "id": "CR-23",
+      "title": "Vintage analysis and roll rates",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Vintage analysis follows cohorts originated at similar times as they season; roll-rate analysis follows movements between delinquency states. Both restore the time dimension that a portfolio snapshot destroys.",
+      "prerequisites": [
+        "CR-06",
+        "CR-19",
+        "CR-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve, “Estimation Methodologies for Losses, Revenues, and Expenses”, August 2013, roll-rate and transition-model sections",
+          "url": "https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-23",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "CR-23.mdx",
+      "initialX": 329.6,
+      "initialY": -80.5
+    },
+    "CR-24": {
+      "id": "CR-24",
+      "title": "Concentration: single-name and sector risk",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Concentration risk arises when too much exposure depends on the same obligor, connected group, sector, geography or underlying risk driver. Diversification is about independent sources of loss, not the number of rows in a portfolio file.",
+      "prerequisites": [
+        "CR-03",
+        "CR-04",
+        "CR-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit risk concentration”",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/32.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10",
+          "url": "https://www.bis.org/basel_framework/chapter/LEX/10.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, SS3/25",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Commercial Banks – Large Exposures Framework Directions, 2025",
+          "url": "https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13152",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-24",
+      "depth": 8,
+      "currentness": "fresh",
+      "filepath": "CR-24.mdx",
+      "initialX": 338.3,
+      "initialY": 28.7
+    },
+    "CR-25": {
+      "id": "CR-25",
+      "title": "Correlation and systematic credit risk",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Credit correlation means borrowers' default outcomes are not independent because common economic forces move their credit quality together. Idiosyncratic risk can diversify away; systematic risk cannot be eliminated simply by adding more borrowers exposed to the same underlying conditions.",
+      "prerequisites": [
+        "CR-12",
+        "CR-18",
+        "CR-24"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB approach: risk-weight functions”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit risk concentration”",
+          "url": "https://www.bis.org/basel_framework/chapter/SRP/32.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-25",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "CR-25.mdx",
+      "initialX": 368.6,
+      "initialY": -38.6
+    },
+    "CR-26": {
+      "id": "CR-26",
+      "title": "The credit-loss architecture: expected loss as cost, unexpected loss as capital risk",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "unsorted",
+      "one_screen": "Expected loss is the recurring average economic cost of taking credit risk; unexpected loss is the adverse deviation around that average that threatens solvency. Sound credit economics prices and provides for expected loss while capital protects the institution against severe unexpected loss.",
+      "prerequisites": [
+        "CR-17",
+        "CR-18",
+        "CR-24",
+        "CR-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB approach: risk-weight functions”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment of expected losses and recognition of provisions”",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, DBR.BP.BC.No.29/21.07.001/2018-19, “Deferral of Implementation of Indian Accounting Standards”, 22 March 2019",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, “Implementation of Indian Accounting Standards”, 13 March 2020",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "cr-26",
+      "depth": 10,
+      "currentness": "durable",
+      "filepath": "CR-26.mdx",
+      "initialX": 390.3,
+      "initialY": -1.7
+    },
+    "FND-01": {
+      "id": "FND-01",
+      "title": "Bank as a Balance Sheet",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "A bank is a balance sheet before it is a building, app, or lender. It owns assets, owes liabilities, and has equity equal to the residual difference: **Assets = Liabilities + Equity**.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters 4–5",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "FND-01.mdx",
+      "initialX": -270.5,
+      "initialY": -24
+    },
+    "FND-02": {
+      "id": "FND-02",
+      "title": "Deposits and Loans: Opposite Sides of the Bank",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Deposits fund the bank and are liabilities; loans use the bank's balance sheet and are assets.** The words are usually spoken from the customer's perspective, which is why beginners instinctively put them on the wrong sides.",
+      "prerequisites": [
+        "FND-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Bank of England, *How is money created?*, Explainer",
+          "url": "https://www.bankofengland.co.uk/explainers/how-is-money-created",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-02",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "FND-02.mdx",
+      "initialX": -362,
+      "initialY": -37.1
+    },
+    "FND-03": {
+      "id": "FND-03",
+      "title": "Loan Creation, Deposits and Funding",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "When a bank grants a loan and credits the borrower's account, it can create a **loan asset and a deposit liability simultaneously**. That does not make funding irrelevant: payments out of the bank create settlement outflows, while liquidity, capital, risk and profitability constrain sustainable lending.",
+      "prerequisites": [
+        "FND-01",
+        "FND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Bank of England, *How is money created?*, Explainer",
+          "url": "https://www.bankofengland.co.uk/explainers/how-is-money-created",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Bank of England, Andrew Bailey, *The importance of central bank reserves*, speech, May 21, 2024",
+          "url": "https://www.bankofengland.co.uk/speech/2024/may/andrew-bailey-lecture-london-school-of-economics-charles-goodhart",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-03",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "FND-03.mdx",
+      "initialX": -319.7,
+      "initialY": -68.6
+    },
+    "FND-04": {
+      "id": "FND-04",
+      "title": "Net Interest Income and Bank Earnings",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "A traditional bank earns a spread by receiving interest on interest-earning assets and paying interest on funding. **Net interest income = interest income − interest expense**, but final profit also reflects fees, market-related income, operating expenses, credit losses and taxes.",
+      "prerequisites": [
+        "FND-01",
+        "FND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Banking System Conditions*, Supervision and Regulation Report, November 2023",
+          "url": "https://www.federalreserve.gov/publications/2023-november-supervision-and-regulation-report-banking-system-conditions.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-04",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "FND-04.mdx",
+      "initialX": -321.9,
+      "initialY": -1.7
+    },
+    "FND-05": {
+      "id": "FND-05",
+      "title": "Capital Versus Liquidity",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Capital absorbs losses; liquidity meets payments when due.** A bank can have positive capital yet fail through a cash shortage, or hold abundant cash yet be economically insolvent because its assets are worth less than its obligations.",
+      "prerequisites": [
+        "FND-01",
+        "FND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Bank of England, Prudential Regulation Authority, *Liquidity*, Prudential and Resolution Policy Index",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/prudential-and-resolution-policy-index/banking/liquidity",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Banking Authority, *Liquidity risk*",
+          "url": "https://www.eba.europa.eu/regulation-and-policy/liquidity-risk",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-05",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "FND-05.mdx",
+      "initialX": -320,
+      "initialY": 18.9
+    },
+    "FND-06": {
+      "id": "FND-06",
+      "title": "The Financial Statements and How They Link",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "The three-statement shorthand is **balance sheet, profit and loss statement, and cash-flow statement**. Profit changes equity, cash flows explain movements in cash, and every recognised closing balance must end up on the closing balance sheet.",
+      "prerequisites": [
+        "FND-01",
+        "FND-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *IAS 1 Presentation of Financial Statements*",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *IAS 7 Statement of Cash Flows*",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Financial Statements: Presentation and Disclosures) Directions, 2025*",
+          "url": "https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13143",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "UK Endorsement Board, *Text by Standard 2024*",
+          "url": "https://www.endorsement-board.uk/standards/text-by-standard/text-by-standard-2024/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Union, *International accounting standards — IAS Regulation*, Regulation (EC) No 1606/2002 and Regulation (EU) 2023/1803 summary",
+          "url": "https://eur-lex.europa.eu/EN/legal-content/summary/international-accounting-standards-ias-regulation.html",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Accounting Standards Board, *FASB Mission*",
+          "url": "https://www.fasb.org/about-us/about-the-fasb",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-06",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "FND-06.mdx",
+      "initialX": -281.6,
+      "initialY": 34.1
+    },
+    "FND-07": {
+      "id": "FND-07",
+      "title": "Reading a Bank Balance Sheet",
+      "type": "procedure",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "Read a bank balance sheet by asking three questions in order: **what assets generate or preserve value, how those assets are funded, and how much residual loss absorption sits beneath the liabilities**. A bank's debtors are often its customers, while its customers' deposits are its funding.",
+      "prerequisites": [
+        "FND-01",
+        "FND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, DIS20 — Main features of regulatory capital instruments and other disclosures*",
+          "url": "https://www.bis.org/basel_framework/chapter/DIS/20.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Bank of England, *How is money created?*",
+          "url": "https://www.bankofengland.co.uk/explainers/how-is-money-created",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-07",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "FND-07.mdx",
+      "initialX": -314.7,
+      "initialY": -46.8
+    },
+    "FND-08": {
+      "id": "FND-08",
+      "title": "Accrual Versus Cash",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Accrual accounting recognises economic effects when the recognition criteria are met, not simply when cash moves.** Cash accounting asks when money moved; accrual accounting asks what asset, liability, income or expense exists because of what happened.",
+      "prerequisites": [
+        "FND-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters 4–5",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *IAS 7 Statement of Cash Flows*",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-08",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "FND-08.mdx",
+      "initialX": -301.1,
+      "initialY": 70.9
+    },
+    "FND-09": {
+      "id": "FND-09",
+      "title": "Provisions and Credit-Loss Allowances",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "A credit-loss allowance recognises that the amount expected to be collected from credit exposures may be less than their contractual amount. **The economic idea is shared; the recognition and measurement rule is jurisdiction- and reporting-framework-specific.**",
+      "prerequisites": [
+        "FND-06",
+        "FND-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
+          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Income Recognition, Asset Classification and Provisioning*, 2025 Directions as amended in 2026, including RBI/2026-27/45, DOR.STR.REC.34/21-04-048/2026-27, April 29, 2026",
+          "url": "https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards by NBFCs and ARCs*, DOR(NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Frequently Asked Questions on the Current Expected Credit Losses Methodology*, ASC Topic 326 / ASU 2016-13 guidance",
+          "url": "https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-09",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "FND-09.mdx",
+      "initialX": -339.5,
+      "initialY": 59.5
+    },
+    "FND-10": {
+      "id": "FND-10",
+      "title": "Other Comprehensive Income",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Other comprehensive income (OCI) is a reporting route for specified recognised income and expense that the applicable accounting standard does not put in current profit or loss.** It is not \"less real\" income, and it is not a discretionary parking place for inconvenient volatility.",
+      "prerequisites": [
+        "FND-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *IAS 1 Presentation of Financial Statements*",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
+          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Classification, Valuation and Operation of Investment Portfolio of Commercial Banks Directions, 2023*, RBI/DOR/2023-24/104, DOR.MRG.36/21.04.141/2023-24, September 12, 2023, updated April 1, 2025",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12534&Mode=0",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Accounting Standards Board, *Accounting Standards Codification Topic 220 — Comprehensive Income*, referenced in ASU 2018-02",
+          "url": "https://www.fasb.org/page/document?pdf=ASU+2018-02.pdf&title=ACCOUNTING+STANDARDS+UPDATE+2018-02%E2%80%94INCOME+STATEMENT%E2%80%94REPORTING+COMPREHENSIVE+INCOME+%28TOPIC+220%29%3A+RECLASSIFICATION+OF+CERTAIN+TAX+EFFECTS+FROM+ACCUMULATED+OTHER+COMPREHENSIVE+INCOME",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-10",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "FND-10.mdx",
+      "initialX": -301.2,
+      "initialY": -21.5
+    },
+    "FND-11": {
+      "id": "FND-11",
+      "title": "Present Value and Discount Factors",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Present value converts money at different dates into values at one common date.** A discount factor is the multiplier that performs that conversion: for one annual rate \\(r\\), the time-\\(t\\) factor is \\(1/(1+r)^t\\).",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix B, including B5.5.44 on discounting expected credit losses",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-11",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "FND-11.mdx",
+      "initialX": -315.5,
+      "initialY": 43
+    },
+    "FND-12": {
+      "id": "FND-12",
+      "title": "Compounding and Discounting Conventions",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Compounding moves value forward through time; discounting moves it backward.** The mathematics only works when the rate, compounding frequency, day-count or period convention, and cash-flow dates are internally consistent.",
+      "prerequisites": [
+        "FND-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A and application guidance on effective interest calculations",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-12",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "FND-12.mdx",
+      "initialX": -348.7,
+      "initialY": -4
+    },
+    "FND-13": {
+      "id": "FND-13",
+      "title": "Effective Interest Rate",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "The **effective interest rate (EIR)** is the single periodic rate that makes the present value of the relevant contractual cash-flow stream equal to the instrument's initial carrying amount under the stated methodology. It converts price, interest, fees and timing into one internally consistent yield.",
+      "prerequisites": [
+        "FND-11",
+        "FND-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, effective interest method and effective interest rate definitions",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-13",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "FND-13.mdx",
+      "initialX": -366.5,
+      "initialY": 57.8
+    },
+    "FND-14": {
+      "id": "FND-14",
+      "title": "NPV and Discounting Expected Loss",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Net present value (NPV) adds cash flows after converting them to one valuation date.** Expected loss is time-sensitive when the applicable methodology discounts shortfalls: the same nominal shortfall occurring later has a different present value.",
+      "prerequisites": [
+        "FND-09",
+        "FND-11",
+        "FND-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.44",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
+          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Income Recognition, Asset Classification and Provisioning*, 2025 Directions as amended in 2026",
+          "url": "https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Frequently Asked Questions on the Current Expected Credit Losses Methodology*, ASC Topic 326 / ASU 2016-13 guidance",
+          "url": "https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-14",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "FND-14.mdx",
+      "initialX": -379,
+      "initialY": 10.8
+    },
+    "FND-15": {
+      "id": "FND-15",
+      "title": "Exposure: What Is Actually at Risk",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Exposure is the amount or position whose value can be affected by a risk event; it is not the loss itself.** The relevant exposure may include more than today's booked principal because commitments, accrued amounts, derivatives or future drawings can also be at risk.",
+      "prerequisites": [
+        "FND-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — Credit Risk*, consolidated framework",
+          "url": "https://www.bis.org/basel_framework/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-15",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "FND-15.mdx",
+      "initialX": -156.3,
+      "initialY": -2.9
+    },
+    "FND-16": {
+      "id": "FND-16",
+      "title": "Probability and Expected Value",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Probability says how likely an outcome is; expected value combines each possible outcome with its probability.** A 1% probability of losing 100 is not a loss of 1%, but in a two-outcome example it contributes an expected loss of 1.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods*",
+          "url": "https://www.itl.nist.gov/div898/handbook/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-16",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "FND-16.mdx",
+      "initialX": -291.6,
+      "initialY": -53.2
+    },
+    "FND-17": {
+      "id": "FND-17",
+      "title": "Variance and Volatility",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Variance measures average squared dispersion around a mean; standard deviation is its square root.** In finance, volatility usually refers to a standard-deviation measure over a stated horizon, so volatility is meaningless without the variable, data frequency and time horizon.",
+      "prerequisites": [
+        "FND-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Measures of Scale*, Section 1.3.5.6",
+          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods*",
+          "url": "https://www.itl.nist.gov/div898/handbook/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-17",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "FND-17.mdx",
+      "initialX": -293,
+      "initialY": 12
+    },
+    "FND-18": {
+      "id": "FND-18",
+      "title": "Quantiles and Tail Risk",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "A **quantile** is a threshold in a distribution: an \\(\\alpha\\)-quantile has approximately \\(\\alpha\\) of probability at or below it under the stated convention. **Tail risk is what happens in the extreme region beyond such thresholds; a quantile is not a maximum possible loss.**",
+      "prerequisites": [
+        "FND-16",
+        "FND-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Percentiles and Critical Values*",
+          "url": "https://www.itl.nist.gov/div898/handbook/prc/section4/prc471.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Distributional Shape and Tails*",
+          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-18",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "FND-18.mdx",
+      "initialX": -338,
+      "initialY": -25.5
+    },
+    "FND-19": {
+      "id": "FND-19",
+      "title": "Expected Loss Versus Unexpected Loss",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Expected loss is the probability-weighted average loss built into the centre of the loss distribution; unexpected loss is adverse variation around and beyond that expectation.** Provisioning and pricing address expected loss in different ways, while prudential capital is fundamentally concerned with resilience to losses beyond the expected level.",
+      "prerequisites": [
+        "FND-15",
+        "FND-16",
+        "FND-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB approach: risk-weighted assets for credit risk*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE35 — Treatment of expected losses and provisions*",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Bank for International Settlements, Financial Stability Institute, *IFRS 9 and expected loss provisioning — Executive Summary*",
+          "url": "https://www.bis.org/fsi/fsisummaries/ifrs9.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-19",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "FND-19.mdx",
+      "initialX": -274,
+      "initialY": -2.4
+    },
+    "FND-20": {
+      "id": "FND-20",
+      "title": "Risk Appetite",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Risk appetite is the aggregate level and types of risk an institution is willing to assume within its risk capacity while pursuing its objectives.** Appetite becomes operational only when translated into limits, monitored against the actual risk profile, and linked to escalation and decisions.",
+      "prerequisites": [
+        "FND-05",
+        "FND-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Financial Stability Board, *Principles for an Effective Risk Appetite Framework*, November 18, 2013",
+          "url": "https://www.fsb.org/2013/11/r_131118/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Stability Board, *FSB releases guidance for more effective supervision of risk appetite and risk culture at financial institutions*, November 18, 2013",
+          "url": "https://www.fsb.org/2013/11/fsb-releases-guidance-for-more-effective-supervision-of-risk-appetite-and-risk-culture-at-financial-institutions/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-20",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "FND-20.mdx",
+      "initialX": -363.9,
+      "initialY": -12.7
+    },
+    "FND-21": {
+      "id": "FND-21",
+      "title": "The Three Lines Model",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "The Three Lines Model separates **management's ownership and management of risk**, specialist support and challenge, and **independent internal-audit assurance**. The lines are roles in governance, not walls that permit one function to outsource responsibility to another.",
+      "prerequisites": [
+        "FND-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Institute of Internal Auditors, *The IIA's Three Lines Model: An update of the Three Lines of Defense*, 2020, updated 2024",
+          "url": "https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Institute of Internal Auditors, *Statements of Position — Three Lines and Internal Audit*",
+          "url": "https://www.theiia.org/en/resources/statements-of-position/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Institute of Internal Auditors, *IIA Issues Important Update to Three Lines Model*, July 20, 2020",
+          "url": "https://www.theiia.org/en/content/communications/2020/july/20-july-2020-iia-issues-important-update-to-three-lines-model/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-21",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "FND-21.mdx",
+      "initialX": -403.3,
+      "initialY": -1.2
+    },
+    "FND-22": {
+      "id": "FND-22",
+      "title": "Policy, Standard and Procedure",
+      "type": "reference",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "A useful control hierarchy is **policy = required intent and principles; standard = mandatory control or design criteria; procedure = steps for execution**. The terminology is not legally universal, so authority and content matter more than the document label.",
+      "prerequisites": [
+        "FND-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Institute of Internal Auditors, *The IIA's Three Lines Model: An update of the Three Lines of Defense*, 2020, updated 2024",
+          "url": "https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Stability Board, *Principles for an Effective Risk Appetite Framework*, November 18, 2013",
+          "url": "https://www.fsb.org/2013/11/r_131118/",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-22",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "FND-22.mdx",
+      "initialX": -360.6,
+      "initialY": 35.8
+    },
+    "FND-23": {
+      "id": "FND-23",
+      "title": "What a Regulator Actually Does",
+      "type": "mechanism",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "A banking regulator turns law and statutory objectives into enforceable boundaries, while **supervision** tests how institutions actually operate inside those boundaries. Depending on the mandate, the toolkit can include authorisation, rules, reporting, examinations, remediation and enforcement.",
+      "prerequisites": [
+        "FND-05",
+        "FND-19",
+        "FND-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Department of Banking Supervision — Functions and Legal Framework*",
+          "url": "https://www.rbi.org.in/commonman/english/scripts/DeptofBS.aspx",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Bank of England, Prudential Regulation Authority, *Prudential regulation*",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Conduct Authority, *The FCA — mandate and regulatory responsibilities*",
+          "url": "https://www.fca.org.uk/about/what-we-do/the-fca",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Banking Authority, *Single Rulebook*",
+          "url": "https://www.eba.europa.eu/single-rulebook",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Understanding Federal Reserve Supervision*",
+          "url": "https://www.federalreserve.gov/supervisionreg/understanding-federal-reserve-supervision.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Office of the Comptroller of the Currency, *OCC mandate — chartering, regulating and supervising national banks*",
+          "url": "https://www.occ.treas.gov/about/index-about.html",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-23",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "FND-23.mdx",
+      "initialX": -337,
+      "initialY": -48.4
+    },
+    "FND-24": {
+      "id": "FND-24",
+      "title": "Prudential Regulation, Conduct Regulation and Accounting Standards",
+      "type": "reference",
+      "domain": "foundation",
+      "subdomain": "unsorted",
+      "one_screen": "**Prudential regulation asks whether a financial institution is safe and resilient; conduct regulation asks whether it behaves properly toward customers and markets; accounting standards determine how financial position and performance are recognised, measured and reported.** The three systems interact, but none is a substitute for another.",
+      "prerequisites": [
+        "FND-06",
+        "FND-09",
+        "FND-23"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-27",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 4,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
+          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Commercial Banks – Income Recognition, Asset Classification and Provisioning*, 2025 Directions as amended in 2026",
+          "url": "https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards by NBFCs and ARCs*, DOR(NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Bank of England, Prudential Regulation Authority, *Prudential regulation*",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Conduct Authority, *The FCA — mandate and regulatory responsibilities*",
+          "url": "https://www.fca.org.uk/about/what-we-do/the-fca",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Banking Authority, *Single Rulebook*",
+          "url": "https://www.eba.europa.eu/single-rulebook",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Banking Authority, *Consumer protection*",
+          "url": "https://www.eba.europa.eu/regulation-and-policy/consumer-protection",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Accounting Standards Board, *FASB Mission*",
+          "url": "https://www.fasb.org/about-us/about-the-fasb",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "fnd-24",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "FND-24.mdx",
+      "initialX": -347.8,
+      "initialY": 15
+    }
+  },
+  "reverseIndex": {
+    "CR-01": [
+      "CR-02",
+      "CR-03",
+      "CR-04",
+      "CR-05",
+      "CR-19",
+      "CR-22"
+    ],
+    "CR-02": [
+      "CR-03",
+      "CR-05",
+      "CR-06",
+      "CR-16",
+      "CR-19"
+    ],
+    "CR-03": [
+      "CR-04",
+      "CR-11",
+      "CR-15",
+      "CR-16",
+      "CR-24"
+    ],
+    "CR-04": [
+      "CR-24"
+    ],
+    "CR-05": [
+      "CR-06",
+      "CR-07",
+      "CR-08",
+      "CR-09",
+      "CR-10",
+      "CR-11",
+      "CR-12",
+      "CR-14",
+      "CR-15"
+    ],
+    "CR-06": [
+      "CR-07",
+      "CR-09",
+      "CR-23"
+    ],
+    "CR-07": [
+      "CR-08"
+    ],
+    "CR-08": [
+      "CR-09",
+      "CR-10"
+    ],
+    "CR-09": [
+      "CR-10",
+      "CR-11"
+    ],
+    "CR-10": [],
+    "CR-11": [],
+    "CR-12": [
+      "CR-13",
+      "CR-17",
+      "CR-19",
+      "CR-20",
+      "CR-21",
+      "CR-22",
+      "CR-25"
+    ],
+    "CR-13": [
+      "CR-21"
+    ],
+    "CR-14": [
+      "CR-17"
+    ],
+    "CR-15": [
+      "CR-17"
+    ],
+    "CR-16": [],
+    "CR-17": [
+      "CR-18",
+      "CR-26"
+    ],
+    "CR-18": [
+      "CR-24",
+      "CR-25",
+      "CR-26"
+    ],
+    "CR-19": [
+      "CR-20",
+      "CR-21",
+      "CR-23"
+    ],
+    "CR-20": [
+      "CR-22",
+      "CR-23"
+    ],
+    "CR-21": [],
+    "CR-22": [],
+    "CR-23": [],
+    "CR-24": [
+      "CR-25",
+      "CR-26"
+    ],
+    "CR-25": [
+      "CR-26"
+    ],
+    "CR-26": [],
+    "FND-01": [
+      "FND-02",
+      "FND-03",
+      "FND-04",
+      "FND-05",
+      "FND-06",
+      "FND-07",
+      "FND-15"
+    ],
+    "FND-02": [
+      "FND-03",
+      "FND-04",
+      "FND-05",
+      "FND-07"
+    ],
+    "FND-03": [],
+    "FND-04": [
+      "FND-06"
+    ],
+    "FND-05": [
+      "FND-20",
+      "FND-23"
+    ],
+    "FND-06": [
+      "FND-08",
+      "FND-09",
+      "FND-10",
+      "FND-24"
+    ],
+    "FND-07": [],
+    "FND-08": [
+      "FND-09"
+    ],
+    "FND-09": [
+      "FND-14",
+      "FND-24"
+    ],
+    "FND-10": [],
+    "FND-11": [
+      "FND-12",
+      "FND-13",
+      "FND-14"
+    ],
+    "FND-12": [
+      "FND-13"
+    ],
+    "FND-13": [
+      "FND-14"
+    ],
+    "FND-14": [],
+    "FND-15": [
+      "CR-01",
+      "FND-19"
+    ],
+    "FND-16": [
+      "FND-17",
+      "FND-18",
+      "FND-19"
+    ],
+    "FND-17": [
+      "FND-18"
+    ],
+    "FND-18": [
+      "FND-19"
+    ],
+    "FND-19": [
+      "FND-20",
+      "FND-23"
+    ],
+    "FND-20": [
+      "FND-21",
+      "FND-23"
+    ],
+    "FND-21": [
+      "FND-22"
+    ],
+    "FND-22": [],
+    "FND-23": [
+      "FND-24"
+    ],
+    "FND-24": []
+  },
+  "domainTree": [
+    {
+      "domain": "credit-risk",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "CR-01",
+              "title": "Obligor, borrower and counterparty",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-02",
+              "title": "Facility, account and product",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-03",
+              "title": "Exposure and aggregation levels",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-04",
+              "title": "Group and connected-party exposure",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-05",
+              "title": "Default: event before metric",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-06",
+              "title": "Days past due, arrears and delinquency buckets",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-07",
+              "title": "The ninety-day backstop",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-08",
+              "title": "Unlikeliness to pay",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-09",
+              "title": "Cure and re-default",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-10",
+              "title": "Restructuring and forbearance",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-11",
+              "title": "Write-off: accounting removal versus economic loss",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-12",
+              "title": "Probability of default",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-13",
+              "title": "Point-in-time and through-the-cycle PD",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-14",
+              "title": "Loss given default and recovery rate",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-15",
+              "title": "Exposure at default and credit conversion factors",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-16",
+              "title": "Effective maturity",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-17",
+              "title": "Expected loss as PD × LGD × EAD",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-18",
+              "title": "Unexpected loss and capital",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-19",
+              "title": "Retail versus wholesale credit modelling",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-20",
+              "title": "Application and behavioural scorecards",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-21",
+              "title": "Rating grades, master scales and migration",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-22",
+              "title": "Bureau data",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-23",
+              "title": "Vintage analysis and roll rates",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-24",
+              "title": "Concentration: single-name and sector risk",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-25",
+              "title": "Correlation and systematic credit risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-26",
+              "title": "The credit-loss architecture: expected loss as cost, unexpected loss as capital risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "foundation",
+      "subdomains": [
+        {
+          "subdomain": "unsorted",
+          "atoms": [
+            {
+              "id": "FND-01",
+              "title": "Bank as a Balance Sheet",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-02",
+              "title": "Deposits and Loans: Opposite Sides of the Bank",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-03",
+              "title": "Loan Creation, Deposits and Funding",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-04",
+              "title": "Net Interest Income and Bank Earnings",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-05",
+              "title": "Capital Versus Liquidity",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-06",
+              "title": "The Financial Statements and How They Link",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-07",
+              "title": "Reading a Bank Balance Sheet",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-08",
+              "title": "Accrual Versus Cash",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-09",
+              "title": "Provisions and Credit-Loss Allowances",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-10",
+              "title": "Other Comprehensive Income",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-11",
+              "title": "Present Value and Discount Factors",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-12",
+              "title": "Compounding and Discounting Conventions",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-13",
+              "title": "Effective Interest Rate",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-14",
+              "title": "NPV and Discounting Expected Loss",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-15",
+              "title": "Exposure: What Is Actually at Risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-16",
+              "title": "Probability and Expected Value",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-17",
+              "title": "Variance and Volatility",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-18",
+              "title": "Quantiles and Tail Risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-19",
+              "title": "Expected Loss Versus Unexpected Loss",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-20",
+              "title": "Risk Appetite",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-21",
+              "title": "The Three Lines Model",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-22",
+              "title": "Policy, Standard and Procedure",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-23",
+              "title": "What a Regulator Actually Does",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "FND-24",
+              "title": "Prudential Regulation, Conduct Regulation and Accounting Standards",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "roles": [
     {
       "id": "credit-model-validation",
@@ -450,65 +3234,293 @@
     }
   ],
   "missingAtoms": [
-    "CR-03",
-    "CR-07",
-    "CR-08",
-    "FND-18",
-    "CR-10",
-    "CR-11",
-    "CR-07",
-    "CR-08",
-    "CR-09",
+    "ANL-01",
+    "CM-01",
     "CR-07-EX",
-    "FND-18",
-    "CR-12",
-    "CR-03",
-    "CR-07",
-    "CR-08",
-    "CR-09",
-    "REG-01",
+    "DAT-01",
+    "DAT-02",
     "ECL-01",
-    "REG-01",
-    "CR-03",
-    "CR-07",
-    "OPS-01",
-    "FND-18",
-    "REG-03",
-    "REG-02",
-    "FND-18",
-    "MKT-01",
-    "TR-01",
-    "TR-02",
-    "FND-18",
-    "REG-02",
-    "TR-03",
-    "TR-04",
+    "FIN-01",
     "LEG-01",
     "MKT-01",
     "MKT-02",
-    "FND-18",
-    "CM-01",
+    "OPS-01",
     "REG-01",
     "REG-02",
-    "LEG-01",
+    "REG-03",
     "REG-04",
-    "REG-01",
-    "CR-03",
-    "DAT-01",
-    "DAT-02",
-    "FND-18",
-    "CR-07-EX",
-    "CR-03",
-    "ANL-01",
-    "CR-07",
-    "CR-03",
-    "CR-07-EX",
-    "FIN-01",
-    "CR-03",
-    "CR-09",
-    "LEG-01",
-    "SYS-01"
+    "SYS-01",
+    "TR-01",
+    "TR-02",
+    "TR-03",
+    "TR-04"
   ],
-  "lintWarnings": [],
-  "generatedAt": "2026-08-27T20:10:24.461Z"
+  "lintWarnings": [
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-01",
+      "message": "Atom \"CR-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-02",
+      "message": "Atom \"CR-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-03",
+      "message": "Atom \"CR-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-04",
+      "message": "Atom \"CR-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-05",
+      "message": "Atom \"CR-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-06",
+      "message": "Atom \"CR-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-07",
+      "message": "Atom \"CR-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-08",
+      "message": "Atom \"CR-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-09",
+      "message": "Atom \"CR-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-10",
+      "message": "Atom \"CR-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-11",
+      "message": "Atom \"CR-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-12",
+      "message": "Atom \"CR-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-13",
+      "message": "Atom \"CR-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-14",
+      "message": "Atom \"CR-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-15",
+      "message": "Atom \"CR-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-16",
+      "message": "Atom \"CR-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-17",
+      "message": "Atom \"CR-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-18",
+      "message": "Atom \"CR-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-19",
+      "message": "Atom \"CR-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-20",
+      "message": "Atom \"CR-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-21",
+      "message": "Atom \"CR-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-22",
+      "message": "Atom \"CR-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-23",
+      "message": "Atom \"CR-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-24",
+      "message": "Atom \"CR-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-25",
+      "message": "Atom \"CR-25\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-26",
+      "message": "Atom \"CR-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-01",
+      "message": "Atom \"FND-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "FND-01",
+      "message": "Atom \"FND-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-02",
+      "message": "Atom \"FND-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-03",
+      "message": "Atom \"FND-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-04",
+      "message": "Atom \"FND-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-05",
+      "message": "Atom \"FND-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-06",
+      "message": "Atom \"FND-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-07",
+      "message": "Atom \"FND-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-08",
+      "message": "Atom \"FND-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-09",
+      "message": "Atom \"FND-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-10",
+      "message": "Atom \"FND-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-11",
+      "message": "Atom \"FND-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "FND-11",
+      "message": "Atom \"FND-11\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-12",
+      "message": "Atom \"FND-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-13",
+      "message": "Atom \"FND-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-14",
+      "message": "Atom \"FND-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-15",
+      "message": "Atom \"FND-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-16",
+      "message": "Atom \"FND-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "FND-16",
+      "message": "Atom \"FND-16\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-17",
+      "message": "Atom \"FND-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-18",
+      "message": "Atom \"FND-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-19",
+      "message": "Atom \"FND-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-20",
+      "message": "Atom \"FND-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-21",
+      "message": "Atom \"FND-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-22",
+      "message": "Atom \"FND-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-23",
+      "message": "Atom \"FND-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "FND-24",
+      "message": "Atom \"FND-24\" is unverified (draft). Displays development banner."
+    }
+  ],
+  "generatedAt": "2026-08-27T20:44:22.851Z"
 }

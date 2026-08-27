@@ -1,0 +1,124 @@
+---
+id: FND-09
+title: Provisions and Credit-Loss Allowances
+type: mechanism
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  A credit-loss allowance recognises that the amount expected to be collected
+  from credit exposures may be less than their contractual amount. **The
+  economic idea is shared; the recognition and measurement rule is jurisdiction-
+  and reporting-framework-specific.**
+prerequisites:
+  - FND-06
+  - FND-08
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind
+      AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019
+    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning*, 2025 Directions as amended in 2026,
+      including RBI/2026-27/45, DOR.STR.REC.34/21-04-048/2026-27, April 29, 2026
+    url: 'https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Implementation of Indian Accounting Standards by
+      NBFCs and ARCs*, DOR(NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0'
+    accessed: 'August 28, 2026'
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Frequently Asked
+      Questions on the Current Expected Credit Losses Methodology*, ASC Topic
+      326 / ASU 2016-13 guidance
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+A borrower can owe 100 contractually while the bank expects to recover less. Credit-loss accounting provides a mechanism for reflecting that deterioration before the final cash loss necessarily occurs. The resulting **allowance** is an accounting adjustment associated with expected credit losses; the related charge ordinarily affects profit or loss under the applicable framework.
+
+The allowance must not be confused with cash placed in a separate account. Under US CECL, for example, the allowance for credit losses on financial assets measured at amortised cost is a **valuation account deducted from amortised cost** to present the amount expected to be collected. Under IFRS 9, expected credit losses are probability-weighted and the impairment model distinguishes 12-month and lifetime expected credit losses according to the applicable stage and conditions.
+
+The Indian banking position requires special discipline. RBI deferred implementation of Ind AS for scheduled commercial banks in April 2019 **until further notice**. Their prudential asset classification and provisioning operate under RBI directions, not an assumption that Ind AS 109 applies to banks. Relevant NBFCs that are required to apply Ind AS have separate RBI guidance dealing explicitly with impairment allowances under **Ind AS 109**.
+
+This distinction matters operationally because "expected loss", "provision", "allowance", "stage" and "NPA" can belong to different rule systems. Similar economic concerns do not make the accounting mechanics interchangeable.
+
+&lt;Flow&gt;
+Credit exposure
+      |
+      v
++----------------------+
+| Estimate / determine |
+| loss under applicable|
+| framework            |
++----------------------+
+      |
+      v
++----------------------+
+| Allowance / provision|
++----------------------+
+      |
+      v
++----------------------+
+| Profit or loss effect|
+| + carrying-value /   |
+| regulatory treatment |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A credit-loss allowance is a measurement or valuation mechanism, not a segregated pot of cash.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Applying IFRS 9 staging and ECL rules to an Indian scheduled commercial bank merely because Ind AS 109 exists for other Indian financial entities.
+</Trap>
+
+<NeverConfuse a="Credit-loss allowance" b="Regulatory provision">
+**Credit-loss allowance** — an accounting valuation adjustment reflecting credit losses under the applicable reporting framework.
+---
+**Regulatory provision** — an amount required by prudential rules; it may interact with accounting allowances but need not be calculated on the same basis.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI deferred Ind AS implementation for scheduled commercial banks until further notice; bank income recognition, asset classification and provisioning therefore operate under RBI prudential directions. Relevant Ind AS-applying NBFCs use Ind AS 109 subject to RBI regulatory guidance. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; RBI DOR(NBFC).CC.PD.No.109/22.10.106/2019-20; RBI Commercial Banks IRACP Directions]
+</Delta>
+
+<Delta j="UK">
+— For entities reporting under UK-adopted IFRS, IFRS 9 contains the expected-credit-loss impairment model. [UK Endorsement Board, UK-adopted IFRS 9]
+</Delta>
+
+<Delta j="EU">
+— For reporting within the scope of EU-adopted IFRS, IFRS 9 is part of the EU-endorsed accounting framework. [Regulation (EU) 2023/1803]
+</Delta>
+
+<Delta j="US">
+— ASC Topic 326 uses CECL for applicable financial assets; CECL estimates expected credit losses over the contractual term, considering specified historical, current and reasonable-and-supportable forecast information. [FASB ASU 2016-13; Federal Reserve CECL FAQ]
+</Delta>
+
+<Recall
+  q="Is a provision a pile of cash reserved for future defaults?"
+  a="No; it is an accounting or prudential loss-recognition amount, depending on the framework."
+/>
+
+<Recall
+  q="Do Indian scheduled commercial banks apply Ind AS 109?"
+  a="No. RBI deferred Ind AS implementation for banks until further notice; RBI prudential provisioning norms apply."
+/>

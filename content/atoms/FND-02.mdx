@@ -1,0 +1,80 @@
+---
+id: FND-02
+title: 'Deposits and Loans: Opposite Sides of the Bank'
+type: mechanism
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Deposits fund the bank and are liabilities; loans use the bank's balance
+  sheet and are assets.** The words are usually spoken from the customer's
+  perspective, which is why beginners instinctively put them on the wrong sides.
+prerequisites:
+  - FND-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Bank of England, *How is money created?*, Explainer'
+    url: 'https://www.bankofengland.co.uk/explainers/how-is-money-created'
+    accessed: 'August 28, 2026'
+  - label: 'IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+A **deposit** is money the bank owes to a depositor. From the customer's perspective, a positive deposit balance is an asset: the customer has a claim on the bank. From the bank's perspective, exactly the same contract is a liability. Perspective determines the label.
+
+A **loan** reverses the direction. The customer receives funds and promises future repayment of principal and usually interest. The customer therefore has a liability; the bank holds the corresponding contractual claim and therefore records an asset. The bank earns interest on many such assets and pays interest on many funding liabilities.
+
+This symmetry explains a large part of bank accounting. When a depositor adds cash to an existing account, the bank can receive an asset such as cash or settlement balances while simultaneously increasing its deposit liability. When a borrower repays principal, the bank's loan asset declines. Where repayment comes from a deposit at the same bank, that deposit liability can decline at the same time.
+
+**Funding** means the liabilities and equity that support the asset side of the balance sheet. Deposits are a major form of bank funding, but not the only form: a bank can also borrow from financial markets or other institutions and can fund itself with equity. Saying that deposits are funding therefore does not mean every individual deposited currency unit can be traced to a particular loan.
+
+The balance sheet must always be read from the reporting bank's perspective. That single discipline prevents the common reversal of deposits and loans and prepares the ground for understanding how lending can create deposits.
+
+&lt;Flow&gt;
+CUSTOMER VIEW                  BANK VIEW
+
++--------------+               +--------------+
+| Deposit      |--------------&amp;gt;| Deposit      |
+| = asset      | same contract | = liability  |
++--------------+               +--------------+
+
++--------------+               +--------------+
+| Loan         |--------------&amp;gt;| Loan         |
+| = liability  | same contract | = asset      |
++--------------+               +--------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Classify a financial instrument from the perspective of the entity whose balance sheet is being read.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling deposits "bank assets" because the money is physically or electronically at the bank. The depositor's claim is an amount the bank owes, so it is a bank liability.
+</Trap>
+
+<NeverConfuse a="Deposit" b="Loan">
+**Deposit** — a customer's claim on the bank and therefore normally a liability of the bank.
+---
+**Loan** — a bank's claim on the borrower and therefore normally an asset of the bank; the perspective reversal makes the two easy to mix up.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Contractual perspective and the asset-versus-liability logic are universal.
+</Rule>
+
+<Recall
+  q="On which side of a bank balance sheet is a customer deposit?"
+  a="Liabilities."
+/>
+
+<Recall
+  q="On which side is a loan made by the bank?"
+  a="Assets."
+/>

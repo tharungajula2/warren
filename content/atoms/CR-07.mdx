@@ -1,0 +1,116 @@
+---
+id: CR-07
+title: The ninety-day backstop
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Ninety days past due is a backstop because credit can default before day 90
+  through unlikeliness-to-pay criteria. Waiting for the clock when evidence
+  already shows non-payment is likely converts a maximum mechanical threshold
+  into an unjustified grace period.
+prerequisites:
+  - CR-05
+  - CR-06
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning Directions, 2025
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
+    accessed: 28 August 2026
+  - label: >-
+      Prudential Regulation Authority, PS7/19, “Credit risk: the definition of
+      default”
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default
+    accessed: 28 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+In the Basel regulatory default architecture, the 90-day test sits beside an unlikeliness-to-pay test. Default occurs when either relevant condition is met. The two tests therefore form an **OR**, not a sequence requiring a bank to wait until both occur.
+
+That distinction is operationally important. Consider an obligor whose loan is only 20 days overdue but which has entered a severe insolvency process and cannot meet its obligations without a distressed concession. An unlikeliness-to-pay assessment may identify default immediately. Conversely, an obligor may pass through earlier delinquency buckets without yet satisfying another default indicator; the mechanical backstop prevents an indefinitely optimistic judgement once material arrears persist.
+
+A **backstop** therefore constrains judgement rather than replacing it. It creates an outside mechanical trigger while permitting earlier recognition when substantive evidence warrants it.
+
+Materiality matters as well. Basel and CRR formulations refer to a material credit obligation. Without a materiality threshold, tiny operational underpayments could mechanically create default; with an excessively generous threshold, genuine delinquency could be hidden. Jurisdictions consequently prescribe or supervise how materiality operates.
+
+India requires particular care because the banking prudential concept is **NPA classification**, not simply a direct transcription of Basel's IRB definition. RBI's commercial-bank rules make more than 90 days overdue a core NPA criterion for term loans, but they also prescribe different tests for cash-credit/overdraft facilities, crop loans, bills and other categories.
+
+The US demonstrates why "90 days everywhere" is unsafe. Under Federal Reserve Advanced Approaches rules, wholesale default includes more than 90 days past due on a material obligation, while residential mortgage and revolving retail exposures use 180 days and other retail exposures 120 days for specified mechanical default triggers.
+
+&lt;Flow&gt;
++--------------------------+
+| Credit deterioration     |
++--------------------------+
+       |              |
+       v              v
++-------------+  +------------------+
+| UTP trigger |  | DPD clock        |
+| met early?  |  | reaches backstop?|
++-------------+  +------------------+
+       |              |
+       +-------+------+
+               |
+               v
++--------------------------+
+| Default under applicable |
+| regulatory definition    |
++--------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A past-due backstop is the latest mechanical trigger under that rule, not permission to postpone an earlier qualitative default trigger.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling 90 DPD "the definition of default" causes banks to label severe credit failures as performing until an arrears clock happens to mature.
+</Trap>
+
+<NeverConfuse>
+**Backstop** — a mechanical outer trigger that limits how long an exposure can escape classification.
+
+**Definition of default** — the complete set of conditions, including qualitative and quantitative triggers.
+</NeverConfuse>
+
+<Delta j="IN">
+— Commercial-bank NPA classification generally uses more than 90 days overdue for term loans, alongside product-specific rules such as out-of-order treatment for OD/CC and crop-season tests for agricultural loans. [RBI IRACP Directions 2025]
+</Delta>
+
+<Delta j="UK">
+— PRA policy removed reliance on the former 180-day discretion and established 90 days as the relevant past-due criterion in the current CRR-derived default framework. [PRA PS7/19]
+</Delta>
+
+<Delta j="EU">
+— CRR Article 178 pairs unlikeliness to pay with a material past-due trigger generally based on more than 90 days; the EBA Guidelines govern application details. [CRR Article 178; EBA/GL/2016/07 as amended by EBA/GL/2026/05]
+</Delta>
+
+<Delta j="US">
+— Advanced Approaches wholesale uses more than 90 days on a material obligation, but specified retail exposures use 120- or 180-day mechanical thresholds. [12 CFR Part 217 Subpart E]
+</Delta>
+
+<Recall
+  q="Why is 90 DPD called a backstop?"
+  a="Because qualitative default can occur earlier; the DPD rule prevents recognition from being postponed beyond the prescribed mechanical threshold."
+/>
+
+<Recall
+  q="Is the US Advanced Approaches retail default threshold always 90 days?"
+  a="No. Specified retail categories use 120 or 180 days."
+/>

@@ -1,0 +1,105 @@
+---
+id: FND-12
+title: Compounding and Discounting Conventions
+type: mechanism
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Compounding moves value forward through time; discounting moves it
+  backward.** The mathematics only works when the rate, compounding frequency,
+  day-count or period convention, and cash-flow dates are internally consistent.
+prerequisites:
+  - FND-11
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A and
+      application guidance on effective interest calculations
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+With annual compounding, an amount \(P\) invested for \(n\) years at annual rate \(r\) grows to:
+
+\[
+FV=P(1+r)^n
+\]
+
+where **FV** is future value. Reversing the operation gives:
+
+\[
+PV=\frac&#123;FV&#125;&#123;(1+r)^n&#125;
+\]
+
+Compounding and discounting are therefore inverse operations under the same assumptions.
+
+Rates can be quoted under different **compounding conventions**. If a nominal annual rate \(r_&#123;nom&#125;\) is compounded \(m\) times per year for \(n\) years, one common representation is:
+
+\[
+FV=P\left(1+\frac&#123;r_&#123;nom&#125;&#125;&#123;m&#125;\right)^&#123;mn&#125;
+\]
+
+A quoted annual rate of 12% compounded monthly is therefore not mechanically identical to 12% compounded annually. More frequent compounding changes the effective annual growth when the nominal quote is held constant.
+
+Timing conventions matter just as much. A cash flow received today has no one-period discounting. A payment received at the end of year one receives one period of discounting. A payment occurring halfway through a year needs timing that reflects that half-period under the chosen convention. In real financial contracts, day-count conventions and payment calendars can further affect the calculation.
+
+The most common modelling error is not sophisticated mathematics; it is **unit mismatch**. A model may combine annual probability assumptions, monthly cash flows and quarterly discount rates without converting them to a common time basis. Another error is comparing rates whose quotation conventions differ and treating the numerical percentage as sufficient.
+
+The safe method is to identify the cash-flow dates first, state the rate convention explicitly, convert rates consistently where necessary, then apply the corresponding factors. Only after that should results be aggregated.
+
+&lt;Flow&gt;
+Present value
+     |
+     | compound forward
+     v
++----------------------+
+| P x (1+r)^n          |
++----------------------+
+     |
+     v
+Future value
+     |
+     | discount backward
+     v
++----------------------+
+| FV / (1+r)^n         |
++----------------------+
+     |
+     v
+Present value
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Rate frequency and cash-flow frequency must use the same time basis before compounding or discounting.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating a nominal 12% rate compounded monthly as economically identical to an effective 12% annual rate.
+</Trap>
+
+<NeverConfuse a="Nominal annual rate" b="Effective annual rate">
+**Nominal annual rate** — a quoted annualised rate whose economic effect depends on its compounding convention.
+---
+**Effective annual rate** — the one-year growth rate after the specified intra-year compounding has been reflected.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Compounding identities and the need for consistent conventions are mathematical rather than jurisdictional.
+</Rule>
+
+<Recall
+  q="What operation reverses compounding under the same assumptions?"
+  a="Discounting."
+/>
+
+<Recall
+  q="What must be checked before applying a quoted rate to cash flows?"
+  a="Its time basis and compounding convention must match the cash-flow timing."
+/>

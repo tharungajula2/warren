@@ -1,0 +1,91 @@
+---
+id: FND-01
+title: Bank as a Balance Sheet
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  A bank is a balance sheet before it is a building, app, or lender. It owns
+  assets, owes liabilities, and has equity equal to the residual difference:
+  **Assets = Liabilities + Equity**.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters
+      4–5
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel III: international
+      regulatory framework for banks*
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+A **balance sheet** is a snapshot of financial position at a particular date. An **asset** is a present economic resource controlled by an entity as a result of past events; a **liability** is a present obligation to transfer an economic resource; **equity** is the residual interest after liabilities are deducted from assets. Those definitions make the basic accounting identity unavoidable rather than optional.
+
+For a bank, the labels can initially feel reversed. A loan made to a customer is normally an **asset of the bank** because the customer owes future payments to the bank. A customer deposit is normally a **liability of the bank** because the bank owes the depositor money and must honour valid withdrawals or payments. Cash, balances with central banks, securities and loans are common asset categories; deposits and wholesale borrowings are common liability categories. Equity sits beneath them as the residual claim.
+
+Suppose a bank has assets of 110 and liabilities of 100. Its equity is 10. If an asset subsequently loses 4 in value and nothing else changes, assets become 106 and equity becomes 6. The loss does not disappear because it was non-cash; it reduces the residual available to absorb losses. This is the mechanical reason capital matters to a bank.
+
+The identity does **not** say that every asset is safe, every liability is payable immediately, or equity is a pile of cash. It only says that recognised resources and obligations must balance through the residual interest. Accounting recognition and measurement determine the amounts assigned to each item; prudential regulation may then make additional adjustments when determining regulatory capital.
+
+&lt;Flow&gt;
++-----------------------+
+|        ASSETS         |
+| cash, securities,     |
+| loans, other claims   |
++-----------------------+
+            |
+            | financed by
+            v
++-----------------------+
+|      LIABILITIES      |
+| deposits, borrowings  |
++-----------------------+
+            |
+            | plus residual
+            v
++-----------------------+
+|        EQUITY         |
+| assets - liabilities  |
++-----------------------+
+
+Assets = Liabilities + Equity
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Every recognised balance-sheet amount must fit the identity **Assets = Liabilities + Equity**. A loss that reduces assets without reducing liabilities reduces equity.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Reading a customer's loan as the bank's liability because the bank "gave the money". The remaining repayment claim belongs to the bank, so the loan is the bank's asset.
+</Trap>
+
+<NeverConfuse a="Asset" b="Equity">
+**Asset** — a recognised economic resource controlled by the bank.
+---
+**Equity** — the residual after liabilities are deducted from assets; it is not another asset or a dedicated cash reserve.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The accounting identity and the asset-liability-equity relationship do not depend on jurisdiction.
+</Rule>
+
+<Recall
+  q="Why is a customer loan normally a bank asset?"
+  a="Because the customer owes contractual payments to the bank."
+/>
+
+<Recall
+  q="What absorbs a loss when assets fall but liabilities do not?"
+  a="Equity."
+/>

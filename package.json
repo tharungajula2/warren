@@ -7,6 +7,7 @@
     "build-corpus": "node scripts/build-corpus.mjs",
     "new-atom": "node scripts/new-atom.mjs",
     "import": "node scripts/import-markdown.mjs",
+    "import-pack": "node scripts/import-pack.mjs",
     "suggest-prereqs": "node scripts/suggest-prerequisites.mjs",
     "suggest-subdomains": "node scripts/suggest-subdomains.mjs",
     "stats": "node scripts/corpus-stats.mjs",

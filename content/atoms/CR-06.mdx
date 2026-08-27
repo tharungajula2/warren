@@ -1,0 +1,106 @@
+---
+id: CR-06
+title: 'Days past due, arrears and delinquency buckets'
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Days past due measures elapsed time since a contractual amount became unpaid;
+  arrears measure the unpaid amount; a delinquency bucket groups accounts by
+  lateness. None of these is automatically the same thing as default.
+prerequisites:
+  - CR-02
+  - CR-05
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning Directions, 2025, paragraphs 31–42
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, “Prudential norms on Income Recognition, Asset
+      Classification and Provisioning – Clarifications”, 12 November 2021
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12194&Mode=0'
+    accessed: 28 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+**Days past due (DPD)** is a clock. It counts how long a contractual payment has remained unpaid after its due date under the applicable convention. **Arrears** is an amount: the sum of required payments that remain unpaid. An account can therefore have ₹1 of arrears and 40 DPD, or a large arrears balance and a different DPD count.
+
+A **delinquency bucket** converts continuous DPD into categories such as current, 1–30, 31–60 and 61–90 days. Bucketing makes operational monitoring, collections and migration analysis easier, but the cut-offs are conventions rather than laws of nature.
+
+The starting point of the clock matters. RBI requires borrower accounts to be flagged overdue through the day-end process for the due date. Its current commercial-bank directions illustrate an amount due on 31 March becoming overdue on that date if not received before the day-end process, then reaching SMA-1 after 30 continuous days and SMA-2 after 60.
+
+Revolving facilities require different logic because there may be no single scheduled principal instalment. RBI therefore uses an **out-of-order** concept for cash-credit and overdraft accounts, including conditions involving persistent excess over sanctioned limit/drawing power, absence of credits and insufficient credits to cover interest.
+
+DPD should be treated as an observed behavioural state, not an estimate of ultimate loss. A borrower at 60 DPD may cure; another borrower at 0 DPD may already be unlikely to pay because of insolvency, fraud or another serious credit event.
+
+&lt;Flow&gt;
++---------+
+| Due date|
++---------+
+     |
+     v
++---------+     +----------+     +----------+     +----------+
+| Overdue | --&amp;gt; | 1-30 DPD | --&amp;gt; |31-60 DPD| --&amp;gt; |61-90 DPD|
++---------+     +----------+     +----------+     +----------+
+                                                        |
+                                                        v
+                                           +---------------------+
+                                           | Default/NPA test     |
+                                           | applied separately  |
+                                           +---------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+DPD is a time-since-missed-payment measure; default status requires the applicable default rule.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+A common operational error is to calculate DPD from statement date, reporting date or month-end instead of the contractual due date and specified day-end convention.
+</Trap>
+
+<NeverConfuse>
+**Arrears** — the unpaid contractual amount.
+
+**Days past due** — the elapsed delinquency time associated with an unpaid obligation.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI commercial-bank monitoring uses SMA-0 up to 30 days overdue, SMA-1 more than 30 and up to 60, and SMA-2 more than 60 and up to 90; revolving facilities use corresponding out-of-order logic. [RBI IRACP Directions 2025]
+</Delta>
+
+<Delta j="UK">
+— PRA default treatment uses material past-due obligations and a 90-day default criterion under the current CRR-derived framework; arrears reporting buckets are not themselves the complete definition of default. [PRA PS7/19]
+</Delta>
+
+<Delta j="EU">
+— CRR reporting distinguishes performing and non-performing exposures across past-due bands, including exposures that are unlikely to pay even when no more than 90 days past due. [CRR Article 178; Commission Implementing Regulation (EU) 2021/637]
+</Delta>
+
+<Delta j="US">
+— US regulatory frameworks use multiple delinquency thresholds depending on purpose; Advanced Approaches retail default, for example, is not uniformly a 90-day rule. [12 CFR Part 217 Subpart E]
+</Delta>
+
+<Recall
+  q="What does 45 DPD tell a practitioner?"
+  a="A payment has remained past due for roughly 45 days under the governing counting convention; it does not alone determine default in every framework."
+/>
+
+<Recall
+  q="What is the RBI analogue for delinquency monitoring before NPA?"
+  a="Special Mention Account categories, including SMA-0, SMA-1 and SMA-2."
+/>

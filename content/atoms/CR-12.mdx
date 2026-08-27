@@ -1,0 +1,103 @@
+---
+id: CR-12
+title: Probability of default
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Probability of default is the probability that a defined obligor or exposure
+  enters a defined default state over a specified future horizon, conditional on
+  a stated information set. A PD without a horizon, default definition and unit
+  of observation is not a complete parameter.
+prerequisites:
+  - CR-05
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB
+      approach: minimum requirements”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131,
+      Advanced Approaches risk parameters
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+A **probability of default (PD)** is a probability attached to a future default event. Four elements must accompany the number.
+
+First is the **unit**: an obligor, facility or homogeneous retail pool. A 2% obligor PD and a 2% facility-level default probability need not describe the same event.
+
+Second is the **default definition**. A PD calibrated to regulatory default is not automatically interchangeable with a probability of 90 DPD, bankruptcy, charge-off or accounting impairment.
+
+Third is the **horizon**. Basel IRB PDs are fundamentally one-year measures, with regulatory estimates required to reflect long-run average one-year default experience subject to framework requirements. A lifetime default probability answers a different question from a 12-month PD.
+
+Fourth is the **information date** or conditioning set. Two identical borrowers observed in different macroeconomic environments may receive different point-in-time probabilities if the model conditions strongly on current conditions.
+
+PD is not a prediction that a particular borrower "will default". If 1,000 genuinely comparable exposures each have a well-calibrated 1% one-year PD, the interpretation is roughly that repeated comparable populations would default at a rate consistent with that probability, not that ten predetermined borrowers have already been identified.
+
+A rating grade can therefore contain many obligors with a common calibrated grade PD even though individual circumstances differ. Conversely, a credit score may rank borrowers well without its raw score being a probability. Calibration is the mapping from score or grade to an observed or estimated default frequency.
+
+&lt;Flow&gt;
++---------------------+
+| Unit                |
+| obligor/facility    |
++---------------------+
+          |
+          v
++---------------------+
+| Default definition  |
++---------------------+
+          |
+          v
++---------------------+
+| Horizon             |
+| e.g. one year       |
++---------------------+
+          |
+          v
++---------------------+
+| Information set     |
++---------------------+
+          |
+          v
++---------------------+
+| PD                  |
++---------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A PD is incomplete unless the event, unit, horizon and conditioning information are known.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Comparing two PDs solely because both are labelled "one-year PD" can be invalid when one uses regulatory default and the other uses a delinquency or accounting-loss target.
+</Trap>
+
+<NeverConfuse>
+**PD** — a calibrated probability of a specified future default event.
+
+**Credit score** — a numerical ranking or predictive output that need not itself be a probability.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Probability mathematics does not change by jurisdiction; regulatory frameworks can prescribe different default definitions, floors, horizons or calibration requirements.
+</Rule>
+
+<Recall
+  q="What horizon underlies Basel IRB PD estimation?"
+  a="One-year default probability, calibrated using long-run default experience under the framework."
+/>
+
+<Recall
+  q="Can a raw score be multiplied by LGD as though it were PD?"
+  a="No, unless the score has been validly transformed and calibrated into a probability."
+/>

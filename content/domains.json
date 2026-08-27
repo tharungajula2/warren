@@ -1,38 +1,74 @@
 {
+  "foundation": {
+    "title": "Quantitative Foundations",
+    "description": "Deterministic financial mathematics, discounting, present value, and fundamental probability distributions."
+  },
   "credit-risk": {
     "title": "Credit Risk",
     "description": "Measurement, provisioning, and portfolio modeling of obligor probability of default, loss severity, and exposure."
+  },
+  "impairment": {
+    "title": "Credit Risk Impairment & Provisioning",
+    "description": "IFRS 9 / CECL expected credit loss accounting, staging criteria, and ECL provisioning models."
+  },
+  "regulatory-capital": {
+    "title": "Regulatory Capital & RWA",
+    "description": "Basel capital requirements, risk-weighted assets calculations, Tier 1 ratios, and prudential capital floors."
+  },
+  "treasury-alm": {
+    "title": "Treasury & ALM",
+    "description": "Asset liability management, interest rate risk in the banking book (IRRBB), and liquidity ratios (LCR, NSFR)."
+  },
+  "traded-products": {
+    "title": "Traded Products & Derivatives",
+    "description": "Financial derivatives pricing, interest rate swaps, credit default swaps, and trading book valuation."
   },
   "counterparty-risk": {
     "title": "Counterparty Credit Risk",
     "description": "Counterparty credit risk exposure, valuation adjustments (xVA), collateral management, and derivative settlement."
   },
-  "foundation": {
-    "title": "Quantitative Foundations",
-    "description": "Deterministic financial mathematics, discounting, present value, and fundamental probability distributions."
-  },
-  "legal-framework": {
-    "title": "Legal Framework",
-    "description": "Contractual enforceability of netting agreements, collateral arrangements, and jurisdictional bankruptcy laws."
-  },
   "market-risk": {
-    "title": "Market Risk",
-    "description": "Statistical loss estimation across trading books under normal and extreme market stress scenarios."
+    "title": "Market Risk & VaR",
+    "description": "Statistical loss estimation across trading books under normal and extreme market stress scenarios (FRTB, VaR, ES)."
   },
   "operational-risk": {
     "title": "Operational Risk",
     "description": "Capital quantification for inadequate internal processes, system failures, human error, and legal events."
   },
-  "quantitative": {
-    "title": "Quantitative Analytics",
-    "description": "Statistical risk modeling, machine learning algorithms, time-series forecasting, and ETL data pipelines."
-  },
-  "regulatory": {
-    "title": "Regulatory Standards",
-    "description": "Basel III/IV international capital adequacy frameworks, liquidity coverage requirements, and prudential ratios."
+  "model-risk": {
+    "title": "Model Risk & Validation",
+    "description": "Model risk management, SR 11-7 validation standards, backtesting, sensitivity analysis, and governance."
   },
   "risk-data": {
     "title": "Risk Data Governance",
     "description": "BCBS 239 risk data aggregation principles, data lineage tracing, metadata governance, and quality management."
+  },
+  "financial-crime": {
+    "title": "Financial Crime & AML",
+    "description": "Anti-money laundering, know-your-customer (KYC) compliance, sanctions screening, and transaction monitoring."
+  },
+  "india-lending": {
+    "title": "India Lending & Prudential Norms",
+    "description": "Reserve Bank of India (RBI) prudential framework, IRACP income recognition, asset classification, and provisioning."
+  },
+  "business-analysis": {
+    "title": "Business Analysis",
+    "description": "Banking functional requirements, target operating models, regulatory change analysis, and workflow specification."
+  },
+  "technical": {
+    "title": "Technical Infrastructure",
+    "description": "Financial software engineering, database architectures, high-performance computing pipelines, and risk engines."
+  },
+  "quantitative": {
+    "title": "Quantitative Analytics",
+    "description": "Statistical risk modeling, machine learning algorithms, time-series forecasting, and ETL data pipelines."
+  },
+  "legal-framework": {
+    "title": "Legal Framework",
+    "description": "Contractual enforceability of netting agreements, collateral arrangements, and jurisdictional bankruptcy laws."
+  },
+  "regulatory": {
+    "title": "Regulatory Standards",
+    "description": "Basel III/IV international capital adequacy frameworks, liquidity coverage requirements, and prudential ratios."
   }
 }

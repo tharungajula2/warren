@@ -1,0 +1,108 @@
+---
+id: FND-17
+title: Variance and Volatility
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Variance measures average squared dispersion around a mean; standard
+  deviation is its square root.** In finance, volatility usually refers to a
+  standard-deviation measure over a stated horizon, so volatility is meaningless
+  without the variable, data frequency and time horizon.
+prerequisites:
+  - FND-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
+      of Statistical Methods — Measures of Scale*, Section 1.3.5.6
+    url: 'https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
+      of Statistical Methods*
+    url: 'https://www.itl.nist.gov/div898/handbook/'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+For a random variable \(X\) with mean \(\mu\), **variance** is:
+
+\[
+Var(X)=E[(X-\mu)^2]
+\]
+
+It asks how far outcomes tend to lie from the mean, squares those deviations so positive and negative deviations do not cancel, and averages them according to the probability model.
+
+Variance has squared units. If \(X\) is measured in percentage points, variance is measured in squared percentage points. The **standard deviation** is:
+
+\[
+\sigma=\sqrt&#123;Var(X)&#125;
+\]
+
+Taking the square root restores the original units, which makes standard deviation easier to interpret alongside the variable itself. NIST makes this unit distinction explicitly when describing measures of scale.
+
+In financial usage, **volatility** usually means a standard deviation of price changes, returns, rates or another chosen variable over a defined interval and observation scheme. A daily volatility calculated from daily observations and an annual volatility are not automatically the same number. Conversion can require assumptions about how changes behave through time; multiplying by an arbitrary number of days is not a general solution.
+
+Variance also treats upside and downside deviations symmetrically. A return far above the mean increases variance just as a similarly distant return below the mean does. That can be useful for measuring dispersion but makes volatility different from a pure downside-loss measure.
+
+Finally, equal variance does not imply equal tail behaviour. Two distributions can have the same mean and variance yet place very different probability in extreme outcomes. Variance and volatility therefore summarise spread; they do not fully describe risk.
+
+&lt;Flow&gt;
+Outcomes X
+    |
+    v
++----------------------+
+| Mean = mu            |
++----------------------+
+    |
+    v
++----------------------+
+| Deviations X - mu    |
++----------------------+
+    |
+    v
++----------------------+
+| Square and average   |
+| = variance           |
++----------------------+
+    |
+    v
++----------------------+
+| Square root          |
+| = standard deviation |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A volatility number is incomplete unless its underlying variable and measurement horizon are known.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Comparing a daily standard deviation directly with an annual standard deviation because both are labelled "volatility".
+</Trap>
+
+<NeverConfuse a="Variance" b="Standard deviation">
+**Variance** — expected squared dispersion around the mean, expressed in squared units.
+---
+**Standard deviation** — square root of variance, expressed in the original units and commonly called volatility in financial contexts.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Variance and standard-deviation mathematics do not vary by jurisdiction.
+</Rule>
+
+<Recall
+  q="Why is standard deviation usually easier to interpret than variance?"
+  a="It is expressed in the same units as the underlying variable."
+/>
+
+<Recall
+  q="Does equal volatility guarantee equal tail risk?"
+  a="No."
+/>

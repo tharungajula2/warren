@@ -1,0 +1,99 @@
+---
+id: FND-22
+title: 'Policy, Standard and Procedure'
+type: reference
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  A useful control hierarchy is **policy = required intent and principles;
+  standard = mandatory control or design criteria; procedure = steps for
+  execution**. The terminology is not legally universal, so authority and
+  content matter more than the document label.
+prerequisites:
+  - FND-21
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Institute of Internal Auditors, *The IIA's Three Lines Model: An update of
+      the Three Lines of Defense*, 2020, updated 2024
+    url: >-
+      https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/
+    accessed: 'August 28, 2026'
+  - label: >-
+      Financial Stability Board, *Principles for an Effective Risk Appetite
+      Framework*, November 18, 2013
+    url: 'https://www.fsb.org/2013/11/r_131118/'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+A **policy** states what the institution requires and why. It usually establishes principles, scope, responsibilities, risk boundaries or mandatory outcomes. For example, a credit-risk policy might require independent approval above defined thresholds and prescribe high-level principles for acceptable lending.
+
+A **standard** converts policy into more specific mandatory requirements. It might define minimum information needed for an approval, required control frequencies, quantitative thresholds, modelling conventions or documentation fields. A standard should be sufficiently precise that compliance can be tested.
+
+A **procedure** describes how people or systems execute the requirement. It normally specifies a sequence: obtain information, perform checks, record evidence, obtain approvals, book the transaction and retain documentation. Procedures are closest to day-to-day operations and usually change more often than governing policy.
+
+This three-level hierarchy is a governance convention, not a globally fixed legal taxonomy. One institution may call a document a "policy" where another calls similar content a "standard", "framework", "manual" or "rulebook". Regulatory texts can also use these words differently. The reliable test is therefore the document's **authority, mandatory force, scope, owner and approval route**, not its title.
+
+The hierarchy should flow downward without contradiction. A procedure cannot legitimately authorise activity prohibited by the governing policy. A standard cannot silently widen risk appetite beyond an approved boundary. Where lower-level documents conflict with higher-authority requirements, the conflict must be resolved through governance rather than by choosing whichever text is operationally convenient.
+
+Version control matters for the same reason. Users need to know which document is effective, who approved it, what it superseded and how exceptions are authorised.
+
+&lt;Flow&gt;
++------------------------+
+| POLICY                 |
+| intent, principles,    |
+| mandatory outcomes     |
++------------------------+
+            |
+            v
++------------------------+
+| STANDARD               |
+| detailed mandatory     |
+| requirements           |
++------------------------+
+            |
+            v
++------------------------+
+| PROCEDURE              |
+| execution steps        |
++------------------------+
+            |
+            v
++------------------------+
+| Evidence / records     |
++------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Lower-authority documents may implement higher-authority requirements but cannot validly contradict them.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating the word "policy" as proof of board approval, or "procedure" as proof of low authority, without checking the institution's actual governance taxonomy.
+</Trap>
+
+<NeverConfuse a="Standard" b="Procedure">
+**Standard** — a set of specific mandatory criteria translating higher-level requirements into testable controls.
+---
+**Procedure** — the operational sequence used to perform those requirements; detailed steps do not themselves establish higher authority.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** There is no universal statutory taxonomy fixing these three document labels; institution-specific governance and applicable local rules determine formal authority.
+</Rule>
+
+<Recall
+  q="Which document normally explains the execution steps?"
+  a="The procedure."
+/>
+
+<Recall
+  q="What should happen when a procedure contradicts its governing policy?"
+  a="The inconsistency must be resolved; the procedure cannot legitimately override the higher-authority requirement."
+/>

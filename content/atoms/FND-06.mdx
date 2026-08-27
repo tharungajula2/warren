@@ -1,0 +1,127 @@
+---
+id: FND-06
+title: The Financial Statements and How They Link
+type: mechanism
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  The three-statement shorthand is **balance sheet, profit and loss statement,
+  and cash-flow statement**. Profit changes equity, cash flows explain movements
+  in cash, and every recognised closing balance must end up on the closing
+  balance sheet.
+prerequisites:
+  - FND-01
+  - FND-04
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'IFRS Foundation, *IAS 1 Presentation of Financial Statements*'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/
+    accessed: 'August 28, 2026'
+  - label: 'IFRS Foundation, *IAS 7 Statement of Cash Flows*'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Financial Statements: Presentation and Disclosures) Directions, 2025*
+    url: 'https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13143'
+    accessed: 'August 28, 2026'
+  - label: 'UK Endorsement Board, *Text by Standard 2024*'
+    url: >-
+      https://www.endorsement-board.uk/standards/text-by-standard/text-by-standard-2024/
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Union, *International accounting standards — IAS Regulation*,
+      Regulation (EC) No 1606/2002 and Regulation (EU) 2023/1803 summary
+    url: >-
+      https://eur-lex.europa.eu/EN/legal-content/summary/international-accounting-standards-ias-regulation.html
+    accessed: 'August 28, 2026'
+  - label: 'Financial Accounting Standards Board, *FASB Mission*'
+    url: 'https://www.fasb.org/about-us/about-the-fasb'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+The **balance sheet** reports financial position at a date. The **profit and loss statement** reports income and expenses over a period. The **cash-flow statement** reports cash inflows and outflows during the period, commonly classified into operating, investing and financing activities under IAS 7.
+
+They measure different things. If interest income of 10 is accrued but only 8 has been received in cash, profit can include 10 while cash increases by only 8; the remaining 2 appears through a receivable or carrying amount elsewhere on the balance sheet. Similarly, depreciation or a credit-loss charge can reduce profit without producing an equal current-period cash payment.
+
+Profit normally feeds equity through retained earnings after dividends and other equity movements. Cash movements change the closing cash balance. Transactions such as new borrowing can increase cash and liabilities without creating profit. Repaying principal can reduce cash and debt without creating an equivalent expense. The statements therefore reconcile economic performance, financial position and cash movement rather than repeating one another.
+
+"Three statements" is practitioner shorthand, not a claim that a complete set of accounts literally contains only three documents. Under IFRS, a complete set also includes a statement of changes in equity, notes and comparative information, while profit or loss and other comprehensive income form part of the prescribed presentation.
+
+For banks, the linking logic is the same even though line items differ markedly from an industrial company's accounts. The applicable reporting framework determines recognition, measurement and presentation; prudential reports may use accounting values as a starting point and then apply regulatory definitions.
+
+&lt;Flow&gt;
++-----------------------+
+| Opening balance sheet |
++-----------------------+
+            |
+            v
++-----------------------+
+| Profit or loss        |
+| income - expenses     |
++-----------------------+
+            |
+            +---------&amp;gt; changes equity
+            |
+            v
++-----------------------+
+| Cash-flow statement   |
+| explains cash movement|
++-----------------------+
+            |
+            v
++-----------------------+
+| Closing balance sheet |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Profit is not cash, and cash movement is not profit; both ultimately reconcile into closing balance-sheet positions.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Forcing the change in cash to equal reported profit and treating any difference as an error.
+</Trap>
+
+<NeverConfuse a="Profit and loss statement" b="Cash-flow statement">
+**Profit and loss statement** — measures recognised income and expenses over a period.
+---
+**Cash-flow statement** — measures cash movements over a period; accruals and non-cash items make it differ from profit.
+</NeverConfuse>
+
+<Delta j="IN">
+— Scheduled commercial banks prepare statutory financial statements under the Banking Regulation Act framework and RBI presentation/disclosure directions; this does not mean they apply Ind AS 109. [RBI, Commercial Banks – Financial Statements: Presentation and Disclosures Directions, 2025]
+</Delta>
+
+<Delta j="UK">
+— Entities reporting under UK-adopted international accounting standards use the applicable UK-endorsed IFRS requirements, including IAS 1/IFRS presentation requirements. [UK Endorsement Board, UK-adopted international accounting standards]
+</Delta>
+
+<Delta j="EU">
+— EU law requires EU-adopted international accounting standards for specified consolidated accounts, notably those of companies whose securities trade on an EU regulated market. [Regulation (EC) No 1606/2002; Regulation (EU) 2023/1803]
+</Delta>
+
+<Delta j="US">
+— Applicable US entities report under US GAAP; the FASB establishes and improves financial accounting and reporting standards for nongovernmental entities. [FASB Mission]
+</Delta>
+
+<Recall
+  q="Which statement is a snapshot rather than a period flow?"
+  a="The balance sheet."
+/>
+
+<Recall
+  q="Why can profit differ from cash generated?"
+  a="Accruals, non-cash expenses and transactions outside profit or loss separate recognition from cash timing."
+/>

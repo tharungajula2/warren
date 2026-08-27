@@ -1,0 +1,91 @@
+---
+id: FND-05
+title: Capital Versus Liquidity
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Capital absorbs losses; liquidity meets payments when due.** A bank can have
+  positive capital yet fail through a cash shortage, or hold abundant cash yet
+  be economically insolvent because its assets are worth less than its
+  obligations.
+prerequisites:
+  - FND-01
+  - FND-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel III: international
+      regulatory framework for banks*
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Bank of England, Prudential Regulation Authority, *Liquidity*, Prudential
+      and Resolution Policy Index
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/prudential-and-resolution-policy-index/banking/liquidity
+    accessed: 'August 28, 2026'
+  - label: 'European Banking Authority, *Liquidity risk*'
+    url: 'https://www.eba.europa.eu/regulation-and-policy/liquidity-risk'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+Bank **capital** is the loss-absorbing financial base protecting creditors and depositors against declines in asset value. Accounting equity and regulatory capital are related but not identical: prudential rules define eligible capital instruments and make regulatory deductions and adjustments. Basel standards therefore specify capital measures separately from ordinary financial-statement equity.
+
+**Liquidity** is the ability to meet payment obligations when they fall due without unacceptable loss. Liquid assets can be converted into settlement cash quickly and reliably. A bank needs liquidity because deposit withdrawals, outgoing payments, maturing borrowings and other obligations can require cash before longer-term assets such as loans repay.
+
+The distinction can be seen numerically. A bank with assets economically worth 105 and liabilities of 100 has positive residual value of 5. But if almost all 105 is locked in long-dated, non-saleable assets while 20 of liabilities must be paid today, it can face a liquidity crisis despite being solvent in value terms. Conversely, a bank could hold 30 of immediately available cash but have total assets worth only 90 against liabilities of 100. It is liquid in the immediate sense but has negative economic net worth.
+
+Prudential frameworks therefore maintain distinct capital and liquidity requirements. Basel III includes risk-based capital and leverage requirements as well as liquidity standards. The UK PRA and EU framework likewise treat liquidity as a dedicated prudential risk rather than a synonym for capital.
+
+A capital injection may also improve liquidity if it brings in cash, but that transaction does not collapse the concepts into one. The capital describes loss-bearing capacity; the incoming cash describes an asset available for payments.
+
+&lt;Flow&gt;
+BANK RESILIENCE
+                    |
+          +---------+---------+
+          |                   |
+          v                   v
++------------------+  +------------------+
+| CAPITAL          |  | LIQUIDITY        |
+| absorbs losses   |  | meets cash       |
+|                  |  | outflows on time |
++------------------+  +------------------+
+          |                   |
+          v                   v
+  solvency protection    payment capacity
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Capital answers **"Can losses be absorbed?"** Liquidity answers **"Can payments be made when due?"**
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling a bank "well capitalised" because it has a large cash balance. Cash is an asset; capital is a loss-absorbing funding concept.
+</Trap>
+
+<NeverConfuse a="Solvency" b="Liquidity">
+**Solvency** — having sufficient asset value relative to obligations and an adequate loss-absorbing base.
+---
+**Liquidity** — having resources available at the required time to settle obligations; a solvent institution can still become illiquid.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Regulatory calibration differs, but capital and liquidity remain economically distinct in every jurisdiction.
+</Rule>
+
+<Recall
+  q="Which protects primarily against asset losses: capital or liquidity?"
+  a="Capital."
+/>
+
+<Recall
+  q="Can a solvent bank face a liquidity crisis?"
+  a="Yes, if cash obligations arrive before usable liquidity is available."
+/>

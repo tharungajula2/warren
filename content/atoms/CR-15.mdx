@@ -1,0 +1,106 @@
+---
+id: CR-15
+title: Exposure at default and credit conversion factors
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Exposure at default estimates how much will be exposed when default occurs,
+  not merely how much is drawn today. Credit conversion factors translate
+  eligible undrawn or contingent amounts into expected or regulatory exposure,
+  making drawdown behaviour part of credit risk.
+prerequisites:
+  - CR-03
+  - CR-05
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, EAD
+      estimation requirements
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR 217.101 and Subpart E,
+      risk-parameter definitions
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+For a simple fully drawn loan with no expected balance change, **exposure at default (EAD)** may be close to today's outstanding exposure. For revolving and committed products, that shortcut can fail because borrowers often draw additional funds before default.
+
+Suppose a facility has 60 drawn and 40 undrawn. If 20 of the undrawn amount is expected to be drawn before default, an illustrative EAD is 80. The implied **credit conversion factor (CCF)** on the undrawn component is 50%:
+
+`CCF = additional drawing before default / undrawn amount`
+
+`EAD = current drawn amount + CCF × undrawn amount`
+
+This is a teaching decomposition, not a universal regulatory formula. Different exposure types and regulatory approaches prescribe their own treatment.
+
+EAD should be estimated at the same default event used for PD and LGD. Using balance six months before default for one parameter and balance at default for another can create denominator mismatches. Basel IRB requirements describe EAD as expected gross exposure of the facility upon default and require appropriate estimation standards for off-balance-sheet items.
+
+CCF can be behaviourally complex. Distressed borrowers may draw committed liquidity before failure; lenders may freeze facilities; contractual limits may change; interest and fees may accumulate. A historical CCF sample must therefore preserve the reference date, available limit and default date.
+
+EAD also differs from **limit utilisation**. Utilisation describes how much of a line is currently drawn. EAD asks how much is expected to be exposed if default occurs.
+
+&lt;Flow&gt;
++-------------------+
+| Facility limit    |
++-------------------+
+      |         |
+      v         v
++---------+ +---------+
+| Drawn   | | Undrawn |
++---------+ +---------+
+                |
+                v
+        +---------------+
+        | Apply drawdown|
+        | / CCF logic   |
+        +---------------+
+                |
+                v
++-----------------------+
+| Additional pre-default|
+| exposure              |
++-----------------------+
+          |
+          v
++-----------------------+
+| EAD                   |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+EAD is measured at default; current balance is only one input to that future exposure.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Setting EAD equal to today's drawn amount for revolving facilities systematically ignores pre-default utilisation and contingent exposure.
+</Trap>
+
+<NeverConfuse>
+**EAD** — exposure expected or prescribed at the default event.
+
+**Current utilisation** — the amount drawn today relative to the available line.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The economic mechanism is universal; regulatory CCF values, estimation permissions and exposure-measurement rules vary by framework.
+</Rule>
+
+<Recall
+  q="Why can EAD exceed today's outstanding balance?"
+  a="Additional committed funds, accrued amounts or contingent obligations may become exposed before default."
+/>
+
+<Recall
+  q="What does a CCF convert?"
+  a="An undrawn or contingent amount into a credit-exposure amount under the relevant estimation or regulatory method."
+/>

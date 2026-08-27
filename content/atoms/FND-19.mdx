@@ -1,0 +1,109 @@
+---
+id: FND-19
+title: Expected Loss Versus Unexpected Loss
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Expected loss is the probability-weighted average loss built into the centre
+  of the loss distribution; unexpected loss is adverse variation around and
+  beyond that expectation.** Provisioning and pricing address expected loss in
+  different ways, while prudential capital is fundamentally concerned with
+  resilience to losses beyond the expected level.
+prerequisites:
+  - FND-15
+  - FND-16
+  - FND-18
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB
+      approach: risk-weighted assets for credit risk*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/31.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE35 —
+      Treatment of expected losses and provisions*
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/35.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Bank for International Settlements, Financial Stability Institute, *IFRS 9
+      and expected loss provisioning — Executive Summary*
+    url: 'https://www.bis.org/fsi/fsisummaries/ifrs9.htm'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+Return to a simple position that loses 100 with 1% probability and zero otherwise. Its expected loss is 1. But no actual outcome in that example equals 1: realised loss is either 0 or 100. The gap between the average and adverse realisations is the intuition behind **unexpected loss**.
+
+Expected loss can be written generically as the probability-weighted mean of possible losses:
+
+\[
+EL=E[L]
+\]
+
+In simple credit-risk shorthand, later frameworks may approximate expected loss using components for probability of default, exposure and loss severity. That decomposition does not change the fundamental definition: expected loss is an average over a loss distribution.
+
+Unexpected loss is not ordinarily a second amount that simply gets added to every loan's invoice. It describes variability around expected outcomes, particularly adverse states for which the institution needs resilience. The Basel credit-risk framework explicitly states that risk-weighted assets under its internal-ratings-based architecture are designed to address **unexpected losses**, while expected-loss amounts and provisions receive separate treatment.
+
+This makes the distinction foundational to banking. Expected losses should influence economics such as pricing and loss recognition under the applicable framework. Capital exists to provide loss-absorbing capacity when actual losses are worse than expected, though precise prudential treatment is more complex than "provisions equal EL and capital equals UL" in every circumstance.
+
+The distinction also prevents a dangerous error in risk reporting: a portfolio can have a modest expected loss but a severe tail. Low average loss does not imply low capital need, because concentration and dependence can make rare outcomes extremely damaging.
+
+&lt;Flow&gt;
+Loss distribution
+        |
+        v
++----------------------+
+| Expected loss        |
+| probability-weighted |
+| average              |
++----------------------+
+        |
+        | adverse variation
+        v
++----------------------+
+| Unexpected loss      |
+| outcomes worse than  |
+| the expected level   |
++----------------------+
+        |
+        v
++----------------------+
+| Capital resilience   |
+| against severe loss  |
++----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Expected loss describes the centre of a loss distribution; resilience must also address the possibility that realised losses are materially worse.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Subtracting expected loss from a high quantile and treating the result as a universally defined accounting or regulatory "unexpected loss" number without checking the framework.
+</Trap>
+
+<NeverConfuse a="Expected loss" b="Unexpected loss">
+**Expected loss** — probability-weighted average loss.
+---
+**Unexpected loss** — adverse variation around expected loss, especially the severe outcomes for which additional resilience is required.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The statistical distinction is universal; national prudential and accounting frameworks determine exactly how provisions and capital interact with it.
+</Rule>
+
+<Recall
+  q="Can expected loss be low while tail loss is severe?"
+  a="Yes."
+/>
+
+<Recall
+  q="In Basel credit-risk architecture, what are risk-weighted capital requirements fundamentally designed to address?"
+  a="Unexpected losses, with expected losses and provisions receiving separate treatment."
+/>

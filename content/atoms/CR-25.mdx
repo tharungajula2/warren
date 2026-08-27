@@ -1,0 +1,97 @@
+---
+id: CR-25
+title: Correlation and systematic credit risk
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Credit correlation means borrowers' default outcomes are not independent
+  because common economic forces move their credit quality together.
+  Idiosyncratic risk can diversify away; systematic risk cannot be eliminated
+  simply by adding more borrowers exposed to the same underlying conditions.
+prerequisites:
+  - CR-12
+  - CR-18
+  - CR-24
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB
+      approach: risk-weight functions”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/31.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit
+      risk concentration”
+    url: 'https://www.bis.org/basel_framework/chapter/SRP/32.htm'
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+An individual borrower can default because of an **idiosyncratic** event: poor management, fraud, loss of a key customer or a local operational failure. Holding many independent borrowers reduces the effect of any one such event on the portfolio.
+
+**Systematic risk** comes from common forces: recession, interest-rate shock, unemployment, commodity prices, property-market stress, exchange-rate moves or other economy-wide conditions. These forces can make many borrowers deteriorate simultaneously.
+
+Credit **correlation** describes this dependence. It does not require two borrowers to have identical PDs. One may have a 1% PD and another 5%, yet their default likelihoods can rise together in recession.
+
+This is why portfolio loss cannot be derived by adding expected losses and stopping there. If defaults were independent, a large diversified pool would exhibit relatively stable aggregate outcomes. Positive dependence thickens the loss tail because many defaults can cluster in the same adverse state.
+
+Correlation also explains the danger of hidden concentration. Two companies in different legal sectors may depend on the same property cycle or export market. Conversely, two firms with the same high-level sector label may have materially different geographic or customer exposures. Dependence must therefore be analysed economically, not solely through classification codes.
+
+Basel IRB capital formulas embody systematic dependence through prescribed risk-weight functions rather than assuming independent defaults, while supervisory concentration standards separately require banks to identify material common risk factors.
+
+&lt;Flow&gt;
++-------------------+
+                 | Systematic factor |
+                 | recession/shock   |
+                 +-------------------+
+                    |      |      |
+                    v      v      v
+                 +----+ +----+ +----+
+                 | A  | | B  | | C  |
+                 +----+ +----+ +----+
+                    |      |      |
+                    v      v      v
+                 +-------------------+
+                 | Clustered defaults|
+                 +-------------------+
+                           |
+                           v
+                 +-------------------+
+                 | Portfolio tail    |
+                 | loss increases    |
+                 +-------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Diversification reduces borrower-specific risk only to the extent that exposures do not share the same failure drivers.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming default independence because borrowers are legally unrelated understates tail risk during systemic stress.
+</Trap>
+
+<NeverConfuse>
+**Correlation** — statistical or economic dependence between credit outcomes.
+
+**Concentration** — disproportionate exposure to names or common risk factors; concentration often increases the consequences of correlation but the concepts are not identical.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Dependence and systematic risk are mathematical and economic properties; regulatory frameworks differ in how correlation is parameterised or capitalised.
+</Rule>
+
+<Recall
+  q="Which part of credit risk is hardest to diversify away?"
+  a="Systematic risk driven by common economic factors."
+/>
+
+<Recall
+  q="Why does positive default dependence raise capital needs?"
+  a="It increases the probability of many losses occurring together, widening the portfolio-loss tail."
+/>

@@ -1,0 +1,123 @@
+---
+id: CR-10
+title: Restructuring and forbearance
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Restructuring changes contractual terms; forbearance is a concession
+  associated with a debtor's financial difficulty. Neither word is automatically
+  identical to default, but a distressed concession can be evidence that the
+  original obligation will not be repaid in full and can therefore trigger or
+  prolong default.
+prerequisites:
+  - CR-05
+  - CR-08
+  - CR-09
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning Directions, 2025
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
+    accessed: 28 August 2026
+  - label: >-
+      Prudential Regulation Authority, PS9/24, “Implementation of the Basel 3.1
+      standards – near-final policy statement part 2”
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/implementation-of-the-basel-3-1-standards-near-final-policy-statement-part-2
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+A **restructuring** changes the contractual terms of credit: maturity may be extended, instalments rescheduled, interest altered, principal reduced, repayment deferred or other terms modified. Restructuring can occur for many reasons, so the word alone does not identify credit quality.
+
+**Forbearance** is narrower in prudential usage. It generally refers to a concession granted because the debtor is experiencing or is expected to experience financial difficulty. A commercially negotiated refinancing for a healthy borrower is therefore conceptually different from a concession that would not have been offered absent distress.
+
+The credit-risk question is whether the modification reveals that the original obligation is no longer expected to be paid in full. Under Basel-style default frameworks, **distressed restructuring** is an indicator of unlikeliness to pay where the restructuring is likely to result in a diminished financial obligation. EU and PRA frameworks provide detailed implementation expectations around that principle.
+
+Restructuring also changes measurement. Extending maturity can reduce near-term instalments but increase exposure duration. Principal forgiveness directly affects economic loss. Capitalising arrears can make DPD look better without improving underlying repayment capacity. Models must therefore preserve the pre-restructure status, modification terms and subsequent performance rather than treating the new contract as an unrelated fresh loan.
+
+India's commercial-bank framework directs banks to apply both the IRACP directions and the separate RBI directions governing resolution of stressed assets for restructured accounts. Current RBI rules also impose additional provisioning in specified resolution-plan and repeated-restructuring circumstances.
+
+&lt;Flow&gt;
++----------------------+
+| Existing obligation  |
++----------------------+
+           |
+           v
++----------------------+
+| Terms modified       |
++----------------------+
+           |
+           v
++----------------------+
+| Financial difficulty |
+| caused concession?   |
++----------------------+
+      |            |
+     no           yes
+      |            |
+      v            v
++-----------+  +-------------+
+| Ordinary  |  | Forbearance |
+| amendment |  | / distress  |
++-----------+  +-------------+
+                    |
+                    v
+            +----------------+
+            | Default/UTP    |
+            | test separately|
+            +----------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A new payment schedule does not erase the credit deterioration that caused the old schedule to become unsustainable.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+"Evergreen" restructuring can convert missed payments into a formally current contract while leaving economic repayment capacity unchanged.
+</Trap>
+
+<NeverConfuse>
+**Restructuring** — any qualifying modification of contractual credit terms.
+
+**Forbearance** — a concession linked to the debtor's financial difficulty; it is a credit-quality concept, not merely a contract amendment.
+</NeverConfuse>
+
+<Delta j="IN">
+— commercial banks apply RBI's IRACP Directions together with the Reserve Bank of India (Commercial Banks – Resolution of Stressed Assets) Directions, 2025 for affected restructurings; specified resolution plans can attract additional prudential provisions. [RBI IRACP Directions 2025]
+</Delta>
+
+<Delta j="UK">
+— PRA policy distinguishes forbearance from default and treats distressed restructuring as a UTP issue where modification materially diminishes the financial obligation; not every forborne exposure automatically defaults. [PRA PS9/24 default policy]
+</Delta>
+
+<Delta j="EU">
+— CRR/EBA rules distinguish forbearance, non-performing status and regulatory default; distressed restructuring can trigger UTP, but the categories are not synonyms. [CRR Article 178; EBA definition-of-default Guidelines]
+</Delta>
+
+<Delta j="US">
+— restructuring, accounting treatment and regulatory default are separate determinations; Advanced Approaches default remains governed by the default tests in 12 CFR Part 217. [12 CFR Part 217 Subpart E]
+</Delta>
+
+<Recall
+  q="Does every restructuring prove default?"
+  a="No. The reason and economic effect of the modification matter."
+/>
+
+<Recall
+  q="Why can capitalising arrears be misleading?"
+  a="It can remove visible delinquency without restoring underlying repayment capacity."
+/>

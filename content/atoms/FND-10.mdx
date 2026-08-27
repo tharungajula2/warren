@@ -1,0 +1,120 @@
+---
+id: FND-10
+title: Other Comprehensive Income
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  **Other comprehensive income (OCI) is a reporting route for specified
+  recognised income and expense that the applicable accounting standard does not
+  put in current profit or loss.** It is not "less real" income, and it is not a
+  discretionary parking place for inconvenient volatility.
+prerequisites:
+  - FND-06
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'IFRS Foundation, *IAS 1 Presentation of Financial Statements*'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind
+      AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019
+    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Classification, Valuation and Operation of
+      Investment Portfolio of Commercial Banks Directions, 2023*,
+      RBI/DOR/2023-24/104, DOR.MRG.36/21.04.141/2023-24, September 12, 2023,
+      updated April 1, 2025
+    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12534&Mode=0'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Financial Accounting Standards Board, *Accounting Standards Codification
+      Topic 220 — Comprehensive Income*, referenced in ASU 2018-02
+    url: >-
+      https://www.fasb.org/page/document?pdf=ASU+2018-02.pdf&title=ACCOUNTING+STANDARDS+UPDATE+2018-02%E2%80%94INCOME+STATEMENT%E2%80%94REPORTING+COMPREHENSIVE+INCOME+%28TOPIC+220%29%3A+RECLASSIFICATION+OF+CERTAIN+TAX+EFFECTS+FROM+ACCUMULATED+OTHER+COMPREHENSIVE+INCOME
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+Under IFRS presentation requirements, **other comprehensive income** comprises items of income and expense that other IFRS requirements require or permit to be recognised outside profit or loss. Profit or loss and OCI together contribute to **total comprehensive income**. Accumulated effects generally sit within equity, subject to the classifications and reclassification rules applicable to each item.
+
+Why does OCI exist? Some accounting standards distinguish between changes that belong in current profit or loss and specified changes whose presentation is outside current profit or loss. The classification can preserve information about different sources of performance and measurement without pretending that the recognised change did not occur.
+
+The key discipline is that management cannot simply decide that an unpleasant loss belongs in OCI. The relevant accounting standard determines whether an item goes to profit or loss, OCI, or directly to equity and whether a later **reclassification** into profit or loss occurs. Different instruments and elections can therefore produce different treatments.
+
+Indian scheduled commercial banks require particular care. They are not on Ind AS 109. Under RBI's investment-portfolio directions, valuation movements on the bank's **Available for Sale (AFS)** portfolio are dealt with through an **AFS-Reserve** under RBI-prescribed mechanics; debt-instrument amounts can be recycled to profit and loss on derecognition, while other treatment depends on the instrument. RBI does not thereby convert scheduled commercial banks into Ind AS 109 reporters.
+
+US GAAP also contains other comprehensive income and accumulated other comprehensive income, but the detailed eligible items and recycling mechanics come from US GAAP rather than IFRS.
+
+&lt;Flow&gt;
+Recognised income / expense
+          |
+          v
++--------------------------+
+| Applicable standard asks |
+| where it is presented    |
++--------------------------+
+      |                |
+      v                v
++-------------+   +-------------+
+| Profit or   |   | OCI         |
+| loss        |   | if required |
++-------------+   +-------------+
+                       |
+                       v
+                +-------------+
+                | Equity /    |
+                | accumulated |
+                | OCI effects |
+                +-------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+An item belongs in OCI only because the applicable accounting framework puts it there; management preference cannot create OCI eligibility.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling every valuation change recorded outside a bank's profit and loss account "OCI", including the RBI AFS-Reserve of an Indian scheduled commercial bank.
+</Trap>
+
+<NeverConfuse a="OCI" b="AFS-Reserve under RBI bank directions">
+**OCI** — an accounting-framework category for specified recognised income and expense outside current profit or loss.
+---
+**AFS-Reserve under RBI bank directions** — an RBI-prescribed reserve mechanism for relevant bank investment valuation changes; it should not be relabelled automatically as Ind AS 109 OCI.
+</NeverConfuse>
+
+<Delta j="IN">
+— Scheduled commercial banks remain outside Ind AS implementation following RBI's deferment; RBI's investment-portfolio directions prescribe an AFS-Reserve for relevant AFS valuation movements. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; RBI/DOR/2023-24/104]
+</Delta>
+
+<Delta j="UK">
+— UK-adopted international accounting standards retain the IFRS architecture of profit or loss and OCI for entities within that reporting framework. [UK Endorsement Board, UK-adopted standards]
+</Delta>
+
+<Delta j="EU">
+— EU-adopted IFRS provides the applicable IFRS presentation architecture for entities and accounts within the IAS Regulation's scope. [Regulation (EC) No 1606/2002; Regulation (EU) 2023/1803]
+</Delta>
+
+<Delta j="US">
+— US GAAP contains comprehensive-income and accumulated-OCI requirements under Topic 220; detailed classifications are governed by US GAAP rather than IFRS. [FASB ASC Topic 220]
+</Delta>
+
+<Recall
+  q="Can management move an unwanted loss from profit or loss to OCI by choice?"
+  a="No; the applicable accounting standard determines presentation."
+/>
+
+<Recall
+  q="Is an RBI AFS-Reserve proof that an Indian scheduled commercial bank applies Ind AS 109?"
+  a="No."
+/>

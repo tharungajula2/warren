@@ -1,0 +1,118 @@
+---
+id: CR-05
+title: 'Default: event before metric'
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Default is a rule-defined credit state, not a synonym for loss, arrears or
+  bankruptcy. A PD, default rate, cure rate or LGD is meaningless until the
+  population, level of application and exact events that constitute default have
+  been fixed.
+prerequisites:
+  - CR-01
+  - CR-02
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning Directions, 2025
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
+    accessed: 28 August 2026
+  - label: >-
+      Prudential Regulation Authority, PS7/19, “Credit risk: the definition of
+      default”
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default
+    accessed: 28 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+Credit-risk measurement starts with an event definition. A model cannot estimate a **probability of default** until "default" has been specified. Changing the definition changes the target variable even when the borrowers and their behaviour remain identical.
+
+Basel's regulatory architecture uses two main routes for obligor default: the bank considers the obligor **unlikely to pay** its credit obligations in full without recourse to actions such as realising security, or a material credit obligation is more than 90 days past due. The past-due test is therefore one route into default, not the complete meaning of default.
+
+The level of application also matters. Wholesale default is generally obligor-centred: serious failure by the obligor may affect the treatment of multiple obligations. Retail frameworks can permit facility-level application under prescribed conditions because mass retail portfolios are often managed at the individual-product or facility level.
+
+Default is also distinct from **bankruptcy**. Legal insolvency may be strong evidence that an obligor is unlikely to pay, but regulatory default can arise before a formal insolvency proceeding. Conversely, default is not the same as realised loss: an exposure may default and subsequently recover substantially or even completely.
+
+Consistency is essential through the measurement chain. Historical default rates, PD calibration, LGD workout samples, rating migration and validation must use compatible definitions. Mixing a 90-day model-development target with a different production default rule produces apparently precise but conceptually invalid statistics.
+
+&lt;Flow&gt;
++-----------------------+
+| Define unit           |
+| obligor or facility   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Define default events |
+| UTP and/or DPD rules  |
++-----------------------+
+           |
+           v
++-----------------------+
+| Label history         |
++-----------------------+
+           |
+           v
++-----------------------+
+| Estimate PD, LGD,     |
+| cure and migration    |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Define default before measuring default risk, and preserve that definition across development, calibration, validation and reporting.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Historical "bad" flags are often treated as interchangeable even though one source means 90 days past due, another means charge-off, and another means bankruptcy.
+</Trap>
+
+<NeverConfuse>
+**Default** — a specified credit-risk state triggered by defined criteria.
+
+**Loss** — the economic or accounting shortfall ultimately suffered; default can occur without a full loss.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI commercial-bank IRACP classification is centred on prudential NPA rules. A term loan becomes NPA when interest or principal remains overdue for more than 90 days, with separate rules for OD/CC, agricultural and other exposures. RBI's current directions separately cross-reference the regulatory meaning of “default” used in stressed-asset resolution. [RBI Commercial Banks IRACP Directions 2025]
+</Delta>
+
+<Delta j="UK">
+— the current PRA framework implements the CRR-style definition of default and its materiality requirements; the PRA's replacement SS3/24 framework is due to apply from 1 January 2027. [PRA PS7/19; SS3/24]
+</Delta>
+
+<Delta j="EU">
+— CRR Article 178 uses unlikeliness to pay and material past-due criteria, supported by EBA Guidelines on application of the definition of default. Those Guidelines were amended in May 2026. [CRR Article 178; EBA/GL/2016/07 as amended by EBA/GL/2026/05]
+</Delta>
+
+<Delta j="US">
+— Advanced Approaches rules distinguish wholesale and retail default. Wholesale uses unlikeliness to pay or more than 90 days past due on a material obligation, while specified retail categories use different mechanical past-due thresholds. [12 CFR Part 217, Subpart E]
+</Delta>
+
+<Recall
+  q="Why must default be defined before PD?"
+  a="PD is the probability of a particular defined event; changing the event changes the parameter."
+/>
+
+<Recall
+  q="Is 90 days past due the entire Basel definition of default?"
+  a="No. It is one default trigger alongside unlikeliness to pay."
+/>

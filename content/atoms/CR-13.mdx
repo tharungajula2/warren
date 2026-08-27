@@ -1,0 +1,88 @@
+---
+id: CR-13
+title: Point-in-time and through-the-cycle PD
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Point-in-time risk estimates move more strongly with current borrower and
+  economic conditions; through-the-cycle approaches deliberately damp temporary
+  cyclical variation and emphasise longer-run creditworthiness. They are
+  different conditioning philosophies, not simply "short horizon" versus "long
+  horizon".
+prerequisites:
+  - CR-12
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Bank for International Settlements, Financial Stability Institute,
+      “Stability of a ‘through-the-cycle’ rating system during a financial
+      crisis”, FSI Paper, 8 September 2006
+    url: 'https://www.bis.org/fsi/awp2006.htm'
+    accessed: 28 August 2026
+  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+A **point-in-time (PIT)** rating or PD seeks to reflect risk using information relevant to current conditions. When the economy deteriorates, otherwise similar borrowers may receive higher PIT PDs because unemployment, cash flow, leverage, market conditions or other current predictors have worsened.
+
+A **through-the-cycle (TTC)** approach aims for greater stability across ordinary cyclical movement. It emphasises durable borrower characteristics or conditions averaged or stressed across the cycle, so ratings migrate less merely because the macroeconomic environment has temporarily changed. BIS research describes TTC systems as seeking relatively stable risk categories across business cycles, whereas PIT systems place greater weight on the current observation period.
+
+PIT versus TTC is not identical to one-year versus lifetime. A one-year PD can be PIT or more cycle-neutral depending on conditioning and calibration. Likewise, a long-horizon analysis can incorporate changing future macroeconomic conditions.
+
+The distinction also separates **ranking** from **calibration**. A rating system can rank obligors using relatively stable structural characteristics while mapping grades to PDs that respond more to current conditions. The labels therefore describe a spectrum rather than two perfectly separated model species.
+
+Uses differ. PIT estimates are naturally responsive for pricing, provisioning, stress testing and near-term risk monitoring where current conditions matter. More stable rating systems can reduce unnecessary grade volatility and support functions that value a durable measure of obligor quality. Regulatory IRB calibration, however, must follow its own long-run requirements rather than assuming that any internally labelled "TTC" measure automatically qualifies. Basel requires PD estimates consistent with long-run average one-year default rates under the applicable IRB rules.
+
+&lt;Flow&gt;
++-----------------------+
+| Current information   |
++-----------------------+
+      |             |
+      v             v
++-----------+   +---------------+
+| PIT view  |   | Cycle-neutral |
+| responsive|   | / TTC view    |
++-----------+   +---------------+
+      |             |
+      v             v
++-----------+   +---------------+
+| More PD   |   | More rating   |
+| variation |   | stability     |
++-----------+   +---------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+PIT/TTC describes sensitivity to current versus cyclical conditions; it does not by itself specify the PD horizon.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling a five-year average default rate "TTC PD" without examining how current information enters the rating and calibration process mistakes averaging for modelling philosophy.
+</Trap>
+
+<NeverConfuse>
+**Point-in-time** — risk measurement strongly responsive to conditions at the observation date.
+
+**Through-the-cycle** — risk measurement designed to damp temporary cyclical effects and represent more persistent credit quality.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The conceptual distinction is universal; particular regulatory and accounting uses of PD can impose different calibration requirements.
+</Rule>
+
+<Recall
+  q="Does TTC mean lifetime PD?"
+  a="No. TTC concerns cyclical conditioning, not the forecast horizon."
+/>
+
+<Recall
+  q="Which approach normally moves more when current macroeconomic conditions deteriorate?"
+  a="Point-in-time."
+/>

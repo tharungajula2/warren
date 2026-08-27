@@ -1,0 +1,86 @@
+---
+id: FND-18
+title: Quantiles and Tail Risk
+type: concept
+domain: foundation
+subdomain: unsorted
+one_screen: >-
+  A **quantile** is a threshold in a distribution: an \(\alpha\)-quantile has
+  approximately \(\alpha\) of probability at or below it under the stated
+  convention. **Tail risk is what happens in the extreme region beyond such
+  thresholds; a quantile is not a maximum possible loss.**
+prerequisites:
+  - FND-16
+  - FND-17
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
+      of Statistical Methods — Percentiles and Critical Values*
+    url: 'https://www.itl.nist.gov/div898/handbook/prc/section4/prc471.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
+      of Statistical Methods — Distributional Shape and Tails*
+    url: 'https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm'
+    accessed: 'August 28, 2026'
+import_source: 01_FND_foundations.md
+---
+Take a modelled loss variable \(L\). A 99th-percentile loss quantile is a threshold such that roughly 99% of modelled losses lie at or below it and roughly 1% lie above it, subject to the precise quantile definition and whether the distribution is continuous or discrete. NIST illustrates percentiles through this cumulative-probability interpretation.
+
+This is the foundation of **Value at Risk (VaR)**-type thinking: a high loss quantile gives a boundary associated with a selected confidence level. But the quantile says little by itself about the severity of losses once that boundary has been breached.
+
+Consider two hypothetical loss distributions that both have a 99% quantile of 10. In one, the worst remaining 1% clusters around 11. In another, the remaining 1% includes losses of 100 or more. Their 99% quantiles can look similar while their tail severities are radically different.
+
+**Tail risk** concerns these extreme outcomes and their distribution. A heavier loss tail places relatively more probability or severity in extreme losses than a lighter-tailed alternative. Measures focusing on loss conditional on being beyond a quantile can therefore provide information that the quantile alone does not.
+
+A quantile also depends on horizon and model. A one-day 99% loss quantile and a one-year 99% loss quantile answer different questions. Changing the probability distribution, dependence assumptions or data window can change the estimated threshold.
+
+The phrase "99% confidence" is frequently miscommunicated as "there is only a 1% chance of any loss". That is wrong. It means approximately 1% of modelled outcomes exceed the stated loss threshold, not that the other 99% have zero loss.
+
+&lt;Flow&gt;
+Loss distribution
+0 ---------------------------------------&amp;gt; severe loss
+|                         |
+|&amp;lt;------ about 99% ------&amp;gt;|&amp;lt;-- tail --&amp;gt;|
+                          ^
+                          |
+                    99% quantile
+                          |
+                          v
+                NOT maximum loss
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A quantile identifies a distribution threshold; it does not cap outcomes beyond the threshold.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Describing a 99% VaR-type number as "the most that can be lost with 99% certainty".
+</Trap>
+
+<NeverConfuse a="Quantile" b="Tail risk">
+**Quantile** — a threshold associated with a cumulative probability level.
+---
+**Tail risk** — the probability and severity of extreme outcomes beyond a chosen region; a single quantile does not describe the whole tail.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Quantiles and probability tails are mathematical concepts independent of jurisdiction.
+</Rule>
+
+<Recall
+  q="What does a 99% loss quantile leave beyond the threshold in a continuous model?"
+  a="Approximately 1% of modelled loss outcomes."
+/>
+
+<Recall
+  q="Is a 99% quantile the maximum possible loss?"
+  a="No."
+/>

@@ -1,0 +1,87 @@
+---
+id: CR-23
+title: Vintage analysis and roll rates
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Vintage analysis follows cohorts originated at similar times as they season;
+  roll-rate analysis follows movements between delinquency states. Both restore
+  the time dimension that a portfolio snapshot destroys.
+prerequisites:
+  - CR-06
+  - CR-19
+  - CR-20
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve, “Estimation Methodologies for Losses, Revenues, and
+      Expenses”, August 2013, roll-rate and transition-model sections
+    url: >-
+      https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+A **vintage** is a cohort of exposures grouped by a common origination period, such as month or quarter. Vintage analysis compares performance at the same **months on book** rather than merely at the same calendar date.
+
+Suppose one cohort is 12 months old and another is only three months old. Comparing their raw default percentages today is unfair because the older cohort has had four times as long to season. A vintage curve instead compares each cohort's cumulative delinquency or default at month 1, month 2, month 3 and so on.
+
+This reveals underwriting changes. If later vintages deteriorate faster at the same age, something may have changed in applicant mix, policy, pricing, macroeconomic environment or channel quality.
+
+A **roll rate** measures movement from one delinquency state to another over a defined interval. For example, it may estimate the proportion of accounts at 30–59 DPD that move to 60–89 DPD next month, cure to current or remain in the same state. Federal Reserve supervisory material describes roll-rate models as estimating how current or delinquent loans transition into delinquent or default states in subsequent periods and emphasises adequate time-series history and granularity.
+
+A **snapshot** shows stock, not motion. A portfolio with 5% at 60+ DPD could be improving because many delinquent accounts are curing, or deteriorating because a large current population is rapidly rolling forward. Identical snapshots can therefore hide opposite dynamics.
+
+Vintage and roll-rate analysis must preserve consistent definitions. Changes in DPD calculation, default thresholds, write-off policy or data extraction can create false improvements or deterioration.
+
+&lt;Flow&gt;
+Vintage view:
+
++-----------+ -&amp;gt; +-----------+ -&amp;gt; +-----------+
+| Month 0   |    | Month 3   |    | Month 6   |
+| cohort    |    | outcome   |    | outcome   |
++-----------+    +-----------+    +-----------+
+
+Roll-rate view:
+
++---------+ -&amp;gt; +----------+ -&amp;gt; +----------+ -&amp;gt; +---------+
+| Current |    | 1-30 DPD |    |31-60 DPD|    | Default |
++---------+    +----------+    +----------+    +---------+
+      ^             |               |
+      +-------------+---------------+
+                  cures
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Credit performance is a process through time; any analysis that discards cohort age or state transitions loses material information.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Comparing a young fast-growing book with a mature book on current NPL percentage alone can make the young book appear safer simply because its loans have not had time to season.
+</Trap>
+
+<NeverConfuse>
+**Vintage analysis** — follows origination cohorts through age.
+
+**Roll-rate analysis** — follows transitions between delinquency or credit states through time.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These are universal portfolio-analysis methods; local delinquency and default definitions determine the states being tracked.
+</Rule>
+
+<Recall
+  q="Why compare vintages at the same months on book?"
+  a="To control for seasoning time."
+/>
+
+<Recall
+  q="What information does a roll rate add to a delinquency snapshot?"
+  a="Direction and speed of movement between states."
+/>

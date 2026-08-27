@@ -1,0 +1,92 @@
+---
+id: CR-01
+title: 'Obligor, borrower and counterparty'
+type: concept
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  An obligor owes the credit obligation, a borrower receives or uses borrowed
+  funds, and a counterparty is the other party to a financial transaction. The
+  labels often describe the same legal person, but they are not interchangeable
+  because credit risk must attach to the entity that is legally or economically
+  responsible for performance.
+prerequisites:
+  - FND-15
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE50,
+      “Counterparty credit risk”
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/50.htm'
+    accessed: 28 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR 217.101, “Definitions”'
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+An **obligor** is the legal or natural person whose contractual duty is to perform a credit obligation, normally by paying principal, interest, fees or another amount when due. Basel-style credit frameworks use the obligor as the core wholesale credit-risk object because default is ordinarily assessed at that entity level. US advanced-approaches regulation likewise defines an obligor as the legal entity or natural person contractually obligated on a wholesale exposure, subject to specified exceptions.
+
+A **borrower** is the person to whom credit has been extended. In an ordinary term loan, borrower and obligor are the same entity. They diverge when another entity guarantees repayment, when several entities are jointly liable, when an exposure is acquired from another lender, or when the credit relationship arises from something other than a loan.
+
+A **counterparty** is the other contractual party in a transaction. The term is particularly important for derivatives, securities financing and settlement transactions. Counterparty credit risk is the possibility that this party defaults before final settlement of the transaction's cash flows. Unlike a simple funded loan, the amount at risk on a derivative can change with market value before default. Basel therefore treats counterparty credit risk as a distinct application of credit risk.
+
+The practical question is not "what is the customer's name?" but "which legal person owes which obligation under which contract?" A corporate group may appear commercially to be one customer while containing several separate obligors. Conversely, one obligor may have dozens of facilities and accounts. Ratings, defaults, limits, collateral and recoveries must therefore be attached to explicit levels rather than to a loosely defined customer record.
+
+&lt;Flow&gt;
++-----------------------+
+| Commercial customer   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Legal person          |
+| = potential obligor   |
++-----------------------+
+       |           |
+       v           v
++-----------+  +----------------+
+| Borrower  |  | Counterparty   |
+| on a loan |  | on transaction |
++-----------+  +----------------+
+       \           /
+        \         /
+         v       v
++-----------------------+
+| Credit obligations    |
++-----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Credit risk must be mapped to the legal person responsible for the obligation before ratings, default status or exposure can be aggregated.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Practitioners often use "borrower", "customer", "obligor" and "counterparty" as database synonyms, then accidentally propagate one entity's default or limit status to legally separate entities.
+</Trap>
+
+<NeverConfuse>
+**Obligor** — the person contractually responsible for a credit obligation.
+
+**Counterparty** — the other party to a transaction; it may be an obligor, but the term describes the transactional relationship rather than a loan role.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Legal implementation differs, but separating the person that owes an obligation from the transaction or facility is a universal credit-risk principle.
+</Rule>
+
+<Recall
+  q="What is the primary wholesale credit-risk object?"
+  a="The obligor: the legal or natural person responsible for the credit obligation."
+/>
+
+<Recall
+  q="Can a borrower and counterparty be the same entity?"
+  a="Yes, but the terms describe different roles and should not be treated as semantic substitutes."
+/>

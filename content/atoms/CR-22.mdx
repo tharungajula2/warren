@@ -1,0 +1,103 @@
+---
+id: CR-22
+title: Bureau data
+type: reference
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Bureau data describe reported credit relationships and repayment history; they
+  are powerful evidence of external indebtedness and past behaviour, not a
+  complete statement of current income, assets, intentions or future ability to
+  pay. Absence of adverse bureau information is not evidence of low risk when
+  coverage is incomplete or the borrower has little history.
+prerequisites:
+  - CR-01
+  - CR-12
+  - CR-20
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, “Report of the High Level Task Force on Public
+      Credit Registry for India”, 2018
+    url: 'https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=895'
+    accessed: 28 August 2026
+  - label: 'Federal Reserve, “Credit Scoring”, report to Congress'
+    url: >-
+      https://www.federalreserve.gov/boarddocs/rptcongress/creditscore/general.htm
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+A **credit bureau** or credit-information system aggregates reported information on borrowing relationships, balances, repayment behaviour, enquiries and other permitted credit attributes. It helps a lender see credit activity outside its own books.
+
+This reduces **information asymmetry**: without external credit information, an applicant could appear lightly indebted to one lender while carrying substantial obligations elsewhere. RBI's work on credit information explicitly identifies debt details and repayment history as important inputs to credit decisions and notes the value of wider credit reporting for screening and monitoring.
+
+Bureau data are especially useful for retail scoring. Past delinquency, number and age of credit relationships, utilisation, recent enquiries and outstanding debt can carry predictive information. The same data can also identify inconsistencies between declared obligations and externally reported borrowing.
+
+But a credit report is not a full financial statement. It generally describes credit supplied by participating reporters under the system's coverage rules. It may not capture every informal liability, non-credit expense, current income, liquid asset or future cash-flow shock. Data may also contain timing lags or errors.
+
+A **thin-file** borrower has little reported history. A low observed delinquency count for such a person does not carry the same evidence as a long, clean repayment history. "No adverse history" and "strong positive history" are therefore different states.
+
+Bureau scores must also be kept separate from internal PDs. An external score can be a powerful predictor, but an institution still needs to understand the score's population, observation date, target and calibration before using it as a probability.
+
+&lt;Flow&gt;
++-----------------------+
+| Reporting creditors   |
++-----------------------+
+           |
+           v
++-----------------------+
+| Credit-information    |
+| system                |
++-----------------------+
+           |
+           v
++-----------------------+
+| Debt + repayment      |
+| history               |
++-----------------------+
+           |
+           v
++-----------------------+
+| Lender appraisal      |
++-----------------------+
+       |          |
+       v          v
++-----------+ +-----------+
+| Useful    | | Missing   |
+| evidence  | | non-credit|
++-----------+ +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Bureau information is an input to credit assessment, never a complete substitute for borrower financial and affordability information.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Interpreting "no bureau delinquency" as "low risk" systematically misclassifies thin-file and incompletely covered borrowers.
+</Trap>
+
+<NeverConfuse>
+**Credit history** — recorded past and current credit relationships and repayment behaviour.
+
+**Repayment capacity** — the borrower's ability to meet future obligations from income, cash flow, assets or other resources.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Coverage, permissible fields, consumer rights and reporting rules vary, but the informational limitation is universal.
+</Rule>
+
+<Recall
+  q="What does bureau data primarily reduce?"
+  a="Information asymmetry about externally reported credit obligations and repayment behaviour."
+/>
+
+<Recall
+  q="Why is a thin clean file weaker evidence than a long clean file?"
+  a="Absence of observed bad behaviour may result from limited observation rather than proven repayment performance."
+/>

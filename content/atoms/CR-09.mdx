@@ -1,0 +1,124 @@
+---
+id: CR-09
+title: Cure and re-default
+type: mechanism
+domain: credit-risk
+subdomain: unsorted
+one_screen: >-
+  Cure is the controlled transition from default back to non-default after the
+  conditions causing default have ceased and repayment performance is
+  sufficiently credible. Re-default is a subsequent return to default; treating
+  temporary payment as permanent cure understates both PD and workout risk.
+prerequisites:
+  - CR-05
+  - CR-06
+  - CR-08
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-27'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
+      Classification and Provisioning Directions, 2025, paragraph 71
+    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
+    accessed: 28 August 2026
+  - label: >-
+      European Banking Authority, Guidelines on application of the definition of
+      default, EBA/GL/2016/07 as amended by EBA/GL/2026/05
+    url: >-
+      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-application-definition-default
+    accessed: 28 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+    url: >-
+      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
+    accessed: 28 August 2026
+import_source: 02_CR_credit_risk_core.md
+---
+Default need not be permanent. A borrower may restore arrears, recover financial capacity and resume sustainable contractual performance. A **cure** occurs when the applicable framework permits the exposure or obligor to return from default to non-default.
+
+Cure is not simply "DPD became zero". A payment may eliminate current arrears while the obligor remains financially distressed, under restructuring, or otherwise unlikely to pay. Robust frameworks therefore require evidence that the original default conditions have ceased and that renewed performance is credible. Regulatory regimes may impose probation or monitoring periods before return to non-default.
+
+A **re-default** occurs when a cured exposure subsequently satisfies the default definition again. Re-default matters because a superficially high cure rate can conceal unstable cures. A portfolio in which half of cured borrowers fail again soon afterwards behaves differently from one in which cures are durable.
+
+The default lifecycle must therefore preserve dates and states rather than only a current flag. At minimum, useful history distinguishes first default, cure, subsequent re-default and recovery/write-off outcomes. Destroying prior-default history when an account cures biases default-rate estimation, obscures restructuring performance and weakens behavioural models.
+
+India illustrates the distinction between mere payment activity and prudential upgradation. RBI's commercial-bank rules state that, where a borrower has multiple facilities with a bank, NPA accounts are upgraded to standard only when entire arrears of interest and principal relating to all credit facilities have been repaid, subject to additional rules for specified restructuring cases.
+
+&lt;Flow&gt;
++-----------+
+| Performing|
++-----------+
+      |
+      v
++-----------+
+| Default   |
++-----------+
+      |
+      v
++--------------------+
+| Default conditions |
+| cease + cure test  |
++--------------------+
+      |
+      v
++-----------+
+| Cured     |
++-----------+
+      |
+      v
++------------------+
+| New default test |
++------------------+
+      |
+      v
++-----------+
+| Re-default|
++-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Cure must be defined independently of the original default trigger and must preserve the historical fact that default occurred.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Resetting the customer's record to "never defaulted" after cure creates survivorship bias in PD, migration and recovery analysis.
+</Trap>
+
+<NeverConfuse>
+**Cure** — a qualifying return from default to non-default.
+
+**Temporary arrears clearance** — a payment that removes overdue amounts but may not satisfy broader cure or viability criteria.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI commercial-bank upgradation from NPA to standard generally requires full repayment of arrears of interest and principal; where several facilities exist with the bank, arrears across all such facilities must be cleared, with special restructuring rules applying where relevant. [RBI IRACP Directions 2025]
+</Delta>
+
+<Delta j="UK">
+— PRA default guidance requires policies for return to non-default and continued consistency with the applicable regulatory definition. [PRA default framework]
+</Delta>
+
+<Delta j="EU">
+— EBA definition-of-default Guidelines prescribe return-to-non-default criteria and probation requirements. The Guidelines were amended in May 2026; the current scenario-specific probation requirement must therefore be read from EBA/GL/2016/07 as amended by EBA/GL/2026/05 rather than from superseded versions. [EBA/GL/2026/05]
+</Delta>
+
+<Delta j="US">
+— under Federal Reserve Advanced Approaches rules, a wholesale obligor remains in default until the institution has reasonable assurance of repayment and performance for contractual principal and interest; corresponding retail rules use an exposure-level standard. [12 CFR Part 217 Subpart E]
+</Delta>
+
+<Recall
+  q="Is zero DPD sufficient evidence of cure?"
+  a="Not necessarily; the applicable cure requirements and continuing UTP conditions must also be satisfied."
+/>
+
+<Recall
+  q="Why retain re-default history?"
+  a="Because durability of cure affects model calibration, recovery analysis and risk assessment."
+/>
