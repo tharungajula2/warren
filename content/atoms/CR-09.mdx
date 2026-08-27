@@ -1,0 +1,27 @@
+---
+id: CR-09
+title: Exposure at Default
+type: mechanism
+domain: credit-risk
+subdomain: risk-parameters
+one_screen: >
+  EAD represents the total gross dollar exposure expected when an obligor defaults, including drawn balance and committed undrawn credit facilities.
+prerequisites: [CR-03]
+see_also: [CR-07, CR-08]
+contrast_with: []
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: published
+reading_minutes: 3
+sources: []
+---
+
+<OneScreen />
+
+## EAD Structure and Credit Conversion Factors
+
+EAD integrates current outstanding balances with expected future drawdowns prior to default via Credit Conversion Factors (CCF).
+
+<Formula math="EAD = \text{Drawn} + CCF \times \text{Undrawn}" />

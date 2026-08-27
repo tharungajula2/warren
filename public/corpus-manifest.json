@@ -1,0 +1,522 @@
+{
+  "atoms": {
+    "CR-03": {
+      "id": "CR-03",
+      "title": "Credit Exposure and Expected Loss",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "Expected Loss (EL) quantifies anticipated credit losses over a specified period, calculated as the product of Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD).\n",
+      "prerequisites": [
+        "FND-18"
+      ],
+      "see_also": [
+        "CR-07",
+        "CR-08",
+        "CR-09"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 4,
+      "sources": [],
+      "slug": "cr-03",
+      "depth": 1,
+      "filepath": "CR-03.mdx"
+    },
+    "CR-07-EX": {
+      "id": "CR-07-EX",
+      "title": "Retail PD Estimation Worked Example",
+      "type": "example",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "Demonstration of retail mortgage portfolio PD estimation using historical cohort delinquency migration matrices.\n",
+      "prerequisites": [
+        "CR-07"
+      ],
+      "see_also": [
+        "CR-03"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "cr-07-ex",
+      "depth": 3,
+      "filepath": "CR-07-EX.mdx"
+    },
+    "CR-07": {
+      "id": "CR-07",
+      "title": "Probability of Default",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "PD is the likelihood a borrower fails to meet obligations over a defined horizon, for a defined definition of default.\n",
+      "prerequisites": [
+        "CR-03",
+        "FND-18"
+      ],
+      "see_also": [
+        "CR-08",
+        "CR-09"
+      ],
+      "contrast_with": [
+        "CR-08"
+      ],
+      "jurisdictions": [
+        "universal",
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 4,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision CRE 36",
+          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
+          "accessed": "2026-08-28"
+        },
+        {
+          "label": "EBA Regulatory Technical Standards on Definition of Default",
+          "url": "https://www.eba.europa.eu/regulation-and-policy/single-rulebook",
+          "accessed": "2026-08-28"
+        }
+      ],
+      "slug": "cr-07",
+      "depth": 2,
+      "filepath": "CR-07.mdx"
+    },
+    "CR-08": {
+      "id": "CR-08",
+      "title": "Loss Given Default",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "LGD measures the proportion of exposure lost when an obligor defaults, net of recoveries, collateral liquidation, and legal collection costs.\n",
+      "prerequisites": [
+        "CR-03"
+      ],
+      "see_also": [
+        "CR-07"
+      ],
+      "contrast_with": [
+        "CR-07"
+      ],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "cr-08",
+      "depth": 2,
+      "filepath": "CR-08.mdx"
+    },
+    "CR-09": {
+      "id": "CR-09",
+      "title": "Exposure at Default",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "EAD represents the total gross dollar exposure expected when an obligor defaults, including drawn balance and committed undrawn credit facilities.\n",
+      "prerequisites": [
+        "CR-03"
+      ],
+      "see_also": [
+        "CR-07",
+        "CR-08"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "cr-09",
+      "depth": 2,
+      "filepath": "CR-09.mdx"
+    },
+    "FND-18": {
+      "id": "FND-18",
+      "title": "Fundamental Financial Mathematics",
+      "type": "concept",
+      "domain": "foundation",
+      "subdomain": "quantitative-basics",
+      "one_screen": "Financial mathematics provides the deterministic foundation for valuing cash flows across time, incorporating discount factors, compound interest, and present value calculations.\n",
+      "prerequisites": [],
+      "see_also": [
+        "CR-03"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "fnd-18",
+      "depth": 0,
+      "filepath": "FND-18.mdx"
+    },
+    "LEG-01": {
+      "id": "LEG-01",
+      "title": "Legal Netting and Enforceability",
+      "type": "reference",
+      "domain": "legal-framework",
+      "subdomain": "netting-contracts",
+      "one_screen": "Close-out netting enforceability allows institutions to calculate net credit exposure upon counterparty default under master agreements.\n",
+      "prerequisites": [
+        "FND-18"
+      ],
+      "see_also": [
+        "CR-09"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal",
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 4,
+      "sources": [],
+      "slug": "leg-01",
+      "depth": 1,
+      "filepath": "LEG-01.mdx"
+    },
+    "MKT-01": {
+      "id": "MKT-01",
+      "title": "Value at Risk (VaR)",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "risk-measurement",
+      "one_screen": "VaR measures the maximum potential loss over a specified holding period at a given confidence level under normal market conditions.\n",
+      "prerequisites": [
+        "FND-18"
+      ],
+      "see_also": [
+        "MKT-02"
+      ],
+      "contrast_with": [
+        "MKT-02"
+      ],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 4,
+      "sources": [],
+      "slug": "mkt-01",
+      "depth": 1,
+      "filepath": "MKT-01.mdx"
+    },
+    "MKT-02": {
+      "id": "MKT-02",
+      "title": "Expected Shortfall",
+      "type": "mechanism",
+      "domain": "market-risk",
+      "subdomain": "risk-measurement",
+      "one_screen": "Expected Shortfall (CVaR) quantifies the average loss incurred in tail events beyond the Value at Risk confidence threshold.\n",
+      "prerequisites": [
+        "MKT-01"
+      ],
+      "see_also": [
+        "MKT-01"
+      ],
+      "contrast_with": [
+        "MKT-01"
+      ],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 4,
+      "sources": [],
+      "slug": "mkt-02",
+      "depth": 2,
+      "filepath": "MKT-02.mdx"
+    },
+    "OPS-01": {
+      "id": "OPS-01",
+      "title": "Operational Risk Standardised Approach",
+      "type": "procedure",
+      "domain": "operational-risk",
+      "subdomain": "capital-framework",
+      "one_screen": "The Basel Standardised Measurement Approach combines financial component indicators with internal historical loss multipliers to determine capital requirements.\n",
+      "prerequisites": [
+        "FND-18"
+      ],
+      "see_also": [
+        "REG-01"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "published",
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "ops-01",
+      "depth": 1,
+      "filepath": "OPS-01.mdx"
+    },
+    "REG-01": {
+      "id": "REG-01",
+      "title": "Basel Capital Adequacy Framework",
+      "type": "procedure",
+      "domain": "regulatory",
+      "subdomain": "capital-requirements",
+      "one_screen": "The Basel Capital Framework establishes minimum capital requirements relative to Risk-Weighted Assets (RWA) across credit, market, and operational risks.\n",
+      "prerequisites": [
+        "FND-18"
+      ],
+      "see_also": [
+        "REG-02"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": "2027-01-01",
+      "status": "published",
+      "reading_minutes": 5,
+      "sources": [
+        {
+          "label": "BCBS Consolidated Basel Framework - Capital Ratios",
+          "url": "https://www.bis.org/basel_framework/chapter/CAP/10.htm",
+          "accessed": "2026-08-28"
+        }
+      ],
+      "slug": "reg-01",
+      "depth": 1,
+      "filepath": "REG-01.mdx"
+    },
+    "REG-02": {
+      "id": "REG-02",
+      "title": "Liquidity Coverage Ratio",
+      "type": "procedure",
+      "domain": "regulatory",
+      "subdomain": "liquidity-standards",
+      "one_screen": "LCR ensures institutions maintain an adequate stock of unencumbered High Quality Liquid Assets (HQLA) to survive a 30-day severe stress scenario.\n",
+      "prerequisites": [
+        "FND-18"
+      ],
+      "see_also": [
+        "REG-01"
+      ],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "reading_minutes": 4,
+      "sources": [],
+      "slug": "reg-02",
+      "depth": 1,
+      "filepath": "REG-02.mdx"
+    }
+  },
+  "reverseIndex": {
+    "CR-03": [
+      "CR-07",
+      "CR-08",
+      "CR-09"
+    ],
+    "CR-07-EX": [],
+    "CR-07": [
+      "CR-07-EX"
+    ],
+    "CR-08": [],
+    "CR-09": [],
+    "FND-18": [
+      "CR-03",
+      "CR-07",
+      "LEG-01",
+      "MKT-01",
+      "OPS-01",
+      "REG-01",
+      "REG-02"
+    ],
+    "LEG-01": [],
+    "MKT-01": [
+      "MKT-02"
+    ],
+    "MKT-02": [],
+    "OPS-01": [],
+    "REG-01": [],
+    "REG-02": []
+  },
+  "domainTree": [
+    {
+      "domain": "credit-risk",
+      "subdomains": [
+        {
+          "subdomain": "risk-parameters",
+          "atoms": [
+            {
+              "id": "CR-03",
+              "title": "Credit Exposure and Expected Loss",
+              "type": "mechanism"
+            },
+            {
+              "id": "CR-07-EX",
+              "title": "Retail PD Estimation Worked Example",
+              "type": "example"
+            },
+            {
+              "id": "CR-07",
+              "title": "Probability of Default",
+              "type": "concept"
+            },
+            {
+              "id": "CR-08",
+              "title": "Loss Given Default",
+              "type": "concept"
+            },
+            {
+              "id": "CR-09",
+              "title": "Exposure at Default",
+              "type": "mechanism"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "foundation",
+      "subdomains": [
+        {
+          "subdomain": "quantitative-basics",
+          "atoms": [
+            {
+              "id": "FND-18",
+              "title": "Fundamental Financial Mathematics",
+              "type": "concept"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "legal-framework",
+      "subdomains": [
+        {
+          "subdomain": "netting-contracts",
+          "atoms": [
+            {
+              "id": "LEG-01",
+              "title": "Legal Netting and Enforceability",
+              "type": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "market-risk",
+      "subdomains": [
+        {
+          "subdomain": "risk-measurement",
+          "atoms": [
+            {
+              "id": "MKT-01",
+              "title": "Value at Risk (VaR)",
+              "type": "concept"
+            },
+            {
+              "id": "MKT-02",
+              "title": "Expected Shortfall",
+              "type": "mechanism"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "operational-risk",
+      "subdomains": [
+        {
+          "subdomain": "capital-framework",
+          "atoms": [
+            {
+              "id": "OPS-01",
+              "title": "Operational Risk Standardised Approach",
+              "type": "procedure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "regulatory",
+      "subdomains": [
+        {
+          "subdomain": "capital-requirements",
+          "atoms": [
+            {
+              "id": "REG-01",
+              "title": "Basel Capital Adequacy Framework",
+              "type": "procedure"
+            }
+          ]
+        },
+        {
+          "subdomain": "liquidity-standards",
+          "atoms": [
+            {
+              "id": "REG-02",
+              "title": "Liquidity Coverage Ratio",
+              "type": "procedure"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-08-27T18:59:00.317Z"
+}

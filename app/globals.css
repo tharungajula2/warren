@@ -1,26 +1,74 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-bg: #0B0C0E;
+  --color-surface: #121417;
+  --color-surface-2: #191C20;
+  --color-border: #23272D;
+  --color-border-strong: #333940;
+  --color-text: #E6E8EB;
+  --color-text-muted: #9AA3AD;
+  --color-text-faint: #6B747E;
+  --color-accent: #C9711F;
+  --color-accent-soft: #2A1D10;
+
+  --color-rule: #3E7D5A;
+  --color-trap: #A6503C;
+  --color-confuse: #8A6D2F;
+
+  --color-jur-in: #7D5A31;
+  --color-jur-uk: #315F7D;
+  --color-jur-eu: #51518A;
+  --color-jur-us: #6D4545;
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-body: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+
+  --radius-sm: 3px;
+  --radius-md: 5px;
+
+  --motion-fast: 100ms;
+  --motion-base: 160ms;
+  --ease: cubic-bezier(.2,.8,.2,1);
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background-color: #0B0C0E;
+  color: #E6E8EB;
+  min-height: 100vh;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Numeric alignment rule */
+.tabular-nums, .numeral, table, [data-tabular] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hairline borders */
+* {
+  border-color: #23272D;
+}
+
+/* Keyboard focus states */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #C9711F;
+  outline-offset: 2px;
 }

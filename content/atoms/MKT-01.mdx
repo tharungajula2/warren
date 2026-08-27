@@ -1,0 +1,33 @@
+---
+id: MKT-01
+title: Value at Risk (VaR)
+type: concept
+domain: market-risk
+subdomain: risk-measurement
+one_screen: >
+  VaR measures the maximum potential loss over a specified holding period at a given confidence level under normal market conditions.
+prerequisites: [FND-18]
+see_also: [MKT-02]
+contrast_with: [MKT-02]
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: published
+reading_minutes: 4
+sources: []
+---
+
+<OneScreen />
+
+## Parametric VaR Definition
+
+<Formula math="VaR_{\alpha} = -\mu + \sigma \cdot Z_{\alpha}" />
+
+<NeverConfuse a="Value at Risk (VaR)" b="Expected Shortfall (ES)">
+Calculates loss threshold at confidence level alpha. Ignores severity of losses beyond alpha threshold.
+
+---
+
+Calculates expected loss conditional on exceeding VaR threshold. Subadditive coherent risk measure.
+</NeverConfuse>

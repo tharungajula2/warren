@@ -4,14 +4,25 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build-corpus": "node scripts/build-corpus.mjs",
+    "prebuild": "node scripts/build-corpus.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/katex": "^0.16.8",
+    "gray-matter": "^4.0.3",
+    "js-cookie": "^3.0.8",
+    "katex": "^0.18.4",
     "next": "16.3.3",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -1,0 +1,31 @@
+---
+id: CR-08
+title: Loss Given Default
+type: concept
+domain: credit-risk
+subdomain: risk-parameters
+one_screen: >
+  LGD measures the proportion of exposure lost when an obligor defaults, net of recoveries, collateral liquidation, and legal collection costs.
+prerequisites: [CR-03]
+see_also: [CR-07]
+contrast_with: [CR-07]
+jurisdictions: [universal]
+perishable: false
+as_of: null
+next_effective_date: null
+status: published
+reading_minutes: 3
+sources: []
+---
+
+<OneScreen />
+
+## Overview of Loss Given Default
+
+Loss Given Default (LGD) reflects the economic loss severity following a default event.
+
+<Formula math="LGD = 1 - \frac{\text{Recoveries} - \text{Collection Costs}}{\text{EAD}}" />
+
+<Rule label="DOWNTURN LGD">
+Regulatory capital requires downturn LGD estimates reflecting severe macroeconomic downturn periods rather than average economic conditions.
+</Rule>
