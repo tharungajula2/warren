@@ -80,6 +80,8 @@ export interface AtomManifestItem extends AtomFrontmatter {
   depth: number;
   filepath: string;
   currentness: CurrentnessStatus;
+  initialX?: number;
+  initialY?: number;
 }
 
 export interface DomainTreeNode {

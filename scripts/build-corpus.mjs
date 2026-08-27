@@ -252,19 +252,77 @@ function buildCorpus() {
     return depth;
   }
 
-  const atomsManifest = {};
-  for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
-    const depth = computeDepth(id);
-    const currentness = computeCurrentness(frontmatter);
-
-    atomsManifest[id] = {
-      ...frontmatter,
-      slug: id.toLowerCase(),
-      depth,
-      currentness,
-      filepath: filename,
+  // Precompute Graph Positions (Part 3 of Task 9)
+  const uniqueDomains = Array.from(new Set(Object.values(rawAtoms).map((a) => a.frontmatter.domain)));
+  const domainCentroids = {};
+  const radius = 320;
+  uniqueDomains.forEach((domain, idx) => {
+    const angle = (2 * Math.PI * idx) / uniqueDomains.length;
+    domainCentroids[domain] = {
+      x: radius * Math.cos(angle),
+      y: radius * Math.sin(angle),
     };
-  }
+  });
+
+  // Run d3-force simulation in Node
+  import("d3-force").then(({ forceSimulation, forceLink, forceManyBody, forceX, forceY }) => {
+    const simNodes = Object.keys(rawAtoms).map((id) => ({
+      id,
+      domain: rawAtoms[id].frontmatter.domain,
+      x: domainCentroids[rawAtoms[id].frontmatter.domain]?.x || 0,
+      y: domainCentroids[rawAtoms[id].frontmatter.domain]?.y || 0,
+    }));
+
+    const simEdges = [];
+    Object.values(rawAtoms).forEach(({ frontmatter }) => {
+      frontmatter.prerequisites.forEach((p) => {
+        if (rawAtoms[p]) {
+          simEdges.push({ source: p, target: frontmatter.id });
+        }
+      });
+    });
+
+    const sim = forceSimulation(simNodes)
+      .force("link", forceLink(simEdges).id((d) => d.id).distance(60).strength(0.3))
+      .force("charge", forceManyBody().strength(-70))
+      .force("x", forceX((d) => domainCentroids[d.domain]?.x || 0).strength(0.3))
+      .force("y", forceY((d) => domainCentroids[d.domain]?.y || 0).strength(0.3))
+      .stop();
+
+    for (let i = 0; i < 300; i++) {
+      sim.tick();
+    }
+
+    const nodePositions = {};
+    simNodes.forEach((n) => {
+      nodePositions[n.id] = {
+        x: Math.round(n.x * 10) / 10,
+        y: Math.round(n.y * 10) / 10,
+      };
+    });
+
+    const atomsManifest = {};
+    for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
+      const depth = computeDepth(id);
+      const currentness = computeCurrentness(frontmatter);
+      const pos = nodePositions[id] || { x: 0, y: 0 };
+
+      atomsManifest[id] = {
+        ...frontmatter,
+        slug: id.toLowerCase(),
+        depth,
+        currentness,
+        filepath: filename,
+        initialX: pos.x,
+        initialY: pos.y,
+      };
+    }
+
+    finishBuild(atomsManifest, rawAtoms, allIds, domainCentroids);
+  });
+}
+
+function finishBuild(atomsManifest, rawAtoms, allIds, domainCentroids) {
 
   // Reverse index
   const reverseIndex = {};

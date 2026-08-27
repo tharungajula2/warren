@@ -23,7 +23,9 @@
       "slug": "ccr-02",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-02.mdx"
+      "filepath": "CCR-02.mdx",
+      "initialX": 359.5,
+      "initialY": 13
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -48,7 +50,9 @@
       "slug": "ccr-03",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-03.mdx"
+      "filepath": "CCR-03.mdx",
+      "initialX": 341.9,
+      "initialY": -52.4
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -73,7 +77,9 @@
       "slug": "ccr-04",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-04.mdx"
+      "filepath": "CCR-04.mdx",
+      "initialX": 377.9,
+      "initialY": -25.5
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -98,7 +104,9 @@
       "slug": "ccr-05",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-05.mdx"
+      "filepath": "CCR-05.mdx",
+      "initialX": 298.7,
+      "initialY": -14.4
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -123,7 +131,9 @@
       "slug": "ccr-06",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-06.mdx"
+      "filepath": "CCR-06.mdx",
+      "initialX": 348.2,
+      "initialY": -17.5
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -148,7 +158,9 @@
       "slug": "ccr-07",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-07.mdx"
+      "filepath": "CCR-07.mdx",
+      "initialX": 334.1,
+      "initialY": 15.2
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -173,7 +185,9 @@
       "slug": "ccr-08",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-08.mdx"
+      "filepath": "CCR-08.mdx",
+      "initialX": 322,
+      "initialY": -4.8
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -198,7 +212,9 @@
       "slug": "ccr-09",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-09.mdx"
+      "filepath": "CCR-09.mdx",
+      "initialX": 365.9,
+      "initialY": -46.8
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -223,7 +239,9 @@
       "slug": "ccr-10",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-10.mdx"
+      "filepath": "CCR-10.mdx",
+      "initialX": 378.6,
+      "initialY": -1.4
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -248,7 +266,9 @@
       "slug": "ccr-11",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-11.mdx"
+      "filepath": "CCR-11.mdx",
+      "initialX": 314.1,
+      "initialY": -52.4
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -273,7 +293,9 @@
       "slug": "ccr-12",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CCR-12.mdx"
+      "filepath": "CCR-12.mdx",
+      "initialX": 320.3,
+      "initialY": -30.6
     },
     "CR-03": {
       "id": "CR-03",
@@ -304,7 +326,9 @@
       "slug": "cr-03",
       "depth": 1,
       "currentness": "durable",
-      "filepath": "CR-03.mdx"
+      "filepath": "CR-03.mdx",
+      "initialX": 131.3,
+      "initialY": 179.8
     },
     "CR-07-EX": {
       "id": "CR-07-EX",
@@ -333,7 +357,9 @@
       "slug": "cr-07-ex",
       "depth": 3,
       "currentness": "durable",
-      "filepath": "CR-07-EX.mdx"
+      "filepath": "CR-07-EX.mdx",
+      "initialX": 198.2,
+      "initialY": 227.3
     },
     "CR-07": {
       "id": "CR-07",
@@ -381,7 +407,9 @@
       "slug": "cr-07",
       "depth": 2,
       "currentness": "durable",
-      "filepath": "CR-07.mdx"
+      "filepath": "CR-07.mdx",
+      "initialX": 119.7,
+      "initialY": 210.7
     },
     "CR-08": {
       "id": "CR-08",
@@ -412,7 +440,9 @@
       "slug": "cr-08",
       "depth": 2,
       "currentness": "durable",
-      "filepath": "CR-08.mdx"
+      "filepath": "CR-08.mdx",
+      "initialX": 201,
+      "initialY": 201.4
     },
     "CR-09": {
       "id": "CR-09",
@@ -442,7 +472,9 @@
       "slug": "cr-09",
       "depth": 2,
       "currentness": "durable",
-      "filepath": "CR-09.mdx"
+      "filepath": "CR-09.mdx",
+      "initialX": 204.9,
+      "initialY": 177.6
     },
     "CRX-02": {
       "id": "CRX-02",
@@ -467,7 +499,9 @@
       "slug": "crx-02",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-02.mdx"
+      "filepath": "CRX-02.mdx",
+      "initialX": 220.7,
+      "initialY": 247.4
     },
     "CRX-03": {
       "id": "CRX-03",
@@ -492,7 +526,9 @@
       "slug": "crx-03",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-03.mdx"
+      "filepath": "CRX-03.mdx",
+      "initialX": 285.8,
+      "initialY": 273.3
     },
     "CRX-04": {
       "id": "CRX-04",
@@ -517,7 +553,9 @@
       "slug": "crx-04",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-04.mdx"
+      "filepath": "CRX-04.mdx",
+      "initialX": 317.5,
+      "initialY": 225.1
     },
     "CRX-05": {
       "id": "CRX-05",
@@ -542,7 +580,9 @@
       "slug": "crx-05",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-05.mdx"
+      "filepath": "CRX-05.mdx",
+      "initialX": 288.6,
+      "initialY": 247.8
     },
     "CRX-06": {
       "id": "CRX-06",
@@ -567,7 +607,9 @@
       "slug": "crx-06",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-06.mdx"
+      "filepath": "CRX-06.mdx",
+      "initialX": 232.7,
+      "initialY": 193.4
     },
     "CRX-07": {
       "id": "CRX-07",
@@ -592,7 +634,9 @@
       "slug": "crx-07",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-07.mdx"
+      "filepath": "CRX-07.mdx",
+      "initialX": 305.8,
+      "initialY": 182
     },
     "CRX-08": {
       "id": "CRX-08",
@@ -617,7 +661,9 @@
       "slug": "crx-08",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-08.mdx"
+      "filepath": "CRX-08.mdx",
+      "initialX": 262.4,
+      "initialY": 191.8
     },
     "CRX-09": {
       "id": "CRX-09",
@@ -642,7 +688,9 @@
       "slug": "crx-09",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "CRX-09.mdx"
+      "filepath": "CRX-09.mdx",
+      "initialX": 268,
+      "initialY": 237.3
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -667,7 +715,9 @@
       "slug": "dat-02",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-02.mdx"
+      "filepath": "DAT-02.mdx",
+      "initialX": 6,
+      "initialY": 312
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -692,7 +742,9 @@
       "slug": "dat-03",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-03.mdx"
+      "filepath": "DAT-03.mdx",
+      "initialX": 50.9,
+      "initialY": 347.9
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -717,7 +769,9 @@
       "slug": "dat-04",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-04.mdx"
+      "filepath": "DAT-04.mdx",
+      "initialX": 60,
+      "initialY": 311.7
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -742,7 +796,9 @@
       "slug": "dat-05",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-05.mdx"
+      "filepath": "DAT-05.mdx",
+      "initialX": -1.8,
+      "initialY": 337.9
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -767,7 +823,9 @@
       "slug": "dat-06",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-06.mdx"
+      "filepath": "DAT-06.mdx",
+      "initialX": 36,
+      "initialY": 321.1
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -792,7 +850,9 @@
       "slug": "dat-07",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-07.mdx"
+      "filepath": "DAT-07.mdx",
+      "initialX": 75.3,
+      "initialY": 336.5
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -817,7 +877,9 @@
       "slug": "dat-08",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-08.mdx"
+      "filepath": "DAT-08.mdx",
+      "initialX": 7.7,
+      "initialY": 364.3
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -842,7 +904,9 @@
       "slug": "dat-09",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-09.mdx"
+      "filepath": "DAT-09.mdx",
+      "initialX": 30.6,
+      "initialY": 376.7
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -867,7 +931,9 @@
       "slug": "dat-10",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-10.mdx"
+      "filepath": "DAT-10.mdx",
+      "initialX": 30,
+      "initialY": 296.6
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -892,7 +958,9 @@
       "slug": "dat-11",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-11.mdx"
+      "filepath": "DAT-11.mdx",
+      "initialX": 75.6,
+      "initialY": 364.2
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -917,7 +985,9 @@
       "slug": "dat-12",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-12.mdx"
+      "filepath": "DAT-12.mdx",
+      "initialX": 26.7,
+      "initialY": 344.1
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -942,7 +1012,9 @@
       "slug": "dat-13",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "DAT-13.mdx"
+      "filepath": "DAT-13.mdx",
+      "initialX": 55,
+      "initialY": 380.2
     },
     "FND-18": {
       "id": "FND-18",
@@ -969,7 +1041,9 @@
       "slug": "fnd-18",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "FND-18.mdx"
+      "filepath": "FND-18.mdx",
+      "initialX": -81.5,
+      "initialY": 176.8
     },
     "LEG-01": {
       "id": "LEG-01",
@@ -1002,7 +1076,9 @@
       "slug": "leg-01",
       "depth": 1,
       "currentness": "durable",
-      "filepath": "LEG-01.mdx"
+      "filepath": "LEG-01.mdx",
+      "initialX": -239.2,
+      "initialY": 138.6
     },
     "MKT-01": {
       "id": "MKT-01",
@@ -1033,7 +1109,9 @@
       "slug": "mkt-01",
       "depth": 1,
       "currentness": "durable",
-      "filepath": "MKT-01.mdx"
+      "filepath": "MKT-01.mdx",
+      "initialX": -239.9,
+      "initialY": -7.2
     },
     "MKT-02": {
       "id": "MKT-02",
@@ -1064,7 +1142,9 @@
       "slug": "mkt-02",
       "depth": 2,
       "currentness": "durable",
-      "filepath": "MKT-02.mdx"
+      "filepath": "MKT-02.mdx",
+      "initialX": -309,
+      "initialY": -84.1
     },
     "ML-02": {
       "id": "ML-02",
@@ -1089,7 +1169,9 @@
       "slug": "ml-02",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-02.mdx"
+      "filepath": "ML-02.mdx",
+      "initialX": -125.5,
+      "initialY": -271.9
     },
     "ML-03": {
       "id": "ML-03",
@@ -1114,7 +1196,9 @@
       "slug": "ml-03",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-03.mdx"
+      "filepath": "ML-03.mdx",
+      "initialX": -140.9,
+      "initialY": -251.9
     },
     "ML-04": {
       "id": "ML-04",
@@ -1139,7 +1223,9 @@
       "slug": "ml-04",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-04.mdx"
+      "filepath": "ML-04.mdx",
+      "initialX": -152.6,
+      "initialY": -347.2
     },
     "ML-05": {
       "id": "ML-05",
@@ -1164,7 +1250,9 @@
       "slug": "ml-05",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-05.mdx"
+      "filepath": "ML-05.mdx",
+      "initialX": -187.3,
+      "initialY": -272
     },
     "ML-06": {
       "id": "ML-06",
@@ -1189,7 +1277,9 @@
       "slug": "ml-06",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-06.mdx"
+      "filepath": "ML-06.mdx",
+      "initialX": -114.8,
+      "initialY": -297.9
     },
     "ML-07": {
       "id": "ML-07",
@@ -1214,7 +1304,9 @@
       "slug": "ml-07",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-07.mdx"
+      "filepath": "ML-07.mdx",
+      "initialX": -140.4,
+      "initialY": -298.1
     },
     "ML-08": {
       "id": "ML-08",
@@ -1239,7 +1331,9 @@
       "slug": "ml-08",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-08.mdx"
+      "filepath": "ML-08.mdx",
+      "initialX": -166.6,
+      "initialY": -297.9
     },
     "ML-09": {
       "id": "ML-09",
@@ -1264,7 +1358,9 @@
       "slug": "ml-09",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-09.mdx"
+      "filepath": "ML-09.mdx",
+      "initialX": -195.9,
+      "initialY": -297.7
     },
     "ML-10": {
       "id": "ML-10",
@@ -1289,7 +1385,9 @@
       "slug": "ml-10",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-10.mdx"
+      "filepath": "ML-10.mdx",
+      "initialX": -184.4,
+      "initialY": -322.3
     },
     "ML-11": {
       "id": "ML-11",
@@ -1314,7 +1412,9 @@
       "slug": "ml-11",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-11.mdx"
+      "filepath": "ML-11.mdx",
+      "initialX": -160.7,
+      "initialY": -272.8
     },
     "ML-12": {
       "id": "ML-12",
@@ -1339,7 +1439,9 @@
       "slug": "ml-12",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-12.mdx"
+      "filepath": "ML-12.mdx",
+      "initialX": -221.8,
+      "initialY": -279.4
     },
     "ML-13": {
       "id": "ML-13",
@@ -1364,7 +1466,9 @@
       "slug": "ml-13",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-13.mdx"
+      "filepath": "ML-13.mdx",
+      "initialX": -125.3,
+      "initialY": -327.5
     },
     "ML-14": {
       "id": "ML-14",
@@ -1389,7 +1493,9 @@
       "slug": "ml-14",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-14.mdx"
+      "filepath": "ML-14.mdx",
+      "initialX": -225.1,
+      "initialY": -305.5
     },
     "ML-15": {
       "id": "ML-15",
@@ -1414,7 +1520,9 @@
       "slug": "ml-15",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-15.mdx"
+      "filepath": "ML-15.mdx",
+      "initialX": -153.6,
+      "initialY": -322.7
     },
     "ML-16": {
       "id": "ML-16",
@@ -1439,7 +1547,9 @@
       "slug": "ml-16",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-16.mdx"
+      "filepath": "ML-16.mdx",
+      "initialX": -211.2,
+      "initialY": -328.8
     },
     "ML-17": {
       "id": "ML-17",
@@ -1464,7 +1574,9 @@
       "slug": "ml-17",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-17.mdx"
+      "filepath": "ML-17.mdx",
+      "initialX": -212.6,
+      "initialY": -257
     },
     "ML-18": {
       "id": "ML-18",
@@ -1489,7 +1601,9 @@
       "slug": "ml-18",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-18.mdx"
+      "filepath": "ML-18.mdx",
+      "initialX": -164.8,
+      "initialY": -242.8
     },
     "ML-19": {
       "id": "ML-19",
@@ -1514,7 +1628,9 @@
       "slug": "ml-19",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-19.mdx"
+      "filepath": "ML-19.mdx",
+      "initialX": -190.7,
+      "initialY": -243.4
     },
     "ML-20": {
       "id": "ML-20",
@@ -1539,7 +1655,9 @@
       "slug": "ml-20",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "ML-20.mdx"
+      "filepath": "ML-20.mdx",
+      "initialX": -183.2,
+      "initialY": -346.9
     },
     "OPS-01": {
       "id": "OPS-01",
@@ -1568,7 +1686,9 @@
       "slug": "ops-01",
       "depth": 1,
       "currentness": "durable",
-      "filepath": "OPS-01.mdx"
+      "filepath": "OPS-01.mdx",
+      "initialX": -2.9,
+      "initialY": -117.4
     },
     "REG-01": {
       "id": "REG-01",
@@ -1603,7 +1723,9 @@
       "slug": "reg-01",
       "depth": 1,
       "currentness": "future",
-      "filepath": "REG-01.mdx"
+      "filepath": "REG-01.mdx",
+      "initialX": 101.2,
+      "initialY": -54.7
     },
     "REG-02": {
       "id": "REG-02",
@@ -1632,7 +1754,9 @@
       "slug": "reg-02",
       "depth": 1,
       "currentness": "durable",
-      "filepath": "REG-02.mdx"
+      "filepath": "REG-02.mdx",
+      "initialX": 116.2,
+      "initialY": -61
     },
     "RTL-02": {
       "id": "RTL-02",
@@ -1657,7 +1781,9 @@
       "slug": "rtl-02",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-02.mdx"
+      "filepath": "RTL-02.mdx",
+      "initialX": 248.2,
+      "initialY": 211.9
     },
     "RTL-03": {
       "id": "RTL-03",
@@ -1682,7 +1808,9 @@
       "slug": "rtl-03",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-03.mdx"
+      "filepath": "RTL-03.mdx",
+      "initialX": 282.1,
+      "initialY": 213.6
     },
     "RTL-04": {
       "id": "RTL-04",
@@ -1707,7 +1835,9 @@
       "slug": "rtl-04",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-04.mdx"
+      "filepath": "RTL-04.mdx",
+      "initialX": 237.2,
+      "initialY": 166
     },
     "RTL-05": {
       "id": "RTL-05",
@@ -1732,7 +1862,9 @@
       "slug": "rtl-05",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-05.mdx"
+      "filepath": "RTL-05.mdx",
+      "initialX": 283.1,
+      "initialY": 175.7
     },
     "RTL-06": {
       "id": "RTL-06",
@@ -1757,7 +1889,9 @@
       "slug": "rtl-06",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-06.mdx"
+      "filepath": "RTL-06.mdx",
+      "initialX": 307.5,
+      "initialY": 204.7
     },
     "RTL-07": {
       "id": "RTL-07",
@@ -1782,7 +1916,9 @@
       "slug": "rtl-07",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-07.mdx"
+      "filepath": "RTL-07.mdx",
+      "initialX": 263.1,
+      "initialY": 160.8
     },
     "RTL-08": {
       "id": "RTL-08",
@@ -1807,7 +1943,9 @@
       "slug": "rtl-08",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-08.mdx"
+      "filepath": "RTL-08.mdx",
+      "initialX": 243.3,
+      "initialY": 236.4
     },
     "RTL-09": {
       "id": "RTL-09",
@@ -1832,7 +1970,9 @@
       "slug": "rtl-09",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-09.mdx"
+      "filepath": "RTL-09.mdx",
+      "initialX": 312,
+      "initialY": 250
     },
     "RTL-10": {
       "id": "RTL-10",
@@ -1857,7 +1997,9 @@
       "slug": "rtl-10",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-10.mdx"
+      "filepath": "RTL-10.mdx",
+      "initialX": 260.9,
+      "initialY": 270.5
     },
     "RTL-11": {
       "id": "RTL-11",
@@ -1882,7 +2024,9 @@
       "slug": "rtl-11",
       "depth": 0,
       "currentness": "durable",
-      "filepath": "RTL-11.mdx"
+      "filepath": "RTL-11.mdx",
+      "initialX": 237,
+      "initialY": 267.6
     }
   },
   "reverseIndex": {
@@ -4367,5 +4511,5 @@
       "message": "Orphan Atom \"RTL-11\": no other atom lists it as prerequisite, see_also, or contrast_with."
     }
   ],
-  "generatedAt": "2026-08-27T19:54:38.466Z"
+  "generatedAt": "2026-08-27T19:58:11.062Z"
 }
