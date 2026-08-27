@@ -2,12 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { CorpusManifest, Jurisdiction, RoleFamily } from "@/lib/schema";
+import { CorpusManifest, Jurisdiction } from "@/lib/schema";
 import {
   matchRoles,
   detectJurisdiction,
   buildRequirementSet,
-  RoleMatch,
   RequirementSet,
 } from "@/lib/jd-matcher";
 import { TypeBadge } from "@/components/TypeBadge";
@@ -81,6 +80,10 @@ export default function CompilePage() {
     ? buildRequirementSet(roleMatches, activeJur, manifest)
     : null;
 
+  const hasUnverifiedAtoms = requirementSet
+    ? requirementSet.coveredAtoms.some((item) => item.atom.verified === false)
+    : false;
+
   const handleCopyChecklist = () => {
     if (!requirementSet || !roleMatches[0]) return;
     const topRole = roleMatches[0].role.label;
@@ -92,7 +95,8 @@ export default function CompilePage() {
 
     requirementSet.coveredAtoms.forEach((item, idx) => {
       const badge = item.weight === 3 ? "[CORE]" : item.weight === 2 ? "[SUPPORTING]" : "[OPTIONAL]";
-      markdown += `${idx + 1}. ${badge} **${item.atom.id}: ${item.atom.title}** (${item.atom.reading_minutes}m)\n   *Mental Model*: ${item.atom.one_screen.trim()}\n`;
+      const unverifiedTag = item.atom.verified === false ? " [UNVERIFIED FIXTURE]" : "";
+      markdown += `${idx + 1}. ${badge} **${item.atom.id}: ${item.atom.title}** (${item.atom.reading_minutes}m)${unverifiedTag}\n   *Mental Model*: ${item.atom.one_screen.trim()}\n`;
     });
 
     if (requirementSet.gapAtoms.length > 0) {
@@ -108,7 +112,7 @@ export default function CompilePage() {
   };
 
   return (
-    <div className="max-w-[1024px] mx-auto px-4 py-8 space-y-8 font-sans">
+    <div className="max-w-[1024px] mx-auto px-4 py-8 space-y-8 font-sans min-w-0">
       {/* Top Header Bar */}
       <div className="border-b border-[#23272D] pb-5 font-mono text-xs space-y-2">
         <div className="flex items-center justify-between">
@@ -195,6 +199,19 @@ export default function CompilePage() {
       {/* RESULT STATE */}
       {isCompiled && requirementSet && (
         <div className="space-y-8 font-sans">
+          {/* Unverified Fixture Warning Banner */}
+          {hasUnverifiedAtoms && (
+            <div className="border-l-4 border-[#8A6D2F] bg-[#8A6D2F]/10 p-4 rounded-[3px] font-mono text-xs text-[#8A6D2F] flex items-start gap-3 select-none">
+              <span className="text-base font-bold shrink-0">⚠️</span>
+              <div>
+                <strong className="font-bold uppercase block mb-0.5 tracking-wider">
+                  UNVERIFIED FIXTURES IN COMPILED PATH
+                </strong>
+                This capability reading path includes unverified development fixtures that have not been checked against primary regulatory sources.
+              </div>
+            </div>
+          )}
+
           {/* Action Header */}
           <div className="flex items-center justify-between font-mono text-xs border-b border-[#23272D] pb-4">
             <button
@@ -314,6 +331,7 @@ export default function CompilePage() {
               {requirementSet.coveredAtoms.map((item, idx) => {
                 const badgeLabel = item.weight === 3 ? "CORE" : item.weight === 2 ? "SUPPORTING" : "OPTIONAL";
                 const badgeBorder = item.weight === 3 ? "border-[#C9711F] text-[#C9711F]" : item.weight === 2 ? "border-[#3E7D5A] text-[#3E7D5A]" : "border-[#6B747E] text-[#6B747E]";
+                const isFixture = item.atom.verified === false;
 
                 return (
                   <div key={item.atom.id} className="relative group">
@@ -329,6 +347,11 @@ export default function CompilePage() {
                           </span>
                           <span className="text-[#C9711F] font-bold">{item.atom.id}</span>
                           <TypeBadge type={item.atom.type} />
+                          {isFixture && (
+                            <span className="text-[9px] text-[#8A6D2F] font-bold bg-[#8A6D2F]/10 border border-[#8A6D2F]/30 px-1.5 py-0.2 rounded-[3px]">
+                              UNVERIFIED FIXTURE
+                            </span>
+                          )}
                           {item.isPrerequisite && (
                             <span className="text-[#6B747E] text-[10px]">(PREREQUISITE)</span>
                           )}

@@ -7,22 +7,33 @@ subdomain: risk-parameters
 one_screen: >
   PD is the likelihood a borrower fails to meet obligations over a defined
   horizon, for a defined definition of default.
-prerequisites: [CR-03, FND-18]
-see_also: [CR-08, CR-09]
-contrast_with: [CR-08]
-jurisdictions: [universal, IN, UK, EU, US]
+prerequisites:
+  - CR-03
+  - FND-18
+see_also:
+  - CR-08
+  - CR-09
+contrast_with:
+  - CR-08
+jurisdictions:
+  - universal
+  - IN
+  - UK
+  - EU
+  - US
 perishable: false
 as_of: null
 next_effective_date: null
-status: published
+status: fixture
 reading_minutes: 4
 sources:
   - label: Basel Committee on Banking Supervision CRE 36
-    url: https://www.bis.org/basel_framework/chapter/CRE/36.htm
-    accessed: 2026-08-28
+    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
+    accessed: 2026-08-28T00:00:00.000Z
   - label: EBA Regulatory Technical Standards on Definition of Default
-    url: https://www.eba.europa.eu/regulation-and-policy/single-rulebook
-    accessed: 2026-08-28
+    url: 'https://www.eba.europa.eu/regulation-and-policy/single-rulebook'
+    accessed: 2026-08-28T00:00:00.000Z
+verified: false
 ---
 
 ## Definition and Estimation Process
@@ -68,7 +79,7 @@ Probability of Default measures the empirical likelihood that an obligor experie
 Regulatory IRB models require estimating PD over a minimum 12-month horizon following the rating date.
 </Rule>
 
-<Trap label="ZERO-DEFAULT PORTFOLIO FALACY">
+<Trap label="ZERO-DEFAULT PORTFOLIO FALLACY">
 Having zero historical defaults in a low-default portfolio does not justify a 0% PD assignment. Floor limits apply.
 </Trap>
 

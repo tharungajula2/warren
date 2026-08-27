@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/js-cookie": "^3.0.6",
     "@types/katex": "^0.16.8",
+    "@xyflow/react": "^12.11.5",
     "cmdk": "^1.1.1",
     "gray-matter": "^4.0.3",
     "js-cookie": "^3.0.8",

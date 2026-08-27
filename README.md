@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WARREN — Banking Risk & Regulatory Knowledge System
 
-## Getting Started
+WARREN is a jurisdiction-aware, static technical operating manual for banking, credit risk, market risk, treasury, and regulatory professionals.
 
-First, run the development server:
+It structures complex financial regulations, mathematical models, and operational frameworks into discrete, teachable **Knowledge Atoms** connected in a Directed Acyclic Graph (DAG).
+
+---
+
+## 🏛 Core Architecture & Philosophy
+
+1. **Dense Technical Typography**: Designed like an operating manual, using IBM Plex Mono and Source Sans 3 with tabular numerals and hairline borders (`#23272D`).
+2. **Zero Runtime Database**: Static build compiled directly from MDX fixtures (`/content/atoms/`) into `/public/corpus-manifest.json`.
+3. **Cross-Jurisdiction Matrix**: Core baseline treatments paired with jurisdiction-specific regulatory deltas (`IN`, `UK`, `EU`, `US`).
+4. **Deterministic Matcher & Compiler**: Pure client-side job description capability matching engine (`/lib/jd-matcher.ts`). Zero AI dependency.
+
+---
+
+## 📋 Atom Frontmatter Schema
+
+Every knowledge unit is defined as an MDX file in `/content/atoms/{ID}.mdx` adhering to the Zod schema (`/lib/schema.ts`):
+
+```yaml
+---
+id: CR-07
+title: Probability of Default
+type: concept                     # concept | mechanism | procedure | delta | example | reference
+domain: credit-risk
+subdomain: risk-parameters
+one_screen: >
+  PD is the likelihood a borrower fails to meet obligations over a defined horizon.
+prerequisites: [CR-03, FND-18]
+see_also: [CR-08, CR-09]
+contrast_with: [CR-08]
+jurisdictions: [universal, IN, UK, EU, US]
+perishable: false
+as_of: 2026-08-28
+next_effective_date: null
+status: fixture                   # draft | fixture | published
+verified: false                   # boolean: true | false (REQUIRED)
+reading_minutes: 4
+sources:
+  - label: Basel Committee on Banking Supervision CRE 36
+    url: https://www.bis.org/basel_framework/chapter/CRE/36.htm
+    accessed: 2026-08-28
+---
+```
+
+---
+
+## 🛡️ Trust Quarantine & Strict Verification Rule
+
+- **`verified: false`**: Required on all unverified fixtures and draft content. Displays an unmissable amber banner (`UNVERIFIED FIXTURE`) on atom pages, registers, comparison matrices, and compiler paths.
+- **`verified: true`**: **May ONLY be set by a human domain expert** who has personally read and verified the primary regulatory source. No script, compiler, or AI agent may set `verified: true`.
+- **Production Build Gate**: `scripts/build-corpus.mjs` enforces that when `NODE_ENV=production`, any atom with `status: 'published'` and `verified: false` **BLOCKS AND FAILS THE BUILD IMMEDIATELY**.
+
+---
+
+## 🛠️ Authoring Tooling
+
+To scaffold a new knowledge atom:
+
+```bash
+npm run new-atom -- --id CR-12 --domain credit-risk --subdomain risk-parameters
+```
+
+Or using positional arguments:
+
+```bash
+node scripts/new-atom.mjs CR-12 credit-risk risk-parameters
+```
+
+---
+
+## 🧪 Testing & Verification
+
+Run the Vitest unit test suite:
+
+```bash
+npm test
+```
+
+Build the static corpus manifest and Next.js static site:
+
+```bash
+npm run build
+```
+
+Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Production Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+WARREN compiles to a 100% static Next.js production build (`/out` or standard Next.js Vercel deployment).

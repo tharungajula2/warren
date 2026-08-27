@@ -38,6 +38,8 @@ export default function DeltasPage() {
     (a) => a.status !== "draft"
   );
 
+  const hasUnverified = publishedAtoms.some((a) => a.verified === false);
+
   // Filter atoms based on domain, jurisdiction, perishable
   const filteredAtoms = publishedAtoms.filter((atom) => {
     if (selectedDomain !== "all" && atom.domain !== selectedDomain) {
@@ -61,7 +63,20 @@ export default function DeltasPage() {
   ).sort();
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 py-8 space-y-6 font-sans">
+    <div className="max-w-[1440px] mx-auto px-4 py-8 space-y-6 font-sans min-w-0">
+      {/* Page Level Unverified Warning Banner */}
+      {hasUnverified && (
+        <div className="border-l-4 border-[#8A6D2F] bg-[#8A6D2F]/10 p-4 rounded-[3px] font-mono text-xs text-[#8A6D2F] flex items-start gap-3 select-none">
+          <span className="text-base font-bold shrink-0">⚠️</span>
+          <div>
+            <strong className="font-bold uppercase block mb-0.5 tracking-wider">
+              UNVERIFIED FIXTURE DATA IN REGISTER
+            </strong>
+            The delta register contains unverified development fixtures that have not been checked against primary regulatory sources.
+          </div>
+        </div>
+      )}
+
       {/* Top Title Bar */}
       <div className="border-b border-[#23272D] pb-5 font-mono text-xs space-y-2">
         <div className="flex items-center gap-2 text-[#9AA3AD]">
@@ -151,19 +166,21 @@ export default function DeltasPage() {
         )}
       </div>
 
-      {/* Delta Register Table */}
+      {/* Delta Register Table (Horizontal Scroll Container with Sticky Left Column) */}
       <div className="border border-[#23272D] bg-[#121417] rounded-[3px] overflow-x-auto max-w-full">
-        <table className="w-full text-left font-mono text-xs border-collapse tabular-nums">
+        <table className="w-full text-left font-mono text-xs border-collapse tabular-nums min-w-[960px]">
           <thead>
             <tr className="border-b border-[#23272D] bg-[#191C20] text-[#6B747E] text-[11px] select-none">
-              <th className="py-3 px-4 font-semibold w-24">ATOM ID</th>
+              <th className="py-3 px-4 font-semibold w-28 sticky left-0 bg-[#191C20] z-20 border-r border-[#23272D]">
+                ATOM ID
+              </th>
               <th className="py-3 px-4 font-semibold">TITLE</th>
               <th className="py-3 px-4 font-semibold w-36">DOMAIN</th>
               <th className="py-3 px-4 font-semibold w-28">TYPE</th>
               <th className="py-3 px-4 font-semibold w-40">VARIANTS</th>
               <th className="py-3 px-4 font-semibold w-32">CURRENTNESS</th>
               <th className="py-3 px-4 font-semibold w-28">AS OF</th>
-              <th className="py-3 px-4 font-semibold w-32">REVISION</th>
+              <th className="py-3 px-4 font-semibold w-36">REVISION</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#23272D]">
@@ -176,17 +193,25 @@ export default function DeltasPage() {
             ) : (
               filteredAtoms.map((atom) => {
                 const variantJurs = atom.jurisdictions.filter((j) => j !== "universal");
+                const isUnverified = atom.verified === false;
 
                 return (
                   <tr
                     key={atom.id}
                     className="hover:bg-[#191C20] transition-colors"
                   >
-                    {/* Atom ID */}
-                    <td className="py-3 px-4 font-bold text-[#C9711F]">
-                      <Link href={`/atom/${atom.id}`} className="hover:underline">
-                        {atom.id}
-                      </Link>
+                    {/* Sticky Left Atom ID Column */}
+                    <td className="py-3 px-4 font-bold text-[#C9711F] sticky left-0 bg-[#121417] z-10 border-r border-[#23272D]">
+                      <div className="flex items-center gap-1.5">
+                        <Link href={`/atom/${atom.id}`} className="hover:underline">
+                          {atom.id}
+                        </Link>
+                        {isUnverified && (
+                          <span className="text-[9px] text-[#8A6D2F] font-bold" title="Unverified Fixture">
+                            [F]
+                          </span>
+                        )}
+                      </div>
                     </td>
 
                     {/* Title */}

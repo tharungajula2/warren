@@ -22,7 +22,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 4,
       "sources": [],
       "slug": "cr-03",
@@ -50,7 +51,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 3,
       "sources": [],
       "slug": "cr-07-ex",
@@ -86,7 +88,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 4,
       "sources": [
         {
@@ -127,7 +130,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 3,
       "sources": [],
       "slug": "cr-08",
@@ -156,7 +160,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 3,
       "sources": [],
       "slug": "cr-09",
@@ -182,7 +187,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 3,
       "sources": [],
       "slug": "fnd-18",
@@ -214,7 +220,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 4,
       "sources": [],
       "slug": "leg-01",
@@ -244,7 +251,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 4,
       "sources": [],
       "slug": "mkt-01",
@@ -274,7 +282,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 4,
       "sources": [],
       "slug": "mkt-02",
@@ -302,7 +311,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 3,
       "sources": [],
       "slug": "ops-01",
@@ -330,7 +340,8 @@
       "perishable": true,
       "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
-      "status": "published",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 5,
       "sources": [
         {
@@ -364,7 +375,8 @@
       "perishable": false,
       "as_of": null,
       "next_effective_date": null,
-      "status": "draft",
+      "status": "fixture",
+      "verified": false,
       "reading_minutes": 4,
       "sources": [],
       "slug": "reg-02",
@@ -413,27 +425,37 @@
             {
               "id": "CR-03",
               "title": "Credit Exposure and Expected Loss",
-              "type": "mechanism"
+              "type": "mechanism",
+              "status": "fixture",
+              "verified": false
             },
             {
               "id": "CR-07-EX",
               "title": "Retail PD Estimation Worked Example",
-              "type": "example"
+              "type": "example",
+              "status": "fixture",
+              "verified": false
             },
             {
               "id": "CR-07",
               "title": "Probability of Default",
-              "type": "concept"
+              "type": "concept",
+              "status": "fixture",
+              "verified": false
             },
             {
               "id": "CR-08",
               "title": "Loss Given Default",
-              "type": "concept"
+              "type": "concept",
+              "status": "fixture",
+              "verified": false
             },
             {
               "id": "CR-09",
               "title": "Exposure at Default",
-              "type": "mechanism"
+              "type": "mechanism",
+              "status": "fixture",
+              "verified": false
             }
           ]
         }
@@ -448,7 +470,9 @@
             {
               "id": "FND-18",
               "title": "Fundamental Financial Mathematics",
-              "type": "concept"
+              "type": "concept",
+              "status": "fixture",
+              "verified": false
             }
           ]
         }
@@ -463,7 +487,9 @@
             {
               "id": "LEG-01",
               "title": "Legal Netting and Enforceability",
-              "type": "reference"
+              "type": "reference",
+              "status": "fixture",
+              "verified": false
             }
           ]
         }
@@ -478,12 +504,16 @@
             {
               "id": "MKT-01",
               "title": "Value at Risk (VaR)",
-              "type": "concept"
+              "type": "concept",
+              "status": "fixture",
+              "verified": false
             },
             {
               "id": "MKT-02",
               "title": "Expected Shortfall",
-              "type": "mechanism"
+              "type": "mechanism",
+              "status": "fixture",
+              "verified": false
             }
           ]
         }
@@ -498,7 +528,9 @@
             {
               "id": "OPS-01",
               "title": "Operational Risk Standardised Approach",
-              "type": "procedure"
+              "type": "procedure",
+              "status": "fixture",
+              "verified": false
             }
           ]
         }
@@ -513,7 +545,9 @@
             {
               "id": "REG-01",
               "title": "Basel Capital Adequacy Framework",
-              "type": "procedure"
+              "type": "procedure",
+              "status": "fixture",
+              "verified": false
             }
           ]
         },
@@ -523,7 +557,9 @@
             {
               "id": "REG-02",
               "title": "Liquidity Coverage Ratio",
-              "type": "procedure"
+              "type": "procedure",
+              "status": "fixture",
+              "verified": false
             }
           ]
         }
@@ -997,9 +1033,9 @@
   ],
   "lintWarnings": [
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-03",
-      "message": "Published atom \"CR-03\" (Credit Exposure and Expected Loss) has no sources listed."
+      "message": "Atom \"CR-03\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1007,9 +1043,9 @@
       "message": "Atom \"CR-03\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-07-EX",
-      "message": "Published atom \"CR-07-EX\" (Retail PD Estimation Worked Example) has no sources listed."
+      "message": "Atom \"CR-07-EX\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1017,9 +1053,14 @@
       "message": "Atom \"CR-07-EX\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "CR-07",
+      "message": "Atom \"CR-07\" is unverified (fixture). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-08",
-      "message": "Published atom \"CR-08\" (Loss Given Default) has no sources listed."
+      "message": "Atom \"CR-08\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1027,9 +1068,9 @@
       "message": "Atom \"CR-08\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-09",
-      "message": "Published atom \"CR-09\" (Exposure at Default) has no sources listed."
+      "message": "Atom \"CR-09\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1037,9 +1078,9 @@
       "message": "Atom \"CR-09\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "FND-18",
-      "message": "Published atom \"FND-18\" (Fundamental Financial Mathematics) has no sources listed."
+      "message": "Atom \"FND-18\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "ROOT_ATOM_NOTE",
@@ -1052,9 +1093,9 @@
       "message": "Atom \"FND-18\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "LEG-01",
-      "message": "Published atom \"LEG-01\" (Legal Netting and Enforceability) has no sources listed."
+      "message": "Atom \"LEG-01\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1062,9 +1103,9 @@
       "message": "Atom \"LEG-01\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "MKT-01",
-      "message": "Published atom \"MKT-01\" (Value at Risk (VaR)) has no sources listed."
+      "message": "Atom \"MKT-01\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1072,9 +1113,9 @@
       "message": "Atom \"MKT-01\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "MKT-02",
-      "message": "Published atom \"MKT-02\" (Expected Shortfall) has no sources listed."
+      "message": "Atom \"MKT-02\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1082,9 +1123,9 @@
       "message": "Atom \"MKT-02\" does not contain a <Recall> retrieval practice block."
     },
     {
-      "rule": "MISSING_SOURCES",
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "OPS-01",
-      "message": "Published atom \"OPS-01\" (Operational Risk Standardised Approach) has no sources listed."
+      "message": "Atom \"OPS-01\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1092,9 +1133,19 @@
       "message": "Atom \"OPS-01\" does not contain a <Recall> retrieval practice block."
     },
     {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "REG-01",
+      "message": "Atom \"REG-01\" is unverified (fixture). Displays development banner."
+    },
+    {
       "rule": "MISSING_RECALL_BLOCK",
       "atomId": "REG-01",
       "message": "Atom \"REG-01\" does not contain a <Recall> retrieval practice block."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "REG-02",
+      "message": "Atom \"REG-02\" is unverified (fixture). Displays development banner."
     },
     {
       "rule": "MISSING_RECALL_BLOCK",
@@ -1102,5 +1153,5 @@
       "message": "Atom \"REG-02\" does not contain a <Recall> retrieval practice block."
     }
   ],
-  "generatedAt": "2026-08-27T19:25:16.898Z"
+  "generatedAt": "2026-08-27T19:32:25.987Z"
 }

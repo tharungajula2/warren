@@ -8,7 +8,7 @@ import { MdxRenderer } from "@/components/atom/MdxRenderer";
 import { OneScreen } from "@/components/atom/OneScreen";
 import { TypeBadge } from "@/components/TypeBadge";
 import { CurrentnessMarker } from "@/components/CurrentnessMarker";
-import { JurisdictionCode } from "@/components/atom/Delta";
+import { AtomNeighbourhood } from "@/components/AtomNeighbourhood";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -60,9 +60,24 @@ export default async function AtomPage({ params }: PageProps) {
   const nonUniversalJurs = atom.jurisdictions.filter((j) => j !== "universal");
   const hasMultipleVariants = nonUniversalJurs.length >= 1;
 
+  const isUnverified = atom.verified === false;
+
   return (
     <div className="max-w-[1440px] mx-auto px-4 py-8 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_240px] gap-8 items-start">
+      {/* UNVERIFIED FIXTURE PERSISTENT BANNER (At very top before header) */}
+      {isUnverified && (
+        <div className="mb-6 border-l-4 border-[#8A6D2F] bg-[#8A6D2F]/10 p-4 rounded-[3px] font-mono text-xs text-[#8A6D2F] flex items-start gap-3 select-none">
+          <span className="text-base font-bold shrink-0">⚠️</span>
+          <div>
+            <strong className="font-bold uppercase block mb-0.5 tracking-wider">
+              UNVERIFIED FIXTURE CONTENT
+            </strong>
+            This content is placeholder material for development and has not been checked against primary sources. Do not rely on it.
+          </div>
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_280px] gap-8 items-start min-w-0">
         
         {/* LEFT COLUMN (280px, sticky) */}
         <aside className="lg:sticky lg:top-20 space-y-5 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto pr-2">
@@ -156,7 +171,7 @@ export default async function AtomPage({ params }: PageProps) {
           </div>
         </aside>
 
-        {/* CENTRE COLUMN (max 68ch) */}
+        {/* CENTRE COLUMN (max 68ch, min-w-0) */}
         <main className="max-w-[68ch] mx-auto w-full min-w-0">
           {/* Atom Header Block */}
           <div className="border border-[#23272D] bg-[#121417] p-6 rounded-[3px] mb-6">
@@ -169,9 +184,9 @@ export default async function AtomPage({ params }: PageProps) {
               <span className="text-[#6B747E] tabular-nums ml-auto">
                 {atom.reading_minutes} MIN READ
               </span>
-              {atom.status === "draft" && (
-                <span className="bg-[#A6503C]/20 border border-[#A6503C] text-[#A6503C] px-2 py-0.5 rounded-[3px] font-bold uppercase">
-                  DRAFT ATOM
+              {atom.status === "fixture" && (
+                <span className="bg-[#8A6D2F]/20 border border-[#8A6D2F] text-[#8A6D2F] px-2 py-0.5 rounded-[3px] font-bold uppercase">
+                  FIXTURE ATOM
                 </span>
               )}
             </div>
@@ -215,13 +230,13 @@ export default async function AtomPage({ params }: PageProps) {
           <OneScreen text={atom.one_screen} isHeader={true} />
 
           {/* MDX Body */}
-          <article className="mt-6 border-t border-[#23272D] pt-6">
+          <article className="mt-6 border-t border-[#23272D] pt-6 min-w-0">
             <MdxRenderer source={mdxSource} />
           </article>
 
           {/* Sources Section */}
           {atom.sources && atom.sources.length > 0 && (
-            <section className="mt-10 border-t border-[#23272D] pt-6">
+            <section className="mt-10 border-t border-[#23272D] pt-6 print:block">
               <h3 className="font-mono text-xs uppercase tracking-wider text-[#9AA3AD] font-bold mb-3">
                 PROVENANCE & SOURCES ({atom.sources.length})
               </h3>
@@ -255,8 +270,15 @@ export default async function AtomPage({ params }: PageProps) {
           )}
         </main>
 
-        {/* RIGHT COLUMN (240px, sticky) */}
+        {/* RIGHT COLUMN (280px, sticky) */}
         <aside className="lg:sticky lg:top-20 space-y-5 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto pl-2">
+          {/* 1-Hop Local Graph Component */}
+          <AtomNeighbourhood
+            atom={atom}
+            allAtoms={manifest.atoms}
+            reverseIndex={manifest.reverseIndex}
+          />
+
           {/* Compare Across Jurisdictions Button */}
           {hasMultipleVariants && (
             <div className="border border-[#7D5A31] bg-[#121417] p-3 rounded-[3px]">

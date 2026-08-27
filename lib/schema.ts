@@ -13,7 +13,7 @@ export type AtomType = z.infer<typeof AtomTypeSchema>;
 export const JurisdictionSchema = z.enum(["universal", "IN", "UK", "EU", "US"]);
 export type Jurisdiction = z.infer<typeof JurisdictionSchema>;
 
-export const AtomStatusSchema = z.enum(["draft", "published"]);
+export const AtomStatusSchema = z.enum(["draft", "fixture", "published"]);
 export type AtomStatus = z.infer<typeof AtomStatusSchema>;
 
 export type CurrentnessStatus = "fresh" | "ageing" | "stale" | "future" | "durable";
@@ -51,7 +51,10 @@ export const AtomFrontmatterSchema = z
     perishable: z.boolean().default(false),
     as_of: DateOrStringSchema.nullable().optional(),
     next_effective_date: DateOrStringSchema.nullable().optional(),
-    status: AtomStatusSchema.default("published"),
+    status: AtomStatusSchema.default("fixture"),
+    verified: z.boolean({
+      message: "Field 'verified' is required (boolean: true | false)",
+    }),
     reading_minutes: z.number().positive(),
     sources: z.array(SourceSchema).default([]),
   })
@@ -81,7 +84,7 @@ export interface DomainTreeNode {
   domain: string;
   subdomains: {
     subdomain: string;
-    atoms: { id: string; title: string; type: AtomType }[];
+    atoms: { id: string; title: string; type: AtomType; status: AtomStatus; verified: boolean }[];
   }[];
 }
 

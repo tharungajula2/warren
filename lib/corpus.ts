@@ -97,6 +97,22 @@ export function generateCorpusManifest(): CorpusManifest {
 
   const allIds = new Set(Object.keys(rawAtoms));
 
+  // Build Gate for production
+  if (process.env.NODE_ENV === "production") {
+    const offending = [];
+    for (const [id, { frontmatter }] of Object.entries(rawAtoms)) {
+      if (frontmatter.status === "published" && frontmatter.verified === false) {
+        offending.push(`${id} (${frontmatter.title})`);
+      }
+    }
+    if (offending.length > 0) {
+      throw new Error(
+        `[BUILD GATE FAILED] Production build blocked! ${offending.length} published atom(s) have verified: false:\n - ` +
+          offending.join("\n - ")
+      );
+    }
+  }
+
   // Step 3: Resolve every prerequisite, see_also, and contrast_with ID
   for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
     const references = [
@@ -149,7 +165,7 @@ export function generateCorpusManifest(): CorpusManifest {
     }
   }
 
-  // Step 5: Compute depth (longest prerequisite chain to a root)
+  // Step 5: Compute depth
   const depthMemo: Record<string, number> = {};
 
   function computeDepth(nodeId: string): number {
@@ -186,7 +202,7 @@ export function generateCorpusManifest(): CorpusManifest {
     };
   }
 
-  // Step 6: Reverse index (which atoms list this atom as a prerequisite)
+  // Step 6: Reverse index
   const reverseIndex: Record<string, string[]> = {};
   for (const id of allIds) {
     reverseIndex[id] = [];
@@ -206,7 +222,7 @@ export function generateCorpusManifest(): CorpusManifest {
   // Step 7: Domain tree
   const domainMap: Record<
     string,
-    Record<string, { id: string; title: string; type: any }[]>
+    Record<string, { id: string; title: string; type: any; status: any; verified: boolean }[]>
   > = {};
 
   for (const atom of Object.values(atomsManifest)) {
@@ -220,6 +236,8 @@ export function generateCorpusManifest(): CorpusManifest {
       id: atom.id,
       title: atom.title,
       type: atom.type,
+      status: atom.status,
+      verified: atom.verified,
     });
   }
 
@@ -267,6 +285,13 @@ export function generateCorpusManifest(): CorpusManifest {
 
   for (const [id, atom] of Object.entries(atomsManifest)) {
     const rawData = rawAtoms[id];
+    if (!atom.verified) {
+      lintWarnings.push({
+        rule: "UNVERIFIED_CONTENT",
+        atomId: id,
+        message: `Atom "${id}" is unverified (${atom.status}). Displays development banner.`,
+      });
+    }
     if (atom.status === "published" && (!atom.sources || atom.sources.length === 0)) {
       lintWarnings.push({
         rule: "MISSING_SOURCES",
@@ -322,7 +347,6 @@ export function generateCorpusManifest(): CorpusManifest {
     generatedAt: new Date().toISOString(),
   };
 
-  // Write to public/corpus-manifest.json
   const publicDir = path.join(process.cwd(), "public");
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
@@ -332,9 +356,6 @@ export function generateCorpusManifest(): CorpusManifest {
   return manifest;
 }
 
-/**
- * Reads the emitted manifest at runtime. Single source of truth.
- */
 export function getCorpusManifest(): CorpusManifest {
   if (!fs.existsSync(MANIFEST_PATH)) {
     return generateCorpusManifest();

@@ -17,7 +17,7 @@ const AtomTypeSchema = z.enum([
 ]);
 
 const JurisdictionSchema = z.enum(["universal", "IN", "UK", "EU", "US"]);
-const AtomStatusSchema = z.enum(["draft", "published"]);
+const AtomStatusSchema = z.enum(["draft", "fixture", "published"]);
 
 const DateOrStringSchema = z
   .union([z.string(), z.date()])
@@ -51,7 +51,10 @@ const AtomFrontmatterSchema = z
     perishable: z.boolean().default(false),
     as_of: DateOrStringSchema.nullable().optional(),
     next_effective_date: DateOrStringSchema.nullable().optional(),
-    status: AtomStatusSchema.default("published"),
+    status: AtomStatusSchema.default("fixture"),
+    verified: z.boolean({
+      required_error: "Field 'verified' is required (boolean: true | false)",
+    }),
     reading_minutes: z.number().positive(),
     sources: z.array(SourceSchema).default([]),
   })
@@ -98,7 +101,7 @@ function computeCurrentness(frontmatter, buildDate = new Date("2026-08-28")) {
 }
 
 function buildCorpus() {
-  console.log("=== WARREN CORPUS COMPILER & LINT PASS ===");
+  console.log("=== WARREN CORPUS COMPILER & TRUST BUILD GATE ===");
 
   if (!fs.existsSync(CONTENT_DIR)) {
     fs.mkdirSync(CONTENT_DIR, { recursive: true });
@@ -149,6 +152,28 @@ function buildCorpus() {
 
   const allIds = new Set(Object.keys(rawAtoms));
 
+  // PART 1D BUILD GATE: If NODE_ENV === 'production' and any atom status === 'published' with verified === false -> FAIL BUILD
+  if (process.env.NODE_ENV === "production") {
+    const offendingUnverifiedPublished = [];
+    for (const [id, { frontmatter }] of Object.entries(rawAtoms)) {
+      if (frontmatter.status === "published" && frontmatter.verified === false) {
+        offendingUnverifiedPublished.push(`${id} (${frontmatter.title})`);
+      }
+    }
+
+    if (offendingUnverifiedPublished.length > 0) {
+      console.error("\n❌ [BUILD GATE FAILED] Production build blocked!");
+      console.error(
+        `   The following ${offendingUnverifiedPublished.length} atom(s) have status 'published' but verified: false:`
+      );
+      offendingUnverifiedPublished.forEach((item) => console.error(`   - ${item}`));
+      console.error(
+        "\n   Only human-reviewed primary sources may set verified: true for published atoms.\n"
+      );
+      process.exit(1);
+    }
+  }
+
   // Resolve references
   for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
     const references = [
@@ -167,7 +192,7 @@ function buildCorpus() {
     }
   }
 
-  // Detect prerequisite cycles
+  // Detect cycles
   const visited = {};
   const recursionStack = [];
 
@@ -271,6 +296,8 @@ function buildCorpus() {
       id: atom.id,
       title: atom.title,
       type: atom.type,
+      status: atom.status,
+      verified: atom.verified,
     });
   }
 
@@ -299,7 +326,7 @@ function buildCorpus() {
 
   const missingAtoms = Array.from(missingAtomsSet).sort();
 
-  // LINT PASS: Generate warnings report
+  // LINT PASS
   const lintWarnings = [];
   const inboundLinksCount = {};
   for (const id of allIds) {
@@ -317,6 +344,14 @@ function buildCorpus() {
 
   for (const [id, atom] of Object.entries(atomsManifest)) {
     const rawData = rawAtoms[id];
+
+    if (!atom.verified) {
+      lintWarnings.push({
+        rule: "UNVERIFIED_CONTENT",
+        atomId: id,
+        message: `Atom "${id}" is unverified (${atom.status}). Displays development banner.`,
+      });
+    }
 
     if (atom.status === "published" && (!atom.sources || atom.sources.length === 0)) {
       lintWarnings.push({
@@ -387,13 +422,9 @@ function buildCorpus() {
 
   console.log(`✅ Corpus Manifest successfully written to ${MANIFEST_PATH}`);
   console.log(`   Atoms compiled: ${Object.keys(atomsManifest).length}`);
+  console.log(`   Unverified fixtures quarantined: ${Object.values(atomsManifest).filter((a) => !a.verified).length}`);
   console.log(`   Role Families indexed: ${roles.length}`);
-  console.log(`   Missing Atom Gaps tracked: ${missingAtoms.length} (${missingAtoms.join(", ")})`);
-  console.log(`\n⚠️  LINT WARNING REPORT (${lintWarnings.length} warnings):`);
-  lintWarnings.forEach((w) => {
-    console.log(`   [${w.rule}] ${w.atomId ? w.atomId + ": " : ""}${w.message}`);
-  });
-  console.log("\n");
+  console.log(`   Missing Atom Gaps tracked: ${missingAtoms.length}`);
 }
 
 buildCorpus();

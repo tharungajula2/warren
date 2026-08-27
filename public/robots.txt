@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /studio
+
+Sitemap: https://warren-banking.vercel.app/sitemap.xml

@@ -100,9 +100,23 @@ export default async function ComparePage({ params }: PageProps) {
   const universalCoreMdx = mdxSource.replace(/<Delta[\s\S]*?<\/Delta>/g, "").trim();
 
   const jurisdictions: JurisdictionCode[] = ["IN", "UK", "EU", "US"];
+  const isUnverified = atom.verified === false;
 
   return (
-    <div className="max-w-[1366px] mx-auto px-4 py-8 space-y-8 font-sans">
+    <div className="max-w-[1366px] mx-auto px-4 py-8 space-y-8 font-sans min-w-0">
+      {/* UNVERIFIED FIXTURE WARNING BANNER */}
+      {isUnverified && (
+        <div className="border-l-4 border-[#8A6D2F] bg-[#8A6D2F]/10 p-4 rounded-[3px] font-mono text-xs text-[#8A6D2F] flex items-start gap-3 select-none">
+          <span className="text-base font-bold shrink-0">⚠️</span>
+          <div>
+            <strong className="font-bold uppercase block mb-0.5 tracking-wider">
+              UNVERIFIED FIXTURE CONTENT
+            </strong>
+            This comparison matrix uses unverified development fixtures that have not been checked against primary regulatory sources.
+          </div>
+        </div>
+      )}
+
       {/* Top Header & Navigation */}
       <div className="border-b border-[#23272D] pb-5 font-mono text-xs space-y-2">
         <div className="flex items-center gap-2 text-[#9AA3AD]">
@@ -145,12 +159,12 @@ export default async function ComparePage({ params }: PageProps) {
           </span>
           <span className="text-[#6B747E]">BASE TREATMENT</span>
         </div>
-        <div className="prose-warren text-sm leading-relaxed text-[#E6E8EB]">
+        <div className="prose-warren text-sm leading-relaxed text-[#E6E8EB] min-w-0">
           <MdxRenderer source={universalCoreMdx} />
         </div>
       </section>
 
-      {/* Cross-Jurisdiction 4-Column Grid (Desktop) / Accordion (Mobile) */}
+      {/* Cross-Jurisdiction Matrix: 4 cols above 1440px, 2 cols between 1024px-1440px, Accordion below 1024px */}
       <section className="space-y-4">
         <div className="flex items-center justify-between border-b border-[#23272D] pb-2 font-mono text-xs">
           <h2 className="uppercase tracking-wider text-[#C9711F] font-bold">
@@ -161,8 +175,8 @@ export default async function ComparePage({ params }: PageProps) {
           </span>
         </div>
 
-        {/* Desktop Grid (4 Columns) */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-4 items-start">
+        {/* Responsive Grid: 4 cols >= 1440px (xl), 2 cols between 1024px and 1440px (lg) */}
+        <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-4 items-start">
           {jurisdictions.map((jur) => {
             const config = JURISDICTION_CONFIG[jur];
             const content = deltaBlocks[jur];
@@ -190,7 +204,7 @@ export default async function ComparePage({ params }: PageProps) {
 
                   {/* Variant Content */}
                   {hasVariant ? (
-                    <div className="text-xs font-sans text-[#E6E8EB] leading-relaxed space-y-2">
+                    <div className="text-xs font-sans text-[#E6E8EB] leading-relaxed space-y-2 min-w-0">
                       <MdxRenderer source={content} />
                     </div>
                   ) : (
@@ -211,7 +225,7 @@ export default async function ComparePage({ params }: PageProps) {
           })}
         </div>
 
-        {/* Mobile Accordion (< 1024px) */}
+        {/* Mobile / Tablet Accordion (< 1024px) */}
         <div className="lg:hidden space-y-3">
           {jurisdictions.map((jur) => {
             const config = JURISDICTION_CONFIG[jur];
@@ -232,7 +246,7 @@ export default async function ComparePage({ params }: PageProps) {
                     {hasVariant ? "[VARIANT RECORDED]" : "[NO VARIANT]"}
                   </span>
                 </summary>
-                <div className="mt-3 pt-3 border-t border-[#23272D] text-xs font-sans text-[#E6E8EB] leading-relaxed">
+                <div className="mt-3 pt-3 border-t border-[#23272D] text-xs font-sans text-[#E6E8EB] leading-relaxed min-w-0">
                   {hasVariant ? (
                     <MdxRenderer source={content} />
                   ) : (
