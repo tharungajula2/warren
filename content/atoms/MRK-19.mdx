@@ -1,0 +1,56 @@
+---
+id: MRK-19
+title: Prudent valuation and XVAs
+type: concept
+domain: market-risk
+subdomain: valuation-control-and-jurisdictions
+one_screen: >-
+  Prudent valuation requires banks to apply Additional Valuation Adjustments
+  (AVAs) to trading positions’ fair values, reflecting valuation uncertainty
+  (bid-ask spreads, model error, etc.). These AVAs are deducted from capital to
+  be conservative.
+prerequisites:
+  - MRK-11
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Regulatory guidance on prudent valuation (CRR/CRD RTS).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Regulators mandate that fair-valued trading assets must be marked down conservatively.  For example, the EU’s CRR/CRD rules (via RTS on prudent valuation) require AVAs to cover risks like market price uncertainty and model risk.  Banks quantify AVAs (often at a 90% confidence level) for items such as bid-ask spreads, close-out costs, and other uncertainties.  The total AVA reduces Tier-1 capital.  
+
+Separately, XVAs (e.g. CVA for counterparty credit, FVA for funding) adjust valuation for trading derivatives.  These are usually calculated under accounting standards or supervisory frameworks.  While CVA (Counterparty Value Adjustment) was specifically addressed in Basel III/CRR2, other XVA components (DVA, FVA) reflect economic value adjustments.  Overall, prudent valuation and XVA policies ensure the bank’s book reflect worst-case or “fiduciary” values, protecting capital.
+
+<Rule label="PERMANENT RULE">
+Always include regulatory valuation adjustments (AVAs) on marked-to-market positions to account for uncertainty.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Relying solely on model or mid-market prices for capital without AVAs, understating risk.
+</Trap>
+
+<NeverConfuse>
+**Fair value** — market-based exit price; **Prudent value** — lower value after applying AVAs (90% CI). AVAs include factors like bid-ask and model risk.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Prudent valuation standards (including AVA requirements) are embedded in CRR/CRD in EU and similarly in other advanced frameworks.
+</Rule>
+
+<Recall
+  q="What are AVAs in prudent valuation?"
+  a="Regulatory add-ons to fair value (for bid-ask, model risk, etc.), deducted from capital."
+/>
+
+<Recall
+  q="Why apply prudent valuation?"
+  a="To ensure trading book is not overstated; it accounts for potential losses not captured by mark-to-market."
+/>

@@ -1,0 +1,54 @@
+---
+id: MRK-02
+title: Market risk vs credit risk capital
+type: concept
+domain: market-risk
+subdomain: market-risk-foundations
+one_screen: >-
+  Market risk capital covers mark-to-market losses on trading positions, whereas
+  credit risk capital covers losses from counterparty or issuer default.
+prerequisites:
+  - MRK-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Basel Market Risk (MAR) definitions.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Market risk and credit risk address different loss drivers.  Market risk capital is held against losses from price or rate moves in tradable instruments (e.g. bond price declines, equity crashes).  In contrast, credit risk capital covers expected losses from default or credit deterioration of borrowers/counterparties (covered under credit RWA frameworks).  For example, widening credit spreads on a corporate bond affect its market value (market risk), whereas an actual default causing a loss beyond any resale value is credit risk.  
+
+The Basel Committee explicitly includes credit spread and jump-to-default risk in the trading book market risk framework.  This reflects that trading desks face both price volatility and potential default events.  However, the capital for each risk type is calculated separately, since pricing risk and default risk behave differently.
+
+<Rule label="PERMANENT RULE">
+Market risk covers losses from market price or volatility changes; credit risk covers losses from defaults.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring that credit exposures in the trading book incur both market (spread) and default risk; treating all credit exposures as only credit RWA.
+</Trap>
+
+<NeverConfuse>
+**Credit spread risk** — market loss from widening credit spreads on instruments (market risk factor); **Credit risk** — loss from default or credit event (covered by credit RWA).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The conceptual separation between market and credit risk capital is universal.
+</Rule>
+
+<Recall
+  q="What does market risk capital protect against that credit risk capital does not?"
+  a="Losses from market price fluctuations (rates, FX, equity, credit spreads, etc.)."
+/>
+
+<Recall
+  q="What additional risk does market risk capital include in the trading book?"
+  a="Jump-to-default (default risk) and credit spread risk."
+/>

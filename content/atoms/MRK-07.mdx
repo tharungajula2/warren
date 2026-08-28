@@ -1,0 +1,55 @@
+---
+id: MRK-07
+title: Expected Shortfall (ES) and rationale
+type: concept
+domain: market-risk
+subdomain: var-and-expected-shortfall
+one_screen: >-
+  Expected Shortfall at confidence level α is defined as the average loss in the
+  worst (1−α)% of cases. It was adopted by Basel because it captures tail losses
+  that VaR ignores.
+prerequisites:
+  - MRK-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Basel market risk glossary; Basel explanatory note on ES rationale.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Expected Shortfall (ES), also known as Conditional VaR or Tail VaR, is the mean loss given that losses exceed the VaR threshold.  Formally, ESα is the expected loss in the worst (100−α)% scenarios.  For example, 97.5% ES is the average of the worst 2.5% losses.  ES addresses VaR’s blind spot: it incorporates how bad tail losses can be. Basel III.1 replaced 99% VaR with 97.5% ES for capital, explicitly to “overcome some weaknesses identified in VaR, in particular that it does not ignore tail losses”.  
+
+ES is a coherent risk measure and responds more sensibly to extreme events.  Under normal distributions, 99% VaR and 97.5% ES are numerically similar, but for fat-tailed markets ES is significantly larger. Basel’s switch to ES reflects a priority on capturing potential extreme losses in stressed conditions.
+
+<Rule label="PERMANENT RULE">
+ESα is the average loss beyond the α-VaR cutoff and ensures tail losses are included in risk capital.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using VaR instead of ES for capital calculations when regulators require ES, thereby underestimating tail risk.
+</Trap>
+
+<NeverConfuse>
+**VaR** — loss percentile at confidence α; **Expected Shortfall (ES)** — average of losses beyond that percentile (tail average).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The expected shortfall calculation is a mathematical concept with no jurisdictional variation.
+</Rule>
+
+<Recall
+  q="What is expected shortfall at 97.5%?"
+  a="The mean loss of the worst 2.5% of scenarios."
+/>
+
+<Recall
+  q="Why did Basel move to ES?"
+  a="Because ES “does not ignore tail losses,” addressing VaR’s weakness of not reflecting extreme losses."
+/>

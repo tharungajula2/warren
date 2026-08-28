@@ -1,0 +1,66 @@
+---
+id: MRK-09
+title: VaR backtesting and traffic light
+type: mechanism
+domain: market-risk
+subdomain: var-and-expected-shortfall
+one_screen: >-
+  VaR backtesting checks model accuracy by counting daily exceptions.  Over 250
+  days, 0–4 exceptions (loss>VaR) is green, 5–9 yellow, ≥10 red.
+prerequisites:
+  - MRK-05
+  - MRK-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Baseline VaR backtesting standards.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Banks compare realized P&amp;L against VaR forecasts each day. An “exception” occurs when actual loss exceeds the VaR estimate.  Basel prescribed a 250-day test window.  If exceptions are within 0–4, the model is in the green zone; 5–9 exceptions is a yellow (caution) zone; ≥10 exceptions (4% rate) is red, implying the model likely underestimates risk.  Consistently high exceptions trigger higher capital multipliers or require model review.  
+
+Typically, about 2.5 exceptions are expected on average per 250 days at 99% VaR.  A red-zone model would get a multiplier of 4× on VaR for capital.  Notably, regulators use *hypothetical* P&amp;L (revaluing yesterday’s closing positions) for backtesting, not intraday actual P&amp;L, to avoid distortions from new trades.  Counting actual P&amp;L can inflate exceptions if intraday trades occur.  
+
+&lt;Flow&gt;
+250-day backtesting:
++-------------+--------+
+| Exceptions  | Action |
++-------------+--------+
+| 0–4 (Green) | Model OK (low exceptions)  |
+| 5–9 (Yellow)| Investigate (some alarm)   |
+| &amp;gt;=10 (Red)  | Model invalid (4%+ breaches) |
++-------------+--------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+An accurate 99% VaR model should yield roughly 2-3 exceptions in 250 days (green zone).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating any exception as a model failure, or using actual P&amp;L (with intraday trading) instead of hypothetical P&amp;L.
+</Trap>
+
+<NeverConfuse>
+**Actual P&amp;L** — realized daily P&amp;L including new trades; **Hypothetical P&amp;L** — P&amp;L from revaluing prior-day positions (used in backtesting).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The Basel backtesting traffic-light framework is applied uniformly.
+</Rule>
+
+<Recall
+  q="In a 250-day window, how many VaR breaches triggers the red zone?"
+  a="≥10 breaches (red zone, indicating >4% exceptions)."
+/>
+
+<Recall
+  q="What is the green zone exception range?"
+  a="0–4 exceptions (model performing acceptably)."
+/>

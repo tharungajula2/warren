@@ -1,0 +1,55 @@
+---
+id: MRK-18
+title: 'SA vs IMA: banks'' choice'
+type: concept
+domain: market-risk
+subdomain: frtb-sa-and-ima-capital
+one_screen: >-
+  Many banks are opting for the Standardised Approach under FRTB because the
+  Internal Models Approach entails onerous requirements.  Surveys show roughly
+  40% of current model users plan to switch to SA.
+prerequisites:
+  - MRK-13
+  - MRK-16
+  - MRK-17
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: Industry data (ICMA) on banks’ FRTB implementation plans.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Deploying IMA under FRTB is operationally complex.  PLA failures and NMRF capital often make IMA yield higher capital than SA for certain desks.  The extensive data, modeling and approval hurdles prompt many institutions to prefer SA (simpler formulaic approach) unless IMA provides a clear advantage.  For example, an ICMA survey found ~40% of banks already using IMA intend to seek IMA approval under FRTB, while another ~40% plan to shift to SA.  In other words, SA may become more common despite offering less risk sensitivity, due to practical considerations.
+
+<Rule label="PERMANENT RULE">
+Banks can choose SA or IMA at the desk level; they will compare resulting capital and compliance costs.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming that using internal models will automatically yield lower capital.  In some cases, SA can produce lower capital if IMA requirements force heavy add-ons.
+</Trap>
+
+<NeverConfuse>
+**IMA (Internal Models)** — bank-specific models using ES, LH, etc; **SA (Standardised Approach)** — regulator-set sensitivities framework.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Surveys on approach choice apply broadly; specifics of adoption vary by jurisdiction but the dilemma is universal.
+</Rule>
+
+<Recall
+  q="According to industry surveys, what share of banks plan to use SA under FRTB?"
+  a="Around 40% (similar to those staying with IMA)."
+/>
+
+<Recall
+  q="Why might a bank prefer SA to IMA?"
+  a="IMA requires passing PLA and handling NMRFs; if a desk fails PLA or has many NMRFs, IMA capital can be higher than SA."
+/>

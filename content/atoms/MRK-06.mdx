@@ -1,0 +1,55 @@
+---
+id: MRK-06
+title: Limitations of Value at Risk
+type: concept
+domain: market-risk
+subdomain: var-and-expected-shortfall
+one_screen: >-
+  VaR does not describe the magnitude of losses beyond its threshold, and can be
+  insensitive to extreme tail risk.
+prerequisites:
+  - MRK-04
+  - MRK-05
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Risk management discussion of VaR shortcomings.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+VaR only tells you the cut-off loss at the confidence level, not what happens if losses exceed that.  It ignores the severity of losses in the tail.  In other words, portfolios with very different tail risk can have the same VaR.  As one analyst notes, “VaR does not tell us anything about losses beyond the VaR level”. For instance, a portfolio with potential huge losses in rare events may have the same VaR as a benign portfolio up to that quantile.  This gap became apparent during crises when losses far exceeded VaR predictions.  
+
+VaR is also not a coherent risk measure (it lacks sub-additivity in some cases), which means diversifying positions could, counterintuitively, increase VaR.  These shortcomings motivated the shift to Expected Shortfall in regulatory frameworks (see MRK-07).
+
+<Rule label="PERMANENT RULE">
+VaR at α% does **not** measure how large losses can be beyond that percentile.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating VaR as if it were a worst-case loss or ignoring the tail beyond the VaR cutoff.
+</Trap>
+
+<NeverConfuse>
+**VaR** — the (1−α) percentile loss (threshold loss); **Worst-case loss** — an extreme possible loss (VaR does not guarantee worst-case).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The mathematical limitations of VaR are inherent and do not depend on jurisdiction.
+</Rule>
+
+<Recall
+  q="What important information does VaR omit?"
+  a="The expected size of losses beyond the VaR threshold."
+/>
+
+<Recall
+  q="Why did regulators move from VaR to ES?"
+  a="Because VaR ignores tail losses, whereas ES captures the average loss in the tail."
+/>

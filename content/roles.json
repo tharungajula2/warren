@@ -94,6 +94,8 @@
       { "id": "CAP-12", "weight": 3 },
       { "id": "CAP-13", "weight": 2 },
       { "id": "CAP-16", "weight": 2 },
+      { "id": "MRK-13", "weight": 2 },
+      { "id": "MRK-14", "weight": 2 },
       { "id": "CAP-30", "weight": 1 }
     ]
   },
@@ -160,8 +162,11 @@
       { "id": "TRD-26", "weight": 3 },
       { "id": "TRD-13", "weight": 3 },
       { "id": "TRD-29", "weight": 3 },
+      { "id": "MRK-04", "weight": 3 },
+      { "id": "MRK-07", "weight": 3 },
       { "id": "TRD-02", "weight": 2 },
       { "id": "TRD-30", "weight": 2 },
+      { "id": "MRK-11", "weight": 2 },
       { "id": "CCR-01", "weight": 1 },
       { "id": "CCR-06", "weight": 1 }
     ]

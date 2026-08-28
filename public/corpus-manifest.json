@@ -40,8 +40,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 319.5,
-      "initialY": -15.8
+      "initialX": 361.1,
+      "initialY": -27.6
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +80,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 293.6,
-      "initialY": 14.7
+      "initialX": 430.1,
+      "initialY": -25.2
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 326.2,
-      "initialY": 41.1
+      "initialX": 401.5,
+      "initialY": 28.7
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +161,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 383.7,
-      "initialY": 28.5
+      "initialX": 420.4,
+      "initialY": 77.1
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +201,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 444.8,
-      "initialY": 43.4
+      "initialX": 372.9,
+      "initialY": 44
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +249,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 412.4,
-      "initialY": 75
+      "initialX": 337.8,
+      "initialY": 45.2
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +297,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 352,
-      "initialY": 47.5
+      "initialX": 391.4,
+      "initialY": 65.3
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +346,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 428.2,
-      "initialY": 59.4
+      "initialX": 429.2,
+      "initialY": 23.2
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 363.2,
-      "initialY": 20.5
+      "initialX": 360.1,
+      "initialY": 29.2
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +431,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 365,
-      "initialY": 69.2
+      "initialX": 408.3,
+      "initialY": -14.7
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +477,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 412.5,
-      "initialY": 42.1
+      "initialX": 335.8,
+      "initialY": -10.1
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +526,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 414.6,
-      "initialY": -14.8
+      "initialX": 418.1,
+      "initialY": 4.9
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +574,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 392,
-      "initialY": -61.2
+      "initialX": 347.9,
+      "initialY": 10.2
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +622,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 350.3,
-      "initialY": -8.1
+      "initialX": 401.1,
+      "initialY": -40
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +665,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 402.9,
-      "initialY": -38
+      "initialX": 454.5,
+      "initialY": -18.6
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +715,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 454.8,
-      "initialY": -45.1
+      "initialX": 384.5,
+      "initialY": -43.1
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +759,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 329,
-      "initialY": -39.7
+      "initialX": 327.8,
+      "initialY": -34.1
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +799,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 429.1,
-      "initialY": -59.1
+      "initialX": 417.7,
+      "initialY": 60.2
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -840,7 +840,7 @@
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
       "initialX": 358.8,
-      "initialY": -44.6
+      "initialY": 61.4
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +879,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 394.4,
-      "initialY": -1.2
+      "initialX": 427.1,
+      "initialY": 45.8
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +920,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 344.1,
-      "initialY": 14.9
+      "initialX": 364.1,
+      "initialY": -55.6
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +960,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 421.2,
-      "initialY": 3.8
+      "initialX": 385.4,
+      "initialY": -6.6
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 393.1,
-      "initialY": 54.6
+      "initialX": 317.3,
+      "initialY": 13.9
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1040,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 371.9,
-      "initialY": -8.5
+      "initialX": 363.8,
+      "initialY": -6.2
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1080,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 406.3,
-      "initialY": 19.9
+      "initialX": 474.6,
+      "initialY": -4.2
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1123,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 473.4,
-      "initialY": 5
+      "initialX": 433.9,
+      "initialY": -50.9
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1175,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 378.7,
-      "initialY": -41.5
+      "initialX": 452.4,
+      "initialY": -47.1
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1230,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 454.2,
-      "initialY": 6.9
+      "initialX": 471.9,
+      "initialY": 46.3
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +1283,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 461.4,
-      "initialY": 29.9
+      "initialX": 390.5,
+      "initialY": 14.1
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +1360,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 435.8,
-      "initialY": -32.8
+      "initialX": 446.4,
+      "initialY": 12.6
     },
     "CCR-01": {
       "id": "CCR-01",
@@ -1403,8 +1403,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-01.mdx",
-      "initialX": 297.8,
-      "initialY": 263.1
+      "initialX": 348,
+      "initialY": 281.7
     },
     "CCR-02": {
       "id": "CCR-02",
@@ -1443,8 +1443,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-02.mdx",
-      "initialX": 308.2,
-      "initialY": 220.5
+      "initialX": 316.3,
+      "initialY": 228.7
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -1483,8 +1483,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-03.mdx",
-      "initialX": 312.8,
-      "initialY": 286.8
+      "initialX": 261.8,
+      "initialY": 224.1
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -1523,8 +1523,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-04.mdx",
-      "initialX": 243.8,
-      "initialY": 253.2
+      "initialX": 309.6,
+      "initialY": 251.9
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -1563,8 +1563,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-05.mdx",
-      "initialX": 247.8,
-      "initialY": 226.6
+      "initialX": 303.1,
+      "initialY": 289.3
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -1608,8 +1608,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-06.mdx",
-      "initialX": 306.8,
-      "initialY": 190.6
+      "initialX": 294.2,
+      "initialY": 232.8
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -1648,8 +1648,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-07.mdx",
-      "initialX": 344.5,
-      "initialY": 248.7
+      "initialX": 257.8,
+      "initialY": 190.1
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -1688,8 +1688,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-08.mdx",
-      "initialX": 249.9,
-      "initialY": 187.4
+      "initialX": 286.3,
+      "initialY": 280.8
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -1728,8 +1728,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-09.mdx",
-      "initialX": 356.9,
-      "initialY": 195.9
+      "initialX": 360,
+      "initialY": 239.1
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -1768,8 +1768,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-10.mdx",
-      "initialX": 327.3,
-      "initialY": 201.1
+      "initialX": 391.1,
+      "initialY": 241.6
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -1808,8 +1808,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-11.mdx",
-      "initialX": 270.8,
-      "initialY": 189.6
+      "initialX": 379.1,
+      "initialY": 187.6
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -1848,8 +1848,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-12.mdx",
-      "initialX": 269.8,
-      "initialY": 219.4
+      "initialX": 337.3,
+      "initialY": 203.9
     },
     "CCR-13": {
       "id": "CCR-13",
@@ -1888,8 +1888,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-13.mdx",
-      "initialX": 283.9,
-      "initialY": 241
+      "initialX": 354.8,
+      "initialY": 188.3
     },
     "CCR-14": {
       "id": "CCR-14",
@@ -1933,8 +1933,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-14.mdx",
-      "initialX": 332.8,
-      "initialY": 273.3
+      "initialX": 370.2,
+      "initialY": 212.8
     },
     "CCR-15": {
       "id": "CCR-15",
@@ -1973,8 +1973,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-15.mdx",
-      "initialX": 319.7,
-      "initialY": 318.5
+      "initialX": 306.4,
+      "initialY": 199.9
     },
     "CCR-16": {
       "id": "CCR-16",
@@ -2013,8 +2013,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-16.mdx",
-      "initialX": 378.5,
-      "initialY": 279.9
+      "initialX": 328.1,
+      "initialY": 171.9
     },
     "CCR-17": {
       "id": "CCR-17",
@@ -2053,8 +2053,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-17.mdx",
-      "initialX": 373.5,
-      "initialY": 235
+      "initialX": 371.4,
+      "initialY": 275
     },
     "CCR-18": {
       "id": "CCR-18",
@@ -2093,8 +2093,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CCR-18.mdx",
-      "initialX": 346.3,
-      "initialY": 291.8
+      "initialX": 338.9,
+      "initialY": 229.5
     },
     "CCR-19": {
       "id": "CCR-19",
@@ -2133,8 +2133,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-19.mdx",
-      "initialX": 336.9,
-      "initialY": 227
+      "initialX": 329,
+      "initialY": 288.8
     },
     "CCR-20": {
       "id": "CCR-20",
@@ -2173,8 +2173,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-20.mdx",
-      "initialX": 383.1,
-      "initialY": 252.6
+      "initialX": 280.9,
+      "initialY": 206.8
     },
     "CCR-21": {
       "id": "CCR-21",
@@ -2218,8 +2218,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CCR-21.mdx",
-      "initialX": 318.2,
-      "initialY": 248.5
+      "initialX": 397,
+      "initialY": 218
     },
     "CCR-22": {
       "id": "CCR-22",
@@ -2258,8 +2258,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-22.mdx",
-      "initialX": 289.5,
-      "initialY": 202.3
+      "initialX": 286.6,
+      "initialY": 254.9
     },
     "CCR-23": {
       "id": "CCR-23",
@@ -2296,8 +2296,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-23.mdx",
-      "initialX": 365.3,
-      "initialY": 215.3
+      "initialX": 278.2,
+      "initialY": 172.4
     },
     "CCR-24": {
       "id": "CCR-24",
@@ -2338,8 +2338,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-24.mdx",
-      "initialX": 270.7,
-      "initialY": 288.5
+      "initialX": 346.3,
+      "initialY": 260.4
     },
     "CCR-25": {
       "id": "CCR-25",
@@ -2384,8 +2384,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CCR-25.mdx",
-      "initialX": 288.5,
-      "initialY": 293.4
+      "initialX": 307.7,
+      "initialY": 174.8
     },
     "CCR-26": {
       "id": "CCR-26",
@@ -2425,8 +2425,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-26.mdx",
-      "initialX": 267.5,
-      "initialY": 265.1
+      "initialX": 390.7,
+      "initialY": 269.4
     },
     "CR-01": {
       "id": "CR-01",
@@ -2465,8 +2465,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 38.4,
-      "initialY": 318.9
+      "initialX": 76.7,
+      "initialY": 324.9
     },
     "CR-02": {
       "id": "CR-02",
@@ -2505,8 +2505,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 18.4,
-      "initialY": 246
+      "initialX": 51.5,
+      "initialY": 249.2
     },
     "CR-03": {
       "id": "CR-03",
@@ -2551,8 +2551,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": -22.6,
-      "initialY": 238.8
+      "initialX": 8.8,
+      "initialY": 258.8
     },
     "CR-04": {
       "id": "CR-04",
@@ -2605,8 +2605,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": -29.7,
-      "initialY": 271.6
+      "initialX": 3.6,
+      "initialY": 297.2
     },
     "CR-05": {
       "id": "CR-05",
@@ -2659,8 +2659,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": -14.6,
-      "initialY": 285.2
+      "initialX": 23.5,
+      "initialY": 292.3
     },
     "CR-06": {
       "id": "CR-06",
@@ -2708,8 +2708,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 87.4,
-      "initialY": 327
+      "initialX": 125.5,
+      "initialY": 323.8
     },
     "CR-07": {
       "id": "CR-07",
@@ -2762,8 +2762,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 70.9,
-      "initialY": 381.1
+      "initialX": 121.9,
+      "initialY": 379.7
     },
     "CR-08": {
       "id": "CR-08",
@@ -2811,8 +2811,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 26.5,
-      "initialY": 329.6
+      "initialX": 70.9,
+      "initialY": 337.5
     },
     "CR-09": {
       "id": "CR-09",
@@ -2861,8 +2861,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 40,
-      "initialY": 273.7
+      "initialX": 76.4,
+      "initialY": 272.2
     },
     "CR-10": {
       "id": "CR-10",
@@ -2911,8 +2911,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -98.9,
-      "initialY": 196.1
+      "initialX": -68.2,
+      "initialY": 228.1
     },
     "CR-11": {
       "id": "CR-11",
@@ -2966,8 +2966,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -68.3,
-      "initialY": 190.6
+      "initialX": -41.9,
+      "initialY": 214.9
     },
     "CR-12": {
       "id": "CR-12",
@@ -3006,8 +3006,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 13,
-      "initialY": 265.9
+      "initialX": 52,
+      "initialY": 266.7
     },
     "CR-13": {
       "id": "CR-13",
@@ -3046,8 +3046,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 40.7,
-      "initialY": 240.3
+      "initialX": 42.4,
+      "initialY": 302.6
     },
     "CR-14": {
       "id": "CR-14",
@@ -3086,8 +3086,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": -1.2,
-      "initialY": 226.2
+      "initialX": 27.1,
+      "initialY": 237.8
     },
     "CR-15": {
       "id": "CR-15",
@@ -3127,8 +3127,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 42.6,
-      "initialY": 295
+      "initialX": 82.8,
+      "initialY": 293.8
     },
     "CR-16": {
       "id": "CR-16",
@@ -3168,8 +3168,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -97.7,
-      "initialY": 176.3
+      "initialX": -72.6,
+      "initialY": 210.1
     },
     "CR-17": {
       "id": "CR-17",
@@ -3210,8 +3210,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": -82.1,
-      "initialY": 213
+      "initialX": -48.4,
+      "initialY": 237.5
     },
     "CR-18": {
       "id": "CR-18",
@@ -3250,8 +3250,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 70,
-      "initialY": 293
+      "initialX": 95.7,
+      "initialY": 313.4
     },
     "CR-19": {
       "id": "CR-19",
@@ -3292,8 +3292,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 106.9,
-      "initialY": 314
+      "initialX": 140.8,
+      "initialY": 304.3
     },
     "CR-20": {
       "id": "CR-20",
@@ -3333,8 +3333,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 96.1,
-      "initialY": 379
+      "initialX": 171.5,
+      "initialY": 331.6
     },
     "CR-21": {
       "id": "CR-21",
@@ -3375,8 +3375,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 84.8,
-      "initialY": 351
+      "initialX": 127.3,
+      "initialY": 350.2
     },
     "CR-22": {
       "id": "CR-22",
@@ -3417,8 +3417,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 113.7,
-      "initialY": 335.5
+      "initialX": 140.9,
+      "initialY": 363.4
     },
     "CR-23": {
       "id": "CR-23",
@@ -3454,8 +3454,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 143.6,
-      "initialY": 385.9
+      "initialX": 182.1,
+      "initialY": 380.2
     },
     "CR-24": {
       "id": "CR-24",
@@ -3509,8 +3509,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 67.3,
-      "initialY": 330.1
+      "initialX": 100.5,
+      "initialY": 353.3
     },
     "CR-25": {
       "id": "CR-25",
@@ -3551,8 +3551,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 110.7,
-      "initialY": 359.2
+      "initialX": 153.1,
+      "initialY": 337.1
     },
     "CR-26": {
       "id": "CR-26",
@@ -3604,8 +3604,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 39.7,
-      "initialY": 350.4
+      "initialX": 111.8,
+      "initialY": 284.2
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -3642,8 +3642,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -178.5,
-      "initialY": 414.4
+      "initialX": -51,
+      "initialY": 480.1
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -3677,8 +3677,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -128.1,
-      "initialY": 441.7
+      "initialX": -56.5,
+      "initialY": 435.7
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -3722,8 +3722,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -89.9,
-      "initialY": 387.8
+      "initialX": -115.3,
+      "initialY": 425.4
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -3762,8 +3762,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -76.9,
-      "initialY": 439.1
+      "initialX": -93.6,
+      "initialY": 467.4
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -3797,8 +3797,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -103.8,
-      "initialY": 333
+      "initialX": -107.2,
+      "initialY": 368.4
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -3837,8 +3837,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": -142.7,
-      "initialY": 364
+      "initialX": -87.6,
+      "initialY": 361.4
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -3877,8 +3877,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -135.7,
-      "initialY": 318.7
+      "initialX": -37.1,
+      "initialY": 350.2
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -3912,8 +3912,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": -83.5,
-      "initialY": 357.4
+      "initialX": -66,
+      "initialY": 395.2
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -3947,8 +3947,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -120.3,
-      "initialY": 398.1
+      "initialX": -23.1,
+      "initialY": 432.2
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -3982,8 +3982,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -64.8,
-      "initialY": 397.5
+      "initialX": -90.1,
+      "initialY": 441.3
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -4017,8 +4017,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": -102.5,
-      "initialY": 445
+      "initialX": -34.6,
+      "initialY": 457.4
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -4052,8 +4052,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -117.3,
-      "initialY": 421.4
+      "initialX": -92.7,
+      "initialY": 387.9
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -4087,8 +4087,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -163.5,
-      "initialY": 388.8
+      "initialX": -37.6,
+      "initialY": 376.8
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -4122,8 +4122,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -110.3,
-      "initialY": 362.8
+      "initialX": -86.5,
+      "initialY": 413.5
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -4162,8 +4162,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -87.3,
-      "initialY": 415.1
+      "initialX": -68.5,
+      "initialY": 461.9
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -4197,8 +4197,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -160,
-      "initialY": 440.6
+      "initialX": -29.8,
+      "initialY": 401.9
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -4232,8 +4232,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": -190.9,
-      "initialY": 390.5
+      "initialX": -10.6,
+      "initialY": 459.3
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -4267,8 +4267,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": -133.3,
-      "initialY": 383.6
+      "initialX": 3.1,
+      "initialY": 415
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -4307,8 +4307,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -181.5,
-      "initialY": 351
+      "initialX": -54.8,
+      "initialY": 416.8
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -4342,8 +4342,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": -127.4,
-      "initialY": 339.8
+      "initialX": -9.8,
+      "initialY": 388.6
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -4377,8 +4377,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -168.9,
-      "initialY": 365.5
+      "initialX": -63.7,
+      "initialY": 362
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -4430,8 +4430,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": -148.6,
-      "initialY": 417.7
+      "initialX": -116,
+      "initialY": 400.3
     },
     "FND-01": {
       "id": "FND-01",
@@ -4468,8 +4468,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -287.9,
-      "initialY": 208.5
+      "initialX": -240.2,
+      "initialY": 272.8
     },
     "FND-02": {
       "id": "FND-02",
@@ -4508,8 +4508,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -322.8,
-      "initialY": 176.3
+      "initialX": -258.9,
+      "initialY": 248.2
     },
     "FND-03": {
       "id": "FND-03",
@@ -4554,8 +4554,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -310.6,
-      "initialY": 255.2
+      "initialX": -213.2,
+      "initialY": 301.6
     },
     "FND-04": {
       "id": "FND-04",
@@ -4595,8 +4595,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -371.5,
-      "initialY": 231.3
+      "initialX": -258.1,
+      "initialY": 324.2
     },
     "FND-05": {
       "id": "FND-05",
@@ -4641,8 +4641,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -364.3,
-      "initialY": 195
+      "initialX": -315.3,
+      "initialY": 270.3
     },
     "FND-06": {
       "id": "FND-06",
@@ -4705,8 +4705,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -346.5,
-      "initialY": 202.4
+      "initialX": -296.4,
+      "initialY": 286.8
     },
     "FND-07": {
       "id": "FND-07",
@@ -4751,8 +4751,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -351.5,
-      "initialY": 231
+      "initialX": -230.7,
+      "initialY": 319.4
     },
     "FND-08": {
       "id": "FND-08",
@@ -4791,8 +4791,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -373.5,
-      "initialY": 145.6
+      "initialX": -334.9,
+      "initialY": 234.5
     },
     "FND-09": {
       "id": "FND-09",
@@ -4850,8 +4850,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -338,
-      "initialY": 148.1
+      "initialX": -300.4,
+      "initialY": 229.3
     },
     "FND-10": {
       "id": "FND-10",
@@ -4903,8 +4903,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -354.7,
-      "initialY": 276.5
+      "initialX": -292.1,
+      "initialY": 346.5
     },
     "FND-11": {
       "id": "FND-11",
@@ -4936,8 +4936,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -351.9,
-      "initialY": 258.6
+      "initialX": -287.1,
+      "initialY": 320.2
     },
     "FND-12": {
       "id": "FND-12",
@@ -4971,8 +4971,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -401.4,
-      "initialY": 243.8
+      "initialX": -291.6,
+      "initialY": 372.9
     },
     "FND-13": {
       "id": "FND-13",
@@ -5007,8 +5007,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -383.9,
-      "initialY": 200.8
+      "initialX": -241.2,
+      "initialY": 347.3
     },
     "FND-14": {
       "id": "FND-14",
@@ -5062,8 +5062,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -313.9,
-      "initialY": 217.6
+      "initialX": -269.6,
+      "initialY": 283.7
     },
     "FND-15": {
       "id": "FND-15",
@@ -5097,8 +5097,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -198.7,
-      "initialY": 251.1
+      "initialX": -155.1,
+      "initialY": 299.2
     },
     "FND-16": {
       "id": "FND-16",
@@ -5130,8 +5130,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -328.5,
-      "initialY": 210.6
+      "initialX": -318,
+      "initialY": 299.2
     },
     "FND-17": {
       "id": "FND-17",
@@ -5170,8 +5170,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -285,
-      "initialY": 254.4
+      "initialX": -265.4,
+      "initialY": 351.1
     },
     "FND-18": {
       "id": "FND-18",
@@ -5211,8 +5211,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -325.2,
-      "initialY": 275.6
+      "initialX": -314.9,
+      "initialY": 348.4
     },
     "FND-19": {
       "id": "FND-19",
@@ -5258,8 +5258,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -272.3,
-      "initialY": 237.8
+      "initialX": -249,
+      "initialY": 303.4
     },
     "FND-20": {
       "id": "FND-20",
@@ -5299,8 +5299,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -327.6,
-      "initialY": 240.8
+      "initialX": -306.3,
+      "initialY": 317.4
     },
     "FND-21": {
       "id": "FND-21",
@@ -5344,8 +5344,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -329.9,
-      "initialY": 297.9
+      "initialX": -346.3,
+      "initialY": 283.5
     },
     "FND-22": {
       "id": "FND-22",
@@ -5384,8 +5384,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -380.6,
-      "initialY": 265
+      "initialX": -337.4,
+      "initialY": 331.9
     },
     "FND-23": {
       "id": "FND-23",
@@ -5449,8 +5449,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -300.6,
-      "initialY": 173.6
+      "initialX": -275.4,
+      "initialY": 245.2
     },
     "FND-24": {
       "id": "FND-24",
@@ -5529,8 +5529,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -277.2,
-      "initialY": 193.3
+      "initialX": -233.2,
+      "initialY": 256.2
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -5592,8 +5592,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -259.9,
-      "initialY": 108.6
+      "initialX": -234.9,
+      "initialY": 174.5
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -5643,8 +5643,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -306.7,
-      "initialY": 72.8
+      "initialX": -284.7,
+      "initialY": 154.7
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -5700,8 +5700,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -228.9,
-      "initialY": 93.4
+      "initialX": -208.1,
+      "initialY": 156.9
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -5750,8 +5750,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -393.1,
-      "initialY": 46.8
+      "initialX": -374.7,
+      "initialY": 149.2
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -5800,8 +5800,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -249.4,
-      "initialY": 35.7
+      "initialX": -251.7,
+      "initialY": 117.7
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -5857,8 +5857,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -202.4,
-      "initialY": 90.1
+      "initialX": -183.1,
+      "initialY": 148.5
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -5908,8 +5908,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -239.3,
-      "initialY": 106.9
+      "initialX": -217.5,
+      "initialY": 170.9
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -5960,8 +5960,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -249.3,
-      "initialY": 75.9
+      "initialX": -224.5,
+      "initialY": 139.4
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -6009,8 +6009,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -285.9,
-      "initialY": 86.6
+      "initialX": -263.3,
+      "initialY": 166.5
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -6060,8 +6060,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -179.2,
-      "initialY": 145.5
+      "initialX": -155.3,
+      "initialY": 200.7
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -6110,8 +6110,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -341.9,
-      "initialY": 58.4
+      "initialX": -324.8,
+      "initialY": 150.5
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -6161,8 +6161,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -246.3,
-      "initialY": 122.9
+      "initialX": -222.6,
+      "initialY": 188.4
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -6212,8 +6212,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -240.9,
-      "initialY": 55.2
+      "initialX": -223.7,
+      "initialY": 118.5
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -6263,8 +6263,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -183.3,
-      "initialY": 91.6
+      "initialX": -170.1,
+      "initialY": 160.6
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -6319,8 +6319,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -222.3,
-      "initialY": 74.4
+      "initialX": -198.8,
+      "initialY": 131.4
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -6375,8 +6375,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -282.4,
-      "initialY": -25.8
+      "initialX": -257.6,
+      "initialY": 42.1
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -6432,8 +6432,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -305,
-      "initialY": -12.6
+      "initialX": -281.1,
+      "initialY": 58.8
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -6488,8 +6488,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -348.5,
-      "initialY": 27
+      "initialX": -329.8,
+      "initialY": 113.6
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -6545,8 +6545,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -299.1,
-      "initialY": 20.4
+      "initialX": -310.3,
+      "initialY": 126
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -6608,8 +6608,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -321.4,
-      "initialY": 39.4
+      "initialX": -292.5,
+      "initialY": 106
     },
     "IND-01": {
       "id": "IND-01",
@@ -6646,8 +6646,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -310.3,
-      "initialY": -285
+      "initialX": -328.7,
+      "initialY": -83.3
     },
     "IND-02": {
       "id": "IND-02",
@@ -6686,8 +6686,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -334.3,
-      "initialY": -229.1
+      "initialX": -401.3,
+      "initialY": -92.8
     },
     "IND-03": {
       "id": "IND-03",
@@ -6721,8 +6721,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -287.9,
-      "initialY": -271.5
+      "initialX": -447.6,
+      "initialY": -78.3
     },
     "IND-04": {
       "id": "IND-04",
@@ -6756,8 +6756,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -264.5,
-      "initialY": -215.7
+      "initialX": -398.2,
+      "initialY": -65.8
     },
     "IND-05": {
       "id": "IND-05",
@@ -6797,8 +6797,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -349.7,
-      "initialY": -279.7
+      "initialX": -405.7,
+      "initialY": -40.3
     },
     "IND-06": {
       "id": "IND-06",
@@ -6838,8 +6838,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -312.8,
-      "initialY": -222.8
+      "initialX": -381.9,
+      "initialY": -85.5
     },
     "IND-07": {
       "id": "IND-07",
@@ -6878,8 +6878,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -381.7,
-      "initialY": -206.5
+      "initialX": -371.9,
+      "initialY": -153
     },
     "IND-08": {
       "id": "IND-08",
@@ -6919,8 +6919,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -361.3,
-      "initialY": -248.6
+      "initialX": -426.3,
+      "initialY": -108.7
     },
     "IND-09": {
       "id": "IND-09",
@@ -6961,8 +6961,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -330.4,
-      "initialY": -180.1
+      "initialX": -349.7,
+      "initialY": -121.9
     },
     "IND-10": {
       "id": "IND-10",
@@ -7002,8 +7002,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -271.2,
-      "initialY": -184.1
+      "initialX": -413.1,
+      "initialY": -135.7
     },
     "IND-11": {
       "id": "IND-11",
@@ -7043,8 +7043,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -282.4,
-      "initialY": -240.5
+      "initialX": -375.9,
+      "initialY": -44.7
     },
     "IND-12": {
       "id": "IND-12",
@@ -7083,8 +7083,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -337.6,
-      "initialY": -254.4
+      "initialX": -352,
+      "initialY": -98.1
     },
     "IND-13": {
       "id": "IND-13",
@@ -7123,8 +7123,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -300.1,
-      "initialY": -190
+      "initialX": -438.6,
+      "initialY": -133.6
     },
     "IND-14": {
       "id": "IND-14",
@@ -7158,8 +7158,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -354,
-      "initialY": -197.8
+      "initialX": -394.3,
+      "initialY": -170.8
     },
     "IND-15": {
       "id": "IND-15",
@@ -7198,8 +7198,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -353.6,
-      "initialY": -219.5
+      "initialX": -420.2,
+      "initialY": -172.5
     },
     "IND-16": {
       "id": "IND-16",
@@ -7239,8 +7239,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -285.9,
-      "initialY": -210.4
+      "initialX": -455.2,
+      "initialY": -124.6
     },
     "IND-17": {
       "id": "IND-17",
@@ -7279,8 +7279,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -311.6,
-      "initialY": -258.3
+      "initialX": -399.4,
+      "initialY": -112.4
     },
     "IND-18": {
       "id": "IND-18",
@@ -7319,8 +7319,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -351.4,
-      "initialY": -168.3
+      "initialX": -377.6,
+      "initialY": -122
     },
     "IND-19": {
       "id": "IND-19",
@@ -7359,8 +7359,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -298.3,
-      "initialY": -168
+      "initialX": -329.4,
+      "initialY": -138.3
     },
     "IND-20": {
       "id": "IND-20",
@@ -7399,8 +7399,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -261.4,
-      "initialY": -246
+      "initialX": -431.7,
+      "initialY": -60.1
     },
     "IND-21": {
       "id": "IND-21",
@@ -7439,8 +7439,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -379.7,
-      "initialY": -233.2
+      "initialX": -322.4,
+      "initialY": -108.9
     },
     "IND-22": {
       "id": "IND-22",
@@ -7479,8 +7479,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -372.3,
-      "initialY": -278.7
+      "initialX": -363.8,
+      "initialY": -69.3
     },
     "IND-23": {
       "id": "IND-23",
@@ -7519,8 +7519,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -331.1,
-      "initialY": -296.2
+      "initialX": -389.9,
+      "initialY": -148.8
     },
     "IND-24": {
       "id": "IND-24",
@@ -7559,8 +7559,806 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -374.8,
-      "initialY": -180.4
+      "initialX": -343.2,
+      "initialY": -58.1
+    },
+    "MRK-01": {
+      "id": "MRK-01",
+      "title": "Market risk and risk factor classes",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "market-risk-foundations",
+      "one_screen": "Market risk is the risk of trading losses due to changes in market prices, covering exposures to interest rates, equity prices, FX, commodities, and credit spreads.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Market Risk (MAR): definitions of market risk and risk classes.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "MRK-01.mdx",
+      "initialX": -294.9,
+      "initialY": -304.5
+    },
+    "MRK-02": {
+      "id": "MRK-02",
+      "title": "Market risk vs credit risk capital",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "market-risk-foundations",
+      "one_screen": "Market risk capital covers mark-to-market losses on trading positions, whereas credit risk capital covers losses from counterparty or issuer default.",
+      "prerequisites": [
+        "MRK-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Market Risk (MAR) definitions.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-02",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "MRK-02.mdx",
+      "initialX": -230.6,
+      "initialY": -289.6
+    },
+    "MRK-03": {
+      "id": "MRK-03",
+      "title": "Market risk sensitivities (delta, vega, curvature)",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "market-risk-foundations",
+      "one_screen": "Market risk is often quantified by first-order and second-order sensitivities: delta (linear price change), vega (volatility sensitivity), and curvature (non-linear/gamma effect).",
+      "prerequisites": [
+        "MRK-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel market risk glossary definitions.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-03",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "MRK-03.mdx",
+      "initialX": -284.3,
+      "initialY": -245
+    },
+    "MRK-04": {
+      "id": "MRK-04",
+      "title": "Value at Risk (VaR) definition",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "VaR is the loss threshold which is not expected to be exceeded at a given confidence level over a specified time horizon.",
+      "prerequisites": [
+        "MRK-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel market risk glossary.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-04",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "MRK-04.mdx",
+      "initialX": -242.8,
+      "initialY": -328.2
+    },
+    "MRK-05": {
+      "id": "MRK-05",
+      "title": "VaR calculation methods",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "VaR can be computed by historical simulation (replaying actual past returns), parametric (variance-covariance, assuming normal returns), or Monte Carlo simulation. Each method uses different assumptions about return distributions.",
+      "prerequisites": [
+        "MRK-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Academic study on VaR methods; Basel framework definitions.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-05",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "MRK-05.mdx",
+      "initialX": -262.4,
+      "initialY": -376.3
+    },
+    "MRK-06": {
+      "id": "MRK-06",
+      "title": "Limitations of Value at Risk",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "VaR does not describe the magnitude of losses beyond its threshold, and can be insensitive to extreme tail risk.",
+      "prerequisites": [
+        "MRK-04",
+        "MRK-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Risk management discussion of VaR shortcomings.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-06",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "MRK-06.mdx",
+      "initialX": -292.1,
+      "initialY": -344.1
+    },
+    "MRK-07": {
+      "id": "MRK-07",
+      "title": "Expected Shortfall (ES) and rationale",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "Expected Shortfall at confidence level α is defined as the average loss in the worst (1−α)% of cases. It was adopted by Basel because it captures tail losses that VaR ignores.",
+      "prerequisites": [
+        "MRK-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel market risk glossary; Basel explanatory note on ES rationale.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-07",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "MRK-07.mdx",
+      "initialX": -331.4,
+      "initialY": -318.9
+    },
+    "MRK-08": {
+      "id": "MRK-08",
+      "title": "Confidence levels, holding periods, scaling",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "VaR and ES must specify a confidence level and holding period.  Regulators typically use 99% VaR (10-day) or 97.5% ES (10-day) for capital.  Under iid returns, risk scales as √time, but real markets often violate that.",
+      "prerequisites": [
+        "MRK-04",
+        "MRK-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel documentation.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-08",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "MRK-08.mdx",
+      "initialX": -283.4,
+      "initialY": -284.2
+    },
+    "MRK-09": {
+      "id": "MRK-09",
+      "title": "VaR backtesting and traffic light",
+      "type": "mechanism",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "VaR backtesting checks model accuracy by counting daily exceptions.  Over 250 days, 0–4 exceptions (loss>VaR) is green, 5–9 yellow, ≥10 red.",
+      "prerequisites": [
+        "MRK-05",
+        "MRK-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Baseline VaR backtesting standards.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-09",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "MRK-09.mdx",
+      "initialX": -225.1,
+      "initialY": -337.5
+    },
+    "MRK-10": {
+      "id": "MRK-10",
+      "title": "Stressed VaR calibration",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "var-and-expected-shortfall",
+      "one_screen": "Regulators require calibrating VaR/ES on a 12-month historically stressed period (e.g. 250 trading days) representative of serious market stress. Under FRTB, capital is based on stressed ES on such a period.",
+      "prerequisites": [
+        "MRK-05",
+        "MRK-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel text on stressed VaR/ES requirements.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-10",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "MRK-10.mdx",
+      "initialX": -280.4,
+      "initialY": -323
+    },
+    "MRK-11": {
+      "id": "MRK-11",
+      "title": "FRTB rationale (pre-crisis failures)",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "The pre-2008 market risk rules failed to capture tail events and credit concentration. Trading losses in 2008–09 revealed these gaps, prompting Basel 2.5 and then FRTB reforms.",
+      "prerequisites": [
+        "MRK-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "BIS discussion of 2009 market risk reforms (Basel 2.5) and later FRTB rationale.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-11",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "MRK-11.mdx",
+      "initialX": -312,
+      "initialY": -356.9
+    },
+    "MRK-12": {
+      "id": "MRK-12",
+      "title": "Trading book boundary (FRTB)",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "FRTB enforces a stricter trading/banking book boundary with clear criteria. Positions held to hedge trading risk go in TB; others belong in BB. The rules aim to prevent arbitrage through misclassification.",
+      "prerequisites": [
+        "MRK-01",
+        "MRK-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel RBC25 on trading book boundary clarifications.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-12",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "MRK-12.mdx",
+      "initialX": -259.3,
+      "initialY": -348.8
+    },
+    "MRK-13": {
+      "id": "MRK-13",
+      "title": "Standardised Approach (sensitivities-based, SA)",
+      "type": "procedure",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "The FRTB Standardised Approach (SA) computes capital by mapping sensitivities (delta, vega, curvature) to fixed risk weights in buckets, aggregating within each risk class and across two correlation scenarios.",
+      "prerequisites": [
+        "MRK-03",
+        "MRK-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel MAR (SA aggregation and scenarios); Default Risk Charge definition; Residual Risk Add-On description.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-13",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "MRK-13.mdx",
+      "initialX": -252.6,
+      "initialY": -281.6
+    },
+    "MRK-14": {
+      "id": "MRK-14",
+      "title": "Default Risk Charge (DRC) and Residual Risk Add-On (RRAO)",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "Under FRTB SA, the Default Risk Charge (DRC) is an add-on capital for jump-to-default events on credit instruments.  The Residual Risk Add-On (RRAO) covers positions not captured by the standard sensitivities (e.g. exotic or basis risks).",
+      "prerequisites": [
+        "MRK-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel MAR definitions of DRC and RRAO.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-14",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "MRK-14.mdx",
+      "initialX": -234.2,
+      "initialY": -232.3
+    },
+    "MRK-15": {
+      "id": "MRK-15",
+      "title": "Internal Models Approach (IMA: ES and liquidity horizons)",
+      "type": "procedure",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "Under FRTB IMA, banks compute expected shortfall (97.5% conf., 10-day base) on a desk basis, adjusting for liquidity horizons by scaling risk factors to 10, 20, 40, 60, or 120 days as specified.",
+      "prerequisites": [
+        "MRK-07",
+        "MRK-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel MAR IMA rules (ES at 97.5%, liquidity horizon scaling).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-15",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "MRK-15.mdx",
+      "initialX": -306.5,
+      "initialY": -270
+    },
+    "MRK-16": {
+      "id": "MRK-16",
+      "title": "P&L attribution (PLA) test",
+      "type": "procedure",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "To use IMA, each trading desk must pass a daily P&L attribution test comparing model P&L to revalued P&L. Desks that fail must use SA.",
+      "prerequisites": [
+        "MRK-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel MAR definitions and requirements for the P&L attribution test.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-16",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "MRK-16.mdx",
+      "initialX": -249.6,
+      "initialY": -249.1
+    },
+    "MRK-17": {
+      "id": "MRK-17",
+      "title": "Risk factor eligibility test and non-modellable factors (NMRFs)",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "IMA is only allowed for risk factors with sufficient market data.  A risk factor passes the Risk Factor Eligibility Test (RFET) if it has enough observable prices.  If it fails, it is a Non-Modellable Risk Factor (NMRF) and incurs a separate stress charge.",
+      "prerequisites": [
+        "MRK-15",
+        "MRK-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel MAR (risk factor eligibility and NMRF).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-17",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "MRK-17.mdx",
+      "initialX": -259,
+      "initialY": -307.1
+    },
+    "MRK-18": {
+      "id": "MRK-18",
+      "title": "SA vs IMA: banks' choice",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "frtb-sa-and-ima-capital",
+      "one_screen": "Many banks are opting for the Standardised Approach under FRTB because the Internal Models Approach entails onerous requirements.  Surveys show roughly 40% of current model users plan to switch to SA.",
+      "prerequisites": [
+        "MRK-13",
+        "MRK-16",
+        "MRK-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "Industry data (ICMA) on banks’ FRTB implementation plans.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-18",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "MRK-18.mdx",
+      "initialX": -203,
+      "initialY": -273.8
+    },
+    "MRK-19": {
+      "id": "MRK-19",
+      "title": "Prudent valuation and XVAs",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "valuation-control-and-jurisdictions",
+      "one_screen": "Prudent valuation requires banks to apply Additional Valuation Adjustments (AVAs) to trading positions’ fair values, reflecting valuation uncertainty (bid-ask spreads, model error, etc.). These AVAs are deducted from capital to be conservative.",
+      "prerequisites": [
+        "MRK-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Regulatory guidance on prudent valuation (CRR/CRD RTS).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-19",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "MRK-19.mdx",
+      "initialX": -316.6,
+      "initialY": -298.5
+    },
+    "MRK-20": {
+      "id": "MRK-20",
+      "title": "Valuation control and independent price verification",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "valuation-control-and-jurisdictions",
+      "one_screen": "Banks must have robust valuation controls: independent price verification (IPV) and hierarchical fair value procedures.  Instruments are categorized by input observability (Level 1,2,3), with Level 3 valuations (no market prices) subject to stringent review.",
+      "prerequisites": [
+        "MRK-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "IFRS13/ASC820 fair value hierarchy (commonly known accounting).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-20",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "MRK-20.mdx",
+      "initialX": -265.9,
+      "initialY": -264.1
+    },
+    "MRK-21": {
+      "id": "MRK-21",
+      "title": "Model risk in valuation models",
+      "type": "concept",
+      "domain": "market-risk",
+      "subdomain": "valuation-control-and-jurisdictions",
+      "one_screen": "Valuation models themselves carry model risk.  Banks must manage model risk for pricing models just as they do for risk models (see MRM pack).  This means independent model validation, backtesting, and capital add-ons for model uncertainty.",
+      "prerequisites": [
+        "MRK-20",
+        "MRM-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee principles on model risk (e.g. BCBS 2012 “Sound Practices”) – general principle.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-21",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "MRK-21.mdx",
+      "initialX": -206.8,
+      "initialY": -243.4
+    },
+    "MRK-22": {
+      "id": "MRK-22",
+      "title": "Jurisdiction: UK, EU, India, US FRTB implementation",
+      "type": "reference",
+      "domain": "market-risk",
+      "subdomain": "valuation-control-and-jurisdictions",
+      "one_screen": "Jurisdictions vary on FRTB adoption. The UK will implement SA (Basel 3.1) from Jan 1, 2027 and delay IMA to Jan 1, 2028. The EU has postponed its FRTB to Jan 1, 2027. India’s banks currently use RBI’s older VaR or duration-based rules (e.g. 99% VaR at 15 days) and RBI has not adopted FRTB; IFRS 9 (Ind AS 109) is deferred for banks. In the US, FRTB has not been finalized: regulators published Basel III proposals (Dec 2021 and re-proposed Mar 2026), but advanced US banks still use the pre-FRTB market risk rule (99% VaR and stressed VaR).",
+      "prerequisites": [
+        "MRK-18",
+        "MRK-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "UK PRA policy (PS1/26, Jan 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "EU Commission press release (Jun 2025).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI market risk guidelines (VaR 99%/15-day for PDs) and general duration approach.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "US Basel proposals (Fed/NPR Dec 2021; re-proposed Mar 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrk-22",
+      "depth": 10,
+      "currentness": "future",
+      "filepath": "MRK-22.mdx",
+      "initialX": -223.4,
+      "initialY": -311.7
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -7602,8 +8400,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -190.6,
-      "initialY": -194.8
+      "initialX": -151.1,
+      "initialY": -175.9
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -7640,8 +8438,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -112.4,
-      "initialY": -376.5
+      "initialX": -83.3,
+      "initialY": -400.7
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -7680,8 +8478,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -147.9,
-      "initialY": -419.1
+      "initialX": -94.5,
+      "initialY": -349.2
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -7725,8 +8523,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -137.9,
-      "initialY": -283.8
+      "initialX": -89.6,
+      "initialY": -282.1
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -7770,8 +8568,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -155.7,
-      "initialY": -300.4
+      "initialX": -94.9,
+      "initialY": -303.3
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -7810,8 +8608,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -162.7,
-      "initialY": -362.1
+      "initialX": -88.4,
+      "initialY": -371.7
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -7850,8 +8648,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -173.6,
-      "initialY": -412.8
+      "initialX": -28.8,
+      "initialY": -396.7
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -7891,8 +8689,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -119.5,
-      "initialY": -404.9
+      "initialX": -82.4,
+      "initialY": -422.1
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -7931,8 +8729,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -112.1,
-      "initialY": -349.1
+      "initialX": -70.7,
+      "initialY": -358.6
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -7971,8 +8769,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -132.7,
-      "initialY": -327.6
+      "initialX": -105.8,
+      "initialY": -427
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -8011,8 +8809,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -107.5,
-      "initialY": -327.9
+      "initialX": -41,
+      "initialY": -341.6
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -8051,8 +8849,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -120,
-      "initialY": -430.4
+      "initialX": -64.9,
+      "initialY": -440.8
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -8091,8 +8889,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -140.6,
-      "initialY": -382.1
+      "initialX": -110.9,
+      "initialY": -395.7
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -8126,8 +8924,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -92.9,
-      "initialY": -402.6
+      "initialX": -87.8,
+      "initialY": -450.2
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -8162,8 +8960,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -88.2,
-      "initialY": -363.9
+      "initialX": -55,
+      "initialY": -390.2
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -8203,8 +9001,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -168.9,
-      "initialY": -385.9
+      "initialX": -39,
+      "initialY": -442.3
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -8243,8 +9041,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -182.7,
-      "initialY": -362.4
+      "initialX": -46.9,
+      "initialY": -415
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -8289,8 +9087,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -143.8,
-      "initialY": -353.8
+      "initialX": -53.7,
+      "initialY": -362
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -8332,8 +9130,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 80.8,
-      "initialY": -447.2
+      "initialX": 92.3,
+      "initialY": -415.6
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -8380,8 +9178,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 53.1,
-      "initialY": -381.9
+      "initialX": 153.4,
+      "initialY": -433.9
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -8420,8 +9218,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 55.2,
-      "initialY": -417.6
+      "initialX": 158,
+      "initialY": -404
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -8460,8 +9258,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 62.8,
-      "initialY": -348.4
+      "initialX": 174.6,
+      "initialY": -340
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -8500,8 +9298,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 101.4,
-      "initialY": -293.1
+      "initialX": 196.8,
+      "initialY": -393.3
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -8540,8 +9338,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 63.6,
-      "initialY": -307
+      "initialX": 227,
+      "initialY": -416.1
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -8580,8 +9378,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 72.2,
-      "initialY": -407.5
+      "initialX": 139.1,
+      "initialY": -294.9
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -8634,8 +9432,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 35.8,
-      "initialY": -350.8
+      "initialX": 116.6,
+      "initialY": -351.2
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -8675,8 +9473,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 43.5,
-      "initialY": -400.2
+      "initialX": 120.1,
+      "initialY": -294.1
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -8730,8 +9528,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 85.1,
-      "initialY": -339
+      "initialX": 168.5,
+      "initialY": -320
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -8780,8 +9578,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 45.2,
-      "initialY": -306.7
+      "initialX": 223.1,
+      "initialY": -360.2
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -8821,8 +9619,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 126.7,
-      "initialY": -435.6
+      "initialX": 116.2,
+      "initialY": -377.9
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -8874,8 +9672,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 116.1,
-      "initialY": -360.5
+      "initialX": 165.6,
+      "initialY": -359.9
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -8928,8 +9726,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 177.6,
-      "initialY": -388.7
+      "initialX": 110.9,
+      "initialY": -321.9
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -8982,8 +9780,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 120.7,
-      "initialY": -386.5
+      "initialX": 154.7,
+      "initialY": -333.9
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -9023,8 +9821,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 132.9,
-      "initialY": -364.6
+      "initialX": 74,
+      "initialY": -336.5
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -9065,8 +9863,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 93.6,
-      "initialY": -409.3
+      "initialX": 133.6,
+      "initialY": -329.4
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -9113,8 +9911,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 105,
-      "initialY": -458.6
+      "initialX": 198.2,
+      "initialY": -332.5
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -9169,8 +9967,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 148,
-      "initialY": -431.4
+      "initialX": 159.6,
+      "initialY": -283.8
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -9216,8 +10014,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 99.9,
-      "initialY": -386.5
+      "initialX": 130.5,
+      "initialY": -441.7
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -9256,8 +10054,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 105.6,
-      "initialY": -325.2
+      "initialX": 186.4,
+      "initialY": -435.8
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -9296,8 +10094,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 118.8,
-      "initialY": -406.4
+      "initialX": 175.4,
+      "initialY": -384.9
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -9337,8 +10135,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 165.6,
-      "initialY": -423.4
+      "initialX": 100.1,
+      "initialY": -389.6
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -9384,8 +10182,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 78.3,
-      "initialY": -374.7
+      "initialX": 123.1,
+      "initialY": -416.6
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -9427,8 +10225,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 153,
-      "initialY": -370.9
+      "initialX": 155,
+      "initialY": -380.6
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -9469,8 +10267,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 156.6,
-      "initialY": -397
+      "initialX": 175.8,
+      "initialY": -411.4
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -9511,8 +10309,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 95.5,
-      "initialY": -362.6
+      "initialX": 190.5,
+      "initialY": -362.3
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -9565,8 +10363,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 133.8,
-      "initialY": -313.3
+      "initialX": 93,
+      "initialY": -360.4
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -9627,8 +10425,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 158.9,
-      "initialY": -348.9
+      "initialX": 100.8,
+      "initialY": -289
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -9684,8 +10482,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 138.9,
-      "initialY": -337.9
+      "initialX": 133.3,
+      "initialY": -382.3
     },
     "TRD-01": {
       "id": "TRD-01",
@@ -9717,8 +10515,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-01.mdx",
-      "initialX": 284.8,
-      "initialY": -218.2
+      "initialX": 391.7,
+      "initialY": -265.2
     },
     "TRD-02": {
       "id": "TRD-02",
@@ -9752,8 +10550,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-02.mdx",
-      "initialX": 279.6,
-      "initialY": -278.2
+      "initialX": 347.7,
+      "initialY": -240.4
     },
     "TRD-03": {
       "id": "TRD-03",
@@ -9787,8 +10585,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-03.mdx",
-      "initialX": 321.1,
-      "initialY": -313.9
+      "initialX": 381.4,
+      "initialY": -184.7
     },
     "TRD-04": {
       "id": "TRD-04",
@@ -9828,8 +10626,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-04.mdx",
-      "initialX": 346.9,
-      "initialY": -266.8
+      "initialX": 314.9,
+      "initialY": -194.2
     },
     "TRD-05": {
       "id": "TRD-05",
@@ -9863,8 +10661,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-05.mdx",
-      "initialX": 294.3,
-      "initialY": -302
+      "initialX": 293.3,
+      "initialY": -145.5
     },
     "TRD-06": {
       "id": "TRD-06",
@@ -9898,8 +10696,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-06.mdx",
-      "initialX": 272.7,
-      "initialY": -257.7
+      "initialX": 363.3,
+      "initialY": -188.5
     },
     "TRD-07": {
       "id": "TRD-07",
@@ -9934,8 +10732,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-07.mdx",
-      "initialX": 295.4,
-      "initialY": -251.1
+      "initialX": 357.3,
+      "initialY": -160.4
     },
     "TRD-08": {
       "id": "TRD-08",
@@ -9969,8 +10767,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-08.mdx",
-      "initialX": 239.6,
-      "initialY": -219.6
+      "initialX": 400.9,
+      "initialY": -204.2
     },
     "TRD-09": {
       "id": "TRD-09",
@@ -10005,8 +10803,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-09.mdx",
-      "initialX": 235.8,
-      "initialY": -245
+      "initialX": 311.1,
+      "initialY": -273.6
     },
     "TRD-10": {
       "id": "TRD-10",
@@ -10051,8 +10849,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TRD-10.mdx",
-      "initialX": 360.6,
-      "initialY": -289.1
+      "initialX": 295.6,
+      "initialY": -170.9
     },
     "TRD-11": {
       "id": "TRD-11",
@@ -10091,8 +10889,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-11.mdx",
-      "initialX": 396.8,
-      "initialY": -259.8
+      "initialX": 282,
+      "initialY": -231
     },
     "TRD-12": {
       "id": "TRD-12",
@@ -10135,8 +10933,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TRD-12.mdx",
-      "initialX": 354.9,
-      "initialY": -226.3
+      "initialX": 241.1,
+      "initialY": -189
     },
     "TRD-13": {
       "id": "TRD-13",
@@ -10168,8 +10966,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-13.mdx",
-      "initialX": 302.7,
-      "initialY": -201.9
+      "initialX": 336.2,
+      "initialY": -267
     },
     "TRD-14": {
       "id": "TRD-14",
@@ -10203,8 +11001,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-14.mdx",
-      "initialX": 348.5,
-      "initialY": -170.7
+      "initialX": 380.6,
+      "initialY": -295.4
     },
     "TRD-15": {
       "id": "TRD-15",
@@ -10238,8 +11036,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-15.mdx",
-      "initialX": 271.9,
-      "initialY": -154.8
+      "initialX": 304.7,
+      "initialY": -213.8
     },
     "TRD-16": {
       "id": "TRD-16",
@@ -10278,8 +11076,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-16.mdx",
-      "initialX": 248.7,
-      "initialY": -193.4
+      "initialX": 261.1,
+      "initialY": -171
     },
     "TRD-17": {
       "id": "TRD-17",
@@ -10319,8 +11117,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-17.mdx",
-      "initialX": 320.6,
-      "initialY": -187.6
+      "initialX": 253.6,
+      "initialY": -226.7
     },
     "TRD-18": {
       "id": "TRD-18",
@@ -10355,8 +11153,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-18.mdx",
-      "initialX": 255.3,
-      "initialY": -233.9
+      "initialX": 373.9,
+      "initialY": -212.3
     },
     "TRD-19": {
       "id": "TRD-19",
@@ -10403,8 +11201,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TRD-19.mdx",
-      "initialX": 285,
-      "initialY": -179.5
+      "initialX": 365,
+      "initialY": -262.8
     },
     "TRD-20": {
       "id": "TRD-20",
@@ -10439,8 +11237,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TRD-20.mdx",
-      "initialX": 232.5,
-      "initialY": -178
+      "initialX": 417.8,
+      "initialY": -231
     },
     "TRD-21": {
       "id": "TRD-21",
@@ -10475,8 +11273,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-21.mdx",
-      "initialX": 326.9,
-      "initialY": -261.3
+      "initialX": 392.5,
+      "initialY": -237.2
     },
     "TRD-22": {
       "id": "TRD-22",
@@ -10510,8 +11308,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-22.mdx",
-      "initialX": 376,
-      "initialY": -213.8
+      "initialX": 359.1,
+      "initialY": -284.6
     },
     "TRD-23": {
       "id": "TRD-23",
@@ -10545,8 +11343,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-23.mdx",
-      "initialX": 360.2,
-      "initialY": -192.9
+      "initialX": 332.6,
+      "initialY": -218.3
     },
     "TRD-24": {
       "id": "TRD-24",
@@ -10585,8 +11383,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-24.mdx",
-      "initialX": 389.4,
-      "initialY": -235.4
+      "initialX": 285.8,
+      "initialY": -256.3
     },
     "TRD-25": {
       "id": "TRD-25",
@@ -10644,8 +11442,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-25.mdx",
-      "initialX": 322.7,
-      "initialY": -241.4
+      "initialX": 270.6,
+      "initialY": -204
     },
     "TRD-26": {
       "id": "TRD-26",
@@ -10685,8 +11483,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-26.mdx",
-      "initialX": 370.9,
-      "initialY": -254.1
+      "initialX": 334.6,
+      "initialY": -174.4
     },
     "TRD-27": {
       "id": "TRD-27",
@@ -10720,8 +11518,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-27.mdx",
-      "initialX": 315.2,
-      "initialY": -282.8
+      "initialX": 362.1,
+      "initialY": -227.4
     },
     "TRD-28": {
       "id": "TRD-28",
@@ -10760,8 +11558,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-28.mdx",
-      "initialX": 342.6,
-      "initialY": -302.5
+      "initialX": 315.1,
+      "initialY": -238.7
     },
     "TRD-29": {
       "id": "TRD-29",
@@ -10811,8 +11609,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-29.mdx",
-      "initialX": 311,
-      "initialY": -226.4
+      "initialX": 282.1,
+      "initialY": -192.9
     },
     "TRD-30": {
       "id": "TRD-30",
@@ -10856,8 +11654,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-30.mdx",
-      "initialX": 308.8,
-      "initialY": -165.4
+      "initialX": 321.8,
+      "initialY": -154.6
     },
     "TRD-31": {
       "id": "TRD-31",
@@ -10897,8 +11695,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TRD-31.mdx",
-      "initialX": 264,
-      "initialY": -201.9
+      "initialX": 259,
+      "initialY": -146.8
     },
     "TRD-32": {
       "id": "TRD-32",
@@ -10956,8 +11754,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-32.mdx",
-      "initialX": 334,
-      "initialY": -216.9
+      "initialX": 324.9,
+      "initialY": -294
     }
   },
   "reverseIndex": {
@@ -11565,9 +12363,82 @@
     "IND-22": [],
     "IND-23": [],
     "IND-24": [],
+    "MRK-01": [
+      "MRK-02",
+      "MRK-03",
+      "MRK-04",
+      "MRK-12"
+    ],
+    "MRK-02": [
+      "MRK-12"
+    ],
+    "MRK-03": [
+      "MRK-13"
+    ],
+    "MRK-04": [
+      "MRK-05",
+      "MRK-06",
+      "MRK-08",
+      "MRK-13"
+    ],
+    "MRK-05": [
+      "MRK-06",
+      "MRK-09",
+      "MRK-10"
+    ],
+    "MRK-06": [
+      "MRK-07",
+      "MRK-09"
+    ],
+    "MRK-07": [
+      "MRK-08",
+      "MRK-15"
+    ],
+    "MRK-08": [],
+    "MRK-09": [
+      "MRK-10"
+    ],
+    "MRK-10": [
+      "MRK-11",
+      "MRK-15"
+    ],
+    "MRK-11": [
+      "MRK-19"
+    ],
+    "MRK-12": [],
+    "MRK-13": [
+      "MRK-14",
+      "MRK-18"
+    ],
+    "MRK-14": [],
+    "MRK-15": [
+      "MRK-16",
+      "MRK-17"
+    ],
+    "MRK-16": [
+      "MRK-17",
+      "MRK-18"
+    ],
+    "MRK-17": [
+      "MRK-18"
+    ],
+    "MRK-18": [
+      "MRK-22"
+    ],
+    "MRK-19": [
+      "MRK-20"
+    ],
+    "MRK-20": [
+      "MRK-21"
+    ],
+    "MRK-21": [
+      "MRK-22"
+    ],
+    "MRK-22": [],
     "MRM-01": [
       "IMP-16",
       "IMP-17",
+      "MRK-21",
       "MRM-04",
       "MRM-05"
     ],
@@ -13244,6 +14115,185 @@
       ]
     },
     {
+      "domain": "market-risk",
+      "subdomains": [
+        {
+          "subdomain": "market-risk-foundations",
+          "atoms": [
+            {
+              "id": "MRK-01",
+              "title": "Market risk and risk factor classes",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-02",
+              "title": "Market risk vs credit risk capital",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-03",
+              "title": "Market risk sensitivities (delta, vega, curvature)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "var-and-expected-shortfall",
+          "atoms": [
+            {
+              "id": "MRK-04",
+              "title": "Value at Risk (VaR) definition",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-05",
+              "title": "VaR calculation methods",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-06",
+              "title": "Limitations of Value at Risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-07",
+              "title": "Expected Shortfall (ES) and rationale",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-08",
+              "title": "Confidence levels, holding periods, scaling",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-09",
+              "title": "VaR backtesting and traffic light",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-10",
+              "title": "Stressed VaR calibration",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "frtb-sa-and-ima-capital",
+          "atoms": [
+            {
+              "id": "MRK-11",
+              "title": "FRTB rationale (pre-crisis failures)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-12",
+              "title": "Trading book boundary (FRTB)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-13",
+              "title": "Standardised Approach (sensitivities-based, SA)",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-14",
+              "title": "Default Risk Charge (DRC) and Residual Risk Add-On (RRAO)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-15",
+              "title": "Internal Models Approach (IMA: ES and liquidity horizons)",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-16",
+              "title": "P&L attribution (PLA) test",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-17",
+              "title": "Risk factor eligibility test and non-modellable factors (NMRFs)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-18",
+              "title": "SA vs IMA: banks' choice",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "valuation-control-and-jurisdictions",
+          "atoms": [
+            {
+              "id": "MRK-19",
+              "title": "Prudent valuation and XVAs",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-20",
+              "title": "Valuation control and independent price verification",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-21",
+              "title": "Model risk in valuation models",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRK-22",
+              "title": "Jurisdiction: UK, EU, India, US FRTB implementation",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "domain": "model-risk",
       "subdomains": [
         {
@@ -14045,6 +15095,14 @@
           "weight": 2
         },
         {
+          "id": "MRK-13",
+          "weight": 2
+        },
+        {
+          "id": "MRK-14",
+          "weight": 2
+        },
+        {
           "id": "CAP-30",
           "weight": 1
         }
@@ -14159,11 +15217,23 @@
           "weight": 3
         },
         {
+          "id": "MRK-04",
+          "weight": 3
+        },
+        {
+          "id": "MRK-07",
+          "weight": 3
+        },
+        {
           "id": "TRD-02",
           "weight": 2
         },
         {
           "id": "TRD-30",
+          "weight": 2
+        },
+        {
+          "id": "MRK-11",
           "weight": 2
         },
         {
@@ -15525,6 +16595,141 @@
     },
     {
       "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-01",
+      "message": "Atom \"MRK-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "MRK-01",
+      "message": "Atom \"MRK-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-02",
+      "message": "Atom \"MRK-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-03",
+      "message": "Atom \"MRK-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-04",
+      "message": "Atom \"MRK-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-05",
+      "message": "Atom \"MRK-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-06",
+      "message": "Atom \"MRK-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-07",
+      "message": "Atom \"MRK-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-08",
+      "message": "Atom \"MRK-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRK-08",
+      "message": "one_screen in \"MRK-08\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-09",
+      "message": "Atom \"MRK-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-10",
+      "message": "Atom \"MRK-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRK-10",
+      "message": "one_screen in \"MRK-10\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-11",
+      "message": "Atom \"MRK-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-12",
+      "message": "Atom \"MRK-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-13",
+      "message": "Atom \"MRK-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-14",
+      "message": "Atom \"MRK-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRK-14",
+      "message": "one_screen in \"MRK-14\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-15",
+      "message": "Atom \"MRK-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-16",
+      "message": "Atom \"MRK-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-17",
+      "message": "Atom \"MRK-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-18",
+      "message": "Atom \"MRK-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-19",
+      "message": "Atom \"MRK-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-20",
+      "message": "Atom \"MRK-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-21",
+      "message": "Atom \"MRK-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRK-22",
+      "message": "Atom \"MRK-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRK-22",
+      "message": "one_screen in \"MRK-22\" contains 8 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-01",
       "message": "Atom \"MRM-01\" is unverified (draft). Displays development banner."
     },
@@ -16009,5 +17214,5 @@
       "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-28T13:03:27.707Z"
+  "generatedAt": "2026-08-28T14:56:49.074Z"
 }

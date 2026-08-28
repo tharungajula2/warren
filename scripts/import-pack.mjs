@@ -468,6 +468,13 @@ function inferSubdomain(atomId) {
     return "settlement-and-jurisdictions";
   }
 
+  if (prefix === "MRK") {
+    if (num <= 3) return "market-risk-foundations";
+    if (num <= 10) return "var-and-expected-shortfall";
+    if (num <= 18) return "frtb-sa-and-ima-capital";
+    return "valuation-control-and-jurisdictions";
+  }
+
   return "unsorted";
 }
 

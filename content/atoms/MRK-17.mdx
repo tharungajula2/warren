@@ -1,0 +1,57 @@
+---
+id: MRK-17
+title: Risk factor eligibility test and non-modellable factors (NMRFs)
+type: concept
+domain: market-risk
+subdomain: frtb-sa-and-ima-capital
+one_screen: >-
+  IMA is only allowed for risk factors with sufficient market data.  A risk
+  factor passes the Risk Factor Eligibility Test (RFET) if it has enough
+  observable prices.  If it fails, it is a Non-Modellable Risk Factor (NMRF) and
+  incurs a separate stress charge.
+prerequisites:
+  - MRK-15
+  - MRK-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Basel MAR (risk factor eligibility and NMRF).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Under RFET, each risk factor in a modelled desk must have a minimum number of real price observations over the past year (e.g. ~200–300) and data coverage across time.  Factors without enough data (e.g. illiquid bonds, bespoke swaps) cannot be modelled as continuous variables.  These are designated NMRFs.  Banks must then hold capital for NMRFs by assuming a stressed loss scenario (typically a 97.5% loss on those positions in a chosen stress period).  This prevents arbitrage of risk factors simply by calling them non-modellable.  
+
+In practice, NMRFs often force banks to charge for a large fraction of trading positions (especially in fixed income).  Managing NMRFs is a major challenge: banks sometimes widen buckets or accept higher capital rather than model each factor.
+
+<Rule label="PERMANENT RULE">
+Only use IMA on factors that pass the eligibility test; treat others as NMRFs with separate capital.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Labeling too many factors as “modellable” with insufficient data to reduce capital.
+</Trap>
+
+<NeverConfuse>
+**Modellable risk factor** — passes RFET (enough price observations); **Non-Modellable Risk Factor (NMRF)** — fails RFET and requires extra capital.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The RFET and NMRF treatment are specified by Basel and applied universally in advanced jurisdictions.
+</Rule>
+
+<Recall
+  q="What is a NMRF?"
+  a="A risk factor without enough market observations to be modelled; it fails the eligibility test."
+/>
+
+<Recall
+  q="How are NMRFs capitalized?"
+  a="By a stressed scenario charge (e.g. 97.5% loss at a chosen stress period)."
+/>

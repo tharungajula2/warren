@@ -1,0 +1,56 @@
+---
+id: MRK-15
+title: 'Internal Models Approach (IMA: ES and liquidity horizons)'
+type: procedure
+domain: market-risk
+subdomain: frtb-sa-and-ima-capital
+one_screen: >-
+  Under FRTB IMA, banks compute expected shortfall (97.5% conf., 10-day base) on
+  a desk basis, adjusting for liquidity horizons by scaling risk factors to 10,
+  20, 40, 60, or 120 days as specified.
+prerequisites:
+  - MRK-07
+  - MRK-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Basel MAR IMA rules (ES at 97.5%, liquidity horizon scaling).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Each trading desk that uses IMA must calculate a daily ES measure.  The modeler computes 10-day ES at 97.5% for each desk.  Crucially, risk factors have assigned *liquidity horizons* (LH) reflecting how long it takes to exit or hedge.  ES is initially computed for a 10-day base then scaled: e.g. a factor with a 20-day LH has its 10-day ES multiplied by √(20/10) to obtain a 20-day ES.  Table 1 of MAR33 defines five LH categories: 10, 20, 40, 60, 120 days (higher LH for less liquid products). 
+
+IMA capital equals the sum of these liquidity-adjusted ES contributions across risk factors in the desk.  Desks must have regulators’ approval to use IMA.  Each desk must also pass backtesting and P&amp;L attribution (next atom).
+
+<Rule label="PERMANENT RULE">
+IMA-based capital is the liquidity-adjusted 97.5% ES at desk level.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using VaR in place of ES, or omitting the liquidity horizon adjustment (treating all factors as 10-day).
+</Trap>
+
+<NeverConfuse>
+**Expected Shortfall (ES)** in IMA vs **VaR** (older metric): IMA requires ES at 97.5%, not VaR.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The use of ES and liquidity horizons is mandated by the Basel FRTB standard for IMA globally (subject to local implementation delays).
+</Rule>
+
+<Recall
+  q="What risk measure do IMA models use?"
+  a="10-day ES at 97.5% confidence level."
+/>
+
+<Recall
+  q="How are liquidity horizons applied in IMA?"
+  a="Each risk factor’s ES is scaled by √(LH/10) using its assigned LH (10–120 days)."
+/>

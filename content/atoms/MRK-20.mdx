@@ -1,0 +1,61 @@
+---
+id: MRK-20
+title: Valuation control and independent price verification
+type: concept
+domain: market-risk
+subdomain: valuation-control-and-jurisdictions
+one_screen: >-
+  Banks must have robust valuation controls: independent price verification
+  (IPV) and hierarchical fair value procedures.  Instruments are categorized by
+  input observability (Level 1,2,3), with Level 3 valuations (no market prices)
+  subject to stringent review.
+prerequisites:
+  - MRK-19
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: IFRS13/ASC820 fair value hierarchy (commonly known accounting).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+A strong valuation control environment is vital.  Banks establish independent valuation committees to review model inputs and outputs.  **Independent Price Verification (IPV)** means having separate systems or personnel to compare book prices against external sources (vendors or brokers) daily.  Significant discrepancies trigger investigation and adjustments.  
+
+Regulators (via accounting standards IFRS13/ASC820 and risk rules) define a fair value hierarchy:  
+- *Level 1:* quoted market prices in active markets (highest reliability).  
+- *Level 2:* observable inputs (e.g. dealer quotes, similar instruments).  
+- *Level 3:* unobservable inputs (derived from models).  
+
+Level 3 instruments (illiquid or complex) carry the highest valuation uncertainty and often the largest AVAs (see MRK-19).  Banks must document assumptions for Level 3 models, regularly backtest them against any transaction prices, and escalate issues.  In essence, valuation models fall under model risk management (MRM) frameworks, requiring validation and governance.
+
+<Rule label="PERMANENT RULE">
+All significant mark-to-market positions must be independently priced or verified each day.  Any Level 3 (non-observable) inputs require extensive model validation.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using stale or self-generated prices without challenge, especially for illiquid positions.
+</Trap>
+
+<NeverConfuse>
+**Independent Price Verification (IPV)** — reconciling book prices with third-party data; **Model output** — output of a valuation model (which may feed Level 3 valuation).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These valuation controls and hierarchy concepts derive from accounting standards and are universally expected in sound practice.
+</Rule>
+
+<Recall
+  q="What is IPV?"
+  a="Independently checking trading positions’ prices against external sources each valuation date."
+/>
+
+<Recall
+  q="How are fair value levels defined?"
+  a="Level 1: quoted market prices; Level 2: observable inputs; Level 3: unobservable (model) inputs (with Level 3 needing the most control)."
+/>

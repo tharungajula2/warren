@@ -1,0 +1,56 @@
+---
+id: MRK-12
+title: Trading book boundary (FRTB)
+type: concept
+domain: market-risk
+subdomain: frtb-sa-and-ima-capital
+one_screen: >-
+  FRTB enforces a stricter trading/banking book boundary with clear criteria.
+  Positions held to hedge trading risk go in TB; others belong in BB. The rules
+  aim to prevent arbitrage through misclassification.
+prerequisites:
+  - MRK-01
+  - MRK-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Basel RBC25 on trading book boundary clarifications.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+Prior to FRTB, banks had wide discretion to classify positions, often moving illiquid bonds into the banking book to reduce capital.  FRTB closes these gaps by requiring documented intent and specific criteria for trading book inclusion.  For example, a position must be held with intent to trade (or hedge another trading position) to go in the trading book.  Otherwise it must stay in the banking book.  This “marked-to-market requirement” ensures capital reflects actual risk.  
+
+The revised rules (Basel RBC25) replaced the previous “principles-based” boundary with prescriptive rules and governance requirements.  Banks must justify each trading book position with approvals and documentation.  This reduces risk-shifting between books and promotes consistency.
+
+<Rule label="PERMANENT RULE">
+Any position not held with a trading intent or as a hedge of trading risk must be classified as banking book.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Designating long-term or illiquid instruments as trading positions simply to use potentially lower market risk capital.
+</Trap>
+
+<NeverConfuse>
+**Trading book** — positions held for short-term resale or hedging trading exposures; **Banking book** — held for earning interest or fulfilling contractual relationships (not for active trading).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All regimes that implement FRTB impose stricter boundaries (UK/EU via RBC, US via OCC guidelines, etc).
+</Rule>
+
+<Recall
+  q="How did FRTB change the trading book boundary?"
+  a="It imposed strict criteria and documentation for trading book designation, replacing the old flexible approach."
+/>
+
+<Recall
+  q="What must a position meet to qualify as trading book?"
+  a="Held with intent to trade or to hedge trading risk, under approved strategy."
+/>

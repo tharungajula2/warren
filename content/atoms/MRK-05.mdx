@@ -1,0 +1,78 @@
+---
+id: MRK-05
+title: VaR calculation methods
+type: concept
+domain: market-risk
+subdomain: var-and-expected-shortfall
+one_screen: >-
+  VaR can be computed by historical simulation (replaying actual past returns),
+  parametric (variance-covariance, assuming normal returns), or Monte Carlo
+  simulation. Each method uses different assumptions about return distributions.
+prerequisites:
+  - MRK-04
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Academic study on VaR methods; Basel framework definitions.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+**Historical simulation** VaR sorts actual historical portfolio returns (e.g. last 1,000 days) and picks the percentile loss. It assumes the future risk factor moves will resemble past moves (no distributional assumption). **Parametric (variance-covariance)** VaR assumes portfolio returns are multivariate normal and portfolios respond linearly to risk factors; it calculates VaR analytically from portfolio mean and covariance. This is computationally fast but can underestimate tail risk if returns are fat-tailed. **Monte Carlo simulation** VaR uses a risk model to generate many random return scenarios (e.g. from heavy-tailed or multi-factor distributions), revalues the portfolio under each, and then finds the loss percentile. It can capture complex distributions and non-linearities but is computation-intensive.  
+
+&lt;Flow&gt;
++---------------------------+
+|       VaR Methods         |
++---------------------------+
+| Historical Simulation     |
++---------------------------+
+|   (use actual past returns)   |
+|                           |
++---------------------------+
+| Parametric (Var-Cov)      |
++---------------------------+
+|   (assume normal returns) |
+|                           |
++---------------------------+
+| Monte Carlo Simulation    |
++---------------------------+
+|   (simulate future paths) |
++---------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Three main VaR methods: historical simulation, parametric (variance-covariance), and Monte Carlo.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using a parametric (normal) VaR model when returns are fat-tailed or portfolios are non-linear, thus underestimating actual risk.
+</Trap>
+
+<NeverConfuse>
+**Historical VaR** — derived from actual past return scenarios (no assumed distribution); **Parametric VaR** — calculated assuming normal returns (linearized portfolio).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The conceptual VaR methods are the same everywhere.
+</Rule>
+
+<Recall
+  q="Name the three common VaR computation methods."
+  a="Historical simulation, parametric (variance-covariance), Monte Carlo."
+/>
+
+<Recall
+  q="What assumption underlies parametric VaR?"
+  a="Asset returns follow a normal distribution and portfolio moves linearly."
+/>
+
+<Recall
+  q="How does historical VaR work?"
+  a="It sorts historical portfolio returns and takes the appropriate quantile loss."
+/>

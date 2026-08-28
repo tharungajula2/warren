@@ -1,0 +1,56 @@
+---
+id: MRK-10
+title: Stressed VaR calibration
+type: concept
+domain: market-risk
+subdomain: var-and-expected-shortfall
+one_screen: >-
+  Regulators require calibrating VaR/ES on a 12-month historically stressed
+  period (e.g. 250 trading days) representative of serious market stress. Under
+  FRTB, capital is based on stressed ES on such a period.
+prerequisites:
+  - MRK-05
+  - MRK-09
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Basel text on stressed VaR/ES requirements.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 11_MRK_market_risk.md
+---
+To capture potential losses under adverse conditions, banks must compute a *Stressed VaR* (Basel 2.5) or *Stressed ES* (FRTB) using a past period of high volatility.  Each bank selects a recent 250-business-day window of significant market stress that is relevant to its portfolio.  For example, a U.S. dealer might choose the 2008 crisis or a 2011 euro debt stress.  The chosen period’s data are fed into the VaR or ES model instead of a normal period.  
+
+Under Basel 2.5, capital was 10-day VaR (99%) plus 10-day Stressed VaR (99%) from a stress window.  FRTB instead uses 10-day ES at 97.5% on the stress window for capital.  The rules ensure banks hold capital that reflects losses in a realistic stress scenario.
+
+<Rule label="PERMANENT RULE">
+Always use a continuous one-year period of actual stress for calibrating Stressed VaR/ES.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Selecting a stress period that is not relevant to current portfolio risks, or forgetting to update the stress window periodically.
+</Trap>
+
+<NeverConfuse>
+**Historical VaR** — VaR from recent normal market data; **Stressed VaR** — VaR from a past stress period.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The concept of calibrating to a stressed period is applied globally in advanced regimes.
+</Rule>
+
+<Recall
+  q="What is “stressed VaR”?"
+  a="VaR calculated using returns from a bank-chosen 250-day stress period."
+/>
+
+<Recall
+  q="Under FRTB, what replaced stressed VaR?"
+  a="Stressed Expected Shortfall (97.5% ES over 10 days) on a 250-day stress window."
+/>
