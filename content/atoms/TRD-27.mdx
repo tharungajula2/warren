@@ -1,0 +1,86 @@
+---
+id: TRD-27
+title: 'Front Office, Middle Office and Back Office'
+type: reference
+domain: traded-products
+subdomain: market-infrastructure-and-lifecycle
+one_screen: >-
+  Front, middle and back office are responsibility patterns, not universal
+  organisation charts. Front office takes and manages commercial risk;
+  middle-office functions control and explain it; back office completes
+  confirmations, payments, settlements and records.
+prerequisites:
+  - TRD-26
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'BCBS, Corporate governance principles for banks'
+    url: 'https://www.bis.org/bcbs/publ/d328.htm'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+The three-office model is a useful map of responsibilities, but real banks divide work differently. A function’s name should never be treated as proof of its control role.
+
+Front office originates, prices, executes and manages positions. Traders, sales staff and structurers may own revenue and market-risk decisions within limits. Their systems prioritise fast pricing, inventory, client activity and position management.
+
+Middle-office responsibilities commonly include independent trade validation, P&amp;L explanation, risk monitoring, limit control, product control, valuations, collateral oversight or change support. Some firms place product control in finance, market risk in an independent risk function and collateral in operations. The durable principle is independence from the risk-taker where a control must challenge the risk-taker.
+
+Back office focuses on completion and books-and-records processes: confirmations, settlements, payments, reconciliations, asset servicing, static-data maintenance and exception management. Automation has blurred traditional boundaries, but accountability remains essential.
+
+A single trade can therefore move through several control lenses. Front office says, “Is the price and risk right?” Product control asks, “Is the P&amp;L complete and independently explainable?” Risk asks, “Is exposure within appetite and limits?” Operations asks, “Can the contractual cash and asset movements be completed?” Finance asks, “Is it reflected correctly in books and disclosures?”
+
+Segregation of duties matters because the person who can create or change a risk position should not also be the sole person validating its valuation, limit use and settlement. System entitlements, maker-checker controls and independent price verification operationalise this principle.
+
+For BAs, map responsibilities through RACI and data ownership rather than organisational labels. “Middle office owns it” is not a requirement. Identify who creates, approves, enriches, challenges, settles and reconciles each field or event.
+
+&lt;Flow&gt;
+Front office
+  price / execute / manage risk
+          |
+          v
+Independent controls
+  risk / P&amp;amp;L / validation
+          |
+          v
+Back-office completion
+  confirm / settle / reconcile
+          |
+          v
+books, records and reporting
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Design controls around independence and accountability, not around department names.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming every bank uses the same FO/MO/BO boundary.
+</Trap>
+
+<NeverConfuse a="Risk owner" b="Control owner">
+**Risk owner** — function authorised to take or manage commercial exposure.
+
+---
+
+**Control owner** — function accountable for independently validating or constraining that exposure or its processing.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="Why is “middle office” an unsafe requirement label?"
+  a="Its responsibilities vary by institution; the required control activity and owner must be named explicitly."
+/>
+
+<Recall
+  q="What is the central governance principle behind office separation?"
+  a="Appropriate segregation of duties and independent challenge."
+/>

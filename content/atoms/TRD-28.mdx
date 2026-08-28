@@ -1,0 +1,90 @@
+---
+id: TRD-28
+title: Static Data and Reference Data
+type: reference
+domain: traded-products
+subdomain: market-infrastructure-and-lifecycle
+one_screen: >-
+  Reference data tells systems what an entity, instrument, calendar or code
+  means; transactional data tells them what happened. A wrong static field can
+  contaminate thousands of correct trades, which is why golden sources,
+  effective dating and lineage matter.
+prerequisites:
+  - TRD-26
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'GLEIF, Introducing the Legal Entity Identifier'
+    url: >-
+      https://www.gleif.org/en/about-lei/introducing-the-legal-entity-identifier-lei
+    accessed: 28 August 2026
+  - label: 'ISO, International Securities Identification Number (ISIN)'
+    url: 'https://www.iso.org/standard/44811.html'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+Trading systems depend on data that changes less frequently than trades but controls how trades behave. Instrument reference data can include identifiers, issuer, currency, coupon, maturity, day-count basis, option terms and exchange. Counterparty data can include legal entity identifiers, regulatory classifications, agreements and settlement eligibility. Market reference data includes calendars, currencies, indices and benchmark definitions. Standing settlement instructions specify where cash or securities should move.
+
+“Static” does not mean immutable. A counterparty can merge, a rating can change, an instrument can undergo a corporate action, a benchmark can cease and settlement instructions can be updated. Reference data therefore needs effective dates and version history.
+
+The central design problem is identity. A ticker is not globally unique. A legal entity name can vary across systems. A listed company, its parent, a bond issuer and a trading counterparty may be related but legally distinct. Stable identifiers such as ISINs, LEIs and internal mastered IDs help, but mappings and validity periods still matter.
+
+Golden source means the authoritative source for a defined field, not one database that must own everything. Market data may come from a vendor, legal-entity data from client onboarding, product definitions from a securities master and accounting mappings from finance. Each field should have an owner and lineage.
+
+Reference-data errors have multiplicative effects. One wrong holiday calendar can misdate many payments; one incorrect CSA mapping can change margining; one stale settlement instruction can generate repeated fails. Reconciliation therefore should distinguish a trade break from a shared reference-data break.
+
+The BA test is to trace every critical trade field backwards: was it entered on the trade, derived from a mastered object, looked up by effective date, or overwritten manually? That lineage determines both control design and root-cause analysis.
+
+&lt;Flow&gt;
+Authoritative sources
+   |
+   +--&amp;gt; instrument master
+   +--&amp;gt; legal-entity master
+   +--&amp;gt; calendars / benchmarks
+   +--&amp;gt; settlement instructions
+   |
+   v
+effective-dated reference data
+   |
+   v
+trade enrichment
+   |
+   v
+valuation / risk / settlement / reporting
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Master the meaning and effective date of a field before reconciling its value.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using ticker, short name or free text as a durable cross-system identifier.
+</Trap>
+
+<NeverConfuse a="Reference data" b="Transaction data">
+**Reference data** — descriptive or classificatory data used repeatedly to interpret transactions and processes.
+
+---
+
+**Transaction data** — data recording a specific business event or position.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="Why can a reference-data error create many trade breaks at once?"
+  a="The same mastered value can enrich or control thousands of transactions."
+/>
+
+<Recall
+  q="What must a golden-source design specify beyond the source system name?"
+  a="Field-level ownership, effective dating, lineage and override rules."
+/>

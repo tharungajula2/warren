@@ -40,8 +40,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 414.8,
-      "initialY": 31.9
+      "initialX": 302.5,
+      "initialY": 12.2
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +80,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 441.6,
-      "initialY": -29.7
+      "initialX": 328.6,
+      "initialY": -23.6
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 380.4,
-      "initialY": -26
+      "initialX": 334.3,
+      "initialY": 53.8
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +161,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 323.6,
-      "initialY": -29.4
+      "initialX": 326.8,
+      "initialY": 1.9
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +201,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 373.8,
-      "initialY": -61.8
+      "initialX": 372.4,
+      "initialY": 40.6
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +249,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 334.2,
-      "initialY": 35.4
+      "initialX": 353.3,
+      "initialY": 60.8
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +297,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 296,
-      "initialY": 11
+      "initialX": 349.2,
+      "initialY": -0.6
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +346,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 358.8,
-      "initialY": 12.3
+      "initialX": 392.3,
+      "initialY": 31.7
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 374.8,
-      "initialY": 72.3
+      "initialX": 357.9,
+      "initialY": -21.6
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +431,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 336.1,
-      "initialY": 11.7
+      "initialX": 382.8,
+      "initialY": 59.7
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +477,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 324.7,
-      "initialY": 54.8
+      "initialX": 379.5,
+      "initialY": 9.6
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +526,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 378.8,
-      "initialY": 22.5
+      "initialX": 422.4,
+      "initialY": -3
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +574,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 406.9,
-      "initialY": 75.7
+      "initialX": 439.4,
+      "initialY": -55.5
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +622,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 359,
-      "initialY": 42.3
+      "initialX": 386.7,
+      "initialY": -46.2
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +665,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 385.5,
-      "initialY": -6.5
+      "initialX": 439.2,
+      "initialY": -34.8
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +715,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 438.2,
-      "initialY": 26.7
+      "initialX": 470,
+      "initialY": 8.1
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +759,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 353.3,
-      "initialY": 83.9
+      "initialX": 446.2,
+      "initialY": -9.5
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +799,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 438.1,
-      "initialY": -5.6
+      "initialX": 354.5,
+      "initialY": -48.5
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -839,8 +839,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 406.4,
-      "initialY": -60.7
+      "initialX": 410.8,
+      "initialY": -24.5
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +879,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 339.1,
-      "initialY": -52.5
+      "initialX": 399.1,
+      "initialY": -70.3
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +920,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 300.7,
-      "initialY": -11.7
+      "initialX": 327.1,
+      "initialY": 32.9
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +960,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 357.3,
-      "initialY": -34.6
+      "initialX": 376.6,
+      "initialY": 81.1
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 412.1,
-      "initialY": -2.5
+      "initialX": 358.2,
+      "initialY": 24.1
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1040,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 344.2,
-      "initialY": -12.9
+      "initialX": 423.1,
+      "initialY": 33.5
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1080,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 396.1,
-      "initialY": 15.9
+      "initialX": 405.1,
+      "initialY": 11.4
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1123,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 418.6,
-      "initialY": -34.4
+      "initialX": 430.5,
+      "initialY": 61.3
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1175,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 425.8,
-      "initialY": 65.6
+      "initialX": 448.2,
+      "initialY": 56.5
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1230,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 394.7,
-      "initialY": -39.1
+      "initialX": 381.7,
+      "initialY": -24.6
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +1283,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 392.8,
-      "initialY": 56.5
+      "initialX": 410.2,
+      "initialY": 66.9
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +1360,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 449.4,
-      "initialY": 11.9
+      "initialX": 447.3,
+      "initialY": 10.5
     },
     "CR-01": {
       "id": "CR-01",
@@ -1400,8 +1400,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 145,
-      "initialY": 247.6
+      "initialX": 183.9,
+      "initialY": 265.7
     },
     "CR-02": {
       "id": "CR-02",
@@ -1440,8 +1440,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 98.4,
-      "initialY": 214.5
+      "initialX": 141.1,
+      "initialY": 205.2
     },
     "CR-03": {
       "id": "CR-03",
@@ -1486,8 +1486,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": 72.3,
-      "initialY": 175.9
+      "initialX": 97.6,
+      "initialY": 202.1
     },
     "CR-04": {
       "id": "CR-04",
@@ -1540,8 +1540,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 98.4,
-      "initialY": 159
+      "initialX": 105.4,
+      "initialY": 237.2
     },
     "CR-05": {
       "id": "CR-05",
@@ -1594,8 +1594,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": 115.3,
-      "initialY": 167.7
+      "initialX": 126.3,
+      "initialY": 233.3
     },
     "CR-06": {
       "id": "CR-06",
@@ -1643,8 +1643,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 206.5,
-      "initialY": 244
+      "initialX": 235.2,
+      "initialY": 238.2
     },
     "CR-07": {
       "id": "CR-07",
@@ -1697,8 +1697,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 244,
-      "initialY": 214.6
+      "initialX": 256.2,
+      "initialY": 278.7
     },
     "CR-08": {
       "id": "CR-08",
@@ -1746,8 +1746,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 180.8,
-      "initialY": 192
+      "initialX": 190.4,
+      "initialY": 245.2
     },
     "CR-09": {
       "id": "CR-09",
@@ -1796,8 +1796,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 143.2,
-      "initialY": 204.5
+      "initialX": 171.6,
+      "initialY": 198.7
     },
     "CR-10": {
       "id": "CR-10",
@@ -1846,8 +1846,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -12.1,
-      "initialY": 138.8
+      "initialX": 6.3,
+      "initialY": 190.1
     },
     "CR-11": {
       "id": "CR-11",
@@ -1901,8 +1901,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": 14.5,
-      "initialY": 136.5
+      "initialX": 33.3,
+      "initialY": 171.2
     },
     "CR-12": {
       "id": "CR-12",
@@ -1941,8 +1941,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 115.4,
-      "initialY": 207.9
+      "initialX": 141.8,
+      "initialY": 189.5
     },
     "CR-13": {
       "id": "CR-13",
@@ -1981,8 +1981,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 137.8,
-      "initialY": 168.2
+      "initialX": 148.5,
+      "initialY": 158.2
     },
     "CR-14": {
       "id": "CR-14",
@@ -2021,8 +2021,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 78.9,
-      "initialY": 193.5
+      "initialX": 109.3,
+      "initialY": 175
     },
     "CR-15": {
       "id": "CR-15",
@@ -2062,8 +2062,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 154.5,
-      "initialY": 219.4
+      "initialX": 181.8,
+      "initialY": 220.2
     },
     "CR-16": {
       "id": "CR-16",
@@ -2103,8 +2103,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -28.1,
-      "initialY": 148.4
+      "initialX": -1.8,
+      "initialY": 174.9
     },
     "CR-17": {
       "id": "CR-17",
@@ -2145,8 +2145,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": 2.6,
-      "initialY": 169.1
+      "initialX": 29.3,
+      "initialY": 192.8
     },
     "CR-18": {
       "id": "CR-18",
@@ -2185,8 +2185,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 170,
-      "initialY": 267.7
+      "initialX": 212.4,
+      "initialY": 197.6
     },
     "CR-19": {
       "id": "CR-19",
@@ -2227,8 +2227,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 205,
-      "initialY": 271
+      "initialX": 250.4,
+      "initialY": 251.2
     },
     "CR-20": {
       "id": "CR-20",
@@ -2268,8 +2268,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 255,
-      "initialY": 249.4
+      "initialX": 287,
+      "initialY": 216.3
     },
     "CR-21": {
       "id": "CR-21",
@@ -2310,8 +2310,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 229.8,
-      "initialY": 231.5
+      "initialX": 249.1,
+      "initialY": 196.5
     },
     "CR-22": {
       "id": "CR-22",
@@ -2352,8 +2352,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 218.5,
-      "initialY": 284.3
+      "initialX": 251.2,
+      "initialY": 228.1
     },
     "CR-23": {
       "id": "CR-23",
@@ -2389,8 +2389,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 278.5,
-      "initialY": 291.1
+      "initialX": 313.6,
+      "initialY": 268.1
     },
     "CR-24": {
       "id": "CR-24",
@@ -2444,8 +2444,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 206.4,
-      "initialY": 213.4
+      "initialX": 222.1,
+      "initialY": 263.7
     },
     "CR-25": {
       "id": "CR-25",
@@ -2486,8 +2486,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 237,
-      "initialY": 268.1
+      "initialX": 273.2,
+      "initialY": 235.5
     },
     "CR-26": {
       "id": "CR-26",
@@ -2539,8 +2539,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 174,
-      "initialY": 234.8
+      "initialX": 204.5,
+      "initialY": 227.5
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -2577,8 +2577,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -45.6,
-      "initialY": 408.3
+      "initialX": 128.1,
+      "initialY": 422.4
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -2612,8 +2612,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -45.6,
-      "initialY": 350.9
+      "initialX": 74.8,
+      "initialY": 448.1
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -2657,8 +2657,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -22,
-      "initialY": 404.1
+      "initialX": 23.4,
+      "initialY": 436.7
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -2697,8 +2697,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -3.5,
-      "initialY": 452.5
+      "initialX": 60.3,
+      "initialY": 390.1
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -2732,8 +2732,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -68.8,
-      "initialY": 414.7
+      "initialX": 73.5,
+      "initialY": 420.2
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -2772,8 +2772,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": 38.9,
-      "initialY": 391.2
+      "initialX": 8.4,
+      "initialY": 381.9
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -2812,8 +2812,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -0.3,
-      "initialY": 425.1
+      "initialX": 64.2,
+      "initialY": 360.4
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -2847,8 +2847,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": 52.2,
-      "initialY": 372.9
+      "initialX": 40.9,
+      "initialY": 411.3
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -2882,8 +2882,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": 17.5,
-      "initialY": 411
+      "initialX": 49.1,
+      "initialY": 456.5
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -2917,8 +2917,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -33.7,
-      "initialY": 375.4
+      "initialX": 10.9,
+      "initialY": 413.3
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -2952,8 +2952,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": 11.2,
-      "initialY": 340.2
+      "initialX": 15.3,
+      "initialY": 356.7
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -2987,8 +2987,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -31.4,
-      "initialY": 434.6
+      "initialX": 41.8,
+      "initialY": 361.2
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -3022,8 +3022,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -59.8,
-      "initialY": 379.3
+      "initialX": 100.2,
+      "initialY": 385.1
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -3057,8 +3057,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -27.8,
-      "initialY": 332.3
+      "initialX": 97,
+      "initialY": 445.9
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -3097,8 +3097,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -2.8,
-      "initialY": 370.6
+      "initialX": 128.8,
+      "initialY": 396.4
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -3132,8 +3132,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -4.7,
-      "initialY": 393.6
+      "initialX": 54.8,
+      "initialY": 330.7
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -3167,8 +3167,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": 47.4,
-      "initialY": 423.5
+      "initialX": 96.5,
+      "initialY": 364
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -3202,8 +3202,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": 19.9,
-      "initialY": 373
+      "initialX": 103.1,
+      "initialY": 423.2
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -3242,8 +3242,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -5.4,
-      "initialY": 322.8
+      "initialX": 127.5,
+      "initialY": 371.9
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -3277,8 +3277,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": 37.8,
-      "initialY": 350.9
+      "initialX": 82.8,
+      "initialY": 341
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -3312,8 +3312,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": 64.4,
-      "initialY": 401.2
+      "initialX": 85.1,
+      "initialY": 400.5
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -3365,8 +3365,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": 25.8,
-      "initialY": 441.7
+      "initialX": 32.3,
+      "initialY": 387.9
     },
     "FND-01": {
       "id": "FND-01",
@@ -3403,8 +3403,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -252.6,
-      "initialY": 216.1
+      "initialX": -170.7,
+      "initialY": 292.3
     },
     "FND-02": {
       "id": "FND-02",
@@ -3443,8 +3443,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -222.4,
-      "initialY": 213.1
+      "initialX": -217.7,
+      "initialY": 280.3
     },
     "FND-03": {
       "id": "FND-03",
@@ -3489,8 +3489,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -221.3,
-      "initialY": 274.3
+      "initialX": -173.2,
+      "initialY": 349.2
     },
     "FND-04": {
       "id": "FND-04",
@@ -3530,8 +3530,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -275.7,
-      "initialY": 274
+      "initialX": -194.4,
+      "initialY": 353.2
     },
     "FND-05": {
       "id": "FND-05",
@@ -3576,8 +3576,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -246.8,
-      "initialY": 283.1
+      "initialX": -201.4,
+      "initialY": 332.8
     },
     "FND-06": {
       "id": "FND-06",
@@ -3640,8 +3640,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -314,
-      "initialY": 230
+      "initialX": -240,
+      "initialY": 324.2
     },
     "FND-07": {
       "id": "FND-07",
@@ -3686,8 +3686,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -295.4,
-      "initialY": 242.8
+      "initialX": -220.8,
+      "initialY": 343.6
     },
     "FND-08": {
       "id": "FND-08",
@@ -3726,8 +3726,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -327.4,
-      "initialY": 173.8
+      "initialX": -276.5,
+      "initialY": 272.1
     },
     "FND-09": {
       "id": "FND-09",
@@ -3785,8 +3785,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -298.3,
-      "initialY": 170.7
+      "initialX": -248.6,
+      "initialY": 256.7
     },
     "FND-10": {
       "id": "FND-10",
@@ -3838,8 +3838,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -320.4,
-      "initialY": 298.1
+      "initialX": -202.8,
+      "initialY": 378.9
     },
     "FND-11": {
       "id": "FND-11",
@@ -3871,8 +3871,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -296.6,
-      "initialY": 308
+      "initialX": -177.4,
+      "initialY": 330.9
     },
     "FND-12": {
       "id": "FND-12",
@@ -3906,8 +3906,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -238.5,
-      "initialY": 268.5
+      "initialX": -215.3,
+      "initialY": 308.1
     },
     "FND-13": {
       "id": "FND-13",
@@ -3942,8 +3942,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -278.7,
-      "initialY": 245
+      "initialX": -253.5,
+      "initialY": 355.3
     },
     "FND-14": {
       "id": "FND-14",
@@ -3997,8 +3997,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -332.8,
-      "initialY": 242.7
+      "initialX": -235.6,
+      "initialY": 309
     },
     "FND-15": {
       "id": "FND-15",
@@ -4032,8 +4032,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -139.9,
-      "initialY": 255.2
+      "initialX": -72.7,
+      "initialY": 306.8
     },
     "FND-16": {
       "id": "FND-16",
@@ -4065,8 +4065,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -299.1,
-      "initialY": 287.7
+      "initialX": -225,
+      "initialY": 369.7
     },
     "FND-17": {
       "id": "FND-17",
@@ -4105,8 +4105,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -260.2,
-      "initialY": 262.7
+      "initialX": -260,
+      "initialY": 335.6
     },
     "FND-18": {
       "id": "FND-18",
@@ -4146,8 +4146,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -269,
-      "initialY": 332
+      "initialX": -187.6,
+      "initialY": 394.2
     },
     "FND-19": {
       "id": "FND-19",
@@ -4193,8 +4193,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -223.2,
-      "initialY": 298.6
+      "initialX": -148.5,
+      "initialY": 337.6
     },
     "FND-20": {
       "id": "FND-20",
@@ -4234,8 +4234,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -273.3,
-      "initialY": 308.1
+      "initialX": -162.6,
+      "initialY": 374.9
     },
     "FND-21": {
       "id": "FND-21",
@@ -4279,8 +4279,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -315.5,
-      "initialY": 264.1
+      "initialX": -221.6,
+      "initialY": 398.9
     },
     "FND-22": {
       "id": "FND-22",
@@ -4319,8 +4319,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -344.6,
-      "initialY": 293.1
+      "initialX": -266,
+      "initialY": 371.8
     },
     "FND-23": {
       "id": "FND-23",
@@ -4384,8 +4384,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -228.2,
-      "initialY": 229.2
+      "initialX": -156.1,
+      "initialY": 280.7
     },
     "FND-24": {
       "id": "FND-24",
@@ -4464,8 +4464,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -261.6,
-      "initialY": 195.2
+      "initialX": -198.7,
+      "initialY": 272.8
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -4527,8 +4527,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -213.6,
-      "initialY": 105.8
+      "initialX": -187.4,
+      "initialY": 182.8
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -4578,8 +4578,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -268.7,
-      "initialY": 78.3
+      "initialX": -245.6,
+      "initialY": 167.3
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -4635,8 +4635,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -183.9,
-      "initialY": 92.1
+      "initialX": -160.9,
+      "initialY": 155.9
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -4685,8 +4685,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -361.4,
-      "initialY": 64.4
+      "initialX": -337.2,
+      "initialY": 180.8
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -4735,8 +4735,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -229.3,
-      "initialY": 40.8
+      "initialX": -209.9,
+      "initialY": 112.8
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -4792,8 +4792,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -161.8,
-      "initialY": 78.5
+      "initialX": -139.8,
+      "initialY": 144.9
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -4843,8 +4843,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -199.2,
-      "initialY": 87.3
+      "initialX": -174.9,
+      "initialY": 165.5
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -4895,8 +4895,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -209.6,
-      "initialY": 67.9
+      "initialX": -189.9,
+      "initialY": 144.7
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -4944,8 +4944,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -215.2,
-      "initialY": 19.2
+      "initialX": -219.8,
+      "initialY": 172
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -4995,8 +4995,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -107.7,
-      "initialY": 87.9
+      "initialX": -94.5,
+      "initialY": 179.7
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -5045,8 +5045,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -307.3,
-      "initialY": 57.5
+      "initialX": -285.3,
+      "initialY": 169.2
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -5096,8 +5096,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -172.8,
-      "initialY": 32.5
+      "initialX": -168.4,
+      "initialY": 184.9
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -5147,8 +5147,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -198.7,
-      "initialY": 37.5
+      "initialX": -191.1,
+      "initialY": 122.1
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -5198,8 +5198,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -139.7,
-      "initialY": 70.6
+      "initialX": -126,
+      "initialY": 124.8
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -5254,8 +5254,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -182,
-      "initialY": 62.8
+      "initialX": -165.8,
+      "initialY": 128.5
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -5310,8 +5310,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -253.2,
-      "initialY": -29.7
+      "initialX": -261,
+      "initialY": 64.1
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -5367,8 +5367,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -274.3,
-      "initialY": -17.8
+      "initialX": -279,
+      "initialY": 83.6
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -5423,8 +5423,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -313.8,
-      "initialY": 10.1
+      "initialX": -303.6,
+      "initialY": 139.3
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -5480,8 +5480,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -276.3,
-      "initialY": 20.6
+      "initialX": -261.9,
+      "initialY": 115.9
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -5543,8 +5543,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -290.7,
-      "initialY": 43.3
+      "initialX": -273.2,
+      "initialY": 142.5
     },
     "IND-01": {
       "id": "IND-01",
@@ -5581,8 +5581,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -317.2,
-      "initialY": -315.1
+      "initialX": -387.2,
+      "initialY": -115.7
     },
     "IND-02": {
       "id": "IND-02",
@@ -5621,8 +5621,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -276.1,
-      "initialY": -261.7
+      "initialX": -384.8,
+      "initialY": -64.1
     },
     "IND-03": {
       "id": "IND-03",
@@ -5656,8 +5656,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -239.2,
-      "initialY": -289
+      "initialX": -404.8,
+      "initialY": -130.9
     },
     "IND-04": {
       "id": "IND-04",
@@ -5691,8 +5691,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -267,
-      "initialY": -336.7
+      "initialX": -381.4,
+      "initialY": -83.8
     },
     "IND-05": {
       "id": "IND-05",
@@ -5732,8 +5732,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -300,
-      "initialY": -306.2
+      "initialX": -420,
+      "initialY": -81
     },
     "IND-06": {
       "id": "IND-06",
@@ -5773,8 +5773,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -310.5,
-      "initialY": -266.8
+      "initialX": -384.3,
+      "initialY": -188.3
     },
     "IND-07": {
       "id": "IND-07",
@@ -5813,8 +5813,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -280.3,
-      "initialY": -200.8
+      "initialX": -343.3,
+      "initialY": -133.2
     },
     "IND-08": {
       "id": "IND-08",
@@ -5854,8 +5854,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -311.2,
-      "initialY": -226.8
+      "initialX": -342.6,
+      "initialY": -188.2
     },
     "IND-09": {
       "id": "IND-09",
@@ -5896,8 +5896,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -252.1,
-      "initialY": -242.2
+      "initialX": -397.6,
+      "initialY": -150.3
     },
     "IND-10": {
       "id": "IND-10",
@@ -5937,8 +5937,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -262.7,
-      "initialY": -296.4
+      "initialX": -360.1,
+      "initialY": -115.4
     },
     "IND-11": {
       "id": "IND-11",
@@ -5978,8 +5978,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -250.2,
-      "initialY": -317.1
+      "initialX": -333.9,
+      "initialY": -72.1
     },
     "IND-12": {
       "id": "IND-12",
@@ -6018,8 +6018,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -297.3,
-      "initialY": -283.1
+      "initialX": -300.5,
+      "initialY": -119.7
     },
     "IND-13": {
       "id": "IND-13",
@@ -6058,8 +6058,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -220.4,
-      "initialY": -301.1
+      "initialX": -376.3,
+      "initialY": -133.1
     },
     "IND-14": {
       "id": "IND-14",
@@ -6093,8 +6093,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -228.7,
-      "initialY": -246.4
+      "initialX": -358.8,
+      "initialY": -77
     },
     "IND-15": {
       "id": "IND-15",
@@ -6133,8 +6133,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -207.4,
-      "initialY": -252.7
+      "initialX": -321.9,
+      "initialY": -162.1
     },
     "IND-16": {
       "id": "IND-16",
@@ -6174,8 +6174,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -285.6,
-      "initialY": -320
+      "initialX": -432.8,
+      "initialY": -94.5
     },
     "IND-17": {
       "id": "IND-17",
@@ -6214,8 +6214,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -295.4,
-      "initialY": -250.9
+      "initialX": -425.7,
+      "initialY": -153.7
     },
     "IND-18": {
       "id": "IND-18",
@@ -6254,8 +6254,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -251.7,
-      "initialY": -264.7
+      "initialX": -428.7,
+      "initialY": -119.8
     },
     "IND-19": {
       "id": "IND-19",
@@ -6294,8 +6294,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -251,
-      "initialY": -209.1
+      "initialX": -404.2,
+      "initialY": -175.5
     },
     "IND-20": {
       "id": "IND-20",
@@ -6334,8 +6334,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -344,
-      "initialY": -238.6
+      "initialX": -342,
+      "initialY": -164.3
     },
     "IND-21": {
       "id": "IND-21",
@@ -6374,8 +6374,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -273.2,
-      "initialY": -225.6
+      "initialX": -360.2,
+      "initialY": -149.8
     },
     "IND-22": {
       "id": "IND-22",
@@ -6414,8 +6414,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -322.5,
-      "initialY": -212.3
+      "initialX": -318.5,
+      "initialY": -107.7
     },
     "IND-23": {
       "id": "IND-23",
@@ -6454,8 +6454,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -335.3,
-      "initialY": -279.1
+      "initialX": -314.3,
+      "initialY": -139
     },
     "IND-24": {
       "id": "IND-24",
@@ -6494,8 +6494,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -220.4,
-      "initialY": -221
+      "initialX": -333.5,
+      "initialY": -93.5
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -6537,8 +6537,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -117.7,
-      "initialY": -204.8
+      "initialX": -217.8,
+      "initialY": -136.4
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -6575,8 +6575,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": 11.3,
-      "initialY": -381.9
+      "initialX": -247.5,
+      "initialY": -358.9
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -6615,8 +6615,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": 7.2,
-      "initialY": -331
+      "initialX": -210.4,
+      "initialY": -316.6
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -6660,8 +6660,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -41.5,
-      "initialY": -295
+      "initialX": -208.6,
+      "initialY": -245.4
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -6705,8 +6705,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -55.1,
-      "initialY": -312.5
+      "initialX": -187.6,
+      "initialY": -249
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -6745,8 +6745,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -12.2,
-      "initialY": -349.8
+      "initialX": -184,
+      "initialY": -305
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -6785,8 +6785,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -53.5,
-      "initialY": -395.2
+      "initialX": -178.1,
+      "initialY": -366.1
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -6826,8 +6826,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -2.8,
-      "initialY": -404.3
+      "initialX": -227.9,
+      "initialY": -336.7
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -6866,8 +6866,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": 38.9,
-      "initialY": -371.2
+      "initialX": -226.2,
+      "initialY": -385.8
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -6906,8 +6906,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": 32.3,
-      "initialY": -350.3
+      "initialX": -216.4,
+      "initialY": -360.3
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -6946,8 +6946,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -24.3,
-      "initialY": -410.5
+      "initialX": -237.9,
+      "initialY": -303.8
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -6986,8 +6986,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": 3.6,
-      "initialY": -429.7
+      "initialX": -158.5,
+      "initialY": -304.7
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -7026,8 +7026,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -45.7,
-      "initialY": -423.5
+      "initialX": -208.2,
+      "initialY": -288
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -7061,8 +7061,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -43.1,
-      "initialY": -369.5
+      "initialX": -162.2,
+      "initialY": -327.7
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -7097,8 +7097,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -15.7,
-      "initialY": -378
+      "initialX": -184.1,
+      "initialY": -332.7
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -7138,8 +7138,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": 43.5,
-      "initialY": -414.4
+      "initialX": -166,
+      "initialY": -351.6
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -7178,8 +7178,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": 23.3,
-      "initialY": -406.2
+      "initialX": -252.5,
+      "initialY": -323.3
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -7224,8 +7224,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -31.2,
-      "initialY": -347.8
+      "initialX": -207.2,
+      "initialY": -391
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -7267,8 +7267,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 200.4,
-      "initialY": -281.3
+      "initialX": 14.7,
+      "initialY": -341.1
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -7315,8 +7315,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 199.6,
-      "initialY": -221.9
+      "initialX": 71.3,
+      "initialY": -373.3
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -7355,8 +7355,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 267.5,
-      "initialY": -289.1
+      "initialX": 40.9,
+      "initialY": -314.4
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -7395,8 +7395,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 282.4,
-      "initialY": -339.2
+      "initialX": 83.7,
+      "initialY": -313.5
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -7435,8 +7435,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 207.3,
-      "initialY": -318.6
+      "initialX": 92.2,
+      "initialY": -381
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -7475,8 +7475,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 185.2,
-      "initialY": -258.1
+      "initialX": 122.7,
+      "initialY": -424.7
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -7515,8 +7515,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 329.6,
-      "initialY": -296.8
+      "initialX": 34.5,
+      "initialY": -295.1
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -7569,8 +7569,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 294.8,
-      "initialY": -239.4
+      "initialX": -3.2,
+      "initialY": -347.5
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -7610,8 +7610,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 311.3,
-      "initialY": -292.1
+      "initialX": 14.5,
+      "initialY": -303.4
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -7665,8 +7665,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 252.2,
-      "initialY": -290.5
+      "initialX": 58.6,
+      "initialY": -329.6
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -7715,8 +7715,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 238.3,
-      "initialY": -348.3
+      "initialX": 117,
+      "initialY": -347
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -7756,8 +7756,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 222.5,
-      "initialY": -236.5
+      "initialX": 41.4,
+      "initialY": -382.2
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -7809,8 +7809,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 300,
-      "initialY": -217.9
+      "initialX": 20,
+      "initialY": -443.9
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -7863,8 +7863,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 276.8,
-      "initialY": -268.9
+      "initialX": 75.9,
+      "initialY": -411
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -7917,8 +7917,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 236.1,
-      "initialY": -305.5
+      "initialX": -10.6,
+      "initialY": -398.2
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -7958,8 +7958,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 219.3,
-      "initialY": -299.8
+      "initialX": 34.8,
+      "initialY": -454.1
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -8000,8 +8000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 263.7,
-      "initialY": -255.9
+      "initialX": 61,
+      "initialY": -425.6
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -8048,8 +8048,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 219.2,
-      "initialY": -279.2
+      "initialX": 9.8,
+      "initialY": -396.5
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -8104,8 +8104,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 261.3,
-      "initialY": -329.2
+      "initialX": 44.6,
+      "initialY": -356.2
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -8151,8 +8151,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 264,
-      "initialY": -231.3
+      "initialX": 88,
+      "initialY": -347.6
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -8191,8 +8191,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 308.2,
-      "initialY": -260.6
+      "initialX": 98.8,
+      "initialY": -406.5
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -8231,8 +8231,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 277.5,
-      "initialY": -207.8
+      "initialX": 47.5,
+      "initialY": -405.6
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -8272,8 +8272,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 323.3,
-      "initialY": -244
+      "initialX": 97.5,
+      "initialY": -425.8
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -8319,8 +8319,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 240.7,
-      "initialY": -250.3
+      "initialX": 67.1,
+      "initialY": -349.1
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -8362,8 +8362,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 284.7,
-      "initialY": -300.8
+      "initialX": 126.5,
+      "initialY": -377.3
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -8404,8 +8404,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 253.9,
-      "initialY": -199.9
+      "initialX": -4.7,
+      "initialY": -420.8
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -8446,8 +8446,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 215.5,
-      "initialY": -197.3
+      "initialX": -11.7,
+      "initialY": -372.9
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -8500,8 +8500,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 335,
-      "initialY": -268.6
+      "initialX": 74,
+      "initialY": -457.9
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -8562,8 +8562,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 306.7,
-      "initialY": -320.9
+      "initialX": 30.4,
+      "initialY": -409.9
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -8619,8 +8619,1280 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 209.6,
+      "initialX": 29.1,
+      "initialY": -369.3
+    },
+    "TRD-01": {
+      "id": "TRD-01",
+      "title": "Equities",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "An equity is a residual claim on a company: debt and other senior claims are paid first, and shareholders own what remains. Its price therefore reflects both expected future cash generation and the uncertainty around that residual.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "U.S. SEC, Investor.gov, Stocks",
+          "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TRD-01.mdx",
+      "initialX": 307.1,
+      "initialY": -239
+    },
+    "TRD-02": {
+      "id": "TRD-02",
+      "title": "Fixed Income",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "A fixed-income instrument converts financing into contractual cash flows: interest, principal and sometimes embedded options. Its value is driven by the timing and certainty of those cash flows and the discount rates used to value them.",
+      "prerequisites": [
+        "TRD-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "U.S. SEC, Investor.gov, What Are Corporate Bonds?",
+          "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/what-are",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-02",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TRD-02.mdx",
+      "initialX": 273.5,
+      "initialY": -188
+    },
+    "TRD-03": {
+      "id": "TRD-03",
+      "title": "Clean Price and Dirty Price",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "A bond quote may exclude accrued interest even though settlement does not. Clean price is the quoted price without accrued interest; dirty price is the amount economically paid for the bond before fees: clean price plus accrued interest.",
+      "prerequisites": [
+        "TRD-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FINRA, Understanding Bond Yield and Return",
+          "url": "https://www.finra.org/investors/insights/bond-yield-return",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-03",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TRD-03.mdx",
+      "initialX": 213.8,
+      "initialY": -216.6
+    },
+    "TRD-04": {
+      "id": "TRD-04",
+      "title": "Yield to Maturity and the Price–Yield Relationship",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "Yield to maturity is the single discount rate that equates a bond’s market price with the present value of its promised remaining cash flows. For a plain fixed-rate bond, price and yield move in opposite directions because a higher discount rate lowers present value.",
+      "prerequisites": [
+        "TRD-02",
+        "TRD-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FINRA, Understanding Bond Yield and Return",
+          "url": "https://www.finra.org/investors/insights/bond-yield-return",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "U.S. SEC, Investor Bulletin: Fixed Income Investments — When Interest Rates Go Up, Prices of Fixed-Rate Bonds Fall",
+          "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-86",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-04",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "TRD-04.mdx",
+      "initialX": 254.1,
+      "initialY": -244
+    },
+    "TRD-05": {
+      "id": "TRD-05",
+      "title": "Duration and Convexity",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "Duration is the first-order estimate of how a bond price changes when yield changes; convexity is the second-order correction for the curve in the price–yield relationship. Duration gives the slope, convexity improves the estimate when moves are larger.",
+      "prerequisites": [
+        "TRD-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FINRA, Brush Up on Bonds: Interest Rate Changes and Duration",
+          "url": "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-05",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "TRD-05.mdx",
+      "initialX": 222.3,
+      "initialY": -278
+    },
+    "TRD-06": {
+      "id": "TRD-06",
+      "title": "Credit Spreads",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "A credit spread is the extra yield demanded over a reference curve for bearing risks not present in the reference instrument. It is compensation for expected credit loss plus risk, liquidity and technical premia—not a direct default-probability reading.",
+      "prerequisites": [
+        "TRD-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FINRA, Spread the Word: What You Need to Know About Bond Spreads",
+          "url": "https://www.finra.org/investors/insights/spread-word-what-you-need-know-about-bond-spreads",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-06",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "TRD-06.mdx",
+      "initialX": 246.3,
+      "initialY": -193.8
+    },
+    "TRD-07": {
+      "id": "TRD-07",
+      "title": "The Yield Curve",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "A yield curve maps interest rates or yields across maturities for instruments sharing a defined credit and market basis. Level, slope and curvature are separate sources of risk: the curve can move without shifting in parallel.",
+      "prerequisites": [
+        "TRD-04",
+        "TRD-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FINRA, Understanding Bond Yield and Return",
+          "url": "https://www.finra.org/investors/insights/bond-yield-return",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-07",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TRD-07.mdx",
+      "initialX": 274.7,
+      "initialY": -301.5
+    },
+    "TRD-08": {
+      "id": "TRD-08",
+      "title": "Repo and Reverse Repo",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "A repo is economically secured borrowing: one party sells securities now and agrees to repurchase equivalent securities later at a higher price. The same transaction is a reverse repo from the cash lender’s perspective.",
+      "prerequisites": [
+        "TRD-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "ICMA, Repo and Collateral Markets",
+          "url": "https://www.icmagroup.org/market-practice-and-regulatory-policy/repo-and-collateral-markets/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-08",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TRD-08.mdx",
+      "initialX": 218.3,
+      "initialY": -195.1
+    },
+    "TRD-09": {
+      "id": "TRD-09",
+      "title": "Securities Lending",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "cash-products-and-bonds",
+      "one_screen": "Securities lending temporarily transfers securities to a borrower against collateral, with an obligation to return equivalent securities. The lender earns a fee or investment spread; the borrower obtains the securities, often to support short selling, settlement or market making.",
+      "prerequisites": [
+        "TRD-01",
+        "TRD-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ISLA, Guidance Notes to the Global Master Securities Lending Agreement (2010 Version)",
+          "url": "https://docs.islaemea.org/download/latest/gmsla-2010-agreement-guidance-notes-freshfields",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-09",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TRD-09.mdx",
+      "initialX": 328.4,
+      "initialY": -190.5
+    },
+    "TRD-10": {
+      "id": "TRD-10",
+      "title": "FX Spot, Forward and Swap",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "fx-and-ndfs",
+      "one_screen": "FX spot exchanges two currencies near the trade date; an FX forward locks an exchange for a future date; an FX swap combines a spot leg and an offsetting forward leg. The key is to track both currencies, both directions and every value date.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "BIS, Dollar debt in FX swaps and forwards: huge, missing and growing",
+          "url": "https://www.bis.org/publ/qtrpdf/r_qt2212h.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "RBI, Foreign Exchange (Forex) Transactions FAQs",
+          "url": "https://www.rbi.org.in/scripts/FS_FAQs.aspx?Id=146",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "BIS, Uncovering FX settlement risk: new measures from the 2025 BIS Triennial Survey",
+          "url": "https://www.bis.org/publ/qtrpdf/r_qt2606c.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-10",
+      "depth": 0,
+      "currentness": "fresh",
+      "filepath": "TRD-10.mdx",
+      "initialX": 248.9,
+      "initialY": -282.6
+    },
+    "TRD-11": {
+      "id": "TRD-11",
+      "title": "Covered Interest Parity and Forward Points",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "fx-and-ndfs",
+      "one_screen": "Covered interest parity links spot FX, forward FX and interest rates in two currencies under no-arbitrage. Forward points are therefore primarily a funding relationship, not a directional prediction—and persistent basis can appear when balance sheet and hedging constraints make arbitrage costly.",
+      "prerequisites": [
+        "TRD-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "BIS, Covered interest parity lost: understanding the cross-currency basis",
+          "url": "https://www.bis.org/publ/qtrpdf/r_qt1609e.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "BIS, Covered interest parity: a forecasting approach to estimate the neutral band",
+          "url": "https://www.bis.org/publ/work1206.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-11",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TRD-11.mdx",
+      "initialX": 300.9,
+      "initialY": -265
+    },
+    "TRD-12": {
+      "id": "TRD-12",
+      "title": "Non-Deliverable Forwards",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "fx-and-ndfs",
+      "one_screen": "An NDF locks an exchange-rate outcome without exchanging the restricted underlying currency at maturity. The parties cash-settle the difference between the contracted forward rate and an agreed fixing, usually in a freely deliverable settlement currency.",
+      "prerequisites": [
+        "TRD-10",
+        "TRD-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "BIS, Non-deliverable forwards: impact of currency internationalisation and derivatives reform",
+          "url": "https://www.bis.org/publ/qtrpdf/r_qt1612h.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "RBI, Master Direction — Risk Management and Inter-Bank Dealings",
+          "url": "https://systemhealth.rbi.org.in/Scripts/BS_ViewMasDirections.aspx_id%3D10485%281%29.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-12",
+      "depth": 2,
+      "currentness": "fresh",
+      "filepath": "TRD-12.mdx",
+      "initialX": 297.2,
+      "initialY": -324.4
+    },
+    "TRD-13": {
+      "id": "TRD-13",
+      "title": "Derivatives: Linear and Non-Linear Payoffs",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "A derivative takes its value from an underlying market variable. Linear derivatives change value roughly one-for-one with that variable; non-linear derivatives change sensitivity as the underlying moves, which is why options require more than a single directional risk measure.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "BIS, OTC derivatives statistics explanatory notes",
+          "url": "https://www.bis.org/statistics/derstats3y.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-13",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TRD-13.mdx",
+      "initialX": 283.2,
+      "initialY": -240
+    },
+    "TRD-14": {
+      "id": "TRD-14",
+      "title": "Forwards and Futures",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "Forwards and futures both lock future economic exposure, but the market infrastructure differs. A forward is typically bilateral and customisable; a future is standardised, exchange-traded and margined through a clearing framework.",
+      "prerequisites": [
+        "TRD-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "CFTC, Futures Glossary",
+          "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-14",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TRD-14.mdx",
+      "initialX": 312,
+      "initialY": -305.3
+    },
+    "TRD-15": {
+      "id": "TRD-15",
+      "title": "Options: Moneyness, Intrinsic Value and Time Value",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "An option buys asymmetry: the holder has a right, not an obligation, to transact at the strike. Option premium is commonly decomposed into intrinsic value plus time value, while moneyness describes where spot sits relative to strike.",
+      "prerequisites": [
+        "TRD-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "CME Group, Options Analytics: Greeks and Implied Volatility",
+          "url": "https://www.cmegroup.com/market-data/greeks-and-implied-volatility-data.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-15",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TRD-15.mdx",
+      "initialX": 293.6,
+      "initialY": -287.6
+    },
+    "TRD-16": {
+      "id": "TRD-16",
+      "title": "The Option Greeks",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "The Greeks are local sensitivities, not separate risks: delta measures underlying-price sensitivity, gamma the change in delta, vega volatility sensitivity and theta time decay. They describe how an option’s value responds when one input moves while others are held approximately constant.",
+      "prerequisites": [
+        "TRD-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "CME Group, Options Analytics: Greeks and Implied Volatility",
+          "url": "https://www.cmegroup.com/market-data/greeks-and-implied-volatility-data.html",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "CME Group, Options Vega — The Greeks",
+          "url": "https://www.cmegroup.com/education/courses/option-greeks/options-vega-the-greeks",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-16",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TRD-16.mdx",
+      "initialX": 330.2,
+      "initialY": -227.1
+    },
+    "TRD-17": {
+      "id": "TRD-17",
+      "title": "Optionality",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "Optionality means one party controls a future choice whose value changes with market conditions. It can be explicit, as in an option contract, or embedded inside another product, as in a callable bond or prepayable loan.",
+      "prerequisites": [
+        "TRD-15",
+        "TRD-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FINRA, Brush Up on Bonds: Interest Rate Changes and Duration",
+          "url": "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "CME Group, Options Analytics: Greeks and Implied Volatility",
+          "url": "https://www.cmegroup.com/market-data/greeks-and-implied-volatility-data.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-17",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "TRD-17.mdx",
+      "initialX": 271.9,
+      "initialY": -221.4
+    },
+    "TRD-18": {
+      "id": "TRD-18",
+      "title": "Interest Rate Swaps",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "A plain interest-rate swap exchanges fixed and floating interest cash flows on a notional principal. The notional usually is not exchanged; the swap converts the economic rate exposure of an asset or liability without refinancing the underlying principal.",
+      "prerequisites": [
+        "TRD-13",
+        "TRD-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "ISDA, 2021 ISDA Interest Rate Derivatives Definitions",
+          "url": "https://www.isda.org/book/2021-isda-interest-rate-derivatives-definitions/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-18",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "TRD-18.mdx",
+      "initialX": 327,
+      "initialY": -290.6
+    },
+    "TRD-19": {
+      "id": "TRD-19",
+      "title": "IBOR Reform and Risk-Free Rates",
+      "type": "reference",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "LIBOR is over. Modern rate markets use alternative overnight risk-free or near-risk-free benchmarks and explicit fallback mechanics. The durable lesson is that replacing a term unsecured bank rate with an overnight rate changes conventions, not just the ticker.",
+      "prerequisites": [
+        "TRD-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FCA, About LIBOR transition",
+          "url": "https://www.fca.org.uk/markets/libor-transition",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "FCA, The end of LIBOR",
+          "url": "https://www.fca.org.uk/news/press-releases/end-libor",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISDA, 2021 Interest Rate Derivatives Definitions InfoHub",
+          "url": "https://www.isda.org/2021/10/04/2021-isda-interest-rate-derivatives-definitions/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-19",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "TRD-19.mdx",
+      "initialX": 357,
+      "initialY": -310.5
+    },
+    "TRD-20": {
+      "id": "TRD-20",
+      "title": "OIS and Discounting",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "An overnight index swap exchanges a fixed rate against an overnight-rate-based floating leg. In collateralised derivatives, overnight-rate curves became central to discounting because the collateral remuneration rate is part of the economics of funding future cash flows.",
+      "prerequisites": [
+        "TRD-18",
+        "TRD-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ISDA, 2021 ISDA Interest Rate Derivatives Definitions",
+          "url": "https://www.isda.org/book/2021-isda-interest-rate-derivatives-definitions/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-20",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "TRD-20.mdx",
+      "initialX": 363.6,
       "initialY": -252.4
+    },
+    "TRD-21": {
+      "id": "TRD-21",
+      "title": "Credit Default Swaps",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "A CDS transfers defined credit-event risk on a reference entity or obligation. The protection buyer pays premium; the protection seller makes a credit-event settlement if the contractually defined event occurs.",
+      "prerequisites": [
+        "TRD-06",
+        "TRD-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ISDA, Credit Derivatives",
+          "url": "https://www.isda.org/category/asset-class/credit-derivatives/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-21",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TRD-21.mdx",
+      "initialX": 302.1,
+      "initialY": -183
+    },
+    "TRD-22": {
+      "id": "TRD-22",
+      "title": "Credit Indices",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "derivatives-and-swaps",
+      "one_screen": "A credit index packages CDS exposure to a standard basket of reference entities into one tradable contract. It gives broad credit-spread exposure, while single-name defaults are handled through defined index mechanics rather than turning the product into a static bond fund.",
+      "prerequisites": [
+        "TRD-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ISDA, Credit Derivatives",
+          "url": "https://www.isda.org/category/asset-class/credit-derivatives/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-22",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "TRD-22.mdx",
+      "initialX": 247,
+      "initialY": -174
+    },
+    "TRD-23": {
+      "id": "TRD-23",
+      "title": "Exchange-Traded and OTC Markets",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "market-infrastructure-and-lifecycle",
+      "one_screen": "Exchange trading standardises the contract and market process; OTC trading allows bilateral or platform-based negotiation of bespoke terms. Trading venue, clearing venue and legal counterparty are separate questions.",
+      "prerequisites": [
+        "TRD-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "BIS CPMI-IOSCO, Principles for Financial Market Infrastructures",
+          "url": "https://www.bis.org/cpmi/publ/d101.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-23",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TRD-23.mdx",
+      "initialX": 327.3,
+      "initialY": -271.6
+    },
+    "TRD-24": {
+      "id": "TRD-24",
+      "title": "Central Counterparties and Novation",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "market-infrastructure-and-lifecycle",
+      "one_screen": "A CCP interposes itself between market participants so each faces the CCP rather than the original trading counterparty for cleared obligations. Novation changes the legal counterparty; it does not make risk disappear.",
+      "prerequisites": [
+        "TRD-23"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "BIS CPMI-IOSCO, Principles for Financial Market Infrastructures",
+          "url": "https://www.bis.org/cpmi/publ/d101.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "BIS CPMI, Recommendations for Central Counterparties",
+          "url": "https://www.bis.org/cpmi/publ/d64.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-24",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TRD-24.mdx",
+      "initialX": 372.9,
+      "initialY": -281.5
+    },
+    "TRD-25": {
+      "id": "TRD-25",
+      "title": "Clearing, Settlement and Settlement Cycles",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "market-infrastructure-and-lifecycle",
+      "one_screen": "Clearing determines what each party owes; settlement discharges those obligations by moving cash and securities. T+1 means standard settlement is one business day after trade date—it does not mean every market, instrument or failed trade settles then.",
+      "prerequisites": [
+        "TRD-23",
+        "TRD-24"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": "2027-10-11",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "SEBI, Introduction of Beta version of T+0 rolling settlement cycle on optional basis in addition to the existing T+1 settlement cycle in Equity Cash Markets",
+          "url": "https://www.sebi.gov.in/legal/circulars/mar-2024/introduction-of-beta-version-of-t-0-rolling-settlement-cycle-on-optional-basis-in-addition-to-the-existing-t-1-settlement-cycle-in-equity-cash-markets_82455.html",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "SEBI, Enhancement in the scope of optional T+0 rolling settlement cycle",
+          "url": "https://www.sebi.gov.in/legal/circulars/dec-2024/enhancement-in-the-scope-of-optional-t-0-rolling-settlement-cycle-in-addition-to-the-existing-t-1-settlement-cycle-in-equity-cash-markets_89443.html",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "U.S. SEC, SEC Chair Gensler Statement on Upcoming Implementation of T+1 Settlement Cycle",
+          "url": "https://www.sec.gov/newsroom/press-releases/2024-62",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "UK HM Treasury, Accelerated Settlement (T+1)",
+          "url": "https://www.gov.uk/government/publications/accelerated-settlement-t1",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Commission, T+1 settlement",
+          "url": "https://finance.ec.europa.eu/news/t1-settlement-2025-02-14_en",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-25",
+      "depth": 3,
+      "currentness": "future",
+      "filepath": "TRD-25.mdx",
+      "initialX": 361.4,
+      "initialY": -227.7
+    },
+    "TRD-26": {
+      "id": "TRD-26",
+      "title": "The Trade Lifecycle",
+      "type": "procedure",
+      "domain": "traded-products",
+      "subdomain": "market-infrastructure-and-lifecycle",
+      "one_screen": "A trade is not complete when it is executed. It must be captured, enriched, validated, confirmed, cleared where relevant, settled, valued, margined, reported and maintained through every lifecycle event until maturity or close-out.",
+      "prerequisites": [
+        "TRD-23",
+        "TRD-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "BIS CPMI-IOSCO, Principles for Financial Market Infrastructures",
+          "url": "https://www.bis.org/cpmi/publ/d101.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISDA, Common Domain Model",
+          "url": "https://www.isda.org/2019/10/14/isda-common-domain-model/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-26",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "TRD-26.mdx",
+      "initialX": 300.3,
+      "initialY": -211.1
+    },
+    "TRD-27": {
+      "id": "TRD-27",
+      "title": "Front Office, Middle Office and Back Office",
+      "type": "reference",
+      "domain": "traded-products",
+      "subdomain": "market-infrastructure-and-lifecycle",
+      "one_screen": "Front, middle and back office are responsibility patterns, not universal organisation charts. Front office takes and manages commercial risk; middle-office functions control and explain it; back office completes confirmations, payments, settlements and records.",
+      "prerequisites": [
+        "TRD-26"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "BCBS, Corporate governance principles for banks",
+          "url": "https://www.bis.org/bcbs/publ/d328.htm",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-27",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TRD-27.mdx",
+      "initialX": 354.2,
+      "initialY": -207
+    },
+    "TRD-28": {
+      "id": "TRD-28",
+      "title": "Static Data and Reference Data",
+      "type": "reference",
+      "domain": "traded-products",
+      "subdomain": "market-infrastructure-and-lifecycle",
+      "one_screen": "Reference data tells systems what an entity, instrument, calendar or code means; transactional data tells them what happened. A wrong static field can contaminate thousands of correct trades, which is why golden sources, effective dating and lineage matter.",
+      "prerequisites": [
+        "TRD-26"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "GLEIF, Introducing the Legal Entity Identifier",
+          "url": "https://www.gleif.org/en/about-lei/introducing-the-legal-entity-identifier-lei",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISO, International Securities Identification Number (ISIN)",
+          "url": "https://www.iso.org/standard/44811.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-28",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TRD-28.mdx",
+      "initialX": 243.2,
+      "initialY": -222
+    },
+    "TRD-29": {
+      "id": "TRD-29",
+      "title": "The Derivatives Documentation Stack",
+      "type": "reference",
+      "domain": "traded-products",
+      "subdomain": "documentation-collateral-book",
+      "one_screen": "Derivative documentation is layered: a master agreement sets relationship-wide legal rules, schedules customise them, credit-support documents govern collateral and confirmations define individual transactions. The economic trade cannot be understood safely from the confirmation alone.",
+      "prerequisites": [
+        "TRD-23",
+        "TRD-26"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "ISDA, 2002 ISDA Master Agreement",
+          "url": "https://www.isda.org/book/2002-isda-master-agreement-mylibrary/",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISDA, 2021 ISDA Interest Rate Derivatives Definitions",
+          "url": "https://www.isda.org/book/2021-isda-interest-rate-derivatives-definitions/",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ICMA, Repo and Collateral Markets",
+          "url": "https://www.icmagroup.org/market-practice-and-regulatory-policy/repo-and-collateral-markets/",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISLA, Guidance Notes to the GMSLA 2010",
+          "url": "https://docs.islaemea.org/download/latest/gmsla-2010-agreement-guidance-notes-freshfields",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-29",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "TRD-29.mdx",
+      "initialX": 269.2,
+      "initialY": -264.2
+    },
+    "TRD-30": {
+      "id": "TRD-30",
+      "title": "ISDA Master Agreement and Close-Out Netting",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "documentation-collateral-book",
+      "one_screen": "The ISDA Master Agreement turns many OTC derivatives into one governed relationship. If termination is triggered, close-out netting values the covered terminated transactions and collapses them into a single net amount, subject to the agreement and applicable law.",
+      "prerequisites": [
+        "TRD-29"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ISDA, 2002 ISDA Master Agreement",
+          "url": "https://www.isda.org/book/2002-isda-master-agreement-mylibrary/",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISDA, ISDA Close-out Framework",
+          "url": "https://www.isda.org/isda-close-out-framework/",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISDA, Collateral Market Review",
+          "url": "https://www.isda.org/a/seiDE/collateral-market-review.pdf",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-30",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "TRD-30.mdx",
+      "initialX": 221.5,
+      "initialY": -247.6
+    },
+    "TRD-31": {
+      "id": "TRD-31",
+      "title": "Credit Support Annex and Collateral",
+      "type": "mechanism",
+      "domain": "traded-products",
+      "subdomain": "documentation-collateral-book",
+      "one_screen": "A CSA governs collateral for a derivatives relationship. It converts changing mark-to-market exposure into collateral calls according to agreed thresholds, eligible assets, valuation rules and transfer mechanics; it changes counterparty and liquidity risk, not the underlying derivative payoff.",
+      "prerequisites": [
+        "TRD-29",
+        "TRD-30"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ISDA, Collateral Market Review",
+          "url": "https://www.isda.org/a/seiDE/collateral-market-review.pdf",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "ISDA, ISDA Close-out Framework",
+          "url": "https://www.isda.org/isda-close-out-framework/",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-31",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "TRD-31.mdx",
+      "initialX": 255,
+      "initialY": -311.6
+    },
+    "TRD-32": {
+      "id": "TRD-32",
+      "title": "Banking Book versus Trading Book",
+      "type": "concept",
+      "domain": "traded-products",
+      "subdomain": "documentation-collateral-book",
+      "one_screen": "The regulatory book boundary determines which capital framework applies to an instrument. Trading intent matters, but modern Basel rules add mandatory classifications, presumptions, documentation and tight restrictions on switching so that banks cannot move positions simply to obtain lower capital.",
+      "prerequisites": [
+        "TRD-14",
+        "TRD-24"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": "2027-01-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework RBC25 — Boundary between the banking book and the trading book",
+          "url": "https://www.bis.org/basel_framework/chapter/RBC/25.htm",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Master Direction — Classification, Valuation and Operation of Investment Portfolio of Commercial Banks (Directions), 2023",
+          "url": "https://systemhealth.rbi.org.in/Scripts/BS_ViewMasDirections.aspx_id%3D12534.html",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Bank of England/PRA, PS1/26 — Implementation of Basel 3.1: Final rules",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "European Banking Authority, The EBA publishes a no-action letter and technical considerations to support the implementation of the market risk framework for EU banks",
+          "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-no-action-letter-and-technical-considerations-support-implementation-market-risk",
+          "accessed": "28 August 2026"
+        },
+        {
+          "label": "Office of the Comptroller of the Currency, Bulletin 2026-9",
+          "url": "https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-9.html",
+          "accessed": "28 August 2026"
+        }
+      ],
+      "slug": "trd-32",
+      "depth": 3,
+      "currentness": "future",
+      "filepath": "TRD-32.mdx",
+      "initialX": 334.9,
+      "initialY": -249.9
     }
   },
   "reverseIndex": {
@@ -9337,7 +10609,103 @@
       "TLM-29"
     ],
     "TLM-29": [],
-    "TLM-30": []
+    "TLM-30": [],
+    "TRD-01": [
+      "TRD-02",
+      "TRD-09"
+    ],
+    "TRD-02": [
+      "TRD-03",
+      "TRD-04",
+      "TRD-08",
+      "TRD-09"
+    ],
+    "TRD-03": [
+      "TRD-04"
+    ],
+    "TRD-04": [
+      "TRD-05",
+      "TRD-06",
+      "TRD-07"
+    ],
+    "TRD-05": [
+      "TRD-07"
+    ],
+    "TRD-06": [
+      "TRD-21"
+    ],
+    "TRD-07": [
+      "TRD-18"
+    ],
+    "TRD-08": [],
+    "TRD-09": [],
+    "TRD-10": [
+      "TRD-11",
+      "TRD-12"
+    ],
+    "TRD-11": [
+      "TRD-12"
+    ],
+    "TRD-12": [],
+    "TRD-13": [
+      "TRD-14",
+      "TRD-15",
+      "TRD-18",
+      "TRD-21",
+      "TRD-23"
+    ],
+    "TRD-14": [
+      "TRD-32"
+    ],
+    "TRD-15": [
+      "TRD-16",
+      "TRD-17"
+    ],
+    "TRD-16": [
+      "TRD-17"
+    ],
+    "TRD-17": [],
+    "TRD-18": [
+      "TRD-19",
+      "TRD-20"
+    ],
+    "TRD-19": [
+      "TRD-20"
+    ],
+    "TRD-20": [],
+    "TRD-21": [
+      "TRD-22"
+    ],
+    "TRD-22": [],
+    "TRD-23": [
+      "TRD-24",
+      "TRD-25",
+      "TRD-26",
+      "TRD-29"
+    ],
+    "TRD-24": [
+      "TRD-25",
+      "TRD-32"
+    ],
+    "TRD-25": [
+      "TRD-26"
+    ],
+    "TRD-26": [
+      "TRD-27",
+      "TRD-28",
+      "TRD-29"
+    ],
+    "TRD-27": [],
+    "TRD-28": [],
+    "TRD-29": [
+      "TRD-30",
+      "TRD-31"
+    ],
+    "TRD-30": [
+      "TRD-31"
+    ],
+    "TRD-31": [],
+    "TRD-32": []
   },
   "domainTree": [
     {
@@ -10912,6 +12280,260 @@
           ]
         }
       ]
+    },
+    {
+      "domain": "traded-products",
+      "subdomains": [
+        {
+          "subdomain": "cash-products-and-bonds",
+          "atoms": [
+            {
+              "id": "TRD-01",
+              "title": "Equities",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-02",
+              "title": "Fixed Income",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-03",
+              "title": "Clean Price and Dirty Price",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-04",
+              "title": "Yield to Maturity and the Price–Yield Relationship",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-05",
+              "title": "Duration and Convexity",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-06",
+              "title": "Credit Spreads",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-07",
+              "title": "The Yield Curve",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-08",
+              "title": "Repo and Reverse Repo",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-09",
+              "title": "Securities Lending",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "fx-and-ndfs",
+          "atoms": [
+            {
+              "id": "TRD-10",
+              "title": "FX Spot, Forward and Swap",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-11",
+              "title": "Covered Interest Parity and Forward Points",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-12",
+              "title": "Non-Deliverable Forwards",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "derivatives-and-swaps",
+          "atoms": [
+            {
+              "id": "TRD-13",
+              "title": "Derivatives: Linear and Non-Linear Payoffs",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-14",
+              "title": "Forwards and Futures",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-15",
+              "title": "Options: Moneyness, Intrinsic Value and Time Value",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-16",
+              "title": "The Option Greeks",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-17",
+              "title": "Optionality",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-18",
+              "title": "Interest Rate Swaps",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-19",
+              "title": "IBOR Reform and Risk-Free Rates",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-20",
+              "title": "OIS and Discounting",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-21",
+              "title": "Credit Default Swaps",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-22",
+              "title": "Credit Indices",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "market-infrastructure-and-lifecycle",
+          "atoms": [
+            {
+              "id": "TRD-23",
+              "title": "Exchange-Traded and OTC Markets",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-24",
+              "title": "Central Counterparties and Novation",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-25",
+              "title": "Clearing, Settlement and Settlement Cycles",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-26",
+              "title": "The Trade Lifecycle",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-27",
+              "title": "Front Office, Middle Office and Back Office",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-28",
+              "title": "Static Data and Reference Data",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "documentation-collateral-book",
+          "atoms": [
+            {
+              "id": "TRD-29",
+              "title": "The Derivatives Documentation Stack",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-30",
+              "title": "ISDA Master Agreement and Close-Out Netting",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-31",
+              "title": "Credit Support Annex and Collateral",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TRD-32",
+              "title": "Banking Book versus Trading Book",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "roles": [
@@ -11182,23 +12804,23 @@
       ],
       "atoms": [
         {
-          "id": "CR-01",
+          "id": "TRD-26",
           "weight": 3
         },
         {
-          "id": "CAP-18",
+          "id": "TRD-13",
           "weight": 3
         },
         {
-          "id": "DAT-21",
+          "id": "TRD-29",
           "weight": 3
         },
         {
-          "id": "DAT-09",
+          "id": "TRD-02",
           "weight": 2
         },
         {
-          "id": "TRD-01",
+          "id": "TRD-30",
           "weight": 2
         },
         {
@@ -11418,8 +13040,7 @@
     }
   ],
   "missingAtoms": [
-    "CCR-01",
-    "TRD-01"
+    "CCR-01"
   ],
   "lintWarnings": [
     {
@@ -12661,7 +14282,182 @@
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "TLM-30",
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-01",
+      "message": "Atom \"TRD-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TRD-01",
+      "message": "Atom \"TRD-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-02",
+      "message": "Atom \"TRD-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-03",
+      "message": "Atom \"TRD-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-04",
+      "message": "Atom \"TRD-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-05",
+      "message": "Atom \"TRD-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-06",
+      "message": "Atom \"TRD-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-07",
+      "message": "Atom \"TRD-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-08",
+      "message": "Atom \"TRD-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-09",
+      "message": "Atom \"TRD-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-10",
+      "message": "Atom \"TRD-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TRD-10",
+      "message": "Atom \"TRD-10\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-11",
+      "message": "Atom \"TRD-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-12",
+      "message": "Atom \"TRD-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-13",
+      "message": "Atom \"TRD-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TRD-13",
+      "message": "Atom \"TRD-13\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-14",
+      "message": "Atom \"TRD-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-15",
+      "message": "Atom \"TRD-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-16",
+      "message": "Atom \"TRD-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-17",
+      "message": "Atom \"TRD-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-18",
+      "message": "Atom \"TRD-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-19",
+      "message": "Atom \"TRD-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-20",
+      "message": "Atom \"TRD-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-21",
+      "message": "Atom \"TRD-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-22",
+      "message": "Atom \"TRD-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-23",
+      "message": "Atom \"TRD-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-24",
+      "message": "Atom \"TRD-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-25",
+      "message": "Atom \"TRD-25\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-26",
+      "message": "Atom \"TRD-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-27",
+      "message": "Atom \"TRD-27\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-28",
+      "message": "Atom \"TRD-28\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-29",
+      "message": "Atom \"TRD-29\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-30",
+      "message": "Atom \"TRD-30\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-31",
+      "message": "Atom \"TRD-31\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TRD-32",
+      "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-28T09:03:53.872Z"
+  "generatedAt": "2026-08-28T09:39:54.477Z"
 }

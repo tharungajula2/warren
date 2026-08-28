@@ -1,0 +1,84 @@
+---
+id: TRD-21
+title: Credit Default Swaps
+type: mechanism
+domain: traded-products
+subdomain: derivatives-and-swaps
+one_screen: >-
+  A CDS transfers defined credit-event risk on a reference entity or obligation.
+  The protection buyer pays premium; the protection seller makes a credit-event
+  settlement if the contractually defined event occurs.
+prerequisites:
+  - TRD-06
+  - TRD-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'ISDA, Credit Derivatives'
+    url: 'https://www.isda.org/category/asset-class/credit-derivatives/'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+A credit default swap, or CDS, is a derivative on credit risk rather than a funded bond purchase. The protection buyer pays periodic premium, often quoted as a spread on notional. The protection seller receives that premium and owes a settlement amount if a contractually defined credit event occurs during the protection period.
+
+The reference entity is the legal borrower whose credit is referenced. Reference obligations and deliverable obligations can matter for determining events or settlement under the applicable definitions. A credit event is not simply “the bond price fell”. It must satisfy contractual definitions such as bankruptcy, failure to pay or restructuring where applicable.
+
+After a credit event, settlement can be physical or cash depending on contract and market process. In cash settlement, an auction-determined recovery price is commonly used so that loss is approximately notional × (1 − recovery price), subject to the contract. This resembles LGD economically but is a market settlement value, not an accounting recovery estimate.
+
+CDS spread reflects the market price of credit protection. It is influenced by default expectations, recovery, liquidity, risk premia, funding and technical demand. It should not be converted directly into probability of default without a pricing model.
+
+Buying CDS protection can hedge a bond’s default/spread exposure, but hedge effectiveness depends on matching reference entity, seniority, maturity, currency, restructuring terms and basis. The cash bond and CDS can trade at different implied spreads; this difference is called the CDS-bond basis.
+
+Counterparty risk remains because the protection seller must perform precisely when the reference credit may be deteriorating. Collateral, clearing and legal documentation therefore matter alongside reference-credit risk.
+
+&lt;Flow&gt;
+Protection buyer
+ premium --------------------&amp;gt;
+             Protection seller
+
+If no credit event:
+premiums continue / contract ends
+
+If defined credit event:
+             &amp;lt;----------------
+       settlement payment
+
+Reference entity risk transferred
+without funding the bond principal
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A CDS pays on a defined contractual credit event, not on any deterioration in credit quality.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating CDS notional as a funded loan exposure or treating a spread widening as if a credit event has already occurred.
+</Trap>
+
+<NeverConfuse a="Reference entity" b="Counterparty">
+**Reference entity** — borrower or legal entity whose credit risk the CDS references.
+
+---
+
+**Counterparty** — the party on the other side of the CDS contract that must perform under the derivative.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="What triggers a CDS settlement?"
+  a="A credit event defined by the applicable contract and credit derivatives definitions."
+/>
+
+<Recall
+  q="Why can CDS fail to perfectly hedge a bond?"
+  a="Differences in maturity, seniority, documentation, liquidity, deliverability and basis can remain."
+/>

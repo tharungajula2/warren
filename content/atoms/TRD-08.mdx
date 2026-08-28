@@ -1,0 +1,81 @@
+---
+id: TRD-08
+title: Repo and Reverse Repo
+type: mechanism
+domain: traded-products
+subdomain: cash-products-and-bonds
+one_screen: >-
+  A repo is economically secured borrowing: one party sells securities now and
+  agrees to repurchase equivalent securities later at a higher price. The same
+  transaction is a reverse repo from the cash lender’s perspective.
+prerequisites:
+  - TRD-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'ICMA, Repo and Collateral Markets'
+    url: >-
+      https://www.icmagroup.org/market-practice-and-regulatory-policy/repo-and-collateral-markets/
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+A repurchase transaction combines a spot sale of securities with a forward repurchase. The party needing cash delivers securities and receives cash; at maturity it pays the repurchase price and receives equivalent securities back. The difference between sale and repurchase price expresses the repo interest. From the cash provider’s perspective, the transaction is a reverse repo.
+
+Collateral reduces but does not eliminate counterparty exposure. If the borrower defaults, the cash lender can rely on the collateral subject to legal enforceability and market value. A haircut creates a buffer: cash advanced is less than the market value of collateral. Margining can restore the agreed collateralisation when prices move. Haircuts, eligible collateral, valuation frequency and substitution rights therefore matter as much as the headline repo rate.
+
+Repo is also central to market liquidity. Dealers finance securities inventories, investors obtain leverage, and market participants borrow cash against high-quality assets. “Special” repo can arise when a particular security is in strong demand; the economic value of obtaining that security can push its repo rate below general collateral rates.
+
+Legal form matters. Market-standard cross-border repo is commonly documented under the Global Master Repurchase Agreement, or GMRA, developed by ICMA. A master agreement supports consistent transaction terms and close-out/netting mechanics across a relationship, but legal enforceability depends on the governing law, counterparty and jurisdiction.
+
+Repo must not be confused with an unsecured loan merely because the economic purpose is funding. Securities are transferred under the agreed legal structure. Operationally, both cash and securities legs must settle, collateral must be valued and lifecycle events such as coupons, substitutions and margin calls must be handled.
+
+&lt;Flow&gt;
+Repo seller / cash borrower
+   securities ----------&amp;gt;
+             counterparty
+   &amp;lt;------------ cash
+
+Maturity:
+   cash + repo interest -&amp;gt;
+   &amp;lt;- equivalent securities
+
+Same trade:
+seller view = repo
+buyer view  = reverse repo
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Repo and reverse repo are two perspectives on the same secured financing transaction.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating collateral as eliminating credit risk. Wrong-way risk, gap risk, liquidity and legal enforceability remain.
+</Trap>
+
+<NeverConfuse a="Repo" b="Reverse repo">
+**Repo** — transaction viewed from the party selling securities and receiving cash initially.
+
+---
+
+**Reverse repo** — the same transaction viewed from the party providing cash and receiving securities initially.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="What is the economic function of a repo for the securities seller?"
+  a="Secured borrowing against securities."
+/>
+
+<Recall
+  q="What does a haircut do?"
+  a="It makes collateral value exceed cash advanced, creating a buffer against adverse price moves and liquidation risk."
+/>

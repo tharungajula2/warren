@@ -1,0 +1,84 @@
+---
+id: TRD-24
+title: Central Counterparties and Novation
+type: mechanism
+domain: traded-products
+subdomain: market-infrastructure-and-lifecycle
+one_screen: >-
+  A CCP interposes itself between market participants so each faces the CCP
+  rather than the original trading counterparty for cleared obligations.
+  Novation changes the legal counterparty; it does not make risk disappear.
+prerequisites:
+  - TRD-23
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'BIS CPMI-IOSCO, Principles for Financial Market Infrastructures'
+    url: 'https://www.bis.org/cpmi/publ/d101.htm'
+    accessed: 28 August 2026
+  - label: 'BIS CPMI, Recommendations for Central Counterparties'
+    url: 'https://www.bis.org/cpmi/publ/d64.htm'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+A central counterparty, or CCP, becomes the buyer to every seller and the seller to every buyer for transactions accepted for clearing. In a common legal mechanism, the original bilateral contract is replaced or transformed so that each participant has an obligation to the CCP rather than directly to the original counterparty.
+
+This concentration changes the shape of counterparty risk. Bilateral exposure across many trading partners can be multilateral-netted within the clearing framework. The CCP collects margin, maintains a default-management process and holds financial resources designed to absorb losses under defined scenarios. Participants may contribute to a default fund in addition to posting initial and variation margin.
+
+Variation margin transfers current mark-to-market gains and losses. Initial margin is intended to cover potential future exposure during the period needed to close or hedge a defaulted position. A CCP may also apply concentration, liquidity or add-on charges.
+
+Clearing therefore reduces some bilateral risks but creates dependence on the CCP and its members. Liquidity demands can rise sharply when volatility increases and margin calls grow. A participant can be economically hedged but still fail if it cannot meet cash margin on time.
+
+Novation must also be distinguished from trade affirmation. Matching confirms that both sides agree trade economics; novation changes the legal counterparty relationship. Not every clearing model uses identical legal wording, so system design should not hard-code one legal mechanism globally.
+
+The PFMI set international standards for systemically important CCPs and other financial market infrastructures. For a BA, the key data chain is original trade → clearing eligibility → clearing submission → acceptance → cleared position → margin and settlement. A rejected clearing submission may leave the original bilateral risk alive, depending on the legal arrangement.
+
+&lt;Flow&gt;
+Before clearing:
+Party A &amp;lt;--------&amp;gt; Party B
+
+Accepted by CCP:
+Party A &amp;lt;--------&amp;gt; CCP &amp;lt;--------&amp;gt; Party B
+
+Risk controls:
+initial margin
+variation margin
+default fund
+default management
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+CCP clearing redistributes and manages counterparty risk; it does not abolish credit or liquidity risk.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming a matched trade is already novated to the CCP before clearing acceptance.
+</Trap>
+
+<NeverConfuse a="Novation" b="Netting">
+**Novation** — replacement of an original contractual relationship with new obligations involving another counterparty.
+
+---
+
+**Netting** — combining multiple obligations into reduced net obligations under enforceable rules.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="What is the core legal-economic effect of a CCP?"
+  a="Each cleared participant faces the CCP instead of relying solely on the original bilateral counterparty."
+/>
+
+<Recall
+  q="Why can a hedged dealer still face severe CCP-related stress?"
+  a="Large variation-margin calls create liquidity needs even if ultimate market risk is hedged."
+/>

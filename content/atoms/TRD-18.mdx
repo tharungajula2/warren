@@ -1,0 +1,81 @@
+---
+id: TRD-18
+title: Interest Rate Swaps
+type: mechanism
+domain: traded-products
+subdomain: derivatives-and-swaps
+one_screen: >-
+  A plain interest-rate swap exchanges fixed and floating interest cash flows on
+  a notional principal. The notional usually is not exchanged; the swap converts
+  the economic rate exposure of an asset or liability without refinancing the
+  underlying principal.
+prerequisites:
+  - TRD-13
+  - TRD-07
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'ISDA, 2021 ISDA Interest Rate Derivatives Definitions'
+    url: 'https://www.isda.org/book/2021-isda-interest-rate-derivatives-definitions/'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+In a plain fixed-for-floating interest-rate swap, one party pays a fixed rate and receives a floating rate; the other does the opposite. Both legs are calculated on a common notional amount under defined day counts, payment frequencies, business-day rules and reference-rate conventions.
+
+The notional is normally a calculation base, not principal that changes hands. If a company has floating-rate debt and pays fixed in a swap while receiving a matching floating reference rate, the combination can approximate fixed-rate funding, subject to basis, credit, timing and documentation differences.
+
+At inception, the fixed rate on an at-market swap is chosen so the present values of the two legs are approximately equal, making initial fair value near zero before transaction costs and credit/funding adjustments. Afterwards, market rates move and the swap acquires positive value to one party and negative value to the other.
+
+A swap is not one “interest rate”. The fixed leg has a coupon schedule; the floating leg references a rate definition and reset method; discounting uses an appropriate collateral/funding framework; separate curves may be used for projecting floating coupons and discounting cash flows. This multi-curve setup became standard after the global financial crisis and benchmark reform.
+
+Risk can be expressed through DV01/PV01 by tenor bucket. A pay-fixed swap generally loses value when the relevant swap rates fall and gains when they rise, from the pay-fixed party’s perspective, all else equal. However, exact exposure depends on curve shape, reset dates and collateral terms.
+
+Operationally, the trade must preserve notional, currency, effective date, maturity, fixed rate, floating-rate option, reset frequency, payment frequency, day count, calendars, compounding method and clearing status. “Five-year swap” is not sufficient to reconstruct economics.
+
+&lt;Flow&gt;
+Party A                         Party B
+ fixed payments  -------------------&amp;gt;
+                  notional reference
+ &amp;lt;---------------- floating payments
+
+No routine notional exchange
+        |
+        v
+net interest-rate exposure transferred
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+An IRS exchanges interest cash flows; do not assume the notional principal itself is funded or transferred.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating the floating leg, projection curve and discount curve as the same concept.
+</Trap>
+
+<NeverConfuse a="Fixed leg" b="Floating leg">
+**Fixed leg** — contractual interest payments based on a predetermined fixed rate.
+
+---
+
+**Floating leg** — payments determined from a specified floating-rate option and calculation method.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="Why can a borrower use a pay-fixed/receive-floating swap?"
+  a="To offset floating-rate exposure and approximate fixed-rate funding."
+/>
+
+<Recall
+  q="Does a vanilla single-currency IRS normally exchange the notional principal?"
+  a="No. The notional is usually only the calculation base."
+/>

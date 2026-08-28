@@ -1,0 +1,85 @@
+---
+id: TRD-23
+title: Exchange-Traded and OTC Markets
+type: concept
+domain: traded-products
+subdomain: market-infrastructure-and-lifecycle
+one_screen: >-
+  Exchange trading standardises the contract and market process; OTC trading
+  allows bilateral or platform-based negotiation of bespoke terms. Trading
+  venue, clearing venue and legal counterparty are separate questions.
+prerequisites:
+  - TRD-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'BIS CPMI-IOSCO, Principles for Financial Market Infrastructures'
+    url: 'https://www.bis.org/cpmi/publ/d101.htm'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+Exchange-traded markets list standardised instruments under exchange rules. Contract size, expiry, tick size, trading hours and settlement method are predefined. Orders interact through the venue’s market structure, and listed derivatives are ordinarily processed through a central clearing framework.
+
+Over-the-counter, or OTC, means the transaction is not executed as a listed exchange contract. Terms can be customised and trading may occur bilaterally, through dealers or on electronic platforms. OTC does not automatically mean “uncleared”: many OTC derivatives are centrally cleared, either because regulation requires it or because parties choose clearing.
+
+This leads to three separate dimensions. Execution asks where and how the trade is agreed. Clearing asks whether a CCP interposes itself after execution. Settlement asks how the resulting cash or securities obligations are finally discharged. A trade can be executed on an electronic venue, centrally cleared and then cash-settled; those are three different lifecycle facts.
+
+Standardisation generally supports liquidity, transparency and fungibility. Bespoke OTC terms can better match a real exposure but increase confirmation, valuation and operational complexity. OTC legal relationships also depend heavily on master agreements, collateral documents and counterparty-specific terms.
+
+Price discovery differs by market. An exchange may publish a visible order book, while dealer OTC markets can use request-for-quote, streaming prices or voice negotiation. “OTC” therefore should not be used as a synonym for opaque or manual.
+
+For technology and controls, instrument source, execution venue, trading capacity, clearing status, clearing broker, CCP, confirmation route and settlement method should be separate fields. Combining them into one “market type” flag creates ambiguity that later appears in reporting, margin and reconciliation logic.
+
+&lt;Flow&gt;
+Trade agreed
+    |
+    +--&amp;gt; listed exchange contract
+    |        standard terms
+    |
+    +--&amp;gt; OTC contract
+             bespoke / dealer / platform
+             |
+             v
+       clearing decision
+        |          |
+       CCP      bilateral
+        |
+        v
+      settlement
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Execution venue does not determine clearing status by itself.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using “OTC” to mean bilateral, uncleared, manual and uncollateralised all at once.
+</Trap>
+
+<NeverConfuse a="Execution" b="Clearing">
+**Execution** — the process by which parties agree the trade.
+
+---
+
+**Clearing** — the post-trade process that establishes and manages obligations, potentially through a CCP.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="Can an OTC derivative be centrally cleared?"
+  a="Yes. OTC describes the execution/contract market, not necessarily the clearing model."
+/>
+
+<Recall
+  q="What does exchange standardisation buy at the cost of flexibility?"
+  a="Greater fungibility, common terms and often deeper centralised liquidity."
+/>

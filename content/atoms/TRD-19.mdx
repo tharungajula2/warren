@@ -1,0 +1,100 @@
+---
+id: TRD-19
+title: IBOR Reform and Risk-Free Rates
+type: reference
+domain: traded-products
+subdomain: derivatives-and-swaps
+one_screen: >-
+  LIBOR is over. Modern rate markets use alternative overnight risk-free or
+  near-risk-free benchmarks and explicit fallback mechanics. The durable lesson
+  is that replacing a term unsecured bank rate with an overnight rate changes
+  conventions, not just the ticker.
+prerequisites:
+  - TRD-18
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'FCA, About LIBOR transition'
+    url: 'https://www.fca.org.uk/markets/libor-transition'
+    accessed: 28 August 2026
+  - label: 'FCA, The end of LIBOR'
+    url: 'https://www.fca.org.uk/news/press-releases/end-libor'
+    accessed: 28 August 2026
+  - label: 'ISDA, 2021 Interest Rate Derivatives Definitions InfoHub'
+    url: >-
+      https://www.isda.org/2021/10/04/2021-isda-interest-rate-derivatives-definitions/
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+Interbank offered rates such as LIBOR were historically embedded in loans, bonds, swaps and valuation systems. Benchmark reform replaced them because panel-based unsecured term borrowing became less robust as the underlying market shrank. Alternative reference rates are generally grounded more directly in overnight transactions or robust market data.
+
+The transition was not a simple label substitution. LIBOR contained bank credit and term components. Overnight risk-free rates such as SONIA for sterling and SOFR for US dollars have different economic bases. A contract moving from a forward-looking term IBOR to an overnight rate may need compounding in arrears, observation shifts, lookbacks, payment delays or a published term-RFR convention. Spread adjustments may be needed to preserve economic value during fallback.
+
+Fallback language is therefore a core contract feature. It defines what happens if the benchmark is unavailable, non-representative or permanently ceases. Derivatives markets used ISDA fallback frameworks; cash products may have different statutory or contractual solutions. Basis can remain between instruments that transition under different rules.
+
+**Perishable knowledge — checked 28 August 2026:** all 35 LIBOR settings have permanently ceased. The final synthetic US dollar LIBOR settings ceased after publication on 30 September 2024. References to “current LIBOR fixing” in a 2026 production system should therefore trigger a legacy-data or contract-state question, not a request for today’s rate.
+
+India’s benchmark landscape differs by product; MIBOR and other domestic benchmarks should not be casually called “Indian LIBOR”. Benchmark family, administrator, tenor, calculation method and fallback must be stored explicitly.
+
+For BAs and risk teams, the main migration lesson is data lineage: every affected trade needs the original benchmark, fallback hierarchy, spread adjustment, effective trigger, calculation method and downstream valuation/reporting treatment.
+
+&lt;Flow&gt;
+Legacy contract
+   |
+   +--&amp;gt; IBOR reference
+           |
+           v
+ benchmark cessation / trigger
+           |
+           v
+ fallback mechanism
+   +--&amp;gt; replacement RFR
+   +--&amp;gt; spread adjustment
+   +--&amp;gt; new compounding convention
+           |
+           v
+ updated cash flows / valuation
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Benchmark migration changes economics and calculation conventions; never perform a ticker-only replacement.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming LIBOR still has live settings because legacy contracts or database fields still contain the word LIBOR.
+</Trap>
+
+<NeverConfuse a="IBOR" b="RFR">
+**IBOR** — interbank offered-rate family historically intended to reflect term unsecured bank funding.
+
+---
+
+**RFR** — risk-free or near-risk-free reference rate, commonly based on overnight markets.
+</NeverConfuse>
+
+**IN — No universal one-for-one LIBOR replacement exists across all INR products; use the benchmark specified by the instrument and applicable Indian market rules.**
+
+**UK — Perishable, checked 28 August 2026.** SONIA is the principal sterling RFR. The FCA states that all LIBOR settings have permanently ceased; the final synthetic LIBOR settings ended by 30 September 2024.
+
+**EU — EURIBOR remains a separate benchmark and should not be described as LIBOR. Euro derivatives also use €STR-based conventions.
+
+**US — US dollar LIBOR has ceased; SOFR is the principal US dollar RFR used in the transition framework.**
+
+<Recall
+  q="Why is moving from LIBOR to an overnight RFR more than a code-table change?"
+  a="The benchmark economics, accrual method, timing and fallback/spread conventions can all differ."
+/>
+
+<Recall
+  q="Is LIBOR still published in any setting as of 28 August 2026?"
+  a="No. All 35 settings have permanently ceased."
+/>

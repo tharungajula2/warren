@@ -1,0 +1,85 @@
+---
+id: TRD-02
+title: Fixed Income
+type: concept
+domain: traded-products
+subdomain: cash-products-and-bonds
+one_screen: >-
+  A fixed-income instrument converts financing into contractual cash flows:
+  interest, principal and sometimes embedded options. Its value is driven by the
+  timing and certainty of those cash flows and the discount rates used to value
+  them.
+prerequisites:
+  - TRD-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'U.S. SEC, Investor.gov, What Are Corporate Bonds?'
+    url: >-
+      https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/what-are
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+A bond is a debt instrument. The issuer receives funding and promises specified payments to investors. A plain fixed-rate bond has a face value or principal, a coupon rate, payment dates and a maturity date when principal is due. Other debt instruments may pay floating rates, no interim coupon, amortising principal or cash flows linked to inflation, credit events or options.
+
+The basic valuation rule is simple: a bond’s price is the present value of its future contractual cash flows, discounted at rates appropriate to their timing and risk. Two bonds with identical cash flows can still trade at different yields if they differ in liquidity, tax treatment, collateral, legal ranking or market convention. Credit quality matters because promised cash flows are not guaranteed merely because they are contractual.
+
+Seniority determines where an instrument sits in the capital structure. Secured debt has claims over specified collateral; senior unsecured debt ranks ahead of subordinated debt; equity is residual. Maturity describes when principal is contractually due, while duration describes price sensitivity to interest-rate movements. These are related but not interchangeable.
+
+Fixed-income analysis separates several risks. Interest-rate risk changes the value of otherwise unchanged cash flows. Credit risk concerns whether the issuer pays in full and on time. Spread risk changes the market compensation demanded for credit and liquidity. Optionality changes the cash-flow pattern itself: a callable bond may be redeemed when refinancing is favourable to the issuer, limiting investor upside.
+
+For operations and risk, the instrument definition must include coupon convention, day-count basis, business-day rule, payment calendar, redemption terms, seniority, currency and settlement convention. A one-line label such as “5-year bond” is insufficient to reproduce its economics.
+
+&lt;Flow&gt;
+Issuer needs funding
+      |
+      v
+Creates debt instrument
+      |
+      +--&amp;gt; coupon / interest
+      +--&amp;gt; principal
+      +--&amp;gt; maturity
+      +--&amp;gt; optional features
+      |
+      v
+Investor discounts expected cash flows
+      |
+      v
+Market price
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Value the cash-flow contract, not the product label.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using maturity as a synonym for interest-rate risk. A long maturity can have low or high duration depending on coupons and optionality.
+</Trap>
+
+<NeverConfuse a="Maturity" b="Duration">
+**Maturity** — the contractual date by which principal is due.
+
+---
+
+**Duration** — a measure of a bond price’s sensitivity to changes in yield or interest rates.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="What is the core valuation object in fixed income?"
+  a="The instrument’s future cash flows and the discount rates applied to them."
+/>
+
+<Recall
+  q="Why can two bonds with the same maturity have different prices and yields?"
+  a="Their coupons, credit risk, liquidity, seniority, optionality or conventions may differ."
+/>

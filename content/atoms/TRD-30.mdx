@@ -1,0 +1,97 @@
+---
+id: TRD-30
+title: ISDA Master Agreement and Close-Out Netting
+type: mechanism
+domain: traded-products
+subdomain: documentation-collateral-book
+one_screen: >-
+  The ISDA Master Agreement turns many OTC derivatives into one governed
+  relationship. If termination is triggered, close-out netting values the
+  covered terminated transactions and collapses them into a single net amount,
+  subject to the agreement and applicable law.
+prerequisites:
+  - TRD-29
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'ISDA, 2002 ISDA Master Agreement'
+    url: 'https://www.isda.org/book/2002-isda-master-agreement-mylibrary/'
+    accessed: 28 August 2026
+  - label: 'ISDA, ISDA Close-out Framework'
+    url: 'https://www.isda.org/isda-close-out-framework/'
+    accessed: 28 August 2026
+  - label: 'ISDA, Collateral Market Review'
+    url: 'https://www.isda.org/a/seiDE/collateral-market-review.pdf'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+The ISDA Master Agreement is a standard framework for OTC derivatives relationships. The 2002 form updates the 1992 architecture and includes provisions for payment, representations, events of default, termination events, close-out amount and set-off. Parties negotiate elections and amendments in a Schedule.
+
+Its central risk-management feature is the relationship between the “single agreement” concept and close-out. In normal conditions, individual transactions continue with their own cash flows. If an Event of Default or relevant Termination Event occurs and the contractual steps are satisfied, transactions can be terminated in accordance with the agreement. Their replacement or close-out values are calculated and combined into one Early Termination Amount under the applicable terms.
+
+Close-out netting reduces gross bilateral replacement obligations into a net claim or payable. If one party is owed 100 on some terminated transactions and owes 80 on others, enforceable netting can leave a single 20 claim rather than separate gross obligations. This can materially reduce counterparty exposure and capital requirements where regulatory conditions are met.
+
+But netting is a legal conclusion, not an arithmetic feature. Enforceability depends on governing law, counterparty type, insolvency regime, branches and transaction scope. Banks therefore rely on legal opinions and eligibility controls before recognising netting benefits. A database “netting set” flag does not create legal enforceability.
+
+Resolution regimes can also impose temporary stays on termination rights for certain financial institutions. ISDA’s close-out framework highlights the interaction among default notices, stays and collateral enforcement.
+
+Set-off and close-out netting should not be treated as identical. Close-out netting operates through termination and valuation of covered transactions under the contractual framework; set-off may apply to separate payment obligations under different legal conditions.
+
+The operational control is document-to-netting-set lineage: every trade included in a net exposure calculation must be legally in scope.
+
+&lt;Flow&gt;
+Normal state:
+Trade 1
+Trade 2  --&amp;gt; one ISDA relationship
+Trade 3
+
+Default / termination trigger
+          |
+          v
+terminate covered trades
+          |
+          v
+value each terminated trade
+          |
+          v
+close-out netting
+          |
+          v
+single net payable / receivable
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Netting benefit exists only if the contractual mechanism is legally enforceable for the relevant parties and transactions.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming a system-generated net amount proves legal close-out netting eligibility.
+</Trap>
+
+<NeverConfuse a="Close-out netting" b="Set-off">
+**Close-out netting** — termination, valuation and combination of covered transactions into a single net amount.
+
+---
+
+**Set-off** — legal combination of mutual payment obligations that may arise under a different basis and scope.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="What turns many terminated ISDA transactions into one amount after default?"
+  a="The agreement’s close-out valuation and netting mechanism, subject to applicable law."
+/>
+
+<Recall
+  q="Why does legal opinion coverage matter to risk and capital systems?"
+  a="Because arithmetic netting is not enough; enforceability must be supportable for the relevant jurisdiction and counterparty."
+/>

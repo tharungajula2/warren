@@ -157,11 +157,11 @@
       "capital markets"
     ],
     "atoms": [
-      { "id": "CR-01", "weight": 3 },
-      { "id": "CAP-18", "weight": 3 },
-      { "id": "DAT-21", "weight": 3 },
-      { "id": "DAT-09", "weight": 2 },
-      { "id": "TRD-01", "weight": 2 },
+      { "id": "TRD-26", "weight": 3 },
+      { "id": "TRD-13", "weight": 3 },
+      { "id": "TRD-29", "weight": 3 },
+      { "id": "TRD-02", "weight": 2 },
+      { "id": "TRD-30", "weight": 2 },
       { "id": "CCR-01", "weight": 1 }
     ]
   },

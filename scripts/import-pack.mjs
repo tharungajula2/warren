@@ -280,15 +280,15 @@ function extractNextEffectiveDate(text) {
       let curA = "";
       for (const line of qLines) {
         const trimmed = line.trim();
-        if (trimmed.startsWith("Q:")) {
+        if (/^(?:\*\*)?Q:\s*/i.test(trimmed)) {
           if (curQ && curA) {
             recallPairs.push({ q: curQ, a: curA });
             curQ = "";
             curA = "";
           }
-          curQ = trimmed.replace(/^Q:\s*/, "");
-        } else if (trimmed.startsWith("A:")) {
-          curA = trimmed.replace(/^A:\s*/, "");
+          curQ = trimmed.replace(/^(?:\*\*)?Q:\s*\*\*\s*|^(?:\*\*)?Q:\s*/i, "");
+        } else if (/^(?:\*\*)?A:\s*/i.test(trimmed)) {
+          curA = trimmed.replace(/^(?:\*\*)?A:\s*\*\*\s*|^(?:\*\*)?A:\s*/i, "");
         }
       }
       if (curQ && curA) {
@@ -449,6 +449,14 @@ function inferSubdomain(atomId) {
     if (num <= 15) return "digital-lending";
     if (num <= 20) return "co-lending-and-data-tech";
     return "enforcement-and-conduct";
+  }
+
+  if (prefix === "TRD") {
+    if (num <= 9) return "cash-products-and-bonds";
+    if (num <= 12) return "fx-and-ndfs";
+    if (num <= 22) return "derivatives-and-swaps";
+    if (num <= 28) return "market-infrastructure-and-lifecycle";
+    return "documentation-collateral-book";
   }
 
   return "unsorted";

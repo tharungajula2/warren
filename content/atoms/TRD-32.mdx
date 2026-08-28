@@ -1,0 +1,118 @@
+---
+id: TRD-32
+title: Banking Book versus Trading Book
+type: concept
+domain: traded-products
+subdomain: documentation-collateral-book
+one_screen: >-
+  The regulatory book boundary determines which capital framework applies to an
+  instrument. Trading intent matters, but modern Basel rules add mandatory
+  classifications, presumptions, documentation and tight restrictions on
+  switching so that banks cannot move positions simply to obtain lower capital.
+prerequisites:
+  - TRD-14
+  - TRD-24
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: '2027-01-01'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework RBC25 — Boundary
+      between the banking book and the trading book
+    url: 'https://www.bis.org/basel_framework/chapter/RBC/25.htm'
+    accessed: 28 August 2026
+  - label: >-
+      Reserve Bank of India, Master Direction — Classification, Valuation and
+      Operation of Investment Portfolio of Commercial Banks (Directions), 2023
+    url: >-
+      https://systemhealth.rbi.org.in/Scripts/BS_ViewMasDirections.aspx_id%3D12534.html
+    accessed: 28 August 2026
+  - label: 'Bank of England/PRA, PS1/26 — Implementation of Basel 3.1: Final rules'
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement
+    accessed: 28 August 2026
+  - label: >-
+      European Banking Authority, The EBA publishes a no-action letter and
+      technical considerations to support the implementation of the market risk
+      framework for EU banks
+    url: >-
+      https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-no-action-letter-and-technical-considerations-support-implementation-market-risk
+    accessed: 28 August 2026
+  - label: 'Office of the Comptroller of the Currency, Bulletin 2026-9'
+    url: >-
+      https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-9.html
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+The banking book and trading book are regulatory classifications, not product categories. The same broad instrument type can sit in different books depending on purpose and the applicable mandatory rules. Under the Basel Framework, trading-book instruments are subject to market-risk capital requirements, while banking-book instruments are generally subject to credit-risk capital requirements.
+
+The first test is not “is this security tradable?” Basel RBC25 contains mandatory treatments and presumptions. Instruments held for short-term resale, profit from short-term price movements, arbitrage or hedging those trading risks are designated to the trading book subject to the framework. Certain instruments are required in the banking book; others, such as listed equities, market-making positions and trading-related repo-style transactions, are presumed to be trading-book positions unless the conditions for deviation are satisfied.
+
+Trading-book eligibility also carries operating expectations. The instrument must not face a legal impediment to sale or full hedging, and Basel requires daily fair valuation with valuation changes recognised in P&amp;L. Banks must maintain documented policies, controls and periodic audit over designation.
+
+Reclassification after initial designation is deliberately difficult. Basel prohibits switching for regulatory arbitrage and says moves should be rare and allowed only in extraordinary circumstances. A change in market conditions, liquidity or trading intent alone is not a valid reason. Supervisory approval, senior management approval, documentation and disclosure are required for permitted discretionary reassignments, and a capital benefit from switching is neutralised through a Pillar 1 surcharge.
+
+This boundary therefore connects product knowledge to capital, finance, risk and data. A BA needs instrument identity, desk, accounting classification, purpose, regulatory-book designation, approval evidence and effective date. “Held by treasury” or “available for sale” is not a sufficient regulatory-book rule.
+
+&lt;Flow&gt;
+Instrument recognised
+       |
+       v
+mandatory banking/trading treatment?
+       |
+   +---+---+
+   |       |
+  yes      no
+   |       |
+assign     v
+       purpose / presumption
+           |
+      +----+----+
+      |         |
+ trading     banking
+      |
+      v
+strict controls on any later switch
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Regulatory-book designation follows the rule framework and documented purpose; it is not a free management choice.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Moving a capital-intensive or loss-making position between books because the other capital treatment is cheaper. Basel explicitly prohibits regulatory-arbitrage switching.
+</Trap>
+
+<NeverConfuse a="Accounting classification" b="Regulatory-book classification">
+**Accounting classification** — financial-reporting classification under the applicable accounting framework.
+
+---
+
+**Regulatory-book classification** — banking-book or trading-book designation used for prudential capital treatment.
+</NeverConfuse>
+
+**IN — Perishable, checked 28 August 2026.** RBI’s 2023 investment-portfolio directions, effective 1 April 2024 for commercial banks excluding RRBs, introduced a clearly identifiable Held for Trading subcategory within FVTPL and removed the earlier 90-day HFT holding ceiling. This accounting/investment classification should not be silently equated with full Basel FRTB implementation; the applicable RBI capital directions must be checked for the capital-boundary treatment in force.
+
+**UK — Perishable, checked 28 August 2026.** PRA PS1/26 states that the Basel 3.1 rules and policy, including the revised market-risk framework other than IMA, take effect on 1 January 2027. The market-risk internal model approach takes effect on 1 January 2028.
+
+**EU — Perishable, checked 28 August 2026.** On 3 August 2026 the EBA issued a no-action letter recommending that competent authorities not prioritise supervision or enforcement of specified FRTB banking/trading-book boundary and internal-risk-transfer provisions during the implementation adjustment associated with the Commission’s 2026 Delegated Act.
+
+**US — Perishable, checked 28 August 2026.** The 2026 federal banking-agency modernised capital and revised market-risk framework remained a proposal rather than a final rule; do not present the proposed Basel-aligned boundary as current US final law.
+
+<Recall
+  q="What should be checked before asking whether management intends to trade an instrument?"
+  a="Any mandatory banking-book or trading-book treatment and applicable presumptions under the regulatory framework."
+/>
+
+<Recall
+  q="Can a bank move a position to the other book simply because liquidity changed or capital would fall?"
+  a="No. Basel tightly restricts reclassification, rejects those reasons and neutralises capital benefit from permitted switches."
+/>

@@ -1,0 +1,88 @@
+---
+id: TRD-04
+title: Yield to Maturity and the Price–Yield Relationship
+type: mechanism
+domain: traded-products
+subdomain: cash-products-and-bonds
+one_screen: >-
+  Yield to maturity is the single discount rate that equates a bond’s market
+  price with the present value of its promised remaining cash flows. For a plain
+  fixed-rate bond, price and yield move in opposite directions because a higher
+  discount rate lowers present value.
+prerequisites:
+  - TRD-02
+  - TRD-03
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'FINRA, Understanding Bond Yield and Return'
+    url: 'https://www.finra.org/investors/insights/bond-yield-return'
+    accessed: 28 August 2026
+  - label: >-
+      U.S. SEC, Investor Bulletin: Fixed Income Investments — When Interest
+      Rates Go Up, Prices of Fixed-Rate Bonds Fall
+    url: >-
+      https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-86
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+Yield to maturity, or YTM, compresses a bond’s price and scheduled cash flows into one annualised rate. It is the discount rate that makes the present value of remaining coupons and principal equal to the observed full economic price under the relevant market convention. It is therefore an internal rate of return on promised cash flows, not a guarantee of realised return.
+
+The inverse price–yield relationship follows directly from present-value mathematics. If all promised cash flows are unchanged and the discount rate rises, each future payment is worth less today, so the bond price falls. If the discount rate falls, present values rise and the price increases. A bond trading below par usually has a YTM above its coupon rate; one trading above par usually has a YTM below its coupon rate, assuming a plain fixed-rate bullet bond.
+
+YTM has assumptions and limitations. It treats the promised cash-flow schedule as if it occurs, so defaultable bonds can have a quoted YTM that overstates economically expected return. It also embeds a reinvestment assumption for interim coupons if interpreted as a realised compound return. Callable, puttable and otherwise optional bonds may need yield-to-call, yield-to-worst or option-adjusted measures because the maturity cash-flow path is not fixed.
+
+A small yield movement does not cause the same percentage price change for every bond. Sensitivity depends mainly on duration and convexity, which are separate concepts. YTM tells where the bond sits on a price–yield curve; duration and convexity describe the local shape of that curve.
+
+Operationally, YTM calculations depend on clean/full-price handling, settlement date, coupon schedule, day count, compounding frequency and redemption value. Two systems can produce different yields from the same headline price if conventions differ.
+
+&lt;Flow&gt;
+Higher required yield
+        |
+        v
+Future cash flows discounted more heavily
+        |
+        v
+Lower present value
+        |
+        v
+Lower bond price
+
+Lower required yield -&amp;gt; higher bond price
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+For a plain fixed-cash-flow bond, hold cash flows constant: yield up means price down, and yield down means price up.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Calling YTM the investor’s guaranteed return. Default, reinvestment, sale before maturity and optionality can all change realised return.
+</Trap>
+
+<NeverConfuse a="Coupon rate" b="Yield to maturity">
+**Coupon rate** — contractual interest rate applied to face value.
+
+---
+
+**Yield to maturity** — discount rate implied by current price and promised remaining cash flows.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="Why does a fixed-rate bond price fall when market yields rise?"
+  a="Its unchanged future cash flows are discounted at a higher rate."
+/>
+
+<Recall
+  q="Can a high quoted YTM on a distressed bond be read as a high expected return?"
+  a="No. YTM discounts promised cash flows and may not reflect likely credit losses."
+/>

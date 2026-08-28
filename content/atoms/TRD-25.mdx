@@ -1,0 +1,116 @@
+---
+id: TRD-25
+title: 'Clearing, Settlement and Settlement Cycles'
+type: mechanism
+domain: traded-products
+subdomain: market-infrastructure-and-lifecycle
+one_screen: >-
+  Clearing determines what each party owes; settlement discharges those
+  obligations by moving cash and securities. T+1 means standard settlement is
+  one business day after trade date—it does not mean every market, instrument or
+  failed trade settles then.
+prerequisites:
+  - TRD-23
+  - TRD-24
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: '2027-10-11'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      SEBI, Introduction of Beta version of T+0 rolling settlement cycle on
+      optional basis in addition to the existing T+1 settlement cycle in Equity
+      Cash Markets
+    url: >-
+      https://www.sebi.gov.in/legal/circulars/mar-2024/introduction-of-beta-version-of-t-0-rolling-settlement-cycle-on-optional-basis-in-addition-to-the-existing-t-1-settlement-cycle-in-equity-cash-markets_82455.html
+    accessed: 28 August 2026
+  - label: 'SEBI, Enhancement in the scope of optional T+0 rolling settlement cycle'
+    url: >-
+      https://www.sebi.gov.in/legal/circulars/dec-2024/enhancement-in-the-scope-of-optional-t-0-rolling-settlement-cycle-in-addition-to-the-existing-t-1-settlement-cycle-in-equity-cash-markets_89443.html
+    accessed: 28 August 2026
+  - label: >-
+      U.S. SEC, SEC Chair Gensler Statement on Upcoming Implementation of T+1
+      Settlement Cycle
+    url: 'https://www.sec.gov/newsroom/press-releases/2024-62'
+    accessed: 28 August 2026
+  - label: 'UK HM Treasury, Accelerated Settlement (T+1)'
+    url: 'https://www.gov.uk/government/publications/accelerated-settlement-t1'
+    accessed: 28 August 2026
+  - label: 'European Commission, T+1 settlement'
+    url: 'https://finance.ec.europa.eu/news/t1-settlement-2025-02-14_en'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+Trade execution creates obligations, but ownership and cash are not fully exchanged until settlement. Clearing sits between these points: trades are validated, matched, netted where applicable and translated into settlement obligations. Settlement then moves securities through a depository or settlement system and cash through the relevant payment mechanism.
+
+A settlement cycle is expressed relative to trade date, T. Under T+1, a trade agreed on Monday normally has Tuesday as its intended settlement date, subject to market holidays and instrument-specific rules. Faster settlement reduces the period during which market and counterparty exposures can accumulate, but it also compresses the time available for allocation, affirmation, funding, securities borrowing and FX.
+
+Delivery versus payment, or DvP, links delivery of securities to payment so that one leg does not complete without the corresponding other leg under the infrastructure’s model. In FX, payment versus payment, or PvP, addresses principal risk across currencies. These mechanisms reduce settlement risk but do not guarantee that a participant will have the required cash or securities on time.
+
+Settlement fails remain possible. A fail can arise from missing securities, insufficient cash, incorrect standing settlement instructions, unmatched economic details or operational cut-offs. The intended settlement date and actual settlement date are therefore separate data fields.
+
+**Perishable knowledge — checked 28 August 2026:** major jurisdictions are not synchronised. India and the US already use T+1 broadly for cash equities; India also operates optional T+0 for eligible equity-cash trades. The UK and EU are preparing for T+1 on 11 October 2027. Cross-border operating models must therefore handle mismatched cycles until convergence.
+
+The durable control is to model settlement by instrument and market, not by a global “T+1” assumption.
+
+&lt;Flow&gt;
+Trade date T
+    |
+    v
+matching / affirmation
+    |
+    v
+clearing / netting
+    |
+    v
+intended settlement date
+    |
+    +--&amp;gt; cash available?
+    +--&amp;gt; securities available?
+    +--&amp;gt; instructions matched?
+    |
+    v
+final settlement
+(actual date may differ)
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Trade date, intended settlement date and actual settlement date are distinct lifecycle facts.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Hard-coding one settlement cycle for all securities because a jurisdiction’s headline equity market is T+1.
+</Trap>
+
+<NeverConfuse a="Clearing" b="Settlement">
+**Clearing** — determination and management of obligations before final discharge.
+
+---
+
+**Settlement** — final transfer of cash, securities or other assets that discharges those obligations.
+</NeverConfuse>
+
+**IN — Perishable, checked 28 August 2026.** SEBI states that the existing equity-cash settlement cycle is T+1 and has also introduced an optional T+0 cycle for eligible trades, with scope expanded after the 2024 beta.
+
+**UK — Perishable, checked 28 August 2026.** The UK government has committed to mandate T+1 from 11 October 2027; until then the general statutory standard remains T+2 for the relevant securities.
+
+**EU — Perishable, checked 28 August 2026.** The European Commission has proposed 11 October 2027 for the EU move to T+1.
+
+**US — Perishable, checked 28 August 2026.** The standard cycle for most broker-dealer securities transactions moved to T+1 on 28 May 2024.
+
+<Recall
+  q="What is the difference between intended and actual settlement date?"
+  a="The intended date is when settlement should occur under market terms; the actual date is when cash and securities finally move."
+/>
+
+<Recall
+  q="Why can T+1 increase operational pressure even while reducing exposure time?"
+  a="Allocation, matching, funding, securities sourcing and FX must be completed in a shorter window."
+/>

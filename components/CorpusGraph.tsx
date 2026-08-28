@@ -104,11 +104,11 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return synth;
   }, [atoms, syntheticCount]);
 
-  // Compute Domain Centroids on a smaller radius (180px) so clusters sit closer together
+  // Compute Domain Centroids on a radius of 250px so 9 populated domain clusters sit cleanly separated
   const domainCentroids = useMemo(() => {
     const domains = Array.from(new Set(Object.values(effectiveAtoms).map((a) => a.domain)));
     const centroids: Record<string, { x: number; y: number }> = {};
-    const radius = 180;
+    const radius = 250;
     domains.forEach((d, idx) => {
       const angle = (2 * Math.PI * idx) / domains.length;
       centroids[d] = {
@@ -238,14 +238,14 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
           .distance(65)
           .strength(0.25)
       )
-      .force("charge", forceManyBody().strength(-140))
+      .force("charge", forceManyBody().strength(-160))
       .force(
         "x",
-        forceX((d: any) => domainCentroids[d.domain]?.x || 0).strength(0.3)
+        forceX((d: any) => domainCentroids[d.domain]?.x || 0).strength(0.25)
       )
       .force(
         "y",
-        forceY((d: any) => domainCentroids[d.domain]?.y || 0).strength(0.3)
+        forceY((d: any) => domainCentroids[d.domain]?.y || 0).strength(0.25)
       );
 
     sim.alpha(0.25);

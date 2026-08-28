@@ -1,0 +1,85 @@
+---
+id: TRD-03
+title: Clean Price and Dirty Price
+type: mechanism
+domain: traded-products
+subdomain: cash-products-and-bonds
+one_screen: >-
+  A bond quote may exclude accrued interest even though settlement does not.
+  Clean price is the quoted price without accrued interest; dirty price is the
+  amount economically paid for the bond before fees: clean price plus accrued
+  interest.
+prerequisites:
+  - TRD-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'FINRA, Understanding Bond Yield and Return'
+    url: 'https://www.finra.org/investors/insights/bond-yield-return'
+    accessed: 28 August 2026
+import_source: 09_TRD_traded_products.md
+---
+Coupon interest accrues economically between payment dates. Suppose a bond pays a coupon every six months. The seller who has held the bond for part of the coupon period has earned part of the next coupon even though the issuer will pay the full coupon to whoever owns the bond on the payment date. Settlement therefore compensates the seller for accrued interest.
+
+The standard relationship is:
+
+Dirty price = Clean price + Accrued interest
+
+The clean price is useful for price comparison because it removes the predictable saw-tooth movement caused purely by coupon accrual. The dirty price, sometimes called the full price, is the value used to determine the cash consideration for settlement, subject to market-specific conventions and transaction charges.
+
+Accrued interest depends on the coupon amount and the fraction of the coupon period that has elapsed. That fraction is determined by a day-count convention such as Actual/Actual, 30/360 or Actual/365. Two instruments can therefore accrue differently even when they have the same coupon rate and calendar dates.
+
+Around a coupon payment date, the mechanics can look counter-intuitive. Immediately before coupon payment, accrued interest is high. After the coupon is detached and paid, accrued interest resets, while the clean price should not mechanically jump by the same amount merely because time passed. This is why analysts distinguish clean and dirty measures.
+
+The distinction also matters in reconciliations. A trader may discuss a clean-price move, the risk system may mark a full price, and the settlement instruction may reflect principal amount plus accrued interest. If systems disagree on the field definition, a correct trade can appear to have a valuation or cash break.
+
+&lt;Flow&gt;
+Coupon date A ---------------- Coupon date B
+     |                                 |
+     |&amp;lt;------ accrued interest -------&amp;gt;|
+                  ^
+                  |
+              trade date
+
+clean price
+    +
+accrued interest
+    =
+dirty / full price
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Always identify whether a bond price field is clean or dirty before comparing valuations or settlement amounts.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Explaining a dirty-price increase caused by one day of accrual as market P&amp;L.
+</Trap>
+
+<NeverConfuse a="Clean price" b="Dirty price">
+**Clean price** — bond price excluding accrued coupon interest.
+
+---
+
+**Dirty price** — clean price plus accrued interest; also called full price.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.**
+</Rule>
+
+<Recall
+  q="If clean price is 99.20 and accrued interest is 1.10, what is the dirty price?"
+  a="100.30, before fees and other settlement adjustments."
+/>
+
+<Recall
+  q="Why do markets commonly quote clean prices?"
+  a="They make genuine market-price changes easier to see by stripping out routine coupon accrual."
+/>
