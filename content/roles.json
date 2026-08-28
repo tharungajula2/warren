@@ -17,8 +17,14 @@
     "atoms": [
       { "id": "MRM-08", "weight": 3 },
       { "id": "MRM-12", "weight": 3 },
-      { "id": "MRM-13", "weight": 3 },
+      { "id": "QNT-04", "weight": 3 },
+      { "id": "QNT-09", "weight": 3 },
+      { "id": "QNT-22", "weight": 3 },
+      { "id": "MRM-13", "weight": 2 },
       { "id": "MRM-17", "weight": 2 },
+      { "id": "QNT-24", "weight": 2 },
+      { "id": "QNT-25", "weight": 2 },
+      { "id": "QNT-26", "weight": 2 },
       { "id": "CR-12", "weight": 2 },
       { "id": "CAP-14", "weight": 1 }
     ]
@@ -42,8 +48,13 @@
       { "id": "MRM-07", "weight": 3 },
       { "id": "CR-12", "weight": 3 },
       { "id": "CR-20", "weight": 3 },
+      { "id": "QNT-08", "weight": 3 },
+      { "id": "QNT-10", "weight": 3 },
+      { "id": "QNT-11", "weight": 3 },
       { "id": "MRM-13", "weight": 2 },
       { "id": "MRM-14", "weight": 2 },
+      { "id": "QNT-15", "weight": 2 },
+      { "id": "QNT-23", "weight": 2 },
       { "id": "CAP-14", "weight": 1 }
     ]
   },
@@ -238,8 +249,12 @@
       { "id": "FND-16", "weight": 3 },
       { "id": "FND-17", "weight": 3 },
       { "id": "CR-23", "weight": 3 },
+      { "id": "QNT-01", "weight": 3 },
+      { "id": "QNT-08", "weight": 3 },
       { "id": "DAT-09", "weight": 2 },
       { "id": "DAT-21", "weight": 2 },
+      { "id": "QNT-18", "weight": 2 },
+      { "id": "QNT-21", "weight": 2 },
       { "id": "FND-18", "weight": 1 }
     ]
   },

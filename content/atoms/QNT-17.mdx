@@ -1,0 +1,61 @@
+---
+id: QNT-17
+title: SHAP (Shapley Additive Explanations)
+type: concept
+domain: quantitative
+subdomain: machine-learning-and-explainability
+one_screen: >-
+  SHAP assigns each feature a “contribution” value for a specific prediction,
+  based on cooperative game-theoretic Shapley values. These values guarantee
+  local accuracy (they sum to the model output minus a baseline) and consistency
+  (features that change a prediction more get higher attribution). SHAP provides
+  interpretable, additive explanations for individual credit scores.
+prerequisites:
+  - QNT-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Lundberg, S. M. et al., *From Local Explanations to Global Understanding
+      with Explainable AI for Trees*, Nat. Mach. Intell. 2(1):56–67 (2020).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+SHAP (SHapley Additive exPlanations) treats each feature as a “player” in a game whose payout is the model’s prediction. The SHAP value of a feature for one observation is the average change in prediction when adding that feature, across all combinations of features. Practically, tree-based models (random forest, boosting) can use TreeExplainer to compute SHAP exactly in polynomial time. The result is that for a given borrower, we get a breakdown: e.g. “+0.05 default probability from low credit score, –0.02 from high income, …, totaling the predicted PD of 0.12.” Plotting SHAP values across many loans gives a global view, while individual SHAP explanations show why each decision was made. 
+
+Crucially, SHAP values satisfy properties of fairness: efficiency (contributions sum to output), and consistency (if one model increases a feature’s effect, its SHAP value won’t decrease). This makes them theoretically attractive for interpretability. In credit risk, regulators expect that each driver of a decision can be explained. SHAP is one way to meet this interpretability requirement without sacrificing the accuracy of complex ensembles. It allows both global insight (feature importance as average absolute SHAP) and local explanations.
+
+<Rule label="PERMANENT RULE">
+SHAP values for one prediction sum to the difference between the model’s output and a baseline. This ensures the explanation is exact (local accuracy). Each feature’s SHAP indicates how much it pushed the score up or down.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating SHAP as proving causality. SHAP distributes contributions *given the model*, not necessarily reflecting causal effects. Also, using a too-narrow background dataset can bias SHAP values.
+</Trap>
+
+<NeverConfuse a="SHAP value" b="Feature importance">
+**SHAP value** — a local explanation: the contribution of a feature to one specific prediction. It is computed under the model’s logic.  
+---  
+**Feature importance** — a global metric summarizing a model. Unlike SHAP, it does not decompose individual predictions and may miss interactions.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** SHAP is a mathematical construct; regulatory emphasis on explainability is common (e.g. Fed SR11-7, PRA SS3/16) but does not alter SHAP’s definition.
+</Rule>
+
+<Recall
+  q="What properties do Shapley (SHAP) values satisfy?"
+  a="They satisfy efficiency (values sum to model output change), consistency (if a model change increases a feature’s contribution, its SHAP does not decrease), and missingness (features not in model get zero)."
+/>
+
+<Recall
+  q="How do SHAP values differ from just looking at a single tree path?"
+  a="A single path ignores interactions and averages over other feature orders. SHAP systematically averages over all feature orderings, yielding a fair contribution for each feature based on the entire model."
+/>

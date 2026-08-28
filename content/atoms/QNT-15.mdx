@@ -1,0 +1,89 @@
+---
+id: QNT-15
+title: Gradient Boosting
+type: mechanism
+domain: quantitative
+subdomain: machine-learning-and-explainability
+one_screen: >-
+  Gradient boosting builds a strong predictive model by sequentially adding
+  trees that each fit the residual errors of the ensemble so far. The final
+  model is a weighted sum of many simple trees, tuned by a learning rate. This
+  approach often achieves high accuracy on tabular risk data, which explains why
+  it is a dominant method in credit modeling.
+prerequisites:
+  - QNT-13
+  - QNT-14
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Lundberg, S. M. et al., *From Local Explanations to Global Understanding
+      with Explainable AI for Trees*, Nat. Mach. Intell. 2(1):56–67 (2020).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+In gradient boosting, we start with a simple model (often predicting the mean outcome). Then we iteratively train new decision trees on the *residuals* (errors) of the current model. Each tree’s predictions are scaled by a learning rate (shrinkage) and added to the ensemble. Formally, the algorithm minimizes a loss function (e.g. squared error or logistic loss) via gradient descent: each new tree targets the negative gradient of loss with respect to the model’s predictions. Popular implementations like XGBoost or LightGBM use shallow trees (e.g. max depth 3–5) to keep each tree weak and prevent overfitting. 
+
+For example, to predict loan default probability, we might start with a base prediction of 0.1. The first tree learns where this is underestimating defaults and pushes those cases higher. The next tree then corrects remaining errors, and so on. After 100 trees, the model might be much more accurate than logistic regression, especially capturing non-linear and interaction effects. Gradient boosted trees excel on credit data because they handle mixed variable types and missing values easily, and can learn complex patterns that linear models miss. 
+
+&lt;Flow&gt;
++----------------------------+
+|  Initialize model output   |
+|  (e.g. mean of target)     |
++-------------+--------------+
+              |
+Repeat for t = 1..T:
++-------------v--------------+
+| Compute residuals =        |
+| (target - current model)   |
++-------------+--------------+
+              |
++-------------v--------------+
+| Fit new tree to residuals  |
++-------------+--------------+
+              |
++-------------v--------------+
+| Update model:              |
+| add scaled predictions     |
+| (old model + lr * tree)    |
++-------------+--------------+
+              |
++----------------------------+
+|  Updated ensemble model    |
++----------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Each new tree in boosting improves the model by focusing on what previous trees missed. The trees are combined additively: final prediction = initial + shrinkage×tree1 + shrinkage×tree2 + … (often in log-odds for classification).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring the learning rate or early stopping. A very small learning rate requires many trees (long training), while a large rate or too many trees can easily overfit. Always validate the number of trees and shrinkage on hold-out data.
+</Trap>
+
+<NeverConfuse a="Gradient boosting" b="AdaBoost">
+**Gradient boosting** — an ensemble that fits trees sequentially to residuals, adding them to the model in a stagewise fashion.  
+---  
+**AdaBoost** — another boosting method that reweights misclassified samples instead of fitting residuals; it focuses on misclassified points and uses weighted voting, rather than explicit gradients.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Gradient boosting’s mathematics is universal; no regulator prescribes or forbids its use.
+</Rule>
+
+<Recall
+  q="Why does gradient boosting often outperform single models on credit data?"
+  a="Because it builds many trees that each capture different parts of the data structure, and their additive combination can approximate complex non-linear relationships with high accuracy."
+/>
+
+<Recall
+  q="How is overfitting controlled in boosting?"
+  a="By using a low learning rate, limiting tree depth, and choosing a stopping rule (e.g. cross-validated number of trees). Without these, boosting can fit noise with many trees."
+/>

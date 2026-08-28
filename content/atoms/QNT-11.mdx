@@ -1,0 +1,66 @@
+---
+id: QNT-11
+title: Weight of Evidence (WOE) and Information Value (IV)
+type: mechanism
+domain: quantitative
+subdomain: regression-and-scorecard-modelling
+one_screen: >-
+  **Weight of Evidence (WOE):** A transformation of categorical/binned variables
+  for use in logistic models. For each bin/category, WOE = ln(%goods / %bads).
+  It encodes the risk difference of each bin relative to the overall data.
+  **Information Value (IV):** A summary measure of a variable’s predictive
+  power, computed as Σ(bad rate - good rate) * WOE. Credit scoring often bins
+  continuous features into monotonic risk groups, computes WOE and then fits a
+  logistic on those WOE values.
+prerequisites:
+  - QNT-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: FRM notes (VOE usage) (implied binomial/goods-bads setup).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+Banks commonly use WOE because it yields linear relationships in log-odds space and deals well with missing values. Example: Suppose credit score binned:  
+- Score 1-300: 10% defaults (bads), 90% good =&gt; WOE = ln(0.90/0.10)=2.2.  
+- Score 301-600: 5% defaults, 95% good =&gt; WOE = ln(0.95/0.05)=2.94.  
+Higher WOE means a bin has relatively more goods (lower default risk). The logistic regression will use these WOE values to model default odds linearly.  
+
+**IV** is used to rank variable strength: higher IV implies stronger separation between goods/bads. Rough guide: IV&lt;0.02 not useful; 0.1-0.3 medium; &gt;0.5 extremely predictive. It sums the “divergence” of distribution. It’s not regulatory but common industry practice for feature selection.  
+
+**Why binning:** Continuous variables may have non-linear PD relationships. Binning (e.g. by quantile) and computing WOE enforces piecewise-constant relationship, simplifying model. It also handles missing by treating missing as a separate bin. A caveat: bins should have enough data to avoid volatility.
+
+<Rule label="PERMANENT RULE">
+When using WOE, ensure monotonicity: bins should be sorted so that WOE moves consistently (e.g. increasing WOE with score). This avoids non-monotonic risk segments which can cause logistic coefficients to be unstable or non-intuitive.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Creating too many bins or bins with small counts. This inflates IV artificially and causes overfitting. Also, forgetting to check monotonic trend: if WOE jumps up then down across bins, it suggests your model may overfit bin boundaries rather than true risk.
+</Trap>
+
+<NeverConfuse a="WOE" b="IV">
+**WOE** — numeric encoding of bins: ln(%goods/%bads).  
+---  
+**IV** — aggregate measure of how well a variable’s distribution separates goods/bads. High IV implies big differences in rates across bins. Unlike WOE, IV is a single number per variable.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** WOE and IV are industry conventions, not mandated by regulators. All jurisdictions use similar methods. However, if under IRB, RBI expects documented binning rationale. IFRS 9 does not specify this detail.
+</Rule>
+
+<Recall
+  q="Why use WOE instead of raw categorical values in logistic?"
+  a="WOE ensures linear log-odds relationship and handles different scales/balance. It also directly reflects risk: higher WOE = more good (less risk). Raw categories would need dummy encoding which is less interpretable."
+/>
+
+<Recall
+  q="What does an IV of 0.8 suggest?"
+  a="Extremely predictive variable. Might be too good (possible data leak?), or just very relevant. Check if not capturing future info."
+/>

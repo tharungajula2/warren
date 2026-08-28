@@ -1,0 +1,67 @@
+---
+id: QNT-09
+title: Multicollinearity and VIF
+type: concept
+domain: quantitative
+subdomain: regression-and-scorecard-modelling
+one_screen: >-
+  *Multicollinearity* occurs when predictors in a regression are highly
+  correlated, inflating coefficient variances and making individual effects hard
+  to separate. The **Variance Inflation Factor (VIF)** quantifies
+  multicollinearity: VIF=(1−R²_j)^(-1) for regressing predictor *j* on others. A
+  VIF>5 (or 10) signals problematic collinearity.
+prerequisites:
+  - QNT-08
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Medium (Darshan Bhokare) on Ridge vs Lasso (mention of multicollinearity).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+In credit models, multicollinearity often arises when using overlapping information: e.g. two credit bureau scores, or income and loan amount. Such redundancy doesn’t harm overall prediction accuracy much, but it makes coefficient estimates unstable. For instance, if income and loan size correlate strongly, including both may lead to neither coefficient being precisely estimated (large SE). 
+
+To calculate VIF for predictor X_j: regress X_j against all other X’s and get R²_j. Then VIF_j = 1/(1−R²_j). Example: if a predictor has R²=0.9 when regressed on others, VIF=10. This indicates its variance estimate is 10 times what it would be if uncorrelated with others.
+
+High VIF means small changes in data can flip the sign or magnitude of β_j. This is dangerous when regulators or stakeholders expect stable interpretability. Remedies: drop or combine correlated variables (e.g. use principal components), or regularization (see QNT-12). But dropping variables may lose predictive info, so trade-off is needed.
+
+**VIF interpretation:** 
+- VIF≈1: no correlation with other X’s. 
+- VIF&gt;5: moderate collinearity. 
+- VIF&gt;10: serious collinearity.
+Often one simplifies by ensuring predictors have pairwise correlations &lt;0.8 or VIFs &lt;5.
+
+<Rule label="PERMANENT RULE">
+Check VIFs during regression. If any predictor’s VIF is high (≥10), address it by removal or transformation. Credit-score industry best practice is to avoid multicollinearity so that variable effects are interpretable and stable.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Leaving collinear variables in, thinking “it doesn’t matter since model fit is okay.” It *does* matter: if collinearity is ignored, the model can behave erratically on new data or give misleading coefficient signs, which is unacceptable for risk models.
+</Trap>
+
+<NeverConfuse a="Variance Inflation Factor (VIF)" b="Standard Error (SE)">
+**Variance Inflation Factor (VIF)** — measures how much the variance of a coefficient is increased due to collinearity.  
+---  
+**Standard Error (SE)** — the uncertainty of a coefficient. VIF tells why SE might be high: because variables overlap. VIF is not a direct measure of predictor importance (that’s given by coefficient/SE or other metrics).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Multicollinearity is a numerical issue, not jurisdiction-dependent. However, some IRB model validators may scrutinize models for collinearity to ensure stability.
+</Rule>
+
+<Recall
+  q="How does VIF relate to correlation?"
+  a="If X is perfectly uncorrelated with others, VIF=1 (ideal). If X is 90% explained by others (R²=0.9), VIF=10. Roughly, VIF≈1/(1-r²) for single strong correlation."
+/>
+
+<Recall
+  q="A model has two highly correlated variables (r=0.95). What is likely VIF?"
+  a="Even a single strong pair can inflate VIF significantly. If one regresses variable A on B (r² ≈ 0.95² ≈ 0.90), VIF≈10. That’s borderline or high."
+/>

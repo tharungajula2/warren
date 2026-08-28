@@ -1,0 +1,83 @@
+---
+id: QNT-19
+title: Trend and Seasonality (Decomposition)
+type: concept
+domain: quantitative
+subdomain: time-series-and-forecasting
+one_screen: >-
+  A time series often contains a *trend* (long-term increase/decrease) and
+  *seasonality* (regular periodic fluctuations). Decomposing the series
+  separates these components plus a residual. For example, credit losses might
+  rise over years (trend) but have higher losses in certain months (seasonal).
+  Identifying and removing trend/seasonality yields a stationary residual
+  suitable for modeling.
+prerequisites:
+  - QNT-18
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      R.J. Hyndman and G. Athanasopoulos, *Forecasting: principles and
+      practice*, OTexts (2018), Ch. 6 (decomposition).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Rob J Hyndman (for Duke), *ARIMA models for forecasting*, University of
+      Washington/Duke (lecture notes).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+The **trend** is the smooth, non-random movement over time (upward or downward). Seasonality is a pattern that repeats every fixed period (e.g. every 12 months or every quarter). Decomposition methods (additive or multiplicative) express the series as `Observed = Trend + Seasonality + Residual` (or multiplied if percentage effects). In practice, one might use moving averages or STL (seasonal-trend decomposition) to estimate these. For instance, a bank’s monthly default rate may show a small upward trend due to economic slowdown, plus spikes every year-end (seasonality). By isolating the trend, forecasters can model the remaining (stationary) part more easily. 
+
+&lt;Flow&gt;
+Original Series
+   |
+   v
++-----------------+
+| Decompose into: |
+| - Trend         |
+| - Seasonality   |
+| - Remainder     |
++--------+--------+
+         |
+    +----+----+
+    |         |
+Trend    Season + Residual
+&lt;/Flow&gt;
+
+Seasonality can be additive (constant amount) or multiplicative (proportional). When modeling, seasonal series may require seasonal differencing (e.g. subtract value from same month last year) or inclusion of seasonal ARIMA terms. Credit data with seasonal effects (e.g. holiday spending) must handle these patterns explicitly.
+
+<Rule label="PERMANENT RULE">
+Trend is a long-term direction in the data; seasonality is a repeated cycle of fixed length. Always remove or model these before applying models that assume stationarity.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Confusing a slowly changing trend for seasonality (or vice versa). For example, attributing a monotonically rising credit loss rate to seasonality can mislead forecasts. Always inspect plots at multiple time scales.
+</Trap>
+
+<NeverConfuse a="Trend" b="Seasonality">
+**Trend** — a general upward or downward movement over time.  
+---  
+**Seasonality** — a periodic pattern repeating at fixed intervals (like higher purchases every Dec). Trend affects the baseline over time, seasonality oscillates around that baseline.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The concepts of trend and seasonality are mathematical. Forecasters in any jurisdiction must address them identically.
+</Rule>
+
+<Recall
+  q="What is seasonal adjustment?"
+  a="Removing or modeling the repeating seasonal pattern so the remaining series is stationary, e.g. by subtracting the average value of each month/quarter from the observed values."
+/>
+
+<Recall
+  q="How might a multiplicative seasonal effect differ from an additive one?"
+  a="In multiplicative seasonality, the size of seasonal swings grows with the level of the series (e.g. 10% bump each December), whereas additive means constant swings (e.g. +2 default points each Dec regardless of baseline)."
+/>

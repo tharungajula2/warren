@@ -1,0 +1,73 @@
+---
+id: QNT-06
+title: Correlation vs Causation; Confounding
+type: concept
+domain: quantitative
+subdomain: statistical-foundations-and-sampling
+one_screen: >-
+  Correlation means two variables move together; causation means one variable
+  directly influences another. A *confounder* is a hidden common cause that
+  creates a spurious correlation. In credit data, misidentifying causation can
+  lead to wrong risk decisions.
+prerequisites:
+  - QNT-02
+  - QNT-04
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Standard statistical texts: correlation vs causation. (Principles). [No
+      direct citation, widely known concept].
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+For example, a bank might observe that customers with many cellphone lines have higher default rates. This is a correlation. But is having multiple lines causing defaults? Likely not. A confounder like income or employment stability might cause both more phone lines and more default. If we ignorantly treat the phone lines variable as causal, we could erroneously deny credit to people with many phones, which is a mistake. 
+
+Statistics: we often measure correlation by Pearson’s r (for continuous), or contingency tables for categorical. But high correlation doesn’t prove one causes the other. Another example: when credit scores rose during a boom, did positive sentiment cause better credit history, or did third factors (like unemployment falling) cause both? Without random experimentation, we cannot be sure. 
+
+**Confounding** is common in observational credit data. Suppose a score model finds married customers default less. Marriage isn’t causing lower defaults per se; perhaps married people are older with steadier jobs (confounders). To claim causation, one needs to control for confounders or use techniques like propensity scoring. 
+
+Practically, risk analysts should: ask if a predictive factor makes economic sense as a cause, and check if unobserved factors could be driving both. If unsure, treat correlated predictors with caution. For example, IGNORED: days-with-current-employer might correlate with income; controlling for both avoids blaming employer tenure incorrectly. 
+
+&lt;Flow&gt;
+In actual data, observation shows:
+   YearsEmployed ↑  -&amp;gt;  DefaultRate ↓
+   But: YearsEmployed and Income are correlated (r=0.6).
+ Confounder: Income
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Always question causality claims in credit models. Use domain knowledge and control for confounders to avoid spurious attributions. No matter how strong a correlation, it may be caused by hidden variables.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Automatically assuming that a correlated predictor is causal. E.g., “Since region correlates with default, region causes default.” In reality, region may proxy economic conditions (the real cause). Mis-specifying this can lead to misdirected interventions.
+</Trap>
+
+<NeverConfuse a="Correlation" b="Causation">
+**Correlation** — statistical association between two variables’ values (e.g. high debt ratio and defaults).  
+---  
+**Causation** — one variable directly influences the other.  
+They are not the same: correlation is necessary but not sufficient for causation. Always consider other variables that might explain the link.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The principle that correlation is not causation is fundamental to statistics. However, regulatory scrutiny may vary: e.g. fair lending laws (in US/EU) demand checking that models do not inadvertently use proxies for protected attributes (a form of confounding fairness).
+</Rule>
+
+<Recall
+  q="In a study, zip code is correlated with default risk. Why not simply include zip code in a scoring model?"
+  a="Zip code might correlate due to local economic conditions or even protected class proxies. It doesn’t cause default; using it could violate fair lending rules. Instead, we seek underlying risk drivers (like local unemployment) to maintain compliance."
+/>
+
+<Recall
+  q="How can we test if a variable’s effect is confounded?"
+  a="Include potential confounders in a regression model. If the variable’s effect vanishes when adding another factor (e.g. adding income removes the effect of employment tenure), that suggests confounding."
+/>

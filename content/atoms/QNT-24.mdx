@@ -1,0 +1,80 @@
+---
+id: QNT-24
+title: Data Leakage
+type: concept
+domain: quantitative
+subdomain: validation-leakage-and-governance
+one_screen: >-
+  Data leakage happens when a model’s training data inadvertently includes
+  information that would not be available in practice at the time of prediction.
+  This gives misleadingly good performance on training and validation, but fails
+  in production. In credit, a common mistake is using future borrower
+  information (like a snapshot of end-of-year balance) to predict a loan’s early
+  default – this leaks the outcome into features.
+prerequisites:
+  - QNT-23
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Kaufman, S., Rosset, S., Perlich, C., & Stitelman, O., *Leakage in data
+      mining: Formulation, detection, and avoidance*, KDD (2012).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Lecun, Y., *Preventing Data Leakage in Model Training*, credit industry
+      examples (2019) [unpublished]. (General principle: ensure time alignment.)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+There are two main leakage types: *target leakage*, where predictors include the outcome itself (or its proxies), and *train-test contamination*, where observations in the test period influence training (e.g. shuffling time series). For example, if we include “*ever defaulted*” status (logged after six months) as an input to predict one-year default, the model essentially sees part of the answer. Another example: mixing borrowers from 2019 (test year) into 2018 training can let the model indirectly learn future trends. 
+
+To avoid leakage, ensure each feature is computable from information available at model decision time. In credit scoring, use only origination attributes or lagged variables. Rigorously align time: treat all data as of a cutoff date. For instance, if predicting default within a year, use only features known at loan issuance. Data pipelines should separate historical features from label construction. Finally, always evaluate on truly unseen data (see QNT-23) – a sharp drop from training to test performance is a red flag for leakage or overfitting. 
+
+&lt;Flow&gt;
++--------------+       +---------------+
+| Raw Dataset  |       | Good Practice |
++------+-------+       +-------+-------+
+       |                       |
+Select features (no future info)   Train/test split by time
+       |                       |
+       v                       v
++--------------+       +---------------+
+| Model Build  |       | Prediction    |
++--------------+       +---------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Never include any variable that cannot be known at scoring time. Ask, “Would this feature be available in real-time?” If not, omit or shift it.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Including any proxy of the target. For example, “balance after 1 year” to predict default in that year looks innocent but is label leakage. Also beware of merging data incorrectly (e.g. including post-default loan closure status).
+</Trap>
+
+<NeverConfuse a="Data leakage" b="Overfitting">
+**Data leakage** — model sees future or target-related information in training, giving overly optimistic accuracy.  
+---  
+**Overfitting** — model is too complex for the signal in training data (but without artificial leaks). Both can cause test drop-offs, but leakage violates causality.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All jurisdictions expect no data leakage in model development. Regulatory model validation (e.g. AIRB guidance) specifically checks that feature timing is correct.
+</Rule>
+
+<Recall
+  q="Give a credit example of data leakage."
+  a="Using a borrower’s credit score computed after loan disbursement or a balance at year-end (when predicting origination default risk) leaks future information into training, inflating accuracy."
+/>
+
+<Recall
+  q="How can you spot leakage?"
+  a="An unusually high training score and a large performance drop on test can indicate leakage. Also, check if any feature is derived from the outcome (even indirectly)."
+/>

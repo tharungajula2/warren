@@ -1,0 +1,64 @@
+---
+id: QNT-12
+title: 'Regularisation: Ridge and Lasso'
+type: mechanism
+domain: quantitative
+subdomain: regression-and-scorecard-modelling
+one_screen: >-
+  *Regularisation* adds a penalty to regression coefficients to prevent
+  overfitting, especially when many predictors or multicollinearity exist.
+  **Ridge (L2)** adds sum of squared coefficients to loss, shrinking them
+  towards zero. **Lasso (L1)** adds sum of absolute values, shrinking and
+  possibly zeroing some coefficients. Which to use depends on goals: ridge keeps
+  all features (shrunk), lasso selects a subset (drives some to zero).
+prerequisites:
+  - QNT-08
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Medium article (Darshan D. Bhokare), summarizing ridge (L2) vs lasso (L1).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+In credit modeling, regularisation can improve out-of-sample PD predictions. Ridge (L2) is preferred when many correlated predictors exist (it stabilizes coefficients). Lasso (L1) is useful when you suspect only a few variables matter; it effectively does variable selection by zeroing weaker ones. Often, a hybrid Elastic Net (combination of L1+L2) is used if there’s grouping of correlated features. 
+
+For example, in a model with dozens of socioeconomic variables (many correlated), ridge would shrink all, reducing variance. If you have hundreds of transactional features (most irrelevant), lasso would pick a smaller subset for simplicity. 
+
+**Interpretation:** With ridge, coefficients are biased smaller but all remain in model. With lasso, coefficients above threshold become zero (variable dropped). In credit, we must be cautious: lasso’s dropping may run into regulatory issues if dropping variables changes model logic. Usually, final modeler inspects which features lasso kept. 
+
+**Implementation:** Choose λ (penalty weight) by cross-validation. Larger λ = stronger penalty (smaller coefficients). Compare performance on validation: if too high, model underfits. The permanent rule: regularise to combat overfitting, but always re-express final model in original terms. For some models, especially under IRB, explicit variable reduction might require re-approval.
+
+<Rule label="PERMANENT RULE">
+Ridge (L2) for many small signals or multicollinearity; Lasso (L1) when you want feature selection (fewer predictors). Always cross-validate to pick the penalty strength.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Blindly using lasso and trusting it removed only noise. It may drop a variable important in reality but slightly less statistically strong. Likewise, too much regularisation (large λ) biases coefficients heavily, harming all predictions. Always check business sense of retained features.
+</Trap>
+
+<NeverConfuse a="Ridge (L2)" b="Lasso (L1)">
+**Ridge (L2)** — penalizes square of coefficients; shrinks but keeps variables.  
+---  
+**Lasso (L1)** — penalizes absolute values; can set some coefficients to zero (feature selection). Both add a term λ∑β² or λ∑|β| respectively to loss.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Regularisation is a mathematical technique, not regulated differently. However, some regulatory models may ban black-box tech; explicitly mention if lasso removes key explanatory variables, the resulting model still needs justification of omitted factors.
+</Rule>
+
+<Recall
+  q="How to choose between ridge and lasso?"
+  a="If you believe many features contribute a bit, use ridge (shrinks all). If you think few are truly relevant, use lasso (drops extras). If uncertain, cross-validate both."
+/>
+
+<Recall
+  q="Why not always use lasso for simplicity?"
+  a="In presence of multicollinearity, lasso arbitrarily picks one of correlated variables, which may destabilize business rationale. Also, regulatory documentation often needs a consistent set of variables, so arbitrarily dropping can complicate interpretation."
+/>

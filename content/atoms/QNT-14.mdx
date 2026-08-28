@@ -1,0 +1,90 @@
+---
+id: QNT-14
+title: Random Forest
+type: mechanism
+domain: quantitative
+subdomain: machine-learning-and-explainability
+one_screen: >-
+  A random forest constructs an ensemble of decision trees on bootstrapped
+  samples of the data and averages (or votes on) their predictions. This
+  “bagging” approach greatly reduces a single tree’s variance, making the model
+  more stable and accurate, especially on noisy credit data.
+prerequisites:
+  - QNT-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Breiman, L., *Random Forests*, Machine Learning 45(1):5–32 (2001).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Cornell CS4780, *Bagging and Random Forest lecture notes*, by Jason Ren et
+      al. (2022)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 28 Aug
+import_source: 12_QNT_statistics_ml.md
+---
+Random forests apply the bootstrap-aggregation (bagging) technique to decision trees. We draw \(m\) random samples (with replacement) from the training data, train a separate tree on each sample, then combine the results. In classification (e.g. default/no default) the forest takes a majority vote; in regression (e.g. loss given default) it averages outputs. Additionally, at each split, a random forest only considers a random subset of features (e.g. \(\sqrt&#123;p&#125;\) of \(p\) total) to decide the split. This feature subsampling de-correlates the trees, further reducing variance. The ensemble is thus robust: even if some trees overfit their sample, the majority smooths out idiosyncrasies. The model requires minimal preprocessing: features of different scales or missing values are handled inherently by trees. 
+
+In a credit scoring example, we might build 100 trees on different bootstrap samples of loan records. Each tree might split on various borrower attributes. The forest’s predicted probability of default is the average of all trees’ PD outputs. This typically outperforms one tree, as shown in practice: adding more trees (up to a point) usually lowers test error. Importantly, random forests can provide a measure of *out-of-bag* error (error on samples not included in each bootstrap), which serves as an internal validation.  
+
+&lt;Flow&gt;
++------------------+
+            | Training Data    |
+            +---------+--------+
+                      |
+    +-----------------+-----------------+
+    |                 |                 |
++-------+         +-------+         +-------+
+|Sample1|         |Sample2|  ...    |SampleM|
++---+---+         +---+---+         +---+---+
+    |                 |                 |
+    v                 v                 v
++-------+         +-------+         +-------+
+|Tree 1 |         |Tree 2 |  ...    |Tree M |
++-------+         +-------+         +-------+
+    |                 |                 |
+    v                 v                 v
+ Pred1             Pred2             PredM
+    \       ...    /     ...      /       
+     \            /             /        
+      +------------------------+         
+      | Aggregate (avg or vote)|       
+      +------------------------+       
+                 |
+            Final Prediction
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A random forest uses *all* trees at inference, so the final prediction is an average (regression) or majority vote (classification) of many decorrelated trees. This ensemble effect dramatically lowers variance versus one tree.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming a random forest cannot overfit. In practice, if trees are too deep or features too many, forests can still overfit noise. Also, forests reduce variance but do little to correct bias: if no tree can capture an effect, the ensemble won’t either.
+</Trap>
+
+<NeverConfuse a="Random forest" b="Gradient boosting">
+**Random forest** — an ensemble that builds many trees on random samples (bagging) and aggregates their outputs for robustness.  
+---  
+**Gradient boosting** — an ensemble built sequentially, where each tree is trained to correct the residuals of the prior ensemble. Unlike a random forest’s parallel bagging, boosting trains trees one after another.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Random forests are a universal statistical technique with no jurisdiction-specific differences.
+</Rule>
+
+<Recall
+  q="How does feature subsampling improve a random forest?"
+  a="By choosing a random subset of features at each split, trees become more diverse (less correlated), which enhances variance reduction when the trees are aggregated."
+/>
+
+<Recall
+  q="What is “out-of-bag” error in a random forest?"
+  a="It is the average prediction error on each training sample using only the trees that did *not* include that sample in their bootstrap. It provides a built-in validation metric without separate hold-out data."
+/>

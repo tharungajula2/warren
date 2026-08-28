@@ -136,12 +136,17 @@ for (const seg of rawSegments) {
     } else if (line.startsWith("**Prerequisites:**")) {
       const pStr = line.replace("**Prerequisites:**", "").trim();
       if (pStr.toLowerCase() !== "none" && pStr !== "") {
-        prereqs = pStr.split(",").map((s) => s.trim()).filter(Boolean);
+        prereqs = pStr
+          .split(",")
+          .map((s) => s.replace(/\s*\([^)]*\)/g, "").trim())
+          .filter(Boolean);
       }
       metaEndLineIdx = Math.max(metaEndLineIdx, i);
     } else if (line.startsWith("**Jurisdictions:**")) {
       const jStr = line.replace("**Jurisdictions:**", "").trim();
-      if (jStr.toLowerCase() !== "none" && jStr !== "") {
+      if (jStr.toLowerCase().startsWith("no delta") || jStr.toLowerCase() === "universal") {
+        jurisdictions = ["universal"];
+      } else if (jStr.toLowerCase() !== "none" && jStr !== "") {
         jurisdictions = jStr.split(",").map((s) => s.trim()).filter(Boolean);
       }
       metaEndLineIdx = Math.max(metaEndLineIdx, i);
@@ -475,6 +480,14 @@ function inferSubdomain(atomId) {
     return "valuation-control-and-jurisdictions";
   }
 
+  if (prefix === "QNT") {
+    if (num <= 7) return "statistical-foundations-and-sampling";
+    if (num <= 12) return "regression-and-scorecard-modelling";
+    if (num <= 17) return "machine-learning-and-explainability";
+    if (num <= 22) return "time-series-and-forecasting";
+    return "validation-leakage-and-governance";
+  }
+
   return "unsorted";
 }
 
@@ -520,7 +533,7 @@ function inferSubdomain(atomId) {
   }
 
   // First-person check (avoid Roman numerals like Title I, Part I, Tier I)
-  const firstPersonMatch = cleanText.match(/\b(I'm|I've|I'll|my|our|me|we|myself|ourself)\b|\bI\s+(?:am|have|was|had|think|feel|believe|built|made|wrote|created|modelled|found)\b/i);
+  const firstPersonMatch = cleanText.match(/\b(I'm|I've|I'll|my|our|me|myself|ourself)\b|\bI\s+(?:am|have|was|had|think|feel|believe|built|made|wrote|created|modelled|found)\b|\bwe\s+(?:have|are|will|can|see|find|note|use|defined|discussed|call|say)\b/i);
   if (firstPersonMatch) {
     validationWarnings.push(`Atom "${id}" contains first-person language ("${firstPersonMatch[0]}").`);
   }

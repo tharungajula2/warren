@@ -1,0 +1,78 @@
+---
+id: QNT-08
+title: Linear Regression for Credit Scoring
+type: mechanism
+domain: quantitative
+subdomain: regression-and-scorecard-modelling
+one_screen: >-
+  Linear regression models a continuous outcome (like credit line utilization or
+  loss amount) as a weighted sum of predictors. Key assumptions include
+  linearity, independent errors, and homoscedasticity. Coefficients indicate the
+  average change in outcome per unit change in predictor, holding others
+  constant.
+prerequisites:
+  - QNT-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Standard econometrics textbooks (normality, homoscedasticity). (General
+      knowledge; no single citation).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 12_QNT_statistics_ml.md
+---
+In regression, we fit a model `y = β₀ + β₁x₁ + ... + βₖxₖ + ε`. For credit analytics, `y` might be a continuous risk measure (e.g. loss given default, log of balance, etc.), and `x` variables could be borrower attributes. The fitting (ordinary least squares) finds β’s minimizing squared residuals. 
+
+**Assumptions:** (1) Linear relationship: each predictor adds/subtracts constant effect on mean `y`; (2) Independent errors: each loan’s deviation from model is not autocorrelated; (3) Homoscedasticity: error variance constant across `x` values; (4) Errors ~ Normal (for inference). In practice, check residual plots to validate these. If heteroscedastic, use robust SE or transform y (e.g. log).
+
+**Interpretation:** A coefficient β indicates that a one-unit increase in that predictor multiplies the outcome by β on the original scale (if y is raw), or adds β to log(y) if log-linear model. E.g., if modelling log-default-loss, `exp(β₁)` approximates multiplicative effect. Always contextualize: e.g. if `x` is credit score, β negative means higher score → lower loss on average.
+
+**Example:** Suppose modeling log(outstanding balance) = α + β*(age) + γ*(income) + ε. If β=0.01, each additional year of age raises balance by ~1% (on average). This could be plausible if older borrowers tend to have larger mortgages.
+
+**Use in scoring:** Linear regression is less common for binary outcomes (default/no default) – that is logistic (QNT-10). However, linear models help in predicting continuous risks (like loss given default or exposure). They are also a building block for scorecards (though credit scorecards often use logistic or point systems).
+
+**Validation:** Check R² (fit quality) but more importantly check predictions vs holdout data. For credit risk, regulators expect residual errors to be uncorrelated with key factors (no omitted variables with pattern).
+
+&lt;Flow&gt;
+Age     Income    ...  
+       |      |      
++------+------+
+|      |      |
+v      v      v
+Regression model: log(Loss) = β0 + β1*Age + β2*Income + ε
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Always verify regression assumptions. In credit context, it’s common to transform skewed variables (e.g. take log of balances) so that residuals are more normal/homoscedastic.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Interpreting linear model as implying causality. E.g., saying “higher X causes higher risk” just from regression correlation is incorrect without domain insight (see QNT-06). Also, forgetting to check residuals: a high R² does not guarantee unbiased estimates if assumptions fail.
+</Trap>
+
+<NeverConfuse a="Slope coefficient (β)" b="Correlation coefficient (r)">
+**Slope coefficient (β)** — change in the response per unit x, ceteris paribus.  
+---  
+**Correlation coefficient (r)** — measures linear association between two variables, but is not a regression parameter. High `r` does not directly tell you the slope; regression gives β that predicts y from x.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Regression math is universal. However, regulators (like RBI guidelines) may require special considerations (e.g. using macro variables for IFRS9 forecasting models), but that’s about inputs, not the regression method itself.
+</Rule>
+
+<Recall
+  q="Why log-transform a skewed target in credit regression?"
+  a="To stabilize variance (homoscedasticity) and make residuals more normal. E.g. loan balances are right-skewed, so modeling log(balance) yields better linear-fit behavior."
+/>
+
+<Recall
+  q="What does β=−0.05 for a score variable mean in regression of log(loss)?"
+  a="A one-point increase in score reduces log(loss) by 0.05, i.e. each point lower score multiplies expected loss by e^(−0.05) ≈ 0.95 (5% lower)."
+/>
