@@ -1,0 +1,61 @@
+---
+id: CCR-07
+title: Margin Period of Risk & Related Terms
+type: concept
+domain: counterparty-risk
+subdomain: netting-margin-and-collateral
+one_screen: >-
+  The margin period of risk (MPR) is the time assumed between a counterparty’s
+  default and the liquidation or hedging of the position. It determines how much
+  additional future price movement risk the initial margin must cover.
+  Regulators often assume 10 days or more for the MPR.
+prerequisites:
+  - CCR-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Basel Committee, “SA-CCR” (2014) (assumes margin period in calculations).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: ISDA/ industry literature on CSAs and MPR.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+When a counterparty defaults, trades do not immediately settle; the surviving party needs time to revalue or replace trades. The MPR covers this lag. For example, if a bank assumes a 10-day MPR, it calculates potential exposure assuming markets move during those 10 days. IM posted is meant to cover losses that could arise in that period. A longer MPR means greater PFE (since more days of potential move), so higher IM.
+
+Other collateral terms: **Threshold** is the uncollateralized exposure allowed (e.g. $0 for major banks), **Minimum Transfer Amount (MTA)** is a floor below which no margin is transferred, and **Independent Amount (IA)** is an extra fixed IM buffer. These terms are specified in the CSA. A bank must model the MPR correctly; underestimating it can leave exposure when collateral is stale.
+
+<Rule label="PERMANENT RULE">
+When computing PFE (in SA-CCR or IMM), include an appropriate margin period of risk. Regulators mandate conservative MPR assumptions (often 10–20 days for non-cleared).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Forgetting that collateral calls aren’t instantaneous. A default may occur during periods when collateral isn’t updated (e.g. weekend or holiday), so exposure can grow.
+</Trap>
+
+<NeverConfuse a="Margin Period of Risk (MPR)" b="Maturity (T)">
+**Margin Period of Risk (MPR)** — The assumed time to close out positions after default, used in PFE calculation.  
+---  
+**Maturity (T)** — The time until a trade’s normal expiration. These get mixed up but MPR is usually much shorter than T.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Basel SA-CCR and IMM define MPR parameters; implementations are consistent across major regulators.
+</Rule>
+
+<Recall
+  q="What is the margin period of risk?"
+  a="The assumed delay (e.g. 10 days) between counterparty default and closing out positions; used to calculate PFE."
+/>
+
+<Recall
+  q="How do thresholds and MTA affect exposure?"
+  a="Thresholds allow some uncollateralized exposure, and MTAs mean small exposures may not be margined, increasing potential exposure."
+/>

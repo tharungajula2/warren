@@ -459,6 +459,15 @@ function inferSubdomain(atomId) {
     return "documentation-collateral-book";
   }
 
+  if (prefix === "CCR") {
+    if (num <= 4) return "exposure-and-wrong-way-risk";
+    if (num <= 9) return "netting-margin-and-collateral";
+    if (num <= 13) return "central-clearing-and-ccp-risk";
+    if (num <= 16) return "sa-ccr-and-imm-approaches";
+    if (num <= 21) return "xva-and-cva-capital";
+    return "settlement-and-jurisdictions";
+  }
+
   return "unsorted";
 }
 

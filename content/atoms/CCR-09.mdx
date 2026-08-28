@@ -1,0 +1,62 @@
+---
+id: CCR-09
+title: Uncleared Margin Rules
+type: mechanism
+domain: counterparty-risk
+subdomain: netting-margin-and-collateral
+one_screen: >-
+  The global “Uncleared Margin Rules” (UMR) require banks and other dealers to
+  post both variation and initial margin on non-centrally-cleared OTC
+  derivatives. Phased implementation began in 2016, with the last group of
+  counterparties complying by 2022. UMR ensure broad use of VM/IM even for
+  bilateral trades.
+prerequisites:
+  - CCR-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'CME Group, “Navigating Uncleared Margin Rules” (2020) (timeline of UMR).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: BCBS-IOSCO margin requirements standards (2015).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+UMR (BCBS-IOSCO) mandated that each phase, based on aggregate notional, requires IM for entities above a threshold. The key goal is to mitigate tail risk by ensuring collateral is posted on nearly all large OTC trades. Before UMR, many bilateral trades had no margin except VM for regulated dealers; now even unregistered entities might need to post VM/IM when counterparties are in scope.  
+
+Under UMR, variation margin was required from 2016 for the largest dealers, and initial margin was phased in by 2022 for basically all participants with US$50bn+ notional. By 2022, most major dealers globally must exchange VM (daily) and IM (initial margin) for new and legacy trades. This rule is enforceable via regulations in each jurisdiction (e.g. US final rule, EU regulation, etc.).
+
+<Rule label="PERMANENT RULE">
+Global margining standards under UMR must be incorporated. Failing to post required margin can lead to capital add-ons or regulatory penalties.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Overlooking smaller counterparties. Even many hedge funds, asset managers, and corporates are now subject to initial margin requirements once thresholds were reduced in phase 6.
+</Trap>
+
+<NeverConfuse a="Uncleared Margin Rules (UMR)" b="Clearinghouse Margin">
+**Uncleared Margin Rules (UMR)** — Global regulatory requirements for posting IM/VM on non-cleared derivatives.  
+---  
+**Clearinghouse Margin** — Collateral required by a CCP for cleared trades. UMR applies to bilateral trades only.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** UMR are a global BCBS-IOSCO standard; all G20 jurisdictions have rules implementing the schedule.
+</Rule>
+
+<Recall
+  q="When did UMR become fully effective?"
+  a="By September 2022 (Phase 6) for initial margin, and 2016 for variation margin."
+/>
+
+<Recall
+  q="Which trades require margin under UMR?"
+  a="All non-centrally-cleared OTC derivatives between entities above the regulatory thresholds. Cleared trades are exempt (as CCP imposes its own margin)."
+/>

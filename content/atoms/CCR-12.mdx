@@ -1,0 +1,64 @@
+---
+id: CCR-12
+title: Client Clearing Structures
+type: mechanism
+domain: counterparty-risk
+subdomain: central-clearing-and-ccp-risk
+one_screen: >-
+  When clients clear through a clearing member, there are typically two models:
+  omnibus and segregated. In omnibus clearing, all client positions are pooled
+  under the member’s account; the member’s risk to the CCP is net of all its
+  clients. In segregated clearing, each client’s positions are separately
+  collateralized, isolating them in case the member defaults.
+prerequisites:
+  - CCR-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      BIS/CPMI-IOSCO Principles for financial market infrastructures (client
+      clearing guidelines).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'LCH, CME clearing rulebooks (public summaries).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+In the omnibus model, a client’s margin might be held with other clients’, so if a client defaults or the member goes under, there can be confusion over entitlements (to be unwound by legal agreement). Segregated models (e.g. client-specific accounts) protect clients’ collateral from each other. Regulators often require at least partial segregation. If a clearing member defaults, segregated client positions can be ported or liquidated without affecting other clients; omnibus positions require more coordination.  
+
+Clearing members must report client exposures to regulators and meet margin calls including client trades. The client still faces the clearing member credit risk unless the clearing is fully segregated (in which the client’s only counterparty is the CCP, effectively). Capital rules often treat client-cleared positions differently from house positions (e.g. risk weights, recognition of client collateral).
+
+<Rule label="PERMANENT RULE">
+A clearing member must disclose and segregate client funds and trades as per CCP rules. Clients must be informed how their positions are held (omnibus vs segregated).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming client collateral fully covers client losses even if pooled with others. In omnibus accounts, one client’s losses can erode others’ assets.
+</Trap>
+
+<NeverConfuse a="House Account" b="Client Account">
+**House Account** — The clearing member’s own trading account with the CCP.  
+---  
+**Client Account** — The account (omnibus or segregated) holding client trades.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Most regulators require client fund protection but allow either omnibus or segregated models, with slight preference for segregation (e.g. Dodd-Frank requires segregation for many customer positions).
+</Rule>
+
+<Recall
+  q="In clearing, what does “porting” mean?"
+  a="Transferring clients’ open positions from one clearing member to another in an orderly default, enabled by segregation and client agreements."
+/>
+
+<Recall
+  q="How does omnibus clearing affect CCR?"
+  a="The clearing member’s exposure to the CCP is the net of its house and all client positions. Clients’ CCR to the CCP is indirect through the member."
+/>

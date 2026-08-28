@@ -1,0 +1,82 @@
+---
+id: CCR-14
+title: SA-CCR (Standardized Approach to CCR)
+type: concept
+domain: counterparty-risk
+subdomain: sa-ccr-and-imm-approaches
+one_screen: >-
+  SA-CCR is the Basel III capital approach for measuring CCR exposure. It
+  computes Exposure at Default (EAD) as **EAD = α × (Replacement Cost +
+  Potential Future Exposure)**, with α=1.4. Replacement Cost (RC) is the
+  positive current value net of haircut collateral. Potential Future Exposure
+  (PFE) is derived from standardized add-on factors by asset class, aggregated
+  by hedging sets and offset by correlation, then net of initial margin (subject
+  to a small 5% floor). This approach accounts for margining, netting, asset
+  classes, and uses a higher multiplier for safety.
+prerequisites:
+  - CCR-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Basel Committee, “SA-CCR” (BCBS 279, 2014) (formal definition of EAD
+      components).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Wikipedia “Standardized approach (CCR)” (summary of formula with α=1.4).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: US Fed press release (Nov 2019) (mentions SA-CCR adoption timeline).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+SA-CCR’s formula: **EAD = 1.4 × (RC + PFE)**. For example, RC = max(MTM, 0) – collateral. PFE add-ons use supervisory notional * factors (similar to old CEM add-ons but more refined). Trades are grouped by asset class and hedging sets to allow some offset. Initial margin reduces PFE but only up to 95% (the multiplier means at least 5% of IM benefit is ignored, ensuring some capital).  
+
+SA-CCR replaced the older CEM and SM and was calibrated to be risk-sensitive (accounting for netting, hedges, margin). It avoids banks’ using bespoke models (except IMM). SA-CCR became effective 2017 globally (though actual regulatory implementation varied by jurisdiction).  
+
+&lt;Flow&gt;
++-------------------------+
+    | EAD = 1.4 × (RC + PFE)  |
+    +-------------------------+
+         /             \
+     +--------+     +--------+
+     |  RC    |     |  PFE   |
+     +--------+     +--------+
+     | Current|     | Add-on |
+     | exposure (MTM)|   (std. potential exposure) |
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+EAD under SA-CCR always uses α=1.4 as a conservatism buffer. Replacement Cost cannot be negative (floor at zero).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring netting sets or collateral: SA-CCR explicitly nets trades and collaterals first. Also, forgetting to use correct supervisory factors for add-ons by product type and maturity.
+</Trap>
+
+<NeverConfuse a="Replacement Cost (RC)" b="Potential Future Exposure (PFE)">
+**Replacement Cost (RC)** — Current exposure (MTM) minus collateral.  
+---  
+**Potential Future Exposure (PFE)** — The supervisory-derived add-on component for future risk. RC is “today’s” risk, PFE is “future” risk.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Basel SA-CCR formula is standard. Jurisdictions implement it verbatim (e.g. EU CRR, UK PRA rules, Fed final rule).
+</Rule>
+
+<Recall
+  q="What are the two components of SA-CCR’s EAD formula?"
+  a="Replacement Cost (current positive value net of collateral) and Potential Future Exposure (standardized add-ons)."
+/>
+
+<Recall
+  q="Why is α set to 1.4?"
+  a="As a safety buffer to cover unexpected volatility beyond the add-on calculation."
+/>

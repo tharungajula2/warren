@@ -1,0 +1,69 @@
+---
+id: CCR-06
+title: Collateral and Margin
+type: mechanism
+domain: counterparty-risk
+subdomain: netting-margin-and-collateral
+one_screen: >-
+  Collateral is a key mitigation tool for CCR. Variation margin (VM) and initial
+  margin (IM) are two collateral types. VM is exchanged to cover current
+  mark-to-market exposure daily, protecting against immediate losses. IM is
+  posted upfront or periodically to cover potential future exposure over a
+  margin period of risk.
+prerequisites:
+  - CCR-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Federal Reserve et al., “Interagency Guidance on CCR” (2010) (high-level
+      risk management).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'CME Group, “Uncleared Margin Rules” (2020) (timeline of VM/IM phases).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: ISDA publications on collateral.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+Under a margin agreement (CSA), counterparties exchange VM whenever the contract’s market value changes. VM ensures that current exposures are collateralized. Initial margin (sometimes called independent amount) is additional collateral that covers the risk during the margin period of risk (the time to close out trades after default). Thus IM protects against volatile moves that occur between margin calls.  
+
+Collateral agreements may include **thresholds** (amounts below which no VM is exchanged) and **minimum transfer amounts** (small amounts exempt). These can leave small exposures uncollateralized. IM is typically applied symmetrically (both parties must post if in scope). Once posted, collateral is often rehypothecated (re-used) by the receiver, which can introduce risk if that receiver fails.
+
+Margin requirements for non-cleared trades (BCBS-IOSCO rules) phased in from 2016–2022; by 2022 most large participants must exchange both VM and IM on bilateral trades. These global rules standardize collateral for non-centrally-cleared derivatives. Variation margin is typically transferred daily, while initial margin amounts depend on regulatory formulae or models.
+
+<Rule label="PERMANENT RULE">
+Collateral must be valued daily, and variation margin called frequently (often daily). Collateral credit quality should be high (e.g. cash, sovereign debt) to avoid further risk.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating posted collateral as risk-free. If collateral is rehypothecated or volatile, it may not fully protect against loss. Also, assuming thresholds or IM exempt all risk.
+</Trap>
+
+<NeverConfuse a="Variation Margin (VM)" b="Initial Margin (IM)">
+**Variation Margin (VM)** — Collateral exchanged to cover current exposure (daily mark-to-market).  
+---  
+**Initial Margin (IM)** — Up-front collateral to cover potential future exposure over a margin period.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** BCBS-IOSCO margining standards apply globally for regulated participants. Some jurisdictions (e.g. India) are still using older models with updated add-on factors.
+</Rule>
+
+<Recall
+  q="What does variation margin cover?"
+  a="Variation margin covers the present mark-to-market exposure on a trade. It is exchanged as the trade’s value moves."
+/>
+
+<Recall
+  q="What does initial margin cover?"
+  a="Initial margin is collateral to cover possible exposure during the margin period of risk; it protects against future market moves once a counterparty has defaulted."
+/>

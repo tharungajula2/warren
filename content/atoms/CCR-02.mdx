@@ -1,0 +1,72 @@
+---
+id: CCR-02
+title: Current vs Potential Exposure
+type: concept
+domain: counterparty-risk
+subdomain: exposure-and-wrong-way-risk
+one_screen: >-
+  CCR measurement distinguishes between current exposure (replacement cost) and
+  potential future exposure. Current exposure is the positive mark-to-market
+  value of a trade today. Potential future exposure is an estimate of how much
+  the exposure could increase over time due to market movements, reflecting the
+  contract’s uncertainty.
+prerequisites:
+  - CCR-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Federal Reserve et al., “Interagency Guidance on CCR” (2010) (definitions
+      of expected exposure and PFE).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, BCBS 279 (2014) (SA-CCR uses RC +
+      PFE).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+Current exposure is simply the contract’s current market value (if it is positive to the bank). For example, if a bank has an interest rate swap that is in-the-money by $1 million, its current exposure is $1 million. Potential future exposure (PFE) represents a statistically high percentile of the future distribution of exposures. It accounts for volatility: even if current exposure is small, markets could move. PFE is computed using models or add-on factors to the notional. Together, current and potential exposures are used to calculate Expected Exposure (EE) and Expected Positive Exposure (EPE) profiles over the life of the contract.
+
+An exposure profile shows how exposure might evolve. Initially, current exposure starts at the trade date’s mark‑to‑market. Over time, without frequent cash settlement (as in uncollateralized trades), exposure can grow. Banks use either simulation or standardized add-ons to gauge PFE at future dates. Current and potential exposures are summed and multiplied by a buffer (alpha) in SA-CCR to get Exposure At Default (EAD).
+
+&lt;Flow&gt;
+Current Exposure (CE) = max(mark-to-market, 0)  
+Potential Future Exposure (PFE) = high-percentile of future exposure increase  
+EAD = 1.4 × (CE + PFE)   (under SA-CCR)
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+When measuring CCR, always include both current exposure (today’s value) and potential future exposure (possible increase).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Considering only current exposure (ignoring future volatility) will understate CCR. Conversely, overstating exposure by using notional without adjustments is also wrong.
+</Trap>
+
+<NeverConfuse a="Current Exposure" b="Potential Future Exposure (PFE)">
+**Current Exposure** — Today’s positive mark-to-market value.  
+---  
+**Potential Future Exposure (PFE)** — A modeled high-percentile future exposure. PFE is *not* the same as current exposure or an average; it is an estimate of future increase and is typically larger.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The concepts of current vs potential exposure are part of the Basel CCR framework and apply universally.
+</Rule>
+
+<Recall
+  q="What is current exposure?"
+  a="The current exposure is the replacement cost of a derivative: the mark‑to‑market value if positive (zero if negative)."
+/>
+
+<Recall
+  q="What is potential future exposure?"
+  a="PFE is a statistical estimate (often a percentile) of how much the exposure could increase over the remaining life of the trade due to market movements."
+/>

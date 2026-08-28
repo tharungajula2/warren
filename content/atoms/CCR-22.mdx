@@ -1,0 +1,63 @@
+---
+id: CCR-22
+title: Settlement vs Pre-Settlement Risk
+type: concept
+domain: counterparty-risk
+subdomain: settlement-and-jurisdictions
+one_screen: >-
+  Pre-settlement risk is the counterparty credit risk during the life of a trade
+  (as described above). Settlement risk (often called Herstatt risk in FX) is
+  the risk that one party pays while the other does not at settlement time,
+  usually due to timing differences. For instance, in an FX trade across time
+  zones, a bank may deliver EUR but not yet receive USD if the counterparty
+  fails.
+prerequisites:
+  - CCR-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Dirk Bullmann, “FX settlement risk: to PvP or not to PvP” (CLS, 2023).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: FX Global Code (2017) on PvP recommendations.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+Herstatt risk famously arose when a German bank failed mid-day, causing FX payments to be one-sided. To mitigate settlement risk in FX, most participants now use payment-versus-payment (PvP) systems like CLS, which ensure the final transfer of one currency occurs only if the other currency’s payment is finalized. PvP is mandated or recommended for major FX pairs. Settlement risk can also occur in securities (delivery vs payment), but standard solutions exist (DVP settlement at exchanges or clearinghouses). 
+
+In short, pre-settlement (counterparty) risk is before trade completion; settlement risk is the risk of final exchange of value. Both affect CCR practice, but capital for CCR typically concerns pre-settlement exposures.
+
+<Rule label="PERMANENT RULE">
+Implement PvP (e.g. through CLS) for FX trades to eliminate Herstatt risk when possible. Use delivery-versus-payment (DVP) for securities.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Equating CCR capital with settlement risk. Regulators require CCR capital for trades that are bilateral; settlement risk is operational/liquidity risk, not included in CCR capital.
+</Trap>
+
+<NeverConfuse a="Pre-settlement risk (CCR)" b="Settlement risk (Herstatt)">
+**Pre-settlement risk (CCR)** — Counterparty default risk before and up to settlement of cash flows.  
+---  
+**Settlement risk (Herstatt)** — Risk of loss due to one party failing to make payment at settlement time (e.g. FX PvP risk).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Settlement risk management is driven by market infrastructure (CLS, clearinghouses). Basel mandates PvP where available. Regulatory capital for settlement risk is not separate; it is managed via operational standards.
+</Rule>
+
+<Recall
+  q="What is Herstatt risk?"
+  a="FX settlement risk where one currency leg is paid but the other currency’s payment is not yet received, leading to a possible loss."
+/>
+
+<Recall
+  q="How does CLS mitigate settlement risk?"
+  a="CLS offers a PvP service: it settles two currency legs simultaneously so that one leg’s payment only occurs if the other does."
+/>

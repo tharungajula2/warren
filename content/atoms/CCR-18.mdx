@@ -1,0 +1,61 @@
+---
+id: CCR-18
+title: Credit Valuation Adjustment (CVA)
+type: concept
+domain: counterparty-risk
+subdomain: xva-and-cva-capital
+one_screen: >-
+  CVA is the adjustment to the fair value of a derivative portfolio reflecting
+  the counterparty’s credit risk. It is effectively the market value of expected
+  loss from counterparty default, similar to “credit spread” on the portfolio.
+  Banks include CVA in pricing and may hold hedges for it.
+prerequisites:
+  - CCR-17
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Federal Reserve et al., “Interagency Guidance” (definition of CVA).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: BCBS “CVA framework” (Basel III adjustments).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+Mathematically, CVA = ∑ (Discounted Expected Exposure × LGD × PD). It is the amount by which a portfolio’s value is marked down to price in default risk. Basel requires capital for CVA risk changes, and accounting rules require recognition of CVA in mark-to-market (e.g. IFRS 13). CVA exists because bilateral contracts would not otherwise price in default risk. 
+
+CVA is widely hedged using credit derivatives. Managing CVA involves modeling exposure profiles (EPE) and counterparty credit spreads. Market CVA desks track and capitalise CVA. After the financial crisis, regulators required explicit CVA capital requirements since CVA swings caused bank losses.
+
+<Rule label="PERMANENT RULE">
+Value derivatives portfolios including CVA to reflect counterparty risk, and hold capital for CVA volatility. CVA must be revalued as the counterparty’s credit quality changes.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring CVA in pricing or hedging. A bank that marks trades without CVA or hedging CVA can underprice risk and build uncapitalized positions.
+</Trap>
+
+<NeverConfuse a="CVA (Credit Valuation Adjustment)" b="DVA (Debit Valuation Adjustment)">
+**CVA (Credit Valuation Adjustment)** — Adjustment reflecting the counterparty’s credit risk in valuation.  
+---  
+**DVA (Debit Valuation Adjustment)** — Similar adjustment reflecting the bank’s own credit. CVA (debit to bank) and DVA (credit to bank) often confuse people (see next atom).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Basel and accounting standards (IFRS 13/ASC 820) recognize CVA. Some specific rules exist for which trades count in CVA (e.g. some sovereigns are exempt in standardized CVA formula).
+</Rule>
+
+<Recall
+  q="Why is CVA needed?"
+  a="CVA prices in the risk of counterparty default over the life of a derivative, which is not captured by the risk-free mark-to-market."
+/>
+
+<Recall
+  q="What factors affect CVA magnitude?"
+  a="Exposure profile (EE/EPE), counterparty probability of default (or CDS spread), and loss given default."
+/>

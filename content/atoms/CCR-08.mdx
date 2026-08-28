@@ -1,0 +1,61 @@
+---
+id: CCR-08
+title: Rehypothecation
+type: concept
+domain: counterparty-risk
+subdomain: netting-margin-and-collateral
+one_screen: >-
+  Rehypothecation is the practice where the collateral receiver re-uses
+  (re-pledges) the client’s collateral to fund its own activities. This can
+  create risk: if the receiver defaults, the original pledgor might not get full
+  collateral back.
+prerequisites:
+  - CCR-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Basel Committee, capital rules on collateral recognition.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: IOSCO-BCBS “Margin rules” (2015) on segregation (brief mention).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+Many counterparties allow rehypothecation of collateral (especially cash), effectively giving the collateral-receiver a lien on it. This can improve liquidity for dealers but introduces systemic risk. If the client counterparty defaults but its posted collateral is rehypothecated and then lost or seized, the client cannot reclaim it. As a result, regulators have restricted rehypothecation in some cases (e.g. segregated accounts), and banking regulations may require some client collateral be held in special segregated accounts.  
+
+Rehypothecation issues arose in past crises (e.g. 2008 Bear Stearns). Current guidelines encourage limiting rehypothecation or requiring full disclosure to clients. In CCR terms, rehypothecated collateral may not provide full protection: banks should consider the availability of collateral in stress (if collateral is encumbered elsewhere).
+
+<Rule label="PERMANENT RULE">
+Do not double-count rehypothecated collateral. Once collateral is rehypothecated, the receiving party’s obligation to return it remains, but the collateral may not be free to use for own risk.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming posted collateral is safe and available even if rehypothecated. In reality, if the receiving bank is insolvent, the collateral may be tied up.
+</Trap>
+
+<NeverConfuse a="Pledged Collateral" b="Rehypothecation">
+**Pledged Collateral** — Collateral a counterparty provides as security.  
+---  
+**Rehypothecation** — The reuse of pledged collateral by the receiver. These are not the same; rehypothecated collateral may be co-mingled with others’ assets.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Rules on rehypothecation may vary legally, but concept is global. Many jurisdictions allow limited rehypothecation under CSAs.
+</Rule>
+
+<Recall
+  q="What is rehypothecation risk?"
+  a="The risk that collateral you posted is re-used by the receiver and might be inaccessible if the receiver fails."
+/>
+
+<Recall
+  q="How can rehypothecation affect CCR?"
+  a="If collateral is rehypothecated, a defaulting counterparty’s pledged assets may not fully cover losses. Banks often limit or segregate client collateral."
+/>

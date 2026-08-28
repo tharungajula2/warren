@@ -1,0 +1,67 @@
+---
+id: CCR-24
+title: UK/EU Implementation
+type: reference
+domain: counterparty-risk
+subdomain: settlement-and-jurisdictions
+one_screen: >-
+  The UK and EU have adopted Basel CCR and CVA rules through their capital
+  regulations. The EU’s CRR3 (part of Basel 3.1 package) was agreed in late 2023
+  and takes effect Jan 1, 2025. It includes SA-CCR for calculating exposures and
+  the new standardized CVA capital approach. The UK’s PRA released draft
+  standards (PS17/23) on CCR/CVA, finalizing them for implementation by July
+  2025.
+prerequisites:
+  - CCR-14
+  - CCR-21
+jurisdictions:
+  - UK
+  - EU
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: UK PRA Policy Statement PS17/23 (Apr 2024).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: EU CRR3 Regulation (EU 2023/xxx) and EBA guidelines. (See press releases).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+In detail, EU CRR2 already implemented SA-CCR (from Jan 2023) and amended CVA rules. CRR3 (Basel 3.1) further updates CVA capital (transition Jan 2025) and keeps SA-CCR as is. The UK follows the same schedule: the PRA’s policy says Basel 3.1 reforms (CVA and margining) will be in force by mid-2025. Both jurisdictions require qualifying CCP (QCCP) treatment for exposures (EU and UK lists). They also follow the same definitions of EE/EPE, WWR, etc, as Basel.
+
+<Rule label="PERMANENT RULE">
+Use CRR or UK Prudential Regulation Authority rules for final figures in these jurisdictions. Generally, EU/UK text mirrors Basel with local choices (e.g. sovereign CVA exemptions in EU).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Forgetting conversion factors or treatment differences. For instance, EU CVA rules used to exempt certain sovereigns; UK may diverge post-Brexit.
+</Trap>
+
+<NeverConfuse a="CRR2/3 (EU)" b="UK PRA rules">
+**CRR2/3 (EU)** — European regulations implementing Basel (CRR3 is latest, full Basel 3.1).  
+---  
+**UK PRA rules** — UK’s onshore regs (PRA policy statements for Basel 3.1).
+</NeverConfuse>
+
+<Delta j="UK">
+— PRA announced Basel 3.1 implementation by July 2025, including CCR and CVA changes (reducing SA-CCR alpha to 1.0 for non-financials, transitional treatment).
+</Delta>
+
+<Delta j="EU">
+— CRR3 (Basel 3.1) adopted with application date Jan 1, 2025; CRR2 already moved banks to SA-CCR in 2023 and updated CVA.
+</Delta>
+
+<Recall
+  q="When did the UK plan to implement Basel 3.1 CCR/CVA rules?"
+  a="The PRA stated new rules will apply from 1 July 2025, with transitional arrangements to 2030."
+/>
+
+<Recall
+  q="Did the EU change SA-CCR under CRR3?"
+  a="No, CRR3 kept SA-CCR as is; changes mainly concerned CVA capital and market risk."
+/>

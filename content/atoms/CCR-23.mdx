@@ -1,0 +1,61 @@
+---
+id: CCR-23
+title: Basel Framework (Global Standard)
+type: reference
+domain: counterparty-risk
+subdomain: settlement-and-jurisdictions
+one_screen: >-
+  The Basel Committee’s published standards (Basel III, Basel 3.1, etc.) are the
+  definitive source for CCR methodologies and capital. Key texts include BCBS
+  279 (SA-CCR standard) and the Basel III Revised Framework for market risk/CVA.
+  These set the universal baseline for capital and definitions in all
+  jurisdictions.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, “The standardised approach for
+      measuring CCR exposures” (Mar 2014).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: BCBS “Credit Valuation Adjustment” final framework (2023).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 10_CCR_counterparty_credit_risk.md
+---
+For example, BCBS 279 (2014) finalized SA-CCR. Basel 3.1 (2023) updated CCR/CVA for capital (implemented by 2025 in many countries). Regulators in each jurisdiction (Fed, PRA, EBA, RBI) transposed these rules but cannot deviate from core calculations. Thus, for universal CCR concepts (like SA-CCR formula, CVA definitions, netting rules), citing the Basel text is authoritative.
+
+<Rule label="PERMANENT RULE">
+Always refer to the latest Basel Framework text for definitions and formulas of CCR metrics. National rules follow this text.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using outdated or local circulars instead of Basel standards for universal concepts.
+</Trap>
+
+<NeverConfuse a="Basel III Standards" b="Local Regulations">
+**Basel III Standards** — Internationally agreed rules by BCBS.  
+---  
+**Local Regulations** — Jurisdictional laws implementing Basel (may lag or add conservatism).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Basel standards themselves do not vary by country. Differences arise only in national adoption timetables or stricter add-ons, not in the core mathematics.
+</Rule>
+
+<Recall
+  q="Where can one find the detailed SA-CCR framework?"
+  a="In the Basel Committee’s document BCBS 279 (2014), now integrated into the consolidated Basel III Framework."
+/>
+
+<Recall
+  q="Does Basel say banks must use CEM?"
+  a="No. Basel III replaced CEM/SM with SA-CCR (BCBS 279) effective 2017."
+/>
