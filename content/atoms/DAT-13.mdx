@@ -1,0 +1,67 @@
+---
+id: DAT-13
+title: Data Quality Dimensions
+type: concept
+domain: risk-data
+subdomain: data-quality-and-governance
+one_screen: >-
+  Data quality is multi-dimensional. Key dimensions include **accuracy** (data
+  correctly reflects reality), **completeness** (no missing values),
+  **consistency** (data aligns across sources), **timeliness** (data is
+  up-to-date and available when needed), **validity** (data follows defined
+  formats and rules), and **uniqueness** (no duplicates).
+prerequisites:
+  - DAT-12
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Raw Knowledge blog, *Golden Source of Data* (2022).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+For regulatory reporting, all dimensions matter. For example, an asset balance must be accurate (matches the general ledger), complete (every balance is reported), valid (currency format, non-negative), and timely (as of the report date). Consistency ensures that if two reports reference the same exposure, they use the same amount. Defining these dimensions allows setting measurable targets: e.g. 99% of accounts must be filled (completeness threshold), or 100% of country codes must match ISO lists (validity). 
+
+Banks implement data quality frameworks that automate checks against these dimensions. Scorecards might flag any loans with null values (completeness) or duplicate customer IDs (uniqueness). Working these dimensions into BCBS 239 compliance means building controls for each: reconciliation for accuracy, data completeness reports, etc.
+
+&lt;Flow&gt;
+Data Quality Dimensions
++-----------+-----------+-----------+
+| Accuracy  | Timeliness| Consistency|
+| Completeness| Validity| Uniqueness|
++-----------+-----------+-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+All regulatory data must meet the necessary quality dimensions for its use. Missing or outdated key data invalidates a report.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Focusing on only one dimension (e.g. only completeness) while ignoring others (like not verifying that “complete” data is accurate).
+</Trap>
+
+<NeverConfuse a="Accuracy" b="Consistency">
+**Accuracy** — Data matches the true value or source system.  
+---  
+**Consistency** — Data is uniform across systems (e.g. same value for Customer ID in trading vs risk systems).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Data quality dimensions are agreed best practice in all jurisdictions; regulators expect rigorous checks regardless of country.
+</Rule>
+
+<Recall
+  q="List three dimensions of data quality."
+  a="Completeness, accuracy, timeliness (also consistency, validity, uniqueness)."
+/>
+
+<Recall
+  q="What does “validity” mean in data quality?"
+  a="Data conforms to defined formats or business rules (e.g. interest rate between 0–100%)."
+/>

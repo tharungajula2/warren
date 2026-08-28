@@ -1,0 +1,76 @@
+---
+id: DAT-10
+title: Metadata and Business Glossary
+type: concept
+domain: risk-data
+subdomain: architecture-and-lineage
+one_screen: >-
+  Metadata is “data about data” – information that defines and describes data
+  elements. A business glossary is a centralized catalog of business terms and
+  their definitions. Together, they ensure everyone has a common understanding
+  of data definitions.
+prerequisites:
+  - DAT-09
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'RBI Committee Report on Data Standardization, *Executive Summary* (2018).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+For example, a report might include a column “Non-Performing Asset Ratio.” Metadata would record that this is calculated as “Total NPA amount / Total advances” and has business unit “Retail Loans.” The business glossary would define “Non-Performing Asset” (e.g. a loan overdue &gt;90 days). Good metadata systems also track data source, format, and constraints for each field. 
+
+Under RBI guidance, banks are urged to use common taxonomies and sync metadata across systems. This means aligning internal definitions with external ones (e.g. RBI’s definition of NPA). A single business glossary prevents mismatches where one department uses one term differently from another. Both metadata and glossary entries should have clear ownership, and be updated when policies change. This is a cornerstone of data governance: without metadata, reports can’t be properly interpreted and controls on data validity are weak.
+
+&lt;Flow&gt;
++----------------------+
+| Business Glossary    |
++----------------------+
+| Term | Definition    |
+| NPA  | ...           |
+| PD   | ...           |
++----------------------+
+       |
+       v
++-----------------------------+
+| Metadata Repository         |
++-----------------------------+
+| Field | Source | Type | ... |
+| NPA_Amount | CoreBanking | Curr. | ... |
++-----------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+All regulatory and risk data fields must have definitions and metadata documented, linked to the official business glossary.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming everyone understands a term; failing to codify definitions causes inconsistent reporting and confusion.
+</Trap>
+
+<NeverConfuse a="Metadata" b="Business glossary">
+**Metadata** — Details about data fields (type, format, source, lineage).  
+---  
+**Business glossary** — A dictionary of business terms with plain-language definitions (bridges business and technical meaning).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Standardizing metadata and glossaries is universally recommended (e.g. BIS mentions using international codes and definitions for RBI reporting).
+</Rule>
+
+<Recall
+  q="Why maintain a business glossary?"
+  a="To ensure a common vocabulary – e.g. that all departments use the term “customer exposure” identically."
+/>
+
+<Recall
+  q="Give an example of metadata content for a report field."
+  a="Field name, source system, update frequency, and allowed range or format (e.g. date format) are typical metadata."
+/>

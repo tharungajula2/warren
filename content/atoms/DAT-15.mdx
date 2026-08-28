@@ -1,0 +1,66 @@
+---
+id: DAT-15
+title: Reconciliation (Front-to-Back and Risk-to-Finance)
+type: concept
+domain: risk-data
+subdomain: data-quality-and-governance
+one_screen: >-
+  Reconciliation is the process of comparing data between systems to detect and
+  resolve differences. *Front-to-back* reconciliation ensures that transactions
+  recorded in front-office systems (trading, loans booking) match entries in the
+  back-office accounting system. *Risk-to-finance* reconciliation ensures that
+  risk metrics (e.g. aggregated exposures) reconcile to financial accounts (e.g.
+  total assets or regulatory capital). Both are critical controls for data
+  integrity.
+prerequisites:
+  - DAT-14
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Industry practice (Capgemini blog) (conceptual).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Regulatory expectation (implied by BCBS 239 emphasis on
+      accuracy/integrity).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+Front-to-back reconciliation typically involves comparing trade tickets or loan disbursements against the general ledger entries. Any mismatch (e.g. a trade missing from the ledger) is investigated. For example, the Risk data might sum all counterparty exposures and compare to the Finance system’s total asset value. Discrepancies often arise from timing differences or mapping errors. A common permanent rule is to run these reconciliations daily or at least monthly; material breaks must be cleared before period-end. 
+
+Risk-to-finance reconciliation is especially vital under BCBS 239. If a bank reports a credit exposure of ₹100 bn to risk management, the finance team’s asset ledger should also reflect ₹100 bn (allowing for minor classification differences). Regulators expect banks to explain any gaps. A perennial trap is to ignore small mismatches that then grow unnoticed. Instead, banks should categorize breaks (e.g. expected timing lag vs error) and resolve root causes. Reconciliation tasks often uncover underlying data issues (bad mappings, missing code standards) that feed back into data quality improvement.
+
+<Rule label="PERMANENT RULE">
+Perform both front-to-back and risk-to-finance reconciliations regularly; document and fix all significant breaks.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Only reconciling at quarter-end or audit time. Instead, reconciliation must be integrated into daily processes.
+</Trap>
+
+<NeverConfuse a="Front-to-back reconciliation" b="Risk-to-finance reconciliation">
+**Front-to-back reconciliation** — Comparing transactional data (front office) to accounting ledgers (back office).  
+---  
+**Risk-to-finance reconciliation** — Comparing risk aggregate data (used in risk reports) to financial statements or accounting reports.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These reconciliations are standard controls in all banks worldwide.
+</Rule>
+
+<Recall
+  q="What is a front-to-back break?"
+  a="A discrepancy where a trade or transaction exists in the trading system but not in the accounting books (or vice versa)."
+/>
+
+<Recall
+  q="Why reconcile risk and finance data?"
+  a="To ensure that risk-reporting numbers match the bank’s accounting records, avoiding unexplained gaps between the two perspectives."
+/>

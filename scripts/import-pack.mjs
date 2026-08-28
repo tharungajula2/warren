@@ -435,6 +435,13 @@ function inferSubdomain(atomId) {
     return "validation-and-metrics";
   }
 
+  if (prefix === "DAT") {
+    if (num <= 6) return "bcbs239-and-aggregation";
+    if (num <= 12) return "architecture-and-lineage";
+    if (num <= 18) return "data-quality-and-governance";
+    return "reporting-and-delivery";
+  }
+
   return "unsorted";
 }
 
@@ -486,7 +493,7 @@ function inferSubdomain(atomId) {
   }
 
   // Surviving citation tokens check
-  if (/cite/i.test(finalMdxBody) || /turn\d+search\d+/i.test(finalMdxBody)) {
+  if (/turn\d+(?:search|view)\d+/i.test(finalMdxBody) || /[\uE000-\uF8FF\uDB80-\uDBFF]/i.test(finalMdxBody)) {
     validationWarnings.push(`❌ [FAIL] Atom "${id}" contains surviving citation token.`);
   }
 }

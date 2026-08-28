@@ -1,0 +1,68 @@
+---
+id: DAT-12
+title: Reference Data vs Master Data
+type: concept
+domain: risk-data
+subdomain: architecture-and-lineage
+one_screen: >-
+  Master data consists of core business entities (e.g. customers, accounts,
+  products) that are critical to operations, while reference data consists of
+  standardized code sets or classifications (e.g. country codes, currency codes,
+  security identifiers). Master data changes as business grows; reference data
+  is relatively stable and often global (ISO codes, etc.).
+prerequisites:
+  - DAT-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Dataversity, *Master Data vs Reference Data* (Apr 2024).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+For example, a customer record (with name, KYC info) is master data; the country code “IN” used in an address is reference data. Master data is usually owned by business functions (e.g. front office), whereas reference data can be managed centrally (often by risk or finance teams). Both must be maintained carefully: a glitch in master data can misstate exposure for an entity; a stale reference code (like an outdated ISIN) can disrupt reporting.
+
+Regulatory data reporting relies on reference data standards (e.g. RBI may mandate ISO country codes in returns). Master data alignment ensures all systems recognize the same legal entity (which ties into entity resolution and LEIs). In practice, data governance tracks both types. Tools like MDM systems often manage master data, while governance tools or data catalogs manage reference codes. But conceptually, **never confusing** them is key. Reference data supports interpretation of master data.
+
+&lt;Flow&gt;
+Master Data        Reference Data
++------------+    +--------------------+
+| Customer   |    | Currency Codes     |
+| Product    |    | Country Codes      |
+| Account    |    | ISIN, Tickers      |
++------------+    +--------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Maintain a single master record for each core entity and use standard reference data sets (e.g. ISO codes) across the bank.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Letting departments define their own “local” reference lists (e.g. local sector codes instead of international standards), leading to integration headaches.
+</Trap>
+
+<NeverConfuse a="Master data" b="Reference data">
+**Master data** — Business-critical records (customers, accounts) that the bank transacts with.  
+---  
+**Reference data** — Shared classification codes and lists (currency codes, country codes, industry codes) used for categorizing data.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Distinction between master vs reference data is a general data management concept, not subject to regulatory variation.
+</Rule>
+
+<Recall
+  q="Give an example of master data in banking."
+  a="Customer information (name, ID, KYC details) or financial product definitions."
+/>
+
+<Recall
+  q="Give an example of reference data in banking."
+  a="Currency codes (e.g. “USD”), country codes (ISO 3166), security identifiers (ISIN)."
+/>

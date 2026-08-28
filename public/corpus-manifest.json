@@ -40,8 +40,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 405.7,
-      "initialY": 67.1
+      "initialX": 390.6,
+      "initialY": 54.2
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +80,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 437.6,
-      "initialY": 13
+      "initialX": 439.7,
+      "initialY": 36.2
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 384.5,
-      "initialY": 11.2
+      "initialX": 401.4,
+      "initialY": -5.4
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +161,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 380,
-      "initialY": -38.6
+      "initialX": 354.7,
+      "initialY": -19.7
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +201,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 431.2,
-      "initialY": -37.7
+      "initialX": 315.1,
+      "initialY": 9.4
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +249,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 381.9,
-      "initialY": 30.1
+      "initialX": 357.3,
+      "initialY": -69.4
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +297,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 337.2,
-      "initialY": -7.4
+      "initialX": 306,
+      "initialY": -29.2
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +346,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 331.6,
-      "initialY": 22.3
+      "initialX": 327.9,
+      "initialY": 24.8
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 361.5,
-      "initialY": 77.5
+      "initialX": 339.4,
+      "initialY": 69.8
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +431,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 406.1,
-      "initialY": 36.8
+      "initialX": 298.6,
+      "initialY": 5.1
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +477,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 359.9,
-      "initialY": 6
+      "initialX": 359.7,
+      "initialY": 25.9
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +526,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 322.1,
-      "initialY": 46
+      "initialX": 406.8,
+      "initialY": 71.4
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +574,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 368.1,
-      "initialY": 54.5
+      "initialX": 443.3,
+      "initialY": 9.8
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +622,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 422.2,
-      "initialY": 52.5
+      "initialX": 383.2,
+      "initialY": -27.1
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +665,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 346.4,
-      "initialY": 63.7
+      "initialX": 441.6,
+      "initialY": -25.6
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +715,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 291.2,
-      "initialY": 40.4
+      "initialX": 407,
+      "initialY": 20.3
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +759,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 407.7,
-      "initialY": 4.7
+      "initialX": 423,
+      "initialY": -53
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +799,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 283.8,
-      "initialY": 8.2
+      "initialX": 361.5,
+      "initialY": 80
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -839,8 +839,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 307.8,
-      "initialY": -48.5
+      "initialX": 416.1,
+      "initialY": 50
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +879,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 366.3,
-      "initialY": -66
+      "initialX": 425.5,
+      "initialY": -7.9
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +920,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 419.4,
-      "initialY": -16
+      "initialX": 351.6,
+      "initialY": -37.9
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +960,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 354.4,
-      "initialY": -38.6
+      "initialX": 411.3,
+      "initialY": -30.8
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 393.6,
-      "initialY": -70.5
+      "initialX": 378.3,
+      "initialY": -60.3
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1040,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 337.1,
-      "initialY": -59.6
+      "initialX": 324.1,
+      "initialY": -48.6
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1080,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 368.2,
-      "initialY": -16
+      "initialX": 327.9,
+      "initialY": 53.9
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1123,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 310.9,
-      "initialY": -3.7
+      "initialX": 362.4,
+      "initialY": 6.1
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1175,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 300.3,
-      "initialY": -15.8
+      "initialX": 364.8,
+      "initialY": 51.1
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1230,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 322.2,
-      "initialY": -28.2
+      "initialX": 381.2,
+      "initialY": 25
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +1283,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 405.4,
-      "initialY": -26.3
+      "initialX": 327.9,
+      "initialY": -18.1
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +1360,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 351.6,
-      "initialY": 30.8
+      "initialX": 304,
+      "initialY": 30.2
     },
     "CR-01": {
       "id": "CR-01",
@@ -1400,8 +1400,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 88.4,
-      "initialY": 311.4
+      "initialX": 111.8,
+      "initialY": 240.8
     },
     "CR-02": {
       "id": "CR-02",
@@ -1440,8 +1440,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 51.9,
-      "initialY": 265.1
+      "initialX": 84.5,
+      "initialY": 184
     },
     "CR-03": {
       "id": "CR-03",
@@ -1486,8 +1486,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": 18.6,
-      "initialY": 229.9
+      "initialX": 58.3,
+      "initialY": 149.2
     },
     "CR-04": {
       "id": "CR-04",
@@ -1540,8 +1540,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 44.3,
-      "initialY": 224.9
+      "initialX": 89.6,
+      "initialY": 143.4
     },
     "CR-05": {
       "id": "CR-05",
@@ -1594,8 +1594,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": 35.7,
-      "initialY": 248.4
+      "initialX": 107.6,
+      "initialY": 153
     },
     "CR-06": {
       "id": "CR-06",
@@ -1643,8 +1643,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 125.5,
-      "initialY": 328
+      "initialX": 186.7,
+      "initialY": 238.3
     },
     "CR-07": {
       "id": "CR-07",
@@ -1697,8 +1697,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 155.5,
-      "initialY": 288.2
+      "initialX": 223.9,
+      "initialY": 240.1
     },
     "CR-08": {
       "id": "CR-08",
@@ -1746,8 +1746,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 110.7,
-      "initialY": 245.3
+      "initialX": 162.4,
+      "initialY": 199.2
     },
     "CR-09": {
       "id": "CR-09",
@@ -1796,8 +1796,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 77.2,
-      "initialY": 272.5
+      "initialX": 123.8,
+      "initialY": 198.4
     },
     "CR-10": {
       "id": "CR-10",
@@ -1846,8 +1846,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -52.8,
-      "initialY": 180.8
+      "initialX": -16.2,
+      "initialY": 89.9
     },
     "CR-11": {
       "id": "CR-11",
@@ -1901,8 +1901,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -26,
-      "initialY": 171.4
+      "initialX": 12,
+      "initialY": 95.8
     },
     "CR-12": {
       "id": "CR-12",
@@ -1941,8 +1941,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 72.3,
-      "initialY": 226.6
+      "initialX": 83.6,
+      "initialY": 200.8
     },
     "CR-13": {
       "id": "CR-13",
@@ -1981,8 +1981,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 86.5,
-      "initialY": 195.2
+      "initialX": 115.9,
+      "initialY": 174.8
     },
     "CR-14": {
       "id": "CR-14",
@@ -2021,8 +2021,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 48.1,
-      "initialY": 194.9
+      "initialX": 58.8,
+      "initialY": 171.5
     },
     "CR-15": {
       "id": "CR-15",
@@ -2062,8 +2062,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 97.2,
-      "initialY": 264
+      "initialX": 124.3,
+      "initialY": 218.3
     },
     "CR-16": {
       "id": "CR-16",
@@ -2103,8 +2103,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -57.8,
-      "initialY": 169
+      "initialX": -35.5,
+      "initialY": 92.1
     },
     "CR-17": {
       "id": "CR-17",
@@ -2145,8 +2145,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": -30,
-      "initialY": 193.8
+      "initialX": -11.7,
+      "initialY": 124.8
     },
     "CR-18": {
       "id": "CR-18",
@@ -2185,8 +2185,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 106,
-      "initialY": 283.4
+      "initialX": 134.8,
+      "initialY": 262.9
     },
     "CR-19": {
       "id": "CR-19",
@@ -2227,8 +2227,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 147.9,
-      "initialY": 310.4
+      "initialX": 185,
+      "initialY": 255.9
     },
     "CR-20": {
       "id": "CR-20",
@@ -2268,8 +2268,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 191.7,
-      "initialY": 281.9
+      "initialX": 196.6,
+      "initialY": 307.4
     },
     "CR-21": {
       "id": "CR-21",
@@ -2310,8 +2310,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 168.4,
-      "initialY": 259.9
+      "initialX": 162.9,
+      "initialY": 286.8
     },
     "CR-22": {
       "id": "CR-22",
@@ -2352,8 +2352,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 159.8,
-      "initialY": 325.6
+      "initialX": 179.7,
+      "initialY": 274.8
     },
     "CR-23": {
       "id": "CR-23",
@@ -2389,8 +2389,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 200.4,
-      "initialY": 345.2
+      "initialX": 247.3,
+      "initialY": 297.8
     },
     "CR-24": {
       "id": "CR-24",
@@ -2444,8 +2444,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 124.9,
-      "initialY": 305.5
+      "initialX": 185.4,
+      "initialY": 218
     },
     "CR-25": {
       "id": "CR-25",
@@ -2486,8 +2486,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 178.3,
-      "initialY": 300.3
+      "initialX": 203,
+      "initialY": 279.2
     },
     "CR-26": {
       "id": "CR-26",
@@ -2539,8 +2539,834 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 134.5,
-      "initialY": 251.8
+      "initialX": 147.5,
+      "initialY": 234
+    },
+    "DAT-01": {
+      "id": "DAT-01",
+      "title": "Risk Data as a Discipline",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "bcbs239-and-aggregation",
+      "one_screen": "In the 2007–2009 financial crisis, banks could not aggregate their risk exposures quickly or accurately. This failure impaired timely decision-making, prompting regulators to formalize risk data management as a discipline (e.g. Basel BCBS 239) to ensure banks maintain accurate, timely, end-to-end risk data aggregation and reporting.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, *Principles for effective risk data aggregation and risk reporting*, Jan 2013.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee press release, *Progress report on BCBS 239 implementation* (28 Nov 2023).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "DAT-01.mdx",
+      "initialX": -42.1,
+      "initialY": 318.7
+    },
+    "DAT-02": {
+      "id": "DAT-02",
+      "title": "Risk Data Aggregation vs Risk Reporting",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "bcbs239-and-aggregation",
+      "one_screen": "Risk data aggregation is the internal process of collecting and consolidating all relevant risk data across the bank. Risk reporting is the output of that process, conveying the aggregated data in reports. BCBS 239 treats them as separate obligations: the former ensures data is accurate and complete; the latter ensures reports are clear and delivered on time.",
+      "prerequisites": [
+        "DAT-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FluxForce, *BCBS 239: What It Requires* (2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-02",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "DAT-02.mdx",
+      "initialX": -77,
+      "initialY": 341
+    },
+    "DAT-03": {
+      "id": "DAT-03",
+      "title": "BCBS 239 Principles Overview",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "bcbs239-and-aggregation",
+      "one_screen": "BCBS 239 comprises 14 principles organized in four groups: (I) Governance & Infrastructure (board accountability, data architecture), (II) Risk Data Aggregation Capabilities (accuracy, completeness, timeliness, adaptability), (III) Risk Reporting Practices (comprehensiveness, clarity, frequency, distribution), and (IV) Supervisory Review (how regulators assess banks). Together they form a principles-based framework requiring banks to implement robust data policies and systems.",
+      "prerequisites": [
+        "DAT-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee, *Principles for effective risk data aggregation and risk reporting*, Jan 2013.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FluxForce, *BCBS 239: Requirements, Scope & Compliance* (2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee press release (28 Nov 2023).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-03",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "DAT-03.mdx",
+      "initialX": -94.2,
+      "initialY": 399.3
+    },
+    "DAT-04": {
+      "id": "DAT-04",
+      "title": "Risk Data Aggregation Capabilities (Accuracy, Completeness, Timeliness, Adaptability)",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "bcbs239-and-aggregation",
+      "one_screen": "BCBS 239 mandates that a bank’s risk data aggregation be **accurate, complete, timely, and adaptable**. In practice, this means automated data pipelines, extensive reconciliations, and flexible reporting capabilities. Banks must reconcile risk data with accounting records, cover ~95% of exposures across all entities, refresh data fast (daily or intraday for critical metrics), and be able to run ad-hoc reports on demand.",
+      "prerequisites": [
+        "DAT-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FluxForce, *BCBS 239 Principles* (2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "BIS BCBS newsletter, *Improving risk data aggregation* (Jan 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-04",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "DAT-04.mdx",
+      "initialX": -123,
+      "initialY": 340.4
+    },
+    "DAT-05": {
+      "id": "DAT-05",
+      "title": "Risk Reporting Practices",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "bcbs239-and-aggregation",
+      "one_screen": "BCBS 239 requires risk reports to be **accurate, comprehensive, clear, frequent, and properly distributed**. Reports must be tailored to their audience (e.g. board vs risk manager) and sufficiently granular. This ensures stakeholders get the right information at the right time.",
+      "prerequisites": [
+        "DAT-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FluxForce, *BCBS 239 Principles* (2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-05",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "DAT-05.mdx",
+      "initialX": -56.8,
+      "initialY": 429.6
+    },
+    "DAT-06": {
+      "id": "DAT-06",
+      "title": "Supervisory Review and Compliance Record",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "bcbs239-and-aggregation",
+      "one_screen": "The final BCBS 239 principles cover supervisory review (Principles 12–14) and require banks to act on regulators’ findings. By 2023, global reports show banks remain at “different stages” of compliance and need significant work to meet the standard.",
+      "prerequisites": [
+        "DAT-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Basel Committee press release (28 Nov 2023).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FluxForce, *BCBS 239 Compliance* (2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-06",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "DAT-06.mdx",
+      "initialX": -148.9,
+      "initialY": 394.9
+    },
+    "DAT-07": {
+      "id": "DAT-07",
+      "title": "Golden Source of Data",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "architecture-and-lineage",
+      "one_screen": "A golden source is the single authoritative source of truth for a given data element across the organization. It contains the most accurate and up-to-date version of that data, and all systems reference this “one source” to avoid discrepancies.",
+      "prerequisites": [
+        "DAT-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Raw Knowledge blog, *Golden Source of Data* (2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee BCBS 239, Principle 2 (data architecture).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-07",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "DAT-07.mdx",
+      "initialX": -97.7,
+      "initialY": 426.3
+    },
+    "DAT-08": {
+      "id": "DAT-08",
+      "title": "Critical Data Elements (CDEs)",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "architecture-and-lineage",
+      "one_screen": "Critical Data Elements (CDEs) are the data points an organization deems essential to its core operations, decision-making, and compliance. In banking, CDEs include fields like customer ID, credit exposure amounts, collateral valuations, etc. They require special governance attention since errors in CDEs can have significant impact.",
+      "prerequisites": [
+        "DAT-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Alation blog, *Critical Data Elements Explained* (Feb 2025).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-08",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "DAT-08.mdx",
+      "initialX": -43.1,
+      "initialY": 412
+    },
+    "DAT-09": {
+      "id": "DAT-09",
+      "title": "Data Lineage (Business vs Technical)",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "architecture-and-lineage",
+      "one_screen": "Data lineage tracks the journey of data from its origin to its final use. *Business lineage* is a high-level, user-friendly map of what data comes from where for reporting purposes; *technical lineage* is the detailed breakdown of data flows through systems and code. Both are essential for understanding and troubleshooting data issues.",
+      "prerequisites": [
+        "DAT-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Secoda blog, *Business vs Technical Data Lineage* (Dec 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-09",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "DAT-09.mdx",
+      "initialX": -28.3,
+      "initialY": 357.2
+    },
+    "DAT-10": {
+      "id": "DAT-10",
+      "title": "Metadata and Business Glossary",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "architecture-and-lineage",
+      "one_screen": "Metadata is “data about data” – information that defines and describes data elements. A business glossary is a centralized catalog of business terms and their definitions. Together, they ensure everyone has a common understanding of data definitions.",
+      "prerequisites": [
+        "DAT-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Committee Report on Data Standardization, *Executive Summary* (2018).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-10",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "DAT-10.mdx",
+      "initialX": -71,
+      "initialY": 399.5
+    },
+    "DAT-11": {
+      "id": "DAT-11",
+      "title": "Data Dictionary and Data Model",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "architecture-and-lineage",
+      "one_screen": "A data dictionary is a detailed catalog of all fields (data elements), describing each one’s attributes (name, type, description, format, valid values, etc.). A data model (conceptual or logical) is a diagram showing entities and relationships between them. Together they help design systems and prevent misinterpretation.",
+      "prerequisites": [
+        "DAT-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RudderStack blog, *What is a Data Dictionary?* (Jan 2025).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-11",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "DAT-11.mdx",
+      "initialX": -117.5,
+      "initialY": 367.9
+    },
+    "DAT-12": {
+      "id": "DAT-12",
+      "title": "Reference Data vs Master Data",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "architecture-and-lineage",
+      "one_screen": "Master data consists of core business entities (e.g. customers, accounts, products) that are critical to operations, while reference data consists of standardized code sets or classifications (e.g. country codes, currency codes, security identifiers). Master data changes as business grows; reference data is relatively stable and often global (ISO codes, etc.).",
+      "prerequisites": [
+        "DAT-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Dataversity, *Master Data vs Reference Data* (Apr 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-12",
+      "depth": 8,
+      "currentness": "durable",
+      "filepath": "DAT-12.mdx",
+      "initialX": -133.5,
+      "initialY": 381.8
+    },
+    "DAT-13": {
+      "id": "DAT-13",
+      "title": "Data Quality Dimensions",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "data-quality-and-governance",
+      "one_screen": "Data quality is multi-dimensional. Key dimensions include **accuracy** (data correctly reflects reality), **completeness** (no missing values), **consistency** (data aligns across sources), **timeliness** (data is up-to-date and available when needed), **validity** (data follows defined formats and rules), and **uniqueness** (no duplicates).",
+      "prerequisites": [
+        "DAT-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Raw Knowledge blog, *Golden Source of Data* (2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-13",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "DAT-13.mdx",
+      "initialX": -98.6,
+      "initialY": 340.5
+    },
+    "DAT-14": {
+      "id": "DAT-14",
+      "title": "Data Quality Rules, Thresholds, and Exception Management",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "data-quality-and-governance",
+      "one_screen": "Data quality rules are specific checks or constraints (e.g. “loan amount ≥ 0”, “interest date must not precede loan date”). Thresholds set acceptable levels for quality metrics (e.g. “95% of records must be complete”). When data fails a rule or threshold, it is flagged as an exception to be investigated and resolved.",
+      "prerequisites": [
+        "DAT-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Generic best practice (no specific cite).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-14",
+      "depth": 10,
+      "currentness": "durable",
+      "filepath": "DAT-14.mdx",
+      "initialX": -118.8,
+      "initialY": 404.2
+    },
+    "DAT-15": {
+      "id": "DAT-15",
+      "title": "Reconciliation (Front-to-Back and Risk-to-Finance)",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "data-quality-and-governance",
+      "one_screen": "Reconciliation is the process of comparing data between systems to detect and resolve differences. *Front-to-back* reconciliation ensures that transactions recorded in front-office systems (trading, loans booking) match entries in the back-office accounting system. *Risk-to-finance* reconciliation ensures that risk metrics (e.g. aggregated exposures) reconcile to financial accounts (e.g. total assets or regulatory capital). Both are critical controls for data integrity.",
+      "prerequisites": [
+        "DAT-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Industry practice (Capgemini blog) (conceptual).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Regulatory expectation (implied by BCBS 239 emphasis on accuracy/integrity).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-15",
+      "depth": 11,
+      "currentness": "durable",
+      "filepath": "DAT-15.mdx",
+      "initialX": -144.7,
+      "initialY": 349.1
+    },
+    "DAT-16": {
+      "id": "DAT-16",
+      "title": "Data Ownership vs Stewardship",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "data-quality-and-governance",
+      "one_screen": "**Data owners** are senior business managers who are accountable for data assets; **data stewards** are specialists who manage data quality day-to-day. The owner defines data policies and sets quality standards, while the steward implements these standards and handles operational issues.",
+      "prerequisites": [
+        "DAT-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Committee Report on Data Governance (2018).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-16",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "DAT-16.mdx",
+      "initialX": -110.7,
+      "initialY": 314.3
+    },
+    "DAT-17": {
+      "id": "DAT-17",
+      "title": "Data Governance Models",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "data-quality-and-governance",
+      "one_screen": "Data governance models define how oversight is structured. Common models are *centralized* (a single data governance committee sets policies for all) and *federated* (each business unit has its own governance under corporate guidelines). RBI notes typical models based on process, subject area, or geography, but emphasizes business-function-based ownership.",
+      "prerequisites": [
+        "DAT-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Committee Report on Data Governance (2018).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-17",
+      "depth": 10,
+      "currentness": "durable",
+      "filepath": "DAT-17.mdx",
+      "initialX": -92.4,
+      "initialY": 372.8
+    },
+    "DAT-18": {
+      "id": "DAT-18",
+      "title": "Issue Management and Remediation",
+      "type": "mechanism",
+      "domain": "risk-data",
+      "subdomain": "data-quality-and-governance",
+      "one_screen": "Data issues must be formally managed: identified, tracked, and remediated through a controlled process. This typically involves logging issues in an issue-tracking system, prioritizing by severity, performing root-cause analysis, and implementing fixes under governance oversight.",
+      "prerequisites": [
+        "DAT-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Industry practice (implied by regulatory expectations).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-18",
+      "depth": 11,
+      "currentness": "durable",
+      "filepath": "DAT-18.mdx",
+      "initialX": -39.8,
+      "initialY": 390.6
+    },
+    "DAT-19": {
+      "id": "DAT-19",
+      "title": "Regulatory Returns and Production Cycle",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "reporting-and-delivery",
+      "one_screen": "A *regulatory return* is a standardized report or form that banks must submit to supervisors (e.g. capital, liquidity, or risk data). The production cycle involves: extracting data from source systems, transforming and mapping it to the return’s schema, aggregating as needed, validating the report against business rules, then submitting and attesting.",
+      "prerequisites": [
+        "DAT-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Regnology, *India Element-Based Reporting (EBR) explained*. (Context on RBI’s focus.)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Standard industry practice.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-19",
+      "depth": 12,
+      "currentness": "durable",
+      "filepath": "DAT-19.mdx",
+      "initialX": -70,
+      "initialY": 362.8
+    },
+    "DAT-20": {
+      "id": "DAT-20",
+      "title": "Attestation, Restatements, and Reporting Change Programs",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "reporting-and-delivery",
+      "one_screen": "**Attestation and sign-off:** Senior management (often the board, CEO or Chief Risk Officer) must formally attest that each regulatory report is accurate and complete. This is both a legal requirement in many jurisdictions and an internal control. **Restatements:** If a material error is discovered after submission, the bank must correct (“restatement”) the return. Restatements can impact capital calculations or regulatory standings, so timely correction and explanation are critical. **Reporting change programs:** When regulations change or new reports are added, a change program is launched. This involves requirement analysis, mapping updates, system development, testing, and parallel runs.",
+      "prerequisites": [
+        "DAT-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Common regulatory practice (e.g. RBI circulars).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-20",
+      "depth": 13,
+      "currentness": "durable",
+      "filepath": "DAT-20.mdx",
+      "initialX": -84.4,
+      "initialY": 307.8
+    },
+    "DAT-21": {
+      "id": "DAT-21",
+      "title": "Delivery Layer: Requirements, Mapping, and Testing",
+      "type": "mechanism",
+      "domain": "risk-data",
+      "subdomain": "reporting-and-delivery",
+      "one_screen": "The delivery layer in a data program consists of business requirements, mapping specifications, and testing. A Business Requirements Document (BRD) defines *what* reports/data are needed (with business context). A Data Mapping Specification details *how* each target field is derived from source fields with transformation logic. Testing involves pre-defined result sets and user acceptance testing (UAT) to validate that the implemented mappings produce the expected outputs.",
+      "prerequisites": [
+        "DAT-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Standard project practice (no specific citation).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-21",
+      "depth": 14,
+      "currentness": "durable",
+      "filepath": "DAT-21.mdx",
+      "initialX": -48.8,
+      "initialY": 346.1
+    },
+    "DAT-22": {
+      "id": "DAT-22",
+      "title": "Jurisdiction-Specific Reporting Frameworks",
+      "type": "concept",
+      "domain": "risk-data",
+      "subdomain": "reporting-and-delivery",
+      "one_screen": "Regulatory reporting frameworks differ by jurisdiction. BCBS 239 itself is a global set of principles with **no direct legal force**. In practice:",
+      "prerequisites": [
+        "DAT-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Executive Summary of Data Governance Committee Report*, 2018.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "HCL Tech, *EBA Reporting Requirements (COREP, FINREP)*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Federal Reserve Board, *FR Y-14 Report* (July 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee press release, Nov 2023.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "dat-22",
+      "depth": 15,
+      "currentness": "fresh",
+      "filepath": "DAT-22.mdx",
+      "initialX": -19.4,
+      "initialY": 388.4
     },
     "FND-01": {
       "id": "FND-01",
@@ -2577,8 +3403,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -168.4,
-      "initialY": 254.7
+      "initialX": -270.6,
+      "initialY": 128.4
     },
     "FND-02": {
       "id": "FND-02",
@@ -2617,8 +3443,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -219.1,
-      "initialY": 254
+      "initialX": -301.5,
+      "initialY": 103.6
     },
     "FND-03": {
       "id": "FND-03",
@@ -2663,8 +3489,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -216.4,
-      "initialY": 308.5
+      "initialX": -297.2,
+      "initialY": 183.3
     },
     "FND-04": {
       "id": "FND-04",
@@ -2704,8 +3530,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -197.9,
-      "initialY": 318.9
+      "initialX": -333.9,
+      "initialY": 166.3
     },
     "FND-05": {
       "id": "FND-05",
@@ -2750,8 +3576,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -180.5,
-      "initialY": 315.2
+      "initialX": -323.5,
+      "initialY": 149.1
     },
     "FND-06": {
       "id": "FND-06",
@@ -2814,8 +3640,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -237,
-      "initialY": 283.8
+      "initialX": -340.4,
+      "initialY": 112.7
     },
     "FND-07": {
       "id": "FND-07",
@@ -2860,8 +3686,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -166.1,
-      "initialY": 304.4
+      "initialX": -315.3,
+      "initialY": 173.8
     },
     "FND-08": {
       "id": "FND-08",
@@ -2900,8 +3726,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -236.9,
-      "initialY": 208.6
+      "initialX": -348.8,
+      "initialY": 46.1
     },
     "FND-09": {
       "id": "FND-09",
@@ -2959,8 +3785,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -263.9,
-      "initialY": 220.4
+      "initialX": -318.8,
+      "initialY": 51.7
     },
     "FND-10": {
       "id": "FND-10",
@@ -3012,8 +3838,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -210.9,
-      "initialY": 344.5
+      "initialX": -364.7,
+      "initialY": 169.7
     },
     "FND-11": {
       "id": "FND-11",
@@ -3045,8 +3871,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -183.2,
-      "initialY": 353.6
+      "initialX": -390.6,
+      "initialY": 163.2
     },
     "FND-12": {
       "id": "FND-12",
@@ -3080,8 +3906,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -144.6,
-      "initialY": 297.2
+      "initialX": -324.7,
+      "initialY": 207.6
     },
     "FND-13": {
       "id": "FND-13",
@@ -3116,8 +3942,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -139.4,
-      "initialY": 340.3
+      "initialX": -373.7,
+      "initialY": 200.1
     },
     "FND-14": {
       "id": "FND-14",
@@ -3171,8 +3997,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -202.8,
-      "initialY": 288.6
+      "initialX": -373,
+      "initialY": 113.7
     },
     "FND-15": {
       "id": "FND-15",
@@ -3206,8 +4032,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -91,
-      "initialY": 312.3
+      "initialX": -189,
+      "initialY": 180
     },
     "FND-16": {
       "id": "FND-16",
@@ -3239,8 +4065,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -176.3,
-      "initialY": 381.4
+      "initialX": -349,
+      "initialY": 192.6
     },
     "FND-17": {
       "id": "FND-17",
@@ -3279,8 +4105,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -230.1,
-      "initialY": 377.7
+      "initialX": -400.8,
+      "initialY": 144.2
     },
     "FND-18": {
       "id": "FND-18",
@@ -3320,8 +4146,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -230.8,
-      "initialY": 338.5
+      "initialX": -348.6,
+      "initialY": 136.5
     },
     "FND-19": {
       "id": "FND-19",
@@ -3367,8 +4193,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -162.8,
-      "initialY": 329.4
+      "initialX": -292.6,
+      "initialY": 158.8
     },
     "FND-20": {
       "id": "FND-20",
@@ -3408,8 +4234,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -237.4,
-      "initialY": 315.5
+      "initialX": -368.4,
+      "initialY": 138.6
     },
     "FND-21": {
       "id": "FND-21",
@@ -3453,8 +4279,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -205.6,
-      "initialY": 370.2
+      "initialX": -395.8,
+      "initialY": 189.5
     },
     "FND-22": {
       "id": "FND-22",
@@ -3493,8 +4319,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -148.1,
-      "initialY": 366.1
+      "initialX": -347.6,
+      "initialY": 222.1
     },
     "FND-23": {
       "id": "FND-23",
@@ -3558,8 +4384,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -186.1,
-      "initialY": 255.5
+      "initialX": -310.7,
+      "initialY": 87.5
     },
     "FND-24": {
       "id": "FND-24",
@@ -3638,8 +4464,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -207.4,
-      "initialY": 231
+      "initialX": -275.3,
+      "initialY": 100.5
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -3701,8 +4527,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -218.7,
-      "initialY": 126
+      "initialX": -209.5,
+      "initialY": 3.1
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -3752,8 +4578,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -270.1,
-      "initialY": 94.5
+      "initialX": -255.8,
+      "initialY": -42
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -3809,8 +4635,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -200.2,
-      "initialY": 103.1
+      "initialX": -191.4,
+      "initialY": -11.5
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -3859,8 +4685,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -341.1,
-      "initialY": 95
+      "initialX": -341.2,
+      "initialY": -80
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -3909,8 +4735,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -226.5,
-      "initialY": 32.2
+      "initialX": -204,
+      "initialY": -75.5
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -3966,8 +4792,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -179.2,
-      "initialY": 95.3
+      "initialX": -147.3,
+      "initialY": -20.4
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -4017,8 +4843,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -204.7,
-      "initialY": 83.6
+      "initialX": -178.1,
+      "initialY": -13.3
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -4069,8 +4895,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -223.8,
-      "initialY": 74.3
+      "initialX": -192.4,
+      "initialY": -40.5
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -4118,8 +4944,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -249.8,
-      "initialY": 50.2
+      "initialX": -182.4,
+      "initialY": -89.2
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -4169,8 +4995,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -144.6,
-      "initialY": 128.8
+      "initialX": -97.4,
+      "initialY": 9.6
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -4219,8 +5045,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -302.5,
-      "initialY": 80.8
+      "initialX": -285.3,
+      "initialY": -73.2
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -4270,8 +5096,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -233.5,
-      "initialY": 104.3
+      "initialX": -146.1,
+      "initialY": -64
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -4321,8 +5147,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -221.8,
-      "initialY": 50.7
+      "initialX": -173.7,
+      "initialY": -65.5
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -4372,8 +5198,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -159.3,
-      "initialY": 73.1
+      "initialX": -129.4,
+      "initialY": -10
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -4428,8 +5254,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -195,
-      "initialY": 64.2
+      "initialX": -171.4,
+      "initialY": -34.7
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -4484,8 +5310,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -275.4,
-      "initialY": -21
+      "initialX": -264.3,
+      "initialY": -139.9
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -4541,8 +5367,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -298.6,
-      "initialY": -12.8
+      "initialX": -233.4,
+      "initialY": -140.9
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -4597,8 +5423,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -330.7,
-      "initialY": 27.3
+      "initialX": -278.5,
+      "initialY": -124.8
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -4654,8 +5480,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -280.6,
-      "initialY": 28.2
+      "initialX": -242.7,
+      "initialY": -102.8
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -4717,8 +5543,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -300.3,
-      "initialY": 48.1
+      "initialX": -265,
+      "initialY": -88
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -4760,8 +5586,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -236.5,
-      "initialY": -176.6
+      "initialX": -167.3,
+      "initialY": -261.5
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -4798,8 +5624,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -219.9,
-      "initialY": -345.4
+      "initialX": -119.9,
+      "initialY": -402.8
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -4838,8 +5664,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -190.9,
-      "initialY": -290.2
+      "initialX": -68,
+      "initialY": -384
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -4883,8 +5709,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -201.1,
-      "initialY": -251
+      "initialX": -118.3,
+      "initialY": -312.5
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -4928,8 +5754,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -225.1,
-      "initialY": -259.2
+      "initialX": -140.5,
+      "initialY": -331.4
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -4968,8 +5794,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -203,
-      "initialY": -308.8
+      "initialX": -140.1,
+      "initialY": -387.7
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -5008,8 +5834,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -201.7,
-      "initialY": -365.2
+      "initialX": -112.8,
+      "initialY": -336.6
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -5049,8 +5875,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -158.9,
-      "initialY": -318.8
+      "initialX": -92.2,
+      "initialY": -376.4
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -5089,8 +5915,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -177.4,
-      "initialY": -370.1
+      "initialX": -88.7,
+      "initialY": -317.8
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -5129,8 +5955,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -141.6,
-      "initialY": -303
+      "initialX": -91.6,
+      "initialY": -417.1
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -5169,8 +5995,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -251.3,
-      "initialY": -318.6
+      "initialX": -83.9,
+      "initialY": -400.5
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -5209,8 +6035,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -145.7,
-      "initialY": -340.5
+      "initialX": -157,
+      "initialY": -369.9
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -5249,8 +6075,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -162.4,
-      "initialY": -286.4
+      "initialX": -115.9,
+      "initialY": -366
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -5284,8 +6110,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -224.8,
-      "initialY": -294.5
+      "initialX": -74.5,
+      "initialY": -336.5
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -5320,8 +6146,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -192.2,
-      "initialY": -333.7
+      "initialX": -65.5,
+      "initialY": -358.7
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -5361,8 +6187,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -175.7,
-      "initialY": -264.5
+      "initialX": -41.7,
+      "initialY": -367.5
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -5401,8 +6227,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -171,
-      "initialY": -347.8
+      "initialX": -44.8,
+      "initialY": -393.6
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -5447,8 +6273,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -224.8,
-      "initialY": -319.9
+      "initialX": -54.6,
+      "initialY": -329.3
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -5490,8 +6316,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 208,
-      "initialY": -252.2
+      "initialX": 235.6,
+      "initialY": -359.8
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -5538,8 +6364,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 218.5,
-      "initialY": -306.9
+      "initialX": 229.1,
+      "initialY": -311.2
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -5578,8 +6404,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 179.2,
-      "initialY": -273.4
+      "initialX": 281.2,
+      "initialY": -336
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -5618,8 +6444,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 123.8,
-      "initialY": -283
+      "initialX": 264.6,
+      "initialY": -285.4
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -5658,8 +6484,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 167.1,
-      "initialY": -317.1
+      "initialX": 193.4,
+      "initialY": -303
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -5698,8 +6524,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 106,
-      "initialY": -303.6
+      "initialX": 203.1,
+      "initialY": -363.2
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -5738,8 +6564,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 95,
-      "initialY": -333
+      "initialX": 306.8,
+      "initialY": -315.5
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -5792,8 +6618,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 144.1,
-      "initialY": -324.6
+      "initialX": 260.2,
+      "initialY": -308.6
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -5833,8 +6659,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 116.7,
-      "initialY": -363.6
+      "initialX": 289.6,
+      "initialY": -251.2
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -5888,8 +6714,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 168,
-      "initialY": -391
+      "initialX": 229.6,
+      "initialY": -260.9
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -5938,8 +6764,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 122.4,
-      "initialY": -344.4
+      "initialX": 241.9,
+      "initialY": -333.6
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -5979,8 +6805,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 239.4,
-      "initialY": -304.5
+      "initialX": 209.7,
+      "initialY": -320.9
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -6032,8 +6858,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 186.9,
-      "initialY": -369.5
+      "initialX": 186,
+      "initialY": -270.4
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -6086,8 +6912,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 187.6,
-      "initialY": -301
+      "initialX": 144.4,
+      "initialY": -293.8
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -6140,8 +6966,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 210.6,
-      "initialY": -364.9
+      "initialX": 156.6,
+      "initialY": -324.7
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -6181,8 +7007,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 231,
-      "initialY": -363.3
+      "initialX": 197.9,
+      "initialY": -252.7
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -6223,8 +7049,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 199.6,
-      "initialY": -320.9
+      "initialX": 238,
+      "initialY": -290.5
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -6271,8 +7097,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 234.6,
-      "initialY": -272.5
+      "initialX": 260,
+      "initialY": -350.4
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -6327,8 +7153,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 247.9,
-      "initialY": -326.9
+      "initialX": 199.9,
+      "initialY": -335.8
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -6374,8 +7200,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 184.5,
-      "initialY": -326.9
+      "initialX": 246.1,
+      "initialY": -275.5
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -6414,8 +7240,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 129.8,
-      "initialY": -307.3
+      "initialX": 207.2,
+      "initialY": -223.7
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -6454,8 +7280,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 159,
-      "initialY": -244.7
+      "initialX": 260.4,
+      "initialY": -222.5
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -6495,8 +7321,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 212.2,
-      "initialY": -274.8
+      "initialX": 289.7,
+      "initialY": -285.9
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -6542,8 +7368,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 110.2,
-      "initialY": -264.2
+      "initialX": 260.5,
+      "initialY": -255.6
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -6585,8 +7411,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 160.6,
-      "initialY": -263.7
+      "initialX": 207.7,
+      "initialY": -285
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -6627,8 +7453,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 161.8,
-      "initialY": -295.1
+      "initialX": 228.7,
+      "initialY": -241.7
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -6669,8 +7495,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 192,
-      "initialY": -356
+      "initialX": 170.3,
+      "initialY": -292.9
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -6723,8 +7549,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 230.7,
-      "initialY": -339.3
+      "initialX": 178.2,
+      "initialY": -335.2
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -6785,8 +7611,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 166.1,
-      "initialY": -346.7
+      "initialX": 167.4,
+      "initialY": -264.3
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -6842,8 +7668,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 142.6,
-      "initialY": -358.5
+      "initialX": 177.6,
+      "initialY": -243.8
     }
   },
   "reverseIndex": {
@@ -7090,6 +7916,67 @@
       "CR-26"
     ],
     "CR-26": [],
+    "DAT-01": [
+      "DAT-02"
+    ],
+    "DAT-02": [
+      "DAT-03"
+    ],
+    "DAT-03": [
+      "DAT-04",
+      "DAT-05",
+      "DAT-06"
+    ],
+    "DAT-04": [],
+    "DAT-05": [],
+    "DAT-06": [
+      "DAT-07"
+    ],
+    "DAT-07": [
+      "DAT-08"
+    ],
+    "DAT-08": [
+      "DAT-09"
+    ],
+    "DAT-09": [
+      "DAT-10"
+    ],
+    "DAT-10": [
+      "DAT-11",
+      "DAT-12"
+    ],
+    "DAT-11": [
+      "DAT-16"
+    ],
+    "DAT-12": [
+      "DAT-13"
+    ],
+    "DAT-13": [
+      "DAT-14"
+    ],
+    "DAT-14": [
+      "DAT-15"
+    ],
+    "DAT-15": [],
+    "DAT-16": [
+      "DAT-17"
+    ],
+    "DAT-17": [
+      "DAT-18"
+    ],
+    "DAT-18": [
+      "DAT-19"
+    ],
+    "DAT-19": [
+      "DAT-20"
+    ],
+    "DAT-20": [
+      "DAT-21"
+    ],
+    "DAT-21": [
+      "DAT-22"
+    ],
+    "DAT-22": [],
     "FND-01": [
       "FND-02",
       "FND-03",
@@ -7874,6 +8761,185 @@
             {
               "id": "CR-26",
               "title": "The credit-loss architecture: expected loss as cost, unexpected loss as capital risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "risk-data",
+      "subdomains": [
+        {
+          "subdomain": "bcbs239-and-aggregation",
+          "atoms": [
+            {
+              "id": "DAT-01",
+              "title": "Risk Data as a Discipline",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-02",
+              "title": "Risk Data Aggregation vs Risk Reporting",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-03",
+              "title": "BCBS 239 Principles Overview",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-04",
+              "title": "Risk Data Aggregation Capabilities (Accuracy, Completeness, Timeliness, Adaptability)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-05",
+              "title": "Risk Reporting Practices",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-06",
+              "title": "Supervisory Review and Compliance Record",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "architecture-and-lineage",
+          "atoms": [
+            {
+              "id": "DAT-07",
+              "title": "Golden Source of Data",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-08",
+              "title": "Critical Data Elements (CDEs)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-09",
+              "title": "Data Lineage (Business vs Technical)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-10",
+              "title": "Metadata and Business Glossary",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-11",
+              "title": "Data Dictionary and Data Model",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-12",
+              "title": "Reference Data vs Master Data",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "data-quality-and-governance",
+          "atoms": [
+            {
+              "id": "DAT-13",
+              "title": "Data Quality Dimensions",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-14",
+              "title": "Data Quality Rules, Thresholds, and Exception Management",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-15",
+              "title": "Reconciliation (Front-to-Back and Risk-to-Finance)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-16",
+              "title": "Data Ownership vs Stewardship",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-17",
+              "title": "Data Governance Models",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-18",
+              "title": "Issue Management and Remediation",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "reporting-and-delivery",
+          "atoms": [
+            {
+              "id": "DAT-19",
+              "title": "Regulatory Returns and Production Cycle",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-20",
+              "title": "Attestation, Restatements, and Reporting Change Programs",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-21",
+              "title": "Delivery Layer: Requirements, Mapping, and Testing",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "DAT-22",
+              "title": "Jurisdiction-Specific Reporting Frameworks",
               "type": "concept",
               "status": "draft",
               "verified": false
@@ -8903,19 +9969,19 @@
           "weight": 3
         },
         {
-          "id": "TRD-01",
+          "id": "DAT-21",
           "weight": 3
         },
         {
+          "id": "DAT-09",
+          "weight": 2
+        },
+        {
+          "id": "TRD-01",
+          "weight": 2
+        },
+        {
           "id": "CCR-01",
-          "weight": 2
-        },
-        {
-          "id": "MRK-01",
-          "weight": 2
-        },
-        {
-          "id": "BA-01",
           "weight": 1
         }
       ]
@@ -8937,27 +10003,27 @@
       ],
       "atoms": [
         {
-          "id": "FND-24",
+          "id": "DAT-19",
           "weight": 3
+        },
+        {
+          "id": "DAT-20",
+          "weight": 3
+        },
+        {
+          "id": "DAT-21",
+          "weight": 3
+        },
+        {
+          "id": "DAT-22",
+          "weight": 2
         },
         {
           "id": "CAP-04",
-          "weight": 3
-        },
-        {
-          "id": "CAP-30",
-          "weight": 3
-        },
-        {
-          "id": "IMP-18",
           "weight": 2
         },
         {
-          "id": "BA-01",
-          "weight": 2
-        },
-        {
-          "id": "TEC-01",
+          "id": "FND-24",
           "weight": 1
         }
       ]
@@ -8979,27 +10045,27 @@
       ],
       "atoms": [
         {
-          "id": "CR-03",
-          "weight": 3
-        },
-        {
-          "id": "DAT-01",
-          "weight": 3
-        },
-        {
-          "id": "DAT-02",
-          "weight": 3
-        },
-        {
-          "id": "FND-06",
-          "weight": 2
-        },
-        {
-          "id": "CAP-11",
-          "weight": 2
-        },
-        {
           "id": "DAT-03",
+          "weight": 3
+        },
+        {
+          "id": "DAT-08",
+          "weight": 3
+        },
+        {
+          "id": "DAT-09",
+          "weight": 3
+        },
+        {
+          "id": "DAT-07",
+          "weight": 2
+        },
+        {
+          "id": "DAT-13",
+          "weight": 2
+        },
+        {
+          "id": "DAT-17",
           "weight": 1
         }
       ]
@@ -9033,11 +10099,11 @@
           "weight": 3
         },
         {
-          "id": "QNT-01",
+          "id": "DAT-09",
           "weight": 2
         },
         {
-          "id": "TEC-01",
+          "id": "DAT-21",
           "weight": 2
         },
         {
@@ -9108,38 +10174,31 @@
           "weight": 3
         },
         {
+          "id": "DAT-21",
+          "weight": 3
+        },
+        {
           "id": "CR-03",
           "weight": 3
         },
         {
-          "id": "CR-04",
-          "weight": 3
+          "id": "DAT-09",
+          "weight": 2
+        },
+        {
+          "id": "DAT-11",
+          "weight": 2
         },
         {
           "id": "CR-10",
-          "weight": 2
-        },
-        {
-          "id": "BA-01",
-          "weight": 2
-        },
-        {
-          "id": "TEC-01",
           "weight": 1
         }
       ]
     }
   ],
   "missingAtoms": [
-    "BA-01",
     "CCR-01",
-    "DAT-01",
-    "DAT-02",
-    "DAT-03",
     "IND-01",
-    "MRK-01",
-    "QNT-01",
-    "TEC-01",
     "TRD-01"
   ],
   "lintWarnings": [
@@ -9452,6 +10511,166 @@
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "CR-26",
       "message": "Atom \"CR-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-01",
+      "message": "Atom \"DAT-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "DAT-01",
+      "message": "Atom \"DAT-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-01",
+      "message": "one_screen in \"DAT-01\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-02",
+      "message": "Atom \"DAT-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-03",
+      "message": "Atom \"DAT-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-04",
+      "message": "Atom \"DAT-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-05",
+      "message": "Atom \"DAT-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-05",
+      "message": "one_screen in \"DAT-05\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-06",
+      "message": "Atom \"DAT-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-07",
+      "message": "Atom \"DAT-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-08",
+      "message": "Atom \"DAT-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-09",
+      "message": "Atom \"DAT-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-10",
+      "message": "Atom \"DAT-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-11",
+      "message": "Atom \"DAT-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-11",
+      "message": "one_screen in \"DAT-11\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-12",
+      "message": "Atom \"DAT-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-12",
+      "message": "one_screen in \"DAT-12\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-13",
+      "message": "Atom \"DAT-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-14",
+      "message": "Atom \"DAT-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-14",
+      "message": "one_screen in \"DAT-14\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-15",
+      "message": "Atom \"DAT-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-15",
+      "message": "one_screen in \"DAT-15\" contains 8 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-16",
+      "message": "Atom \"DAT-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-17",
+      "message": "Atom \"DAT-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-18",
+      "message": "Atom \"DAT-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-19",
+      "message": "Atom \"DAT-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-19",
+      "message": "one_screen in \"DAT-19\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-20",
+      "message": "Atom \"DAT-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-20",
+      "message": "one_screen in \"DAT-20\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-21",
+      "message": "Atom \"DAT-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "DAT-21",
+      "message": "one_screen in \"DAT-21\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "DAT-22",
+      "message": "Atom \"DAT-22\" is unverified (draft). Displays development banner."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -9999,5 +11218,5 @@
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-28T04:08:25.073Z"
+  "generatedAt": "2026-08-28T04:23:17.558Z"
 }

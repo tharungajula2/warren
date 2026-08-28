@@ -1,0 +1,82 @@
+---
+id: DAT-21
+title: 'Delivery Layer: Requirements, Mapping, and Testing'
+type: mechanism
+domain: risk-data
+subdomain: reporting-and-delivery
+one_screen: >-
+  The delivery layer in a data program consists of business requirements,
+  mapping specifications, and testing. A Business Requirements Document (BRD)
+  defines *what* reports/data are needed (with business context). A Data Mapping
+  Specification details *how* each target field is derived from source fields
+  with transformation logic. Testing involves pre-defined result sets and user
+  acceptance testing (UAT) to validate that the implemented mappings produce the
+  expected outputs.
+prerequisites:
+  - DAT-20
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Standard project practice (no specific citation).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+**BRD:** In regulatory/risk contexts, the BRD describes needed data points, calculation methods, timing, and exceptions. It often cites regulatory definitions. The BRD ensures developers and analysts understand the objectives.  
+**Data Mapping Spec:** This is the core deliverable. It is typically a spreadsheet or document listing: Source Field → Transformation Rule → Target Field. For example: “LoanBook.EndDate → Calendar Quarter End for report.” Each mapping should include any conversion (currency, units) and business rules applied. It serves as the blueprint for ETL developers.  
+**Testing:** Test packs with known inputs and results are prepared. For example, a small dataset with calculated expected totals. During UAT, business users verify that outputs match these expectations. Automated regression tests and reconciliation reports are also built to compare results against legacy systems or previous runs. UAT covers functional correctness and edge cases.  
+
+A strong delivery approach uses examples: e.g. test that negative balances or unusual security types still produce correct report lines. Downstream extracts (e.g. FINREP extracts sent to ECB) should also be checked – that is, one might run a script on the final data extract to verify totals against source systems. The process is iterative: any discrepancies found in UAT or extracts feed back into the mapping (looping through the cycle again until clean).
+
+&lt;Flow&gt;
+Business Requirements
+    |
+    v
+Data Mapping Spec
+    |
+    v
+ETL/Development
+    |
+    v
+Unit Testing
+    |
+    v
+UAT (with test packs)
+    |
+    v
+Go-live and Parallel Runs
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Every data transformation must be traceable (via the mapping spec) and tested with expected results before production use.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Skipping UAT or not involving actual report users. Testing by IT alone often misses business logic errors.
+</Trap>
+
+<NeverConfuse a="Business Requirements Document (BRD)" b="Mapping Specification">
+**Business Requirements Document (BRD)** — Describes the *what* and *why* (business needs, regulatory requirements).  
+---  
+**Mapping Specification** — Details the *how* (the exact field mappings and calculations).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These delivery practices apply to any data/reporting project, regardless of jurisdiction.
+</Rule>
+
+<Recall
+  q="What is a data mapping specification?"
+  a="A detailed list of how each target report field is populated from source fields, including any formulas or conversions."
+/>
+
+<Recall
+  q="Why use predefined test packs?"
+  a="To ensure transformations yield correct known results, giving confidence that the logic matches requirements."
+/>

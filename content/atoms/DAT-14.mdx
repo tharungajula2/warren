@@ -1,0 +1,74 @@
+---
+id: DAT-14
+title: 'Data Quality Rules, Thresholds, and Exception Management'
+type: concept
+domain: risk-data
+subdomain: data-quality-and-governance
+one_screen: >-
+  Data quality rules are specific checks or constraints (e.g. “loan amount ≥ 0”,
+  “interest date must not precede loan date”). Thresholds set acceptable levels
+  for quality metrics (e.g. “95% of records must be complete”). When data fails
+  a rule or threshold, it is flagged as an exception to be investigated and
+  resolved.
+prerequisites:
+  - DAT-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Generic best practice (no specific cite).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+For example, a completeness rule might state that 99% of trade records must have an associated counterparty ID. If only 97% do, that misses the threshold and triggers an exception report. Exception management then enters: the issue is logged with severity, root causes are analyzed (e.g. missing entries in a source feed), and corrective action is taken (perhaps a process fix or data backfill). Exception tracking tools or ticket systems typically record these issues.
+
+Banks document quality rules in their governance frameworks, often aligning with BCBS 239’s accuracy/integrity principle. At each reporting cycle, automated validators run the rules. Validations can be cross-checks (e.g. sum of sub-portfolios equals total) or plausibility checks (e.g. a ratio must lie in [0,100]). When thresholds are narrowly missed, some banks issue warnings; larger gaps may halt report submission until fixed.
+
+The **permanent expectation** is that no data anomaly goes unchecked. Adopting robust exception management means assigning issues to data stewards or owners, tracking SLA for fixes, and reporting status to management. Regulators have become wary of banks “papering over” persistent exceptions. Best practice is to classify and resolve high-impact exceptions immediately, while monitoring low-impact ones until clearance.
+
+&lt;Flow&gt;
+Data Quality Framework
++-------------------------+   +-------------+   +------------+
+| Data Quality Rules      |--&amp;gt;| Data Checks |--&amp;gt;| Reports    |
++-------------------------+   +-------------+   +------------+
+ Thresholds: 95% compliant         ^
+                                   |
+                                   v
+                        +--------------------------+
+                        | Exceptions (tickets)     |
+                        +--------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Every failed quality check must be logged and owned; unresolved exceptions compromise report integrity.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Archiving known data issues without resolution, assuming they are “small” or won’t recur.
+</Trap>
+
+<NeverConfuse a="Data quality rule" b="Threshold">
+**Data quality rule** — A specific constraint (e.g. a value range).  
+---  
+**Threshold** — The allowable error rate (e.g. 1% missing data).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These practices are part of robust data governance everywhere; regulators everywhere expect strict validation and issue tracking.
+</Rule>
+
+<Recall
+  q="What is an example of a data quality rule?"
+  a="“All loan IDs must be unique.”"
+/>
+
+<Recall
+  q="Why set thresholds in data checks?"
+  a="To define what level of error is tolerable before action; it prevents trivial issues from delaying reporting but ensures significant problems are caught."
+/>

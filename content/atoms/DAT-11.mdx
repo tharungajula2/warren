@@ -1,0 +1,69 @@
+---
+id: DAT-11
+title: Data Dictionary and Data Model
+type: concept
+domain: risk-data
+subdomain: architecture-and-lineage
+one_screen: >-
+  A data dictionary is a detailed catalog of all fields (data elements),
+  describing each one’s attributes (name, type, description, format, valid
+  values, etc.). A data model (conceptual or logical) is a diagram showing
+  entities and relationships between them. Together they help design systems and
+  prevent misinterpretation.
+prerequisites:
+  - DAT-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'RudderStack blog, *What is a Data Dictionary?* (Jan 2025).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+For instance, in a bank’s credit risk data model, entities might include `Customer`, `Loan`, `Collateral`. The data dictionary would list that `Loan.Amount` is a numeric field in rupees, defined as “principal outstanding.” The dictionary is a repository of these definitions for technical staff, while the model visualizes how `Loan` relates to `Customer` and `Collateral`.
+
+Having a data model ensures database tables and fields align with business concepts (avoids missing fields). The dictionary ensures anyone writing queries or reports knows exactly what each field means. Both should be version-controlled. When regulations introduce new report items, the dictionary/model must be updated. Without them, even a simple mapping exercise is error-prone, and data integration between systems becomes guesswork.
+
+&lt;Flow&gt;
++----------------+     +--------------+     +--------------+
+|   Customer     |&amp;lt;----|   Account    |----&amp;gt;|   Product    |
++----------------+     +--------------+     +--------------+
+   CustomerID           AccountID           ProductID
+   Name                 CustID (FK)         Name
+   DOB                  Balance             Type
+   ...                  ...                 ...
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Every data field in any regulatory report or risk system must be defined in the data dictionary and accounted for in the data model.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Skipping the dictionary for “obvious” fields; even basic terms like “balance” need precise definition in a banking context.
+</Trap>
+
+<NeverConfuse a="Data dictionary" b="Data catalog">
+**Data dictionary** — A detailed list of fields and technical specs for developers and analysts.  
+---  
+**Data catalog** — A broader inventory (often tool-based) that may include the data dictionary and also lineage, quality metrics, etc.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The use of data dictionaries and models is a technical practice not dictated by law; best practices are common globally.
+</Rule>
+
+<Recall
+  q="Why use a data dictionary?"
+  a="To provide a single source of technical metadata (names, formats) for all fields used in reports."
+/>
+
+<Recall
+  q="What does a conceptual data model show?"
+  a="The entities (e.g. Customer, Loan) and relationships (e.g. Customer→Loan) that structure the data."
+/>

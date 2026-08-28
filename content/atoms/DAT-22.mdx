@@ -1,0 +1,99 @@
+---
+id: DAT-22
+title: Jurisdiction-Specific Reporting Frameworks
+type: concept
+domain: risk-data
+subdomain: reporting-and-delivery
+one_screen: >-
+  Regulatory reporting frameworks differ by jurisdiction. BCBS 239 itself is a
+  global set of principles with **no direct legal force**. In practice:
+prerequisites:
+  - DAT-21
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, *Executive Summary of Data Governance Committee
+      Report*, 2018.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'HCL Tech, *EBA Reporting Requirements (COREP, FINREP)*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'Federal Reserve Board, *FR Y-14 Report* (July 2024).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'Basel Committee press release, Nov 2023.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+**IN** — India’s RBI has instituted the *Automated Data Flow (ADF)* system. Since 2010, banks build a Centralised Data Repository (CDR) to consolidate required data elements, and submit many returns in XBRL format. RBI’s standards (e.g. on coding, unique IDs) govern data in this system.
+
+**UK** — The Prudential Regulation Authority (PRA) expects UK banks (especially “significant institutions”) to apply BCBS 239 outcomes. Reporting is done under the UK Rulebook (Capital Requirements Regulations adapted from CRR). Banks submit COREP and FINREP returns (via PRA-run systems) consistent with EU rules, although UK now diverges post-Brexit. PRA Supervisory Statements reinforce BCBS 239 principles, and breaches can affect SREP.
+
+**EU** — Eurozone banks file EBA-developed COREP/FINREP returns under the CRR/CRD IV framework. COREP covers credit, market and operational risk and capital ratios. FINREP covers financial statements for IFRS-adopters. The EU is moving to an integrated framework (IReF) which by 2030 will unify multiple ECB statistical and supervisory returns. 
+
+**US** — Banks file *Call Reports* (FFIEC 031/041) quarterly with regulators. Large bank holding companies (BHCs) file Federal Reserve FR Y series (e.g. FR Y-9C) and FR Y-14 for stress testing. These cover balance sheet, income and risk data. The Fed incorporates BCBS 239 expectations into its supervisory processes, especially for Systemically Important BHCs.
+
+&lt;Flow&gt;
+BCBS 239 (Global principles)
+    |
+    v
++-----+    +-----+    +-----+   +-----+
+| India|    | UK  |    | EU  |   | US  |
++-----+    +-----+    +-----+   +-----+
+ ADF/XBRL   PRA returns  EBA COREP/   FFIEC Call
+(central    (BCBS239 &amp;amp;   FINREP,      Reports;
+ data repo)  UK SREP)    integrated    Fed FR Y series
+                         (IReF)
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Regulatory return taxonomies differ by jurisdiction, but underlying risk data governance expectations (BCBS 239) remain universal.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming a regulatory report mapping in one jurisdiction automatically satisfies the data definition rules of another.
+</Trap>
+
+<NeverConfuse a="COREP/FINREP" b="FFIEC Call Reports">
+**COREP/FINREP** — European Supervisory Authority (EBA) reporting frameworks for capital and financial statements.
+---
+**FFIEC Call Reports** — US prudential regulatory return filings required for insured depository institutions.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s ADF requires banks to channel return data into a centralized repository and submit XBRL filings.
+</Delta>
+
+<Delta j="UK">
+— The PRA expects banks to meet BCBS 239 outcomes; capital and risk data are reported via PRA’s forms (based on CRR/CRD) in the sub-set of COREP/FINREP where applicable.
+</Delta>
+
+<Delta j="EU">
+— Banks submit EBA COREP (capital/risk) and FINREP (financial statements) under CRR/CRD IV. The future Integrated Reporting Framework (ECB IReF) will consolidate data collection from 2030.
+</Delta>
+
+<Delta j="US">
+— Insured depository institutions file Call Reports (FFIEC 031/041) to regulators, and large BHCs file Fed FR Y-series (e.g. FR Y-9C for consolidated data).
+</Delta>
+
+<Recall
+  q="What is India’s Automated Data Flow (ADF)?"
+  a="A system where banks load required data into a central repository and use XBRL to submit returns to RBI."
+/>
+
+<Recall
+  q="Name two main EU banking returns."
+  a="COREP (Common Reporting) and FINREP (Financial Reporting) for capital and financial statements."
+/>

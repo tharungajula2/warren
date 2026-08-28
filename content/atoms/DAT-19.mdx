@@ -1,0 +1,88 @@
+---
+id: DAT-19
+title: Regulatory Returns and Production Cycle
+type: concept
+domain: risk-data
+subdomain: reporting-and-delivery
+one_screen: >-
+  A *regulatory return* is a standardized report or form that banks must submit
+  to supervisors (e.g. capital, liquidity, or risk data). The production cycle
+  involves: extracting data from source systems, transforming and mapping it to
+  the return’s schema, aggregating as needed, validating the report against
+  business rules, then submitting and attesting.
+prerequisites:
+  - DAT-18
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Regnology, *India Element-Based Reporting (EBR) explained*. (Context on
+      RBI’s focus.)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Standard industry practice.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+Concretely, a bank’s risk data team gathers the necessary raw data (from trading, lending, finance systems) and runs it through a predefined mapping specification. This mapping (often in code or ETL tools) converts internal field names and units into the regulatory template fields. Aggregation steps consolidate records (e.g. summing exposures by counterparty type). Once the draft return is built, a series of validation checks ensures the filing is consistent (e.g. column sums match subsidiary filings, no negative values). Issue items from validations are resolved by adjusting mappings or cleaning data. Finally, the return is submitted electronically (often in XBRL or other formats) and signed off.  
+
+Attestation and sign-off are usually required: typically a senior executive or compliance officer must certify the return is true and correct. Restatements occur when errors post-submission require a corrected filing; these must be communicated to the regulator. In data projects, understanding this full cycle is crucial: changes in business definitions or systems can break mappings, so any reporting change project must consider end-to-end impact. A sample production flow:
+
+&lt;Flow&gt;
+Source Systems
+     |
+     v
+Extract Data
+     |
+     v
+Transform/Map (spec: source→return fields)
+     |
+     v
+Aggregate/Summarize
+     |
+     v
+Validate (quality checks)
+     |
+     +--&amp;gt; Exceptions? -&amp;gt; Investigate and correct
+     |
+     v
+Submit Return
+     |
+     v
+Attest/Sign-off
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Every field in a regulatory return must be traceable back to source data via the mapping logic.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Neglecting to re-validate mappings after source system changes; a code update might redirect a column without testers noticing.
+</Trap>
+
+<NeverConfuse a="Regulatory return" b="Regulatory report (internal)">
+**Regulatory return** — A formal submission to a supervisor with pre-defined data items.  
+---  
+**Regulatory report (internal)** — An internal risk report (like VaR reports) which is not directly submitted to regulators.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All regulators require banks to follow this general extract-transform-validate-submit cycle for returns. (The details of formats differ.)
+</Rule>
+
+<Recall
+  q="What is the typical first step in producing a regulatory return?"
+  a="Extracting relevant data from the bank’s source systems (e.g. core banking, market risk systems)."
+/>
+
+<Recall
+  q="Why is attestation needed?"
+  a="To formally confirm accountability – usually a CRO or CEO certifies that data is accurate before submission."
+/>

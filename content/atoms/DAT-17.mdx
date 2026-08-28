@@ -1,0 +1,83 @@
+---
+id: DAT-17
+title: Data Governance Models
+type: concept
+domain: risk-data
+subdomain: data-quality-and-governance
+one_screen: >-
+  Data governance models define how oversight is structured. Common models are
+  *centralized* (a single data governance committee sets policies for all) and
+  *federated* (each business unit has its own governance under corporate
+  guidelines). RBI notes typical models based on process, subject area, or
+  geography, but emphasizes business-function-based ownership.
+prerequisites:
+  - DAT-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: RBI Committee Report on Data Governance (2018).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+In a centralized model, a bank-wide data council or steering committee makes decisions on data standards and conflicts. This ensures consistency but can be slow to react. In a federated model, each line of business governs its own data (loans, payments, etc.) with a chief data steward, under high-level corporate policy. This is more agile but risks inconsistent rules. Many banks use a hybrid: enterprise-wide standards set by a central group, with subcommittees or local owners refining for their area. 
+
+Choosing a model depends on bank size and culture. Large global banks often need a strong central committee (reporting to the board) to coordinate regional offices. A smaller bank might use a subject-based structure (e.g. separate governance for retail vs corporate banking data). RBI’s guidance suggests ownership should follow business functions, with an executive data governance committee and clear roles. 
+
+Regardless of model, a permanent rule is that the structure and responsibilities must be documented. A trap is letting data governance stay informal or ad hoc. Best practice: publish an operating model (committees, roles, processes), and review it periodically. The goal is a sustainable model where policies are enforced, quality is measured (e.g. via KPIs), and issue remediation is managed end-to-end.
+
+&lt;Flow&gt;
+Centralized Model
+    +-----------------------------+
+    | Corporate Data Governance   |
+    | Steering Committee (Board)  |
+    +------+----------------------+
+           |
+    +------+------+
+    | Department A | (Data Stewards)
+    +-------------+
+    | Department B |
+    +-------------+
+
+   Federated Model
++---------------------+   +---------------------+
+| Dept A Governance   |   | Dept B Governance   |
+| (Loan Data Council) |   | (Market Data Council)|
++---------------------+   +---------------------+
+          ^                         ^
+         Corporate Data Governance (policy framework)
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Define and publish your data governance structure (committees, roles, processes) and measure its effectiveness.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Believing “one size fits all” – e.g. centralizing without business input can lead to resistance. Balance central oversight with local expertise.
+</Trap>
+
+<NeverConfuse a="Centralized governance" b="Federated governance">
+**Centralized governance** — A single corporate body governs all data decisions.  
+---  
+**Federated governance** — Each division/business unit has autonomy (within overall guidelines).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These are organizational choices; regulators expect some governance model, but don’t mandate a specific structure.
+</Rule>
+
+<Recall
+  q="What is a federated data governance model?"
+  a="Governance is handled by individual business units (with a corporate policy overlay)."
+/>
+
+<Recall
+  q="Who typically chairs a bank’s data governance steering committee?"
+  a="Often a senior executive such as the CIO, CRO or COO, with board oversight."
+/>

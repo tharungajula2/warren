@@ -1,0 +1,64 @@
+---
+id: DAT-20
+title: 'Attestation, Restatements, and Reporting Change Programs'
+type: concept
+domain: risk-data
+subdomain: reporting-and-delivery
+one_screen: >-
+  **Attestation and sign-off:** Senior management (often the board, CEO or Chief
+  Risk Officer) must formally attest that each regulatory report is accurate and
+  complete. This is both a legal requirement in many jurisdictions and an
+  internal control. **Restatements:** If a material error is discovered after
+  submission, the bank must correct (“restatement”) the return. Restatements can
+  impact capital calculations or regulatory standings, so timely correction and
+  explanation are critical. **Reporting change programs:** When regulations
+  change or new reports are added, a change program is launched. This involves
+  requirement analysis, mapping updates, system development, testing, and
+  parallel runs.
+prerequisites:
+  - DAT-19
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Common regulatory practice (e.g. RBI circulars).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+In practice, attestation is typically documented via a cover letter or checkbox in the submission portal. It holds senior officers legally responsible if the data is faulty. Restatements usually follow a defined protocol: e.g. notify the regulator, submit a corrected report, and explain the cause. Each restatement is logged to avoid repeat mistakes.
+
+Reporting changes (like new BCBS rules or formats) require project management. For instance, moving from manual to XBRL filing or adding a new COREP schedule. Such projects demand coordination between IT, data teams, and regulators. They produce new mapping specs and update test packs. A common trap is underestimating the regression testing needed across old reports. Compliance requires that all related reports still match after change.
+
+<Rule label="PERMANENT RULE">
+No report is final until attested. All corrections must be documented: one should never “forget” a restatement or leave an unexplained discrepancy.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Thinking of reporting change as just a format switch; in reality it often involves changing data definitions, so deep validation is needed.
+</Trap>
+
+<NeverConfuse a="Attestation" b="Audit">
+**Attestation** — Management’s certification of a report’s accuracy.  
+---  
+**Audit** — Independent verification by internal or external auditors. Attestation is self-certification; audit is independent checking.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Attestation/sign-off processes and requirements for restatements are universal (though e.g. Indian banks may align with Companies Act and RBI letters).
+</Rule>
+
+<Recall
+  q="Who typically signs off on a bank’s regulatory returns?"
+  a="In most jurisdictions, a senior executive (often the CEO, CFO or CRO) must attest, making them personally responsible."
+/>
+
+<Recall
+  q="What steps should a bank take if it finds an error in a filed return?"
+  a="Issue a restatement: correct the data, resubmit, and report the error and fix to the regulator promptly."
+/>

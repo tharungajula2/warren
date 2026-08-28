@@ -1,0 +1,76 @@
+---
+id: DAT-09
+title: Data Lineage (Business vs Technical)
+type: concept
+domain: risk-data
+subdomain: architecture-and-lineage
+one_screen: >-
+  Data lineage tracks the journey of data from its origin to its final use.
+  *Business lineage* is a high-level, user-friendly map of what data comes from
+  where for reporting purposes; *technical lineage* is the detailed breakdown of
+  data flows through systems and code. Both are essential for understanding and
+  troubleshooting data issues.
+prerequisites:
+  - DAT-08
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Secoda blog, *Business vs Technical Data Lineage* (Dec 2024).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+Business lineage answers “what data needed to produce a report and why.” It’s often documented in a business requirements document (BRD): e.g. a line item in a report is defined as “sum of loan commitments by country.” Technical lineage, by contrast, traces exactly how that sum is calculated: which tables in the core banking system, what transformations (aggregations, currency conversion) were applied, and how it moved into the data warehouse. Regulators and auditors require lineage evidence to trust reports. For instance, if a regulator sees a credit risk report, they may ask the bank to show the chain of systems and transformations leading to each number.
+
+Clear lineage helps identify root causes of data discrepancies. If a report number is wrong, technical lineage lets data engineers pinpoint where the anomaly occurred in the pipeline. Business lineage helps managers understand the impact (e.g. which products are affected). Both together provide a “complete picture.” Under BCBS 239, documenting lineage is part of demonstrating data governance; many banks include lineage diagrams in their data management plans.  
+
+&lt;Flow&gt;
++---------------------+
+| Business Lineage    |
++---------------------+
+| Loan Commitments --|
+| by Region -&amp;gt; Report |
++---------------------+
+      |
+      v
++-------------------------------+
+| Technical Lineage             |
++-------------------------------+
+| CoreBanking.Loans -&amp;gt; ETL -&amp;gt;   |
+| DataWarehouse -&amp;gt; Report DB    |
++-------------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Always document both business and technical lineage when creating data flows or reports. This double perspective ensures clarity for both business and IT stakeholders.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Providing only high-level lineage (“loans come from system X”) without the technical detail needed for audit.
+</Trap>
+
+<NeverConfuse a="Business lineage" b="Technical lineage">
+**Business lineage** — A high-level mapping (for example, “Loan system ⇒ (sum) ⇒ monthly risk report”), understandable by non-IT stakeholders.  
+---  
+**Technical lineage** — A precise record of ETL steps, database tables and transformations that produce the data.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Both forms of lineage are part of global data governance expectations (e.g. BCBS 239 Principle 2’s call for documented architecture).
+</Rule>
+
+<Recall
+  q="What is the purpose of technical data lineage?"
+  a="To trace exactly how report data was processed through systems and transformations."
+/>
+
+<Recall
+  q="Who typically uses business lineage?"
+  a="Business managers, auditors and regulators to understand what data is being reported and why."
+/>

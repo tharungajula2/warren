@@ -159,10 +159,10 @@
     "atoms": [
       { "id": "CR-01", "weight": 3 },
       { "id": "CAP-18", "weight": 3 },
-      { "id": "TRD-01", "weight": 3 },
-      { "id": "CCR-01", "weight": 2 },
-      { "id": "MRK-01", "weight": 2 },
-      { "id": "BA-01", "weight": 1 }
+      { "id": "DAT-21", "weight": 3 },
+      { "id": "DAT-09", "weight": 2 },
+      { "id": "TRD-01", "weight": 2 },
+      { "id": "CCR-01", "weight": 1 }
     ]
   },
   {
@@ -181,12 +181,12 @@
       "requirements"
     ],
     "atoms": [
-      { "id": "FND-24", "weight": 3 },
-      { "id": "CAP-04", "weight": 3 },
-      { "id": "CAP-30", "weight": 3 },
-      { "id": "IMP-18", "weight": 2 },
-      { "id": "BA-01", "weight": 2 },
-      { "id": "TEC-01", "weight": 1 }
+      { "id": "DAT-19", "weight": 3 },
+      { "id": "DAT-20", "weight": 3 },
+      { "id": "DAT-21", "weight": 3 },
+      { "id": "DAT-22", "weight": 2 },
+      { "id": "CAP-04", "weight": 2 },
+      { "id": "FND-24", "weight": 1 }
     ]
   },
   {
@@ -205,12 +205,12 @@
       "CDE"
     ],
     "atoms": [
-      { "id": "CR-03", "weight": 3 },
-      { "id": "DAT-01", "weight": 3 },
-      { "id": "DAT-02", "weight": 3 },
-      { "id": "FND-06", "weight": 2 },
-      { "id": "CAP-11", "weight": 2 },
-      { "id": "DAT-03", "weight": 1 }
+      { "id": "DAT-03", "weight": 3 },
+      { "id": "DAT-08", "weight": 3 },
+      { "id": "DAT-09", "weight": 3 },
+      { "id": "DAT-07", "weight": 2 },
+      { "id": "DAT-13", "weight": 2 },
+      { "id": "DAT-17", "weight": 1 }
     ]
   },
   {
@@ -232,8 +232,8 @@
       { "id": "FND-16", "weight": 3 },
       { "id": "FND-17", "weight": 3 },
       { "id": "CR-23", "weight": 3 },
-      { "id": "QNT-01", "weight": 2 },
-      { "id": "TEC-01", "weight": 2 },
+      { "id": "DAT-09", "weight": 2 },
+      { "id": "DAT-21", "weight": 2 },
       { "id": "FND-18", "weight": 1 }
     ]
   },
@@ -277,11 +277,11 @@
     ],
     "atoms": [
       { "id": "CR-02", "weight": 3 },
+      { "id": "DAT-21", "weight": 3 },
       { "id": "CR-03", "weight": 3 },
-      { "id": "CR-04", "weight": 3 },
-      { "id": "CR-10", "weight": 2 },
-      { "id": "BA-01", "weight": 2 },
-      { "id": "TEC-01", "weight": 1 }
+      { "id": "DAT-09", "weight": 2 },
+      { "id": "DAT-11", "weight": 2 },
+      { "id": "CR-10", "weight": 1 }
     ]
   }
 ]

@@ -1,0 +1,89 @@
+---
+id: DAT-04
+title: >-
+  Risk Data Aggregation Capabilities (Accuracy, Completeness, Timeliness,
+  Adaptability)
+type: concept
+domain: risk-data
+subdomain: bcbs239-and-aggregation
+one_screen: >-
+  BCBS 239 mandates that a bank’s risk data aggregation be **accurate, complete,
+  timely, and adaptable**. In practice, this means automated data pipelines,
+  extensive reconciliations, and flexible reporting capabilities. Banks must
+  reconcile risk data with accounting records, cover ~95% of exposures across
+  all entities, refresh data fast (daily or intraday for critical metrics), and
+  be able to run ad-hoc reports on demand.
+prerequisites:
+  - DAT-03
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'FluxForce, *BCBS 239 Principles* (2026).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'BIS BCBS newsletter, *Improving risk data aggregation* (Jan 2026).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+The principle of **Accuracy and Integrity** (Principle 3) requires that risk data reconcile with the general ledger and management reports, and that automated checks minimize manual errors. Any manual adjustments must have documented rationale and approval. **Completeness** (Principle 4) means capturing data across all material business lines, legal entities and geographies. Supervisors typically expect banks to cover at least 95% of risk sources; any gaps trigger examination findings. **Timeliness** (Principle 5) demands that consolidated risk metrics be available fast enough for decision-making in stress; for example, daily VaR and credit portfolio reports as a baseline, potentially intraday for key measures. Finally, **Adaptability** (Principle 6) requires systems to produce new, ad-hoc reports quickly – for instance, answering a one-off supervisory query without months of coding.
+
+Banking institutions implement these requirements by building data warehouses or data lakes that collect source-system data nightly (or more frequently) and standardizing it. They set quality rules so that any discrepancy (e.g. mismatched values) is flagged. Importantly, the infrastructure must operate in crisis scenarios as well (e.g. with market freezes or system outages) to ensure data is still deliverable. The perpetual struggle is that legacy siloed systems and manual processes often fall short of these standards, which is why many banks have ongoing data improvement programs. Nonetheless, under BCBS 239, the **permanent requirement** is clear: all material risk data must be consolidated accurately and on time.
+
+&lt;Flow&gt;
+Sources (trading, loans, etc.)
+     |
+     v
++--------------+
+| Data Warehouse|
++--------------+
+     |
+     v
+Checks: Reconcile with ledger (Accuracy)
+     |
+     v
+Coverage: Ensure all entities, instruments (Completeness)
+     |
+     v
+Update: Nightly/daily loads, real-time where needed (Timeliness)
+     |
+     v
+Flexible queries on demand (Adaptability)
+     |
+     v
+Risk aggregation outputs
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Risk aggregation must cover all material data and reconcile to accounting — incomplete or unverified data is unacceptable.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming that old processes (e.g. monthly spreadsheet closes) are sufficient; BCBS 239 expects daily or intraday capabilities and automation.
+</Trap>
+
+<NeverConfuse a="Completeness" b="Consistency (or validity)">
+**Completeness** — capturing *all* relevant risk data (nearly 100% coverage).  
+---  
+**Consistency (or validity)** — ensuring data adheres to business rules. While related, completeness means no gaps, consistency means matching definitions.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Data aggregation requirements (accuracy, completeness, etc.) are consistent under BCBS 239 across jurisdictions, as these are quantitative targets not subject to local modification.
+</Rule>
+
+<Recall
+  q="What is a typical coverage target for completeness?"
+  a="Supervisors look for at least ~95% of relevant exposures included (Principle 4)."
+/>
+
+<Recall
+  q="Give an example of adaptability in risk data."
+  a="The ability to generate a new report on demand (e.g. an ad-hoc credit exposure breakdown) without major reprogramming."
+/>

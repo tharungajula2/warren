@@ -1,0 +1,82 @@
+---
+id: DAT-03
+title: BCBS 239 Principles Overview
+type: concept
+domain: risk-data
+subdomain: bcbs239-and-aggregation
+one_screen: >-
+  BCBS 239 comprises 14 principles organized in four groups: (I) Governance &
+  Infrastructure (board accountability, data architecture), (II) Risk Data
+  Aggregation Capabilities (accuracy, completeness, timeliness, adaptability),
+  (III) Risk Reporting Practices (comprehensiveness, clarity, frequency,
+  distribution), and (IV) Supervisory Review (how regulators assess banks).
+  Together they form a principles-based framework requiring banks to implement
+  robust data policies and systems.
+prerequisites:
+  - DAT-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee, *Principles for effective risk data aggregation and risk
+      reporting*, Jan 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'FluxForce, *BCBS 239: Requirements, Scope & Compliance* (2026).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Basel Committee press release (28 Nov 2023).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+BCBS 239’s purpose is to ensure banks can identify their risk exposures at any time. It mandates that the board of directors oversee data quality, and that the Chief Risk Officer is accountable day-to-day. Principle 1 demands “strong governance” consistent with other Basel standards, and Principle 2 requires a data architecture that supports aggregation in normal and stress conditions (avoiding last-minute spreadsheets). The second group (Principles 3–6) then focuses on aggregation: data must reconcile with accounting, cover all material sources (at least ~95%), be updated rapidly (daily or intraday for critical metrics), and support ad hoc queries under stress. The third group (Principles 7–11) covers reporting: risk reports must be “accurate, comprehensive, and written for their intended audience,” delivered at appropriate frequency, and distributed along the approved chain of command. Finally, Principles 12–14 describe supervisory review: they guide how regulators should evaluate compliance, require remediation plans for deficiencies, and address home/host coordination for global banks.
+
+BCBS 239 is principles-based: it does not prescribe specific IT architectures but sets outcomes. National supervisors (e.g. PRA in the UK, Fed in the US, RBI in India) expect banks to meet these outcomes, potentially imposing Pillar 2 add-ons for serious shortcomings. The standard has no formal legal force by itself; compliance is enforced through local regulation and supervision.
+
+&lt;Flow&gt;
++------------------------+  +----------------------------+
+| Governance &amp;amp; Infra     |  | Risk Reporting Practices  |
+| (Principles 1–2)       |  | (Principles 7–11)         |
++------------------------+  +----------------------------+
+             |                         ^ 
+             v                         |
++------------------------+  +----------------------------+
+| Data Aggregation       |  | Supervisory Review        |
+| (Principles 3–6)       |  | (Principles 12–14)        |
++------------------------+  +----------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+The board of directors must ultimately own the risk data framework, not just delegate it to IT – strong governance is mandatory.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating BCBS 239 as optional guidance; in practice, major regulators treat it as mandatory for significant banks.
+</Trap>
+
+<NeverConfuse a="BCBS 239" b="Basel III/CRR">
+**BCBS 239** — Basel Committee principles for risk data aggregation and reporting. Its focus is data and reporting quality.  
+---  
+**Basel III/CRR** — Regulatory framework for capital and liquidity. While related to risk, Basel III addresses capital adequacy, not data architecture.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The 14 principles and their objectives are identical globally; they were adopted for G-SIBs with the same intent by all major regulators.
+</Rule>
+
+<Recall
+  q="What are the four categories of BCBS 239 principles?"
+  a="Governance & infrastructure; risk data aggregation; risk reporting; supervisory review."
+/>
+
+<Recall
+  q="Who is covered by BCBS 239?"
+  a="G-SIBs had a mandatory deadline; D-SIBs and large banks are expected to follow equivalent rules enforced by local supervisors."
+/>
