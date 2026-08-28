@@ -107,6 +107,8 @@
       { "id": "CAP-16", "weight": 2 },
       { "id": "MRK-13", "weight": 2 },
       { "id": "MRK-14", "weight": 2 },
+      { "id": "OPR-10", "weight": 2 },
+      { "id": "OPR-12", "weight": 2 },
       { "id": "CAP-30", "weight": 1 }
     ]
   },
@@ -203,6 +205,8 @@
       { "id": "DAT-21", "weight": 3 },
       { "id": "TEC-12", "weight": 2 },
       { "id": "TEC-13", "weight": 2 },
+      { "id": "OPR-14", "weight": 2 },
+      { "id": "OPR-15", "weight": 2 },
       { "id": "DAT-22", "weight": 2 },
       { "id": "CAP-04", "weight": 2 },
       { "id": "FND-24", "weight": 1 }

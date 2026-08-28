@@ -1,0 +1,83 @@
+---
+id: OPR-10
+title: 'Pillar I: Basic Indicator and Standardised Approaches'
+type: concept
+domain: operational-risk
+subdomain: sma-and-capital-approaches
+one_screen: >-
+  **Basic Indicator Approach (BIA):** Capital = 15% of average annual gross
+  income (last 3 years).  **Standardised Approach (TSA/ASA):** Divide bank
+  activities into 8 business lines; apply fixed beta factors to each line’s
+  gross income; then average the sum over 3 years.
+prerequisites:
+  - OPR-01
+jurisdictions:
+  - universal
+  - IN
+  - UK
+  - EU
+  - US
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'BIS, *Basel II Accord (BCBS 128)* – BIA and TSA formulas.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Finalyse (Basel III overview).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+Under Basel II (and prior Basel I transitional norms), simple pillar 1 methods existed before SMA.  **BIA** is the simplest: it sets the operational risk capital charge equal to *α* × (average annual gross income), with α=15%.  For example, if a bank’s average gross income was €100m, BIA charge = 0.15×100m = €15m. (Years with negative or zero income are dropped.)  
+
+**Standardised Approach (TSA)** refines this by business line. Basel defined 8 lines (e.g. retail, corporate finance, trading, etc.).  Each line’s gross income is multiplied by a line-specific factor (β) – typically 12%-18% depending on line.  For example, corporate finance β=18%, retail banking β=12%. The capital charge = average over 3 years of sum(β_i × GI_i).  Each negative income can offset positive in the same year.   
+
+These approaches were “standardised” because any bank could calculate them from simple P&amp;L data. They were retired by 2022 under Basel 3.1, but some regimes still use BIA/TSA for domestic banks or under-transition.
+
+&lt;Flow&gt;
++------------------------+
+| Basic Indicator (BIA)  |
+| Charge = 15% × avg GI  |
++------------------------+
+           vs
++-------------------------------+
+| Standardised (TSA/ASA)        |
+| Split into 8 lines with betas |
+| Charge = avg over 3y of Σ(β_i×GI_i) |
++-------------------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+If using TSA, the 8 business lines and associated beta factors (12–18%) must be applied.  National regulators may specify these in detail (EBA or local law).  Board approval and risk framework standards are required even under TSA.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Do not assume these approaches reflect current risk (they were proxies).  Under TSA, a bank with complex products might hold too little capital.  Also, don’t confuse “Standardised” with the newer “SMA” – they are completely different.
+</Trap>
+
+<NeverConfuse a="Basic Indicator (BIA)" b="Standardised (TSA)">
+**Basic Indicator (BIA)** — capital = α×(bank’s gross income).  
+---  
+**Standardised (TSA)** — capital = weighted sum of each business line’s GI (β factors).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These formulas were global under Basel II. However, note:  
+- **UK/EU (pre-Basel3.1):** SMEs or retail banks often used TSA with same factors.  
+- **India:** RBI followed Basel II on paper; BIA (15%) and TSA lines were defined in Master Directions.  
+- **US:** US banking regulators allowed these approaches earlier but also introduced standardized (ASA) that resembled TSA.
+</Rule>
+
+<Recall
+  q="What percentage of gross income does BIA use?"
+  a="15%."
+/>
+
+<Recall
+  q="How many business lines are in the Standardised Approach?"
+  a="Eight (with factors like 18%, 15%, 12% depending on line)."
+/>

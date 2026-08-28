@@ -1,0 +1,71 @@
+---
+id: OPR-01
+title: Operational Risk Definition
+type: concept
+domain: operational-risk
+subdomain: operational-risk-foundations
+one_screen: >-
+  Loss resulting from inadequate or failed internal processes, people, and
+  systems or from external events; this definition explicitly includes legal
+  risk but excludes strategic and reputational risk.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: Basel II (BCBS 128) definition of operational risk
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: MetricStream (ERM framework discussion).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+Operational risk is one of the core categories of banking risk. Under Basel definitions, it is “the risk of loss resulting from inadequate or failed internal processes, people, and systems, or from external events. It includes legal risk, but excludes strategic and reputational risk”.  In practice this means that any operational failure – from a system outage to a fraud loss – is treated as an operational risk event.  Banks must categorize losses from things like data breaches, fraud, system downtime, or human error as operational losses.  “Legal risk” (e.g. fines or litigation) is counted here too, but strategy mistakes or general PR damage are not part of operational risk.  India follows this principle as well: RBI prudential rules in banks treat losses from internal failures or external shocks as operational risk, separate from strategic or reputation issues.  (NB India’s banks use RBI norms rather than IFRS 9, so the definition is applied for prudential risk management, not via accounting rules.)  
+
+Internal jargon: sometimes analysts call these “process risk” or “ops risk”.  Everyone should remember the Basel boundary: **legal risk (like litigation)** is included, but **reputational or strategic risk** are separate categories (handled under governance or business risk frameworks). 
+
+&lt;Flow&gt;
++--------------------+
+| Operational Risk   |  
+| categories include:|
+| - Process failures |
+| - People errors    |
+| - System outages   |
+| - External events  |
+| - Legal failures   |
++--------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+If it’s a loss caused by something going wrong in the bank’s operations or from an outside shock, it’s operational risk.  Always capture these losses in your ORM (operational risk management) framework, including any legal or compliance fines as part of operational risk.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Do **not** assume strategic mis-steps or brand damage count here – they do not.  A common mistake is trying to manage reputational or strategic issues with the operational risk model.  They are handled elsewhere (e.g. under strategic risk or conduct frameworks) and should not be lumped under “operational loss data.”
+</Trap>
+
+<NeverConfuse a="Operational Risk" b="Reputational Risk">
+**Operational Risk** — loss from failed processes, people, systems or external events (Basel definition).   
+---  
+**Reputational Risk** — risk that negative perception harms the bank. (Not part of “operational” category.)
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The basic definition of operational risk comes from Basel and is used globally; all regulators require banks to manage loss risk from failures as outlined above.
+</Rule>
+
+<Recall
+  q="Does operational risk include reputational risk?"
+  a="No – by definition it excludes reputational and strategic risks."
+/>
+
+<Recall
+  q="Is legal risk included in operational risk?"
+  a="Yes – regulatory fines or litigation from errors are counted as operational risk losses."
+/>

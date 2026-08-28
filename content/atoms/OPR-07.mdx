@@ -1,0 +1,63 @@
+---
+id: OPR-07
+title: External Loss Data and Scenario Analysis
+type: concept
+domain: operational-risk
+subdomain: rcsa-kri-and-control-governance
+one_screen: >-
+  Banks supplement internal data with external loss data (e.g. industry
+  databases like ORX) and scenario analysis workshops.  External data is limited
+  (often anonymized), while scenario analysis uses expert judgment to estimate
+  severe loss frequency/severity.
+prerequisites:
+  - OPR-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Fed analysis of AMA (external data & scenario).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: ORX/industry discussions on scenario use.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+Because internal loss data is limited, banks use **external data** and **scenario analysis**. External sources include news databases, vendor feeds, and consortium pools (e.g. ORX).  However, regulators note such data are sparse and biased toward big publicized events. For example, ORX’s anonymized dataset helps gauge extreme losses, but cannot be directly scaled without judgment.  
+
+**Scenario analysis** is a forward-looking process: risk experts and business leaders hold workshops to identify plausible “severe but plausible” events and estimate their frequency and impact.  For instance, a scenario might be “critical IT system hack causing $50m losses”. Participants use past incidents, market knowledge, and judgment to quantify impact.  (Note: scenarios are subjective, so controls are needed to mitigate optimism bias.)  
+
+Under Basel’s old AMA these elements were required, but guidance emphasized not to **lower** capital estimates via optimistic scenarios.  Even though AMA is gone, banks still use scenarios to stress-test resilience and in Pillar 2 reviews.  Scenario analysis is especially useful for emerging risks with little history (e.g. cloud failure, cyber events).
+
+<Rule label="PERMANENT RULE">
+Use external data and scenario outputs only as supplements to internal loss data.  They should capture tail risks that internal records miss.  Always document assumptions in scenarios and avoid letting them reduce conservatism.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Don’t over-rely on scenarios to justify lowering capital.  Supervisors warn that banks often underestimate scenario losses to reduce capital.  Also, treat external loss data carefully — small banks shouldn’t blindly import the industry’s largest losses without proper scaling.
+</Trap>
+
+<NeverConfuse a="Scenario analysis" b="Stress testing">
+**Scenario analysis** — expert-driven estimation of tail loss frequency/severity.  
+---  
+**Stress testing** — systematic shock to risk factor values (more common in market/credit risk). (Both are forward-looking but scenarios use narrative events while stress tests use factor jumps.)
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Basel guidelines for operational risk encouraged use of external data and scenario inputs (formerly under AMA).  Current frameworks (SMA/Pillar 2) still expect firms to consider severe-event scenarios in risk management.
+</Rule>
+
+<Recall
+  q="What is the main limitation of external loss data?"
+  a="It’s not comprehensive (focuses on major events) and usually anonymized (hard to scale)."
+/>
+
+<Recall
+  q="How is scenario analysis done?"
+  a="Experts brainstorm and quantify plausible severe loss events (frequency & severity) for risks that lack historical data."
+/>

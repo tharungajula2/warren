@@ -147,7 +147,12 @@ for (const seg of rawSegments) {
       if (jStr.toLowerCase().startsWith("no delta") || jStr.toLowerCase() === "universal") {
         jurisdictions = ["universal"];
       } else if (jStr.toLowerCase() !== "none" && jStr !== "") {
-        jurisdictions = jStr.split(",").map((s) => s.trim()).filter(Boolean);
+        const rawList = jStr.split(",").map((s) => s.trim()).filter(Boolean);
+        const validCodes = new Set(["universal", "IN", "UK", "EU", "US"]);
+        const mapped = rawList
+          .map((j) => (j.toLowerCase() === "basel" ? "universal" : j))
+          .filter((j) => validCodes.has(j));
+        jurisdictions = mapped.length > 0 ? mapped : ["universal"];
       }
       metaEndLineIdx = Math.max(metaEndLineIdx, i);
     }
@@ -493,6 +498,13 @@ function inferSubdomain(atomId) {
     if (num <= 14) return "data-engineering-and-reconciliation";
     if (num <= 20) return "pandas-analytics-and-dataframes";
     return "python-vectorization-and-engineering";
+  }
+
+  if (prefix === "OPR") {
+    if (num <= 3) return "operational-risk-foundations";
+    if (num <= 9) return "rcsa-kri-and-control-governance";
+    if (num <= 13) return "sma-and-capital-approaches";
+    return "resilience-third-party-and-conduct";
   }
 
   return "unsorted";

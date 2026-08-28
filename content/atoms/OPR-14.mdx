@@ -1,0 +1,73 @@
+---
+id: OPR-14
+title: Third-Party and Outsourcing Risk
+type: concept
+domain: operational-risk
+subdomain: resilience-third-party-and-conduct
+one_screen: >-
+  Outsourcing critical functions to vendors creates operational risk. 
+  Concentration risk arises when a single provider dominates (e.g. all banks
+  using one cloud service).  OSFI defines “institution-specific” concentration
+  as overreliance on a single third party for one bank, and “systemic”
+  concentration when many banks depend on the same provider.
+prerequisites:
+  - OPR-01
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'OSFI, *Third-Party Risk Guideline* definitions.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'Basel Committee, *Principles for Third-Party Risk Management*, 2017.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+**Third-party risk** (also called vendor risk) occurs when banks rely on external service providers (for IT, payments, data centers, etc).  Key aspects include due diligence, contract management, and exit planning. Even if a task is outsourced, the bank’s 1LOD retains accountability for that risk (supervisors emphasize that rule). 
+
+**Concentration risk** is a special concern: if many banks use the same vendor, a single vendor failure can hit the entire sector.  The Canadian OSFI guideline defines:
+- *Institution-specific concentration:* loss to one bank from reliance on a single vendor.  
+- *Systemic concentration:* loss across many banks when one third-party provider (or location) fails.  
+A current example is cloud services – if almost all banks use AWS or Azure, an outage there is a systemic threat.
+
+Banks must identify critical vendor relationships and manage them (multiple suppliers, safeguards, exit plans).  Many regulators now require approval and oversight of critical third parties. The Basel Committee also published sound third-party management principles.  Poor outsourcing control can lead to large operational losses (e.g. data breach at a provider, failure of a payment processor).
+
+<Rule label="PERMANENT RULE">
+Assess and document the criticality of all outsourced services.  Maintain contingency and exit plans.  Ensure concentration (especially in cloud) is monitored – e.g. do not let any single third-party failure threaten business continuity.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Do not assume risk disappears because a function is outsourced.  The bank always remains responsible.  Also, beware of relying too heavily on one vendor.  A classic error is assuming that utilizing a reputable vendor eliminates risk. Even top vendors can fail (as seen with global outages).
+</Trap>
+
+<NeverConfuse a="Outsourcing" b="Offshoring">
+**Outsourcing** — contracting services to a third party under a formal agreement.  
+---  
+**Offshoring** — relocating business processes (could still be in-house or offshore branch). (Outsourcing and offshoring can overlap but are not the same.)
+</NeverConfuse>
+
+**UK/EU** — Regulators (PRA/SRBD/FCA) require firms to have robust outsourcing frameworks (e.g. FCA’s SYSC 8 and DORA regulations on ICT third-party management).
+
+<Delta j="IN">
+— RBI’s Master Directions mandate banks’ risk management of outsourcing (including to cloud and data centers).
+</Delta>
+
+<Delta j="US">
+— OCC and Fed guidance (e.g. OCC Bulletin 2013-29) emphasize vendor management and concentration risk.
+</Delta>
+
+<Recall
+  q="What’s the difference between institution-specific and systemic concentration risk?"
+  a="Institution-specific: one bank’s risk from a single vendor.  Systemic: many banks’ risk if they all use one vendor."
+/>
+
+<Recall
+  q="True or False: If I move operations to Amazon Web Services, I eliminate operational risk."
+  a="False – you still face risk (e.g. AWS outage is an outsourcer risk)."
+/>

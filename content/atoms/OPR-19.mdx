@@ -1,0 +1,60 @@
+---
+id: OPR-19
+title: Change Management Risk
+type: concept
+domain: operational-risk
+subdomain: resilience-third-party-and-conduct
+one_screen: >-
+  Change management risk is the risk that implementing a change (e.g. new
+  system, process revamp) itself causes failures or losses. Major changes must
+  be managed carefully to avoid unintended disruptions.
+prerequisites:
+  - OPR-15
+  - OPR-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Basel Committee, *Principles for Sound IT and Governance* (control over
+      change management).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+Organizations undertake major change programs (new core banking system, mergers, or regulatory projects). Each such change carries its own risk of introducing errors or disruption. Change management risk includes schedule overruns, technical glitches, data errors, or poor training leading to failures once the change is live.  For example, a system upgrade might inadvertently disable a payment batch. Banks thus need rigorous change-control processes: testing in a risk-free environment, phased rollout, fallback plans, and impact assessment. 
+
+Change risk is operational, not strategic: it arises during the execution of projects. It is often managed under project management and IT risk frameworks, but should be integrated with ops risk (e.g. scenario thinking about “failed change” events).
+
+<Rule label="PERMANENT RULE">
+Apply strict change controls: use version control, testing, sign-off at each stage, and rollback procedures. Involve the risk function in major changes and log any near-misses or incidents during implementation.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Don’t treat project issues as only project risk.  Ignoring a change failure can lead to large operational loss later.  Also, avoid “big bang” rollouts without pilot testing – history shows those often go wrong.
+</Trap>
+
+<NeverConfuse a="Change management risk" b="Project Risk">
+**Change management risk** — risk of problems due to the change process itself.  
+---  
+**Project Risk** — risks around delivering the project objectives (time/cost). (There’s overlap, but change risk focuses on aftermath after deployment.)
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Good change management is a universal best practice (mentioned in Basel principles, IT governance guidelines, etc.). Some regulators (e.g. RBI on IT governance) specifically require robust change controls.
+</Rule>
+
+<Recall
+  q="Give an example of change management risk."
+  a="A new IT system rollout fails and corrupts customer data."
+/>
+
+<Recall
+  q="What is a key mitigation for change risk?"
+  a="Thorough testing and a rollback plan before going live."
+/>

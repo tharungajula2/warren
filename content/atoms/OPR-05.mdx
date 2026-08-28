@@ -1,0 +1,65 @@
+---
+id: OPR-05
+title: Key Risk Indicators (KRI) vs Key Performance Indicators (KPI)
+type: concept
+domain: operational-risk
+subdomain: rcsa-kri-and-control-governance
+one_screen: >-
+  KRIs are forward-looking metrics signaling risk exposure, whereas KPIs track
+  business performance.  A KRI warns of rising risk (like number of control
+  breaches), while a KPI measures output (like sales volume).
+prerequisites:
+  - OPR-04
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'OSFI, *Third-Party Risk Guideline* (KRIs mentioned as BEICF).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: MetricStream (ERM framework).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Finextra (KRI vs KPI distinction).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+Key Risk Indicators (KRIs) and Key Performance Indicators (KPIs) often confuse people but serve different purposes.  A **KRI** is a risk-focused measure, intended to alert the bank to increasing risk before losses occur. For example, a KRI might be the percentage of exceptions in a control process, or days since the last system patch (longer time = higher risk). KRIs usually have warning thresholds: if exceeded, management investigates potential failures.  
+
+A **KPI** is a metric of business performance (e.g. profit margin, new accounts opened).  A KRI gives an early warning of possible risk events, while a KPI tells you if you met your targets.  In short: “KRIs measure exposure to risk; KPIs measure progress toward goals”.  For instance, falling customer satisfaction could be a KRI for conduct risk; growth in assets under management is a KPI for business success.
+
+Always align KRIs to actual risk scenarios identified (e.g. RCSA or loss data).  And distinguish them clearly from KPIs so risk and business metrics are not mixed.
+
+<Rule label="PERMANENT RULE">
+Define KRIs with clear thresholds and action triggers.  Link each KRI to a specific risk scenario, and review them regularly.  KRIs should be meaningful and measurable (e.g. error rates, incident counts).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+A frequent mistake is tracking a KPI and calling it a KRI (or vice versa).  For example, using branch transaction volume (a KPI) to measure processing risk is misleading.  Always double-check if a metric is truly risk-related (KRI) or just performance (KPI).
+</Trap>
+
+<NeverConfuse a="KRI" b="KPI">
+**KRI** — a risk exposure metric that should rise *before* losses (e.g. late detections).  
+---  
+**KPI** — a performance metric of outcomes (e.g. revenue growth).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The concept of KRIs vs KPIs is consistent across banking regulations. All risk frameworks emphasize forward-looking indicators.
+</Rule>
+
+<Recall
+  q="What’s a simple example of a KRI?"
+  a="Number of operational incidents in the last month, or percentage of transactions failing."
+/>
+
+<Recall
+  q="Why aren’t profit targets KRIs?"
+  a="Profit targets are KPIs (performance). They don’t warn of risks ahead; KRIs must signal a problem before it causes a loss."
+/>

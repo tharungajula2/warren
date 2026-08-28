@@ -1,0 +1,71 @@
+---
+id: OPR-08
+title: Issue and Action Management
+type: procedure
+domain: operational-risk
+subdomain: rcsa-kri-and-control-governance
+one_screen: >-
+  Issue management tracks identified risk/control weaknesses through to
+  remediation. An “issue” is a control/process gap that could lead to risk
+  materialisation, requiring action plans.
+prerequisites:
+  - OPR-04
+  - OPR-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: ORX *Issue Management* definition.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel BCBS 195/196 (sound operational risk practices guidelines, on
+      corrective action).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 14_OPR_operational_risk.md
+---
+Issue (or finding) management is the process of ensuring that problems identified in the risk framework are fixed. An “issue” typically means a **weakness or deficiency** in a control or process; if unaddressed it may let a risk materialise. For example, an audit report might flag that a reconciliations process is missing a key review – that is logged as an “issue.” The bank then assigns a responsible owner, sets deadlines and action plans to correct the gap (e.g. implement a new check), and tracks it to closure.  
+
+Good issue management involves: clear logging (unique IDs, description of root cause), categorization (risk type, severity), timely escalation to management, and periodic status reporting.  Many banks use dedicated software to track issues (some link them to risk indicators).  The key is follow-through: every issue should be resolved or formally accepted by senior management if not mitigated. Unresolved issues accumulate “residual risk.” 
+
+&lt;Flow&gt;
+Audit/Incident -&amp;gt; Issue logged 
+      |  
+Risk Office tracks and categorizes -&amp;gt; Action plan assigned 
+      |  
+Reports to Management and Board until closed
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+All identified issues (e.g. audit findings, RCSA gaps, loss root causes) must be logged and tracked. Assign a clear deadline and owner.  Regularly review outstanding issues with senior risk committees to ensure remediation.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Avoid letting issues stall. A frequent mistake is opening many low-priority issues and losing track of them.  Focus resources on resolving issues that pose the greatest risk.  Also, don’t close an issue prematurely: require evidence of a fix (e.g. retest of control) before marking it done.
+</Trap>
+
+<NeverConfuse a="Issue" b="Incident (loss)">
+**Issue** — a control/process gap or weakness found, awaiting remediation.  
+---  
+**Incident (loss)** — an actual event where a risk materialised (the loss itself). (Incidents are root causes for issues; issues may exist before any loss.)
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Effective issue management is universally required by regulators as part of internal controls and operational risk frameworks.  (For example, Basel’s SRP guidelines expect banks to fix risk model weaknesses found in validation/audit.)
+</Rule>
+
+<Recall
+  q="What happens to an issue after it’s logged?"
+  a="It is assigned an owner and action plan, and tracked until fully remediated or formally accepted."
+/>
+
+<Recall
+  q="True or False: Closed issues should never be reopened."
+  a="False. If an action fails, the issue must stay open. Controls changes need evidence of effectiveness."
+/>
