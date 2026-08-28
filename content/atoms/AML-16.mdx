@@ -1,0 +1,66 @@
+---
+id: AML-16
+title: Sanctions Screening
+type: mechanism
+domain: financial-crime
+subdomain: transaction-monitoring-and-sanctions
+one_screen: >-
+  Sanctions screening involves checking customer names and transactions against
+  global watchlists (UN, OFAC, etc.). This uses name-matching algorithms (often
+  fuzzy matching) to catch known terrorists, criminals, or sanctioned entities.
+  Screening is distinct from transaction monitoring because it matches specific
+  identities rather than patterns.
+prerequisites:
+  - AML-15
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      OFAC, *Sanctions List Search Manual* (US Treasury guidance on name
+      screening).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      FATF, *Guidance on Compliance with WMD Sanctions* (sanctions screening
+      best practices).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 15_AML_financial_crime.md
+---
+Sanctions screening is a separate discipline from general transaction monitoring. Banks must screen customers at onboarding and periodically re-screen accounts against sanctions lists: UN Security Council, US Treasury’s OFAC, EU, UK, etc.  For transactions (especially cross-border payments), the payment’s beneficiary and originator names are also screened in real time to block any transfer involving a sanctioned party.  Fuzzy or “approximate” matching is used to account for misspellings or transliterations. For example, a wire transfer to “Mohammed Salim” would be checked against “Mohammed Suleiman” using phonetic match logic.  
+
+Sanctions screening is mandated by law. In the US, OFAC requires blocking any transaction involving a person on the Specially Designated Nationals (SDN) list. Similar rules exist globally. Unlike AML alerts, a sanctions match has no ambiguity – if the payee is on a list, the payment must be rejected or frozen.  Thus, sanctions screening focuses on lists and name-matching, whereas transaction monitoring focuses on behavioral patterns.
+
+<Rule label="PERMANENT RULE">
+Maintain up-to-date sanctions and PEP lists (daily at least). Screen all new customers and every transaction against these lists using reliable matching software. Do not rely solely on exact spellings – use fuzzy logic to catch variants.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming exact name match is enough. Criminals often use aliases or misspellings; failing to catch those will let them slip by. Also, treating sanctions screening as part of AML monitoring – it’s a distinct process legally and technically.
+</Trap>
+
+<NeverConfuse a="Sanctions screening" b="Transaction monitoring">
+**Sanctions screening** — matching names against official sanctions/terrorism lists.  
+---  
+**Transaction monitoring** — looking for suspicious activity patterns. The two are often conflated but sanctions screening simply verifies if transaction parties are blacklisted, whereas monitoring checks transaction *behavior*.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Sanctions regimes are country-specific in content (different lists), but all jurisdictions require compliance with UN sanction lists. In practice: **IN** follows UN and domestic (e.g. ISIS list) sanctions via RBI circulars; **UK** implements UN/EU/UK lists via HM Treasury; **EU** has Union lists; **US** has its own OFAC list (e.g. North Korea, Iran). Screening processes are similar globally but lists differ.
+</Rule>
+
+<Recall
+  q="What is fuzzy matching in sanctions screening?"
+  a="A technique that finds approximate name matches so variations (typos, transliterations) still hit on a sanctions list. For example, “Youssef” vs “Youssef” might match via soundex."
+/>
+
+<Recall
+  q="How does sanctions screening differ from transaction monitoring?"
+  a="Sanctions screening compares names/identifiers to known prohibited parties and blocks matches. Transaction monitoring looks at transaction amounts/patterns for anomalies. Both are AML controls but with different purposes."
+/>

@@ -1,0 +1,64 @@
+---
+id: AML-09
+title: Risk-Based Approach (RBA)
+type: concept
+domain: financial-crime
+subdomain: kyc-edd-and-customer-due-diligence
+one_screen: >-
+  The risk-based approach means allocating AML resources according to the risk
+  posed by each customer or transaction. Banks must assess risk factors
+  (customer type, geography, product) and adjust due diligence intensity
+  accordingly.
+prerequisites:
+  - AML-06
+  - AML-08
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'FATF, *Guidance on the Risk-Based Approach to AML* (e.g. FATF Rec. 1).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee, *Customer Risk Factors (CBB 2021)* (summary of RBA
+      concepts).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 15_AML_financial_crime.md
+---
+Under FATF’s standards, banks are expected to tailor their AML controls to the level of risk. This means identifying each customer’s risk level (high, medium, low) based on factors like customer profile (e.g. PEP vs retail), country of origin (sanctioned vs safe), industry (cash-intensive vs usual), and product (complex instruments vs basic deposits).  The FATF states that firms should “identify, assess and understand ML/TF risk… and take AML measures commensurate to the risk level”.  For example, a high-risk client may have quarterly KYC reviews, while a low-risk retail saver may only need basic onboarding checks.  
+
+A customer risk rating typically combines factors: a PEP from a high-risk country doing large wire transfers might be “high risk,” requiring enhanced due diligence. Conversely, a local salaried employee with small deposits is “low risk,” possibly even eligible for simplified due diligence. The product or transaction risk is also considered: certain services (like private banking or crypto trading) raise risk. The key is that higher-risk relationships have more rigorous checks (EDD) while very low-risk customers may get reduced scrutiny (SDD) if regulations allow.
+
+<Rule label="PERMANENT RULE">
+Always document a customer’s risk rating and apply the corresponding level of due diligence. Higher risk customers require senior review and more frequent monitoring, as per FATF’s guidance.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating all customers identically (one-size-fits-all compliance). Also, misjudging risk: e.g. calling a high-net-worth business owner “low risk” just because they’re polite and have an account manager.
+</Trap>
+
+<NeverConfuse a="Customer risk" b="Transaction/product risk">
+**Customer risk** — the inherent ML/TF risk of the customer’s profile (PEP status, business type, location).  
+---  
+**Transaction/product risk** — risk associated with a particular product or transaction (cash deposit, trade finance, etc.). They are often conflated; in fact, a high-risk customer can have safe transactions, and vice versa.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All AML regimes (US BSA, UK MLR, RBI, EU AMLD) require a risk-based approach. The FATF standard (Rec.1) is implemented universally, though exact categories (what is “high risk”) may differ by country’s assessment.
+</Rule>
+
+<Recall
+  q="What factors are used in a risk-based customer assessment?"
+  a="Key factors include customer identity (e.g. PEP vs normal), geography (high-risk country?), industry, products/services used, and transaction patterns. Higher values in these factors lead to a higher risk rating."
+/>
+
+<Recall
+  q="How does due diligence differ by risk level?"
+  a="High-risk clients get Enhanced Due Diligence (EDD): extra verification and monitoring. Low-risk clients may qualify for Simplified Due Diligence (basic checks only). Medium risk get standard CDD."
+/>

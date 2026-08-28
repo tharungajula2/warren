@@ -68,7 +68,13 @@ const CLEAN_UNICODE_REGEX = /[\uE000-\uF8FF\uDB80-\uDBFF\uD800-\uDFFF]/g;
 const sanitizedContent = cleanedContent.replace(CLEAN_UNICODE_REGEX, () => {
   citationTokenCount++;
   return "";
-});
+})
+  .replace(/^(?<!#\s*)Permanent rule\b/gm, "### Permanent rule")
+  .replace(/^(?<!#\s*)Permanent trap\b/gm, "### Permanent trap")
+  .replace(/^(?<!#\s*)Never confuse\b/gm, "### Never confuse")
+  .replace(/^(?<!#\s*)Jurisdiction variants\b/gm, "### Jurisdiction variants")
+  .replace(/^(?<!#\s*)Recall\b/gm, "### Recall")
+  .replace(/^(?<!#\s*)Sources\b/gm, "### Sources");
 
 // Split file by `# {N}. {Title}`
 const ATOM_HEADER_REGEX = /^#\s+\d+\.\s+(.+)$/gm;
@@ -505,6 +511,13 @@ function inferSubdomain(atomId) {
     if (num <= 9) return "rcsa-kri-and-control-governance";
     if (num <= 13) return "sma-and-capital-approaches";
     return "resilience-third-party-and-conduct";
+  }
+
+  if (prefix === "AML") {
+    if (num <= 5) return "financial-crime-foundations";
+    if (num <= 12) return "kyc-edd-and-customer-due-diligence";
+    if (num <= 16) return "transaction-monitoring-and-sanctions";
+    return "fraud-and-aml-governance";
   }
 
   return "unsorted";

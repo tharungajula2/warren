@@ -285,6 +285,9 @@
       { "id": "IND-13", "weight": 3 },
       { "id": "IND-14", "weight": 3 },
       { "id": "CR-20", "weight": 3 },
+      { "id": "AML-06", "weight": 3 },
+      { "id": "AML-10", "weight": 2 },
+      { "id": "AML-17", "weight": 2 },
       { "id": "IND-18", "weight": 2 },
       { "id": "IND-20", "weight": 2 },
       { "id": "CR-06", "weight": 1 }
@@ -308,6 +311,8 @@
       { "id": "CR-02", "weight": 3 },
       { "id": "DAT-21", "weight": 3 },
       { "id": "IND-16", "weight": 3 },
+      { "id": "AML-06", "weight": 2 },
+      { "id": "AML-12", "weight": 2 },
       { "id": "IND-17", "weight": 2 },
       { "id": "DAT-09", "weight": 2 },
       { "id": "DAT-11", "weight": 1 }

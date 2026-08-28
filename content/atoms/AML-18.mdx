@@ -1,0 +1,81 @@
+---
+id: AML-18
+title: AML Governance and Oversight
+type: mechanism
+domain: financial-crime
+subdomain: fraud-and-aml-governance
+one_screen: >-
+  Governance sets up the AML framework: a designated compliance officer
+  (MLRO/Principal Officer) ensures policy, training and reporting. Transaction
+  monitoring and screening models count as regulated models subject to
+  validation (MRM principles). Regulators typically enforce AML by penalizing
+  failures (e.g. missing STRs, inadequate controls).
+prerequisites:
+  - AML-14
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      RBI, *Master Direction – KYC & AML* (appointment of Principal Officer and
+      obligations).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'UK NCA, *Proceeds of Crime Act* (offences for failure to report).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: FinCEN/OFAC enforcement press releases (on AML fines).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 15_AML_financial_crime.md
+---
+An effective AML program requires strong governance. A bank’s board must approve AML policy and appoint a senior officer (MLRO or principal officer) to oversee compliance. For example, RBI mandates a Principal Officer in each reporting entity to file STRs and coordinate with FIU.  The MLRO is responsible for ensuring controls are implemented, suspicious reports filed, and staff trained on AML. Other governance elements include an independent audit of AML processes, periodic compliance reviews, and clear escalation paths.  
+
+Model Risk is a key oversight area now. Transaction monitoring systems are considered AML “models” and must be validated like other financial models. Regulators expect documented model risk management (see Warren CCR pack).  This includes testing detection rules, reviewing backtesting results, and calibrating thresholds. Over-reliance on a black-box system without validation is a vulnerability.  
+
+Regulators penalize banks for AML failures. Common triggers for enforcement include: failing to file STRs, ignoring AML exam findings, or having a compliance culture that downplays AML.  UK authorities can prosecute failing-to-disclose offences (up to five years jail). In India, non-compliance with PMLA can incur fines (₹10k–₹100k per violation).  US banks have faced massive fines for BSA breaches (e.g. inadequate CIP or SAR programs).  FATF evals also put pressure on regulators; poor ratings can lead to tougher oversight.
+
+<Rule label="PERMANENT RULE">
+Ensure top management commitment. The MLRO/Principal Officer must be qualified, independent, and empowered. All AML models and tools (transaction monitoring, screening) should be validated and audited regularly.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Letting AML governance lapse: e.g. MLRO role unfilled, outdated policies, or “tick-box” training with no real emphasis. Remember that complacency on governance itself triggers regulator action.
+</Trap>
+
+<NeverConfuse a="MLRO (Money Laundering Reporting Officer)" b="Internal Audit or Compliance Department">
+**MLRO (Money Laundering Reporting Officer)** — the compliance officer in a bank responsible for AML reports and policies.  
+---  
+**Internal Audit or Compliance Department** — separate functions. The MLRO is an operational officer (front-line AML), whereas internal audit reviews AML as part of broader risk audits. Mixing these roles violates four-eye principles.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI requires every reporting entity to appoint a Principal Officer (PO) to file STRs and comply with PMLA regulations. AML compliance is overseen by entities like RBI and FIU.
+</Delta>
+
+<Delta j="UK">
+— MLRO appointment is mandatory under MLRs; regulators (FCA/PRA) can sanction banks for weak AML controls. The JMLSG guidance is followed but not law.
+</Delta>
+
+<Delta j="EU">
+— National competent authorities enforce AML (and soon the EU AML Authority, AMLA, will centralize some supervision). Banks follow EBA guidelines but adapt to local laws.
+</Delta>
+
+<Delta j="US">
+— Banks must designate a compliance officer (often called BSA Officer) to handle AML. Regulators (Fed, OCC, FinCEN) conduct examinations; enforcement actions (fines, orders) typically arise from regulatory audits or after breaches (e.g. fines by FinCEN/OCC for BSA violations).
+</Delta>
+
+<Recall
+  q="What is an MLRO’s role?"
+  a="The MLRO (or Principal Officer) is the person responsible for the bank’s AML program: filing STRs, liaising with authorities, and ensuring AML policies are implemented (as per RBI/FIU directions and FATF guidance)."
+/>
+
+<Recall
+  q="Give an example of an AML compliance failure that can trigger enforcement."
+  a="Failing to file an STR on a clearly suspicious transaction, or having a 100% SATIS factory AML audit but ignoring obvious gaps. For instance, not verifying a PEP’s source of funds could lead to regulatory penalty."
+/>

@@ -1,0 +1,63 @@
+---
+id: AML-03
+title: Proliferation Financing
+type: concept
+domain: financial-crime
+subdomain: financial-crime-foundations
+one_screen: >-
+  Proliferation financing is the provision of funds or financial services for
+  the creation or spread of weapons of mass destruction. It is illegal under UN
+  sanctions and FATF standards, and financial institutions must screen against
+  WMD sanctions lists.
+prerequisites:
+  - AML-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Gibraltar FIAU, *Anti-Money Laundering & Countering Terrorist Financing
+      Guidance* (defining PF in line with FATF/UN).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'FATF, *Guidance on Counter Proliferation Financing* (2022).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 15_AML_financial_crime.md
+---
+Proliferation financing means supplying money, goods or services to help manufacture nuclear, chemical or biological weapons or their delivery systems, contrary to UN regulations.  It covers funds used by state or non-state actors to buy missile parts, nuclear materials, or related know-how.  FATF has issued guidance that PF is a high-risk area tied to UN sanctions programs. For example, funding an international buyer to ship missile components into a sanctioned country would be PF.  
+
+Unlike typical ML or TF, proliferation finance is usually done by governments or front companies acting for rogue states.  Sanctions lists (UN, EU, US) explicitly target individuals and entities involved in WMD programs.  Banks must therefore do special screening: check customers and transactions against UN Security Council lists for proliferation (e.g. North Korea, Iran sanctions) and flag any matches.  Because PF involves evasion of sanctions, detecting it relies on sanctions compliance rather than pattern analysis.
+
+<Rule label="PERMANENT RULE">
+Block or reject any transaction involving a person or entity on a WMD-related sanctions list.  Implement payment filters specifically for proliferation-related products or entities.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating PF just like terrorism financing. PF usually involves state actors and strict UN lists; it often requires additional government licenses, so do not ignore sanctions compliance.
+</Trap>
+
+<NeverConfuse a="Proliferation financing" b="Terrorism financing">
+**Proliferation financing** — funding the spread of WMD capabilities (subject to strict UN sanctions).  
+---  
+**Terrorism financing** — funding terrorism (often banned by domestic/UN rules but not limited to WMD). They are mixed up because both involve “illicit finance,” but PF is specifically WMD-related and always illegal under international law.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All jurisdictions implement UN sanctions on proliferation the same way: by requiring EDD for any customer or payment linked to WMD-sensitive activities and mandatory blocking of UN-listed individuals/entities.
+</Rule>
+
+<Recall
+  q="What makes proliferation financing distinct?"
+  a="It specifically funds the spread of weapons of mass destruction, and is banned by UN sanctions."
+/>
+
+<Recall
+  q="What should a bank do if a customer is on an UN WMD sanctions list?"
+  a="It must freeze or reject their transactions and report the name match immediately under sanctions regulations."
+/>

@@ -1,5 +1,730 @@
 {
   "atoms": {
+    "AML-01": {
+      "id": "AML-01",
+      "title": "Money Laundering (Placement, Layering, Integration)",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "financial-crime-foundations",
+      "one_screen": "Criminals attempt to disguise illicit proceeds by processing funds through multiple steps (often called placement, layering, integration) to make them appear legitimate. In practice these steps can overlap or repeat rather than being strictly sequential.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "FinCEN, *Money Laundering and the Bank Secrecy Act (BSA)* (US Treasury, Feb 2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "PMLA 2002 (India), Section 3 definition of ML (via FIU-IND site).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "AML-01.mdx",
+      "initialX": 446.1,
+      "initialY": 24.5
+    },
+    "AML-02": {
+      "id": "AML-02",
+      "title": "Terrorist Financing",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "financial-crime-foundations",
+      "one_screen": "Terrorist financing is collecting or providing funds to support terrorism. Unlike money laundering, it may involve funds from lawful sources and focuses on concealing the destination and purpose of money, not necessarily its origin.",
+      "prerequisites": [
+        "AML-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Egmont Group, *Basel AML Handbook (CFT Section)*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FATF Guidance on Terrorist Financing (risk indicators).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-02",
+      "depth": 1,
+      "currentness": "fresh",
+      "filepath": "AML-02.mdx",
+      "initialX": 379.5,
+      "initialY": 4
+    },
+    "AML-03": {
+      "id": "AML-03",
+      "title": "Proliferation Financing",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "financial-crime-foundations",
+      "one_screen": "Proliferation financing is the provision of funds or financial services for the creation or spread of weapons of mass destruction. It is illegal under UN sanctions and FATF standards, and financial institutions must screen against WMD sanctions lists.",
+      "prerequisites": [
+        "AML-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Gibraltar FIAU, *Anti-Money Laundering & Countering Terrorist Financing Guidance* (defining PF in line with FATF/UN).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FATF, *Guidance on Counter Proliferation Financing* (2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-03",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "AML-03.mdx",
+      "initialX": 434.7,
+      "initialY": -23.5
+    },
+    "AML-04": {
+      "id": "AML-04",
+      "title": "FATF and Global Standards",
+      "type": "reference",
+      "domain": "financial-crime",
+      "subdomain": "financial-crime-foundations",
+      "one_screen": "The Financial Action Task Force (FATF) is an international body that sets AML/CFT standards (40+9 Recommendations). Its rules aren’t laws, but countries adopt them locally. FATF conducts mutual evaluations and classifies jurisdictions into “grey” (monitored) and “black” (high-risk) lists.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FATF, *The FATF Recommendations (updated 2023)*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FATF, *High-Risk Jurisdictions - Call for Action (black list) and Increased Monitoring (grey list)* (June 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-04",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "AML-04.mdx",
+      "initialX": 467.4,
+      "initialY": 37.9
+    },
+    "AML-05": {
+      "id": "AML-05",
+      "title": "Banks as AML Gatekeepers",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "financial-crime-foundations",
+      "one_screen": "Banks act as the financial system’s “first line of defense.” They are legally required to verify customers (KYC), monitor transactions, and report suspicious activity. Regulators rely on banks to enforce AML rules because banks handle the cash flows criminals need.",
+      "prerequisites": [
+        "AML-01",
+        "AML-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI, *Master Direction – Know Your Customer (KYC) Direction* (2025) (outlining banks’ AML duties).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FinCEN, *BSA Compliance (e.g., CIP Rule 31 CFR 1020.220)* (discussing banks’ gatekeeper role in preventing criminal money entering the system).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-05",
+      "depth": 1,
+      "currentness": "fresh",
+      "filepath": "AML-05.mdx",
+      "initialX": 397.2,
+      "initialY": 34.4
+    },
+    "AML-06": {
+      "id": "AML-06",
+      "title": "KYC and Customer Identification (CIP)",
+      "type": "procedure",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "“Know Your Customer” (KYC) is the process of verifying a customer’s identity before opening an account. In the US this is called the Customer Identification Program (CIP). Banks must collect official ID, confirm it is valid, and record it.",
+      "prerequisites": [
+        "AML-01",
+        "AML-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Master Direction – Know Your Customer (KYC) Direction* (2025).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FFIEC BSA/AML Manual (US CIP Rule).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-06",
+      "depth": 2,
+      "currentness": "fresh",
+      "filepath": "AML-06.mdx",
+      "initialX": 410.6,
+      "initialY": -22.7
+    },
+    "AML-07": {
+      "id": "AML-07",
+      "title": "Beneficial Ownership",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "Beneficial owner (BO) means the natural person(s) who ultimately owns or controls a customer (especially a company), even if not listed on official records. Laws typically use ownership thresholds (e.g. >10% in India, >25% in US) to identify BOs.",
+      "prerequisites": [
+        "AML-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI, *Master Direction – Know Your Customer (KYC)* (2025).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FinCEN FAQ on *Beneficial Ownership Information Reporting*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-07",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "AML-07.mdx",
+      "initialX": 475.5,
+      "initialY": -17.9
+    },
+    "AML-08": {
+      "id": "AML-08",
+      "title": "Politically Exposed Persons (PEPs)",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "A PEP is someone entrusted with a prominent public function (e.g. senior politician, military officer). Because of corruption risk, PEPs (and their family/close associates) require enhanced due diligence.",
+      "prerequisites": [
+        "AML-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FATF, *Guidance on Politically Exposed Persons (2013)*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FinCEN, *Advisory (Nov 2020) on PEP definition*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-08",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "AML-08.mdx",
+      "initialX": 470.9,
+      "initialY": 11.7
+    },
+    "AML-09": {
+      "id": "AML-09",
+      "title": "Risk-Based Approach (RBA)",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "The risk-based approach means allocating AML resources according to the risk posed by each customer or transaction. Banks must assess risk factors (customer type, geography, product) and adjust due diligence intensity accordingly.",
+      "prerequisites": [
+        "AML-06",
+        "AML-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FATF, *Guidance on the Risk-Based Approach to AML* (e.g. FATF Rec. 1).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel Committee, *Customer Risk Factors (CBB 2021)* (summary of RBA concepts).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-09",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "AML-09.mdx",
+      "initialX": 458.7,
+      "initialY": -34.8
+    },
+    "AML-10": {
+      "id": "AML-10",
+      "title": "Simplified vs Enhanced Due Diligence (SDD vs EDD)",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "Due diligence intensity is matched to risk. Enhanced Due Diligence (EDD) means extra checks (for high-risk clients, e.g. PEPs, high-risk countries). Simplified Due Diligence (SDD) allows reduced checks for very low-risk customers.",
+      "prerequisites": [
+        "AML-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Master Direction – Know Your Customer (KYC)* (2025) (EDD on high-risk countries).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FATF, *AML Risk Factors and EDD Guidance* (Rec. 10/12).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-10",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "AML-10.mdx",
+      "initialX": 389.2,
+      "initialY": -24.5
+    },
+    "AML-11": {
+      "id": "AML-11",
+      "title": "Ongoing Due Diligence and Periodic Review",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "Ongoing due diligence means continuously monitoring a customer and updating their profile as circumstances change. Periodic reviews (refreshing KYC at set intervals) must be done in line with risk level. Regulators expect banks to treat KYC as a “living” process, not a one-time task.",
+      "prerequisites": [
+        "AML-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FATF Recommendation 10 guidance: firms must conduct ongoing due diligence and periodic review.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Fraxtional (AML blog), *Ongoing Monitoring & Perpetual KYC*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-11",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "AML-11.mdx",
+      "initialX": 402,
+      "initialY": 3.3
+    },
+    "AML-12": {
+      "id": "AML-12",
+      "title": "Perpetual KYC (Continuous Updating)",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "kyc-edd-and-customer-due-diligence",
+      "one_screen": "Perpetual KYC is the practice of continuously updating customer profiles rather than relying solely on periodic refreshes. It means automatically re-verifying identity, sanctions, and risk as soon as new data appears (via screening and open sources).",
+      "prerequisites": [
+        "AML-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Fraxtional (AML blog), *Understanding Ongoing Monitoring & Perpetual KYC*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "ACAMS, *Perpetual KYC concept in AML compliance*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-12",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "AML-12.mdx",
+      "initialX": 339.1,
+      "initialY": 7.3
+    },
+    "AML-13": {
+      "id": "AML-13",
+      "title": "Transaction Monitoring",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "transaction-monitoring-and-sanctions",
+      "one_screen": "Transaction monitoring is the automated process of screening payments and account activity for unusual patterns (based on rules, thresholds and typologies). It compares transactions against customer profiles and known risk indicators.",
+      "prerequisites": [
+        "AML-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Fraxtional (AML blog), *Key Components of Transaction Monitoring*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "ACAMS, *AML Transaction Monitoring Best Practices* (industry typologies summary).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-13",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "AML-13.mdx",
+      "initialX": 436.6,
+      "initialY": 44.3
+    },
+    "AML-14": {
+      "id": "AML-14",
+      "title": "False Positives and Alert Triage",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "transaction-monitoring-and-sanctions",
+      "one_screen": "Modern AML monitoring flags far more legitimate transactions than criminal ones. Industry data show ~90–95% of alerts are false positives. The challenge is efficiently triaging each alert (reviewing context) to determine if it truly indicates suspicious activity.",
+      "prerequisites": [
+        "AML-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "FluxForce (AML analytics) *What percentage of AML alerts are false positives?*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "LexisNexis Risk Solutions, *True Cost of Financial Crime* report (2009) – note on compliance costs and SARs.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-14",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "AML-14.mdx",
+      "initialX": 371.2,
+      "initialY": 25.7
+    },
+    "AML-15": {
+      "id": "AML-15",
+      "title": "Suspicious Activity Reporting and Tipping Off",
+      "type": "procedure",
+      "domain": "financial-crime",
+      "subdomain": "transaction-monitoring-and-sanctions",
+      "one_screen": "Suspicious activity reports (SARs/STRs) are formal filings to authorities when a financial institution suspects money laundering or terrorist financing. The naming and exact process vary by country (e.g. SAR in US/UK, STR in India). Tipping off (informing the client they’re being reported) is strictly prohibited.",
+      "prerequisites": [
+        "AML-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "UK NCA, *Suspicious Activity Reports Guidance*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FIU-IND FAQs (on STR filing and tipping-off).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-15",
+      "depth": 8,
+      "currentness": "fresh",
+      "filepath": "AML-15.mdx",
+      "initialX": 422.9,
+      "initialY": 6.1
+    },
+    "AML-16": {
+      "id": "AML-16",
+      "title": "Sanctions Screening",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "transaction-monitoring-and-sanctions",
+      "one_screen": "Sanctions screening involves checking customer names and transactions against global watchlists (UN, OFAC, etc.). This uses name-matching algorithms (often fuzzy matching) to catch known terrorists, criminals, or sanctioned entities. Screening is distinct from transaction monitoring because it matches specific identities rather than patterns.",
+      "prerequisites": [
+        "AML-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "OFAC, *Sanctions List Search Manual* (US Treasury guidance on name screening).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FATF, *Guidance on Compliance with WMD Sanctions* (sanctions screening best practices).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-16",
+      "depth": 9,
+      "currentness": "durable",
+      "filepath": "AML-16.mdx",
+      "initialX": 357.5,
+      "initialY": -9.1
+    },
+    "AML-17": {
+      "id": "AML-17",
+      "title": "Fraud and its Relationship to AML",
+      "type": "concept",
+      "domain": "financial-crime",
+      "subdomain": "fraud-and-aml-governance",
+      "one_screen": "Fraud involves criminal deception for financial gain, whereas AML deals with concealing illicit funds. They overlap (e.g. fraud proceeds need laundering) and banks increasingly combine fraud and AML monitoring. Key terms: first-party vs third-party fraud, application fraud, mule accounts.",
+      "prerequisites": [
+        "AML-01",
+        "AML-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "GBG, *Application Fraud and First-Party Fraud* (explains first-party vs third-party).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Flagright, *Uncovering Money Mules in ML* (industry perspective).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-17",
+      "depth": 7,
+      "currentness": "durable",
+      "filepath": "AML-17.mdx",
+      "initialX": 495,
+      "initialY": 9.6
+    },
+    "AML-18": {
+      "id": "AML-18",
+      "title": "AML Governance and Oversight",
+      "type": "mechanism",
+      "domain": "financial-crime",
+      "subdomain": "fraud-and-aml-governance",
+      "one_screen": "Governance sets up the AML framework: a designated compliance officer (MLRO/Principal Officer) ensures policy, training and reporting. Transaction monitoring and screening models count as regulated models subject to validation (MRM principles). Regulators typically enforce AML by penalizing failures (e.g. missing STRs, inadequate controls).",
+      "prerequisites": [
+        "AML-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Master Direction – KYC & AML* (appointment of Principal Officer and obligations).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "UK NCA, *Proceeds of Crime Act* (offences for failure to report).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "FinCEN/OFAC enforcement press releases (on AML fines).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "aml-18",
+      "depth": 8,
+      "currentness": "fresh",
+      "filepath": "AML-18.mdx",
+      "initialX": 441.5,
+      "initialY": 2.4
+    },
     "CAP-01": {
       "id": "CAP-01",
       "title": "Why Regulatory Capital Exists",
@@ -40,8 +765,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 428.9,
-      "initialY": 12.5
+      "initialX": 403.7,
+      "initialY": 165
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +805,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 439.4,
-      "initialY": 65.4
+      "initialX": 442,
+      "initialY": 217.9
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +846,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 371.8,
-      "initialY": 42.8
+      "initialX": 460,
+      "initialY": 160.4
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +886,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 366.6,
-      "initialY": -22.8
+      "initialX": 402.5,
+      "initialY": 138.5
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +926,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 416.2,
-      "initialY": -47
+      "initialX": 349.5,
+      "initialY": 152.9
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +974,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 311.4,
-      "initialY": 0.6
+      "initialX": 443.2,
+      "initialY": 179.5
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +1022,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 323,
-      "initialY": 43.5
+      "initialX": 436.3,
+      "initialY": 130
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +1071,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 433.3,
-      "initialY": -33.5
+      "initialX": 353.7,
+      "initialY": 107.8
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +1111,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 489.5,
-      "initialY": -14.8
+      "initialX": 332.6,
+      "initialY": 168.8
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +1156,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 469.6,
-      "initialY": -52.5
+      "initialX": 396.7,
+      "initialY": 204
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +1202,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 422.5,
-      "initialY": -17.4
+      "initialX": 356.6,
+      "initialY": 227.6
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +1251,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 452.7,
-      "initialY": 22.1
+      "initialX": 373.4,
+      "initialY": 186.2
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +1299,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 401.4,
-      "initialY": 35.6
+      "initialX": 309.2,
+      "initialY": 173.6
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +1347,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 343.8,
-      "initialY": 40.2
+      "initialX": 312.8,
+      "initialY": 108.9
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +1390,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 397.9,
-      "initialY": 58.4
+      "initialX": 285.4,
+      "initialY": 158
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +1440,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 465.8,
-      "initialY": 64.2
+      "initialX": 323.2,
+      "initialY": 125.9
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +1484,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 341.5,
-      "initialY": -7.2
+      "initialX": 275.2,
+      "initialY": 131.6
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +1524,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 417.6,
-      "initialY": 63.1
+      "initialX": 323.9,
+      "initialY": 198.5
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -839,8 +1564,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 401.7,
-      "initialY": -3.2
+      "initialX": 384.2,
+      "initialY": 226.6
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +1604,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 345.1,
-      "initialY": -26.7
+      "initialX": 378.1,
+      "initialY": 166.4
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +1645,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 475.7,
-      "initialY": 15.6
+      "initialX": 430.8,
+      "initialY": 202.5
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +1685,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 457.6,
-      "initialY": -31.8
+      "initialX": 427.3,
+      "initialY": 151.7
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1725,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 391.2,
-      "initialY": -32.1
+      "initialX": 462,
+      "initialY": 197.6
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1765,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 342.2,
-      "initialY": 12.8
+      "initialX": 427,
+      "initialY": 242.9
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1805,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 447.9,
-      "initialY": -5.2
+      "initialX": 350.1,
+      "initialY": 194.6
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1848,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 500.6,
-      "initialY": 8.8
+      "initialX": 367.9,
+      "initialY": 132.8
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1900,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 500.5,
-      "initialY": 30.9
+      "initialX": 384.6,
+      "initialY": 128.3
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1955,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 393.5,
-      "initialY": 14.4
+      "initialX": 329.6,
+      "initialY": 144.6
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +2008,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 374.7,
-      "initialY": 18
+      "initialX": 409.3,
+      "initialY": 230.5
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +2085,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 443.3,
-      "initialY": 43.1
+      "initialX": 399.1,
+      "initialY": 181.3
     },
     "CCR-01": {
       "id": "CCR-01",
@@ -1403,8 +2128,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-01.mdx",
-      "initialX": 400.4,
-      "initialY": 211.7
+      "initialX": 263.9,
+      "initialY": 355
     },
     "CCR-02": {
       "id": "CCR-02",
@@ -1443,8 +2168,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-02.mdx",
-      "initialX": 338.5,
-      "initialY": 201.6
+      "initialX": 307,
+      "initialY": 314
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -1483,8 +2208,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-03.mdx",
-      "initialX": 308.6,
-      "initialY": 145.8
+      "initialX": 332.6,
+      "initialY": 369.4
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -1523,8 +2248,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-04.mdx",
-      "initialX": 372.5,
-      "initialY": 158
+      "initialX": 295.6,
+      "initialY": 397
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -1563,8 +2288,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-05.mdx",
-      "initialX": 352.2,
-      "initialY": 176.8
+      "initialX": 313.2,
+      "initialY": 381
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -1608,8 +2333,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-06.mdx",
-      "initialX": 350.1,
-      "initialY": 242.6
+      "initialX": 223.3,
+      "initialY": 341.3
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -1648,8 +2373,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-07.mdx",
-      "initialX": 306.6,
-      "initialY": 204.3
+      "initialX": 236.8,
+      "initialY": 275.3
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -1688,8 +2413,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-08.mdx",
-      "initialX": 406.2,
-      "initialY": 258.1
+      "initialX": 262.7,
+      "initialY": 377.8
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -1728,8 +2453,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-09.mdx",
-      "initialX": 323.5,
-      "initialY": 184.6
+      "initialX": 209.5,
+      "initialY": 280.6
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -1768,8 +2493,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-10.mdx",
-      "initialX": 424.2,
-      "initialY": 167
+      "initialX": 216.8,
+      "initialY": 314
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -1808,8 +2533,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-11.mdx",
-      "initialX": 422,
-      "initialY": 220.1
+      "initialX": 257.8,
+      "initialY": 268.2
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -1848,8 +2573,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-12.mdx",
-      "initialX": 445.9,
-      "initialY": 216.6
+      "initialX": 212.3,
+      "initialY": 252.4
     },
     "CCR-13": {
       "id": "CCR-13",
@@ -1888,8 +2613,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-13.mdx",
-      "initialX": 382.7,
-      "initialY": 221.3
+      "initialX": 275.2,
+      "initialY": 307.9
     },
     "CCR-14": {
       "id": "CCR-14",
@@ -1933,8 +2658,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-14.mdx",
-      "initialX": 346.9,
-      "initialY": 143.6
+      "initialX": 279.8,
+      "initialY": 268.2
     },
     "CCR-15": {
       "id": "CCR-15",
@@ -1973,8 +2698,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-15.mdx",
-      "initialX": 400.8,
-      "initialY": 158.2
+      "initialX": 232.5,
+      "initialY": 242.1
     },
     "CCR-16": {
       "id": "CCR-16",
@@ -2013,8 +2738,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-16.mdx",
-      "initialX": 398.5,
-      "initialY": 180.4
+      "initialX": 233.3,
+      "initialY": 296.7
     },
     "CCR-17": {
       "id": "CCR-17",
@@ -2053,8 +2778,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-17.mdx",
-      "initialX": 292.9,
-      "initialY": 179.7
+      "initialX": 327,
+      "initialY": 308.3
     },
     "CCR-18": {
       "id": "CCR-18",
@@ -2093,8 +2818,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CCR-18.mdx",
-      "initialX": 329.3,
-      "initialY": 226.6
+      "initialX": 289.4,
+      "initialY": 360.5
     },
     "CCR-19": {
       "id": "CCR-19",
@@ -2133,8 +2858,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-19.mdx",
-      "initialX": 382.2,
-      "initialY": 247.1
+      "initialX": 340,
+      "initialY": 325.1
     },
     "CCR-20": {
       "id": "CCR-20",
@@ -2173,8 +2898,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-20.mdx",
-      "initialX": 372.1,
-      "initialY": 266.3
+      "initialX": 347.4,
+      "initialY": 348.5
     },
     "CCR-21": {
       "id": "CCR-21",
@@ -2218,8 +2943,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CCR-21.mdx",
-      "initialX": 331.8,
-      "initialY": 155.6
+      "initialX": 288.5,
+      "initialY": 284.3
     },
     "CCR-22": {
       "id": "CCR-22",
@@ -2258,8 +2983,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-22.mdx",
-      "initialX": 444.5,
-      "initialY": 183.3
+      "initialX": 263.9,
+      "initialY": 402.2
     },
     "CCR-23": {
       "id": "CCR-23",
@@ -2296,8 +3021,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-23.mdx",
-      "initialX": 425.1,
-      "initialY": 242.4
+      "initialX": 314.8,
+      "initialY": 346.4
     },
     "CCR-24": {
       "id": "CCR-24",
@@ -2338,8 +3063,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-24.mdx",
-      "initialX": 358.5,
-      "initialY": 209.4
+      "initialX": 288.5,
+      "initialY": 334
     },
     "CCR-25": {
       "id": "CCR-25",
@@ -2384,8 +3109,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CCR-25.mdx",
-      "initialX": 289,
-      "initialY": 156.2
+      "initialX": 258.7,
+      "initialY": 332.7
     },
     "CCR-26": {
       "id": "CCR-26",
@@ -2425,8 +3150,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-26.mdx",
-      "initialX": 378.8,
-      "initialY": 193
+      "initialX": 243.8,
+      "initialY": 319
     },
     "CR-01": {
       "id": "CR-01",
@@ -2465,8 +3190,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 170,
-      "initialY": 316.9
+      "initialX": 54.6,
+      "initialY": 384.2
     },
     "CR-02": {
       "id": "CR-02",
@@ -2505,8 +3230,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 124.4,
-      "initialY": 298.3
+      "initialX": 14.1,
+      "initialY": 360.7
     },
     "CR-03": {
       "id": "CR-03",
@@ -2551,8 +3276,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": 90,
-      "initialY": 280
+      "initialX": -9.8,
+      "initialY": 327.2
     },
     "CR-04": {
       "id": "CR-04",
@@ -2605,8 +3330,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 103.8,
-      "initialY": 256.9
+      "initialX": 14.1,
+      "initialY": 301.9
     },
     "CR-05": {
       "id": "CR-05",
@@ -2659,8 +3384,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": 122.8,
-      "initialY": 249.5
+      "initialX": 12.2,
+      "initialY": 323.3
     },
     "CR-06": {
       "id": "CR-06",
@@ -2708,8 +3433,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 212.8,
-      "initialY": 302.6
+      "initialX": 85.7,
+      "initialY": 409.4
     },
     "CR-07": {
       "id": "CR-07",
@@ -2762,8 +3487,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 230.1,
-      "initialY": 264.3
+      "initialX": 108.2,
+      "initialY": 362.4
     },
     "CR-08": {
       "id": "CR-08",
@@ -2811,8 +3536,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 177.8,
-      "initialY": 249.6
+      "initialX": 73.1,
+      "initialY": 309
     },
     "CR-09": {
       "id": "CR-09",
@@ -2861,8 +3586,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 154.8,
-      "initialY": 277
+      "initialX": 45.8,
+      "initialY": 350.6
     },
     "CR-10": {
       "id": "CR-10",
@@ -2911,8 +3636,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": 24.5,
-      "initialY": 274.1
+      "initialX": -69.3,
+      "initialY": 291.4
     },
     "CR-11": {
       "id": "CR-11",
@@ -2966,8 +3691,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": 36,
-      "initialY": 254.4
+      "initialX": -57,
+      "initialY": 277.2
     },
     "CR-12": {
       "id": "CR-12",
@@ -3006,8 +3731,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 134.1,
-      "initialY": 315.2
+      "initialX": 40.9,
+      "initialY": 314.4
     },
     "CR-13": {
       "id": "CR-13",
@@ -3046,8 +3771,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 132.3,
-      "initialY": 273
+      "initialX": 42.3,
+      "initialY": 274.6
     },
     "CR-14": {
       "id": "CR-14",
@@ -3086,8 +3811,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 103.1,
-      "initialY": 298.7
+      "initialX": 16.4,
+      "initialY": 272.7
     },
     "CR-15": {
       "id": "CR-15",
@@ -3127,8 +3852,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 167.6,
-      "initialY": 293.1
+      "initialX": 67.3,
+      "initialY": 333.8
     },
     "CR-16": {
       "id": "CR-16",
@@ -3168,8 +3893,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": 10.2,
-      "initialY": 285.7
+      "initialX": -84.2,
+      "initialY": 294.5
     },
     "CR-17": {
       "id": "CR-17",
@@ -3210,8 +3935,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": 38.1,
-      "initialY": 304.9
+      "initialX": -47.1,
+      "initialY": 291.7
     },
     "CR-18": {
       "id": "CR-18",
@@ -3250,8 +3975,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 190.2,
-      "initialY": 345.5
+      "initialX": 70.3,
+      "initialY": 355.7
     },
     "CR-19": {
       "id": "CR-19",
@@ -3292,8 +4017,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 230.7,
-      "initialY": 302.8
+      "initialX": 105.6,
+      "initialY": 394.6
     },
     "CR-20": {
       "id": "CR-20",
@@ -3333,8 +4058,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 245.4,
-      "initialY": 363.8
+      "initialX": 138.6,
+      "initialY": 363.5
     },
     "CR-21": {
       "id": "CR-21",
@@ -3375,8 +4100,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 221.3,
-      "initialY": 344.9
+      "initialX": 118.6,
+      "initialY": 334.8
     },
     "CR-22": {
       "id": "CR-22",
@@ -3417,8 +4142,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 240.6,
-      "initialY": 317.7
+      "initialX": 116.5,
+      "initialY": 411.3
     },
     "CR-23": {
       "id": "CR-23",
@@ -3454,8 +4179,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 287.9,
-      "initialY": 339.8
+      "initialX": 148.4,
+      "initialY": 436.5
     },
     "CR-24": {
       "id": "CR-24",
@@ -3509,8 +4234,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 201.5,
-      "initialY": 275.9
+      "initialX": 81.9,
+      "initialY": 385.8
     },
     "CR-25": {
       "id": "CR-25",
@@ -3551,8 +4276,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 248.7,
-      "initialY": 335.8
+      "initialX": 130.9,
+      "initialY": 384
     },
     "CR-26": {
       "id": "CR-26",
@@ -3604,8 +4329,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 187.3,
-      "initialY": 313.3
+      "initialX": 92.1,
+      "initialY": 324.3
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -3642,8 +4367,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": 118.5,
-      "initialY": 406.9
+      "initialX": -89.8,
+      "initialY": 413.2
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -3677,8 +4402,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": 68.3,
-      "initialY": 441.2
+      "initialX": -99,
+      "initialY": 478.5
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -3722,8 +4447,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": 92.5,
-      "initialY": 489.1
+      "initialX": -45.1,
+      "initialY": 498.9
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -3762,8 +4487,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": 46.8,
-      "initialY": 453.2
+      "initialX": 6.1,
+      "initialY": 485.9
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -3797,8 +4522,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": 46.6,
-      "initialY": 475.6
+      "initialX": -83.3,
+      "initialY": 462.9
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -3837,8 +4562,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": 126.2,
-      "initialY": 439.3
+      "initialX": 5.7,
+      "initialY": 467.8
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -3877,8 +4602,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": 66.4,
-      "initialY": 413.8
+      "initialX": -2.4,
+      "initialY": 418.1
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -3912,8 +4637,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": 57.1,
-      "initialY": 362.7
+      "initialX": -51.9,
+      "initialY": 389.5
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -3947,8 +4672,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": 87.6,
-      "initialY": 407.1
+      "initialX": -87.4,
+      "initialY": 436.9
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -3982,8 +4707,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": 85.8,
-      "initialY": 466.1
+      "initialX": -76.9,
+      "initialY": 385.6
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -4017,8 +4742,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": 136.9,
-      "initialY": 419.6
+      "initialX": -107.2,
+      "initialY": 444.3
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -4052,8 +4777,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": 45.1,
-      "initialY": 424.5
+      "initialX": -42.9,
+      "initialY": 440.5
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -4087,8 +4812,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": 97.6,
-      "initialY": 387.5
+      "initialX": -25.5,
+      "initialY": 390.4
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -4122,8 +4847,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": 108,
-      "initialY": 452.9
+      "initialX": -1,
+      "initialY": 445.1
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -4162,8 +4887,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": 161.3,
-      "initialY": 452.9
+      "initialX": -49.6,
+      "initialY": 475.8
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -4197,8 +4922,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": 138.6,
-      "initialY": 474.7
+      "initialX": -73.7,
+      "initialY": 494.1
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -4232,8 +4957,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": 162.9,
-      "initialY": 425.9
+      "initialX": -18.1,
+      "initialY": 502.2
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -4267,8 +4992,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": 130.1,
-      "initialY": 384.6
+      "initialX": -25.2,
+      "initialY": 457
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -4307,8 +5032,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": 81.5,
-      "initialY": 369
+      "initialX": -59.9,
+      "initialY": 414.7
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -4342,8 +5067,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": 42.5,
-      "initialY": 398.3
+      "initialX": -50.4,
+      "initialY": 363.8
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -4377,8 +5102,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": 93.4,
-      "initialY": 433.3
+      "initialX": -25.2,
+      "initialY": 419.6
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -4430,8 +5155,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": 117.1,
-      "initialY": 483.4
+      "initialX": -66.1,
+      "initialY": 447.8
     },
     "FND-01": {
       "id": "FND-01",
@@ -4468,8 +5193,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -95.8,
-      "initialY": 393.7
+      "initialX": -209.9,
+      "initialY": 327.5
     },
     "FND-02": {
       "id": "FND-02",
@@ -4508,8 +5233,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -146.8,
-      "initialY": 409.9
+      "initialX": -236,
+      "initialY": 343.7
     },
     "FND-03": {
       "id": "FND-03",
@@ -4554,8 +5279,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -113.6,
-      "initialY": 463.2
+      "initialX": -172.8,
+      "initialY": 348.1
     },
     "FND-04": {
       "id": "FND-04",
@@ -4595,8 +5320,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -126.8,
-      "initialY": 473.6
+      "initialX": -286.2,
+      "initialY": 347.8
     },
     "FND-05": {
       "id": "FND-05",
@@ -4641,8 +5366,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -71.6,
-      "initialY": 427.9
+      "initialX": -185.6,
+      "initialY": 375.3
     },
     "FND-06": {
       "id": "FND-06",
@@ -4705,8 +5430,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -148.6,
-      "initialY": 434.1
+      "initialX": -258.5,
+      "initialY": 376
     },
     "FND-07": {
       "id": "FND-07",
@@ -4751,8 +5476,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -96.6,
-      "initialY": 463.6
+      "initialX": -226.2,
+      "initialY": 398.4
     },
     "FND-08": {
       "id": "FND-08",
@@ -4791,8 +5516,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -175,
-      "initialY": 379.3
+      "initialX": -305.8,
+      "initialY": 332
     },
     "FND-09": {
       "id": "FND-09",
@@ -4850,8 +5575,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -196.9,
-      "initialY": 403.5
+      "initialX": -277.2,
+      "initialY": 316.3
     },
     "FND-10": {
       "id": "FND-10",
@@ -4903,8 +5628,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -79.2,
-      "initialY": 460.7
+      "initialX": -308.2,
+      "initialY": 384.4
     },
     "FND-11": {
       "id": "FND-11",
@@ -4936,8 +5661,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -139.2,
-      "initialY": 394.8
+      "initialX": -261.5,
+      "initialY": 334.8
     },
     "FND-12": {
       "id": "FND-12",
@@ -4971,8 +5696,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -74.7,
-      "initialY": 376
+      "initialX": -280.6,
+      "initialY": 385.6
     },
     "FND-13": {
       "id": "FND-13",
@@ -5007,8 +5732,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -95.8,
-      "initialY": 436.8
+      "initialX": -209.5,
+      "initialY": 358.8
     },
     "FND-14": {
       "id": "FND-14",
@@ -5062,8 +5787,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -157.8,
-      "initialY": 458.1
+      "initialX": -249.5,
+      "initialY": 391
     },
     "FND-15": {
       "id": "FND-15",
@@ -5097,8 +5822,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -13.4,
-      "initialY": 374.2
+      "initialX": -130.7,
+      "initialY": 359.4
     },
     "FND-16": {
       "id": "FND-16",
@@ -5130,8 +5855,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -60.9,
-      "initialY": 391.9
+      "initialX": -267,
+      "initialY": 403
     },
     "FND-17": {
       "id": "FND-17",
@@ -5170,8 +5895,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -116.9,
-      "initialY": 363.9
+      "initialX": -271.3,
+      "initialY": 436.9
     },
     "FND-18": {
       "id": "FND-18",
@@ -5211,8 +5936,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -111.2,
-      "initialY": 421.2
+      "initialX": -226.3,
+      "initialY": 440.2
     },
     "FND-19": {
       "id": "FND-19",
@@ -5258,8 +5983,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -57.1,
-      "initialY": 439.2
+      "initialX": -203.5,
+      "initialY": 387.6
     },
     "FND-20": {
       "id": "FND-20",
@@ -5299,8 +6024,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -124.3,
-      "initialY": 443.8
+      "initialX": -245.5,
+      "initialY": 361
     },
     "FND-21": {
       "id": "FND-21",
@@ -5344,8 +6069,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -119.8,
-      "initialY": 396.2
+      "initialX": -221.4,
+      "initialY": 421
     },
     "FND-22": {
       "id": "FND-22",
@@ -5384,8 +6109,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -174.4,
-      "initialY": 438.6
+      "initialX": -181.7,
+      "initialY": 397.9
     },
     "FND-23": {
       "id": "FND-23",
@@ -5449,8 +6174,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -94.3,
-      "initialY": 370.1
+      "initialX": -189.4,
+      "initialY": 321.3
     },
     "FND-24": {
       "id": "FND-24",
@@ -5529,8 +6254,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -149.9,
-      "initialY": 375.8
+      "initialX": -234.8,
+      "initialY": 320.6
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -5592,8 +6317,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -132,
-      "initialY": 318.1
+      "initialX": -212.4,
+      "initialY": 263.7
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -5643,8 +6368,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -182.9,
-      "initialY": 322.4
+      "initialX": -257.3,
+      "initialY": 251
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -5700,8 +6425,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -116.7,
-      "initialY": 288.4
+      "initialX": -192,
+      "initialY": 246.7
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -5750,8 +6475,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -263.2,
-      "initialY": 350.9
+      "initialX": -346.9,
+      "initialY": 266.6
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -5800,8 +6525,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -167.1,
-      "initialY": 264.7
+      "initialX": -236.5,
+      "initialY": 215.2
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -5857,8 +6582,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -95.6,
-      "initialY": 281.2
+      "initialX": -181.7,
+      "initialY": 273.7
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -5908,8 +6633,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -124.7,
-      "initialY": 303.5
+      "initialX": -177.9,
+      "initialY": 234.9
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -5960,8 +6685,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -132.6,
-      "initialY": 263.1
+      "initialX": -225.8,
+      "initialY": 255.2
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -6009,8 +6734,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -156.8,
-      "initialY": 289.1
+      "initialX": -211.1,
+      "initialY": 203.2
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -6060,8 +6785,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -53.4,
-      "initialY": 264.2
+      "initialX": -138.3,
+      "initialY": 265
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -6110,8 +6835,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -219.1,
-      "initialY": 322.9
+      "initialX": -298.6,
+      "initialY": 256.2
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -6161,8 +6886,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -109.2,
-      "initialY": 233.3
+      "initialX": -194.5,
+      "initialY": 224.1
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -6212,8 +6937,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -137.4,
-      "initialY": 244.8
+      "initialX": -219.3,
+      "initialY": 226.2
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -6263,8 +6988,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -80.9,
-      "initialY": 282.6
+      "initialX": -154.4,
+      "initialY": 228.6
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -6319,8 +7044,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -115.1,
-      "initialY": 272.6
+      "initialX": -180.3,
+      "initialY": 213.5
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -6375,8 +7100,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -207.4,
-      "initialY": 206.7
+      "initialX": -256.6,
+      "initialY": 145.1
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -6432,8 +7157,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -217.2,
-      "initialY": 231.4
+      "initialX": -275.3,
+      "initialY": 166
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -6488,8 +7213,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -228.3,
-      "initialY": 280.6
+      "initialX": -304.9,
+      "initialY": 218.7
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -6545,8 +7270,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -213.8,
-      "initialY": 304
+      "initialX": -290.9,
+      "initialY": 242.2
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -6608,8 +7333,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -200.6,
-      "initialY": 278.4
+      "initialX": -274.6,
+      "initialY": 216.1
     },
     "IND-01": {
       "id": "IND-01",
@@ -6646,8 +7371,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -386.4,
-      "initialY": 135.2
+      "initialX": -357.6,
+      "initialY": 45.1
     },
     "IND-02": {
       "id": "IND-02",
@@ -6686,8 +7411,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -339.9,
-      "initialY": 187.9
+      "initialX": -413.2,
+      "initialY": 40.2
     },
     "IND-03": {
       "id": "IND-03",
@@ -6721,8 +7446,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -396.7,
-      "initialY": 218
+      "initialX": -455.7,
+      "initialY": 83.4
     },
     "IND-04": {
       "id": "IND-04",
@@ -6756,8 +7481,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -390.1,
-      "initialY": 262
+      "initialX": -486.3,
+      "initialY": 122.9
     },
     "IND-05": {
       "id": "IND-05",
@@ -6797,8 +7522,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -383,
-      "initialY": 157.8
+      "initialX": -385.7,
+      "initialY": 78.1
     },
     "IND-06": {
       "id": "IND-06",
@@ -6838,8 +7563,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -358.7,
-      "initialY": 172.7
+      "initialX": -407.1,
+      "initialY": 77.4
     },
     "IND-07": {
       "id": "IND-07",
@@ -6878,8 +7603,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -399.2,
-      "initialY": 177.4
+      "initialX": -371.2,
+      "initialY": 135.8
     },
     "IND-08": {
       "id": "IND-08",
@@ -6919,8 +7644,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -333.3,
-      "initialY": 138.1
+      "initialX": -417.4,
+      "initialY": 141.9
     },
     "IND-09": {
       "id": "IND-09",
@@ -6961,8 +7686,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -348,
-      "initialY": 215.2
+      "initialX": -362.1,
+      "initialY": 100.1
     },
     "IND-10": {
       "id": "IND-10",
@@ -7002,8 +7727,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -306.5,
-      "initialY": 170.7
+      "initialX": -431.3,
+      "initialY": 124.7
     },
     "IND-11": {
       "id": "IND-11",
@@ -7043,8 +7768,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -400.6,
-      "initialY": 199.6
+      "initialX": -386.6,
+      "initialY": 98.2
     },
     "IND-12": {
       "id": "IND-12",
@@ -7083,8 +7808,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -448.6,
-      "initialY": 174.5
+      "initialX": -338,
+      "initialY": 63.8
     },
     "IND-13": {
       "id": "IND-13",
@@ -7123,8 +7848,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -358.9,
-      "initialY": 134
+      "initialX": -430.3,
+      "initialY": 95.4
     },
     "IND-14": {
       "id": "IND-14",
@@ -7158,8 +7883,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -305,
-      "initialY": 141.7
+      "initialX": -374.2,
+      "initialY": 61
     },
     "IND-15": {
       "id": "IND-15",
@@ -7198,8 +7923,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -417.8,
-      "initialY": 144
+      "initialX": -441.9,
+      "initialY": 152.5
     },
     "IND-16": {
       "id": "IND-16",
@@ -7239,8 +7964,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -352.2,
-      "initialY": 243.1
+      "initialX": -475.4,
+      "initialY": 48
     },
     "IND-17": {
       "id": "IND-17",
@@ -7279,8 +8004,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -413.8,
-      "initialY": 237
+      "initialX": -424.1,
+      "initialY": 64.1
     },
     "IND-18": {
       "id": "IND-18",
@@ -7319,8 +8044,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -416.8,
-      "initialY": 163.6
+      "initialX": -484.6,
+      "initialY": 83.9
     },
     "IND-19": {
       "id": "IND-19",
@@ -7359,8 +8084,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -436.5,
-      "initialY": 217.5
+      "initialX": -443.6,
+      "initialY": 47.9
     },
     "IND-20": {
       "id": "IND-20",
@@ -7399,8 +8124,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -424.5,
-      "initialY": 191.5
+      "initialX": -459.3,
+      "initialY": 107.2
     },
     "IND-21": {
       "id": "IND-21",
@@ -7439,8 +8164,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -321,
-      "initialY": 207.7
+      "initialX": -345,
+      "initialY": 89.1
     },
     "IND-22": {
       "id": "IND-22",
@@ -7479,8 +8204,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -335.9,
-      "initialY": 157.8
+      "initialX": -394,
+      "initialY": 133.1
     },
     "IND-23": {
       "id": "IND-23",
@@ -7519,8 +8244,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -369.2,
-      "initialY": 194.2
+      "initialX": -467,
+      "initialY": 136.2
     },
     "IND-24": {
       "id": "IND-24",
@@ -7559,8 +8284,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -375.9,
-      "initialY": 231.4
+      "initialX": -405.9,
+      "initialY": 110.4
     },
     "MRK-01": {
       "id": "MRK-01",
@@ -7592,8 +8317,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRK-01.mdx",
-      "initialX": -474.2,
-      "initialY": -10.1
+      "initialX": -443.2,
+      "initialY": -45.5
     },
     "MRK-02": {
       "id": "MRK-02",
@@ -7627,8 +8352,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-02.mdx",
-      "initialX": -417,
-      "initialY": 10
+      "initialX": -396.2,
+      "initialY": -78.1
     },
     "MRK-03": {
       "id": "MRK-03",
@@ -7662,8 +8387,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-03.mdx",
-      "initialX": -418.4,
-      "initialY": -42.1
+      "initialX": -483.4,
+      "initialY": -85
     },
     "MRK-04": {
       "id": "MRK-04",
@@ -7697,8 +8422,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-04.mdx",
-      "initialX": -431.7,
-      "initialY": 25.8
+      "initialX": -383.6,
+      "initialY": -61.7
     },
     "MRK-05": {
       "id": "MRK-05",
@@ -7732,8 +8457,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-05.mdx",
-      "initialX": -454.4,
-      "initialY": -35.3
+      "initialX": -456.3,
+      "initialY": -66.2
     },
     "MRK-06": {
       "id": "MRK-06",
@@ -7768,8 +8493,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-06.mdx",
-      "initialX": -395.4,
-      "initialY": -35.5
+      "initialX": -415.4,
+      "initialY": -112.7
     },
     "MRK-07": {
       "id": "MRK-07",
@@ -7803,8 +8528,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-07.mdx",
-      "initialX": -402.8,
-      "initialY": 29.7
+      "initialX": -450.8,
+      "initialY": -146.8
     },
     "MRK-08": {
       "id": "MRK-08",
@@ -7839,8 +8564,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-08.mdx",
-      "initialX": -479.2,
-      "initialY": 14.9
+      "initialX": -443.8,
+      "initialY": -89.3
     },
     "MRK-09": {
       "id": "MRK-09",
@@ -7875,8 +8600,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-09.mdx",
-      "initialX": -447.9,
-      "initialY": 11.5
+      "initialX": -482.2,
+      "initialY": -115.6
     },
     "MRK-10": {
       "id": "MRK-10",
@@ -7911,8 +8636,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-10.mdx",
-      "initialX": -385.3,
-      "initialY": -20.1
+      "initialX": -438.2,
+      "initialY": -126
     },
     "MRK-11": {
       "id": "MRK-11",
@@ -7946,8 +8671,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-11.mdx",
-      "initialX": -439.4,
-      "initialY": -54.4
+      "initialX": -382.4,
+      "initialY": -96.8
     },
     "MRK-12": {
       "id": "MRK-12",
@@ -7982,8 +8707,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-12.mdx",
-      "initialX": -466.6,
-      "initialY": 42.5
+      "initialX": -457.7,
+      "initialY": -106
     },
     "MRK-13": {
       "id": "MRK-13",
@@ -8018,8 +8743,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-13.mdx",
-      "initialX": -374.1,
-      "initialY": 16.3
+      "initialX": -428.1,
+      "initialY": -73.7
     },
     "MRK-14": {
       "id": "MRK-14",
@@ -8053,8 +8778,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-14.mdx",
-      "initialX": -358.5,
-      "initialY": -36.3
+      "initialX": -412.3,
+      "initialY": -136.5
     },
     "MRK-15": {
       "id": "MRK-15",
@@ -8089,8 +8814,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-15.mdx",
-      "initialX": -338.8,
-      "initialY": 10.6
+      "initialX": -383.7,
+      "initialY": -130
     },
     "MRK-16": {
       "id": "MRK-16",
@@ -8124,8 +8849,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-16.mdx",
-      "initialX": -376.2,
-      "initialY": 44.3
+      "initialX": -415.7,
+      "initialY": -89.1
     },
     "MRK-17": {
       "id": "MRK-17",
@@ -8160,8 +8885,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-17.mdx",
-      "initialX": -394,
-      "initialY": -1.4
+      "initialX": -351.1,
+      "initialY": -74.9
     },
     "MRK-18": {
       "id": "MRK-18",
@@ -8197,8 +8922,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-18.mdx",
-      "initialX": -433,
-      "initialY": 47.5
+      "initialX": -366,
+      "initialY": -112.7
     },
     "MRK-19": {
       "id": "MRK-19",
@@ -8232,8 +8957,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-19.mdx",
-      "initialX": -483,
-      "initialY": -28.1
+      "initialX": -415.7,
+      "initialY": -46.9
     },
     "MRK-20": {
       "id": "MRK-20",
@@ -8267,8 +8992,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-20.mdx",
-      "initialX": -416.3,
-      "initialY": -22
+      "initialX": -364,
+      "initialY": -48.1
     },
     "MRK-21": {
       "id": "MRK-21",
@@ -8303,8 +9028,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-21.mdx",
-      "initialX": -351.9,
-      "initialY": -8.6
+      "initialX": -333.3,
+      "initialY": -97
     },
     "MRK-22": {
       "id": "MRK-22",
@@ -8357,8 +9082,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "MRK-22.mdx",
-      "initialX": -430.6,
-      "initialY": -10.8
+      "initialX": -341.4,
+      "initialY": -52.9
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -8400,8 +9125,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -276.4,
-      "initialY": 3.1
+      "initialX": -277.9,
+      "initialY": -56.2
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -8438,8 +9163,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -389.6,
-      "initialY": -167
+      "initialX": -389.3,
+      "initialY": -289.2
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -8478,8 +9203,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -415.3,
-      "initialY": -223.8
+      "initialX": -388.9,
+      "initialY": -237.8
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -8523,8 +9248,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -306.8,
-      "initialY": -101.2
+      "initialX": -283.2,
+      "initialY": -161.2
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -8568,8 +9293,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -319.1,
-      "initialY": -118.6
+      "initialX": -301.6,
+      "initialY": -175.9
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -8608,8 +9333,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -331.5,
-      "initialY": -194.4
+      "initialX": -314.9,
+      "initialY": -250.4
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -8648,8 +9373,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -315.4,
-      "initialY": -154.4
+      "initialX": -359.5,
+      "initialY": -299.7
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -8689,8 +9414,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -374.3,
-      "initialY": -185.6
+      "initialX": -368.2,
+      "initialY": -251.6
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -8729,8 +9454,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -403.9,
-      "initialY": -142.1
+      "initialX": -303.3,
+      "initialY": -235
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -8769,8 +9494,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -388.5,
-      "initialY": -220.9
+      "initialX": -370.4,
+      "initialY": -275.3
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -8809,8 +9534,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -395.2,
-      "initialY": -195.9
+      "initialX": -277,
+      "initialY": -212.6
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -8849,8 +9574,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -364.3,
-      "initialY": -157.8
+      "initialX": -337.9,
+      "initialY": -257.7
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -8889,8 +9614,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -367,
-      "initialY": -213
+      "initialX": -306.1,
+      "initialY": -208.7
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -8924,8 +9649,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -427.5,
-      "initialY": -203
+      "initialX": -366.1,
+      "initialY": -220.2
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -8960,8 +9685,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -415,
-      "initialY": -169.1
+      "initialX": -348.6,
+      "initialY": -233.6
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -9001,8 +9726,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -435.8,
-      "initialY": -180.5
+      "initialX": -331.5,
+      "initialY": -217.1
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -9041,8 +9766,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -343.5,
-      "initialY": -174.7
+      "initialX": -321,
+      "initialY": -276.3
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -9087,8 +9812,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -363.5,
-      "initialY": -134.2
+      "initialX": -410.5,
+      "initialY": -264.5
     },
     "OPR-01": {
       "id": "OPR-01",
@@ -9125,8 +9850,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "OPR-01.mdx",
-      "initialX": -254.3,
-      "initialY": -323.8
+      "initialX": -212.5,
+      "initialY": -348.2
     },
     "OPR-02": {
       "id": "OPR-02",
@@ -9160,8 +9885,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-02.mdx",
-      "initialX": -239.7,
-      "initialY": -251.6
+      "initialX": -233.7,
+      "initialY": -293.7
     },
     "OPR-03": {
       "id": "OPR-03",
@@ -9201,8 +9926,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-03.mdx",
-      "initialX": -212.5,
-      "initialY": -293.9
+      "initialX": -179.3,
+      "initialY": -290.9
     },
     "OPR-04": {
       "id": "OPR-04",
@@ -9241,8 +9966,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-04.mdx",
-      "initialX": -314.2,
-      "initialY": -327.5
+      "initialX": -257.5,
+      "initialY": -323.7
     },
     "OPR-05": {
       "id": "OPR-05",
@@ -9286,8 +10011,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-05.mdx",
-      "initialX": -280.8,
-      "initialY": -368.8
+      "initialX": -204.7,
+      "initialY": -293.8
     },
     "OPR-06": {
       "id": "OPR-06",
@@ -9327,8 +10052,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-06.mdx",
-      "initialX": -268,
-      "initialY": -290.2
+      "initialX": -196.2,
+      "initialY": -321.4
     },
     "OPR-07": {
       "id": "OPR-07",
@@ -9367,8 +10092,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-07.mdx",
-      "initialX": -215.9,
-      "initialY": -258.8
+      "initialX": -217.6,
+      "initialY": -385.7
     },
     "OPR-08": {
       "id": "OPR-08",
@@ -9408,8 +10133,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-08.mdx",
-      "initialX": -262,
-      "initialY": -348.6
+      "initialX": -231.7,
+      "initialY": -368.3
     },
     "OPR-09": {
       "id": "OPR-09",
@@ -9443,7 +10168,7 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-09.mdx",
-      "initialX": -301.6,
+      "initialX": -258.7,
       "initialY": -381.9
     },
     "OPR-10": {
@@ -9487,8 +10212,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-10.mdx",
-      "initialX": -301.8,
-      "initialY": -349.6
+      "initialX": -171,
+      "initialY": -314.4
     },
     "OPR-11": {
       "id": "OPR-11",
@@ -9536,8 +10261,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-11.mdx",
-      "initialX": -263,
-      "initialY": -306
+      "initialX": -226.6,
+      "initialY": -324.4
     },
     "OPR-12": {
       "id": "OPR-12",
@@ -9583,8 +10308,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "OPR-12.mdx",
-      "initialX": -313.2,
-      "initialY": -294.8
+      "initialX": -195.7,
+      "initialY": -372.9
     },
     "OPR-13": {
       "id": "OPR-13",
@@ -9627,8 +10352,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-13.mdx",
-      "initialX": -264.9,
-      "initialY": -247.6
+      "initialX": -247.6,
+      "initialY": -346
     },
     "OPR-14": {
       "id": "OPR-14",
@@ -9667,8 +10392,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-14.mdx",
-      "initialX": -263.3,
-      "initialY": -376.9
+      "initialX": -193.3,
+      "initialY": -399.2
     },
     "OPR-15": {
       "id": "OPR-15",
@@ -9711,8 +10436,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-15.mdx",
-      "initialX": -322.7,
-      "initialY": -360.3
+      "initialX": -229.9,
+      "initialY": -424.2
     },
     "OPR-16": {
       "id": "OPR-16",
@@ -9751,8 +10476,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "OPR-16.mdx",
-      "initialX": -332.8,
-      "initialY": -311.2
+      "initialX": -280.8,
+      "initialY": -383.2
     },
     "OPR-17": {
       "id": "OPR-17",
@@ -9791,8 +10516,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-17.mdx",
-      "initialX": -232.8,
-      "initialY": -322.9
+      "initialX": -186.6,
+      "initialY": -342.8
     },
     "OPR-18": {
       "id": "OPR-18",
@@ -9835,8 +10560,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-18.mdx",
-      "initialX": -285.5,
-      "initialY": -274.7
+      "initialX": -244.8,
+      "initialY": -395.5
     },
     "OPR-19": {
       "id": "OPR-19",
@@ -9871,8 +10596,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "OPR-19.mdx",
-      "initialX": -282.8,
-      "initialY": -319.6
+      "initialX": -268.4,
+      "initialY": -421.9
     },
     "OPR-20": {
       "id": "OPR-20",
@@ -9918,8 +10643,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-20.mdx",
-      "initialX": -234.7,
-      "initialY": -276.3
+      "initialX": -273.1,
+      "initialY": -358.1
     },
     "QNT-01": {
       "id": "QNT-01",
@@ -9951,8 +10676,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-01.mdx",
-      "initialX": -78.3,
-      "initialY": -425.1
+      "initialX": -10.8,
+      "initialY": -437.4
     },
     "QNT-02": {
       "id": "QNT-02",
@@ -9991,8 +10716,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-02.mdx",
-      "initialX": -139.9,
-      "initialY": -387.4
+      "initialX": -79.3,
+      "initialY": -413.8
     },
     "QNT-03": {
       "id": "QNT-03",
@@ -10031,8 +10756,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-03.mdx",
-      "initialX": -110.5,
-      "initialY": -322.2
+      "initialX": -34.9,
+      "initialY": -460.8
     },
     "QNT-04": {
       "id": "QNT-04",
@@ -10067,8 +10792,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-04.mdx",
-      "initialX": -79.6,
-      "initialY": -378.9
+      "initialX": -34.9,
+      "initialY": -385.4
     },
     "QNT-05": {
       "id": "QNT-05",
@@ -10102,8 +10827,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-05.mdx",
-      "initialX": -118.5,
-      "initialY": -435
+      "initialX": -63.9,
+      "initialY": -333.8
     },
     "QNT-06": {
       "id": "QNT-06",
@@ -10138,8 +10863,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-06.mdx",
-      "initialX": -90.1,
-      "initialY": -332.4
+      "initialX": -82.8,
+      "initialY": -349.8
     },
     "QNT-07": {
       "id": "QNT-07",
@@ -10173,8 +10898,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-07.mdx",
-      "initialX": -144.4,
-      "initialY": -423.9
+      "initialX": -15.4,
+      "initialY": -379.4
     },
     "QNT-08": {
       "id": "QNT-08",
@@ -10208,8 +10933,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-08.mdx",
-      "initialX": -142.9,
-      "initialY": -449.2
+      "initialX": -32.9,
+      "initialY": -440.1
     },
     "QNT-09": {
       "id": "QNT-09",
@@ -10243,8 +10968,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-09.mdx",
-      "initialX": -101.8,
-      "initialY": -481.6
+      "initialX": -65.6,
+      "initialY": -387.5
     },
     "QNT-10": {
       "id": "QNT-10",
@@ -10278,8 +11003,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-10.mdx",
-      "initialX": -101.3,
-      "initialY": -389.1
+      "initialX": -91.5,
+      "initialY": -439.6
     },
     "QNT-11": {
       "id": "QNT-11",
@@ -10313,8 +11038,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-11.mdx",
-      "initialX": -131.9,
-      "initialY": -335.3
+      "initialX": -50.9,
+      "initialY": -473.7
     },
     "QNT-12": {
       "id": "QNT-12",
@@ -10348,8 +11073,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-12.mdx",
-      "initialX": -122.3,
-      "initialY": -379.4
+      "initialX": -33.3,
+      "initialY": -493
     },
     "QNT-13": {
       "id": "QNT-13",
@@ -10381,8 +11106,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-13.mdx",
-      "initialX": -59.6,
-      "initialY": -371.6
+      "initialX": -112,
+      "initialY": -422.1
     },
     "QNT-14": {
       "id": "QNT-14",
@@ -10421,8 +11146,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-14.mdx",
-      "initialX": -63.8,
-      "initialY": -443.1
+      "initialX": -53.4,
+      "initialY": -410.5
     },
     "QNT-15": {
       "id": "QNT-15",
@@ -10457,8 +11182,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-15.mdx",
-      "initialX": -103.1,
-      "initialY": -413.1
+      "initialX": -94.2,
+      "initialY": -369.6
     },
     "QNT-16": {
       "id": "QNT-16",
@@ -10493,8 +11218,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-16.mdx",
-      "initialX": -124.2,
-      "initialY": -469.3
+      "initialX": -33.7,
+      "initialY": -355.3
     },
     "QNT-17": {
       "id": "QNT-17",
@@ -10528,8 +11253,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-17.mdx",
-      "initialX": -168.9,
-      "initialY": -437.1
+      "initialX": -24.9,
+      "initialY": -413.5
     },
     "QNT-18": {
       "id": "QNT-18",
@@ -10566,8 +11291,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-18.mdx",
-      "initialX": -167,
-      "initialY": -401.9
+      "initialX": -62.8,
+      "initialY": -494
     },
     "QNT-19": {
       "id": "QNT-19",
@@ -10606,8 +11331,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-19.mdx",
-      "initialX": -120.9,
-      "initialY": -406.1
+      "initialX": -117.2,
+      "initialY": -450.4
     },
     "QNT-20": {
       "id": "QNT-20",
@@ -10642,8 +11367,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-20.mdx",
-      "initialX": -115,
-      "initialY": -347.1
+      "initialX": -58.6,
+      "initialY": -437.1
     },
     "QNT-21": {
       "id": "QNT-21",
@@ -10684,8 +11409,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-21.mdx",
-      "initialX": -149.1,
-      "initialY": -359.8
+      "initialX": -98.2,
+      "initialY": -478.4
     },
     "QNT-22": {
       "id": "QNT-22",
@@ -10726,8 +11451,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-22.mdx",
-      "initialX": -76.5,
-      "initialY": -355.3
+      "initialX": -100.2,
+      "initialY": -400.7
     },
     "QNT-23": {
       "id": "QNT-23",
@@ -10766,8 +11491,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-23.mdx",
-      "initialX": -64.2,
-      "initialY": -409.3
+      "initialX": -58.4,
+      "initialY": -363
     },
     "QNT-24": {
       "id": "QNT-24",
@@ -10806,8 +11531,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "QNT-24.mdx",
-      "initialX": -79.9,
-      "initialY": -467.7
+      "initialX": -56.7,
+      "initialY": -310.5
     },
     "QNT-25": {
       "id": "QNT-25",
@@ -10847,8 +11572,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-25.mdx",
-      "initialX": -79.4,
-      "initialY": -308.2
+      "initialX": -76.4,
+      "initialY": -462.4
     },
     "QNT-26": {
       "id": "QNT-26",
@@ -10885,8 +11610,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-26.mdx",
-      "initialX": -98.2,
-      "initialY": -449.4
+      "initialX": -31.4,
+      "initialY": -330.3
     },
     "TEC-01": {
       "id": "TEC-01",
@@ -10918,8 +11643,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-01.mdx",
-      "initialX": 109,
-      "initialY": -432
+      "initialX": 163,
+      "initialY": -412.6
     },
     "TEC-02": {
       "id": "TEC-02",
@@ -10963,8 +11688,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-02.mdx",
-      "initialX": 87.5,
-      "initialY": -378.7
+      "initialX": 102.7,
+      "initialY": -406.9
     },
     "TEC-03": {
       "id": "TEC-03",
@@ -11003,8 +11728,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-03.mdx",
-      "initialX": 64.9,
-      "initialY": -433.3
+      "initialX": 158.4,
+      "initialY": -388.1
     },
     "TEC-04": {
       "id": "TEC-04",
@@ -11039,8 +11764,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-04.mdx",
-      "initialX": 44.3,
-      "initialY": -422.6
+      "initialX": 152.8,
+      "initialY": -465.2
     },
     "TEC-05": {
       "id": "TEC-05",
@@ -11084,8 +11809,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-05.mdx",
-      "initialX": 48.5,
-      "initialY": -445
+      "initialX": 114.9,
+      "initialY": -469.8
     },
     "TEC-06": {
       "id": "TEC-06",
@@ -11119,8 +11844,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-06.mdx",
-      "initialX": 86.9,
-      "initialY": -438.2
+      "initialX": 93.6,
+      "initialY": -467.8
     },
     "TEC-07": {
       "id": "TEC-07",
@@ -11154,8 +11879,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-07.mdx",
-      "initialX": 47.4,
-      "initialY": -329.7
+      "initialX": 147.9,
+      "initialY": -443.4
     },
     "TEC-08": {
       "id": "TEC-08",
@@ -11189,8 +11914,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-08.mdx",
-      "initialX": 36.2,
-      "initialY": -350
+      "initialX": 93.1,
+      "initialY": -347.9
     },
     "TEC-09": {
       "id": "TEC-09",
@@ -11224,8 +11949,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-09.mdx",
-      "initialX": 86.3,
-      "initialY": -328.2
+      "initialX": 167,
+      "initialY": -436.8
     },
     "TEC-10": {
       "id": "TEC-10",
@@ -11259,8 +11984,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-10.mdx",
-      "initialX": 65.6,
-      "initialY": -319.6
+      "initialX": 133.4,
+      "initialY": -466.3
     },
     "TEC-11": {
       "id": "TEC-11",
@@ -11294,8 +12019,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-11.mdx",
-      "initialX": 130.4,
-      "initialY": -420.7
+      "initialX": 70.7,
+      "initialY": -355.3
     },
     "TEC-12": {
       "id": "TEC-12",
@@ -11330,8 +12055,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TEC-12.mdx",
-      "initialX": 34.5,
-      "initialY": -375.7
+      "initialX": 117.6,
+      "initialY": -346.8
     },
     "TEC-13": {
       "id": "TEC-13",
@@ -11365,8 +12090,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-13.mdx",
-      "initialX": 87,
-      "initialY": -487.7
+      "initialX": 136.3,
+      "initialY": -358.9
     },
     "TEC-14": {
       "id": "TEC-14",
@@ -11400,8 +12125,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-14.mdx",
-      "initialX": 66.3,
-      "initialY": -382.3
+      "initialX": 107.9,
+      "initialY": -380.8
     },
     "TEC-15": {
       "id": "TEC-15",
@@ -11433,8 +12158,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-15.mdx",
-      "initialX": 84.8,
-      "initialY": -406.7
+      "initialX": 133.4,
+      "initialY": -386.1
     },
     "TEC-16": {
       "id": "TEC-16",
@@ -11466,8 +12191,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-16.mdx",
-      "initialX": 111.3,
-      "initialY": -400.5
+      "initialX": 80.7,
+      "initialY": -380.3
     },
     "TEC-17": {
       "id": "TEC-17",
@@ -11506,8 +12231,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-17.mdx",
-      "initialX": 65.2,
-      "initialY": -358.3
+      "initialX": 131.1,
+      "initialY": -413.2
     },
     "TEC-18": {
       "id": "TEC-18",
@@ -11541,8 +12266,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-18.mdx",
-      "initialX": 68.8,
-      "initialY": -462.4
+      "initialX": 109.8,
+      "initialY": -323.9
     },
     "TEC-19": {
       "id": "TEC-19",
@@ -11576,8 +12301,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-19.mdx",
-      "initialX": 93.4,
-      "initialY": -463.1
+      "initialX": 96.7,
+      "initialY": -433.9
     },
     "TEC-20": {
       "id": "TEC-20",
@@ -11611,8 +12336,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-20.mdx",
-      "initialX": 135.4,
-      "initialY": -454
+      "initialX": 118.5,
+      "initialY": -432.9
     },
     "TEC-21": {
       "id": "TEC-21",
@@ -11646,8 +12371,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-21.mdx",
-      "initialX": 116.5,
-      "initialY": -465.6
+      "initialX": 70.9,
+      "initialY": -324.3
     },
     "TEC-22": {
       "id": "TEC-22",
@@ -11681,8 +12406,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-22.mdx",
-      "initialX": 51.1,
-      "initialY": -399.4
+      "initialX": 77.2,
+      "initialY": -440.9
     },
     "TEC-23": {
       "id": "TEC-23",
@@ -11717,8 +12442,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-23.mdx",
-      "initialX": 15.8,
-      "initialY": -408.3
+      "initialX": 65.7,
+      "initialY": -409.8
     },
     "TEC-24": {
       "id": "TEC-24",
@@ -11750,8 +12475,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-24.mdx",
-      "initialX": 107.3,
-      "initialY": -367.4
+      "initialX": 88.9,
+      "initialY": -307.2
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -11793,8 +12518,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 279.7,
-      "initialY": -398.6
+      "initialX": 351.5,
+      "initialY": -345.5
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -11841,8 +12566,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 328.7,
-      "initialY": -372.3
+      "initialX": 321.6,
+      "initialY": -390.6
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -11881,8 +12606,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 306.2,
-      "initialY": -368
+      "initialX": 312.8,
+      "initialY": -305.3
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -11921,8 +12646,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 269.1,
-      "initialY": -302.7
+      "initialX": 274.8,
+      "initialY": -252.6
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -11961,8 +12686,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 199.6,
-      "initialY": -284
+      "initialX": 234.7,
+      "initialY": -274.3
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -12001,8 +12726,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 177.1,
-      "initialY": -323.3
+      "initialX": 288.5,
+      "initialY": -313.7
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -12041,8 +12766,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 318,
-      "initialY": -344.5
+      "initialX": 321.8,
+      "initialY": -289.4
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -12095,8 +12820,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 260.4,
-      "initialY": -352.8
+      "initialX": 257.2,
+      "initialY": -280.7
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -12136,8 +12861,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 309.6,
-      "initialY": -322
+      "initialX": 224.2,
+      "initialY": -231.3
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -12191,8 +12916,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 250.7,
-      "initialY": -279.3
+      "initialX": 194.2,
+      "initialY": -280.4
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -12241,8 +12966,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 237.9,
-      "initialY": -338.7
+      "initialX": 204.5,
+      "initialY": -227.7
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -12282,8 +13007,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 275.1,
-      "initialY": -327.3
+      "initialX": 270.9,
+      "initialY": -339.3
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -12335,8 +13060,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 275.4,
-      "initialY": -280.2
+      "initialX": 326.8,
+      "initialY": -336.3
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -12389,8 +13114,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 225.8,
-      "initialY": -289.2
+      "initialX": 286.3,
+      "initialY": -280.3
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -12443,8 +13168,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 201.8,
-      "initialY": -328.9
+      "initialX": 220.6,
+      "initialY": -293.5
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -12484,8 +13209,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 218.1,
-      "initialY": -338
+      "initialX": 335,
+      "initialY": -320.3
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -12526,8 +13251,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 224.8,
-      "initialY": -271.6
+      "initialX": 274.2,
+      "initialY": -298.2
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -12574,8 +13299,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 181.6,
-      "initialY": -235
+      "initialX": 212,
+      "initialY": -315.2
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -12630,8 +13355,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 166.8,
-      "initialY": -287.5
+      "initialX": 212.1,
+      "initialY": -255.6
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -12677,8 +13402,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 242.1,
-      "initialY": -373.6
+      "initialX": 316.7,
+      "initialY": -364.1
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -12717,8 +13442,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 289.3,
-      "initialY": -349.9
+      "initialX": 246.9,
+      "initialY": -368.4
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -12757,8 +13482,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 252.8,
-      "initialY": -391.8
+      "initialX": 235.8,
+      "initialY": -310.2
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -12798,8 +13523,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 202.7,
-      "initialY": -373.9
+      "initialX": 264.7,
+      "initialY": -360.1
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -12845,8 +13570,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 305.6,
-      "initialY": -397.1
+      "initialX": 297,
+      "initialY": -339.2
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -12888,8 +13613,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 256.6,
-      "initialY": -413.8
+      "initialX": 293.2,
+      "initialY": -403.1
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -12930,8 +13655,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 210.8,
-      "initialY": -308.6
+      "initialX": 300.2,
+      "initialY": -372.6
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -12972,8 +13697,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 222.9,
-      "initialY": -357.9
+      "initialX": 263.7,
+      "initialY": -386.4
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -13026,8 +13751,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 228,
-      "initialY": -239.7
+      "initialX": 258.5,
+      "initialY": -318.9
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -13088,8 +13813,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 187.7,
-      "initialY": -256.7
+      "initialX": 249.4,
+      "initialY": -245.5
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -13145,8 +13870,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 259.4,
-      "initialY": -324
+      "initialX": 241.8,
+      "initialY": -338.5
     },
     "TRD-01": {
       "id": "TRD-01",
@@ -13178,8 +13903,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-01.mdx",
-      "initialX": 323.2,
-      "initialY": -207.9
+      "initialX": 324.3,
+      "initialY": -173.5
     },
     "TRD-02": {
       "id": "TRD-02",
@@ -13213,8 +13938,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-02.mdx",
-      "initialX": 388.3,
-      "initialY": -187
+      "initialX": 389.2,
+      "initialY": -160.4
     },
     "TRD-03": {
       "id": "TRD-03",
@@ -13248,8 +13973,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-03.mdx",
-      "initialX": 396.8,
-      "initialY": -252.7
+      "initialX": 413,
+      "initialY": -114.3
     },
     "TRD-04": {
       "id": "TRD-04",
@@ -13289,8 +14014,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-04.mdx",
-      "initialX": 344.6,
-      "initialY": -218.1
+      "initialX": 457,
+      "initialY": -142.1
     },
     "TRD-05": {
       "id": "TRD-05",
@@ -13324,8 +14049,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-05.mdx",
-      "initialX": 382.1,
-      "initialY": -162
+      "initialX": 443.6,
+      "initialY": -194.4
     },
     "TRD-06": {
       "id": "TRD-06",
@@ -13359,8 +14084,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-06.mdx",
-      "initialX": 346.2,
-      "initialY": -150.4
+      "initialX": 469.4,
+      "initialY": -197.3
     },
     "TRD-07": {
       "id": "TRD-07",
@@ -13395,8 +14120,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-07.mdx",
-      "initialX": 323,
-      "initialY": -155.1
+      "initialX": 401.9,
+      "initialY": -143.4
     },
     "TRD-08": {
       "id": "TRD-08",
@@ -13430,8 +14155,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-08.mdx",
-      "initialX": 426.2,
-      "initialY": -241.3
+      "initialX": 455,
+      "initialY": -166.9
     },
     "TRD-09": {
       "id": "TRD-09",
@@ -13466,8 +14191,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-09.mdx",
-      "initialX": 366.8,
-      "initialY": -246.8
+      "initialX": 343.6,
+      "initialY": -116.8
     },
     "TRD-10": {
       "id": "TRD-10",
@@ -13512,8 +14237,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TRD-10.mdx",
-      "initialX": 445.9,
-      "initialY": -170.6
+      "initialX": 430.7,
+      "initialY": -161.1
     },
     "TRD-11": {
       "id": "TRD-11",
@@ -13552,8 +14277,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-11.mdx",
-      "initialX": 407.6,
-      "initialY": -228.9
+      "initialX": 392.6,
+      "initialY": -209.7
     },
     "TRD-12": {
       "id": "TRD-12",
@@ -13596,8 +14321,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TRD-12.mdx",
-      "initialX": 450.9,
-      "initialY": -227.3
+      "initialX": 446.7,
+      "initialY": -221.5
     },
     "TRD-13": {
       "id": "TRD-13",
@@ -13629,8 +14354,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-13.mdx",
-      "initialX": 346.7,
-      "initialY": -130.7
+      "initialX": 360.8,
+      "initialY": -197.3
     },
     "TRD-14": {
       "id": "TRD-14",
@@ -13664,8 +14389,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-14.mdx",
-      "initialX": 297.9,
-      "initialY": -133
+      "initialX": 409.1,
+      "initialY": -232.1
     },
     "TRD-15": {
       "id": "TRD-15",
@@ -13699,8 +14424,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-15.mdx",
-      "initialX": 405.1,
-      "initialY": -147.2
+      "initialX": 365,
+      "initialY": -140.9
     },
     "TRD-16": {
       "id": "TRD-16",
@@ -13739,8 +14464,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-16.mdx",
-      "initialX": 390.3,
-      "initialY": -213.1
+      "initialX": 430.8,
+      "initialY": -136.3
     },
     "TRD-17": {
       "id": "TRD-17",
@@ -13780,8 +14505,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-17.mdx",
-      "initialX": 438.8,
-      "initialY": -195.2
+      "initialX": 390,
+      "initialY": -104.1
     },
     "TRD-18": {
       "id": "TRD-18",
@@ -13816,8 +14541,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-18.mdx",
-      "initialX": 271.1,
-      "initialY": -154.4
+      "initialX": 421.2,
+      "initialY": -200.7
     },
     "TRD-19": {
       "id": "TRD-19",
@@ -13864,8 +14589,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TRD-19.mdx",
-      "initialX": 293.9,
-      "initialY": -112.6
+      "initialX": 370.4,
+      "initialY": -223
     },
     "TRD-20": {
       "id": "TRD-20",
@@ -13900,8 +14625,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TRD-20.mdx",
-      "initialX": 299.5,
-      "initialY": -182.3
+      "initialX": 425.9,
+      "initialY": -247.1
     },
     "TRD-21": {
       "id": "TRD-21",
@@ -13936,8 +14661,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-21.mdx",
-      "initialX": 280.8,
-      "initialY": -138.5
+      "initialX": 415.7,
+      "initialY": -179
     },
     "TRD-22": {
       "id": "TRD-22",
@@ -13971,8 +14696,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-22.mdx",
-      "initialX": 330.9,
-      "initialY": -118.8
+      "initialX": 361.3,
+      "initialY": -169.7
     },
     "TRD-23": {
       "id": "TRD-23",
@@ -14006,8 +14731,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-23.mdx",
-      "initialX": 345.6,
-      "initialY": -188.1
+      "initialX": 327.1,
+      "initialY": -144.9
     },
     "TRD-24": {
       "id": "TRD-24",
@@ -14046,8 +14771,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-24.mdx",
-      "initialX": 373.2,
-      "initialY": -227
+      "initialX": 332.8,
+      "initialY": -197.8
     },
     "TRD-25": {
       "id": "TRD-25",
@@ -14105,8 +14830,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-25.mdx",
-      "initialX": 413.7,
-      "initialY": -175.3
+      "initialX": 281.1,
+      "initialY": -159.7
     },
     "TRD-26": {
       "id": "TRD-26",
@@ -14146,8 +14871,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-26.mdx",
-      "initialX": 380.5,
-      "initialY": -133.4
+      "initialX": 276.5,
+      "initialY": -113.6
     },
     "TRD-27": {
       "id": "TRD-27",
@@ -14181,8 +14906,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-27.mdx",
-      "initialX": 351,
-      "initialY": -170.6
+      "initialX": 303.4,
+      "initialY": -152.6
     },
     "TRD-28": {
       "id": "TRD-28",
@@ -14221,8 +14946,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-28.mdx",
-      "initialX": 368,
-      "initialY": -190.7
+      "initialX": 321.8,
+      "initialY": -124.9
     },
     "TRD-29": {
       "id": "TRD-29",
@@ -14272,8 +14997,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-29.mdx",
-      "initialX": 408.4,
-      "initialY": -196.3
+      "initialX": 320.1,
+      "initialY": -97.1
     },
     "TRD-30": {
       "id": "TRD-30",
@@ -14317,8 +15042,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-30.mdx",
-      "initialX": 432.8,
-      "initialY": -144.6
+      "initialX": 342.3,
+      "initialY": -158.5
     },
     "TRD-31": {
       "id": "TRD-31",
@@ -14358,8 +15083,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TRD-31.mdx",
-      "initialX": 459.2,
-      "initialY": -200.5
+      "initialX": 370,
+      "initialY": -113.8
     },
     "TRD-32": {
       "id": "TRD-32",
@@ -14417,11 +15142,60 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-32.mdx",
-      "initialX": 320,
-      "initialY": -182.9
+      "initialX": 387.3,
+      "initialY": -183.7
     }
   },
   "reverseIndex": {
+    "AML-01": [
+      "AML-02",
+      "AML-05",
+      "AML-06",
+      "AML-17"
+    ],
+    "AML-02": [
+      "AML-03"
+    ],
+    "AML-03": [],
+    "AML-04": [
+      "AML-05"
+    ],
+    "AML-05": [
+      "AML-06"
+    ],
+    "AML-06": [
+      "AML-07",
+      "AML-08",
+      "AML-09"
+    ],
+    "AML-07": [],
+    "AML-08": [
+      "AML-09"
+    ],
+    "AML-09": [
+      "AML-10",
+      "AML-11"
+    ],
+    "AML-10": [],
+    "AML-11": [
+      "AML-12",
+      "AML-13"
+    ],
+    "AML-12": [],
+    "AML-13": [
+      "AML-14",
+      "AML-17"
+    ],
+    "AML-14": [
+      "AML-15",
+      "AML-18"
+    ],
+    "AML-15": [
+      "AML-16"
+    ],
+    "AML-16": [],
+    "AML-17": [],
+    "AML-18": [],
     "CAP-01": [
       "CAP-02",
       "CAP-03",
@@ -15552,6 +16326,157 @@
     "TRD-32": []
   },
   "domainTree": [
+    {
+      "domain": "financial-crime",
+      "subdomains": [
+        {
+          "subdomain": "financial-crime-foundations",
+          "atoms": [
+            {
+              "id": "AML-01",
+              "title": "Money Laundering (Placement, Layering, Integration)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-02",
+              "title": "Terrorist Financing",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-03",
+              "title": "Proliferation Financing",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-04",
+              "title": "FATF and Global Standards",
+              "type": "reference",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-05",
+              "title": "Banks as AML Gatekeepers",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "kyc-edd-and-customer-due-diligence",
+          "atoms": [
+            {
+              "id": "AML-06",
+              "title": "KYC and Customer Identification (CIP)",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-07",
+              "title": "Beneficial Ownership",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-08",
+              "title": "Politically Exposed Persons (PEPs)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-09",
+              "title": "Risk-Based Approach (RBA)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-10",
+              "title": "Simplified vs Enhanced Due Diligence (SDD vs EDD)",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-11",
+              "title": "Ongoing Due Diligence and Periodic Review",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-12",
+              "title": "Perpetual KYC (Continuous Updating)",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "transaction-monitoring-and-sanctions",
+          "atoms": [
+            {
+              "id": "AML-13",
+              "title": "Transaction Monitoring",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-14",
+              "title": "False Positives and Alert Triage",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-15",
+              "title": "Suspicious Activity Reporting and Tipping Off",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-16",
+              "title": "Sanctions Screening",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "fraud-and-aml-governance",
+          "atoms": [
+            {
+              "id": "AML-17",
+              "title": "Fraud and its Relationship to AML",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "AML-18",
+              "title": "AML Governance and Oversight",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
     {
       "domain": "regulatory-capital",
       "subdomains": [
@@ -18910,6 +19835,18 @@
           "weight": 3
         },
         {
+          "id": "AML-06",
+          "weight": 3
+        },
+        {
+          "id": "AML-10",
+          "weight": 2
+        },
+        {
+          "id": "AML-17",
+          "weight": 2
+        },
+        {
           "id": "IND-18",
           "weight": 2
         },
@@ -18951,6 +19888,14 @@
           "weight": 3
         },
         {
+          "id": "AML-06",
+          "weight": 2
+        },
+        {
+          "id": "AML-12",
+          "weight": 2
+        },
+        {
           "id": "IND-17",
           "weight": 2
         },
@@ -18967,6 +19912,141 @@
   ],
   "missingAtoms": [],
   "lintWarnings": [
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-01",
+      "message": "Atom \"AML-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "AML-01",
+      "message": "Atom \"AML-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-02",
+      "message": "Atom \"AML-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-03",
+      "message": "Atom \"AML-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-04",
+      "message": "Atom \"AML-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "AML-04",
+      "message": "Atom \"AML-04\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-05",
+      "message": "Atom \"AML-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-06",
+      "message": "Atom \"AML-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-07",
+      "message": "Atom \"AML-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-07",
+      "message": "one_screen in \"AML-07\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-08",
+      "message": "Atom \"AML-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-08",
+      "message": "one_screen in \"AML-08\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-09",
+      "message": "Atom \"AML-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-10",
+      "message": "Atom \"AML-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-10",
+      "message": "one_screen in \"AML-10\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-11",
+      "message": "Atom \"AML-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-12",
+      "message": "Atom \"AML-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-13",
+      "message": "Atom \"AML-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-14",
+      "message": "Atom \"AML-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-15",
+      "message": "Atom \"AML-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-15",
+      "message": "one_screen in \"AML-15\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-16",
+      "message": "Atom \"AML-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-16",
+      "message": "one_screen in \"AML-16\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-17",
+      "message": "Atom \"AML-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-17",
+      "message": "one_screen in \"AML-17\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "AML-18",
+      "message": "Atom \"AML-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "AML-18",
+      "message": "one_screen in \"AML-18\" contains 5 sentences (maximum 3 recommended)."
+    },
     {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "CAP-01",
@@ -21303,5 +22383,5 @@
       "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-28T16:32:30.216Z"
+  "generatedAt": "2026-08-28T16:47:05.383Z"
 }

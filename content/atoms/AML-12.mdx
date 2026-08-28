@@ -1,0 +1,73 @@
+---
+id: AML-12
+title: Perpetual KYC (Continuous Updating)
+type: mechanism
+domain: financial-crime
+subdomain: kyc-edd-and-customer-due-diligence
+one_screen: >-
+  Perpetual KYC is the practice of continuously updating customer profiles
+  rather than relying solely on periodic refreshes. It means automatically
+  re-verifying identity, sanctions, and risk as soon as new data appears (via
+  screening and open sources).
+prerequisites:
+  - AML-11
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Fraxtional (AML blog), *Understanding Ongoing Monitoring & Perpetual KYC*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'ACAMS, *Perpetual KYC concept in AML compliance*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 15_AML_financial_crime.md
+---
+“Perpetual” or continuous KYC takes ongoing diligence further: banks strive to have real-time or event-driven updates of customer data. Instead of waiting a year for the next review, the bank’s systems continuously screen for changes.  For example, automated processes may re-run name screening daily or alert staff if a customer appears in news or sanctions feeds. The goal is to “maintain a living view” of each client. ACAMS describes this as “perpetual KYC,” where client data is kept current through near-real-time monitoring of risk indicators.  
+
+This trend away from calendar-based KYC means banks invest in technology: integrated data sources (legal registries, watchlists, media monitors) and trigger-based workflows. For instance, India’s CKYCR (central KYC registry) facilitates sharing updates across banks, reducing redundant KYC. Video KYC or e-KYC (Aadhaar-based) allow faster identity checks. The result is that if a customer’s situation changes (new BO, sanction hit, etc.), compliance is updated immediately, not at the annual review.
+
+<Rule label="PERMANENT RULE">
+Implement systems that alert compliance staff to material changes (sanctions, adverse news, ownership changes) so KYC can be updated immediately. Use centralized KYC registries (like India’s CKYCR) and re-screen customers periodically (or continuously for high risk).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Relying purely on periodic checks and treating KYC reviews as routine paperwork. In today’s dynamic world, waiting six months for the next review can miss emerging risks.
+</Trap>
+
+<NeverConfuse a="Periodic Review" b="Perpetual KYC">
+**Periodic Review** — scheduled KYC refresh (e.g. annual).  
+---  
+**Perpetual KYC** — continuous, event-triggered updates. The confusion arises as both aim to keep KYC current; the difference is periodic is fixed schedule while perpetual is on change-driven alerts.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s CKYCR allows banks to update a central record; it mandates updates on PAN/Aadhaar info changes. E-KYC (Aadhaar) and Video KYC are accepted for quick onboarding and re-verification.
+</Delta>
+
+<Delta j="UK">
+— The FCA expects firms to have “systems to identify PEP status changes throughout the relationship”. The trend is to more frequent reviews beyond the regulatory minimum.
+</Delta>
+
+<Delta j="EU">
+— Anti-Money Laundering Package (2024) pushes for digitisation of KYC data and envisages an EU KYC “data house” for continuous updates.
+</Delta>
+
+<Delta j="US">
+— No centralized KYC, but banks re-run watchlist screening at least daily/weekly. Regulatory focus is on whether changes (like home ownership or employment) should prompt updates under the RBA principle.
+</Delta>
+
+<Recall
+  q="What is perpetual KYC?"
+  a="Continuously updating customer information via real-time checks (sanctions, adverse media, changes in ownership, etc.) instead of waiting for scheduled reviews."
+/>
+
+<Recall
+  q="Name one technology or process that facilitates perpetual KYC."
+  a="Using a central KYC registry (e.g. India’s CKYCR), daily sanctions screening, or automated adverse media alerts that trigger instant KYC updates."
+/>

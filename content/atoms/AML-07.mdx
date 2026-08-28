@@ -1,0 +1,73 @@
+---
+id: AML-07
+title: Beneficial Ownership
+type: concept
+domain: financial-crime
+subdomain: kyc-edd-and-customer-due-diligence
+one_screen: >-
+  Beneficial owner (BO) means the natural person(s) who ultimately owns or
+  controls a customer (especially a company), even if not listed on official
+  records. Laws typically use ownership thresholds (e.g. >10% in India, >25% in
+  US) to identify BOs.
+prerequisites:
+  - AML-06
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'RBI, *Master Direction – Know Your Customer (KYC)* (2025).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: FinCEN FAQ on *Beneficial Ownership Information Reporting*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 15_AML_financial_crime.md
+---
+Beneficial ownership refers to the real human owners behind legal entities. For corporate customers, “boilerplate” documents show only legal title (e.g. Board of Directors). AML rules therefore require banks to identify the individual(s) who ultimately own or control the company. For example, RBI’s KYC guidelines define a BO as someone holding &gt;10% of shares or exercising control. US law (via FinCEN) similarly defines BOs as individuals with substantial control or ≥25% ownership.  UK/EU AML rules use a 25% threshold or “significant control.”  
+
+Finding BOs is often hard: the listed directors may not be the true owners (there may be nominee shareholders). Banks must obtain documentation or declarations to trace chain of ownership. This can involve checking public registries (like the UK PSC register) or trusting legal opinions. The BO requirement ensures banks see through shell companies and trust structures.
+
+<Rule label="PERMANENT RULE">
+Always obtain BO information for any corporate customer. Verify it with documents or public registries. If uncertain, treat the account as high-risk (issue EDD). In India, banks must collect IDs of all BOs (person with &gt;10% or who controls the company).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Accepting a single shareholder’s statement that “there are no other BOs.” In reality, multiple people can share ownership. Overlooking indirect ownership (e.g. via trusts or chains of companies) is also a common error.
+</Trap>
+
+<NeverConfuse a="Nominee" b="Beneficial owner">
+**Nominee** — person who is listed as owner on paper but holds assets on someone else’s behalf.  
+---  
+**Beneficial owner** — the real person who ultimately owns or controls the asset or entity. They get mixed up because a nominee’s name is on the legal title, but the BO is the one with real power or benefit.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI KYC rules define BO as individuals holding ≥10% equity or control; banks must collect KYC of each such person.
+</Delta>
+
+<Delta j="UK">
+— MLR/Companies Act: BO/PSC is anyone with &gt;25% shares or votes, or significant control. FCA guidance emphasizes verifying via the UK PSC register.
+</Delta>
+
+<Delta j="EU">
+— AML Directives: BO usually &gt;25% ownership, must be identified and ID-verified.
+</Delta>
+
+<Delta j="US">
+— The Corporate Transparency Act (FinCEN) defines BO as person with ≥25% ownership or exercising substantial control. U.S. firms must report BO info to FinCEN.
+</Delta>
+
+<Recall
+  q="What is a beneficial owner?"
+  a="It’s the natural person who ultimately owns or controls a client entity (typically by meeting an ownership threshold or other control criteria)."
+/>
+
+<Recall
+  q="What threshold usually defines a BO?"
+  a="Often 25% ownership or similar (in India a 10% rule applies, in the US 25% plus control)."
+/>
