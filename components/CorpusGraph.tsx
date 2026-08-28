@@ -48,7 +48,7 @@ const DOMAIN_COLORS: Record<string, string> = {
   "india-lending": "#7D7D3E",
   "business-analysis": "#6B4A82",
   technical: "#3E5A7D",
-  quantitative: "#7D3E5A",
+  "quantitative": "#7D3E5A",
   regulatory: "#A6503C",
 };
 
@@ -104,11 +104,11 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return synth;
   }, [atoms, syntheticCount]);
 
-  // Compute Domain Centroids on a radius of 250px so 9 populated domain clusters sit cleanly separated
+  // PART 2: Centroid Circle Radius 480px so all 16 domains separate cleanly
   const domainCentroids = useMemo(() => {
     const domains = Array.from(new Set(Object.values(effectiveAtoms).map((a) => a.domain)));
     const centroids: Record<string, { x: number; y: number }> = {};
-    const radius = 250;
+    const radius = 480;
     domains.forEach((d, idx) => {
       const angle = (2 * Math.PI * idx) / domains.length;
       centroids[d] = {
@@ -119,14 +119,14 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return centroids;
   }, [effectiveAtoms]);
 
-  // Build Graph Nodes & Edges (Radius 5px - 11px)
+  // PART 2: Build Graph Nodes & Edges (Node radius 6px - 13px scaled by reading_minutes)
   const { nodes, edges, nodeMap } = useMemo(() => {
     const nMap: Record<string, GraphNode> = {};
     const nodeList: GraphNode[] = [];
 
     Object.values(effectiveAtoms).forEach((atom) => {
-      // Radius scale: 5px to 11px
-      const r = Math.min(11, Math.max(5, atom.reading_minutes + 4));
+      // Radius scale: 6px to 13px
+      const r = Math.min(13, Math.max(6, atom.reading_minutes + 5));
       const initialX = atom.initialX ?? (domainCentroids[atom.domain]?.x || 0);
       const initialY = atom.initialY ?? (domainCentroids[atom.domain]?.y || 0);
 
@@ -171,9 +171,12 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return map;
   }, [nodes, edges]);
 
-  // Compute Domain Cluster Bounding Boxes for Label Offset
+  // Compute Domain Cluster Bounding Boxes & Centroids for Label Rendering
   const domainClusterBounds = useMemo(() => {
-    const bounds: Record<string, { minX: number; maxX: number; minY: number; maxY: number; count: number }> = {};
+    const bounds: Record<
+      string,
+      { minX: number; maxX: number; minY: number; maxY: number; count: number }
+    > = {};
 
     nodes.forEach((node) => {
       if (!bounds[node.domain]) {
@@ -197,7 +200,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return bounds;
   }, [nodes]);
 
-  // Auto-fit 90% Canvas Fill Bounding Box Scaling
+  // PART 2: Fit Scale 92% of Canvas Bounding Box Fill
   const fitGraphToCanvas = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas || nodes.length === 0) return;
@@ -219,8 +222,8 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     const centerX = (minX + maxX) / 2;
     const centerY = (minY + maxY) / 2;
 
-    const scaleX = (canvas.width * 0.88) / graphWidth;
-    const scaleY = (canvas.height * 0.88) / graphHeight;
+    const scaleX = (canvas.width * 0.92) / graphWidth;
+    const scaleY = (canvas.height * 0.92) / graphHeight;
     const scale = Math.min(scaleX, scaleY, 2.5);
 
     // Apply centered transform
@@ -228,17 +231,17 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     transformRef.current = t;
   }, [nodes]);
 
-  // Simulation setup with increased forceManyBody repulsion (-140)
+  // Force simulation setup
   useEffect(() => {
     const sim = forceSimulation(nodes as any)
       .force(
         "link",
         forceLink(edges as any)
           .id((d: any) => d.id)
-          .distance(65)
+          .distance(70)
           .strength(0.25)
       )
-      .force("charge", forceManyBody().strength(-160))
+      .force("charge", forceManyBody().strength(-180))
       .force(
         "x",
         forceX((d: any) => domainCentroids[d.domain]?.x || 0).strength(0.25)
@@ -253,7 +256,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     let tickCount = 0;
     sim.on("tick", () => {
       tickCount++;
-      if (tickCount >= 80) {
+      if (tickCount >= 90) {
         sim.stop();
         setIsSettled(true);
         fitGraphToCanvas();
@@ -279,7 +282,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     ctx.save();
     ctx.clearRect(0, 0, width, height);
 
-    // Dark background
+    // Canvas background
     ctx.fillStyle = "#0B0C0E";
     ctx.fillRect(0, 0, width, height);
 
@@ -291,14 +294,17 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     const activeHoverNeighbors = activeHoverId ? neighborMap[activeHoverId] : null;
     const qLower = searchQuery.toLowerCase().trim();
 
-    // 1. Draw Edges (0.35 opacity, #333940 --color-border-strong)
+    // Filter matching nodes count
+    let visibleMatchCount = 0;
+
+    // PART 2: Edges set to 0.45 opacity
     edges.forEach((edge) => {
       const isConnectedToHover =
         activeHoverId && (edge.source.id === activeHoverId || edge.target.id === activeHoverId);
 
-      let edgeAlpha = 0.35;
+      let edgeAlpha = 0.45;
       if (activeHoverId) {
-        edgeAlpha = isConnectedToHover ? 0.85 : 0.12;
+        edgeAlpha = isConnectedToHover ? 0.90 : 0.10;
       }
 
       ctx.beginPath();
@@ -306,27 +312,27 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       ctx.lineTo(edge.target.x, edge.target.y);
       ctx.strokeStyle = isConnectedToHover ? "#C9711F" : "#333940";
       ctx.globalAlpha = edgeAlpha;
-      ctx.lineWidth = isConnectedToHover ? 1.5 : 1;
+      ctx.lineWidth = isConnectedToHover ? 1.8 : 1.2;
       ctx.stroke();
     });
 
-    // 2. Draw Domain Labels Offset Above Cluster Bounding Box at 0.6 Opacity
+    // PART 2: Draw Domain Labels at Cluster Top Edge, Uppercase Mono, 0.7 Opacity
     Object.entries(domainClusterBounds).forEach(([domain, bounds]) => {
       ctx.save();
       const isSel = !selectedDomain || selectedDomain === domain;
-      ctx.globalAlpha = isSel ? 0.6 : 0.15;
+      ctx.globalAlpha = isSel ? 0.70 : 0.15;
       ctx.font = "bold 11px monospace";
       ctx.fillStyle = DOMAIN_COLORS[domain] || "#9AA3AD";
       ctx.textAlign = "center";
 
       const labelX = (bounds.minX + bounds.maxX) / 2;
-      const labelY = bounds.minY - 18; // Offset above cluster bounding box
+      const labelY = bounds.minY - 22;
 
       ctx.fillText(domain.toUpperCase(), labelX, labelY);
       ctx.restore();
     });
 
-    // 3. Draw Nodes (Floor 0.75 opacity for draft/fixture, 1.0 for published; hover fade to 0.20)
+    // Draw Nodes
     nodes.forEach((node) => {
       const isHovered = activeHoverId === node.id;
       const isNeighbor = activeHoverNeighbors?.has(node.id);
@@ -334,18 +340,19 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       const isSearchMatched =
         !qLower || node.id.toLowerCase().includes(qLower) || node.title.toLowerCase().includes(qLower);
 
-      // Task 10 Fix: Opacity Floor 0.75 for draft/fixture, 1.0 for published
-      let alpha = node.status === "published" && node.verified ? 1.0 : 0.75;
+      if (isDomainSelected && isSearchMatched) {
+        visibleMatchCount++;
+      }
 
-      // Task 10 Fix: Hover fade 0.20
+      let alpha = 0.85;
       if (activeHoverId) {
         if (!isHovered && !isNeighbor) {
-          alpha = 0.20;
+          alpha = 0.15;
         } else {
           alpha = 1.0;
         }
       } else if (!isDomainSelected || !isSearchMatched) {
-        alpha = 0.20;
+        alpha = 0.15;
       }
 
       ctx.save();
@@ -358,7 +365,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       ctx.fillStyle = color;
       ctx.fill();
 
-      // Published node ring (1.0 opacity with 1px ring)
+      // Published node ring
       if (node.status === "published" && node.verified) {
         ctx.strokeStyle = "#E6E8EB";
         ctx.lineWidth = 1.5;
@@ -426,25 +433,61 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       const worldX = (mouseX - canvas.width / 2 - t.x) / t.k;
       const worldY = (mouseY - canvas.height / 2 - t.y) / t.k;
 
-      let found: GraphNode | null = null;
+      // Check click/hover on domain labels to isolate domain
+      let foundDomain: string | null = null;
+      Object.entries(domainClusterBounds).forEach(([dom, bounds]) => {
+        const labelX = (bounds.minX + bounds.maxX) / 2;
+        const labelY = bounds.minY - 22;
+        const dx = worldX - labelX;
+        const dy = worldY - labelY;
+        if (Math.abs(dx) < 60 && Math.abs(dy) < 15) {
+          foundDomain = dom;
+        }
+      });
+
+      let foundNode: GraphNode | null = null;
       for (const node of nodes) {
         const dx = node.x - worldX;
         const dy = node.y - worldY;
         if (dx * dx + dy * dy <= (node.radius + 6) * (node.radius + 6)) {
-          found = node;
+          foundNode = node;
           break;
         }
       }
 
-      setHoveredNode(found);
-      if (found) {
+      setHoveredNode(foundNode);
+      if (foundNode) {
         setTooltipPos({ x: e.clientX, y: e.clientY });
+        canvas.style.cursor = "pointer";
+      } else if (foundDomain) {
+        canvas.style.cursor = "pointer";
       } else {
         setTooltipPos(null);
+        canvas.style.cursor = "grab";
       }
     };
 
-    const handleClick = () => {
+    const handleClick = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      const t = transformRef.current;
+      const worldX = (mouseX - canvas.width / 2 - t.x) / t.k;
+      const worldY = (mouseY - canvas.height / 2 - t.y) / t.k;
+
+      // Check click on domain label
+      for (const [dom, bounds] of Object.entries(domainClusterBounds)) {
+        const labelX = (bounds.minX + bounds.maxX) / 2;
+        const labelY = bounds.minY - 22;
+        const dx = worldX - labelX;
+        const dy = worldY - labelY;
+        if (Math.abs(dx) < 60 && Math.abs(dy) < 15) {
+          setSelectedDomain((prev) => (prev === dom ? null : dom));
+          return;
+        }
+      }
+
       if (hoveredNode) {
         router.push(`/atom/${hoveredNode.id}`);
       }
@@ -457,7 +500,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       canvas.removeEventListener("pointermove", handlePointerMove);
       canvas.removeEventListener("click", handleClick);
     };
-  }, [nodes, hoveredNode, router]);
+  }, [nodes, hoveredNode, domainClusterBounds, router]);
 
   // Handle Resize & Bounding Box Fit
   useEffect(() => {
@@ -488,17 +531,28 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return counts;
   }, [nodes]);
 
+  // Check matching nodes count for empty state
+  const matchingNodeCount = useMemo(() => {
+    const qLower = searchQuery.toLowerCase().trim();
+    return nodes.filter((node) => {
+      const isDomainSelected = !selectedDomain || node.domain === selectedDomain;
+      const isSearchMatched =
+        !qLower || node.id.toLowerCase().includes(qLower) || node.title.toLowerCase().includes(qLower);
+      return isDomainSelected && isSearchMatched;
+    }).length;
+  }, [nodes, selectedDomain, searchQuery]);
+
   return (
     <div
       ref={containerRef}
-      className={`relative w-full overflow-hidden bg-[#0B0C0E] border border-[#23272D] select-none ${
-        isEmbedded ? "h-[540px] rounded-[3px]" : "h-[calc(100vh-48px)]"
+      className={`relative w-full overflow-hidden bg-[#0B0C0E] select-none ${
+        isEmbedded ? "h-full w-full" : "h-[calc(100vh-48px)] border-none rounded-none"
       }`}
     >
-      <canvas ref={canvasRef} className="w-full h-full cursor-grab active:cursor-grabbing block" />
+      <canvas ref={canvasRef} className="w-full h-full block" />
 
-      {/* Top Right Controls: Search Box & Reset Zoom */}
-      <div className="absolute top-3 right-3 flex items-center gap-2 font-mono text-xs z-10">
+      {/* Top Right Controls: Filter Input & Reset Zoom */}
+      <div className="absolute top-4 right-4 flex items-center gap-2 font-mono text-xs z-20">
         <input
           type="text"
           placeholder="Filter nodes..."
@@ -519,8 +573,8 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
         )}
       </div>
 
-      {/* Bottom Left Legend */}
-      <div className="absolute bottom-3 left-3 bg-[#121417]/95 border border-[#23272D] p-2.5 rounded-[3px] font-mono text-[10px] space-y-1 z-10 max-w-[240px]">
+      {/* PART 1 & 2: Legend Overlay at Left — Solid #0B0C0E Fill at 85% Opacity, Hairline Border */}
+      <div className="absolute top-4 left-4 bg-[#0B0C0E]/85 border border-[#23272D] p-3 rounded-[3px] font-mono text-[10px] space-y-1.5 z-20 max-w-[240px]">
         <div className="text-[#6B747E] font-bold uppercase tracking-wider mb-1 flex items-center justify-between">
           <span>DOMAINS ({Object.keys(domainStats).length})</span>
           {selectedDomain && (
@@ -532,7 +586,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
             </button>
           )}
         </div>
-        <div className="space-y-0.5">
+        <div className="space-y-0.5 max-h-[260px] overflow-y-auto pr-1">
           {Object.entries(domainStats).map(([dom, count]) => {
             const color = DOMAIN_COLORS[dom] || "#9AA3AD";
             const isSelected = selectedDomain === dom;
@@ -555,27 +609,31 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
         </div>
       </div>
 
-      {/* Empty State Overlay */}
-      {nodes.length === 0 && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none font-mono text-xs text-center space-y-2 z-20">
-          <div className="text-[#C9711F] font-bold text-sm tracking-wider uppercase">
-            NO ATOMS INDEXED YET
-          </div>
-          <p className="text-[#6B747E] max-w-[40ch]">
-            No atoms yet. Run importer to populate corpus graph.
-          </p>
+      {/* PART 2: Empty State for Zero Matching Filter */}
+      {matchingNodeCount === 0 && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none font-mono text-xs text-[#6B747E] z-20">
+          No atoms match that filter.
         </div>
       )}
 
-      {/* Hover Tooltip */}
+      {/* PART 2: Hover Tooltip with Domain-Coloured Border */}
       {hoveredNode && tooltipPos && (
         <div
-          className="fixed pointer-events-none z-50 bg-[#191C20] border border-[#C9711F] p-2.5 rounded-[3px] shadow-xl font-mono text-xs space-y-1 -translate-x-1/2 -translate-y-full mb-3 max-w-[260px]"
-          style={{ left: tooltipPos.x, top: tooltipPos.y }}
+          className="fixed pointer-events-none z-50 bg-[#191C20] p-2.5 rounded-[3px] shadow-2xl font-mono text-xs space-y-1 -translate-x-1/2 -translate-y-full mb-3 max-w-[280px]"
+          style={{
+            left: tooltipPos.x,
+            top: tooltipPos.y,
+            borderWidth: "1px",
+            borderStyle: "solid",
+            borderColor: DOMAIN_COLORS[hoveredNode.domain] || "#C9711F",
+          }}
         >
           <div className="flex items-center justify-between gap-2 border-b border-[#23272D] pb-1">
             <span className="text-[#C9711F] font-bold">{hoveredNode.id}</span>
-            <span className="text-[9px] text-[#9AA3AD] uppercase border border-[#23272D] px-1 py-0.2 rounded-[2px]">
+            <span
+              className="text-[9px] text-[#E6E8EB] uppercase px-1 py-0.2 rounded-[2px] font-bold"
+              style={{ backgroundColor: (DOMAIN_COLORS[hoveredNode.domain] || "#9AA3AD") + "40" }}
+            >
               {hoveredNode.domain}
             </span>
           </div>
@@ -583,7 +641,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
             {hoveredNode.title}
           </div>
           <div className="flex items-center justify-between text-[10px] text-[#6B747E] pt-1">
-            <span>{hoveredNode.readingMinutes} MIN</span>
+            <span>{hoveredNode.readingMinutes} MIN READ</span>
             <span
               className={
                 hoveredNode.status === "published"

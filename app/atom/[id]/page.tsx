@@ -4,11 +4,14 @@ import Link from "next/link";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { getCorpusManifest } from "@/lib/corpus";
+import { AtomManifestItem } from "@/lib/schema";
 import { MdxRenderer } from "@/components/atom/MdxRenderer";
 import { OneScreen } from "@/components/atom/OneScreen";
 import { TypeBadge } from "@/components/TypeBadge";
 import { CurrentnessMarker } from "@/components/CurrentnessMarker";
 import { AtomNeighbourhood } from "@/components/AtomNeighbourhood";
+import { RecallStudyPanel } from "@/components/atom/RecallStudyPanel";
+import { AtomSeqNav } from "@/components/atom/AtomSeqNav";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -59,12 +62,48 @@ export default async function AtomPage({ params }: PageProps) {
 
   const nonUniversalJurs = atom.jurisdictions.filter((j) => j !== "universal");
   const hasMultipleVariants = nonUniversalJurs.length >= 1;
-
   const isUnverified = atom.verified === false;
+
+  // PART 5: Sequential Atom Reading Order (Domain -> Subdomain -> Atom ID)
+  const allOrderedAtoms: AtomManifestItem[] = [];
+  manifest.domainTree.forEach((domNode) => {
+    domNode.subdomains.forEach((subNode) => {
+      const sorted = [...subNode.atoms].sort((a, b) => {
+        const numA = parseInt(a.id.split("-")[1] || "0", 10);
+        const numB = parseInt(b.id.split("-")[1] || "0", 10);
+        return numA - numB;
+      });
+      sorted.forEach((item) => {
+        const fullAtom = manifest.atoms[item.id];
+        if (fullAtom) allOrderedAtoms.push(fullAtom);
+      });
+    });
+  });
+
+  const currentIndex = allOrderedAtoms.findIndex((a) => a.id === id);
+  const prevAtom = currentIndex > 0 ? allOrderedAtoms[currentIndex - 1] : null;
+  const nextAtom =
+    currentIndex >= 0 && currentIndex < allOrderedAtoms.length - 1
+      ? allOrderedAtoms[currentIndex + 1]
+      : null;
+
+  // PART 6: Extract Recall items from mdxSource for Right Rail Study Panel
+  const recallItems: Array<{ q: string; a: string }> = [];
+  const recallRegex = /<Recall\s+q="([^"]+)"\s+a="([^"]+)"\s*\/>/g;
+  let rMatch;
+  while ((rMatch = recallRegex.exec(mdxSource)) !== null) {
+    recallItems.push({
+      q: rMatch[1].replace(/&quot;/g, '"'),
+      a: rMatch[2].replace(/&quot;/g, '"'),
+    });
+  }
 
   return (
     <div className="max-w-[1440px] mx-auto px-4 py-8 lg:px-8">
-      {/* UNVERIFIED FIXTURE PERSISTENT BANNER (At very top before header) */}
+      {/* Sequential Navigation Keyboard Shortcut Listener */}
+      <AtomSeqNav prevId={prevAtom?.id || null} nextId={nextAtom?.id || null} />
+
+      {/* UNVERIFIED FIXTURE PERSISTENT BANNER */}
       {isUnverified && (
         <div className="mb-6 border-l-4 border-[#8A6D2F] bg-[#8A6D2F]/10 p-4 rounded-[3px] font-mono text-xs text-[#8A6D2F] flex items-start gap-3 select-none">
           <span className="text-base font-bold shrink-0">⚠️</span>
@@ -234,6 +273,13 @@ export default async function AtomPage({ params }: PageProps) {
             <MdxRenderer source={mdxSource} />
           </article>
 
+          {/* PART 6: Mobile-only Recall Study Panel when Right Rail Collapses (< 1024px) */}
+          {recallItems.length > 0 && (
+            <div className="block lg:hidden mt-8">
+              <RecallStudyPanel items={recallItems} />
+            </div>
+          )}
+
           {/* Sources Section */}
           {atom.sources && atom.sources.length > 0 && (
             <section className="mt-10 border-t border-[#23272D] pt-6 print:block">
@@ -268,6 +314,41 @@ export default async function AtomPage({ params }: PageProps) {
               </ol>
             </section>
           )}
+
+          {/* PART 5: Sequential Atom Reading Controls (Prev / Next) */}
+          <div className="flex flex-col sm:flex-row items-stretch justify-between gap-4 border-t border-[#23272D] pt-6 mt-10 font-mono text-xs">
+            {prevAtom ? (
+              <Link
+                href={`/atom/${prevAtom.id}`}
+                className="group border border-[#23272D] bg-[#121417] hover:bg-[#191C20] hover:border-[#C9711F] p-3 rounded-[3px] flex-1 min-w-0 transition-colors block"
+              >
+                <div className="text-[10px] uppercase text-[#6B747E] font-bold mb-0.5">
+                  ← PREVIOUS ({prevAtom.subdomain})
+                </div>
+                <div className="text-[#E6E8EB] font-bold truncate group-hover:text-[#C9711F]">
+                  {prevAtom.id}: {prevAtom.title}
+                </div>
+              </Link>
+            ) : (
+              <div className="flex-1" />
+            )}
+
+            {nextAtom ? (
+              <Link
+                href={`/atom/${nextAtom.id}`}
+                className="group border border-[#23272D] bg-[#121417] hover:bg-[#191C20] hover:border-[#C9711F] p-3 rounded-[3px] flex-1 min-w-0 sm:text-right transition-colors block"
+              >
+                <div className="text-[10px] uppercase text-[#6B747E] font-bold mb-0.5">
+                  NEXT ({nextAtom.subdomain}) →
+                </div>
+                <div className="text-[#E6E8EB] font-bold truncate group-hover:text-[#C9711F]">
+                  {nextAtom.id}: {nextAtom.title}
+                </div>
+              </Link>
+            ) : (
+              <div className="flex-1" />
+            )}
+          </div>
         </main>
 
         {/* RIGHT COLUMN (280px, sticky) */}
@@ -278,6 +359,11 @@ export default async function AtomPage({ params }: PageProps) {
             allAtoms={manifest.atoms}
             reverseIndex={manifest.reverseIndex}
           />
+
+          {/* PART 6: Compact Recall Study Panel in Right Rail (Desktop >= 1024px) */}
+          {recallItems.length > 0 && (
+            <RecallStudyPanel items={recallItems} className="hidden lg:block" />
+          )}
 
           {/* Compare Across Jurisdictions Button */}
           {hasMultipleVariants && (

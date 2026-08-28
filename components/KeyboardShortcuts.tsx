@@ -110,6 +110,20 @@ export function KeyboardShortcuts() {
           </div>
 
           <div className="flex items-center justify-between py-1 border-b border-[#23272D]/50">
+            <span className="text-[#9AA3AD]">Next Atom (Sequential Reading)</span>
+            <kbd className="bg-[#191C20] border border-[#333940] text-[#C9711F] px-2 py-0.5 rounded-[3px]">
+              j or →
+            </kbd>
+          </div>
+
+          <div className="flex items-center justify-between py-1 border-b border-[#23272D]/50">
+            <span className="text-[#9AA3AD]">Previous Atom (Sequential Reading)</span>
+            <kbd className="bg-[#191C20] border border-[#333940] text-[#C9711F] px-2 py-0.5 rounded-[3px]">
+              k or ←
+            </kbd>
+          </div>
+
+          <div className="flex items-center justify-between py-1 border-b border-[#23272D]/50">
             <span className="text-[#9AA3AD]">Go to Home Page</span>
             <kbd className="bg-[#191C20] border border-[#333940] text-[#E6E8EB] px-2 py-0.5 rounded-[3px]">
               g then h

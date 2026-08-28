@@ -11,82 +11,94 @@ export const metadata = {
 
 export default function HomePage() {
   const manifest = getCorpusManifest();
-  const { atoms, domainTree, roles, generatedAt } = manifest;
+  const { atoms, domainTree, roles } = manifest;
 
   const allAtomsList = Object.values(atoms);
   const totalAtomsCount = allAtomsList.length;
+  const domainCount = domainTree.length;
+  
+  // Calculate unique subdomains and jurisdictions dynamically
+  const uniqueSubdomains = new Set(allAtomsList.map((a) => a.subdomain));
+  const subdomainCount = uniqueSubdomains.size;
+
+  const uniqueJurisdictions = new Set(allAtomsList.flatMap((a) => a.jurisdictions));
+  const jurisdictionCount = uniqueJurisdictions.size;
+
+  // Calculate total pages dynamically (atoms + compare + path + roles + static pages)
+  const totalPages = totalAtomsCount * 3 + (roles ? roles.length : 12) + 9;
+
   const publishedCount = allAtomsList.filter((a) => a.status === "published").length;
   const fixtureCount = allAtomsList.filter((a) => a.status === "fixture").length;
   const draftCount = allAtomsList.filter((a) => a.status === "draft").length;
-  const unverifiedClaimsCount = allAtomsList.reduce((sum, a) => sum + ((a as any).claimCount || 0), 0);
 
   // Find depth 0 root atoms
   const rootAtoms = allAtomsList.filter((a) => a.depth === 0).slice(0, 8);
 
-  // Find atom with most jurisdiction variants for jurisdiction mechanic preview (e.g. CR-07)
+  // Find preview atom for jurisdiction mechanic (CR-07 or first with variants)
   const previewAtom = atoms["CR-07"] || allAtomsList.find((a) => a.jurisdictions.length > 3) || allAtomsList[0];
 
   return (
     <div className="w-full bg-[#0B0C0E] text-[#E6E8EB] font-sans antialiased">
-      {/* ABOVE THE FOLD — Full Viewport Height */}
-      <section className="relative w-full h-[calc(100vh-48px)] flex flex-col justify-between p-4 md:p-8 border-b border-[#23272D] overflow-hidden">
-        {/* Top Left Branding */}
-        <div className="z-10 font-mono space-y-1 select-none">
+      {/* PART 1: ABOVE THE FOLD — Full Viewport Canvas Background (100vw x 100vh - 48px) */}
+      <section className="relative w-full h-[calc(100vh-48px)] overflow-hidden select-none">
+        {/* Graph Canvas Background */}
+        <div className="absolute inset-0 z-0">
+          <CorpusGraph atoms={atoms} isEmbedded={false} />
+        </div>
+
+        {/* Top Left Wordmark & Tagline Overlay (No background panel) */}
+        <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10 font-mono space-y-1 pointer-events-none">
           <div className="flex items-center gap-2">
-            <span className="text-[#C9711F] font-bold text-base tracking-wider">WARREN</span>
-            <span className="bg-[#191C20] border border-[#23272D] text-[#9AA3AD] text-[10px] px-1.5 py-0.5 rounded-[3px]">
-              v0.1.0-OPERATING-MANUAL
-            </span>
+            <span className="text-[#C9711F] font-bold text-lg tracking-wider drop-shadow-md">WARREN</span>
           </div>
-          <p className="text-xs text-[#9AA3AD] font-sans">
+          <p className="text-xs text-[#9AA3AD] font-sans font-medium drop-shadow-sm">
             Banking risk, regulation, and the work built on it.
           </p>
         </div>
 
-        {/* Center Clustered Graph Constellation */}
-        <div className="absolute inset-x-4 top-16 bottom-20 md:inset-x-8 md:top-20 md:bottom-24 z-0">
-          <CorpusGraph atoms={atoms} isEmbedded={true} />
+        {/* PART 1: Scroll Affordance at Bottom Centre */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center pointer-events-none opacity-60">
+          <span className="font-mono text-[10px] tracking-widest text-[#9AA3AD] font-bold">SCROLL</span>
+          <span className="text-xs text-[#C9711F] -mt-1 animate-bounce">▾</span>
         </div>
 
-        {/* Bottom Bar: Live Stat Strip (Left) + Text Links (Right) */}
-        <div className="z-10 flex flex-wrap items-end justify-between gap-4 font-mono text-xs border-t border-[#23272D] pt-4 bg-[#0B0C0E]/80 backdrop-blur-sm">
-          {/* Live Stat Strip */}
-          <div className="flex flex-wrap items-center gap-4 text-[#9AA3AD] tabular-nums text-[11px]">
-            <div>
-              <span className="text-[#6B747E]">ATOMS:</span>{" "}
-              <strong className="text-[#E6E8EB]">{totalAtomsCount}</strong>
-            </div>
-            <div>
-              <span className="text-[#6B747E]">DOMAINS:</span>{" "}
-              <strong className="text-[#E6E8EB]">{domainTree.length}</strong>
-            </div>
-            <div>
-              <span className="text-[#6B747E]">JURISDICTIONS:</span>{" "}
-              <strong className="text-[#C9711F]">5 (IN, UK, EU, US, Universal)</strong>
-            </div>
-            <div>
-              <span className="text-[#6B747E]">PUBLISHED:</span>{" "}
-              <strong className="text-[#3E7D5A]">{publishedCount}</strong>
-            </div>
-            <div>
-              <span className="text-[#6B747E]">UPDATED:</span>{" "}
-              <span>{new Date(generatedAt).toISOString().split("T")[0]}</span>
-            </div>
+        {/* PART 1 & 3: Bottom Left Live Status Line Overlay */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-10 font-mono text-[11px] space-y-0.5 text-[#9AA3AD] pointer-events-none select-none max-w-[540px]">
+          <div className="text-[#E6E8EB] font-bold tracking-tight tabular-nums">
+            {totalAtomsCount.toLocaleString()} ATOMS · {domainCount} DOMAINS · {subdomainCount} SUBDOMAINS · {jurisdictionCount} JURISDICTIONS · {totalPages.toLocaleString()} PAGES
           </div>
+          <div className="text-[#6B747E] text-[10px] uppercase font-bold tracking-wider">
+            IN REVIEW · NOTHING PUBLISHED UNTIL VERIFIED AGAINST PRIMARY SOURCES
+          </div>
+        </div>
 
-          {/* Plain Text Entry Point Links */}
-          <div className="flex flex-wrap items-center gap-4 font-bold text-xs uppercase text-[#C9711F]">
-            <Link href="/compile" className="hover:underline">
-              COMPILE A JOB DESCRIPTION →
+        {/* PART 1 & 7: Bottom Right Entry Point Links Overlay */}
+        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 flex flex-col items-end gap-1 text-right">
+          <div className="flex flex-wrap items-center gap-3 font-mono font-bold text-xs uppercase text-[#C9711F]">
+            <Link
+              href="/compile"
+              className="bg-[#C9711F] text-[#0B0C0E] hover:bg-[#E58529] px-3 py-1.5 rounded-[3px] transition-colors font-bold shadow-lg"
+            >
+              ⚡ COMPILE A JOB DESCRIPTION →
             </Link>
-            <span className="text-[#23272D]">·</span>
-            <Link href="/atoms" className="hover:underline text-[#E6E8EB]">
-              BROWSE THE CORPUS →
+            <span className="text-[#23272D] hidden sm:inline">·</span>
+            <Link
+              href="/atoms"
+              className="hover:underline text-[#E6E8EB] bg-[#121417]/80 border border-[#23272D] px-2.5 py-1 rounded-[3px]"
+            >
+              BROWSE CORPUS →
             </Link>
-            <span className="text-[#23272D]">·</span>
-            <Link href="/deltas" className="hover:underline text-[#E6E8EB]">
+            <span className="text-[#23272D] hidden sm:inline">·</span>
+            <Link
+              href="/deltas"
+              className="hover:underline text-[#E6E8EB] bg-[#121417]/80 border border-[#23272D] px-2.5 py-1 rounded-[3px]"
+            >
               DELTA REGISTER →
             </Link>
+          </div>
+          {/* Part 7 Item 3: Plain Words Description Line */}
+          <div className="text-[11px] text-[#9AA3AD] font-sans font-normal normal-case pt-0.5">
+            Paste a job description and get the reading path for it.
           </div>
         </div>
       </section>

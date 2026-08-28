@@ -6,6 +6,7 @@ import { z } from "zod";
 const CONTENT_DIR = path.join(process.cwd(), "content", "atoms");
 const ROLES_PATH = path.join(process.cwd(), "content", "roles.json");
 const MANIFEST_PATH = path.join(process.cwd(), "public", "corpus-manifest.json");
+const SEARCH_INDEX_PATH = path.join(process.cwd(), "public", "search-index.json");
 
 const AtomTypeSchema = z.enum([
   "concept",
@@ -100,6 +101,17 @@ function computeCurrentness(frontmatter, buildDate = new Date("2026-08-28")) {
   }
 }
 
+function stripMdxToPlainText(rawMdx) {
+  if (!rawMdx) return "";
+  return rawMdx
+    .replace(/```[\s\S]*?```/g, " ") // Strip fenced code blocks
+    .replace(/<[^>]+>/g, " ") // Strip JSX / HTML tags
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, " ") // Strip JSX comments
+    .replace(/[\r\n]+/g, " ") // Collapse linebreaks to spaces
+    .replace(/\s+/g, " ") // Normalize multiple spaces
+    .trim();
+}
+
 function buildCorpus() {
   console.log("=== WARREN CORPUS COMPILER & TRUST BUILD GATE ===");
 
@@ -132,6 +144,7 @@ function buildCorpus() {
       fs.mkdirSync(publicDir, { recursive: true });
     }
     fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), "utf-8");
+    fs.writeFileSync(SEARCH_INDEX_PATH, JSON.stringify([], null, 2), "utf-8");
     console.log(`✅ Corpus Manifest (EMPTY) successfully written to ${MANIFEST_PATH}`);
     return;
   }
@@ -204,14 +217,14 @@ function buildCorpus() {
   const missingFutureAtoms = new Set();
 
   // Resolve references
-  for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
+  for (const [id, { frontmatter }] of Object.entries(rawAtoms)) {
     const references = [
       ...frontmatter.prerequisites.map((ref) => ({ ref, field: "prerequisites" })),
       ...frontmatter.see_also.map((ref) => ({ ref, field: "see_also" })),
       ...frontmatter.contrast_with.map((ref) => ({ ref, field: "contrast_with" })),
     ];
 
-    for (const { ref, field } of references) {
+    for (const { ref } of references) {
       if (!allIds.has(ref)) {
         missingFutureAtoms.add(ref);
       }
@@ -278,7 +291,7 @@ function buildCorpus() {
     return depth;
   }
 
-  // Precompute Graph Positions (Part 3 of Task 9)
+  // Precompute Graph Positions
   const uniqueDomains = Array.from(new Set(Object.values(rawAtoms).map((a) => a.frontmatter.domain)));
   const domainCentroids = {};
   const radius = 320;
@@ -344,12 +357,11 @@ function buildCorpus() {
       };
     }
 
-    finishBuild(atomsManifest, rawAtoms, allIds, domainCentroids);
+    finishBuild(atomsManifest, rawAtoms, allIds);
   });
 }
 
-function finishBuild(atomsManifest, rawAtoms, allIds, domainCentroids) {
-
+function finishBuild(atomsManifest, rawAtoms, allIds) {
   // Reverse index
   const reverseIndex = {};
   for (const id of allIds) {
@@ -504,7 +516,38 @@ function finishBuild(atomsManifest, rawAtoms, allIds, domainCentroids) {
 
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), "utf-8");
 
+  // BUILD SEPARATE SEARCH INDEX FOR FULL-TEXT SEARCH (Part 4)
+  const searchIndex = Object.entries(atomsManifest).map(([id, atom]) => {
+    const rawContent = rawAtoms[id]?.content || "";
+    let bodyText = stripMdxToPlainText(rawContent);
+    return {
+      id: atom.id,
+      title: atom.title,
+      domain: atom.domain,
+      subdomain: atom.subdomain,
+      one_screen: atom.one_screen,
+      bodyText,
+    };
+  });
+
+  let indexJson = JSON.stringify(searchIndex);
+  let indexSizeMb = Buffer.byteLength(indexJson) / (1024 * 1024);
+
+  // If size > 2MB, truncate bodyText per atom to first 400 words
+  if (indexSizeMb > 2.0) {
+    console.log(`⚠️ Search index size (${indexSizeMb.toFixed(2)} MB) > 2MB. Truncating bodyText to first 400 words per atom...`);
+    const truncatedIndex = searchIndex.map((item) => {
+      const words = item.bodyText.split(/\s+/).slice(0, 400).join(" ");
+      return { ...item, bodyText: words };
+    });
+    indexJson = JSON.stringify(truncatedIndex);
+    indexSizeMb = Buffer.byteLength(indexJson) / (1024 * 1024);
+  }
+
+  fs.writeFileSync(SEARCH_INDEX_PATH, indexJson, "utf-8");
+
   console.log(`✅ Corpus Manifest successfully written to ${MANIFEST_PATH}`);
+  console.log(`✅ Search Index successfully written to ${SEARCH_INDEX_PATH} (${indexSizeMb.toFixed(2)} MB)`);
   console.log(`   Atoms compiled: ${Object.keys(atomsManifest).length}`);
   console.log(`   Unverified fixtures quarantined: ${Object.values(atomsManifest).filter((a) => !a.verified).length}`);
   console.log(`   Role Families indexed: ${roles.length}`);

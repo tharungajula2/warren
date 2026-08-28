@@ -69,7 +69,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             href="/"
             className="font-mono text-sm font-bold tracking-wider text-[#E6E8EB] hover:text-[#C9711F] transition-colors"
           >
-            WARREN <span className="text-[#C9711F] text-[10px]">v1.0</span>
+            WARREN <span className="text-[#C9711F] text-[10px]">v0.1.0</span>
           </Link>
         </div>
 

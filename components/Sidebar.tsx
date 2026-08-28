@@ -206,11 +206,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                                           [FIXTURE]
                                         </span>
                                       )}
-                                      {isDraft && (
-                                        <span className="ml-1 text-[9px] text-[#C9711F] font-bold">
-                                          [DRAFT]
-                                        </span>
-                                      )}
                                     </Link>
                                   </li>
                                 );
