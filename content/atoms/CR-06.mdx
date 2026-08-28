@@ -49,14 +49,14 @@ Revolving facilities require different logic because there may be no single sche
 
 DPD should be treated as an observed behavioural state, not an estimate of ultimate loss. A borrower at 60 DPD may cure; another borrower at 0 DPD may already be unlikely to pay because of insolvency, fraud or another serious credit event.
 
-&lt;Flow&gt;
+<Flow>
 +---------+
 | Due date|
 +---------+
      |
      v
 +---------+     +----------+     +----------+     +----------+
-| Overdue | --&amp;gt; | 1-30 DPD | --&amp;gt; |31-60 DPD| --&amp;gt; |61-90 DPD|
+| Overdue | --&gt; | 1-30 DPD | --&gt; |31-60 DPD| --&gt; |61-90 DPD|
 +---------+     +----------+     +----------+     +----------+
                                                         |
                                                         v
@@ -64,7 +64,7 @@ DPD should be treated as an observed behavioural state, not an estimate of ultim
                                            | Default/NPA test     |
                                            | applied separately  |
                                            +---------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 DPD is a time-since-missed-payment measure; default status requires the applicable default rule.

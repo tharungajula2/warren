@@ -30,11 +30,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-Global feature importance (e.g. total gain or split frequency in a tree, or magnitude of coefficients in a linear model) measures each feature’s average effect on model performance. For instance, a credit score might have the highest importance in predicting default rates on average across all borrowers. However, this does not explain why any one borrower was classified as default or not. Importance reflects correlation with the target, not causation or individual impact. Moreover, importance can be misleading if features are correlated: one might appear unimportant simply because another correlated feature “soaked up” its effect. 
+Global feature importance (e.g. total gain or split frequency in a tree, or magnitude of coefficients in a linear model) measures each feature’s average effect on model performance. For instance, a credit score might have the highest importance in predicting default rates on average across all borrowers. However, this does not explain why any one borrower was classified as default or not. Importance reflects correlation with the target, not causation or individual impact. Moreover, importance can be misleading if features are correlated: one might appear unimportant simply because another correlated feature “soaked up” its effect.
 
-Local explanations, by contrast, break down a single prediction. For example, a SHAP (Shapley) value tells us how much a borrower’s income and history contribute to that borrower’s predicted default probability. Feature importance might list “Income: 0.4, Balance: 0.3, Age: 0.1”, meaning on average income was most influential. But it won’t reveal that in one case a high income actually lowered that borrower’s risk by 5%. Feature importance is useful for feature selection or understanding model trends; explanations are necessary for interpreting individual credit decisions (often a regulatory requirement).  
+Local explanations, by contrast, break down a single prediction. For example, a SHAP (Shapley) value tells us how much a borrower’s income and history contribute to that borrower’s predicted default probability. Feature importance might list “Income: 0.4, Balance: 0.3, Age: 0.1”, meaning on average income was most influential. But it won’t reveal that in one case a high income actually lowered that borrower’s risk by 5%. Feature importance is useful for feature selection or understanding model trends; explanations are necessary for interpreting individual credit decisions (often a regulatory requirement).
 
-&lt;Flow&gt;
+<Flow>
 Global model perspective:
     Model training on full dataset
            |
@@ -43,12 +43,12 @@ Global model perspective:
       Importance ranking
 
 Local prediction perspective:
-    Single borrower data -&amp;gt; Model prediction
+    Single borrower data -&gt; Model prediction
            |
     Explain prediction (SHAP values, etc.)
            |
     Contribution of each feature to this instance
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Feature importance scores are an aggregate, global measure. They tell *which features matter most overall*, but not *how* they influence a given prediction.
@@ -59,8 +59,8 @@ Assuming a high importance feature always increases predictions or that it expla
 </Trap>
 
 <NeverConfuse a="Feature importance" b="SHAP (Shapley) values">
-**Feature importance** — global ranking of features by average contribution to the model’s performance. It is an aggregate statistic, not an explanation of any single outcome.  
----  
+**Feature importance** — global ranking of features by average contribution to the model’s performance. It is an aggregate statistic, not an explanation of any single outcome.
+---
 **SHAP (Shapley) values** — local explanation values that decompose a specific prediction into contributions from each feature. They explain individual decisions, unlike global importance.
 </NeverConfuse>
 

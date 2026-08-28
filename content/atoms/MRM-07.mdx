@@ -31,9 +31,9 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Model development starts with **problem definition**: what decision the model will support.  For example, a credit model might predict default probability for new loan applications.  The developer then assembles relevant data.  Input data should be adequate and of high quality (see MRM-13).  Next is choosing or building the mathematical/statistical method (e.g. logistic regression, decision tree, machine learning).  The methodology must fit the purpose (e.g. lifetime PD modeling requires a survival model, not simple linear regression).  All key **assumptions** and variables must be explicitly specified.  
+Model development starts with **problem definition**: what decision the model will support.  For example, a credit model might predict default probability for new loan applications.  The developer then assembles relevant data.  Input data should be adequate and of high quality (see MRM-13).  Next is choosing or building the mathematical/statistical method (e.g. logistic regression, decision tree, machine learning).  The methodology must fit the purpose (e.g. lifetime PD modeling requires a survival model, not simple linear regression).  All key **assumptions** and variables must be explicitly specified.
 
-Regulators stress clear objectives and documentation.  RBI’s credit model principles, for instance, require “the objectives of the model” to be clearly defined, and that “inputs and assumptions… ensure adequate robustness”.  RBI also mandates detailed documentation including sensitivity of outputs to assumptions.  Likewise, firms should document model logic, training process, and expected limitations.  This documentation is crucial for later validation and audit.  PRA Principle 3 expects firms to have development standards and documentation (the PRA SS notes that firms should have model development and use governed under policies, with documentation).  
+Regulators stress clear objectives and documentation.  RBI’s credit model principles, for instance, require “the objectives of the model” to be clearly defined, and that “inputs and assumptions… ensure adequate robustness”.  RBI also mandates detailed documentation including sensitivity of outputs to assumptions.  Likewise, firms should document model logic, training process, and expected limitations.  This documentation is crucial for later validation and audit.  PRA Principle 3 expects firms to have development standards and documentation (the PRA SS notes that firms should have model development and use governed under policies, with documentation).
 
 Practically, development often involves statistical analysis and iterative testing.  Developers calibrate parameters on historical data, check intuitive plausibility (face validity), and may back-test on hold-out data before finalizing the model.  The key is to embed sound practice: clear target outcomes, robust data pipelines, explainable methodology, and retrievable code/documents.  Once development is done, no use is allowed until the model passes independent validation.
 
@@ -46,9 +46,9 @@ Creating a “black box” with no written spec.  Skipping documentation or igno
 </Trap>
 
 <NeverConfuse a="Model purpose" b="Model exposure">
-**Model purpose** — the business decision or metric the model is meant to support (e.g. predicting 1-year PD).  
----  
-**Model exposure** — the financial amount or scope to which the model applies.  
+**Model purpose** — the business decision or metric the model is meant to support (e.g. predicting 1-year PD).
+---
+**Model exposure** — the financial amount or scope to which the model applies.
 They are different: purpose is “what” the model does; exposure is “how big” its impact is.
 </NeverConfuse>
 

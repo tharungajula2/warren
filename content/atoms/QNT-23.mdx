@@ -32,14 +32,14 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-A **training** set is used to estimate model parameters. A **validation** set (or multiple cross-validation folds) is used to tune hyperparameters (e.g. depth, regularisation). A final **test** set (or sets) gives unbiased performance on data not used in fitting or tuning. An **out-of-time (OOT)** sample is a test set from a later period (e.g. loans originated in a later year) that simulates the model in production. For example, train on 2015–2017 loans, validate on 2018 loans, and test/OOT on 2019 loans. This ensures the model is evaluated on truly unseen, forward-looking data.  
+A **training** set is used to estimate model parameters. A **validation** set (or multiple cross-validation folds) is used to tune hyperparameters (e.g. depth, regularisation). A final **test** set (or sets) gives unbiased performance on data not used in fitting or tuning. An **out-of-time (OOT)** sample is a test set from a later period (e.g. loans originated in a later year) that simulates the model in production. For example, train on 2015–2017 loans, validate on 2018 loans, and test/OOT on 2019 loans. This ensures the model is evaluated on truly unseen, forward-looking data.
 
-Because credit risk often varies over time (economic up/downturns), it is misleading to randomly shuffle all data. Instead, split chronologically: use earlier periods for training/validation and later periods as test. This avoids look-ahead: the model never “knows” future conditions during training. Regulators expect performance on an OOT sample; it reveals if the model generalises across vintage shifts (e.g. a model trained in growth must still score well in recession).  
+Because credit risk often varies over time (economic up/downturns), it is misleading to randomly shuffle all data. Instead, split chronologically: use earlier periods for training/validation and later periods as test. This avoids look-ahead: the model never “knows” future conditions during training. Regulators expect performance on an OOT sample; it reveals if the model generalises across vintage shifts (e.g. a model trained in growth must still score well in recession).
 
-&lt;Flow&gt;
+<Flow>
 Time-line:  [Train: 2015-2017]  [Validate: 2018]  [Test/OOT: 2019]
                  build model       choose model    evaluate model
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Reserve the latest data (out-of-time) as the primary test. Use only past data for development and validation to mimic deployment.
@@ -50,8 +50,8 @@ Using future information in training. For example, randomly splitting data acros
 </Trap>
 
 <NeverConfuse a="Validation set" b="Test (evaluation) set">
-**Validation set** — used during model development (e.g. hyperparameter tuning).  
----  
+**Validation set** — used during model development (e.g. hyperparameter tuning).
+---
 **Test (evaluation) set** — held out until final model is chosen, used for final performance. Out-of-time is one type of test set (a test period in the future).
 </NeverConfuse>
 

@@ -32,7 +32,7 @@ sources:
     accessed: 28 Aug
 import_source: 12_QNT_statistics_ml.md
 ---
-Model documentation should include a description of the model’s objective (e.g. “estimate 1-year PD for mortgage portfolio”), data inputs (definition, source, period), transformations, algorithms, and parameter choices. It must detail development decisions (feature engineering, binning, regularisation), performance metrics on development/validation/OOT sets, and limitations. Assumptions (e.g. stability of economic conditions) should be explicit. The documentation also outlines how the model is used (deployment, decision thresholds) and maintenance plan. Regulators expect enough detail to reproduce results: for example, Fed guidance says an effective process “begins with a clear statement of purpose” and that model development involves explicit assumptions. The PRA similarly requires detailed documentation (even from vendors) “sufficient to validate the model’s use”.  
+Model documentation should include a description of the model’s objective (e.g. “estimate 1-year PD for mortgage portfolio”), data inputs (definition, source, period), transformations, algorithms, and parameter choices. It must detail development decisions (feature engineering, binning, regularisation), performance metrics on development/validation/OOT sets, and limitations. Assumptions (e.g. stability of economic conditions) should be explicit. The documentation also outlines how the model is used (deployment, decision thresholds) and maintenance plan. Regulators expect enough detail to reproduce results: for example, Fed guidance says an effective process “begins with a clear statement of purpose” and that model development involves explicit assumptions. The PRA similarly requires detailed documentation (even from vendors) “sufficient to validate the model’s use”.
 
 In practice, documentation may be a written report and annotated code. It should evolve with the model (version control) and be reviewed periodically. Incomplete documentation is a frequent model validation finding. Banks should follow templates (e.g. internal model policy or SS11/13 guidelines) ensuring all sections are covered. Thorough documentation is not just bureaucracy: it captures the business context and justification for each model choice, preventing the “black box” problem.
 
@@ -45,8 +45,8 @@ Assuming code comments or an informal narrative suffice. Documentation must be f
 </Trap>
 
 <NeverConfuse a="Model documentation" b="Validation report">
-**Model documentation** — a detailed report created by developers (data descriptions, logic, results).  
----  
+**Model documentation** — a detailed report created by developers (data descriptions, logic, results).
+---
 **Validation report** — an independent assessment by a separate party. It is not a substitute for documentation but relies on it. Developers must still document the model fully.
 </NeverConfuse>
 

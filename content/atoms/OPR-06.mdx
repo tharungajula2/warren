@@ -28,7 +28,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 14_OPR_operational_risk.md
 ---
-An internal loss data collection process ensures the bank tracks each actual loss event.  Banks maintain a database of all operational losses by category (see OPR-02) – including fraud losses, fines, system repair costs, etc.  Typically there is a **loss event threshold**: events below this amount aren’t individually logged to avoid noise.  For example, Basel’s SMA requires data on losses above €20,000. In practice many banks set lower internal thresholds (e.g. $1k) so they also capture frequency patterns.  
+An internal loss data collection process ensures the bank tracks each actual loss event.  Banks maintain a database of all operational losses by category (see OPR-02) – including fraud losses, fines, system repair costs, etc.  Typically there is a **loss event threshold**: events below this amount aren’t individually logged to avoid noise.  For example, Basel’s SMA requires data on losses above €20,000. In practice many banks set lower internal thresholds (e.g. $1k) so they also capture frequency patterns.
 
 The collected data feed multiple uses: management reporting, trend analysis, scenario calibration, and capital. Under SMA, the “Loss Component” is defined as 15× the 10-year average annual losses recorded (gross, before recoveries). Losses must be **gross of insurance** – a common error is logging net values.  Good practice also separates recoveries to analyze control effectiveness.  Note: if an operational failure caused a loan loss, classification can be tricky – banks usually classify by legal cause (so a system error that led to a trading loss still counts as operational loss).
 
@@ -43,8 +43,8 @@ Do not undercount losses by using net-of-insurance amounts. The regulatory capit
 </Trap>
 
 <NeverConfuse a="Gross loss" b="Net loss">
-**Gross loss** — the total loss amount before any recoveries.  
----  
+**Gross loss** — the total loss amount before any recoveries.
+---
 **Net loss** — the loss after deducting insurance or recoveries. (Banks must record *gross* loss for risk capital.)
 </NeverConfuse>
 

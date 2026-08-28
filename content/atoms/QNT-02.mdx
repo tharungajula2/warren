@@ -29,7 +29,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-**Normal distribution:** Symmetric bell-curve, defined by mean (μ) and variance (σ²). In credit risk, many aggregated quantities (e.g. average credit score across many independent borrowers) tend toward normal by the Central Limit Theorem (CLT) (see QNT-03). Internal models like the Vasicek IRB model assume a normal latent variable for asset returns.  
+**Normal distribution:** Symmetric bell-curve, defined by mean (μ) and variance (σ²). In credit risk, many aggregated quantities (e.g. average credit score across many independent borrowers) tend toward normal by the Central Limit Theorem (CLT) (see QNT-03). Internal models like the Vasicek IRB model assume a normal latent variable for asset returns.
 
 **Lognormal distribution:** A variable is lognormal if its logarithm is normal. It is right-skewed (long tail on right). Credit risk example: firm asset values or portfolio losses are often modeled as lognormal. The Vasicek/Merton framework assumes firm asset value follows lognormal growth, so log(asset) is normal. Many individual loss severities (e.g. loss given default) are positive and skewed, fitting a lognormal shape.
 
@@ -39,18 +39,18 @@ import_source: 12_QNT_statistics_ml.md
 
 Using the correct distribution is crucial for risk metrics: e.g. mis-specifying default count as normal (when events are rare) underestimates tail risk. Each distribution’s parameters should be estimated from data or expert priors, and used consistently in simulations or VaR calculations.
 
-&lt;Flow&gt;
+<Flow>
 Loan defaults:     aggregate risk:
 +---------+       +---------+
 |Bernoulli|       | Binomial|
-| (0 or 1)|  ---&amp;gt; |(n,p)    |
+| (0 or 1)|  ---&gt; |(n,p)    |
 +---------+       +---------+
       |                 |
       v                 v
  Defaults count  ~ Binomial
  (rare defaults, large n)
              ≈ Poisson
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Each distribution’s assumptions must match the credit context (e.g. non-negative, skewed, independent events). Using a normal model for highly skewed or discrete data leads to wrong estimates.
@@ -61,8 +61,8 @@ Treating an inherently skewed quantity (like loan loss amounts) as normally dist
 </Trap>
 
 <NeverConfuse a="Binomial distribution" b="Poisson distribution">
-**Binomial distribution** — count of successes (e.g. defaults) in a fixed number of trials (loans) with success probability *p*.  
----  
+**Binomial distribution** — count of successes (e.g. defaults) in a fixed number of trials (loans) with success probability *p*.
+---
 **Poisson distribution** — count of independent events (e.g. defaults) over fixed exposure/time when events are rare. Poisson can approximate binomial for large *n* and small *p* (np=λ).
 </NeverConfuse>
 

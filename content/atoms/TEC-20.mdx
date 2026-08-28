@@ -27,10 +27,10 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-Example:  
+Example:
 ```python
 merged = pd.merge(loans_df, customers_df, left_on='CustID', right_on='ID', how='inner')
-```  
+```
 This yields rows where `CustID` matches `ID`. A left join (`how='left'`) would keep all loans, adding customer info or NaN if missing.
 
 <Rule label="PERMANENT RULE">
@@ -42,8 +42,8 @@ If two DataFrames share column names besides the key, `merge` may join on all of
 </Trap>
 
 <NeverConfuse a="merge" b="concat">
-**merge** (pandas) — database-style join on keys (columns or index).  
----  
+**merge** (pandas) — database-style join on keys (columns or index).
+---
 **concat** (pandas) — stacks DataFrames (like SQL `UNION`), not a join on keys.
 </NeverConfuse>
 

@@ -25,15 +25,15 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 16_BA_business_analysis.md
 ---
-A **Business Requirements Document (BRD)** is the formal specification of business needs. It typically contains an executive summary, background, business objectives (e.g. compliance goals), scope, assumptions, and a list of requirements from the business perspective. Requirements in a BRD may include functional needs (e.g. “system shall generate monthly reports by day 5”) and non-functional needs (e.g. performance, audit trails). Importantly, the BRD states *what* is needed, not *how* to build it. It avoids technical solution detail (that belongs in a functional spec).  
+A **Business Requirements Document (BRD)** is the formal specification of business needs. It typically contains an executive summary, background, business objectives (e.g. compliance goals), scope, assumptions, and a list of requirements from the business perspective. Requirements in a BRD may include functional needs (e.g. “system shall generate monthly reports by day 5”) and non-functional needs (e.g. performance, audit trails). Importantly, the BRD states *what* is needed, not *how* to build it. It avoids technical solution detail (that belongs in a functional spec).
 
-Each requirement in the BRD should be clear and include acceptance criteria (conditions for success). For instance, instead of saying “system should be fast,” a BRD requirement would say “System must respond to user queries within 2 seconds” (with that criterion). This precision avoids ambiguity and ensures testability. Also include references to regulatory rules if applicable, and note any impacts (e.g. compliance reporting).  
+Each requirement in the BRD should be clear and include acceptance criteria (conditions for success). For instance, instead of saying “system should be fast,” a BRD requirement would say “System must respond to user queries within 2 seconds” (with that criterion). This precision avoids ambiguity and ensures testability. Also include references to regulatory rules if applicable, and note any impacts (e.g. compliance reporting).
 
-&lt;Flow&gt;
+<Flow>
 Sample BRD section:
 Objective: Improve AML screening efficiency.
 Requirement: System should screen 100% of new accounts for PEP status within 1 hour of creation (Acceptance: Demonstrate 1-hour turnaround in test).
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 A BRD defines *business needs and constraints*. It must not prescribe the solution. Document each requirement with its own acceptance criteria to make it verifiable.
@@ -44,7 +44,7 @@ Mixing requirements with design. For example, writing “the system shall use ru
 </Trap>
 
 <NeverConfuse>
-**Business Requirements** vs **Functional Specification**:  
+**Business Requirements** vs **Functional Specification**:
 A *Business Requirement* describes what the business must have (high-level need or rule). A *Functional Specification* details how the system will fulfill those needs. They are different deliverables; the BRD should not become a development spec.
 </NeverConfuse>
 

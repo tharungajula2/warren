@@ -25,7 +25,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-**Sampling bias:** A sample differs from the true population by design. In credit, a notorious case is “only current customers”: if a bank studies default rates using only customers who renewed their credit cards, it misses those who defaulted or left, underestimating risk. CASRAI warns that bias doesn’t shrink with more data – it leads precisely wrong estimates. 
+**Sampling bias:** A sample differs from the true population by design. In credit, a notorious case is “only current customers”: if a bank studies default rates using only customers who renewed their credit cards, it misses those who defaulted or left, underestimating risk. CASRAI warns that bias doesn’t shrink with more data – it leads precisely wrong estimates.
 
 **Selection bias:** When the sample is chosen by outcome. For example, analyzing PD using only approved loans ignores applicants who were denied (who might be higher risk). This underestimates risk because we selected out lower-scoring individuals. Another example: surveying customers about repaying loans will naturally exclude those already delinquent or defaulted – giving an overly rosy repayment picture.
 
@@ -33,18 +33,18 @@ import_source: 12_QNT_statistics_ml.md
 
 **Avoidance:** Always define a clear population: e.g. “all loans originated in 2018, tracking until 2021, including those closed by default, pay-off, or charge-off.” Use full origination data, not just current books. If data is truncated (e.g. only current borrowers), acknowledge bias and adjust (maybe via weight or external default statistics). Regulators (e.g. RBI IRB) expect PD models to account for these biases in historical data.
 
-&lt;Flow&gt;
+<Flow>
 Loan Origination cohort 2018
     +--------------------+
     | All customers      |
     +------+-------------+
            |
-           +-&amp;gt; Approved -&amp;gt; Observed loans (used for modeling)
+           +-&gt; Approved -&gt; Observed loans (used for modeling)
            |
-           +-&amp;gt; Declined -&amp;gt; (no performance data)   &amp;lt;-- selection bias
+           +-&gt; Declined -&gt; (no performance data)   &lt;-- selection bias
            |
-           +-&amp;gt; Never applied
-&lt;/Flow&gt;
+           +-&gt; Never applied
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Always include all relevant cases in your sample, especially failures. Missing defaulters or rejects biases any risk estimate. Double-check that your data frame contains both “survivors” and “non-survivors” from a cohort.
@@ -55,8 +55,8 @@ Using only successfully repaid loans to model performance. This creates survivor
 </Trap>
 
 <NeverConfuse a="Survivorship bias" b="Selection bias">
-**Survivorship bias** — only survivors of a process are seen (e.g. only extant accounts).  
----  
+**Survivorship bias** — only survivors of a process are seen (e.g. only extant accounts).
+---
 **Selection bias** — systematic inclusion/exclusion during data collection (e.g. excluding denied applicants).
 </NeverConfuse>
 

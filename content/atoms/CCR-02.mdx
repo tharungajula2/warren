@@ -37,11 +37,11 @@ Current exposure is simply the contract’s current market value (if it is posit
 
 An exposure profile shows how exposure might evolve. Initially, current exposure starts at the trade date’s mark‑to‑market. Over time, without frequent cash settlement (as in uncollateralized trades), exposure can grow. Banks use either simulation or standardized add-ons to gauge PFE at future dates. Current and potential exposures are summed and multiplied by a buffer (alpha) in SA-CCR to get Exposure At Default (EAD).
 
-&lt;Flow&gt;
-Current Exposure (CE) = max(mark-to-market, 0)  
-Potential Future Exposure (PFE) = high-percentile of future exposure increase  
+<Flow>
+Current Exposure (CE) = max(mark-to-market, 0)
+Potential Future Exposure (PFE) = high-percentile of future exposure increase
 EAD = 1.4 × (CE + PFE)   (under SA-CCR)
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 When measuring CCR, always include both current exposure (today’s value) and potential future exposure (possible increase).
@@ -52,8 +52,8 @@ Considering only current exposure (ignoring future volatility) will understate C
 </Trap>
 
 <NeverConfuse a="Current Exposure" b="Potential Future Exposure (PFE)">
-**Current Exposure** — Today’s positive mark-to-market value.  
----  
+**Current Exposure** — Today’s positive mark-to-market value.
+---
 **Potential Future Exposure (PFE)** — A modeled high-percentile future exposure. PFE is *not* the same as current exposure or an average; it is an estimate of future increase and is typically larger.
 </NeverConfuse>
 

@@ -28,16 +28,16 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 16_BA_business_analysis.md
 ---
-A **Requirements Traceability Matrix (RTM)** is usually a table or tool output mapping each requirement to its related artifacts (design specifications, code modules, test cases, test results). The BA or project manager creates/maintains the RTM. It guarantees that each requirement was implemented and tested. In banking, this is critical: regulators or auditors will want proof that every regulation-driven requirement has been satisfied. 
+A **Requirements Traceability Matrix (RTM)** is usually a table or tool output mapping each requirement to its related artifacts (design specifications, code modules, test cases, test results). The BA or project manager creates/maintains the RTM. It guarantees that each requirement was implemented and tested. In banking, this is critical: regulators or auditors will want proof that every regulation-driven requirement has been satisfied.
 
-For example, if a requirement says “calculate capital ratio per Basel rules,” the RTM will show the design document section that implements it, the code module or report name, and the test cases that verify it.  At audit time, the RTM provides a single view showing “Basel Cap Ratio req ➔ System Design ➔ Code ➔ Test Passed”.  
+For example, if a requirement says “calculate capital ratio per Basel rules,” the RTM will show the design document section that implements it, the code module or report name, and the test cases that verify it.  At audit time, the RTM provides a single view showing “Basel Cap Ratio req ➔ System Design ➔ Code ➔ Test Passed”.
 
 Traceability enforces discipline: if a requirement lacks test coverage, the matrix shows it. Banks often use the RTM to prove compliance. A comprehensive RTM helps avoid scope leakage and missed requirements.
 
-&lt;Flow&gt;
+<Flow>
 Requirement ID → Design Doc  → Code Module → Test Case → Status
 R1: Basel Cap. → Design Sec 2.1 → Mod_Capital → TC01, TC02 → All passed
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Maintain full end-to-end traceability of every requirement, especially regulatory ones. The RTM must be started early and updated continuously.  Each requirement should map to at least one test case that passes.
@@ -48,7 +48,7 @@ Trying to build traceability after the fact or only partially tracing requiremen
 </Trap>
 
 <NeverConfuse>
-**Requirements Traceability Matrix** vs **Test Plan**:  
+**Requirements Traceability Matrix** vs **Test Plan**:
 The *Traceability Matrix* maps requirements to tests and design. A *Test Plan* outlines the overall testing approach and schedule. They are different documents: the RTM is evidence, the test plan is strategy.
 </NeverConfuse>
 

@@ -38,19 +38,19 @@ American-style options can generally be exercised before expiry; European-style 
 
 A complete option definition must include call/put, buyer/seller, underlying, strike, expiry, notional, style, settlement, premium and any barrier or other feature. Without these, “long option” is not a complete economic position.
 
-&lt;Flow&gt;
+<Flow>
 Option premium
      |
-     +--&amp;gt; intrinsic value
+     +--&gt; intrinsic value
      |      call: max(S-K,0)
      |      put : max(K-S,0)
      |
-     +--&amp;gt; time value
+     +--&gt; time value
             time
             volatility
             rates/carry
             optional features
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 In-the-money describes exercise value relative to strike; it does not tell you the trade’s total profit after premium.

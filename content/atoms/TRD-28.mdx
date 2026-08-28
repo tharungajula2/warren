@@ -41,13 +41,13 @@ Reference-data errors have multiplicative effects. One wrong holiday calendar ca
 
 The BA test is to trace every critical trade field backwards: was it entered on the trade, derived from a mastered object, looked up by effective date, or overwritten manually? That lineage determines both control design and root-cause analysis.
 
-&lt;Flow&gt;
+<Flow>
 Authoritative sources
    |
-   +--&amp;gt; instrument master
-   +--&amp;gt; legal-entity master
-   +--&amp;gt; calendars / benchmarks
-   +--&amp;gt; settlement instructions
+   +--&gt; instrument master
+   +--&gt; legal-entity master
+   +--&gt; calendars / benchmarks
+   +--&gt; settlement instructions
    |
    v
 effective-dated reference data
@@ -57,7 +57,7 @@ trade enrichment
    |
    v
 valuation / risk / settlement / reporting
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Master the meaning and effective date of a field before reconciling its value.

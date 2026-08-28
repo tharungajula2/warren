@@ -29,12 +29,12 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-For example, to analyze exposures by quarter:  
+For example, to analyze exposures by quarter:
 ```python
 df['Date'] = pd.to_datetime(df['Date'])
 df = df.set_index('Date')
 quarterly = df.resample('Q')['Exposure'].sum()
-```  
+```
 This handles the date alignment for reporting periods easily. Also, you can use `.dt` accessor: `df['Date'].dt.month` to get month, etc.
 
 <Rule label="PERMANENT RULE">
@@ -46,8 +46,8 @@ Forgetting `set_index` with a `DatetimeIndex` means you can’t use `.resample()
 </Trap>
 
 <NeverConfuse a="Timestamp" b="Period">
-**Timestamp** — a single datetime (e.g. 2026-08-01 00:00).  
----  
+**Timestamp** — a single datetime (e.g. 2026-08-01 00:00).
+---
 **Period** — a span (e.g. Aug 2026); use pandas `Period` if needed.
 </NeverConfuse>
 

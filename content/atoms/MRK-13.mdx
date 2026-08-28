@@ -27,17 +27,17 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 11_MRK_market_risk.md
 ---
-Under SA, each risk factor (e.g. interest rate, FX, equity) has pre-set weight tables.  A bank computes portfolio delta, vega and curvature sensitivities for each risk factor.  Those sensitivities are multiplied by risk weights and summed according to prescribed buckets (e.g. grouping interest rate tenors into zones, currency pairs into FX buckets).  Buckets allow intra- and inter-bucket correlations: SA defines two scenarios (medium and low correlation) for combining risk, and takes the larger capital requirement from those.  
+Under SA, each risk factor (e.g. interest rate, FX, equity) has pre-set weight tables.  A bank computes portfolio delta, vega and curvature sensitivities for each risk factor.  Those sensitivities are multiplied by risk weights and summed according to prescribed buckets (e.g. grouping interest rate tenors into zones, currency pairs into FX buckets).  Buckets allow intra- and inter-bucket correlations: SA defines two scenarios (medium and low correlation) for combining risk, and takes the larger capital requirement from those.
 
-After summing delta, vega, and curvature charges for all classes under the worst-case scenario, SA also adds two extra charges: the **Default Risk Charge** (DRC) for jump-to-default credit risk and the **Residual Risk Add-On** (RRAO) for exotic/basis exposures.  These components ensure known market and credit risks are covered even without an internal model.  
+After summing delta, vega, and curvature charges for all classes under the worst-case scenario, SA also adds two extra charges: the **Default Risk Charge** (DRC) for jump-to-default credit risk and the **Residual Risk Add-On** (RRAO) for exotic/basis exposures.  These components ensure known market and credit risks are covered even without an internal model.
 
-&lt;Flow&gt;
+<Flow>
 +-----------------------------+
 | Sensitivities (Δ, vega, κ)  |
 +-------------+---------------+
               |
 +-------------v---------------+
-| Apply risk weights &amp;amp; buckets|
+| Apply risk weights &amp; buckets|
 +-------------+---------------+
               |
 +-------------v---------------+
@@ -57,7 +57,7 @@ After summing delta, vega, and curvature charges for all classes under the worst
 +-------------v---------------+
 | Total SA Capital Charge     |
 +-----------------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 SA capital = max(scenario capital) + DRC + RRAO.

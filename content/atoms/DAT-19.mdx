@@ -31,11 +31,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Concretely, a bank’s risk data team gathers the necessary raw data (from trading, lending, finance systems) and runs it through a predefined mapping specification. This mapping (often in code or ETL tools) converts internal field names and units into the regulatory template fields. Aggregation steps consolidate records (e.g. summing exposures by counterparty type). Once the draft return is built, a series of validation checks ensures the filing is consistent (e.g. column sums match subsidiary filings, no negative values). Issue items from validations are resolved by adjusting mappings or cleaning data. Finally, the return is submitted electronically (often in XBRL or other formats) and signed off.  
+Concretely, a bank’s risk data team gathers the necessary raw data (from trading, lending, finance systems) and runs it through a predefined mapping specification. This mapping (often in code or ETL tools) converts internal field names and units into the regulatory template fields. Aggregation steps consolidate records (e.g. summing exposures by counterparty type). Once the draft return is built, a series of validation checks ensures the filing is consistent (e.g. column sums match subsidiary filings, no negative values). Issue items from validations are resolved by adjusting mappings or cleaning data. Finally, the return is submitted electronically (often in XBRL or other formats) and signed off.
 
 Attestation and sign-off are usually required: typically a senior executive or compliance officer must certify the return is true and correct. Restatements occur when errors post-submission require a corrected filing; these must be communicated to the regulator. In data projects, understanding this full cycle is crucial: changes in business definitions or systems can break mappings, so any reporting change project must consider end-to-end impact. A sample production flow:
 
-&lt;Flow&gt;
+<Flow>
 Source Systems
      |
      v
@@ -50,14 +50,14 @@ Aggregate/Summarize
      v
 Validate (quality checks)
      |
-     +--&amp;gt; Exceptions? -&amp;gt; Investigate and correct
+     +--&gt; Exceptions? -&gt; Investigate and correct
      |
      v
 Submit Return
      |
      v
 Attest/Sign-off
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Every field in a regulatory return must be traceable back to source data via the mapping logic.
@@ -68,8 +68,8 @@ Neglecting to re-validate mappings after source system changes; a code update mi
 </Trap>
 
 <NeverConfuse a="Regulatory return" b="Regulatory report (internal)">
-**Regulatory return** — A formal submission to a supervisor with pre-defined data items.  
----  
+**Regulatory return** — A formal submission to a supervisor with pre-defined data items.
+---
 **Regulatory report (internal)** — An internal risk report (like VaR reports) which is not directly submitted to regulators.
 </NeverConfuse>
 

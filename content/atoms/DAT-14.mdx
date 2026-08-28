@@ -32,10 +32,10 @@ Banks document quality rules in their governance frameworks, often aligning with
 
 The **permanent expectation** is that no data anomaly goes unchecked. Adopting robust exception management means assigning issues to data stewards or owners, tracking SLA for fixes, and reporting status to management. Regulators have become wary of banks “papering over” persistent exceptions. Best practice is to classify and resolve high-impact exceptions immediately, while monitoring low-impact ones until clearance.
 
-&lt;Flow&gt;
-Data Quality Framework
+<Flow>
+                Data Quality Framework
 +-------------------------+   +-------------+   +------------+
-| Data Quality Rules      |--&amp;gt;| Data Checks |--&amp;gt;| Reports    |
+| Data Quality Rules      |--&gt;| Data Checks |--&gt;| Reports    |
 +-------------------------+   +-------------+   +------------+
  Thresholds: 95% compliant         ^
                                    |
@@ -43,7 +43,7 @@ Data Quality Framework
                         +--------------------------+
                         | Exceptions (tickets)     |
                         +--------------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Every failed quality check must be logged and owned; unresolved exceptions compromise report integrity.
@@ -54,8 +54,8 @@ Archiving known data issues without resolution, assuming they are “small” or
 </Trap>
 
 <NeverConfuse a="Data quality rule" b="Threshold">
-**Data quality rule** — A specific constraint (e.g. a value range).  
----  
+**Data quality rule** — A specific constraint (e.g. a value range).
+---
 **Threshold** — The allowable error rate (e.g. 1% missing data).
 </NeverConfuse>
 

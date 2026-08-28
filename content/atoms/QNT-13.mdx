@@ -27,25 +27,25 @@ sources:
     accessed: 28 Aug
 import_source: 12_QNT_statistics_ml.md
 ---
-A decision tree is a flowchart-like predictive model. Internal nodes test feature values (e.g. “income &gt; ₹50,000?”), branches follow outcomes (Yes/No), and leaves give a prediction (class label or regression value). For example, a credit model might first split borrowers by income, then by past defaults, assigning high default risk to those meeting certain conditions. By partitioning the dataset into homogeneous subsets, a tree fits flexible, non-linear relationships without requiring feature scaling or dummy coding. In credit scoring, trees can capture interactions (e.g. low income * poor history). However, if grown unconstrained, a tree can split until each leaf has few samples, fitting noise and idiosyncrasies. A fully grown tree has low bias but very high variance: it may classify every training case correctly but fail on new data. 
+A decision tree is a flowchart-like predictive model. Internal nodes test feature values (e.g. “income &gt; ₹50,000?”), branches follow outcomes (Yes/No), and leaves give a prediction (class label or regression value). For example, a credit model might first split borrowers by income, then by past defaults, assigning high default risk to those meeting certain conditions. By partitioning the dataset into homogeneous subsets, a tree fits flexible, non-linear relationships without requiring feature scaling or dummy coding. In credit scoring, trees can capture interactions (e.g. low income * poor history). However, if grown unconstrained, a tree can split until each leaf has few samples, fitting noise and idiosyncrasies. A fully grown tree has low bias but very high variance: it may classify every training case correctly but fail on new data.
 
-To mitigate over-complex trees, practitioners use **pruning** (removing branches that add little predictive power) or stop splitting when few samples remain. Cross-validation can determine optimal tree size. Trees are inherently “white-box” models: one can trace the path for a given prediction, e.g. “Income was low  collateral insufficient  decline loan.” This makes them interpretable, a desirable property in credit risk. 
+To mitigate over-complex trees, practitioners use **pruning** (removing branches that add little predictive power) or stop splitting when few samples remain. Cross-validation can determine optimal tree size. Trees are inherently “white-box” models: one can trace the path for a given prediction, e.g. “Income was low  collateral insufficient  decline loan.” This makes them interpretable, a desirable property in credit risk.
 
-&lt;Flow&gt;
+<Flow>
 +------------------+
-|  Income &amp;gt; 50k?   |
+|  Income &gt; 50k?   |
 +----+------+------+
      /        \
    Yes        No
     |          |
 +-----------+  +-----------+
-| Defaulted? |  | Collat. &amp;gt; |
+| Defaulted? |  | Collat. &gt; |
 +-----------+  |  5k?      |
    /   \       +-----+-----+
   Yes  No            /    \
   |     |         Yes    No
 [Decline] [Approve] [Approve] [Decline]
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Each split partitions data to increase purity (e.g. reduce variance or Gini impurity). Every split is a simple rule on one feature, building a decision path to a final prediction.
@@ -56,8 +56,8 @@ Assuming a deeper or more complex tree always improves results. In fact, very de
 </Trap>
 
 <NeverConfuse a="Decision tree" b="Random forest">
-**Decision tree** — a single model with branches of feature-threshold tests leading to predictions, easy to interpret.  
----  
+**Decision tree** — a single model with branches of feature-threshold tests leading to predictions, easy to interpret.
+---
 **Random forest** — an ensemble of many trees (each on a random sample), where the final prediction is an aggregate (majority vote or average). A random forest is not one big tree, but many small trees combined to reduce variance.
 </NeverConfuse>
 

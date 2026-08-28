@@ -28,11 +28,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Model risk is fundamentally different from credit or market risk.  Model risk refers to losses or misstatements resulting from flaws in the model itself – such as bad data, wrong assumptions, coding bugs or misuse – rather than from the underlying exposures.  As the Fed guidance explains, “model risk… can lead to financial loss, errors in financial statements and reporting, and flawed financial and risk management decisions”.  In other words, even if a loan portfolio’s creditworthiness is unchanged, faulty credit-risk models can cause bad credit decisions (model risk).  By contrast, credit risk is the inherent risk of borrower default or LGD, and market risk is the risk of losses from market movements.  Those are separate dimensions: a portfolio with zero credit risk still has model risk if its models are wrong.  
+Model risk is fundamentally different from credit or market risk.  Model risk refers to losses or misstatements resulting from flaws in the model itself – such as bad data, wrong assumptions, coding bugs or misuse – rather than from the underlying exposures.  As the Fed guidance explains, “model risk… can lead to financial loss, errors in financial statements and reporting, and flawed financial and risk management decisions”.  In other words, even if a loan portfolio’s creditworthiness is unchanged, faulty credit-risk models can cause bad credit decisions (model risk).  By contrast, credit risk is the inherent risk of borrower default or LGD, and market risk is the risk of losses from market movements.  Those are separate dimensions: a portfolio with zero credit risk still has model risk if its models are wrong.
 
 Because models often measure credit or market risk, practitioners sometimes conflate them.  For example, one might say “our credit risk is low,” when in fact the models estimating that risk may be unreliable (model risk).  Regulators emphasize treating model risk as a distinct discipline.  For instance, RBI’s 2024 model-risk principles note that models “are based on assumptions which may not manifest in envisaged ways” and that this “potentially exposes REs to model risk, which has implications on prudential aspects of credit risk management”.  In practice, model risk is managed under operational risk/Pillar 2 frameworks or specific model-risk policies, even though it affects credit and market outcomes.
 
-&lt;Flow&gt;
+<Flow>
 +-----------------+
 |   Loan defaults |--+
 +-----------------+  |
@@ -48,7 +48,7 @@ Because models often measure credit or market risk, practitioners sometimes conf
 |  errors cause bad       |
 |  lending decisions      |
 +-------------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Model risk always exists whenever models are used. It must be managed independently of, though it may interact with, other risks like credit or market risk.
@@ -59,9 +59,9 @@ Treating model errors as “just credit risk.”  For example, **believing that 
 </Trap>
 
 <NeverConfuse a="Model risk" b="Credit risk">
-**Model risk** — risk from the use of a flawed model (inaccurate outputs).  
----  
-**Credit risk** — risk of loss due to borrower default.  
+**Model risk** — risk from the use of a flawed model (inaccurate outputs).
+---
+**Credit risk** — risk of loss due to borrower default.
 They get mixed up because credit models produce credit-risk estimates, but a bad estimate is model risk, not a new kind of credit risk.
 </NeverConfuse>
 

@@ -25,7 +25,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 16_BA_business_analysis.md
 ---
-Before execution, the BA (often with QA) creates a **Test Plan**: it includes test objectives, types of testing, environment details, schedule, and responsibilities.  The plan ensures everyone knows what will be tested and when. Key to this is preparing **test packs**: collections of test cases and test data with expected results.  For example, a pack for a regulatory report change might include sample transactions (input data) and the exact numbers expected in the output.  
+Before execution, the BA (often with QA) creates a **Test Plan**: it includes test objectives, types of testing, environment details, schedule, and responsibilities.  The plan ensures everyone knows what will be tested and when. Key to this is preparing **test packs**: collections of test cases and test data with expected results.  For example, a pack for a regulatory report change might include sample transactions (input data) and the exact numbers expected in the output.
 
 In regulated projects, predefined test data is especially important: you must demonstrate that for each scenario, you know the “right answer” in advance.  This way, testers (or auditors reviewing UAT) can verify correctness efficiently.  The BA’s role is to help identify all required scenarios and define the expected results (often consulting SMEs or model owners for calculations). Testers then use this pack during UAT to systematically execute tests.
 
@@ -38,7 +38,7 @@ Assuming testers will figure out expected outcomes on the fly. Without a predefi
 </Trap>
 
 <NeverConfuse>
-**Test Plan** vs **Test Case/Test Pack**:  
+**Test Plan** vs **Test Case/Test Pack**:
 A *Test Plan* is the high-level strategy and timeline for testing. A *Test Case* (in a pack) is a specific scenario with steps and expected result. The plan is “what/when”, test cases are “how/results”.
 </NeverConfuse>
 

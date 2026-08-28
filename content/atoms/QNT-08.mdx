@@ -28,7 +28,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-In regression, we fit a model `y = β₀ + β₁x₁ + ... + βₖxₖ + ε`. For credit analytics, `y` might be a continuous risk measure (e.g. loss given default, log of balance, etc.), and `x` variables could be borrower attributes. The fitting (ordinary least squares) finds β’s minimizing squared residuals. 
+In regression, we fit a model `y = β₀ + β₁x₁ + ... + βₖxₖ + ε`. For credit analytics, `y` might be a continuous risk measure (e.g. loss given default, log of balance, etc.), and `x` variables could be borrower attributes. The fitting (ordinary least squares) finds β’s minimizing squared residuals.
 
 **Assumptions:** (1) Linear relationship: each predictor adds/subtracts constant effect on mean `y`; (2) Independent errors: each loan’s deviation from model is not autocorrelated; (3) Homoscedasticity: error variance constant across `x` values; (4) Errors ~ Normal (for inference). In practice, check residual plots to validate these. If heteroscedastic, use robust SE or transform y (e.g. log).
 
@@ -40,14 +40,14 @@ In regression, we fit a model `y = β₀ + β₁x₁ + ... + βₖxₖ + ε`. Fo
 
 **Validation:** Check R² (fit quality) but more importantly check predictions vs holdout data. For credit risk, regulators expect residual errors to be uncorrelated with key factors (no omitted variables with pattern).
 
-&lt;Flow&gt;
-Age     Income    ...  
-       |      |      
+<Flow>
+     Age     Income    ...
+       |      |
 +------+------+
 |      |      |
 v      v      v
 Regression model: log(Loss) = β0 + β1*Age + β2*Income + ε
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Always verify regression assumptions. In credit context, it’s common to transform skewed variables (e.g. take log of balances) so that residuals are more normal/homoscedastic.
@@ -58,8 +58,8 @@ Interpreting linear model as implying causality. E.g., saying “higher X causes
 </Trap>
 
 <NeverConfuse a="Slope coefficient (β)" b="Correlation coefficient (r)">
-**Slope coefficient (β)** — change in the response per unit x, ceteris paribus.  
----  
+**Slope coefficient (β)** — change in the response per unit x, ceteris paribus.
+---
 **Correlation coefficient (r)** — measures linear association between two variables, but is not a regression parameter. High `r` does not directly tell you the slope; regression gives β that predicts y from x.
 </NeverConfuse>
 

@@ -29,7 +29,7 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-After grouping, common aggregates include `.sum()`, `.count()`, `.mean()`, `.min()`, `.max()`. Pandas also has `.agg()` to apply multiple functions or custom ones. The result keys become the index by default (similar to GROUP BY making the group columns the new index). 
+After grouping, common aggregates include `.sum()`, `.count()`, `.mean()`, `.min()`, `.max()`. Pandas also has `.agg()` to apply multiple functions or custom ones. The result keys become the index by default (similar to GROUP BY making the group columns the new index).
 
 ```python
 grouped = df.groupby(['ProductType', 'Vintage'])
@@ -47,8 +47,8 @@ Forgetting to aggregate: `df.groupby('X')` alone does not compute anything. Also
 </Trap>
 
 <NeverConfuse a="groupby" b="pivot">
-**groupby** — aggregates data by keys (like SQL `GROUP BY`).  
----  
+**groupby** — aggregates data by keys (like SQL `GROUP BY`).
+---
 **pivot** — reshapes (reorients) data without aggregating (or with separate logic). Pivot tables convert grouped results to a wide format, which is a distinct operation.
 </NeverConfuse>
 

@@ -24,7 +24,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 16_BA_business_analysis.md
 ---
-For data migrations or integration, a **Data Mapping Specification** lists every data element to be transferred. Each row typically has: source table/field, source data type, target table/field, target data type, and *Transformation Logic/Business Rules*.  For example, a mapping might say `SRC.CUST_ID (VARCHAR)` maps to `CUST.ACCOUNT_NUMBER (String)` with rule “pad with leading zeros to length 15”. Or “DOB (YYYYMMDD) → Birthdate (YYYY-MM-DD)” to reformat dates. 
+For data migrations or integration, a **Data Mapping Specification** lists every data element to be transferred. Each row typically has: source table/field, source data type, target table/field, target data type, and *Transformation Logic/Business Rules*.  For example, a mapping might say `SRC.CUST_ID (VARCHAR)` maps to `CUST.ACCOUNT_NUMBER (String)` with rule “pad with leading zeros to length 15”. Or “DOB (YYYYMMDD) → Birthdate (YYYY-MM-DD)” to reformat dates.
 
 This document serves as the *golden source* for developers and testers to implement and verify data flow. In banking, precise mapping is critical (e.g. for customer data, transactions). Missing a transformation can lead to errors or compliance issues.
 
@@ -37,7 +37,7 @@ Assuming simple copy (source to target) for all fields. Some fields require non-
 </Trap>
 
 <NeverConfuse>
-**Source Field** vs **Target Field** in mapping:  
+**Source Field** vs **Target Field** in mapping:
 A *Source Field* is the field in the existing (origin) system. A *Target Field* is where it goes in the new system.  Keep straight which is which when writing the spec.
 </NeverConfuse>
 

@@ -29,13 +29,13 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-For example, on an *Exposure* table, one might retrieve loan amounts and borrower IDs for high-risk loans:  
+For example, on an *Exposure* table, one might retrieve loan amounts and borrower IDs for high-risk loans:
 ```sql
 SELECT LoanID, Principal, BorrowerID
 FROM Exposures
 WHERE RiskRating = 'High'
 ORDER BY Principal DESC;
-```  
+```
 Here `SELECT LoanID, Principal, BorrowerID` picks columns, `WHERE RiskRating = 'High'` filters rows to high-risk ones, and `ORDER BY Principal DESC` sorts the resulting loans by size (largest first).
 
 The `WHERE` clause applies conditions (e.g. numerical comparisons, string matches) to each row; only rows meeting all conditions appear in the result. After filtering, `ORDER BY` arranges the rows by one or more columns. Without `ORDER BY`, SQL does not guarantee any specific row order.
@@ -49,8 +49,8 @@ Omitting a `WHERE` filter can return huge result sets. Ensure conditions are cor
 </Trap>
 
 <NeverConfuse a="WHERE" b="ORDER BY">
-**WHERE** — filters rows before grouping or sorting (applies to individual rows).  
----  
+**WHERE** — filters rows before grouping or sorting (applies to individual rows).
+---
 **ORDER BY** — sorts the final result rows (after filtering).
 </NeverConfuse>
 

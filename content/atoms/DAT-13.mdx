@@ -26,17 +26,17 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For regulatory reporting, all dimensions matter. For example, an asset balance must be accurate (matches the general ledger), complete (every balance is reported), valid (currency format, non-negative), and timely (as of the report date). Consistency ensures that if two reports reference the same exposure, they use the same amount. Defining these dimensions allows setting measurable targets: e.g. 99% of accounts must be filled (completeness threshold), or 100% of country codes must match ISO lists (validity). 
+For regulatory reporting, all dimensions matter. For example, an asset balance must be accurate (matches the general ledger), complete (every balance is reported), valid (currency format, non-negative), and timely (as of the report date). Consistency ensures that if two reports reference the same exposure, they use the same amount. Defining these dimensions allows setting measurable targets: e.g. 99% of accounts must be filled (completeness threshold), or 100% of country codes must match ISO lists (validity).
 
 Banks implement data quality frameworks that automate checks against these dimensions. Scorecards might flag any loans with null values (completeness) or duplicate customer IDs (uniqueness). Working these dimensions into BCBS 239 compliance means building controls for each: reconciliation for accuracy, data completeness reports, etc.
 
-&lt;Flow&gt;
+<Flow>
 Data Quality Dimensions
 +-----------+-----------+-----------+
 | Accuracy  | Timeliness| Consistency|
 | Completeness| Validity| Uniqueness|
 +-----------+-----------+-----------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 All regulatory data must meet the necessary quality dimensions for its use. Missing or outdated key data invalidates a report.
@@ -47,8 +47,8 @@ Focusing on only one dimension (e.g. only completeness) while ignoring others (l
 </Trap>
 
 <NeverConfuse a="Accuracy" b="Consistency">
-**Accuracy** — Data matches the true value or source system.  
----  
+**Accuracy** — Data matches the true value or source system.
+---
 **Consistency** — Data is uniform across systems (e.g. same value for Customer ID in trading vs risk systems).
 </NeverConfuse>
 

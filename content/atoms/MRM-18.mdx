@@ -38,9 +38,9 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-AI and ML introduce additional complexity in model risk.  Unlike linear regressions, many ML models (neural nets, ensemble trees) are “black boxes” by default.  Yet regulators require that models be understood by the bank.  For example, the ECB’s 2025 guide to internal models adds a section on machine learning, specifying that ML models must be “adequately explainable” and that their performance must justify the added complexity.  Similarly, RBI’s draft guidance explicitly lists AI/ML models in scope and requires explainability, bias checks, and human oversight.  The new U.S. guidance acknowledges AI/ML as model risk (although it currently excludes “generative AI” from scope), and the OCC has signaled forthcoming guidance on AI.  In short, banks cannot claim “it’s just AI” to avoid validation – they must apply model risk principles to AI models too.  
+AI and ML introduce additional complexity in model risk.  Unlike linear regressions, many ML models (neural nets, ensemble trees) are “black boxes” by default.  Yet regulators require that models be understood by the bank.  For example, the ECB’s 2025 guide to internal models adds a section on machine learning, specifying that ML models must be “adequately explainable” and that their performance must justify the added complexity.  Similarly, RBI’s draft guidance explicitly lists AI/ML models in scope and requires explainability, bias checks, and human oversight.  The new U.S. guidance acknowledges AI/ML as model risk (although it currently excludes “generative AI” from scope), and the OCC has signaled forthcoming guidance on AI.  In short, banks cannot claim “it’s just AI” to avoid validation – they must apply model risk principles to AI models too.
 
-However, validating AI models is challenging.  Common practices include using SHAP values or LIME to explain predictions, simplifying models via surrogate linearizations, or requiring that final decisions be interpretable.  Backtesting, discrimination and calibration concepts still apply, but new tests (e.g. for concept drift) may be needed.  Given the complexity, the industry relies on “explainable AI” tools and rigorous documentation of how the model learns.  
+However, validating AI models is challenging.  Common practices include using SHAP values or LIME to explain predictions, simplifying models via surrogate linearizations, or requiring that final decisions be interpretable.  Backtesting, discrimination and calibration concepts still apply, but new tests (e.g. for concept drift) may be needed.  Given the complexity, the industry relies on “explainable AI” tools and rigorous documentation of how the model learns.
 
 Regulators are actively developing expectations for AI.  The PRA already includes AI risk in SS1/23 sub-principles.  In the U.S., OCC’s 2026 press release noted agencies will solicit input on AI use in banking.  RBI’s draft explicitly covers AI: it requires a Board-approved AI governance framework, human-in-the-loop, and the ability to “kill” or decommission high-risk AI models.  These emerging rules suggest strong scrutiny on AI: consider them “developing” expectations.
 
@@ -53,9 +53,9 @@ Tolerating a black box just because it performs well.  Ignoring regulations by c
 </Trap>
 
 <NeverConfuse a="Interpretability" b="Predictive accuracy">
-**Interpretability** — the ability to explain how a model arrives at a result.  
----  
-**Predictive accuracy** — how well the model predicts outcomes.  
+**Interpretability** — the ability to explain how a model arrives at a result.
+---
+**Predictive accuracy** — how well the model predicts outcomes.
 A model can be accurate but uninterpretable; regulators require both (accuracy and some level of interpretability).
 </NeverConfuse>
 

@@ -30,7 +30,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-In credit models (and many risk models), validators assess ranking performance.  The ROC curve plots true positive rate vs false positive rate; the area under that curve (AUC) is a popular measure (1.0 = perfect, 0.5 = random).  The **Gini** index is closely related: Gini = 2*AUC–1 (so Gini ranges 0–1).  For example, a Gini of 0.6 corresponds to AUC 0.8.  These metrics summarize the model’s ability to order cases by risk.  The **KS statistic** is another measure – it finds the point where the difference between the cumulative default vs non-default curves is greatest; a larger KS indicates better lift.  
+In credit models (and many risk models), validators assess ranking performance.  The ROC curve plots true positive rate vs false positive rate; the area under that curve (AUC) is a popular measure (1.0 = perfect, 0.5 = random).  The **Gini** index is closely related: Gini = 2*AUC–1 (so Gini ranges 0–1).  For example, a Gini of 0.6 corresponds to AUC 0.8.  These metrics summarize the model’s ability to order cases by risk.  The **KS statistic** is another measure – it finds the point where the difference between the cumulative default vs non-default curves is greatest; a larger KS indicates better lift.
 
 However, none of these metrics tell the whole story.  They only measure discrimination (ranking), not calibration.  A model might have high AUC yet systematically under- or over-predict probabilities.  Therefore, regulators expect both discrimination and calibration checks in validation.  Typical thresholds vary by context, but as a rule of thumb (from industry practice): an AUC of 0.7–0.8 is moderate, &gt;0.8 is strong.  (Regulators do not set fixed benchmarks but may question models with unusually low discrimination.)
 
@@ -43,8 +43,8 @@ Focusing only on one metric.  For instance, a model with high AUC but very poor 
 </Trap>
 
 <NeverConfuse a="AUC (Area Under the ROC)" b="Gini coefficient">
-**AUC (Area Under the ROC)** — overall probability that the model ranks a randomly chosen positive higher than a negative.  
----  
+**AUC (Area Under the ROC)** — overall probability that the model ranks a randomly chosen positive higher than a negative.
+---
 **Gini coefficient** — derived from AUC (Gini=2*AUC–1).  They are different scales of the same information (Gini ~ 2×AUC minus 1), so they often get used interchangeably.
 </NeverConfuse>
 

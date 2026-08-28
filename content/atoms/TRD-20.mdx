@@ -38,21 +38,21 @@ Operationally, compounding details matter: observation dates, lookbacks, lockout
 
 The mental model is two questions: which curve generates the future cash flow, and which curve discounts that cash flow back to today? They may be related, but they are not automatically identical.
 
-&lt;Flow&gt;
+<Flow>
 Future coupon
    |
-   +--&amp;gt; projection curve
+   +--&gt; projection curve
    |       "what cash flow?"
    |
    v
 projected amount
    |
-   +--&amp;gt; discount curve
+   +--&gt; discount curve
            "what is it worth today?"
    |
    v
 present value
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Projection and discounting are separate valuation functions.

@@ -41,23 +41,23 @@ A **snapshot** shows stock, not motion. A portfolio with 5% at 60+ DPD could be 
 
 Vintage and roll-rate analysis must preserve consistent definitions. Changes in DPD calculation, default thresholds, write-off policy or data extraction can create false improvements or deterioration.
 
-&lt;Flow&gt;
+<Flow>
 Vintage view:
 
-+-----------+ -&amp;gt; +-----------+ -&amp;gt; +-----------+
++-----------+ -&gt; +-----------+ -&gt; +-----------+
 | Month 0   |    | Month 3   |    | Month 6   |
 | cohort    |    | outcome   |    | outcome   |
 +-----------+    +-----------+    +-----------+
 
 Roll-rate view:
 
-+---------+ -&amp;gt; +----------+ -&amp;gt; +----------+ -&amp;gt; +---------+
++---------+ -&gt; +----------+ -&gt; +----------+ -&gt; +---------+
 | Current |    | 1-30 DPD |    |31-60 DPD|    | Default |
 +---------+    +----------+    +----------+    +---------+
       ^             |               |
       +-------------+---------------+
                   cures
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Credit performance is a process through time; any analysis that discards cohort age or state transitions loses material information.

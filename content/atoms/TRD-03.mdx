@@ -39,10 +39,10 @@ Around a coupon payment date, the mechanics can look counter-intuitive. Immediat
 
 The distinction also matters in reconciliations. A trader may discuss a clean-price move, the risk system may mark a full price, and the settlement instruction may reflect principal amount plus accrued interest. If systems disagree on the field definition, a correct trade can appear to have a valuation or cash break.
 
-&lt;Flow&gt;
+<Flow>
 Coupon date A ---------------- Coupon date B
      |                                 |
-     |&amp;lt;------ accrued interest -------&amp;gt;|
+     |&lt;------ accrued interest -------&gt;|
                   ^
                   |
               trade date
@@ -52,7 +52,7 @@ clean price
 accrued interest
     =
 dirty / full price
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Always identify whether a bond price field is clean or dirty before comparing valuations or settlement amounts.

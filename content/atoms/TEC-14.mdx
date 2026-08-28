@@ -30,16 +30,16 @@ import_source: 13_TEC_sql_python.md
 ---
 For example, a *Loan_Fact* table might have columns `(LoanKey, CustomerKey, ProductKey, Balance, InterestRate)`, where `CustomerKey` points to a *Customer_Dim* table with `(CustomerKey, Name, Segment, RiskRating)`, and `ProductKey` points to a *Product_Dim* table. This star schema lets analysts slice facts by any dimension attribute.
 
-&lt;Flow&gt;
-+-------------+
+<Flow>
+    +-------------+
     |  Loan_Fact  |
     +-------------+
-    | CustomerKey |--&amp;gt; +-----------+
-    | ProductKey  |--&amp;gt; |Customer_Dim|
+    | CustomerKey |--&gt; +-----------+
+    | ProductKey  |--&gt; |Customer_Dim|
     | Balance     |    +-----------+
     +-------------+      |   ...   |
                         +-----------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Fact tables should contain only keys (foreign keys) and measure columns. All descriptive attributes belong in dimensions, not the fact.
@@ -50,8 +50,8 @@ Placing text or descriptive fields in the fact table (denormalization) is discou
 </Trap>
 
 <NeverConfuse a="Fact Table" b="Dimension Table">
-**Fact Table** — contains numeric measurements and foreign keys linking to dimensions.  
----  
+**Fact Table** — contains numeric measurements and foreign keys linking to dimensions.
+---
 **Dimension Table** — contains attributes (descriptions) and a primary key.
 </NeverConfuse>
 

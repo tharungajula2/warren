@@ -23,17 +23,17 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 11_MRK_market_risk.md
 ---
-Value at Risk (VaR) is a statistical risk measure.  For a chosen confidence level α (e.g. 99%) and horizon (e.g. 10 days), VaRα is the loss L such that there is a (1−α) probability the actual loss will exceed L.  In practice, a bank says “99% 10-day VaR” of $X means there is a 1% chance the 10-day loss will exceed $X.  
+Value at Risk (VaR) is a statistical risk measure.  For a chosen confidence level α (e.g. 99%) and horizon (e.g. 10 days), VaRα is the loss L such that there is a (1−α) probability the actual loss will exceed L.  In practice, a bank says “99% 10-day VaR” of $X means there is a 1% chance the 10-day loss will exceed $X.
 
-Banks typically compute VaR daily for trading books to summarize total market risk exposure. Basel rules historically used 10-day 99% VaR (12-month window) for capital. FRTB replaces VaR with ES, but VaR remains key for backtesting and internal limits.  
+Banks typically compute VaR daily for trading books to summarize total market risk exposure. Basel rules historically used 10-day 99% VaR (12-month window) for capital. FRTB replaces VaR with ES, but VaR remains key for backtesting and internal limits.
 
-&lt;Flow&gt;
+<Flow>
 VaR computation (conceptual):
-1. Gather P&amp;amp;L distribution over horizon (simulation or historical returns).
+1. Gather P&amp;L distribution over horizon (simulation or historical returns).
 2. Sort losses from smallest (best) to largest (worst).
 3. Identify the 1% quantile (for 99% VaR).
 4. VaR = loss at that quantile (not exceeded with 99% confidence).
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 VaRα is always defined as the (100−α)th percentile loss over the chosen horizon.

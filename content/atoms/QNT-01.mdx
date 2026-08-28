@@ -24,11 +24,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-Banks rarely have data on every possible borrower (the population). Instead, models use samples such as past borrowers or current customers. If the sample is unrepresentative, estimates of default rates or other risk measures will be biased. For instance, a credit bureau dataset may omit loans that did not originate (an *application bias*), or a portfolio dataset might lack information on people who were denied credit (a *selection bias*). Regulatory guidance emphasizes that models should be validated on a sample representative of current and future portfolios. 
+Banks rarely have data on every possible borrower (the population). Instead, models use samples such as past borrowers or current customers. If the sample is unrepresentative, estimates of default rates or other risk measures will be biased. For instance, a credit bureau dataset may omit loans that did not originate (an *application bias*), or a portfolio dataset might lack information on people who were denied credit (a *selection bias*). Regulatory guidance emphasizes that models should be validated on a sample representative of current and future portfolios.
 
-In practice, analysts must check if the training sample covers all customer segments and time periods. For example, if only performing clients are sampled, average default probability will be under-estimated. Oversampling defaulters can correct imbalance but must be done carefully to avoid altering the underlying distribution. As a rule, increasing sample size will not fix a biased sample – adding more biased data only tightens confidence around the wrong value. The *permanent rule* is: ensure your training data frame covers the same population characteristics as the real credit book. 
+In practice, analysts must check if the training sample covers all customer segments and time periods. For example, if only performing clients are sampled, average default probability will be under-estimated. Oversampling defaulters can correct imbalance but must be done carefully to avoid altering the underlying distribution. As a rule, increasing sample size will not fix a biased sample – adding more biased data only tightens confidence around the wrong value. The *permanent rule* is: ensure your training data frame covers the same population characteristics as the real credit book.
 
-&lt;Flow&gt;
+<Flow>
 +------------+                 +-------------+
 | Population |                 | Sample      |
 | (All loans)|                 | (Historic,  |
@@ -37,7 +37,7 @@ In practice, analysts must check if the training sample covers all customer segm
        |                            |
        v                            v
   Model input                 Model training
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 A larger sample cannot correct a sampling bias; validate models on data representative of the true credit population.
@@ -48,8 +48,8 @@ Assuming a large sample size eliminates bias. In fact, if the sampling frame is 
 </Trap>
 
 <NeverConfuse a="Sampling bias" b="Non-response bias">
-**Sampling bias** — distortion from how the sample is drawn.  
----  
+**Sampling bias** — distortion from how the sample is drawn.
+---
 **Non-response bias** — when sampled applicants fail to provide data (e.g. survey participants differ from non-respondents). Both distort representativeness, but sampling bias is in frame selection, while non-response occurs post-selection.
 </NeverConfuse>
 

@@ -31,19 +31,19 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-If a bank has a large, diversified loan portfolio, each loan’s default or loss contributes a little to total risk. By the CLT, the distribution of total loss approximates normal, even if individual loan losses are skewed. For example, if many similar small loans each have random loss, their average or sum will be near normal. This helps in risk capital models (e.g. using normal quantiles to set capital). However, the CLT has conditions: loans should be *independent* (or only weakly correlated) and none *too large* (“fine-grained” portfolio). 
+If a bank has a large, diversified loan portfolio, each loan’s default or loss contributes a little to total risk. By the CLT, the distribution of total loss approximates normal, even if individual loan losses are skewed. For example, if many similar small loans each have random loss, their average or sum will be near normal. This helps in risk capital models (e.g. using normal quantiles to set capital). However, the CLT has conditions: loans should be *independent* (or only weakly correlated) and none *too large* (“fine-grained” portfolio).
 
-Credit portfolios often violate CLT ideal assumptions. Defaults can be correlated through economic cycles (violating independence), and large exposures (“lumpiness”) also break the identical small-size assumption. Basel’s IRB capital formula assumes infinite, independent loans (the “asymptotically fine-grained” condition). In reality, correlated defaults (systematic risk) mean aggregate losses can have fat tails. Thus, CLT only licenses normal approximations under strong diversification. 
+Credit portfolios often violate CLT ideal assumptions. Defaults can be correlated through economic cycles (violating independence), and large exposures (“lumpiness”) also break the identical small-size assumption. Basel’s IRB capital formula assumes infinite, independent loans (the “asymptotically fine-grained” condition). In reality, correlated defaults (systematic risk) mean aggregate losses can have fat tails. Thus, CLT only licenses normal approximations under strong diversification.
 
-**In practice:** one uses CLT as a guide but tests its validity. Risk managers might apply normal approximations to portfolio VaR only after verifying no extreme concentration. If not, alternative distributions (e.g. Vasicek distribution for correlated losses) are used. The *permanent rule*: use CLT for large, well-diversified groups, but check for correlation or large-exposure breaks. 
+**In practice:** one uses CLT as a guide but tests its validity. Risk managers might apply normal approximations to portfolio VaR only after verifying no extreme concentration. If not, alternative distributions (e.g. Vasicek distribution for correlated losses) are used. The *permanent rule*: use CLT for large, well-diversified groups, but check for correlation or large-exposure breaks.
 
-&lt;Flow&gt;
-Individual loan losses ~ any dist. (skewed) 
-  + many independent exposures 
-      |  
+<Flow>
+Individual loan losses ~ any dist. (skewed)
+  + many independent exposures
+      |
       v  (CLT: n large, similar loans)
 Total portfolio loss ≈ Normal dist. (mean=nμ, var=nσ²)
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Large, independent loan portfolios produce approximately normal aggregate losses, but only if no single loan dominates and correlations are low. If not, explicitly model tail risk instead of relying on CLT.
@@ -54,8 +54,8 @@ Assuming CLT holds when loans are correlated or a few loans are huge. E.g. a ban
 </Trap>
 
 <NeverConfuse a="Normal approximation (CLT)" b="Exact distribution">
-**Normal approximation (CLT)** — valid when summing many i.i.d. variables (small loans, independent).  
----  
+**Normal approximation (CLT)** — valid when summing many i.i.d. variables (small loans, independent).
+---
 **Exact distribution** — e.g. Vasicek’s model or empirical simulation; needed if defaults correlate or portfolio is not fine-grained. CLT’s normal result is a special-case approximation, not always applicable.
 </NeverConfuse>
 

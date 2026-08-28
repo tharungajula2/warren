@@ -29,11 +29,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-In gradient boosting, we start with a simple model (often predicting the mean outcome). Then we iteratively train new decision trees on the *residuals* (errors) of the current model. Each tree’s predictions are scaled by a learning rate (shrinkage) and added to the ensemble. Formally, the algorithm minimizes a loss function (e.g. squared error or logistic loss) via gradient descent: each new tree targets the negative gradient of loss with respect to the model’s predictions. Popular implementations like XGBoost or LightGBM use shallow trees (e.g. max depth 3–5) to keep each tree weak and prevent overfitting. 
+In gradient boosting, we start with a simple model (often predicting the mean outcome). Then we iteratively train new decision trees on the *residuals* (errors) of the current model. Each tree’s predictions are scaled by a learning rate (shrinkage) and added to the ensemble. Formally, the algorithm minimizes a loss function (e.g. squared error or logistic loss) via gradient descent: each new tree targets the negative gradient of loss with respect to the model’s predictions. Popular implementations like XGBoost or LightGBM use shallow trees (e.g. max depth 3–5) to keep each tree weak and prevent overfitting.
 
-For example, to predict loan default probability, we might start with a base prediction of 0.1. The first tree learns where this is underestimating defaults and pushes those cases higher. The next tree then corrects remaining errors, and so on. After 100 trees, the model might be much more accurate than logistic regression, especially capturing non-linear and interaction effects. Gradient boosted trees excel on credit data because they handle mixed variable types and missing values easily, and can learn complex patterns that linear models miss. 
+For example, to predict loan default probability, we might start with a base prediction of 0.1. The first tree learns where this is underestimating defaults and pushes those cases higher. The next tree then corrects remaining errors, and so on. After 100 trees, the model might be much more accurate than logistic regression, especially capturing non-linear and interaction effects. Gradient boosted trees excel on credit data because they handle mixed variable types and missing values easily, and can learn complex patterns that linear models miss.
 
-&lt;Flow&gt;
+<Flow>
 +----------------------------+
 |  Initialize model output   |
 |  (e.g. mean of target)     |
@@ -58,7 +58,7 @@ Repeat for t = 1..T:
 +----------------------------+
 |  Updated ensemble model    |
 +----------------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Each new tree in boosting improves the model by focusing on what previous trees missed. The trees are combined additively: final prediction = initial + shrinkage×tree1 + shrinkage×tree2 + … (often in log-odds for classification).
@@ -69,8 +69,8 @@ Ignoring the learning rate or early stopping. A very small learning rate require
 </Trap>
 
 <NeverConfuse a="Gradient boosting" b="AdaBoost">
-**Gradient boosting** — an ensemble that fits trees sequentially to residuals, adding them to the model in a stagewise fashion.  
----  
+**Gradient boosting** — an ensemble that fits trees sequentially to residuals, adding them to the model in a stagewise fashion.
+---
 **AdaBoost** — another boosting method that reweights misclassified samples instead of fitting residuals; it focuses on misclassified points and uses weighted voting, rather than explicit gradients.
 </NeverConfuse>
 

@@ -31,7 +31,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 16_BA_business_analysis.md
 ---
-**UAT Coverage:** The BA must confirm that UAT scenarios collectively cover all key requirements and risk areas. Typically, this is demonstrated by linking each requirement (and sub-case) to one or more UAT scenarios.  In practice, teams track *scenario coverage percentage*. For example, Yethi’s core banking UAT practice uses end-to-end business scenarios (account opening, loan origination, payments) to ensure coverage. They measure how many of those planned scenarios have been executed successfully. To argue coverage is sufficient, present traceability: “Requirement X is covered by test cases TC1, TC2.” Focus on risk: prioritize testing of critical flows first.  
+**UAT Coverage:** The BA must confirm that UAT scenarios collectively cover all key requirements and risk areas. Typically, this is demonstrated by linking each requirement (and sub-case) to one or more UAT scenarios.  In practice, teams track *scenario coverage percentage*. For example, Yethi’s core banking UAT practice uses end-to-end business scenarios (account opening, loan origination, payments) to ensure coverage. They measure how many of those planned scenarios have been executed successfully. To argue coverage is sufficient, present traceability: “Requirement X is covered by test cases TC1, TC2.” Focus on risk: prioritize testing of critical flows first.
 
 **Defect Management:** Each defect discovered in testing is logged with details. Importantly, classify it by **Severity** (the technical impact: *Critical* = system-blocker, *Major*, etc.) and **Priority** (how urgent the fix is to the business: high=must-fix, low=can wait). For example, a calculation error in a capital ratio (high severity) might also be high priority. Lowering defect list by severity/priority and reaching “0 critical open” is usually a go-live criterion.  Track defects transparently: who fixes them, retest after fixes, and ensure no showstoppers remain before sign-off.
 
@@ -44,7 +44,7 @@ Overconfidence that “we tested enough” without proof. Always use coverage me
 </Trap>
 
 <NeverConfuse>
-**Severity** vs **Priority**:  
+**Severity** vs **Priority**:
 *Severity* gauges the impact of a defect on system functionality. *Priority* indicates how quickly the defect should be fixed (a business decision). They are separate measures, not synonyms.
 </NeverConfuse>
 

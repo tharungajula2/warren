@@ -28,8 +28,8 @@ import_source: 13_TEC_sql_python.md
 ---
 For example, joining a *Facility* table to its *Account* table: each facility (one side) may link to multiple accounts (many side). An inner join lists only facilities that have accounts, whereas a left join lists all facilities with matching accounts (NULL account fields if none). Beware of **fan-out**: joining a 1:M relationship will duplicate the "one" side row for each "many" side row, potentially inflating counts. Always ensure join keys are correct and understand cardinality.
 
-&lt;Flow&gt;
-+---------+      +---------+
+<Flow>
+   +---------+      +---------+
    | Table A |      | Table B |
    +---------+      +---------+
          \         /
@@ -38,7 +38,7 @@ For example, joining a *Facility* table to its *Account* table: each facility (o
         +-----------+
         | Result    |
         +-----------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Always specify an `ON` condition (join key) to match rows. For example: `ON Facilities.FacID = Accounts.FacID`.
@@ -49,8 +49,8 @@ Forgetting the join condition (or typo) leads to a Cartesian product (every A wi
 </Trap>
 
 <NeverConfuse a="INNER JOIN" b="CROSS JOIN">
-**INNER JOIN** — returns only rows where keys match in both tables.  
----  
+**INNER JOIN** — returns only rows where keys match in both tables.
+---
 **CROSS JOIN** — returns Cartesian product (every row of A with every row of B), no key condition.
 </NeverConfuse>
 

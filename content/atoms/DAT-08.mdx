@@ -26,22 +26,22 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Organizations identify CDEs based on risk and business significance. For example, any data field that feeds risk-weight calculations or capital models would be a CDE. Under BCBS 239, regulators effectively treat all material risk data as CDEs. Good data governance frameworks inventory CDEs and assign them owners and stewards. The owner (often a senior business manager) is responsible for the definition and quality of each CDE; stewards implement controls and fixes.  
+Organizations identify CDEs based on risk and business significance. For example, any data field that feeds risk-weight calculations or capital models would be a CDE. Under BCBS 239, regulators effectively treat all material risk data as CDEs. Good data governance frameworks inventory CDEs and assign them owners and stewards. The owner (often a senior business manager) is responsible for the definition and quality of each CDE; stewards implement controls and fixes.
 
-Marking data as “critical” means prioritizing quality rules, monitoring, and issue management for those fields. The idea is to avoid the opposite of the CDE philosophy: that all data gets equal, impractical scrutiny. By focusing on CDEs, banks can allocate resources to where mistakes matter most. Identifying CDEs is not a one-time task; it must be revisited as regulations and products change.  
+Marking data as “critical” means prioritizing quality rules, monitoring, and issue management for those fields. The idea is to avoid the opposite of the CDE philosophy: that all data gets equal, impractical scrutiny. By focusing on CDEs, banks can allocate resources to where mistakes matter most. Identifying CDEs is not a one-time task; it must be revisited as regulations and products change.
 
-&lt;Flow&gt;
-+--------------+
+<Flow>
+                  +--------------+
                   | Data Governance Framework |
                   +--------------+
                           |
             +-----------------------------+
             | Critical Data Elements List |
             +-----------------------------+
-                   /       |        \ 
+                   /       |        \
                   /        |         \
            [Customer ID] [Loan Amount] [FX Rate] ...
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Banks must explicitly identify and govern their critical data elements (CDEs) to ensure governance efforts focus on high-impact fields.
@@ -52,8 +52,8 @@ Treating all data elements alike; without highlighting CDEs, governance becomes 
 </Trap>
 
 <NeverConfuse a="CDE" b="Data catalog">
-**CDE** — A specific field deemed critical (e.g. a risk exposure amount).  
----  
+**CDE** — A specific field deemed critical (e.g. a risk exposure amount).
+---
 **Data catalog** — A comprehensive inventory of all data assets (it may list CDEs but also all other fields).
 </NeverConfuse>
 

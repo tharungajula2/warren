@@ -34,8 +34,8 @@ The golden source concept is vital under BCBS 239 Principle 2 (Data Architecture
 
 Golden source is sometimes synonymous with “source of truth” or “master dataset.” It is not static: it is updated continuously to reflect the latest true data. Achieving a golden source typically involves integrating data pipelines and may use technologies like master data management (MDM) tools. The permanent expectation is that *every key data field* has one golden source designated, so that accuracy and consistency are maintained.
 
-&lt;Flow&gt;
-+-------------------------+
+<Flow>
+          +-------------------------+
           | Golden Source Database  |
           +-------------------------+
            ^       ^        ^     ^
@@ -44,7 +44,7 @@ Golden source is sometimes synonymous with “source of truth” or “master da
      | CRM |     | Trade   | Market| ...
      | Sys |     | Sys     | Data  |
      +-----+     +---+    +---+  +---+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 For each key data element, the bank must designate one authoritative source and use it consistently.
@@ -55,8 +55,8 @@ Allowing multiple “masters” for the same data field (e.g. one report using C
 </Trap>
 
 <NeverConfuse a="Golden source" b="Data lake">
-**Golden source** — The official, authoritative dataset for a piece of information.  
----  
+**Golden source** — The official, authoritative dataset for a piece of information.
+---
 **Data lake** — A repository of raw data. A data lake is not by itself an authoritative source unless governance ensures it contains only validated data.
 </NeverConfuse>
 

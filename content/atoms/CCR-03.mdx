@@ -34,17 +34,17 @@ import_source: 10_CCR_counterparty_credit_risk.md
 ---
 Expected Exposure (EE) is the average potential exposure at a specific future date. It includes only positive exposures (zero is the floor). Expected Positive Exposure (EPE) is the average of EE over multiple future dates, usually up to one year. The Basel CCR guidelines define EPE as the weighted average of expected exposures over time. “Effective EPE” is a slight variant used in IMM that applies the max of EPE or certain floors. Banks may cap EPE at the maximum expected exposure to reflect worst-case scenarios.
 
-Peak exposure (or “Peak EEPE”) is the (say) 95th or 99th percentile of all future exposure values, representing a stress point. This is used for limit-setting to ensure capital covers extreme outcomes. Typically, banks’ exposure profiles start low (time-zero exposure is often zero if no up-front payment) and rise as time passes, then fall near maturity for some products. The shape depends on the type of derivative. For example, a vanilla interest rate swap might have exposures that rise and then fall.  
- 
-&lt;Flow&gt;
-Exposure Profile (by date) 
-    /\           /\      
-   /  \         /  \     
+Peak exposure (or “Peak EEPE”) is the (say) 95th or 99th percentile of all future exposure values, representing a stress point. This is used for limit-setting to ensure capital covers extreme outcomes. Typically, banks’ exposure profiles start low (time-zero exposure is often zero if no up-front payment) and rise as time passes, then fall near maturity for some products. The shape depends on the type of derivative. For example, a vanilla interest rate swap might have exposures that rise and then fall.
+
+<Flow>
+   Exposure Profile (by date)
+    /\           /\
+   /  \         /  \
   /    \_______/    \____ Time
  EE = expected exposure at dates
  EPE = (EE1+EE2+...)/N  (average over time)
  Peak = max(EE_t at percentile)
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Regulatory capital for CCR often uses EPE (a weighted average exposure) and peak exposures, not just point-in-time values.
@@ -55,8 +55,8 @@ Using one date’s exposure as representative, or confusing average (EPE) with w
 </Trap>
 
 <NeverConfuse a="Expected Positive Exposure (EPE)" b="Peak Exposure">
-**Expected Positive Exposure (EPE)** — The time-weighted average of expected exposures (only positive) over a horizon.  
----  
+**Expected Positive Exposure (EPE)** — The time-weighted average of expected exposures (only positive) over a horizon.
+---
 **Peak Exposure** — A high percentile (e.g. 95%) of exposure across time. Peak exposure is *not* the same as EPE (average); it typically exceeds EPE.
 </NeverConfuse>
 

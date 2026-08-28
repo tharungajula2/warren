@@ -29,16 +29,16 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Any step in building or using a model can introduce errors (model risk).  Common sources include:  
-- **Data issues:** Erroneous, incomplete, outdated or biased inputs.  For instance, using stale or unrepresentative data can skew predictions.  (If the data have systemic bias, an AI model may perpetuate that bias.)  
-- **Assumption or parameter errors:** Omitting a key variable, using unreasonable assumptions, or calibrating parameters inappropriately.  A housing-price model ignoring new market trends might be severely off.  Likewise, statistical models rely on assumptions (e.g. linearity, independence) that may not hold.  If those are wrong, the model fails. .  
-- **Methodology or design flaws:** Choosing an inappropriate model form or algorithm for the problem.  For example, using a linear model for highly nonlinear data can produce poor results.  Complex ML methods can themselves be misconfigured (e.g. overfit, wrong architecture).  
-- **Implementation errors:** Programming bugs, calculation mistakes, or software issues.  A mis-indexed data array in code could shift inputs, or a wrong formula may be used.  Even “human error” in a spreadsheet (e.g. a wrong cell reference) can create huge errors (the famous $6B JPMorgan error was a spreadsheet bug)..  
-- **Usage and interpretation:** Applying a model outside its intended scope, or misunderstanding its output.  For instance, using a model built for retail loans to price corporate loans, or misinterpreting probabilities as certainties.  
+Any step in building or using a model can introduce errors (model risk).  Common sources include:
+- **Data issues:** Erroneous, incomplete, outdated or biased inputs.  For instance, using stale or unrepresentative data can skew predictions.  (If the data have systemic bias, an AI model may perpetuate that bias.)
+- **Assumption or parameter errors:** Omitting a key variable, using unreasonable assumptions, or calibrating parameters inappropriately.  A housing-price model ignoring new market trends might be severely off.  Likewise, statistical models rely on assumptions (e.g. linearity, independence) that may not hold.  If those are wrong, the model fails. .
+- **Methodology or design flaws:** Choosing an inappropriate model form or algorithm for the problem.  For example, using a linear model for highly nonlinear data can produce poor results.  Complex ML methods can themselves be misconfigured (e.g. overfit, wrong architecture).
+- **Implementation errors:** Programming bugs, calculation mistakes, or software issues.  A mis-indexed data array in code could shift inputs, or a wrong formula may be used.  Even “human error” in a spreadsheet (e.g. a wrong cell reference) can create huge errors (the famous $6B JPMorgan error was a spreadsheet bug)..
+- **Usage and interpretation:** Applying a model outside its intended scope, or misunderstanding its output.  For instance, using a model built for retail loans to price corporate loans, or misinterpreting probabilities as certainties.
 
 Practitioner guides list these clearly.  For example, IBM notes that model risk “can stem from various causes: Data (e.g. bias or inaccuracy); Assumptions (unrealistic or omitted variables); Methodology (inherent errors in chosen techniques); Implementation (coding or calculation errors); Interpretation (misreading results); and Usage (using a model inappropriately)”.  Regulators expect firms to identify such sources in their risk frameworks.  The RBI’s draft guidance on credit models explicitly requires validation to include reviewing data accuracy and underlying assumptions.  In practice, a sound validation process scrutinizes each of these sources: checking data quality, testing assumptions, reviewing code, and assessing model use in business processes.
 
-&lt;Flow&gt;
+<Flow>
 Common Sources of Model Risk:
 +---------------+   +------------------------+   +------------------+
 |   Data issues |   | Flawed methodology/    |   | Implementation   |
@@ -53,7 +53,7 @@ Common Sources of Model Risk:
     | misinterpretation  |
     | (outside scope)    |
     +--------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Model risk can come from anywhere in the model’s development or use: data, design, code, or deployment. Every model must be checked end-to-end for these sources of error.
@@ -64,9 +64,9 @@ Focusing only on one source of risk.  For example, **checking a model’s math b
 </Trap>
 
 <NeverConfuse a="Coding error" b="Model assumption">
-**Coding error** — a bug or mistake in the model’s implementation (e.g. wrong formula or mis-indexing data).  
----  
-**Model assumption** — a conceptual choice about how the model works (e.g. assuming linearity).  
+**Coding error** — a bug or mistake in the model’s implementation (e.g. wrong formula or mis-indexing data).
+---
+**Model assumption** — a conceptual choice about how the model works (e.g. assuming linearity).
 These both cause wrong output but arise in different ways.  (Confusing them can lead one to fix code when the real issue is a bad assumption.)
 </NeverConfuse>
 

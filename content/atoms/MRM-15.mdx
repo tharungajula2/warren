@@ -30,9 +30,9 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-PSI is calculated as Σ (actual - expected)*ln(actual/expected) over bins of the distribution.  It quantifies how much the data have shifted.  A common practice (from industry “rules of thumb”) is: **PSI &lt;0.10** = little change, **0.10–0.25** = moderate change, **&gt;0.25** = significant change requiring investigation.  For example, if the score distribution has more high-risk borrowers now than at development, PSI will rise.  CSI is a variant used when variables are categorical (like rating transitions).  
+PSI is calculated as Σ (actual - expected)*ln(actual/expected) over bins of the distribution.  It quantifies how much the data have shifted.  A common practice (from industry “rules of thumb”) is: **PSI &lt;0.10** = little change, **0.10–0.25** = moderate change, **&gt;0.25** = significant change requiring investigation.  For example, if the score distribution has more high-risk borrowers now than at development, PSI will rise.  CSI is a variant used when variables are categorical (like rating transitions).
 
-Banks use these metrics in monitoring (MRM-10).  If PSI breaches its threshold, it often triggers a model review or recalibration.  Regulators expect banks to track such stability measures for key variables and scores.  (EBA/ECB Pillar 2 expectations and TRIM reviews included similar migration/stability checks.)  
+Banks use these metrics in monitoring (MRM-10).  If PSI breaches its threshold, it often triggers a model review or recalibration.  Regulators expect banks to track such stability measures for key variables and scores.  (EBA/ECB Pillar 2 expectations and TRIM reviews included similar migration/stability checks.)
 
 It is important not to treat PSI/CSI breaches as automatic model failure.  They are signals that something changed – perhaps the portfolio mix or economy – and model performance must be reassessed.  A sudden PSI increase could also come from a one-time data issue.  Nonetheless, including PSI/CSI in validation reports is good practice.
 
@@ -45,9 +45,9 @@ Relying on fixed PSI thresholds without context.  A PSI just above 0.25 in a ben
 </Trap>
 
 <NeverConfuse a="Population Stability Index (PSI)" b="Characteristic Stability Index (CSI)">
-**Population Stability Index (PSI)** — measures shift in the model *score* or numeric input distribution between time periods.  
----  
-**Characteristic Stability Index (CSI)** — measures shift in a *categorical* characteristic distribution (e.g. rating classes).  
+**Population Stability Index (PSI)** — measures shift in the model *score* or numeric input distribution between time periods.
+---
+**Characteristic Stability Index (CSI)** — measures shift in a *categorical* characteristic distribution (e.g. rating classes).
 Both flag distribution shifts, but PSI is for continuous scores/inputs, CSI for discrete categories.
 </NeverConfuse>
 

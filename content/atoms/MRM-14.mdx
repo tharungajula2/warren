@@ -28,7 +28,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Calibration is distinct from discrimination.  For example, two models with the same AUC could have different calibration.  In logistic regression models, analysts often use the Hosmer–Lemeshow test to quantify calibration.  If the H-L p-value is high, the model is said to fit well; a low p-value suggests poor fit.  But practitioners caution that with large test samples, the H-L test is too sensitive: trivial misalignments will become “statistically significant.”  In other words, a very large dataset may make almost any model fail H-L even if calibration is acceptable in business terms.  Therefore, one should inspect calibration plots (e.g. predicted vs actual by bucket) alongside or instead of relying solely on H-L statistics.  
+Calibration is distinct from discrimination.  For example, two models with the same AUC could have different calibration.  In logistic regression models, analysts often use the Hosmer–Lemeshow test to quantify calibration.  If the H-L p-value is high, the model is said to fit well; a low p-value suggests poor fit.  But practitioners caution that with large test samples, the H-L test is too sensitive: trivial misalignments will become “statistically significant.”  In other words, a very large dataset may make almost any model fail H-L even if calibration is acceptable in business terms.  Therefore, one should inspect calibration plots (e.g. predicted vs actual by bucket) alongside or instead of relying solely on H-L statistics.
 
 Banks typically expect models to be reasonably well-calibrated.  For example, EBA Pillar 2 guidance on IRB models requires checking that observed default rates closely match predicted PDs.  If not, the model may need adjustment (calibration).  If H-L rejects a model, analysts should judge if the deviation is economically material.  In summary, calibration assessment involves statistical tests and also human judgement on the materiality of any miscalibration.
 
@@ -41,9 +41,9 @@ Blindly trusting p-values in large samples.  A trivial discrepancy with millions
 </Trap>
 
 <NeverConfuse a="Calibration (Goodness-of-fit)" b="Discrimination (AUC/Gini)">
-**Calibration (Goodness-of-fit)** — how closely the model’s predicted probabilities match actual outcomes (tested by H-L, calibration plots).  
----  
-**Discrimination (AUC/Gini)** — how well the model orders outcomes (tested by AUC/KS).  
+**Calibration (Goodness-of-fit)** — how closely the model’s predicted probabilities match actual outcomes (tested by H-L, calibration plots).
+---
+**Discrimination (AUC/Gini)** — how well the model orders outcomes (tested by AUC/KS).
 They address different qualities.  A model can discriminate well but still be mis-calibrated.
 </NeverConfuse>
 

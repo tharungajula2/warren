@@ -34,9 +34,9 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-&lt;Flow&gt;
+<Flow>
 TableA  Full Join  TableB  = Discrepancies (NULLs for missing)
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Always match on a clear key (e.g. LoanID) and include all data sources needed. Use aggregates (sums, counts) to verify totals align as a quick check.
@@ -47,8 +47,8 @@ Mismatched keys or joins hide differences. For example, an inner join drops unma
 </Trap>
 
 <NeverConfuse a="INNER JOIN" b="FULL OUTER JOIN">
-**INNER JOIN** — only matching rows (not useful alone for recon).  
----  
+**INNER JOIN** — only matching rows (not useful alone for recon).
+---
 **FULL OUTER JOIN** — includes mismatches from both sides (needed to find missing records).
 </NeverConfuse>
 

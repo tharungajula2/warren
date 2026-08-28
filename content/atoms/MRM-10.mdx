@@ -31,11 +31,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Models are dynamic; their performance can drift over time as data or conditions change.  Banks therefore establish an **ongoing monitoring program**.  This typically involves: 
-- **Performance tracking:** comparing model predictions to actual results (backtesting). For example, periodically compare predicted default rates to realized defaults.  
-- **Data drift checks:** computing stability metrics (PSI/CSI) on input variables or score distributions (see MRM-16).  Significant shifts in data distributions may signal model drift.  
-- **Thresholds:** setting quantitative thresholds (e.g. maximum allowable PSI) that, if exceeded, trigger investigation or revalidation.  Common practice is PSI&lt;0.10 (little change), 0.10–0.25 moderate, &gt;0.25 significant.  
-- **Periodic reviews:** formal re-validation cycles or ad-hoc reviews when performance degrades.  Regulators discourage fixed cadences; instead, use a risk-based approach to determine review frequency.  
+Models are dynamic; their performance can drift over time as data or conditions change.  Banks therefore establish an **ongoing monitoring program**.  This typically involves:
+- **Performance tracking:** comparing model predictions to actual results (backtesting). For example, periodically compare predicted default rates to realized defaults.
+- **Data drift checks:** computing stability metrics (PSI/CSI) on input variables or score distributions (see MRM-16).  Significant shifts in data distributions may signal model drift.
+- **Thresholds:** setting quantitative thresholds (e.g. maximum allowable PSI) that, if exceeded, trigger investigation or revalidation.  Common practice is PSI&lt;0.10 (little change), 0.10–0.25 moderate, &gt;0.25 significant.
+- **Periodic reviews:** formal re-validation cycles or ad-hoc reviews when performance degrades.  Regulators discourage fixed cadences; instead, use a risk-based approach to determine review frequency.
 
 Regulators support strong monitoring.  PRA SS1/23 Principle 5 expects firms to have “model risk mitigants” including performance monitoring and expert overrides.  The PRA details standards for monitoring model performance (criteria, thresholds, back-testing).  RBI’s draft also requires “ongoing performance testing using backward-looking and forward-looking approaches”.  In the US, SR 26-2 lists monitoring as a governance activity (OCC noted monitoring and outcome analysis as sound practice in vendor models).
 
@@ -50,9 +50,9 @@ Assuming a validated model will stay valid forever.  For example, **ignoring a r
 </Trap>
 
 <NeverConfuse a="Monitoring" b="Validation">
-**Monitoring** — ongoing checks of model output/data (e.g. backtests, stability indices).  
----  
-**Validation** — formal, periodic re-assessment of the whole model.  
+**Monitoring** — ongoing checks of model output/data (e.g. backtests, stability indices).
+---
+**Validation** — formal, periodic re-assessment of the whole model.
 They are related but different stages.  Monitoring is continuous; validation is periodic/developer review (see MRM-08).
 </NeverConfuse>
 

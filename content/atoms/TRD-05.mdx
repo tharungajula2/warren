@@ -18,7 +18,7 @@ as_of: null
 next_effective_date: null
 status: draft
 verified: false
-reading_minutes: 3
+reading_minutes: 2
 sources:
   - label: 'FINRA, Brush Up on Bonds: Interest Rate Changes and Duration'
     url: >-
@@ -44,17 +44,17 @@ Duration is not maturity. A 10-year high-coupon bond generally has lower duratio
 
 At portfolio level, duration supports hedging and risk aggregation, but parallel-shift duration misses changes in curve shape. Key-rate durations or bucketed sensitivities are needed when different maturities move by different amounts.
 
-&lt;Flow&gt;
+<Flow>
 Yield shock
    |
    v
-First-order effect --------&amp;gt; Duration
+First-order effect --------&gt; Duration
    |
-   +--&amp;gt; curvature correction -&amp;gt; Convexity
+   +--&gt; curvature correction -&gt; Convexity
    |
    v
 Estimated bond-price change
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Use duration for local slope and convexity for curvature; neither is a substitute for understanding the cash flows and options.

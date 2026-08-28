@@ -26,19 +26,19 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-For instance, to summarize a loan portfolio, one might compute total outstanding by product:  
+For instance, to summarize a loan portfolio, one might compute total outstanding by product:
 ```sql
 SELECT ProductType, SUM(OutstandingBalance) AS TotalBalance
 FROM Loans
 GROUP BY ProductType;
-```  
-This splits the data by each `ProductType` (group), then `SUM` is applied per group. Often combined with `COUNT`, `AVG`, etc. To filter on aggregate values (e.g. only products with large totals), use `HAVING`:  
+```
+This splits the data by each `ProductType` (group), then `SUM` is applied per group. Often combined with `COUNT`, `AVG`, etc. To filter on aggregate values (e.g. only products with large totals), use `HAVING`:
 ```sql
 SELECT ProductType, SUM(OutstandingBalance) AS TotalBalance
 FROM Loans
 GROUP BY ProductType
 HAVING SUM(OutstandingBalance) &gt; 1000000;
-```  
+```
 This returns only products where the summed balance exceeds a threshold. Note `HAVING` comes after grouping, unlike `WHERE` which filters rows before grouping.
 
 <Rule label="PERMANENT RULE">
@@ -50,8 +50,8 @@ Omitting required `GROUP BY` columns (or aggregating every column) causes SQL er
 </Trap>
 
 <NeverConfuse a="WHERE" b="HAVING">
-**WHERE** — filters individual rows before grouping.  
----  
+**WHERE** — filters individual rows before grouping.
+---
 **HAVING** — filters entire groups after aggregation.
 </NeverConfuse>
 

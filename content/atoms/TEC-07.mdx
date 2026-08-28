@@ -29,12 +29,12 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-Example: to assign row numbers within each product line:  
+Example: to assign row numbers within each product line:
 ```sql
 SELECT LoanID, ProductType,
        ROW_NUMBER() OVER (PARTITION BY ProductType ORDER BY StartDate) AS LoanSeq
 FROM Loans;
-```  
+```
 Here `ROW_NUMBER` restarts count for each `ProductType` group. `RANK()` would give the same sequence number to ties.
 
 <Rule label="PERMANENT RULE">
@@ -46,8 +46,8 @@ Forgetting `PARTITION BY` leads to global ranking instead of per-group. Also, no
 </Trap>
 
 <NeverConfuse a="ROW_NUMBER()" b="RANK()">
-**ROW_NUMBER()** — assigns unique sequential numbers (1,2,3...).  
----  
+**ROW_NUMBER()** — assigns unique sequential numbers (1,2,3...).
+---
 **RANK()** — assigns the same rank to ties (1,2,2,4...).
 </NeverConfuse>
 

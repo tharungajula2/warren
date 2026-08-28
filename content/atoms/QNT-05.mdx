@@ -31,13 +31,13 @@ In credit risk, CIs are crucial. For example, IRB models often use confidence bo
 
 **Calculation:** For large samples, a CI can be approximate normal: estimate ± z*SE, where SE is the standard error of the estimate. For proportion PD, SE = sqrt(p*(1-p)/n). For small samples or rare events, use exact (binomial) or bootstrap CIs. Also, always report confidence level (e.g. 95%) and sample size context.
 
-In summary, CI expresses estimation uncertainty: wider if data are sparse or variable, narrower with more/larger data. The permanent rule: always pair point estimates (like PD) with a CI to show reliability. Regulators often look at these intervals when backtesting models. 
+In summary, CI expresses estimation uncertainty: wider if data are sparse or variable, narrower with more/larger data. The permanent rule: always pair point estimates (like PD) with a CI to show reliability. Regulators often look at these intervals when backtesting models.
 
-&lt;Flow&gt;
-Sample PD = 2.0%  (50 defaults/2500 loans)  
-SE = sqrt(0.02*0.98/2500) ≈ 0.009  
+<Flow>
+Sample PD = 2.0%  (50 defaults/2500 loans)
+SE = sqrt(0.02*0.98/2500) ≈ 0.009
 95% CI ≈ 2.0% ± 1.96*0.9% = [0.22%, 3.78%]
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Report estimates with their confidence intervals. The interval indicates how much estimation error might exist due to finite data.
@@ -48,8 +48,8 @@ Misinterpreting CI as probability of parameter. E.g. “We’re 95% sure true PD
 </Trap>
 
 <NeverConfuse a="95% confidence interval" b="Credible interval (Bayesian)">
-**95% confidence interval** — range capturing the true parameter in 95% of repeated samples.  
----  
+**95% confidence interval** — range capturing the true parameter in 95% of repeated samples.
+---
 **Credible interval (Bayesian)** — range where the parameter has 95% probability given the data (Bayesian concept). CI’s guarantee is about the method, not the single interval’s probability.
 </NeverConfuse>
 

@@ -25,11 +25,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For example, a report might include a column “Non-Performing Asset Ratio.” Metadata would record that this is calculated as “Total NPA amount / Total advances” and has business unit “Retail Loans.” The business glossary would define “Non-Performing Asset” (e.g. a loan overdue &gt;90 days). Good metadata systems also track data source, format, and constraints for each field. 
+For example, a report might include a column “Non-Performing Asset Ratio.” Metadata would record that this is calculated as “Total NPA amount / Total advances” and has business unit “Retail Loans.” The business glossary would define “Non-Performing Asset” (e.g. a loan overdue &gt;90 days). Good metadata systems also track data source, format, and constraints for each field.
 
 Under RBI guidance, banks are urged to use common taxonomies and sync metadata across systems. This means aligning internal definitions with external ones (e.g. RBI’s definition of NPA). A single business glossary prevents mismatches where one department uses one term differently from another. Both metadata and glossary entries should have clear ownership, and be updated when policies change. This is a cornerstone of data governance: without metadata, reports can’t be properly interpreted and controls on data validity are weak.
 
-&lt;Flow&gt;
+<Flow>
 +----------------------+
 | Business Glossary    |
 +----------------------+
@@ -45,7 +45,7 @@ Under RBI guidance, banks are urged to use common taxonomies and sync metadata a
 | Field | Source | Type | ... |
 | NPA_Amount | CoreBanking | Curr. | ... |
 +-----------------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 All regulatory and risk data fields must have definitions and metadata documented, linked to the official business glossary.
@@ -56,8 +56,8 @@ Assuming everyone understands a term; failing to codify definitions causes incon
 </Trap>
 
 <NeverConfuse a="Metadata" b="Business glossary">
-**Metadata** — Details about data fields (type, format, source, lineage).  
----  
+**Metadata** — Details about data fields (type, format, source, lineage).
+---
 **Business glossary** — A dictionary of business terms with plain-language definitions (bridges business and technical meaning).
 </NeverConfuse>
 

@@ -22,6 +22,17 @@ const PREFIX_DOMAIN_MAP = {
   QNT: "quantitative",
 };
 
+// Load Manual Annotations if file exists
+let manualAnnotations = {};
+const ANNOTATIONS_PATH = path.join(process.cwd(), "scripts", "manual-annotations.json");
+if (fs.existsSync(ANNOTATIONS_PATH)) {
+  try {
+    manualAnnotations = JSON.parse(fs.readFileSync(ANNOTATIONS_PATH, "utf-8"));
+  } catch (e) {
+    console.warn("⚠️ [WARN] Could not parse manual-annotations.json:", e.message);
+  }
+}
+
 // Parse command line flags
 const args = process.argv.slice(2);
 let fileName = "01_FND_foundations.md";
@@ -54,7 +65,6 @@ if (!fs.existsSync(IMPORT_FILE_PATH)) {
 const rawContent = fs.readFileSync(IMPORT_FILE_PATH, "utf-8");
 
 // ChatGPT Citation Token Stripping Regex
-// Matches all variations of cite + turnXsearchY / turnXviewY surrounded by private-use unicode codepoints
 const CITATION_REGEX = /[\s\u00A0]*[^\w\s.,;:!?()'"/\-–—]*cite[^\w\s.,;:!?()'"/\-–—]*(?:turn\d+(?:search|view)\d+|[^\w\s.,;:!?()'"/\-–—])+/gi;
 
 let citationTokenCount = 0;
@@ -243,7 +253,6 @@ for (const seg of rawSegments) {
       // Split on --- or double newline
       const parts = secBody.split(/---+/).map((p) => p.trim());
       if (parts.length >= 2) {
-        // Extract concept titles
         const matchA = parts[0].match(/^\*\*([^*]+)\*\*/);
         const matchB = parts[1].match(/^\*\*([^*]+)\*\*/);
         neverConfuseA = matchA ? matchA[1] : "Concept A";
@@ -254,40 +263,36 @@ for (const seg of rawSegments) {
       }
       sectionStats.NeverConfuse++;
     } else if (secTitle.includes("jurisdiction variants")) {
-// Function to extract earliest future effective date (2027 or later) from text
-function extractNextEffectiveDate(text) {
-  if (!text) return null;
-  const monthMap = {
-    jan: "01", january: "01", feb: "02", february: "02", mar: "03", march: "03",
-    apr: "04", april: "04", may: "05", jun: "06", june: "06", jul: "07", july: "07",
-    aug: "08", august: "08", sep: "09", september: "09", oct: "10", october: "10",
-    nov: "11", november: "11", dec: "12", december: "12"
-  };
+      function extractNextEffectiveDate(text) {
+        if (!text) return null;
+        const monthMap = {
+          jan: "01", january: "01", feb: "02", february: "02", mar: "03", march: "03",
+          apr: "04", april: "04", may: "05", jun: "06", june: "06", jul: "07", july: "07",
+          aug: "08", august: "08", sep: "09", september: "09", oct: "10", october: "10",
+          nov: "11", november: "11", dec: "12", december: "12"
+        };
 
-  const dates = [];
+        const dates = [];
+        const regex1 = /\b(\d{1,2})\s+([A-Za-z]+)\s+(202[7-9]|203[0-9])\b/g;
+        let match;
+        while ((match = regex1.exec(text)) !== null) {
+          const day = match[1].padStart(2, "0");
+          const mStr = match[2].toLowerCase();
+          const year = match[3];
+          if (monthMap[mStr]) {
+            dates.push(`${year}-${monthMap[mStr]}-${day}`);
+          }
+        }
 
-  // Match e.g. "1 January 2027", "1 Jan 2027", "1 April 2027", "31 December 2027"
-  const regex1 = /\b(\d{1,2})\s+([A-Za-z]+)\s+(202[7-9]|203[0-9])\b/g;
-  let match;
-  while ((match = regex1.exec(text)) !== null) {
-    const day = match[1].padStart(2, "0");
-    const mStr = match[2].toLowerCase();
-    const year = match[3];
-    if (monthMap[mStr]) {
-      dates.push(`${year}-${monthMap[mStr]}-${day}`);
-    }
-  }
+        const regex2 = /\b(202[7-9]|203[0-9])-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\b/g;
+        while ((match = regex2.exec(text)) !== null) {
+          dates.push(match[0]);
+        }
 
-  // Match e.g. "2027-01-01"
-  const regex2 = /\b(202[7-9]|203[0-9])-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\b/g;
-  while ((match = regex2.exec(text)) !== null) {
-    dates.push(match[0]);
-  }
-
-  if (dates.length === 0) return null;
-  dates.sort();
-  return dates[0];
-}
+        if (dates.length === 0) return null;
+        dates.sort();
+        return dates[0];
+      }
 
       jurisdictionContent = secBody;
       if (!secBody.startsWith("**No delta.**")) {
@@ -300,7 +305,6 @@ function extractNextEffectiveDate(text) {
       }
       sectionStats.Jurisdiction++;
     } else if (secTitle.includes("recall")) {
-      // Parse Q: and A: pairs
       const qLines = secBody.split(/\r?\n/);
       let curQ = "";
       let curA = "";
@@ -322,7 +326,6 @@ function extractNextEffectiveDate(text) {
       }
       sectionStats.Recall++;
     } else if (secTitle.includes("sources")) {
-      // Parse Sources bullets into frontmatter array
       const sLines = secBody.split(/\r?\n/);
       for (const sLine of sLines) {
         const trimmed = sLine.trim().replace(/^-\s*/, "");
@@ -347,43 +350,76 @@ function extractNextEffectiveDate(text) {
       .replace(/\{/g, "&#123;")
       .replace(/\}/g, "&#125;");
 
-  // Convert ```text fenced code blocks into <Flow> components
-  mainProse = mainProse.replace(/```text\s*\r?\n([\s\S]*?)\r?\n```/g, (m, code) => {
-    sectionStats.Flow++;
-    return `<Flow>\n${escapeJsx(code.trim())}\n</Flow>`;
-  });
+  // Helper to clean prose text: trim line ends and clean doubled asterisks
+  const cleanProse = (text) => {
+    if (!text) return "";
+    return text
+      .split(/\r?\n/)
+      .map((l) => l.trimEnd())
+      .join("\n")
+      .replace(/\*{4,}|\*\*\s+\*\*/g, "**")
+      .trim();
+  };
 
   // Assemble MDX Body Component Structure
   const bodyComponents = [];
 
+  // Parse mainProse for ```text ... ``` code blocks to convert them to <Flow> components cleanly
   if (mainProse) {
-    bodyComponents.push(escapeJsx(mainProse));
+    const flowRegex = /```text\s*\r?\n([\s\S]*?)\r?\n```/g;
+    let lastIdx = 0;
+    let match;
+
+    while ((match = flowRegex.exec(mainProse)) !== null) {
+      const proseBefore = mainProse.substring(lastIdx, match.index);
+      const cleanedProse = cleanProse(proseBefore);
+      if (cleanedProse) {
+        bodyComponents.push(escapeJsx(cleanedProse));
+      }
+
+      sectionStats.Flow++;
+      const code = match[1]; // keep original code with newlines intact!
+      const codeLines = code.split(/\r?\n/).map((l) => l.trimEnd());
+      const escapedCode = codeLines.map((l) => escapeJsx(l)).join("\n");
+      bodyComponents.push(`<Flow>\n${escapedCode}\n</Flow>`);
+
+      lastIdx = flowRegex.lastIndex;
+    }
+
+    const proseAfter = mainProse.substring(lastIdx);
+    const cleanedProseAfter = cleanProse(proseAfter);
+    if (cleanedProseAfter) {
+      bodyComponents.push(escapeJsx(cleanedProseAfter));
+    }
   }
 
   if (ruleContent) {
-    bodyComponents.push(`<Rule label="PERMANENT RULE">\n${escapeJsx(ruleContent)}\n</Rule>`);
+    const cleaned = cleanProse(ruleContent);
+    bodyComponents.push(`<Rule label="PERMANENT RULE">\n${escapeJsx(cleaned)}\n</Rule>`);
   }
 
   if (trapContent) {
-    bodyComponents.push(`<Trap label="PERMANENT TRAP">\n${escapeJsx(trapContent)}\n</Trap>`);
+    const cleaned = cleanProse(trapContent);
+    bodyComponents.push(`<Trap label="PERMANENT TRAP">\n${escapeJsx(cleaned)}\n</Trap>`);
   }
 
   if (neverConfuseContent) {
+    const cleaned = cleanProse(neverConfuseContent);
     if (neverConfuseA && neverConfuseB) {
       bodyComponents.push(
-        `<NeverConfuse a="${escapeJsx(neverConfuseA)}" b="${escapeJsx(neverConfuseB)}">\n${escapeJsx(neverConfuseContent)}\n</NeverConfuse>`
+        `<NeverConfuse a="${escapeJsx(neverConfuseA.trim())}" b="${escapeJsx(neverConfuseB.trim())}">\n${escapeJsx(cleaned)}\n</NeverConfuse>`
       );
     } else {
-      bodyComponents.push(`<NeverConfuse>\n${escapeJsx(neverConfuseContent)}\n</NeverConfuse>`);
+      bodyComponents.push(`<NeverConfuse>\n${escapeJsx(cleaned)}\n</NeverConfuse>`);
     }
   }
 
   if (jurisdictionContent) {
-    if (jurisdictionContent.startsWith("**No delta.**")) {
-      bodyComponents.push(`<Rule label="NO DELTA">\n${escapeJsx(jurisdictionContent)}\n</Rule>`);
+    const cleaned = cleanProse(jurisdictionContent);
+    if (cleaned.startsWith("**No delta.**")) {
+      bodyComponents.push(`<Rule label="NO DELTA">\n${escapeJsx(cleaned)}\n</Rule>`);
     } else {
-      // Parse IN, UK, EU, US lines
-      const jLines = jurisdictionContent.split(/\r?\n/);
+      const jLines = cleaned.split(/\r?\n/);
       let jBlocks = [];
       for (const jLine of jLines) {
         const match = jLine.match(/^\*\*(IN|UK|EU|US)\*\*\s*(.+)$/);
@@ -401,144 +437,155 @@ function extractNextEffectiveDate(text) {
     const recallJsx = recallPairs
       .map(
         (pair) =>
-          `<Recall\n  q="${pair.q.replace(/"/g, '&quot;')}"\n  a="${pair.a.replace(/"/g, '&quot;')}"\n/>`
+          `<Recall\n  q="${cleanProse(pair.q).replace(/"/g, '&quot;')}"\n  a="${cleanProse(pair.a).replace(/"/g, '&quot;')}"\n/>`
       )
       .join("\n\n");
     bodyComponents.push(recallJsx);
   }
 
-  const finalMdxBody = bodyComponents.join("\n\n");
+  let finalMdxBody = bodyComponents.join("\n\n");
+
+  // Re-apply manual annotation if defined for this atom ID (e.g. IND-14)
+  if (manualAnnotations[id]) {
+    const ann = manualAnnotations[id];
+    if (ann.prepend_body) {
+      finalMdxBody = ann.prepend_body + "\n\n" + finalMdxBody;
+    }
+    if (ann.append_body) {
+      finalMdxBody = finalMdxBody + "\n\n" + ann.append_body;
+    }
+  }
 
   // Word count & reading minutes
   const cleanText = (oneScreen + " " + finalMdxBody).replace(/<[^>]+>/g, "").trim();
   const wordCount = cleanText.split(/\s+/).filter(Boolean).length;
   const readingMinutes = Math.max(1, Math.ceil(wordCount / 200));
 
-function inferSubdomain(atomId) {
-  const [prefix, numStr] = atomId.split("-");
-  const num = parseInt(numStr, 10);
+  function inferSubdomain(atomId) {
+    const [prefix, numStr] = atomId.split("-");
+    const num = parseInt(numStr, 10);
 
-  if (prefix === "FND") {
-    if (num <= 5) return "bank-mechanics";
-    if (num <= 10) return "financial-statements";
-    if (num <= 14) return "time-value";
-    if (num <= 19) return "risk-language";
-    return "governance";
+    if (prefix === "FND") {
+      if (num <= 5) return "bank-mechanics";
+      if (num <= 10) return "financial-statements";
+      if (num <= 14) return "time-value";
+      if (num <= 19) return "risk-language";
+      return "governance";
+    }
+
+    if (prefix === "CR") {
+      if (num <= 11) return "exposure-and-default";
+      if (num <= 18) return "risk-parameters";
+      if (num <= 23) return "scorecards-and-ratings";
+      return "portfolio-risk";
+    }
+
+    if (prefix === "IMP") {
+      if (num <= 5) return "ecl-foundations";
+      if (num <= 12) return "three-stage-architecture";
+      if (num <= 15) return "lifetime-modelling";
+      return "governance-and-jurisdictions";
+    }
+
+    if (prefix === "CAP") {
+      if (num <= 8) return "capital-stack";
+      if (num <= 11) return "rwa-and-pillars";
+      if (num <= 17) return "credit-approaches";
+      if (num <= 20) return "mitigation";
+      return "pillar-2-and-jurisdictions";
+    }
+
+    if (prefix === "TLM") {
+      if (num <= 11) return "irrbb-and-mismatches";
+      if (num <= 19) return "liquidity-risk";
+      if (num <= 25) return "funds-transfer-pricing";
+      return "systemic-and-jurisdictions";
+    }
+
+    if (prefix === "MRM") {
+      if (num <= 5) return "model-risk-foundations";
+      if (num <= 11) return "governance-and-lifecycle";
+      return "validation-and-metrics";
+    }
+
+    if (prefix === "DAT") {
+      if (num <= 6) return "bcbs239-and-aggregation";
+      if (num <= 12) return "architecture-and-lineage";
+      if (num <= 18) return "data-quality-and-governance";
+      return "reporting-and-delivery";
+    }
+
+    if (prefix === "IND") {
+      if (num <= 5) return "regulatory-structure";
+      if (num <= 10) return "iracp-npa-norms";
+      if (num <= 12) return "priority-sector";
+      if (num <= 15) return "digital-lending";
+      if (num <= 20) return "co-lending-and-data-tech";
+      return "enforcement-and-conduct";
+    }
+
+    if (prefix === "TRD") {
+      if (num <= 9) return "cash-products-and-bonds";
+      if (num <= 12) return "fx-and-ndfs";
+      if (num <= 22) return "derivatives-and-swaps";
+      if (num <= 28) return "market-infrastructure-and-lifecycle";
+      return "documentation-collateral-book";
+    }
+
+    if (prefix === "CCR") {
+      if (num <= 4) return "exposure-and-wrong-way-risk";
+      if (num <= 9) return "netting-margin-and-collateral";
+      if (num <= 13) return "central-clearing-and-ccp-risk";
+      if (num <= 16) return "sa-ccr-and-imm-approaches";
+      if (num <= 21) return "xva-and-cva-capital";
+      return "settlement-and-jurisdictions";
+    }
+
+    if (prefix === "MRK") {
+      if (num <= 3) return "market-risk-foundations";
+      if (num <= 10) return "var-and-expected-shortfall";
+      if (num <= 18) return "frtb-sa-and-ima-capital";
+      return "valuation-control-and-jurisdictions";
+    }
+
+    if (prefix === "QNT") {
+      if (num <= 7) return "statistical-foundations-and-sampling";
+      if (num <= 12) return "regression-and-scorecard-modelling";
+      if (num <= 17) return "machine-learning-and-explainability";
+      if (num <= 22) return "time-series-and-forecasting";
+      return "validation-leakage-and-governance";
+    }
+
+    if (prefix === "TEC") {
+      if (num <= 7) return "sql-querying-and-window-functions";
+      if (num <= 14) return "data-engineering-and-reconciliation";
+      if (num <= 20) return "pandas-analytics-and-dataframes";
+      return "python-vectorization-and-engineering";
+    }
+
+    if (prefix === "OPR") {
+      if (num <= 3) return "operational-risk-foundations";
+      if (num <= 9) return "rcsa-kri-and-control-governance";
+      if (num <= 13) return "sma-and-capital-approaches";
+      return "resilience-third-party-and-conduct";
+    }
+
+    if (prefix === "AML") {
+      if (num <= 5) return "financial-crime-foundations";
+      if (num <= 12) return "kyc-edd-and-customer-due-diligence";
+      if (num <= 16) return "transaction-monitoring-and-sanctions";
+      return "fraud-and-aml-governance";
+    }
+
+    if (prefix === "BA") {
+      if (num <= 8) return "ba-foundations-and-elicitation";
+      if (num <= 14) return "brd-functional-specs-and-user-stories";
+      if (num <= 19) return "testing-uat-and-cutover";
+      return "project-delivery-and-scope-governance";
+    }
+
+    return "unsorted";
   }
-
-  if (prefix === "CR") {
-    if (num <= 11) return "exposure-and-default";
-    if (num <= 18) return "risk-parameters";
-    if (num <= 23) return "scorecards-and-ratings";
-    return "portfolio-risk";
-  }
-
-  if (prefix === "IMP") {
-    if (num <= 5) return "ecl-foundations";
-    if (num <= 12) return "three-stage-architecture";
-    if (num <= 15) return "lifetime-modelling";
-    return "governance-and-jurisdictions";
-  }
-
-  if (prefix === "CAP") {
-    if (num <= 8) return "capital-stack";
-    if (num <= 11) return "rwa-and-pillars";
-    if (num <= 17) return "credit-approaches";
-    if (num <= 20) return "mitigation";
-    return "pillar-2-and-jurisdictions";
-  }
-
-  if (prefix === "TLM") {
-    if (num <= 11) return "irrbb-and-mismatches";
-    if (num <= 19) return "liquidity-risk";
-    if (num <= 25) return "funds-transfer-pricing";
-    return "systemic-and-jurisdictions";
-  }
-
-  if (prefix === "MRM") {
-    if (num <= 5) return "model-risk-foundations";
-    if (num <= 11) return "governance-and-lifecycle";
-    return "validation-and-metrics";
-  }
-
-  if (prefix === "DAT") {
-    if (num <= 6) return "bcbs239-and-aggregation";
-    if (num <= 12) return "architecture-and-lineage";
-    if (num <= 18) return "data-quality-and-governance";
-    return "reporting-and-delivery";
-  }
-
-  if (prefix === "IND") {
-    if (num <= 5) return "regulatory-structure";
-    if (num <= 10) return "iracp-npa-norms";
-    if (num <= 12) return "priority-sector";
-    if (num <= 15) return "digital-lending";
-    if (num <= 20) return "co-lending-and-data-tech";
-    return "enforcement-and-conduct";
-  }
-
-  if (prefix === "TRD") {
-    if (num <= 9) return "cash-products-and-bonds";
-    if (num <= 12) return "fx-and-ndfs";
-    if (num <= 22) return "derivatives-and-swaps";
-    if (num <= 28) return "market-infrastructure-and-lifecycle";
-    return "documentation-collateral-book";
-  }
-
-  if (prefix === "CCR") {
-    if (num <= 4) return "exposure-and-wrong-way-risk";
-    if (num <= 9) return "netting-margin-and-collateral";
-    if (num <= 13) return "central-clearing-and-ccp-risk";
-    if (num <= 16) return "sa-ccr-and-imm-approaches";
-    if (num <= 21) return "xva-and-cva-capital";
-    return "settlement-and-jurisdictions";
-  }
-
-  if (prefix === "MRK") {
-    if (num <= 3) return "market-risk-foundations";
-    if (num <= 10) return "var-and-expected-shortfall";
-    if (num <= 18) return "frtb-sa-and-ima-capital";
-    return "valuation-control-and-jurisdictions";
-  }
-
-  if (prefix === "QNT") {
-    if (num <= 7) return "statistical-foundations-and-sampling";
-    if (num <= 12) return "regression-and-scorecard-modelling";
-    if (num <= 17) return "machine-learning-and-explainability";
-    if (num <= 22) return "time-series-and-forecasting";
-    return "validation-leakage-and-governance";
-  }
-
-  if (prefix === "TEC") {
-    if (num <= 7) return "sql-querying-and-window-functions";
-    if (num <= 14) return "data-engineering-and-reconciliation";
-    if (num <= 20) return "pandas-analytics-and-dataframes";
-    return "python-vectorization-and-engineering";
-  }
-
-  if (prefix === "OPR") {
-    if (num <= 3) return "operational-risk-foundations";
-    if (num <= 9) return "rcsa-kri-and-control-governance";
-    if (num <= 13) return "sma-and-capital-approaches";
-    return "resilience-third-party-and-conduct";
-  }
-
-  if (prefix === "AML") {
-    if (num <= 5) return "financial-crime-foundations";
-    if (num <= 12) return "kyc-edd-and-customer-due-diligence";
-    if (num <= 16) return "transaction-monitoring-and-sanctions";
-    return "fraud-and-aml-governance";
-  }
-
-  if (prefix === "BA") {
-    if (num <= 8) return "ba-foundations-and-elicitation";
-    if (num <= 14) return "brd-functional-specs-and-user-stories";
-    if (num <= 19) return "testing-uat-and-cutover";
-    return "project-delivery-and-scope-governance";
-  }
-
-  return "unsorted";
-}
 
   // Frontmatter object
   const frontmatter = {
@@ -605,7 +652,7 @@ parsedAtoms.forEach((atom) => {
 
 // DRY-RUN REPORT OUTPUT
 console.log("\n===========================================================");
-console.log(`WARREN IMPORTER — PACK DRY-RUN REPORT: ${fileName}`);
+console.log(`WARREN IMPORTER — PACK REPORT: ${fileName}`);
 console.log("===========================================================");
 console.log(`📌 TOTAL ATOMS PARSED: ${parsedAtoms.length}`);
 console.log(`✂️ CITATION TOKENS STRIPPED: ${citationTokenCount}`);
@@ -617,19 +664,6 @@ console.log(`   - Jurisdiction (<Delta> / No Delta): ${sectionStats.Jurisdiction
 console.log(`   - Recall (<Recall>): ${sectionStats.Recall}`);
 console.log(`   - Sources (Frontmatter Array): ${sectionStats.Sources}`);
 console.log(`   - Flow (<Flow>): ${sectionStats.Flow}`);
-
-console.log("\n📝 PARSED ATOMS SUMMARY & WORD COUNTS:");
-console.table(
-  parsedAtoms.map((a) => ({
-    ID: a.id,
-    Title: a.title,
-    Type: a.frontmatter.type,
-    Domain: a.frontmatter.domain,
-    Prereqs: a.frontmatter.prerequisites.join(", ") || "none",
-    "Words": a.wordCount,
-    "Read (m)": a.frontmatter.reading_minutes,
-  }))
-);
 
 console.log(`\n⚠️ VALIDATION AUDIT WARNINGS (${validationWarnings.length}):`);
 if (validationWarnings.length === 0) {

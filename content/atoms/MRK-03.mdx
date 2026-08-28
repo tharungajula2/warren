@@ -24,7 +24,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 11_MRK_market_risk.md
 ---
-Instead of revaluing portfolios for every risk shock, traders and risk managers express exposure in sensitivities to risk factors.  **Delta risk** is the linear change in value per unit move in the underlying (e.g. bond yield or stock price).  **Vega risk** measures the change in instrument value for a change in implied volatility (important for options or caps).  **Curvature risk** (sometimes called gamma/volga) captures the additional non-linear loss beyond the linear delta approximation when large shocks or optionality is present. 
+Instead of revaluing portfolios for every risk shock, traders and risk managers express exposure in sensitivities to risk factors.  **Delta risk** is the linear change in value per unit move in the underlying (e.g. bond yield or stock price).  **Vega risk** measures the change in instrument value for a change in implied volatility (important for options or caps).  **Curvature risk** (sometimes called gamma/volga) captures the additional non-linear loss beyond the linear delta approximation when large shocks or optionality is present.
 
 For example, an at-the-money option has high vega and curvature: a spike in volatility or a large price move causes loss beyond the delta estimate.  FRTB explicitly models separate charges for delta, vega, and curvature in each risk class.
 

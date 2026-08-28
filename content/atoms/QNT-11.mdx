@@ -28,12 +28,12 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-Banks commonly use WOE because it yields linear relationships in log-odds space and deals well with missing values. Example: Suppose credit score binned:  
-- Score 1-300: 10% defaults (bads), 90% good =&gt; WOE = ln(0.90/0.10)=2.2.  
-- Score 301-600: 5% defaults, 95% good =&gt; WOE = ln(0.95/0.05)=2.94.  
-Higher WOE means a bin has relatively more goods (lower default risk). The logistic regression will use these WOE values to model default odds linearly.  
+Banks commonly use WOE because it yields linear relationships in log-odds space and deals well with missing values. Example: Suppose credit score binned:
+- Score 1-300: 10% defaults (bads), 90% good =&gt; WOE = ln(0.90/0.10)=2.2.
+- Score 301-600: 5% defaults, 95% good =&gt; WOE = ln(0.95/0.05)=2.94.
+Higher WOE means a bin has relatively more goods (lower default risk). The logistic regression will use these WOE values to model default odds linearly.
 
-**IV** is used to rank variable strength: higher IV implies stronger separation between goods/bads. Rough guide: IV&lt;0.02 not useful; 0.1-0.3 medium; &gt;0.5 extremely predictive. It sums the “divergence” of distribution. It’s not regulatory but common industry practice for feature selection.  
+**IV** is used to rank variable strength: higher IV implies stronger separation between goods/bads. Rough guide: IV&lt;0.02 not useful; 0.1-0.3 medium; &gt;0.5 extremely predictive. It sums the “divergence” of distribution. It’s not regulatory but common industry practice for feature selection.
 
 **Why binning:** Continuous variables may have non-linear PD relationships. Binning (e.g. by quantile) and computing WOE enforces piecewise-constant relationship, simplifying model. It also handles missing by treating missing as a separate bin. A caveat: bins should have enough data to avoid volatility.
 
@@ -46,8 +46,8 @@ Creating too many bins or bins with small counts. This inflates IV artificially 
 </Trap>
 
 <NeverConfuse a="WOE" b="IV">
-**WOE** — numeric encoding of bins: ln(%goods/%bads).  
----  
+**WOE** — numeric encoding of bins: ln(%goods/%bads).
+---
 **IV** — aggregate measure of how well a variable’s distribution separates goods/bads. High IV implies big differences in rates across bins. Unlike WOE, IV is a single number per variable.
 </NeverConfuse>
 

@@ -28,12 +28,12 @@ import_source: 13_TEC_sql_python.md
 ---
 # fast (vectorized):
 total = df['Balance'].sum()
-```  
-Or summarizing a loan tape into segments:  
+```
+Or summarizing a loan tape into segments:
 ```python
 summary = df.groupby('Segment').agg(&#123;'Outstanding':'sum', 'LoanID':'count'&#125;)
-```  
-This avoids explicit Python loops. Even custom functions can often be expressed as vectorized NumPy functions or pandas aggregations. 
+```
+This avoids explicit Python loops. Even custom functions can often be expressed as vectorized NumPy functions or pandas aggregations.
 
 In short: treat DataFrames like in-memory tables and use built-in operations. This is akin to using `SUM` in SQL vs iterating rows in application code.
 
@@ -46,8 +46,8 @@ Using `df.apply()` with a Python function on rows can be as slow as loops. Test 
 </Trap>
 
 <NeverConfuse a="Vectorized operation" b="Python loop or apply">
-**Vectorized operation** — an operation applied to entire array/column at once (fast, in C).  
----  
+**Vectorized operation** — an operation applied to entire array/column at once (fast, in C).
+---
 **Python loop or apply** — iterates in Python for each row (slow).
 </NeverConfuse>
 

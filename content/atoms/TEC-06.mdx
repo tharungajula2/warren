@@ -18,7 +18,7 @@ as_of: null
 next_effective_date: null
 status: draft
 verified: false
-reading_minutes: 2
+reading_minutes: 1
 sources:
   - label: >-
       Real Python Blog, *“Introduction to Common Table Expressions (CTEs)”*
@@ -27,7 +27,7 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-For example, instead of nesting multiple subqueries, use a CTE:  
+For example, instead of nesting multiple subqueries, use a CTE:
 ```sql
 WITH RecentLoans AS (
   SELECT LoanID, Principal, SaleDate
@@ -35,24 +35,25 @@ WITH RecentLoans AS (
   WHERE SaleDate &gt; '2025-01-01'
 )
 SELECT COUNT(*) FROM RecentLoans WHERE Principal &gt; 100000;
-```  
+```
 This defines `RecentLoans` once, then queries it. A subquery approach would nest the SELECT inside another SELECT.
 
-&lt;Flow&gt;
+<Flow>
 WITH cte_table AS (
     +------------------+
     | (complex query)  |
     +------------------+
 )
 SELECT * FROM cte_table;
-&lt;/Flow&gt;  
-&lt;Flow&gt;
+</Flow>
+
+<Flow>
 SELECT * FROM (
     +------------------+
     | (complex query)  |
     +------------------+
 ) AS sub;
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 A CTE must be immediately followed by a SELECT (or INSERT/UPDATE/DELETE) that references it.
@@ -63,8 +64,8 @@ A CTE’s scope is limited to one statement; it cannot be reused outside. Also, 
 </Trap>
 
 <NeverConfuse a="Subquery" b="CTE (WITH)">
-**Subquery** — an unnamed SELECT inside another query (inline, not reusable).  
----  
+**Subquery** — an unnamed SELECT inside another query (inline, not reusable).
+---
 **CTE (WITH)** — a named temporary table defined for one query (improves clarity and reuse).
 </NeverConfuse>
 

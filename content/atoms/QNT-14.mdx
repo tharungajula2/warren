@@ -30,12 +30,12 @@ sources:
     accessed: 28 Aug
 import_source: 12_QNT_statistics_ml.md
 ---
-Random forests apply the bootstrap-aggregation (bagging) technique to decision trees. We draw \(m\) random samples (with replacement) from the training data, train a separate tree on each sample, then combine the results. In classification (e.g. default/no default) the forest takes a majority vote; in regression (e.g. loss given default) it averages outputs. Additionally, at each split, a random forest only considers a random subset of features (e.g. \(\sqrt&#123;p&#125;\) of \(p\) total) to decide the split. This feature subsampling de-correlates the trees, further reducing variance. The ensemble is thus robust: even if some trees overfit their sample, the majority smooths out idiosyncrasies. The model requires minimal preprocessing: features of different scales or missing values are handled inherently by trees. 
+Random forests apply the bootstrap-aggregation (bagging) technique to decision trees. We draw \(m\) random samples (with replacement) from the training data, train a separate tree on each sample, then combine the results. In classification (e.g. default/no default) the forest takes a majority vote; in regression (e.g. loss given default) it averages outputs. Additionally, at each split, a random forest only considers a random subset of features (e.g. \(\sqrt&#123;p&#125;\) of \(p\) total) to decide the split. This feature subsampling de-correlates the trees, further reducing variance. The ensemble is thus robust: even if some trees overfit their sample, the majority smooths out idiosyncrasies. The model requires minimal preprocessing: features of different scales or missing values are handled inherently by trees.
 
-In a credit scoring example, we might build 100 trees on different bootstrap samples of loan records. Each tree might split on various borrower attributes. The forest’s predicted probability of default is the average of all trees’ PD outputs. This typically outperforms one tree, as shown in practice: adding more trees (up to a point) usually lowers test error. Importantly, random forests can provide a measure of *out-of-bag* error (error on samples not included in each bootstrap), which serves as an internal validation.  
+In a credit scoring example, we might build 100 trees on different bootstrap samples of loan records. Each tree might split on various borrower attributes. The forest’s predicted probability of default is the average of all trees’ PD outputs. This typically outperforms one tree, as shown in practice: adding more trees (up to a point) usually lowers test error. Importantly, random forests can provide a measure of *out-of-bag* error (error on samples not included in each bootstrap), which serves as an internal validation.
 
-&lt;Flow&gt;
-+------------------+
+<Flow>
+            +------------------+
             | Training Data    |
             +---------+--------+
                       |
@@ -52,14 +52,14 @@ In a credit scoring example, we might build 100 trees on different bootstrap sam
     |                 |                 |
     v                 v                 v
  Pred1             Pred2             PredM
-    \       ...    /     ...      /       
-     \            /             /        
-      +------------------------+         
-      | Aggregate (avg or vote)|       
-      +------------------------+       
+    \       ...    /     ...      /
+     \            /             /
+      +------------------------+
+      | Aggregate (avg or vote)|
+      +------------------------+
                  |
             Final Prediction
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 A random forest uses *all* trees at inference, so the final prediction is an average (regression) or majority vote (classification) of many decorrelated trees. This ensemble effect dramatically lowers variance versus one tree.
@@ -70,8 +70,8 @@ Assuming a random forest cannot overfit. In practice, if trees are too deep or f
 </Trap>
 
 <NeverConfuse a="Random forest" b="Gradient boosting">
-**Random forest** — an ensemble that builds many trees on random samples (bagging) and aggregates their outputs for robustness.  
----  
+**Random forest** — an ensemble that builds many trees on random samples (bagging) and aggregates their outputs for robustness.
+---
 **Gradient boosting** — an ensemble built sequentially, where each tree is trained to correct the residuals of the prior ensemble. Unlike a random forest’s parallel bagging, boosting trains trees one after another.
 </NeverConfuse>
 

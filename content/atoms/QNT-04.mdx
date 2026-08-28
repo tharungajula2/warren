@@ -26,9 +26,9 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-In credit analysis, one might test if a new scorecard has a higher default rate than historical average. The null hypothesis (H₀) could be "new model’s default rate = old rate." After collecting data, compute a test statistic (e.g. difference of proportions) and derive a p-value: the probability of seeing such a difference (or more extreme) by chance if H₀ holds. If p is below a chosen significance level (e.g. 5%), H₀ is rejected, suggesting a real difference. 
+In credit analysis, one might test if a new scorecard has a higher default rate than historical average. The null hypothesis (H₀) could be "new model’s default rate = old rate." After collecting data, compute a test statistic (e.g. difference of proportions) and derive a p-value: the probability of seeing such a difference (or more extreme) by chance if H₀ holds. If p is below a chosen significance level (e.g. 5%), H₀ is rejected, suggesting a real difference.
 
-**Common misinterpretation:** p &lt; 0.05 does *not* mean there’s only 5% chance H₀ is true. Instead, it means that if H₀ were true, only 5% of repeated experiments would yield data at least this extreme. StatPearls clarifies: “The p-value is not the probability of the null hypothesis itself. It is the probability that, if the study were repeated infinitely, one would get results at least as extreme as observed.” Thus, p informs us about data extreme-ness under H₀, not the truth of H₀. 
+**Common misinterpretation:** p &lt; 0.05 does *not* mean there’s only 5% chance H₀ is true. Instead, it means that if H₀ were true, only 5% of repeated experiments would yield data at least this extreme. StatPearls clarifies: “The p-value is not the probability of the null hypothesis itself. It is the probability that, if the study were repeated infinitely, one would get results at least as extreme as observed.” Thus, p informs us about data extreme-ness under H₀, not the truth of H₀.
 
 For example, testing “portfolio default rate &gt; 2%” with sample data: suppose sample default was 2.5%, p = 0.03. This means there’s a 3% chance of seeing ≥2.5% defaults if true rate =2%. We might then conclude rate &gt;2%. But if sample size is small, p can be misleading; also p=0.03 doesn’t prove a big effect, just that result is unlikely by chance.
 
@@ -43,8 +43,8 @@ Believing p=0.03 means “there’s 97% chance this model is superior.” Actual
 </Trap>
 
 <NeverConfuse a="p-value" b="Confidence level">
-**p-value** — probability of observing data (or more extreme) under the null hypothesis.  
----  
+**p-value** — probability of observing data (or more extreme) under the null hypothesis.
+---
 **Confidence level** — (1–α), e.g. 95% CI means 5% significance; but CI is about parameter range (QNT-05), not the probability that H₀ is false.
 </NeverConfuse>
 

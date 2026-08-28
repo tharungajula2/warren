@@ -29,7 +29,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-In practice, conceptual review and data review are key initial steps in validation.  A **conceptual soundness review** looks at the model’s logic: does the methodology fit the problem?  Are the right variables included?  Are assumptions (e.g. linearity, stability) realistic?  For example, a default-probability model would fail conceptual validation if it omitted a key economic variable or used an inappropriate distribution.  The review also ensures that the model’s objectives and boundaries are clear.  This step guards against fundamental flaws that no amount of testing can fix.  
+In practice, conceptual review and data review are key initial steps in validation.  A **conceptual soundness review** looks at the model’s logic: does the methodology fit the problem?  Are the right variables included?  Are assumptions (e.g. linearity, stability) realistic?  For example, a default-probability model would fail conceptual validation if it omitted a key economic variable or used an inappropriate distribution.  The review also ensures that the model’s objectives and boundaries are clear.  This step guards against fundamental flaws that no amount of testing can fix.
 
 Immediately after, **data quality checks** are done.  Validators verify that the data used in development accurately reflect the intended population.  They check for errors (typos, duplicate records), missing or inconsistent values, and sample bias.  For instance, if a credit scoring model was trained on a poor-quality dataset, its predictions will be off.  RBI’s guidance explicitly requires validation to “verify the accuracy of data used in the model and reliability of data sources”.  This means confirming data fields make sense (e.g. no negative loan amounts) and ensuring no systematic distortions.  Validators also ensure that development data cover a representative range of situations; if not, they may recommend additional adjustments or overlays.
 
@@ -44,9 +44,9 @@ Skipping data checks because “it’s just the same raw inputs.”  Even minor 
 </Trap>
 
 <NeverConfuse a="Data bias" b="Model misspecification">
-**Data bias** — systematic error in inputs (e.g. non-representative sample).  
----  
-**Model misspecification** — a flaw in the model’s form or assumptions.  
+**Data bias** — systematic error in inputs (e.g. non-representative sample).
+---
+**Model misspecification** — a flaw in the model’s form or assumptions.
 They both hurt model results, but one is in the data, the other in the model logic.
 </NeverConfuse>
 

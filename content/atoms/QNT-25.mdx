@@ -32,14 +32,14 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-Overfitting often appears with very flexible models on limited data. For instance, a deep decision tree or a high-degree polynomial might perfectly classify every sample by carving the feature space finely, but will perform poorly on new data. Symptoms of overfitting include much higher accuracy (or lower error) on training data than on validation/test. Underfitting happens with overly simple models: e.g. linear regression on a clearly nonlinear relationship yields poor fit both on train and test, with high bias.  
+Overfitting often appears with very flexible models on limited data. For instance, a deep decision tree or a high-degree polynomial might perfectly classify every sample by carving the feature space finely, but will perform poorly on new data. Symptoms of overfitting include much higher accuracy (or lower error) on training data than on validation/test. Underfitting happens with overly simple models: e.g. linear regression on a clearly nonlinear relationship yields poor fit both on train and test, with high bias.
 
-Bias-variance tradeoff underlies this: simple models have high bias and low variance (stable but inaccurate), complex models have low bias and high variance (accurate on train, erratic on new). In credit modeling, overfit models may pick up on quirks of one portfolio and fail on another vintage. Underfit models (like a too-simple PD formula) might miss obvious risk factors entirely. Cross-validation on time-based splits (QNT-22/QNT-23) helps detect both: if training error is low but test error is high, that’s likely overfitting.  
+Bias-variance tradeoff underlies this: simple models have high bias and low variance (stable but inaccurate), complex models have low bias and high variance (accurate on train, erratic on new). In credit modeling, overfit models may pick up on quirks of one portfolio and fail on another vintage. Underfit models (like a too-simple PD formula) might miss obvious risk factors entirely. Cross-validation on time-based splits (QNT-22/QNT-23) helps detect both: if training error is low but test error is high, that’s likely overfitting.
 
-&lt;Flow&gt;
-Model complexity --&amp;gt;
-    Underfit (high bias) ---&amp;gt; Just right ---&amp;gt; Overfit (high variance)
-&lt;/Flow&gt;
+<Flow>
+Model complexity --&gt;
+    Underfit (high bias) ---&gt; Just right ---&gt; Overfit (high variance)
+</Flow>
 
 Regularisation (limiting complexity, pruning trees, L1/L2 penalties) and sufficient data are key to avoiding overfitting. Underfitting is remedied by adding relevant features or increasing model flexibility.
 
@@ -52,8 +52,8 @@ Chasing a perfect training score (e.g. 100% accuracy) at the expense of generali
 </Trap>
 
 <NeverConfuse a="Overfitting" b="Underfitting">
-**Overfitting** — model has captured random noise or idiosyncrasies in training data (high variance).  
----  
+**Overfitting** — model has captured random noise or idiosyncrasies in training data (high variance).
+---
 **Underfitting** — model is too simple, missing important patterns in the data (high bias).
 </NeverConfuse>
 

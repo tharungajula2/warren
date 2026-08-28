@@ -27,11 +27,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-In credit modeling, regularisation can improve out-of-sample PD predictions. Ridge (L2) is preferred when many correlated predictors exist (it stabilizes coefficients). Lasso (L1) is useful when you suspect only a few variables matter; it effectively does variable selection by zeroing weaker ones. Often, a hybrid Elastic Net (combination of L1+L2) is used if there’s grouping of correlated features. 
+In credit modeling, regularisation can improve out-of-sample PD predictions. Ridge (L2) is preferred when many correlated predictors exist (it stabilizes coefficients). Lasso (L1) is useful when you suspect only a few variables matter; it effectively does variable selection by zeroing weaker ones. Often, a hybrid Elastic Net (combination of L1+L2) is used if there’s grouping of correlated features.
 
-For example, in a model with dozens of socioeconomic variables (many correlated), ridge would shrink all, reducing variance. If you have hundreds of transactional features (most irrelevant), lasso would pick a smaller subset for simplicity. 
+For example, in a model with dozens of socioeconomic variables (many correlated), ridge would shrink all, reducing variance. If you have hundreds of transactional features (most irrelevant), lasso would pick a smaller subset for simplicity.
 
-**Interpretation:** With ridge, coefficients are biased smaller but all remain in model. With lasso, coefficients above threshold become zero (variable dropped). In credit, we must be cautious: lasso’s dropping may run into regulatory issues if dropping variables changes model logic. Usually, final modeler inspects which features lasso kept. 
+**Interpretation:** With ridge, coefficients are biased smaller but all remain in model. With lasso, coefficients above threshold become zero (variable dropped). In credit, we must be cautious: lasso’s dropping may run into regulatory issues if dropping variables changes model logic. Usually, final modeler inspects which features lasso kept.
 
 **Implementation:** Choose λ (penalty weight) by cross-validation. Larger λ = stronger penalty (smaller coefficients). Compare performance on validation: if too high, model underfits. The permanent rule: regularise to combat overfitting, but always re-express final model in original terms. For some models, especially under IRB, explicit variable reduction might require re-approval.
 
@@ -44,8 +44,8 @@ Blindly using lasso and trusting it removed only noise. It may drop a variable i
 </Trap>
 
 <NeverConfuse a="Ridge (L2)" b="Lasso (L1)">
-**Ridge (L2)** — penalizes square of coefficients; shrinks but keeps variables.  
----  
+**Ridge (L2)** — penalizes square of coefficients; shrinks but keeps variables.
+---
 **Lasso (L1)** — penalizes absolute values; can set some coefficients to zero (feature selection). Both add a term λ∑β² or λ∑|β| respectively to loss.
 </NeverConfuse>
 

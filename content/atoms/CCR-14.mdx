@@ -37,12 +37,12 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 10_CCR_counterparty_credit_risk.md
 ---
-SA-CCR’s formula: **EAD = 1.4 × (RC + PFE)**. For example, RC = max(MTM, 0) – collateral. PFE add-ons use supervisory notional * factors (similar to old CEM add-ons but more refined). Trades are grouped by asset class and hedging sets to allow some offset. Initial margin reduces PFE but only up to 95% (the multiplier means at least 5% of IM benefit is ignored, ensuring some capital).  
+SA-CCR’s formula: **EAD = 1.4 × (RC + PFE)**. For example, RC = max(MTM, 0) – collateral. PFE add-ons use supervisory notional * factors (similar to old CEM add-ons but more refined). Trades are grouped by asset class and hedging sets to allow some offset. Initial margin reduces PFE but only up to 95% (the multiplier means at least 5% of IM benefit is ignored, ensuring some capital).
 
-SA-CCR replaced the older CEM and SM and was calibrated to be risk-sensitive (accounting for netting, hedges, margin). It avoids banks’ using bespoke models (except IMM). SA-CCR became effective 2017 globally (though actual regulatory implementation varied by jurisdiction).  
+SA-CCR replaced the older CEM and SM and was calibrated to be risk-sensitive (accounting for netting, hedges, margin). It avoids banks’ using bespoke models (except IMM). SA-CCR became effective 2017 globally (though actual regulatory implementation varied by jurisdiction).
 
-&lt;Flow&gt;
-+-------------------------+
+<Flow>
+    +-------------------------+
     | EAD = 1.4 × (RC + PFE)  |
     +-------------------------+
          /             \
@@ -51,7 +51,7 @@ SA-CCR replaced the older CEM and SM and was calibrated to be risk-sensitive (ac
      +--------+     +--------+
      | Current|     | Add-on |
      | exposure (MTM)|   (std. potential exposure) |
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 EAD under SA-CCR always uses α=1.4 as a conservatism buffer. Replacement Cost cannot be negative (floor at zero).
@@ -62,8 +62,8 @@ Ignoring netting sets or collateral: SA-CCR explicitly nets trades and collatera
 </Trap>
 
 <NeverConfuse a="Replacement Cost (RC)" b="Potential Future Exposure (PFE)">
-**Replacement Cost (RC)** — Current exposure (MTM) minus collateral.  
----  
+**Replacement Cost (RC)** — Current exposure (MTM) minus collateral.
+---
 **Potential Future Exposure (PFE)** — The supervisory-derived add-on component for future risk. RC is “today’s” risk, PFE is “future” risk.
 </NeverConfuse>
 

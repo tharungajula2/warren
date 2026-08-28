@@ -33,9 +33,9 @@ sources:
     accessed: 28 Aug
 import_source: 12_QNT_statistics_ml.md
 ---
-In a stationary series, the average and variability remain roughly constant. There is no long-term upward or downward drift (no trend) and no changing seasonality. For example, a stationary default rate might oscillate around 2% with similar magnitude fluctuations each period. If instead default rates are rising in a credit cycle, the series is non-stationary. Non-stationarity can lead to spurious or unreliable forecasts: for instance, ARIMA models assume consistent autocorrelations over time. To test stationarity, analysts use plots (constant mean/variance visually) and tests like Augmented Dickey-Fuller. If non-stationary, one may *difference* the data (subtract each value from its predecessor) or remove a deterministic trend to achieve stationarity. A stationary transformed series is then suitable for ARMA/ARIMA modeling.  
+In a stationary series, the average and variability remain roughly constant. There is no long-term upward or downward drift (no trend) and no changing seasonality. For example, a stationary default rate might oscillate around 2% with similar magnitude fluctuations each period. If instead default rates are rising in a credit cycle, the series is non-stationary. Non-stationarity can lead to spurious or unreliable forecasts: for instance, ARIMA models assume consistent autocorrelations over time. To test stationarity, analysts use plots (constant mean/variance visually) and tests like Augmented Dickey-Fuller. If non-stationary, one may *difference* the data (subtract each value from its predecessor) or remove a deterministic trend to achieve stationarity. A stationary transformed series is then suitable for ARMA/ARIMA modeling.
 
-&lt;Flow&gt;
+<Flow>
 +----------------+
 | Original series| (may have trend/seasonality)
 +--------+-------+
@@ -63,7 +63,7 @@ Transform (difference, detrend)
 +--------------+
 | Fit ARIMA    |
 +--------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Stationarity means “no trend, constant mean and variance over time.” In practice, if the mean or variance changes (e.g. rising loan volumes or volatility), remove these effects before modeling.
@@ -74,8 +74,8 @@ Treating a visibly trending or seasonal series as stationary. Running ARIMA with
 </Trap>
 
 <NeverConfuse a="Stationarity" b="White noise">
-**Stationarity** — a property of a time series (constant statistical properties over time).  
----  
+**Stationarity** — a property of a time series (constant statistical properties over time).
+---
 **White noise** — a special stationary series where each value is random with zero autocorrelation. All white noise series are stationary, but not all stationary series are white noise (white noise has no structure to exploit).
 </NeverConfuse>
 

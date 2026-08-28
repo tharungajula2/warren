@@ -33,14 +33,14 @@ import_source: 13_TEC_sql_python.md
 ---
 The *Loan Book* in banking is not a single table: loans have borrowers, products, schedules, etc. Each aspect lives in its own table with keys linking them. For example, a *Facility* table may link to multiple *Account* rows (one-to-many), and accounts link to *Exposure* or *Transaction* tables. Keys ensure SQL queries join these tables reliably.
 
-&lt;Flow&gt;
+<Flow>
 +-----------+       +----------+       +-------------+
 | Facility  |       | Account  |       | Transaction |
 +-----------+       +----------+       +-------------+
 | FacilityID| 1   M | AccountID| 1   M | TransID     |
 | ...       |-------| FacID FK |-------| AccountID FK|
 +-----------+       +----------+       +-------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Every table should define a **primary key** column(s) that uniquely identifies each row.
@@ -51,8 +51,8 @@ Putting unrelated data in one wide table (no keys) or not enforcing uniqueness c
 </Trap>
 
 <NeverConfuse a="Primary Key" b="Foreign Key">
-**Primary Key** — uniquely identifies a row in its table (no duplicates, no NULLs).  
----  
+**Primary Key** — uniquely identifies a row in its table (no duplicates, no NULLs).
+---
 **Foreign Key** — references a primary key in another table, establishing a link.
 </NeverConfuse>
 

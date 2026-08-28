@@ -25,7 +25,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 11_MRK_market_risk.md
 ---
-Regulators set specific confidence levels and horizons for capital calculation.  Basel II used 99% VaR over 10 trading days; FRTB uses 97.5% ES over 10 days.  The longer holding period corresponds to liquidating or hedging positions under stress.  One often scales 1-day VaR to a 10-day VaR by multiplying by √10 (assuming independent returns), but if volatility changes or liquidity constraints exist, that simple scaling breaks down.  
+Regulators set specific confidence levels and horizons for capital calculation.  Basel II used 99% VaR over 10 trading days; FRTB uses 97.5% ES over 10 days.  The longer holding period corresponds to liquidating or hedging positions under stress.  One often scales 1-day VaR to a 10-day VaR by multiplying by √10 (assuming independent returns), but if volatility changes or liquidity constraints exist, that simple scaling breaks down.
 
 Under a normal return assumption, 10-day 99% VaR numerically equals 10-day 97.5% ES (both ≈2.33σ).  Basel chose 97.5% ES in part to align capital ratios (since ES at 97.5% on a normal distribution roughly matches 99% VaR).  Confidence level governs the tail probability (e.g. 99% VaR ignores top 1% losses).  Basel also introduced a separate stressed calibration (see MRK-10) using a 250-day period.
 

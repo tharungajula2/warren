@@ -24,20 +24,20 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 11_MRK_market_risk.md
 ---
-Banks compare realized P&amp;L against VaR forecasts each day. An “exception” occurs when actual loss exceeds the VaR estimate.  Basel prescribed a 250-day test window.  If exceptions are within 0–4, the model is in the green zone; 5–9 exceptions is a yellow (caution) zone; ≥10 exceptions (4% rate) is red, implying the model likely underestimates risk.  Consistently high exceptions trigger higher capital multipliers or require model review.  
+Banks compare realized P&amp;L against VaR forecasts each day. An “exception” occurs when actual loss exceeds the VaR estimate.  Basel prescribed a 250-day test window.  If exceptions are within 0–4, the model is in the green zone; 5–9 exceptions is a yellow (caution) zone; ≥10 exceptions (4% rate) is red, implying the model likely underestimates risk.  Consistently high exceptions trigger higher capital multipliers or require model review.
 
-Typically, about 2.5 exceptions are expected on average per 250 days at 99% VaR.  A red-zone model would get a multiplier of 4× on VaR for capital.  Notably, regulators use *hypothetical* P&amp;L (revaluing yesterday’s closing positions) for backtesting, not intraday actual P&amp;L, to avoid distortions from new trades.  Counting actual P&amp;L can inflate exceptions if intraday trades occur.  
+Typically, about 2.5 exceptions are expected on average per 250 days at 99% VaR.  A red-zone model would get a multiplier of 4× on VaR for capital.  Notably, regulators use *hypothetical* P&amp;L (revaluing yesterday’s closing positions) for backtesting, not intraday actual P&amp;L, to avoid distortions from new trades.  Counting actual P&amp;L can inflate exceptions if intraday trades occur.
 
-&lt;Flow&gt;
+<Flow>
 250-day backtesting:
 +-------------+--------+
 | Exceptions  | Action |
 +-------------+--------+
 | 0–4 (Green) | Model OK (low exceptions)  |
 | 5–9 (Yellow)| Investigate (some alarm)   |
-| &amp;gt;=10 (Red)  | Model invalid (4%+ breaches) |
+| &gt;=10 (Red)  | Model invalid (4%+ breaches) |
 +-------------+--------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 An accurate 99% VaR model should yield roughly 2-3 exceptions in 250 days (green zone).

@@ -32,18 +32,18 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 14_OPR_operational_risk.md
 ---
-The **Standardised Measurement Approach (SMA)**, effective from 2022, applies to all large banks. It combines current size with past losses. The **Business Indicator (BI)** is calculated from selected financials (Interest/Lease/Dividend, Services, Financial components of P&amp;L).  The BI is bucketed with marginal coefficients (12%, 15%, 18%) to produce the **Business Indicator Component (BIC)**.  This BIC roughly scales with bank size.  
+The **Standardised Measurement Approach (SMA)**, effective from 2022, applies to all large banks. It combines current size with past losses. The **Business Indicator (BI)** is calculated from selected financials (Interest/Lease/Dividend, Services, Financial components of P&amp;L).  The BI is bucketed with marginal coefficients (12%, 15%, 18%) to produce the **Business Indicator Component (BIC)**.  This BIC roughly scales with bank size.
 
 The **Internal Loss Multiplier (ILM)** is then calculated using the bank’s internal Loss Component (LC = 15× the 10-year avg annual loss) relative to BIC.  Mathematically: *ILM = ln(e – 1 + (LC/BIC)^0.8)*.  The final Pillar 1 capital = BIC × ILM. If a bank had no losses, ILM approaches 1 and capital≈BIC. If losses are high, ILM &gt;1 and capital increases.  (Notably, when LC=BIC, ILM=1 exactly, so capital=BIC.)
 
 **Example:** Suppose BIC = €1.5bn and LC (15× avg loss) = €1.2bn. Then ILM = ln(e–1 + (0.8)^0.8)≈0.94, so capital ≈ €1.5bn×0.94. If LC rises to €2.25bn, ILM≈1.13 and capital ≈€1.70bn.
 
-&lt;Flow&gt;
-Compute BI from financials -&amp;gt; Apply α -&amp;gt; BIC (size-based)
+<Flow>
+Compute BI from financials -&gt; Apply α -&gt; BIC (size-based)
 LC = 15×(10-yr avg loss)
 ILM = ln(e–1 + (LC/BIC)^0.8)
 OR Capital = BIC × ILM
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Use gross losses in LC.  The regulator-provided ILM formula must be used exactly.  Note: the UK (PRA) has elected to set ILM=1 for all firms (making capital = BIC only).
@@ -54,8 +54,8 @@ A big mistake is mixing up **BI** with **BIC**.  BI is raw aggregated income; BI
 </Trap>
 
 <NeverConfuse a="BI (Business Indicator)" b="BIC (Business Indicator Component)">
-**BI (Business Indicator)** — the raw income-based metric (sum of income components).  
----  
+**BI (Business Indicator)** — the raw income-based metric (sum of income components).
+---
 **BIC (Business Indicator Component)** — the size component used for capital, after applying the Basel α-coefficients.
 </NeverConfuse>
 

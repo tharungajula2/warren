@@ -34,16 +34,16 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-In rolling-origin evaluation, we simulate real forecasting: train on an initial window, predict the next \(h\) steps, record the error, then expand (or slide) the window forward and repeat. This avoids peeking into the future (random k-fold cross-validation would leak information). For example, use loans data from 2015–2018 to predict 2019 losses, then re-train on 2015–2019 to predict 2020 losses, etc. Errors from each fold are aggregated to assess model stability. 
+In rolling-origin evaluation, we simulate real forecasting: train on an initial window, predict the next \(h\) steps, record the error, then expand (or slide) the window forward and repeat. This avoids peeking into the future (random k-fold cross-validation would leak information). For example, use loans data from 2015–2018 to predict 2019 losses, then re-train on 2015–2019 to predict 2020 losses, etc. Errors from each fold are aggregated to assess model stability.
 
-Common metrics include RMSE (root mean square error) and MAPE (mean absolute percentage error). RMSE = \(\sqrt&#123;\frac&#123;1&#125;&#123;n&#125;\sum (forecast - actual)^2&#125;\) penalises large errors more heavily. MAPE = \(\frac&#123;100\%&#125;&#123;n&#125;\sum |\frac&#123;forecast - actual&#125;&#123;actual&#125;|\) scales error by actual values; it is easy to interpret but blows up when actuals near zero. Always be aware of the failure modes: MAPE is undefined for zero actuals and may be skewed by small denominators.  
+Common metrics include RMSE (root mean square error) and MAPE (mean absolute percentage error). RMSE = \(\sqrt&#123;\frac&#123;1&#125;&#123;n&#125;\sum (forecast - actual)^2&#125;\) penalises large errors more heavily. MAPE = \(\frac&#123;100\%&#125;&#123;n&#125;\sum |\frac&#123;forecast - actual&#125;&#123;actual&#125;|\) scales error by actual values; it is easy to interpret but blows up when actuals near zero. Always be aware of the failure modes: MAPE is undefined for zero actuals and may be skewed by small denominators.
 
-Crucially, compare the model’s scores to a simple benchmark. A typical naive baseline for time series is “no change” (e.g. forecast \(Y_&#123;t+1&#125; = Y_t\)) or “seasonal naive” (forecast equals last year’s value for seasonal data). If a model’s MAPE or RMSE is not substantially better than the baseline, it may not be useful. For instance, if credit volume declines by 1% each month, a model should beat the baseline forecast of “same as last month.”  
+Crucially, compare the model’s scores to a simple benchmark. A typical naive baseline for time series is “no change” (e.g. forecast \(Y_&#123;t+1&#125; = Y_t\)) or “seasonal naive” (forecast equals last year’s value for seasonal data). If a model’s MAPE or RMSE is not substantially better than the baseline, it may not be useful. For instance, if credit volume declines by 1% each month, a model should beat the baseline forecast of “same as last month.”
 
-&lt;Flow&gt;
-Time Axis: [Train (t=1..T)] =&amp;gt; Forecast [T+1 .. T+h] =&amp;gt; Evaluate error
+<Flow>
+Time Axis: [Train (t=1..T)] =&gt; Forecast [T+1 .. T+h] =&gt; Evaluate error
                       then Expand window to T+h, repeat
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Always reserve future time for testing. Use a sequential backtesting (rolling-origin) that mimics real deployment. Compute forecast errors and compare to a naive model’s error. Metrics alone are meaningless without a baseline.
@@ -54,8 +54,8 @@ Performing standard k-fold validation (random splits) on time series. This lets 
 </Trap>
 
 <NeverConfuse a="MAPE" b="RMSE">
-**MAPE** — Mean Absolute Percentage Error: measures relative error (%). Can exaggerate errors when actual values are small.  
----  
+**MAPE** — Mean Absolute Percentage Error: measures relative error (%). Can exaggerate errors when actual values are small.
+---
 **RMSE** — Root Mean Squared Error: measures absolute error magnitude. Penalises large deviations more.
 </NeverConfuse>
 

@@ -43,7 +43,7 @@ The most useful BA model is state plus event. Instead of treating a trade as one
 
 Breaks occur when two systems are correct about different states. The control question is therefore: what event has each system processed, using what effective timestamp and source?
 
-&lt;Flow&gt;
+<Flow>
 Execute
    |
 Capture
@@ -56,13 +56,13 @@ Clear if applicable
    |
 Settle
    |
-+--&amp;gt; value / margin
-+--&amp;gt; report
-+--&amp;gt; lifecycle events
++--&gt; value / margin
++--&gt; report
++--&gt; lifecycle events
          |
          v
 maturity / termination / close-out
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 A trade lifecycle is a sequence of state changes, not a single booking event.

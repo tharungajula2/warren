@@ -34,11 +34,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-There are two main leakage types: *target leakage*, where predictors include the outcome itself (or its proxies), and *train-test contamination*, where observations in the test period influence training (e.g. shuffling time series). For example, if we include “*ever defaulted*” status (logged after six months) as an input to predict one-year default, the model essentially sees part of the answer. Another example: mixing borrowers from 2019 (test year) into 2018 training can let the model indirectly learn future trends. 
+There are two main leakage types: *target leakage*, where predictors include the outcome itself (or its proxies), and *train-test contamination*, where observations in the test period influence training (e.g. shuffling time series). For example, if we include “*ever defaulted*” status (logged after six months) as an input to predict one-year default, the model essentially sees part of the answer. Another example: mixing borrowers from 2019 (test year) into 2018 training can let the model indirectly learn future trends.
 
-To avoid leakage, ensure each feature is computable from information available at model decision time. In credit scoring, use only origination attributes or lagged variables. Rigorously align time: treat all data as of a cutoff date. For instance, if predicting default within a year, use only features known at loan issuance. Data pipelines should separate historical features from label construction. Finally, always evaluate on truly unseen data (see QNT-23) – a sharp drop from training to test performance is a red flag for leakage or overfitting. 
+To avoid leakage, ensure each feature is computable from information available at model decision time. In credit scoring, use only origination attributes or lagged variables. Rigorously align time: treat all data as of a cutoff date. For instance, if predicting default within a year, use only features known at loan issuance. Data pipelines should separate historical features from label construction. Finally, always evaluate on truly unseen data (see QNT-23) – a sharp drop from training to test performance is a red flag for leakage or overfitting.
 
-&lt;Flow&gt;
+<Flow>
 +--------------+       +---------------+
 | Raw Dataset  |       | Good Practice |
 +------+-------+       +-------+-------+
@@ -49,7 +49,7 @@ Select features (no future info)   Train/test split by time
 +--------------+       +---------------+
 | Model Build  |       | Prediction    |
 +--------------+       +---------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Never include any variable that cannot be known at scoring time. Ask, “Would this feature be available in real-time?” If not, omit or shift it.
@@ -60,8 +60,8 @@ Including any proxy of the target. For example, “balance after 1 year” to pr
 </Trap>
 
 <NeverConfuse a="Data leakage" b="Overfitting">
-**Data leakage** — model sees future or target-related information in training, giving overly optimistic accuracy.  
----  
+**Data leakage** — model sees future or target-related information in training, giving overly optimistic accuracy.
+---
 **Overfitting** — model is too complex for the signal in training data (but without artificial leaks). Both can cause test drop-offs, but leakage violates causality.
 </NeverConfuse>
 

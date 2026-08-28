@@ -28,13 +28,13 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-**BRD:** In regulatory/risk contexts, the BRD describes needed data points, calculation methods, timing, and exceptions. It often cites regulatory definitions. The BRD ensures developers and analysts understand the objectives.  
-**Data Mapping Spec:** This is the core deliverable. It is typically a spreadsheet or document listing: Source Field → Transformation Rule → Target Field. For example: “LoanBook.EndDate → Calendar Quarter End for report.” Each mapping should include any conversion (currency, units) and business rules applied. It serves as the blueprint for ETL developers.  
-**Testing:** Test packs with known inputs and results are prepared. For example, a small dataset with calculated expected totals. During UAT, business users verify that outputs match these expectations. Automated regression tests and reconciliation reports are also built to compare results against legacy systems or previous runs. UAT covers functional correctness and edge cases.  
+**BRD:** In regulatory/risk contexts, the BRD describes needed data points, calculation methods, timing, and exceptions. It often cites regulatory definitions. The BRD ensures developers and analysts understand the objectives.
+**Data Mapping Spec:** This is the core deliverable. It is typically a spreadsheet or document listing: Source Field → Transformation Rule → Target Field. For example: “LoanBook.EndDate → Calendar Quarter End for report.” Each mapping should include any conversion (currency, units) and business rules applied. It serves as the blueprint for ETL developers.
+**Testing:** Test packs with known inputs and results are prepared. For example, a small dataset with calculated expected totals. During UAT, business users verify that outputs match these expectations. Automated regression tests and reconciliation reports are also built to compare results against legacy systems or previous runs. UAT covers functional correctness and edge cases.
 
 A strong delivery approach uses examples: e.g. test that negative balances or unusual security types still produce correct report lines. Downstream extracts (e.g. FINREP extracts sent to ECB) should also be checked – that is, one might run a script on the final data extract to verify totals against source systems. The process is iterative: any discrepancies found in UAT or extracts feed back into the mapping (looping through the cycle again until clean).
 
-&lt;Flow&gt;
+<Flow>
 Business Requirements
     |
     v
@@ -51,7 +51,7 @@ UAT (with test packs)
     |
     v
 Go-live and Parallel Runs
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Every data transformation must be traceable (via the mapping spec) and tested with expected results before production use.
@@ -62,8 +62,8 @@ Skipping UAT or not involving actual report users. Testing by IT alone often mis
 </Trap>
 
 <NeverConfuse a="Business Requirements Document (BRD)" b="Mapping Specification">
-**Business Requirements Document (BRD)** — Describes the *what* and *why* (business needs, regulatory requirements).  
----  
+**Business Requirements Document (BRD)** — Describes the *what* and *why* (business needs, regulatory requirements).
+---
 **Mapping Specification** — Details the *how* (the exact field mappings and calculations).
 </NeverConfuse>
 

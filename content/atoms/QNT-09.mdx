@@ -26,15 +26,15 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 12_QNT_statistics_ml.md
 ---
-In credit models, multicollinearity often arises when using overlapping information: e.g. two credit bureau scores, or income and loan amount. Such redundancy doesn’t harm overall prediction accuracy much, but it makes coefficient estimates unstable. For instance, if income and loan size correlate strongly, including both may lead to neither coefficient being precisely estimated (large SE). 
+In credit models, multicollinearity often arises when using overlapping information: e.g. two credit bureau scores, or income and loan amount. Such redundancy doesn’t harm overall prediction accuracy much, but it makes coefficient estimates unstable. For instance, if income and loan size correlate strongly, including both may lead to neither coefficient being precisely estimated (large SE).
 
 To calculate VIF for predictor X_j: regress X_j against all other X’s and get R²_j. Then VIF_j = 1/(1−R²_j). Example: if a predictor has R²=0.9 when regressed on others, VIF=10. This indicates its variance estimate is 10 times what it would be if uncorrelated with others.
 
 High VIF means small changes in data can flip the sign or magnitude of β_j. This is dangerous when regulators or stakeholders expect stable interpretability. Remedies: drop or combine correlated variables (e.g. use principal components), or regularization (see QNT-12). But dropping variables may lose predictive info, so trade-off is needed.
 
-**VIF interpretation:** 
-- VIF≈1: no correlation with other X’s. 
-- VIF&gt;5: moderate collinearity. 
+**VIF interpretation:**
+- VIF≈1: no correlation with other X’s.
+- VIF&gt;5: moderate collinearity.
 - VIF&gt;10: serious collinearity.
 Often one simplifies by ensuring predictors have pairwise correlations &lt;0.8 or VIFs &lt;5.
 
@@ -47,8 +47,8 @@ Leaving collinear variables in, thinking “it doesn’t matter since model fit 
 </Trap>
 
 <NeverConfuse a="Variance Inflation Factor (VIF)" b="Standard Error (SE)">
-**Variance Inflation Factor (VIF)** — measures how much the variance of a coefficient is increased due to collinearity.  
----  
+**Variance Inflation Factor (VIF)** — measures how much the variance of a coefficient is increased due to collinearity.
+---
 **Standard Error (SE)** — the uncertainty of a coefficient. VIF tells why SE might be high: because variables overlap. VIF is not a direct measure of predictor importance (that’s given by coefficient/SE or other metrics).
 </NeverConfuse>
 

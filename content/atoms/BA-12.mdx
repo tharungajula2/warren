@@ -27,12 +27,12 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 16_BA_business_analysis.md
 ---
-Non-functional requirements (NFRs) cover attributes not captured by functional specs. Key NFRs in banking projects include:  
-- **Performance:** e.g. “System must handle 1000 concurrent users with response &lt;2s.”  
-- **Security &amp; Compliance:** data encryption, access controls, KYC/AML checks, GDPR or similar data privacy.  
-- **Availability:** e.g. “99.9% uptime required.”  
-- **Data Retention:** how long data (or logs) must be kept (often 5–7 years or more).  
-- **Auditability:** ability to trace actions – full logging of transactions and changes. Regulators explicitly require audit trails on changes. For example, a BA noted for a bank onboarding project that auditability (full action logs retained 7+ years) was a key NFR.  
+Non-functional requirements (NFRs) cover attributes not captured by functional specs. Key NFRs in banking projects include:
+- **Performance:** e.g. “System must handle 1000 concurrent users with response &lt;2s.”
+- **Security &amp; Compliance:** data encryption, access controls, KYC/AML checks, GDPR or similar data privacy.
+- **Availability:** e.g. “99.9% uptime required.”
+- **Data Retention:** how long data (or logs) must be kept (often 5–7 years or more).
+- **Auditability:** ability to trace actions – full logging of transactions and changes. Regulators explicitly require audit trails on changes. For example, a BA noted for a bank onboarding project that auditability (full action logs retained 7+ years) was a key NFR.
 
 Non-functional requirements are critical: even if the functionality is correct, failure in security or audit logging can invalidate a project. In regulated change, treat NFRs like compliance: put them in the requirement list and test for them.
 
@@ -45,7 +45,7 @@ Assuming NFRs will be “obvious” or handled later. A common error is neglecti
 </Trap>
 
 <NeverConfuse>
-**Functional Requirement** vs **Non-Functional Requirement**:  
+**Functional Requirement** vs **Non-Functional Requirement**:
 A *Functional Requirement* describes what the system does (specific features). A *Non-Functional Requirement* describes constraints or qualities (like speed, security). For example, “generate monthly report” is functional; “report generation shall complete within 5 minutes” is non-functional.
 </NeverConfuse>
 

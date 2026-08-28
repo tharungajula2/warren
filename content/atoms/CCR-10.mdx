@@ -31,14 +31,14 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 10_CCR_counterparty_credit_risk.md
 ---
-A CCP provides multilateral netting: all trades in a given product with the CCP are netted across parties daily. This significantly lowers gross exposures. CCPs require initial and variation margin from members, and maintain a default fund contributed by members (and sometimes the CCP’s own capital). If a member defaults, its margin is used first; then its default fund contribution; then the CCP’s “skin in the game”; then possibly a mutualized fund of other members. Thus, CCP risk is mutualized. 
+A CCP provides multilateral netting: all trades in a given product with the CCP are netted across parties daily. This significantly lowers gross exposures. CCPs require initial and variation margin from members, and maintain a default fund contributed by members (and sometimes the CCP’s own capital). If a member defaults, its margin is used first; then its default fund contribution; then the CCP’s “skin in the game”; then possibly a mutualized fund of other members. Thus, CCP risk is mutualized.
 
 However, CCPs do not eliminate all risk. Members now face the CCP’s credit and liquidity risk. A CCP could face simultaneous defaults (e.g. extreme market moves), in which case default fund and possibly additional loss-sharing can be used. Clients clearing through a member have either “house” or “client” accounts; in some models, client positions are segregated, reducing risk of using client funds to cover a dealer’s losses.
 
 Central clearing is usually mandated or incentivized for standardized derivatives (e.g. interest rate swaps). Studies show CCPs greatly reduce systemic exposure but can concentrate risk in the CCP, so regulators treat CCP exposures carefully.
 
-&lt;Flow&gt;
-Participants: A, B, C, ...   
+<Flow>
+Participants: A, B, C, ...
                  \ | /
                   \|/
                +--------+
@@ -47,7 +47,7 @@ Participants: A, B, C, ...
                /|\   /|\
               / | \ / | \
          (netted exposures between CCP and each clearing member)
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 When a trade is centrally cleared, CCR is replaced by the CCP’s counterparty risk. A bank must hold capital for its exposure to the CCP under special rules.
@@ -58,8 +58,8 @@ Assuming central clearing removes all CCR. Even with a CCP, residual risk (e.g. 
 </Trap>
 
 <NeverConfuse a="Clearing Member" b="Client">
-**Clearing Member** — A firm that is a direct member of a CCP.  
----  
+**Clearing Member** — A firm that is a direct member of a CCP.
+---
 **Client** — An end-user or customer whose trades are cleared by a member. Clients have indirect exposure to the CCP through the member.
 </NeverConfuse>
 

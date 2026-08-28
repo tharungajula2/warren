@@ -33,11 +33,11 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-In practice, there is a boundary between quantitative models and simpler tools.  U.S. SR 26-2 says it excludes “simple arithmetic calculations, such as those found within spreadsheets, as well as deterministic rule-based processes” from the definition of a model.  This means a spreadsheet that just adds up values or applies fixed formulas (with no statistical algorithm) is not a “model” under Fed/OCC guidance.  By contrast, the UK PRA says that even deterministic methods may need controls if they are complex and impact decisions.  RBI’s draft guidance goes further: it says any tool (including decision rules in software) that has a material impact on decision-making should be treated as a model.  (For example, a loan-pricing spreadsheet might be just a “basic tool,” but if it factors in risk-adjusted spreads to set rates, RBI says it must be treated as a model.)  
+In practice, there is a boundary between quantitative models and simpler tools.  U.S. SR 26-2 says it excludes “simple arithmetic calculations, such as those found within spreadsheets, as well as deterministic rule-based processes” from the definition of a model.  This means a spreadsheet that just adds up values or applies fixed formulas (with no statistical algorithm) is not a “model” under Fed/OCC guidance.  By contrast, the UK PRA says that even deterministic methods may need controls if they are complex and impact decisions.  RBI’s draft guidance goes further: it says any tool (including decision rules in software) that has a material impact on decision-making should be treated as a model.  (For example, a loan-pricing spreadsheet might be just a “basic tool,” but if it factors in risk-adjusted spreads to set rates, RBI says it must be treated as a model.)
 
-The key distinction is whether the method relies on a statistical/economic theory or not.  **If there is no statistical model underlying it, it is formally a “tool,”** but regulators still expect robust controls.  The PRA advises firms to document and control deterministic rules just as they would a model.  In short, ***deterministic tools*** are fixed-logic processes (e.g. credit-policy rules coded into a system) whereas ***statistical models*** use probabilistic or econometric methods.  Firms should not ignore the risk of a rule-based tool just because it’s not labeled a model.  In many cases, best practice is to apply parts of the model risk framework (validation, review) to critical tools.  
+The key distinction is whether the method relies on a statistical/economic theory or not.  **If there is no statistical model underlying it, it is formally a “tool,”** but regulators still expect robust controls.  The PRA advises firms to document and control deterministic rules just as they would a model.  In short, ***deterministic tools*** are fixed-logic processes (e.g. credit-policy rules coded into a system) whereas ***statistical models*** use probabilistic or econometric methods.  Firms should not ignore the risk of a rule-based tool just because it’s not labeled a model.  In many cases, best practice is to apply parts of the model risk framework (validation, review) to critical tools.
 
-&lt;Flow&gt;
+<Flow>
 +----------------------+
 |   Model              |
 +----------+-----------+
@@ -62,7 +62,7 @@ The key distinction is whether the method relies on a statistical/economic theor
 | - Fixed rules/formula|
 | - No underlying stat |
 +----------------------+
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Tools with complex business impact should be governed even if not classified as “models.”  Always clarify in policy which calculations are covered by MRM.
@@ -73,8 +73,8 @@ Assuming “not a model = no risk.”  For example, ignoring validation of a spr
 </Trap>
 
 <NeverConfuse a="Deterministic tool" b="Statistical model">
-**Deterministic tool** — a fixed‐logic calculator or rules engine (no statistical basis).  It may be excluded from the model definition but still needs oversight.  
----  
+**Deterministic tool** — a fixed‐logic calculator or rules engine (no statistical basis).  It may be excluded from the model definition but still needs oversight.
+---
 **Statistical model** — uses statistical/economic theory and assumptions to produce predictions (subject to full MRM). They differ: one is theory-driven (model), the other is rule-based (tool).
 </NeverConfuse>
 

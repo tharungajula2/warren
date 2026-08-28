@@ -27,12 +27,12 @@ import_source: 07_DAT_risk_data_reporting.md
 ---
 In practice, once a data validation or reconciliation uncovers an error (for example, a daily report mismatch), an issue ticket is created. The ticket includes description, severity (e.g. Critical if it affects a report submission), and owner (often a data steward). Root cause might be a system defect, a mapping error, or missing data. The solution plan is documented – e.g. code correction or process change – with milestones. Senior management tracks progress via dashboards or committee reports.
 
-BCBS 239 requires that material data/reporting issues be escalated “to the highest appropriate level” and that timely action be taken. A bank’s “issue management” process is a key part of its data governance framework. A trap is failing to monitor slow fixes; regulators expect permanent resolution, not temporary workarounds. A permanent rule is that any critical data quality issue (especially those impacting regulatory reports) should be escalated through the risk committee or even board if needed. 
+BCBS 239 requires that material data/reporting issues be escalated “to the highest appropriate level” and that timely action be taken. A bank’s “issue management” process is a key part of its data governance framework. A trap is failing to monitor slow fixes; regulators expect permanent resolution, not temporary workarounds. A permanent rule is that any critical data quality issue (especially those impacting regulatory reports) should be escalated through the risk committee or even board if needed.
 
-Remediation may involve multiple steps: short-term manual fixes (to enable report filing) and long-term system changes. Banks often set a standard (e.g. 30 days to fix a critical break). Progress is reported to risk committees, often via heatmaps of outstanding issues. Ultimately, management sign-off on the fix closes the loop. 
+Remediation may involve multiple steps: short-term manual fixes (to enable report filing) and long-term system changes. Banks often set a standard (e.g. 30 days to fix a critical break). Progress is reported to risk committees, often via heatmaps of outstanding issues. Ultimately, management sign-off on the fix closes the loop.
 
-&lt;Flow&gt;
-Issue Detected 
+<Flow>
+Issue Detected
     |
     v
 Log Ticket (ID, Owner, Severity)
@@ -44,14 +44,14 @@ Root Cause Analysis
 Action Plan (short-term, long-term)
     |
     v
-Implement Fix -&amp;gt; Test
+Implement Fix -&gt; Test
     |
     v
 Verify Resolution
     |
     v
 Close Ticket
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Every significant data discrepancy or report error must be tracked until fully resolved, with evidence of the fix.
@@ -62,8 +62,8 @@ Treating issue tickets as “done” when a report is patched, rather than fixin
 </Trap>
 
 <NeverConfuse a="Remediation" b="Workaround">
-**Remediation** — The corrective actions taken to fix a data defect (code fixes, process changes).  
----  
+**Remediation** — The corrective actions taken to fix a data defect (code fixes, process changes).
+---
 **Workaround** — A temporary solution to allow reporting to proceed (e.g. manual data entry) before full remediation. Both need controls and tracking.
 </NeverConfuse>
 

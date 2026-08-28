@@ -25,10 +25,10 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-For instance, to find accounts without an open date:  
+For instance, to find accounts without an open date:
 ```sql
 SELECT AccountID FROM Accounts WHERE OpenDate IS NULL;
-```  
+```
 Regular operators (`=`, `&lt;`, etc.) cannot be used with NULL. Use `ISNULL()` or `COALESCE()` functions to substitute defaults when needed.
 
 <Rule label="PERMANENT RULE">
@@ -40,8 +40,8 @@ Treating NULL as a value in conditions (e.g. `WHERE Balance != 0` won’t catch 
 </Trap>
 
 <NeverConfuse a="NULL" b="0">
-**NULL** — absence/unknown value (three-valued logic).  
----  
+**NULL** — absence/unknown value (three-valued logic).
+---
 **0** — numeric zero, a definite number (not NULL).
 </NeverConfuse>
 

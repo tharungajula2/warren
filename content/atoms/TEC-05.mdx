@@ -31,13 +31,13 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-Example: to list all unique borrower IDs from two legacy loan tables:  
+Example: to list all unique borrower IDs from two legacy loan tables:
 ```sql
 SELECT BorrowerID FROM Loans_Old
 UNION
 SELECT BorrowerID FROM Loans_New;
-```  
-This yields each ID once. To find IDs present in both tables:  
+```
+This yields each ID once. To find IDs present in both tables:
 ```sql
 SELECT BorrowerID FROM Loans_Old
 INTERSECT
@@ -53,8 +53,8 @@ Forgetting that `UNION` removes duplicates; use `UNION ALL` if you need to prese
 </Trap>
 
 <NeverConfuse a="UNION" b="JOIN">
-**UNION** — appends rows from queries into one result (distinct by default).  
----  
+**UNION** — appends rows from queries into one result (distinct by default).
+---
 **JOIN** — combines columns from tables based on a key.
 </NeverConfuse>
 

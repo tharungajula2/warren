@@ -29,17 +29,17 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 10_CCR_counterparty_credit_risk.md
 ---
-Netting is documented in master agreements (like an ISDA Master). Upon default, all trades in a netting set are “closed out” at current market values and netted. The surviving bank then has a single net claim or obligation. Enforceability of netting depends on jurisdiction and legal opinions. If netting fails (e.g. in bankruptcy some local law does not recognize it), the bank faces each trade’s exposure separately. 
+Netting is documented in master agreements (like an ISDA Master). Upon default, all trades in a netting set are “closed out” at current market values and netted. The surviving bank then has a single net claim or obligation. Enforceability of netting depends on jurisdiction and legal opinions. If netting fails (e.g. in bankruptcy some local law does not recognize it), the bank faces each trade’s exposure separately.
 
 Netting reduces CCR by off-setting gains and losses. For example, if bank A owes $5 on one swap but is owed $3 on another with the same counterparty, netting lets A owe only $2 instead of risking $8. Banks rely on netting to lower capital and collateral needs. Supervisors require proof that netting agreements are legally valid. A broken netting could double-count exposure and increase losses.
 
-&lt;Flow&gt;
+<Flow>
 Counterparty A ----- Master Agreement ----- Counterparty B
     |        \                 /       |
     +--- Swap 1 (+$5)         Swap 2 (+$3) ---+
-    \_____ Swap 3 (-$2)______/ 
+    \_____ Swap 3 (-$2)______/
 Close-out: A owed $(5+3-2) = $6 net
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Only legally enforceable netting agreements count toward reducing exposure. Without enforceability, netting benefits cannot be recognized.
@@ -50,8 +50,8 @@ Assuming netting always works. If a jurisdiction or failure scenario prohibits c
 </Trap>
 
 <NeverConfuse a="Bilateral Netting (Master netting)" b="Portfolio Compression">
-**Bilateral Netting (Master netting)** — Offsetting trades between two parties under one agreement, where obligations are legally netted.  
----  
+**Bilateral Netting (Master netting)** — Offsetting trades between two parties under one agreement, where obligations are legally netted.
+---
 **Portfolio Compression** — A multilateral process of reducing notional without involving close-out netting. It does not affect legal netting sets.
 </NeverConfuse>
 

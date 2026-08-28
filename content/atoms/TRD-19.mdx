@@ -47,23 +47,23 @@ India’s benchmark landscape differs by product; MIBOR and other domestic bench
 
 For BAs and risk teams, the main migration lesson is data lineage: every affected trade needs the original benchmark, fallback hierarchy, spread adjustment, effective trigger, calculation method and downstream valuation/reporting treatment.
 
-&lt;Flow&gt;
+<Flow>
 Legacy contract
    |
-   +--&amp;gt; IBOR reference
+   +--&gt; IBOR reference
            |
            v
  benchmark cessation / trigger
            |
            v
  fallback mechanism
-   +--&amp;gt; replacement RFR
-   +--&amp;gt; spread adjustment
-   +--&amp;gt; new compounding convention
+   +--&gt; replacement RFR
+   +--&gt; spread adjustment
+   +--&gt; new compounding convention
            |
            v
  updated cash flows / valuation
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Benchmark migration changes economics and calculation conventions; never perform a ticker-only replacement.
@@ -81,9 +81,7 @@ Assuming LIBOR still has live settings because legacy contracts or database fiel
 **RFR** — risk-free or near-risk-free reference rate, commonly based on overnight markets.
 </NeverConfuse>
 
-**IN — No universal one-for-one LIBOR replacement exists across all INR products; use the benchmark specified by the instrument and applicable Indian market rules.**
-
-**UK — Perishable, checked 28 August 2026.** SONIA is the principal sterling RFR. The FCA states that all LIBOR settings have permanently ceased; the final synthetic LIBOR settings ended by 30 September 2024.
+**IN — No universal one-for-one LIBOR replacement exists across all INR products; use the benchmark specified by the instrument and applicable Indian market rules.**UK — Perishable, checked 28 August 2026.** SONIA is the principal sterling RFR. The FCA states that all LIBOR settings have permanently ceased; the final synthetic LIBOR settings ended by 30 September 2024.
 
 **EU — EURIBOR remains a separate benchmark and should not be described as LIBOR. Euro derivatives also use €STR-based conventions.
 

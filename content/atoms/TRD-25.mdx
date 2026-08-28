@@ -60,7 +60,7 @@ Settlement fails remain possible. A fail can arise from missing securities, insu
 
 The durable control is to model settlement by instrument and market, not by a global “T+1” assumption.
 
-&lt;Flow&gt;
+<Flow>
 Trade date T
     |
     v
@@ -72,14 +72,14 @@ clearing / netting
     v
 intended settlement date
     |
-    +--&amp;gt; cash available?
-    +--&amp;gt; securities available?
-    +--&amp;gt; instructions matched?
+    +--&gt; cash available?
+    +--&gt; securities available?
+    +--&gt; instructions matched?
     |
     v
 final settlement
 (actual date may differ)
-&lt;/Flow&gt;
+</Flow>
 
 <Rule label="PERMANENT RULE">
 Trade date, intended settlement date and actual settlement date are distinct lifecycle facts.

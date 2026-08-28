@@ -33,7 +33,7 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 15_AML_financial_crime.md
 ---
-Sanctions screening is a separate discipline from general transaction monitoring. Banks must screen customers at onboarding and periodically re-screen accounts against sanctions lists: UN Security Council, US Treasury’s OFAC, EU, UK, etc.  For transactions (especially cross-border payments), the payment’s beneficiary and originator names are also screened in real time to block any transfer involving a sanctioned party.  Fuzzy or “approximate” matching is used to account for misspellings or transliterations. For example, a wire transfer to “Mohammed Salim” would be checked against “Mohammed Suleiman” using phonetic match logic.  
+Sanctions screening is a separate discipline from general transaction monitoring. Banks must screen customers at onboarding and periodically re-screen accounts against sanctions lists: UN Security Council, US Treasury’s OFAC, EU, UK, etc.  For transactions (especially cross-border payments), the payment’s beneficiary and originator names are also screened in real time to block any transfer involving a sanctioned party.  Fuzzy or “approximate” matching is used to account for misspellings or transliterations. For example, a wire transfer to “Mohammed Salim” would be checked against “Mohammed Suleiman” using phonetic match logic.
 
 Sanctions screening is mandated by law. In the US, OFAC requires blocking any transaction involving a person on the Specially Designated Nationals (SDN) list. Similar rules exist globally. Unlike AML alerts, a sanctions match has no ambiguity – if the payee is on a list, the payment must be rejected or frozen.  Thus, sanctions screening focuses on lists and name-matching, whereas transaction monitoring focuses on behavioral patterns.
 
@@ -46,8 +46,8 @@ Assuming exact name match is enough. Criminals often use aliases or misspellings
 </Trap>
 
 <NeverConfuse a="Sanctions screening" b="Transaction monitoring">
-**Sanctions screening** — matching names against official sanctions/terrorism lists.  
----  
+**Sanctions screening** — matching names against official sanctions/terrorism lists.
+---
 **Transaction monitoring** — looking for suspicious activity patterns. The two are often conflated but sanctions screening simply verifies if transaction parties are blacklisted, whereas monitoring checks transaction *behavior*.
 </NeverConfuse>
 
