@@ -1,0 +1,81 @@
+---
+id: MRM-09
+title: 'Approval, Governance, and Use'
+type: procedure
+domain: model-risk
+subdomain: governance-and-lifecycle
+one_screen: >-
+  Before a validated model can be used, it must be formally approved by senior
+  management or the board (or a delegated committee).  The model’s intended use
+  must align with business needs and policy.  Governance roles (board oversight,
+  risk committees, internal audit) apply: boards must approve MRM policies and
+  receive reports on model issues.
+prerequisites:
+  - MRM-08
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), para 3
+      (Board approval requirement).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      S&C memo on SR 26-2 (Apr. 2026), referencing board approvals and audit
+      reporting.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Model approval is the gate after validation.  Typically, a model is presented to a **model governance committee** or **senior management** (often the Board’s Risk Management Committee) with documentation and validation results.  They evaluate whether the model is sound and fit for its intended use.  Only then is it authorized for production use.  Regulators historically required the board or its delegate to approve model risk policies and significant models.  For example, RBI’s circular mandates that new credit models (and material changes) be approved by the bank’s Risk Management Committee of the Board.  PRA SS1/23 requires that firms “allocate responsibility” for model governance to senior management, with clear accountability for model policies (principles) – implying top-level sign-off.
+
+Once approved, **use test** considerations apply: regulators in risk frameworks often require that the model actually be used in day-to-day decisions.  A common regulatory expectation (especially in IRB models) is that models cannot just exist on paper – they must be integrated into decision processes.  (Though not explicitly in SS1/23 or SR 26-2, “use test” is a familiar concept from Basel/IRB validation.)  Practically, firms should document how a model’s output is used operationally (e.g. credit officers follow the scorecard outputs).  
+
+Ongoing governance ties in here.  The Board is responsible for overall MRM framework oversight and must be informed of material model issues.  Regulators expect internal audit (third line) to review the MRM framework and report any findings.  For example, the U.S. original guidance stated that “[f]indings from internal audit related to models should be…reported to the board”.  Model risk appetite – the firm’s tolerance for model-related errors – should also be approved at the board level.
+
+<Rule label="PERMANENT RULE">
+No model may enter production without final sign-off by the appropriate governance authority (Board or delegated committee). The model’s use must match its approved scope.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using a model before board approval or outside its intended use.  For example, **rolling out a credit-scoring model without documented Board approval and policies** violates governance norms.
+</Trap>
+
+<NeverConfuse a="Model approval" b="Model validation">
+**Model approval** — formal authorization by management/board to use a model.  
+---  
+**Model validation** — the technical check of model accuracy.  
+Approval is a governance step *after* validation; some people mistake a successful validation report for “approval,” but the board’s sign-off is a separate requirement.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s guidance says deployment (and any changes) of credit models requires prior approval by the Board or its Risk Committee. The Board must also approve the MRM framework and model risk appetite, and internal audit findings must go to the Board.
+</Delta>
+
+<Delta j="UK">
+— PRA SS1/23 expects firms to assign overall MRM responsibility to senior management (SMFs) and for boards to oversee MRM policies.  High-tier models must be signed off by senior committees.  Internal audit is the third line (firm should ensure audit reviews MRM).
+</Delta>
+
+<Delta j="US">
+— SR 26-2 does not prescribe exact boards’ actions, but emphasizes clear roles and accountability in MRM.  The prior SR 11-7 (and S&amp;C memo) note that findings from audit should be reported to the board, and that boards should approve MRM policies.
+</Delta>
+
+<Delta j="EU">
+— ECB guidance on internal models similarly requires board or management body sign-off of key models and policies (e.g. in IRB models board approval of rating systems). The three-lines framework is expected (first line model owner, second line risk group, third line audit).
+</Delta>
+
+<Recall
+  q="Who usually grants final approval for a model?"
+  a="A senior governance body (e.g. Board or delegated committee).  RBI specifies the bank’s Risk Management Committee of the Board for credit models."
+/>
+
+<Recall
+  q="What is the “use test”?"
+  a="Demonstrating that the model is actually used in decisions for which it was designed (not just an academic exercise)."
+/>

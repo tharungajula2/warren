@@ -388,13 +388,63 @@ function extractNextEffectiveDate(text) {
   const wordCount = cleanText.split(/\s+/).filter(Boolean).length;
   const readingMinutes = Math.max(1, Math.ceil(wordCount / 200));
 
+function inferSubdomain(atomId) {
+  const [prefix, numStr] = atomId.split("-");
+  const num = parseInt(numStr, 10);
+
+  if (prefix === "FND") {
+    if (num <= 5) return "bank-mechanics";
+    if (num <= 10) return "financial-statements";
+    if (num <= 14) return "time-value";
+    if (num <= 19) return "risk-language";
+    return "governance";
+  }
+
+  if (prefix === "CR") {
+    if (num <= 11) return "exposure-and-default";
+    if (num <= 18) return "risk-parameters";
+    if (num <= 23) return "scorecards-and-ratings";
+    return "portfolio-risk";
+  }
+
+  if (prefix === "IMP") {
+    if (num <= 5) return "ecl-foundations";
+    if (num <= 12) return "three-stage-architecture";
+    if (num <= 15) return "lifetime-modelling";
+    return "governance-and-jurisdictions";
+  }
+
+  if (prefix === "CAP") {
+    if (num <= 8) return "capital-stack";
+    if (num <= 11) return "rwa-and-pillars";
+    if (num <= 17) return "credit-approaches";
+    if (num <= 20) return "mitigation";
+    return "pillar-2-and-jurisdictions";
+  }
+
+  if (prefix === "TLM") {
+    if (num <= 11) return "irrbb-and-mismatches";
+    if (num <= 19) return "liquidity-risk";
+    if (num <= 25) return "funds-transfer-pricing";
+    return "systemic-and-jurisdictions";
+  }
+
+  if (prefix === "MRM") {
+    if (num <= 5) return "model-risk-foundations";
+    if (num <= 11) return "governance-and-lifecycle";
+    return "validation-and-metrics";
+  }
+
+  return "unsorted";
+}
+
   // Frontmatter object
   const frontmatter = {
     id,
     title: seg.title,
     type,
     domain,
-    subdomain: "unsorted",
+    subdomain: inferSubdomain(id),
     one_screen: oneScreen,
     prerequisites: prereqs,
     jurisdictions,

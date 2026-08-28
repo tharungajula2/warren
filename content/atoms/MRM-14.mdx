@@ -1,0 +1,62 @@
+---
+id: MRM-14
+title: Calibration and Goodness-of-Fit
+type: mechanism
+domain: model-risk
+subdomain: validation-and-metrics
+one_screen: >-
+  Calibration measures how well predicted probabilities match observed
+  outcomes.  A common tool is the Hosmer–Lemeshow (H-L) test: it groups data
+  (e.g. deciles) and compares predicted vs actual frequencies using a chi-square
+  statistic.  Good calibration means predicted and actual rates align.  However,
+  large sample sizes can cause H-L to reject even small, practically unimportant
+  differences.  Validation should also include graphical plots of predicted vs
+  actual rates as a sanity check.
+prerequisites:
+  - MRM-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Statistical modeling reference on calibration (for concept).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Calibration is distinct from discrimination.  For example, two models with the same AUC could have different calibration.  In logistic regression models, analysts often use the Hosmer–Lemeshow test to quantify calibration.  If the H-L p-value is high, the model is said to fit well; a low p-value suggests poor fit.  But practitioners caution that with large test samples, the H-L test is too sensitive: trivial misalignments will become “statistically significant.”  In other words, a very large dataset may make almost any model fail H-L even if calibration is acceptable in business terms.  Therefore, one should inspect calibration plots (e.g. predicted vs actual by bucket) alongside or instead of relying solely on H-L statistics.  
+
+Banks typically expect models to be reasonably well-calibrated.  For example, EBA Pillar 2 guidance on IRB models requires checking that observed default rates closely match predicted PDs.  If not, the model may need adjustment (calibration).  If H-L rejects a model, analysts should judge if the deviation is economically material.  In summary, calibration assessment involves statistical tests and also human judgement on the materiality of any miscalibration.
+
+<Rule label="PERMANENT RULE">
+Always check calibration in addition to discrimination.  A model that ranks well (high AUC) but systematically underestimates risk can still be dangerous.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Blindly trusting p-values in large samples.  A trivial discrepancy with millions of observations can yield a significant H-L test, leading to overreaction.  Instead, focus on practical significance (e.g. a small percentage point error in probabilities is often tolerable).
+</Trap>
+
+<NeverConfuse a="Calibration (Goodness-of-fit)" b="Discrimination (AUC/Gini)">
+**Calibration (Goodness-of-fit)** — how closely the model’s predicted probabilities match actual outcomes (tested by H-L, calibration plots).  
+---  
+**Discrimination (AUC/Gini)** — how well the model orders outcomes (tested by AUC/KS).  
+They address different qualities.  A model can discriminate well but still be mis-calibrated.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Calibration is universally required. Both PRA and Fed expect models to be well-calibrated for their intended use. RBI’s draft and IFRS9 guidance (for applicable NBFCs) also emphasize aligned predicted/actual losses.
+</Rule>
+
+<Recall
+  q="Why might the Hosmer–Lemeshow test fail on a good model with large N?"
+  a="Because with a huge sample, even tiny deviations from perfect fit give a large chi-square, yielding a “reject” p-value.  So a significant H-L in large samples doesn’t always mean the model is practically bad."
+/>
+
+<Recall
+  q="How can we assess calibration if H-L is misleading?"
+  a="Use calibration plots or look at cumulative predicted vs actual defaults across score buckets."
+/>

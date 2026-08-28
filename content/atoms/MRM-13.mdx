@@ -1,0 +1,63 @@
+---
+id: MRM-13
+title: 'Discrimination Metrics (AUC, Gini, KS)'
+type: mechanism
+domain: model-risk
+subdomain: validation-and-metrics
+one_screen: >-
+  Discrimination measures how well a model ranks outcomes.  Common metrics are
+  **ROC-AUC** (area under the receiver operating curve), **Gini coefficient**
+  and **KS statistic**.  AUC (0.5–1) and Gini (0–1) quantify the model’s overall
+  ranking power, while KS is the maximum difference between cumulative
+  distributions of outcomes.  Higher values mean better separation of groups
+  (e.g. defaulters vs non-defaulters).
+prerequisites:
+  - MRM-12
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: (Conceptual metrics – not directly quoted from regs)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: A general model validation reference or textbook on ROC curves.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+In credit models (and many risk models), validators assess ranking performance.  The ROC curve plots true positive rate vs false positive rate; the area under that curve (AUC) is a popular measure (1.0 = perfect, 0.5 = random).  The **Gini** index is closely related: Gini = 2*AUC–1 (so Gini ranges 0–1).  For example, a Gini of 0.6 corresponds to AUC 0.8.  These metrics summarize the model’s ability to order cases by risk.  The **KS statistic** is another measure – it finds the point where the difference between the cumulative default vs non-default curves is greatest; a larger KS indicates better lift.  
+
+However, none of these metrics tell the whole story.  They only measure discrimination (ranking), not calibration.  A model might have high AUC yet systematically under- or over-predict probabilities.  Therefore, regulators expect both discrimination and calibration checks in validation.  Typical thresholds vary by context, but as a rule of thumb (from industry practice): an AUC of 0.7–0.8 is moderate, &gt;0.8 is strong.  (Regulators do not set fixed benchmarks but may question models with unusually low discrimination.)
+
+<Rule label="PERMANENT RULE">
+Discrimination metrics must be reported for every predictive model.  High discrimination is necessary but not sufficient for model quality.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Focusing only on one metric.  For instance, a model with high AUC but very poor calibration can still misprice risk.  Always assess multiple performance aspects.
+</Trap>
+
+<NeverConfuse a="AUC (Area Under the ROC)" b="Gini coefficient">
+**AUC (Area Under the ROC)** — overall probability that the model ranks a randomly chosen positive higher than a negative.  
+---  
+**Gini coefficient** — derived from AUC (Gini=2*AUC–1).  They are different scales of the same information (Gini ~ 2×AUC minus 1), so they often get used interchangeably.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Discrimination metrics are standard in all regimes. Regulators (PRA, Fed, RBI, ECB) expect banks to use them in validating predictive models (especially PD/LGD models).
+</Rule>
+
+<Recall
+  q="What does an AUC of 0.9 indicate?"
+  a="Excellent discrimination; the model ranks almost all outcomes correctly (AUC=1 is perfect)."
+/>
+
+<Recall
+  q="How is the Gini coefficient related to AUC?"
+  a="Gini = 2*AUC - 1.  So Gini 0.6 corresponds to AUC 0.8."
+/>

@@ -1,0 +1,67 @@
+---
+id: MRM-07
+title: Model Development
+type: procedure
+domain: model-risk
+subdomain: governance-and-lifecycle
+one_screen: >-
+  During development, the model’s purpose, data, and method are defined and
+  documented.  Firms must clearly state the model’s objectives, select
+  appropriate data and variables, choose a methodology suited to the problem,
+  and record all assumptions and design choices.  Good documentation ensures
+  transparency for later review.
+prerequisites:
+  - MRM-06
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'RBI, *Draft Principles for Model Risk in Credit* (Aug. 2024).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      PRA SS1/23 (Apr. 2026) – Principle 3 (Model development and use) –
+      Overview.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Model development starts with **problem definition**: what decision the model will support.  For example, a credit model might predict default probability for new loan applications.  The developer then assembles relevant data.  Input data should be adequate and of high quality (see MRM-13).  Next is choosing or building the mathematical/statistical method (e.g. logistic regression, decision tree, machine learning).  The methodology must fit the purpose (e.g. lifetime PD modeling requires a survival model, not simple linear regression).  All key **assumptions** and variables must be explicitly specified.  
+
+Regulators stress clear objectives and documentation.  RBI’s credit model principles, for instance, require “the objectives of the model” to be clearly defined, and that “inputs and assumptions… ensure adequate robustness”.  RBI also mandates detailed documentation including sensitivity of outputs to assumptions.  Likewise, firms should document model logic, training process, and expected limitations.  This documentation is crucial for later validation and audit.  PRA Principle 3 expects firms to have development standards and documentation (the PRA SS notes that firms should have model development and use governed under policies, with documentation).  
+
+Practically, development often involves statistical analysis and iterative testing.  Developers calibrate parameters on historical data, check intuitive plausibility (face validity), and may back-test on hold-out data before finalizing the model.  The key is to embed sound practice: clear target outcomes, robust data pipelines, explainable methodology, and retrievable code/documents.  Once development is done, no use is allowed until the model passes independent validation.
+
+<Rule label="PERMANENT RULE">
+A model must have a defined use case, appropriate data, and complete documentation from the start.  Never proceed to validation or use without thorough development records.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Creating a “black box” with no written spec.  Skipping documentation or ignoring model purpose can lead to validation failure.  (For example, training a model without stating its decision criteria or target population leaves validation teams clueless.)
+</Trap>
+
+<NeverConfuse a="Model purpose" b="Model exposure">
+**Model purpose** — the business decision or metric the model is meant to support (e.g. predicting 1-year PD).  
+---  
+**Model exposure** — the financial amount or scope to which the model applies.  
+They are different: purpose is “what” the model does; exposure is “how big” its impact is.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Development standards are similar worldwide.  RBI’s guidance explicitly lists development principles (clear objectives, robust inputs, documentation).  PRA and Fed guidance likewise stress that models should be developed in line with policy and in-house standards, though neither prescribes a specific development process beyond these principles.
+</Rule>
+
+<Recall
+  q="What should be documented during model development?"
+  a="The model’s objective, data sources, assumptions, methodology, parameters, and any transformations.  RBI requires documenting sensitivity to assumptions."
+/>
+
+<Recall
+  q="Why define objectives clearly?"
+  a="So validation can check if the model solves the intended problem.  Ambiguity leads to scope creep or misuse."
+/>

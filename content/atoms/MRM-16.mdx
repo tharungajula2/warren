@@ -1,0 +1,70 @@
+---
+id: MRM-16
+title: Benchmarking and Challenger Models
+type: mechanism
+domain: model-risk
+subdomain: validation-and-metrics
+one_screen: >-
+  A **benchmark** (or reference) model is an alternate model used as a
+  comparison.  A **challenger model** is a competing model built to test the
+  primary model’s performance.  Banks may use simpler or differently-specified
+  challenger models to sanity-check the primary model.  If the challenger
+  outperforms, it signals the primary model may need improvement.
+prerequisites:
+  - MRM-08
+  - MRM-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      RBI, *Draft Guidance on MRM, 2026* – mentions benchmarking/model
+      validation.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      S&C memo (Apr. 2026) – mentions monitoring/outcome analysis (includes
+      benchmarking).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Challenger and benchmark models serve to guard against model errors.  For example, a bank’s existing PD model (the “incumbent”) might be compared to a newly-developed simpler model or an industry benchmark.  This comparison can be part of validation or periodic review.  The challenger might use a subset of the data or a different algorithm.  The goal is not necessarily to replace the primary model, but to ensure the primary model is still competitive.  
+
+Regulators encourage such comparisons.  The PCA pillar 2 common terminology refers to “benchmarking” as a supervisory tool.  While SR 26-2 does not mandate challengers, it lists ongoing monitoring and outcome analysis as good practices.  RBI’s draft also mentions “benchmarking” in its requirements.  In practice, a challenger model can help identify when a model has become stale.  If performance metrics of the challenger are significantly better on hold-out data, this may trigger a model review or redevelopment.
+
+Benchmarking can also refer to comparing to industry models or historical performance.  The key is to not rely blindly on one model.  Banks should have a process to re-run or update challengers periodically for major models.  (Note: having challengers is not a universal requirement; smaller banks may simply revalidate the main model more often.)
+
+<Rule label="PERMANENT RULE">
+Maintain at least one independent benchmark (or challenger) for each material model to verify it still performs well.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating the primary model’s validation in isolation.  Example: **believing a long-used model is fine without testing a new approach**.  A challenger might reveal weaknesses not caught by routine checks.
+</Trap>
+
+<NeverConfuse a="Benchmark model" b="Primary model">
+**Benchmark model** — an external or internally developed reference used for comparison.  
+---  
+**Primary model** — the model in actual use.  
+They get mixed up when a benchmark is incorrectly used for decisions; remember the primary is the one governing business.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Challenger/benchmark practice is recommended by regulators worldwide as part of model governance.  (ECB’s internal model guidelines mention the use of simpler collateral models, for example.)
+</Rule>
+
+<Recall
+  q="Why create a challenger model?"
+  a="To test if a simpler or alternative model can outperform the primary model, indicating potential improvements or deficiencies."
+/>
+
+<Recall
+  q="What should be done if a challenger model outperforms the primary model?"
+  a="Investigate why.  It may indicate that the primary model is no longer optimal; consider redevelopment or recalibration."
+/>

@@ -1,0 +1,83 @@
+---
+id: MRM-10
+title: Ongoing Monitoring and Performance
+type: procedure
+domain: model-risk
+subdomain: governance-and-lifecycle
+one_screen: >-
+  After a model is in use, the firm must continuously monitor its performance
+  and environment.  This includes tracking key metrics (stability indexes,
+  backtests, outcomes) and ensuring the model remains accurate.  Oversight
+  bodies should set thresholds for action and require periodic performance
+  reports, with escalations if issues are detected.
+prerequisites:
+  - MRM-06
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: PRA SS1/23 (Apr. 2026) – Standards for monitoring model performance.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      *Statistical Properties of the Population Stability Index*, Risk Journal
+      (Apr. 2022).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Models are dynamic; their performance can drift over time as data or conditions change.  Banks therefore establish an **ongoing monitoring program**.  This typically involves: 
+- **Performance tracking:** comparing model predictions to actual results (backtesting). For example, periodically compare predicted default rates to realized defaults.  
+- **Data drift checks:** computing stability metrics (PSI/CSI) on input variables or score distributions (see MRM-16).  Significant shifts in data distributions may signal model drift.  
+- **Thresholds:** setting quantitative thresholds (e.g. maximum allowable PSI) that, if exceeded, trigger investigation or revalidation.  Common practice is PSI&lt;0.10 (little change), 0.10–0.25 moderate, &gt;0.25 significant.  
+- **Periodic reviews:** formal re-validation cycles or ad-hoc reviews when performance degrades.  Regulators discourage fixed cadences; instead, use a risk-based approach to determine review frequency.  
+
+Regulators support strong monitoring.  PRA SS1/23 Principle 5 expects firms to have “model risk mitigants” including performance monitoring and expert overrides.  The PRA details standards for monitoring model performance (criteria, thresholds, back-testing).  RBI’s draft also requires “ongoing performance testing using backward-looking and forward-looking approaches”.  In the US, SR 26-2 lists monitoring as a governance activity (OCC noted monitoring and outcome analysis as sound practice in vendor models).
+
+Senior management should review model performance at least annually or more often for top-tier models.  Reports summarizing key metrics and any breaches of thresholds should be provided to risk committees.  Any persistent performance shortfall must be remediated (perhaps via recalibration or new model).
+
+<Rule label="PERMANENT RULE">
+Always monitor a model in production.  A model’s validity is not one-time; it requires continuous checking.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming a validated model will stay valid forever.  For example, **ignoring a rising PSI that indicates data shift**, which could make the model obsolete.
+</Trap>
+
+<NeverConfuse a="Monitoring" b="Validation">
+**Monitoring** — ongoing checks of model output/data (e.g. backtests, stability indices).  
+---  
+**Validation** — formal, periodic re-assessment of the whole model.  
+They are related but different stages.  Monitoring is continuous; validation is periodic/developer review (see MRM-08).
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s draft requires continuous oversight.  It even calls for backward/forward performance testing and benchmarking in monitoring. Excessive model risk must be reported to the Board.
+</Delta>
+
+<Delta j="UK">
+— The PRA expects firms to monitor model performance and use expert judgment or overrides as needed (SS1/23 Principle 5).  Monitoring standards should include criteria and thresholds.
+</Delta>
+
+<Delta j="US">
+— Fed/OCC guidance includes “ongoing monitoring and outcome analysis” as key practices (especially for vendor models).  The revised guidance emphasizes risk-based monitoring but is principles-based.
+</Delta>
+
+<Delta j="EU">
+— ECB supervisors require regular monitoring of internal models and use of backtesting (as in TRIM/ICAAP reviews).  EBA Pillar 2 practices include ongoing performance tracking.
+</Delta>
+
+<Recall
+  q="What does PSI > 0.25 indicate?"
+  a="A “significant change” in the data distribution, requiring investigation."
+/>
+
+<Recall
+  q="Who should receive model performance reports?"
+  a="The model owner, second-line model risk group, and governance bodies (e.g. risk committee or board).  Regulators expect at least annual high-level reporting."
+/>

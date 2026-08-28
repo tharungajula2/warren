@@ -5,7 +5,7 @@
       "title": "Why Regulatory Capital Exists",
       "type": "concept",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Expected loss is the recurring, statistically anticipated cost of taking risk; unexpected loss is the adverse tail beyond that expectation. Provisions and pricing address expected loss, while capital exists principally to keep the bank solvent when realised losses exceed what was expected.",
       "prerequisites": [],
       "see_also": [],
@@ -40,15 +40,15 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 291.7,
-      "initialY": 46.3
+      "initialX": 405.7,
+      "initialY": 67.1
     },
     "CAP-02": {
       "id": "CAP-02",
       "title": "Solvency and Liquidity in a Capital Context",
       "type": "concept",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Solvency asks whether the value of the bank’s assets can absorb losses and still cover its liabilities; liquidity asks whether cash obligations can be met when due. Capital protects solvency, while liquidity resources protect payment capacity, and a bank can fail either test without initially failing the other.",
       "prerequisites": [
         "CAP-01"
@@ -80,15 +80,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 284.4,
-      "initialY": -13.6
+      "initialX": 437.6,
+      "initialY": 13
     },
     "CAP-03": {
       "id": "CAP-03",
       "title": "Going-Concern and Gone-Concern Capital",
       "type": "concept",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Going-concern capital absorbs losses while the bank remains operating; gone-concern capital protects creditors and supports resolution once viability has been lost. Basel places CET1 and AT1 in Tier 1 going-concern capital and characterises Tier 2 as gone-concern capital.",
       "prerequisites": [
         "CAP-01",
@@ -121,15 +121,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 328.1,
-      "initialY": 10
+      "initialX": 384.5,
+      "initialY": 11.2
     },
     "CAP-04": {
       "id": "CAP-04",
       "title": "The Regulatory Capital Stack",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Regulatory capital is a quality hierarchy: CET1 is the first and strongest loss absorber, AT1 supplements going-concern capital, and Tier 2 provides lower-ranking gone-concern capacity. Basel total regulatory capital is CET1 plus AT1 plus Tier 2, after applicable regulatory adjustments.",
       "prerequisites": [
         "CAP-03"
@@ -161,15 +161,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 371.5,
-      "initialY": -22.7
+      "initialX": 380,
+      "initialY": -38.6
     },
     "CAP-05": {
       "id": "CAP-05",
       "title": "Regulatory Adjustments and Deductions",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Accounting equity is not automatically regulatory capital. Prudential deductions and adjustments remove or limit balance-sheet items whose value may be unavailable, uncertain or double-counted precisely when the bank needs loss-absorbing capital most.",
       "prerequisites": [
         "CAP-04"
@@ -201,15 +201,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 379.8,
-      "initialY": 38.5
+      "initialX": 431.2,
+      "initialY": -37.7
     },
     "CAP-06": {
       "id": "CAP-06",
       "title": "The Capital Buffer Stack",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Minimum capital is the line a bank must not normally cross; buffers are deliberately placed above that line so capital can absorb stress before minimum requirements are breached. Conservation, countercyclical and systemic buffers serve different purposes even when all are expressed as additional CET1 requirements.",
       "prerequisites": [
         "CAP-04"
@@ -223,7 +223,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -249,15 +249,15 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 315.5,
-      "initialY": -24.1
+      "initialX": 381.9,
+      "initialY": 30.1
     },
     "CAP-07": {
       "id": "CAP-07",
       "title": "Distribution Constraints and Maximum Distributable Amount",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "Buffers bite before minimums because entering the buffer restricts distributions while the bank can still remain legally capitalised above minimum requirements. The maximum distributable amount mechanism turns buffer depletion into progressively stronger limits on dividends, variable remuneration and other discretionary payouts.",
       "prerequisites": [
         "CAP-06"
@@ -271,7 +271,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -297,15 +297,15 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 361.8,
-      "initialY": -51.3
+      "initialX": 337.2,
+      "initialY": -7.4
     },
     "CAP-08": {
       "id": "CAP-08",
       "title": "The Leverage Ratio Backstop",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "capital-stack",
       "one_screen": "The leverage ratio ignores most risk weights and compares Tier 1 capital with a broad exposure measure. It is a deliberately blunt backstop: risk-based models can change the measured riskiness of assets, but they cannot make the underlying exposure disappear.",
       "prerequisites": [
         "CAP-04",
@@ -320,7 +320,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -346,15 +346,15 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 350.9,
-      "initialY": 35.2
+      "initialX": 331.6,
+      "initialY": 22.3
     },
     "CAP-09": {
       "id": "CAP-09",
       "title": "Risk Weights and Risk-Weighted Assets",
       "type": "concept",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "rwa-and-pillars",
       "one_screen": "A risk weight converts an exposure amount into a regulatory risk measure: exposure × risk weight = RWA under the basic standardised credit-risk logic. The weight is a prudential calibration of relative risk, not a forecast that the stated percentage of the exposure will be lost.",
       "prerequisites": [
         "CAP-01"
@@ -386,15 +386,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 300,
-      "initialY": 7.6
+      "initialX": 361.5,
+      "initialY": 77.5
     },
     "CAP-10": {
       "id": "CAP-10",
       "title": "Basel’s Three Pillars",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "rwa-and-pillars",
       "one_screen": "Pillar 1 supplies minimum quantitative capital rules, Pillar 2 adds bank-specific risk assessment and supervisory review, and Pillar 3 uses public disclosure to strengthen market discipline. A complete capital framework therefore asks not only “what does the formula require?” but also “what risks did the formula miss?” and “what must outsiders be told?”",
       "prerequisites": [
         "CAP-09"
@@ -431,15 +431,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 296.6,
-      "initialY": -45.5
+      "initialX": 406.1,
+      "initialY": 36.8
     },
     "CAP-11": {
       "id": "CAP-11",
       "title": "The Four RWA Components",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "rwa-and-pillars",
       "one_screen": "Total RWA aggregates distinct prudential risk engines: credit risk, market risk, operational risk and credit valuation adjustment risk. They share the same capital denominator only after each component has been measured under its own rules.",
       "prerequisites": [
         "CAP-09",
@@ -477,15 +477,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 339,
-      "initialY": -28.2
+      "initialX": 359.9,
+      "initialY": 6
     },
     "CAP-12": {
       "id": "CAP-12",
       "title": "The Standardised Approach to Credit Risk",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "credit-approaches",
       "one_screen": "Under the standardised approach, the regulator prescribes the exposure classes, eligibility conditions and risk-weight rules instead of allowing the bank to generate the core credit-risk capital requirement from its own PD/LGD models. Revised Basel rules make this approach more granular and risk-sensitive while retaining external ratings only where the framework permits them.",
       "prerequisites": [
         "CAP-09",
@@ -500,7 +500,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -526,15 +526,15 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 364.9,
-      "initialY": 15.5
+      "initialX": 322.1,
+      "initialY": 46
     },
     "CAP-13": {
       "id": "CAP-13",
       "title": "Foundation and Advanced IRB",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "credit-approaches",
       "one_screen": "IRB allows approved banks to use internal estimates for specified credit-risk parameters, but the bank never owns the whole capital formula. Under Foundation IRB the supervisor supplies more of the loss parameters; under Advanced IRB the bank estimates more of them, subject to permission, constraints and validation.",
       "prerequisites": [
         "CAP-12"
@@ -548,7 +548,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -574,15 +574,15 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 345.1,
-      "initialY": 61
+      "initialX": 368.1,
+      "initialY": 54.5
     },
     "CAP-14": {
       "id": "CAP-14",
       "title": "The IRB Risk-Weight Function",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "credit-approaches",
       "one_screen": "The IRB function turns PD, LGD, EAD and maturity into a capital measure while applying a supervisory correlation structure. Higher default likelihood, larger loss severity, larger exposure or longer effective maturity generally increase capital, but the function is nonlinear because it is designed around adverse portfolio loss rather than a simple PD × LGD calculation.",
       "prerequisites": [
         "CAP-13"
@@ -596,7 +596,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -622,15 +622,15 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 381,
-      "initialY": 79.4
+      "initialX": 422.2,
+      "initialY": 52.5
     },
     "CAP-15": {
       "id": "CAP-15",
       "title": "IRB Input Floors and Parameter Constraints",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "credit-approaches",
       "one_screen": "Input floors stop internally estimated risk parameters from falling below prudential lower bounds even when a model produces a smaller number. They constrain the ingredients of the IRB calculation; the output floor constrains the final aggregate RWA result.",
       "prerequisites": [
         "CAP-14"
@@ -644,7 +644,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -665,15 +665,15 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 331.5,
-      "initialY": 74.2
+      "initialX": 346.4,
+      "initialY": 63.7
     },
     "CAP-16": {
       "id": "CAP-16",
       "title": "The Output Floor",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "credit-approaches",
       "one_screen": "The output floor prevents approved internal models from reducing total RWA below 72.5% of the amount produced by the prescribed standardised comparison at full implementation. It is an aggregate backstop against model risk and excessive RWA variability, not a rule that replaces internal models with a 72.5% risk weight.",
       "prerequisites": [
         "CAP-12",
@@ -689,7 +689,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -715,15 +715,15 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 394.3,
-      "initialY": 61.7
+      "initialX": 291.2,
+      "initialY": 40.4
     },
     "CAP-17": {
       "id": "CAP-17",
       "title": "Specialised Lending and Supervisory Slotting",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "credit-approaches",
       "one_screen": "Slotting converts a specialised-lending exposure into a supervisory quality category and assigns the corresponding regulatory treatment rather than relying on an ordinary corporate PD/LGD model. It is designed for financing whose repayment depends materially on the performance of a specific asset, project or cash-flow structure.",
       "prerequisites": [
         "CAP-13",
@@ -738,7 +738,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -759,15 +759,15 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 307.8,
-      "initialY": 60.4
+      "initialX": 407.7,
+      "initialY": 4.7
     },
     "CAP-18": {
       "id": "CAP-18",
       "title": "Credit Risk Mitigation: Collateral, Guarantees and Netting",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "mitigation",
       "one_screen": "Credit risk mitigation reduces regulatory exposure only when the protection is eligible, legally effective and recognised by the applicable capital rules. Collateral changes the loss available from pledged assets, guarantees transfer specified credit risk to a protection provider, and netting reduces exposure by recognising enforceable offsetting claims.",
       "prerequisites": [
         "CAP-12"
@@ -799,15 +799,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 420.3,
-      "initialY": -18.9
+      "initialX": 283.8,
+      "initialY": 8.2
     },
     "CAP-19": {
       "id": "CAP-19",
       "title": "Substitution and Comprehensive CRM Approaches",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "mitigation",
       "one_screen": "Substitution changes whose credit quality drives the protected portion of an exposure; the comprehensive collateral approach changes the exposure value after recognising collateral and prescribed valuation adjustments. One changes the relevant risk weight, the other changes the amount to which risk weighting is applied.",
       "prerequisites": [
         "CAP-18"
@@ -839,15 +839,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 424.9,
-      "initialY": 38.1
+      "initialX": 307.8,
+      "initialY": -48.5
     },
     "CAP-20": {
       "id": "CAP-20",
       "title": "Haircuts",
       "type": "mechanism",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "mitigation",
       "one_screen": "A haircut is a prudential valuation adjustment that recognises that exposure and collateral values can move before a position is closed or collateral is realised. It deliberately prevents yesterday’s collateral market value from being treated as perfectly certain protection against tomorrow’s exposure.",
       "prerequisites": [
         "CAP-19"
@@ -879,15 +879,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 376.3,
-      "initialY": -1.1
+      "initialX": 366.3,
+      "initialY": -66
     },
     "CAP-21": {
       "id": "CAP-21",
       "title": "Pillar 1 and Pillar 2",
       "type": "concept",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "Pillar 1 standardises minimum capital for risks that can be captured through common formulas; Pillar 2 asks whether those formulas leave material institution-specific risk uncovered. Pillar 2 is therefore the deliberate completeness check on Pillar 1.",
       "prerequisites": [
         "CAP-10",
@@ -920,15 +920,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 347.8,
-      "initialY": -76.9
+      "initialX": 419.4,
+      "initialY": -16
     },
     "CAP-22": {
       "id": "CAP-22",
       "title": "ICAAP and the Supervisory Review Process",
       "type": "procedure",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "ICAAP is the bank’s own disciplined assessment of how much capital it needs for its actual risk profile and strategy; supervisory review tests whether that assessment is credible. It is not a worksheet for reproducing regulatory minima.",
       "prerequisites": [
         "CAP-21"
@@ -960,15 +960,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 390.6,
-      "initialY": -36.5
+      "initialX": 354.4,
+      "initialY": -38.6
     },
     "CAP-23": {
       "id": "CAP-23",
       "title": "Stress Testing and Capital Transmission",
       "type": "procedure",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "A capital stress test is a causal chain: define an adverse scenario, translate it into risk drivers and financial losses, project earnings and RWA, then recalculate capital resources and ratios. Reverse stress testing runs the chain backwards from failure to identify combinations of events capable of breaking the business model.",
       "prerequisites": [
         "CAP-22"
@@ -1000,15 +1000,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 326.8,
-      "initialY": -52.8
+      "initialX": 393.6,
+      "initialY": -70.5
     },
     "CAP-24": {
       "id": "CAP-24",
       "title": "Supervisory and Internal Stress Tests",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "Internal stress tests are management tools tailored to the bank’s own vulnerabilities; supervisory stress tests are authority-led or authority-specified exercises designed to assess prudential resilience and comparability. The same scenario can serve both purposes, but ownership, objectives and consequences are different.",
       "prerequisites": [
         "CAP-23"
@@ -1040,15 +1040,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 399.6,
-      "initialY": -53.8
+      "initialX": 337.1,
+      "initialY": -59.6
     },
     "CAP-25": {
       "id": "CAP-25",
       "title": "Basel Does Not Bind Banks Directly",
       "type": "concept",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "Basel is an international prudential standard, not a supranational banking statute. The Basel Committee expressly has no formal supranational authority and its decisions have no legal force; binding obligations arise only when competent jurisdictions implement the standards through their own law and supervisory rulebooks.",
       "prerequisites": [
         "CAP-10"
@@ -1080,15 +1080,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 349.8,
-      "initialY": -5.4
+      "initialX": 368.2,
+      "initialY": -16
     },
     "CAP-26": {
       "id": "CAP-26",
       "title": "UK Basel 3.1 and the SDDT Regime",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "**Perishable — final rules, pending commencement.** The PRA’s Basel 3.1 package takes effect on **1 January 2027**; the FRTB Internal Models Approach is delayed separately to **1 January 2028**. Small Domestic Deposit Takers enter the PRA’s simplified capital regime on **1 January 2027**, creating a deliberately different domestic framework for eligible smaller firms.",
       "prerequisites": [
         "CAP-12",
@@ -1102,7 +1102,7 @@
         "UK"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -1123,15 +1123,15 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 423.6,
-      "initialY": 11
+      "initialX": 310.9,
+      "initialY": -3.7
     },
     "CAP-27": {
       "id": "CAP-27",
       "title": "EU CRR3 Implementation",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "**Perishable — partially implemented with a pending market-risk date.** CRR3 has applied major Basel-finalisation reforms since **1 January 2025**; the output floor is **55% during 2026** and reaches **72.5% on 1 January 2030**. Binding FRTB market-risk own-funds requirements have been postponed to **1 January 2027**, while specified FRTB calculations continue to matter for the output floor.",
       "prerequisites": [
         "CAP-12",
@@ -1144,7 +1144,7 @@
         "EU"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -1175,15 +1175,15 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 327,
-      "initialY": 38
+      "initialX": 300.3,
+      "initialY": -15.8
     },
     "CAP-28": {
       "id": "CAP-28",
       "title": "India’s Commercial-Bank Capital Framework",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "**Perishable — a final revised credit-risk framework is pending commencement.** Indian commercial banks have higher domestic Basel-style minimums of **5.5% CET1, 7% Tier 1 and 9% total capital**; leverage minima are **4% for D-SIBs and 3.5% for other banks**. RBI’s final revised **Standardised Approach** for banking-book credit risk becomes effective on **1 April 2027**.",
       "prerequisites": [
         "CAP-04",
@@ -1199,7 +1199,7 @@
         "IN"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-04-01",
       "status": "draft",
       "verified": false,
@@ -1230,15 +1230,15 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 405.7,
-      "initialY": 36.7
+      "initialX": 322.2,
+      "initialY": -28.2
     },
     "CAP-29": {
       "id": "CAP-29",
       "title": "The US March 2026 Capital Reproposal and Stress Capital Buffer",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "**Perishable — proposal, not rule.** On **19 March 2026** the US federal banking agencies issued a new capital package, including a proposal for the largest and most internationally active organisations, a broader standardised-capital proposal and a Federal Reserve GSIB-surcharge proposal. As at 27 August 2026, the package must be treated as **proposed**, while the existing stress capital buffer architecture remains the operative large-bank stress-capital mechanism.",
       "prerequisites": [
         "CAP-06",
@@ -1252,7 +1252,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -1283,15 +1283,15 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 378.1,
-      "initialY": -65.7
+      "initialX": 405.4,
+      "initialY": -26.3
     },
     "CAP-30": {
       "id": "CAP-30",
       "title": "Cross-Jurisdiction Basel Implementation Map",
       "type": "reference",
       "domain": "regulatory-capital",
-      "subdomain": "unsorted",
+      "subdomain": "pillar-2-and-jurisdictions",
       "one_screen": "**Perishable — status as at 27 August 2026.** Basel supplies the common vocabulary, but the live rule differs sharply by jurisdiction: EU CRR3 is already in application, UK Basel 3.1 starts 1 January 2027, India’s revised credit-risk Standardised Approach starts 1 April 2027, and the US March 2026 capital package remains proposed.",
       "prerequisites": [
         "CAP-25",
@@ -1309,7 +1309,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
@@ -1360,15 +1360,15 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 394.6,
-      "initialY": -12.9
+      "initialX": 351.6,
+      "initialY": 30.8
     },
     "CR-01": {
       "id": "CR-01",
       "title": "Obligor, borrower and counterparty",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "An obligor owes the credit obligation, a borrower receives or uses borrowed funds, and a counterparty is the other party to a financial transaction. The labels often describe the same legal person, but they are not interchangeable because credit risk must attach to the entity that is legally or economically responsible for performance.",
       "prerequisites": [
         "FND-15"
@@ -1380,6 +1380,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1399,15 +1400,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 27.2,
-      "initialY": 282.8
+      "initialX": 88.4,
+      "initialY": 311.4
     },
     "CR-02": {
       "id": "CR-02",
       "title": "Facility, account and product",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "A product is a reusable commercial design, a facility is a particular contractual grant of credit, and an account is an operational record through which a facility may be booked or serviced. Credit decisions occur on real facilities and obligors, not on abstract product labels.",
       "prerequisites": [
         "CR-01"
@@ -1419,6 +1420,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1438,15 +1440,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 16.9,
-      "initialY": 217.4
+      "initialX": 51.9,
+      "initialY": 265.1
     },
     "CR-03": {
       "id": "CR-03",
       "title": "Exposure and aggregation levels",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Exposure is the amount or value subject to credit loss, but its meaning changes with the aggregation level and measurement purpose. Account balance, facility exposure, obligor exposure and portfolio exposure answer different questions and must never be silently substituted.",
       "prerequisites": [
         "CR-01",
@@ -1459,6 +1461,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1483,15 +1486,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": -1.6,
-      "initialY": 179.3
+      "initialX": 18.6,
+      "initialY": 229.9
     },
     "CR-04": {
       "id": "CR-04",
       "title": "Group and connected-party exposure",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Legal separation does not guarantee economic independence. Connected-party rules aggregate exposures where control or economic interdependence means that trouble at one entity can transmit to another, preventing a bank from disguising one concentrated risk as several separate names.",
       "prerequisites": [
         "CR-01",
@@ -1506,7 +1509,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1536,15 +1540,15 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 30.5,
-      "initialY": 178.8
+      "initialX": 44.3,
+      "initialY": 224.9
     },
     "CR-05": {
       "id": "CR-05",
       "title": "Default: event before metric",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Default is a rule-defined credit state, not a synonym for loss, arrears or bankruptcy. A PD, default rate, cure rate or LGD is meaningless until the population, level of application and exact events that constitute default have been fixed.",
       "prerequisites": [
         "CR-01",
@@ -1559,7 +1563,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1587,17 +1592,17 @@
       ],
       "slug": "cr-05",
       "depth": 4,
-      "currentness": "fresh",
+      "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": 41.6,
-      "initialY": 195
+      "initialX": 35.7,
+      "initialY": 248.4
     },
     "CR-06": {
       "id": "CR-06",
       "title": "Days past due, arrears and delinquency buckets",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Days past due measures elapsed time since a contractual amount became unpaid; arrears measure the unpaid amount; a delinquency bucket groups accounts by lateness. None of these is automatically the same thing as default.",
       "prerequisites": [
         "CR-02",
@@ -1612,7 +1617,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1637,15 +1643,15 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 93.5,
-      "initialY": 291
+      "initialX": 125.5,
+      "initialY": 328
     },
     "CR-07": {
       "id": "CR-07",
       "title": "The ninety-day backstop",
       "type": "reference",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Ninety days past due is a backstop because credit can default before day 90 through unlikeliness-to-pay criteria. Waiting for the clock when evidence already shows non-payment is likely converts a maximum mechanical threshold into an unjustified grace period.",
       "prerequisites": [
         "CR-05",
@@ -1660,7 +1666,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1690,15 +1697,15 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 127,
-      "initialY": 299.8
+      "initialX": 155.5,
+      "initialY": 288.2
     },
     "CR-08": {
       "id": "CR-08",
       "title": "Unlikeliness to pay",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Unlikeliness to pay recognises default from the substance of credit deterioration before a delinquency clock necessarily reaches its backstop. It is forward-looking judgement about full repayment without extraordinary recovery action, not a discretionary excuse to classify whichever borrowers appear weak.",
       "prerequisites": [
         "CR-05",
@@ -1713,7 +1720,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1738,15 +1746,15 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 54.1,
-      "initialY": 268
+      "initialX": 110.7,
+      "initialY": 245.3
     },
     "CR-09": {
       "id": "CR-09",
       "title": "Cure and re-default",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Cure is the controlled transition from default back to non-default after the conditions causing default have ceased and repayment performance is sufficiently credible. Re-default is a subsequent return to default; treating temporary payment as permanent cure understates both PD and workout risk.",
       "prerequisites": [
         "CR-05",
@@ -1762,7 +1770,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1787,15 +1796,15 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 62.2,
-      "initialY": 229.9
+      "initialX": 77.2,
+      "initialY": 272.5
     },
     "CR-10": {
       "id": "CR-10",
       "title": "Restructuring and forbearance",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "Restructuring changes contractual terms; forbearance is a concession associated with a debtor's financial difficulty. Neither word is automatically identical to default, but a distressed concession can be evidence that the original obligation will not be repaid in full and can therefore trigger or prolong default.",
       "prerequisites": [
         "CR-05",
@@ -1811,7 +1820,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1836,15 +1846,15 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -55.8,
-      "initialY": 107.5
+      "initialX": -52.8,
+      "initialY": 180.8
     },
     "CR-11": {
       "id": "CR-11",
       "title": "Write-off: accounting removal versus economic loss",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "exposure-and-default",
       "one_screen": "A write-off changes the carrying amount recognised on the balance sheet; it does not necessarily mean the legal claim, recovery process or economic history has vanished. Default, provision, write-off and recovery are separate lifecycle states.",
       "prerequisites": [
         "CR-03",
@@ -1860,7 +1870,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1890,15 +1901,15 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -31.7,
-      "initialY": 115.7
+      "initialX": -26,
+      "initialY": 171.4
     },
     "CR-12": {
       "id": "CR-12",
       "title": "Probability of default",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "Probability of default is the probability that a defined obligor or exposure enters a defined default state over a specified future horizon, conditional on a stated information set. A PD without a horizon, default definition and unit of observation is not a complete parameter.",
       "prerequisites": [
         "CR-05"
@@ -1910,6 +1921,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1929,15 +1941,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 3.6,
-      "initialY": 228.7
+      "initialX": 72.3,
+      "initialY": 226.6
     },
     "CR-13": {
       "id": "CR-13",
       "title": "Point-in-time and through-the-cycle PD",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "Point-in-time risk estimates move more strongly with current borrower and economic conditions; through-the-cycle approaches deliberately damp temporary cyclical variation and emphasise longer-run creditworthiness. They are different conditioning philosophies, not simply \"short horizon\" versus \"long horizon\".",
       "prerequisites": [
         "CR-12"
@@ -1949,6 +1961,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -1968,15 +1981,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": -14.8,
-      "initialY": 251.4
+      "initialX": 86.5,
+      "initialY": 195.2
     },
     "CR-14": {
       "id": "CR-14",
       "title": "Loss given default and recovery rate",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "LGD is loss severity conditional on default; recovery rate is the complementary recovered share only when both are defined on a consistent economic basis. Economic LGD must capture recovery cash flows, costs and timing rather than merely subtracting collateral value from balance.",
       "prerequisites": [
         "CR-05"
@@ -1988,6 +2001,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2007,15 +2021,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": -14.9,
-      "initialY": 204
+      "initialX": 48.1,
+      "initialY": 194.9
     },
     "CR-15": {
       "id": "CR-15",
       "title": "Exposure at default and credit conversion factors",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "Exposure at default estimates how much will be exposed when default occurs, not merely how much is drawn today. Credit conversion factors translate eligible undrawn or contingent amounts into expected or regulatory exposure, making drawdown behaviour part of credit risk.",
       "prerequisites": [
         "CR-03",
@@ -2028,6 +2042,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2047,15 +2062,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 35.5,
-      "initialY": 258.1
+      "initialX": 97.2,
+      "initialY": 264
     },
     "CR-16": {
       "id": "CR-16",
       "title": "Effective maturity",
       "type": "reference",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "Effective maturity converts the timing of an exposure's remaining contractual cash flows into a maturity measure relevant to credit risk. It is not always the calendar time until the final legal maturity date.",
       "prerequisites": [
         "CR-02",
@@ -2068,6 +2083,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2087,15 +2103,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -72.2,
-      "initialY": 106.1
+      "initialX": -57.8,
+      "initialY": 169
     },
     "CR-17": {
       "id": "CR-17",
       "title": "Expected loss as PD × LGD × EAD",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "`EL = PD × LGD × EAD` is a useful one-period credit-loss decomposition only when the three parameters describe compatible events, horizons, populations and economic conditions. The multiplication is simple; obtaining coherent inputs is not.",
       "prerequisites": [
         "CR-12",
@@ -2109,6 +2125,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2128,15 +2145,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": -63.5,
-      "initialY": 143.7
+      "initialX": -30,
+      "initialY": 193.8
     },
     "CR-18": {
       "id": "CR-18",
       "title": "Unexpected loss and capital",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "risk-parameters",
       "one_screen": "Expected loss is the average credit cost; unexpected loss is adverse variation around that average. Capital exists to absorb sufficiently severe unexpected losses and protect creditors when realised losses exceed ordinary expected-loss capacity.",
       "prerequisites": [
         "CR-17"
@@ -2148,6 +2165,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
@@ -2167,15 +2185,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 67.6,
-      "initialY": 266.2
+      "initialX": 106,
+      "initialY": 283.4
     },
     "CR-19": {
       "id": "CR-19",
       "title": "Retail versus wholesale credit modelling",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "scorecards-and-ratings",
       "one_screen": "Retail credit is usually managed through statistically homogeneous pools because each exposure is small and there are many observations; wholesale credit is usually assessed obligor by obligor because exposures are larger, populations are smaller and information is more heterogeneous. Neither approach eliminates judgement.",
       "prerequisites": [
         "CR-01",
@@ -2189,6 +2207,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2208,15 +2227,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 80,
-      "initialY": 309.1
+      "initialX": 147.9,
+      "initialY": 310.4
     },
     "CR-20": {
       "id": "CR-20",
       "title": "Application and behavioural scorecards",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "scorecards-and-ratings",
       "one_screen": "Application scorecards estimate risk using information available around origination; behavioural scorecards use information generated after the credit relationship exists. Mixing their observation windows creates leakage and makes model performance look better than it really is.",
       "prerequisites": [
         "CR-12",
@@ -2229,6 +2248,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2248,15 +2268,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 70.1,
-      "initialY": 355.3
+      "initialX": 191.7,
+      "initialY": 281.9
     },
     "CR-21": {
       "id": "CR-21",
       "title": "Rating grades, master scales and migration",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "scorecards-and-ratings",
       "one_screen": "A rating grade is a discrete risk class, a master scale defines the ordered meaning of all grades, and migration records movements between them through time. A rating system is useful only if grades consistently separate risk and retain enough history to test how borrowers move and default.",
       "prerequisites": [
         "CR-12",
@@ -2270,6 +2290,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2289,15 +2310,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 46.3,
-      "initialY": 334.1
+      "initialX": 168.4,
+      "initialY": 259.9
     },
     "CR-22": {
       "id": "CR-22",
       "title": "Bureau data",
       "type": "reference",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "scorecards-and-ratings",
       "one_screen": "Bureau data describe reported credit relationships and repayment history; they are powerful evidence of external indebtedness and past behaviour, not a complete statement of current income, assets, intentions or future ability to pay. Absence of adverse bureau information is not evidence of low risk when coverage is incomplete or the borrower has little history.",
       "prerequisites": [
         "CR-01",
@@ -2311,6 +2332,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2330,15 +2352,15 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 98.4,
-      "initialY": 317.8
+      "initialX": 159.8,
+      "initialY": 325.6
     },
     "CR-23": {
       "id": "CR-23",
       "title": "Vintage analysis and roll rates",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "scorecards-and-ratings",
       "one_screen": "Vintage analysis follows cohorts originated at similar times as they season; roll-rate analysis follows movements between delinquency states. Both restore the time dimension that a portfolio snapshot destroys.",
       "prerequisites": [
         "CR-06",
@@ -2352,6 +2374,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2366,15 +2389,15 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 128.3,
-      "initialY": 361.2
+      "initialX": 200.4,
+      "initialY": 345.2
     },
     "CR-24": {
       "id": "CR-24",
       "title": "Concentration: single-name and sector risk",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "portfolio-risk",
       "one_screen": "Concentration risk arises when too much exposure depends on the same obligor, connected group, sector, geography or underlying risk driver. Diversification is about independent sources of loss, not the number of rows in a portfolio file.",
       "prerequisites": [
         "CR-03",
@@ -2390,7 +2413,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2420,15 +2444,15 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 101.6,
-      "initialY": 270.2
+      "initialX": 124.9,
+      "initialY": 305.5
     },
     "CR-25": {
       "id": "CR-25",
       "title": "Correlation and systematic credit risk",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "portfolio-risk",
       "one_screen": "Credit correlation means borrowers' default outcomes are not independent because common economic forces move their credit quality together. Idiosyncratic risk can diversify away; systematic risk cannot be eliminated simply by adding more borrowers exposed to the same underlying conditions.",
       "prerequisites": [
         "CR-12",
@@ -2442,6 +2466,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2461,15 +2486,15 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 88.2,
-      "initialY": 335
+      "initialX": 178.3,
+      "initialY": 300.3
     },
     "CR-26": {
       "id": "CR-26",
       "title": "The credit-loss architecture: expected loss as cost, unexpected loss as capital risk",
       "type": "concept",
       "domain": "credit-risk",
-      "subdomain": "unsorted",
+      "subdomain": "portfolio-risk",
       "one_screen": "Expected loss is the recurring average economic cost of taking credit risk; unexpected loss is the adverse deviation around that average that threatens solvency. Sound credit economics prices and provides for expected loss while capital protects the institution against severe unexpected loss.",
       "prerequisites": [
         "CR-17",
@@ -2484,6 +2509,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2513,15 +2539,15 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 38.2,
-      "initialY": 300.4
+      "initialX": 134.5,
+      "initialY": 251.8
     },
     "FND-01": {
       "id": "FND-01",
       "title": "Bank as a Balance Sheet",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "bank-mechanics",
       "one_screen": "A bank is a balance sheet before it is a building, app, or lender. It owns assets, owes liabilities, and has equity equal to the residual difference: **Assets = Liabilities + Equity**.",
       "prerequisites": [],
       "see_also": [],
@@ -2531,6 +2557,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2550,15 +2577,15 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -253.1,
-      "initialY": 148.8
+      "initialX": -168.4,
+      "initialY": 254.7
     },
     "FND-02": {
       "id": "FND-02",
       "title": "Deposits and Loans: Opposite Sides of the Bank",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "bank-mechanics",
       "one_screen": "**Deposits fund the bank and are liabilities; loans use the bank's balance sheet and are assets.** The words are usually spoken from the customer's perspective, which is why beginners instinctively put them on the wrong sides.",
       "prerequisites": [
         "FND-01"
@@ -2570,6 +2597,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2589,15 +2617,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -287.7,
-      "initialY": 131.2
+      "initialX": -219.1,
+      "initialY": 254
     },
     "FND-03": {
       "id": "FND-03",
       "title": "Loan Creation, Deposits and Funding",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "bank-mechanics",
       "one_screen": "When a bank grants a loan and credits the borrower's account, it can create a **loan asset and a deposit liability simultaneously**. That does not make funding irrelevant: payments out of the bank create settlement outflows, while liquidity, capital, risk and profitability constrain sustainable lending.",
       "prerequisites": [
         "FND-01",
@@ -2610,6 +2638,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2634,15 +2663,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -317.3,
-      "initialY": 185.9
+      "initialX": -216.4,
+      "initialY": 308.5
     },
     "FND-04": {
       "id": "FND-04",
       "title": "Net Interest Income and Bank Earnings",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "bank-mechanics",
       "one_screen": "A traditional bank earns a spread by receiving interest on interest-earning assets and paying interest on funding. **Net interest income = interest income − interest expense**, but final profit also reflects fees, market-related income, operating expenses, credit losses and taxes.",
       "prerequisites": [
         "FND-01",
@@ -2655,6 +2684,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2674,15 +2704,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -300.2,
-      "initialY": 205.3
+      "initialX": -197.9,
+      "initialY": 318.9
     },
     "FND-05": {
       "id": "FND-05",
       "title": "Capital Versus Liquidity",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "bank-mechanics",
       "one_screen": "**Capital absorbs losses; liquidity meets payments when due.** A bank can have positive capital yet fail through a cash shortage, or hold abundant cash yet be economically insolvent because its assets are worth less than its obligations.",
       "prerequisites": [
         "FND-01",
@@ -2695,6 +2725,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2719,15 +2750,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -281.9,
-      "initialY": 206.9
+      "initialX": -180.5,
+      "initialY": 315.2
     },
     "FND-06": {
       "id": "FND-06",
       "title": "The Financial Statements and How They Link",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "financial-statements",
       "one_screen": "The three-statement shorthand is **balance sheet, profit and loss statement, and cash-flow statement**. Profit changes equity, cash flows explain movements in cash, and every recognised closing balance must end up on the closing balance sheet.",
       "prerequisites": [
         "FND-01",
@@ -2742,7 +2773,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2782,15 +2814,15 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -320,
-      "initialY": 153.2
+      "initialX": -237,
+      "initialY": 283.8
     },
     "FND-07": {
       "id": "FND-07",
       "title": "Reading a Bank Balance Sheet",
       "type": "procedure",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "financial-statements",
       "one_screen": "Read a bank balance sheet by asking three questions in order: **what assets generate or preserve value, how those assets are funded, and how much residual loss absorption sits beneath the liabilities**. A bank's debtors are often its customers, while its customers' deposits are its funding.",
       "prerequisites": [
         "FND-01",
@@ -2803,6 +2835,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2827,15 +2860,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -257.2,
-      "initialY": 205.2
+      "initialX": -166.1,
+      "initialY": 304.4
     },
     "FND-08": {
       "id": "FND-08",
       "title": "Accrual Versus Cash",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "financial-statements",
       "one_screen": "**Accrual accounting recognises economic effects when the recognition criteria are met, not simply when cash moves.** Cash accounting asks when money moved; accrual accounting asks what asset, liability, income or expense exists because of what happened.",
       "prerequisites": [
         "FND-06"
@@ -2847,6 +2880,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2866,15 +2900,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -316.8,
-      "initialY": 76.1
+      "initialX": -236.9,
+      "initialY": 208.6
     },
     "FND-09": {
       "id": "FND-09",
       "title": "Provisions and Credit-Loss Allowances",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "financial-statements",
       "one_screen": "A credit-loss allowance recognises that the amount expected to be collected from credit exposures may be less than their contractual amount. **The economic idea is shared; the recognition and measurement rule is jurisdiction- and reporting-framework-specific.**",
       "prerequisites": [
         "FND-06",
@@ -2889,7 +2923,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2924,15 +2959,15 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -286.9,
-      "initialY": 76.5
+      "initialX": -263.9,
+      "initialY": 220.4
     },
     "FND-10": {
       "id": "FND-10",
       "title": "Other Comprehensive Income",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "financial-statements",
       "one_screen": "**Other comprehensive income (OCI) is a reporting route for specified recognised income and expense that the applicable accounting standard does not put in current profit or loss.** It is not \"less real\" income, and it is not a discretionary parking place for inconvenient volatility.",
       "prerequisites": [
         "FND-06"
@@ -2946,7 +2981,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -2976,15 +3012,15 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -316.2,
-      "initialY": 227.6
+      "initialX": -210.9,
+      "initialY": 344.5
     },
     "FND-11": {
       "id": "FND-11",
       "title": "Present Value and Discount Factors",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "time-value",
       "one_screen": "**Present value converts money at different dates into values at one common date.** A discount factor is the multiplier that performs that conversion: for one annual rate \\(r\\), the time-\\(t\\) factor is \\(1/(1+r)^t\\).",
       "prerequisites": [],
       "see_also": [],
@@ -2994,6 +3030,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3008,15 +3045,15 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -268.2,
-      "initialY": 250.7
+      "initialX": -183.2,
+      "initialY": 353.6
     },
     "FND-12": {
       "id": "FND-12",
       "title": "Compounding and Discounting Conventions",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "time-value",
       "one_screen": "**Compounding moves value forward through time; discounting moves it backward.** The mathematics only works when the rate, compounding frequency, day-count or period convention, and cash-flow dates are internally consistent.",
       "prerequisites": [
         "FND-11"
@@ -3028,6 +3065,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
@@ -3042,15 +3080,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -338,
-      "initialY": 241.4
+      "initialX": -144.6,
+      "initialY": 297.2
     },
     "FND-13": {
       "id": "FND-13",
       "title": "Effective Interest Rate",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "time-value",
       "one_screen": "The **effective interest rate (EIR)** is the single periodic rate that makes the present value of the relevant contractual cash-flow stream equal to the instrument's initial carrying amount under the stated methodology. It converts price, interest, fees and timing into one internally consistent yield.",
       "prerequisites": [
         "FND-11",
@@ -3063,6 +3101,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3077,15 +3116,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -299.3,
-      "initialY": 258.8
+      "initialX": -139.4,
+      "initialY": 340.3
     },
     "FND-14": {
       "id": "FND-14",
       "title": "NPV and Discounting Expected Loss",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "time-value",
       "one_screen": "**Net present value (NPV) adds cash flows after converting them to one valuation date.** Expected loss is time-sensitive when the applicable methodology discounts shortfalls: the same nominal shortfall occurring later has a different present value.",
       "prerequisites": [
         "FND-09",
@@ -3101,7 +3140,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3131,15 +3171,15 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -296.2,
-      "initialY": 174.8
+      "initialX": -202.8,
+      "initialY": 288.6
     },
     "FND-15": {
       "id": "FND-15",
       "title": "Exposure: What Is Actually at Risk",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "risk-language",
       "one_screen": "**Exposure is the amount or position whose value can be affected by a risk event; it is not the loss itself.** The relevant exposure may include more than today's booked principal because commitments, accrued amounts, derivatives or future drawings can also be at risk.",
       "prerequisites": [
         "FND-01"
@@ -3151,6 +3191,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3165,15 +3206,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -187.3,
-      "initialY": 231.6
+      "initialX": -91,
+      "initialY": 312.3
     },
     "FND-16": {
       "id": "FND-16",
       "title": "Probability and Expected Value",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "risk-language",
       "one_screen": "**Probability says how likely an outcome is; expected value combines each possible outcome with its probability.** A 1% probability of losing 100 is not a loss of 1%, but in a two-outcome example it contributes an expected loss of 1.",
       "prerequisites": [],
       "see_also": [],
@@ -3183,6 +3224,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
@@ -3197,15 +3239,15 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -333.2,
-      "initialY": 210.3
+      "initialX": -176.3,
+      "initialY": 381.4
     },
     "FND-17": {
       "id": "FND-17",
       "title": "Variance and Volatility",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "risk-language",
       "one_screen": "**Variance measures average squared dispersion around a mean; standard deviation is its square root.** In finance, volatility usually refers to a standard-deviation measure over a stated horizon, so volatility is meaningless without the variable, data frequency and time horizon.",
       "prerequisites": [
         "FND-16"
@@ -3217,6 +3259,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3236,15 +3279,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -362.2,
-      "initialY": 237.9
+      "initialX": -230.1,
+      "initialY": 377.7
     },
     "FND-18": {
       "id": "FND-18",
       "title": "Quantiles and Tail Risk",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "risk-language",
       "one_screen": "A **quantile** is a threshold in a distribution: an \\(\\alpha\\)-quantile has approximately \\(\\alpha\\) of probability at or below it under the stated convention. **Tail risk is what happens in the extreme region beyond such thresholds; a quantile is not a maximum possible loss.**",
       "prerequisites": [
         "FND-16",
@@ -3257,6 +3300,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3276,15 +3320,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -316.3,
-      "initialY": 269.3
+      "initialX": -230.8,
+      "initialY": 338.5
     },
     "FND-19": {
       "id": "FND-19",
       "title": "Expected Loss Versus Unexpected Loss",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "risk-language",
       "one_screen": "**Expected loss is the probability-weighted average loss built into the centre of the loss distribution; unexpected loss is adverse variation around and beyond that expectation.** Provisioning and pricing address expected loss in different ways, while prudential capital is fundamentally concerned with resilience to losses beyond the expected level.",
       "prerequisites": [
         "FND-15",
@@ -3298,6 +3342,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3322,15 +3367,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -272.6,
-      "initialY": 230.1
+      "initialX": -162.8,
+      "initialY": 329.4
     },
     "FND-20": {
       "id": "FND-20",
       "title": "Risk Appetite",
       "type": "concept",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "governance",
       "one_screen": "**Risk appetite is the aggregate level and types of risk an institution is willing to assume within its risk capacity while pursuing its objectives.** Appetite becomes operational only when translated into limits, monitored against the actual risk profile, and linked to escalation and decisions.",
       "prerequisites": [
         "FND-05",
@@ -3343,6 +3388,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3362,15 +3408,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -237.8,
-      "initialY": 238.6
+      "initialX": -237.4,
+      "initialY": 315.5
     },
     "FND-21": {
       "id": "FND-21",
       "title": "The Three Lines Model",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "governance",
       "one_screen": "The Three Lines Model separates **management's ownership and management of risk**, specialist support and challenge, and **independent internal-audit assurance**. The lines are roles in governance, not walls that permit one function to outsource responsibility to another.",
       "prerequisites": [
         "FND-20"
@@ -3382,6 +3428,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3406,15 +3453,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -274.5,
-      "initialY": 190.7
+      "initialX": -205.6,
+      "initialY": 370.2
     },
     "FND-22": {
       "id": "FND-22",
       "title": "Policy, Standard and Procedure",
       "type": "reference",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "governance",
       "one_screen": "A useful control hierarchy is **policy = required intent and principles; standard = mandatory control or design criteria; procedure = steps for execution**. The terminology is not legally universal, so authority and content matter more than the document label.",
       "prerequisites": [
         "FND-21"
@@ -3426,6 +3473,7 @@
       ],
       "perishable": false,
       "as_of": null,
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3445,15 +3493,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -345.5,
-      "initialY": 189.6
+      "initialX": -148.1,
+      "initialY": 366.1
     },
     "FND-23": {
       "id": "FND-23",
       "title": "What a Regulator Actually Does",
       "type": "mechanism",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "governance",
       "one_screen": "A banking regulator turns law and statutory objectives into enforceable boundaries, while **supervision** tests how institutions actually operate inside those boundaries. Depending on the mandate, the toolkit can include authorisation, rules, reporting, examinations, remediation and enforcement.",
       "prerequisites": [
         "FND-05",
@@ -3469,7 +3517,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3509,15 +3558,15 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -235.6,
-      "initialY": 157
+      "initialX": -186.1,
+      "initialY": 255.5
     },
     "FND-24": {
       "id": "FND-24",
       "title": "Prudential Regulation, Conduct Regulation and Accounting Standards",
       "type": "reference",
       "domain": "foundation",
-      "subdomain": "unsorted",
+      "subdomain": "governance",
       "one_screen": "**Prudential regulation asks whether a financial institution is safe and resilient; conduct regulation asks whether it behaves properly toward customers and markets; accounting standards determine how financial position and performance are recognised, measured and reported.** The three systems interact, but none is a substitute for another.",
       "prerequisites": [
         "FND-06",
@@ -3533,7 +3582,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 4,
@@ -3588,15 +3638,15 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -264.8,
-      "initialY": 120
+      "initialX": -207.4,
+      "initialY": 231
     },
     "IMP-01": {
       "id": "IMP-01",
       "title": "Impairment and Expected Credit Loss",
       "type": "concept",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "ecl-foundations",
       "one_screen": "Impairment is the accounting recognition that contractual credit cash flows will not all be collected. Expected-credit-loss accounting brings that recognition forward: the allowance reflects losses expected from credit risk before a loss event has necessarily occurred.",
       "prerequisites": [
         "FND-01",
@@ -3615,7 +3665,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3650,15 +3701,15 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -211.1,
-      "initialY": -7.2
+      "initialX": -218.7,
+      "initialY": 126
     },
     "IMP-02": {
       "id": "IMP-02",
       "title": "Credit Loss Is a Discounted Cash Shortfall",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "ecl-foundations",
       "one_screen": "Under IFRS 9, credit loss is fundamentally the present value of the difference between contractual cash flows due and cash flows expected to be received. PD, LGD and EAD are modelling components; the accounting target is the cash shortfall.",
       "prerequisites": [
         "IMP-01",
@@ -3675,7 +3726,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3700,15 +3752,15 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -251.2,
-      "initialY": -54.5
+      "initialX": -270.1,
+      "initialY": 94.5
     },
     "IMP-03": {
       "id": "IMP-03",
       "title": "Probability-Weighted Outcomes",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "ecl-foundations",
       "one_screen": "ECL is an expectation across possible credit outcomes, not the loss under the single scenario management considers most likely. Non-linearity matters: weighting scenario-specific losses can differ materially from calculating loss once at probability-weighted average macroeconomic inputs.",
       "prerequisites": [
         "IMP-02",
@@ -3726,7 +3778,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3756,15 +3809,15 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -186.8,
-      "initialY": -16.8
+      "initialX": -200.2,
+      "initialY": 103.1
     },
     "IMP-04": {
       "id": "IMP-04",
       "title": "Effective Interest Rate Discounting",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "ecl-foundations",
       "one_screen": "IFRS 9 discounts expected cash shortfalls using the effective interest rate established from the instrument’s own economics, not a current market yield selected at the reporting date. The rule prevents changes in market discount rates from being mistaken for changes in credit loss.",
       "prerequisites": [
         "IMP-02",
@@ -3780,7 +3833,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3805,15 +3859,15 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -314.1,
-      "initialY": -87.3
+      "initialX": -341.1,
+      "initialY": 95
     },
     "IMP-05": {
       "id": "IMP-05",
       "title": "Forward-Looking Information and Macroeconomic Scenarios",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "ecl-foundations",
       "one_screen": "ECL must respond to information about the future when that information is relevant, reasonable and supportable. Macroeconomic forecasts are inputs to credit-risk expectations, not independent reserves added on top of modelled loss.",
       "prerequisites": [
         "IMP-03",
@@ -3829,7 +3883,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3854,15 +3909,15 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -197,
-      "initialY": -96.2
+      "initialX": -226.5,
+      "initialY": 32.2
     },
     "IMP-06": {
       "id": "IMP-06",
       "title": "The IFRS 9 Three-Stage Architecture",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "IFRS 9 staging changes the horizon of loss recognition as credit risk changes: Stage 1 carries 12-month ECL, Stage 2 lifetime ECL after significant deterioration, and Stage 3 lifetime ECL once the asset is credit-impaired. Stage is a credit-risk state, not simply an arrears bucket.",
       "prerequisites": [
         "IMP-01",
@@ -3880,7 +3935,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3910,15 +3966,15 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -148.3,
-      "initialY": -35.5
+      "initialX": -179.2,
+      "initialY": 95.3
     },
     "IMP-07": {
       "id": "IMP-07",
       "title": "Twelve-Month ECL",
       "type": "concept",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "Twelve-month ECL is not the cash loss expected during the next twelve months. It is the lifetime credit loss arising from default events that are possible within the next twelve months, weighted by the probability of those defaults.",
       "prerequisites": [
         "IMP-02",
@@ -3935,7 +3991,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -3960,15 +4017,15 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -181.6,
-      "initialY": -34.7
+      "initialX": -204.7,
+      "initialY": 83.6
     },
     "IMP-08": {
       "id": "IMP-08",
       "title": "Significant Increase in Credit Risk",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "SICR is principally a relative test: compare the risk of default over the remaining life at the reporting date with that risk at initial recognition. Absolute thresholds can operationalise or conservatively supplement the test, but they must not erase the origination benchmark.",
       "prerequisites": [
         "IMP-05",
@@ -3986,7 +4043,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4011,15 +4069,15 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -172.2,
-      "initialY": -66.8
+      "initialX": -223.8,
+      "initialY": 74.3
     },
     "IMP-09": {
       "id": "IMP-09",
       "title": "The Thirty-Day Past-Due Backstop",
       "type": "reference",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "More than 30 days past due creates a rebuttable IFRS 9 presumption that SICR has occurred. It is a backstop, not the normal definition of Stage 2, and rebuttal requires reasonable and supportable evidence rather than routine policy.",
       "prerequisites": [
         "IMP-08",
@@ -4034,7 +4092,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4059,15 +4118,15 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -167.7,
-      "initialY": -111.1
+      "initialX": -249.8,
+      "initialY": 50.2
     },
     "IMP-10": {
       "id": "IMP-10",
       "title": "Stage Three and Credit-Impaired Assets",
       "type": "concept",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "Stage 3 means the financial asset is credit-impaired at the reporting date, not merely that its risk has increased. Lifetime ECL remains the allowance basis, while IFRS 9 changes interest recognition for assets that became credit-impaired after origination.",
       "prerequisites": [
         "IMP-06",
@@ -4084,7 +4143,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4109,15 +4169,15 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -112.6,
-      "initialY": 7.7
+      "initialX": -144.6,
+      "initialY": 128.8
     },
     "IMP-11": {
       "id": "IMP-11",
       "title": "Purchased or Originated Credit-Impaired Assets",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "A POCI asset is already credit-impaired when first recognised, so ordinary Stage 1-to-Stage 3 logic does not describe its economics. IFRS 9 embeds initial expected credit losses in a credit-adjusted EIR and subsequently recognises only changes in lifetime ECL.",
       "prerequisites": [
         "IMP-04",
@@ -4133,7 +4193,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4158,15 +4219,15 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -261.2,
-      "initialY": -89.6
+      "initialX": -302.5,
+      "initialY": 80.8
     },
     "IMP-12": {
       "id": "IMP-12",
       "title": "Transfers Back and Cure Asymmetry",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "three-stage-architecture",
       "one_screen": "IFRS 9 allows transfer back from lifetime to 12-month ECL when the SICR criterion is no longer met, but reversal is not simply the mirror image of deterioration. The question is whether current lifetime default risk is no longer significantly above the origination benchmark—not whether the latest adverse symptom has merely disappeared.",
       "prerequisites": [
         "IMP-06",
@@ -4183,7 +4244,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4208,15 +4270,15 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -138.1,
-      "initialY": -78.9
+      "initialX": -233.5,
+      "initialY": 104.3
     },
     "IMP-13": {
       "id": "IMP-13",
       "title": "Lifetime PD Term Structures",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "lifetime-modelling",
       "one_screen": "Lifetime ECL needs the timing of default risk, not merely one lifetime default percentage. Marginal PD measures default probability in a particular future interval conditional on survival to that interval; cumulative PD measures the probability of having defaulted by a stated horizon.",
       "prerequisites": [
         "IMP-06",
@@ -4233,7 +4295,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4258,15 +4321,15 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -188.6,
-      "initialY": -77.4
+      "initialX": -221.8,
+      "initialY": 50.7
     },
     "IMP-14": {
       "id": "IMP-14",
       "title": "Lifetime EAD and Revolving Behavioural Life",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "lifetime-modelling",
       "one_screen": "Lifetime EAD is a path through time, not today’s balance copied into every future period. Revolving facilities are special because future drawdowns and the period of credit exposure can depend on borrower behaviour and the lender’s practical risk-management actions, sometimes extending beyond a nominal cancellation notice period.",
       "prerequisites": [
         "IMP-13",
@@ -4283,7 +4346,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4308,15 +4372,15 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -162.1,
-      "initialY": -8.4
+      "initialX": -159.3,
+      "initialY": 73.1
     },
     "IMP-15": {
       "id": "IMP-15",
       "title": "Accounting LGD Versus Regulatory LGD",
       "type": "concept",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "lifetime-modelling",
       "one_screen": "Accounting LGD estimates the loss severity needed to satisfy an accounting ECL measurement objective; regulatory LGD is calibrated for prudential capital objectives. Regulatory parameters can be useful starting points, but they are not interchangeable because horizon, cyclicality, conservatism and prescribed floors can differ.",
       "prerequisites": [
         "IMP-02",
@@ -4333,7 +4397,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4363,15 +4428,15 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -189.3,
-      "initialY": -46
+      "initialX": -195,
+      "initialY": 64.2
     },
     "IMP-16": {
       "id": "IMP-16",
       "title": "Overlays and Post-Model Adjustments",
       "type": "mechanism",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "governance-and-jurisdictions",
       "one_screen": "An overlay or post-model adjustment changes model output when relevant credit risk is not adequately captured by the model. It is necessary when models have known blind spots, but dangerous when it becomes an undocumented plug, double-counts modelled risk or persists after the underlying deficiency should have been repaired.",
       "prerequisites": [
         "IMP-03",
@@ -4388,7 +4453,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4418,15 +4484,15 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -242.9,
-      "initialY": -154.6
+      "initialX": -275.4,
+      "initialY": -21
     },
     "IMP-17": {
       "id": "IMP-17",
       "title": "ECL Model Validation and Backtesting",
       "type": "procedure",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "governance-and-jurisdictions",
       "one_screen": "Validation asks whether an ECL model is conceptually sound, implemented correctly and performing acceptably for its intended accounting use. Backtesting is one part of validation: compare predictions with realised outcomes, diagnose differences, and determine whether recalibration, redevelopment or a controlled adjustment is needed.",
       "prerequisites": [
         "IMP-13",
@@ -4444,7 +4510,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4474,15 +4541,15 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -269.6,
-      "initialY": -142
+      "initialX": -298.6,
+      "initialY": -12.8
     },
     "IMP-18": {
       "id": "IMP-18",
       "title": "Staging Validation and ECL Disclosures",
       "type": "procedure",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "governance-and-jurisdictions",
       "one_screen": "Staging needs its own validation because a well-calibrated PD model can still produce wrong allowances if SICR thresholds move exposures too early or too late. Disclosures then make the framework observable by explaining staging policies, assumptions, forward-looking information, allowance movements and credit-risk concentrations.",
       "prerequisites": [
         "IMP-08",
@@ -4499,7 +4566,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4529,15 +4597,15 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -228.5,
-      "initialY": -175.9
+      "initialX": -330.7,
+      "initialY": 27.3
     },
     "IMP-19": {
       "id": "IMP-19",
       "title": "US CECL Under ASC 326",
       "type": "reference",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "governance-and-jurisdictions",
       "one_screen": "CECL and IFRS 9 are both forward-looking expected-loss frameworks, but CECL is not “IFRS 9 without stage labels”. For amortised-cost assets, CECL recognises lifetime expected credit losses from initial recognition, eliminating the IFRS 9 SICR gateway between 12-month and lifetime ECL.",
       "prerequisites": [
         "IMP-01",
@@ -4555,7 +4623,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
@@ -4585,15 +4654,15 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -249.5,
-      "initialY": -117
+      "initialX": -280.6,
+      "initialY": 28.2
     },
     "IMP-20": {
       "id": "IMP-20",
       "title": "India: IRACP, Ind AS and the Bank ECL Transition",
       "type": "reference",
       "domain": "impairment",
-      "subdomain": "unsorted",
+      "subdomain": "governance-and-jurisdictions",
       "one_screen": "India must be read as three distinct tracks: scheduled commercial banks are not on Ind AS and remain under RBI IRACP through March 31, 2027; relevant NBFCs already apply Ind AS, including Ind AS 109 ECL; and RBI has issued a separate final three-stage ECL framework for commercial banks that becomes effective April 1, 2027. The January 2023 ECL discussion paper was a proposal; the April 2026 Directions are final future rules, not current rules as of August 28, 2026.",
       "prerequisites": [
         "IMP-01",
@@ -4612,7 +4681,8 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 4,
@@ -4647,15 +4717,745 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -221.9,
-      "initialY": -133.7
+      "initialX": -300.3,
+      "initialY": 48.1
+    },
+    "MRM-01": {
+      "id": "MRM-01",
+      "title": "What is a Model",
+      "type": "concept",
+      "domain": "model-risk",
+      "subdomain": "model-risk-foundations",
+      "one_screen": "A model is a quantitative system that processes input data using statistical, economic or financial theory to produce an output.  This definition determines which tools fall under model risk controls.  Not all decision-support tools are “models” in every regime – for example, U.S. guidance explicitly excludes simple spreadsheets or rule-based calculators from the model category, whereas UK and Indian frameworks use broader definitions that include any system with material impact on decisions.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 4,
+      "sources": [
+        {
+          "label": "Federal Reserve, *SR 26-2, Revised Guidance on Model Risk Management* (Apr. 17, 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "PRA, *Supervisory Statement SS1/23 (Apr 2026)* (Model Risk Management).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI draft, *Guidance on Regulatory Principles for Model Risk Management, 2026* (Jun 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-01",
+      "depth": 0,
+      "currentness": "fresh",
+      "filepath": "MRM-01.mdx",
+      "initialX": -236.5,
+      "initialY": -176.6
+    },
+    "MRM-02": {
+      "id": "MRM-02",
+      "title": "Model Risk versus Other Risks",
+      "type": "concept",
+      "domain": "model-risk",
+      "subdomain": "model-risk-foundations",
+      "one_screen": "Model risk is the potential for adverse outcomes from using a model (e.g. losses or bad decisions), not a type of financial risk like credit or market risk.  It arises from model errors and misuses.  By contrast, credit risk refers to borrower default, and market risk to price moves.  Model risk can exist even if credit and market risk are unchanged.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve, SR 26-2 (Apr. 17, 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 5, 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-02",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "MRM-02.mdx",
+      "initialX": -219.9,
+      "initialY": -345.4
+    },
+    "MRM-03": {
+      "id": "MRM-03",
+      "title": "Sources of Model Risk",
+      "type": "concept",
+      "domain": "model-risk",
+      "subdomain": "model-risk-foundations",
+      "one_screen": "Model risk arises from many causes: bad input data, flawed methodology or assumptions, coding/implementation errors, and model misuse or misinterpretation.  Any part of a model’s lifecycle can introduce risk – for example, if training data are biased, if key variables are omitted, or if the model is used in a way the developers didn’t intend.",
+      "prerequisites": [
+        "MRM-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "IBM, *What Is Model Risk Management?* (Tech briefing).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-03",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "MRM-03.mdx",
+      "initialX": -190.9,
+      "initialY": -290.2
+    },
+    "MRM-04": {
+      "id": "MRM-04",
+      "title": "Deterministic Tools versus Models",
+      "type": "concept",
+      "domain": "model-risk",
+      "subdomain": "model-risk-foundations",
+      "one_screen": "Regulators distinguish “models” from simpler rule-based tools.  A deterministic tool (e.g. a spreadsheet calculator or rules engine with fixed logic) is not considered a model if it has no underlying statistical or theoretical basis.  U.S. guidance explicitly excludes pure arithmetic spreadsheets from the model definition.  However, if such tools have “material bearing on decisions,” firms often still apply model risk controls to them.",
+      "prerequisites": [
+        "MRM-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Fed/OCC, *Revised Guidance on Model Risk Management* (Apr. 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "PRA, *SS1/23 – Model risk management principles* (Apr. 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI, *Draft Guidance on Model Risk Management* (Jun. 2026).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-04",
+      "depth": 1,
+      "currentness": "fresh",
+      "filepath": "MRM-04.mdx",
+      "initialX": -201.1,
+      "initialY": -251
+    },
+    "MRM-05": {
+      "id": "MRM-05",
+      "title": "Model Inventory and Materiality Tiering",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "model-risk-foundations",
+      "one_screen": "Firms must catalogue all models in an inventory and classify them by materiality or “tier.”  This ensures that validation and controls are focused on the most critical models.  Materiality (e.g. impact on capital or decisions) typically determines whether a model is High-, Medium- or Low-tier. Regulators explicitly require a complete model inventory and risk-based tiering.",
+      "prerequisites": [
+        "MRM-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "PRA, *SS1/23 (Apr. 2026) Principle 1 (Model inventory & tiering)*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Fed SR 26-2 Attachment (2026) – Fed/OCC press release on risk-based materiality.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI draft (Aug. 2024), section on governance (calls for model inventory).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-05",
+      "depth": 1,
+      "currentness": "fresh",
+      "filepath": "MRM-05.mdx",
+      "initialX": -225.1,
+      "initialY": -259.2
+    },
+    "MRM-06": {
+      "id": "MRM-06",
+      "title": "Model Lifecycle",
+      "type": "concept",
+      "domain": "model-risk",
+      "subdomain": "governance-and-lifecycle",
+      "one_screen": "A model’s lifecycle consists of development, independent validation, approval, deployment/use, ongoing monitoring, updates (recalibration/redevelopment), and eventually retirement.  Each stage has specific risk controls.  Regulators expect firms to manage model risk across the entire lifecycle, not just at inception.",
+      "prerequisites": [
+        "MRM-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "OCC, *Revised Guidance on Model Risk Management* (OCC Bulletin 2026-13).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI draft, *Guidance on MRM, 2026* (Jun 2026), Chapters on lifecycle.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-06",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "MRM-06.mdx",
+      "initialX": -203,
+      "initialY": -308.8
+    },
+    "MRM-07": {
+      "id": "MRM-07",
+      "title": "Model Development",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "governance-and-lifecycle",
+      "one_screen": "During development, the model’s purpose, data, and method are defined and documented.  Firms must clearly state the model’s objectives, select appropriate data and variables, choose a methodology suited to the problem, and record all assumptions and design choices.  Good documentation ensures transparency for later review.",
+      "prerequisites": [
+        "MRM-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Draft Principles for Model Risk in Credit* (Aug. 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "PRA SS1/23 (Apr. 2026) – Principle 3 (Model development and use) – Overview.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-07",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "MRM-07.mdx",
+      "initialX": -201.7,
+      "initialY": -365.2
+    },
+    "MRM-08": {
+      "id": "MRM-08",
+      "title": "Independent Model Validation",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "governance-and-lifecycle",
+      "one_screen": "Independent validation is a formal review of a model by someone outside the development team.  It checks data, assumptions, methodology, and output accuracy.  True independence (no conflicts with the model developer) is required to ensure objectivity.",
+      "prerequisites": [
+        "MRM-06",
+        "MRM-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "S&C memo on SR 26-2 (Apr. 2026), noting validation independence requirement.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation framework.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-08",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "MRM-08.mdx",
+      "initialX": -158.9,
+      "initialY": -318.8
+    },
+    "MRM-09": {
+      "id": "MRM-09",
+      "title": "Approval, Governance, and Use",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "governance-and-lifecycle",
+      "one_screen": "Before a validated model can be used, it must be formally approved by senior management or the board (or a delegated committee).  The model’s intended use must align with business needs and policy.  Governance roles (board oversight, risk committees, internal audit) apply: boards must approve MRM policies and receive reports on model issues.",
+      "prerequisites": [
+        "MRM-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), para 3 (Board approval requirement).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "S&C memo on SR 26-2 (Apr. 2026), referencing board approvals and audit reporting.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-09",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "MRM-09.mdx",
+      "initialX": -177.4,
+      "initialY": -370.1
+    },
+    "MRM-10": {
+      "id": "MRM-10",
+      "title": "Ongoing Monitoring and Performance",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "governance-and-lifecycle",
+      "one_screen": "After a model is in use, the firm must continuously monitor its performance and environment.  This includes tracking key metrics (stability indexes, backtests, outcomes) and ensuring the model remains accurate.  Oversight bodies should set thresholds for action and require periodic performance reports, with escalations if issues are detected.",
+      "prerequisites": [
+        "MRM-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "PRA SS1/23 (Apr. 2026) – Standards for monitoring model performance.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "*Statistical Properties of the Population Stability Index*, Risk Journal (Apr. 2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-10",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "MRM-10.mdx",
+      "initialX": -141.6,
+      "initialY": -303
+    },
+    "MRM-11": {
+      "id": "MRM-11",
+      "title": "Change Management and Recalibration",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "governance-and-lifecycle",
+      "one_screen": "If a model’s performance deteriorates or business conditions change, banks must update the model.  This can be done by **recalibration** (adjusting parameters) or full **redevelopment** (building a new model).  Any changes must follow the same validation and approval process as the original model.",
+      "prerequisites": [
+        "MRM-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), on post-deployment validation.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "PRA SS1/23 (Apr. 2026) – Requirements for model change management (see [52], standards for recalibration).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-11",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "MRM-11.mdx",
+      "initialX": -251.3,
+      "initialY": -318.6
+    },
+    "MRM-12": {
+      "id": "MRM-12",
+      "title": "Conceptual Soundness and Data Quality",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "**Conceptual soundness** ensures the model’s design and assumptions are valid for its purpose.  Validators check that the model structure (type, variables, functional form) is appropriate.  **Data quality** ensures inputs are accurate and representative.  Validations review data sourcing, completeness, and relevance.  Both steps catch errors before performance testing.",
+      "prerequisites": [
+        "MRM-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation guidelines.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IBM Think article on model risk (for data risk examples).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-12",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "MRM-12.mdx",
+      "initialX": -145.7,
+      "initialY": -340.5
+    },
+    "MRM-13": {
+      "id": "MRM-13",
+      "title": "Discrimination Metrics (AUC, Gini, KS)",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "Discrimination measures how well a model ranks outcomes.  Common metrics are **ROC-AUC** (area under the receiver operating curve), **Gini coefficient** and **KS statistic**.  AUC (0.5–1) and Gini (0–1) quantify the model’s overall ranking power, while KS is the maximum difference between cumulative distributions of outcomes.  Higher values mean better separation of groups (e.g. defaulters vs non-defaulters).",
+      "prerequisites": [
+        "MRM-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "(Conceptual metrics – not directly quoted from regs)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "A general model validation reference or textbook on ROC curves.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-13",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "MRM-13.mdx",
+      "initialX": -162.4,
+      "initialY": -286.4
+    },
+    "MRM-14": {
+      "id": "MRM-14",
+      "title": "Calibration and Goodness-of-Fit",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "Calibration measures how well predicted probabilities match observed outcomes.  A common tool is the Hosmer–Lemeshow (H-L) test: it groups data (e.g. deciles) and compares predicted vs actual frequencies using a chi-square statistic.  Good calibration means predicted and actual rates align.  However, large sample sizes can cause H-L to reject even small, practically unimportant differences.  Validation should also include graphical plots of predicted vs actual rates as a sanity check.",
+      "prerequisites": [
+        "MRM-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Statistical modeling reference on calibration (for concept).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-14",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "MRM-14.mdx",
+      "initialX": -224.8,
+      "initialY": -294.5
+    },
+    "MRM-15": {
+      "id": "MRM-15",
+      "title": "Stability Metrics (PSI and CSI)",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "Population Stability Index (PSI) and Characteristic Stability Index (CSI) measure changes in distributions over time.  PSI compares a variable’s or model-score distribution between the development period and current period.  CSI is similar but often used for categorical variables (e.g. rating grades).  In credit risk, PSI/CSI thresholds (e.g. >0.25) are used as a rule-of-thumb to signal a “significant change” that may require model review.",
+      "prerequisites": [
+        "MRM-10",
+        "MRM-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Risk.net Journal of RM Validation, *Statistical properties of the population stability index* (Apr. 2022) – PSI thresholds.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-15",
+      "depth": 6,
+      "currentness": "durable",
+      "filepath": "MRM-15.mdx",
+      "initialX": -192.2,
+      "initialY": -333.7
+    },
+    "MRM-16": {
+      "id": "MRM-16",
+      "title": "Benchmarking and Challenger Models",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "A **benchmark** (or reference) model is an alternate model used as a comparison.  A **challenger model** is a competing model built to test the primary model’s performance.  Banks may use simpler or differently-specified challenger models to sanity-check the primary model.  If the challenger outperforms, it signals the primary model may need improvement.",
+      "prerequisites": [
+        "MRM-08",
+        "MRM-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI, *Draft Guidance on MRM, 2026* – mentions benchmarking/model validation.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "S&C memo (Apr. 2026) – mentions monitoring/outcome analysis (includes benchmarking).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-16",
+      "depth": 5,
+      "currentness": "durable",
+      "filepath": "MRM-16.mdx",
+      "initialX": -175.7,
+      "initialY": -264.5
+    },
+    "MRM-17": {
+      "id": "MRM-17",
+      "title": "Backtesting, Use Test, and Overrides",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "**Backtesting** compares a model’s historical forecasts to actual results (e.g. predicted vs realized losses).  It’s a formal test of predictive accuracy over time.  The **use test** checks that the model is being applied in practice as intended (not just in name).  Banks must also track **overrides** (manual deviations) to ensure that business judgment does not mask model errors.",
+      "prerequisites": [
+        "MRM-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI, *Draft Principles… in Credit* (Aug. 2024) – requires documentation of overrides.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Basel II/III documents (conceptual).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-17",
+      "depth": 4,
+      "currentness": "durable",
+      "filepath": "MRM-17.mdx",
+      "initialX": -171,
+      "initialY": -347.8
+    },
+    "MRM-18": {
+      "id": "MRM-18",
+      "title": "AI and Machine Learning Models",
+      "type": "concept",
+      "domain": "model-risk",
+      "subdomain": "validation-and-metrics",
+      "one_screen": "Models using AI/ML must be interpretable and transparent.  Regulators expect that even non-linear models can be explained sufficiently to satisfy risk controls.  New guidelines explicitly stress interpretability (e.g. “explainability” requirements) and governance of AI.  Supervisory expectations for AI in finance are still evolving (often marked as “developing”) but lean toward strong oversight.",
+      "prerequisites": [
+        "MRM-07",
+        "MRM-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "ECB press release (July 28, 2025) on revised internal models guide (new ML section).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI, *Draft Guidance on MRM, 2026* (Jun 2026) – Chapter on AI/ML, explainability and governance.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "S&C (Apr. 2026) – OCC statement on upcoming AI measures.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-18",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "MRM-18.mdx",
+      "initialX": -224.8,
+      "initialY": -319.9
     },
     "TLM-01": {
       "id": "TLM-01",
       "title": "What a bank treasury actually does",
       "type": "concept",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "Bank treasury is the balance-sheet control centre that converts customer activity into managed funding, liquidity, interest-rate and market positions. Unlike a corporate treasury, it does not merely finance an operating business: maturity transformation and financial intermediation are themselves part of the bank’s business model.",
       "prerequisites": [],
       "see_also": [],
@@ -4690,15 +5490,15 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 151.4,
-      "initialY": -379.3
+      "initialX": 208,
+      "initialY": -252.2
     },
     "TLM-02": {
       "id": "TLM-02",
       "title": "Banking book versus trading book",
       "type": "concept",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "The banking-book/trading-book boundary is not shorthand for “held long term” versus “traded frequently”; it is a regulatory classification determining which risk framework applies. Moving an exposure across that boundary can change valuation, capital treatment, risk measurement, governance and permissible hedging recognition.",
       "prerequisites": [
         "TLM-01"
@@ -4712,7 +5512,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -4738,15 +5538,15 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 102.2,
-      "initialY": -327.7
+      "initialX": 218.5,
+      "initialY": -306.9
     },
     "TLM-03": {
       "id": "TLM-03",
       "title": "The balance sheet as a set of mismatches",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "ALM begins by discarding accounting labels and viewing the balance sheet as dated cash flows and repricing events. Risk appears because the timing, rate basis, optionality and liquidity characteristics of assets do not line up perfectly with those of liabilities.",
       "prerequisites": [
         "TLM-01"
@@ -4778,15 +5578,15 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 109,
-      "initialY": -394.1
+      "initialX": 179.2,
+      "initialY": -273.4
     },
     "TLM-04": {
       "id": "TLM-04",
       "title": "Where IRRBB comes from",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "IRRBB is not one risk but four interacting mechanisms: repricing gap, yield-curve shape, basis and optionality. A balance sheet can appear matched against one mechanism and remain materially exposed to another.",
       "prerequisites": [
         "TLM-03"
@@ -4818,15 +5618,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 46.5,
-      "initialY": -363.2
+      "initialX": 123.8,
+      "initialY": -283
     },
     "TLM-05": {
       "id": "TLM-05",
       "title": "Economic value of equity versus net interest income",
       "type": "concept",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "EVE asks how interest-rate shocks change the present value of the banking book; NII asks how they change near-term interest earnings and expense. Neither dominates the other because they expose different parts of the same balance-sheet risk.",
       "prerequisites": [
         "TLM-04"
@@ -4858,15 +5658,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 30.5,
-      "initialY": -305.4
+      "initialX": 167.1,
+      "initialY": -317.1
     },
     "TLM-06": {
       "id": "TLM-06",
       "title": "Duration and its limits",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "Duration compresses a stream of cash flows into an approximate first-order sensitivity to interest rates. It is powerful for intuition and dangerous when treated as a complete model of a bank balance sheet.",
       "prerequisites": [
         "TLM-05"
@@ -4898,15 +5698,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 85.7,
-      "initialY": -278
+      "initialX": 106,
+      "initialY": -303.6
     },
     "TLM-07": {
       "id": "TLM-07",
       "title": "Gap analysis and repricing buckets",
       "type": "procedure",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "Repricing gap analysis places rate-sensitive assets and liabilities into the periods when they next reprice, then compares the two sides. It is a map of timing mismatch, not a complete forecast of earnings or value.",
       "prerequisites": [
         "TLM-04"
@@ -4938,15 +5738,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 56.7,
-      "initialY": -411.5
+      "initialX": 95,
+      "initialY": -333
     },
     "TLM-08": {
       "id": "TLM-08",
       "title": "Behavioural modelling of non-maturity deposits",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "A non-maturity deposit has an overnight contractual withdrawal right but may behave like multi-year funding. ALM therefore models both how long balances remain and how their administered rates respond to market rates; those assumptions can dominate measured IRRBB.",
       "prerequisites": [
         "TLM-03",
@@ -4961,7 +5761,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -4992,15 +5792,15 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 67.9,
-      "initialY": -364.8
+      "initialX": 144.1,
+      "initialY": -324.6
     },
     "TLM-09": {
       "id": "TLM-09",
       "title": "Prepayment, early redemption and pipeline risk",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "Customer and business options make future banking-book cash flows conditional rather than fixed. Prepayments shorten assets, early withdrawals shorten liabilities, and pipeline commitments can create exposure before an instrument has even reached the balance sheet.",
       "prerequisites": [
         "TLM-04",
@@ -5033,15 +5833,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 78.6,
-      "initialY": -405
+      "initialX": 116.7,
+      "initialY": -363.6
     },
     "TLM-10": {
       "id": "TLM-10",
       "title": "IRRBB stress tests and supervisory outliers",
       "type": "procedure",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "An IRRBB stress test asks whether the balance sheet remains tolerable under severe rate paths and stressed customer behaviour; a supervisory outlier test is a regulatory screening device, not the bank’s complete risk appetite. Passing the outlier test does not prove IRRBB is safe.",
       "prerequisites": [
         "TLM-05",
@@ -5057,7 +5857,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5088,15 +5888,15 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 28,
-      "initialY": -355.6
+      "initialX": 168,
+      "initialY": -391
     },
     "TLM-11": {
       "id": "TLM-11",
       "title": "Hedging IRRBB and hedge accounting",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "irrbb-and-mismatches",
       "one_screen": "An economic hedge changes the bank’s risk; hedge accounting changes how qualifying hedge effects appear in financial statements. A hedge can be economically effective without receiving hedge-accounting treatment, and accounting treatment must never determine whether the underlying risk is actually controlled.",
       "prerequisites": [
         "TLM-04",
@@ -5112,7 +5912,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5138,15 +5938,15 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 78.3,
-      "initialY": -314.7
+      "initialX": 122.4,
+      "initialY": -344.4
     },
     "TLM-12": {
       "id": "TLM-12",
       "title": "Funding liquidity risk versus market liquidity risk",
       "type": "concept",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "Funding liquidity risk is the risk that the bank cannot obtain cash when obligations fall due without unacceptable loss; market liquidity risk is the risk that an asset cannot be sold or financed quickly near its expected value. One can trigger the other, but they are not the same risk.",
       "prerequisites": [
         "TLM-01",
@@ -5179,15 +5979,15 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 88.6,
-      "initialY": -352.4
+      "initialX": 239.4,
+      "initialY": -304.5
     },
     "TLM-13": {
       "id": "TLM-13",
       "title": "High-quality liquid assets",
       "type": "concept",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "HQLA are not simply “safe securities”; they are assets that the liquidity framework recognises as capable of generating cash rapidly under stress with little loss. Eligibility, operational availability, encumbrance, haircut and portfolio composition all matter.",
       "prerequisites": [
         "TLM-12"
@@ -5201,7 +6001,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5232,15 +6032,15 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 159.8,
-      "initialY": -316.7
+      "initialX": 186.9,
+      "initialY": -369.5
     },
     "TLM-14": {
       "id": "TLM-14",
       "title": "The Liquidity Coverage Ratio",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "LCR asks whether a bank has enough recognised HQLA to withstand modelled net cash outflows over a severe 30-calendar-day stress period. It is a standardised short-horizon resilience test, not a forecast of the bank’s actual next 30 days.",
       "prerequisites": [
         "TLM-12",
@@ -5255,7 +6055,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5286,15 +6086,15 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 124,
-      "initialY": -295
+      "initialX": 187.6,
+      "initialY": -301
     },
     "TLM-15": {
       "id": "TLM-15",
       "title": "The Net Stable Funding Ratio",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "NSFR asks whether the bank’s longer-term assets and activities are supported by sufficiently stable funding over a one-year structural horizon. Where LCR is a short-term stress-buffer test, NSFR is a balance-sheet funding-structure test.",
       "prerequisites": [
         "TLM-12",
@@ -5309,7 +6109,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5340,15 +6140,15 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 64.1,
-      "initialY": -291
+      "initialX": 210.6,
+      "initialY": -364.9
     },
     "TLM-16": {
       "id": "TLM-16",
       "title": "Intraday liquidity",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "A bank can end the day liquid and still fail during the day if payments arrive before offsetting receipts. Intraday liquidity is the capacity to meet payment and settlement obligations at the required time, not merely by the reporting cut-off.",
       "prerequisites": [
         "TLM-12",
@@ -5381,15 +6181,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 52.1,
-      "initialY": -314.9
+      "initialX": 231,
+      "initialY": -363.3
     },
     "TLM-17": {
       "id": "TLM-17",
       "title": "Survival horizon and liquidity stress testing",
       "type": "procedure",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "Liquidity stress testing converts a scenario into daily cash needs and monetisable resources; survival horizon is the time until the bank can no longer meet obligations under that scenario without prohibited or extraordinary assumptions. Unlike LCR, it is institution-specific and can span multiple phases of stress.",
       "prerequisites": [
         "TLM-12",
@@ -5423,15 +6223,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 104.8,
-      "initialY": -301.1
+      "initialX": 199.6,
+      "initialY": -320.9
     },
     "TLM-18": {
       "id": "TLM-18",
       "title": "Contingency funding plans",
       "type": "procedure",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "A contingency funding plan converts liquidity stress analysis into an executable crisis playbook: triggers, decision rights, funding actions, collateral, communications and escalation. A list of theoretical funding sources is not a CFP unless those sources can actually be mobilised under stress.",
       "prerequisites": [
         "TLM-17"
@@ -5445,7 +6245,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5471,15 +6271,15 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 160.9,
-      "initialY": -289.6
+      "initialX": 234.6,
+      "initialY": -272.5
     },
     "TLM-19": {
       "id": "TLM-19",
       "title": "ILAAP and the naming trap",
       "type": "reference",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "liquidity-risk",
       "one_screen": "ILAAP is the formal internal liquidity adequacy assessment terminology used in UK and EU supervisory architecture; it is not the universal global name for bank liquidity assessment. India and the US require liquidity-risk governance, stress testing and contingency planning through their own frameworks without universally relabelling that architecture “ILAAP”.",
       "prerequisites": [
         "TLM-14",
@@ -5496,7 +6296,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5527,15 +6327,15 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 110.2,
-      "initialY": -259.8
+      "initialX": 247.9,
+      "initialY": -326.9
     },
     "TLM-20": {
       "id": "TLM-20",
       "title": "What funds transfer pricing solves",
       "type": "concept",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "funds-transfer-pricing",
       "one_screen": "FTP gives each business an internal price for the funding and liquidity consequences it creates, separating customer-product performance from centrally managed balance-sheet risk. Without FTP, business profitability can look strongest precisely where the bank is taking the most hidden maturity and liquidity risk.",
       "prerequisites": [
         "TLM-01",
@@ -5574,15 +6374,15 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 131.7,
-      "initialY": -318.2
+      "initialX": 184.5,
+      "initialY": -326.9
     },
     "TLM-21": {
       "id": "TLM-21",
       "title": "Matched-maturity FTP",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "funds-transfer-pricing",
       "one_screen": "Matched-maturity FTP prices each asset or liability against internal funding of a comparable effective tenor rather than against one pooled average funding rate. It removes the accidental subsidy that otherwise makes long-dated assets look as cheap to fund as short-dated ones.",
       "prerequisites": [
         "TLM-20"
@@ -5614,15 +6414,15 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 153.2,
-      "initialY": -360.8
+      "initialX": 129.8,
+      "initialY": -307.3
     },
     "TLM-22": {
       "id": "TLM-22",
       "title": "The FTP curve and its components",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "funds-transfer-pricing",
       "one_screen": "An FTP curve converts tenor into the bank’s internal marginal value or cost of funding; it normally combines a reference-rate component with institution-specific term-liquidity economics, while contingent liquidity costs are allocated to exposures that can create stressed funding needs. The components must remain interpretable or business behaviour cannot be controlled.",
       "prerequisites": [
         "TLM-21"
@@ -5654,15 +6454,15 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 147.2,
-      "initialY": -409.6
+      "initialX": 159,
+      "initialY": -244.7
     },
     "TLM-23": {
       "id": "TLM-23",
       "title": "Charging liquidity to the business that consumes it",
       "type": "procedure",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "funds-transfer-pricing",
       "one_screen": "Liquidity cost belongs with the activity that creates the need to fund or hold a buffer, even when treasury centrally executes the funding. Central execution without decentralised pricing hides the risk from the business decision that created it.",
       "prerequisites": [
         "TLM-20",
@@ -5695,15 +6495,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 173.6,
-      "initialY": -363.7
+      "initialX": 212.2,
+      "initialY": -274.8
     },
     "TLM-24": {
       "id": "TLM-24",
       "title": "FTP for non-maturity deposits",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "funds-transfer-pricing",
       "one_screen": "NMD FTP is difficult because the product has no contractual term from which to select a transfer rate. The transfer credit must be built from a governed behavioural replication of stable balances and repricing behaviour, not from either overnight maturity or an arbitrary long-term tenor.",
       "prerequisites": [
         "TLM-08",
@@ -5742,15 +6542,15 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 102.6,
-      "initialY": -414.8
+      "initialX": 110.2,
+      "initialY": -264.2
     },
     "TLM-25": {
       "id": "TLM-25",
       "title": "How bad FTP distorts behaviour",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "funds-transfer-pricing",
       "one_screen": "FTP is a behavioural control disguised as an internal price. Set it wrongly and rational business lines will optimise the wrong objective—creating excessive maturity transformation, unstable funding, cheap commitments or artificial deposit growth while reported product profitability still looks attractive.",
       "prerequisites": [
         "TLM-20",
@@ -5785,15 +6585,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 102.7,
-      "initialY": -369.8
+      "initialX": 160.6,
+      "initialY": -263.7
     },
     "TLM-26": {
       "id": "TLM-26",
       "title": "Why a solvent bank can fail",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "systemic-and-jurisdictions",
       "one_screen": "Solvency is about whether assets ultimately cover liabilities with adequate capital; liquidity is about whether cash is available when payment is due. A bank can possess positive economic net worth yet fail if it cannot monetise assets or obtain funding fast enough to settle immediate obligations.",
       "prerequisites": [
         "TLM-12",
@@ -5827,15 +6627,15 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 128.5,
-      "initialY": -374.3
+      "initialX": 161.8,
+      "initialY": -295.1
     },
     "TLM-27": {
       "id": "TLM-27",
       "title": "The credit-liquidity feedback loop",
       "type": "mechanism",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "systemic-and-jurisdictions",
       "one_screen": "Credit deterioration can create liquidity stress, and liquidity stress can create additional credit losses; the loop runs through collateral, funding confidence, asset sales and customer drawdowns. Stress models that shock credit and liquidity independently can therefore miss the mechanism that makes combined crises severe.",
       "prerequisites": [
         "TLM-12",
@@ -5869,15 +6669,15 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 146.3,
-      "initialY": -333.5
+      "initialX": 192,
+      "initialY": -356
     },
     "TLM-28": {
       "id": "TLM-28",
       "title": "India’s SLR, MSF, FALLCR and LCR interaction",
       "type": "reference",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "systemic-and-jurisdictions",
       "one_screen": "India’s distinctive feature is that specified government securities held within the mandatory SLR can also receive LCR HQLA recognition through the MSF and FALLCR carve-outs. SLR and LCR are different requirements, but RBI deliberately permits overlap so qualifying statutory holdings can provide recognised stress liquidity.",
       "prerequisites": [
         "TLM-13",
@@ -5892,7 +6692,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5923,15 +6723,15 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 178.6,
-      "initialY": -342.4
+      "initialX": 230.7,
+      "initialY": -339.3
     },
     "TLM-29": {
       "id": "TLM-29",
       "title": "Cross-jurisdiction liquidity and IRRBB architecture",
       "type": "reference",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "systemic-and-jurisdictions",
       "one_screen": "Basel supplies the common LCR, NSFR and IRRBB architecture, but national implementation is not identical: India has the SLR/FALLCR overlay and a forthcoming 2025 IRRBB regime; the UK embeds liquidity adequacy in PRA ILAAP supervision; the EU combines CRR liquidity ratios with EBA IRRBB/CSRBB standards; the US tailors LCR/NSFR by firm category and uses liquidity-risk/CFP terminology rather than a universal ILAAP label.",
       "prerequisites": [
         "TLM-10",
@@ -5949,7 +6749,7 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-27",
+      "as_of": "2026-08-28",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
@@ -5985,15 +6785,15 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 108.7,
-      "initialY": -342.5
+      "initialX": 166.1,
+      "initialY": -346.7
     },
     "TLM-30": {
       "id": "TLM-30",
       "title": "The integrated ALM decision cycle",
       "type": "procedure",
       "domain": "treasury-alm",
-      "subdomain": "unsorted",
+      "subdomain": "systemic-and-jurisdictions",
       "one_screen": "ALM is the repeated process of converting the balance sheet into risk measures, comparing them with appetite and constraints, changing pricing, funding or hedges, and then measuring again. The decisive skill is understanding that capital, liquidity, IRRBB and FTP are different views of one evolving balance sheet rather than separate regulatory exercises.",
       "prerequisites": [
         "TLM-05",
@@ -6042,8 +6842,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 74.3,
-      "initialY": -341.1
+      "initialX": 142.6,
+      "initialY": -358.5
     }
   },
   "reverseIndex": {
@@ -6462,6 +7262,55 @@
       "IMP-20"
     ],
     "IMP-20": [],
+    "MRM-01": [
+      "IMP-16",
+      "IMP-17",
+      "MRM-04",
+      "MRM-05"
+    ],
+    "MRM-02": [
+      "MRM-03"
+    ],
+    "MRM-03": [],
+    "MRM-04": [],
+    "MRM-05": [
+      "MRM-06"
+    ],
+    "MRM-06": [
+      "MRM-07",
+      "MRM-08",
+      "MRM-10",
+      "MRM-11"
+    ],
+    "MRM-07": [
+      "MRM-08",
+      "MRM-12",
+      "MRM-18"
+    ],
+    "MRM-08": [
+      "MRM-09",
+      "MRM-16",
+      "MRM-18"
+    ],
+    "MRM-09": [],
+    "MRM-10": [
+      "MRM-15",
+      "MRM-16",
+      "MRM-17"
+    ],
+    "MRM-11": [],
+    "MRM-12": [
+      "MRM-13"
+    ],
+    "MRM-13": [
+      "MRM-14",
+      "MRM-15"
+    ],
+    "MRM-14": [],
+    "MRM-15": [],
+    "MRM-16": [],
+    "MRM-17": [],
+    "MRM-18": [],
     "TLM-01": [
       "TLM-02",
       "TLM-03",
@@ -6583,18 +7432,14 @@
       "TLM-29"
     ],
     "TLM-29": [],
-    "TLM-30": [],
-    "MRM-01": [
-      "IMP-16",
-      "IMP-17"
-    ]
+    "TLM-30": []
   },
   "domainTree": [
     {
       "domain": "regulatory-capital",
       "subdomains": [
         {
-          "subdomain": "unsorted",
+          "subdomain": "capital-stack",
           "atoms": [
             {
               "id": "CAP-01",
@@ -6651,7 +7496,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "rwa-and-pillars",
+          "atoms": [
             {
               "id": "CAP-09",
               "title": "Risk Weights and Risk-Weighted Assets",
@@ -6672,7 +7522,12 @@
               "type": "reference",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "credit-approaches",
+          "atoms": [
             {
               "id": "CAP-12",
               "title": "The Standardised Approach to Credit Risk",
@@ -6714,7 +7569,12 @@
               "type": "reference",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "mitigation",
+          "atoms": [
             {
               "id": "CAP-18",
               "title": "Credit Risk Mitigation: Collateral, Guarantees and Netting",
@@ -6735,7 +7595,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "pillar-2-and-jurisdictions",
+          "atoms": [
             {
               "id": "CAP-21",
               "title": "Pillar 1 and Pillar 2",
@@ -6814,7 +7679,7 @@
       "domain": "credit-risk",
       "subdomains": [
         {
-          "subdomain": "unsorted",
+          "subdomain": "exposure-and-default",
           "atoms": [
             {
               "id": "CR-01",
@@ -6892,7 +7757,12 @@
               "type": "concept",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "risk-parameters",
+          "atoms": [
             {
               "id": "CR-12",
               "title": "Probability of default",
@@ -6941,7 +7811,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "scorecards-and-ratings",
+          "atoms": [
             {
               "id": "CR-19",
               "title": "Retail versus wholesale credit modelling",
@@ -6976,7 +7851,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "portfolio-risk",
+          "atoms": [
             {
               "id": "CR-24",
               "title": "Concentration: single-name and sector risk",
@@ -7006,7 +7886,7 @@
       "domain": "foundation",
       "subdomains": [
         {
-          "subdomain": "unsorted",
+          "subdomain": "bank-mechanics",
           "atoms": [
             {
               "id": "FND-01",
@@ -7042,7 +7922,12 @@
               "type": "concept",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "financial-statements",
+          "atoms": [
             {
               "id": "FND-06",
               "title": "The Financial Statements and How They Link",
@@ -7077,7 +7962,12 @@
               "type": "concept",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "time-value",
+          "atoms": [
             {
               "id": "FND-11",
               "title": "Present Value and Discount Factors",
@@ -7105,7 +7995,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "risk-language",
+          "atoms": [
             {
               "id": "FND-15",
               "title": "Exposure: What Is Actually at Risk",
@@ -7140,7 +8035,12 @@
               "type": "concept",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "governance",
+          "atoms": [
             {
               "id": "FND-20",
               "title": "Risk Appetite",
@@ -7184,7 +8084,7 @@
       "domain": "impairment",
       "subdomains": [
         {
-          "subdomain": "unsorted",
+          "subdomain": "ecl-foundations",
           "atoms": [
             {
               "id": "IMP-01",
@@ -7220,7 +8120,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "three-stage-architecture",
+          "atoms": [
             {
               "id": "IMP-06",
               "title": "The IFRS 9 Three-Stage Architecture",
@@ -7269,7 +8174,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "lifetime-modelling",
+          "atoms": [
             {
               "id": "IMP-13",
               "title": "Lifetime PD Term Structures",
@@ -7290,7 +8200,12 @@
               "type": "concept",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "governance-and-jurisdictions",
+          "atoms": [
             {
               "id": "IMP-16",
               "title": "Overlays and Post-Model Adjustments",
@@ -7331,10 +8246,156 @@
       ]
     },
     {
+      "domain": "model-risk",
+      "subdomains": [
+        {
+          "subdomain": "model-risk-foundations",
+          "atoms": [
+            {
+              "id": "MRM-01",
+              "title": "What is a Model",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-02",
+              "title": "Model Risk versus Other Risks",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-03",
+              "title": "Sources of Model Risk",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-04",
+              "title": "Deterministic Tools versus Models",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-05",
+              "title": "Model Inventory and Materiality Tiering",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "governance-and-lifecycle",
+          "atoms": [
+            {
+              "id": "MRM-06",
+              "title": "Model Lifecycle",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-07",
+              "title": "Model Development",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-08",
+              "title": "Independent Model Validation",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-09",
+              "title": "Approval, Governance, and Use",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-10",
+              "title": "Ongoing Monitoring and Performance",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-11",
+              "title": "Change Management and Recalibration",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "validation-and-metrics",
+          "atoms": [
+            {
+              "id": "MRM-12",
+              "title": "Conceptual Soundness and Data Quality",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-13",
+              "title": "Discrimination Metrics (AUC, Gini, KS)",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-14",
+              "title": "Calibration and Goodness-of-Fit",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-15",
+              "title": "Stability Metrics (PSI and CSI)",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-16",
+              "title": "Benchmarking and Challenger Models",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-17",
+              "title": "Backtesting, Use Test, and Overrides",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-18",
+              "title": "AI and Machine Learning Models",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "domain": "treasury-alm",
       "subdomains": [
         {
-          "subdomain": "unsorted",
+          "subdomain": "irrbb-and-mismatches",
           "atoms": [
             {
               "id": "TLM-01",
@@ -7412,7 +8473,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "liquidity-risk",
+          "atoms": [
             {
               "id": "TLM-12",
               "title": "Funding liquidity risk versus market liquidity risk",
@@ -7468,7 +8534,12 @@
               "type": "reference",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "funds-transfer-pricing",
+          "atoms": [
             {
               "id": "TLM-20",
               "title": "What funds transfer pricing solves",
@@ -7510,7 +8581,12 @@
               "type": "mechanism",
               "status": "draft",
               "verified": false
-            },
+            }
+          ]
+        },
+        {
+          "subdomain": "systemic-and-jurisdictions",
+          "atoms": [
             {
               "id": "TLM-26",
               "title": "Why a solvent bank can fail",
@@ -7569,27 +8645,27 @@
       ],
       "atoms": [
         {
-          "id": "CR-05",
+          "id": "MRM-08",
           "weight": 3
+        },
+        {
+          "id": "MRM-12",
+          "weight": 3
+        },
+        {
+          "id": "MRM-13",
+          "weight": 3
+        },
+        {
+          "id": "MRM-17",
+          "weight": 2
         },
         {
           "id": "CR-12",
-          "weight": 3
-        },
-        {
-          "id": "CR-13",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "CAP-14",
-          "weight": 2
-        },
-        {
-          "id": "MRM-01",
-          "weight": 2
-        },
-        {
-          "id": "FND-18",
           "weight": 1
         }
       ]
@@ -7611,11 +8687,11 @@
       ],
       "atoms": [
         {
-          "id": "CR-12",
+          "id": "MRM-07",
           "weight": 3
         },
         {
-          "id": "CR-19",
+          "id": "CR-12",
           "weight": 3
         },
         {
@@ -7623,15 +8699,15 @@
           "weight": 3
         },
         {
-          "id": "CR-21",
+          "id": "MRM-13",
+          "weight": 2
+        },
+        {
+          "id": "MRM-14",
           "weight": 2
         },
         {
           "id": "CAP-14",
-          "weight": 2
-        },
-        {
-          "id": "CR-23",
           "weight": 1
         }
       ]
@@ -8062,7 +9138,6 @@
     "DAT-03",
     "IND-01",
     "MRK-01",
-    "MRM-01",
     "QNT-01",
     "TEC-01",
     "TRD-01"
@@ -8615,6 +9690,161 @@
     },
     {
       "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-01",
+      "message": "Atom \"MRM-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "MRM-01",
+      "message": "Atom \"MRM-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-01",
+      "message": "one_screen in \"MRM-01\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-02",
+      "message": "Atom \"MRM-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "MRM-02",
+      "message": "Atom \"MRM-02\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-02",
+      "message": "one_screen in \"MRM-02\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-03",
+      "message": "Atom \"MRM-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-04",
+      "message": "Atom \"MRM-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-04",
+      "message": "one_screen in \"MRM-04\" contains 8 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-05",
+      "message": "Atom \"MRM-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-05",
+      "message": "one_screen in \"MRM-05\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-06",
+      "message": "Atom \"MRM-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-07",
+      "message": "Atom \"MRM-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-08",
+      "message": "Atom \"MRM-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-09",
+      "message": "Atom \"MRM-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-10",
+      "message": "Atom \"MRM-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-11",
+      "message": "Atom \"MRM-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-12",
+      "message": "Atom \"MRM-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-12",
+      "message": "one_screen in \"MRM-12\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-13",
+      "message": "Atom \"MRM-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-13",
+      "message": "one_screen in \"MRM-13\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-14",
+      "message": "Atom \"MRM-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-14",
+      "message": "one_screen in \"MRM-14\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-15",
+      "message": "Atom \"MRM-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-15",
+      "message": "one_screen in \"MRM-15\" contains 9 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-16",
+      "message": "Atom \"MRM-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-16",
+      "message": "one_screen in \"MRM-16\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-17",
+      "message": "Atom \"MRM-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-17",
+      "message": "one_screen in \"MRM-17\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-18",
+      "message": "Atom \"MRM-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "MRM-18",
+      "message": "one_screen in \"MRM-18\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "TLM-01",
       "message": "Atom \"TLM-01\" is unverified (draft). Displays development banner."
     },
@@ -8769,5 +9999,5 @@
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-27T21:31:51.600Z"
+  "generatedAt": "2026-08-28T04:08:25.073Z"
 }

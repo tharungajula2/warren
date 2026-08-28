@@ -1,0 +1,68 @@
+---
+id: MRM-17
+title: 'Backtesting, Use Test, and Overrides'
+type: mechanism
+domain: model-risk
+subdomain: validation-and-metrics
+one_screen: >-
+  **Backtesting** compares a model’s historical forecasts to actual results
+  (e.g. predicted vs realized losses).  It’s a formal test of predictive
+  accuracy over time.  The **use test** checks that the model is being applied
+  in practice as intended (not just in name).  Banks must also track
+  **overrides** (manual deviations) to ensure that business judgment does not
+  mask model errors.
+prerequisites:
+  - MRM-10
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      RBI, *Draft Principles… in Credit* (Aug. 2024) – requires documentation of
+      overrides.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Basel II/III documents (conceptual).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Backtesting is often part of monitoring (see MRM-10).  For example, a Value-at-Risk model would be backtested by counting how often actual losses exceed the VaR estimates.  In credit PD models, backtesting might look at how forecast default rates compare to observed defaults in each grade.  Regulators use backtesting to validate risk models: e.g. Basel committees prescribe backtesting rules for market VaR.  In a broader sense, backtesting any model ensures it worked as advertised.
+
+The use test (a term from regulatory literature on internal ratings or IFRS9) ensures the model’s output influences decisions.  For example, an internal rating model satisfies the use test if credit officers actually use it for approvals.  If a model fails the use test (e.g. it was built but never integrated into processes), regulators may question why it was developed at all.  Firms should maintain evidence of model usage (audit trails, workflow integration).
+
+**Overrides** occur when human experts override a model’s result (e.g. credit underwriters adjusting a score).  Some level of overrides is expected (no model is perfect), but they must be tracked.  Regulators view systematic overrides as potential model risk.  For instance, RBI’s credit model guidance says that subjective overrides must be documented and justifiable.  Banks should monitor override frequency and reason codes.  An unusually high override rate may indicate the model is not trusted or is mis-calibrated, prompting review.  Ongoing monitoring of overrides (and requiring board-level reporting if excessive) is part of robust MRM.
+
+<Rule label="PERMANENT RULE">
+Always measure model performance on historical data (backtest) and ensure the model’s output is actually used.  Track any manual overrides closely.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring overrides.  For example, assuming the model is wrong because many underwriters ignore it, without investigating why.  (Frequent overrides themselves are a sign the model may be problematic.)
+</Trap>
+
+<NeverConfuse a="Backtesting" b="Use test">
+**Backtesting** — evaluating model accuracy by comparing predictions to actual outcomes over time.  
+---  
+**Use test** — verifying that model outputs are actively used in decision-making.  
+The former is statistical validation; the latter is governance of model usage.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All regimes recognize backtesting as a model validation tool (especially for VaR/market models).  The use test is a concept from Basel risk-weighted models and IFRS9, applicable in all advanced-model frameworks (incl. RBI’s IFRS9 NBFCs, PRA’s internal use requirement).
+</Rule>
+
+<Recall
+  q="What is a use test?"
+  a="A check that the model is actually used in business processes as intended (e.g. credit decisions follow model scores)."
+/>
+
+<Recall
+  q="Why should overrides be monitored?"
+  a="Because frequent overrides suggest the model may be misaligned with reality.  Regulators expect banks to document and review overrides (RBI draft explicitly requires documentation)."
+/>

@@ -1,0 +1,88 @@
+---
+id: MRM-06
+title: Model Lifecycle
+type: concept
+domain: model-risk
+subdomain: governance-and-lifecycle
+one_screen: >-
+  A model’s lifecycle consists of development, independent validation, approval,
+  deployment/use, ongoing monitoring, updates (recalibration/redevelopment), and
+  eventually retirement.  Each stage has specific risk controls.  Regulators
+  expect firms to manage model risk across the entire lifecycle, not just at
+  inception.
+prerequisites:
+  - MRM-05
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'OCC, *Revised Guidance on Model Risk Management* (OCC Bulletin 2026-13).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'RBI draft, *Guidance on MRM, 2026* (Jun 2026), Chapters on lifecycle.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Banks treat models much like products: from conception to retirement.  The high-level stages are: **Development → Validation → Approval → Deployment/Use → Monitoring &amp; Maintenance → Change/Update → Retirement**.  In development, the model’s objectives, data, methodology and documentation are created.  Before any model can be used in decisions, it must be **validated** by an independent reviewer (second line) to check design and accuracy (see MRM-08).  Then the model must be formally **approved** by management or a governance committee (see MRM-09).  Once deployed, the model is used in real operations.  Thereafter, the bank must **monitor** model performance and environment continuously (backtesting, stability checks, etc.).  If model performance drifts or business needs change, the model is **updated** by recalibrating parameters or redeveloping.  Finally, a model may be **retired (decommissioned)** when no longer needed or when replaced by a better model.
+
+This end-to-end view is emphasized by regulators.  The 2026 interagency guidance and OCC bulletin explicitly outline these stages in their high-level framework, covering development, validation, governance, and monitoring.  RBI’s draft guidance similarly lists selection/development, validation, approval, deployment, ongoing oversight, change management, and decommissioning as key lifecycle elements.  The Fed/OCC calls for robust controls “throughout the model lifecycle” (implicitly in each phase).  Having such a lifecycle framework helps ensure nothing is skipped.  For example, a model should never be used before validation and approval; nor should monitoring cease once the model is live.
+
+&lt;Flow&gt;
++--------------+     +--------------+     +----------+     +--------------+
+| Development  | --&amp;gt; | Validation   | --&amp;gt; | Approval | --&amp;gt; | Deployment/ |
+| (purpose,    |     | (independent |     | (senior  |     | Use         |
+|  data, method)|     |  review)     |     |  sign-off) |    |             |
++--------------+     +--------------+     +----------+     +--------------+
+                                                           |      |
+                                                           v      |
+                                                    +-------------+
+                                                    | Monitoring &amp;amp;|
+                                                    | Maintenance |
+                                                    +-------------+
+                                                           |
+                                                           v
+                                                    +-------------+
+                                                    | Updates/    |
+                                                    | Recalibration |
+                                                    +-------------+
+                                                           |
+                                                           v
+                                                    +-------------+
+                                                    | Retirement  |
+                                                    +-------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Governments require oversight at every stage: development, validation, approval, deployment, monitoring, changes, and retirement. Skipping any step undermines model safety.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using a model as soon as it’s built, before validation or formal approval.  Validation must precede use, and monitoring must continue until retirement.
+</Trap>
+
+<NeverConfuse a="Recalibration" b="Redevelopment">
+**Recalibration** — adjusting model parameters to current data.  
+---  
+**Redevelopment** — building a new model from scratch.  
+Both involve change, but recalibration tweaks an existing model; redevelopment replaces it entirely.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** All major frameworks envision the same lifecycle stages.  The specific terminologies may differ (e.g. RBI separates “selection” and “development”), but all regimes require development, independent validation, governance sign-off, deployment, monitoring, updates, and decommissioning of models.
+</Rule>
+
+<Recall
+  q="What are the key stages in a model’s lifecycle?"
+  a="Development → Independent Validation → Approval → Deployment/Use → Ongoing Monitoring → Change management (updates/recalibration) → Retirement."
+/>
+
+<Recall
+  q="Why can’t a model skip any stage?"
+  a="Each stage has controls to manage risk.  For example, without independent validation, hidden errors may go undetected before use."
+/>

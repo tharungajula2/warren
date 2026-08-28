@@ -1,0 +1,86 @@
+---
+id: MRM-18
+title: AI and Machine Learning Models
+type: concept
+domain: model-risk
+subdomain: validation-and-metrics
+one_screen: >-
+  Models using AI/ML must be interpretable and transparent.  Regulators expect
+  that even non-linear models can be explained sufficiently to satisfy risk
+  controls.  New guidelines explicitly stress interpretability (e.g.
+  “explainability” requirements) and governance of AI.  Supervisory expectations
+  for AI in finance are still evolving (often marked as “developing”) but lean
+  toward strong oversight.
+prerequisites:
+  - MRM-07
+  - MRM-08
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      ECB press release (July 28, 2025) on revised internal models guide (new ML
+      section).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      RBI, *Draft Guidance on MRM, 2026* (Jun 2026) – Chapter on AI/ML,
+      explainability and governance.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: S&C (Apr. 2026) – OCC statement on upcoming AI measures.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+AI and ML introduce additional complexity in model risk.  Unlike linear regressions, many ML models (neural nets, ensemble trees) are “black boxes” by default.  Yet regulators require that models be understood by the bank.  For example, the ECB’s 2025 guide to internal models adds a section on machine learning, specifying that ML models must be “adequately explainable” and that their performance must justify the added complexity.  Similarly, RBI’s draft guidance explicitly lists AI/ML models in scope and requires explainability, bias checks, and human oversight.  The new U.S. guidance acknowledges AI/ML as model risk (although it currently excludes “generative AI” from scope), and the OCC has signaled forthcoming guidance on AI.  In short, banks cannot claim “it’s just AI” to avoid validation – they must apply model risk principles to AI models too.  
+
+However, validating AI models is challenging.  Common practices include using SHAP values or LIME to explain predictions, simplifying models via surrogate linearizations, or requiring that final decisions be interpretable.  Backtesting, discrimination and calibration concepts still apply, but new tests (e.g. for concept drift) may be needed.  Given the complexity, the industry relies on “explainable AI” tools and rigorous documentation of how the model learns.  
+
+Regulators are actively developing expectations for AI.  The PRA already includes AI risk in SS1/23 sub-principles.  In the U.S., OCC’s 2026 press release noted agencies will solicit input on AI use in banking.  RBI’s draft explicitly covers AI: it requires a Board-approved AI governance framework, human-in-the-loop, and the ability to “kill” or decommission high-risk AI models.  These emerging rules suggest strong scrutiny on AI: consider them “developing” expectations.
+
+<Rule label="PERMANENT RULE">
+Treat AI/ML models as you would any model, with the added requirement that their logic must be interpretable to decision-makers and auditors. Regulatory agencies now often require explainability as a must-have.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Tolerating a black box just because it performs well.  Ignoring regulations by calling a model “proprietary.”  For example, **simply citing vendor secrecy to avoid explaining an AI model** is unacceptable.
+</Trap>
+
+<NeverConfuse a="Interpretability" b="Predictive accuracy">
+**Interpretability** — the ability to explain how a model arrives at a result.  
+---  
+**Predictive accuracy** — how well the model predicts outcomes.  
+A model can be accurate but uninterpretable; regulators require both (accuracy and some level of interpretability).
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s draft explicitly includes AI/ML models. It requires explainability and bias/fairness controls.  The draft even suggests specialized oversight (e.g. AI governance board-level) for complex ML models.
+</Delta>
+
+<Delta j="UK">
+— The PRA notes that model risk framework should cover AI/Machine Learning where applicable.  Firms should ensure all models are well documented; the European Union is working on AI regulations (e.g. the EU AI Act) that will affect bank models.
+</Delta>
+
+<Delta j="US">
+— SR 26-2 excludes “generative AI” for now, but FCA/OCC guidance is forthcoming.  U.S. banking supervisors emphasize that ML models, like any models, must be validated and understandable.  OCC has announced future guidance addressing banks’ use of AI.
+</Delta>
+
+<Delta j="EU">
+— ECB’s updated internal-model guide (2025) explicitly adds explainability for ML.  The EU is also developing AI-specific regulations (e.g. the AI Act) that will impact financial institutions.
+</Delta>
+
+<Recall
+  q="Why must AI models be explainable?"
+  a="Regulators require understanding of model drivers to ensure responsibility and fairness.  For instance, ECB guidance says ML models must be “adequately explainable”."
+/>
+
+<Recall
+  q="What special controls might be needed for AI?"
+  a="Documentation of training process, bias checks, robustness tests, and procedures to disable a model if it misbehaves (human oversight)."
+/>

@@ -1,0 +1,82 @@
+---
+id: MRM-11
+title: Change Management and Recalibration
+type: procedure
+domain: model-risk
+subdomain: governance-and-lifecycle
+one_screen: >-
+  If a model’s performance deteriorates or business conditions change, banks
+  must update the model.  This can be done by **recalibration** (adjusting
+  parameters) or full **redevelopment** (building a new model).  Any changes
+  must follow the same validation and approval process as the original model.
+prerequisites:
+  - MRM-06
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), on
+      post-deployment validation.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      PRA SS1/23 (Apr. 2026) – Requirements for model change management (see
+      [52], standards for recalibration).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Models rarely remain static.  Firms implement a formal change-management process.  When should a change occur?  Common triggers include: backtest failures, PSI breaches, new regulatory requirements, or material shifts in portfolio mix.  The key is to identify whether the existing model can be fixed by recalibration or needs replacement:
+- **Recalibration** means re-estimating the model’s parameters (e.g. refitting a regression with new data) or updating assumptions.  It is appropriate when the model form is still valid but its coefficients are stale (e.g. updating PD estimates for current economic conditions).  
+- **Redevelopment** means constructing a new model (possibly using different variables or methodology).  This is needed if the old model’s structure is fundamentally wrong or its performance cannot be recovered by tweaking.  
+
+Regulators expect any material change to undergo re-validation.  RBI’s draft guidance explicitly states that any amendments (due to material events) trigger a new validation “before deployment” and at least annually.  The PRA also requires that changes follow the firm’s defined governance.  The PRA’s standards (see [52]) mention that firms should have clear processes to determine when recalibration vs redevelopment is needed (threshold breaches, root cause analysis).  For major changes, the updated model must be re-submitted for independent validation and re-approval.  The Fed/OCC guidance no longer mandates fixed review intervals (“no required cadence”), but strongly advocates a risk-based approach: high-risk models may need more frequent updates.  
+
+In summary, change management is part of the lifecycle: monitor, then decide.  Recalibrations are typically quicker fixes, while redevelopments are full projects.  Firms must document the rationale for either choice and ensure that the updated model is validated as if new.
+
+<Rule label="PERMANENT RULE">
+Every material model change is subject to the same controls as a new model (validation, approval).  No tweaks in production without oversight.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+“Band-aiding” a flawed model without validation.  For example, **adjusting a model’s output by adding a fudge factor** to pass performance tests, but not re-validating the underlying logic.
+</Trap>
+
+<NeverConfuse a="Recalibration" b="Redevelopment">
+**Recalibration** — updating an existing model’s parameters.  
+---  
+**Redevelopment** — creating a new model (new form or variables).  
+Both are “model change,” but recalibration tweaks the old model, while redevelopment replaces it.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI requires validating every amended model; specifically “before deployment” for changes and at least annual reviews.
+</Delta>
+
+<Delta j="UK">
+— PRA SS1/23’s MRM framework demands clear procedures for model change (Principle 2 mentions managing “model change, including clear roles for approval”).  In practice, firms set criteria based on risk tier and triggers.
+</Delta>
+
+<Delta j="US">
+— The new guidance endorses risk-based timing.  It replaced old fixed schedules with a principle that firms should determine frequency and scope of review by materiality.  (No formal calibration interval is mandated.)
+</Delta>
+
+<Delta j="EU">
+— Internal models under ECB supervision must be recalibrated or redeveloped at least annually and whenever significant changes occur.  The ECB’s internal-model guide (and CRR regulations) require model updates to be approved by supervisors and re-validated.
+</Delta>
+
+<Recall
+  q="When is full redevelopment needed instead of simple recalibration?"
+  a="When the model’s conceptual framework no longer fits reality (e.g. a linear model breaking down in a new environment), or performance cannot be recovered by adjusting parameters."
+/>
+
+<Recall
+  q="What must happen after you update a model?"
+  a="The updated model must be re-validated and re-approved before use, just like a new model."
+/>

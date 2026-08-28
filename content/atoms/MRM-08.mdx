@@ -1,0 +1,78 @@
+---
+id: MRM-08
+title: Independent Model Validation
+type: mechanism
+domain: model-risk
+subdomain: governance-and-lifecycle
+one_screen: >-
+  Independent validation is a formal review of a model by someone outside the
+  development team.  It checks data, assumptions, methodology, and output
+  accuracy.  True independence (no conflicts with the model developer) is
+  required to ensure objectivity.
+prerequisites:
+  - MRM-06
+  - MRM-07
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      S&C memo on SR 26-2 (Apr. 2026), noting validation independence
+      requirement.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation framework.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Model validation is a crucial second-line control.  Its purpose is to give management confidence that the model is “fit for purpose.”  Validation should start by reviewing the model’s design (the conceptual soundness) and then testing performance.  Typical steps include checking whether inputs meet quality standards, verifying calculations, re-running parts of the model in a fresh environment (code review/backtest), and assessing outputs against outcomes.  The validator also reviews documentation and ensures compliance with policy.  
+
+**Independence is key.**  The reviewer must not be the same person (or team) who built the model.  Regulators insist on unbiased, competent validators.  For example, the U.S. Revised Guidance says effective challenge should be done by individuals “with sufficient independence to maintain objectivity”.  RBI requires each model be validated by a process “independent of model development”.  The validator typically reports to senior management or a separate risk committee.  Internal audit (third line) does not perform the day-to-day validation but will later audit the process.  
+
+Validation should occur before a model goes live and then periodically (e.g. annually or when triggered by events).  The Fed/OCC guidance now recommends a risk-based frequency rather than a fixed schedule.  RBI’s draft explicitly says each model must be validated before deployment and after any material change or annually.  In practice, validators produce a formal report summarizing findings and recommendations.  If issues are found, the model must be remediated before use.  Independent validation is non-negotiable: an unvalidated model should never enter production.
+
+<Rule label="PERMANENT RULE">
+The model validator must be independent of development (a separate person or team) and must rigorously test the model’s integrity before use.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Letting the developer self-validate.  This destroys objectivity.  An independent validator is required by design, not merely someone “reviewing for mistakes.”
+</Trap>
+
+<NeverConfuse a="Independent validation" b="Internal audit">
+**Independent validation** — a thorough check of the model by a second line (model risk or quant team).  
+---  
+**Internal audit** — a separate (third line) review of the framework/process, not a substitute for the validation itself.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI requires independent vetting/validation of each model before deployment and at least annually.  All models (internal or third-party) must be independently validated.
+</Delta>
+
+<Delta j="UK">
+— PRA SS1/23 Principle 4 mandates ongoing, independent and effective challenge of every model.  The SS explicitly calls for a validation process separate from development.
+</Delta>
+
+<Delta j="US">
+— SR 26-2 emphasizes objectivity but does not dictate a specific validator role; it simply requires “effective challenge by individuals with sufficient independence”.  It allows flexibility in how firms organize independence (e.g. separate team or robust governance).
+</Delta>
+
+<Delta j="EU">
+— EBA and ECB Pillar 2 frameworks require internal model validation by an independent function.  ECB’s internal-model guide and the EBA IRB Validation Handbook both assume separate validator teams.  The concept of independent review is universal.
+</Delta>
+
+<Recall
+  q="Who should perform a model’s validation?"
+  a="Someone independent from development (often a second-line model risk or analytics team)."
+/>
+
+<Recall
+  q="When is validation required?"
+  a="Before a model is put in use, after material changes, and periodically (e.g. yearly)."
+/>

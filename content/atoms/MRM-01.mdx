@@ -1,0 +1,100 @@
+---
+id: MRM-01
+title: What is a Model
+type: concept
+domain: model-risk
+subdomain: model-risk-foundations
+one_screen: >-
+  A model is a quantitative system that processes input data using statistical,
+  economic or financial theory to produce an output.  This definition determines
+  which tools fall under model risk controls.  Not all decision-support tools
+  are “models” in every regime – for example, U.S. guidance explicitly excludes
+  simple spreadsheets or rule-based calculators from the model category, whereas
+  UK and Indian frameworks use broader definitions that include any system with
+  material impact on decisions.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 4
+sources:
+  - label: >-
+      Federal Reserve, *SR 26-2, Revised Guidance on Model Risk Management*
+      (Apr. 17, 2026).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'PRA, *Supervisory Statement SS1/23 (Apr 2026)* (Model Risk Management).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      RBI draft, *Guidance on Regulatory Principles for Model Risk Management,
+      2026* (Jun 2026).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+Bank regulators emphasize clear model definitions to set scope.  For example, the U.S. Federal Reserve’s 2026 guidance defines a model as “a complex quantitative method… that applies statistical, economic, or financial theories to process input data,” and explicitly excludes “simple arithmetic calculations, such as those found within spreadsheets, as well as deterministic rule-based processes”.  In contrast, the UK PRA’s supervisory statement (SS1/23) defines a model as “a quantitative method, system or approach that applies statistical, economic, financial or mathematical theories… to process input data into output”.  India’s draft model-risk guidance similarly defines a model very broadly to include algorithms, analytics, decision rules, and even spreadsheets if they materially affect decisions.  A “spreadsheet-based calculator” might be treated as a basic tool by itself, but if it feeds lending rates or risk scores that drive decisions, RBI says it must be treated as a model.
+
+This definitional boundary matters because it determines oversight: what must be inventoried, validated, and controlled.  For instance, a bank might use a simple Excel pricing sheet. Under Fed/OCC rules, that might not be a “model” at all, but under PRA or RBI rules it could be classified as a model if it affects credit pricing.  Mis-classifying a tool as “not a model” can leave significant risk unmanaged.  Conversely, over-classifying every trivial calculation as a model can waste effort.  In practice, firms adopt the regulator’s definition in their policies so that model inventories and risk frameworks are consistent across lines of business.
+
+&lt;Flow&gt;
++-----------------+
+|    Model        |
++-----------------+
+| - Uses theory   |
+| - Processes data|
+| - Predicts outcome |
++-----------------+
+       /_\
+        |
+        v
++---------------------+
+| Decision impact     |
+| (e.g. pricing,      |
+| credit approval)    |
++---------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A “model” always applies a formal quantitative method (with assumptions) to data.  Simple tools with no underlying statistical/economic theory are generally not models under regulatory definitions.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating any tool in Excel as outside model risk.  For example, **mistakenly ignoring a spreadsheet that sets loan pricing** because “it’s just a calculator” – when that tool uses inputs and formulas that affect lending decisions.
+</Trap>
+
+<NeverConfuse a="Spreadsheet/Calculator" b="Statistical Model">
+**Spreadsheet/Calculator** — an arithmetic, rule‐based tool (no statistical theory). Often excluded as a “model” in U.S. regs.  
+---  
+**Statistical Model** — a quantitative method using statistical/economic assumptions to produce predictions.  It may be developed in code or a spreadsheet, and is subject to model validation.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s draft MRM guidance defines a model broadly as any system (including AI/ML) using theoretical or statistical techniques to process inputs into outputs, **including** algorithms, analytics or even decision-rule spreadsheets that materially affect decisions.
+</Delta>
+
+<Delta j="UK">
+— The PRA expects firms to define models as “quantitative methods… applying statistical, economic, financial or mathematical theories… to process input data into output”.  (Deterministic rules with material impact may still be subject to MRM controls.)
+</Delta>
+
+<Delta j="US">
+— The interagency guidance uses a narrower definition: a “complex quantitative method” that applies statistical/economic theory, **excluding** simple spreadsheets or rule-based tools.  (Those tools still need controls, but they aren’t labeled “models” under SR 26-2.)
+</Delta>
+
+<Delta j="EU">
+— EBA/ECB internal-model frameworks for IRB capital imply a similar broad notion (any statistical or econometric method), but no single EU-wide MRM definition.  In practice, EU regulators follow Basel principles: any quantitative risk model (credit/market/counterparty) must meet validation requirements.
+</Delta>
+
+<Recall
+  q="What makes a tool a “model” for regulators?"
+  a="If it applies statistical/economic theory or assumptions to data to produce estimates, it’s a model. A simple arithmetic spreadsheet without such theory is usually not a model (per Fed guidance)."
+/>
+
+<Recall
+  q="Why is a model definition important?"
+  a="The model definition sets the scope of the MRM framework.  It tells the firm which tools require inventory, validation and controls.  Using the wrong definition (e.g. excluding a critical spreadsheet) can leave gaps in oversight."
+/>

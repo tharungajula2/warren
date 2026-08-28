@@ -1,0 +1,66 @@
+---
+id: MRM-15
+title: Stability Metrics (PSI and CSI)
+type: mechanism
+domain: model-risk
+subdomain: validation-and-metrics
+one_screen: >-
+  Population Stability Index (PSI) and Characteristic Stability Index (CSI)
+  measure changes in distributions over time.  PSI compares a variable’s or
+  model-score distribution between the development period and current period. 
+  CSI is similar but often used for categorical variables (e.g. rating grades). 
+  In credit risk, PSI/CSI thresholds (e.g. >0.25) are used as a rule-of-thumb to
+  signal a “significant change” that may require model review.
+prerequisites:
+  - MRM-10
+  - MRM-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Risk.net Journal of RM Validation, *Statistical properties of the
+      population stability index* (Apr. 2022) – PSI thresholds.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+PSI is calculated as Σ (actual - expected)*ln(actual/expected) over bins of the distribution.  It quantifies how much the data have shifted.  A common practice (from industry “rules of thumb”) is: **PSI &lt;0.10** = little change, **0.10–0.25** = moderate change, **&gt;0.25** = significant change requiring investigation.  For example, if the score distribution has more high-risk borrowers now than at development, PSI will rise.  CSI is a variant used when variables are categorical (like rating transitions).  
+
+Banks use these metrics in monitoring (MRM-10).  If PSI breaches its threshold, it often triggers a model review or recalibration.  Regulators expect banks to track such stability measures for key variables and scores.  (EBA/ECB Pillar 2 expectations and TRIM reviews included similar migration/stability checks.)  
+
+It is important not to treat PSI/CSI breaches as automatic model failure.  They are signals that something changed – perhaps the portfolio mix or economy – and model performance must be reassessed.  A sudden PSI increase could also come from a one-time data issue.  Nonetheless, including PSI/CSI in validation reports is good practice.
+
+<Rule label="PERMANENT RULE">
+Monitor variable and score shifts with PSI/CSI.  Significant drift (e.g. PSI &gt;0.25) should always prompt model review or action.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Relying on fixed PSI thresholds without context.  A PSI just above 0.25 in a benign economic situation may not be as urgent as the same PSI during a crisis.  Also, using too many bins can artificially inflate PSI; ensure bins are consistent.
+</Trap>
+
+<NeverConfuse a="Population Stability Index (PSI)" b="Characteristic Stability Index (CSI)">
+**Population Stability Index (PSI)** — measures shift in the model *score* or numeric input distribution between time periods.  
+---  
+**Characteristic Stability Index (CSI)** — measures shift in a *categorical* characteristic distribution (e.g. rating classes).  
+Both flag distribution shifts, but PSI is for continuous scores/inputs, CSI for discrete categories.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** PSI/CSI are industry-standard techniques. Supervisors generally expect banks to check stability of model inputs and outputs over time.  ECB’s internal-model audits (TRIM) and Pillar 2 guidance include similar stability monitoring.
+</Rule>
+
+<Recall
+  q="What PSI value typically signals “action required”?"
+  a="Over 0.25 (often indicated as “significant change”)."
+/>
+
+<Recall
+  q="If a model’s PSI is very high, what might that indicate?"
+  a="The population has changed (e.g. the borrower mix or economy changed) and the model may need recalibration or replacement."
+/>
