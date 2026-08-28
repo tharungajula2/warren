@@ -1,0 +1,67 @@
+---
+id: TEC-12
+title: Writing a Reconciliation Query
+type: procedure
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  Data reconciliation means comparing two sources to ensure consistency. In SQL,
+  this often involves joining or aggregating data from two tables/reports and
+  highlighting mismatches. For instance, reconciling a daily loan balance
+  extract against the general ledger might involve summing balances by loan and
+  comparing. One approach is a full outer join on key columns to find rows
+  missing on either side. Alternatively, compare aggregates: ```sql SELECT
+  A.LoanID, A.Balance AS Balance_A, B.Balance AS Balance_B FROM LoansTable A
+  FULL OUTER JOIN GL_Loans B ON A.LoanID = B.LoanID WHERE A.Balance <> B.Balance
+  OR A.LoanID IS NULL OR B.LoanID IS NULL; ``` This returns loans where balances
+  differ or exist only in one source. Another common pattern is comparing totals
+  by category: sum balances in each source and `JOIN` or `UNION` to compare
+  totals.
+prerequisites:
+  - TEC-02
+  - TEC-03
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Datafold, *“What is Data Reconciliation?”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+&lt;Flow&gt;
+TableA  Full Join  TableB  = Discrepancies (NULLs for missing)
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Always match on a clear key (e.g. LoanID) and include all data sources needed. Use aggregates (sums, counts) to verify totals align as a quick check.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Mismatched keys or joins hide differences. For example, an inner join drops unmatched rows, missing a discrepancy. To catch all differences, use a full outer join or compare aggregates.
+</Trap>
+
+<NeverConfuse a="INNER JOIN" b="FULL OUTER JOIN">
+**INNER JOIN** — only matching rows (not useful alone for recon).  
+---  
+**FULL OUTER JOIN** — includes mismatches from both sides (needed to find missing records).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Reconciliation logic is generic SQL.
+</Rule>
+
+<Recall
+  q="How to find records in A not in B?"
+  a="Use `FULL OUTER JOIN` and check for NULLs on B’s side."
+/>
+
+<Recall
+  q="How to quickly check totals match?"
+  a="Sum each side by category and compare (e.g. via a join or SELECT from two subqueries)."
+/>

@@ -201,6 +201,8 @@
       { "id": "DAT-19", "weight": 3 },
       { "id": "DAT-20", "weight": 3 },
       { "id": "DAT-21", "weight": 3 },
+      { "id": "TEC-12", "weight": 2 },
+      { "id": "TEC-13", "weight": 2 },
       { "id": "DAT-22", "weight": 2 },
       { "id": "CAP-04", "weight": 2 },
       { "id": "FND-24", "weight": 1 }
@@ -225,6 +227,8 @@
       { "id": "DAT-03", "weight": 3 },
       { "id": "DAT-08", "weight": 3 },
       { "id": "DAT-09", "weight": 3 },
+      { "id": "TEC-12", "weight": 2 },
+      { "id": "TEC-13", "weight": 2 },
       { "id": "DAT-07", "weight": 2 },
       { "id": "DAT-13", "weight": 2 },
       { "id": "DAT-17", "weight": 1 }
@@ -246,16 +250,16 @@
       "ETL"
     ],
     "atoms": [
-      { "id": "FND-16", "weight": 3 },
-      { "id": "FND-17", "weight": 3 },
-      { "id": "CR-23", "weight": 3 },
-      { "id": "QNT-01", "weight": 3 },
-      { "id": "QNT-08", "weight": 3 },
-      { "id": "DAT-09", "weight": 2 },
-      { "id": "DAT-21", "weight": 2 },
-      { "id": "QNT-18", "weight": 2 },
-      { "id": "QNT-21", "weight": 2 },
-      { "id": "FND-18", "weight": 1 }
+      { "id": "TEC-02", "weight": 3 },
+      { "id": "TEC-04", "weight": 3 },
+      { "id": "TEC-07", "weight": 3 },
+      { "id": "TEC-16", "weight": 3 },
+      { "id": "TEC-19", "weight": 3 },
+      { "id": "TEC-12", "weight": 2 },
+      { "id": "TEC-17", "weight": 2 },
+      { "id": "TEC-20", "weight": 2 },
+      { "id": "TEC-23", "weight": 2 },
+      { "id": "TEC-24", "weight": 2 }
     ]
   },
   {

@@ -1,0 +1,73 @@
+---
+id: TEC-05
+title: 'Set Operations (UNION, INTERSECT, EXCEPT)'
+type: concept
+domain: technical
+subdomain: sql-querying-and-window-functions
+one_screen: >-
+  SQL set operators combine result sets like mathematical sets. `UNION` stacks
+  rows from two queries (duplicates removed by default). `UNION ALL` includes
+  duplicates. `INTERSECT` returns only rows present in both queries. `EXCEPT`
+  (or `MINUS`) returns rows in the first query that are not in the second.
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'W3Schools, *“SQL UNION”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+  - label: 'GeeksforGeeks, *“SQL INTERSECT”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+  - label: 'Microsoft Docs, *“EXCEPT (Transact-SQL)”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+Example: to list all unique borrower IDs from two legacy loan tables:  
+```sql
+SELECT BorrowerID FROM Loans_Old
+UNION
+SELECT BorrowerID FROM Loans_New;
+```  
+This yields each ID once. To find IDs present in both tables:  
+```sql
+SELECT BorrowerID FROM Loans_Old
+INTERSECT
+SELECT BorrowerID FROM Loans_New;
+```
+
+<Rule label="PERMANENT RULE">
+All SELECTs combined by UNION/INTERSECT/EXCEPT must have the same number of columns and compatible types.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Forgetting that `UNION` removes duplicates; use `UNION ALL` if you need to preserve them. Also ensure column order and types match.
+</Trap>
+
+<NeverConfuse a="UNION" b="JOIN">
+**UNION** — appends rows from queries into one result (distinct by default).  
+---  
+**JOIN** — combines columns from tables based on a key.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Set operations behave the same in standard SQL for all jurisdictions.
+</Rule>
+
+<Recall
+  q="How to find rows in A not in B?"
+  a="Use `EXCEPT` (or `MINUS`) in SQL: `SELECT * FROM A EXCEPT SELECT * FROM B`."
+/>
+
+<Recall
+  q="How to combine two tables’ rows, keeping duplicates?"
+  a="Use `UNION ALL`."
+/>

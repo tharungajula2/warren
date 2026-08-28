@@ -488,6 +488,13 @@ function inferSubdomain(atomId) {
     return "validation-leakage-and-governance";
   }
 
+  if (prefix === "TEC") {
+    if (num <= 7) return "sql-querying-and-window-functions";
+    if (num <= 14) return "data-engineering-and-reconciliation";
+    if (num <= 20) return "pandas-analytics-and-dataframes";
+    return "python-vectorization-and-engineering";
+  }
+
   return "unsorted";
 }
 

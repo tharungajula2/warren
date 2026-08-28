@@ -40,8 +40,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 320.5,
-      "initialY": 13.6
+      "initialX": 484.3,
+      "initialY": 24.6
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +80,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 340.8,
-      "initialY": 53.5
+      "initialX": 456.9,
+      "initialY": 60.6
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 378.1,
-      "initialY": 63.6
+      "initialX": 411.6,
+      "initialY": 60.7
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +161,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 430.4,
-      "initialY": 46.3
+      "initialX": 362.1,
+      "initialY": 11.4
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +201,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 486.7,
-      "initialY": 16.5
+      "initialX": 323.7,
+      "initialY": -24
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +249,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 360.8,
-      "initialY": 32.2
+      "initialX": 321.8,
+      "initialY": 44.7
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +297,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 388.1,
-      "initialY": -28.4
+      "initialX": 339.8,
+      "initialY": -4.1
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +346,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 465.8,
-      "initialY": 7.1
+      "initialX": 411.8,
+      "initialY": -40.2
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 385.8,
-      "initialY": 37.6
+      "initialX": 473.4,
+      "initialY": -35.1
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +431,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 423.8,
-      "initialY": 71.3
+      "initialX": 418,
+      "initialY": -6.7
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +477,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 436.5,
-      "initialY": -4
+      "initialX": 383.6,
+      "initialY": -41.9
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +526,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 361.9,
-      "initialY": -8.7
+      "initialX": 436.1,
+      "initialY": -28.9
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +574,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 309.4,
-      "initialY": -13.9
+      "initialX": 446.3,
+      "initialY": 23.6
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +622,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 368.8,
-      "initialY": -40.3
+      "initialX": 432.2,
+      "initialY": 73
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +665,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 379.8,
-      "initialY": 10.5
+      "initialX": 368.1,
+      "initialY": 52.7
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +715,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 332.2,
-      "initialY": 36.3
+      "initialX": 385.8,
+      "initialY": -18.1
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +759,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 346,
-      "initialY": 11.2
+      "initialX": 380.5,
+      "initialY": 34
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +799,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 346.3,
-      "initialY": -41.6
+      "initialX": 397.5,
+      "initialY": 48
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -839,8 +839,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 412.8,
-      "initialY": -49.3
+      "initialX": 472.3,
+      "initialY": 50
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +879,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 472.9,
-      "initialY": -37.2
+      "initialX": 487.3,
+      "initialY": -5.3
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +920,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 474.5,
-      "initialY": 53.2
+      "initialX": 448,
+      "initialY": -54.4
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +960,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 448.9,
-      "initialY": 13.6
+      "initialX": 457.6,
+      "initialY": -9.9
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 443.8,
-      "initialY": -45.3
+      "initialX": 387.7,
+      "initialY": 2.8
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1040,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 425.4,
-      "initialY": 15
+      "initialX": 460.9,
+      "initialY": 9.4
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1080,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 457.3,
-      "initialY": 36.5
+      "initialX": 353.9,
+      "initialY": 34.9
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1123,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 403.6,
-      "initialY": 45.2
+      "initialX": 421.7,
+      "initialY": 34.8
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1175,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 403.5,
-      "initialY": 22.5
+      "initialX": 406.4,
+      "initialY": 25.9
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1230,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 416.1,
-      "initialY": -23.2
+      "initialX": 423.9,
+      "initialY": 12.6
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +1283,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 397.5,
-      "initialY": -6.4
+      "initialX": 316.2,
+      "initialY": -1.5
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +1360,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 461.3,
-      "initialY": -15.4
+      "initialX": 365.5,
+      "initialY": -17.1
     },
     "CCR-01": {
       "id": "CCR-01",
@@ -1403,8 +1403,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-01.mdx",
-      "initialX": 297.5,
-      "initialY": 231.1
+      "initialX": 365,
+      "initialY": 203.4
     },
     "CCR-02": {
       "id": "CCR-02",
@@ -1443,8 +1443,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-02.mdx",
-      "initialX": 342.4,
-      "initialY": 190.7
+      "initialX": 409.4,
+      "initialY": 250
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -1483,8 +1483,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-03.mdx",
-      "initialX": 386.3,
-      "initialY": 230.2
+      "initialX": 387,
+      "initialY": 201.4
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -1523,8 +1523,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-04.mdx",
-      "initialX": 296.5,
-      "initialY": 167.8
+      "initialX": 424.3,
+      "initialY": 199.6
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -1563,8 +1563,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-05.mdx",
-      "initialX": 322.5,
-      "initialY": 177.6
+      "initialX": 411.6,
+      "initialY": 225.4
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -1608,8 +1608,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-06.mdx",
-      "initialX": 346.7,
-      "initialY": 210.4
+      "initialX": 319.8,
+      "initialY": 246.5
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -1648,8 +1648,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-07.mdx",
-      "initialX": 280.4,
-      "initialY": 178.1
+      "initialX": 384.6,
+      "initialY": 268.7
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -1688,8 +1688,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-08.mdx",
-      "initialX": 289.1,
-      "initialY": 195.4
+      "initialX": 385.7,
+      "initialY": 239
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -1728,8 +1728,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-09.mdx",
-      "initialX": 281,
-      "initialY": 214.8
+      "initialX": 362.7,
+      "initialY": 279.2
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -1768,8 +1768,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-10.mdx",
-      "initialX": 340.6,
-      "initialY": 260.2
+      "initialX": 302.2,
+      "initialY": 216.7
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -1808,8 +1808,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-11.mdx",
-      "initialX": 291.9,
-      "initialY": 251.6
+      "initialX": 343.5,
+      "initialY": 175.6
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -1848,8 +1848,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-12.mdx",
-      "initialX": 399.1,
-      "initialY": 257.9
+      "initialX": 294.5,
+      "initialY": 156.6
     },
     "CCR-13": {
       "id": "CCR-13",
@@ -1888,8 +1888,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-13.mdx",
-      "initialX": 385.7,
-      "initialY": 281.6
+      "initialX": 274.8,
+      "initialY": 166.4
     },
     "CCR-14": {
       "id": "CCR-14",
@@ -1933,8 +1933,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-14.mdx",
-      "initialX": 369.4,
-      "initialY": 250.6
+      "initialX": 391.4,
+      "initialY": 183
     },
     "CCR-15": {
       "id": "CCR-15",
@@ -1973,8 +1973,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-15.mdx",
-      "initialX": 420.8,
-      "initialY": 236
+      "initialX": 351.7,
+      "initialY": 224.8
     },
     "CCR-16": {
       "id": "CCR-16",
@@ -2013,8 +2013,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-16.mdx",
-      "initialX": 414.3,
-      "initialY": 213.2
+      "initialX": 368,
+      "initialY": 245.5
     },
     "CCR-17": {
       "id": "CCR-17",
@@ -2053,8 +2053,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-17.mdx",
-      "initialX": 369.8,
-      "initialY": 186
+      "initialX": 331.8,
+      "initialY": 216.8
     },
     "CCR-18": {
       "id": "CCR-18",
@@ -2093,8 +2093,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CCR-18.mdx",
-      "initialX": 314.1,
-      "initialY": 208.3
+      "initialX": 369.5,
+      "initialY": 166
     },
     "CCR-19": {
       "id": "CCR-19",
@@ -2133,8 +2133,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-19.mdx",
-      "initialX": 354.6,
-      "initialY": 165.4
+      "initialX": 420.4,
+      "initialY": 177.9
     },
     "CCR-20": {
       "id": "CCR-20",
@@ -2173,8 +2173,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-20.mdx",
-      "initialX": 317.8,
-      "initialY": 152.6
+      "initialX": 314.8,
+      "initialY": 149
     },
     "CCR-21": {
       "id": "CCR-21",
@@ -2218,8 +2218,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CCR-21.mdx",
-      "initialX": 327.7,
-      "initialY": 231.9
+      "initialX": 284.9,
+      "initialY": 191.5
     },
     "CCR-22": {
       "id": "CCR-22",
@@ -2258,8 +2258,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-22.mdx",
-      "initialX": 355.3,
-      "initialY": 232.9
+      "initialX": 429.4,
+      "initialY": 225
     },
     "CCR-23": {
       "id": "CCR-23",
@@ -2296,8 +2296,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-23.mdx",
-      "initialX": 355.3,
-      "initialY": 279.3
+      "initialX": 311.8,
+      "initialY": 183
     },
     "CCR-24": {
       "id": "CCR-24",
@@ -2338,8 +2338,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-24.mdx",
-      "initialX": 383.6,
-      "initialY": 199.4
+      "initialX": 338.8,
+      "initialY": 154.4
     },
     "CCR-25": {
       "id": "CCR-25",
@@ -2384,8 +2384,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CCR-25.mdx",
-      "initialX": 403,
-      "initialY": 194.3
+      "initialX": 347,
+      "initialY": 245
     },
     "CCR-26": {
       "id": "CCR-26",
@@ -2425,8 +2425,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-26.mdx",
-      "initialX": 322.4,
-      "initialY": 281.7
+      "initialX": 336.9,
+      "initialY": 196.7
     },
     "CR-01": {
       "id": "CR-01",
@@ -2465,8 +2465,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 109.5,
-      "initialY": 328.6
+      "initialX": 146.8,
+      "initialY": 347.1
     },
     "CR-02": {
       "id": "CR-02",
@@ -2505,8 +2505,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 63.1,
-      "initialY": 299.9
+      "initialX": 108.4,
+      "initialY": 287.7
     },
     "CR-03": {
       "id": "CR-03",
@@ -2551,8 +2551,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": 37.5,
-      "initialY": 268.8
+      "initialX": 68.9,
+      "initialY": 284.9
     },
     "CR-04": {
       "id": "CR-04",
@@ -2605,8 +2605,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 59.7,
-      "initialY": 245.5
+      "initialX": 73.7,
+      "initialY": 320.5
     },
     "CR-05": {
       "id": "CR-05",
@@ -2659,8 +2659,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": 75.9,
-      "initialY": 255.4
+      "initialX": 94.8,
+      "initialY": 317.6
     },
     "CR-06": {
       "id": "CR-06",
@@ -2708,8 +2708,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 159,
-      "initialY": 318.1
+      "initialX": 189.9,
+      "initialY": 340.5
     },
     "CR-07": {
       "id": "CR-07",
@@ -2762,8 +2762,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 188.6,
-      "initialY": 294.9
+      "initialX": 212.3,
+      "initialY": 367.5
     },
     "CR-08": {
       "id": "CR-08",
@@ -2811,8 +2811,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 131.1,
-      "initialY": 271.5
+      "initialX": 151.9,
+      "initialY": 324.1
     },
     "CR-09": {
       "id": "CR-09",
@@ -2861,8 +2861,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 95.6,
-      "initialY": 300
+      "initialX": 133.6,
+      "initialY": 274.5
     },
     "CR-10": {
       "id": "CR-10",
@@ -2911,8 +2911,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -35.9,
-      "initialY": 250.7
+      "initialX": -3.5,
+      "initialY": 273
     },
     "CR-11": {
       "id": "CR-11",
@@ -2966,8 +2966,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -18.2,
-      "initialY": 240.4
+      "initialX": 13,
+      "initialY": 253.7
     },
     "CR-12": {
       "id": "CR-12",
@@ -3006,8 +3006,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 71.8,
-      "initialY": 316
+      "initialX": 105.7,
+      "initialY": 270.9
     },
     "CR-13": {
       "id": "CR-13",
@@ -3046,8 +3046,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 84.5,
-      "initialY": 277.9
+      "initialX": 105.7,
+      "initialY": 235.7
     },
     "CR-14": {
       "id": "CR-14",
@@ -3086,8 +3086,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 42.2,
-      "initialY": 293.9
+      "initialX": 79.3,
+      "initialY": 255.1
     },
     "CR-15": {
       "id": "CR-15",
@@ -3127,8 +3127,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 116.5,
-      "initialY": 298.5
+      "initialX": 144.1,
+      "initialY": 294.7
     },
     "CR-16": {
       "id": "CR-16",
@@ -3168,8 +3168,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -52.3,
-      "initialY": 256.4
+      "initialX": -17.1,
+      "initialY": 265.2
     },
     "CR-17": {
       "id": "CR-17",
@@ -3210,8 +3210,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": -22.8,
-      "initialY": 276.3
+      "initialX": 12.6,
+      "initialY": 278.9
     },
     "CR-18": {
       "id": "CR-18",
@@ -3250,8 +3250,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 125.7,
-      "initialY": 354.8
+      "initialX": 160,
+      "initialY": 306
     },
     "CR-19": {
       "id": "CR-19",
@@ -3292,8 +3292,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 165.5,
-      "initialY": 337.5
+      "initialX": 200.9,
+      "initialY": 328
     },
     "CR-20": {
       "id": "CR-20",
@@ -3333,8 +3333,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 180.8,
-      "initialY": 386.8
+      "initialX": 236.1,
+      "initialY": 324.9
     },
     "CR-21": {
       "id": "CR-21",
@@ -3375,8 +3375,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 156.3,
-      "initialY": 370.5
+      "initialX": 195,
+      "initialY": 274.9
     },
     "CR-22": {
       "id": "CR-22",
@@ -3417,8 +3417,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 184.8,
-      "initialY": 336.1
+      "initialX": 198,
+      "initialY": 304.3
     },
     "CR-23": {
       "id": "CR-23",
@@ -3454,8 +3454,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 226.6,
-      "initialY": 366.3
+      "initialX": 256.3,
+      "initialY": 371.5
     },
     "CR-24": {
       "id": "CR-24",
@@ -3509,8 +3509,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 155.3,
-      "initialY": 290.9
+      "initialX": 173.5,
+      "initialY": 344.8
     },
     "CR-25": {
       "id": "CR-25",
@@ -3551,8 +3551,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 186.2,
-      "initialY": 357.4
+      "initialX": 219.3,
+      "initialY": 305.5
     },
     "CR-26": {
       "id": "CR-26",
@@ -3604,8 +3604,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 129.5,
-      "initialY": 321.8
+      "initialX": 163.7,
+      "initialY": 272.7
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -3642,8 +3642,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -37.1,
-      "initialY": 409.3
+      "initialX": 12.3,
+      "initialY": 374.7
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -3677,8 +3677,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -18.4,
-      "initialY": 353
+      "initialX": 66,
+      "initialY": 409.3
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -3722,8 +3722,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": 20.1,
-      "initialY": 380.8
+      "initialX": 77.2,
+      "initialY": 472.6
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -3762,8 +3762,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -37.9,
-      "initialY": 373.9
+      "initialX": 21.6,
+      "initialY": 486.1
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -3797,8 +3797,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": 55.6,
-      "initialY": 423.6
+      "initialX": 120.6,
+      "initialY": 443.6
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -3837,8 +3837,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": 25.3,
-      "initialY": 436.9
+      "initialX": 28,
+      "initialY": 467.5
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -3877,8 +3877,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -32.6,
-      "initialY": 443
+      "initialX": -9,
+      "initialY": 428.5
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -3912,8 +3912,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": 28.4,
-      "initialY": 472.6
+      "initialX": 30.2,
+      "initialY": 385.5
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -3947,8 +3947,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -26.5,
-      "initialY": 469
+      "initialX": 19.7,
+      "initialY": 444.2
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -3982,8 +3982,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -7.3,
-      "initialY": 403.6
+      "initialX": 53.5,
+      "initialY": 490.6
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -4017,8 +4017,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": 45.1,
-      "initialY": 397.3
+      "initialX": 62.5,
+      "initialY": 445.3
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -4052,8 +4052,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": 9.8,
-      "initialY": 460.8
+      "initialX": 103.6,
+      "initialY": 473.9
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -4087,8 +4087,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -51.4,
-      "initialY": 465.3
+      "initialX": 108.1,
+      "initialY": 424
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -4122,8 +4122,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -13.6,
-      "initialY": 422.6
+      "initialX": 46.6,
+      "initialY": 432.6
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -4162,8 +4162,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -58.1,
-      "initialY": 395.1
+      "initialX": 93.7,
+      "initialY": 411.4
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -4197,8 +4197,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -13.2,
-      "initialY": 378.1
+      "initialX": 0.7,
+      "initialY": 460.2
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -4232,8 +4232,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": 21,
-      "initialY": 410.3
+      "initialX": 2.6,
+      "initialY": 402.6
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -4267,8 +4267,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": 56.9,
-      "initialY": 446.6
+      "initialX": 43.3,
+      "initialY": 364.2
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -4307,8 +4307,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -0.9,
-      "initialY": 483.2
+      "initialX": 91.3,
+      "initialY": 390.4
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -4342,8 +4342,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": 51.3,
-      "initialY": 465.2
+      "initialX": 43.4,
+      "initialY": 399.2
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -4377,8 +4377,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -5.6,
-      "initialY": 445.3
+      "initialX": 85,
+      "initialY": 444.2
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -4430,8 +4430,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": -60.9,
-      "initialY": 432.1
+      "initialX": 25.8,
+      "initialY": 420.6
     },
     "FND-01": {
       "id": "FND-01",
@@ -4468,8 +4468,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -189.8,
-      "initialY": 330.1
+      "initialX": -138.5,
+      "initialY": 358.7
     },
     "FND-02": {
       "id": "FND-02",
@@ -4508,8 +4508,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -241.3,
-      "initialY": 318.2
+      "initialX": -174.6,
+      "initialY": 344.2
     },
     "FND-03": {
       "id": "FND-03",
@@ -4554,8 +4554,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -250.4,
-      "initialY": 377.9
+      "initialX": -147.4,
+      "initialY": 417.1
     },
     "FND-04": {
       "id": "FND-04",
@@ -4595,8 +4595,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -224.5,
-      "initialY": 395.2
+      "initialX": -111.6,
+      "initialY": 350.9
     },
     "FND-05": {
       "id": "FND-05",
@@ -4641,8 +4641,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -210.2,
-      "initialY": 372.8
+      "initialX": -203.9,
+      "initialY": 380.6
     },
     "FND-06": {
       "id": "FND-06",
@@ -4705,8 +4705,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -265.3,
-      "initialY": 355.2
+      "initialX": -182.7,
+      "initialY": 384.1
     },
     "FND-07": {
       "id": "FND-07",
@@ -4751,8 +4751,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -205.5,
-      "initialY": 390.9
+      "initialX": -192.8,
+      "initialY": 404.3
     },
     "FND-08": {
       "id": "FND-08",
@@ -4791,8 +4791,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -294.7,
-      "initialY": 304.9
+      "initialX": -218.8,
+      "initialY": 337.5
     },
     "FND-09": {
       "id": "FND-09",
@@ -4850,8 +4850,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -264.2,
-      "initialY": 290.4
+      "initialX": -242.3,
+      "initialY": 360.3
     },
     "FND-10": {
       "id": "FND-10",
@@ -4903,8 +4903,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -241.1,
-      "initialY": 417.2
+      "initialX": -125.1,
+      "initialY": 386.6
     },
     "FND-11": {
       "id": "FND-11",
@@ -4936,8 +4936,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -198.5,
-      "initialY": 314
+      "initialX": -226.9,
+      "initialY": 388.4
     },
     "FND-12": {
       "id": "FND-12",
@@ -4971,8 +4971,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -186.5,
-      "initialY": 400
+      "initialX": -200.9,
+      "initialY": 451.2
     },
     "FND-13": {
       "id": "FND-13",
@@ -5007,8 +5007,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -172.3,
-      "initialY": 353.7
+      "initialX": -169.9,
+      "initialY": 415.8
     },
     "FND-14": {
       "id": "FND-14",
@@ -5062,8 +5062,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -246.1,
-      "initialY": 345.9
+      "initialX": -225.3,
+      "initialY": 426.9
     },
     "FND-15": {
       "id": "FND-15",
@@ -5097,8 +5097,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -108,
-      "initialY": 337
+      "initialX": -52.6,
+      "initialY": 363.6
     },
     "FND-16": {
       "id": "FND-16",
@@ -5130,8 +5130,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -276.3,
-      "initialY": 336.5
+      "initialX": -160.3,
+      "initialY": 378.6
     },
     "FND-17": {
       "id": "FND-17",
@@ -5170,8 +5170,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -223,
-      "initialY": 347.1
+      "initialX": -196.3,
+      "initialY": 429.2
     },
     "FND-18": {
       "id": "FND-18",
@@ -5211,8 +5211,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -263.8,
-      "initialY": 395.9
+      "initialX": -142.9,
+      "initialY": 443.5
     },
     "FND-19": {
       "id": "FND-19",
@@ -5258,8 +5258,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -200.9,
-      "initialY": 354
+      "initialX": -106.1,
+      "initialY": 397
     },
     "FND-20": {
       "id": "FND-20",
@@ -5299,8 +5299,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -162.4,
-      "initialY": 379
+      "initialX": -151.3,
+      "initialY": 397.8
     },
     "FND-21": {
       "id": "FND-21",
@@ -5344,8 +5344,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -231,
-      "initialY": 375.8
+      "initialX": -117.9,
+      "initialY": 439.3
     },
     "FND-22": {
       "id": "FND-22",
@@ -5384,8 +5384,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -291.1,
-      "initialY": 370.3
+      "initialX": -169,
+      "initialY": 455.2
     },
     "FND-23": {
       "id": "FND-23",
@@ -5449,8 +5449,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -170.7,
-      "initialY": 307.7
+      "initialX": -144.1,
+      "initialY": 337.1
     },
     "FND-24": {
       "id": "FND-24",
@@ -5529,8 +5529,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -221.1,
-      "initialY": 309.3
+      "initialX": -193.9,
+      "initialY": 338.3
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -5592,8 +5592,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -208,
-      "initialY": 242.2
+      "initialX": -166.6,
+      "initialY": 272.6
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -5643,8 +5643,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -255.7,
-      "initialY": 225.3
+      "initialX": -218.8,
+      "initialY": 273.3
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -5700,8 +5700,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -183.6,
-      "initialY": 217.7
+      "initialX": -144.8,
+      "initialY": 247.7
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -5750,8 +5750,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -343.9,
-      "initialY": 232.1
+      "initialX": -305.1,
+      "initialY": 297.3
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -5800,8 +5800,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -233.2,
-      "initialY": 186.7
+      "initialX": -197.5,
+      "initialY": 229.8
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -5857,8 +5857,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -162.5,
-      "initialY": 215.5
+      "initialX": -121.8,
+      "initialY": 246.3
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -5908,8 +5908,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -190.1,
-      "initialY": 239.5
+      "initialX": -153.1,
+      "initialY": 264.6
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -5960,8 +5960,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -209.2,
-      "initialY": 214.9
+      "initialX": -165.1,
+      "initialY": 237.1
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -6009,8 +6009,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -208,
-      "initialY": 165.7
+      "initialX": -193,
+      "initialY": 279.9
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -6060,8 +6060,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -114,
-      "initialY": 213
+      "initialX": -89,
+      "initialY": 283.1
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -6110,8 +6110,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -293,
-      "initialY": 206.8
+      "initialX": -256.6,
+      "initialY": 285.6
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -6161,8 +6161,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -174.1,
-      "initialY": 173.1
+      "initialX": -153.7,
+      "initialY": 288.3
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -6212,8 +6212,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -204.3,
-      "initialY": 187
+      "initialX": -171.9,
+      "initialY": 215.4
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -6263,8 +6263,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -148.9,
-      "initialY": 226.8
+      "initialX": -114.7,
+      "initialY": 224.2
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -6319,8 +6319,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -180.3,
-      "initialY": 200.9
+      "initialX": -145.7,
+      "initialY": 222.7
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -6375,8 +6375,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -253.8,
-      "initialY": 112.1
+      "initialX": -229.8,
+      "initialY": 162
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -6432,8 +6432,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -269.9,
-      "initialY": 134.5
+      "initialX": -249,
+      "initialY": 183
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -6488,8 +6488,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -302.3,
-      "initialY": 179.6
+      "initialX": -269.5,
+      "initialY": 253.6
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -6545,8 +6545,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -290.2,
-      "initialY": 221.9
+      "initialX": -248,
+      "initialY": 251.1
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -6608,8 +6608,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -275.4,
-      "initialY": 187.7
+      "initialX": -233.7,
+      "initialY": 228.5
     },
     "IND-01": {
       "id": "IND-01",
@@ -6646,8 +6646,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -417.1,
-      "initialY": 0.3
+      "initialX": -341.4,
+      "initialY": 107
     },
     "IND-02": {
       "id": "IND-02",
@@ -6686,8 +6686,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -365.3,
-      "initialY": -37.9
+      "initialX": -397,
+      "initialY": 119.1
     },
     "IND-03": {
       "id": "IND-03",
@@ -6721,8 +6721,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -374.7,
-      "initialY": 6.9
+      "initialX": -448.8,
+      "initialY": 131.4
     },
     "IND-04": {
       "id": "IND-04",
@@ -6756,8 +6756,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -413.5,
-      "initialY": -33.9
+      "initialX": -402.3,
+      "initialY": 92.3
     },
     "IND-05": {
       "id": "IND-05",
@@ -6797,8 +6797,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -328.5,
-      "initialY": -8.8
+      "initialX": -438.8,
+      "initialY": 70.7
     },
     "IND-06": {
       "id": "IND-06",
@@ -6838,8 +6838,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -375.2,
-      "initialY": 51.3
+      "initialX": -397.8,
+      "initialY": 143.7
     },
     "IND-07": {
       "id": "IND-07",
@@ -6878,8 +6878,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -399.2,
-      "initialY": 77.4
+      "initialX": -380.1,
+      "initialY": 77.1
     },
     "IND-08": {
       "id": "IND-08",
@@ -6919,8 +6919,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -414.4,
-      "initialY": 23.8
+      "initialX": -425.9,
+      "initialY": 92.4
     },
     "IND-09": {
       "id": "IND-09",
@@ -6961,8 +6961,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -440.8,
-      "initialY": 71.8
+      "initialX": -361.5,
+      "initialY": 120.4
     },
     "IND-10": {
       "id": "IND-10",
@@ -7002,8 +7002,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -433.1,
-      "initialY": 20.7
+      "initialX": -427.6,
+      "initialY": 113.6
     },
     "IND-11": {
       "id": "IND-11",
@@ -7043,8 +7043,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -428.3,
-      "initialY": -53.6
+      "initialX": -387.7,
+      "initialY": 57.2
     },
     "IND-12": {
       "id": "IND-12",
@@ -7083,8 +7083,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -473,
-      "initialY": -19.9
+      "initialX": -346.2,
+      "initialY": 87.9
     },
     "IND-13": {
       "id": "IND-13",
@@ -7123,8 +7123,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -390.5,
-      "initialY": 24.2
+      "initialX": -415.4,
+      "initialY": 58.4
     },
     "IND-14": {
       "id": "IND-14",
@@ -7158,8 +7158,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -448.3,
-      "initialY": -10.5
+      "initialX": -450.4,
+      "initialY": 105.8
     },
     "IND-15": {
       "id": "IND-15",
@@ -7198,8 +7198,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -456.4,
-      "initialY": 12
+      "initialX": -465.7,
+      "initialY": 79.8
     },
     "IND-16": {
       "id": "IND-16",
@@ -7239,8 +7239,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -333.2,
-      "initialY": 14.9
+      "initialX": -405.4,
+      "initialY": 172
     },
     "IND-17": {
       "id": "IND-17",
@@ -7279,8 +7279,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -374.3,
-      "initialY": -17.9
+      "initialX": -453.4,
+      "initialY": 150.3
     },
     "IND-18": {
       "id": "IND-18",
@@ -7319,8 +7319,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -438.4,
-      "initialY": -27.8
+      "initialX": -377.9,
+      "initialY": 105
     },
     "IND-19": {
       "id": "IND-19",
@@ -7359,8 +7359,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -388.2,
-      "initialY": -44.8
+      "initialX": -357.4,
+      "initialY": 55.2
     },
     "IND-20": {
       "id": "IND-20",
@@ -7399,8 +7399,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -425.3,
-      "initialY": 54.5
+      "initialX": -436.7,
+      "initialY": 168.8
     },
     "IND-21": {
       "id": "IND-21",
@@ -7439,8 +7439,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -397,
-      "initialY": -6.7
+      "initialX": -343.6,
+      "initialY": 134.5
     },
     "IND-22": {
       "id": "IND-22",
@@ -7479,8 +7479,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -356,
-      "initialY": 32.5
+      "initialX": -385,
+      "initialY": 161.1
     },
     "IND-23": {
       "id": "IND-23",
@@ -7519,8 +7519,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -474.8,
-      "initialY": 26.8
+      "initialX": -475.3,
+      "initialY": 113.4
     },
     "IND-24": {
       "id": "IND-24",
@@ -7559,8 +7559,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -447.5,
-      "initialY": 41.8
+      "initialX": -332.3,
+      "initialY": 72.8
     },
     "MRK-01": {
       "id": "MRK-01",
@@ -7592,8 +7592,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRK-01.mdx",
-      "initialX": -346.5,
-      "initialY": -223.5
+      "initialX": -439.2,
+      "initialY": -153.4
     },
     "MRK-02": {
       "id": "MRK-02",
@@ -7627,8 +7627,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-02.mdx",
-      "initialX": -295.7,
-      "initialY": -215.7
+      "initialX": -474,
+      "initialY": -122.6
     },
     "MRK-03": {
       "id": "MRK-03",
@@ -7662,8 +7662,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-03.mdx",
-      "initialX": -389.5,
-      "initialY": -174
+      "initialX": -423.2,
+      "initialY": -90.1
     },
     "MRK-04": {
       "id": "MRK-04",
@@ -7697,8 +7697,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-04.mdx",
-      "initialX": -345.7,
-      "initialY": -162.4
+      "initialX": -412.3,
+      "initialY": -114.3
     },
     "MRK-05": {
       "id": "MRK-05",
@@ -7732,8 +7732,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-05.mdx",
-      "initialX": -297.1,
-      "initialY": -194.1
+      "initialX": -406.8,
+      "initialY": -52.6
     },
     "MRK-06": {
       "id": "MRK-06",
@@ -7768,8 +7768,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-06.mdx",
-      "initialX": -363.6,
-      "initialY": -205.8
+      "initialX": -448.2,
+      "initialY": -73.2
     },
     "MRK-07": {
       "id": "MRK-07",
@@ -7803,8 +7803,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-07.mdx",
-      "initialX": -322.6,
-      "initialY": -237.9
+      "initialX": -439.1,
+      "initialY": -125.5
     },
     "MRK-08": {
       "id": "MRK-08",
@@ -7839,8 +7839,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-08.mdx",
-      "initialX": -387.4,
-      "initialY": -224.9
+      "initialX": -364.8,
+      "initialY": -91.6
     },
     "MRK-09": {
       "id": "MRK-09",
@@ -7875,8 +7875,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-09.mdx",
-      "initialX": -339.3,
-      "initialY": -257.8
+      "initialX": -391.7,
+      "initialY": -111.2
     },
     "MRK-10": {
       "id": "MRK-10",
@@ -7911,8 +7911,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-10.mdx",
-      "initialX": -328.8,
-      "initialY": -210.8
+      "initialX": -446,
+      "initialY": -104.6
     },
     "MRK-11": {
       "id": "MRK-11",
@@ -7946,8 +7946,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-11.mdx",
-      "initialX": -284.3,
-      "initialY": -172.9
+      "initialX": -389.8,
+      "initialY": -69.8
     },
     "MRK-12": {
       "id": "MRK-12",
@@ -7982,8 +7982,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-12.mdx",
-      "initialX": -322.2,
-      "initialY": -163.8
+      "initialX": -462.8,
+      "initialY": -85.5
     },
     "MRK-13": {
       "id": "MRK-13",
@@ -8018,8 +8018,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-13.mdx",
-      "initialX": -366.8,
-      "initialY": -232.1
+      "initialX": -362.2,
+      "initialY": -67.3
     },
     "MRK-14": {
       "id": "MRK-14",
@@ -8053,8 +8053,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-14.mdx",
-      "initialX": -410.9,
-      "initialY": -186.4
+      "initialX": -384.3,
+      "initialY": -133.8
     },
     "MRK-15": {
       "id": "MRK-15",
@@ -8089,8 +8089,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-15.mdx",
-      "initialX": -385.8,
-      "initialY": -201.8
+      "initialX": -407.8,
+      "initialY": -153.5
     },
     "MRK-16": {
       "id": "MRK-16",
@@ -8124,8 +8124,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-16.mdx",
-      "initialX": -365.7,
-      "initialY": -257
+      "initialX": -394,
+      "initialY": -89.9
     },
     "MRK-17": {
       "id": "MRK-17",
@@ -8160,8 +8160,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-17.mdx",
-      "initialX": -406.5,
-      "initialY": -254.7
+      "initialX": -357.3,
+      "initialY": -134.9
     },
     "MRK-18": {
       "id": "MRK-18",
@@ -8197,8 +8197,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-18.mdx",
-      "initialX": -416.5,
-      "initialY": -210.6
+      "initialX": -326.5,
+      "initialY": -98.1
     },
     "MRK-19": {
       "id": "MRK-19",
@@ -8232,8 +8232,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-19.mdx",
-      "initialX": -331.7,
-      "initialY": -190.1
+      "initialX": -438.9,
+      "initialY": -52.7
     },
     "MRK-20": {
       "id": "MRK-20",
@@ -8267,8 +8267,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-20.mdx",
-      "initialX": -365.8,
-      "initialY": -149.1
+      "initialX": -377.2,
+      "initialY": -46.6
     },
     "MRK-21": {
       "id": "MRK-21",
@@ -8303,8 +8303,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-21.mdx",
-      "initialX": -299.1,
-      "initialY": -148.2
+      "initialX": -327.2,
+      "initialY": -70.4
     },
     "MRK-22": {
       "id": "MRK-22",
@@ -8357,8 +8357,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "MRK-22.mdx",
-      "initialX": -362.7,
-      "initialY": -176.7
+      "initialX": -369,
+      "initialY": -115
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -8400,8 +8400,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -219.6,
-      "initialY": -118.6
+      "initialX": -257.8,
+      "initialY": -58.5
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -8438,8 +8438,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -182.8,
-      "initialY": -378.5
+      "initialX": -264,
+      "initialY": -232.1
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -8478,8 +8478,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -232.3,
-      "initialY": -374.1
+      "initialX": -297.1,
+      "initialY": -277.8
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -8523,8 +8523,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -190.3,
-      "initialY": -235.4
+      "initialX": -261.1,
+      "initialY": -172.4
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -8568,8 +8568,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -202.6,
-      "initialY": -251.4
+      "initialX": -280.3,
+      "initialY": -183.2
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -8608,8 +8608,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -209.2,
-      "initialY": -311.7
+      "initialX": -319.1,
+      "initialY": -230.3
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -8648,8 +8648,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -255.1,
-      "initialY": -369.2
+      "initialX": -270.5,
+      "initialY": -260.7
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -8689,8 +8689,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -203,
-      "initialY": -369.6
+      "initialX": -325.8,
+      "initialY": -286.1
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -8729,8 +8729,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -178.4,
-      "initialY": -317.8
+      "initialX": -377.7,
+      "initialY": -286.5
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -8769,8 +8769,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -265,
-      "initialY": -350.1
+      "initialX": -358.2,
+      "initialY": -255.2
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -8809,8 +8809,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -245.6,
-      "initialY": -344.3
+      "initialX": -349.9,
+      "initialY": -280.3
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -8849,8 +8849,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -203.3,
-      "initialY": -347.3
+      "initialX": -313,
+      "initialY": -308.7
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -8889,8 +8889,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -179.9,
-      "initialY": -294.5
+      "initialX": -331,
+      "initialY": -257.7
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -8924,8 +8924,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -177.7,
-      "initialY": -347.8
+      "initialX": -336.7,
+      "initialY": -317.7
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -8960,8 +8960,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -233.2,
-      "initialY": -309.3
+      "initialX": -294.8,
+      "initialY": -226.1
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -9001,8 +9001,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -244.4,
-      "initialY": -401.2
+      "initialX": -294,
+      "initialY": -249.2
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -9041,8 +9041,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -215.8,
-      "initialY": -331.5
+      "initialX": -356.5,
+      "initialY": -310.1
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -9087,8 +9087,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -217.9,
-      "initialY": -410.8
+      "initialX": -288.8,
+      "initialY": -310.1
     },
     "QNT-01": {
       "id": "QNT-01",
@@ -9120,8 +9120,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-01.mdx",
-      "initialX": 24.3,
-      "initialY": -365
+      "initialX": -108.5,
+      "initialY": -372.7
     },
     "QNT-02": {
       "id": "QNT-02",
@@ -9160,8 +9160,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-02.mdx",
-      "initialX": -23,
-      "initialY": -403.1
+      "initialX": -120.2,
+      "initialY": -334.3
     },
     "QNT-03": {
       "id": "QNT-03",
@@ -9200,8 +9200,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-03.mdx",
-      "initialX": -36.7,
-      "initialY": -458.5
+      "initialX": -188.1,
+      "initialY": -332.4
     },
     "QNT-04": {
       "id": "QNT-04",
@@ -9236,8 +9236,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-04.mdx",
-      "initialX": 36.6,
-      "initialY": -421.1
+      "initialX": -168.8,
+      "initialY": -321.1
     },
     "QNT-05": {
       "id": "QNT-05",
@@ -9271,8 +9271,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-05.mdx",
-      "initialX": 16.1,
-      "initialY": -473.1
+      "initialX": -211.2,
+      "initialY": -358.2
     },
     "QNT-06": {
       "id": "QNT-06",
@@ -9307,8 +9307,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-06.mdx",
-      "initialX": -9.7,
-      "initialY": -458.7
+      "initialX": -127.4,
+      "initialY": -285.3
     },
     "QNT-07": {
       "id": "QNT-07",
@@ -9342,8 +9342,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-07.mdx",
-      "initialX": -32.2,
-      "initialY": -358.1
+      "initialX": -173.3,
+      "initialY": -374.1
     },
     "QNT-08": {
       "id": "QNT-08",
@@ -9377,8 +9377,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-08.mdx",
-      "initialX": -14.1,
-      "initialY": -341.1
+      "initialX": -117.3,
+      "initialY": -391.9
     },
     "QNT-09": {
       "id": "QNT-09",
@@ -9412,8 +9412,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-09.mdx",
-      "initialX": -59.5,
-      "initialY": -379.9
+      "initialX": -152.9,
+      "initialY": -343.9
     },
     "QNT-10": {
       "id": "QNT-10",
@@ -9447,8 +9447,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-10.mdx",
-      "initialX": -66.8,
-      "initialY": -357.9
+      "initialX": -105.3,
+      "initialY": -324.5
     },
     "QNT-11": {
       "id": "QNT-11",
@@ -9482,8 +9482,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-11.mdx",
-      "initialX": -22.7,
-      "initialY": -317
+      "initialX": -156.2,
+      "initialY": -297.5
     },
     "QNT-12": {
       "id": "QNT-12",
@@ -9517,8 +9517,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-12.mdx",
-      "initialX": 22.6,
-      "initialY": -391.7
+      "initialX": -138,
+      "initialY": -324.9
     },
     "QNT-13": {
       "id": "QNT-13",
@@ -9550,8 +9550,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-13.mdx",
-      "initialX": -16.1,
-      "initialY": -434.5
+      "initialX": -162.6,
+      "initialY": -390.3
     },
     "QNT-14": {
       "id": "QNT-14",
@@ -9590,8 +9590,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-14.mdx",
-      "initialX": -25.7,
-      "initialY": -380.4
+      "initialX": -132.3,
+      "initialY": -435.2
     },
     "QNT-15": {
       "id": "QNT-15",
@@ -9626,8 +9626,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-15.mdx",
-      "initialX": -75.5,
-      "initialY": -403.3
+      "initialX": -207.4,
+      "initialY": -411.7
     },
     "QNT-16": {
       "id": "QNT-16",
@@ -9662,8 +9662,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-16.mdx",
-      "initialX": -51.3,
-      "initialY": -335.3
+      "initialX": -180,
+      "initialY": -454.1
     },
     "QNT-17": {
       "id": "QNT-17",
@@ -9697,8 +9697,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-17.mdx",
-      "initialX": 8.7,
-      "initialY": -334.6
+      "initialX": -126.5,
+      "initialY": -416.3
     },
     "QNT-18": {
       "id": "QNT-18",
@@ -9735,8 +9735,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-18.mdx",
-      "initialX": -1.6,
-      "initialY": -403.3
+      "initialX": -136.2,
+      "initialY": -360.4
     },
     "QNT-19": {
       "id": "QNT-19",
@@ -9775,8 +9775,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-19.mdx",
-      "initialX": -42.9,
-      "initialY": -423.3
+      "initialX": -144.1,
+      "initialY": -398.1
     },
     "QNT-20": {
       "id": "QNT-20",
@@ -9811,8 +9811,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-20.mdx",
-      "initialX": 18.9,
-      "initialY": -448.3
+      "initialX": -197.8,
+      "initialY": -382.5
     },
     "QNT-21": {
       "id": "QNT-21",
@@ -9853,8 +9853,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-21.mdx",
-      "initialX": -56.7,
-      "initialY": -460.6
+      "initialX": -158.8,
+      "initialY": -430.8
     },
     "QNT-22": {
       "id": "QNT-22",
@@ -9895,8 +9895,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-22.mdx",
-      "initialX": -16.7,
-      "initialY": -481.7
+      "initialX": -206,
+      "initialY": -435.4
     },
     "QNT-23": {
       "id": "QNT-23",
@@ -9935,8 +9935,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-23.mdx",
-      "initialX": 12.1,
-      "initialY": -426.9
+      "initialX": -223.4,
+      "initialY": -385.8
     },
     "QNT-24": {
       "id": "QNT-24",
@@ -9975,8 +9975,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "QNT-24.mdx",
-      "initialX": 1.5,
-      "initialY": -367.4
+      "initialX": -175.8,
+      "initialY": -353
     },
     "QNT-25": {
       "id": "QNT-25",
@@ -10016,8 +10016,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-25.mdx",
-      "initialX": -70.2,
-      "initialY": -440.5
+      "initialX": -148.7,
+      "initialY": -451.9
     },
     "QNT-26": {
       "id": "QNT-26",
@@ -10054,8 +10054,873 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-26.mdx",
-      "initialX": -53.1,
-      "initialY": -403.8
+      "initialX": -182,
+      "initialY": -416.7
+    },
+    "TEC-01": {
+      "id": "TEC-01",
+      "title": "Relational Model & Table Keys",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "The relational model organizes data into structured tables (relations) with rows and columns, using keys to connect data across tables. Each table represents an entity (e.g. **Loan**, **Customer**), rows are records, and columns are fields. A **primary key** is a unique identifier for each row (cannot be NULL). A **foreign key** in one table references a primary key in another to link related data (e.g. an *Account* table has a CustomerID referencing the *Customer* table). This design avoids redundancy (no repeated customer details in every loan row) and enforces data integrity through relationships.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Databricks, *“What Is a Relational Data Model? Key Concepts & Uses”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-01",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TEC-01.mdx",
+      "initialX": -3.8,
+      "initialY": -419.6
+    },
+    "TEC-02": {
+      "id": "TEC-02",
+      "title": "SELECT, WHERE, and ORDER BY Basics",
+      "type": "procedure",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "In SQL, `SELECT` chooses columns (fields) to return, `WHERE` filters rows based on conditions, and `ORDER BY` sorts the output.",
+      "prerequisites": [
+        "TEC-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Microsoft Docs, *“SELECT (Transact-SQL)”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        },
+        {
+          "label": "W3Schools, *“SQL WHERE clause”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        },
+        {
+          "label": "Microsoft, *“SORT order in Access”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-02",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-02.mdx",
+      "initialX": 52.7,
+      "initialY": -406.5
+    },
+    "TEC-03": {
+      "id": "TEC-03",
+      "title": "Aggregation with GROUP BY and HAVING",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "The `GROUP BY` clause groups rows by column values for aggregate calculations, and the `HAVING` clause filters those groups.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "W3Schools, *“SQL GROUP BY”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        },
+        {
+          "label": "W3Schools, *“SQL HAVING clause”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-03",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-03.mdx",
+      "initialX": 23.4,
+      "initialY": -471.4
+    },
+    "TEC-04": {
+      "id": "TEC-04",
+      "title": "SQL Joins (inner, left, right, full)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "SQL `JOIN` combines rows from two tables based on matching column values. An *INNER JOIN* yields only rows with matches in both tables, while *LEFT/RIGHT/OUTER JOIN* include all rows from one side (and NULLs for the other).",
+      "prerequisites": [
+        "TEC-01",
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "W3Schools, *“SQL JOIN”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-04",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-04.mdx",
+      "initialX": 22.2,
+      "initialY": -362.5
+    },
+    "TEC-05": {
+      "id": "TEC-05",
+      "title": "Set Operations (UNION, INTERSECT, EXCEPT)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "SQL set operators combine result sets like mathematical sets. `UNION` stacks rows from two queries (duplicates removed by default). `UNION ALL` includes duplicates. `INTERSECT` returns only rows present in both queries. `EXCEPT` (or `MINUS`) returns rows in the first query that are not in the second.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "W3Schools, *“SQL UNION”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        },
+        {
+          "label": "GeeksforGeeks, *“SQL INTERSECT”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        },
+        {
+          "label": "Microsoft Docs, *“EXCEPT (Transact-SQL)”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-05",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-05.mdx",
+      "initialX": 91.9,
+      "initialY": -447.1
+    },
+    "TEC-06": {
+      "id": "TEC-06",
+      "title": "Subqueries vs. CTEs (Common Table Expressions)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "A *subquery* (nested query) is an inline SELECT within another query, whereas a *CTE* (WITH clause) defines a named temporary result set you can reference in the main query. CTEs improve readability for complex logic and can be referenced multiple times.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Real Python Blog, *“Introduction to Common Table Expressions (CTEs)”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-06",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-06.mdx",
+      "initialX": 0.8,
+      "initialY": -398.7
+    },
+    "TEC-07": {
+      "id": "TEC-07",
+      "title": "Window Functions (ROW_NUMBER, RANK, LAG, LEAD, running totals)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "sql-querying-and-window-functions",
+      "one_screen": "SQL window functions perform calculations across rows related to the current row without collapsing groups. For example, `ROW_NUMBER()` assigns a sequential number to rows in a partition, while `RANK()` assigns equal numbers to tied values. `LAG(col,1) OVER(...)` gets the previous row’s value, and `LEAD` gets the next row’s. You must include an `OVER(PARTITION BY ... ORDER BY ...)` clause. Window functions are ideal for credit roll-forwards: e.g. computing a loan delinquency at each period and comparing to the prior period using `LAG` or cumulative sums.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "Microsoft Docs, *“ROW_NUMBER (Transact-SQL)”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-07",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-07.mdx",
+      "initialX": 43.5,
+      "initialY": -361
+    },
+    "TEC-08": {
+      "id": "TEC-08",
+      "title": "CASE Statements for Conditional Bucketing",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "The SQL `CASE WHEN` expression assigns values based on conditions. It’s often used to bucket or categorize data. For instance, creating delinquency buckets:",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "Programiz, *“SQL CASE Statement”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-08",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-08.mdx",
+      "initialX": 52.5,
+      "initialY": -343.4
+    },
+    "TEC-09": {
+      "id": "TEC-09",
+      "title": "NULL Handling and Three-Valued Logic",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "In SQL, `NULL` represents missing or unknown data. Comparisons with `NULL` yield *UNKNOWN*, not true or false. SQL employs three-valued logic (TRUE, FALSE, UNKNOWN). For example, `NULL = NULL` is UNKNOWN, so a `WHERE` filter excludes those rows. To test for missing data use `IS NULL` or `IS NOT NULL`.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "PostgreSQL Wiki, *“ISNULL and THREE-VALUED LOGIC”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-09",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-09.mdx",
+      "initialX": 52.7,
+      "initialY": -475.3
+    },
+    "TEC-10": {
+      "id": "TEC-10",
+      "title": "Date Handling and Reporting Periods",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "SQL provides date/time functions to manipulate and extract parts of dates. Common functions include `YEAR(date)`, `MONTH(date)`, or `DATEPART` to group or filter by time units. For example, to group loan originations by year: ```sql SELECT YEAR(OriginationDate) AS Year, COUNT(*) FROM Loans GROUP BY YEAR(OriginationDate); ``` This uses `YEAR()` to extract the year component. One can similarly use `MONTH()`, or perform arithmetic (e.g. adding intervals). Reporting often requires custom periods (e.g. fiscal year or quarters) — these can be calculated with date functions or by joining a calendar table.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "Javatpoint, *“SQL DATE Function”* (example of YEAR) (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-10",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-10.mdx",
+      "initialX": 71.1,
+      "initialY": -363.3
+    },
+    "TEC-11": {
+      "id": "TEC-11",
+      "title": "Query Performance Basics (Indexes, Table Scans, Execution Plans)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "Indexes speed up queries by allowing the database to quickly locate rows on indexed columns. A full table scan reads every row and is efficient only if a large fraction of rows qualify. For example, if querying a small subset (e.g. 1% of rows) on an indexed column, the database will use the index; if ~10% or more of rows match, a sequential scan may be faster.",
+      "prerequisites": [
+        "TEC-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Crunchy Data, *“WHEN TO CHOOSE SEQUENTIAL OVER INDEX SCAN”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-11",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-11.mdx",
+      "initialX": 4.4,
+      "initialY": -375
+    },
+    "TEC-12": {
+      "id": "TEC-12",
+      "title": "Writing a Reconciliation Query",
+      "type": "procedure",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "Data reconciliation means comparing two sources to ensure consistency. In SQL, this often involves joining or aggregating data from two tables/reports and highlighting mismatches. For instance, reconciling a daily loan balance extract against the general ledger might involve summing balances by loan and comparing. One approach is a full outer join on key columns to find rows missing on either side. Alternatively, compare aggregates: ```sql SELECT A.LoanID, A.Balance AS Balance_A, B.Balance AS Balance_B FROM LoansTable A FULL OUTER JOIN GL_Loans B ON A.LoanID = B.LoanID WHERE A.Balance <> B.Balance OR A.LoanID IS NULL OR B.LoanID IS NULL; ``` This returns loans where balances differ or exist only in one source. Another common pattern is comparing totals by category: sum balances in each source and `JOIN` or `UNION` to compare totals.",
+      "prerequisites": [
+        "TEC-02",
+        "TEC-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Datafold, *“What is Data Reconciliation?”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-12",
+      "depth": 3,
+      "currentness": "durable",
+      "filepath": "TEC-12.mdx",
+      "initialX": 77.1,
+      "initialY": -465.4
+    },
+    "TEC-13": {
+      "id": "TEC-13",
+      "title": "Data Quality Checks (Completeness, Duplicates, Referential Integrity)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "Common SQL data quality checks ensure tables have no missing (NULL) values in mandatory fields, no unexpected duplicates, and maintain referential integrity. For **completeness**, verify required columns have no NULLs: `SELECT COUNT(*) FROM Loans WHERE AccountID IS NULL;`. For **duplicates**, check for duplicate keys (e.g. `SELECT LoanID, COUNT(*) FROM Loans GROUP BY LoanID HAVING COUNT(*)>1;`). For **referential integrity**, ensure every foreign key matches a primary key: `SELECT fk.col FROM ChildTable fk LEFT JOIN ParentTable pk ON fk.col=pk.col WHERE pk.col IS NULL;` (rows returned have broken links).",
+      "prerequisites": [
+        "TEC-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "DQOps, *“Data Quality Dimensions (completeness etc.)”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-13",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-13.mdx",
+      "initialX": 46.6,
+      "initialY": -428.3
+    },
+    "TEC-14": {
+      "id": "TEC-14",
+      "title": "Data Mart Design: Fact and Dimension Tables",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "data-engineering-and-reconciliation",
+      "one_screen": "In a data warehouse or risk data mart, tables are designed as *fact* or *dimension*. A **fact table** contains measures (numeric data) and foreign keys to dimensions. A **dimension table** contains descriptive attributes (e.g. borrower name, product category) and a primary key. Dimension tables (one side) are small and static (e.g. Time dimension, Product dimension). Fact tables (many side) are large and growing, storing transactions or snapshots (e.g. exposures, losses) with keys to link each record to its dimensions.",
+      "prerequisites": [
+        "TEC-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Microsoft Docs, *“Star schema overview”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-14",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-14.mdx",
+      "initialX": 31.1,
+      "initialY": -453.2
+    },
+    "TEC-15": {
+      "id": "TEC-15",
+      "title": "Why Use Python (Not Excel) for Large Data",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "pandas-analytics-and-dataframes",
+      "one_screen": "Python can handle much larger datasets and reproducible workflows than Excel. Excel is limited to about one million rows and often crashes on complex models, whereas Python (pandas, numpy) can process “Big Data” in code. Python code is also text-based and version-controllable, reducing manual errors inherent in spreadsheets. In risk work, large loan tapes, exposure tables, or simulation outputs often exceed Excel’s capacity. Python scripts (using pandas) can load SQL extracts or CSV files into DataFrames and manipulate millions of rows efficiently.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "Cambridge Spark, *“Python vs Excel for Data Analysis”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-15",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TEC-15.mdx",
+      "initialX": 0.3,
+      "initialY": -465.4
+    },
+    "TEC-16": {
+      "id": "TEC-16",
+      "title": "Pandas Series and DataFrame (Mental Model)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "pandas-analytics-and-dataframes",
+      "one_screen": "In pandas, a **Series** is a 1D labeled array of data (similar to a column), and a **DataFrame** is a 2D table of data with labeled axes. You can think of a DataFrame as equivalent to a spreadsheet or SQL table: each column in a DataFrame is a Series, and all Series share the same index (row labels).",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "pandas Official Docs, *“Intro to Data Structures (Series, DataFrame)”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-16",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TEC-16.mdx",
+      "initialX": 28.2,
+      "initialY": -399.1
+    },
+    "TEC-17": {
+      "id": "TEC-17",
+      "title": "Reading and Writing Data (CSV, SQL, etc.)",
+      "type": "procedure",
+      "domain": "technical",
+      "subdomain": "pandas-analytics-and-dataframes",
+      "one_screen": "Pandas provides I/O functions to read/write various formats. To load CSV: `pd.read_csv('file.csv')` returns a DataFrame. To read from SQL: use `pd.read_sql(query, connection)` which executes a SQL query or table and returns a DataFrame. For example: ```python import pandas as pd import sqlite3 conn = sqlite3.connect('db.db') df_sql = pd.read_sql(\"SELECT * FROM exposures\", conn) df_csv = pd.read_csv(\"loans.csv\") ``` To save a DataFrame: `df.to_csv('out.csv', index=False)` or `df.to_sql('table_name', conn, if_exists='replace')`.",
+      "prerequisites": [
+        "TEC-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "pandas Official Docs, *“pandas.read_sql”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        },
+        {
+          "label": "pandas Official Docs, *“pandas.read_csv”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-17",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-17.mdx",
+      "initialX": -5.2,
+      "initialY": -442.8
+    },
+    "TEC-18": {
+      "id": "TEC-18",
+      "title": "Selection and Filtering in pandas (`loc` vs `iloc`)",
+      "type": "procedure",
+      "domain": "technical",
+      "subdomain": "pandas-analytics-and-dataframes",
+      "one_screen": "In pandas, `.loc` and `.iloc` index/select data differently. `.loc` uses labels (row index or column names), whereas `.iloc` uses integer positions. For example, `df.loc['C345']` selects the row with index `'C345'`, while `df.iloc[5]` selects the 6th row by position. For conditional filtering, use boolean indexing: `df.loc[df['Balance'] > 100000]` returns rows where Balance exceeds 100k. Both `.loc` and `.iloc` accept row and column indexers: `df.loc[row_labels, col_labels]` and `df.iloc[row_nums, col_nums]`.",
+      "prerequisites": [
+        "TEC-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "DataCamp, *“loc vs iloc in Pandas”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-18",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-18.mdx",
+      "initialX": 81.6,
+      "initialY": -401.2
+    },
+    "TEC-19": {
+      "id": "TEC-19",
+      "title": "GroupBy and Aggregation (Split–Apply–Combine)",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "pandas-analytics-and-dataframes",
+      "one_screen": "In pandas, use `groupby` to perform SQL-style GROUP BY operations. The process is “split-apply-combine”: split the DataFrame into groups by some key, apply an aggregate or transformation to each group, then combine the results. For example, to sum balances by product: `df.groupby('ProductType')['Balance'].sum()`. This yields a Series (index=ProductType, values=Sum).",
+      "prerequisites": [
+        "TEC-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "pandas Official Docs, *“Group by: split-apply-combine”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-19",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-19.mdx",
+      "initialX": 75.3,
+      "initialY": -427.7
+    },
+    "TEC-20": {
+      "id": "TEC-20",
+      "title": "pandas Merge/Join vs SQL Join",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "pandas-analytics-and-dataframes",
+      "one_screen": "Pandas `merge` function performs SQL-like joins. For example, `pd.merge(df1, df2, on='key', how='inner')` is analogous to `SELECT * FROM df1 JOIN df2 ON df1.key=df2.key`. The `how` parameter can be `'inner'`, `'left'`, `'right'`, or `'outer'`, just like SQL joins. When merging, common columns (keys) must match on name or be specified via `left_on`/`right_on`. After merge, index labels are reset unless you preserve them.",
+      "prerequisites": [
+        "TEC-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "pandas Official Docs, *“merge”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-20",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-20.mdx",
+      "initialX": 17.5,
+      "initialY": -335.5
+    },
+    "TEC-21": {
+      "id": "TEC-21",
+      "title": "Handling Missing Data in pandas",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "python-vectorization-and-engineering",
+      "one_screen": "Pandas represents missing data as `NaN` (for floats) or `NaT` (for datetimes) or `None` in object columns. Use `df.isna()` (or `isnull()`) to detect missing values, returning a boolean mask. You can drop rows or columns with missing data via `df.dropna()`, or fill values with `df.fillna(value)`. For example, `df['Balance'].fillna(0, inplace=True)` replaces missing balances with 0.",
+      "prerequisites": [
+        "TEC-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "pandas Official Docs, *“Series.isna()”* (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-21",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-21.mdx",
+      "initialX": -2.8,
+      "initialY": -345.6
+    },
+    "TEC-22": {
+      "id": "TEC-22",
+      "title": "Dates and Time Series Indexing in pandas",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "python-vectorization-and-engineering",
+      "one_screen": "Pandas has robust datetime support. Convert columns to datetime with `pd.to_datetime()`, then you can use date methods. A `DatetimeIndex` (when you set a datetime column as the index) enables time-based indexing and resampling. To generate regular time sequences, `pd.date_range(start, end, freq='M')` creates a monthly-end index. You can then align or reindex data by time, and use `df.resample('M').sum()` to aggregate by month.",
+      "prerequisites": [
+        "TEC-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "pandas Official Docs, *“Time series / date functionality”* (date_range example) (accessed 2026-08-28)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "2026"
+        }
+      ],
+      "slug": "tec-22",
+      "depth": 1,
+      "currentness": "durable",
+      "filepath": "TEC-22.mdx",
+      "initialX": 53.1,
+      "initialY": -451.6
+    },
+    "TEC-23": {
+      "id": "TEC-23",
+      "title": "NumPy Vectorization and Portfolio Summary",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "python-vectorization-and-engineering",
+      "one_screen": "Python loops over DataFrame rows (or Python lists) are slow for large tables. Instead, use NumPy/pandas vectorized operations, which run in optimized C. For example, summing balances grouped by condition: ```python # slow (loop): total = 0 for bal in df['Balance']: total += bal",
+      "prerequisites": [
+        "TEC-17",
+        "QNT-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "pandas Tutorial and general knowledge (no direct source)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "tec-23",
+      "depth": 2,
+      "currentness": "durable",
+      "filepath": "TEC-23.mdx",
+      "initialX": -24.6,
+      "initialY": -386.5
+    },
+    "TEC-24": {
+      "id": "TEC-24",
+      "title": "Code Quality: Reproducibility, Testing, Version Control",
+      "type": "concept",
+      "domain": "technical",
+      "subdomain": "python-vectorization-and-engineering",
+      "one_screen": "Treat analytical scripts like software. Use virtual environments (`venv`/`conda`) and a `requirements.txt` to pin library versions, ensuring others can reproduce the environment. For example, `pip freeze > requirements.txt` captures exact package versions. Use clear folder structure and document data sources in code comments.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": false,
+      "as_of": null,
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "TDDA (Test Driven Data Analysis) concept (no specific source)",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "tec-24",
+      "depth": 0,
+      "currentness": "durable",
+      "filepath": "TEC-24.mdx",
+      "initialX": 33.3,
+      "initialY": -318.7
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -10097,8 +10962,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 206.2,
-      "initialY": -381.9
+      "initialX": 235.8,
+      "initialY": -307.9
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -10145,8 +11010,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 258.9,
-      "initialY": -401.9
+      "initialX": 177.1,
+      "initialY": -303.4
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -10185,8 +11050,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 172.4,
-      "initialY": -357.6
+      "initialX": 252.5,
+      "initialY": -359.6
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -10225,8 +11090,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 224.5,
-      "initialY": -336.9
+      "initialX": 274.1,
+      "initialY": -405.8
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -10265,8 +11130,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 171.6,
-      "initialY": -328.8
+      "initialX": 277.5,
+      "initialY": -334
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -10305,8 +11170,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 166.9,
-      "initialY": -401.4
+      "initialX": 304.8,
+      "initialY": -365
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -10345,8 +11210,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 167.7,
-      "initialY": -293.7
+      "initialX": 232.9,
+      "initialY": -429.3
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -10399,8 +11264,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 210.9,
-      "initialY": -322.4
+      "initialX": 205.2,
+      "initialY": -391.5
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -10440,8 +11305,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 153.7,
-      "initialY": -309.2
+      "initialX": 274.7,
+      "initialY": -352.3
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -10495,8 +11360,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 142.8,
-      "initialY": -367
+      "initialX": 247.2,
+      "initialY": -382.2
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -10545,8 +11410,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 191,
-      "initialY": -391.9
+      "initialX": 302.5,
+      "initialY": -381.4
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -10586,8 +11451,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 140.9,
-      "initialY": -330.7
+      "initialX": 200.1,
+      "initialY": -335.8
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -10639,8 +11504,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 210.2,
-      "initialY": -291.1
+      "initialX": 229.4,
+      "initialY": -364.4
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -10693,8 +11558,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 192.3,
-      "initialY": -340.2
+      "initialX": 161.6,
+      "initialY": -333.1
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -10747,8 +11612,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 159.1,
-      "initialY": -379.6
+      "initialX": 153.1,
+      "initialY": -295.4
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -10788,8 +11653,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 175.5,
-      "initialY": -272.7
+      "initialX": 172.2,
+      "initialY": -278.1
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -10830,8 +11695,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 187,
-      "initialY": -317.4
+      "initialX": 230.8,
+      "initialY": -284.1
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -10878,8 +11743,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 246.5,
-      "initialY": -328.8
+      "initialX": 207.4,
+      "initialY": -248.1
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -10934,8 +11799,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 230,
-      "initialY": -379.3
+      "initialX": 168.4,
+      "initialY": -258.2
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -10981,8 +11846,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 143.4,
-      "initialY": -394.4
+      "initialX": 185.7,
+      "initialY": -376.5
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -11021,8 +11886,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 202.8,
-      "initialY": -362
+      "initialX": 186.8,
+      "initialY": -324.3
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -11061,8 +11926,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 235.6,
-      "initialY": -419
+      "initialX": 211.2,
+      "initialY": -369.9
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -11102,8 +11967,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 178.4,
-      "initialY": -439
+      "initialX": 250.8,
+      "initialY": -404.6
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -11149,8 +12014,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 261.8,
-      "initialY": -367.9
+      "initialX": 162.4,
+      "initialY": -360.4
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -11192,8 +12057,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 216.2,
-      "initialY": -414
+      "initialX": 201.6,
+      "initialY": -411
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -11234,8 +12099,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 155.4,
-      "initialY": -269.8
+      "initialX": 264,
+      "initialY": -314.6
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -11276,8 +12141,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 123.3,
-      "initialY": -279.9
+      "initialX": 194.2,
+      "initialY": -277.4
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -11330,8 +12195,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 241,
-      "initialY": -359.8
+      "initialX": 244.2,
+      "initialY": -329.1
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -11392,8 +12257,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 193.7,
-      "initialY": -414.5
+      "initialX": 211.3,
+      "initialY": -305.8
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -11449,8 +12314,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 123.6,
-      "initialY": -325.5
+      "initialX": 217.4,
+      "initialY": -334.9
     },
     "TRD-01": {
       "id": "TRD-01",
@@ -11482,8 +12347,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-01.mdx",
-      "initialX": 278.4,
-      "initialY": -182.8
+      "initialX": 372.1,
+      "initialY": -175.7
     },
     "TRD-02": {
       "id": "TRD-02",
@@ -11517,8 +12382,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-02.mdx",
-      "initialX": 336.7,
-      "initialY": -177.6
+      "initialX": 307.7,
+      "initialY": -193.6
     },
     "TRD-03": {
       "id": "TRD-03",
@@ -11552,8 +12417,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-03.mdx",
-      "initialX": 316.6,
-      "initialY": -230.9
+      "initialX": 286.2,
+      "initialY": -136.9
     },
     "TRD-04": {
       "id": "TRD-04",
@@ -11593,8 +12458,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-04.mdx",
-      "initialX": 372.6,
-      "initialY": -224.3
+      "initialX": 356.9,
+      "initialY": -153.1
     },
     "TRD-05": {
       "id": "TRD-05",
@@ -11628,8 +12493,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-05.mdx",
-      "initialX": 378.7,
-      "initialY": -280
+      "initialX": 294.9,
+      "initialY": -172.3
     },
     "TRD-06": {
       "id": "TRD-06",
@@ -11663,8 +12528,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-06.mdx",
-      "initialX": 365.1,
-      "initialY": -173.9
+      "initialX": 416.8,
+      "initialY": -152.6
     },
     "TRD-07": {
       "id": "TRD-07",
@@ -11699,8 +12564,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-07.mdx",
-      "initialX": 425.6,
-      "initialY": -241.5
+      "initialX": 334.7,
+      "initialY": -221.1
     },
     "TRD-08": {
       "id": "TRD-08",
@@ -11734,8 +12599,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-08.mdx",
-      "initialX": 278.6,
-      "initialY": -147.2
+      "initialX": 263.9,
+      "initialY": -149.4
     },
     "TRD-09": {
       "id": "TRD-09",
@@ -11770,8 +12635,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-09.mdx",
-      "initialX": 305,
-      "initialY": -130
+      "initialX": 356.4,
+      "initialY": -235.2
     },
     "TRD-10": {
       "id": "TRD-10",
@@ -11816,8 +12681,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TRD-10.mdx",
-      "initialX": 306.2,
-      "initialY": -205.2
+      "initialX": 305.5,
+      "initialY": -220.6
     },
     "TRD-11": {
       "id": "TRD-11",
@@ -11856,8 +12721,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-11.mdx",
-      "initialX": 257.1,
-      "initialY": -191.4
+      "initialX": 268.2,
+      "initialY": -177.2
     },
     "TRD-12": {
       "id": "TRD-12",
@@ -11900,8 +12765,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TRD-12.mdx",
-      "initialX": 299.4,
-      "initialY": -153.2
+      "initialX": 324.4,
+      "initialY": -170.2
     },
     "TRD-13": {
       "id": "TRD-13",
@@ -11933,8 +12798,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-13.mdx",
-      "initialX": 379.9,
-      "initialY": -186.8
+      "initialX": 430.1,
+      "initialY": -185.5
     },
     "TRD-14": {
       "id": "TRD-14",
@@ -11968,8 +12833,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-14.mdx",
-      "initialX": 325.4,
-      "initialY": -154.8
+      "initialX": 382.5,
+      "initialY": -146.3
     },
     "TRD-15": {
       "id": "TRD-15",
@@ -12003,8 +12868,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-15.mdx",
-      "initialX": 430.6,
-      "initialY": -192
+      "initialX": 393.7,
+      "initialY": -216.8
     },
     "TRD-16": {
       "id": "TRD-16",
@@ -12043,8 +12908,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-16.mdx",
-      "initialX": 388,
-      "initialY": -159.2
+      "initialX": 343.2,
+      "initialY": -252.4
     },
     "TRD-17": {
       "id": "TRD-17",
@@ -12084,8 +12949,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-17.mdx",
-      "initialX": 397.2,
-      "initialY": -231.1
+      "initialX": 393.5,
+      "initialY": -271.7
     },
     "TRD-18": {
       "id": "TRD-18",
@@ -12120,8 +12985,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-18.mdx",
-      "initialX": 376.2,
-      "initialY": -249.8
+      "initialX": 388.7,
+      "initialY": -247.8
     },
     "TRD-19": {
       "id": "TRD-19",
@@ -12168,8 +13033,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TRD-19.mdx",
-      "initialX": 353.1,
-      "initialY": -200
+      "initialX": 433.1,
+      "initialY": -210.9
     },
     "TRD-20": {
       "id": "TRD-20",
@@ -12204,8 +13069,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TRD-20.mdx",
-      "initialX": 330.5,
-      "initialY": -261.3
+      "initialX": 432.9,
+      "initialY": -256.8
     },
     "TRD-21": {
       "id": "TRD-21",
@@ -12240,8 +13105,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-21.mdx",
-      "initialX": 347.5,
-      "initialY": -139.5
+      "initialX": 373.8,
+      "initialY": -199.6
     },
     "TRD-22": {
       "id": "TRD-22",
@@ -12275,8 +13140,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-22.mdx",
-      "initialX": 404.1,
-      "initialY": -176.7
+      "initialX": 336.7,
+      "initialY": -149.7
     },
     "TRD-23": {
       "id": "TRD-23",
@@ -12310,8 +13175,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-23.mdx",
-      "initialX": 344.1,
-      "initialY": -230.1
+      "initialX": 380.5,
+      "initialY": -231.9
     },
     "TRD-24": {
       "id": "TRD-24",
@@ -12350,8 +13215,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-24.mdx",
-      "initialX": 307.9,
-      "initialY": -178.8
+      "initialX": 339.2,
+      "initialY": -201.1
     },
     "TRD-25": {
       "id": "TRD-25",
@@ -12409,8 +13274,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-25.mdx",
-      "initialX": 289.9,
-      "initialY": -227.9
+      "initialX": 407.1,
+      "initialY": -190.8
     },
     "TRD-26": {
       "id": "TRD-26",
@@ -12450,8 +13315,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-26.mdx",
-      "initialX": 356.4,
-      "initialY": -269.5
+      "initialX": 346.8,
+      "initialY": -181.5
     },
     "TRD-27": {
       "id": "TRD-27",
@@ -12485,8 +13350,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-27.mdx",
-      "initialX": 330.9,
-      "initialY": -210.2
+      "initialX": 306.8,
+      "initialY": -127.2
     },
     "TRD-28": {
       "id": "TRD-28",
@@ -12525,8 +13390,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-28.mdx",
-      "initialX": 305.4,
-      "initialY": -248.4
+      "initialX": 339.2,
+      "initialY": -124.9
     },
     "TRD-29": {
       "id": "TRD-29",
@@ -12576,8 +13441,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-29.mdx",
-      "initialX": 393.4,
-      "initialY": -207.8
+      "initialX": 403.2,
+      "initialY": -170.3
     },
     "TRD-30": {
       "id": "TRD-30",
@@ -12621,8 +13486,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-30.mdx",
-      "initialX": 436.7,
-      "initialY": -217.8
+      "initialX": 453.2,
+      "initialY": -194.2
     },
     "TRD-31": {
       "id": "TRD-31",
@@ -12662,8 +13527,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TRD-31.mdx",
-      "initialX": 401.4,
-      "initialY": -264.8
+      "initialX": 416,
+      "initialY": -234.1
     },
     "TRD-32": {
       "id": "TRD-32",
@@ -12721,8 +13586,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-32.mdx",
-      "initialX": 257.9,
-      "initialY": -157.2
+      "initialX": 310.5,
+      "initialY": -149.7
     }
   },
   "reverseIndex": {
@@ -13455,7 +14320,8 @@
     "QNT-01": [
       "QNT-02",
       "QNT-04",
-      "QNT-07"
+      "QNT-07",
+      "TEC-23"
     ],
     "QNT-02": [
       "QNT-03",
@@ -13525,6 +14391,57 @@
     "QNT-24": [],
     "QNT-25": [],
     "QNT-26": [],
+    "TEC-01": [
+      "TEC-02",
+      "TEC-04",
+      "TEC-13",
+      "TEC-14"
+    ],
+    "TEC-02": [
+      "TEC-03",
+      "TEC-04",
+      "TEC-05",
+      "TEC-06",
+      "TEC-07",
+      "TEC-08",
+      "TEC-09",
+      "TEC-10",
+      "TEC-11",
+      "TEC-12"
+    ],
+    "TEC-03": [
+      "TEC-12"
+    ],
+    "TEC-04": [],
+    "TEC-05": [],
+    "TEC-06": [],
+    "TEC-07": [],
+    "TEC-08": [],
+    "TEC-09": [],
+    "TEC-10": [],
+    "TEC-11": [],
+    "TEC-12": [],
+    "TEC-13": [],
+    "TEC-14": [],
+    "TEC-15": [],
+    "TEC-16": [
+      "TEC-17",
+      "TEC-18",
+      "TEC-19",
+      "TEC-20",
+      "TEC-21",
+      "TEC-22"
+    ],
+    "TEC-17": [
+      "TEC-23"
+    ],
+    "TEC-18": [],
+    "TEC-19": [],
+    "TEC-20": [],
+    "TEC-21": [],
+    "TEC-22": [],
+    "TEC-23": [],
+    "TEC-24": [],
     "TLM-01": [
       "TLM-02",
       "TLM-03",
@@ -15692,6 +16609,199 @@
       ]
     },
     {
+      "domain": "technical",
+      "subdomains": [
+        {
+          "subdomain": "sql-querying-and-window-functions",
+          "atoms": [
+            {
+              "id": "TEC-01",
+              "title": "Relational Model & Table Keys",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-02",
+              "title": "SELECT, WHERE, and ORDER BY Basics",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-03",
+              "title": "Aggregation with GROUP BY and HAVING",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-04",
+              "title": "SQL Joins (inner, left, right, full)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-05",
+              "title": "Set Operations (UNION, INTERSECT, EXCEPT)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-06",
+              "title": "Subqueries vs. CTEs (Common Table Expressions)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-07",
+              "title": "Window Functions (ROW_NUMBER, RANK, LAG, LEAD, running totals)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "data-engineering-and-reconciliation",
+          "atoms": [
+            {
+              "id": "TEC-08",
+              "title": "CASE Statements for Conditional Bucketing",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-09",
+              "title": "NULL Handling and Three-Valued Logic",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-10",
+              "title": "Date Handling and Reporting Periods",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-11",
+              "title": "Query Performance Basics (Indexes, Table Scans, Execution Plans)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-12",
+              "title": "Writing a Reconciliation Query",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-13",
+              "title": "Data Quality Checks (Completeness, Duplicates, Referential Integrity)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-14",
+              "title": "Data Mart Design: Fact and Dimension Tables",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "pandas-analytics-and-dataframes",
+          "atoms": [
+            {
+              "id": "TEC-15",
+              "title": "Why Use Python (Not Excel) for Large Data",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-16",
+              "title": "Pandas Series and DataFrame (Mental Model)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-17",
+              "title": "Reading and Writing Data (CSV, SQL, etc.)",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-18",
+              "title": "Selection and Filtering in pandas (`loc` vs `iloc`)",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-19",
+              "title": "GroupBy and Aggregation (Split–Apply–Combine)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-20",
+              "title": "pandas Merge/Join vs SQL Join",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "python-vectorization-and-engineering",
+          "atoms": [
+            {
+              "id": "TEC-21",
+              "title": "Handling Missing Data in pandas",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-22",
+              "title": "Dates and Time Series Indexing in pandas",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-23",
+              "title": "NumPy Vectorization and Portfolio Summary",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "TEC-24",
+              "title": "Code Quality: Reproducibility, Testing, Version Control",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "domain": "treasury-alm",
       "subdomains": [
         {
@@ -16571,6 +17681,14 @@
           "weight": 3
         },
         {
+          "id": "TEC-12",
+          "weight": 2
+        },
+        {
+          "id": "TEC-13",
+          "weight": 2
+        },
+        {
           "id": "DAT-22",
           "weight": 2
         },
@@ -16613,6 +17731,14 @@
           "weight": 3
         },
         {
+          "id": "TEC-12",
+          "weight": 2
+        },
+        {
+          "id": "TEC-13",
+          "weight": 2
+        },
+        {
           "id": "DAT-07",
           "weight": 2
         },
@@ -16643,44 +17769,44 @@
       ],
       "atoms": [
         {
-          "id": "FND-16",
+          "id": "TEC-02",
           "weight": 3
         },
         {
-          "id": "FND-17",
+          "id": "TEC-04",
           "weight": 3
         },
         {
-          "id": "CR-23",
+          "id": "TEC-07",
           "weight": 3
         },
         {
-          "id": "QNT-01",
+          "id": "TEC-16",
           "weight": 3
         },
         {
-          "id": "QNT-08",
+          "id": "TEC-19",
           "weight": 3
         },
         {
-          "id": "DAT-09",
+          "id": "TEC-12",
           "weight": 2
         },
         {
-          "id": "DAT-21",
+          "id": "TEC-17",
           "weight": 2
         },
         {
-          "id": "QNT-18",
+          "id": "TEC-20",
           "weight": 2
         },
         {
-          "id": "QNT-21",
+          "id": "TEC-23",
           "weight": 2
         },
         {
-          "id": "FND-18",
-          "weight": 1
+          "id": "TEC-24",
+          "weight": 2
         }
       ]
     },
@@ -18402,6 +19528,241 @@
     },
     {
       "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-01",
+      "message": "Atom \"TEC-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TEC-01",
+      "message": "Atom \"TEC-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-01",
+      "message": "one_screen in \"TEC-01\" contains 9 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-02",
+      "message": "Atom \"TEC-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-03",
+      "message": "Atom \"TEC-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-04",
+      "message": "Atom \"TEC-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-05",
+      "message": "Atom \"TEC-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-05",
+      "message": "one_screen in \"TEC-05\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-06",
+      "message": "Atom \"TEC-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-07",
+      "message": "Atom \"TEC-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-07",
+      "message": "one_screen in \"TEC-07\" contains 10 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-08",
+      "message": "Atom \"TEC-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-09",
+      "message": "Atom \"TEC-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-09",
+      "message": "one_screen in \"TEC-09\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-10",
+      "message": "Atom \"TEC-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-10",
+      "message": "one_screen in \"TEC-10\" contains 9 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-11",
+      "message": "Atom \"TEC-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-11",
+      "message": "one_screen in \"TEC-11\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-12",
+      "message": "Atom \"TEC-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-12",
+      "message": "one_screen in \"TEC-12\" contains 15 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-13",
+      "message": "Atom \"TEC-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-13",
+      "message": "one_screen in \"TEC-13\" contains 10 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-14",
+      "message": "Atom \"TEC-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-14",
+      "message": "one_screen in \"TEC-14\" contains 11 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-15",
+      "message": "Atom \"TEC-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TEC-15",
+      "message": "Atom \"TEC-15\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-15",
+      "message": "one_screen in \"TEC-15\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "TEC-15",
+      "message": "Orphan Atom \"TEC-15\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-16",
+      "message": "Atom \"TEC-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TEC-16",
+      "message": "Atom \"TEC-16\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-17",
+      "message": "Atom \"TEC-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-17",
+      "message": "one_screen in \"TEC-17\" contains 15 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-18",
+      "message": "Atom \"TEC-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-18",
+      "message": "one_screen in \"TEC-18\" contains 16 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-19",
+      "message": "Atom \"TEC-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-19",
+      "message": "one_screen in \"TEC-19\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-20",
+      "message": "Atom \"TEC-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-20",
+      "message": "one_screen in \"TEC-20\" contains 8 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-21",
+      "message": "Atom \"TEC-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-21",
+      "message": "one_screen in \"TEC-21\" contains 8 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-22",
+      "message": "Atom \"TEC-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-22",
+      "message": "one_screen in \"TEC-22\" contains 9 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-23",
+      "message": "Atom \"TEC-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "TEC-24",
+      "message": "Atom \"TEC-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "TEC-24",
+      "message": "Atom \"TEC-24\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "TEC-24",
+      "message": "one_screen in \"TEC-24\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "ORPHAN_ATOM",
+      "atomId": "TEC-24",
+      "message": "Orphan Atom \"TEC-24\": no other atom lists it as prerequisite, see_also, or contrast_with."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "TLM-01",
       "message": "Atom \"TLM-01\" is unverified (draft). Displays development banner."
     },
@@ -18731,5 +20092,5 @@
       "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-28T15:52:41.980Z"
+  "generatedAt": "2026-08-28T16:16:27.194Z"
 }

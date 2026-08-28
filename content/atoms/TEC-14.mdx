@@ -1,0 +1,70 @@
+---
+id: TEC-14
+title: 'Data Mart Design: Fact and Dimension Tables'
+type: concept
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  In a data warehouse or risk data mart, tables are designed as *fact* or
+  *dimension*. A **fact table** contains measures (numeric data) and foreign
+  keys to dimensions. A **dimension table** contains descriptive attributes
+  (e.g. borrower name, product category) and a primary key. Dimension tables
+  (one side) are small and static (e.g. Time dimension, Product dimension). Fact
+  tables (many side) are large and growing, storing transactions or snapshots
+  (e.g. exposures, losses) with keys to link each record to its dimensions.
+prerequisites:
+  - TEC-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Microsoft Docs, *“Star schema overview”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, a *Loan_Fact* table might have columns `(LoanKey, CustomerKey, ProductKey, Balance, InterestRate)`, where `CustomerKey` points to a *Customer_Dim* table with `(CustomerKey, Name, Segment, RiskRating)`, and `ProductKey` points to a *Product_Dim* table. This star schema lets analysts slice facts by any dimension attribute.
+
+&lt;Flow&gt;
++-------------+
+    |  Loan_Fact  |
+    +-------------+
+    | CustomerKey |--&amp;gt; +-----------+
+    | ProductKey  |--&amp;gt; |Customer_Dim|
+    | Balance     |    +-----------+
+    +-------------+      |   ...   |
+                        +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Fact tables should contain only keys (foreign keys) and measure columns. All descriptive attributes belong in dimensions, not the fact.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Placing text or descriptive fields in the fact table (denormalization) is discouraged. It bloats the fact and complicates queries.
+</Trap>
+
+<NeverConfuse a="Fact Table" b="Dimension Table">
+**Fact Table** — contains numeric measurements and foreign keys linking to dimensions.  
+---  
+**Dimension Table** — contains attributes (descriptions) and a primary key.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The star schema concept of fact vs dimension is standard in DW design.
+</Rule>
+
+<Recall
+  q="What determines the grain of a fact table?"
+  a="The combination of all its foreign keys (e.g. one row per loan per month)."
+/>
+
+<Recall
+  q="Where do borrower names go?"
+  a="In a dimension table (e.g. `Customer_Dim`), not in the loan fact table."
+/>

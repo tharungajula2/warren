@@ -1,0 +1,76 @@
+---
+id: TEC-16
+title: Pandas Series and DataFrame (Mental Model)
+type: concept
+domain: technical
+subdomain: pandas-analytics-and-dataframes
+one_screen: >-
+  In pandas, a **Series** is a 1D labeled array of data (similar to a column),
+  and a **DataFrame** is a 2D table of data with labeled axes. You can think of
+  a DataFrame as equivalent to a spreadsheet or SQL table: each column in a
+  DataFrame is a Series, and all Series share the same index (row labels).
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      pandas Official Docs, *“Intro to Data Structures (Series, DataFrame)”*
+      (accessed 2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, creating a loan DataFrame:  
+```python
+import pandas as pd
+df = pd.DataFrame(&#123;
+    'LoanID': [101, 102, 103],
+    'Balance': [50000, 75000, 100000],
+    'Status': ['Current','Delinquent','Current']
+&#125;)
+```  
+This yields a table with 3 rows and 3 columns. Under the hood, each column (LoanID, Balance, Status) is a pandas Series, and they all align on their index (0,1,2). You can access a column as `df['Balance']` (a Series) or a single value as `df.loc[1, 'Status']`.
+
+&lt;Flow&gt;
++--------+-----------+
+| LoanID | Balance   | ... 
++--------+-----------+
+|   101  |  50000    |
+|   102  |  75000    |
+|   103  | 100000    |
++--------+-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+All columns in a DataFrame must have the same length (same index). A DataFrame cannot contain “ragged” columns of different lengths.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Passing a dict of lists of different lengths to `DataFrame()` will error. Always ensure input data dimensions align.
+</Trap>
+
+<NeverConfuse a="Series" b="DataFrame">
+**Series** — a one-dimensional labeled array (single column).  
+---  
+**DataFrame** — a two-dimensional table, essentially a dict of Series, like a spreadsheet or SQL table.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These pandas concepts do not vary by region.
+</Rule>
+
+<Recall
+  q="What is the type of `df['LoanID']` if `df` is a DataFrame?"
+  a="A pandas Series."
+/>
+
+<Recall
+  q="How to select the first row of a DataFrame?"
+  a="Use `df.iloc[0]` (positional) or `df.loc[index_value]` if an index is defined."
+/>

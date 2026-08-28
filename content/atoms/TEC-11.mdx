@@ -1,0 +1,59 @@
+---
+id: TEC-11
+title: 'Query Performance Basics (Indexes, Table Scans, Execution Plans)'
+type: concept
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  Indexes speed up queries by allowing the database to quickly locate rows on
+  indexed columns. A full table scan reads every row and is efficient only if a
+  large fraction of rows qualify. For example, if querying a small subset (e.g.
+  1% of rows) on an indexed column, the database will use the index; if ~10% or
+  more of rows match, a sequential scan may be faster.
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Crunchy Data, *“WHEN TO CHOOSE SEQUENTIAL OVER INDEX SCAN”* (accessed
+      2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+Use `EXPLAIN` (or equivalent) to view the execution plan of a query. This shows which indexes (if any) are used and the estimated cost. The plan also shows join methods (nested loop, hash join, etc.) and whether tables are scanned. A query running slowly often indicates missing indexes, inefficient joins, or large scans on big tables.
+
+<Rule label="PERMANENT RULE">
+Put indexes on columns used frequently in `WHERE`, `JOIN`, or `ORDER BY` clauses (primary keys are automatically indexed).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming an index will always be used: if statistics are outdated or the query doesn’t use the indexed column properly (e.g. function on column), the optimizer might do a full scan.
+</Trap>
+
+<NeverConfuse a="Index Scan" b="Sequential (Table) Scan">
+**Index Scan** — uses an index to retrieve specific rows.  
+---  
+**Sequential (Table) Scan** — reads every row of the table.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Index usage and execution plan analysis are general across RDBMS; the concept of cost-based optimization is universal.
+</Rule>
+
+<Recall
+  q="When would a sequential scan be faster than an index?"
+  a="When a query returns a large percentage of rows (e.g. >10%)."
+/>
+
+<Recall
+  q="How to see if an index is used?"
+  a="Use `EXPLAIN QUERY` or execution plan tools in your database."
+/>

@@ -1,0 +1,66 @@
+---
+id: TEC-23
+title: NumPy Vectorization and Portfolio Summary
+type: concept
+domain: technical
+subdomain: python-vectorization-and-engineering
+one_screen: >-
+  Python loops over DataFrame rows (or Python lists) are slow for large tables.
+  Instead, use NumPy/pandas vectorized operations, which run in optimized C. For
+  example, summing balances grouped by condition: ```python # slow (loop): total
+  = 0 for bal in df['Balance']: total += bal
+prerequisites:
+  - TEC-17
+  - QNT-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: pandas Tutorial and general knowledge (no direct source)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 13_TEC_sql_python.md
+---
+# fast (vectorized):
+total = df['Balance'].sum()
+```  
+Or summarizing a loan tape into segments:  
+```python
+summary = df.groupby('Segment').agg(&#123;'Outstanding':'sum', 'LoanID':'count'&#125;)
+```  
+This avoids explicit Python loops. Even custom functions can often be expressed as vectorized NumPy functions or pandas aggregations. 
+
+In short: treat DataFrames like in-memory tables and use built-in operations. This is akin to using `SUM` in SQL vs iterating rows in application code.
+
+<Rule label="PERMANENT RULE">
+Always prefer pandas/NumPy vectorized methods (`.sum()`, `.mean()`, etc.) over manual Python loops for column-wise operations.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using `df.apply()` with a Python function on rows can be as slow as loops. Test performance; often a group-by or built-in aggregate is much faster.
+</Trap>
+
+<NeverConfuse a="Vectorized operation" b="Python loop or apply">
+**Vectorized operation** — an operation applied to entire array/column at once (fast, in C).  
+---  
+**Python loop or apply** — iterates in Python for each row (slow).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** This is a general programming best practice, not jurisdiction-specific.
+</Rule>
+
+<Recall
+  q="Why is `df['x']*2` faster than a for-loop doubling each element?"
+  a="Because pandas/NumPy performs vectorized operations in optimized C."
+/>
+
+<Recall
+  q="How to count loans > 100k without a loop?"
+  a="`df[df['Balance']>100000].shape[0]` or `(df['Balance']>100000).sum()`."
+/>

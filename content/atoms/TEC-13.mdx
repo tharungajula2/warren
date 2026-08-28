@@ -1,0 +1,61 @@
+---
+id: TEC-13
+title: 'Data Quality Checks (Completeness, Duplicates, Referential Integrity)'
+type: concept
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  Common SQL data quality checks ensure tables have no missing (NULL) values in
+  mandatory fields, no unexpected duplicates, and maintain referential
+  integrity. For **completeness**, verify required columns have no NULLs:
+  `SELECT COUNT(*) FROM Loans WHERE AccountID IS NULL;`. For **duplicates**,
+  check for duplicate keys (e.g. `SELECT LoanID, COUNT(*) FROM Loans GROUP BY
+  LoanID HAVING COUNT(*)>1;`). For **referential integrity**, ensure every
+  foreign key matches a primary key: `SELECT fk.col FROM ChildTable fk LEFT JOIN
+  ParentTable pk ON fk.col=pk.col WHERE pk.col IS NULL;` (rows returned have
+  broken links).
+prerequisites:
+  - TEC-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: >-
+      DQOps, *“Data Quality Dimensions (completeness etc.)”* (accessed
+      2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+<Rule label="PERMANENT RULE">
+Ensure primary/unique keys have no duplicates (they enforce uniqueness) and foreign keys match existing parent rows.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Mistaking legitimate multiple entries (e.g. multiple payments per loan) for duplicates. Always confirm the correct key: a *primary key* versus a *natural unique*.
+</Trap>
+
+<NeverConfuse a="PRIMARY KEY" b="UNIQUE constraint/index">
+**PRIMARY KEY** — key defined in schema, cannot have duplicates.  
+---  
+**UNIQUE constraint/index** — also enforces uniqueness, but (unlike primary key) usually allows one NULL.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Data quality principles (completeness, duplicates, referential checks) are universal.
+</Rule>
+
+<Recall
+  q="How to check for missing mandatory fields?"
+  a="Use `WHERE mandatory_col IS NULL`."
+/>
+
+<Recall
+  q="How to find orphaned foreign keys?"
+  a="LEFT JOIN child to parent, filter where parent key is NULL."
+/>

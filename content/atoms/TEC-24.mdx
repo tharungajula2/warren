@@ -1,0 +1,58 @@
+---
+id: TEC-24
+title: 'Code Quality: Reproducibility, Testing, Version Control'
+type: concept
+domain: technical
+subdomain: python-vectorization-and-engineering
+one_screen: >-
+  Treat analytical scripts like software. Use virtual environments
+  (`venv`/`conda`) and a `requirements.txt` to pin library versions, ensuring
+  others can reproduce the environment. For example, `pip freeze >
+  requirements.txt` captures exact package versions. Use clear folder structure
+  and document data sources in code comments.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: TDDA (Test Driven Data Analysis) concept (no specific source)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 13_TEC_sql_python.md
+---
+Testing is essential: write unit tests or assertions to verify code correctness. For example, test that a summary statistic matches a known result or that two different methods yield the same total. A single risk number untested is a hidden model risk. Frameworks like `pytest` can automate tests.  
+
+Finally, use version control (e.g. Git). Commit code regularly with meaningful messages. This allows rollback, review (code audit), and collaboration. Store scripts in a repository (internal or GitHub Enterprise). Each change to analysis code should be tracked like financial model changes.
+
+<Rule label="PERMANENT RULE">
+Pin and document dependencies, and always run tests after making changes.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Copying code around or running analyses manually without scripts. Avoid “lone excel-like” scripts with no version history or tests.
+</Trap>
+
+<NeverConfuse a="Unit Test" b="Version Control Commit">
+**Unit Test** — automated check of a small code piece against expected output.  
+---  
+**Version Control Commit** — a snapshot of code changes saved in a repository.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These software best practices apply to analysts worldwide.
+</Rule>
+
+<Recall
+  q="What file lists Python package versions?"
+  a="`requirements.txt` (output of `pip freeze`)."
+/>
+
+<Recall
+  q="Why use Git for analysis scripts?"
+  a="To track changes, enable reviews, and revert mistakes; it’s essential for auditability."
+/>

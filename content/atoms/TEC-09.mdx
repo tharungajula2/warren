@@ -1,0 +1,60 @@
+---
+id: TEC-09
+title: NULL Handling and Three-Valued Logic
+type: concept
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  In SQL, `NULL` represents missing or unknown data. Comparisons with `NULL`
+  yield *UNKNOWN*, not true or false. SQL employs three-valued logic (TRUE,
+  FALSE, UNKNOWN). For example, `NULL = NULL` is UNKNOWN, so a `WHERE` filter
+  excludes those rows. To test for missing data use `IS NULL` or `IS NOT NULL`.
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'PostgreSQL Wiki, *“ISNULL and THREE-VALUED LOGIC”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For instance, to find accounts without an open date:  
+```sql
+SELECT AccountID FROM Accounts WHERE OpenDate IS NULL;
+```  
+Regular operators (`=`, `&lt;`, etc.) cannot be used with NULL. Use `ISNULL()` or `COALESCE()` functions to substitute defaults when needed.
+
+<Rule label="PERMANENT RULE">
+Always use `IS NULL` or `IS NOT NULL` to check for NULL values.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating NULL as a value in conditions (e.g. `WHERE Balance != 0` won’t catch NULL balances). Also, when using `JOIN`, NULLs can cause unmatched rows.
+</Trap>
+
+<NeverConfuse a="NULL" b="0">
+**NULL** — absence/unknown value (three-valued logic).  
+---  
+**0** — numeric zero, a definite number (not NULL).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** SQL’s handling of NULLs is universal.
+</Rule>
+
+<Recall
+  q="How does SQL treat `NULL = NULL` in a WHERE clause?"
+  a="As UNKNOWN (neither TRUE nor FALSE), so the row is not returned."
+/>
+
+<Recall
+  q="How to select rows where `InterestRate` is missing?"
+  a="Use `WHERE InterestRate IS NULL`."
+/>

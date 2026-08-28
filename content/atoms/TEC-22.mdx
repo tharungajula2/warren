@@ -1,0 +1,66 @@
+---
+id: TEC-22
+title: Dates and Time Series Indexing in pandas
+type: concept
+domain: technical
+subdomain: python-vectorization-and-engineering
+one_screen: >-
+  Pandas has robust datetime support. Convert columns to datetime with
+  `pd.to_datetime()`, then you can use date methods. A `DatetimeIndex` (when you
+  set a datetime column as the index) enables time-based indexing and
+  resampling. To generate regular time sequences, `pd.date_range(start, end,
+  freq='M')` creates a monthly-end index. You can then align or reindex data by
+  time, and use `df.resample('M').sum()` to aggregate by month.
+prerequisites:
+  - TEC-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: >-
+      pandas Official Docs, *“Time series / date functionality”* (date_range
+      example) (accessed 2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, to analyze exposures by quarter:  
+```python
+df['Date'] = pd.to_datetime(df['Date'])
+df = df.set_index('Date')
+quarterly = df.resample('Q')['Exposure'].sum()
+```  
+This handles the date alignment for reporting periods easily. Also, you can use `.dt` accessor: `df['Date'].dt.month` to get month, etc.
+
+<Rule label="PERMANENT RULE">
+Always convert date columns to `datetime64` dtype (using `to_datetime`) before analysis. This allows use of datetime methods and indexing.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Forgetting `set_index` with a `DatetimeIndex` means you can’t use `.resample()`. Also, be mindful of time zones if mixing data from different regions.
+</Trap>
+
+<NeverConfuse a="Timestamp" b="Period">
+**Timestamp** — a single datetime (e.g. 2026-08-01 00:00).  
+---  
+**Period** — a span (e.g. Aug 2026); use pandas `Period` if needed.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** pandas date utilities are standard regardless of locale.
+</Rule>
+
+<Recall
+  q="How to select all data from 2025?"
+  a="`df['2025']` if `df` is indexed by date, or `df[(df['Date']>= '2025-01-01') & (df['Date'] < '2026-01-01')]`."
+/>
+
+<Recall
+  q="How to create a daily date range?"
+  a="`pd.date_range('2025-01-01', '2025-12-31', freq='D')`."
+/>

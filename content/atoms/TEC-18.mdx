@@ -1,0 +1,59 @@
+---
+id: TEC-18
+title: Selection and Filtering in pandas (`loc` vs `iloc`)
+type: procedure
+domain: technical
+subdomain: pandas-analytics-and-dataframes
+one_screen: >-
+  In pandas, `.loc` and `.iloc` index/select data differently. `.loc` uses
+  labels (row index or column names), whereas `.iloc` uses integer positions.
+  For example, `df.loc['C345']` selects the row with index `'C345'`, while
+  `df.iloc[5]` selects the 6th row by position. For conditional filtering, use
+  boolean indexing: `df.loc[df['Balance'] > 100000]` returns rows where Balance
+  exceeds 100k. Both `.loc` and `.iloc` accept row and column indexers:
+  `df.loc[row_labels, col_labels]` and `df.iloc[row_nums, col_nums]`.
+prerequisites:
+  - TEC-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'DataCamp, *“loc vs iloc in Pandas”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+Key difference: `.loc` includes the ending label in slicing (`df.loc['A':'D']` includes 'D'), whereas `.iloc` excludes the endpoint (`df.iloc[0:3]` returns positions 0,1,2). Always ensure you pass the correct type of index (label vs integer) or you’ll get a KeyError/IndexError.
+
+<Rule label="PERMANENT RULE">
+Use `.loc` when indexing by row/column name, and `.iloc` for numerical positions.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Using `.iloc` on an index that’s not a RangeIndex can return unexpected rows. For instance, if the DataFrame index is strings, `.iloc[0]` still returns the first row, not row with label 0.
+</Trap>
+
+<NeverConfuse a="`.loc`" b="`.iloc`">
+**`.loc`** — label-based indexing (select by row/column names).  
+---  
+**`.iloc`** — positional indexing (select by row/column integer location).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** These pandas behaviors are the same everywhere.
+</Rule>
+
+<Recall
+  q="How to select rows 10 through 20 using labels?"
+  a="`df.loc[10:20]` (if the index is numeric labels, includes 20)."
+/>
+
+<Recall
+  q="How to filter rows for a condition on a column?"
+  a="`df.loc[df['Status'] == 'Active']`."
+/>

@@ -1,0 +1,70 @@
+---
+id: TEC-03
+title: Aggregation with GROUP BY and HAVING
+type: concept
+domain: technical
+subdomain: sql-querying-and-window-functions
+one_screen: >-
+  The `GROUP BY` clause groups rows by column values for aggregate calculations,
+  and the `HAVING` clause filters those groups.
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'W3Schools, *“SQL GROUP BY”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+  - label: 'W3Schools, *“SQL HAVING clause”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For instance, to summarize a loan portfolio, one might compute total outstanding by product:  
+```sql
+SELECT ProductType, SUM(OutstandingBalance) AS TotalBalance
+FROM Loans
+GROUP BY ProductType;
+```  
+This splits the data by each `ProductType` (group), then `SUM` is applied per group. Often combined with `COUNT`, `AVG`, etc. To filter on aggregate values (e.g. only products with large totals), use `HAVING`:  
+```sql
+SELECT ProductType, SUM(OutstandingBalance) AS TotalBalance
+FROM Loans
+GROUP BY ProductType
+HAVING SUM(OutstandingBalance) &gt; 1000000;
+```  
+This returns only products where the summed balance exceeds a threshold. Note `HAVING` comes after grouping, unlike `WHERE` which filters rows before grouping.
+
+<Rule label="PERMANENT RULE">
+All non-aggregated columns in the `SELECT` list must appear in `GROUP BY`.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Omitting required `GROUP BY` columns (or aggregating every column) causes SQL errors. Also, forgetting `HAVING` conditions when needed means large groups won’t be filtered.
+</Trap>
+
+<NeverConfuse a="WHERE" b="HAVING">
+**WHERE** — filters individual rows before grouping.  
+---  
+**HAVING** — filters entire groups after aggregation.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Aggregation with `GROUP BY`/`HAVING` is consistent across SQL dialects.
+</Rule>
+
+<Recall
+  q="How to count loans by vintage?"
+  a="`SELECT Vintage, COUNT(*) FROM Loans GROUP BY Vintage`."
+/>
+
+<Recall
+  q="How to exclude groups with few members?"
+  a="Add `HAVING COUNT(*) > [threshold]`."
+/>

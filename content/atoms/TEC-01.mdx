@@ -1,0 +1,67 @@
+---
+id: TEC-01
+title: Relational Model & Table Keys
+type: concept
+domain: technical
+subdomain: sql-querying-and-window-functions
+one_screen: >-
+  The relational model organizes data into structured tables (relations) with
+  rows and columns, using keys to connect data across tables. Each table
+  represents an entity (e.g. **Loan**, **Customer**), rows are records, and
+  columns are fields. A **primary key** is a unique identifier for each row
+  (cannot be NULL). A **foreign key** in one table references a primary key in
+  another to link related data (e.g. an *Account* table has a CustomerID
+  referencing the *Customer* table). This design avoids redundancy (no repeated
+  customer details in every loan row) and enforces data integrity through
+  relationships.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Databricks, *“What Is a Relational Data Model? Key Concepts & Uses”*
+      (accessed 2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+The *Loan Book* in banking is not a single table: loans have borrowers, products, schedules, etc. Each aspect lives in its own table with keys linking them. For example, a *Facility* table may link to multiple *Account* rows (one-to-many), and accounts link to *Exposure* or *Transaction* tables. Keys ensure SQL queries join these tables reliably.
+
+&lt;Flow&gt;
++-----------+       +----------+       +-------------+
+| Facility  |       | Account  |       | Transaction |
++-----------+       +----------+       +-------------+
+| FacilityID| 1   M | AccountID| 1   M | TransID     |
+| ...       |-------| FacID FK |-------| AccountID FK|
++-----------+       +----------+       +-------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Every table should define a **primary key** column(s) that uniquely identifies each row.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Putting unrelated data in one wide table (no keys) or not enforcing uniqueness can lead to corruption (e.g. duplicate loan records).
+</Trap>
+
+<NeverConfuse a="Primary Key" b="Foreign Key">
+**Primary Key** — uniquely identifies a row in its table (no duplicates, no NULLs).  
+---  
+**Foreign Key** — references a primary key in another table, establishing a link.
+</NeverConfuse>
+
+<Recall
+  q="What uniquely identifies a row in a relational table?"
+  a="The primary key."
+/>
+
+<Recall
+  q="How do tables link to each other?"
+  a="By foreign keys referencing primary keys."
+/>

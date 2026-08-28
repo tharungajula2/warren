@@ -1,0 +1,62 @@
+---
+id: TEC-20
+title: pandas Merge/Join vs SQL Join
+type: concept
+domain: technical
+subdomain: pandas-analytics-and-dataframes
+one_screen: >-
+  Pandas `merge` function performs SQL-like joins. For example, `pd.merge(df1,
+  df2, on='key', how='inner')` is analogous to `SELECT * FROM df1 JOIN df2 ON
+  df1.key=df2.key`. The `how` parameter can be `'inner'`, `'left'`, `'right'`,
+  or `'outer'`, just like SQL joins. When merging, common columns (keys) must
+  match on name or be specified via `left_on`/`right_on`. After merge, index
+  labels are reset unless you preserve them.
+prerequisites:
+  - TEC-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'pandas Official Docs, *“merge”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+Example:  
+```python
+merged = pd.merge(loans_df, customers_df, left_on='CustID', right_on='ID', how='inner')
+```  
+This yields rows where `CustID` matches `ID`. A left join (`how='left'`) would keep all loans, adding customer info or NaN if missing.
+
+<Rule label="PERMANENT RULE">
+Explicitly specify `how` and `on` parameters to avoid ambiguity. By default, `how='inner'` and pandas attempts to join on any common column names.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+If two DataFrames share column names besides the key, `merge` may join on all of them unintentionally. Rename or use `suffixes=` to disambiguate.
+</Trap>
+
+<NeverConfuse a="merge" b="concat">
+**merge** (pandas) — database-style join on keys (columns or index).  
+---  
+**concat** (pandas) — stacks DataFrames (like SQL `UNION`), not a join on keys.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Pandas merge behavior is consistent across environments.
+</Rule>
+
+<Recall
+  q="How to do a left join in pandas?"
+  a="`pd.merge(df1, df2, how='left', on='key')`."
+/>
+
+<Recall
+  q="How to merge on different column names?"
+  a="Use `left_on='colA', right_on='colB'`."
+/>

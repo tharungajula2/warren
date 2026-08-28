@@ -1,0 +1,65 @@
+---
+id: TEC-08
+title: CASE Statements for Conditional Bucketing
+type: concept
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  The SQL `CASE WHEN` expression assigns values based on conditions. It’s often
+  used to bucket or categorize data. For instance, creating delinquency buckets:
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'Programiz, *“SQL CASE Statement”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+```sql
+SELECT LoanID,
+  CASE 
+    WHEN DaysPastDue = 0 THEN 'Current'
+    WHEN DaysPastDue BETWEEN 1 AND 30 THEN '1-30 days'
+    WHEN DaysPastDue BETWEEN 31 AND 60 THEN '31-60 days'
+    ELSE '90+ days'
+  END AS DelinqBucket
+FROM Loans;
+```  
+
+Each `WHEN` tests a condition and returns the corresponding label. An `ELSE` provides a default (for any values not matched). The result of `CASE` is a single column value.
+
+<Rule label="PERMANENT RULE">
+Always include an `ELSE` clause in `CASE` unless you intentionally want NULL for unmatched cases.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Omitting `ELSE` yields NULL for rows that meet none of the `WHEN` conditions. Also, `CASE` is evaluated in order – once a condition matches, later ones are skipped.
+</Trap>
+
+<NeverConfuse a="CASE" b="DECODE">
+**CASE** — standard SQL conditional expression (multi-branch).  
+---  
+**DECODE** (Oracle) — an older function only in Oracle SQL, similar to a simple `CASE`. Prefer `CASE` for portability.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** `CASE WHEN` is ANSI SQL standard everywhere.
+</Rule>
+
+<Recall
+  q="How to bucket a numeric score into categories in SQL?"
+  a="Use `CASE WHEN score >= 90 THEN 'High' WHEN score >= 50 THEN 'Medium' ELSE 'Low' END`."
+/>
+
+<Recall
+  q="What does missing `ELSE` in a CASE do?"
+  a="Rows that meet no `WHEN` condition get NULL."
+/>

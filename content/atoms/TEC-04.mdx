@@ -1,0 +1,69 @@
+---
+id: TEC-04
+title: 'SQL Joins (inner, left, right, full)'
+type: concept
+domain: technical
+subdomain: sql-querying-and-window-functions
+one_screen: >-
+  SQL `JOIN` combines rows from two tables based on matching column values. An
+  *INNER JOIN* yields only rows with matches in both tables, while
+  *LEFT/RIGHT/OUTER JOIN* include all rows from one side (and NULLs for the
+  other).
+prerequisites:
+  - TEC-01
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'W3Schools, *“SQL JOIN”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, joining a *Facility* table to its *Account* table: each facility (one side) may link to multiple accounts (many side). An inner join lists only facilities that have accounts, whereas a left join lists all facilities with matching accounts (NULL account fields if none). Beware of **fan-out**: joining a 1:M relationship will duplicate the "one" side row for each "many" side row, potentially inflating counts. Always ensure join keys are correct and understand cardinality.
+
+&lt;Flow&gt;
++---------+      +---------+
+   | Table A |      | Table B |
+   +---------+      +---------+
+         \         /
+          \  JOIN /
+           \     /
+        +-----------+
+        | Result    |
+        +-----------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Always specify an `ON` condition (join key) to match rows. For example: `ON Facilities.FacID = Accounts.FacID`.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Forgetting the join condition (or typo) leads to a Cartesian product (every A with every B). Also, joining on the wrong key can cause hidden duplicates (fan-out).
+</Trap>
+
+<NeverConfuse a="INNER JOIN" b="CROSS JOIN">
+**INNER JOIN** — returns only rows where keys match in both tables.  
+---  
+**CROSS JOIN** — returns Cartesian product (every row of A with every row of B), no key condition.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** JOIN semantics (INNER, LEFT, RIGHT, FULL) are standard SQL.
+</Rule>
+
+<Recall
+  q="Which join shows all left-table rows even if no match?"
+  a="`LEFT JOIN`."
+/>
+
+<Recall
+  q="How to join tables on multiple keys?"
+  a="Include all key conditions in the `ON` clause (e.g. `ON A.id = B.a_id AND A.date = B.date`)."
+/>

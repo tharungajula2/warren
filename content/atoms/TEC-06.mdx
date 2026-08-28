@@ -1,0 +1,83 @@
+---
+id: TEC-06
+title: Subqueries vs. CTEs (Common Table Expressions)
+type: concept
+domain: technical
+subdomain: sql-querying-and-window-functions
+one_screen: >-
+  A *subquery* (nested query) is an inline SELECT within another query, whereas
+  a *CTE* (WITH clause) defines a named temporary result set you can reference
+  in the main query. CTEs improve readability for complex logic and can be
+  referenced multiple times.
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Real Python Blog, *“Introduction to Common Table Expressions (CTEs)”*
+      (accessed 2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, instead of nesting multiple subqueries, use a CTE:  
+```sql
+WITH RecentLoans AS (
+  SELECT LoanID, Principal, SaleDate
+  FROM Loans
+  WHERE SaleDate &gt; '2025-01-01'
+)
+SELECT COUNT(*) FROM RecentLoans WHERE Principal &gt; 100000;
+```  
+This defines `RecentLoans` once, then queries it. A subquery approach would nest the SELECT inside another SELECT.
+
+&lt;Flow&gt;
+WITH cte_table AS (
+    +------------------+
+    | (complex query)  |
+    +------------------+
+)
+SELECT * FROM cte_table;
+&lt;/Flow&gt;  
+&lt;Flow&gt;
+SELECT * FROM (
+    +------------------+
+    | (complex query)  |
+    +------------------+
+) AS sub;
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A CTE must be immediately followed by a SELECT (or INSERT/UPDATE/DELETE) that references it.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+A CTE’s scope is limited to one statement; it cannot be reused outside. Also, avoid overly deep nesting – break logic into multiple CTEs if needed.
+</Trap>
+
+<NeverConfuse a="Subquery" b="CTE (WITH)">
+**Subquery** — an unnamed SELECT inside another query (inline, not reusable).  
+---  
+**CTE (WITH)** — a named temporary table defined for one query (improves clarity and reuse).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** CTEs and subqueries are standard SQL features everywhere.
+</Rule>
+
+<Recall
+  q="Why use a CTE?"
+  a="To break complex logic into steps or reuse a result set, making SQL easier to read."
+/>
+
+<Recall
+  q="How do you filter a subquery result?"
+  a="Wrap the subquery and apply WHERE in the outer SELECT or use a CTE as shown above."
+/>

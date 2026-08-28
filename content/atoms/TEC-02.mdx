@@ -1,0 +1,69 @@
+---
+id: TEC-02
+title: 'SELECT, WHERE, and ORDER BY Basics'
+type: procedure
+domain: technical
+subdomain: sql-querying-and-window-functions
+one_screen: >-
+  In SQL, `SELECT` chooses columns (fields) to return, `WHERE` filters rows
+  based on conditions, and `ORDER BY` sorts the output.
+prerequisites:
+  - TEC-01
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: 'Microsoft Docs, *“SELECT (Transact-SQL)”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+  - label: 'W3Schools, *“SQL WHERE clause”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+  - label: 'Microsoft, *“SORT order in Access”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, on an *Exposure* table, one might retrieve loan amounts and borrower IDs for high-risk loans:  
+```sql
+SELECT LoanID, Principal, BorrowerID
+FROM Exposures
+WHERE RiskRating = 'High'
+ORDER BY Principal DESC;
+```  
+Here `SELECT LoanID, Principal, BorrowerID` picks columns, `WHERE RiskRating = 'High'` filters rows to high-risk ones, and `ORDER BY Principal DESC` sorts the resulting loans by size (largest first).
+
+The `WHERE` clause applies conditions (e.g. numerical comparisons, string matches) to each row; only rows meeting all conditions appear in the result. After filtering, `ORDER BY` arranges the rows by one or more columns. Without `ORDER BY`, SQL does not guarantee any specific row order.
+
+<Rule label="PERMANENT RULE">
+If a specific ordering is needed, always include an `ORDER BY` clause. By default, results are unordered.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Omitting a `WHERE` filter can return huge result sets. Ensure conditions are correct; unintended broad filters (e.g. `WHERE 1=1`) can slow the query and return irrelevant data.
+</Trap>
+
+<NeverConfuse a="WHERE" b="ORDER BY">
+**WHERE** — filters rows before grouping or sorting (applies to individual rows).  
+---  
+**ORDER BY** — sorts the final result rows (after filtering).
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The semantics of `SELECT`, `WHERE`, and `ORDER BY` are standard SQL across jurisdictions.
+</Rule>
+
+<Recall
+  q="Which clause filters rows in a SQL query?"
+  a="The `WHERE` clause."
+/>
+
+<Recall
+  q="How do you sort results by multiple columns?"
+  a="Use `ORDER BY col1, col2` (with optional ASC/DESC)."
+/>

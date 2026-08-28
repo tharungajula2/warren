@@ -1,0 +1,61 @@
+---
+id: TEC-10
+title: Date Handling and Reporting Periods
+type: concept
+domain: technical
+subdomain: data-engineering-and-reconciliation
+one_screen: >-
+  SQL provides date/time functions to manipulate and extract parts of dates.
+  Common functions include `YEAR(date)`, `MONTH(date)`, or `DATEPART` to group
+  or filter by time units. For example, to group loan originations by year:
+  ```sql SELECT YEAR(OriginationDate) AS Year, COUNT(*) FROM Loans GROUP BY
+  YEAR(OriginationDate); ``` This uses `YEAR()` to extract the year component.
+  One can similarly use `MONTH()`, or perform arithmetic (e.g. adding
+  intervals). Reporting often requires custom periods (e.g. fiscal year or
+  quarters) — these can be calculated with date functions or by joining a
+  calendar table.
+prerequisites:
+  - TEC-02
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'Javatpoint, *“SQL DATE Function”* (example of YEAR) (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+Dates can also be compared or ranged: e.g. `WHERE SaleDate BETWEEN '2025-01-01' AND '2025-12-31'` for a calendar year.
+
+<Rule label="PERMANENT RULE">
+Convert strings to actual `DATE` or `DATETIME` types (using `STR_TO_DATE` or client-side parsing) to leverage date functions. Do not treat dates as plain text.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring the time component can yield unexpected results (e.g. missing same-day records). Always truncate times or use date boundaries.
+</Trap>
+
+<NeverConfuse a="DATE" b="DATETIME/TIMESTAMP">
+**DATE** — stores year-month-day (no time).  
+---  
+**DATETIME/TIMESTAMP** — includes time (hours-min-sec). Make sure to use the correct type for dates versus full timestamps.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Date arithmetic and functions follow SQL standards universally.
+</Rule>
+
+<Recall
+  q="How to get quarterly totals?"
+  a="`GROUP BY YEAR(date), DATEPART(quarter, date)` (or a fiscal calendar table)."
+/>
+
+<Recall
+  q="How to compare dates ignoring time?"
+  a="Use `CAST(datefield AS DATE)` or ensure the field is DATE type."
+/>

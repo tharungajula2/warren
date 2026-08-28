@@ -1,0 +1,61 @@
+---
+id: TEC-15
+title: Why Use Python (Not Excel) for Large Data
+type: concept
+domain: technical
+subdomain: pandas-analytics-and-dataframes
+one_screen: >-
+  Python can handle much larger datasets and reproducible workflows than Excel.
+  Excel is limited to about one million rows and often crashes on complex
+  models, whereas Python (pandas, numpy) can process “Big Data” in code. Python
+  code is also text-based and version-controllable, reducing manual errors
+  inherent in spreadsheets. In risk work, large loan tapes, exposure tables, or
+  simulation outputs often exceed Excel’s capacity. Python scripts (using
+  pandas) can load SQL extracts or CSV files into DataFrames and manipulate
+  millions of rows efficiently.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Cambridge Spark, *“Python vs Excel for Data Analysis”* (accessed
+      2026-08-28)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+For example, summarising a 5-million-row loan file by segment is trivial in Python (`df.groupby('Segment').sum()`), whereas in Excel it would require slow pivot operations or manual aggregations. Python’s libraries (pandas, NumPy, sklearn) also support advanced analytics and are open-source, making code sharable and auditable.
+
+<Rule label="PERMANENT RULE">
+For datasets much larger than a few hundred thousand rows, use Python (or similar) instead of Excel. Code-based analysis ensures reproducibility and auditability.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Trying to do complex analytics by dragging/clicking in Excel invites errors (wrong formula ranges, copy-paste mistakes). Don’t rely on untested spreadsheets for critical risk numbers.
+</Trap>
+
+<NeverConfuse a="Excel Workbook" b="Python Script">
+**Excel Workbook** — a spreadsheet with cells and formulas, suitable for small-scale, ad-hoc tasks.  
+---  
+**Python Script** — text-based code (pandas/numpy) for large-scale or repeatable analysis.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** The limitations of Excel and advantages of code apply universally.
+</Rule>
+
+<Recall
+  q="What happens if an Excel file with 2M rows is opened?"
+  a="It will likely fail or truncate (Excel limit ~1,048,576 rows)."
+/>
+
+<Recall
+  q="Why is Python more reliable for data analysis?"
+  a="Code can be tested, versioned, and handles large data without manual intervention."
+/>

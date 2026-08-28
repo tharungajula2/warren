@@ -1,0 +1,63 @@
+---
+id: TEC-17
+title: 'Reading and Writing Data (CSV, SQL, etc.)'
+type: procedure
+domain: technical
+subdomain: pandas-analytics-and-dataframes
+one_screen: >-
+  Pandas provides I/O functions to read/write various formats. To load CSV:
+  `pd.read_csv('file.csv')` returns a DataFrame. To read from SQL: use
+  `pd.read_sql(query, connection)` which executes a SQL query or table and
+  returns a DataFrame. For example: ```python import pandas as pd import sqlite3
+  conn = sqlite3.connect('db.db') df_sql = pd.read_sql("SELECT * FROM
+  exposures", conn) df_csv = pd.read_csv("loans.csv") ``` To save a DataFrame:
+  `df.to_csv('out.csv', index=False)` or `df.to_sql('table_name', conn,
+  if_exists='replace')`.
+prerequisites:
+  - TEC-16
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: 'pandas Official Docs, *“pandas.read_sql”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+  - label: 'pandas Official Docs, *“pandas.read_csv”* (accessed 2026-08-28)'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: '2026'
+import_source: 13_TEC_sql_python.md
+---
+When loading, specify parsing options for dates (`parse_dates`), encodings, or chunk size for large files. Always close database connections or use context managers.
+
+<Rule label="PERMANENT RULE">
+Explicitly set parameters when reading data: e.g. `parse_dates=['date_col']` for dates, or `index_col=` if needed. This ensures correct dtypes.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Loading very large files without chunksize can exhaust memory. Similarly, calling `to_sql` on millions of rows may time out or lock the DB; consider batch inserts.
+</Trap>
+
+<NeverConfuse a="read_csv" b="to_sql">
+**read_csv** — reads a delimited text file into a DataFrame.  
+---  
+**to_sql** — writes a DataFrame to a SQL database table.
+</NeverConfuse>
+
+<Rule label="NO DELTA">
+**No delta.** Pandas I/O functions work the same regardless of jurisdiction.
+</Rule>
+
+<Recall
+  q="How do you read a SQL table into pandas?"
+  a="`pd.read_sql_table('TableName', con)` or `pd.read_sql('SELECT ...', con)`."
+/>
+
+<Recall
+  q="How to append to a CSV instead of overwrite?"
+  a="Use `df.to_csv('file.csv', mode='a', header=False)`."
+/>
