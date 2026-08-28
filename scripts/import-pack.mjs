@@ -137,7 +137,17 @@ for (const seg of rawSegments) {
       id = line.replace("**ID:**", "").trim();
       metaEndLineIdx = Math.max(metaEndLineIdx, i);
     } else if (line.startsWith("**Type:**")) {
-      type = line.replace("**Type:**", "").trim().toLowerCase();
+      const rawType = line.replace("**Type:**", "").trim().toLowerCase();
+      const validTypes = new Set(["concept", "mechanism", "procedure", "delta", "example", "reference"]);
+      if (validTypes.has(rawType)) {
+        type = rawType;
+      } else if (rawType.includes("procedure") || rawType.includes("technique")) {
+        type = "procedure";
+      } else if (rawType.includes("mechanism") || rawType.includes("deliverable")) {
+        type = "mechanism";
+      } else {
+        type = "concept";
+      }
       metaEndLineIdx = Math.max(metaEndLineIdx, i);
     } else if (line.startsWith("**Prerequisites:**")) {
       const pStr = line.replace("**Prerequisites:**", "").trim();
@@ -518,6 +528,13 @@ function inferSubdomain(atomId) {
     if (num <= 12) return "kyc-edd-and-customer-due-diligence";
     if (num <= 16) return "transaction-monitoring-and-sanctions";
     return "fraud-and-aml-governance";
+  }
+
+  if (prefix === "BA") {
+    if (num <= 8) return "ba-foundations-and-elicitation";
+    if (num <= 14) return "brd-functional-specs-and-user-stories";
+    if (num <= 19) return "testing-uat-and-cutover";
+    return "project-delivery-and-scope-governance";
   }
 
   return "unsorted";

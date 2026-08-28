@@ -1,0 +1,76 @@
+---
+id: BA-15
+title: 'Testing Lifecycle (Unit, System, Integration, UAT)'
+type: concept
+domain: business-analysis
+subdomain: testing-uat-and-cutover
+one_screen: >-
+  A typical banking IT change goes through multiple test phases: Unit testing
+  (by developers), Integration/System testing (by QA/IT), and User Acceptance
+  Testing (by business).  Each phase has different owners and objectives.
+prerequisites:
+  - BA-08
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Yethi Consulting – Core banking UAT (business-led)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+The testing process is layered:  
+- **Unit Testing:** done by developers on individual code modules. Ensures each component works as intended.  
+- **Integration Testing:** QA or IT tests combined modules or subsystems. Checks interfaces between components.  
+- **System Testing:** QA tests the complete system against requirements (functional and non-functional).  
+- **User Acceptance Testing (UAT):** Business users test end-to-end business scenarios in a production-like environment. UAT is led by the business (operations, product, compliance teams).  UAT ensures the system meets real business needs before go-live.  
+
+Each test type requires different participants: developers own unit tests, QA owns system/integration tests, and business stakeholders perform UAT.  Testing each phase is critical: skipping system test and jumping to UAT, for instance, risks missing defects that developers should have caught.  
+
+&lt;Flow&gt;
++-------------+
+| Unit Test   |
++-------------+
+        v
++-------------+
+| Integration |
+|   Test      |
++-------------+
+        v
++-------------+
+| System Test |
++-------------+
+        v
++------------------+
+| User Acceptance  |
+|  Test (UAT)      |
++------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+Follow all test phases in order and involve the right people. Use unit and system tests to catch defects early, and let end users validate the solution in UAT.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Treating UAT as the first time the business sees the solution. If unit/integration tests are inadequate, UAT will be overwhelmed with obvious issues.
+</Trap>
+
+<NeverConfuse>
+**System Test** vs **User Acceptance Test (UAT)**:  
+*System Test* is executed by QA/IT to verify the software meets the specified requirements. *UAT* is done by business users to verify the system meets their needs in real-world scenarios.
+</NeverConfuse>
+
+<Recall
+  q="Who typically executes UAT in a bank project?"
+  a="Business stakeholders like branch operations, loan officers, treasury, and compliance teams."
+/>
+
+<Recall
+  q="What is the goal of system testing vs UAT?"
+  a="System testing checks the software against specifications; UAT checks it against business process needs."
+/>

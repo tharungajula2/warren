@@ -1,0 +1,52 @@
+---
+id: BA-21
+title: Prioritisation & Estimation in Banking Projects
+type: mechanism
+domain: business-analysis
+subdomain: project-delivery-and-scope-governance
+one_screen: >-
+  Prioritize work using clear criteria (business value, risk, regulatory
+  urgency) and defend choices with data.  Estimate tasks realistically using
+  ranges or past data, accounting for optimism bias.
+prerequisites:
+  - BA-04
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Planning fallacy (behavioral economics) – people underestimate tasks
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+BAs often help decide what to do first in a change program. Common prioritisation methods include *weighted scoring* (scoring features by value, cost, risk), *MoSCoW* (Must/Should/Could/Won’t), or simple *risk-first* (fix highest compliance risk first). For regulatory projects, items explicitly tied to required dates are usually top priority. Always document how you prioritized: for example, “Requirement A scored 9/10 on impact because it directly addresses a mandatory regulation” provides rationale. This transparency makes prioritisation defensible to management and auditors.  
+
+For estimation, acknowledge that BAs and teams are naturally optimistic (the “planning fallacy”). Use historical data or three-point estimates (best/likely/worst) to capture uncertainty. Include a buffer for testing and integration complexities. For instance, if developing a new report took 10 days in a past project, plan 15 days for similar complexity. Clear estimation methods (e.g. story points, function points, or t-shirt sizes) help set realistic schedules and avoid last-minute scope cuts.
+
+<Rule label="PERMANENT RULE">
+Use objective criteria (value to business, compliance risk, regulatory deadline) in a documented prioritisation model. When estimating, always allow contingencies – it’s normal to be optimistic, so plan for known unknowns.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Letting “priority” be decided by the loudest stakeholder or an incorrect assumption that all items are equally urgent. Also, giving point estimates (e.g. “5 days”) without ranges ignores uncertainty; this often leads to schedule overrun.
+</Trap>
+
+<NeverConfuse>
+**Urgency** vs **Importance**:  
+An *Urgent* task has a tight deadline (often regulatory or external). An *Important* task has high business value or impact. They can differ (e.g. a bug might be urgent but low importance). Prioritisation should consider both, not mistake one for the other.
+</NeverConfuse>
+
+<Recall
+  q="How can you justify a prioritisation decision?"
+  a="By scoring features on impact and risk; for example, regulatory requirements get high weight and are done first."
+/>
+
+<Recall
+  q="Why do BAs add time buffers to estimates?"
+  a="Because of optimism bias (planning fallacy) – experience shows tasks often take longer than the best-case estimate."
+/>

@@ -1,0 +1,56 @@
+---
+id: BA-13
+title: Testable Acceptance Criteria
+type: concept
+domain: business-analysis
+subdomain: brd-functional-specs-and-user-stories
+one_screen: >-
+  Acceptance criteria are the specific, testable conditions that define when a
+  requirement is met.  Well-crafted criteria are clear, concise, and objectively
+  verifiable.
+prerequisites:
+  - BA-09
+  - BA-12
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Atlassian – “Acceptance criteria are... testable statements”
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: Atlassian – acceptance criteria must be “objectively verifiable”
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Each requirement (or user story) needs acceptance criteria that describe exactly what “done” means.  They are written from the user’s perspective: e.g. “The search function returns results that match 100% or partially matching the query” (as in one example). According to Atlassian, acceptance criteria are “clear, concise, and testable statements” that define what success looks like.  They should be measurable: instead of vague terms (“fast”, “user-friendly”), use objective thresholds (e.g. “90% of transactions processed within 2 seconds”). Each criterion should map to one or more executable tests.
+
+Good acceptance criteria eliminate ambiguity.  They align development and QA teams and allow stakeholders to verify requirements. As one guide puts it, they define *“what success looks like”* and “translate the purpose into explicit, verifiable requirements”. For regulators, acceptance criteria often double as test cases to demonstrate compliance.
+
+<Rule label="PERMANENT RULE">
+Write acceptance criteria that are specific and measurable. Each criterion must be objectively verifiable (e.g. through a test or demo). If you can’t define a pass/fail condition, refine the requirement.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Vague criteria. For example, “The system must be user-friendly” or “Reports should load quickly” are not testable. Also avoid combining multiple conditions into one criterion. Each criterion should stand alone (independent).
+</Trap>
+
+<NeverConfuse>
+**Acceptance Criteria** vs **Test Case**:  
+*Acceptance Criteria* are the high-level conditions to meet for a requirement to be accepted. A *Test Case* is a detailed script with steps to verify those criteria. They serve related purposes (criteria shape tests) but are not the same thing.
+</NeverConfuse>
+
+<Recall
+  q="What makes an acceptance criterion “testable”?"
+  a="It must be clearly measurable, allowing a pass/fail result (e.g. “results within 2s” rather than “fast”)."
+/>
+
+<Recall
+  q="How do acceptance criteria help align teams?"
+  a="They spell out exactly what success looks like, ensuring developers, QA, and stakeholders have the same understanding."
+/>

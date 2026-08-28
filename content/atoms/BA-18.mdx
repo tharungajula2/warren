@@ -1,0 +1,53 @@
+---
+id: BA-18
+title: Parallel Running & Go-Live Planning
+type: concept
+domain: business-analysis
+subdomain: testing-uat-and-cutover
+one_screen: >-
+  *Parallel running* means operating the old and new systems side-by-side for a
+  period to compare outputs. *Go-live planning* (cutover) details how to switch
+  to the new system, including rollback steps if needed.  Both are critical in
+  regulated transitions.
+prerequisites:
+  - BA-17
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: OCM Solution – “Cutover and rollback steps” in go-live checklist
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Before decommissioning legacy processes, banks often run *both* systems in parallel to ensure the new one works correctly. For example, a bank might process a day’s transactions in both the old system and the new IFRS-compliant system and compare the results.  This parallel run period (sometimes months) builds confidence and provides audit evidence that the new outputs are accurate. It also allows real data to exercise the system without immediate risk.
+
+The *go-live plan* (cutover plan) is executed once parallel runs are complete. It is a detailed schedule: which data migration steps to perform, which systems to shut down/start up, and who is responsible for each action.  The plan must include *rollback procedures*: if a critical issue occurs, how to revert to the old system to prevent business impact. For example, ensure backups and change logs are ready. Roles (executive sponsor, IT lead, BA, etc.) must be assigned for go/no-go decisions and communication to stakeholders.
+
+<Rule label="PERMANENT RULE">
+Include parallel running and dual-reporting as part of implementation. Plan go-live steps meticulously and always have a tested rollback strategy. Confirm decision criteria (e.g. “all parallel outputs match 99%”) before full cutover.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming go-live will succeed without rehearsal. A frequent mistake is not planning for failures – e.g. no rollback or contingency plan. Also failing to run both systems long enough to catch issues.
+</Trap>
+
+<NeverConfuse>
+**Parallel Run** vs **Dual Reporting**:  
+A *Parallel Run* is running old and new systems at the same time to validate output. *Dual Reporting* is submitting reports in both old and new regimes (e.g. old accounting vs new) to regulators. They both involve duplication but serve different verification purposes.
+</NeverConfuse>
+
+<Recall
+  q="What is the purpose of a parallel run before go-live?"
+  a="To compare legacy vs new system results, ensuring the new process is correct and building confidence."
+/>
+
+<Recall
+  q="What must a cutover plan include?"
+  a="Detailed execution steps, final data migration, communication plans, and a rollback procedure."
+/>

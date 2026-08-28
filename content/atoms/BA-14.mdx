@@ -1,0 +1,60 @@
+---
+id: BA-14
+title: User Stories and Acceptance in a Regulated Context
+type: concept
+domain: business-analysis
+subdomain: brd-functional-specs-and-user-stories
+one_screen: >-
+  In agile development, user stories (“As a user, I want…”) drive increments. 
+  In a regulated project, each story’s acceptance criteria must tie back to
+  formal requirements and evidence.  You may still use stories, but supplement
+  them with thorough documentation and approvals for audit purposes.
+prerequisites:
+  - BA-13
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Atlassian – importance of acceptance criteria as requirements verification
+      (contextual)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Industry best practice – agile in banking still requires traceability and
+      approvals. (No specific cite)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+User stories are a popular agile format to describe functionality. However, in regulated banking change, “just” having user stories is not enough for audit evidence.  For example, a story like “As an accountant I want to generate report X” must be backed by a formal requirement in the BRD or similar doc for traceability.  The acceptance criteria for each story should explicitly cover any regulatory rule or business rule involved.  
+
+In practice, BAs in banks often write user stories for the development team, but also maintain a requirements traceability matrix linking each story to the original business requirement or regulation.  All acceptance criteria must be documented and tested; regulators may request proof that each story’s scope was approved by risk/compliance. If agile ceremonies (like demos) are used, capture their sign-off too.  In short, use user stories for agile development, but never skip the required artifacts (requirements docs, trace matrix, approvals) needed in the regulated context.
+
+<Rule label="PERMANENT RULE">
+When using agile user stories in a regulated project, ensure each story and criterion has formal backing. Treat each as “level 1” requirements in the traceability matrix, and secure formal approval on them.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming “agile = no documentation.”  In regulated change, you cannot omit documentation. Don’t rely solely on Jira tickets or casual “demo approval”; record story acceptance formally.
+</Trap>
+
+<NeverConfuse>
+**User Story** vs **Regulatory Requirement**:  
+A *User Story* is a short description of a feature from an end-user’s perspective (agile format). A *Regulatory Requirement* is an explicit compliance mandate that must be met. User stories may implement a regulatory requirement, but the regulator cares about proof of the requirement being met, not just the story text.
+</NeverConfuse>
+
+<Recall
+  q="Are user stories sufficient evidence for auditors?"
+  a="No – you must tie them back to approved requirements and maintain an audit trail of acceptance criteria and sign-offs."
+/>
+
+<Recall
+  q="How can a BA ensure agile work meets compliance?"
+  a="Map each user story to its business/regulatory requirement, include clear acceptance criteria, and get formal approval."
+/>

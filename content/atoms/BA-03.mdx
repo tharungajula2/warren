@@ -1,0 +1,57 @@
+---
+id: BA-03
+title: Stakeholders in Bank Change Programs
+type: concept
+domain: business-analysis
+subdomain: ba-foundations-and-elicitation
+one_screen: >-
+  Successful change requires early and ongoing involvement of all impacted
+  groups: business owners (front-line and process managers), risk and
+  compliance, finance, IT/operations, data/model owners, internal audit and
+  (where needed) the regulator.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Yethi Consulting – Core banking UAT participants and coverage
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: RiskSpan – model owner vs validator roles and documentation
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+A bank change program involves many stakeholders.  **Business owners** (line-of-business managers, product owners) define requirements. **Risk management** teams (credit, market, operational risk) must approve changes affecting risk profile. **Finance** stakeholders (finance, accounting) need to assess cost, budget impact, and reporting changes. **Technology/IT** teams design and build the solution.  **Data owners** or **model owners** must be involved when data or risk models change, to align logic and validation.  **Internal Audit** should be aware early – auditors will later review that controls and procedures were properly implemented. Finally, the **Regulator** (or compliance team, if working with external regulators) often signs off on regulatory changes or reviews evidence to ensure requirements are met.
+
+A BA bridges all these groups, collecting input and keeping them aligned.  For example, a new risk-reporting requirement needs review by business (for accuracy), risk (for methodology), finance (for impact on reports), IT (for system changes), and model validation (for calculations).  Missing a key stakeholder can derail a project; for instance, if IT or audit are not included until late, critical requirements (like data lineage or evidence logs) might be missed.
+
+<Rule label="PERMANENT RULE">
+Include all relevant stakeholders early and often. Document each group’s inputs and approvals.  If a group (e.g. internal audit, model validation) is required to sign off on compliance, involve them from the start to avoid rework.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Assuming one person can “speak for” multiple stakeholder groups or ignoring a group’s needs.  A common mistake is treating the business as the only stakeholder and failing to involve risk or audit until late in the project.
+</Trap>
+
+<NeverConfuse a="Internal Audit" b="Regulator">
+**Internal Audit** — the bank’s own independent check on controls and procedures (internal governance function).  
+---  
+**Regulator** — the external authority enforcing compliance.  
+Both review the project, but Internal Audit is part of the bank’s governance, whereas the Regulator is an external enforcer.
+</NeverConfuse>
+
+<Recall
+  q="Who typically leads a bank’s User Acceptance Testing (UAT)?"
+  a="Business line stakeholders such as branch operations, loan processing, treasury, and compliance teams."
+/>
+
+<Recall
+  q="What is the role of a model owner vs a model validator?"
+  a="The *Model Owner* uses and maintains the model, while the *Model Validator* independently tests and approves the model; confusion arises because both deal with the model’s details, but one is the user and the other is the checker."
+/>

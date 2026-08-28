@@ -1,0 +1,53 @@
+---
+id: BA-07
+title: Root Cause Analysis
+type: procedure
+domain: business-analysis
+subdomain: ba-foundations-and-elicitation
+one_screen: >-
+  Root Cause Analysis (RCA) is a method to find the underlying cause of a
+  problem or error, not just its symptoms.  Techniques like “5 Whys” and
+  fishbone diagrams are used to dig down to the true source of an issue.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      BA Times – “Root Cause Analysis is a method of identifying the underlying
+      cause of a problem... using cause-and-effect diagrams, flowcharts, etc.”
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+When a process fails or a requirement isn’t met, RCA helps prevent recurrence by fixing the core issue. The BA collects data about the problem, then uses a structured approach: for example, the **5 Whys** technique simply asks “Why?” repeatedly until the fundamental cause is found.  Or use a **Fishbone (Ishikawa) diagram**, where the team brainstorms possible causes in categories (People, Process, Systems, etc.) and traces them back to root factors. 
+
+For instance, if a loan payment is missed, an RCA might reveal that data mismatches caused a calculation error (one of many possible answers). The BA should lead the team through questioning until the real cause (e.g. a misconfigured data field) is identified.  Document findings in an action plan to resolve the root issue and not just the symptom.
+
+<Rule label="PERMANENT RULE">
+Always go deeper: fix the root cause, not just the immediate error. Use structured RCA (5 Whys, fishbone, flow analysis) to uncover underlying factors.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Stopping the analysis when a temporary fix is found. For example, just patching a software bug (symptom) without discovering that it was caused by a flawed business rule mapping.
+</Trap>
+
+<NeverConfuse>
+**Symptom** vs **Root Cause**:  
+A *Symptom* is the visible error (e.g. a broken report). The *Root Cause* is the underlying reason (e.g. a missing data mapping rule). They are often mistakenly treated as the same.
+</NeverConfuse>
+
+<Recall
+  q="Name a common RCA technique."
+  a="5 Whys – repeatedly asking why a problem occurred until reaching the root cause."
+/>
+
+<Recall
+  q="Why do a root cause analysis instead of just fixing the issue?"
+  a="To prevent the problem from recurring by addressing the fundamental cause."
+/>

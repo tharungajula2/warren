@@ -1,0 +1,66 @@
+---
+id: BA-04
+title: Requirements Elicitation Techniques
+type: procedure
+domain: business-analysis
+subdomain: ba-foundations-and-elicitation
+one_screen: >-
+  Elicitation is gathering information on what stakeholders need.  Techniques
+  include structured interviews, workshops, observation, document analysis,
+  surveys, and prototyping, chosen based on context and participant
+  availability.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Bridging the Gap – “5 Best Requirement Elicitation Techniques”
+      (interviews, observation, etc.)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Bridging the Gap – Eliciting from Busy Stakeholders (importance of agenda,
+      homework)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Requirements elicitation is the process of discovering and collecting requirements from stakeholders. Common techniques:  
+
+- **Interviews:**  One-on-one meetings with SMEs or users to dig into specific needs. Structured interviews (with a prepared agenda and questions) are most common for detailed requirements.  
+- **Workshops/JAD sessions:** Facilitated group sessions where stakeholders discuss processes or brainstorm solutions. Good for aligning different groups.  
+- **Observation:** Watch users perform their real tasks (e.g. via screen-share or on-site). This uncovers implicit knowledge (like workarounds) that users might not mention.  
+- **Document analysis:** Review existing documents, process flows, reports or contracts. This can elicit requirements without taking too much stakeholder time.  
+- **Surveys/questionnaires:** Useful when many stakeholders are involved or geographically distributed. A survey can quickly gather input (quantitative or qualitative) from a broad group.  
+- **Prototyping or demos:** Using mock-ups or existing systems to elicit feedback. Stakeholders react to a design, refining requirements.  
+
+Each technique suits different situations. For example, if requirements are unclear and stakeholders are decentralized, a workshop may help align everyone. If SMEs are few but busy, thorough interviews with prepared questions are best. Observing users can catch missing steps in processes.  The BA should mix and match techniques as needed, rather than relying on one method.
+
+<Rule label="PERMANENT RULE">
+Select elicitation methods that fit the situation. Always prepare thoroughly (set agendas, define questions). Use multiple techniques for cross-checking: e.g. interview a user and verify by process observation.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Relying on a single method in isolation. For example, skipping document review and inundating busy stakeholders with questions they already answered in existing documentation, or doing only interviews and missing contradictory data in systems.
+</Trap>
+
+<NeverConfuse>
+**Interview** vs **Workshop**:  
+An *Interview* is a one-on-one or small-group discussion for in-depth detail; a *Workshop* is a facilitated group meeting to reach consensus or brainstorm. They both gather input but are different formats and scopes.
+</NeverConfuse>
+
+<Recall
+  q="What elicitation technique is best when you have many remote users?"
+  a="Surveys or questionnaires – they gather broad input asynchronously."
+/>
+
+<Recall
+  q="When is observation useful?"
+  a="When you need to see how work actually happens (especially for undocumented processes), since users can’t tell you everything."
+/>

@@ -1,0 +1,57 @@
+---
+id: BA-10
+title: Functional Specifications vs Business Requirements
+type: concept
+domain: business-analysis
+subdomain: brd-functional-specs-and-user-stories
+one_screen: >-
+  **Business requirements** state *what* is needed, while **functional
+  specifications** describe *how* the system will meet those needs.  A business
+  requirement is high-level (e.g. “produce regulatory report X”), whereas a
+  functional spec details the software logic, screens, or data elements to
+  implement it. The BRD avoids technical detail.
+prerequisites:
+  - BA-09
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Monday.com – “no excessive technical detail” in BRD template
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Once the business requirements are agreed, the next step is often a detailed functional specification (or functional requirements document). In the functional spec, analysts or developers spell out how each business need will be met technically: database fields, algorithms, screen designs, API calls, etc.  For example, a business requirement might be “notify managers of high-risk trades.” The functional spec would describe the notification module, threshold parameters, and user interface.
+
+In practice, keep these separate: the BA focuses on business needs, while solution designers write the functional spec. The BRD should remain at a business level “without excessive technical detail”. Any technical content needed for implementation goes into the functional specification.
+
+<Rule label="PERMANENT RULE">
+Business requirements (in the BRD) and functional specifications are distinct.  The BRD should capture *what and why*. Details of *how* to meet those requirements (logic, UIs, data formats) belong in the functional spec after the BRD is approved.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Allowing design to creep into the BRD or holding back needed functional detail. For instance, adding a database table definition to the BRD is mixing layers.
+</Trap>
+
+<NeverConfuse a="Business Requirement" b="Functional Specification">
+**Business Requirement** — a high-level need or rule that the solution must satisfy (e.g., “report X must include all customers over 60 days delinquent”).  
+---  
+**Functional Specification** — the technical design documenting how the system will achieve that requirement (e.g., database queries, user interface fields, business logic).  
+
+They get mixed up if a BA starts writing implementation detail in the BRD.
+</NeverConfuse>
+
+<Recall
+  q="What goes into a functional spec that doesn’t belong in a BRD?"
+  a="Technical details like data field mappings, calculations, UAT scripts – things that implement the requirement."
+/>
+
+<Recall
+  q="Can one document be both the BRD and the functional spec?"
+  a="No. The BRD states needs (no tech detail); the functional spec provides solution details."
+/>

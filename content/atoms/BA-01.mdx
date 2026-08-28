@@ -1,0 +1,62 @@
+---
+id: BA-01
+title: Role of the Business Analyst (vs Product/Project Manager)
+type: concept
+domain: business-analysis
+subdomain: ba-foundations-and-elicitation
+one_screen: >-
+  A BA in a bank translates business needs into requirements, focusing on *what*
+  and *why*, unlike a product manager (who defines product strategy and
+  features) or a project manager (who plans the *how* and *when* of delivery).
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: Harvard Business Review (via Medium) – role distinctions
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: ICS Learn – BA vs PM (“what/why” vs “how/when”)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Business Analysts (BAs) gather business requirements and ensure that solutions address true business needs.  They act as the liaison between business stakeholders and technical teams.  BAs **do not** own product strategy or delivery schedules.  A *Product Manager* (or Product Owner) is outward-facing – they define the product vision, customer needs, and high-level features.  A *Project Manager* is responsible for planning, coordinating, and tracking the project timeline, budget, and resources.  In contrast, the BA identifies *what* must be done (the requirements) and *why* (the business objective), but generally not *how* to build it or *when* to schedule tasks.  
+
+For example, if a regulator mandates a new report, the Product Manager ensures the business values it and fits into the roadmap, the Project Manager schedules the implementation, and the BA defines the report’s data requirements and rules.  The BA does **not** decide how the report is coded or which team builds it, nor do they own the release date – those are the project manager’s concerns.  
+
+&lt;Flow&gt;
++-----------------+        +----------------------+        +----------------+
+|  Product Owner  | -----&amp;gt; |   Business Analyst   | -----&amp;gt; | Development Team|
++-----------------+ vision | (defines requirements) | spec  +----------------+
+                          +----------------------+
+&lt;/Flow&gt;
+
+<Rule label="PERMANENT RULE">
+A BA defines *what* needs to be done and *why*, but does **not** dictate the *how* (that’s the domain of solution architects or developers) or *when* (that’s the project manager’s schedule).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Confusing the BA role with the project or product manager role. For instance, asking the BA to manage the project budget or delivery schedule, or to own product strategy, leads to failure. The BA must resist the urge to become a mini–project manager.
+</Trap>
+
+<NeverConfuse a="Product Manager" b="Project Manager">
+**Product Manager** — owns the product vision, market needs, and feature roadmap (external focus).  
+---  
+**Project Manager** — owns the project plan, schedule, and budget (execution focus).
+</NeverConfuse>
+
+<Recall
+  q="What do BAs focus on vs project managers?"
+  a="BAs document *what* is needed and *why* (requirements), while PMs coordinate *how* and *when* it will be delivered."
+/>
+
+<Recall
+  q="Who defines regulatory requirements vs who schedules their implementation?"
+  a="The BA documents the regulatory *requirements* in business terms; the project manager schedules the implementation tasks."
+/>

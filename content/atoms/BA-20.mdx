@@ -1,0 +1,57 @@
+---
+id: BA-20
+title: Waterfall vs Agile in Banking
+type: concept
+domain: business-analysis
+subdomain: project-delivery-and-scope-governance
+one_screen: >-
+  Waterfall (stage-gate) and Agile (iterative) are both used in banks. 
+  Regulatory changes often lean waterfall: fixed scope and deadlines drive
+  sequential phases (requirements→design→build→test). Agile is better for
+  evolving requirements, but must be adapted for compliance needs.
+prerequisites:
+  - BA-08
+  - BA-09
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Ramki Ravulapalli – “Banks deal with regulatory initiatives by setting up
+      Waterfall style... finalise requirements, then design, then build and
+      test”
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Many banks use waterfall for compliance projects because regulators expect detailed plans and sign-offs. As one analyst notes, banks “generally set up regulatory projects in a sequential manner—finalize requirements, then design, then build, then test”. This ensures all regulatory criteria are identified and reviewed upfront. However, waterfall can struggle if requirements change mid-project (which happens frequently). Agile frameworks allow incremental development and frequent feedback, which can help manage changes. In reality, banks often use hybrids: they may scope and plan a regulatory change in detail (waterfall style) but develop components iteratively, or run multiple agile sprints for low-risk modules.  
+
+If using Agile, the BA still needs to document and get approval for requirements. Sprints will produce user stories, but the overall scope cannot drift beyond what’s compliant. Regulators may allow iterative delivery internally, but they expect evidence that all parts of the regulation were handled. For a fixed regulatory date, waterfall gating provides clear go/no-go points (though it risks corner-cutting under pressure). Agile’s visibility (working demos) can reassure stakeholders, but BAs must reconcile it with the formal change control needed.
+
+<Rule label="PERMANENT RULE">
+Choose methodology based on project nature. Regulatory changes usually require upfront planning and documentation, so use waterfall or a controlled hybrid. If adopting Agile elements, ensure deliverables and approvals still meet compliance scrutiny.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Attempting a pure agile approach for a fixed-scope regulatory program without adapting (e.g. without documentation or formal sign-off). Conversely, ignoring agile techniques entirely can lead to last-minute rework.
+</Trap>
+
+<NeverConfuse>
+**Waterfall** vs **Agile**:  
+*Waterfall* is sequential, with completed phases (requirements→design→build→test). *Agile* is iterative and incremental, allowing requirements to evolve. They both aim to deliver systems, but differ in process: Agile values working software over docs, whereas Waterfall emphasizes planning and documentation. In banking, the line blurs, but they remain distinct approaches.
+</NeverConfuse>
+
+<Recall
+  q="Why might a bank use waterfall for a regulatory project?"
+  a="Because of fixed deadlines and the need to lock down requirements and design for compliance."
+/>
+
+<Recall
+  q="When is agile more suitable?"
+  a="When requirements are unclear or evolving, allowing flexibility. Regulatory projects with evolving rules can benefit from agile iterations."
+/>

@@ -1,0 +1,71 @@
+---
+id: BA-06
+title: Process Mapping (As-Is vs To-Be)
+type: mechanism
+domain: business-analysis
+subdomain: ba-foundations-and-elicitation
+one_screen: >-
+  Process mapping diagrams the workflow of a process.  Mapping the current
+  “as-is” process clarifies existing steps and bottlenecks; the “to-be” map lays
+  out the improved future workflow.  Visualizing both highlights where changes
+  are needed.
+prerequisites: []
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      IBM Blueprint (IBM KB) – “A process map outlines steps... reveals areas of
+      improvement”
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: IBM – definition of process mapping for clarity
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+A **process map** is a visual diagram of the steps in a business process.  Common forms include flowcharts or swimlane diagrams.  To create one, identify all activities, decisions, and participants.  An *As-Is* map documents how things currently work; it may reveal inefficiencies, handoffs or delays.  For example, an As-Is map of loan approval might show multiple manual checks.  A *To-Be* map sketches the proposed future process, reflecting improvements (automation, parallel steps, elimination of waste).  For instance, automating checks in the loan process would be shown as a direct flow to approval. 
+
+&lt;Flow&gt;
++-----------+       +------------+       +-----------+
+| Customer  | ---&amp;gt;  | Check      | ---&amp;gt;  | End       |
+| Request   |       | manually   |       |           |
++-----------+       +------------+       +-----------+
+
++-----------+       +------------+       +-----------+
+| Customer  | ---&amp;gt;  | Auto-      | ---&amp;gt;  | End       |
+| Request   |       | check      |       |           |
++-----------+       +------------+       +-----------+
+&lt;/Flow&gt;
+
+In practice, start with an As-Is map to ensure everyone agrees on the current process.  Then discuss the To-Be process: ask how tasks can be done more efficiently or with fewer steps.  Document both maps and annotate issues.  The difference between As-Is and To-Be shows exactly what will change.
+
+<Rule label="PERMANENT RULE">
+Always create an accurate As-Is process map first, then derive the To-Be. The As-Is baseline is needed to measure improvement and avoid missing steps.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Jumping straight to designing the new process without fully mapping the As-Is. This often leads to overlooking current constraints or hidden steps, resulting in gaps in the solution.
+</Trap>
+
+<NeverConfuse a="As-Is Process" b="To-Be Process">
+**As-Is Process** — the current state workflow (often flawed or manual).  
+---  
+**To-Be Process** — the future, improved workflow.  
+They are frequently mixed up if one tries to innovate without understanding the current process.
+</NeverConfuse>
+
+<Recall
+  q="Why map the current (“As-Is”) process?"
+  a="To understand all existing steps and identify inefficiencies before redesigning."
+/>
+
+<Recall
+  q="What does a “To-Be” process map show?"
+  a="The redesigned, improved process after changes, highlighting the differences needed from the As-Is map."
+/>

@@ -1,0 +1,54 @@
+---
+id: BA-19
+title: Post-Implementation Review and Benefits Realisation
+type: procedure
+domain: business-analysis
+subdomain: testing-uat-and-cutover
+one_screen: >-
+  After go-live, conduct a formal review comparing actual outcomes to planned
+  objectives. Capture lessons learned and track whether expected benefits (cost
+  savings, efficiency gains, compliance) are realized.
+prerequisites:
+  - BA-18
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: >-
+      Project Delivery (UK government) – benefits management and review
+      principles (general reference)
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 16_BA_business_analysis.md
+---
+Once the system is live and stable, a **Post-Implementation Review (PIR)** evaluates success. The BA should gather the project team and business stakeholders to review metrics and outcomes. Did the system meet the business objectives outlined in the BRD? For example, if the goal was a 50% reduction in report prep time, measure the actual improvement. Regulatory objectives (e.g. no compliance violations) must also be confirmed.
+
+Part of the PIR is **Benefits Realisation**: compare the business case predictions (e.g. lower costs, better risk metrics) to reality. If benefits fall short, identify why. Lessons from the review should feed back into process improvements for future changes.  A formal PIR also provides closure: documenting success and issues demonstrates to auditors and leadership that the project delivered as intended (or what corrective actions are taken).
+
+<Rule label="PERMANENT RULE">
+Always schedule a post-launch review. It should include all key stakeholders, revisit requirements and scope, and check actual performance and risk metrics against targets.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Skipping the review or only doing technical validation. Don’t forget to measure business impact. For example, installing a new compliance module but never checking if compliance reporting is actually more accurate counts as incomplete implementation.
+</Trap>
+
+<NeverConfuse>
+**Post-Implementation Review** vs **Project Closure**:  
+A *PIR* examines project outcomes and lessons. *Project Closure* is the administrative final step (sign-offs, documentation archive). Both are needed, but PIR focuses on evaluation and benefits tracking.
+</NeverConfuse>
+
+<Recall
+  q="What is a key purpose of a post-implementation review?"
+  a="To verify that the project’s objectives were met and to capture lessons learned."
+/>
+
+<Recall
+  q="What is benefits realisation?"
+  a="Tracking and confirming that the expected business benefits (e.g. efficiency, risk reduction) actually occurred after implementation."
+/>
