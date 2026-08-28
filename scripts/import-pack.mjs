@@ -442,6 +442,15 @@ function inferSubdomain(atomId) {
     return "reporting-and-delivery";
   }
 
+  if (prefix === "IND") {
+    if (num <= 5) return "regulatory-structure";
+    if (num <= 10) return "iracp-npa-norms";
+    if (num <= 12) return "priority-sector";
+    if (num <= 15) return "digital-lending";
+    if (num <= 20) return "co-lending-and-data-tech";
+    return "enforcement-and-conduct";
+  }
+
   return "unsorted";
 }
 

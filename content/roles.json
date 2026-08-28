@@ -253,12 +253,12 @@
       "product manager"
     ],
     "atoms": [
-      { "id": "CR-06", "weight": 3 },
+      { "id": "IND-13", "weight": 3 },
+      { "id": "IND-14", "weight": 3 },
       { "id": "CR-20", "weight": 3 },
-      { "id": "CR-22", "weight": 3 },
-      { "id": "IND-01", "weight": 2 },
-      { "id": "CR-02", "weight": 2 },
-      { "id": "FND-02", "weight": 1 }
+      { "id": "IND-18", "weight": 2 },
+      { "id": "IND-20", "weight": 2 },
+      { "id": "CR-06", "weight": 1 }
     ]
   },
   {
@@ -278,10 +278,10 @@
     "atoms": [
       { "id": "CR-02", "weight": 3 },
       { "id": "DAT-21", "weight": 3 },
-      { "id": "CR-03", "weight": 3 },
+      { "id": "IND-16", "weight": 3 },
+      { "id": "IND-17", "weight": 2 },
       { "id": "DAT-09", "weight": 2 },
-      { "id": "DAT-11", "weight": 2 },
-      { "id": "CR-10", "weight": 1 }
+      { "id": "DAT-11", "weight": 1 }
     ]
   }
 ]

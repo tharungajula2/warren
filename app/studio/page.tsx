@@ -94,6 +94,13 @@ export default function StudioPage() {
       if (bodyText.includes("<Formula")) componentsMatched.push("Formula");
 
       const claimCount = (bodyText.match(/\{\/\* UNVERIFIED CLAIM/g) || []).length;
+      const hasKnownError = bodyText.includes("{/* KNOWN ERROR");
+      let knownErrorText = "";
+      if (hasKnownError) {
+        const match = bodyText.match(/\{\/\*\s*(KNOWN ERROR[\s\S]*?)\*\/\}/i);
+        if (match) knownErrorText = match[1].trim();
+      }
+
       const isPersonal = /\b(my|I\s|our project|this project|in my|my team|my role)\b/i.test(bodyText);
 
       // Word count
@@ -121,6 +128,8 @@ export default function StudioPage() {
         componentsMatched,
         isPersonal,
         claimCount,
+        hasKnownError,
+        knownErrorText,
         proposedSubdomain: subSug ? subSug.proposedSubdomain : "unsorted",
         prereqCandidates: prereqSugs.map((s) => s.prereqId),
         score,
@@ -128,8 +137,12 @@ export default function StudioPage() {
       };
     });
 
-  // Sort by score descending then ID
-  draftRows.sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
+  // Sort prioritizing atoms with KNOWN ERROR flagged at the top, then by score descending
+  draftRows.sort((a, b) => {
+    if (a.hasKnownError && !b.hasKnownError) return -1;
+    if (!a.hasKnownError && b.hasKnownError) return 1;
+    return b.score - a.score || a.id.localeCompare(b.id);
+  });
 
   // Domain counts
   const domainCounts = domainTree

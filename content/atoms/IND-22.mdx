@@ -1,0 +1,67 @@
+---
+id: IND-22
+title: Insolvency and Bankruptcy Code (IBC) and DRT
+type: concept
+domain: india-lending
+subdomain: enforcement-and-conduct
+one_screen: >-
+  The Insolvency and Bankruptcy Code (2016) provides a structured process for
+  resolving stressed corporate debts. If lenders collectively decide (typically
+  75% by value) that a default requires legal resolution, they can initiate
+  corporate insolvency. A *Resolution Professional* then manages the company’s
+  affairs, and creditors vote on a revival plan. The IBC has priority over
+  SARFAESI in that once an insolvency petition is admitted, SARFAESI proceedings
+  halt. For personal or small debtors, formal bankruptcy via IBC may not apply;
+  instead, DRTs (for bank debts above a threshold) and debt recovery tribunals
+  handle lower-value cases, including unsecured and smaller claims.
+prerequisites:
+  - IND-21
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Insolvency and Bankruptcy Code, 2016 (Sections on initiation).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'Recovery of Debts Act, 1993 (DRT jurisdiction).'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+Under IBC, any financial creditor (bank, NBFC, or even a supplier if admitted) can initiate proceedings when payment default occurs. A strict timeline (330 days max) forces quick action. Successful resolution under IBC often involves structural changes (equity dilution, takeover by new promoters, etc.). Recoveries under IBC have exceeded SARFAESI recoveries historically because of its collective mechanism. But IBC is mostly for corporate debt. For individual/business borrowers, RBI relies on SARFAESI and DRT (established by RDDBFI Act, 1993) and lok adalats. 
+
+Debt Recovery Tribunals handle all debts of ₹10 lakh and above to banks/financial institutions. They can entertain cases on any credit, secured or not, and can order recovery from a debtor’s assets. There are separate DRTs for circular references from the RBI. The DRT process is formal (like a tribunal court), but faster than regular civil court. DRTs have been strengthened by digital filing and “DRAT” appeals.  
+
+Banks usually prioritize SARFAESI for quick value, then DRT if borrower defends. IBC is the last resort for viable corporates or when persuasion fails. RBI’s provisions require reclassification of accounts when IBC is filed (they become NPA on petition filing). The IBC can wipe out shareholders; in one instance, leading to EMI refinance rather than further lending.
+
+<Rule label="PERMANENT RULE">
+Under IBC, when a corporate borrower defaults, lenders may trigger insolvency proceedings with RBI filing specified asset classification. DRTs handle recovery suits for any loan above ₹10 lakh.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Missing the priority: initiating SARFAESI on a company after IBC has been filed – not allowed, since IBC is a binding multilateral process once admitted. Also, dismissing smaller claims (below 10 lakh) thinking only big debts go to DRTs – DRT jurisdiction starts at ₹10 lakh for banks.
+</Trap>
+
+<NeverConfuse>
+**IBC (Corporate)** — structured insolvency process for companies / FIs (time-bound, collective).  
+**DRT (Debt Recovery)** — tribunal for creditor claims on individuals or businesses (₹10L+), including enforcement of guarantee by guarantors.
+</NeverConfuse>
+
+<Delta j="IN">
+— The IBC is India’s consolidated insolvency law (2016). Countries like the UK/US have different corporate insolvency regimes (Chapter 11, administration, etc.), but the IBC’s speed and creditor primacy are quite distinctive.
+</Delta>
+
+<Recall
+  q="A company defaults on ₹50 cr debt. Can a single banker force it into IBC?"
+  a="If 75% of financial creditors (by value) agree, they can invoke IBC. An RBI-prescribed default notice is needed first."
+/>
+
+<Recall
+  q="What forum can recover a ₹20 lakh loan?"
+  a="Debt Recovery Tribunal – banks can file a recovery application in DRT for any loan ₹10 lakh or above."
+/>

@@ -17,6 +17,8 @@ export interface BulkDraftRow {
   prereqCandidates: string[];
   score: number;
   importSource: string;
+  hasKnownError?: boolean;
+  knownErrorText?: string;
 }
 
 interface StudioBulkTableProps {
@@ -152,7 +154,14 @@ export function StudioBulkTable({ rows }: StudioBulkTableProps) {
                     {r.id}
                   </td>
                   <td className="p-3 font-sans text-xs text-[#E6E8EB] max-w-[260px]">
-                    <div className="font-semibold line-clamp-1">{r.title}</div>
+                    <div className="font-semibold line-clamp-1 flex items-center gap-1.5">
+                      <span>{r.title}</span>
+                      {r.hasKnownError && (
+                        <span className="bg-[#3D1414] text-[#F87171] border border-[#F87171]/40 px-1.5 py-0.2 text-[9px] font-mono font-bold rounded-[3px] shrink-0" title={r.knownErrorText || "KNOWN ERROR FLAGGED"}>
+                          ⚠️ KNOWN ERROR
+                        </span>
+                      )}
+                    </div>
                     <div className="text-[10px] text-[#6B747E] truncate font-mono" title={r.importSource}>
                       {r.importSource}
                     </div>

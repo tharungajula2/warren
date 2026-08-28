@@ -1,0 +1,72 @@
+---
+id: IND-06
+title: Asset Classification and NPA Norms (IRACP)
+type: concept
+domain: india-lending
+subdomain: iracp-npa-norms
+one_screen: >-
+  Banks must classify each loan into Standard, Sub-standard, Doubtful or Loss
+  assets based on repayment delays. A loan becomes a Non-Performing Asset (NPA)
+  when interest/principal is overdue for 90 days.  The Income Recognition, Asset
+  Classification and Provisioning (IRACP) norms require daily monitoring
+  (stamping) of accounts, with more provisions for higher-risk categories.
+prerequisites:
+  - IND-01
+  - IND-03
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: RBI Master Direction on IRAC (updated 2024).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: RBI Notification on External Benchmark Lending (mentions 90-day rule).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+Under RBI’s IRACP rules, a performing loan is **Standard** if not exhibiting any default and is repayable according to agreement. If a loan shows “signs of weakness” (like late payments but repaying) it may be classified as a **Special Mention Account** (SMA) first (see next atom) before becoming NPA. Once overdue beyond thresholds, it is classified as NPA with subcategories:
+- **Sub-standard**: NPA &lt; 12 months, or assets showing incipient credit weakness.
+- **Doubtful**: NPA ≥ 12 months, significant uncertainty about recovery (e.g. liquidation value &lt; book value).
+- **Loss**: NPA essentially uncollectible and fully written off (may be identified on a continuous basis and written off).
+
+For practical purposes, RBI mandates the *90-day rule*: any loan (principal or interest) unpaid for more than 90 days is an NPA. In many exposures (e.g. credit cards) RBI requires monthly (or more frequent) couponing into NPA status by 90 days overdue. The classification is updated daily through stamping in loan accounting systems.  
+
+Banks must provide (p ) as per IRACP. Standard assets carry minimal provisions (0.4% or 1% of outstanding depending on secured status). Sub-standard assets require a **minimum 15%** provision (further if unsecured). Doubtful assets require higher provisions (20%–100% depending on how long in the bucket and available security). Loss assets have 100% provision. These provisioning rates and classification criteria are laid down in RBI’s IRACP Master Directions (updated periodically).
+
+<Rule label="PERMANENT RULE">
+A credit exposure is an NPA if interest/principal is overdue for more than 90 days.  Once an asset is NPA, it must be classified as sub-standard, doubtful or loss according to RBI’s IRACP guidelines, and provisioning applied accordingly.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Delaying NPA classification beyond 90 days past due. RBI requires daily stamping; waiting months to mark NPA breaches guidelines.  Also, underestimating required provisioning for substandard and doubtful assets is a common mistake – RBI’s table mandates at least 15% for substandard, with more if unsecured.
+</Trap>
+
+<NeverConfuse a="Standard asset" b="Sub-standard asset">
+**Standard asset** — loan with no signs of default; provisioned at RBI’s base rate (often 0.4% or 1%).  
+---  
+**Sub-standard asset** — NPA overdue &lt;1 year; shows weakness; provision ≥15%.  
+---  
+**Doubtful asset** — NPA overdue ≥1 year; high uncertainty; provision much higher (up to 100%).  
+---  
+**Loss asset** — uncollectible; fully provided.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s 90-day NPA rule and IRAC categories are India’s regulatory norm; UK/US use 90 days too, but account aging and provisioning differ.
+</Delta>
+
+<Recall
+  q="When does a loan become an NPA in India?"
+  a="If any installment of principal or interest is overdue for more than 90 days (with daily compliance)."
+/>
+
+<Recall
+  q="What is the minimum provisioning for a sub-standard asset?"
+  a="15% of outstanding (higher if unsecured)."
+/>

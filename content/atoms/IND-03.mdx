@@ -1,0 +1,79 @@
+---
+id: IND-03
+title: NBFC Scale-Based Regulation (SBR)
+type: concept
+domain: india-lending
+subdomain: regulatory-structure
+one_screen: >-
+  In 2022–2023, RBI moved to a four-tier, size-and-risk-based regulatory
+  framework for NBFCs. The framework classifies NBFCs into Base, Middle, Upper
+  and Top layers. Base-layer NBFCs are the smallest/non-deposit ones (assets <
+  ₹1,000 crore) and fintech entities; middle-layer NBFCs include deposit-taking
+  companies and larger NBFCs (assets ≥ ₹1,000 cr) and critical segments like
+  HFCs, CICs, etc.; Upper and Top layers (ideally empty) are for systemically
+  important NBFCs subject to enhanced scrutiny.
+prerequisites:
+  - IND-02
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 1
+sources:
+  - label: RBI (2022) – Master Directions on NBFC – SBR framework.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+Under RBI’s **Scale-Based Regulations (SBR)**, NBFCs are grouped by size and activity. *Base Layer*: mainly non-deposit NBFCs with assets below ₹1,000 crore, plus all NBFC-P2P, NBFC-AA, NOFHCs, etc.. These are subject to simpler rules. *Middle Layer*: all deposit-taking NBFCs and non-deposit NBFCs with assets ≥ ₹1,000 cr; also includes dedicated entities like SPDs, IDF-NBFC, CICs, HFCs, NBFC-IFCs. They face intermediate norms. *Upper Layer*: systemically important NBFCs identified yearly (no fixed list), facing the strictest capital and governance requirements. *Top Layer* is a potential category for any NBFC whose risk (possibly identified from the Upper layer) becomes a serious systemic concern; it is empty at inception. In essence, this regime applies graduated oversight: the smaller/lower-risk NBFCs in the Base Layer follow lighter prudential norms, while large NBFCs or critical ones are tightly regulated.  
+
+The SBR came into effect October 2022 (with legal backing under various Acts). It replaced the older NBFC-ND-SI (systemic) vs NBFC-ND (non-systemic) classification. Now, for example, an HFC or CIC automatically goes into the Middle or Upper Layer (not Base).  A group consolidation rule (from Oct 2022) ensures related NBFCs’ assets are summed to decide their layer. This means RBI can tailor capital, provisioning, group exposure rules by layer.  
+
+```
+   +--------------------------------------+
+   |   NBFC Scale-Based Regulation (SBR)  |
+   +--------------------------------------+
+              |
+   +----------+----------+----------+
+   |                     |          |
+   v                     v          v
+Base Layer        Middle Layer    Upper/Top
+ (NBFCs-BL)      (NBFCs-ML/UL)    (NBFCs-UL/TL)
+ - ND NBFCs       - Deposit         - Systemically
+   &lt; ₹1000cr        NBFCs            important NBFCs
+ - P2P, AA, NOFHC  - ND ≥₹1000cr     (identified by RBI)
+ - Type-I NBFC     - HFC, CIC, IFC, SPD, IDF
+```
+
+<Rule label="PERMANENT RULE">
+All NBFCs in India must register with RBI (with minimum capital), but RBI now groups them by scale: smaller NBFCs (Base Layer) have lighter rules, while larger or deposit-taking NBFCs (Middle/Upper Layer) have stricter norms.
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Ignoring layer classification: applying the same rules to all NBFCs.  For example, assuming an NBFC with ₹500 cr assets is treated like a ₹5,000 cr company is wrong – RBI’s SBR buckets mean they face different requirements.
+</Trap>
+
+<NeverConfuse a="NBFC–Base Layer (NBFC-BL)" b="NBFC–Middle/Upper Layer (NBFC-ML/UL)">
+**NBFC–Base Layer (NBFC-BL)** — NBFCs with asset size &lt; ₹1,000 crore (and fintech NBFCs like P2P, AA, etc.); subject to least stringent norms.  
+---  
+**NBFC–Middle/Upper Layer (NBFC-ML/UL)** — larger or deposit-taking NBFCs (e.g. NBFC-D, HFC, CIC, etc.) with ₹1,000cr+; subject to higher capital and prudential standards.
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s SBR framework is India-specific. It integrates HFCs and others into NBFC layer definitions.
+</Delta>
+
+**No delta.** (No exact counterpart in UK/EU/US; other countries classify banks differently but India’s four-layer NBFC regime is unique.)
+
+<Recall
+  q="Into which layer does an NBFC with ₹800 crore of assets and no public funds fall?"
+  a="Base Layer (NBFC-BL) – non-deposit NBFC with assets under ₹1,000cr."
+/>
+
+<Recall
+  q="Which layer includes Housing Finance Companies (HFCs) after 2022?"
+  a="Middle Layer (NBFCs-ML) – RBI mandated HFCs be in ML or above, not in Base."
+/>

@@ -40,8 +40,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 390.6,
-      "initialY": 54.2
+      "initialX": 414.8,
+      "initialY": 31.9
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -80,8 +80,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 439.7,
-      "initialY": 36.2
+      "initialX": 441.6,
+      "initialY": -29.7
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -121,8 +121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 401.4,
-      "initialY": -5.4
+      "initialX": 380.4,
+      "initialY": -26
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -161,8 +161,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 354.7,
-      "initialY": -19.7
+      "initialX": 323.6,
+      "initialY": -29.4
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -201,8 +201,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 315.1,
-      "initialY": 9.4
+      "initialX": 373.8,
+      "initialY": -61.8
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -249,8 +249,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 357.3,
-      "initialY": -69.4
+      "initialX": 334.2,
+      "initialY": 35.4
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -297,8 +297,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 306,
-      "initialY": -29.2
+      "initialX": 296,
+      "initialY": 11
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -346,8 +346,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 327.9,
-      "initialY": 24.8
+      "initialX": 358.8,
+      "initialY": 12.3
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -386,8 +386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 339.4,
-      "initialY": 69.8
+      "initialX": 374.8,
+      "initialY": 72.3
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -431,8 +431,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 298.6,
-      "initialY": 5.1
+      "initialX": 336.1,
+      "initialY": 11.7
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -477,8 +477,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 359.7,
-      "initialY": 25.9
+      "initialX": 324.7,
+      "initialY": 54.8
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -526,8 +526,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 406.8,
-      "initialY": 71.4
+      "initialX": 378.8,
+      "initialY": 22.5
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -574,8 +574,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 443.3,
-      "initialY": 9.8
+      "initialX": 406.9,
+      "initialY": 75.7
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -622,8 +622,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 383.2,
-      "initialY": -27.1
+      "initialX": 359,
+      "initialY": 42.3
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -665,8 +665,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 441.6,
-      "initialY": -25.6
+      "initialX": 385.5,
+      "initialY": -6.5
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -715,8 +715,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 407,
-      "initialY": 20.3
+      "initialX": 438.2,
+      "initialY": 26.7
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -759,8 +759,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 423,
-      "initialY": -53
+      "initialX": 353.3,
+      "initialY": 83.9
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -799,8 +799,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 361.5,
-      "initialY": 80
+      "initialX": 438.1,
+      "initialY": -5.6
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -839,8 +839,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 416.1,
-      "initialY": 50
+      "initialX": 406.4,
+      "initialY": -60.7
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -879,8 +879,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 425.5,
-      "initialY": -7.9
+      "initialX": 339.1,
+      "initialY": -52.5
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -920,8 +920,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 351.6,
-      "initialY": -37.9
+      "initialX": 300.7,
+      "initialY": -11.7
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -960,8 +960,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 411.3,
-      "initialY": -30.8
+      "initialX": 357.3,
+      "initialY": -34.6
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1000,8 +1000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 378.3,
-      "initialY": -60.3
+      "initialX": 412.1,
+      "initialY": -2.5
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1040,8 +1040,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 324.1,
-      "initialY": -48.6
+      "initialX": 344.2,
+      "initialY": -12.9
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1080,8 +1080,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 327.9,
-      "initialY": 53.9
+      "initialX": 396.1,
+      "initialY": 15.9
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -1123,8 +1123,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 362.4,
-      "initialY": 6.1
+      "initialX": 418.6,
+      "initialY": -34.4
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -1175,8 +1175,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 364.8,
-      "initialY": 51.1
+      "initialX": 425.8,
+      "initialY": 65.6
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -1230,8 +1230,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 381.2,
-      "initialY": 25
+      "initialX": 394.7,
+      "initialY": -39.1
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -1283,8 +1283,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 327.9,
-      "initialY": -18.1
+      "initialX": 392.8,
+      "initialY": 56.5
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -1360,8 +1360,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 304,
-      "initialY": 30.2
+      "initialX": 449.4,
+      "initialY": 11.9
     },
     "CR-01": {
       "id": "CR-01",
@@ -1400,8 +1400,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 111.8,
-      "initialY": 240.8
+      "initialX": 145,
+      "initialY": 247.6
     },
     "CR-02": {
       "id": "CR-02",
@@ -1440,8 +1440,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 84.5,
-      "initialY": 184
+      "initialX": 98.4,
+      "initialY": 214.5
     },
     "CR-03": {
       "id": "CR-03",
@@ -1486,8 +1486,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CR-03.mdx",
-      "initialX": 58.3,
-      "initialY": 149.2
+      "initialX": 72.3,
+      "initialY": 175.9
     },
     "CR-04": {
       "id": "CR-04",
@@ -1540,8 +1540,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 89.6,
-      "initialY": 143.4
+      "initialX": 98.4,
+      "initialY": 159
     },
     "CR-05": {
       "id": "CR-05",
@@ -1594,8 +1594,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CR-05.mdx",
-      "initialX": 107.6,
-      "initialY": 153
+      "initialX": 115.3,
+      "initialY": 167.7
     },
     "CR-06": {
       "id": "CR-06",
@@ -1643,8 +1643,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 186.7,
-      "initialY": 238.3
+      "initialX": 206.5,
+      "initialY": 244
     },
     "CR-07": {
       "id": "CR-07",
@@ -1697,8 +1697,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-07.mdx",
-      "initialX": 223.9,
-      "initialY": 240.1
+      "initialX": 244,
+      "initialY": 214.6
     },
     "CR-08": {
       "id": "CR-08",
@@ -1746,8 +1746,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 162.4,
-      "initialY": 199.2
+      "initialX": 180.8,
+      "initialY": 192
     },
     "CR-09": {
       "id": "CR-09",
@@ -1796,8 +1796,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-09.mdx",
-      "initialX": 123.8,
-      "initialY": 198.4
+      "initialX": 143.2,
+      "initialY": 204.5
     },
     "CR-10": {
       "id": "CR-10",
@@ -1846,8 +1846,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-10.mdx",
-      "initialX": -16.2,
-      "initialY": 89.9
+      "initialX": -12.1,
+      "initialY": 138.8
     },
     "CR-11": {
       "id": "CR-11",
@@ -1901,8 +1901,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": 12,
-      "initialY": 95.8
+      "initialX": 14.5,
+      "initialY": 136.5
     },
     "CR-12": {
       "id": "CR-12",
@@ -1941,8 +1941,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-12.mdx",
-      "initialX": 83.6,
-      "initialY": 200.8
+      "initialX": 115.4,
+      "initialY": 207.9
     },
     "CR-13": {
       "id": "CR-13",
@@ -1981,8 +1981,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-13.mdx",
-      "initialX": 115.9,
-      "initialY": 174.8
+      "initialX": 137.8,
+      "initialY": 168.2
     },
     "CR-14": {
       "id": "CR-14",
@@ -2021,8 +2021,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-14.mdx",
-      "initialX": 58.8,
-      "initialY": 171.5
+      "initialX": 78.9,
+      "initialY": 193.5
     },
     "CR-15": {
       "id": "CR-15",
@@ -2062,8 +2062,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 124.3,
-      "initialY": 218.3
+      "initialX": 154.5,
+      "initialY": 219.4
     },
     "CR-16": {
       "id": "CR-16",
@@ -2103,8 +2103,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CR-16.mdx",
-      "initialX": -35.5,
-      "initialY": 92.1
+      "initialX": -28.1,
+      "initialY": 148.4
     },
     "CR-17": {
       "id": "CR-17",
@@ -2145,8 +2145,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-17.mdx",
-      "initialX": -11.7,
-      "initialY": 124.8
+      "initialX": 2.6,
+      "initialY": 169.1
     },
     "CR-18": {
       "id": "CR-18",
@@ -2185,8 +2185,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-18.mdx",
-      "initialX": 134.8,
-      "initialY": 262.9
+      "initialX": 170,
+      "initialY": 267.7
     },
     "CR-19": {
       "id": "CR-19",
@@ -2227,8 +2227,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CR-19.mdx",
-      "initialX": 185,
-      "initialY": 255.9
+      "initialX": 205,
+      "initialY": 271
     },
     "CR-20": {
       "id": "CR-20",
@@ -2268,8 +2268,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-20.mdx",
-      "initialX": 196.6,
-      "initialY": 307.4
+      "initialX": 255,
+      "initialY": 249.4
     },
     "CR-21": {
       "id": "CR-21",
@@ -2310,8 +2310,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-21.mdx",
-      "initialX": 162.9,
-      "initialY": 286.8
+      "initialX": 229.8,
+      "initialY": 231.5
     },
     "CR-22": {
       "id": "CR-22",
@@ -2352,8 +2352,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 179.7,
-      "initialY": 274.8
+      "initialX": 218.5,
+      "initialY": 284.3
     },
     "CR-23": {
       "id": "CR-23",
@@ -2389,8 +2389,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "CR-23.mdx",
-      "initialX": 247.3,
-      "initialY": 297.8
+      "initialX": 278.5,
+      "initialY": 291.1
     },
     "CR-24": {
       "id": "CR-24",
@@ -2444,8 +2444,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-24.mdx",
-      "initialX": 185.4,
-      "initialY": 218
+      "initialX": 206.4,
+      "initialY": 213.4
     },
     "CR-25": {
       "id": "CR-25",
@@ -2486,8 +2486,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-25.mdx",
-      "initialX": 203,
-      "initialY": 279.2
+      "initialX": 237,
+      "initialY": 268.1
     },
     "CR-26": {
       "id": "CR-26",
@@ -2539,8 +2539,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 147.5,
-      "initialY": 234
+      "initialX": 174,
+      "initialY": 234.8
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -2577,8 +2577,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -42.1,
-      "initialY": 318.7
+      "initialX": -45.6,
+      "initialY": 408.3
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -2612,8 +2612,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -77,
-      "initialY": 341
+      "initialX": -45.6,
+      "initialY": 350.9
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -2657,8 +2657,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -94.2,
-      "initialY": 399.3
+      "initialX": -22,
+      "initialY": 404.1
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -2697,8 +2697,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -123,
-      "initialY": 340.4
+      "initialX": -3.5,
+      "initialY": 452.5
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -2732,8 +2732,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -56.8,
-      "initialY": 429.6
+      "initialX": -68.8,
+      "initialY": 414.7
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -2772,8 +2772,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": -148.9,
-      "initialY": 394.9
+      "initialX": 38.9,
+      "initialY": 391.2
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -2812,8 +2812,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -97.7,
-      "initialY": 426.3
+      "initialX": -0.3,
+      "initialY": 425.1
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -2847,8 +2847,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": -43.1,
-      "initialY": 412
+      "initialX": 52.2,
+      "initialY": 372.9
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -2882,8 +2882,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -28.3,
-      "initialY": 357.2
+      "initialX": 17.5,
+      "initialY": 411
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -2917,8 +2917,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -71,
-      "initialY": 399.5
+      "initialX": -33.7,
+      "initialY": 375.4
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -2952,8 +2952,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": -117.5,
-      "initialY": 367.9
+      "initialX": 11.2,
+      "initialY": 340.2
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -2987,8 +2987,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -133.5,
-      "initialY": 381.8
+      "initialX": -31.4,
+      "initialY": 434.6
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -3022,8 +3022,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -98.6,
-      "initialY": 340.5
+      "initialX": -59.8,
+      "initialY": 379.3
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -3057,8 +3057,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -118.8,
-      "initialY": 404.2
+      "initialX": -27.8,
+      "initialY": 332.3
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -3097,8 +3097,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -144.7,
-      "initialY": 349.1
+      "initialX": -2.8,
+      "initialY": 370.6
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -3132,8 +3132,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -110.7,
-      "initialY": 314.3
+      "initialX": -4.7,
+      "initialY": 393.6
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -3167,8 +3167,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": -92.4,
-      "initialY": 372.8
+      "initialX": 47.4,
+      "initialY": 423.5
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -3202,8 +3202,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": -39.8,
-      "initialY": 390.6
+      "initialX": 19.9,
+      "initialY": 373
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -3242,8 +3242,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -70,
-      "initialY": 362.8
+      "initialX": -5.4,
+      "initialY": 322.8
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -3277,8 +3277,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": -84.4,
-      "initialY": 307.8
+      "initialX": 37.8,
+      "initialY": 350.9
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -3312,8 +3312,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -48.8,
-      "initialY": 346.1
+      "initialX": 64.4,
+      "initialY": 401.2
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -3365,8 +3365,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": -19.4,
-      "initialY": 388.4
+      "initialX": 25.8,
+      "initialY": 441.7
     },
     "FND-01": {
       "id": "FND-01",
@@ -3403,8 +3403,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -270.6,
-      "initialY": 128.4
+      "initialX": -252.6,
+      "initialY": 216.1
     },
     "FND-02": {
       "id": "FND-02",
@@ -3443,8 +3443,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -301.5,
-      "initialY": 103.6
+      "initialX": -222.4,
+      "initialY": 213.1
     },
     "FND-03": {
       "id": "FND-03",
@@ -3489,8 +3489,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -297.2,
-      "initialY": 183.3
+      "initialX": -221.3,
+      "initialY": 274.3
     },
     "FND-04": {
       "id": "FND-04",
@@ -3530,8 +3530,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -333.9,
-      "initialY": 166.3
+      "initialX": -275.7,
+      "initialY": 274
     },
     "FND-05": {
       "id": "FND-05",
@@ -3576,8 +3576,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -323.5,
-      "initialY": 149.1
+      "initialX": -246.8,
+      "initialY": 283.1
     },
     "FND-06": {
       "id": "FND-06",
@@ -3640,8 +3640,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -340.4,
-      "initialY": 112.7
+      "initialX": -314,
+      "initialY": 230
     },
     "FND-07": {
       "id": "FND-07",
@@ -3686,8 +3686,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -315.3,
-      "initialY": 173.8
+      "initialX": -295.4,
+      "initialY": 242.8
     },
     "FND-08": {
       "id": "FND-08",
@@ -3726,8 +3726,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -348.8,
-      "initialY": 46.1
+      "initialX": -327.4,
+      "initialY": 173.8
     },
     "FND-09": {
       "id": "FND-09",
@@ -3785,8 +3785,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -318.8,
-      "initialY": 51.7
+      "initialX": -298.3,
+      "initialY": 170.7
     },
     "FND-10": {
       "id": "FND-10",
@@ -3838,8 +3838,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -364.7,
-      "initialY": 169.7
+      "initialX": -320.4,
+      "initialY": 298.1
     },
     "FND-11": {
       "id": "FND-11",
@@ -3871,8 +3871,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -390.6,
-      "initialY": 163.2
+      "initialX": -296.6,
+      "initialY": 308
     },
     "FND-12": {
       "id": "FND-12",
@@ -3906,8 +3906,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -324.7,
-      "initialY": 207.6
+      "initialX": -238.5,
+      "initialY": 268.5
     },
     "FND-13": {
       "id": "FND-13",
@@ -3942,8 +3942,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -373.7,
-      "initialY": 200.1
+      "initialX": -278.7,
+      "initialY": 245
     },
     "FND-14": {
       "id": "FND-14",
@@ -3997,8 +3997,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -373,
-      "initialY": 113.7
+      "initialX": -332.8,
+      "initialY": 242.7
     },
     "FND-15": {
       "id": "FND-15",
@@ -4032,8 +4032,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -189,
-      "initialY": 180
+      "initialX": -139.9,
+      "initialY": 255.2
     },
     "FND-16": {
       "id": "FND-16",
@@ -4065,8 +4065,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -349,
-      "initialY": 192.6
+      "initialX": -299.1,
+      "initialY": 287.7
     },
     "FND-17": {
       "id": "FND-17",
@@ -4105,8 +4105,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -400.8,
-      "initialY": 144.2
+      "initialX": -260.2,
+      "initialY": 262.7
     },
     "FND-18": {
       "id": "FND-18",
@@ -4146,8 +4146,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -348.6,
-      "initialY": 136.5
+      "initialX": -269,
+      "initialY": 332
     },
     "FND-19": {
       "id": "FND-19",
@@ -4193,8 +4193,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -292.6,
-      "initialY": 158.8
+      "initialX": -223.2,
+      "initialY": 298.6
     },
     "FND-20": {
       "id": "FND-20",
@@ -4234,8 +4234,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -368.4,
-      "initialY": 138.6
+      "initialX": -273.3,
+      "initialY": 308.1
     },
     "FND-21": {
       "id": "FND-21",
@@ -4279,8 +4279,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -395.8,
-      "initialY": 189.5
+      "initialX": -315.5,
+      "initialY": 264.1
     },
     "FND-22": {
       "id": "FND-22",
@@ -4319,8 +4319,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -347.6,
-      "initialY": 222.1
+      "initialX": -344.6,
+      "initialY": 293.1
     },
     "FND-23": {
       "id": "FND-23",
@@ -4384,8 +4384,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -310.7,
-      "initialY": 87.5
+      "initialX": -228.2,
+      "initialY": 229.2
     },
     "FND-24": {
       "id": "FND-24",
@@ -4464,8 +4464,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -275.3,
-      "initialY": 100.5
+      "initialX": -261.6,
+      "initialY": 195.2
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -4527,8 +4527,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -209.5,
-      "initialY": 3.1
+      "initialX": -213.6,
+      "initialY": 105.8
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -4578,8 +4578,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -255.8,
-      "initialY": -42
+      "initialX": -268.7,
+      "initialY": 78.3
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -4635,8 +4635,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -191.4,
-      "initialY": -11.5
+      "initialX": -183.9,
+      "initialY": 92.1
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -4685,8 +4685,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -341.2,
-      "initialY": -80
+      "initialX": -361.4,
+      "initialY": 64.4
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -4735,8 +4735,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -204,
-      "initialY": -75.5
+      "initialX": -229.3,
+      "initialY": 40.8
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -4792,8 +4792,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -147.3,
-      "initialY": -20.4
+      "initialX": -161.8,
+      "initialY": 78.5
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -4843,8 +4843,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -178.1,
-      "initialY": -13.3
+      "initialX": -199.2,
+      "initialY": 87.3
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -4895,8 +4895,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -192.4,
-      "initialY": -40.5
+      "initialX": -209.6,
+      "initialY": 67.9
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -4944,8 +4944,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -182.4,
-      "initialY": -89.2
+      "initialX": -215.2,
+      "initialY": 19.2
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -4995,8 +4995,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -97.4,
-      "initialY": 9.6
+      "initialX": -107.7,
+      "initialY": 87.9
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -5045,8 +5045,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -285.3,
-      "initialY": -73.2
+      "initialX": -307.3,
+      "initialY": 57.5
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -5096,8 +5096,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -146.1,
-      "initialY": -64
+      "initialX": -172.8,
+      "initialY": 32.5
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -5147,8 +5147,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -173.7,
-      "initialY": -65.5
+      "initialX": -198.7,
+      "initialY": 37.5
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -5198,8 +5198,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -129.4,
-      "initialY": -10
+      "initialX": -139.7,
+      "initialY": 70.6
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -5254,8 +5254,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -171.4,
-      "initialY": -34.7
+      "initialX": -182,
+      "initialY": 62.8
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -5310,8 +5310,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -264.3,
-      "initialY": -139.9
+      "initialX": -253.2,
+      "initialY": -29.7
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -5367,8 +5367,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -233.4,
-      "initialY": -140.9
+      "initialX": -274.3,
+      "initialY": -17.8
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -5423,8 +5423,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -278.5,
-      "initialY": -124.8
+      "initialX": -313.8,
+      "initialY": 10.1
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -5480,8 +5480,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -242.7,
-      "initialY": -102.8
+      "initialX": -276.3,
+      "initialY": 20.6
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -5543,8 +5543,959 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -265,
-      "initialY": -88
+      "initialX": -290.7,
+      "initialY": 43.3
+    },
+    "IND-01": {
+      "id": "IND-01",
+      "title": "RBI’s Mandate and Dual Role",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "regulatory-structure",
+      "one_screen": "The Reserve Bank of India (RBI) is India’s central bank with a broad mandate that goes beyond prudential supervision. In addition to setting monetary policy and ensuring banking stability, RBI has a statutory “developmental role” – promoting national objectives like financial inclusion and credit to agriculture and MSMEs.",
+      "prerequisites": [],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India – “Organisation and Functions” (official).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Financial Inclusion & Development Overview (section on PSL).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-01",
+      "depth": 0,
+      "currentness": "fresh",
+      "filepath": "IND-01.mdx",
+      "initialX": -317.2,
+      "initialY": -315.1
+    },
+    "IND-02": {
+      "id": "IND-02",
+      "title": "Bank Categories in India (SCB, SFB, Payments, RRB, Coop)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "regulatory-structure",
+      "one_screen": "India’s banking system has multiple specialized categories.  *Scheduled Commercial Banks* (SCBs) – including public, private, foreign, regional rural, scheduled payments banks, small finance banks, and co-operative banks – have broad banking powers. Small Finance Banks focus on underserved segments; Payments Banks can take small deposits but cannot lend.  Co-operative banks and RRBs serve member or rural communities with limited geographic scope.",
+      "prerequisites": [
+        "IND-01"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 4,
+      "sources": [
+        {
+          "label": "Ministry of Finance FAQs on banks.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Master Directions (payments banks) (deposit limit for PB).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-02",
+      "depth": 1,
+      "currentness": "fresh",
+      "filepath": "IND-02.mdx",
+      "initialX": -276.1,
+      "initialY": -261.7
+    },
+    "IND-03": {
+      "id": "IND-03",
+      "title": "NBFC Scale-Based Regulation (SBR)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "regulatory-structure",
+      "one_screen": "In 2022–2023, RBI moved to a four-tier, size-and-risk-based regulatory framework for NBFCs. The framework classifies NBFCs into Base, Middle, Upper and Top layers. Base-layer NBFCs are the smallest/non-deposit ones (assets < ₹1,000 crore) and fintech entities; middle-layer NBFCs include deposit-taking companies and larger NBFCs (assets ≥ ₹1,000 cr) and critical segments like HFCs, CICs, etc.; Upper and Top layers (ideally empty) are for systemically important NBFCs subject to enhanced scrutiny.",
+      "prerequisites": [
+        "IND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 1,
+      "sources": [
+        {
+          "label": "RBI (2022) – Master Directions on NBFC – SBR framework.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-03",
+      "depth": 2,
+      "currentness": "fresh",
+      "filepath": "IND-03.mdx",
+      "initialX": -239.2,
+      "initialY": -289
+    },
+    "IND-04": {
+      "id": "IND-04",
+      "title": "Housing Finance Companies under RBI",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "regulatory-structure",
+      "one_screen": "As of August 2019, Housing Finance Companies (HFCs) were brought under RBI’s regulation. The Central Bank is now the regulator of HFCs (lenders specializing in home loans), integrating them into the NBFC framework.  During the transition, HFCs were allowed to follow existing NHB guidelines until RBI issues new rules.",
+      "prerequisites": [
+        "IND-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Press Release (Aug 13, 2019) on transfer of HFC regulation.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-04",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-04.mdx",
+      "initialX": -267,
+      "initialY": -336.7
+    },
+    "IND-05": {
+      "id": "IND-05",
+      "title": "Banks vs. NBFCs: Key Distinctions",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "regulatory-structure",
+      "one_screen": "Commercial banks and NBFCs in India differ in core functions and regulation.  Banks can accept demand deposits, offer cheque facilities, and participate in the payment system – NBFCs cannot.  NBFCs rely mostly on wholesale/market funding or term deposits (for deposit-taking NBFCs).  Banks have RBI-backed deposit insurance (DICGC cover), maintain CRR/SLR, and access RBI liquidity; NBFCs do not (except selective refinance schemes).  Banks require higher entry capital and stricter licensing; NBFCs have a lower ₹2 crore equity norm but face similar prudential norms scaled to their assets.  Because NBFCs cannot create money via demand deposits, their funding costs and leverage limits differ fundamentally from banks.",
+      "prerequisites": [
+        "IND-02",
+        "IND-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Act definitions and NBFC Directions (general principle).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI FAQs and master directions (see [25], [51]).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-05",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-05.mdx",
+      "initialX": -300,
+      "initialY": -306.2
+    },
+    "IND-06": {
+      "id": "IND-06",
+      "title": "Asset Classification and NPA Norms (IRACP)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "iracp-npa-norms",
+      "one_screen": "Banks must classify each loan into Standard, Sub-standard, Doubtful or Loss assets based on repayment delays. A loan becomes a Non-Performing Asset (NPA) when interest/principal is overdue for 90 days.  The Income Recognition, Asset Classification and Provisioning (IRACP) norms require daily monitoring (stamping) of accounts, with more provisions for higher-risk categories.",
+      "prerequisites": [
+        "IND-01",
+        "IND-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Master Direction on IRAC (updated 2024).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Notification on External Benchmark Lending (mentions 90-day rule).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-06",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-06.mdx",
+      "initialX": -310.5,
+      "initialY": -266.8
+    },
+    "IND-07": {
+      "id": "IND-07",
+      "title": "Special Mention Accounts (SMAs)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "iracp-npa-norms",
+      "one_screen": "**Special Mention Accounts (SMAs)** are categories for loans showing early warning signals of stress, before becoming NPAs. RBI defines three SMA levels by days past due or consistent irregular payments. SMAs ensure banks monitor these exposures closely.",
+      "prerequisites": [
+        "IND-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Master Directions and supervisory returns (SMA definitions).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI press commentaries on NPAs (SMAs).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-07",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "IND-07.mdx",
+      "initialX": -280.3,
+      "initialY": -200.8
+    },
+    "IND-08": {
+      "id": "IND-08",
+      "title": "Provisioning Norms for Banks",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "iracp-npa-norms",
+      "one_screen": "RBI’s norms prescribe minimum loan-loss provisions based on classification and security. Standard assets require low provisioning (often 0.4% for secured, 1% for unsecured). Sub-standard assets need at least 15% (further higher if unsecured). Doubtful assets carry higher provisions (20–100% depending on seasoning and collateral). Fully-provided Loss assets require 100% provisioning.",
+      "prerequisites": [
+        "IND-06",
+        "IND-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI IRACP Master Directions (latest revision).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Financial Inclusion overview (mentions provisioning min 15%).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-08",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "IND-08.mdx",
+      "initialX": -311.2,
+      "initialY": -226.8
+    },
+    "IND-09": {
+      "id": "IND-09",
+      "title": "Restructuring and Resolution Framework",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "iracp-npa-norms",
+      "one_screen": "Banks follow RBI’s restructuring guidelines when a borrower’s credit stress is resolved via concession. This includes Corporate Debt Restructuring (CDR), 5/25 refinancing, and more recently, the Resolution Frameworks (RBI’s COVID-19 and MSME frameworks). Under these, an NPAs may be restructured (terms changed) and classified as Standard again if conditions are met. Special norms apply to ensure loans aren’t “evergreened” without justification.",
+      "prerequisites": [
+        "IND-06",
+        "IND-07",
+        "IND-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Guidelines on Restructuring, Resolution (various circulars, e.g. MSME resolution, COVID frame).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI press notes on CDR, Resolution.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-09",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "IND-09.mdx",
+      "initialX": -252.1,
+      "initialY": -242.2
+    },
+    "IND-10": {
+      "id": "IND-10",
+      "title": "Upgrades and Write-offs",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "iracp-npa-norms",
+      "one_screen": "**Upgrading** means moving an asset from NPA back to Standard after the borrower cures delinquency. RBI requires strict criteria: the loan must be fully repaid for a mandatory period post-default (e.g. 2 successive quarters or 1 year) and provisions made. This prevents manipulating classification. **Write-off** is when a bank formally removes an asset from its books, fully providing for it. In India, write-off is a prudential (not tax) exercise: losses are absorbed only after thorough review, and even then such loans may be sold or recovered later.",
+      "prerequisites": [
+        "IND-06",
+        "IND-09"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI circular on SME loan upgrades (July 2015).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI IRACP directions (write-off guidelines).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-10",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "IND-10.mdx",
+      "initialX": -262.7,
+      "initialY": -296.4
+    },
+    "IND-11": {
+      "id": "IND-11",
+      "title": "Priority Sector Lending (PSL) Targets",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "priority-sector",
+      "one_screen": "Indian banks must lend a mandated share of their credit to specified “priority sectors” (agriculture, MSMEs, etc.) as defined by RBI, often 40% of net bank credit for domestic banks. Within this, sub-targets exist (e.g. farm credit, smaller loans, micro-enterprises, poorer sections). PSL quotas shape lending portfolios: banks issue loans just to meet these percentages and may sell excess obligation via certificates (PSLCs).",
+      "prerequisites": [
+        "IND-01",
+        "IND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Financial Inclusion page (PSL guidelines overview).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI annual PSL instructions (for details).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-11",
+      "depth": 2,
+      "currentness": "fresh",
+      "filepath": "IND-11.mdx",
+      "initialX": -250.2,
+      "initialY": -317.1
+    },
+    "IND-12": {
+      "id": "IND-12",
+      "title": "Priority Sector Categories (Agri, MSME, Weaker)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "priority-sector",
+      "one_screen": "The “priority sectors” comprise several categories. Key ones include **Agriculture** (direct loans to farmers, etc.), **Micro and Small Enterprises (MSMEs)** (business loans up to specified limits), and **Weaker Sections** (targeted small borrowers). RBI regularly revises definitions: e.g. what constitutes a small farm or loan limit for microenterprise. Understanding each is crucial since only these count toward PSL quotas.",
+      "prerequisites": [
+        "IND-11"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI PSL guidelines (latest circular).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Financial Inclusion overview (PSL sub-targets).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-12",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-12.mdx",
+      "initialX": -297.3,
+      "initialY": -283.1
+    },
+    "IND-13": {
+      "id": "IND-13",
+      "title": "Digital Lending Guidelines (Platforms and KFS)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "digital-lending",
+      "one_screen": "In 2022–2023, RBI issued comprehensive norms on digital lending to protect consumers from predatory fintech practices. It defines *Lending Service Providers* (LSPs) who partner with banks/NBFCs to distribute credit via apps. Key requirements include issuing a mandatory *Key Fact Statement (KFS)* for each loan, ensuring loans are disbursed into borrowers’ bank accounts (no third-party “pass-through” accounts), and capping upfront fees. LSPs also must register with RBI and have grievance officers. These rules address mis-selling and hidden charges that were rampant in unregulated lending apps.",
+      "prerequisites": [
+        "IND-02"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Master Direction – Digital Lending (Dec 2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Notifications on digital lending (Feb 2022 circular).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-13",
+      "depth": 2,
+      "currentness": "fresh",
+      "filepath": "IND-13.mdx",
+      "initialX": -220.4,
+      "initialY": -301.1
+    },
+    "IND-14": {
+      "id": "IND-14",
+      "title": "Digital Lending: Flow, Guarantees, and Securitisation",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "digital-lending",
+      "one_screen": "Beyond transparency, RBI’s digital lending rules impose strict flow-of-funds and guarantee limits. Loans must be disbursed directly, and repayments must go to the original lender. The RBI also defined and capped “First Loss Default Guarantees” (FLDG) by fintechs, clarifying these are not true securitisation. Any arrangement where an app provider keeps collateral or routes funds illegitimately is prohibited.",
+      "prerequisites": [
+        "IND-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Master Direction – Digital Lending (Dec 2022)..",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-14",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-14.mdx",
+      "initialX": -228.7,
+      "initialY": -246.4
+    },
+    "IND-15": {
+      "id": "IND-15",
+      "title": "Digital Lending Grievance Redressal",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "digital-lending",
+      "one_screen": "RBI mandates that all regulated entities using digital lending have formal grievance mechanisms. Lenders and fintechs must appoint nodal officers for customer complaints. Borrowers must be informed of escalation paths (including Banking Ombudsman). RBI also requires that both lenders and their tech partners resolve complaints quickly, tracking them in regular reports.",
+      "prerequisites": [
+        "IND-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Digital Lending Master Directions (customer protection clauses).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI circular on outsourcing/recovery agents (codes of conduct).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-15",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-15.mdx",
+      "initialX": -207.4,
+      "initialY": -252.7
+    },
+    "IND-16": {
+      "id": "IND-16",
+      "title": "Co-Lending Framework (Banks-NBFCs)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "co-lending-and-data-tech",
+      "one_screen": "In 2018, RBI launched a co-lending scheme where banks and eligible NBFCs jointly finance borrowers. Under this, the bank must retain at least 20% of each co-lent loan portfolio (even if the NBFC originated most). Typically, the bank holds the larger share (say 80%) to keep better assets. The NBFC services the loan (e.g. documentation, collection) while sharing credit risk. Co-lending requires both parties to reconcile accounts and operations carefully, since each one-on-one partnership involves dual loan accounts and revenue splits.",
+      "prerequisites": [
+        "IND-02",
+        "IND-03"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Master Direction – Co-lending (2021, 2023 updates).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI press release on co-lending revision (2023).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-16",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-16.mdx",
+      "initialX": -285.6,
+      "initialY": -320
+    },
+    "IND-17": {
+      "id": "IND-17",
+      "title": "Co-Lending Operations and Reconciliation",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "co-lending-and-data-tech",
+      "one_screen": "Practically, co-lending requires careful accounting on both sides. Each co-lending loan is reflected twice: a fraction on the bank’s books and the complementary on the NBFC’s books. Collections and disbursements must be reconciled to ensure each partner receives exactly its share. Often, the NBFC handles origination and collection (sometimes via its own BC network), remitting the bank’s portion of principal and interest as per the agreed split. The complexity of dual servicing and settlement is where most co-lending operations focus.",
+      "prerequisites": [
+        "IND-16"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI Co-lending Master Directions.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Operational guidance from A.P. (RBI Circular DBR.CO.Loans dated 2018).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-17",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "IND-17.mdx",
+      "initialX": -295.4,
+      "initialY": -250.9
+    },
+    "IND-18": {
+      "id": "IND-18",
+      "title": "Account Aggregators and GST Data in Lending",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "co-lending-and-data-tech",
+      "one_screen": "The Account Aggregator (AA) ecosystem enables customers to share financial data from banks, investments and tax (GST) authorities with lenders upon consent. An AA is an RBI-regulated NBFC that securely fetches a borrower’s authenticated bank and other accounts data (like GST returns) to streamline credit assessment. In practice, a borrower can allow a prospective lender to view her bank statements and GST filings via the AA, replacing the need for manual document submission. This enhances underwriting accuracy for cash-flow lending.",
+      "prerequisites": [
+        "IND-13"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "RBI’s AA Master Directions (2021).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI/Finance Ministry notifications on GSTN and lending.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-18",
+      "depth": 3,
+      "currentness": "fresh",
+      "filepath": "IND-18.mdx",
+      "initialX": -251.7,
+      "initialY": -264.7
+    },
+    "IND-19": {
+      "id": "IND-19",
+      "title": "Open Credit Enablement Network (OCEN) and Unified Lending",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "co-lending-and-data-tech",
+      "one_screen": "OCEN is a public digital infrastructure initiated by RBI and others to promote standardized lending processes. It provides open protocols so any bank or NBFC can offer standardized lending products (LOAN service) to any borrower via their preferred interface (called Loan App Provider). The **Unified Lending Interface (ULI)** is an evolution of OCEN – a platform or API layer (conceptualized by IBA/RBI) that allows multiple lenders and tech-entities to interconnect seamlessly for loan origination. In practice, OCEN/ULI aims to let a borrower initiate a loan request once, then multiple lenders can compete or collaborate, all via technology rails.",
+      "prerequisites": [
+        "IND-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI/IBA public documents on OCEN and ULI (pilots).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Notices on OCEN as part of digital lending push.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-19",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "IND-19.mdx",
+      "initialX": -251,
+      "initialY": -209.1
+    },
+    "IND-20": {
+      "id": "IND-20",
+      "title": "Credit Information and CIBIL Scores",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "co-lending-and-data-tech",
+      "one_screen": "Credit Information Companies (CICs) like CIBIL, Experian, Equifax (licensed by RBI) collect borrowers’ credit data (loans, credit cards, defaults) from banks/NBFCs and provide credit reports and scores. A bureau score (300–900 range) reflects an individual’s or firm’s credit history; lenders use it as a risk indicator. Each loan or card issued is reported to CICs. A CIBIL (now TransUnion CIBIL) *score* is a summary derived from one’s report; though popular, RBI treats it as *one* input, not a sole decision factor.",
+      "prerequisites": [
+        "IND-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Credit Information Companies (Regulation) Act, 2005.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI regulations on credit reports and usage (Master Direction).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-20",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "IND-20.mdx",
+      "initialX": -344,
+      "initialY": -238.6
+    },
+    "IND-21": {
+      "id": "IND-21",
+      "title": "SARFAESI Act (Asset Enforcement)",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "enforcement-and-conduct",
+      "one_screen": "The SARFAESI Act (2002) empowers banks/ARCs to enforce securities against defaulting borrowers without court intervention. It allows a secured creditor (bank/NBFC/ARC) to take possession of collateral (land, factories, financial instruments) if a loan account is an NPA, subject to RBI’s prescribed triggers. This mechanism dramatically speeds up recovery in contrast to civil litigation. However, it only covers “secured” exposures: unsecured debts (like credit cards, personal loans) cannot be directly taken under SARFAESI.",
+      "prerequisites": [
+        "IND-06"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "SARFAESI Act, 2002 (Chapter II Enforcement of Security Interest).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI guidelines on asset reconstruction (e.g. Master Direction on ARCs).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-21",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "IND-21.mdx",
+      "initialX": -273.2,
+      "initialY": -225.6
+    },
+    "IND-22": {
+      "id": "IND-22",
+      "title": "Insolvency and Bankruptcy Code (IBC) and DRT",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "enforcement-and-conduct",
+      "one_screen": "The Insolvency and Bankruptcy Code (2016) provides a structured process for resolving stressed corporate debts. If lenders collectively decide (typically 75% by value) that a default requires legal resolution, they can initiate corporate insolvency. A *Resolution Professional* then manages the company’s affairs, and creditors vote on a revival plan. The IBC has priority over SARFAESI in that once an insolvency petition is admitted, SARFAESI proceedings halt. For personal or small debtors, formal bankruptcy via IBC may not apply; instead, DRTs (for bank debts above a threshold) and debt recovery tribunals handle lower-value cases, including unsecured and smaller claims.",
+      "prerequisites": [
+        "IND-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Insolvency and Bankruptcy Code, 2016 (Sections on initiation).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Recovery of Debts Act, 1993 (DRT jurisdiction).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-22",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "IND-22.mdx",
+      "initialX": -322.5,
+      "initialY": -212.3
+    },
+    "IND-23": {
+      "id": "IND-23",
+      "title": "Fair Practices Code and Rate Transparency",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "enforcement-and-conduct",
+      "one_screen": "RBI mandates all banks/NBFCs adopt a *Fair Practices Code (FPC)* – a set of consumer-lending norms. The FPC requires clear, upfront disclosure of key loan terms (interest rates, all fees, prepayment and foreclosure conditions). Borrowers must receive written sanction letters. Lenders must not coerce borrowers into purchasing unrelated products. After 2019, RBI additionally requires all new floating-rate loans (e.g. mortgages, auto loans, corporate loans) to be linked to external benchmarks (like RBI’s repo rate or govt bond yields). This makes the rate formula transparent – borrowers know that if RBI changes repo, their EMI changes per a public index.",
+      "prerequisites": [
+        "IND-08"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Master Direction – Lending to Individuals.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "RBI Notifications on External Benchmark Lending (Sept 2019, Feb 2020).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-23",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "IND-23.mdx",
+      "initialX": -335.3,
+      "initialY": -279.1
+    },
+    "IND-24": {
+      "id": "IND-24",
+      "title": "Recovery Agents Code of Conduct",
+      "type": "concept",
+      "domain": "india-lending",
+      "subdomain": "enforcement-and-conduct",
+      "one_screen": "RBI’s 2022 guidelines reaffirm that financial institutions are fully responsible for their recovery agents’ actions. Banks must ensure recovery personnel treat borrowers respectfully, within prescribed hours, and without intimidation. Agents must carry ID cards. Borrowers can record collection calls and lodge complaints if the code is violated. This rule curbs the excesses of aggressive recovery practices prevalent especially in rural/tele-calling.",
+      "prerequisites": [
+        "IND-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [
+        {
+          "label": "RBI Circular on Outsourcing – Recovery Agents (Aug 12, 2022).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Earlier RBI guidelines on fair practices and recovery (2006-07).",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "ind-24",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "IND-24.mdx",
+      "initialX": -220.4,
+      "initialY": -221
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -5586,8 +6537,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -167.3,
-      "initialY": -261.5
+      "initialX": -117.7,
+      "initialY": -204.8
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -5624,8 +6575,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -119.9,
-      "initialY": -402.8
+      "initialX": 11.3,
+      "initialY": -381.9
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -5664,8 +6615,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -68,
-      "initialY": -384
+      "initialX": 7.2,
+      "initialY": -331
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -5709,8 +6660,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -118.3,
-      "initialY": -312.5
+      "initialX": -41.5,
+      "initialY": -295
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -5754,8 +6705,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -140.5,
-      "initialY": -331.4
+      "initialX": -55.1,
+      "initialY": -312.5
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -5794,8 +6745,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -140.1,
-      "initialY": -387.7
+      "initialX": -12.2,
+      "initialY": -349.8
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -5834,8 +6785,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -112.8,
-      "initialY": -336.6
+      "initialX": -53.5,
+      "initialY": -395.2
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -5875,8 +6826,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -92.2,
-      "initialY": -376.4
+      "initialX": -2.8,
+      "initialY": -404.3
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -5915,8 +6866,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -88.7,
-      "initialY": -317.8
+      "initialX": 38.9,
+      "initialY": -371.2
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -5955,8 +6906,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -91.6,
-      "initialY": -417.1
+      "initialX": 32.3,
+      "initialY": -350.3
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -5995,8 +6946,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -83.9,
-      "initialY": -400.5
+      "initialX": -24.3,
+      "initialY": -410.5
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -6035,8 +6986,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -157,
-      "initialY": -369.9
+      "initialX": 3.6,
+      "initialY": -429.7
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -6075,8 +7026,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -115.9,
-      "initialY": -366
+      "initialX": -45.7,
+      "initialY": -423.5
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -6110,8 +7061,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -74.5,
-      "initialY": -336.5
+      "initialX": -43.1,
+      "initialY": -369.5
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -6146,8 +7097,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -65.5,
-      "initialY": -358.7
+      "initialX": -15.7,
+      "initialY": -378
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -6187,8 +7138,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -41.7,
-      "initialY": -367.5
+      "initialX": 43.5,
+      "initialY": -414.4
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -6227,8 +7178,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -44.8,
-      "initialY": -393.6
+      "initialX": 23.3,
+      "initialY": -406.2
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -6273,8 +7224,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -54.6,
-      "initialY": -329.3
+      "initialX": -31.2,
+      "initialY": -347.8
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -6316,8 +7267,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 235.6,
-      "initialY": -359.8
+      "initialX": 200.4,
+      "initialY": -281.3
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -6364,8 +7315,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 229.1,
-      "initialY": -311.2
+      "initialX": 199.6,
+      "initialY": -221.9
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -6404,8 +7355,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 281.2,
-      "initialY": -336
+      "initialX": 267.5,
+      "initialY": -289.1
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -6444,8 +7395,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 264.6,
-      "initialY": -285.4
+      "initialX": 282.4,
+      "initialY": -339.2
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -6484,8 +7435,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 193.4,
-      "initialY": -303
+      "initialX": 207.3,
+      "initialY": -318.6
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -6524,8 +7475,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 203.1,
-      "initialY": -363.2
+      "initialX": 185.2,
+      "initialY": -258.1
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -6564,8 +7515,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 306.8,
-      "initialY": -315.5
+      "initialX": 329.6,
+      "initialY": -296.8
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -6618,8 +7569,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 260.2,
-      "initialY": -308.6
+      "initialX": 294.8,
+      "initialY": -239.4
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -6659,8 +7610,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 289.6,
-      "initialY": -251.2
+      "initialX": 311.3,
+      "initialY": -292.1
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -6714,8 +7665,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 229.6,
-      "initialY": -260.9
+      "initialX": 252.2,
+      "initialY": -290.5
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -6764,8 +7715,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 241.9,
-      "initialY": -333.6
+      "initialX": 238.3,
+      "initialY": -348.3
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -6805,8 +7756,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 209.7,
-      "initialY": -320.9
+      "initialX": 222.5,
+      "initialY": -236.5
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -6858,8 +7809,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 186,
-      "initialY": -270.4
+      "initialX": 300,
+      "initialY": -217.9
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -6912,8 +7863,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 144.4,
-      "initialY": -293.8
+      "initialX": 276.8,
+      "initialY": -268.9
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -6966,8 +7917,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 156.6,
-      "initialY": -324.7
+      "initialX": 236.1,
+      "initialY": -305.5
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -7007,8 +7958,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 197.9,
-      "initialY": -252.7
+      "initialX": 219.3,
+      "initialY": -299.8
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -7049,8 +8000,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 238,
-      "initialY": -290.5
+      "initialX": 263.7,
+      "initialY": -255.9
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -7097,8 +8048,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 260,
-      "initialY": -350.4
+      "initialX": 219.2,
+      "initialY": -279.2
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -7153,8 +8104,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 199.9,
-      "initialY": -335.8
+      "initialX": 261.3,
+      "initialY": -329.2
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -7200,8 +8151,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 246.1,
-      "initialY": -275.5
+      "initialX": 264,
+      "initialY": -231.3
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -7240,8 +8191,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 207.2,
-      "initialY": -223.7
+      "initialX": 308.2,
+      "initialY": -260.6
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -7280,8 +8231,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 260.4,
-      "initialY": -222.5
+      "initialX": 277.5,
+      "initialY": -207.8
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -7321,8 +8272,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 289.7,
-      "initialY": -285.9
+      "initialX": 323.3,
+      "initialY": -244
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -7368,8 +8319,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 260.5,
-      "initialY": -255.6
+      "initialX": 240.7,
+      "initialY": -250.3
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -7411,8 +8362,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 207.7,
-      "initialY": -285
+      "initialX": 284.7,
+      "initialY": -300.8
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -7453,8 +8404,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 228.7,
-      "initialY": -241.7
+      "initialX": 253.9,
+      "initialY": -199.9
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -7495,8 +8446,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 170.3,
-      "initialY": -292.9
+      "initialX": 215.5,
+      "initialY": -197.3
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -7549,8 +8500,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 178.2,
-      "initialY": -335.2
+      "initialX": 335,
+      "initialY": -268.6
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -7611,8 +8562,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 167.4,
-      "initialY": -264.3
+      "initialX": 306.7,
+      "initialY": -320.9
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -7668,8 +8619,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 177.6,
-      "initialY": -243.8
+      "initialX": 209.6,
+      "initialY": -252.4
     }
   },
   "reverseIndex": {
@@ -8149,6 +9100,73 @@
       "IMP-20"
     ],
     "IMP-20": [],
+    "IND-01": [
+      "IND-02",
+      "IND-06",
+      "IND-11"
+    ],
+    "IND-02": [
+      "IND-03",
+      "IND-05",
+      "IND-11",
+      "IND-13",
+      "IND-16"
+    ],
+    "IND-03": [
+      "IND-04",
+      "IND-05",
+      "IND-06",
+      "IND-16"
+    ],
+    "IND-04": [],
+    "IND-05": [],
+    "IND-06": [
+      "IND-07",
+      "IND-08",
+      "IND-09",
+      "IND-10",
+      "IND-20",
+      "IND-21"
+    ],
+    "IND-07": [
+      "IND-08",
+      "IND-09"
+    ],
+    "IND-08": [
+      "IND-09",
+      "IND-23"
+    ],
+    "IND-09": [
+      "IND-10"
+    ],
+    "IND-10": [],
+    "IND-11": [
+      "IND-12"
+    ],
+    "IND-12": [],
+    "IND-13": [
+      "IND-14",
+      "IND-15",
+      "IND-18"
+    ],
+    "IND-14": [],
+    "IND-15": [],
+    "IND-16": [
+      "IND-17"
+    ],
+    "IND-17": [],
+    "IND-18": [
+      "IND-19"
+    ],
+    "IND-19": [],
+    "IND-20": [],
+    "IND-21": [
+      "IND-22",
+      "IND-24"
+    ],
+    "IND-22": [],
+    "IND-23": [],
+    "IND-24": [],
     "MRM-01": [
       "IMP-16",
       "IMP-17",
@@ -9312,6 +10330,209 @@
       ]
     },
     {
+      "domain": "india-lending",
+      "subdomains": [
+        {
+          "subdomain": "regulatory-structure",
+          "atoms": [
+            {
+              "id": "IND-01",
+              "title": "RBI’s Mandate and Dual Role",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-02",
+              "title": "Bank Categories in India (SCB, SFB, Payments, RRB, Coop)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-03",
+              "title": "NBFC Scale-Based Regulation (SBR)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-04",
+              "title": "Housing Finance Companies under RBI",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-05",
+              "title": "Banks vs. NBFCs: Key Distinctions",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "iracp-npa-norms",
+          "atoms": [
+            {
+              "id": "IND-06",
+              "title": "Asset Classification and NPA Norms (IRACP)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-07",
+              "title": "Special Mention Accounts (SMAs)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-08",
+              "title": "Provisioning Norms for Banks",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-09",
+              "title": "Restructuring and Resolution Framework",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-10",
+              "title": "Upgrades and Write-offs",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "priority-sector",
+          "atoms": [
+            {
+              "id": "IND-11",
+              "title": "Priority Sector Lending (PSL) Targets",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-12",
+              "title": "Priority Sector Categories (Agri, MSME, Weaker)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "digital-lending",
+          "atoms": [
+            {
+              "id": "IND-13",
+              "title": "Digital Lending Guidelines (Platforms and KFS)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-14",
+              "title": "Digital Lending: Flow, Guarantees, and Securitisation",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-15",
+              "title": "Digital Lending Grievance Redressal",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "co-lending-and-data-tech",
+          "atoms": [
+            {
+              "id": "IND-16",
+              "title": "Co-Lending Framework (Banks-NBFCs)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-17",
+              "title": "Co-Lending Operations and Reconciliation",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-18",
+              "title": "Account Aggregators and GST Data in Lending",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-19",
+              "title": "Open Credit Enablement Network (OCEN) and Unified Lending",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-20",
+              "title": "Credit Information and CIBIL Scores",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "enforcement-and-conduct",
+          "atoms": [
+            {
+              "id": "IND-21",
+              "title": "SARFAESI Act (Asset Enforcement)",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-22",
+              "title": "Insolvency and Bankruptcy Code (IBC) and DRT",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-23",
+              "title": "Fair Practices Code and Rate Transparency",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "IND-24",
+              "title": "Recovery Agents Code of Conduct",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "domain": "model-risk",
       "subdomains": [
         {
@@ -10129,7 +11350,11 @@
       ],
       "atoms": [
         {
-          "id": "CR-06",
+          "id": "IND-13",
+          "weight": 3
+        },
+        {
+          "id": "IND-14",
           "weight": 3
         },
         {
@@ -10137,19 +11362,15 @@
           "weight": 3
         },
         {
-          "id": "CR-22",
-          "weight": 3
-        },
-        {
-          "id": "IND-01",
+          "id": "IND-18",
           "weight": 2
         },
         {
-          "id": "CR-02",
+          "id": "IND-20",
           "weight": 2
         },
         {
-          "id": "FND-02",
+          "id": "CR-06",
           "weight": 1
         }
       ]
@@ -10178,8 +11399,12 @@
           "weight": 3
         },
         {
-          "id": "CR-03",
+          "id": "IND-16",
           "weight": 3
+        },
+        {
+          "id": "IND-17",
+          "weight": 2
         },
         {
           "id": "DAT-09",
@@ -10187,10 +11412,6 @@
         },
         {
           "id": "DAT-11",
-          "weight": 2
-        },
-        {
-          "id": "CR-10",
           "weight": 1
         }
       ]
@@ -10198,7 +11419,6 @@
   ],
   "missingAtoms": [
     "CCR-01",
-    "IND-01",
     "TRD-01"
   ],
   "lintWarnings": [
@@ -10909,6 +12129,231 @@
     },
     {
       "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-01",
+      "message": "Atom \"IND-01\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "IND-01",
+      "message": "Atom \"IND-01\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-02",
+      "message": "Atom \"IND-02\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-02",
+      "message": "one_screen in \"IND-02\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-03",
+      "message": "Atom \"IND-03\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-03",
+      "message": "one_screen in \"IND-03\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-04",
+      "message": "Atom \"IND-04\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-05",
+      "message": "Atom \"IND-05\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-05",
+      "message": "one_screen in \"IND-05\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-06",
+      "message": "Atom \"IND-06\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-07",
+      "message": "Atom \"IND-07\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-08",
+      "message": "Atom \"IND-08\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-08",
+      "message": "one_screen in \"IND-08\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-09",
+      "message": "Atom \"IND-09\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-09",
+      "message": "one_screen in \"IND-09\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-10",
+      "message": "Atom \"IND-10\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-10",
+      "message": "one_screen in \"IND-10\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-11",
+      "message": "Atom \"IND-11\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-11",
+      "message": "one_screen in \"IND-11\" contains 6 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-12",
+      "message": "Atom \"IND-12\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-12",
+      "message": "one_screen in \"IND-12\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-13",
+      "message": "Atom \"IND-13\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-13",
+      "message": "one_screen in \"IND-13\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-14",
+      "message": "Atom \"IND-14\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-14",
+      "message": "one_screen in \"IND-14\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-15",
+      "message": "Atom \"IND-15\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-15",
+      "message": "one_screen in \"IND-15\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-16",
+      "message": "Atom \"IND-16\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-16",
+      "message": "one_screen in \"IND-16\" contains 7 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-17",
+      "message": "Atom \"IND-17\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-17",
+      "message": "one_screen in \"IND-17\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-18",
+      "message": "Atom \"IND-18\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-18",
+      "message": "one_screen in \"IND-18\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-19",
+      "message": "Atom \"IND-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-19",
+      "message": "one_screen in \"IND-19\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-20",
+      "message": "Atom \"IND-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-20",
+      "message": "one_screen in \"IND-20\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-21",
+      "message": "Atom \"IND-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-21",
+      "message": "one_screen in \"IND-21\" contains 4 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-22",
+      "message": "Atom \"IND-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-22",
+      "message": "one_screen in \"IND-22\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-23",
+      "message": "Atom \"IND-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-23",
+      "message": "one_screen in \"IND-23\" contains 8 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "IND-24",
+      "message": "Atom \"IND-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "ONE_SCREEN_LENGTH",
+      "atomId": "IND-24",
+      "message": "one_screen in \"IND-24\" contains 5 sentences (maximum 3 recommended)."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-01",
       "message": "Atom \"MRM-01\" is unverified (draft). Displays development banner."
     },
@@ -11218,5 +12663,5 @@
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-28T04:23:17.558Z"
+  "generatedAt": "2026-08-28T09:03:53.872Z"
 }

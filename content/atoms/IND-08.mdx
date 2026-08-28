@@ -1,0 +1,74 @@
+---
+id: IND-08
+title: Provisioning Norms for Banks
+type: concept
+domain: india-lending
+subdomain: iracp-npa-norms
+one_screen: >-
+  RBI’s norms prescribe minimum loan-loss provisions based on classification and
+  security. Standard assets require low provisioning (often 0.4% for secured, 1%
+  for unsecured). Sub-standard assets need at least 15% (further higher if
+  unsecured). Doubtful assets carry higher provisions (20–100% depending on
+  seasoning and collateral). Fully-provided Loss assets require 100%
+  provisioning.
+prerequisites:
+  - IND-06
+  - IND-07
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-28'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 2
+sources:
+  - label: RBI IRACP Master Directions (latest revision).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: RBI Financial Inclusion overview (mentions provisioning min 15%).
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+For **Standard loans**, banks must maintain a floating provision. Current guidelines typically require 0.4% of outstanding for secured standard advances and 1.0% for unsecured standard advances. These may vary by loan type and are updated periodically.  
+
+For **Sub-standard NPAs**, RBI mandates a **minimum 15%** provisioning against outstanding (additional for unsecured portion). For instance, a 15% provision is mandatory even if there is collateral; unsecured portion may require a higher rate (at least 25%). 
+
+For **Doubtful NPAs** (NPA &gt;1 year), provisioning depends on how long the asset has been in that bucket and realizable security. Schematically:  
+- Less than 1 year in Doubtful: ~20% (subject to security coverage).  
+- 1–3 years in Doubtful: ~50%.  
+- Over 3 years in Doubtful: 100%.  
+
+Finally, **Loss assets** are those considered unrecoverable; they carry 100% provision. 
+
+Banks must also consider security coverage (loan-to-value) in computing the shortfall. RBI provides a detailed provisioning schedule in its IRACP directions. If collateral liquidation value significantly covers outstanding, banks can adjust provisions downwards (but not below minimums).  
+
+All these rates are the **minimum** RBI requires; banks can and do often provision more (for prudence).  The actual provisioning entries are critical for regulatory capital and profit. The RBI periodically issues circulars updating these percentages and classification rules (e.g. 15% sub-standard).
+
+<Rule label="PERMANENT RULE">
+Apply the RBI-prescribed provisioning percentages by asset class: 0.4–1% for Standard; ≥15% for Sub-Standard (more if unsecured); higher for Doubtful (up to 100% with aging).
+</Rule>
+
+<Trap label="PERMANENT TRAP">
+Under-provisioning.  A common mistake is assuming low provisions suffice when assets slip into Sub-Standard or Doubtful. RBI’s table demands at least 15% on Sub-Standard, and up to 100% on old Doubtfuls. Also forgetting security cushion (banks must provision on the unsecured portion).
+</Trap>
+
+<NeverConfuse>
+**Standard asset provision** — minimal (0.4%/1%), since loan is performing.  
+**NPA provision** — much higher: e.g. 15% (sub-standard) or more (doubtful).
+</NeverConfuse>
+
+<Delta j="IN">
+— RBI’s percentages are unique to India’s IRAC norms (see RBI master directions). Other countries have their own loss provisioning, but India’s 90-day definition and fixed rates are RBI-specific.
+</Delta>
+
+<Recall
+  q="What minimum provision is RBI’s rule for a Sub-Standard loan?"
+  a="15% of outstanding (plus more on unsecured portion)."
+/>
+
+<Recall
+  q="How much provision for a Standard loan?"
+  a="Typically 0.4% of secured or 1% of unsecured advances (as per current RBI norms)."
+/>

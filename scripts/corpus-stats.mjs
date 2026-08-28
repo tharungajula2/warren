@@ -18,6 +18,7 @@ function runCorpusStats() {
   const domainCounts = {};
   const subdomainCounts = {};
   let totalClaimMarkers = 0;
+  let totalKnownErrors = 0;
   const atomsWithScores = [];
 
   const atomMap = {};
@@ -53,6 +54,10 @@ function runCorpusStats() {
     const claimsInBody = (atom.body.match(/\{\/\* UNVERIFIED CLAIM/g) || []).length;
     totalClaimMarkers += claimsInBody;
 
+    // Known errors count
+    const knownErrorsInBody = (atom.body.match(/\{\/\* KNOWN ERROR/gi) || []).length;
+    totalKnownErrors += knownErrorsInBody;
+
     // Completeness score calculation (out of 6)
     let score = 0;
     if (atom.title) score++;
@@ -71,6 +76,7 @@ function runCorpusStats() {
       score,
       readingMinutes: atom.reading_minutes,
       claimMarkers: claimsInBody,
+      knownErrors: knownErrorsInBody,
     });
   }
 
@@ -97,6 +103,7 @@ function runCorpusStats() {
   console.log(`\n📊 SUMMARY METRICS:`);
   console.log(`   Orphan Root Nodes: ${nonPrereqAtoms.size}`);
   console.log(`   Total UNVERIFIED CLAIM Markers: ${totalClaimMarkers}`);
+  console.log(`   errors_flagged: ${totalKnownErrors}`);
 
   console.log(`\n🏆 TOP 10 ATOMS WITH HIGHEST COMPLETENESS SCORES:`);
   console.table(
