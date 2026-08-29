@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { AlertTriangle } from "lucide-react";
 import { getCorpusManifest } from "@/lib/corpus";
 import { CorpusGraph } from "@/components/CorpusGraph";
 import { TypeBadge } from "@/components/TypeBadge";
@@ -24,7 +25,7 @@ export default function HomePage() {
   const uniqueJurisdictions = new Set(allAtomsList.flatMap((a) => a.jurisdictions));
   const jurisdictionCount = uniqueJurisdictions.size;
 
-  // Calculate total pages dynamically (atoms + compare + path + roles + static pages)
+  // Calculate total pages dynamically
   const totalPages = totalAtomsCount * 3 + (roles ? roles.length : 12) + 9;
 
   const publishedCount = allAtomsList.filter((a) => a.status === "published").length;
@@ -38,79 +39,68 @@ export default function HomePage() {
   const previewAtom = atoms["CR-07"] || allAtomsList.find((a) => a.jurisdictions.length > 3) || allAtomsList[0];
 
   return (
-    <div className="w-full bg-[#0B0C0E] text-[#E6E8EB] font-sans antialiased">
-      {/* PART 1: ABOVE THE FOLD — Full Viewport Canvas Background (100vw x 100vh - 48px) */}
+    <div className="w-full bg-bg text-text font-sans antialiased">
+      {/* ABOVE THE FOLD — Full Viewport Canvas Background (100vw x 100vh - 48px) */}
       <section className="relative w-full h-[calc(100vh-48px)] overflow-hidden select-none">
         {/* Graph Canvas Background */}
         <div className="absolute inset-0 z-0">
           <CorpusGraph atoms={atoms} isEmbedded={false} />
         </div>
 
-        {/* Top Left Wordmark & Tagline Overlay (No background panel) */}
-        <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10 font-mono space-y-1 pointer-events-none">
-          <div className="flex items-center gap-2">
-            <span className="text-[#C9711F] font-bold text-lg tracking-wider drop-shadow-md">WARREN</span>
-          </div>
-          <p className="text-xs text-[#9AA3AD] font-sans font-medium drop-shadow-sm">
-            Banking risk, regulation, and the work built on it.
-          </p>
-        </div>
-
-        {/* PART 1: Scroll Affordance at Bottom Centre */}
+        {/* Task 7: Scroll Affordance at Bottom Centre */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center pointer-events-none opacity-60">
-          <span className="font-mono text-[10px] tracking-widest text-[#9AA3AD] font-bold">SCROLL</span>
-          <span className="text-xs text-[#C9711F] -mt-1 animate-bounce">▾</span>
+          <span className="font-mono text-xs tracking-widest text-text-faint font-bold">SCROLL</span>
         </div>
 
-        {/* PART 1 & 3: Bottom Left Live Status Line Overlay */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-10 font-mono text-[11px] space-y-0.5 text-[#9AA3AD] pointer-events-none select-none max-w-[540px]">
-          <div className="text-[#E6E8EB] font-bold tracking-tight tabular-nums">
+        {/* Task 7: Bottom Left Live Status Line Overlay */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-10 font-mono text-xs space-y-0.5 text-text-muted pointer-events-none select-none max-w-xl">
+          <div className="text-text font-bold tracking-tight tabular-nums">
             {totalAtomsCount.toLocaleString()} ATOMS · {domainCount} DOMAINS · {subdomainCount} SUBDOMAINS · {jurisdictionCount} JURISDICTIONS · {totalPages.toLocaleString()} PAGES
           </div>
-          <div className="text-[#6B747E] text-[10px] uppercase font-bold tracking-wider">
+          <div className="text-text-faint text-xs uppercase font-bold tracking-wider">
             IN REVIEW · NOTHING PUBLISHED UNTIL VERIFIED AGAINST PRIMARY SOURCES
           </div>
         </div>
 
-        {/* PART 1 & 7: Bottom Right Entry Point Links Overlay */}
-        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 flex flex-col items-end gap-1 text-right">
-          <div className="flex flex-wrap items-center gap-3 font-mono font-bold text-xs uppercase text-[#C9711F]">
+        {/* Task 7: Bottom Right Plain Text Entry Links (No button shapes, accent used once) */}
+        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 flex flex-col items-end gap-1.5 text-right">
+          <div className="flex flex-wrap items-center gap-4 font-mono font-bold text-xs uppercase">
             <Link
               href="/compile"
-              className="bg-[#C9711F] text-[#0B0C0E] hover:bg-[#E58529] px-3 py-1.5 rounded-[3px] transition-colors font-bold shadow-lg"
+              className="text-accent hover:underline transition-colors"
             >
-              ⚡ COMPILE A JOB DESCRIPTION →
+              COMPILE A JOB DESCRIPTION →
             </Link>
-            <span className="text-[#23272D] hidden sm:inline">·</span>
+            <span className="text-border hidden sm:inline">·</span>
             <Link
               href="/atoms"
-              className="hover:underline text-[#E6E8EB] bg-[#121417]/80 border border-[#23272D] px-2.5 py-1 rounded-[3px]"
+              className="text-text hover:underline transition-colors"
             >
               BROWSE CORPUS →
             </Link>
-            <span className="text-[#23272D] hidden sm:inline">·</span>
+            <span className="text-border hidden sm:inline">·</span>
             <Link
               href="/deltas"
-              className="hover:underline text-[#E6E8EB] bg-[#121417]/80 border border-[#23272D] px-2.5 py-1 rounded-[3px]"
+              className="text-text hover:underline transition-colors"
             >
               DELTA REGISTER →
             </Link>
           </div>
-          {/* Part 7 Item 3: Plain Words Description Line */}
-          <div className="text-[11px] text-[#9AA3AD] font-sans font-normal normal-case pt-0.5">
+          {/* Helper Description Line with Muted Body Token */}
+          <div className="text-xs text-text-muted font-sans font-normal normal-case">
             Paste a job description and get the reading path for it.
           </div>
         </div>
       </section>
 
-      {/* BELOW THE FOLD — Centered 68ch Technical Manual Document */}
-      <main className="max-w-[68ch] mx-auto px-4 py-16 space-y-16">
+      {/* BELOW THE FOLD — Technical Manual Document (60ch measure for 18px body size) */}
+      <main className="max-w-[60ch] mx-auto px-4 py-16 space-y-16">
         {/* 1. WHAT THIS IS */}
-        <section className="space-y-4 font-sans text-body leading-relaxed text-[#E6E8EB]">
-          <div className="font-mono text-xs uppercase tracking-wider text-[#C9711F] font-bold">
+        <section className="space-y-4 font-sans text-body leading-relaxed text-text">
+          <div className="font-mono text-xs uppercase tracking-wider text-accent font-bold">
             01 // WHAT THIS IS
           </div>
-          <div className="space-y-4 text-sm text-[#9AA3AD] leading-normal">
+          <div className="space-y-4 text-body text-text-muted leading-relaxed">
             <p>
               WARREN is a jurisdiction-aware technical operating manual and knowledge system built specifically for banking, credit risk, market risk, treasury, and regulatory professionals.
             </p>
@@ -124,15 +114,15 @@ export default function HomePage() {
         </section>
 
         {/* 2. THE JURISDICTION MECHANIC */}
-        <section className="space-y-4 border-t border-[#23272D] pt-8 font-mono text-xs">
+        <section className="space-y-4 border-t border-border pt-8 font-mono text-xs">
           <div className="flex items-center justify-between">
-            <div className="uppercase tracking-wider text-[#C9711F] font-bold">
+            <div className="uppercase tracking-wider text-accent font-bold">
               02 // THE JURISDICTION MECHANIC PREVIEW
             </div>
             {previewAtom && (
               <Link
                 href={`/compare/${previewAtom.id}`}
-                className="text-[#C9711F] hover:underline font-bold"
+                className="text-accent hover:underline font-bold"
               >
                 COMPARE MATRICES →
               </Link>
@@ -140,38 +130,38 @@ export default function HomePage() {
           </div>
 
           {!previewAtom ? (
-            <div className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] text-[#6B747E]">
+            <div className="border border-border bg-surface p-4 rounded-sm text-text-faint">
               No atoms in corpus yet. Import content to view live jurisdiction variant matrices.
             </div>
           ) : (
-            <div className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] space-y-3">
-              <div className="flex items-center justify-between border-b border-[#23272D] pb-2">
-                <span className="text-[#C9711F] font-bold text-sm">{previewAtom.id}: {previewAtom.title}</span>
+            <div className="border border-border bg-surface p-4 rounded-sm space-y-3">
+              <div className="flex items-center justify-between border-b border-border pb-2">
+                <span className="text-accent font-bold text-xs">{previewAtom.id}: {previewAtom.title}</span>
                 <TypeBadge type={previewAtom.type} />
               </div>
 
-              <div className="space-y-1 font-sans text-xs text-[#9AA3AD]">
-                <span className="font-mono text-[10px] uppercase text-[#6B747E] font-bold">UNIVERSAL BASELINE:</span>
-                <p className="text-[#E6E8EB] line-clamp-1">{previewAtom.one_screen}</p>
+              <div className="space-y-1 font-sans text-xs text-text-muted">
+                <span className="font-mono text-xs uppercase text-text-faint font-bold">UNIVERSAL BASELINE:</span>
+                <p className="text-text line-clamp-1">{previewAtom.one_screen}</p>
               </div>
 
               {/* 4 Jurisdiction Side-by-Side Cards */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2">
-                <div className="border border-[#7D5A31] bg-[#7D5A31]/10 p-2 rounded-[3px] space-y-1">
-                  <span className="text-[#C9711F] font-bold text-[10px]">IN (RBI)</span>
-                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">IRACP provisions based on 90-day delinquency threshold.</p>
+                <div className="border border-jur-in/40 bg-jur-in/10 p-2 rounded-sm space-y-1">
+                  <span className="text-accent font-bold text-xs">IN (RBI)</span>
+                  <p className="font-sans text-xs text-text-muted line-clamp-2">IRACP provisions based on 90-day delinquency threshold.</p>
                 </div>
-                <div className="border border-[#315F7D] bg-[#315F7D]/10 p-2 rounded-[3px] space-y-1">
-                  <span className="text-[#315F7D] font-bold text-[10px]">UK (PRA)</span>
-                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">SS11/13 PD calibration requires downturn cycle adjustment.</p>
+                <div className="border border-jur-uk/40 bg-jur-uk/10 p-2 rounded-sm space-y-1">
+                  <span className="text-jur-uk font-bold text-xs">UK (PRA)</span>
+                  <p className="font-sans text-xs text-text-muted line-clamp-2">SS11/13 PD calibration requires downturn cycle adjustment.</p>
                 </div>
-                <div className="border border-[#51518A] bg-[#51518A]/10 p-2 rounded-[3px] space-y-1">
-                  <span className="text-[#51518A] font-bold text-[10px]">EU (EBA)</span>
-                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">CRR Article 178 mandate default definition harmonisation.</p>
+                <div className="border border-jur-eu/40 bg-jur-eu/10 p-2 rounded-sm space-y-1">
+                  <span className="text-jur-eu font-bold text-xs">EU (EBA)</span>
+                  <p className="font-sans text-xs text-text-muted line-clamp-2">CRR Article 178 mandate default definition harmonisation.</p>
                 </div>
-                <div className="border border-[#6D4545] bg-[#6D4545]/10 p-2 rounded-[3px] space-y-1">
-                  <span className="text-[#6D4545] font-bold text-[10px]">US (FED/OCC)</span>
-                  <p className="font-sans text-[11px] text-[#9AA3AD] line-clamp-2">CECL FASB ASC 326 mandates lifetime ECL from day one.</p>
+                <div className="border border-jur-us/40 bg-jur-us/10 p-2 rounded-sm space-y-1">
+                  <span className="text-jur-us font-bold text-xs">US (FED/OCC)</span>
+                  <p className="font-sans text-xs text-text-muted line-clamp-2">CECL FASB ASC 326 mandates lifetime ECL from day one.</p>
                 </div>
               </div>
             </div>
@@ -179,12 +169,12 @@ export default function HomePage() {
         </section>
 
         {/* 3. ROLE FAMILIES */}
-        <section className="space-y-4 border-t border-[#23272D] pt-8 font-mono text-xs">
+        <section className="space-y-4 border-t border-border pt-8 font-mono text-xs">
           <div className="flex items-center justify-between">
-            <div className="uppercase tracking-wider text-[#C9711F] font-bold">
+            <div className="uppercase tracking-wider text-accent font-bold">
               03 // INDEXED ROLE FAMILIES ({roles.length})
             </div>
-            <Link href="/roles" className="text-[#C9711F] hover:underline font-bold">
+            <Link href="/roles" className="text-accent hover:underline font-bold">
               ALL ROLES →
             </Link>
           </div>
@@ -194,39 +184,39 @@ export default function HomePage() {
               <Link
                 key={role.id}
                 href={`/role/${role.id}`}
-                className="border border-[#23272D] bg-[#121417] hover:bg-[#191C20] hover:border-[#333940] p-3 rounded-[3px] transition-colors space-y-1 block"
+                className="border border-border bg-surface hover:bg-surface-2 hover:border-border-strong p-3 rounded-sm transition-colors space-y-1 block"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[#E6E8EB] font-bold text-xs font-sans">{role.label}</span>
-                  <span className="text-[#C9711F] text-[10px] font-mono tabular-nums">{role.atoms.length} ATOMS</span>
+                  <span className="text-text font-bold text-xs font-sans">{role.label}</span>
+                  <span className="text-accent text-xs font-mono tabular-nums">{role.atoms.length} ATOMS</span>
                 </div>
-                <p className="text-[#9AA3AD] font-sans text-[11px] line-clamp-1">{role.description}</p>
+                <p className="text-text-muted font-sans text-xs line-clamp-1">{role.description}</p>
               </Link>
             ))}
           </div>
         </section>
 
         {/* 4. START HERE (Depth-0 Roots) */}
-        <section className="space-y-4 border-t border-[#23272D] pt-8 font-mono text-xs">
-          <div className="uppercase tracking-wider text-[#C9711F] font-bold">
+        <section className="space-y-4 border-t border-border pt-8 font-mono text-xs">
+          <div className="uppercase tracking-wider text-accent font-bold">
             04 // START HERE — QUANTITATIVE & LEGAL FOUNDATIONS
           </div>
 
-          <div className="divide-y divide-[#23272D] border border-[#23272D] bg-[#121417] rounded-[3px]">
+          <div className="divide-y divide-border border border-border bg-surface rounded-sm">
             {rootAtoms.map((atom) => (
               <Link
                 key={atom.id}
                 href={`/atom/${atom.id}`}
-                className="p-3 flex items-center justify-between hover:bg-[#191C20] transition-colors block"
+                className="p-3 flex items-center justify-between hover:bg-surface-2 transition-colors block"
               >
                 <div className="space-y-0.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-[#C9711F] font-bold">{atom.id}</span>
-                    <span className="text-[#E6E8EB] font-sans font-semibold">{atom.title}</span>
+                    <span className="text-accent font-bold">{atom.id}</span>
+                    <span className="text-text font-sans font-semibold text-xs">{atom.title}</span>
                   </div>
-                  <p className="text-[#9AA3AD] font-sans text-[11px] line-clamp-1">{atom.one_screen}</p>
+                  <p className="text-text-muted font-sans text-xs line-clamp-1">{atom.one_screen}</p>
                 </div>
-                <span className="text-[#6B747E] text-[10px] uppercase font-bold shrink-0 ml-4">
+                <span className="text-text-faint text-xs uppercase font-bold shrink-0 ml-4">
                   DEPTH 0 →
                 </span>
               </Link>
@@ -235,44 +225,44 @@ export default function HomePage() {
         </section>
 
         {/* 5. CORPUS TRANSPARENCY & STATUS */}
-        <section className="space-y-4 border-t border-[#23272D] pt-8 font-mono text-xs">
-          <div className="uppercase tracking-wider text-[#9AA3AD] font-bold">
-            05 // CORPUS TRANSPARENCY & AUDIT AUDIT
+        <section className="space-y-4 border-t border-border pt-8 font-mono text-xs">
+          <div className="uppercase tracking-wider text-text-muted font-bold">
+            05 // CORPUS TRANSPARENCY & AUDIT
           </div>
 
-          <div className="border border-[#23272D] bg-[#121417] p-4 rounded-[3px] space-y-3">
+          <div className="border border-border bg-surface p-4 rounded-sm space-y-3">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
-              <div className="border border-[#23272D] p-2 rounded-[3px]">
-                <div className="text-[10px] text-[#6B747E] uppercase font-bold">PUBLISHED</div>
-                <div className="text-xl font-bold text-[#3E7D5A] tabular-nums">{publishedCount}</div>
+              <div className="border border-border p-2 rounded-sm">
+                <div className="text-xs text-text-faint uppercase font-bold">PUBLISHED</div>
+                <div className="text-xl font-bold text-rule tabular-nums">{publishedCount}</div>
               </div>
-              <div className="border border-[#23272D] p-2 rounded-[3px]">
-                <div className="text-[10px] text-[#6B747E] uppercase font-bold">FIXTURES</div>
-                <div className="text-xl font-bold text-[#8A6D2F] tabular-nums">{fixtureCount}</div>
+              <div className="border border-border p-2 rounded-sm">
+                <div className="text-xs text-text-faint uppercase font-bold">FIXTURES</div>
+                <div className="text-xl font-bold text-confuse tabular-nums">{fixtureCount}</div>
               </div>
-              <div className="border border-[#23272D] p-2 rounded-[3px]">
-                <div className="text-[10px] text-[#6B747E] uppercase font-bold">DRAFTS</div>
-                <div className="text-xl font-bold text-[#C9711F] tabular-nums">{draftCount}</div>
+              <div className="border border-border p-2 rounded-sm">
+                <div className="text-xs text-text-faint uppercase font-bold">DRAFTS</div>
+                <div className="text-xl font-bold text-accent tabular-nums">{draftCount}</div>
               </div>
-              <div className="border border-[#23272D] p-2 rounded-[3px]">
-                <div className="text-[10px] text-[#6B747E] uppercase font-bold">UNVERIFIED</div>
-                <div className="text-xl font-bold text-[#A6503C] tabular-nums">73 CLAIMS</div>
+              <div className="border border-border p-2 rounded-sm">
+                <div className="text-xs text-text-faint uppercase font-bold">UNVERIFIED</div>
+                <div className="text-xl font-bold text-trap tabular-nums">73 CLAIMS</div>
               </div>
             </div>
 
-            <p className="text-[#9AA3AD] font-sans text-xs leading-relaxed">
+            <p className="text-text-muted font-sans text-xs leading-relaxed">
               Warren publishes its own incompleteness transparently. Unverified claims and fixtures carry unmissable warning banners. Only primary-source human verification allows published atom status.
             </p>
           </div>
         </section>
 
         {/* 6. FOOTER */}
-        <footer className="border-t border-[#23272D] pt-8 space-y-3 font-mono text-xs text-[#6B747E]">
+        <footer className="border-t border-border pt-8 space-y-3 font-mono text-xs text-text-faint">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              Built & maintained by <strong className="text-[#E6E8EB]">Tharun Gajula</strong>.
+              Built & maintained by <strong className="text-text">Tharun Gajula</strong>.
             </div>
-            <div className="flex items-center gap-4 text-[#C9711F]">
+            <div className="flex items-center gap-4 text-accent">
               <a
                 href="https://github.com/tharungajula2/warren"
                 target="_blank"
@@ -291,7 +281,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <p className="text-[11px] font-sans leading-normal text-[#6B747E]">
+          <p className="text-xs font-sans leading-normal text-text-faint">
             DISCLAIMER: WARREN is an independent technical knowledge reference. No content contained herein constitutes formal financial, legal, statutory, accounting, or professional advice.
           </p>
         </footer>

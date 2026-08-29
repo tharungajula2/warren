@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { CorpusManifest, DomainTreeNode } from "@/lib/schema";
 
 interface SidebarProps {
@@ -47,92 +48,92 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   if (!isOpen) return null;
 
   return (
-    <aside className="w-[280px] bg-[#121417] border-r border-[#23272D] flex flex-col shrink-0 min-h-[calc(100vh-48px)] font-mono text-xs select-none">
+    <aside className="w-70 bg-surface border-r border-border flex flex-col shrink-0 min-h-[calc(100vh-48px)] font-mono text-xs select-none">
       {/* Sidebar Top Header & Tagline */}
-      <div className="p-4 border-b border-[#23272D] space-y-1">
+      <div className="p-4 border-b border-border space-y-1">
         <div className="flex items-center justify-between">
-          <span className="text-[#C9711F] font-bold text-xs">WARREN ENGINE</span>
-          <span className="text-[10px] bg-[#191C20] text-[#9AA3AD] border border-[#23272D] px-1.5 py-0.5 rounded-[3px]">
+          <span className="text-accent font-bold text-xs">WARREN ENGINE</span>
+          <span className="text-xs bg-surface-2 text-text-muted border border-border px-1.5 py-0.5 rounded-sm">
             CORPUS
           </span>
         </div>
-        <p className="text-[11px] text-[#9AA3AD] font-sans leading-tight">
+        <p className="text-xs text-text-muted font-sans leading-tight">
           Banking risk, regulation, and the work built on it.
         </p>
       </div>
 
       {/* Primary Navigation Links */}
-      <div className="p-3 border-b border-[#23272D] space-y-1">
+      <div className="p-3 border-b border-border space-y-1">
         <Link
           href="/"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-[3px] transition-colors ${
-            pathname === "/" ? "bg-[#191C20] text-[#C9711F] font-bold" : "text-[#9AA3AD] hover:text-[#E6E8EB]"
+          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
+            pathname === "/" ? "bg-surface-2 text-accent font-bold" : "text-text-muted hover:text-text"
           }`}
         >
           <span>HOME OVERVIEW</span>
-          <span className="text-[10px]">→</span>
+          <span className="text-xs">→</span>
         </Link>
         <Link
           href="/compile"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-[3px] transition-colors ${
-            pathname === "/compile" ? "bg-[#2A1D10] text-[#C9711F] font-bold" : "text-[#C9711F] hover:underline"
+          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
+            pathname === "/compile" ? "bg-accent-soft text-accent font-bold" : "text-accent hover:underline"
           }`}
         >
-          <span>⚡ JD COMPILER</span>
-          <span className="text-[10px]">NEW</span>
+          <span>JD COMPILER</span>
+          <span className="text-xs">NEW</span>
         </Link>
         <Link
           href="/roles"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-[3px] transition-colors ${
-            pathname.startsWith("/role") ? "bg-[#191C20] text-[#C9711F] font-bold" : "text-[#9AA3AD] hover:text-[#E6E8EB]"
+          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
+            pathname.startsWith("/role") ? "bg-surface-2 text-accent font-bold" : "text-text-muted hover:text-text"
           }`}
         >
           <span>ROLE FAMILIES</span>
-          <span className="text-[10px]">12</span>
+          <span className="text-xs tabular-nums">12</span>
         </Link>
         <Link
           href="/atoms"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-[3px] transition-colors ${
-            pathname === "/atoms" ? "bg-[#191C20] text-[#C9711F] font-bold" : "text-[#9AA3AD] hover:text-[#E6E8EB]"
+          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
+            pathname === "/atoms" ? "bg-surface-2 text-accent font-bold" : "text-text-muted hover:text-text"
           }`}
         >
           <span>INDEX & ALL ATOMS</span>
-          <span className="text-[10px]">→</span>
+          <span className="text-xs">→</span>
         </Link>
         <Link
           href="/deltas"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-[3px] transition-colors ${
-            pathname === "/deltas" ? "bg-[#191C20] text-[#C9711F] font-bold" : "text-[#9AA3AD] hover:text-[#E6E8EB]"
+          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
+            pathname === "/deltas" ? "bg-surface-2 text-accent font-bold" : "text-text-muted hover:text-text"
           }`}
         >
           <span>DELTA REGISTER</span>
-          <span className="text-[10px]">→</span>
+          <span className="text-xs">→</span>
         </Link>
         <Link
           href="/currentness"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-[3px] transition-colors ${
-            pathname === "/currentness" ? "bg-[#191C20] text-[#A6503C] font-bold" : "text-[#9AA3AD] hover:text-[#E6E8EB]"
+          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
+            pathname === "/currentness" ? "bg-surface-2 text-trap font-bold" : "text-text-muted hover:text-text"
           }`}
         >
           <span>CURRENTNESS AUDIT</span>
-          <span className="text-[10px]">→</span>
+          <span className="text-xs">→</span>
         </Link>
       </div>
 
       {/* Domain Navigation Tree */}
       <div className="flex-1 overflow-y-auto p-3 space-y-3">
-        <div className="text-[10px] uppercase text-[#6B747E] font-bold tracking-wider px-1">
+        <div className="text-xs uppercase text-text-faint font-bold tracking-wider px-1">
           DOMAIN KNOWLEDGE TREE
         </div>
 
         {!manifest ? (
-          <div className="text-[11px] text-[#6B747E] px-1">Loading tree...</div>
+          <div className="text-xs text-text-faint px-1">Loading tree...</div>
         ) : manifest.domainTree.length === 0 ? (
           <div className="space-y-1">
             {["credit-risk", "counterparty-risk", "foundation", "legal-framework", "market-risk", "operational-risk", "quantitative", "regulatory", "risk-data"].map((domKey) => (
-              <div key={domKey} className="px-2 py-1 bg-[#191C20] border border-[#23272D] rounded-[3px] text-[#9AA3AD] text-[11px]">
-                <span className="font-bold uppercase tracking-wider text-[#C9711F]">{domKey}</span>
-                <span className="block text-[9px] text-[#6B747E]">0 ATOMS INDEXED</span>
+              <div key={domKey} className="px-2 py-1 bg-surface-2 border border-border rounded-sm text-text-muted text-xs">
+                <span className="font-bold uppercase tracking-wider text-accent">{domKey}</span>
+                <span className="block text-xs text-text-faint tabular-nums">0 ATOMS INDEXED</span>
               </div>
             ))}
           </div>
@@ -145,19 +146,23 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 {/* Domain Header Toggle */}
                 <button
                   onClick={() => toggleDomain(domainNode.domain)}
-                  className="w-full flex items-center justify-between px-2 py-1 bg-[#191C20] hover:bg-[#23272D] border border-[#23272D] rounded-[3px] text-[#E6E8EB] transition-colors text-[11px]"
+                  className="w-full flex items-center justify-between px-2 py-1 bg-surface-2 hover:bg-border border border-border rounded-sm text-text transition-colors text-xs cursor-pointer"
                 >
-                  <span className="font-bold uppercase tracking-wider text-[#C9711F] truncate pr-1">
+                  <span className="font-bold uppercase tracking-wider text-accent truncate pr-1">
                     {domainNode.domain}
                   </span>
-                  <span className="text-[#6B747E] font-mono text-[10px]">
-                    {isExpanded ? "▼" : "▶"}
+                  <span className="text-text-faint">
+                    {isExpanded ? (
+                      <ChevronDown size={14} strokeWidth={1.5} className="text-current" />
+                    ) : (
+                      <ChevronRight size={14} strokeWidth={1.5} className="text-current" />
+                    )}
                   </span>
                 </button>
 
                 {/* Subdomains & Atom Items */}
                 {isExpanded && (
-                  <div className="pl-2 border-l border-[#23272D] ml-1.5 space-y-2 pt-1">
+                  <div className="pl-2 border-l border-border ml-1.5 space-y-2 pt-1">
                     {domainNode.subdomains.map((subNode) => {
                       const isUnsorted = subNode.subdomain === "unsorted";
                       const subKey = `${domainNode.domain}:${subNode.subdomain}`;
@@ -168,13 +173,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                           {isUnsorted ? (
                             <button
                               onClick={() => toggleSubdomain(subKey)}
-                              className="w-full flex items-center justify-between text-[10px] text-[#8A6D2F] font-bold uppercase tracking-wider px-1 py-0.5 bg-[#191C20] border border-[#8A6D2F]/30 rounded-[3px]"
+                              className="w-full flex items-center justify-between text-xs text-confuse font-bold uppercase tracking-wider px-1 py-0.5 bg-surface-2 border border-confuse/30 rounded-sm cursor-pointer"
                             >
-                              <span>UNSORTED DRAFTS [{subNode.atoms.length}]</span>
-                              <span>{isSubExpanded ? "▼" : "▶"}</span>
+                              <span className="tabular-nums">UNSORTED DRAFTS [{subNode.atoms.length}]</span>
+                              <span>
+                                {isSubExpanded ? (
+                                  <ChevronDown size={14} strokeWidth={1.5} className="text-current" />
+                                ) : (
+                                  <ChevronRight size={14} strokeWidth={1.5} className="text-current" />
+                                )}
+                              </span>
                             </button>
                           ) : (
-                            <div className="text-[10px] text-[#6B747E] uppercase tracking-wider font-semibold px-1">
+                            <div className="text-xs text-text-faint uppercase tracking-wider font-semibold px-1">
                               {subNode.subdomain}
                             </div>
                           )}
@@ -184,25 +195,24 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                               {subNode.atoms.map((atomItem) => {
                                 const isCurrent = pathname === `/atom/${atomItem.id}`;
                                 const isFixture = atomItem.status === "fixture";
-                                const isDraft = atomItem.status === "draft";
 
                                 return (
                                   <li key={atomItem.id}>
                                     <Link
                                       href={`/atom/${atomItem.id}`}
-                                      className={`block px-2 py-1 rounded-[3px] text-[11px] leading-snug transition-colors line-clamp-2 ${
+                                      className={`block px-2 py-1 rounded-sm text-xs leading-snug transition-colors line-clamp-2 ${
                                         isCurrent
-                                          ? "bg-[#2A1D10] text-[#C9711F] font-bold border border-[#C9711F]/40"
-                                          : "text-[#9AA3AD] hover:text-[#E6E8EB] hover:bg-[#191C20]"
+                                          ? "bg-accent-soft text-accent font-bold border border-accent/40"
+                                          : "text-text-muted hover:text-text hover:bg-surface-2"
                                       }`}
                                       title={atomItem.title}
                                     >
-                                      <span className="text-[#C9711F] font-bold mr-1">
+                                      <span className="text-accent font-bold mr-1">
                                         {atomItem.id}:
                                       </span>
                                       <span>{atomItem.title}</span>
                                       {isFixture && (
-                                        <span className="ml-1 text-[9px] text-[#8A6D2F] font-bold">
+                                        <span className="ml-1 text-xs text-confuse font-bold">
                                           [FIXTURE]
                                         </span>
                                       )}
@@ -224,10 +234,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
 
       {/* Sidebar Footer */}
-      <div className="p-3 border-t border-[#23272D] text-[10px] text-[#6B747E] flex items-center justify-between">
+      <div className="p-3 border-t border-border text-xs text-text-faint flex items-center justify-between">
         <span>PRESS ? FOR SHORTCUTS</span>
         {process.env.NODE_ENV !== "production" && (
-          <Link href="/studio" className="text-[#C9711F] hover:underline font-bold">
+          <Link href="/studio" className="text-accent hover:underline font-bold">
             COCKPIT →
           </Link>
         )}

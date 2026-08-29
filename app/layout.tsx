@@ -32,7 +32,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${sourceSans.variable} ${ibmPlexMono.variable}`}>
-      <body className="bg-[#0B0C0E] text-[#E6E8EB] antialiased selection:bg-[#2A1D10] selection:text-[#C9711F]">
+      <body className="bg-bg text-text antialiased selection:bg-accent-soft selection:text-accent">
         <JurisdictionProvider>
           <Shell>
             {children}

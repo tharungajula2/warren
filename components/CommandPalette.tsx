@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Command } from "cmdk";
 import { useRouter } from "next/navigation";
+import { Search } from "lucide-react";
 
 export interface SearchIndexItem {
   id: string;
@@ -158,7 +159,7 @@ export function CommandPalette({ isOpen, onClose, triggerRef }: CommandPalettePr
     return (
       <>
         {before}
-        <mark className="bg-[#C9711F]/30 text-[#C9711F] font-bold rounded-[2px] px-0.5">
+        <mark className="bg-accent-soft text-accent font-bold rounded-sm px-0.5">
           {matchStr}
         </mark>
         {after}
@@ -167,39 +168,39 @@ export function CommandPalette({ isOpen, onClose, triggerRef }: CommandPalettePr
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 md:pt-20 px-4 bg-black/75 backdrop-blur-none">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 md:pt-20 px-4 bg-bg/80">
       {/* Backdrop click to close */}
       <div className="fixed inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-[680px] bg-[#121417] border border-[#333940] rounded-[5px] shadow-2xl overflow-hidden z-10 font-mono text-xs">
+      <div className="relative w-full max-w-2xl bg-surface border border-border-strong rounded-md shadow-2xl overflow-hidden z-10 font-mono text-xs">
         <Command label="Search Warren Knowledge System" className="w-full">
           {/* Search Input Bar */}
-          <div className="flex items-center border-b border-[#23272D] px-4 py-3 bg-[#191C20]">
-            <span className="text-[#C9711F] font-bold mr-3 select-none">🔍</span>
+          <div className="flex items-center border-b border-border px-4 py-3 bg-surface-2">
+            <Search size={16} strokeWidth={1.5} className="text-text-faint mr-3 shrink-0" />
             <Command.Input
               value={searchQuery}
               onValueChange={setSearchQuery}
-              placeholder="Search all 384 atoms by ID, title, domain, or body text..."
-              className="w-full bg-transparent text-[#E6E8EB] placeholder-[#6B747E] outline-none font-mono text-xs"
+              placeholder="Search all 384 atoms by ID, title, domain, or body text"
+              className="w-full bg-transparent text-text placeholder:text-text-faint outline-none font-mono text-xs"
               autoFocus
             />
             <button
               onClick={onClose}
-              className="text-[10px] bg-[#23272D] text-[#9AA3AD] hover:text-[#E6E8EB] px-1.5 py-0.5 rounded-[3px] ml-2 shrink-0"
+              className="text-xs bg-border text-text-muted hover:text-text px-1.5 py-0.5 rounded-sm ml-2 shrink-0 cursor-pointer"
             >
               ESC
             </button>
           </div>
 
-          <Command.List className="max-h-[420px] overflow-y-auto p-2 divide-y divide-[#23272D]/50">
+          <Command.List className="max-h-[420px] overflow-y-auto p-2 divide-y divide-border/50">
             {isLoading && (
-              <div className="p-6 text-center text-[#9AA3AD] font-mono text-xs">
+              <div className="p-6 text-center text-text-muted font-mono text-xs">
                 Loading full-text search index (384 atoms)...
               </div>
             )}
 
             {!isLoading && isLoaded && searchResults.length === 0 && (
-              <Command.Empty className="p-6 text-center text-[#6B747E] font-mono text-xs">
+              <Command.Empty className="p-6 text-center text-text-faint font-mono text-xs">
                 No atoms matched "{searchQuery}"
               </Command.Empty>
             )}
@@ -210,7 +211,7 @@ export function CommandPalette({ isOpen, onClose, triggerRef }: CommandPalettePr
                 <Command.Group
                   key={domain}
                   heading={
-                    <span className="text-[10px] uppercase tracking-wider text-[#C9711F] font-bold px-2 py-1.5 block select-none">
+                    <span className="text-xs uppercase tracking-wider text-accent font-bold px-2 py-1.5 block select-none">
                       DOMAIN // {domain}
                     </span>
                   }
@@ -220,29 +221,29 @@ export function CommandPalette({ isOpen, onClose, triggerRef }: CommandPalettePr
                       key={item.id}
                       value={`${item.id} ${item.title} ${item.one_screen} ${item.domain} ${item.subdomain} ${item.bodyText}`}
                       onSelect={() => handleSelectAtom(item.id)}
-                      className="px-3 py-2.5 rounded-[3px] cursor-pointer hover:bg-[#191C20] aria-selected:bg-[#2A1D10] aria-selected:text-[#C9711F] transition-colors space-y-1 block"
+                      className="px-3 py-2.5 rounded-sm cursor-pointer hover:bg-surface-2 aria-selected:bg-accent-soft aria-selected:text-accent transition-colors space-y-1 block"
                     >
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2.5 truncate">
-                          <span className="text-[#C9711F] font-mono text-[11px] font-bold shrink-0">
+                          <span className="text-accent font-mono text-xs font-bold shrink-0">
                             {renderHighlightedText(item.id, query)}
                           </span>
-                          <span className="text-[#E6E8EB] font-sans font-semibold text-xs truncate">
+                          <span className="text-text font-sans font-semibold text-xs truncate">
                             {renderHighlightedText(item.title, query)}
                           </span>
                         </div>
-                        <span className="text-[#6B747E] font-mono text-[10px] shrink-0">
+                        <span className="text-text-faint font-mono text-xs shrink-0">
                           {item.subdomain}
                         </span>
                       </div>
 
                       {/* Display matched body snippet or one_screen */}
                       {snippet ? (
-                        <div className="text-[#9AA3AD] font-sans text-[11px] leading-tight line-clamp-1 italic bg-[#191C20] p-1.5 rounded-[3px] border border-[#23272D]">
+                        <div className="text-text-muted font-sans text-xs leading-tight line-clamp-1 italic bg-surface-2 p-1.5 rounded-sm border border-border">
                           "{renderHighlightedText(snippet, query)}"
                         </div>
                       ) : (
-                        <p className="text-[#6B747E] font-sans text-[11px] line-clamp-1">
+                        <p className="text-text-faint font-sans text-xs line-clamp-1">
                           {item.one_screen}
                         </p>
                       )}

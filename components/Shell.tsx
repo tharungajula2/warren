@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, Search, ChevronDown } from "lucide-react";
 import { Sidebar } from "./Sidebar";
 import { CommandPalette } from "./CommandPalette";
 import { KeyboardShortcuts } from "./KeyboardShortcuts";
@@ -10,17 +11,16 @@ import { ReadingProgressBar } from "./ReadingProgressBar";
 
 export type JurisdictionCode = "universal" | "IN" | "UK" | "EU" | "US";
 
-const JURISDICTION_OPTIONS: { code: JurisdictionCode; label: string; flag: string }[] = [
-  { code: "universal", label: "Universal Core", flag: "🌐" },
-  { code: "IN", label: "India (RBI)", flag: "🇮🇳" },
-  { code: "UK", label: "United Kingdom (PRA)", flag: "🇬🇧" },
-  { code: "EU", label: "European Union (EBA)", flag: "🇪🇺" },
-  { code: "US", label: "United States (Fed/OCC)", flag: "🇺🇸" },
+const JURISDICTION_OPTIONS: { code: JurisdictionCode; label: string }[] = [
+  { code: "universal", label: "Universal Core" },
+  { code: "IN", label: "India (RBI)" },
+  { code: "UK", label: "United Kingdom (PRA)" },
+  { code: "EU", label: "European Union (EBA)" },
+  { code: "US", label: "United States (Fed/OCC)" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   const [selectedJur, setSelectedJur] = useState<JurisdictionCode>("universal");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -45,7 +45,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0B0C0E] text-[#E6E8EB] flex flex-col font-sans overflow-x-clip max-w-full">
+    <div className="min-h-screen bg-bg text-text flex flex-col font-sans overflow-x-clip max-w-full">
       {/* 2px Scroll Reading Progress Bar (atom pages) */}
       <ReadingProgressBar />
 
@@ -53,63 +53,62 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <KeyboardShortcuts />
 
       {/* TOP BAR (48px fixed height) */}
-      <header className="h-[48px] bg-[#121417] border-b border-[#23272D] flex items-center justify-between px-4 sticky top-0 z-40 select-none max-w-full">
+      <header className="h-12 bg-surface border-b border-border flex items-center justify-between px-4 sticky top-0 z-40 select-none max-w-full">
         <div className="flex items-center gap-3">
           {/* Sidebar Toggle */}
           <button
             onClick={() => setIsSidebarOpen((prev) => !prev)}
             aria-label="Toggle Navigation Sidebar"
-            className="p-1.5 text-[#9AA3AD] hover:text-[#E6E8EB] hover:bg-[#191C20] rounded-[3px] transition-colors"
+            className="p-1.5 text-text-muted hover:text-text hover:bg-surface-2 rounded-sm transition-colors cursor-pointer"
           >
-            <span className="font-mono text-sm">☰</span>
+            <Menu size={16} strokeWidth={1.5} className="text-current" />
           </button>
 
-          {/* Product Wordmark */}
+          {/* Product Wordmark (Single version string on screen) */}
           <Link
             href="/"
-            className="font-mono text-sm font-bold tracking-wider text-[#E6E8EB] hover:text-[#C9711F] transition-colors"
+            className="font-mono text-sm font-bold tracking-wider text-text hover:text-accent transition-colors"
           >
-            WARREN <span className="text-[#C9711F] text-[10px]">v0.1.0</span>
+            WARREN <span className="text-accent text-xs">v0.1.0</span>
           </Link>
         </div>
 
+        {/* Task 6: Instrument Controls sharing single baseline, height, and border treatment */}
         <div className="flex items-center gap-3 font-mono text-xs">
           {/* CMDK Search Trigger Button */}
           <button
             ref={searchButtonRef}
             onClick={() => setIsSearchOpen(true)}
-            className="flex items-center gap-2 bg-[#191C20] hover:bg-[#23272D] border border-[#23272D] text-[#9AA3AD] px-3 py-1 rounded-[3px] transition-colors"
+            className="h-8 flex items-center gap-2 bg-transparent hover:bg-surface-2 border border-border text-text-muted px-3 rounded-sm transition-colors cursor-pointer"
           >
-            <span>🔍</span>
-            <span className="hidden sm:inline">Search Corpus...</span>
-            <kbd className="hidden md:inline-block bg-[#0B0C0E] border border-[#333940] text-[#6B747E] text-[10px] px-1.5 py-0.2 rounded-[3px]">
-              / or ⌘K
+            <Search size={16} strokeWidth={1.5} className="text-text-faint" />
+            <span className="hidden sm:inline">Search corpus</span>
+            <kbd className="hidden md:inline-block bg-transparent border border-border-strong text-text-faint text-xs px-1.5 py-0.5 rounded-sm">
+              ⌘K
             </kbd>
           </button>
 
-          {/* Global Jurisdiction Switcher Dropdown */}
-          <div className="flex items-center gap-1.5 bg-[#191C20] border border-[#23272D] px-2 py-1 rounded-[3px]">
-            <span className="text-[#6B747E] text-[10px] uppercase hidden sm:inline">
-              JURISDICTION:
-            </span>
+          {/* Jurisdiction Selector Control */}
+          <div className="h-8 relative flex items-center bg-transparent border border-border px-2.5 rounded-sm hover:bg-surface-2 transition-colors">
             <select
               value={selectedJur}
               onChange={(e) => setSelectedJur(e.target.value as JurisdictionCode)}
-              className="bg-transparent text-[#C9711F] font-bold outline-none cursor-pointer text-xs"
+              className="bg-transparent text-text font-mono text-xs pr-5 outline-none cursor-pointer appearance-none"
             >
               {JURISDICTION_OPTIONS.map((opt) => (
-                <option key={opt.code} value={opt.code} className="bg-[#121417] text-[#E6E8EB]">
-                  {opt.flag} {opt.label}
+                <option key={opt.code} value={opt.code} className="bg-surface text-text">
+                  {opt.label}
                 </option>
               ))}
             </select>
+            <ChevronDown size={16} strokeWidth={1.5} className="text-text-faint absolute right-2 pointer-events-none" />
           </div>
         </div>
       </header>
 
       {/* MAIN CONTAINER (Sidebar + Main Content Area) */}
       <div className="flex-1 flex w-full relative min-w-0">
-        {/* Collapsible Sidebar (Hidden on Home / by default for full-bleed graph) */}
+        {/* Collapsible Sidebar */}
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
         {/* Primary Page Content Wrapper */}
