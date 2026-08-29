@@ -33,24 +33,25 @@ interface GraphEdge {
   target: GraphNode;
 }
 
+// Luminous, high-contrast domain palette for pitch-black canvas background
 const DOMAIN_COLORS: Record<string, string> = {
-  foundation: "#7D5A31",
-  "credit-risk": "#315F7D",
-  impairment: "#5A7D3E",
-  "regulatory-capital": "#A6503C",
-  "treasury-alm": "#8A456D",
-  "traded-products": "#6B5A7D",
-  "counterparty-risk": "#51518A",
-  "market-risk": "#C9711F",
-  "operational-risk": "#8A6D2F",
-  "model-risk": "#4A6B82",
-  "risk-data": "#3E7D5A",
-  "financial-crime": "#4A7D7D",
-  "india-lending": "#7D7D3E",
-  "business-analysis": "#6B4A82",
-  technical: "#3E5A7D",
-  "quantitative": "#7D3E5A",
-  regulatory: "#A6503C",
+  foundation: "#D97706",
+  "credit-risk": "#0284C7",
+  impairment: "#16A34A",
+  "regulatory-capital": "#DC2626",
+  "treasury-alm": "#C026D3",
+  "traded-products": "#9333EA",
+  "counterparty-risk": "#6366F1",
+  "market-risk": "#EA580C",
+  "operational-risk": "#CA8A04",
+  "model-risk": "#2563EB",
+  "risk-data": "#0D9488",
+  "financial-crime": "#0891B2",
+  "india-lending": "#65A30D",
+  "business-analysis": "#A21CAF",
+  technical: "#3B82F6",
+  "quantitative": "#E11D48",
+  regulatory: "#DC2626",
 };
 
 export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: CorpusGraphProps) {
@@ -106,14 +107,14 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return centroids;
   }, [atoms]);
 
-  // Build Graph Nodes (In-degree square-root mapping: 2.5px to 6.0px)
+  // Build Graph Nodes (In-degree square-root mapping: 3.0px to 7.0px)
   const { nodes, edges } = useMemo(() => {
     const nMap: Record<string, GraphNode> = {};
     const nodeList: GraphNode[] = [];
 
     Object.values(atoms).forEach((atom) => {
       const inDeg = reverseIndex[atom.id]?.length || 0;
-      const r = 2.5 + Math.sqrt(inDeg / maxInDegree) * 3.5;
+      const r = 3.0 + Math.sqrt(inDeg / maxInDegree) * 4.0;
       const initialX = atom.initialX ?? (domainCentroids[atom.domain]?.x || 0);
       const initialY = atom.initialY ?? (domainCentroids[atom.domain]?.y || 0);
 
@@ -230,7 +231,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     transformRef.current = t;
   }, [nodes]);
 
-  // Point 4 Fix: Setup Canvas DPR & Pre-calculate Bounding Fit BEFORE First Paint
+  // Setup Canvas DPR & Pre-calculate Bounding Fit BEFORE First Paint
   const setupCanvasDpr = useCallback(() => {
     const canvas = canvasRef.current;
     const container = containerRef.current;
@@ -298,7 +299,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     };
   }, [setupCanvasDpr]);
 
-  // Main Canvas Render Loop (Idle, Focused, and Transition states)
+  // Main Canvas Render Loop (High contrast cluster highlighting)
   const renderCanvas = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -333,58 +334,74 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     edges.forEach((edge) => {
       const isConnectedToHover =
         activeHoverId && (edge.source.id === activeHoverId || edge.target.id === activeHoverId);
+      const isEdgeInSelectedDomain =
+        selectedDomain && (edge.source.domain === selectedDomain || edge.target.domain === selectedDomain);
 
-      let edgeAlpha = 0.25; // IDLE State edge opacity (visible structural baseline)
+      let edgeAlpha = 0.25;
+      let strokeColor = "#333940";
+      let lineWidth = 1.0;
+
       if (isFocused) {
         if (isConnectedToHover) {
-          edgeAlpha = 0.60;
-        } else if (selectedDomain) {
-          const isEdgeInDomain = edge.source.domain === selectedDomain || edge.target.domain === selectedDomain;
-          edgeAlpha = isEdgeInDomain ? 0.45 : 0.04;
+          edgeAlpha = 0.85;
+          strokeColor = "#C9711F";
+          lineWidth = 1.8;
+        } else if (isEdgeInSelectedDomain) {
+          edgeAlpha = 0.75;
+          strokeColor = DOMAIN_COLORS[selectedDomain] || "#C9711F";
+          lineWidth = 1.5;
         } else {
-          edgeAlpha = 0.04; // FOCUSED dimmed floor
+          edgeAlpha = 0.02; // Unfocused edges drop low so selected cluster pops
+          strokeColor = "#23272D";
         }
       }
 
       ctx.beginPath();
       ctx.moveTo(edge.source.x, edge.source.y);
       ctx.lineTo(edge.target.x, edge.target.y);
-      ctx.strokeStyle = isConnectedToHover ? "#C9711F" : "#333940";
+      ctx.strokeStyle = strokeColor;
       ctx.globalAlpha = edgeAlpha;
-      ctx.lineWidth = isConnectedToHover ? 1.5 : 1.0;
+      ctx.lineWidth = lineWidth;
       ctx.stroke();
     });
 
-    // 2. NODES RENDER (Idle = Full strength; Focused = Connection rises, rest falls to 0.25 dim floor)
+    // 2. NODES RENDER (High Contrast Highlight for Selected Cluster)
     nodes.forEach((node) => {
       const isHovered = activeHoverId === node.id;
       const isNeighbor = activeHoverNeighbors?.has(node.id);
-      const isDomainSelected = !selectedDomain || node.domain === selectedDomain;
+      const isDomainSelected = selectedDomain ? node.domain === selectedDomain : true;
       const isSearchMatched =
         !qLower || node.id.toLowerCase().includes(qLower) || node.title.toLowerCase().includes(qLower);
 
       let nodeAlpha = 1.0;  // IDLE State: Full strength core opacity
       let ringAlpha = 0.60; // IDLE State: Strong hue-matched ring
+      let isPrimaryHighlight = false;
 
       if (isFocused) {
         if (isHovered) {
           nodeAlpha = 1.0;
           ringAlpha = 1.0;
+          isPrimaryHighlight = true;
         } else if (isNeighbor) {
-          nodeAlpha = 0.85;
-          ringAlpha = 0.50;
-        } else if ((selectedDomain || qLower) && isDomainSelected && isSearchMatched) {
           nodeAlpha = 0.90;
-          ringAlpha = 0.50;
+          ringAlpha = 0.60;
+        } else if (selectedDomain && isDomainSelected) {
+          nodeAlpha = 1.0;  // Selected cluster nodes: 100% full opacity
+          ringAlpha = 0.90; // Selected cluster rings: 90% bright ring
+          isPrimaryHighlight = true;
+        } else if (qLower && isSearchMatched) {
+          nodeAlpha = 1.0;
+          ringAlpha = 0.80;
+          isPrimaryHighlight = true;
         } else {
-          nodeAlpha = 0.25; // FOCUSED dimmed node floor
-          ringAlpha = 0.10; // FOCUSED dimmed ring floor
+          nodeAlpha = 0.12; // Unfocused nodes drop to 0.12 floor for maximum contrast!
+          ringAlpha = 0.04;
         }
       }
 
       ctx.save();
       const color = DOMAIN_COLORS[node.domain] || "#9AA3AD";
-      const renderRadius = isHovered ? node.radius + 1.0 : node.radius;
+      const renderRadius = isHovered ? node.radius + 1.2 : node.radius;
 
       // Filled Core
       ctx.beginPath();
@@ -393,7 +410,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       ctx.globalAlpha = nodeAlpha;
       ctx.fill();
 
-      // 1px Hue-Matched Ring
+      // 1px Hue-Matched Inner Ring
       ctx.beginPath();
       ctx.arc(node.x, node.y, renderRadius + 1.2, 0, 2 * Math.PI);
       ctx.strokeStyle = color;
@@ -401,24 +418,35 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
       ctx.globalAlpha = ringAlpha;
       ctx.stroke();
 
+      // Extra Luminous Outline Ring for Primary Highlighted Cluster Nodes
+      if (isPrimaryHighlight) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, renderRadius + 2.5, 0, 2 * Math.PI);
+        ctx.strokeStyle = "#E6E8EB";
+        ctx.lineWidth = 1.2;
+        ctx.globalAlpha = 0.85;
+        ctx.stroke();
+      }
+
       ctx.restore();
     });
 
-    // 3. CLUSTER LABELS — Primary Orientation Device (Legible at Default Zoom)
+    // 3. CLUSTER LABELS — Section Heading Contrast with Knockout Badge for Selected Domain
     const renderedLabelBoxes: Array<{ minX: number; maxX: number; minY: number; maxY: number }> = [];
     const sortedDomains = Object.entries(domainClusterBounds).sort((a, b) => b[1].count - a[1].count);
 
     sortedDomains.forEach(([domain, bounds]) => {
-      const isSel = !selectedDomain || selectedDomain === domain;
+      const isSel = selectedDomain ? selectedDomain === domain : true;
       const color = DOMAIN_COLORS[domain] || "#9AA3AD";
       const labelText = `${domain.toUpperCase()} ${bounds.count}`;
 
       ctx.save();
-      // Section Heading Weight in Type Scale (Bold 13px Mono)
-      ctx.font = "bold 13px monospace";
+      const isDomainSelected = selectedDomain === domain;
+      const font = isDomainSelected ? "bold 14px monospace" : "bold 13px monospace";
+      ctx.font = font;
       const metrics = ctx.measureText(labelText);
-      const textWidth = metrics.width + 12;
-      const textHeight = 18;
+      const textWidth = metrics.width + (isDomainSelected ? 16 : 12);
+      const textHeight = isDomainSelected ? 22 : 18;
 
       const screenLabelX = bounds.centerX;
       const screenLabelY = bounds.minY - 22;
@@ -439,17 +467,25 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
         }
       }
 
-      if (!collides) {
+      if (!collides || isDomainSelected) {
         renderedLabelBoxes.push(box);
 
-        // Solid Background Knockout Rect (#0B0C0E) so label NEVER sits on top of nodes/edges
+        // Solid Background Knockout Rect (#0B0C0E)
         ctx.fillStyle = "#0B0C0E";
         ctx.globalAlpha = 1.0;
         ctx.fillRect(box.minX, box.minY, textWidth, textHeight);
 
-        // Label Text (Section Heading Contrast: 0.95 in Idle)
-        ctx.fillStyle = color;
-        ctx.globalAlpha = isFocused ? (isSel ? 1.0 : 0.25) : 0.95;
+        // High contrast border for selected cluster label
+        if (isDomainSelected) {
+          ctx.strokeStyle = color;
+          ctx.lineWidth = 1.5;
+          ctx.globalAlpha = 1.0;
+          ctx.strokeRect(box.minX, box.minY, textWidth, textHeight);
+        }
+
+        // Label Text
+        ctx.fillStyle = isDomainSelected ? "#E6E8EB" : color;
+        ctx.globalAlpha = isFocused ? (isSel ? 1.0 : 0.15) : 0.95;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText(labelText, screenLabelX, screenLabelY);
