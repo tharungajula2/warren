@@ -53,7 +53,7 @@ export default function HomePage() {
         </div>
 
         {/* Task 7: Bottom Left Live Status Line Overlay */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-10 font-mono text-xs space-y-0.5 text-text-muted pointer-events-none select-none max-w-xl">
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-10 font-mono text-xs space-y-0.5 text-text-muted pointer-events-none select-none max-w-xl bg-surface/90 border border-border/50 px-3 py-1.5 rounded-sm">
           <div className="text-text font-bold tracking-tight tabular-nums">
             {totalAtomsCount.toLocaleString()} ATOMS · {domainCount} DOMAINS · {subdomainCount} SUBDOMAINS · {jurisdictionCount} JURISDICTIONS · {totalPages.toLocaleString()} PAGES
           </div>

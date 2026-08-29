@@ -699,11 +699,16 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
         </div>
       )}
 
-      {/* Hover Tooltip with Domain-Coloured Border */}
+      {/* Hover Tooltip with Smart Viewport Clamping */}
       {hoveredNode && tooltipPos && (
         <div
-          className="fixed pointer-events-none z-50 bg-surface-2 p-2.5 rounded-sm shadow-2xl font-mono text-xs space-y-1 -translate-x-1/2 -translate-y-full mb-3 max-w-xs"
+          className="fixed pointer-events-none z-50 bg-surface-2 p-2.5 rounded-sm shadow-2xl font-mono text-xs space-y-1 max-w-xs transition-all duration-75"
           style={{
+            left: Math.min(Math.max(tooltipPos.x, 270), typeof window !== "undefined" ? window.innerWidth - 280 : 800),
+            top: Math.max(48, Math.min(tooltipPos.y - 12, typeof window !== "undefined" ? window.innerHeight - 150 : 600)),
+            transform: tooltipPos.y > (typeof window !== "undefined" ? window.innerHeight - 150 : 600)
+              ? "translate(-50%, -100%)"
+              : "translate(-50%, -100%)",
             borderWidth: "1px",
             borderStyle: "solid",
             borderColor: DOMAIN_COLORS[hoveredNode.domain] || "#C9711F",
