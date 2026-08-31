@@ -133,11 +133,13 @@ for (const seg of rawSegments) {
   let id = null;
   let type = "concept";
   let prereqs = [];
+  let seeAlso = [];
+  let contrastWith = [];
   let jurisdictions = ["universal"];
   let metaEndLineIdx = 0;
 
   // Extract Metadata lines directly beneath header
-  for (let i = 0; i < Math.min(lines.length, 12); i++) {
+  for (let i = 0; i < Math.min(lines.length, 16); i++) {
     const line = lines[i].trim();
     if (line.startsWith("**ID:**")) {
       id = line.replace("**ID:**", "").trim();
@@ -159,6 +161,24 @@ for (const seg of rawSegments) {
       const pStr = line.replace("**Prerequisites:**", "").trim();
       if (pStr.toLowerCase() !== "none" && pStr !== "") {
         prereqs = pStr
+          .split(",")
+          .map((s) => s.replace(/\s*\([^)]*\)/g, "").trim())
+          .filter(Boolean);
+      }
+      metaEndLineIdx = Math.max(metaEndLineIdx, i);
+    } else if (line.startsWith("**See also:**")) {
+      const saStr = line.replace("**See also:**", "").trim();
+      if (saStr.toLowerCase() !== "none" && saStr !== "") {
+        seeAlso = saStr
+          .split(",")
+          .map((s) => s.replace(/\s*\([^)]*\)/g, "").trim())
+          .filter(Boolean);
+      }
+      metaEndLineIdx = Math.max(metaEndLineIdx, i);
+    } else if (line.startsWith("**Contrast with:**")) {
+      const cwStr = line.replace("**Contrast with:**", "").trim();
+      if (cwStr.toLowerCase() !== "none" && cwStr !== "") {
+        contrastWith = cwStr
           .split(",")
           .map((s) => s.replace(/\s*\([^)]*\)/g, "").trim())
           .filter(Boolean);
@@ -460,6 +480,8 @@ for (const seg of rawSegments) {
     subdomain,
     one_screen: oneScreen,
     prerequisites: prereqs,
+    see_also: seeAlso,
+    contrast_with: contrastWith,
     jurisdictions,
     perishable: isPerishable,
     as_of: isPerishable ? (existingAsOf || "2026-08-30") : null,
