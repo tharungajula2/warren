@@ -35,23 +35,23 @@ For example, in a model with dozens of socioeconomic variables (many correlated)
 
 **Implementation:** Choose λ (penalty weight) by cross-validation. Larger λ = stronger penalty (smaller coefficients). Compare performance on validation: if too high, model underfits. The permanent rule: regularise to combat overfitting, but always re-express final model in original terms. For some models, especially under IRB, explicit variable reduction might require re-approval.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Ridge (L2) for many small signals or multicollinearity; Lasso (L1) when you want feature selection (fewer predictors). Always cross-validate to pick the penalty strength.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Blindly using lasso and trusting it removed only noise. It may drop a variable important in reality but slightly less statistically strong. Likewise, too much regularisation (large λ) biases coefficients heavily, harming all predictions. Always check business sense of retained features.
-</Trap>
 
-<NeverConfuse a="Ridge (L2)" b="Lasso (L1)">
+### Never confuse
+
 **Ridge (L2)** — penalizes square of coefficients; shrinks but keeps variables.
 ---
 **Lasso (L1)** — penalizes absolute values; can set some coefficients to zero (feature selection). Both add a term λ∑β² or λ∑|β| respectively to loss.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Regularisation is a mathematical technique, not regulated differently. However, some regulatory models may ban black-box tech; explicitly mention if lasso removes key explanatory variables, the resulting model still needs justification of omitted factors.
-</Rule>
 
 <Recall
   q="How to choose between ridge and lasso?"

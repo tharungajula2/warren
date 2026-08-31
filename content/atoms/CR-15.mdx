@@ -47,7 +47,9 @@ import_source: 02_CR_credit_risk_core.md
 
 A one-year PD can be PIT, TTC-like or somewhere between. Likewise, a lifetime forecast can use changing point-in-time macroeconomic paths. **Horizon and cyclical conditioning are separate axes.**
 
-<Flow>
+### Flow
+
+```text
 Current borrower / macro conditions deteriorate
     ↓
 PIT risk signal ↑ → PIT PD / migration ↑
@@ -55,39 +57,41 @@ PIT risk signal ↑ → PIT PD / migration ↑
 Cycle-neutral design ↑
     ↓
 Cyclical responsiveness ↓ → Rating stability ↑
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Rating drivers · Macroeconomic information · Calibration philosophy
 This:       Choose degree of current-condition sensitivity
 Downstream: PD movement · Rating migration · Pricing · Provisioning · Stress analysis
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 PIT/TTC describes sensitivity to current and cyclical conditions; it does not by itself specify the PD horizon.
-</Rule>
 
-<NeverConfuse a="Point-in-time" b="Short horizon">
+### Never confuse [Point-in-time] and [Short horizon]
+
 **Point-in-time** — strong conditioning on information and conditions at the observation date.
 
 ---
 **Short horizon** — a forecast interval; it says nothing by itself about how cyclical information enters the model.
-</NeverConfuse>
 
-<NeverConfuse a="Through-the-cycle" b="Long-run average PD">
+### Never confuse [Through-the-cycle] and [Long-run average PD]
+
 **Through-the-cycle** — a rating philosophy designed to damp temporary cyclical movements.
 
 ---
 **Long-run average PD** — a calibration concept; averaging observed defaults is not by itself a TTC rating system.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling a multi-year average default rate “TTC” without examining rating assignment, macro sensitivity and calibration confuses statistical smoothing with rating philosophy.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Supervisors and accounting standards may require particular calibration or forward-looking treatment for specific uses, but PIT/TTC remains the same conceptual distinction.
-</Rule>
 
 <Recall
   q="Does TTC mean lifetime PD?"

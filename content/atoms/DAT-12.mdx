@@ -30,32 +30,32 @@ For example, a customer record (with name, KYC info) is master data; the country
 
 Regulatory data reporting relies on reference data standards (e.g. RBI may mandate ISO country codes in returns). Master data alignment ensures all systems recognize the same legal entity (which ties into entity resolution and LEIs). In practice, data governance tracks both types. Tools like MDM systems often manage master data, while governance tools or data catalogs manage reference codes. But conceptually, **never confusing** them is key. Reference data supports interpretation of master data.
 
-<Flow>
+```text
 Master Data        Reference Data
 +------------+    +--------------------+
 | Customer   |    | Currency Codes     |
 | Product    |    | Country Codes      |
 | Account    |    | ISIN, Tickers      |
 +------------+    +--------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Maintain a single master record for each core entity and use standard reference data sets (e.g. ISO codes) across the bank.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Letting departments define their own “local” reference lists (e.g. local sector codes instead of international standards), leading to integration headaches.
-</Trap>
 
-<NeverConfuse a="Master data" b="Reference data">
+### Never confuse
+
 **Master data** — Business-critical records (customers, accounts) that the bank transacts with.
 ---
 **Reference data** — Shared classification codes and lists (currency codes, country codes, industry codes) used for categorizing data.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Distinction between master vs reference data is a general data management concept, not subject to regulatory variation.
-</Rule>
 
 <Recall
   q="Give an example of master data in banking."

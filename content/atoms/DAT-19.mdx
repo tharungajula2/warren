@@ -35,7 +35,7 @@ Concretely, a bank’s risk data team gathers the necessary raw data (from tradi
 
 Attestation and sign-off are usually required: typically a senior executive or compliance officer must certify the return is true and correct. Restatements occur when errors post-submission require a corrected filing; these must be communicated to the regulator. In data projects, understanding this full cycle is crucial: changes in business definitions or systems can break mappings, so any reporting change project must consider end-to-end impact. A sample production flow:
 
-<Flow>
+```text
 Source Systems
      |
      v
@@ -57,25 +57,25 @@ Submit Return
      |
      v
 Attest/Sign-off
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every field in a regulatory return must be traceable back to source data via the mapping logic.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Neglecting to re-validate mappings after source system changes; a code update might redirect a column without testers noticing.
-</Trap>
 
-<NeverConfuse a="Regulatory return" b="Regulatory report (internal)">
+### Never confuse
+
 **Regulatory return** — A formal submission to a supervisor with pre-defined data items.
 ---
 **Regulatory report (internal)** — An internal risk report (like VaR reports) which is not directly submitted to regulators.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All regulators require banks to follow this general extract-transform-validate-submit cycle for returns. (The details of formats differ.)
-</Rule>
 
 <Recall
   q="What is the typical first step in producing a regulatory return?"

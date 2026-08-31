@@ -52,7 +52,7 @@ The purpose is not to declare models wrong. Basel preserves modelling incentives
 
 **Perishable — phase-in is jurisdiction-specific.** In the EU the floor is 55% during 2026, rises to 60% in 2027, 65% in 2028, 70% in 2029 and 72.5% from 1 January 2030. The UK starts its Basel 3.1 implementation on 1 January 2027 and is scheduled to reach the fully phased level by January 2030. The US has not implemented the final Basel output floor as a binding rule as at 27 August 2026; the March 2026 package remains proposed.
 
-<Flow>
+```text
 +----------------------+   +----------------------+
 | Model-based RWA      |   | Standardised RWA     |
 | 60                   |   | 100                  |
@@ -68,38 +68,29 @@ The purpose is not to declare models wrong. Basel preserves modelling incentives
           | Higher of 60 / 72.5 |
           | = 72.5              |
           +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 The 72.5% figure applies to the standardised RWA benchmark at full phase-in; it is not a universal asset risk weight.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Multiplying each individual IRB exposure by 72.5% misunderstands an aggregate RWA comparison as an exposure-level risk weight.
-</Trap>
 
-<NeverConfuse a="Output floor" b="Risk weight">
+### Never confuse
+
 **Output floor** — aggregate lower bound on model-based RWA relative to standardised RWA.
 
 ---
 **Risk weight** — exposure-level or formula-derived scaling factor used inside an RWA methodology.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI has selected the Standardised Approach for covered commercial-bank banking-book credit risk from 1 April 2027; an IRB-versus-standardised credit output-floor architecture is therefore not the domestic Indian credit regime. [RBI 2026 SA Directions]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— Basel 3.1 takes effect 1 January 2027; the UK output floor begins then and is scheduled to reach full 72.5% calibration by January 2030. [PRA PS1/26; European Commission 2026 comparative implementation table]
-</Delta>
-
-<Delta j="EU">
-— CRR3 output floor is **55% in 2026**, then 60%, 65%, 70%, and **72.5% from 1 January 2030**. [CRR Article 465(1); European Commission SWD 2026]
-</Delta>
-
-<Delta j="US">
-— The final Basel output floor is not a binding US rule as at 27 August 2026; the March 2026 capital package remains proposed. [Federal Reserve proposal; European Commission comparative implementation review]
-</Delta>
+**IN** — RBI has selected the Standardised Approach for covered commercial-bank banking-book credit risk from 1 April 2027; an IRB-versus-standardised credit output-floor architecture is therefore not the domestic Indian credit regime. [RBI 2026 SA Directions]
+**UK** — Basel 3.1 takes effect 1 January 2027; the UK output floor begins then and is scheduled to reach full 72.5% calibration by January 2030. [PRA PS1/26; European Commission 2026 comparative implementation table]
+**EU** — CRR3 output floor is **55% in 2026**, then 60%, 65%, 70%, and **72.5% from 1 January 2030**. [CRR Article 465(1); European Commission SWD 2026]
+**US** — The final Basel output floor is not a binding US rule as at 27 August 2026; the March 2026 capital package remains proposed. [Federal Reserve proposal; European Commission comparative implementation review]
 
 <Recall
   q="What does 72.5% multiply in the fully phased output-floor calculation?"

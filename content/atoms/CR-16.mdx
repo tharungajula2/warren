@@ -53,7 +53,9 @@ import_source: 02_CR_credit_risk_core.md
 
 A simple `1 − recovery rate` relationship is valid only when recovery rate and LGD use the same exposure base, cash-flow perimeter, costs and discounting convention.
 
-<Flow>
+### Flow
+
+```text
 Default → Gross recoveries
     ↓
 Subtract workout costs
@@ -63,15 +65,18 @@ Discount to default date
 Net recovery / EAD → Recovery rate
     ↓
 LGD = 1 − recovery rate
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Default · EAD · Security/guarantee rights · Workout cash flows
 This:       Collect gross recoveries → subtract costs → discount → compare with EAD
 Downstream: Expected loss · Pricing · Capital parameters · Workout benchmarking
-</Flow>
+```
 
-<Formula>
+### Formula
+
 `LGD = (EAD − PV(net recoveries)) / EAD`
 
 `Recovery rate = PV(net recoveries) / EAD`
@@ -79,26 +84,25 @@ Downstream: Expected loss · Pricing · Capital parameters · Workout benchmarki
 Under aligned definitions: `LGD = 1 − recovery rate`.
 
 Recovery delay ↑ or workout costs ↑ → PV(net recoveries) ↓ → LGD ↑.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Measure LGD from the default event using a consistent exposure base and economically complete recovery cash flows.
-</Rule>
 
-<NeverConfuse a="Collateral value" b="LGD">
+### Never confuse [Collateral value] and [LGD]
+
 **Collateral value** — one potential source of recovery, subject to legal rights, priority, sale value, time and costs.
 
 ---
 **LGD** — total economic loss severity conditional on default across all recovery sources and costs.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 `LGD = 1 − collateral value / current balance` ignores pre-default drawings, borrower payments, guarantor proceeds, senior claims, costs, timing and collateral-value stress.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta in the economic mechanism.** Prudential frameworks differ in recognised collateral, supervisory or internal LGDs, downturn treatment, floors and discounting rules.
-</Rule>
 
 <Recall
   q="Why does a delayed recovery increase economic LGD?"

@@ -41,7 +41,9 @@ A six-month-old cohort and a three-year-old cohort have had different time to se
 
 Roll rates answer a different question: of accounts now at 30–59 DPD, how many cure, stay, move to 60–89 DPD or default next period? Identical current delinquency stocks can therefore hide opposite future directions.
 
-<Flow>
+### Flow
+
+```text
 Vintage: Origination cohort → MOB 1 → MOB 2 → MOB 3 → … → cumulative delinquency / default
     ↓
 Compare later vintages at the same months-on-book
@@ -49,40 +51,42 @@ Compare later vintages at the same months-on-book
 Roll rate: Current → Early delinquency → Later delinquency → Default state
     ↓
 At each step: cure / stay / worsen
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Origination date · Account age · DPD/default states · Observation history
 This:       Cohort by vintage OR transition by state
 Downstream: Early warning · Collections capacity · Forecasting · Policy review · Model validation
-</Flow>
+```
 
-<Formula>
+### Formula
+
 Illustrative one-step roll rate:
 
 `Roll rate(i → j) = count/exposure moving from state i to state j / starting count/exposure in state i`
 
 The numerator and denominator must use the same population basis and interval.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Compare like with like in time: equal seasoning for vintages, and fixed start/end states and intervals for roll rates.
-</Rule>
 
-<NeverConfuse a="Vintage analysis" b="Roll-rate analysis">
+### Never confuse [Vintage analysis] and [Roll-rate analysis]
+
 **Vintage analysis** — follows origination cohorts through account age.
 
 ---
 **Roll-rate analysis** — follows transitions between credit or delinquency states through time.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 A fast-growing young book can look safer than a mature book simply because many accounts have not existed long enough to reach default.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** These are analytical methods; local definitions determine the delinquency and default states being tracked.
-</Rule>
 
 <Recall
   q="Why compare vintages at the same months-on-book?"

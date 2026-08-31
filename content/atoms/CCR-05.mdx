@@ -33,31 +33,31 @@ Netting is documented in master agreements (like an ISDA Master). Upon default, 
 
 Netting reduces CCR by off-setting gains and losses. For example, if bank A owes $5 on one swap but is owed $3 on another with the same counterparty, netting lets A owe only $2 instead of risking $8. Banks rely on netting to lower capital and collateral needs. Supervisors require proof that netting agreements are legally valid. A broken netting could double-count exposure and increase losses.
 
-<Flow>
+```text
 Counterparty A ----- Master Agreement ----- Counterparty B
     |        \                 /       |
     +--- Swap 1 (+$5)         Swap 2 (+$3) ---+
     \_____ Swap 3 (-$2)______/
 Close-out: A owed $(5+3-2) = $6 net
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Only legally enforceable netting agreements count toward reducing exposure. Without enforceability, netting benefits cannot be recognized.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming netting always works. If a jurisdiction or failure scenario prohibits close-out netting, exposures cannot be netted. Each contract’s exposure must then be held separately.
-</Trap>
 
-<NeverConfuse a="Bilateral Netting (Master netting)" b="Portfolio Compression">
+### Never confuse
+
 **Bilateral Netting (Master netting)** — Offsetting trades between two parties under one agreement, where obligations are legally netted.
 ---
 **Portfolio Compression** — A multilateral process of reducing notional without involving close-out netting. It does not affect legal netting sets.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Netting rules vary by law, but the concept of enforceability is universal. Banks obtain legal opinions country by country.
-</Rule>
 
 <Recall
   q="How does netting reduce counterparty exposure?"

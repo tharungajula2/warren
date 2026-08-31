@@ -40,7 +40,7 @@ ARIMA stands for AutoRegressive Integrated Moving Average. In an ARIMA model, \(
 
 For instance, SARIMA(0,1,1)\(\times\)(0,1,1)\(_&#123;12&#125;\) is a common model for monthly data: it differences once to remove trend and once seasonally (lag 12), with one AR and one MA at lag 12. The forecasting equation is linear in the lagged differenced series and lagged errors. If defaults show both a trend and an annual cycle, SARIMA can capture both. Model orders are typically chosen using ACF/PACF plots and information criteria (AIC/BIC).
 
-<Flow>
+```text
 Original series Y_t (possibly non-stationary)
     |  (difference d times)
     v
@@ -54,25 +54,25 @@ Fit ARMA(p,q) (plus seasonal ARMA if SARIMA)
     |
     v
 Forecasts (by extrapolating lags of series and errors)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 ARIMA(p,d,q) = difference \(d\) times to stationarize, then fit ARMA(p,q). Seasonal ARIMA adds seasonal differences and terms for period \(m\). Always difference non-stationary series before modeling.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting to difference a non-stationary series (taking \(d=0\) when a trend exists) or neglecting seasonality. This leads to poor model fit and biased forecasts. Always test for unit roots and seasonal cycles.
-</Trap>
 
-<NeverConfuse a="ARIMA" b="ARMA">
+### Never confuse
+
 **ARIMA** — an ARIMA model always includes an integration (I) component; if \(d=0\), it reduces to ARMA.
 ---
 **ARMA** — a special case of ARIMA with \(d=0\). ARMA assumes the series is already stationary (no differencing).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The ARIMA framework is a mathematical model. Regulatory constraints (e.g. IRB validation) do not change its formulation, although practitioners may prefer simpler models if interpretability is required.
-</Rule>
 
 <Recall
   q="What does the “I” (integrated) part of ARIMA do?"

@@ -40,28 +40,28 @@ Common metrics include RMSE (root mean square error) and MAPE (mean absolute per
 
 Crucially, compare the model’s scores to a simple benchmark. A typical naive baseline for time series is “no change” (e.g. forecast \(Y_&#123;t+1&#125; = Y_t\)) or “seasonal naive” (forecast equals last year’s value for seasonal data). If a model’s MAPE or RMSE is not substantially better than the baseline, it may not be useful. For instance, if credit volume declines by 1% each month, a model should beat the baseline forecast of “same as last month.”
 
-<Flow>
+```text
 Time Axis: [Train (t=1..T)] =&gt; Forecast [T+1 .. T+h] =&gt; Evaluate error
                       then Expand window to T+h, repeat
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always reserve future time for testing. Use a sequential backtesting (rolling-origin) that mimics real deployment. Compute forecast errors and compare to a naive model’s error. Metrics alone are meaningless without a baseline.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Performing standard k-fold validation (random splits) on time series. This lets future information leak into training folds, giving overly optimistic error estimates. Always use time-ordered splits instead.
-</Trap>
 
-<NeverConfuse a="MAPE" b="RMSE">
+### Never confuse
+
 **MAPE** — Mean Absolute Percentage Error: measures relative error (%). Can exaggerate errors when actual values are small.
 ---
 **RMSE** — Root Mean Squared Error: measures absolute error magnitude. Penalises large deviations more.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Forecast evaluation is a general statistical procedure. Regulatory guidelines (e.g. IFRS 9 forecast validation) endorse testing forecasts against actuals and baselines, but the methods (rolling backtest, RMSE/MAPE) are the same everywhere.
-</Rule>
 
 <Recall
   q="What is a rolling-origin forecast?"

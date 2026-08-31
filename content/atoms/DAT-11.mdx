@@ -30,7 +30,7 @@ For instance, in a bank’s credit risk data model, entities might include `Cust
 
 Having a data model ensures database tables and fields align with business concepts (avoids missing fields). The dictionary ensures anyone writing queries or reports knows exactly what each field means. Both should be version-controlled. When regulations introduce new report items, the dictionary/model must be updated. Without them, even a simple mapping exercise is error-prone, and data integration between systems becomes guesswork.
 
-<Flow>
+```text
 +----------------+     +--------------+     +--------------+
 |   Customer     |&lt;----|   Account    |----&gt;|   Product    |
 +----------------+     +--------------+     +--------------+
@@ -38,25 +38,25 @@ Having a data model ensures database tables and fields align with business conce
    Name                 CustID (FK)         Name
    DOB                  Balance             Type
    ...                  ...                 ...
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every data field in any regulatory report or risk system must be defined in the data dictionary and accounted for in the data model.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Skipping the dictionary for “obvious” fields; even basic terms like “balance” need precise definition in a banking context.
-</Trap>
 
-<NeverConfuse a="Data dictionary" b="Data catalog">
+### Never confuse
+
 **Data dictionary** — A detailed list of fields and technical specs for developers and analysts.
 ---
 **Data catalog** — A broader inventory (often tool-based) that may include the data dictionary and also lineage, quality metrics, etc.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The use of data dictionaries and models is a technical practice not dictated by law; best practices are common globally.
-</Rule>
 
 <Recall
   q="Why use a data dictionary?"

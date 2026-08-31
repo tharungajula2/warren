@@ -32,23 +32,23 @@ import_source: 13_TEC_sql_python.md
 ---
 For example, summarising a 5-million-row loan file by segment is trivial in Python (`df.groupby('Segment').sum()`), whereas in Excel it would require slow pivot operations or manual aggregations. Python’s libraries (pandas, NumPy, sklearn) also support advanced analytics and are open-source, making code sharable and auditable.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 For datasets much larger than a few hundred thousand rows, use Python (or similar) instead of Excel. Code-based analysis ensures reproducibility and auditability.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Trying to do complex analytics by dragging/clicking in Excel invites errors (wrong formula ranges, copy-paste mistakes). Don’t rely on untested spreadsheets for critical risk numbers.
-</Trap>
 
-<NeverConfuse a="Excel Workbook" b="Python Script">
+### Never confuse
+
 **Excel Workbook** — a spreadsheet with cells and formulas, suitable for small-scale, ad-hoc tasks.
 ---
 **Python Script** — text-based code (pandas/numpy) for large-scale or repeatable analysis.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The limitations of Excel and advantages of code apply universally.
-</Rule>
 
 <Recall
   q="What happens if an Excel file with 2M rows is opened?"

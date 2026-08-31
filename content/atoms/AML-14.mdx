@@ -36,23 +36,23 @@ False positives (alerts that turn out to be benign) are the biggest operational 
 
 The triage process has multiple steps: (1) **Initial Triage:** Automated filters may re-check alerts for trivial causes (e.g. internal transfers). (2) **Investigation:** Analysts pull additional data (account statements, KYC info) and contact relationship managers. (3) **Escalation:** If no legitimate explanation is found, the case is escalated to file a Suspicious Activity Report (SAR/STR). Efficient triage is crucial: if analysts are swamped by false alerts, they may miss real crimes.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Continuously optimize monitoring: recalibrate rules and thresholds using actual SAR outcomes. Keep records justifying each rule so examiners see due diligence. Use customer risk profiles to suppress unnecessary alerts (e.g. raise threshold for regular high-volume customers).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Overlooking real suspicious activity because of alert fatigue. When teams see thousands of alerts a week, they may rubber-stamp many as false. Always assume any unresolved alert merits a thorough check.
-</Trap>
 
-<NeverConfuse a="False positive alert" b="True suspicious transaction">
+### Never confuse
+
 **False positive alert** — a flagged transaction that, after review, is determined to be legitimate.
 ---
 **True suspicious transaction** — actual illicit activity that should lead to a SAR. Many analysts term every alert “suspicious,” but only those confirmed after review qualify. Mixing them up leads to either over-reporting trivial cases or under-reporting real risks.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All countries face the same false-positive problem with rule-based monitoring. However, regulators differ in expectations: some (like FinCEN) explicitly examine banks’ alert rates and tuning process, while others (UK FCA) emphasize the quality of SARs over quantity.
-</Rule>
 
 <Recall
   q="What percentage of AML alerts are typically false positives?"

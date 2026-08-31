@@ -29,18 +29,18 @@ Before execution, the BA (often with QA) creates a **Test Plan**: it includes te
 
 In regulated projects, predefined test data is especially important: you must demonstrate that for each scenario, you know the “right answer” in advance.  This way, testers (or auditors reviewing UAT) can verify correctness efficiently.  The BA’s role is to help identify all required scenarios and define the expected results (often consulting SMEs or model owners for calculations). Testers then use this pack during UAT to systematically execute tests.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Develop detailed test cases and data (test packs) for all requirements. Each test should have the input data and the precise expected result documented.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming testers will figure out expected outcomes on the fly. Without a predefined expected result, testers cannot conclusively pass/fail a case, and auditors will challenge the validity of the test.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Test Plan** vs **Test Case/Test Pack**:
 A *Test Plan* is the high-level strategy and timeline for testing. A *Test Case* (in a pack) is a specific scenario with steps and expected result. The plan is “what/when”, test cases are “how/results”.
-</NeverConfuse>
 
 ### No delta
 

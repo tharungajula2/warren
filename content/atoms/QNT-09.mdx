@@ -38,23 +38,23 @@ High VIF means small changes in data can flip the sign or magnitude of β_j. Thi
 - VIF&gt;10: serious collinearity.
 Often one simplifies by ensuring predictors have pairwise correlations &lt;0.8 or VIFs &lt;5.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Check VIFs during regression. If any predictor’s VIF is high (≥10), address it by removal or transformation. Credit-score industry best practice is to avoid multicollinearity so that variable effects are interpretable and stable.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Leaving collinear variables in, thinking “it doesn’t matter since model fit is okay.” It *does* matter: if collinearity is ignored, the model can behave erratically on new data or give misleading coefficient signs, which is unacceptable for risk models.
-</Trap>
 
-<NeverConfuse a="Variance Inflation Factor (VIF)" b="Standard Error (SE)">
+### Never confuse
+
 **Variance Inflation Factor (VIF)** — measures how much the variance of a coefficient is increased due to collinearity.
 ---
 **Standard Error (SE)** — the uncertainty of a coefficient. VIF tells why SE might be high: because variables overlap. VIF is not a direct measure of predictor importance (that’s given by coefficient/SE or other metrics).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Multicollinearity is a numerical issue, not jurisdiction-dependent. However, some IRB model validators may scrutinize models for collinearity to ensure stability.
-</Rule>
 
 <Recall
   q="How does VIF relate to correlation?"

@@ -38,36 +38,32 @@ The **Internal Loss Multiplier (ILM)** is then calculated using the bank’s int
 
 **Example:** Suppose BIC = €1.5bn and LC (15× avg loss) = €1.2bn. Then ILM = ln(e–1 + (0.8)^0.8)≈0.94, so capital ≈ €1.5bn×0.94. If LC rises to €2.25bn, ILM≈1.13 and capital ≈€1.70bn.
 
-<Flow>
+```text
 Compute BI from financials -&gt; Apply α -&gt; BIC (size-based)
 LC = 15×(10-yr avg loss)
 ILM = ln(e–1 + (LC/BIC)^0.8)
 OR Capital = BIC × ILM
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Use gross losses in LC.  The regulator-provided ILM formula must be used exactly.  Note: the UK (PRA) has elected to set ILM=1 for all firms (making capital = BIC only).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 A big mistake is mixing up **BI** with **BIC**.  BI is raw aggregated income; BIC multiplies BI by α coefficients for each bucket.  Also, don’t miscalculate ILM by using net losses or wrong averages.
-</Trap>
 
-<NeverConfuse a="BI (Business Indicator)" b="BIC (Business Indicator Component)">
+### Never confuse
+
 **BI (Business Indicator)** — the raw income-based metric (sum of income components).
 ---
 **BIC (Business Indicator Component)** — the size component used for capital, after applying the Basel α-coefficients.
-</NeverConfuse>
 
-<Delta j="UK">
-— The PRA has prescribed ILM=1, so capital = BIC.
-</Delta>
+### Jurisdiction variants
 
+**UK** — The PRA has prescribed ILM=1, so capital = BIC.
 **EU &amp; Others** — Will follow Basel’s formula (BIC×ILM).  **IN** — RBI has not adopted SMA for banks (India is behind on Basel 3.1).
-
-<Delta j="US">
-— No SMA implemented yet; agencies are discussing Basel alignment.
-</Delta>
+**US** — No SMA implemented yet; agencies are discussing Basel alignment.
 
 <Recall
   q="What are the two pieces of SMA capital?"

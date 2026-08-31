@@ -89,7 +89,9 @@ import_source: 02_CR_credit_risk_core.md
 | Portfolio tail | What can fail together? | Concentration · Correlation · Systematic risk |
 | Solvency protection | What absorbs severe loss above the mean? | Unexpected loss · Capital |
 
-<Flow>
+### Flow
+
+```text
 Obligor + Facility + Exposure
     ↓
 Underwriting: repayment capacity first
@@ -107,26 +109,26 @@ Concentration + Correlation + Systematic stress
 Unexpected loss
     ↓
 Capital
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Keep each layer’s question separate, then connect the outputs deliberately. A precise answer at the wrong layer is still the wrong risk measure.
-</Rule>
 
-<NeverConfuse a="Expected loss capacity" b="Capital">
+### Never confuse [Expected loss capacity] and [Capital]
+
 **Expected loss capacity** — pricing, provisions/allowances or other mechanisms that recognise and absorb anticipated credit cost under the applicable framework.
 
 ---
 **Capital** — resources protecting solvency against adverse outcomes beyond ordinary expected loss, under the applicable capital regime.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 A credit pack becomes incoherent when the same label is used for several layers—for example “risk” meaning score, PD, EL, provision and capital depending on the page. Always name the object, state and measure.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The architecture is universal. Jurisdictions differ in prudential definitions, accounting treatment, regulatory formulas, thresholds and legal enforceability, but those variants sit inside the same object → state → parameter → portfolio-loss chain.
-</Rule>
 
 <Recall
   q="What comes immediately before collateral in the architecture?"

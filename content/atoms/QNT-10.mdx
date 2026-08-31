@@ -41,23 +41,23 @@ Logistic regression doesn’t assume normal residuals, but assumes linear logit 
 
 **Industry bins &amp; WOE:** Often continuous predictors are binned and converted to Weight-of-Evidence (WOE) to ensure monotonic relationships. WOE transforms category’s default rates into log-odds, aligning with logistic assumptions. Then a logistic on WOE-encoded features is linear in log-odds, making the model easier to interpret in PD terms.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always express logistic coefficients in odds ratios for interpretation: OR = exp(β). For example, OR&lt;1 means higher x reduces default odds; OR&gt;1 means increases. Double-check that no predicted p&lt;0 or &gt;1 (should never happen in logistic).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Misreading coefficients: thinking β itself is the percentage point change in probability. It is not. Only the odds (exp(β)) have the multiplicative effect. E.g. β= -0.1 doesn’t mean 10% drop in PD; it means ~10% drop in odds (OR≈0.90).
-</Trap>
 
-<NeverConfuse a="Odds" b="Probability">
+### Never confuse
+
 **Odds** — ratio p/(1-p) of default vs non-default probability.
 ---
 **Probability** — p itself (0 to 1). Logistic uses odds in its link. People often mistakenly add β to p directly; the linearity is in log-odds, not in probability.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Logistic regression is standard in all jurisdictions for credit scoring. Some regulators (e.g. RBI) allow logistic scorecards for retail IRB models, given interpretability needs. All use the same math.
-</Rule>
 
 <Recall
   q="If a borrower’s scorecard logistic model yields logit = 1.0, what is the PD?"

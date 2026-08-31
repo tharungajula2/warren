@@ -37,23 +37,23 @@ FROM Loans;
 ```
 Here `ROW_NUMBER` restarts count for each `ProductType` group. `RANK()` would give the same sequence number to ties.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always specify an `ORDER BY` inside the window if using `LAG`, `LEAD`, or ranking; otherwise the result order is arbitrary.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting `PARTITION BY` leads to global ranking instead of per-group. Also, not knowing `RANK()` vs `ROW_NUMBER()` can miscount ties.
-</Trap>
 
-<NeverConfuse a="ROW_NUMBER()" b="RANK()">
+### Never confuse
+
 **ROW_NUMBER()** — assigns unique sequential numbers (1,2,3...).
 ---
 **RANK()** — assigns the same rank to ties (1,2,2,4...).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Window function syntax is SQL-standard (though exact function names may vary slightly by dialect).
-</Rule>
 
 <Recall
   q="How to get the previous period’s balance for each loan?"

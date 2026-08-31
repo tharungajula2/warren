@@ -41,23 +41,23 @@ HAVING SUM(OutstandingBalance) &gt; 1000000;
 ```
 This returns only products where the summed balance exceeds a threshold. Note `HAVING` comes after grouping, unlike `WHERE` which filters rows before grouping.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 All non-aggregated columns in the `SELECT` list must appear in `GROUP BY`.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Omitting required `GROUP BY` columns (or aggregating every column) causes SQL errors. Also, forgetting `HAVING` conditions when needed means large groups won’t be filtered.
-</Trap>
 
-<NeverConfuse a="WHERE" b="HAVING">
+### Never confuse
+
 **WHERE** — filters individual rows before grouping.
 ---
 **HAVING** — filters entire groups after aggregation.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Aggregation with `GROUP BY`/`HAVING` is consistent across SQL dialects.
-</Rule>
 
 <Recall
   q="How to count loans by vintage?"

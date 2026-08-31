@@ -44,35 +44,29 @@ sources:
     accessed: 'August 28, 2026'
 import_source: 11_MRK_market_risk.md
 ---
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Track local regulatory effective dates for FRTB implementation by jurisdiction (UK 2027/2028, EU 2027, US pending, India Basel 2.5).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming FRTB rules apply globally on a single date; implementation timelines diverge significantly across UK, EU, US, and India.
-</Trap>
 
-<NeverConfuse a="FRTB (Basel 3.1)" b="Legacy Market Risk (Basel 2.5)">
+### Never confuse
+
 **FRTB (Basel 3.1)** — New global market risk capital standard (Sensitivities-Based SA and Desk-Level ES IMA).
 ---
 **Legacy Market Risk (Basel 2.5)** — Older VaR and Stressed VaR market risk framework still used in US and India.
-</NeverConfuse>
 
-<Delta j="IN">
-— Indian banks follow RBI market-risk norms (historically 99% VaR at 15 days with multiplier, or a standardized duration approach). RBI has deferred adoption of IFRS/IndAS 109 for banks, so credit provisions and market risk remain under RBI prudential rules. There is no FRTB implementation timeline from RBI; banks continue on Basel 2.5-style frameworks.
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— The PRA (FSMA) adopted Basel 3.1: the Standardized Approach takes effect 1 Jan 2027, but the Internal Models Approach (desk-based ES) is delayed until 1 Jan 2028.
-</Delta>
+**IN** — Indian banks follow RBI market-risk norms (historically 99% VaR at 15 days with multiplier, or a standardized duration approach). RBI has deferred adoption of IFRS/IndAS 109 for banks, so credit provisions and market risk remain under RBI prudential rules. There is no FRTB implementation timeline from RBI; banks continue on Basel 2.5-style frameworks.
 
-<Delta j="EU">
-— CRR3 (Basel 3.1) implementation of the FRTB was deferred by delegated regulation: the FRTB own-funds requirements will apply from 1 Jan 2027, aligning with global delays. (Other Basel III output floor rules took effect 2025.)
-</Delta>
+**UK** — The PRA (FSMA) adopted Basel 3.1: the Standardized Approach takes effect 1 Jan 2027, but the Internal Models Approach (desk-based ES) is delayed until 1 Jan 2028.
 
-<Delta j="US">
-— US agencies have not implemented the final FRTB. In Dec 2021, Fed/OCC proposed new capital rules including market risk; they re-proposed in Mar 2026. No final rule date exists. Until then, US GSIBs with ≥$1bn trading assets calculate market risk capital under the 1996 rule (99% VaR and stressed VaR as per Basel II.5) and US banks do not have an FRTB-style requirement.
-</Delta>
+**EU** — CRR3 (Basel 3.1) implementation of the FRTB was deferred by delegated regulation: the FRTB own-funds requirements will apply from 1 Jan 2027, aligning with global delays. (Other Basel III output floor rules took effect 2025.)
+
+**US** — US agencies have not implemented the final FRTB. In Dec 2021, Fed/OCC proposed new capital rules including market risk; they re-proposed in Mar 2026. No final rule date exists. Until then, US GSIBs with ≥$1bn trading assets calculate market risk capital under the 1996 rule (99% VaR and stressed VaR as per Basel II.5) and US banks do not have an FRTB-style requirement.
 
 <Recall
   q="When does the UK PRA mandate the FRTB Standardised Approach?"

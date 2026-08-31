@@ -32,23 +32,23 @@ import_source: 13_TEC_sql_python.md
 ---
 Dates can also be compared or ranged: e.g. `WHERE SaleDate BETWEEN '2025-01-01' AND '2025-12-31'` for a calendar year.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Convert strings to actual `DATE` or `DATETIME` types (using `STR_TO_DATE` or client-side parsing) to leverage date functions. Do not treat dates as plain text.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Ignoring the time component can yield unexpected results (e.g. missing same-day records). Always truncate times or use date boundaries.
-</Trap>
 
-<NeverConfuse a="DATE" b="DATETIME/TIMESTAMP">
+### Never confuse
+
 **DATE** — stores year-month-day (no time).
 ---
 **DATETIME/TIMESTAMP** — includes time (hours-min-sec). Make sure to use the correct type for dates versus full timestamps.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Date arithmetic and functions follow SQL standards universally.
-</Rule>
 
 <Recall
   q="How to get quarterly totals?"

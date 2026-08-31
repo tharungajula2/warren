@@ -27,21 +27,21 @@ The PLA test evaluates how well a desk’s risk model explains actual P&amp;L.  
 
 Many desks fail PLA because models omit risk factors or simplify valuation.  For example, a desk trading exotic options may not include volatility surface shifts or correlation terms in its model, so the hypothetical P&amp;L (which captures actual instrument repricing) diverges from the model’s P&amp;L.  Common issues include illiquid instruments with no observable prices, or mis-specified static factors.  Failing PLA means the desk’s capital must be calculated using the less favorable standardised approach.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Desks using IMA must continuously satisfy PLA (compare model vs revalued P&amp;L).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a desk passes PLA based on backtesting alone; neglecting PLA discrepancies can invalidate the IMA.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Risk-theoretical P&amp;L** — desk’s model-predicted P&amp;L; **Hypothetical P&amp;L** — P&amp;L from revaluing held positions at new market prices.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** PLA requirements are part of the international FRTB IMA criteria.
-</Rule>
 
 <Recall
   q="What two P&Ls are compared in the PLA test?"

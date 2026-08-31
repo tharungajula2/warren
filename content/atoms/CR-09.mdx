@@ -71,20 +71,24 @@ import_source: 02_CR_credit_risk_core.md
 
 A watch-list flag, downgrade or adverse news item is an **input**, not automatically default. Documented triggers and evidence standards prevent UTP from drifting across teams or cycles.
 
-<Flow>
+### Flow
+
+```text
 Adverse evidence
     ↓
 Assess sustainable full payment without extraordinary recovery action
     ↓
 Full payment likely → No UTP → Continue monitoring
 Full payment unlikely → UTP → Default
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Underwriting baseline · Monitoring · Adverse events · Financial information
 This:       Evidence → Assess full payment without extraordinary action → UTP yes/no
 Downstream: Default state · Collections/workout · PD labels · Provisioning/capital consequences
-</Flow>
+```
 
 ### Ownership
 
@@ -95,35 +99,33 @@ Downstream: Default state · Collections/workout · PD labels · Provisioning/ca
 | Consumes | Collections, restructuring, modelling, finance and regulatory reporting |
 | Challenges | Independent risk, model validation and audit test consistency |
 
-<Rule label="PERMANENT RULE">
-Assess UTP on the ability and likelihood to pay the credit obligation in full, not on how much the bank expects to recover after failure.
-</Rule>
+### Permanent rule
 
-<NeverConfuse a="Unlikely to pay" b="High LGD">
+Assess UTP on the ability and likelihood to pay the credit obligation in full, not on how much the bank expects to recover after failure.
+
+### Never confuse [Unlikely to pay] and [High LGD]
+
 **Unlikely to pay** — a default-likelihood conclusion about full contractual payment.
 
 ---
 **High LGD** — a severity conclusion about the size of loss conditional on default.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling a fully secured exposure “not defaulted” because collateral should cover the debt confuses borrower repayment with recovery from security.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 RBI commercial-bank NPA classification is its own prudential framework. Do not import a Basel IRB UTP label into RBI NPA reporting without an explicit mapping to the RBI rules in force.
 
 #### UK (PRA)
-
 The current UK framework includes unlikeliness-to-pay indicators. PRA SS3/24 provides the future Basel 3.1 expectations from 1 January 2027.
 
 #### EU
-
 UTP is an independent limb of CRR Article 178. The May 2026 EBA amendments apply from 19 October 2026 and should be treated as future-effective until then.
 
 #### US
-
 Advanced Approaches wholesale default expressly includes a determination that the obligor is unlikely to pay in full without recourse to actions such as realising collateral.
 
 <Recall

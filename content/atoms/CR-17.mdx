@@ -50,7 +50,9 @@ import_source: 02_CR_credit_risk_core.md
 
 For a fully drawn amortising loan, EAD can be close to expected balance at default. For cards, overdrafts and revolving commitments, distressed borrowers may draw further before failure, so current utilisation can materially understate EAD.
 
-<Flow>
+### Flow
+
+```text
 Current drawn amount + Undrawn / contingent amount
     ↓
 Apply drawdown / CCF logic
@@ -58,15 +60,18 @@ Apply drawdown / CCF logic
 Additional pre-default exposure
     ↓
 EAD at default
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Facility limit · Drawn balance · Undrawn amount · Behaviour · Default date
 This:       Convert relevant off-balance / undrawn amount → add to default exposure
 Downstream: Expected loss · LGD denominator · Regulatory RWA · Limit analysis
-</Flow>
+```
 
-<Formula>
+### Formula
+
 Teaching decomposition:
 
 `CCF = additional pre-default drawing / undrawn amount at reference date`
@@ -74,26 +79,25 @@ Teaching decomposition:
 `EAD = current drawn amount + CCF × undrawn amount`
 
 CCF ↑ → EAD ↑, all else equal. This is not a universal regulatory formula; applicable frameworks prescribe treatment by exposure type and approach.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 EAD is anchored to the default event. Current balance is an input, not the definition.
-</Rule>
 
-<NeverConfuse a="EAD" b="Current utilisation">
+### Never confuse [EAD] and [Current utilisation]
+
 **EAD** — exposure expected or prescribed at default.
 
 ---
 **Current utilisation** — amount drawn now, often expressed relative to the facility limit.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Estimating revolving-credit loss on today’s balance while LGD is measured against default-date exposure creates a denominator mismatch and usually understates drawdown risk.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta in the mechanism.** Regulatory conversion factors, modelling permissions and off-balance-sheet exposure rules differ by jurisdiction and prudential approach.
-</Rule>
 
 <Recall
   q="Why can EAD exceed today’s drawn balance?"

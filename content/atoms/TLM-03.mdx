@@ -42,7 +42,7 @@ ALM maps these dimensions across the balance sheet, then asks which mismatches t
 
 This is why a single “average maturity” cannot describe a bank’s balance sheet. The useful representation is a collection of cash flows, reset dates and options allocated across time buckets, currencies and rate bases. From that map emerge gap analysis, duration, EVE, NII, liquidity stress testing and FTP.
 
-<Flow>
+```text
 +---------------------+
 | Balance-sheet item  |
 +---------------------+
@@ -63,25 +63,25 @@ This is why a single “average maturity” cannot describe a bank’s balance s
 +-------------------------+
 | ALM mismatch profile    |
 +-------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Accounting balance does not imply economic matching.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using contractual maturity as the universal time axis for deposits, prepayable loans and other products whose behavioural or repricing dates differ.
-</Trap>
 
-<NeverConfuse a="Maturity mismatch" b="Repricing mismatch">
+### Never confuse
+
 **Maturity mismatch** — assets and liabilities return principal on different effective horizons.
 ---
 **Repricing mismatch** — asset and liability interest rates reset at different times, even if principal maturities match.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The cash-flow logic is economic; supervisors may prescribe different measurement assumptions, but the underlying mismatch does not change.
-</Rule>
 
 <Recall
   q="Can a perfectly balanced accounting balance sheet have large ALM risk?"

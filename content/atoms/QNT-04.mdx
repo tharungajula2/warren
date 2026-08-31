@@ -34,23 +34,23 @@ For example, testing “portfolio default rate &gt; 2%” with sample data: supp
 
 Practically, credit risk model validators use hypothesis tests (often z-tests or chi-square) for things like comparing PDs across time or segments. The permanent rule: set significance (alpha) before testing; treat p-value &lt; alpha as evidence against H₀, but don’t over-interpret it. Statistical significance ≠ business significance: a tiny difference may be statistically significant with large data but irrelevant. Always interpret in context.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Use p-values as a measure of data incompatibility with the null, not as proof of hypothesis truth. Treat p&lt;α as grounds to examine assumptions, but also check effect size and practical importance.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Believing p=0.03 means “there’s 97% chance this model is superior.” Actually, p=0.03 means “if there were no real difference, only 3% of experiments yield this result”. Don’t confuse p-value with certainty about hypotheses.
-</Trap>
 
-<NeverConfuse a="p-value" b="Confidence level">
+### Never confuse
+
 **p-value** — probability of observing data (or more extreme) under the null hypothesis.
 ---
 **Confidence level** — (1–α), e.g. 95% CI means 5% significance; but CI is about parameter range (QNT-05), not the probability that H₀ is false.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The logic of hypothesis testing and p-values is the same universally (frequentist inference). Regulatory models may stress statistical rigor (e.g. IRB model validations), but the math doesn’t change by locale.
-</Rule>
 
 <Recall
   q="What does a p-value of 0.02 indicate in a PD change test?"

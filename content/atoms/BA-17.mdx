@@ -35,18 +35,18 @@ import_source: 16_BA_business_analysis.md
 
 **Defect Management:** Each defect discovered in testing is logged with details. Importantly, classify it by **Severity** (the technical impact: *Critical* = system-blocker, *Major*, etc.) and **Priority** (how urgent the fix is to the business: high=must-fix, low=can wait). For example, a calculation error in a capital ratio (high severity) might also be high priority. Lowering defect list by severity/priority and reaching “0 critical open” is usually a go-live criterion.  Track defects transparently: who fixes them, retest after fixes, and ensure no showstoppers remain before sign-off.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Build UAT scenarios that cover *every* business requirement, especially regulatory ones. Use traceability and coverage metrics to justify adequacy. Classify and fix defects based on agreed severity/priority rules.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Overconfidence that “we tested enough” without proof. Always use coverage measures or sign-offs on critical scenarios. Also, don’t mix up severity and priority – a minor typo may be low severity but could be high priority if it affects reporting.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Severity** vs **Priority**:
 *Severity* gauges the impact of a defect on system functionality. *Priority* indicates how quickly the defect should be fixed (a business decision). They are separate measures, not synonyms.
-</NeverConfuse>
 
 ### No delta
 

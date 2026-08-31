@@ -32,23 +32,23 @@ When a counterparty defaults, trades do not immediately settle; the surviving pa
 
 Other collateral terms: **Threshold** is the uncollateralized exposure allowed (e.g. $0 for major banks), **Minimum Transfer Amount (MTA)** is a floor below which no margin is transferred, and **Independent Amount (IA)** is an extra fixed IM buffer. These terms are specified in the CSA. A bank must model the MPR correctly; underestimating it can leave exposure when collateral is stale.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 When computing PFE (in SA-CCR or IMM), include an appropriate margin period of risk. Regulators mandate conservative MPR assumptions (often 10–20 days for non-cleared).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting that collateral calls aren’t instantaneous. A default may occur during periods when collateral isn’t updated (e.g. weekend or holiday), so exposure can grow.
-</Trap>
 
-<NeverConfuse a="Margin Period of Risk (MPR)" b="Maturity (T)">
+### Never confuse
+
 **Margin Period of Risk (MPR)** — The assumed time to close out positions after default, used in PFE calculation.
 ---
 **Maturity (T)** — The time until a trade’s normal expiration. These get mixed up but MPR is usually much shorter than T.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Basel SA-CCR and IMM define MPR parameters; implementations are consistent across major regulators.
-</Rule>
 
 <Recall
   q="What is the margin period of risk?"

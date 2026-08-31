@@ -42,28 +42,28 @@ In a derivative trade, the credit exposure at any time is the replacement cost (
 
 Banks typically net exposures under enforceable master agreements and may require collateral. Managing CCR requires measuring current exposure and forecasting potential future exposure. Basel guidelines define metrics like expected exposure to capture these dynamics. CCR contrasts with normal credit risk: a loan’s exposure is usually the principal, while a derivative’s exposure is uncertain and can reverse direction as market prices change.
 
-<Flow>
+```text
 Bank A &lt;-------- Netting &amp; Collateral --------&gt; Bank B
         (Derivative trade / netting set)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Counterparty credit exposures must account for current mark-to-market values and any future potential changes – not just notional amounts.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a derivative’s credit exposure equals its notional or treating CCR as a one-sided loan risk. In reality, exposure fluctuates and is bilateral.
-</Trap>
 
-<NeverConfuse a="Credit risk (loans)" b="Counterparty credit risk (derivatives)">
+### Never confuse
+
 **Credit risk (loans)** — Risk of borrower default on funded loan balance, usually fixed (principal).
 ---
 **Counterparty credit risk (derivatives)** — Risk of counterparty default on contingent obligations; exposure is mark-to-market and can be positive or negative for either party.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The basic concept of bilateral, contingent exposure applies universally.
-</Rule>
 
 <Recall
   q="What is counterparty credit risk (CCR)?"

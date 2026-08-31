@@ -37,23 +37,23 @@ Higher WOE means a bin has relatively more goods (lower default risk). The logis
 
 **Why binning:** Continuous variables may have non-linear PD relationships. Binning (e.g. by quantile) and computing WOE enforces piecewise-constant relationship, simplifying model. It also handles missing by treating missing as a separate bin. A caveat: bins should have enough data to avoid volatility.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 When using WOE, ensure monotonicity: bins should be sorted so that WOE moves consistently (e.g. increasing WOE with score). This avoids non-monotonic risk segments which can cause logistic coefficients to be unstable or non-intuitive.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Creating too many bins or bins with small counts. This inflates IV artificially and causes overfitting. Also, forgetting to check monotonic trend: if WOE jumps up then down across bins, it suggests your model may overfit bin boundaries rather than true risk.
-</Trap>
 
-<NeverConfuse a="WOE" b="IV">
+### Never confuse
+
 **WOE** — numeric encoding of bins: ln(%goods/%bads).
 ---
 **IV** — aggregate measure of how well a variable’s distribution separates goods/bads. High IV implies big differences in rates across bins. Unlike WOE, IV is a single number per variable.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** WOE and IV are industry conventions, not mandated by regulators. All jurisdictions use similar methods. However, if under IRB, RBI expects documented binning rationale. IFRS 9 does not specify this detail.
-</Rule>
 
 <Recall
   q="Why use WOE instead of raw categorical values in logistic?"

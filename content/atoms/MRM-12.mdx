@@ -35,36 +35,27 @@ Immediately after, **data quality checks** are done.  Validators verify that the
 
 Together, conceptual and data reviews set the stage for performance testing.  A model with sound concept but bad data will still fail, and vice versa.  By treating both rigorously, firms ensure that models are fundamentally sensible before examining metrics like AUC or H-L.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always start validation by scrutinizing the model’s design and data.  No model should proceed if either the conceptual framework or the input data is suspect.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Skipping data checks because “it’s just the same raw inputs.”  Even minor data errors (wrong scale, outdated values) can corrupt outputs.  Likewise, not questioning assumptions leads to blind faith in a wrong model.
-</Trap>
 
-<NeverConfuse a="Data bias" b="Model misspecification">
+### Never confuse
+
 **Data bias** — systematic error in inputs (e.g. non-representative sample).
 ---
 **Model misspecification** — a flaw in the model’s form or assumptions.
 They both hurt model results, but one is in the data, the other in the model logic.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI validation guidance explicitly includes “verification of data accuracy and reliability of sources”, and checking assumptions.
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— PRA expects models to use accurate, reliable data and correctly specified methods (explicit guidance on development and validation covers data quality).
-</Delta>
-
-<Delta j="US">
-— SR 26-2 lists data and methodology review as core validation steps.  (The OCC press release highlights ongoing monitoring of vendor model data quality.)
-</Delta>
-
-<Delta j="EU">
-— EBA/ECB Pillar 2 requires robust data management for internal models.  ECB’s validation handbook also focuses on data completeness and consistency.
-</Delta>
+**IN** — RBI validation guidance explicitly includes “verification of data accuracy and reliability of sources”, and checking assumptions.
+**UK** — PRA expects models to use accurate, reliable data and correctly specified methods (explicit guidance on development and validation covers data quality).
+**US** — SR 26-2 lists data and methodology review as core validation steps.  (The OCC press release highlights ongoing monitoring of vendor model data quality.)
+**EU** — EBA/ECB Pillar 2 requires robust data management for internal models.  ECB’s validation handbook also focuses on data completeness and consistency.
 
 <Recall
   q="Why is data representativeness important?"

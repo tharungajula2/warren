@@ -37,7 +37,7 @@ df = pd.DataFrame(&#123;
 ```
 This yields a table with 3 rows and 3 columns. Under the hood, each column (LoanID, Balance, Status) is a pandas Series, and they all align on their index (0,1,2). You can access a column as `df['Balance']` (a Series) or a single value as `df.loc[1, 'Status']`.
 
-<Flow>
+```text
 +--------+-----------+
 | LoanID | Balance   | ...
 +--------+-----------+
@@ -45,25 +45,25 @@ This yields a table with 3 rows and 3 columns. Under the hood, each column (Loan
 |   102  |  75000    |
 |   103  | 100000    |
 +--------+-----------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 All columns in a DataFrame must have the same length (same index). A DataFrame cannot contain “ragged” columns of different lengths.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Passing a dict of lists of different lengths to `DataFrame()` will error. Always ensure input data dimensions align.
-</Trap>
 
-<NeverConfuse a="Series" b="DataFrame">
+### Never confuse
+
 **Series** — a one-dimensional labeled array (single column).
 ---
 **DataFrame** — a two-dimensional table, essentially a dict of Series, like a spreadsheet or SQL table.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** These pandas concepts do not vary by region.
-</Rule>
 
 <Recall
   q="What is the type of `df['LoanID']` if `df` is a DataFrame?"

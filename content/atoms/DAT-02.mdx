@@ -30,7 +30,7 @@ Risk data aggregation focuses on gathering data points (e.g. exposures, position
 
 In effect, aggregation is about the data pipelines (the “back office” work) and reporting is about the presentation. For example, Principle 4 (completeness) demands data from *all* material sources be captured, whereas Principle 9 (clarity) demands that reports be understandable to non-technical users. A bank may have strong data pipelines but still produce poor reports if it fails the latter principle. BCBS 239 Group II (Principles 3–6) governs aggregation; Group III (Principles 7–11) governs reporting. Both must be in place: good aggregation without clear reporting fails to inform stakeholders, and good reports without sound data defeat regulators’ objectives.
 
-<Flow>
+```text
 Data Aggregation          Data Reporting
 +--------+               +---------+
 | Systems|--extract/ETL--&gt;| Reports |---&gt; Stakeholders
@@ -38,25 +38,25 @@ Data Aggregation          Data Reporting
     |                        ^
     v                        |
 Aggregate, Reconcile        Validate (content, format)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Aggregation and reporting are distinct steps: you must first consolidate all required data, then use it in reports designed for the audience.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Fixating on report templates or dashboards without ensuring the underlying data is comprehensive and reconciled leads to misleading outputs.
-</Trap>
 
-<NeverConfuse a="Risk data aggregation" b="Risk reporting">
+### Never confuse
+
 **Risk data aggregation** — Internal consolidation of all risk data (the “what” and “how” data is collected).
 ---
 **Risk reporting** — The communication of aggregated risk metrics (the “presentation” of that data to management/regulators).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All jurisdictions distinguish between banks’ data-processing capabilities and the reports they deliver to supervisors.
-</Rule>
 
 <Recall
   q="Which BCBS 239 principles cover data aggregation?"

@@ -38,23 +38,23 @@ Regulators (RBI, IBBI, GSTN) have jointly built frameworks: GSTN acts as a KYC a
 
 The government’s Unified Lending Interface (ULI) is an upcoming initiative to integrate this: ULI would let a lender fetch customer data (from AAs or government sources) through APIs, assess eligibility and disburse quickly. As of 2026, ULI pilots (e.g. with NBFCs and fintechs) are underway under RBI and IBA supervision. The idea is a one-stop-shop for loan origination: borrower consents once, and multiple lenders can exchange standardized credit data.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Customer data (bank statements, GST returns, etc.) may be shared with lenders only through RBI-authorised channels (Account Aggregators) and only with customer consent.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming lenders can scrape GST data directly. In fact, only AAs or designated repositories (with consent) can transmit GST filings to banks. Also, neglecting to update borrower’s risk after changes in their GST activity can misstate credit risk.
-</Trap>
 
-<NeverConfuse a="Account Aggregator" b="GST data">
+### Never confuse
+
 **Account Aggregator** — an RBI-regulated data intermediary that moves customer-permissioned data between institutions.
 ---
 **GST data** — tax return data of businesses. (Accessible by banks only through AAs or GSTN APIs with consent.)
-</NeverConfuse>
 
-<Delta j="IN">
-— The AA framework is Indian (launched 2021) and unique in mandating customer consent for banking data sharing.  No similar centralized data sharing network is in place in UK/US.
-</Delta>
+### Jurisdiction variants
+
+**IN** — The AA framework is Indian (launched 2021) and unique in mandating customer consent for banking data sharing.  No similar centralized data sharing network is in place in UK/US.
 
 <Recall
   q="How can a lender get an SME’s GST return data?"

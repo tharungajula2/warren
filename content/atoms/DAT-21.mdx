@@ -34,7 +34,7 @@ import_source: 07_DAT_risk_data_reporting.md
 
 A strong delivery approach uses examples: e.g. test that negative balances or unusual security types still produce correct report lines. Downstream extracts (e.g. FINREP extracts sent to ECB) should also be checked – that is, one might run a script on the final data extract to verify totals against source systems. The process is iterative: any discrepancies found in UAT or extracts feed back into the mapping (looping through the cycle again until clean).
 
-<Flow>
+```text
 Business Requirements
     |
     v
@@ -51,25 +51,25 @@ UAT (with test packs)
     |
     v
 Go-live and Parallel Runs
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every data transformation must be traceable (via the mapping spec) and tested with expected results before production use.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Skipping UAT or not involving actual report users. Testing by IT alone often misses business logic errors.
-</Trap>
 
-<NeverConfuse a="Business Requirements Document (BRD)" b="Mapping Specification">
+### Never confuse
+
 **Business Requirements Document (BRD)** — Describes the *what* and *why* (business needs, regulatory requirements).
 ---
 **Mapping Specification** — Details the *how* (the exact field mappings and calculations).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** These delivery practices apply to any data/reporting project, regardless of jurisdiction.
-</Rule>
 
 <Recall
   q="What is a data mapping specification?"

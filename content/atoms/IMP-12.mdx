@@ -54,7 +54,7 @@ The same principle prevents automatic cure immediately after an arrears balance 
 
 Stage 3 cure adds another layer: first determine whether the asset remains credit-impaired; then determine whether SICR relative to origination still exists. A cured Stage 3 exposure need not jump directly to Stage 1 if credit risk remains significantly elevated.
 
-<Flow>
+```text
 +--------------------+
 | Stage 2 / Stage 3  |
 +--------------------+
@@ -78,38 +78,29 @@ Stage 3 cure adds another layer: first determine whether the asset remains credi
 | Stage 2 |  | Stage 1 |
 | lifetime|  | 12m ECL |
 +---------+  +---------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A stage reversal must reapply the same underlying credit-risk assessment objective used for deterioration.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Automatically curing Stage 2 when DPD returns to zero can move an exposure to Stage 1 while its lifetime default risk remains materially above origination.
-</Trap>
 
-<NeverConfuse a="Symptom cure" b="SICR cure">
+### Never confuse
+
 **Symptom cure** — disappearance of a particular warning signal such as arrears.
 
 ---
 **SICR cure** — evidence that credit risk is no longer significantly increased relative to initial recognition.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current bank IRACP has its own NPA-upgradation rules rather than IFRS stage cure. RBI’s ECL Directions effective April 1, 2027 contain specific Stage 3 upgradation and restructuring conditions alongside SICR assessment, so their prudential cure mechanics must be applied on their own terms. [RBI 2025 IRACP; RBI 2026 ECL Directions, paragraphs 78–81]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— IFRS 9 permits reversion to 12-month ECL when lifetime-ECL criteria are no longer met; PRA expects robust monitoring rather than mechanical cures. [IFRS 9 5.5.7; PRA 2025]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 follows the same accounting reversal principle, supplemented by EBA supervisory guidance. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
-</Delta>
-
-<Delta j="US">
-— CECL has no Stage 2-to-Stage 1 cure because it has no staged allowance horizon; improved credit expectations reduce the lifetime allowance through remeasurement. [ASC 326]
-</Delta>
+**IN** — Current bank IRACP has its own NPA-upgradation rules rather than IFRS stage cure. RBI’s ECL Directions effective April 1, 2027 contain specific Stage 3 upgradation and restructuring conditions alongside SICR assessment, so their prudential cure mechanics must be applied on their own terms. [RBI 2025 IRACP; RBI 2026 ECL Directions, paragraphs 78–81]
+**UK** — IFRS 9 permits reversion to 12-month ECL when lifetime-ECL criteria are no longer met; PRA expects robust monitoring rather than mechanical cures. [IFRS 9 5.5.7; PRA 2025]
+**EU** — EU-adopted IFRS 9 follows the same accounting reversal principle, supplemented by EBA supervisory guidance. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+**US** — CECL has no Stage 2-to-Stage 1 cure because it has no staged allowance horizon; improved credit expectations reduce the lifetime allowance through remeasurement. [ASC 326]
 
 <Recall
   q="Does clearing arrears automatically return an IFRS 9 exposure to Stage 1?"

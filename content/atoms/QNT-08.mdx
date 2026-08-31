@@ -40,32 +40,32 @@ In regression, we fit a model `y = β₀ + β₁x₁ + ... + βₖxₖ + ε`. Fo
 
 **Validation:** Check R² (fit quality) but more importantly check predictions vs holdout data. For credit risk, regulators expect residual errors to be uncorrelated with key factors (no omitted variables with pattern).
 
-<Flow>
+```text
      Age     Income    ...
        |      |
 +------+------+
 |      |      |
 v      v      v
 Regression model: log(Loss) = β0 + β1*Age + β2*Income + ε
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always verify regression assumptions. In credit context, it’s common to transform skewed variables (e.g. take log of balances) so that residuals are more normal/homoscedastic.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Interpreting linear model as implying causality. E.g., saying “higher X causes higher risk” just from regression correlation is incorrect without domain insight (see QNT-06). Also, forgetting to check residuals: a high R² does not guarantee unbiased estimates if assumptions fail.
-</Trap>
 
-<NeverConfuse a="Slope coefficient (β)" b="Correlation coefficient (r)">
+### Never confuse
+
 **Slope coefficient (β)** — change in the response per unit x, ceteris paribus.
 ---
 **Correlation coefficient (r)** — measures linear association between two variables, but is not a regression parameter. High `r` does not directly tell you the slope; regression gives β that predicts y from x.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Regression math is universal. However, regulators (like RBI guidelines) may require special considerations (e.g. using macro variables for IFRS9 forecasting models), but that’s about inputs, not the regression method itself.
-</Rule>
 
 <Recall
   q="Why log-transform a skewed target in credit regression?"

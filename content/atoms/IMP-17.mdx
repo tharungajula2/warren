@@ -61,7 +61,7 @@ A practical sequence begins with **conceptual soundness**: does the methodology 
 
 Repeated material overprediction or underprediction is evidence requiring investigation, not automatic proof that a particular calibration change is correct. US interagency guidance explicitly expects periodic validation independent of credit approval and ACL estimation, including conceptual-soundness review, ongoing monitoring and output analysis; it notes that persistent material forecast error may indicate weakness.
 
-<Flow>
+```text
 +----------------------+
 | Conceptual design    |
 +----------------------+
@@ -88,38 +88,29 @@ Repeated material overprediction or underprediction is evidence requiring invest
 | Remediate / approve  |
 | / monitor            |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Validation must test the model against its intended use and underlying risk mechanics, not merely reproduce the developer’s calculation.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Declaring a model “validated” because aggregate provision is close to actual write-offs can hide offsetting PD, LGD, EAD or staging errors.
-</Trap>
 
-<NeverConfuse a="Validation" b="Backtesting">
+### Never confuse
+
 **Validation** — independent challenge of conceptual soundness, implementation, performance and use.
 
 ---
 **Backtesting** — outcomes analysis comparing model predictions with realised experience; it is a component of validation, not the whole process.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current commercial-bank IRACP requires automated classification controls and periodic system audit; RBI’s ECL Directions from April 1, 2027 add an explicit model inventory, independent validation, pre-implementation validation and post-implementation backtesting framework. [RBI 2025 IRACP; RBI 2026 ECL Directions, paragraphs 119–131]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— PRA’s 2025 thematic feedback emphasises monitoring and validation of IFRS 9 ECL models and model operating boundaries. [PRA 2025 thematic feedback]
-</Delta>
-
-<Delta j="EU">
-— EBA/GL/2017/06 provides supervisory guidance on sound credit-risk-management and accounting-ECL practices alongside IFRS 9. [EBA/GL/2017/06]
-</Delta>
-
-<Delta j="US">
-— Interagency ACL guidance expects periodic independent validation and initial and ongoing model-validation activities, including conceptual soundness, monitoring, benchmarking and model-output analysis. [Interagency ACL Policy Statement]
-</Delta>
+**IN** — Current commercial-bank IRACP requires automated classification controls and periodic system audit; RBI’s ECL Directions from April 1, 2027 add an explicit model inventory, independent validation, pre-implementation validation and post-implementation backtesting framework. [RBI 2025 IRACP; RBI 2026 ECL Directions, paragraphs 119–131]
+**UK** — PRA’s 2025 thematic feedback emphasises monitoring and validation of IFRS 9 ECL models and model operating boundaries. [PRA 2025 thematic feedback]
+**EU** — EBA/GL/2017/06 provides supervisory guidance on sound credit-risk-management and accounting-ECL practices alongside IFRS 9. [EBA/GL/2017/06]
+**US** — Interagency ACL guidance expects periodic independent validation and initial and ongoing model-validation activities, including conceptual soundness, monitoring, benchmarking and model-output analysis. [Interagency ACL Policy Statement]
 
 <Recall
   q="Is backtesting the same as model validation?"

@@ -44,23 +44,23 @@ INTERSECT
 SELECT BorrowerID FROM Loans_New;
 ```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 All SELECTs combined by UNION/INTERSECT/EXCEPT must have the same number of columns and compatible types.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting that `UNION` removes duplicates; use `UNION ALL` if you need to preserve them. Also ensure column order and types match.
-</Trap>
 
-<NeverConfuse a="UNION" b="JOIN">
+### Never confuse
+
 **UNION** — appends rows from queries into one result (distinct by default).
 ---
 **JOIN** — combines columns from tables based on a key.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Set operations behave the same in standard SQL for all jurisdictions.
-</Rule>
 
 <Recall
   q="How to find rows in A not in B?"

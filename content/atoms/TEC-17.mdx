@@ -34,23 +34,23 @@ import_source: 13_TEC_sql_python.md
 ---
 When loading, specify parsing options for dates (`parse_dates`), encodings, or chunk size for large files. Always close database connections or use context managers.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Explicitly set parameters when reading data: e.g. `parse_dates=['date_col']` for dates, or `index_col=` if needed. This ensures correct dtypes.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Loading very large files without chunksize can exhaust memory. Similarly, calling `to_sql` on millions of rows may time out or lock the DB; consider batch inserts.
-</Trap>
 
-<NeverConfuse a="read_csv" b="to_sql">
+### Never confuse
+
 **read_csv** — reads a delimited text file into a DataFrame.
 ---
 **to_sql** — writes a DataFrame to a SQL database table.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Pandas I/O functions work the same regardless of jurisdiction.
-</Rule>
 
 <Recall
   q="How do you read a SQL table into pandas?"

@@ -30,21 +30,21 @@ Once the business requirements are agreed, the next step is often a detailed fun
 
 In practice, keep these separate: the BA focuses on business needs, while solution designers write the functional spec. The BRD should remain at a business level “without excessive technical detail”. Any technical content needed for implementation goes into the functional specification.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Business requirements (in the BRD) and functional specifications are distinct.  The BRD should capture *what and why*. Details of *how* to meet those requirements (logic, UIs, data formats) belong in the functional spec after the BRD is approved.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Allowing design to creep into the BRD or holding back needed functional detail. For instance, adding a database table definition to the BRD is mixing layers.
-</Trap>
 
-<NeverConfuse a="Business Requirement" b="Functional Specification">
+### Never confuse
+
 **Business Requirement** — a high-level need or rule that the solution must satisfy (e.g., “report X must include all customers over 60 days delinquent”).
 ---
 **Functional Specification** — the technical design documenting how the system will achieve that requirement (e.g., database queries, user interface fields, business logic).
 
 They get mixed up if a BA starts writing implementation detail in the BRD.
-</NeverConfuse>
 
 ### No delta
 

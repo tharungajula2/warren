@@ -75,49 +75,51 @@ Neither met → Continue non-default monitoring
 
 The backstop constrains optimism. It preserves an objective point beyond which prolonged material non-payment cannot remain outside default merely because judgement has not acted.
 
-<Flow>
+### Flow
+
+```text
 Qualifying UTP → Default now
     ↓
 OR
     ↓
 Past-due clock → Material backstop reached → Default now
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   DPD · Materiality · UTP evidence
 This:       Earlier of qualifying UTP or applicable mechanical backstop
 Downstream: Default date · Cure clock · Model labels · Workout and reporting
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 The backstop is the latest mechanical trigger under its rule, not a grace period that overrides earlier qualitative default evidence.
-</Rule>
 
-<NeverConfuse a="Backstop" b="Definition of default">
+### Never confuse [Backstop] and [Definition of default]
+
 **Backstop** — an outer mechanical trigger based on elapsed delinquency under a specified rule.
 
 ---
 **Definition of default** — the full set of qualitative and quantitative conditions governing entry to default.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Writing “default = 90 DPD” into data dictionaries suppresses early defaults, mixes products with different rules and trains models on a delayed target.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 For commercial banks, a term loan is classified NPA when interest and/or principal remains overdue for **more than 90 days**. RBI also prescribes distinct tests for OD/CC, working-capital irregularity, bills, agricultural exposures and other categories; asset classification is borrower-wise subject to specified exceptions.
 
 #### UK (PRA)
-
 The current UK CRR-derived default framework uses past-due and materiality rules alongside UTP. The updated PRA Basel 3.1 package, including the January 2026 SS3/24 version, takes effect on 1 January 2027.
 
 #### EU
-
 CRR Article 178 uses a past-due limb alongside UTP, supported by materiality rules. The EBA’s May 2026 amended Guidelines become applicable on 19 October 2026.
 
 #### US
-
 Advanced Approaches wholesale default includes more than 90 days past due on a material obligation, while specified retail categories use different mechanical thresholds; “90 days everywhere” is therefore wrong.
 
 <Recall

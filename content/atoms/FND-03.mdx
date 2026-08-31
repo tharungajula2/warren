@@ -45,7 +45,7 @@ Lending is also constrained by more than settlement cash. The bank must expect t
 
 "Loans create deposits" describes an accounting and monetary mechanism. "Banks need funding" describes the continuing requirement to finance assets and survive payment outflows. Both statements can be true at the same time.
 
-<Flow>
+```text
 Loan approved
      |
      v
@@ -66,25 +66,25 @@ Loan approved
 | Deposit may leave the bank;    |
 | settlement liquidity is needed |
 +--------------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Loan origination can create a deposit, but a bank must still fund and settle the balance sheet that remains after customers move money.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Interpreting "banks create deposits by lending" as "banks can lend without capital, liquidity, funding costs or settlement constraints".
-</Trap>
 
-<NeverConfuse a="Deposit creation" b="Funding">
+### Never confuse
+
 **Deposit creation** — the simultaneous balance-sheet creation of a loan asset and deposit liability.
 ---
 **Funding** — the liabilities and equity supporting assets over time, including after newly created deposits are transferred elsewhere.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The double-entry mechanism is universal; local monetary, capital and liquidity rules determine the constraints around it.
-</Rule>
 
 <Recall
   q="What entries arise when a new loan is credited to an account at the same bank?"

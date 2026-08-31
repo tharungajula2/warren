@@ -36,18 +36,18 @@ Non-functional requirements (NFRs) cover attributes not captured by functional s
 
 Non-functional requirements are critical: even if the functionality is correct, failure in security or audit logging can invalidate a project. In regulated change, treat NFRs like compliance: put them in the requirement list and test for them.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always capture NFRs explicitly (security, performance, reliability, legal/policy requirements). In banking, *auditability* (e.g. detailed logs and retention policies) is first-class: include it as a requirement early.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming NFRs will be “obvious” or handled later. A common error is neglecting to require sufficient audit logging or forgetting to enforce retention, only to fail compliance checks later.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Functional Requirement** vs **Non-Functional Requirement**:
 A *Functional Requirement* describes what the system does (specific features). A *Non-Functional Requirement* describes constraints or qualities (like speed, security). For example, “generate monthly report” is functional; “report generation shall complete within 5 minutes” is non-functional.
-</NeverConfuse>
 
 ### No delta
 

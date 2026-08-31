@@ -37,24 +37,24 @@ Regulators stress clear objectives and documentation.  RBI’s credit model prin
 
 Practically, development often involves statistical analysis and iterative testing.  Developers calibrate parameters on historical data, check intuitive plausibility (face validity), and may back-test on hold-out data before finalizing the model.  The key is to embed sound practice: clear target outcomes, robust data pipelines, explainable methodology, and retrievable code/documents.  Once development is done, no use is allowed until the model passes independent validation.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A model must have a defined use case, appropriate data, and complete documentation from the start.  Never proceed to validation or use without thorough development records.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Creating a “black box” with no written spec.  Skipping documentation or ignoring model purpose can lead to validation failure.  (For example, training a model without stating its decision criteria or target population leaves validation teams clueless.)
-</Trap>
 
-<NeverConfuse a="Model purpose" b="Model exposure">
+### Never confuse
+
 **Model purpose** — the business decision or metric the model is meant to support (e.g. predicting 1-year PD).
 ---
 **Model exposure** — the financial amount or scope to which the model applies.
 They are different: purpose is “what” the model does; exposure is “how big” its impact is.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Development standards are similar worldwide.  RBI’s guidance explicitly lists development principles (clear objectives, robust inputs, documentation).  PRA and Fed guidance likewise stress that models should be developed in line with policy and in-house standards, though neither prescribes a specific development process beyond these principles.
-</Rule>
 
 <Recall
   q="What should be documented during model development?"

@@ -51,7 +51,7 @@ This also means 12-month ECL is not simply “lifetime ECL for loans expected to
 
 For an instrument with less than twelve months remaining, the relevant period cannot exceed the remaining exposure period. The term “12-month” therefore describes the maximum default-event horizon for Stage 1, not a requirement to manufacture risk beyond contractual exposure.
 
-<Flow>
+```text
 Reporting date
       |
       v
@@ -78,38 +78,29 @@ Reporting date
 +----------------------+
 | 12-month ECL         |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 “Twelve months” limits the **default-event window**, not the timing of subsequent cash shortfalls caused by those defaults.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Truncating recoveries and losses at month twelve systematically misstates Stage 1 ECL on instruments whose post-default workout extends beyond a year.
-</Trap>
 
-<NeverConfuse a="12-month ECL" b="Twelve months of cash loss">
+### Never confuse
+
 **12-month ECL** — lifetime loss consequences of defaults possible during the next twelve months.
 
 ---
 **Twelve months of cash loss** — cash shortfalls physically occurring during the next year; this is not the IFRS 9 definition.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current bank IRACP has no Stage 1 12-month-ECL concept. RBI’s bank ECL framework effective April 1, 2027 adopts the same default-event-horizon definition of 12-month ECL. [RBI 2026 ECL Directions, definition of 12-month ECL]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— UK-adopted IFRS 9 uses the IFRS definition. [IFRS 9 B5.5.43]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 uses the same definition. [Regulation (EU) 2023/1803; IFRS 9 B5.5.43]
-</Delta>
-
-<Delta j="US">
-— CECL does not use a 12-month Stage 1 allowance for amortised-cost assets; expected losses are measured over the contractual term, subject to Topic 326’s treatment of expected prepayments and other scope rules. [ASC 326; Interagency CECL FAQ]
-</Delta>
+**IN** — Current bank IRACP has no Stage 1 12-month-ECL concept. RBI’s bank ECL framework effective April 1, 2027 adopts the same default-event-horizon definition of 12-month ECL. [RBI 2026 ECL Directions, definition of 12-month ECL]
+**UK** — UK-adopted IFRS 9 uses the IFRS definition. [IFRS 9 B5.5.43]
+**EU** — EU-adopted IFRS 9 uses the same definition. [Regulation (EU) 2023/1803; IFRS 9 B5.5.43]
+**US** — CECL does not use a 12-month Stage 1 allowance for amortised-cost assets; expected losses are measured over the contractual term, subject to Topic 326’s treatment of expected prepayments and other scope rules. [ASC 326; Interagency CECL FAQ]
 
 <Recall
   q="Does 12-month ECL ignore losses occurring after month twelve?"

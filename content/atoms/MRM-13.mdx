@@ -34,23 +34,23 @@ In credit models (and many risk models), validators assess ranking performance. 
 
 However, none of these metrics tell the whole story.  They only measure discrimination (ranking), not calibration.  A model might have high AUC yet systematically under- or over-predict probabilities.  Therefore, regulators expect both discrimination and calibration checks in validation.  Typical thresholds vary by context, but as a rule of thumb (from industry practice): an AUC of 0.7–0.8 is moderate, &gt;0.8 is strong.  (Regulators do not set fixed benchmarks but may question models with unusually low discrimination.)
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Discrimination metrics must be reported for every predictive model.  High discrimination is necessary but not sufficient for model quality.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Focusing only on one metric.  For instance, a model with high AUC but very poor calibration can still misprice risk.  Always assess multiple performance aspects.
-</Trap>
 
-<NeverConfuse a="AUC (Area Under the ROC)" b="Gini coefficient">
+### Never confuse
+
 **AUC (Area Under the ROC)** — overall probability that the model ranks a randomly chosen positive higher than a negative.
 ---
 **Gini coefficient** — derived from AUC (Gini=2*AUC–1).  They are different scales of the same information (Gini ~ 2×AUC minus 1), so they often get used interchangeably.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Discrimination metrics are standard in all regimes. Regulators (PRA, Fed, RBI, ECB) expect banks to use them in validating predictive models (especially PD/LGD models).
-</Rule>
 
 <Recall
   q="What does an AUC of 0.9 indicate?"

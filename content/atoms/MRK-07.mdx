@@ -28,21 +28,21 @@ Expected Shortfall (ES), also known as Conditional VaR or Tail VaR, is the mean 
 
 ES is a coherent risk measure and responds more sensibly to extreme events.  Under normal distributions, 99% VaR and 97.5% ES are numerically similar, but for fat-tailed markets ES is significantly larger. Basel’s switch to ES reflects a priority on capturing potential extreme losses in stressed conditions.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 ESα is the average loss beyond the α-VaR cutoff and ensures tail losses are included in risk capital.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using VaR instead of ES for capital calculations when regulators require ES, thereby underestimating tail risk.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **VaR** — loss percentile at confidence α; **Expected Shortfall (ES)** — average of losses beyond that percentile (tail average).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The expected shortfall calculation is a mathematical concept with no jurisdictional variation.
-</Rule>
 
 <Recall
   q="What is expected shortfall at 97.5%?"

@@ -62,7 +62,9 @@ import_source: 02_CR_credit_risk_core.md
 
 Post-write-off recoveries are economically real. A technical write-off can coexist with continuing collection activity and legal liability; the database therefore needs both accounting status and recovery status.
 
-<Flow>
+### Flow
+
+```text
 Default → Workout → Recoveries + workout costs
     ↓
 Discounted net recovery → Economic loss
@@ -70,53 +72,53 @@ Discounted net recovery → Economic loss
 Default
     ↓
 Provision / allowance → Write-off when required → Post-write-off recovery can continue
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Default · Exposure · Provisioning / accounting rules
 This:       Provision → Write-off if required → Recoveries and costs → Final economic loss
 Downstream: LGD estimation · Workout strategy · Finance · Tax / reporting
-</Flow>
+```
 
-<Formula>
+### Formula
+
 `Economic loss = EAD − PV(net post-default recoveries)`
 
 `Net recoveries = borrower payments + collateral/guarantee proceeds − workout costs`
 
 Longer recovery time ↑ → present value of recovery ↓ → economic loss and LGD ↑, all else equal.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Never delete default, write-off or post-default recovery history merely because the balance sheet carrying amount has changed.
-</Rule>
 
-<NeverConfuse a="Write-off" b="Debt forgiveness">
+### Never confuse [Write-off] and [Debt forgiveness]
+
 **Write-off** — accounting or prudential reduction/removal of carrying amount under the applicable framework.
 
 ---
 **Debt forgiveness** — release of the debtor’s legal obligation; write-off does not necessarily produce forgiveness.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using the write-off amount as “LGD” automatically ignores later recoveries, workout costs, timing and the exposure actually outstanding at default.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 The commercial-bank IRACP Directions recognise write-offs, technical write-offs and subsequent recoveries. A partial or technical write-off does not permit the remaining exposure to be shown as standard merely because part has been written off.
 
 The current IRACP provisioning regime is replaced for covered commercial banks from **1 April 2027** by RBI’s 2026 expected-credit-loss-based Asset Classification, Provisioning and Income Recognition Directions.
 
 #### UK (PRA)
-
 For IFRS reporters, IFRS 9 write-off requirements operate separately from prudential regulatory default. The two statuses must be mapped, not conflated.
 
 #### EU
-
 IFRS-reporting entities apply IFRS 9 write-off principles while CRR regulatory default remains a separate prudential state.
 
 #### US
-
 CECL allowance and charge-off practice is separate from regulatory default and nonaccrual classifications; modelling must preserve those distinctions.
 
 <Recall

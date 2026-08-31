@@ -31,7 +31,7 @@ BCBS 239 requires that material data/reporting issues be escalated “to the hig
 
 Remediation may involve multiple steps: short-term manual fixes (to enable report filing) and long-term system changes. Banks often set a standard (e.g. 30 days to fix a critical break). Progress is reported to risk committees, often via heatmaps of outstanding issues. Ultimately, management sign-off on the fix closes the loop.
 
-<Flow>
+```text
 Issue Detected
     |
     v
@@ -51,25 +51,25 @@ Verify Resolution
     |
     v
 Close Ticket
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every significant data discrepancy or report error must be tracked until fully resolved, with evidence of the fix.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating issue tickets as “done” when a report is patched, rather than fixing the underlying data problem.
-</Trap>
 
-<NeverConfuse a="Remediation" b="Workaround">
+### Never confuse
+
 **Remediation** — The corrective actions taken to fix a data defect (code fixes, process changes).
 ---
 **Workaround** — A temporary solution to allow reporting to proceed (e.g. manual data entry) before full remediation. Both need controls and tracking.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All regulators expect banks to have formal issue remediation processes (though naming may vary).
-</Rule>
 
 <Recall
   q="Who is typically responsible for closing a data issue ticket?"

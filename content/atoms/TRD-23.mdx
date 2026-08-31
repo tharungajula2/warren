@@ -36,7 +36,7 @@ Price discovery differs by market. An exchange may publish a visible order book,
 
 For technology and controls, instrument source, execution venue, trading capacity, clearing status, clearing broker, CCP, confirmation route and settlement method should be separate fields. Combining them into one “market type” flag creates ambiguity that later appears in reporting, margin and reconciliation logic.
 
-<Flow>
+```text
 Trade agreed
     |
     +--&gt; listed exchange contract
@@ -52,27 +52,27 @@ Trade agreed
         |
         v
       settlement
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Execution venue does not determine clearing status by itself.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using “OTC” to mean bilateral, uncleared, manual and uncollateralised all at once.
-</Trap>
 
-<NeverConfuse a="Execution" b="Clearing">
+### Never confuse
+
 **Execution** — the process by which parties agree the trade.
 
 ---
 
 **Clearing** — the post-trade process that establishes and manages obligations, potentially through a CCP.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Can an OTC derivative be centrally cleared?"

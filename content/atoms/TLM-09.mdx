@@ -43,7 +43,7 @@ These are forms of optionality because the amount or timing of future cash flows
 
 The practitioner must also distinguish **automatic options**, whose contractual payoff follows a formula, from **behavioural options**, whose exercise depends on human decisions and operational frictions. Basel and RBI IRRBB frameworks explicitly require embedded options and behavioural assumptions to be captured and stressed. RBI’s forthcoming framework addresses loan prepayments, term-deposit redemption and option-sensitive cash flows.
 
-<Flow>
+```text
 +------------------+
 | Rate movement    |
 +------------------+
@@ -70,25 +70,25 @@ The practitioner must also distinguish **automatic options**, whose contractual 
 +------------------+
 | EVE / NII changes|
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Where exercise behaviour depends on interest rates, cash-flow timing must be scenario-dependent.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Projecting prepayments or deposit redemptions from a single historical average and holding that rate constant across all interest-rate scenarios.
-</Trap>
 
-<NeverConfuse a="Prepayment risk" b="Pipeline risk">
+### Never confuse
+
 **Prepayment risk** — an existing asset returns principal earlier than expected.
 ---
 **Pipeline risk** — expected or committed future business changes exposure before final booking or funding.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Option exercise economics are universal; prescribed regulatory modelling parameters can vary.
-</Rule>
 
 <Recall
   q="Why do falling rates often increase prepayment risk on fixed-rate assets?"

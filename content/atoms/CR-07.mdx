@@ -84,7 +84,9 @@ import_source: 02_CR_credit_risk_core.md
 
 Basel’s IRB reference definition uses two routes for an obligor: **unlikeliness to pay in full without recourse to actions such as realising security**, or **more than 90 days past due on a material credit obligation**. The routes are alternatives; later atoms own their mechanics.
 
-<Flow>
+### Flow
+
+```text
 Performing
     ↓
 Qualifying credit deterioration
@@ -94,45 +96,45 @@ UTP trigger OR material past-due trigger
 Default state
     ↓
 Cure test / recovery lifecycle
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Legal obligor · Contract · Payment history · Credit information
 This:       Apply governed default definition → default / non-default state
 Downstream: PD labels · LGD sample · Cure · Recovery · Capital · Reporting
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Define default before measuring default risk, then preserve that definition across development, calibration, validation and reporting.
-</Rule>
 
-<NeverConfuse a="Default" b="Loss">
+### Never confuse [Default] and [Loss]
+
 **Default** — entry into a defined credit-risk state.
 
 ---
 **Loss** — the economic or accounting shortfall arising from outcomes around or after default; default can still produce substantial recovery.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Combining historical “bad” flags that mean 90 DPD, charge-off, bankruptcy or NPA creates a target variable with no stable economic meaning.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 RBI commercial-bank asset classification is built around prudential **NPA** rules, not a word-for-word Basel IRB default definition. The IRACP Directions also cross-reference “default” in RBI’s stressed-asset resolution framework; mappings must state which definition is used.
 
 From **1 April 2027**, RBI’s 2026 Asset Classification, Provisioning and Income Recognition Directions mandate an expected-credit-loss provisioning framework for commercial banks; that future provisioning regime does not make the Basel IRB default definition and RBI prudential classifications interchangeable.
 
 #### UK (PRA)
-
 The current UK framework remains CRR-derived. The January 2026 PRA SS3/24 version is **future policy effective 1 January 2027**, not the framework in force on 29 August 2026.
 
 #### EU
-
 CRR Article 178 uses UTP and past-due criteria. EBA’s May 2026 amended Guidelines have an **application date of 19 October 2026** and are future-effective on 29 August 2026.
 
 #### US
-
 Advanced Approaches rules distinguish wholesale and retail default definitions; specified retail categories use different mechanical thresholds.
 
 <Recall

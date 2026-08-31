@@ -37,23 +37,23 @@ This avoids explicit Python loops. Even custom functions can often be expressed 
 
 In short: treat DataFrames like in-memory tables and use built-in operations. This is akin to using `SUM` in SQL vs iterating rows in application code.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always prefer pandas/NumPy vectorized methods (`.sum()`, `.mean()`, etc.) over manual Python loops for column-wise operations.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using `df.apply()` with a Python function on rows can be as slow as loops. Test performance; often a group-by or built-in aggregate is much faster.
-</Trap>
 
-<NeverConfuse a="Vectorized operation" b="Python loop or apply">
+### Never confuse
+
 **Vectorized operation** — an operation applied to entire array/column at once (fast, in C).
 ---
 **Python loop or apply** — iterates in Python for each row (slow).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** This is a general programming best practice, not jurisdiction-specific.
-</Rule>
 
 <Recall
   q="Why is `df['x']*2` faster than a for-loop doubling each element?"

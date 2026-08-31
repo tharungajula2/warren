@@ -28,7 +28,7 @@ Banks rarely have data on every possible borrower (the population). Instead, mod
 
 In practice, analysts must check if the training sample covers all customer segments and time periods. For example, if only performing clients are sampled, average default probability will be under-estimated. Oversampling defaulters can correct imbalance but must be done carefully to avoid altering the underlying distribution. As a rule, increasing sample size will not fix a biased sample – adding more biased data only tightens confidence around the wrong value. The *permanent rule* is: ensure your training data frame covers the same population characteristics as the real credit book.
 
-<Flow>
+```text
 +------------+                 +-------------+
 | Population |                 | Sample      |
 | (All loans)|                 | (Historic,  |
@@ -37,25 +37,25 @@ In practice, analysts must check if the training sample covers all customer segm
        |                            |
        v                            v
   Model input                 Model training
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A larger sample cannot correct a sampling bias; validate models on data representative of the true credit population.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a large sample size eliminates bias. In fact, if the sampling frame is skewed (e.g. excludes declined applicants or past defaulters), even millions of records will give a precisely wrong answer.
-</Trap>
 
-<NeverConfuse a="Sampling bias" b="Non-response bias">
+### Never confuse
+
 **Sampling bias** — distortion from how the sample is drawn.
 ---
 **Non-response bias** — when sampled applicants fail to provide data (e.g. survey participants differ from non-respondents). Both distort representativeness, but sampling bias is in frame selection, while non-response occurs post-selection.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The concept of population vs sample is a statistical fact, not subject to regulatory variation.
-</Rule>
 
 <Recall
   q="Why can’t we just use all available loan data?"

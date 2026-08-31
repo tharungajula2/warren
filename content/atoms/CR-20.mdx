@@ -54,7 +54,9 @@ import_source: 02_CR_credit_risk_core.md
 
 A bureau score or internal score is not automatically a PD. It must have a defined target, population and calibration. A “clean” thin file is also weaker evidence than a long clean history: absence of observed problems can mean absence of observation.
 
-<Flow>
+### Flow
+
+```text
 Application data + bureau data available at origination
     ↓
 Application score → Calibration → PD / credit decision
@@ -64,39 +66,41 @@ Account opens
 Internal behaviour + refreshed bureau data
     ↓
 Behavioural score → Calibration → PD / monitoring
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Decision date · Application data · Bureau snapshot · Internal account history
 This:       Define observation window → build score/ranking → calibrate if probability needed
 Downstream: Approve/decline · Limit/pricing · Behavioural monitoring · PD · Collections
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A model may use only information that was available at the point in time at which the prediction is supposed to be made.
-</Rule>
 
-<NeverConfuse a="Application score" b="Behavioural score">
+### Never confuse [Application score] and [Behavioural score]
+
 **Application score** — risk ranking from information available around origination.
 
 ---
 **Behavioural score** — risk ranking from subsequent account-performance information.
-</NeverConfuse>
 
-<NeverConfuse a="Clean bureau" b="Strong repayment capacity">
+### Never confuse [Clean bureau] and [Strong repayment capacity]
+
 **Clean bureau** — no adverse event observed in the covered reported history.
 
 ---
 **Strong repayment capacity** — sustainable ability to meet future obligations from cash flow or resources; bureau history is only one input.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Allowing later delinquency, post-decision bureau updates or other future information into an origination model creates target leakage and makes model performance look unrealistically strong.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta in the modelling logic.** Data availability, permissible variables, consumer rights, credit-reporting frequency and automated-decision requirements vary materially by law and jurisdiction.
-</Rule>
 
 <Recall
   q="What is the defining difference between application and behavioural models?"

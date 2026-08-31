@@ -53,7 +53,7 @@ The **forecast horizon** and the **credit horizon** are different. A five-year l
 
 FLI also influences staging. A borrower can experience a significant increase in credit risk before missing a payment when forward-looking evidence indicates material deterioration. That is why a purely arrears-driven staging system defeats the purpose of expected-loss accounting.
 
-<Flow>
+```text
 +----------------------+
 | Historical credit    |
 | behaviour            |
@@ -80,38 +80,29 @@ FLI also influences staging. A borrower can experience a significant increase in
 +----------------------+
 | Forward-looking ECL  |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Forward-looking information belongs in ECL only through a defensible connection to expected credit outcomes.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Adding a generic “macroeconomic buffer” after already incorporating the same macro deterioration in modelled PD or LGD can double-count the risk.
-</Trap>
 
-<NeverConfuse a="Forecast horizon" b="ECL horizon">
+### Never confuse
+
 **Forecast horizon** — the period over which specific forward-looking economic estimates remain reasonable and supportable.
 
 ---
 **ECL horizon** — the period over which expected credit losses must be measured; it can extend beyond the detailed forecast horizon.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current bank IRACP remains primarily classification- and provisioning-rule based. RBI’s ECL Directions effective April 1, 2027 require macroeconomic variables and multiple scenarios, including documented treatment beyond standard forecast horizons; Ind AS NBFC ECL already requires forward-looking measurement. [RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— IFRS 9 governs FLI; PRA’s 2025 review stressed monitoring model boundaries and risks not adequately captured by existing models. [IFRS 9 5.5.17; PRA 2025]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 applies, with EBA guidance and monitoring focused on sound forward-looking ECL implementation. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
-</Delta>
-
-<Delta j="US">
-— CECL uses historical experience, current conditions and reasonable and supportable forecasts, with reversion to historical information when forecasting beyond the supportable period. [ASC 326; FASB Staff Q&amp;A Topic 326 No. 2]
-</Delta>
+**IN** — Current bank IRACP remains primarily classification- and provisioning-rule based. RBI’s ECL Directions effective April 1, 2027 require macroeconomic variables and multiple scenarios, including documented treatment beyond standard forecast horizons; Ind AS NBFC ECL already requires forward-looking measurement. [RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
+**UK** — IFRS 9 governs FLI; PRA’s 2025 review stressed monitoring model boundaries and risks not adequately captured by existing models. [IFRS 9 5.5.17; PRA 2025]
+**EU** — EU-adopted IFRS 9 applies, with EBA guidance and monitoring focused on sound forward-looking ECL implementation. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+**US** — CECL uses historical experience, current conditions and reasonable and supportable forecasts, with reversion to historical information when forecasting beyond the supportable period. [ASC 326; FASB Staff Q&amp;A Topic 326 No. 2]
 
 <Recall
   q="Can historical average loss rates alone satisfy a forward-looking ECL framework?"

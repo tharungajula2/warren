@@ -67,7 +67,9 @@ import_source: 02_CR_credit_risk_core.md
 
 Ten equal exposures to genuinely independent obligors diversify idiosyncratic failure better than one exposure of the same total size. One thousand borrowers can still be concentrated if most depend on the same property market or commodity price.
 
-<Flow>
+### Flow
+
+```text
 Shared obligor / group / sector / geography / factor
     ↓
 Common exposure dependence
@@ -75,13 +77,15 @@ Common exposure dependence
 Concentration ↑ → Diversification benefit ↓
     ↓
 Tail-loss sensitivity ↑
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Aggregated exposure · Connected groups · Sector/geography/factor tags
 This:       Identify common loss drivers → measure concentration → compare with limits/appetite
 Downstream: Limit actions · Portfolio steering · Stress testing · Pillar 2 / capital assessment
-</Flow>
+```
 
 ### Ownership
 
@@ -92,35 +96,33 @@ Downstream: Limit actions · Portfolio steering · Stress testing · Pillar 2 / 
 | Consumes | Underwriting, limits, strategy, stress testing and capital planning |
 | Challenges | Independent risk and audit test aggregation, taxonomy and limit exceptions |
 
-<Rule label="PERMANENT RULE">
-Diversification must be judged by independence of loss drivers, not by nominal borrower count.
-</Rule>
+### Permanent rule
 
-<NeverConfuse a="Concentration" b="Large exposure">
+Diversification must be judged by independence of loss drivers, not by nominal borrower count.
+
+### Never confuse [Concentration] and [Large exposure]
+
 **Concentration** — dependence on a common source of loss, which may be name, sector, geography, collateral or another factor.
 
 ---
 **Large exposure** — an exposure or connected-group exposure meeting a defined regulatory or internal size threshold; concentration is broader.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Splitting one economic group across subsidiaries or one common sector across narrow industry codes can improve a report while leaving the underlying loss concentration unchanged.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 RBI’s Large Exposures Framework governs prudential single-counterparty and connected-counterparty aggregation and limits. Internal concentration management must still capture sector and common-factor risks outside the legal large-exposure perimeter.
 
 #### UK (PRA)
-
 PRA large-exposure rules and SS3/25 govern connected-client identification; concentration risk also feeds broader supervisory and Pillar 2 assessment.
 
 #### EU
-
 CRR large-exposure rules constrain single clients and groups of connected clients; broader concentration risk remains a risk-management and supervisory concern.
 
 #### US
-
 US legal lending limits use US-specific aggregation rules. Internal sector and factor concentration management is broader than statutory single-borrower limits.
 
 <Recall

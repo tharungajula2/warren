@@ -36,7 +36,7 @@ Fixed-income analysis separates several risks. Interest-rate risk changes the va
 
 For operations and risk, the instrument definition must include coupon convention, day-count basis, business-day rule, payment calendar, redemption terms, seniority, currency and settlement convention. A one-line label such as “5-year bond” is insufficient to reproduce its economics.
 
-<Flow>
+```text
 Issuer needs funding
       |
       v
@@ -52,27 +52,27 @@ Investor discounts expected cash flows
       |
       v
 Market price
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Value the cash-flow contract, not the product label.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using maturity as a synonym for interest-rate risk. A long maturity can have low or high duration depending on coupons and optionality.
-</Trap>
 
-<NeverConfuse a="Maturity" b="Duration">
+### Never confuse
+
 **Maturity** — the contractual date by which principal is due.
 
 ---
 
 **Duration** — a measure of a bond price’s sensitivity to changes in yield or interest rates.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What is the core valuation object in fixed income?"

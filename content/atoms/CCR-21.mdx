@@ -40,35 +40,26 @@ The **Basic Approach** is a simpler formula (often a flat rate on net expected e
 
 Key point: under Basel’s finalized CVA framework, banks must hold capital for CVA risk using these global formulas. EU/UK transposed these in CRR3/UK Basel 3.1 (effective ~2025) and the US is updating its rule. Hedging rules (what qualifies and to what extent) follow Basel’s main text.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 When calculating CCR capital, CVA risk is a separate add-on: follow the prescribed CVA framework (basic or standardized) based on bank size and model usage. CVA hedges can reduce CVA RWA only as explicitly permitted.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Mixing CVA and default exposures incorrectly. For example, one should not double-count risk reduction. Also, misidentifying which hedges are recognized (only certain counterparty CVA hedges).
-</Trap>
 
-<NeverConfuse a="Basic CVA Approach (BA-CVA)" b="Standardized CVA Approach (SA-CVA)">
+### Never confuse
+
 **Basic CVA Approach (BA-CVA)** — Simple standardized calculation (like fixed factor * EAD).
 ---
 **Standardized CVA Approach (SA-CVA)** — Basel’s detailed formula or CVA VaR-based method.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI’s draft CCR circular focuses on CEM add-ons; India has not yet mandated a separate CVA capital charge for banks. (NBFCs under Ind AS would follow global norms, but banks follow RBI norms).
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— Basel 3.1 includes the revised CVA framework (implemented by mid-2025, final CRR3 expected Jan 2025).
-</Delta>
-
-<Delta j="EU">
-— CRR3 (approved by end-2023) implements Basel’s new CVA rules from Jan 2025.
-</Delta>
-
-<Delta j="US">
-— Agencies have proposed changes (Nov 2022) to align with Basel 3.1 CVA rules, but finalization is pending.
-</Delta>
+**IN** — RBI’s draft CCR circular focuses on CEM add-ons; India has not yet mandated a separate CVA capital charge for banks. (NBFCs under Ind AS would follow global norms, but banks follow RBI norms).
+**UK** — Basel 3.1 includes the revised CVA framework (implemented by mid-2025, final CRR3 expected Jan 2025).
+**EU** — CRR3 (approved by end-2023) implements Basel’s new CVA rules from Jan 2025.
+**US** — Agencies have proposed changes (Nov 2022) to align with Basel 3.1 CVA rules, but finalization is pending.
 
 <Recall
   q="What can banks use to reduce CVA capital?"

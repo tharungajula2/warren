@@ -44,7 +44,7 @@ Duration is not maturity. A 10-year high-coupon bond generally has lower duratio
 
 At portfolio level, duration supports hedging and risk aggregation, but parallel-shift duration misses changes in curve shape. Key-rate durations or bucketed sensitivities are needed when different maturities move by different amounts.
 
-<Flow>
+```text
 Yield shock
    |
    v
@@ -54,27 +54,27 @@ First-order effect --------&gt; Duration
    |
    v
 Estimated bond-price change
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Use duration for local slope and convexity for curvature; neither is a substitute for understanding the cash flows and options.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Quoting a single duration number as if it captures every possible yield-curve movement.
-</Trap>
 
-<NeverConfuse a="Maturity" b="Duration">
+### Never confuse
+
 **Maturity** — time until contractual principal repayment.
 
 ---
 
 **Duration** — price sensitivity to yield changes, derived from the timing and present value of cash flows.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="A bond has modified duration 6. What is the rough first-order price move for a 10 bp yield rise?"

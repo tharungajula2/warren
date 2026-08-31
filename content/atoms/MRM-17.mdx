@@ -38,24 +38,24 @@ The use test (a term from regulatory literature on internal ratings or IFRS9) en
 
 **Overrides** occur when human experts override a model’s result (e.g. credit underwriters adjusting a score).  Some level of overrides is expected (no model is perfect), but they must be tracked.  Regulators view systematic overrides as potential model risk.  For instance, RBI’s credit model guidance says that subjective overrides must be documented and justifiable.  Banks should monitor override frequency and reason codes.  An unusually high override rate may indicate the model is not trusted or is mis-calibrated, prompting review.  Ongoing monitoring of overrides (and requiring board-level reporting if excessive) is part of robust MRM.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always measure model performance on historical data (backtest) and ensure the model’s output is actually used.  Track any manual overrides closely.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Ignoring overrides.  For example, assuming the model is wrong because many underwriters ignore it, without investigating why.  (Frequent overrides themselves are a sign the model may be problematic.)
-</Trap>
 
-<NeverConfuse a="Backtesting" b="Use test">
+### Never confuse
+
 **Backtesting** — evaluating model accuracy by comparing predictions to actual outcomes over time.
 ---
 **Use test** — verifying that model outputs are actively used in decision-making.
 The former is statistical validation; the latter is governance of model usage.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All regimes recognize backtesting as a model validation tool (especially for VaR/market models).  The use test is a concept from Basel risk-weighted models and IFRS9, applicable in all advanced-model frameworks (incl. RBI’s IFRS9 NBFCs, PRA’s internal use requirement).
-</Rule>
 
 <Recall
   q="What is a use test?"

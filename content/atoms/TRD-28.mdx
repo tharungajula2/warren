@@ -41,7 +41,7 @@ Reference-data errors have multiplicative effects. One wrong holiday calendar ca
 
 The BA test is to trace every critical trade field backwards: was it entered on the trade, derived from a mastered object, looked up by effective date, or overwritten manually? That lineage determines both control design and root-cause analysis.
 
-<Flow>
+```text
 Authoritative sources
    |
    +--&gt; instrument master
@@ -57,27 +57,27 @@ trade enrichment
    |
    v
 valuation / risk / settlement / reporting
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Master the meaning and effective date of a field before reconciling its value.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using ticker, short name or free text as a durable cross-system identifier.
-</Trap>
 
-<NeverConfuse a="Reference data" b="Transaction data">
+### Never confuse
+
 **Reference data** — descriptive or classificatory data used repeatedly to interpret transactions and processes.
 
 ---
 
 **Transaction data** — data recording a specific business event or position.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Why can a reference-data error create many trade breaks at once?"

@@ -50,7 +50,7 @@ This methodology also links FTP to IRRBB. If the NMD desk is credited with a fiv
 
 FSI better-practice work states that non-maturing products require blended marginal transfer rates rather than a single average funding rate. The modelling challenge is not to find one objectively “correct” maturity; it is to establish a stable, validated and stressable representation of how the portfolio actually behaves.
 
-<Flow>
+```text
 +------------------+
 | NMD portfolio    |
 +------------------+
@@ -77,25 +77,25 @@ FSI better-practice work states that non-maturing products require blended margi
 | Blended FTP      |
 | credit           |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 NMD transfer value must come from behavioural assumptions that are explicit, governed and consistent with the risk transferred to treasury.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Rewarding a deposit franchise with long-term FTP credit while ALM independently models the same deposits as short-lived, creating profits from inconsistent assumptions.
-</Trap>
 
-<NeverConfuse a="Behavioural tenor" b="Contractual tenor">
+### Never confuse
+
 **Behavioural tenor** — modelled persistence used to represent how long funding effectively remains.
 ---
 **Contractual tenor** — legal maturity; for an NMD it may provide almost no information about aggregate funding persistence.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Regulatory behavioural constraints may influence model boundaries, but the FTP problem itself is universal.
-</Rule>
 
 <Recall
   q="Why can an NMD not simply receive overnight FTP?"

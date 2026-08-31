@@ -56,7 +56,7 @@ This makes the distinction foundational to banking. Expected losses should influ
 
 The distinction also prevents a dangerous error in risk reporting: a portfolio can have a modest expected loss but a severe tail. Low average loss does not imply low capital need, because concentration and dependence can make rare outcomes extremely damaging.
 
-<Flow>
+```text
 Loss distribution
         |
         v
@@ -79,25 +79,25 @@ Loss distribution
 | Capital resilience   |
 | against severe loss  |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Expected loss describes the centre of a loss distribution; resilience must also address the possibility that realised losses are materially worse.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Subtracting expected loss from a high quantile and treating the result as a universally defined accounting or regulatory "unexpected loss" number without checking the framework.
-</Trap>
 
-<NeverConfuse a="Expected loss" b="Unexpected loss">
+### Never confuse
+
 **Expected loss** — probability-weighted average loss.
 ---
 **Unexpected loss** — adverse variation around expected loss, especially the severe outcomes for which additional resilience is required.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The statistical distinction is universal; national prudential and accounting frameworks determine exactly how provisions and capital interact with it.
-</Rule>
 
 <Recall
   q="Can expected loss be low while tail loss is severe?"

@@ -57,7 +57,7 @@ A critical modelling issue is **non-linearity**. Credit risk often deteriorates 
 
 Scenario probabilities are themselves estimates. They should correspond to coherent economic narratives, not be selected backwards to obtain a desired allowance. Governance therefore needs to address scenario design, probability setting, model sensitivity and changes from the previous reporting date.
 
-<Flow>
+```text
 +----------------+
 | Scenario A     |
 | ECL = 40       |
@@ -83,38 +83,29 @@ Scenario probabilities are themselves estimates. They should correspond to coher
 | Weighted ECL   |
 | = 118          |
 +----------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Probability weighting applies to possible credit-loss outcomes; it is not permission to select whichever scenario gives a comfortable provision.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Running ECL once on average macroeconomic variables and calling the result “probability weighted” can miss material non-linear loss behaviour.
-</Trap>
 
-<NeverConfuse a="Most-likely scenario" b="Expected loss">
+### Never confuse
+
 **Most-likely scenario** — the individual scenario with the highest assigned probability.
 
 ---
 **Expected loss** — the probability-weighted result across relevant possible outcomes.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current bank IRACP is not a probability-weighted ECL accounting regime. RBI’s final 2026 bank ECL framework, effective April 1, 2027, explicitly requires multiple scenarios and probability weights informed by historical experience and expert judgement; Ind AS NBFCs already apply expected-loss accounting. [RBI 2026 ECL Directions, paragraphs 47–49]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— IFRS 9 probability weighting applies; PRA’s 2025 thematic work additionally emphasises governance over model limitations and adjustments. [IFRS 9 5.5.17; PRA thematic feedback]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 applies the same probability-weighted objective, with EBA supervisory expectations around robust ECL practices. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
-</Delta>
-
-<Delta j="US">
-— CECL also incorporates reasonable and supportable expectations about future conditions, but Topic 326 does not impose the IFRS 9 scenario architecture or prescribe one estimation method. [ASU 2016-13; Interagency CECL FAQ]
-</Delta>
+**IN** — Current bank IRACP is not a probability-weighted ECL accounting regime. RBI’s final 2026 bank ECL framework, effective April 1, 2027, explicitly requires multiple scenarios and probability weights informed by historical experience and expert judgement; Ind AS NBFCs already apply expected-loss accounting. [RBI 2026 ECL Directions, paragraphs 47–49]
+**UK** — IFRS 9 probability weighting applies; PRA’s 2025 thematic work additionally emphasises governance over model limitations and adjustments. [IFRS 9 5.5.17; PRA thematic feedback]
+**EU** — EU-adopted IFRS 9 applies the same probability-weighted objective, with EBA supervisory expectations around robust ECL practices. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+**US** — CECL also incorporates reasonable and supportable expectations about future conditions, but Topic 326 does not impose the IFRS 9 scenario architecture or prescribe one estimation method. [ASU 2016-13; Interagency CECL FAQ]
 
 <Recall
   q="Is ECL the loss under the scenario with the highest probability?"

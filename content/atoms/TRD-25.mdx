@@ -60,7 +60,7 @@ Settlement fails remain possible. A fail can arise from missing securities, insu
 
 The durable control is to model settlement by instrument and market, not by a global “T+1” assumption.
 
-<Flow>
+```text
 Trade date T
     |
     v
@@ -79,23 +79,25 @@ intended settlement date
     v
 final settlement
 (actual date may differ)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Trade date, intended settlement date and actual settlement date are distinct lifecycle facts.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Hard-coding one settlement cycle for all securities because a jurisdiction’s headline equity market is T+1.
-</Trap>
 
-<NeverConfuse a="Clearing" b="Settlement">
+### Never confuse
+
 **Clearing** — determination and management of obligations before final discharge.
 
 ---
 
 **Settlement** — final transfer of cash, securities or other assets that discharges those obligations.
-</NeverConfuse>
+
+### Jurisdiction variants
 
 **IN — Perishable, checked 28 August 2026.** SEBI states that the existing equity-cash settlement cycle is T+1 and has also introduced an optional T+0 cycle for eligible trades, with scope expanded after the 2024 beta.
 

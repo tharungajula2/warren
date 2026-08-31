@@ -54,7 +54,7 @@ The important sequencing is therefore: first the bank uses excess management hea
 
 The US stress capital buffer reaches a similar objective through a different capital architecture, so European MDA terminology should not be mechanically imported into US requirements.
 
-<Flow>
+```text
 +----------------------+
 | Capital above buffers|
 +----------------------+
@@ -80,38 +80,29 @@ The US stress capital buffer reaches a similar objective through a different cap
 | Severe prudential    |
 | breach territory     |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Distribution restrictions are a conservation mechanism triggered before capital minima are exhausted.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating MDA as the amount of capital a bank is permitted to lose confuses a distribution limit with a capital stock.
-</Trap>
 
-<NeverConfuse a="MDA" b="Capital buffer">
+### Never confuse
+
 **MDA** — the maximum amount permitted for specified distributions under the applicable conservation regime.
 
 ---
 **Capital buffer** — the CET1 cushion whose depletion can cause the MDA restriction to apply.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI applies graduated capital-conservation ratios to earnings as CET1 enters the prescribed buffer bands. [RBI Capital Adequacy Directions 2025, capital conservation standards]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— Ordinary-regime firms face MDA restrictions when they do not meet the combined buffer; the SDDT capital regime effective 1 January 2027 uses a simplified structure and removes the ordinary automatic-MDA architecture for SDDTs. [PRA CP9/24; PS4/26 and finalised Strong and Simple policy]
-</Delta>
-
-<Delta j="EU">
-— CRD Article 141 requires an MDA calculation and distribution restrictions when the combined-buffer requirement is not met. [CRD Article 141 / EBA]
-</Delta>
-
-<Delta j="US">
-— The large-bank framework uses a stress capital buffer derived from supervisory stress testing rather than the EU-style combined-buffer/MDA architecture. [Federal Reserve Annual Report]
-</Delta>
+**IN** — RBI applies graduated capital-conservation ratios to earnings as CET1 enters the prescribed buffer bands. [RBI Capital Adequacy Directions 2025, capital conservation standards]
+**UK** — Ordinary-regime firms face MDA restrictions when they do not meet the combined buffer; the SDDT capital regime effective 1 January 2027 uses a simplified structure and removes the ordinary automatic-MDA architecture for SDDTs. [PRA CP9/24; PS4/26 and finalised Strong and Simple policy]
+**EU** — CRD Article 141 requires an MDA calculation and distribution restrictions when the combined-buffer requirement is not met. [CRD Article 141 / EBA]
+**US** — The large-bank framework uses a stress capital buffer derived from supervisory stress testing rather than the EU-style combined-buffer/MDA architecture. [Federal Reserve Annual Report]
 
 <Recall
   q="Why can distribution restrictions apply while minimum capital is still met?"

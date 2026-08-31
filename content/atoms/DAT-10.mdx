@@ -29,7 +29,7 @@ For example, a report might include a column “Non-Performing Asset Ratio.” M
 
 Under RBI guidance, banks are urged to use common taxonomies and sync metadata across systems. This means aligning internal definitions with external ones (e.g. RBI’s definition of NPA). A single business glossary prevents mismatches where one department uses one term differently from another. Both metadata and glossary entries should have clear ownership, and be updated when policies change. This is a cornerstone of data governance: without metadata, reports can’t be properly interpreted and controls on data validity are weak.
 
-<Flow>
+```text
 +----------------------+
 | Business Glossary    |
 +----------------------+
@@ -45,25 +45,25 @@ Under RBI guidance, banks are urged to use common taxonomies and sync metadata a
 | Field | Source | Type | ... |
 | NPA_Amount | CoreBanking | Curr. | ... |
 +-----------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 All regulatory and risk data fields must have definitions and metadata documented, linked to the official business glossary.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming everyone understands a term; failing to codify definitions causes inconsistent reporting and confusion.
-</Trap>
 
-<NeverConfuse a="Metadata" b="Business glossary">
+### Never confuse
+
 **Metadata** — Details about data fields (type, format, source, lineage).
 ---
 **Business glossary** — A dictionary of business terms with plain-language definitions (bridges business and technical meaning).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Standardizing metadata and glossaries is universally recommended (e.g. BIS mentions using international codes and definitions for RBI reporting).
-</Rule>
 
 <Recall
   q="Why maintain a business glossary?"

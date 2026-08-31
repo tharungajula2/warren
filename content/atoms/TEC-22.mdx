@@ -37,23 +37,23 @@ quarterly = df.resample('Q')['Exposure'].sum()
 ```
 This handles the date alignment for reporting periods easily. Also, you can use `.dt` accessor: `df['Date'].dt.month` to get month, etc.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always convert date columns to `datetime64` dtype (using `to_datetime`) before analysis. This allows use of datetime methods and indexing.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting `set_index` with a `DatetimeIndex` means you can’t use `.resample()`. Also, be mindful of time zones if mixing data from different regions.
-</Trap>
 
-<NeverConfuse a="Timestamp" b="Period">
+### Never confuse
+
 **Timestamp** — a single datetime (e.g. 2026-08-01 00:00).
 ---
 **Period** — a span (e.g. Aug 2026); use pandas `Period` if needed.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** pandas date utilities are standard regardless of locale.
-</Rule>
 
 <Recall
   q="How to select all data from 2025?"

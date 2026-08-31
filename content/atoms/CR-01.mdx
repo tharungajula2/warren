@@ -43,11 +43,13 @@ import_source: 02_CR_credit_risk_core.md
 
 One corporate group can contain several obligors. One obligor can have many facilities. A derivative counterparty can create a credit exposure whose amount changes with market value even though no conventional loan exists.
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Legal identity · Contract · Transaction role
 This:       Identify the person that owes performance
 Downstream: Facility mapping · Default status · Limits · PD · Exposure aggregation
-</Flow>
+```
 
 ### Ownership
 
@@ -58,24 +60,24 @@ Downstream: Facility mapping · Default status · Limits · PD · Exposure aggre
 | Consumes | Underwriting, limits, modelling, collections, capital and reporting |
 | Challenges | Independent risk, legal, compliance and audit test entity mapping and aggregation |
 
-<Rule label="PERMANENT RULE">
-Credit risk must be mapped to the legal or natural person responsible for the obligation before ratings, defaults, limits or exposures are aggregated.
-</Rule>
+### Permanent rule
 
-<NeverConfuse a="Obligor" b="Counterparty">
+Credit risk must be mapped to the legal or natural person responsible for the obligation before ratings, defaults, limits or exposures are aggregated.
+
+### Never confuse [Obligor] and [Counterparty]
+
 **Obligor** — the person responsible for a credit obligation.
 
 ---
 **Counterparty** — the other party to a transaction; the term describes the transactional relationship and may or may not coincide with a loan borrower.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using “customer”, “borrower”, “obligor” and “counterparty” as database synonyms can propagate one entity’s rating, default or limit status to legally separate persons.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Legal definitions and regulatory wording vary, but identifying the person responsible for an obligation is universal.
-</Rule>
 
 <Recall
   q="What is the primary wholesale credit-risk object?"

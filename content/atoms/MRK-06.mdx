@@ -28,21 +28,21 @@ VaR only tells you the cut-off loss at the confidence level, not what happens if
 
 VaR is also not a coherent risk measure (it lacks sub-additivity in some cases), which means diversifying positions could, counterintuitively, increase VaR.  These shortcomings motivated the shift to Expected Shortfall in regulatory frameworks (see MRK-07).
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 VaR at α% does **not** measure how large losses can be beyond that percentile.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating VaR as if it were a worst-case loss or ignoring the tail beyond the VaR cutoff.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **VaR** — the (1−α) percentile loss (threshold loss); **Worst-case loss** — an extreme possible loss (VaR does not guarantee worst-case).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The mathematical limitations of VaR are inherent and do not depend on jurisdiction.
-</Rule>
 
 <Recall
   q="What important information does VaR omit?"

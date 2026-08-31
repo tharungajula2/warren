@@ -36,23 +36,23 @@ Model documentation should include a description of the model’s objective (e.g
 
 In practice, documentation may be a written report and annotated code. It should evolve with the model (version control) and be reviewed periodically. Incomplete documentation is a frequent model validation finding. Banks should follow templates (e.g. internal model policy or SS11/13 guidelines) ensuring all sections are covered. Thorough documentation is not just bureaucracy: it captures the business context and justification for each model choice, preventing the “black box” problem.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Document *everything*: purpose, data, methodology, parameters, results, assumptions, validation, and intended use. This should be in a permanent model report and supported by traceable code.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming code comments or an informal narrative suffice. Documentation must be formal and comprehensive. A common mistake is to omit rationales (“why this feature?”) or validation results. Regulators will flag missing sections.
-</Trap>
 
-<NeverConfuse a="Model documentation" b="Validation report">
+### Never confuse
+
 **Model documentation** — a detailed report created by developers (data descriptions, logic, results).
 ---
 **Validation report** — an independent assessment by a separate party. It is not a substitute for documentation but relies on it. Developers must still document the model fully.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Principles are consistent globally. The Fed’s SR11-7, the PRA’s model guidance, RBI’s risk model norms and IFRS9 guidance all emphasize documentation. For instance, the PRA’s recent policy explicitly aligns IRB documentation requirements with model risk principles.
-</Rule>
 
 <Recall
   q="Name three key components that must be included in model documentation."

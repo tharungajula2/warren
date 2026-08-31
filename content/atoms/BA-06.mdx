@@ -31,7 +31,7 @@ import_source: 16_BA_business_analysis.md
 ---
 A **process map** is a visual diagram of the steps in a business process.  Common forms include flowcharts or swimlane diagrams.  To create one, identify all activities, decisions, and participants.  An *As-Is* map documents how things currently work; it may reveal inefficiencies, handoffs or delays.  For example, an As-Is map of loan approval might show multiple manual checks.  A *To-Be* map sketches the proposed future process, reflecting improvements (automation, parallel steps, elimination of waste).  For instance, automating checks in the loan process would be shown as a direct flow to approval.
 
-<Flow>
+```text
 +-----------+       +------------+       +-----------+
 | Customer  | ---&gt;  | Check      | ---&gt;  | End       |
 | Request   |       | manually   |       |           |
@@ -41,24 +41,24 @@ A **process map** is a visual diagram of the steps in a business process.  Commo
 | Customer  | ---&gt;  | Auto-      | ---&gt;  | End       |
 | Request   |       | check      |       |           |
 +-----------+       +------------+       +-----------+
-</Flow>
+```
 
 In practice, start with an As-Is map to ensure everyone agrees on the current process.  Then discuss the To-Be process: ask how tasks can be done more efficiently or with fewer steps.  Document both maps and annotate issues.  The difference between As-Is and To-Be shows exactly what will change.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always create an accurate As-Is process map first, then derive the To-Be. The As-Is baseline is needed to measure improvement and avoid missing steps.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Jumping straight to designing the new process without fully mapping the As-Is. This often leads to overlooking current constraints or hidden steps, resulting in gaps in the solution.
-</Trap>
 
-<NeverConfuse a="As-Is Process" b="To-Be Process">
+### Never confuse
+
 **As-Is Process** — the current state workflow (often flawed or manual).
 ---
 **To-Be Process** — the future, improved workflow.
 They are frequently mixed up if one tries to innovate without understanding the current process.
-</NeverConfuse>
 
 ### No delta
 

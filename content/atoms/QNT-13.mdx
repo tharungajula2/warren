@@ -31,7 +31,7 @@ A decision tree is a flowchart-like predictive model. Internal nodes test featur
 
 To mitigate over-complex trees, practitioners use **pruning** (removing branches that add little predictive power) or stop splitting when few samples remain. Cross-validation can determine optimal tree size. Trees are inherently “white-box” models: one can trace the path for a given prediction, e.g. “Income was low  collateral insufficient  decline loan.” This makes them interpretable, a desirable property in credit risk.
 
-<Flow>
+```text
 +------------------+
 |  Income &gt; 50k?   |
 +----+------+------+
@@ -45,25 +45,25 @@ To mitigate over-complex trees, practitioners use **pruning** (removing branches
   Yes  No            /    \
   |     |         Yes    No
 [Decline] [Approve] [Approve] [Decline]
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Each split partitions data to increase purity (e.g. reduce variance or Gini impurity). Every split is a simple rule on one feature, building a decision path to a final prediction.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a deeper or more complex tree always improves results. In fact, very deep trees usually overfit: training accuracy rises while test accuracy falls.
-</Trap>
 
-<NeverConfuse a="Decision tree" b="Random forest">
+### Never confuse
+
 **Decision tree** — a single model with branches of feature-threshold tests leading to predictions, easy to interpret.
 ---
 **Random forest** — an ensemble of many trees (each on a random sample), where the final prediction is an aggregate (majority vote or average). A random forest is not one big tree, but many small trees combined to reduce variance.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The concept of a decision tree is mathematical and independent of regulation.
-</Rule>
 
 <Recall
   q="What is a terminal node (leaf) in a decision tree?"

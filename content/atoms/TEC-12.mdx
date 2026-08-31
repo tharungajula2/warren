@@ -34,27 +34,27 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-<Flow>
+```text
 TableA  Full Join  TableB  = Discrepancies (NULLs for missing)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always match on a clear key (e.g. LoanID) and include all data sources needed. Use aggregates (sums, counts) to verify totals align as a quick check.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Mismatched keys or joins hide differences. For example, an inner join drops unmatched rows, missing a discrepancy. To catch all differences, use a full outer join or compare aggregates.
-</Trap>
 
-<NeverConfuse a="INNER JOIN" b="FULL OUTER JOIN">
+### Never confuse
+
 **INNER JOIN** — only matching rows (not useful alone for recon).
 ---
 **FULL OUTER JOIN** — includes mismatches from both sides (needed to find missing records).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Reconciliation logic is generic SQL.
-</Rule>
 
 <Recall
   q="How to find records in A not in B?"

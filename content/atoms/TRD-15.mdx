@@ -38,7 +38,7 @@ American-style options can generally be exercised before expiry; European-style 
 
 A complete option definition must include call/put, buyer/seller, underlying, strike, expiry, notional, style, settlement, premium and any barrier or other feature. Without these, “long option” is not a complete economic position.
 
-<Flow>
+```text
 Option premium
      |
      +--&gt; intrinsic value
@@ -50,27 +50,27 @@ Option premium
             volatility
             rates/carry
             optional features
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 In-the-money describes exercise value relative to strike; it does not tell you the trade’s total profit after premium.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming an option with zero intrinsic value before expiry is worthless. It may still have substantial time value.
-</Trap>
 
-<NeverConfuse a="Moneyness" b="Profitability">
+### Never confuse
+
 **Moneyness** — relationship between underlying price and strike under the relevant option convention.
 
 ---
 
 **Profitability** — economic P&amp;L after premium and all relevant cash flows.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What happens to a plain option’s time value at expiry?"

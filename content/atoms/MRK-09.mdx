@@ -28,7 +28,7 @@ Banks compare realized P&amp;L against VaR forecasts each day. An “exception�
 
 Typically, about 2.5 exceptions are expected on average per 250 days at 99% VaR.  A red-zone model would get a multiplier of 4× on VaR for capital.  Notably, regulators use *hypothetical* P&amp;L (revaluing yesterday’s closing positions) for backtesting, not intraday actual P&amp;L, to avoid distortions from new trades.  Counting actual P&amp;L can inflate exceptions if intraday trades occur.
 
-<Flow>
+```text
 250-day backtesting:
 +-------------+--------+
 | Exceptions  | Action |
@@ -37,23 +37,23 @@ Typically, about 2.5 exceptions are expected on average per 250 days at 99% VaR.
 | 5–9 (Yellow)| Investigate (some alarm)   |
 | &gt;=10 (Red)  | Model invalid (4%+ breaches) |
 +-------------+--------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 An accurate 99% VaR model should yield roughly 2-3 exceptions in 250 days (green zone).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating any exception as a model failure, or using actual P&amp;L (with intraday trading) instead of hypothetical P&amp;L.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Actual P&amp;L** — realized daily P&amp;L including new trades; **Hypothetical P&amp;L** — P&amp;L from revaluing prior-day positions (used in backtesting).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The Basel backtesting traffic-light framework is applied uniformly.
-</Rule>
 
 <Recall
   q="In a 250-day window, how many VaR breaches triggers the red zone?"

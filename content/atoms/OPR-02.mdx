@@ -37,7 +37,7 @@ To ensure banks capture all operational losses, the Basel framework defines seve
 
 Banks use these categories to tag and aggregate losses so they can report to supervisors.  For example, a trading loss due to a systems bug might be a “process management” event; a hurricane damage to a data center is “physical asset”; a lawsuit from a customer suit is “clients/products”.  This taxonomy helps risk managers ensure no area is overlooked.
 
-<Flow>
+```text
 [Risk Category] -&gt; [Event Type Example]
 +-------------------------+
 | Internal Fraud          | Employee embezzles funds
@@ -48,25 +48,25 @@ Banks use these categories to tag and aggregate losses so they can report to sup
 | Execution &amp; Process     | Trade execution error
 | Disruption &amp; Systems    | Data center outage
 +-------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Classify all operational losses under one of Basel’s seven categories.  This is mandatory for risk data consistency.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Don’t neglect the “clients/products” and “employment practices” categories because they sound vague.  For instance, a suit from a client over bad advice goes under “clients/products”, not another category.
-</Trap>
 
-<NeverConfuse a="Internal Fraud" b="External Fraud">
+### Never confuse
+
 **Internal Fraud** — loss due to dishonest acts by staff (theft, unauthorized trading).
 ---
 **External Fraud** — similar fraud by outsiders (ATM robbery, hacking by non-employees).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All Basel-aligned regimes use these same seven event types for operational risk reporting.
-</Rule>
 
 <Recall
   q="Name three of the seven Basel operational risk event types."

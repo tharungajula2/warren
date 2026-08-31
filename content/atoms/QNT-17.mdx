@@ -32,23 +32,23 @@ SHAP (SHapley Additive exPlanations) treats each feature as a “player” in a 
 
 Crucially, SHAP values satisfy properties of fairness: efficiency (contributions sum to output), and consistency (if one model increases a feature’s effect, its SHAP value won’t decrease). This makes them theoretically attractive for interpretability. In credit risk, regulators expect that each driver of a decision can be explained. SHAP is one way to meet this interpretability requirement without sacrificing the accuracy of complex ensembles. It allows both global insight (feature importance as average absolute SHAP) and local explanations.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 SHAP values for one prediction sum to the difference between the model’s output and a baseline. This ensures the explanation is exact (local accuracy). Each feature’s SHAP indicates how much it pushed the score up or down.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating SHAP as proving causality. SHAP distributes contributions *given the model*, not necessarily reflecting causal effects. Also, using a too-narrow background dataset can bias SHAP values.
-</Trap>
 
-<NeverConfuse a="SHAP value" b="Feature importance">
+### Never confuse
+
 **SHAP value** — a local explanation: the contribution of a feature to one specific prediction. It is computed under the model’s logic.
 ---
 **Feature importance** — a global metric summarizing a model. Unlike SHAP, it does not decompose individual predictions and may miss interactions.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** SHAP is a mathematical construct; regulatory emphasis on explainability is common (e.g. Fed SR11-7, PRA SS3/16) but does not alter SHAP’s definition.
-</Rule>
 
 <Recall
   q="What properties do Shapley (SHAP) values satisfy?"

@@ -49,7 +49,7 @@ FSI research similarly found that average-rate transfer pricing failed to penali
 
 The diagnostic question is therefore not merely whether the FTP calculation is mathematically correct. It is: **what transaction would a rational business produce more of because of this price?** If that behaviour is inconsistent with the bank’s risk appetite, the FTP design is wrong or incomplete.
 
-<Flow>
+```text
 +------------------+
 | FTP signal       |
 +------------------+
@@ -77,25 +77,25 @@ The diagnostic question is therefore not merely whether the FTP calculation is m
 | Actual liquidity |
 | and funding risk |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 The quality of FTP should be judged partly by the behaviour it incentivises, not only by the elegance of its calculation.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating an FTP model as a finance-allocation exercise and failing to test which products become artificially profitable under its assumptions.
-</Trap>
 
-<NeverConfuse a="FTP accuracy" b="Accounting allocation accuracy">
+### Never confuse
+
 **FTP accuracy** — economic faithfulness of the internal funding and liquidity signal.
 ---
 **Accounting allocation accuracy** — whether internal revenue and cost mechanically reconcile; reconciliation alone cannot prove incentives are correct.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Incentive distortion from mispricing is an economic mechanism independent of jurisdiction.
-</Rule>
 
 <Recall
   q="What happens if all tenors receive the same FTP charge?"

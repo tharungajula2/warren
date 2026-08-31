@@ -50,7 +50,7 @@ The rate and cash-flow convention must match. Annual cash flows require a rate e
 
 Present value is mathematics rather than a banking-specific rule. Accounting standards, valuation frameworks and risk models decide **which** cash flows and **which** rate to use; the discounting operation itself does not change by jurisdiction.
 
-<Flow>
+```text
 Future cash flow CF_t
           |
           v
@@ -65,25 +65,25 @@ Future cash flow CF_t
 | CF_t x discount      |
 | factor               |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Cash flows at different dates cannot be compared economically until timing has been put on a common basis.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Discounting a monthly cash flow with an annual rate as though one month were one annual period.
-</Trap>
 
-<NeverConfuse a="Discount rate" b="Discount factor">
+### Never confuse
+
 **Discount rate** — the rate used to translate value across time.
 ---
 **Discount factor** — the numerical multiplier produced from the rate and timing; the rate is an input, while the factor performs the multiplication.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Present-value mathematics does not change across jurisdictions.
-</Rule>
 
 <Recall
   q="What is the one-period discount factor at rate \(r\)?"

@@ -35,23 +35,23 @@ Default capital is calculated like any credit exposure: EAD × PD × LGD (for IR
 
 Thus banks need both: default capital (part of credit risk RWA) and CVA capital (part of market risk RWA in trading or CVA desks). These are distinct: a low-default-probability counterparty could still incur large CVA losses if its credit spreads move.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always compute capital for CCR exposure under credit risk rules *and* for CVA risk. Don’t double-count (deduct CVA exposures when already in default RWA).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Thinking credit risk capital is enough for CCR. CVA capital is separate for mark-to-market movements. Some banks once tried to net CVA and default exposures – Basel forbids netting them for capital.
-</Trap>
 
-<NeverConfuse a="Default Risk Capital" b="CVA Capital">
+### Never confuse
+
 **Default Risk Capital** — Capital against expected loss from default (PD × LGD).
 ---
 **CVA Capital** — Capital for mark-to-market credit spread risk on counterparty exposures.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The need for two charges is a global standard. The methods (basic vs standardized CVA) vary slightly: final Basel rules now use standardized CVA capital for all banks.
-</Rule>
 
 <Recall
   q="Why is CVA capital separate from credit capital?"

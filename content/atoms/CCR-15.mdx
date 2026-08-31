@@ -33,23 +33,23 @@ import_source: 10_CCR_counterparty_credit_risk.md
 ---
 Under IMM, banks simulate future exposures (e.g. via Monte Carlo) to compute EPE or CVA capital directly. IMM can capture portfolio-specific correlations and netting more precisely than SA-CCR. However, only very large institutions with approved models may use it, and they must back-test their results. The “IMM shortcut method” of Basel (an alternative simplistic approach) was eliminated once SA-CCR took effect. Now “Internal Model Method” usually refers to CVA exposure models or bilateral EAD models used for regulatory capital, with extensive validation and restrictions on collateral.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 IMM requires supervisory approval and continuous validation. Models must be conservative and cover wrong-way risk and stress.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming one can freely choose IMM. Regulators often discourage new IMM approval because SA-CCR exists; IMM is complex, costly, and under scrutiny after the crisis.
-</Trap>
 
-<NeverConfuse a="Internal Model Method (IMM)" b="Initial Margin (IM)">
+### Never confuse
+
 **Internal Model Method (IMM)** — A regulatory capital method using advanced models for CCR exposures.
 ---
 **Initial Margin (IM)** — Collateral posted to cover future exposure (not a modeling method).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** IMM rules (for CVA and CCR) are largely superseded by Basel SA-CCR except as grandfathered. Regulators generally stick to SA-CCR except for CVA VaR models.
-</Rule>
 
 <Recall
   q="What does the IMM do?"

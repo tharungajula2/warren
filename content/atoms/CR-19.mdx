@@ -50,39 +50,43 @@ import_source: 02_CR_credit_risk_core.md
 
 “Retail = model” and “wholesale = judgement” is too crude. Retail systems still need policy, overrides and fraud controls; wholesale ratings can use powerful quantitative models. The difference is how much **repeatable population evidence** versus **case-specific information** can support the decision.
 
-<Flow>
+### Flow
+
+```text
 Exposure population
     ↓
 Size + homogeneity + data density + materiality
     ↓
 Retail-like → Pool / segment statistical treatment
 Wholesale-like → Obligor-centred rating + facility analysis
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Exposure type · Population size · Homogeneity · Data density · Materiality
 This:       Choose pooled statistical treatment or obligor-centred assessment
 Downstream: Segmentation · Scorecards · Ratings · PD/LGD/EAD estimation · Validation
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Choose the modelling unit and method to match the economic homogeneity, data density and materiality of the exposures.
-</Rule>
 
-<NeverConfuse a="Retail modelling" b="Automated lending">
+### Never confuse [Retail modelling] and [Automated lending]
+
 **Retail modelling** — pool-oriented estimation using repeated observations with similar risk characteristics.
 
 ---
 **Automated lending** — an operational decision process; retail credit can include manual review, and wholesale credit can use automation.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Applying a mass-retail scorecard to a small, heterogeneous set of large corporates creates apparent statistical precision without a genuinely comparable population.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta in the economic logic.** Regulatory definitions determine which exposures qualify for retail or wholesale treatment and can impose size, pooling or management criteria.
-</Rule>
 
 <Recall
   q="Why is statistical modelling especially natural in retail portfolios?"

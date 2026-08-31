@@ -45,7 +45,7 @@ import_source: 07_DAT_risk_data_reporting.md
 
 **US** — Banks file *Call Reports* (FFIEC 031/041) quarterly with regulators. Large bank holding companies (BHCs) file Federal Reserve FR Y series (e.g. FR Y-9C) and FR Y-14 for stress testing. These cover balance sheet, income and risk data. The Fed incorporates BCBS 239 expectations into its supervisory processes, especially for Systemically Important BHCs.
 
-<Flow>
+```text
 BCBS 239 (Global principles)
     |
     v
@@ -56,37 +56,28 @@ BCBS 239 (Global principles)
 (central    (BCBS239 &amp;   FINREP,      Reports;
  data repo)  UK SREP)    integrated    Fed FR Y series
                          (IReF)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Regulatory return taxonomies differ by jurisdiction, but underlying risk data governance expectations (BCBS 239) remain universal.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a regulatory report mapping in one jurisdiction automatically satisfies the data definition rules of another.
-</Trap>
 
-<NeverConfuse a="COREP/FINREP" b="FFIEC Call Reports">
+### Never confuse
+
 **COREP/FINREP** — European Supervisory Authority (EBA) reporting frameworks for capital and financial statements.
 ---
 **FFIEC Call Reports** — US prudential regulatory return filings required for insured depository institutions.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI’s ADF requires banks to channel return data into a centralized repository and submit XBRL filings.
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— The PRA expects banks to meet BCBS 239 outcomes; capital and risk data are reported via PRA’s forms (based on CRR/CRD) in the sub-set of COREP/FINREP where applicable.
-</Delta>
-
-<Delta j="EU">
-— Banks submit EBA COREP (capital/risk) and FINREP (financial statements) under CRR/CRD IV. The future Integrated Reporting Framework (ECB IReF) will consolidate data collection from 2030.
-</Delta>
-
-<Delta j="US">
-— Insured depository institutions file Call Reports (FFIEC 031/041) to regulators, and large BHCs file Fed FR Y-series (e.g. FR Y-9C for consolidated data).
-</Delta>
+**IN** — RBI’s ADF requires banks to channel return data into a centralized repository and submit XBRL filings.
+**UK** — The PRA expects banks to meet BCBS 239 outcomes; capital and risk data are reported via PRA’s forms (based on CRR/CRD) in the sub-set of COREP/FINREP where applicable.
+**EU** — Banks submit EBA COREP (capital/risk) and FINREP (financial statements) under CRR/CRD IV. The future Integrated Reporting Framework (ECB IReF) will consolidate data collection from 2030.
+**US** — Insured depository institutions file Call Reports (FFIEC 031/041) to regulators, and large BHCs file Fed FR Y-series (e.g. FR Y-9C for consolidated data).
 
 <Recall
   q="What is India’s Automated Data Flow (ADF)?"

@@ -46,7 +46,7 @@ Basel’s liquidity principles require banks to consider institution-specific an
 
 The ALM implication is that a combined stress cannot be built by simply adding a credit loss number to a liquidity outflow number. Assumptions must interact: haircuts, funding availability, drawdowns, collateral requirements and asset-sale discounts should respond to the deteriorating state of the institution.
 
-<Flow>
+```text
 +------------------+
 | Credit quality   |
 | deteriorates     |
@@ -77,25 +77,25 @@ The ALM implication is that a combined stress cannot be built by simply adding a
 +------------------+
         |
         +----------&gt; back to top
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Credit and liquidity stresses are endogenous to one another once confidence, collateral and forced transactions begin to interact.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Running a “combined” stress by adding independently modelled credit and liquidity outputs without changing funding, haircut or drawdown assumptions as credit quality deteriorates.
-</Trap>
 
-<NeverConfuse a="Credit loss" b="Liquidity loss">
+### Never confuse
+
 **Credit loss** — loss caused by deterioration or default of an obligor or exposure.
 ---
 **Liquidity loss** — cost or failure arising from obtaining cash or monetising assets under stress; it can amplify credit losses without being the same risk.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The feedback mechanism is economic and appears across banking systems.
-</Rule>
 
 <Recall
   q="How can credit deterioration reduce liquidity before default losses fully crystallise?"

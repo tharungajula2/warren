@@ -38,7 +38,7 @@ Operationally, compounding details matter: observation dates, lookbacks, lockout
 
 The mental model is two questions: which curve generates the future cash flow, and which curve discounts that cash flow back to today? They may be related, but they are not automatically identical.
 
-<Flow>
+```text
 Future coupon
    |
    +--&gt; projection curve
@@ -52,27 +52,27 @@ projected amount
    |
    v
 present value
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Projection and discounting are separate valuation functions.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling an OIS curve merely the “risk-free forecast curve” and ignoring the collateral agreement that makes its use economically relevant.
-</Trap>
 
-<NeverConfuse a="Overnight fixing" b="OIS rate">
+### Never confuse
+
 **Overnight fixing** — observed overnight reference rate for a specific date.
 
 ---
 
 **OIS rate** — fixed rate on a swap against compounded/averaged overnight rates over a future period.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Why can one swap use two curves?"

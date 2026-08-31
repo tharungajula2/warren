@@ -44,30 +44,32 @@ import_source: 02_CR_credit_risk_core.md
 
 A simple term loan may be one facility with one account. A revolving facility can have several operational accounts. One obligor can hold facilities with different collateral, seniority and drawdown behaviour even when a common obligor PD is used.
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Obligor · Product design · Credit decision
 This:       Product → Facility → Account
 Downstream: Exposure · Delinquency · LGD · EAD · Collections · Reporting
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every risk measure must state its level: product, facility, account, obligor or a defined aggregate.
-</Rule>
 
-<NeverConfuse a="Facility" b="Account">
+### Never confuse [Facility] and [Account]
+
 **Facility** — the contractual grant or commitment of credit, including its limit and terms.
 
 ---
 **Account** — the operational record through which balances, payments and arrears are booked; one facility need not equal one account.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating an account-level delinquency flag as automatically equivalent to an obligor-level credit state can misclassify other facilities when the governing default framework applies a different propagation rule.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Regulatory rules differ on when account or facility events propagate to an obligor, but the object hierarchy itself is universal.
-</Rule>
 
 <Recall
   q="Which object owns the sanctioned limit and contractual maturity?"

@@ -35,7 +35,7 @@ import_source: 12_QNT_statistics_ml.md
 ---
 In a stationary series, the average and variability remain roughly constant. There is no long-term upward or downward drift (no trend) and no changing seasonality. For example, a stationary default rate might oscillate around 2% with similar magnitude fluctuations each period. If instead default rates are rising in a credit cycle, the series is non-stationary. Non-stationarity can lead to spurious or unreliable forecasts: for instance, ARIMA models assume consistent autocorrelations over time. To test stationarity, analysts use plots (constant mean/variance visually) and tests like Augmented Dickey-Fuller. If non-stationary, one may *difference* the data (subtract each value from its predecessor) or remove a deterministic trend to achieve stationarity. A stationary transformed series is then suitable for ARMA/ARIMA modeling.
 
-<Flow>
+```text
 +----------------+
 | Original series| (may have trend/seasonality)
 +--------+-------+
@@ -63,25 +63,25 @@ Transform (difference, detrend)
 +--------------+
 | Fit ARIMA    |
 +--------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Stationarity means “no trend, constant mean and variance over time.” In practice, if the mean or variance changes (e.g. rising loan volumes or volatility), remove these effects before modeling.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating a visibly trending or seasonal series as stationary. Running ARIMA without differencing when data have trend will yield misleading parameters. Always test a series (plot it and use unit-root tests) before assuming stationarity.
-</Trap>
 
-<NeverConfuse a="Stationarity" b="White noise">
+### Never confuse
+
 **Stationarity** — a property of a time series (constant statistical properties over time).
 ---
 **White noise** — a special stationary series where each value is random with zero autocorrelation. All white noise series are stationary, but not all stationary series are white noise (white noise has no structure to exploit).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Stationarity is a mathematical property. Regulatory models (like CIRB) don’t change this: all quantitative models assume stationarity or explicitly handle non-stationarity.
-</Rule>
 
 <Recall
   q="Why is stationarity important for ARIMA?"

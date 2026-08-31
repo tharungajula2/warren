@@ -45,7 +45,7 @@ The word “credible” matters. A funding source should not be counted merely b
 
 Stress testing is therefore more informative than a single ratio. It shows the path to failure: which day, currency, entity or funding source causes the breach. It can also expose cliffs—a stable profile for ten days followed by a large wholesale maturity on day eleven.
 
-<Flow>
+```text
 +------------------+
 | Stress scenario  |
 +------------------+
@@ -73,25 +73,25 @@ Stress testing is therefore more informative than a single ratio. It shows the p
 | First shortfall  |
 | = survival limit |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Survival horizon is scenario-dependent; there is no meaningful survival-horizon number without stated assumptions.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Counting an asset sale, secured borrowing and central-bank borrowing simultaneously when all three rely on the same collateral.
-</Trap>
 
-<NeverConfuse a="LCR horizon" b="Survival horizon">
+### Never confuse
+
 **LCR horizon** — a standardised 30-calendar-day regulatory stress window.
 ---
 **Survival horizon** — the institution-specific time until liquidity resources are exhausted in a defined stress.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Supervisory specifications vary, but institution-specific cash-flow stress and survival analysis are common liquidity-risk tools.
-</Rule>
 
 <Recall
   q="What determines survival horizon?"

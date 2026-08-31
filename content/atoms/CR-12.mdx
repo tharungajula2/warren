@@ -83,7 +83,9 @@ Re-default
 
 A sound data model keeps the entire state history: first default date, cause, restructuring events, cure date, probation, re-default and recovery. Deleting default history after cure produces survivorship bias and makes weak restructurings look successful.
 
-<Flow>
+### Flow
+
+```text
 Default
     ↓
 Original trigger ceases → Arrears / viability conditions met
@@ -93,43 +95,43 @@ Probation / observation where required
 Cured / non-default
     ↓
 New qualifying trigger → Re-default
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Default state · Payments · Financial recovery · Restructuring performance
 This:       Test exit conditions → probation where required → cure
 Downstream: Migration · Re-default · PD calibration · Recovery analysis · Monitoring
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Cure removes the current default state; it does not remove the historical fact that default occurred.
-</Rule>
 
-<NeverConfuse a="Cure" b="Arrears clearance">
+### Never confuse [Cure] and [Arrears clearance]
+
 **Cure** — return to non-default under the complete exit criteria.
 
 ---
 **Arrears clearance** — payment of overdue amounts; UTP or other default conditions may still remain.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Resetting a cured customer to “never defaulted” inflates apparent portfolio quality and corrupts PD, transition and restructuring-performance analysis.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 Under the current commercial-bank IRACP Directions, an NPA may be upgraded to standard only when the **entire arrears of interest and principal are paid**; where the borrower has more than one facility with the bank, arrears across all those credit facilities must be repaid, subject to additional restructuring rules where relevant.
 
 #### UK (PRA)
-
 Return-to-non-default is governed under the current definition-of-default framework. The updated PRA SS3/24 sets the future Basel 3.1 expectations from 1 January 2027.
 
 #### EU
-
 EBA Guidelines govern return-to-non-default and probation concepts. The May 2026 amended version has an application date of 19 October 2026, so the applicable version must be identified by observation date.
 
 #### US
-
 Advanced Approaches rules provide return-from-default standards for wholesale obligors and retail exposures under the US framework; the relevant unit must be preserved.
 
 <Recall

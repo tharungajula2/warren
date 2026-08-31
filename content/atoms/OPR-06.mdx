@@ -34,23 +34,23 @@ The collected data feed multiple uses: management reporting, trend analysis, sce
 
 High-quality data is crucial: even one missing large loss can distort capital greatly. Losss should be captured promptly and reconciled (e.g. accounting vs op-risk logs). The internal loss database is typically owned by the 2nd line (Operational Risk) but populated by 1st line or an incident intake system.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Record every material operational loss (gross amount) in the internal loss database. Use the predefined threshold and update it with regulator guidance (e.g. SMA €20k floor).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Do not undercount losses by using net-of-insurance amounts. The regulatory capital formula (and risk view) assumes gross losses.  Also avoid high thresholds that miss important events – recall a loss just below threshold may lead to serious underestimation of tail risk.
-</Trap>
 
-<NeverConfuse a="Gross loss" b="Net loss">
+### Never confuse
+
 **Gross loss** — the total loss amount before any recoveries.
 ---
 **Net loss** — the loss after deducting insurance or recoveries. (Banks must record *gross* loss for risk capital.)
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All Basel-aligned capital frameworks use gross operational losses.  Basel’s SMA specifies €20k min threshold (banks can report more granular).  For reference, UK regulators also expect banks’ internal loss databases to follow Basel rules for materiality.
-</Rule>
 
 <Recall
   q="What is Basel’s minimum threshold for internal loss data under SMA?"

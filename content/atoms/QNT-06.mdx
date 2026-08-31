@@ -36,31 +36,31 @@ Statistics: we often measure correlation by Pearson’s r (for continuous), or c
 
 Practically, risk analysts should: ask if a predictive factor makes economic sense as a cause, and check if unobserved factors could be driving both. If unsure, treat correlated predictors with caution. For example, IGNORED: days-with-current-employer might correlate with income; controlling for both avoids blaming employer tenure incorrectly.
 
-<Flow>
+```text
  In actual data, observation shows:
    YearsEmployed ↑  -&gt;  DefaultRate ↓
    But: YearsEmployed and Income are correlated (r=0.6).
  Confounder: Income
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always question causality claims in credit models. Use domain knowledge and control for confounders to avoid spurious attributions. No matter how strong a correlation, it may be caused by hidden variables.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Automatically assuming that a correlated predictor is causal. E.g., “Since region correlates with default, region causes default.” In reality, region may proxy economic conditions (the real cause). Mis-specifying this can lead to misdirected interventions.
-</Trap>
 
-<NeverConfuse a="Correlation" b="Causation">
+### Never confuse
+
 **Correlation** — statistical association between two variables’ values (e.g. high debt ratio and defaults).
 ---
 **Causation** — one variable directly influences the other.
 They are not the same: correlation is necessary but not sufficient for causation. Always consider other variables that might explain the link.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The principle that correlation is not causation is fundamental to statistics. However, regulatory scrutiny may vary: e.g. fair lending laws (in US/EU) demand checking that models do not inadvertently use proxies for protected attributes (a form of confounding fairness).
-</Rule>
 
 <Recall
   q="In a study, zip code is correlated with default risk. Why not simply include zip code in a scoring model?"

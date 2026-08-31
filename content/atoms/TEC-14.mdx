@@ -30,7 +30,7 @@ import_source: 13_TEC_sql_python.md
 ---
 For example, a *Loan_Fact* table might have columns `(LoanKey, CustomerKey, ProductKey, Balance, InterestRate)`, where `CustomerKey` points to a *Customer_Dim* table with `(CustomerKey, Name, Segment, RiskRating)`, and `ProductKey` points to a *Product_Dim* table. This star schema lets analysts slice facts by any dimension attribute.
 
-<Flow>
+```text
     +-------------+
     |  Loan_Fact  |
     +-------------+
@@ -39,25 +39,25 @@ For example, a *Loan_Fact* table might have columns `(LoanKey, CustomerKey, Prod
     | Balance     |    +-----------+
     +-------------+      |   ...   |
                         +-----------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Fact tables should contain only keys (foreign keys) and measure columns. All descriptive attributes belong in dimensions, not the fact.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Placing text or descriptive fields in the fact table (denormalization) is discouraged. It bloats the fact and complicates queries.
-</Trap>
 
-<NeverConfuse a="Fact Table" b="Dimension Table">
+### Never confuse
+
 **Fact Table** — contains numeric measurements and foreign keys linking to dimensions.
 ---
 **Dimension Table** — contains attributes (descriptions) and a primary key.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The star schema concept of fact vs dimension is standard in DW design.
-</Rule>
 
 <Recall
   q="What determines the grain of a fact table?"

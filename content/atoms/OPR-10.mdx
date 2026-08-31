@@ -38,7 +38,7 @@ Under Basel II (and prior Basel I transitional norms), simple pillar 1 methods e
 
 These approaches were “standardised” because any bank could calculate them from simple P&amp;L data. They were retired by 2022 under Basel 3.1, but some regimes still use BIA/TSA for domestic banks or under-transition.
 
-<Flow>
+```text
 +------------------------+
 | Basic Indicator (BIA)  |
 | Charge = 15% × avg GI  |
@@ -49,28 +49,28 @@ These approaches were “standardised” because any bank could calculate them f
 | Split into 8 lines with betas |
 | Charge = avg over 3y of Σ(β_i×GI_i) |
 +-------------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 If using TSA, the 8 business lines and associated beta factors (12–18%) must be applied.  National regulators may specify these in detail (EBA or local law).  Board approval and risk framework standards are required even under TSA.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Do not assume these approaches reflect current risk (they were proxies).  Under TSA, a bank with complex products might hold too little capital.  Also, don’t confuse “Standardised” with the newer “SMA” – they are completely different.
-</Trap>
 
-<NeverConfuse a="Basic Indicator (BIA)" b="Standardised (TSA)">
+### Never confuse
+
 **Basic Indicator (BIA)** — capital = α×(bank’s gross income).
 ---
 **Standardised (TSA)** — capital = weighted sum of each business line’s GI (β factors).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** These formulas were global under Basel II. However, note:
 - **UK/EU (pre-Basel3.1):** SMEs or retail banks often used TSA with same factors.
 - **India:** RBI followed Basel II on paper; BIA (15%) and TSA lines were defined in Master Directions.
 - **US:** US banking regulators allowed these approaches earlier but also introduced standardized (ASA) that resembled TSA.
-</Rule>
 
 <Recall
   q="What percentage of gross income does BIA use?"

@@ -32,23 +32,23 @@ sources:
     accessed: '2026'
 import_source: 13_TEC_sql_python.md
 ---
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Ensure primary/unique keys have no duplicates (they enforce uniqueness) and foreign keys match existing parent rows.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Mistaking legitimate multiple entries (e.g. multiple payments per loan) for duplicates. Always confirm the correct key: a *primary key* versus a *natural unique*.
-</Trap>
 
-<NeverConfuse a="PRIMARY KEY" b="UNIQUE constraint/index">
+### Never confuse
+
 **PRIMARY KEY** — key defined in schema, cannot have duplicates.
 ---
 **UNIQUE constraint/index** — also enforces uniqueness, but (unlike primary key) usually allows one NULL.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Data quality principles (completeness, duplicates, referential checks) are universal.
-</Rule>
 
 <Recall
   q="How to check for missing mandatory fields?"

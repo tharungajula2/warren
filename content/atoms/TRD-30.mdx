@@ -45,7 +45,7 @@ Set-off and close-out netting should not be treated as identical. Close-out nett
 
 The operational control is document-to-netting-set lineage: every trade included in a net exposure calculation must be legally in scope.
 
-<Flow>
+```text
 Normal state:
 Trade 1
 Trade 2  --&gt; one ISDA relationship
@@ -64,27 +64,27 @@ close-out netting
           |
           v
 single net payable / receivable
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Netting benefit exists only if the contractual mechanism is legally enforceable for the relevant parties and transactions.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a system-generated net amount proves legal close-out netting eligibility.
-</Trap>
 
-<NeverConfuse a="Close-out netting" b="Set-off">
+### Never confuse
+
 **Close-out netting** — termination, valuation and combination of covered transactions into a single net amount.
 
 ---
 
 **Set-off** — legal combination of mutual payment obligations that may arise under a different basis and scope.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What turns many terminated ISDA transactions into one amount after default?"

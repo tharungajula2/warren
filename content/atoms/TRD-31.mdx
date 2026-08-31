@@ -41,7 +41,7 @@ A margin call is not the same as settlement of the derivative. It is a collatera
 
 Collateral reduces loss given counterparty default but creates liquidity demands. During volatility, a firm can be economically solvent yet face large same-day cash calls. Collateral risk management is therefore both a credit-risk and treasury problem.
 
-<Flow>
+```text
 Portfolio mark-to-market
         |
         v
@@ -59,27 +59,27 @@ margin call
         |
         v
 collateral transfer / return
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A CSA changes collateralisation of counterparty exposure; it does not rewrite the derivative’s underlying payoff.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating posted collateral as unavailable to liquidity risk merely because it reduces credit exposure.
-</Trap>
 
-<NeverConfuse a="Variation margin" b="Initial margin">
+### Never confuse
+
 **Variation margin** — collateral responding primarily to current mark-to-market exposure.
 
 ---
 
 **Initial margin** — collateral intended primarily to cover potential future exposure during a close-out period.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What four terms can change the size of a collateral call even if portfolio MTM is unchanged?"

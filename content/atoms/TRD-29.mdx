@@ -51,7 +51,7 @@ For data design, contract identity is therefore separate from trade identity. A 
 
 The practical question is: which document controls this field? Economic data may come from the confirmation; close-out rights from the master; collateral thresholds from the CSA; calculation mechanics from definitions.
 
-<Flow>
+```text
 Relationship
    |
    +--&gt; Master Agreement
@@ -65,27 +65,27 @@ Relationship
              |
              v
         individual economics
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Map every contractual data element to the document that legally controls it.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating the confirmation as the entire legal contract or assuming every OTC product uses the same master agreement.
-</Trap>
 
-<NeverConfuse a="Master agreement" b="Confirmation">
+### Never confuse
+
 **Master agreement** — relationship-level legal framework governing multiple transactions.
 
 ---
 
 **Confirmation** — transaction-level document recording specific economic terms.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Where would a collateral threshold normally be found?"

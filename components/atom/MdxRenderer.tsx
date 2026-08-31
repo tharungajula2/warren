@@ -4,27 +4,47 @@ import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 
-import { OneScreen } from "./OneScreen";
-import { Flow } from "./Flow";
-import { Rule } from "./Rule";
-import { Trap } from "./Trap";
-import { NeverConfuse } from "./NeverConfuse";
-import { Worked } from "./Worked";
 import { Delta } from "./Delta";
-import { Formula } from "./Formula";
-import { Source } from "./Source";
 
 const mdxComponents = {
-  OneScreen,
-  Flow,
-  Rule,
-  Trap,
-  NeverConfuse,
-  Worked,
   Recall: () => null,
   Delta,
-  Formula,
-  Source,
+  h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h1 className="text-xl font-bold text-[#E6E8EB] mt-8 mb-3 tracking-tight" {...props} />
+  ),
+  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h2 className="text-lg font-bold text-[#E6E8EB] mt-6 mb-2 tracking-tight border-b border-[#23272D] pb-1.5" {...props} />
+  ),
+  h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h3 className="text-xs font-semibold uppercase tracking-wider text-[#9AA3AD] font-mono mt-6 mb-2 border-b border-[#23272D] pb-1" {...props} />
+  ),
+  h4: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h4 className="text-xs font-semibold uppercase tracking-wider text-[#9AA3AD] font-mono mt-4 mb-2" {...props} />
+  ),
+  p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
+    <p className="text-[14px] leading-[1.65] text-[#E6E8EB] my-3" {...props} />
+  ),
+  ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
+    <ul className="list-disc list-inside space-y-1.5 my-3 text-[14px] text-[#E6E8EB]" {...props} />
+  ),
+  ol: (props: React.HTMLAttributes<HTMLOListElement>) => (
+    <ol className="list-decimal list-inside space-y-1.5 my-3 text-[14px] text-[#E6E8EB]" {...props} />
+  ),
+  li: (props: React.LiHTMLAttributes<HTMLLIElement>) => (
+    <li className="leading-relaxed" {...props} />
+  ),
+  hr: (props: React.HTMLAttributes<HTMLHRElement>) => (
+    <hr className="border-t border-[#23272D] my-6" {...props} />
+  ),
+  blockquote: (props: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
+    <blockquote className="border-l-2 border-[#C9711F] pl-4 py-1 my-4 text-[#9AA3AD] italic text-[14px]" {...props} />
+  ),
+  pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
+    <pre className="bg-[#121417] border border-[#23272D] p-3.5 rounded-[3px] my-4 text-[11px] font-mono text-[#E6E8EB] leading-[17px] whitespace-pre-wrap break-words tabular-nums" {...props} />
+  ),
+  code: (props: React.HTMLAttributes<HTMLElement>) => (
+    <code className="font-mono text-[12px] bg-[#191C20] text-[#E6E8EB] px-1.5 py-0.5 rounded-[3px] border border-[#23272D]" {...props} />
+  ),
   table: (props: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-5 w-full overflow-x-auto border border-[#23272D] rounded-[3px]">
       <table className="w-full text-left text-xs border-collapse font-sans" {...props} />

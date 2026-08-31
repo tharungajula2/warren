@@ -29,21 +29,21 @@ The DRC addresses the gap that credit spread shocks (in the sensitivities method
 
 The RRAO is for “any instruments bearing residual risk” beyond delta/vega/curvature.  Typical examples: exotic options whose risk isn’t well represented by the buckets, correlation-trading positions, or multi-underlying products.  FRTB requires a fixed charge or stress scenario calculation for these.  Together, SA capital = SB method (sensitivities) OR (DRC+RRAO), whichever is higher.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always add DRC for credit default risk and RRAO for remaining exposures to the sensitivities-based capital.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating the sensitivities formula as sufficient and ignoring DRC or RRAO, which can underestimate capital for credit and exotic positions.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Default Risk Charge** — covers jump-to-default credit losses; **Residual Risk Add-On** — covers other risks not in SBM (like exotic instrument exposures).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Both DRC and RRAO are defined by Basel and apply universally in SA.
-</Rule>
 
 <Recall
   q="What does the Default Risk Charge capture?"

@@ -61,55 +61,57 @@ import_source: 02_CR_credit_risk_core.md
 
 DPD describes payment behaviour; the default definition determines when that behaviour, or separate qualitative evidence, becomes a governed credit state.
 
-<Flow>
+### Flow
+
+```text
 Contractual due date → Unpaid amount = arrears
     ↓
 DPD clock starts → Delinquency bucket advances
     ↓
 Collections / early warning → Governed default test
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Contractual due date · Required payment · Credits received
 This:       Due → Overdue → DPD count → Delinquency state
 Downstream: Collections · Early warning · Default test · Roll rates · Vintage analysis
-</Flow>
+```
 
-<Formula>
+### Formula
+
 `DPD = observation date − relevant unpaid contractual due date`
 
 The exact counting convention belongs to the governing policy or regulation. DPD ↑ → delinquency severity usually ↑, but default still requires the applicable rule.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Calculate delinquency from the contractual obligation and the specified counting convention; do not infer default merely from an informal bucket label.
-</Rule>
 
-<NeverConfuse a="Arrears" b="Days past due">
+### Never confuse [Arrears] and [Days past due]
+
 **Arrears** — the unpaid amount.
 
 ---
 **Days past due** — elapsed time associated with an unpaid contractual obligation.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Changing due-date logic, allocation of payments or day-end convention can create apparent credit deterioration or improvement without any change in borrower behaviour.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 RBI requires overdue, SMA and NPA status to be determined through the day-end process for the relevant date. Its illustration moves a continuously overdue account to SMA-1 after 30 days, SMA-2 after 60 days and NPA after the applicable 90-day progression; OD/CC products use the defined “out of order” test.
 
 #### UK (PRA)
-
 Past-due status and materiality are inputs to the current regulatory default framework; arrears buckets used operationally are not themselves the complete definition of default.
 
 #### EU
-
 CRR/EBA rules distinguish days-past-due mechanics, materiality and unlikeliness-to-pay indicators; reporting past-due bands do not replace Article 178 default.
 
 #### US
-
 Different regulatory purposes and retail categories use different delinquency/default thresholds; there is no safe universal “90 DPD for everything” rule.
 
 <Recall

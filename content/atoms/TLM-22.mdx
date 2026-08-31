@@ -51,7 +51,7 @@ The curve should be marginal rather than merely an average of historic funding c
 
 Care is required when combining components. Credit spread, liquidity premium, interest-rate risk and contingent charges can overlap if definitions are vague. A well-governed FTP framework states exactly what each component transfers and prevents the same risk from being charged twice.
 
-<Flow>
+```text
 +------------------+
 | Base/reference   |
 | term curve       |
@@ -75,25 +75,25 @@ Care is required when combining components. Credit spread, liquidity premium, in
 | liquidity charge |
 | where relevant   |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every FTP component should correspond to a distinct economic cost or benefit and have a defined risk owner.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Adding a “liquidity spread”, “term premium” and “contingency premium” without checking whether two components charge the same underlying risk.
-</Trap>
 
-<NeverConfuse a="Funding-liquidity premium" b="Contingent liquidity charge">
+### Never confuse
+
 **Funding-liquidity premium** — internal compensation for the marginal cost/value of term funding.
 ---
 **Contingent liquidity charge** — allocation for potential stressed cash needs that may arise from currently unfunded or conditional exposures.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Curve construction is institution-specific; the economic components do not depend on jurisdictional naming.
-</Rule>
 
 <Recall
   q="Why use marginal rather than average historic funding cost?"

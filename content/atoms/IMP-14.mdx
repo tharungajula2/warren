@@ -55,7 +55,7 @@ Revolving products require special attention under IFRS 9. Ordinarily, the maxim
 
 This is **behavioural life**, not licence to assume an unlimited horizon. The estimate should reflect observed account survival, drawdown patterns, limit management, cancellation practices and other actions that genuinely terminate or mitigate credit exposure.
 
-<Flow>
+```text
 +-----------------------+
 | Current drawn balance |
 +-----------------------+
@@ -82,38 +82,29 @@ This is **behavioural life**, not licence to assume an unlimited horizon. The es
 | Combine with period   |
 | PD and LGD            |
 +-----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 EAD must correspond to the exposure expected at the time of each modelled default, not merely the exposure reported today.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using the contractual cancellation notice period as behavioural life for a revolving portfolio without testing whether limits are actually cancelled in practice can materially understate ECL.
-</Trap>
 
-<NeverConfuse a="Contractual maturity" b="Behavioural exposure period">
+### Never confuse
+
 **Contractual maturity** — the legal endpoint or cancellation period specified by the contract.
 
 ---
 **Behavioural exposure period** — the period during which credit exposure is expected to persist given actual borrower behaviour and credit-risk-management actions.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current bank IRACP does not implement an IFRS behavioural-life ECL model. RBI’s ECL Directions from April 1, 2027 specify different lifetime treatments for drawn facilities, revolving commitments and auto-renewing products, including analysis of default, drawdown and limit-management behaviour. [RBI 2026 ECL Directions, paragraph 46]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— UK-adopted IFRS 9 applies the contractual-period rule and revolving-facility exception in paragraph 5.5.20. [IFRS 9 5.5.19–5.5.20]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 applies the same revolving exposure-period requirements. [Regulation (EU) 2023/1803]
-</Delta>
-
-<Delta j="US">
-— CECL estimates off-balance-sheet expected losses over the contractual period in which the entity is exposed to credit risk, but no allowance is recorded for an unfunded commitment that can be unconditionally cancelled by the institution; this differs structurally from IFRS 9’s revolving-product exception. [ASC 326; Interagency CECL FAQ]
-</Delta>
+**IN** — Current bank IRACP does not implement an IFRS behavioural-life ECL model. RBI’s ECL Directions from April 1, 2027 specify different lifetime treatments for drawn facilities, revolving commitments and auto-renewing products, including analysis of default, drawdown and limit-management behaviour. [RBI 2026 ECL Directions, paragraph 46]
+**UK** — UK-adopted IFRS 9 applies the contractual-period rule and revolving-facility exception in paragraph 5.5.20. [IFRS 9 5.5.19–5.5.20]
+**EU** — EU-adopted IFRS 9 applies the same revolving exposure-period requirements. [Regulation (EU) 2023/1803]
+**US** — CECL estimates off-balance-sheet expected losses over the contractual period in which the entity is exposed to credit risk, but no allowance is recorded for an unfunded commitment that can be unconditionally cancelled by the institution; this differs structurally from IFRS 9’s revolving-product exception. [ASC 326; Interagency CECL FAQ]
 
 <Recall
   q="Why is current balance not necessarily lifetime EAD?"

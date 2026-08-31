@@ -47,7 +47,7 @@ NDF lifecycle risk is concentrated around fixing and settlement. A wrong fixing 
 
 The Indian rupee is a major NDF currency in offshore markets, but access to INR non-deliverable derivative contracts is governed by RBI rules for authorised dealers and user categories. The universal product mechanic remains cash settlement against a fixing.
 
-<Flow>
+```text
 Trade date
    |
    v
@@ -63,23 +63,25 @@ contracted rate vs fixing
    v
 net cash settlement
 (no delivery of restricted currency)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 An NDF uses the underlying currency to calculate value but does not require its principal delivery at maturity.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Building an NDF payoff without locking down quote direction and fixing source.
-</Trap>
 
-<NeverConfuse a="Deliverable forward" b="NDF">
+### Never confuse
+
 **Deliverable forward** — both currency principals are exchanged at maturity.
 
 ---
 
 **NDF** — a net cash difference is settled using an agreed reference fixing.
-</NeverConfuse>
+
+### Jurisdiction variants
 
 **IN — Perishable, checked 28 August 2026.** RBI’s master directions govern when authorised dealers may offer non-deliverable derivative contracts involving INR. The permitted user, purpose and location of the authorised dealer matter; do not infer permission from the existence of an offshore INR NDF market.
 

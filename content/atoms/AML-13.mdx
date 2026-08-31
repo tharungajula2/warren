@@ -34,23 +34,23 @@ Transaction Monitoring is the core tool for detecting suspicious activity. Banks
 
 To build these systems, banks use AML typologies – known money laundering patterns. This can include structuring (multiple small transfers to avoid limits), circular trades between affiliates, or payments to high-risk industries. Rules can be as simple as “cash &gt; $10,000” or complex “transfer to a high-risk country followed by immediate account withdrawal.” Many institutions also incorporate machine learning to detect deviations from normal behavior. The output of transaction monitoring is a continuous stream of alerts for further triage.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Maintain robust transaction monitoring systems that align with business profiles. Regularly update rules and thresholds (based on risk and past alert outcomes) so genuine criminal patterns are captured while routine transactions are mostly ignored.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Overloading on alerts (setting too many rules) without tuning them leads to hundreds of false positives. Focus on the highest-risk triggers and calibrate thresholds to actual customer behavior, or important alerts get buried.
-</Trap>
 
-<NeverConfuse a="Transaction monitoring" b="Sanctions screening">
+### Never confuse
+
 **Transaction monitoring** — active scanning of transactions to find red flags.
 ---
 **Sanctions screening** — separate process of matching transaction parties against blacklist names. Both involve “screening,” but transaction monitoring looks at money flows/patterns, whereas sanctions screening only checks names against watchlists.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The concept of automated transaction monitoring is a universal banking practice. Specific rules (e.g. reportable cash amount) vary: India requires CTR for cash &gt; ₹10L monthly, US requires reports over $10,000. But all banks must monitor activity per local regulations.
-</Rule>
 
 <Recall
   q="What triggers a transaction monitoring alert?"

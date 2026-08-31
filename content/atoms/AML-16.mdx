@@ -37,23 +37,23 @@ Sanctions screening is a separate discipline from general transaction monitoring
 
 Sanctions screening is mandated by law. In the US, OFAC requires blocking any transaction involving a person on the Specially Designated Nationals (SDN) list. Similar rules exist globally. Unlike AML alerts, a sanctions match has no ambiguity – if the payee is on a list, the payment must be rejected or frozen.  Thus, sanctions screening focuses on lists and name-matching, whereas transaction monitoring focuses on behavioral patterns.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Maintain up-to-date sanctions and PEP lists (daily at least). Screen all new customers and every transaction against these lists using reliable matching software. Do not rely solely on exact spellings – use fuzzy logic to catch variants.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming exact name match is enough. Criminals often use aliases or misspellings; failing to catch those will let them slip by. Also, treating sanctions screening as part of AML monitoring – it’s a distinct process legally and technically.
-</Trap>
 
-<NeverConfuse a="Sanctions screening" b="Transaction monitoring">
+### Never confuse
+
 **Sanctions screening** — matching names against official sanctions/terrorism lists.
 ---
 **Transaction monitoring** — looking for suspicious activity patterns. The two are often conflated but sanctions screening simply verifies if transaction parties are blacklisted, whereas monitoring checks transaction *behavior*.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Sanctions regimes are country-specific in content (different lists), but all jurisdictions require compliance with UN sanction lists. In practice: **IN** follows UN and domestic (e.g. ISIS list) sanctions via RBI circulars; **UK** implements UN/EU/UK lists via HM Treasury; **EU** has Union lists; **US** has its own OFAC list (e.g. North Korea, Iran). Screening processes are similar globally but lists differ.
-</Rule>
 
 <Recall
   q="What is fuzzy matching in sanctions screening?"

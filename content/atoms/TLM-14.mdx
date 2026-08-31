@@ -61,7 +61,7 @@ LCR is intentionally stylised. An actual crisis can last longer than 30 days, ru
 
 India’s current framework follows the Basel architecture but has local calibrations. RBI’s April 2025 amendments, effective 1 April 2026, add 2.5 percentage points to run-off rates for internet/mobile-enabled retail deposits, producing 7.5% for qualifying stable balances and 12.5% for less-stable balances, and revise government-security HQLA valuation.
 
-<Flow>
+```text
 +----------------------+
 | 30-day stress inputs |
 +----------------------+
@@ -87,37 +87,28 @@ India’s current framework follows the Basel architecture but has local calibra
 | LCR = HQLA / net     |
 | stressed outflows    |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 LCR measures standardised 30-day stressed liquidity coverage, not long-term funding stability.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Reading a 110% LCR as “the bank can survive exactly 33 days”; the ratio is based on prescribed stress assumptions, not a linear survival clock.
-</Trap>
 
-<NeverConfuse a="LCR" b="Survival horizon">
+### Never confuse
+
 **LCR** — HQLA relative to standardised net stressed cash outflows over 30 days.
 ---
 **Survival horizon** — the modelled time until available liquidity is exhausted under a particular internal stress scenario.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI uses the Basel LCR architecture with Indian calibrations and SLR/FALLCR interaction; revised digital-deposit run-offs and government-security haircut rules are effective 1 April 2026. [RBI/2025-26/27]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— PRA-supervised firms operate under the UK liquidity framework, with LCR embedded alongside broader liquidity supervision and ILAAP. [PRA SS24/15]
-</Delta>
-
-<Delta j="EU">
-— LCR is a binding CRR liquidity requirement supplemented by Delegated Regulation (EU) 2015/61. [CRR Part Six, Title I]
-</Delta>
-
-<Delta j="US">
-— LCR applicability is category-based rather than universal: the tailoring framework applies full, reduced or no LCR depending on firm category and specified risk indicators. [OCC Bulletin 2019-52]
-</Delta>
+**IN** — RBI uses the Basel LCR architecture with Indian calibrations and SLR/FALLCR interaction; revised digital-deposit run-offs and government-security haircut rules are effective 1 April 2026. [RBI/2025-26/27]
+**UK** — PRA-supervised firms operate under the UK liquidity framework, with LCR embedded alongside broader liquidity supervision and ILAAP. [PRA SS24/15]
+**EU** — LCR is a binding CRR liquidity requirement supplemented by Delegated Regulation (EU) 2015/61. [CRR Part Six, Title I]
+**US** — LCR applicability is category-based rather than universal: the tailoring framework applies full, reduced or no LCR depending on firm category and specified risk indicators. [OCC Bulletin 2019-52]
 
 <Recall
   q="What is LCR fundamentally testing?"

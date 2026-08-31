@@ -31,7 +31,7 @@ Under SA, each risk factor (e.g. interest rate, FX, equity) has pre-set weight t
 
 After summing delta, vega, and curvature charges for all classes under the worst-case scenario, SA also adds two extra charges: the **Default Risk Charge** (DRC) for jump-to-default credit risk and the **Residual Risk Add-On** (RRAO) for exotic/basis exposures.  These components ensure known market and credit risks are covered even without an internal model.
 
-<Flow>
+```text
 +-----------------------------+
 | Sensitivities (Δ, vega, κ)  |
 +-------------+---------------+
@@ -57,23 +57,23 @@ After summing delta, vega, and curvature charges for all classes under the worst
 +-------------v---------------+
 | Total SA Capital Charge     |
 +-----------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 SA capital = max(scenario capital) + DRC + RRAO.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting to apply the correct correlation scenario (always take the higher) or omitting the RRAO for exotic positions.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Delta risk** (linear sensitivity) vs **Vega risk** (volatility sensitivity) — both are treated separately in SA and not interchangeable.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The SA framework is a standardized Basel formula applied globally (though local regulators may adjust some risk weights).
-</Rule>
 
 <Recall
   q="What components make up SA market risk capital?"

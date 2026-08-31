@@ -60,7 +60,9 @@ For a low-PD loan, the most likely realised loss may be zero while expected loss
 
 Dependence can hide inside the inputs. Revolving utilisation and recovery severity can both worsen around default or in recessions. Multiplying three independently estimated averages without considering their conditional meaning can therefore misstate the true expectation.
 
-<Flow>
+### Flow
+
+```text
 Align PD event / horizon + LGD conditional basis + EAD default basis
     ↓
 PD × LGD × EAD
@@ -68,43 +70,45 @@ PD × LGD × EAD
 Expected loss
     ↓
 Aggregate across exposures → Portfolio EL
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   PD · LGD · EAD with aligned definitions
 This:       Probability × Severity × Exposure
 Downstream: Pricing · Portfolio EL · Provision/capital comparison · Profitability
-</Flow>
+```
 
-<Formula>
+### Formula
+
 `EL = PD × LGD × EAD`
 
 Example: `2% × 40% × 100 = 0.8` monetary units.
 
 PD ↑, LGD ↑ or EAD ↑ → EL ↑, holding the other inputs constant.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Reconcile event, horizon, population, observation point and valuation basis before multiplying PD, LGD and EAD.
-</Rule>
 
-<NeverConfuse a="Expected loss" b="Most likely loss">
+### Never confuse [Expected loss] and [Most likely loss]
+
 **Expected loss** — probability-weighted average loss over the defined horizon.
 
 ---
 **Most likely loss** — the modal outcome; for many low-PD exposures it is zero.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Combining a regulatory one-year PD, a lifetime accounting LGD and today’s balance creates a numeric answer whose components do not describe one coherent loss experiment.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 #### IN (RBI)
 For covered commercial banks, RBI’s 2026 Asset Classification, Provisioning and Income Recognition Directions mandate an expected-credit-loss provisioning framework from **1 April 2027**.
 
 **No delta in the probability decomposition.** Regulatory capital, accounting ECL and internal economics prescribe different parameter horizons, conditions and treatments; the same formula label does not make those calculations interchangeable.
-</Rule>
 
 <Recall
   q="What must be aligned before calculating EL?"

@@ -39,7 +39,7 @@ import_source: 12_QNT_statistics_ml.md
 
 Using the correct distribution is crucial for risk metrics: e.g. mis-specifying default count as normal (when events are rare) underestimates tail risk. Each distribution’s parameters should be estimated from data or expert priors, and used consistently in simulations or VaR calculations.
 
-<Flow>
+```text
 Loan defaults:     aggregate risk:
 +---------+       +---------+
 |Bernoulli|       | Binomial|
@@ -50,25 +50,25 @@ Loan defaults:     aggregate risk:
  Defaults count  ~ Binomial
  (rare defaults, large n)
              ≈ Poisson
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Each distribution’s assumptions must match the credit context (e.g. non-negative, skewed, independent events). Using a normal model for highly skewed or discrete data leads to wrong estimates.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating an inherently skewed quantity (like loan loss amounts) as normally distributed can underestimate extreme losses. For example, assuming symmetric losses when actual losses (e.g. severe defaults) follow a long-tailed lognormal can understate required provisions.
-</Trap>
 
-<NeverConfuse a="Binomial distribution" b="Poisson distribution">
+### Never confuse
+
 **Binomial distribution** — count of successes (e.g. defaults) in a fixed number of trials (loans) with success probability *p*.
 ---
 **Poisson distribution** — count of independent events (e.g. defaults) over fixed exposure/time when events are rare. Poisson can approximate binomial for large *n* and small *p* (np=λ).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Probability distributions and their shapes are mathematical truths. Specific regulatory models (e.g. Basel IRB) may use these distributions (e.g. Vasicek’s normal-based model), but the underlying math is universal.
-</Rule>
 
 <Recall
   q="When is a Poisson used instead of binomial for default counts?"

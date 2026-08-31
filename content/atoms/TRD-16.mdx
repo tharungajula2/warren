@@ -44,7 +44,7 @@ The Greeks are model-dependent and local. A delta measured now can change after 
 
 A trader may describe a position as “delta neutral” while still carrying substantial gamma and vega. Neutralising first-order direction is therefore not equivalent to eliminating option risk.
 
-<Flow>
+```text
 Option value
    |
    +--&gt; underlying move ------&gt; Delta
@@ -56,27 +56,27 @@ Option value
    +--&gt; passage of time ------&gt; Theta
    |
    +--&gt; interest rates -------&gt; Rho
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Greeks are local derivatives of value; always ask the unit, sign convention, model and valuation point.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling a delta-neutral book risk-free. Gamma, vega, theta, basis and model risks remain.
-</Trap>
 
-<NeverConfuse a="Delta" b="Gamma">
+### Never confuse
+
 **Delta** — first-order option-value sensitivity to the underlying.
 
 ---
 
 **Gamma** — sensitivity of delta to changes in the underlying.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What risk remains after a book is delta hedged?"

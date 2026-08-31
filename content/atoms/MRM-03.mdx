@@ -38,7 +38,7 @@ Any step in building or using a model can introduce errors (model risk).  Common
 
 Practitioner guides list these clearly.  For example, IBM notes that model risk “can stem from various causes: Data (e.g. bias or inaccuracy); Assumptions (unrealistic or omitted variables); Methodology (inherent errors in chosen techniques); Implementation (coding or calculation errors); Interpretation (misreading results); and Usage (using a model inappropriately)”.  Regulators expect firms to identify such sources in their risk frameworks.  The RBI’s draft guidance on credit models explicitly requires validation to include reviewing data accuracy and underlying assumptions.  In practice, a sound validation process scrutinizes each of these sources: checking data quality, testing assumptions, reviewing code, and assessing model use in business processes.
 
-<Flow>
+```text
 Common Sources of Model Risk:
 +---------------+   +------------------------+   +------------------+
 |   Data issues |   | Flawed methodology/    |   | Implementation   |
@@ -53,26 +53,26 @@ Common Sources of Model Risk:
     | misinterpretation  |
     | (outside scope)    |
     +--------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Model risk can come from anywhere in the model’s development or use: data, design, code, or deployment. Every model must be checked end-to-end for these sources of error.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Focusing only on one source of risk.  For example, **checking a model’s math but ignoring biased input data**.  All sources (data, assumptions, code, usage) must be considered.
-</Trap>
 
-<NeverConfuse a="Coding error" b="Model assumption">
+### Never confuse
+
 **Coding error** — a bug or mistake in the model’s implementation (e.g. wrong formula or mis-indexing data).
 ---
 **Model assumption** — a conceptual choice about how the model works (e.g. assuming linearity).
 These both cause wrong output but arise in different ways.  (Confusing them can lead one to fix code when the real issue is a bad assumption.)
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**  The types of model risk sources are similar across jurisdictions.  Regulators everywhere expect institutions to address data quality, logical assumptions, technical implementation and model usage in their validation and controls.
-</Rule>
 
 <Recall
   q="Give three typical sources of model risk."

@@ -41,7 +41,7 @@ A simple conceptual example makes the distinction clear. An exposure of 100 prot
 
 The methods therefore cannot be mixed casually. A guarantee is not “collateral with a zero haircut”, and collateral is not automatically a substitute counterparty. Each CRM instrument follows the method prescribed for its legal and risk characteristics.
 
-<Flow>
+```text
 +----------------------+
 | Protected exposure   |
 +----------------------+
@@ -64,26 +64,26 @@ The methods therefore cannot be mixed casually. A guarantee is not “collateral
 +----------------------+
 | Post-CRM credit RWA  |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Substitution operates on the credit-risk treatment of the protected portion; comprehensive collateral recognition operates through adjusted exposure and collateral values.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Applying a guarantor’s risk weight to collateral because both are “security” uses the wrong CRM mechanism.
-</Trap>
 
-<NeverConfuse a="Substitution approach" b="Comprehensive collateral approach">
+### Never confuse
+
 **Substitution approach** — replaces the original obligor’s risk treatment with that of an eligible protection provider for the protected amount.
 
 ---
 **Comprehensive collateral approach** — adjusts exposure and eligible collateral values, including prescribed haircuts, before calculating the residual exposure.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Detailed eligibility differs, but the conceptual distinction between unfunded-protection substitution and collateral-value adjustment is common to Basel-style CRM.
-</Rule>
 
 <Recall
   q="What changes under substitution?"

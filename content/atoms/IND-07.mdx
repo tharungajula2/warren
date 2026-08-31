@@ -43,25 +43,25 @@ Loan Days Past Due -&gt; Classification
 &gt;90 days        | SMA-2 (Special Mention 2) -&gt; NPA (Sub-std)
 ```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Accounts must be flagged in increasing SMA categories as soon as they cross due-date thresholds (31, 61, 91 days past due). This daily reporting is mandatory.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Ignoring SMA flags or delaying them.  SMA classification is not a choice; banks must stamp accounts promptly at 31+ days overdue. Treating a stressed loan as “still standard” before 30 days beyond due violates rules.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **SMA-0** — overdue 31–60 days (early warning, pre-NPA).
 **SMA-1** — overdue 61–90 days.
 **SMA-2** — overdue 91–180 days (immediately becomes NPA if not resolved)
 
 SMAs are *not* regulatory categories with prescribed provisioning; they’re managerial flags. Once past 90 days, any SMA becomes NPA (Sub-Standard asset).
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI’s SMA classification is used; similar watch-lists exist in some countries but not all regulators formalize 30/60/90 day buckets.
-</Delta>
+### Jurisdiction variants
+
+**IN** — RBI’s SMA classification is used; similar watch-lists exist in some countries but not all regulators formalize 30/60/90 day buckets.
 
 <Recall
   q="What does SMA-1 signify?"

@@ -53,7 +53,7 @@ After initial recognition, the entity recognises the cumulative change in **life
 
 The concept is particularly important when comparing purchased distressed assets with loans that deteriorate after origination. Two assets can have identical current expected cash flows but different accounting histories because one was purchased already impaired and the other became impaired after initial recognition.
 
-<Flow>
+```text
 +------------------------+
 | Credit-impaired at     |
 | initial recognition?   |
@@ -82,38 +82,29 @@ The concept is particularly important when comparing purchased distressed assets
 | Recognise subsequent   |
 | change in lifetime ECL |
 +------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 For POCI assets, initial credit deterioration is part of the asset’s starting economics rather than a post-origination stage migration.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Booking a normal Day-1 Stage 3 allowance on top of a purchase price already reflecting credit impairment can double-count the initial expected loss under IFRS 9.
-</Trap>
 
-<NeverConfuse a="POCI" b="Stage 3 after origination">
+### Never confuse
+
 **POCI** — an asset credit-impaired when first recognised by the reporting entity.
 
 ---
 **Stage 3 after origination** — an asset that was not credit-impaired initially but later became credit-impaired.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current scheduled-commercial-bank IRACP does not operate the Ind AS 109 POCI model. RBI’s final bank ECL framework from April 1, 2027 separately identifies POCI, embeds initial ECL in a credit-adjusted EIR and recognises subsequent cumulative lifetime-ECL changes; relevant Ind AS NBFCs follow applicable Ind AS requirements. [RBI 2026 ECL Directions, paragraphs 24 and related POCI provisions]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— UK-adopted IFRS 9 applies the POCI and credit-adjusted-EIR model. [IFRS 9 Appendix A, 5.4.1, 5.5.13]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 applies the same POCI treatment. [Regulation (EU) 2023/1803]
-</Delta>
-
-<Delta j="US">
-— ASC 326 uses **purchased credit deteriorated (PCD)** accounting rather than IFRS 9 POCI: the acquisition-date allowance is added to purchase price to establish the initial amortised-cost basis, producing a gross-up rather than IFRS 9’s POCI credit-adjusted-EIR model. [ASC 326; Interagency CECL FAQ]
-</Delta>
+**IN** — Current scheduled-commercial-bank IRACP does not operate the Ind AS 109 POCI model. RBI’s final bank ECL framework from April 1, 2027 separately identifies POCI, embeds initial ECL in a credit-adjusted EIR and recognises subsequent cumulative lifetime-ECL changes; relevant Ind AS NBFCs follow applicable Ind AS requirements. [RBI 2026 ECL Directions, paragraphs 24 and related POCI provisions]
+**UK** — UK-adopted IFRS 9 applies the POCI and credit-adjusted-EIR model. [IFRS 9 Appendix A, 5.4.1, 5.5.13]
+**EU** — EU-adopted IFRS 9 applies the same POCI treatment. [Regulation (EU) 2023/1803]
+**US** — ASC 326 uses **purchased credit deteriorated (PCD)** accounting rather than IFRS 9 POCI: the acquisition-date allowance is added to purchase price to establish the initial amortised-cost basis, producing a gross-up rather than IFRS 9’s POCI credit-adjusted-EIR model. [ASC 326; Interagency CECL FAQ]
 
 <Recall
   q="Why does IFRS 9 not treat initial POCI ECL like an ordinary Day-1 Stage 1 allowance?"

@@ -41,7 +41,7 @@ Bank regulators emphasize clear model definitions to set scope.  For example, th
 
 This definitional boundary matters because it determines oversight: what must be inventoried, validated, and controlled.  For instance, a bank might use a simple Excel pricing sheet. Under Fed/OCC rules, that might not be a “model” at all, but under PRA or RBI rules it could be classified as a model if it affects credit pricing.  Mis-classifying a tool as “not a model” can leave significant risk unmanaged.  Conversely, over-classifying every trivial calculation as a model can waste effort.  In practice, firms adopt the regulator’s definition in their policies so that model inventories and risk frameworks are consistent across lines of business.
 
-<Flow>
+```text
 +-----------------+
 |    Model        |
 +-----------------+
@@ -57,37 +57,28 @@ This definitional boundary matters because it determines oversight: what must be
 | (e.g. pricing,      |
 | credit approval)    |
 +---------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A “model” always applies a formal quantitative method (with assumptions) to data.  Simple tools with no underlying statistical/economic theory are generally not models under regulatory definitions.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating any tool in Excel as outside model risk.  For example, **mistakenly ignoring a spreadsheet that sets loan pricing** because “it’s just a calculator” – when that tool uses inputs and formulas that affect lending decisions.
-</Trap>
 
-<NeverConfuse a="Spreadsheet/Calculator" b="Statistical Model">
+### Never confuse
+
 **Spreadsheet/Calculator** — an arithmetic, rule‐based tool (no statistical theory). Often excluded as a “model” in U.S. regs.
 ---
 **Statistical Model** — a quantitative method using statistical/economic assumptions to produce predictions.  It may be developed in code or a spreadsheet, and is subject to model validation.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI’s draft MRM guidance defines a model broadly as any system (including AI/ML) using theoretical or statistical techniques to process inputs into outputs, **including** algorithms, analytics or even decision-rule spreadsheets that materially affect decisions.
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— The PRA expects firms to define models as “quantitative methods… applying statistical, economic, financial or mathematical theories… to process input data into output”.  (Deterministic rules with material impact may still be subject to MRM controls.)
-</Delta>
-
-<Delta j="US">
-— The interagency guidance uses a narrower definition: a “complex quantitative method” that applies statistical/economic theory, **excluding** simple spreadsheets or rule-based tools.  (Those tools still need controls, but they aren’t labeled “models” under SR 26-2.)
-</Delta>
-
-<Delta j="EU">
-— EBA/ECB internal-model frameworks for IRB capital imply a similar broad notion (any statistical or econometric method), but no single EU-wide MRM definition.  In practice, EU regulators follow Basel principles: any quantitative risk model (credit/market/counterparty) must meet validation requirements.
-</Delta>
+**IN** — RBI’s draft MRM guidance defines a model broadly as any system (including AI/ML) using theoretical or statistical techniques to process inputs into outputs, **including** algorithms, analytics or even decision-rule spreadsheets that materially affect decisions.
+**UK** — The PRA expects firms to define models as “quantitative methods… applying statistical, economic, financial or mathematical theories… to process input data into output”.  (Deterministic rules with material impact may still be subject to MRM controls.)
+**US** — The interagency guidance uses a narrower definition: a “complex quantitative method” that applies statistical/economic theory, **excluding** simple spreadsheets or rule-based tools.  (Those tools still need controls, but they aren’t labeled “models” under SR 26-2.)
+**EU** — EBA/ECB internal-model frameworks for IRB capital imply a similar broad notion (any statistical or econometric method), but no single EU-wide MRM definition.  In practice, EU regulators follow Basel principles: any quantitative risk model (credit/market/counterparty) must meet validation requirements.
 
 <Recall
   q="What makes a tool a “model” for regulators?"

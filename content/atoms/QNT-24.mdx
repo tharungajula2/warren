@@ -38,7 +38,7 @@ There are two main leakage types: *target leakage*, where predictors include the
 
 To avoid leakage, ensure each feature is computable from information available at model decision time. In credit scoring, use only origination attributes or lagged variables. Rigorously align time: treat all data as of a cutoff date. For instance, if predicting default within a year, use only features known at loan issuance. Data pipelines should separate historical features from label construction. Finally, always evaluate on truly unseen data (see QNT-23) – a sharp drop from training to test performance is a red flag for leakage or overfitting.
 
-<Flow>
+```text
 +--------------+       +---------------+
 | Raw Dataset  |       | Good Practice |
 +------+-------+       +-------+-------+
@@ -49,25 +49,25 @@ Select features (no future info)   Train/test split by time
 +--------------+       +---------------+
 | Model Build  |       | Prediction    |
 +--------------+       +---------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Never include any variable that cannot be known at scoring time. Ask, “Would this feature be available in real-time?” If not, omit or shift it.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Including any proxy of the target. For example, “balance after 1 year” to predict default in that year looks innocent but is label leakage. Also beware of merging data incorrectly (e.g. including post-default loan closure status).
-</Trap>
 
-<NeverConfuse a="Data leakage" b="Overfitting">
+### Never confuse
+
 **Data leakage** — model sees future or target-related information in training, giving overly optimistic accuracy.
 ---
 **Overfitting** — model is too complex for the signal in training data (but without artificial leaks). Both can cause test drop-offs, but leakage violates causality.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All jurisdictions expect no data leakage in model development. Regulatory model validation (e.g. AIRB guidance) specifically checks that feature timing is correct.
-</Rule>
 
 <Recall
   q="Give a credit example of data leakage."

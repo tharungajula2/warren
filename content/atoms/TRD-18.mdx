@@ -38,7 +38,7 @@ Risk can be expressed through DV01/PV01 by tenor bucket. A pay-fixed swap genera
 
 Operationally, the trade must preserve notional, currency, effective date, maturity, fixed rate, floating-rate option, reset frequency, payment frequency, day count, calendars, compounding method and clearing status. “Five-year swap” is not sufficient to reconstruct economics.
 
-<Flow>
+```text
 Party A                         Party B
  fixed payments  -------------------&gt;
                   notional reference
@@ -48,27 +48,27 @@ No routine notional exchange
         |
         v
 net interest-rate exposure transferred
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 An IRS exchanges interest cash flows; do not assume the notional principal itself is funded or transferred.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating the floating leg, projection curve and discount curve as the same concept.
-</Trap>
 
-<NeverConfuse a="Fixed leg" b="Floating leg">
+### Never confuse
+
 **Fixed leg** — contractual interest payments based on a predetermined fixed rate.
 
 ---
 
 **Floating leg** — payments determined from a specified floating-rate option and calculation method.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Why can a borrower use a pay-fixed/receive-floating swap?"

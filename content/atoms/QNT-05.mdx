@@ -33,29 +33,29 @@ In credit risk, CIs are crucial. For example, IRB models often use confidence bo
 
 In summary, CI expresses estimation uncertainty: wider if data are sparse or variable, narrower with more/larger data. The permanent rule: always pair point estimates (like PD) with a CI to show reliability. Regulators often look at these intervals when backtesting models.
 
-<Flow>
+```text
 Sample PD = 2.0%  (50 defaults/2500 loans)
 SE = sqrt(0.02*0.98/2500) ≈ 0.009
 95% CI ≈ 2.0% ± 1.96*0.9% = [0.22%, 3.78%]
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Report estimates with their confidence intervals. The interval indicates how much estimation error might exist due to finite data.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Misinterpreting CI as probability of parameter. E.g. “We’re 95% sure true PD is between 1.8–2.4%” is wrong. Actually, if we repeated data collection, 95% of such intervals would contain the true PD.
-</Trap>
 
-<NeverConfuse a="95% confidence interval" b="Credible interval (Bayesian)">
+### Never confuse
+
 **95% confidence interval** — range capturing the true parameter in 95% of repeated samples.
 ---
 **Credible interval (Bayesian)** — range where the parameter has 95% probability given the data (Bayesian concept). CI’s guarantee is about the method, not the single interval’s probability.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Statistical confidence intervals are universal. Financial regulations (e.g. RBI or ECB validation) may stipulate certain confidence levels, but methodology is the same.
-</Rule>
 
 <Recall
   q="A 90% CI for LGD is [30%, 50%]. What does this mean?"

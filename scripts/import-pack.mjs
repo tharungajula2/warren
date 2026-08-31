@@ -289,7 +289,7 @@ for (const seg of rawSegments) {
       const code = match[1];
       const codeLines = code.split(/\r?\n/).map((l) => l.trimEnd());
       const escapedCode = codeLines.map((l) => escapeJsx(l)).join("\n");
-      bodyComponents.push(`<Flow>\n${escapedCode}\n</Flow>`);
+      bodyComponents.push("```text\n" + escapedCode + "\n```");
 
       lastIdx = flowRegex.lastIndex;
     }
@@ -322,45 +322,7 @@ for (const seg of rawSegments) {
       }
       const codeLines = flowContent.split(/\r?\n/).map((l) => l.trimEnd());
       const escapedCode = codeLines.map((l) => escapeJsx(l)).join("\n");
-      bodyComponents.push(`<Flow>\n${escapedCode}\n</Flow>`);
-    } else if (secTitle.startsWith("formula")) {
-      const cleanedFormula = cleanProse(secBody);
-      bodyComponents.push(`<Formula>\n${escapeJsx(cleanedFormula)}\n</Formula>`);
-    } else if (secTitle.includes("permanent rule")) {
-      sectionStats.Rule++;
-      const cleaned = cleanProse(secBody);
-      bodyComponents.push(`<Rule label="PERMANENT RULE">\n${escapeJsx(cleaned)}\n</Rule>`);
-    } else if (secTitle.includes("permanent trap")) {
-      sectionStats.Trap++;
-      const cleaned = cleanProse(secBody);
-      bodyComponents.push(`<Trap label="PERMANENT TRAP">\n${escapeJsx(cleaned)}\n</Trap>`);
-    } else if (secTitle.includes("never confuse")) {
-      sectionStats.NeverConfuse++;
-      let neverConfuseA = "";
-      let neverConfuseB = "";
-
-      const titleMatch = rawSecTitle.match(/\[([^\]]+)\]\s+and\s+\[([^\]]+)\]/i) || rawSecTitle.match(/\[([^\]]+)\].*?\[([^\]]+)\]/);
-      if (titleMatch) {
-        neverConfuseA = titleMatch[1].trim();
-        neverConfuseB = titleMatch[2].trim();
-      } else {
-        const parts = secBody.split(/---+/).map((p) => p.trim());
-        if (parts.length >= 2) {
-          const matchA = parts[0].match(/^\*\*([^*]+)\*\*/);
-          const matchB = parts[1].match(/^\*\*([^*]+)\*\*/);
-          neverConfuseA = matchA ? matchA[1] : "Concept A";
-          neverConfuseB = matchB ? matchB[1] : "Concept B";
-        }
-      }
-
-      const cleaned = cleanProse(secBody);
-      if (neverConfuseA && neverConfuseB) {
-        bodyComponents.push(
-          `<NeverConfuse a="${escapeJsx(neverConfuseA)}" b="${escapeJsx(neverConfuseB)}">\n${escapeJsx(cleaned)}\n</NeverConfuse>`
-        );
-      } else {
-        bodyComponents.push(`<NeverConfuse>\n${escapeJsx(cleaned)}\n</NeverConfuse>`);
-      }
+      bodyComponents.push(`### ${rawSecTitle}\n\n\`\`\`text\n${escapedCode}\n\`\`\``);
     } else if (secTitle.includes("jurisdiction variants")) {
       sectionStats.Jurisdiction++;
 
@@ -402,22 +364,7 @@ for (const seg of rawSegments) {
       }
 
       const cleaned = cleanProse(secBody);
-      const isNoDelta = cleaned.toLowerCase().includes("no delta") || (!cleaned.match(/####\s+(IN|UK|EU|US)/i) && !cleaned.match(/\*\*(IN|UK|EU|US)\*\*/));
-      if (isNoDelta) {
-        bodyComponents.push(`<Rule label="NO DELTA">\n${escapeJsx(cleaned)}\n</Rule>`);
-      } else {
-        const jLines = cleaned.split(/\r?\n/);
-        let jBlocks = [];
-        for (const jLine of jLines) {
-          const match = jLine.match(/^\*\*(IN|UK|EU|US)\*\*\s*(.+)$/);
-          if (match) {
-            jBlocks.push(`<Delta j="${match[1]}">\n${escapeJsx(match[2].trim())}\n</Delta>`);
-          } else if (jLine.trim()) {
-            jBlocks.push(escapeJsx(jLine.trim()));
-          }
-        }
-        bodyComponents.push(jBlocks.join("\n\n"));
-      }
+      bodyComponents.push(`### ${rawSecTitle}\n\n${escapeJsx(cleaned)}`);
     } else if (secTitle.includes("recall")) {
       sectionStats.Recall++;
       const qLines = secBody.split(/\r?\n/);
@@ -464,7 +411,7 @@ for (const seg of rawSegments) {
         sourcesList.push({ label: label || trimmed, url, accessed });
       }
     } else {
-      // Preserve any other H3 section (### Core mechanism, ### Ownership, etc.) in document order!
+      // All other H3 sections (Permanent rule, Permanent trap, Never confuse, Formula, Core mechanism, Ownership, etc.)
       const cleaned = cleanProse(secBody);
       bodyComponents.push(`### ${rawSecTitle}\n\n${escapeJsx(cleaned)}`);
     }
@@ -523,14 +470,6 @@ console.log(`WARREN IMPORTER — PACK REPORT: ${fileName}`);
 console.log(`===========================================================`);
 console.log(`📌 TOTAL ATOMS PARSED: ${parsedAtoms.length}`);
 console.log(`✂️ CITATION TOKENS STRIPPED: ${citationTokenCount}`);
-console.log(`\n📊 SECTION MATCHES PER TYPE:`);
-console.log(`   - Rule (<Rule>): ${sectionStats.Rule}`);
-console.log(`   - Trap (<Trap>): ${sectionStats.Trap}`);
-console.log(`   - NeverConfuse (<NeverConfuse>): ${sectionStats.NeverConfuse}`);
-console.log(`   - Jurisdiction (<Delta> / No Delta): ${sectionStats.Jurisdiction}`);
-console.log(`   - Recall (<Recall>): ${sectionStats.Recall}`);
-console.log(`   - Sources (Frontmatter Array): ${sectionStats.Sources}`);
-console.log(`   - Flow (<Flow>): ${sectionStats.Flow}`);
 
 if (validationWarnings.length > 0) {
   console.log(`\n⚠️ VALIDATION AUDIT WARNINGS (${validationWarnings.length}):`);

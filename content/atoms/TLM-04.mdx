@@ -41,7 +41,7 @@ These mechanisms can offset or reinforce one another. A bank may close its simpl
 
 Basel’s IRRBB framework therefore expects identification of gap, basis and option risks and uses multiple standardised shock shapes rather than a single parallel rate shock. RBI’s forthcoming framework likewise requires scenarios capturing parallel and non-parallel gap risks and consideration of basis and embedded-option behaviour.
 
-<Flow>
+```text
 +------------------+
 | Banking book     |
 +------------------+
@@ -62,25 +62,25 @@ Basel’s IRRBB framework therefore expects identification of gap, basis and opt
 +------------------+
 | EVE and NII risk |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Matching reset dates eliminates only part of IRRBB; basis, curve and option risks can remain.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Declaring a floating-rate asset “hedged” because its funding is also floating-rate without checking whether the indices, reset conventions and embedded options match.
-</Trap>
 
-<NeverConfuse a="Repricing risk" b="Basis risk">
+### Never confuse
+
 **Repricing risk** — sensitivity created by different reset timing.
 ---
 **Basis risk** — sensitivity created by imperfect co-movement of different reference rates even when reset timing is similar.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Basel and major national frameworks recognise the same fundamental economic sources, although prescribed scenario calibrations can differ.
-</Rule>
 
 <Recall
   q="What four mechanisms generate IRRBB?"

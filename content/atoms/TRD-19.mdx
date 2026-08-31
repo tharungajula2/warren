@@ -47,7 +47,7 @@ India’s benchmark landscape differs by product; MIBOR and other domestic bench
 
 For BAs and risk teams, the main migration lesson is data lineage: every affected trade needs the original benchmark, fallback hierarchy, spread adjustment, effective trigger, calculation method and downstream valuation/reporting treatment.
 
-<Flow>
+```text
 Legacy contract
    |
    +--&gt; IBOR reference
@@ -63,23 +63,25 @@ Legacy contract
            |
            v
  updated cash flows / valuation
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Benchmark migration changes economics and calculation conventions; never perform a ticker-only replacement.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming LIBOR still has live settings because legacy contracts or database fields still contain the word LIBOR.
-</Trap>
 
-<NeverConfuse a="IBOR" b="RFR">
+### Never confuse
+
 **IBOR** — interbank offered-rate family historically intended to reflect term unsecured bank funding.
 
 ---
 
 **RFR** — risk-free or near-risk-free reference rate, commonly based on overnight markets.
-</NeverConfuse>
+
+### Jurisdiction variants
 
 **IN — No universal one-for-one LIBOR replacement exists across all INR products; use the benchmark specified by the instrument and applicable Indian market rules.**UK — Perishable, checked 28 August 2026.** SONIA is the principal sterling RFR. The FCA states that all LIBOR settings have permanently ceased; the final synthetic LIBOR settings ended by 30 September 2024.
 

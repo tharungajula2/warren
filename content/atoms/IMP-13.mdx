@@ -54,7 +54,7 @@ The distinctions matter operationally. Adding cumulative PDs across years double
 
 IFRS 9 does not mandate a `PD × LGD × EAD` implementation, but where that architecture is used, lifetime PD must represent default risk over the relevant lifetime and be consistent with forward-looking information. IFRS 9 also warns that changes in 12-month default risk are only an approximation for changes in lifetime risk when the circumstances make that approximation reasonable; concentrated risk beyond twelve months can make the shortcut inappropriate.
 
-<Flow>
+```text
 +----------------------+
 | Cumulative PD        |
 | Y1 = 2%              |
@@ -77,38 +77,29 @@ IFRS 9 does not mandate a `PD × LGD × EAD` implementation, but where that arch
 | Apply Y2 EAD, LGD,   |
 | discount factor      |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Default probabilities used across periods must be mutually consistent so that an obligor cannot be counted as newly defaulting more than once.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Summing one-year cumulative PD figures to construct lifetime PD overstates default risk by repeatedly counting defaults already included in earlier horizons.
-</Trap>
 
-<NeverConfuse a="Cumulative PD" b="Marginal PD">
+### Never confuse
+
 **Cumulative PD** — probability of default at any time from the starting date up to a stated horizon.
 
 ---
 **Marginal PD** — probability allocated to a particular future interval rather than all preceding intervals combined.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current commercial-bank IRACP does not require lifetime PD term structures. RBI’s ECL Directions effective April 1, 2027 require 12-month PD for Stage 1 and lifetime PD for Stage 2 under a PD–LGD approach, and prohibit mechanically extending Stage 1 PD parameters without adjustment for lifetime and higher-risk characteristics. [RBI 2026 ECL Directions, paragraphs 45–46]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— IFRS 9 governs the measurement objective but does not prescribe one PD-term-structure methodology. [IFRS 9 5.5 and B5.5]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 has the same accounting position; EBA supervisory work addresses sound ECL methodology. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
-</Delta>
-
-<Delta j="US">
-— CECL may use PD/LGD methods but does not require them; any selected method must estimate lifetime expected collectability consistently with Topic 326. [ASC 326; Interagency CECL FAQ]
-</Delta>
+**IN** — Current commercial-bank IRACP does not require lifetime PD term structures. RBI’s ECL Directions effective April 1, 2027 require 12-month PD for Stage 1 and lifetime PD for Stage 2 under a PD–LGD approach, and prohibit mechanically extending Stage 1 PD parameters without adjustment for lifetime and higher-risk characteristics. [RBI 2026 ECL Directions, paragraphs 45–46]
+**UK** — IFRS 9 governs the measurement objective but does not prescribe one PD-term-structure methodology. [IFRS 9 5.5 and B5.5]
+**EU** — EU-adopted IFRS 9 has the same accounting position; EBA supervisory work addresses sound ECL methodology. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+**US** — CECL may use PD/LGD methods but does not require them; any selected method must estimate lifetime expected collectability consistently with Topic 326. [ASC 326; Interagency CECL FAQ]
 
 <Recall
   q="Why cannot cumulative PDs simply be added across years?"

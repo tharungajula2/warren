@@ -37,31 +37,31 @@ Credit portfolios often violate CLT ideal assumptions. Defaults can be correlate
 
 **In practice:** one uses CLT as a guide but tests its validity. Risk managers might apply normal approximations to portfolio VaR only after verifying no extreme concentration. If not, alternative distributions (e.g. Vasicek distribution for correlated losses) are used. The *permanent rule*: use CLT for large, well-diversified groups, but check for correlation or large-exposure breaks.
 
-<Flow>
+```text
 Individual loan losses ~ any dist. (skewed)
   + many independent exposures
       |
       v  (CLT: n large, similar loans)
 Total portfolio loss ≈ Normal dist. (mean=nμ, var=nσ²)
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Large, independent loan portfolios produce approximately normal aggregate losses, but only if no single loan dominates and correlations are low. If not, explicitly model tail risk instead of relying on CLT.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming CLT holds when loans are correlated or a few loans are huge. E.g. a bank with a $1B loan and many $1k loans is not “fine-grained” – CLT fails. Basel notes that violating these assumptions (lumpiness or multiple risk factors) “would result in an incorrect assessment of portfolio risk”.
-</Trap>
 
-<NeverConfuse a="Normal approximation (CLT)" b="Exact distribution">
+### Never confuse
+
 **Normal approximation (CLT)** — valid when summing many i.i.d. variables (small loans, independent).
 ---
 **Exact distribution** — e.g. Vasicek’s model or empirical simulation; needed if defaults correlate or portfolio is not fine-grained. CLT’s normal result is a special-case approximation, not always applicable.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** CLT is a mathematical theorem. Regulatory models like Basel’s IRB build on CLT assumptions, but if portfolio deviates, banks must adjust (e.g. use RWA add-ons).
-</Rule>
 
 <Recall
   q="Why do regulators stress “fine-grained” portfolios?"

@@ -45,7 +45,7 @@ The FSI’s liquidity transfer-pricing work identifies matched-maturity marginal
 
 Matched-maturity FTP does not mean treasury actually issues an external bond matching every customer transaction. The transfer is a pricing construct: it allocates the economic cost of the tenor while treasury centrally optimises the actual funding portfolio.
 
-<Flow>
+```text
 +------------------+
 | Product cash     |
 | flows            |
@@ -72,25 +72,25 @@ Matched-maturity FTP does not mean treasury actually issues an external bond mat
 +------------------+
 | Business margin  |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Funding cost should follow the effective tenor of the exposure, not the accounting period in which profitability is reported.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Charging every asset the current overnight funding rate because treasury happens to be funding the bank overnight today.
-</Trap>
 
-<NeverConfuse a="Matched-maturity FTP" b="Matched external funding">
+### Never confuse
+
 **Matched-maturity FTP** — internal pricing against funding economics of comparable effective tenor.
 ---
 **Matched external funding** — actually issuing external funding that mirrors an individual asset’s cash flows.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Matched-maturity pricing is an economic allocation principle rather than a jurisdiction-specific formula.
-</Rule>
 
 <Recall
   q="Why is a flat FTP rate dangerous?"

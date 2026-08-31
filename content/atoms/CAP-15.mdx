@@ -45,7 +45,7 @@ The **output floor** operates at a different level. Input floors constrain indiv
 
 **Perishable — India’s revised commercial-bank credit framework effective 1 April 2027 is standardised, so IRB input floors are not domestic Indian credit-capital parameters.**
 
-<Flow>
+```text
 +----------------------+
 | Internal estimate    |
 | e.g. PD or LGD       |
@@ -71,38 +71,29 @@ The **output floor** operates at a different level. Input floors constrain indiv
 +----------------------+
 | Modelled RWA         |
 +----------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 An input floor changes or bounds a model parameter before the risk-weight calculation; it does not directly impose a percentage floor on total RWA.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling the 72.5% output floor a “PD floor” mixes an aggregate RWA backstop with parameter-level constraints.
-</Trap>
 
-<NeverConfuse a="Input floor" b="Output floor">
+### Never confuse
+
 **Input floor** — a lower bound on an IRB risk parameter or model input.
 
 ---
 **Output floor** — an aggregate lower bound on model-based RWA relative to standardised RWA.
-</NeverConfuse>
 
-<Delta j="IN">
-— RBI’s covered commercial-bank framework from 1 April 2027 uses the Standardised Approach, so Basel IRB parameter floors are not the domestic method for those credit exposures. [RBI 2026 SA Directions]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— PRA Basel 3.1 implements revised IRB constraints from 1 January 2027 for exposures remaining eligible for IRB. [PRA PS1/26]
-</Delta>
-
-<Delta j="EU">
-— CRR3 implements revised model constraints alongside the output floor from 2025, subject to transition. [CRR3]
-</Delta>
-
-<Delta j="US">
-— The March 2026 package remains proposed; proposed model constraints are not final US rules. [Federal Reserve, 19 March 2026]
-</Delta>
+**IN** — RBI’s covered commercial-bank framework from 1 April 2027 uses the Standardised Approach, so Basel IRB parameter floors are not the domestic method for those credit exposures. [RBI 2026 SA Directions]
+**UK** — PRA Basel 3.1 implements revised IRB constraints from 1 January 2027 for exposures remaining eligible for IRB. [PRA PS1/26]
+**EU** — CRR3 implements revised model constraints alongside the output floor from 2025, subject to transition. [CRR3]
+**US** — The March 2026 package remains proposed; proposed model constraints are not final US rules. [Federal Reserve, 19 March 2026]
 
 <Recall
   q="At what stage does an input floor operate?"

@@ -54,7 +54,7 @@ Expected recoveries affect the shortfall. Cash expected from the borrower, colla
 
 The distinction also explains why market-price movements are not automatically credit losses. Credit impairment focuses on expected contractual collection. Market value may change because risk-free rates, liquidity premiums or other non-credit factors move even when expected contractual collection is unchanged.
 
-<Flow>
+```text
 +---------------------------+
 | Contractual cash flows    |
 | due                       |
@@ -82,38 +82,29 @@ The distinction also explains why market-price movements are not automatically c
 +---------------------------+
 | Credit loss               |
 +---------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 The economic object being measured is expected non-collection of contractual value, including the effect of timing.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using `PD × LGD × EAD` mechanically without checking whether it reproduces discounted expected cash shortfalls can produce a technically elaborate but accounting-inconsistent allowance.
-</Trap>
 
-<NeverConfuse a="Credit loss" b="Fair-value loss">
+### Never confuse
+
 **Credit loss** — the expected discounted contractual cash shortfall.
 
 ---
 **Fair-value loss** — a change in market value that may contain credit, interest-rate, liquidity and other effects.
-</NeverConfuse>
 
-<Delta j="IN">
-— Current scheduled-commercial-bank IRACP provisioning is rule-based rather than an Ind AS 109 cash-shortfall ECL regime; RBI’s bank ECL Directions effective April 1, 2027 introduce an ECL framework with PD/LGD mechanics and EIR discounting. Relevant Ind AS NBFCs already operate under Ind AS impairment requirements. [RBI 2025 IRACP; RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— UK-adopted IFRS 9 uses the IFRS cash-shortfall definition. [UK-adopted IFRS 9]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 uses the same cash-shortfall measurement principle. [Regulation (EU) 2023/1803]
-</Delta>
-
-<Delta j="US">
-— CECL defines the allowance for amortised-cost assets as the amount needed to reflect the net amount expected to be collected; it permits multiple estimation methods rather than requiring the IFRS 9 cash-shortfall technique in every case. [ASC 326; Interagency CECL FAQ]
-</Delta>
+**IN** — Current scheduled-commercial-bank IRACP provisioning is rule-based rather than an Ind AS 109 cash-shortfall ECL regime; RBI’s bank ECL Directions effective April 1, 2027 introduce an ECL framework with PD/LGD mechanics and EIR discounting. Relevant Ind AS NBFCs already operate under Ind AS impairment requirements. [RBI 2025 IRACP; RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
+**UK** — UK-adopted IFRS 9 uses the IFRS cash-shortfall definition. [UK-adopted IFRS 9]
+**EU** — EU-adopted IFRS 9 uses the same cash-shortfall measurement principle. [Regulation (EU) 2023/1803]
+**US** — CECL defines the allowance for amortised-cost assets as the amount needed to reflect the net amount expected to be collected; it permits multiple estimation methods rather than requiring the IFRS 9 cash-shortfall technique in every case. [ASC 326; Interagency CECL FAQ]
 
 <Recall
   q="What is the accounting target behind an IFRS 9 ECL model?"

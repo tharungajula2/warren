@@ -30,7 +30,7 @@ Organizations identify CDEs based on risk and business significance. For example
 
 Marking data as “critical” means prioritizing quality rules, monitoring, and issue management for those fields. The idea is to avoid the opposite of the CDE philosophy: that all data gets equal, impractical scrutiny. By focusing on CDEs, banks can allocate resources to where mistakes matter most. Identifying CDEs is not a one-time task; it must be revisited as regulations and products change.
 
-<Flow>
+```text
                   +--------------+
                   | Data Governance Framework |
                   +--------------+
@@ -41,25 +41,25 @@ Marking data as “critical” means prioritizing quality rules, monitoring, and
                    /       |        \
                   /        |         \
            [Customer ID] [Loan Amount] [FX Rate] ...
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Banks must explicitly identify and govern their critical data elements (CDEs) to ensure governance efforts focus on high-impact fields.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating all data elements alike; without highlighting CDEs, governance becomes spread too thin.
-</Trap>
 
-<NeverConfuse a="CDE" b="Data catalog">
+### Never confuse
+
 **CDE** — A specific field deemed critical (e.g. a risk exposure amount).
 ---
 **Data catalog** — A comprehensive inventory of all data assets (it may list CDEs but also all other fields).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The notion of identifying and governing CDEs is best practice internationally (no one sets different rules on which fields count as “critical”).
-</Rule>
 
 <Recall
   q="How do banks decide what data is “critical”?"

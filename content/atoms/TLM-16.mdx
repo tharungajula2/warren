@@ -43,7 +43,7 @@ Collateral management is inseparable from intraday liquidity. Securities may nee
 
 The Basel Committee developed seven quantitative intraday monitoring tools and explicitly stated that intraday liquidity management is a key element of overall liquidity risk management. It also noted that intraday liquidity was not included in the calibration of the original LCR. This means a healthy LCR cannot be treated as proof that settlement liquidity is adequate.
 
-<Flow>
+```text
 Start of day
     |
     v
@@ -71,25 +71,25 @@ Start of day
     |
     v
 End of day
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Intraday liquidity is about having cash at the required settlement time, not merely sufficient cash by day-end.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using daily net cash flow or LCR as a proxy for peak intraday funding needs.
-</Trap>
 
-<NeverConfuse a="Intraday liquidity" b="End-of-day liquidity">
+### Never confuse
+
 **Intraday liquidity** — resources needed to settle obligations during the business day.
 ---
 **End-of-day liquidity** — the closing cash position after that day’s receipts and payments have occurred.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Payment-system structures and reporting details differ, but the timing mechanism is universal.
-</Rule>
 
 <Recall
   q="How can a bank with zero net daily outflow still need large intraday liquidity?"

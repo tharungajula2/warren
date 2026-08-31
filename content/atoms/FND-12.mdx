@@ -55,7 +55,7 @@ The most common modelling error is not sophisticated mathematics; it is **unit m
 
 The safe method is to identify the cash-flow dates first, state the rate convention explicitly, convert rates consistently where necessary, then apply the corresponding factors. Only after that should results be aggregated.
 
-<Flow>
+```text
 Present value
      |
      | compound forward
@@ -75,25 +75,25 @@ Future value
      |
      v
 Present value
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Rate frequency and cash-flow frequency must use the same time basis before compounding or discounting.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating a nominal 12% rate compounded monthly as economically identical to an effective 12% annual rate.
-</Trap>
 
-<NeverConfuse a="Nominal annual rate" b="Effective annual rate">
+### Never confuse
+
 **Nominal annual rate** — a quoted annualised rate whose economic effect depends on its compounding convention.
 ---
 **Effective annual rate** — the one-year growth rate after the specified intra-year compounding has been reflected.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Compounding identities and the need for consistent conventions are mathematical rather than jurisdictional.
-</Rule>
 
 <Recall
   q="What operation reverses compounding under the same assumptions?"

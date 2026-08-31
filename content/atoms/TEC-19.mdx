@@ -38,23 +38,23 @@ result = grouped['Balance'].sum()
 
 This produces a MultiIndex Series with each (ProductType, Vintage) combination’s total balance. Use `reset_index()` if you want the keys as columns again.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 By default, grouped keys become the index of the result. Use `as_index=False` in `groupby()` or `reset_index()` afterward to turn them back into columns.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Forgetting to aggregate: `df.groupby('X')` alone does not compute anything. Also, using `apply(lambda x: ...)` is often much slower than using built-in aggregates.
-</Trap>
 
-<NeverConfuse a="groupby" b="pivot">
+### Never confuse
+
 **groupby** — aggregates data by keys (like SQL `GROUP BY`).
 ---
 **pivot** — reshapes (reorients) data without aggregating (or with separate logic). Pivot tables convert grouped results to a wide format, which is a distinct operation.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The split-apply-combine paradigm is language-agnostic; pandas follows it consistently.
-</Rule>
 
 <Recall
   q="How to get average balance by region?"

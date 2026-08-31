@@ -39,21 +39,21 @@ Basel II allowed a most sophisticated option, the **Advanced Measurement Approac
 
 However, the financial crisis exposed problems with AMA.  In practice AMA outputs varied wildly between banks, making the capital numbers non-comparable.  The extreme tail of the loss distribution is highly sensitive to inputs: risk modelers found that a ~9% change in a severity parameter could double the capital charge.  This instability (and complexity/supervisory burden) led regulators to scrap AMA in Basel 3.1.  As a result, AMA ceased being an approved Pillar 1 method globally after 2021.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 When AMA was in use, regulators required it to be conservative. Now banks base Pillar 1 capital on SMA instead.  (Many banks still use AMA-like internal models for economic capital or Pillar 2 stress tests.)
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Don’t rely on unvalidated internal models for regulatory capital.  Overfitting to your own data, or using only small-sample scenarios, gave illusion of precision and was a key flaw of AMA.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **AMA (old Basel)** vs **Standardised Measurement Approach (SMA)**.  AMA = internal models; SMA = formulaic Basel 3.1 approach. They are completely different regimes.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All Basel-member regulators moved away from AMA.  For example, the EU and UK have implemented SMA; the US agencies have signaled support for Basel’s new approach but have not finalized it.
-</Rule>
 
 <Recall
   q="Why did Basel scrap AMA?"

@@ -48,7 +48,7 @@ import_source: 04_CAP_regulatory_capital.md
 
 Basel’s minimum-capital calculation aggregates the prescribed RWA components to produce the denominator against which capital ratios are measured. The calculation should therefore be visualised as several risk engines feeding one capital ratio, not as one universal risk-weight formula.
 
-<Flow>
+```text
 +------------------+   +------------------+
 | Credit RWA       |   | Market RWA       |
 +------------------+   +------------------+
@@ -62,26 +62,26 @@ Basel’s minimum-capital calculation aggregates the prescribed RWA components t
 +------------------+   +------------------+
 | Operational RWA  |   | CVA RWA          |
 +------------------+   +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 The four RWA components measure different risk types before being aggregated into the common risk-based capital denominator.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating CVA risk as merely another name for counterparty default risk misses the mark-to-market credit-spread risk that the CVA framework is designed to capture.
-</Trap>
 
-<NeverConfuse a="Counterparty credit default risk" b="CVA risk">
+### Never confuse
+
 **Counterparty credit default risk** — risk of loss because the counterparty fails to perform.
 
 ---
 **CVA risk** — risk of loss from changes in the credit valuation adjustment before or without counterparty default.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Detailed implementation dates and methods vary, but credit, market, operational and CVA risk are the core risk-based capital components in the Basel finalisation architecture.
-</Rule>
 
 <Recall
   q="What four broad risk components feed Basel risk-based capital?"

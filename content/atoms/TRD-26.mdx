@@ -43,7 +43,7 @@ The most useful BA model is state plus event. Instead of treating a trade as one
 
 Breaks occur when two systems are correct about different states. The control question is therefore: what event has each system processed, using what effective timestamp and source?
 
-<Flow>
+```text
 Execute
    |
 Capture
@@ -62,27 +62,27 @@ Settle
          |
          v
 maturity / termination / close-out
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A trade lifecycle is a sequence of state changes, not a single booking event.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling a trade “done” once front office has booked it.
-</Trap>
 
-<NeverConfuse a="Trade state" b="Lifecycle event">
+### Never confuse
+
 **Trade state** — the current contractual and operational condition of a transaction.
 
 ---
 
 **Lifecycle event** — an authorised occurrence that changes, settles or terminates part of that state.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What model best explains why two systems can disagree on the same trade?"

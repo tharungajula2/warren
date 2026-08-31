@@ -36,28 +36,28 @@ A **training** set is used to estimate model parameters. A **validation** set (o
 
 Because credit risk often varies over time (economic up/downturns), it is misleading to randomly shuffle all data. Instead, split chronologically: use earlier periods for training/validation and later periods as test. This avoids look-ahead: the model never “knows” future conditions during training. Regulators expect performance on an OOT sample; it reveals if the model generalises across vintage shifts (e.g. a model trained in growth must still score well in recession).
 
-<Flow>
+```text
 Time-line:  [Train: 2015-2017]  [Validate: 2018]  [Test/OOT: 2019]
                  build model       choose model    evaluate model
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Reserve the latest data (out-of-time) as the primary test. Use only past data for development and validation to mimic deployment.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using future information in training. For example, randomly splitting data across years can mix up season/economy effects. Always ensure that validation and test sets occur later in time than training data.
-</Trap>
 
-<NeverConfuse a="Validation set" b="Test (evaluation) set">
+### Never confuse
+
 **Validation set** — used during model development (e.g. hyperparameter tuning).
 ---
 **Test (evaluation) set** — held out until final model is chosen, used for final performance. Out-of-time is one type of test set (a test period in the future).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The principle of time-based splitting is universal. Banking regulators in all jurisdictions (e.g. Fed, RBI) emphasize out-of-time testing, as future prediction is the model’s true purpose.
-</Rule>
 
 <Recall
   q="What is an “out-of-time” sample and why use it?"

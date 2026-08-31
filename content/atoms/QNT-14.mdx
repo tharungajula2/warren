@@ -34,7 +34,7 @@ Random forests apply the bootstrap-aggregation (bagging) technique to decision t
 
 In a credit scoring example, we might build 100 trees on different bootstrap samples of loan records. Each tree might split on various borrower attributes. The forest’s predicted probability of default is the average of all trees’ PD outputs. This typically outperforms one tree, as shown in practice: adding more trees (up to a point) usually lowers test error. Importantly, random forests can provide a measure of *out-of-bag* error (error on samples not included in each bootstrap), which serves as an internal validation.
 
-<Flow>
+```text
             +------------------+
             | Training Data    |
             +---------+--------+
@@ -59,25 +59,25 @@ In a credit scoring example, we might build 100 trees on different bootstrap sam
       +------------------------+
                  |
             Final Prediction
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A random forest uses *all* trees at inference, so the final prediction is an average (regression) or majority vote (classification) of many decorrelated trees. This ensemble effect dramatically lowers variance versus one tree.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a random forest cannot overfit. In practice, if trees are too deep or features too many, forests can still overfit noise. Also, forests reduce variance but do little to correct bias: if no tree can capture an effect, the ensemble won’t either.
-</Trap>
 
-<NeverConfuse a="Random forest" b="Gradient boosting">
+### Never confuse
+
 **Random forest** — an ensemble that builds many trees on random samples (bagging) and aggregates their outputs for robustness.
 ---
 **Gradient boosting** — an ensemble built sequentially, where each tree is trained to correct the residuals of the prior ensemble. Unlike a random forest’s parallel bagging, boosting trains trees one after another.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Random forests are a universal statistical technique with no jurisdiction-specific differences.
-</Rule>
 
 <Recall
   q="How does feature subsampling improve a random forest?"

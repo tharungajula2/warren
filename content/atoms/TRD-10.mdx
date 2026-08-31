@@ -47,7 +47,7 @@ Operational errors often arise from direction. “Buy USD/INR” may be interpre
 
 Settlement itself can create principal risk when one currency is paid before the other is received. Payment-versus-payment arrangements are designed to reduce this risk.
 
-<Flow>
+```text
 Spot:
 Currency A &lt;------&gt; Currency B
         near value date
@@ -63,23 +63,25 @@ FX swap:
 near exchange
         +
 far reverse exchange
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Never infer trade direction from a rate field alone; record which currency is bought, which is sold and on which date.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating the forward rate as the market’s pure forecast of the future spot rate.
-</Trap>
 
-<NeverConfuse a="FX forward" b="FX swap">
+### Never confuse
+
 **FX forward** — single future exchange of two currencies at a rate fixed today.
 
 ---
 
 **FX swap** — near exchange plus an offsetting far exchange of the same two currencies.
-</NeverConfuse>
+
+### Jurisdiction variants
 
 **IN — Perishable, checked 28 August 2026.** RBI permits forex transactions only through authorised persons and for permitted purposes under FEMA. For FCY-INR derivatives, permitted purpose depends on user/product rules; RBI’s public FAQ states hedging exchange-rate risk as the permitted purpose for FCY-INR forex derivatives, while FCY-FCY derivatives are not similarly purpose-restricted.
 

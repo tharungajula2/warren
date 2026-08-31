@@ -29,21 +29,21 @@ Each trading desk that uses IMA must calculate a daily ES measure.  The modeler 
 
 IMA capital equals the sum of these liquidity-adjusted ES contributions across risk factors in the desk.  Desks must have regulators’ approval to use IMA.  Each desk must also pass backtesting and P&amp;L attribution (next atom).
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 IMA-based capital is the liquidity-adjusted 97.5% ES at desk level.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using VaR in place of ES, or omitting the liquidity horizon adjustment (treating all factors as 10-day).
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Expected Shortfall (ES)** in IMA vs **VaR** (older metric): IMA requires ES at 97.5%, not VaR.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The use of ES and liquidity horizons is mandated by the Basel FRTB standard for IMA globally (subject to local implementation delays).
-</Rule>
 
 <Recall
   q="What risk measure do IMA models use?"

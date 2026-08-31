@@ -37,7 +37,7 @@ Buying CDS protection can hedge a bond’s default/spread exposure, but hedge ef
 
 Counterparty risk remains because the protection seller must perform precisely when the reference credit may be deteriorating. Collateral, clearing and legal documentation therefore matter alongside reference-credit risk.
 
-<Flow>
+```text
 Protection buyer
  premium --------------------&gt;
              Protection seller
@@ -51,27 +51,27 @@ If defined credit event:
 
 Reference entity risk transferred
 without funding the bond principal
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A CDS pays on a defined contractual credit event, not on any deterioration in credit quality.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating CDS notional as a funded loan exposure or treating a spread widening as if a credit event has already occurred.
-</Trap>
 
-<NeverConfuse a="Reference entity" b="Counterparty">
+### Never confuse
+
 **Reference entity** — borrower or legal entity whose credit risk the CDS references.
 
 ---
 
 **Counterparty** — the party on the other side of the CDS contract that must perform under the derivative.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What triggers a CDS settlement?"

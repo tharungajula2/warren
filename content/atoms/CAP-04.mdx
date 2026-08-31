@@ -42,7 +42,7 @@ Basel’s global minima are 4.5% CET1, 6% Tier 1 and 8% total capital as percent
 
 A crucial nesting rule follows from the hierarchy. CET1 can satisfy the CET1 minimum and, to the extent available beyond that need, higher-level Tier 1 or total-capital requirements. AT1 cannot satisfy CET1. Tier 2 cannot satisfy either CET1 or Tier 1. Quality therefore flows upward through the requirement stack; lower-quality capital cannot be substituted downward into a higher-quality requirement.
 
-<Flow>
+```text
 +---------------------------+
 | CET1                      |
 | highest quality           |
@@ -65,26 +65,26 @@ A crucial nesting rule follows from the hierarchy. CET1 can satisfy the CET1 min
 | Total regulatory capital  |
 | CET1 + AT1 + Tier 2       |
 +---------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Capital categories are nested by quality: Tier 2 cannot cure a CET1 shortfall, and AT1 cannot cure a CET1 shortfall.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Adding CET1, Tier 1 and total-capital percentages as though they were independent requirements triple-counts capital because the ratios are nested.
-</Trap>
 
-<NeverConfuse a="Tier 1 capital" b="Total capital">
+### Never confuse
+
 **Tier 1 capital** — CET1 plus eligible AT1.
 
 ---
 **Total capital** — Tier 1 plus eligible Tier 2; it is not an additional layer equal to the sum of three minimum percentages.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The CET1–AT1–Tier 2 hierarchy is the common Basel architecture; numerical national minima can differ.
-</Rule>
 
 <Recall
   q="What comprises Tier 1 capital?"

@@ -28,23 +28,23 @@ import_source: 13_TEC_sql_python.md
 ---
 Always be careful: operations skip `NaN` by default (e.g. `sum()` treats `NaN` as zero, but `mean()` ignores it). Deciding to drop or fill depends on context. For instance, missing credit score might be imputed or flagged.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Detect missing explicitly with `isna()`. Always decide on a strategy: either drop records or fill them (imputation).
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Mixing `None` and `NaN`: some pandas methods distinguish them, but generally `isna()` catches both. Beware that `df['col'] == np.nan` does not work (use `isna`).
-</Trap>
 
-<NeverConfuse a="NaN" b="Empty string">
+### Never confuse
+
 **NaN** — pandas float “Not a Number” for missing.
 ---
 **Empty string** — a valid string, not missing. `isna()` returns False for `''`.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** pandas missing-value handling is the same everywhere.
-</Rule>
 
 <Recall
   q="How to get only rows without any missing values?"

@@ -29,21 +29,21 @@ Regulators set specific confidence levels and horizons for capital calculation. 
 
 Under a normal return assumption, 10-day 99% VaR numerically equals 10-day 97.5% ES (both ≈2.33σ).  Basel chose 97.5% ES in part to align capital ratios (since ES at 97.5% on a normal distribution roughly matches 99% VaR).  Confidence level governs the tail probability (e.g. 99% VaR ignores top 1% losses).  Basel also introduced a separate stressed calibration (see MRK-10) using a 250-day period.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Capital VaR/ES increases with higher confidence and longer horizon. Under i.i.d. assumptions, risk approximately scales with the square root of time.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Blindly scaling VaR by √time when returns are autocorrelated or volatility shifts; treating 99% VaR as equivalent to 97.5% ES without regard to distribution.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **1-day VaR** vs **10-day VaR** (horizon difference); **99% VaR** vs **97.5% ES** (confidence difference). For a normal distribution, 99% VaR ≈ 97.5% ES, but this breaks in crisis.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The concepts of confidence level and time horizon scaling are general; only the numeric standards (e.g. 97.5% ES vs 99% VaR) vary by regulation.
-</Rule>
 
 <Recall
   q="How does VaR scale if returns are independent?"

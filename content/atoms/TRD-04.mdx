@@ -42,7 +42,7 @@ A small yield movement does not cause the same percentage price change for every
 
 Operationally, YTM calculations depend on clean/full-price handling, settlement date, coupon schedule, day count, compounding frequency and redemption value. Two systems can produce different yields from the same headline price if conventions differ.
 
-<Flow>
+```text
 Higher required yield
         |
         v
@@ -55,27 +55,27 @@ Lower present value
 Lower bond price
 
 Lower required yield -&gt; higher bond price
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 For a plain fixed-cash-flow bond, hold cash flows constant: yield up means price down, and yield down means price up.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling YTM the investor’s guaranteed return. Default, reinvestment, sale before maturity and optionality can all change realised return.
-</Trap>
 
-<NeverConfuse a="Coupon rate" b="Yield to maturity">
+### Never confuse
+
 **Coupon rate** — contractual interest rate applied to face value.
 
 ---
 
 **Yield to maturity** — discount rate implied by current price and promised remaining cash flows.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Why does a fixed-rate bond price fall when market yields rise?"

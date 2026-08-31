@@ -37,7 +37,7 @@ An index is not the same as a tranche. The unfunded index provides proportional 
 
 For risk data, map the index contract to its legal identifier, series, constituent set and effective dates. A position can appear unchanged at the front-office label level while its risk mapping changes when a new index series becomes the market benchmark.
 
-<Flow>
+```text
 Single-name CDS
  A  B  C  D  ... N
   \ |  |  |     /
@@ -48,27 +48,27 @@ Single-name CDS
        CDS index
            |
    broad spread exposure
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Index family plus series/version is part of the instrument identity.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating a CDS index as interchangeable with a cash bond index or with a tranched credit product.
-</Trap>
 
-<NeverConfuse a="CDS index" b="Credit tranche">
+### Never confuse
+
 **CDS index** — standard basket of CDS reference credits traded as one derivative.
 
 ---
 
 **Credit tranche** — layered loss exposure with attachment and detachment points and non-linear default sensitivity.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Why must a system store the series of a credit index?"

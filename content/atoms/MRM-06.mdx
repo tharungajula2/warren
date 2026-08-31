@@ -33,7 +33,7 @@ Banks treat models much like products: from conception to retirement.  The high-
 
 This end-to-end view is emphasized by regulators.  The 2026 interagency guidance and OCC bulletin explicitly outline these stages in their high-level framework, covering development, validation, governance, and monitoring.  RBI’s draft guidance similarly lists selection/development, validation, approval, deployment, ongoing oversight, change management, and decommissioning as key lifecycle elements.  The Fed/OCC calls for robust controls “throughout the model lifecycle” (implicitly in each phase).  Having such a lifecycle framework helps ensure nothing is skipped.  For example, a model should never be used before validation and approval; nor should monitoring cease once the model is live.
 
-<Flow>
+```text
 +--------------+     +--------------+     +----------+     +--------------+
 | Development  | --&gt; | Validation   | --&gt; | Approval | --&gt; | Deployment/ |
 | (purpose,    |     | (independent |     | (senior  |     | Use         |
@@ -56,26 +56,26 @@ This end-to-end view is emphasized by regulators.  The 2026 interagency guidance
                                                     +-------------+
                                                     | Retirement  |
                                                     +-------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Governments require oversight at every stage: development, validation, approval, deployment, monitoring, changes, and retirement. Skipping any step undermines model safety.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using a model as soon as it’s built, before validation or formal approval.  Validation must precede use, and monitoring must continue until retirement.
-</Trap>
 
-<NeverConfuse a="Recalibration" b="Redevelopment">
+### Never confuse
+
 **Recalibration** — adjusting model parameters to current data.
 ---
 **Redevelopment** — building a new model from scratch.
 Both involve change, but recalibration tweaks an existing model; redevelopment replaces it entirely.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** All major frameworks envision the same lifecycle stages.  The specific terminologies may differ (e.g. RBI separates “selection” and “development”), but all regimes require development, independent validation, governance sign-off, deployment, monitoring, updates, and decommissioning of models.
-</Rule>
 
 <Recall
   q="What are the key stages in a model’s lifecycle?"

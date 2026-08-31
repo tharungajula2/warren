@@ -32,30 +32,30 @@ import_source: 12_QNT_statistics_ml.md
 ---
 Specifically, the ACF at lag \(k\) is the Pearson correlation between the series and itself shifted \(k\) periods. A slow decay in the ACF suggests strong autocorrelation (often indicating non-stationarity or an AR component). The PACF at lag \(k\) adjusts for all lags 1..\(k-1\), isolating the direct effect of lag \(k\). In practice, one plots ACF and PACF with confidence bands. For example, if credit default counts show correlation at 1 and 2 month lags but drop to near zero at higher lags, the ACF would have spikes at 1 and 2 then fall off. The PACF might spike at lag 1 and cut off, indicating an AR(1).
 
-<Flow>
+```text
 Time series data --[compute correlations]--&gt; ACF/PACF values at lags 1,2,...
 (ACF considers all lag interactions, PACF filters out shorter ones)
-</Flow>
+```
 
 Interpreting these plots guides model choice. A sharp cutoff (near zero correlation beyond lag \(p\)) in PACF suggests an AR(\(p\)); a cutoff in ACF suggests an MA(\(q\)). In seasonal data, repeated ACF spikes can indicate periodicity (e.g. monthly cycle).
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 ACF shows how past values influence future values cumulatively, while PACF shows only the direct lagged influence. Use ACF/PACF to help choose ARIMA orders: e.g. AR(p) if PACF cuts off at p.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Reading random noise or one-off spikes as significant. Autocorrelation estimates can be noisy, especially with small samples or a trend. Always check significance bands and consider transformations if needed.
-</Trap>
 
-<NeverConfuse a="Autocorrelation (ACF)" b="Partial autocorrelation (PACF)">
+### Never confuse
+
 **Autocorrelation (ACF)** — correlation of the series with itself at lag k, including indirect effects of shorter lags.
 ---
 **Partial autocorrelation (PACF)** — the autocorrelation at lag k after removing contributions from all intermediate lags (1 to k-1).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** ACF/PACF are statistical tools independent of regulatory context. Their interpretation in model selection is the same everywhere.
-</Rule>
 
 <Recall
   q="What pattern in ACF/PACF indicates an AR(2) model?"

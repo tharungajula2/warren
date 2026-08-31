@@ -45,7 +45,7 @@ A quantile also depends on horizon and model. A one-day 99% loss quantile and a 
 
 The phrase "99% confidence" is frequently miscommunicated as "there is only a 1% chance of any loss". That is wrong. It means approximately 1% of modelled outcomes exceed the stated loss threshold, not that the other 99% have zero loss.
 
-<Flow>
+```text
 Loss distribution
 0 ---------------------------------------&gt; severe loss
 |                         |
@@ -56,25 +56,25 @@ Loss distribution
                           |
                           v
                 NOT maximum loss
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A quantile identifies a distribution threshold; it does not cap outcomes beyond the threshold.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Describing a 99% VaR-type number as "the most that can be lost with 99% certainty".
-</Trap>
 
-<NeverConfuse a="Quantile" b="Tail risk">
+### Never confuse
+
 **Quantile** — a threshold associated with a cumulative probability level.
 ---
 **Tail risk** — the probability and severity of extreme outcomes beyond a chosen region; a single quantile does not describe the whole tail.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Quantiles and probability tails are mathematical concepts independent of jurisdiction.
-</Rule>
 
 <Recall
   q="What does a 99% loss quantile leave beyond the threshold in a continuous model?"

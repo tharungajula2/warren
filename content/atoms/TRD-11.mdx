@@ -44,7 +44,7 @@ In real markets, CIP can deviate. Since the global financial crisis, cross-curre
 
 For risk and valuation, forward points need the correct spot date, forward date, two discount curves and quotation convention. A one-day date error around holidays can change the interest accrual and therefore the expected points. The core test is not “where will spot go?” but “what relative funding conditions and basis are embedded between these two dates?”
 
-<Flow>
+```text
 Domestic cash
     |
     +--&gt; invest domestically ------------------+
@@ -55,27 +55,27 @@ Domestic cash
                                   hedged returns compared
                                                |
                                       no-arbitrage/CIP
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Forward points are first a relative funding price; do not read them as a standalone currency forecast.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using CIP as if it must hold exactly after transaction costs, credit, capital and balance-sheet constraints.
-</Trap>
 
-<NeverConfuse a="Forward points" b="Cross-currency basis">
+### Never confuse
+
 **Forward points** — difference between forward and spot FX rates under the market quote convention.
 
 ---
 
 **Cross-currency basis** — deviation indicating that FX-implied funding differs from direct cash-market funding after the standard parity relationship.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What economic inputs primarily determine textbook FX forward points?"

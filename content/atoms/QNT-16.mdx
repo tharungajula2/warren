@@ -34,7 +34,7 @@ Global feature importance (e.g. total gain or split frequency in a tree, or magn
 
 Local explanations, by contrast, break down a single prediction. For example, a SHAP (Shapley) value tells us how much a borrower’s income and history contribute to that borrower’s predicted default probability. Feature importance might list “Income: 0.4, Balance: 0.3, Age: 0.1”, meaning on average income was most influential. But it won’t reveal that in one case a high income actually lowered that borrower’s risk by 5%. Feature importance is useful for feature selection or understanding model trends; explanations are necessary for interpreting individual credit decisions (often a regulatory requirement).
 
-<Flow>
+```text
 Global model perspective:
     Model training on full dataset
            |
@@ -48,25 +48,25 @@ Local prediction perspective:
     Explain prediction (SHAP values, etc.)
            |
     Contribution of each feature to this instance
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Feature importance scores are an aggregate, global measure. They tell *which features matter most overall*, but not *how* they influence a given prediction.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming a high importance feature always increases predictions or that it explains individual cases. For example, “LoanAmount” might be important globally, but the importance metric alone cannot say if a particular high loan amount raises or lowers risk for a specific applicant.
-</Trap>
 
-<NeverConfuse a="Feature importance" b="SHAP (Shapley) values">
+### Never confuse
+
 **Feature importance** — global ranking of features by average contribution to the model’s performance. It is an aggregate statistic, not an explanation of any single outcome.
 ---
 **SHAP (Shapley) values** — local explanation values that decompose a specific prediction into contributions from each feature. They explain individual decisions, unlike global importance.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The distinction between global importance and local explanation is mathematical and does not vary by jurisdiction. Regulators universally want model explanations for individual decisions, even if different names are used.
-</Rule>
 
 <Recall
   q="If a feature has zero importance, is it safe to drop it?"

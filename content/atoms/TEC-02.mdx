@@ -40,23 +40,23 @@ Here `SELECT LoanID, Principal, BorrowerID` picks columns, `WHERE RiskRating = '
 
 The `WHERE` clause applies conditions (e.g. numerical comparisons, string matches) to each row; only rows meeting all conditions appear in the result. After filtering, `ORDER BY` arranges the rows by one or more columns. Without `ORDER BY`, SQL does not guarantee any specific row order.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 If a specific ordering is needed, always include an `ORDER BY` clause. By default, results are unordered.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Omitting a `WHERE` filter can return huge result sets. Ensure conditions are correct; unintended broad filters (e.g. `WHERE 1=1`) can slow the query and return irrelevant data.
-</Trap>
 
-<NeverConfuse a="WHERE" b="ORDER BY">
+### Never confuse
+
 **WHERE** — filters rows before grouping or sorting (applies to individual rows).
 ---
 **ORDER BY** — sorts the final result rows (after filtering).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The semantics of `SELECT`, `WHERE`, and `ORDER BY` are standard SQL across jurisdictions.
-</Rule>
 
 <Recall
   q="Which clause filters rows in a SQL query?"

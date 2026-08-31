@@ -34,21 +34,21 @@ Another challenge is **sparse data**. Firms may have only a few decades of inter
 
 These factors create capital volatility and uncertainty.  For example, risk experts have shown that a small change in a tail parameter can double the capital estimate. This instability was a key reason Basel ditched advanced models.  In summary, operational loss modelling requires special care with tail-fitting, often relying on conservative, simple approaches (or on SMA) to avoid underestimation.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always model operational losses as heavy-tailed.  Focus on tail estimation (e.g. extreme quantiles) and acknowledge data scarcity.  Use all available data (internal + external + scenario inputs) to capture possible large losses.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Do not assume a normal or light-tailed loss distribution.  Underestimating tail risk or over-relying on few data points (or ignoring large single events) can lead to severe capital undercoverage.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Tail of distribution** vs **bulk data**.  The bulk (small losses) should not be mistaken for the tail. Operational risk capital depends on the tail.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Heavy tails and sparse data are universal challenges.  All banks must use conservative modeling (or the standardized multiplier approach) to account for them.
-</Rule>
 
 <Recall
   q="Why is operational risk modelling “fat-tailed”?"

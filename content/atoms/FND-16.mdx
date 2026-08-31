@@ -48,7 +48,7 @@ Expected value is also sensitive to the modelled outcome set and assigned probab
 
 This distinction forms the base for credit-risk reasoning. Default probability describes likelihood. Exposure describes what is at risk. Loss severity describes what portion is lost if the event occurs. Combining such quantities can create an expected-loss measure, but each answers a different question.
 
-<Flow>
+```text
 Possible outcomes
       |
       v
@@ -70,25 +70,25 @@ Possible outcomes
       |
       v
    Expected value
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Probability is a likelihood; expected value is a probability-weighted amount.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Reporting "1% expected loss" when the calculation actually produced a 1% probability of a monetary loss event.
-</Trap>
 
-<NeverConfuse a="Probability" b="Expected value">
+### Never confuse
+
 **Probability** — likelihood of an event under the stated model.
 ---
 **Expected value** — the probability-weighted average amount across possible outcomes.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Probability axioms and expected-value mathematics do not depend on jurisdiction.
-</Rule>
 
 <Recall
   q="What is the expected loss from a 1% chance of losing 100 and otherwise losing zero?"

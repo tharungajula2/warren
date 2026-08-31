@@ -33,7 +33,7 @@ import_source: 12_QNT_statistics_ml.md
 
 **Avoidance:** Always define a clear population: e.g. “all loans originated in 2018, tracking until 2021, including those closed by default, pay-off, or charge-off.” Use full origination data, not just current books. If data is truncated (e.g. only current borrowers), acknowledge bias and adjust (maybe via weight or external default statistics). Regulators (e.g. RBI IRB) expect PD models to account for these biases in historical data.
 
-<Flow>
+```text
 Loan Origination cohort 2018
     +--------------------+
     | All customers      |
@@ -44,25 +44,25 @@ Loan Origination cohort 2018
            +-&gt; Declined -&gt; (no performance data)   &lt;-- selection bias
            |
            +-&gt; Never applied
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always include all relevant cases in your sample, especially failures. Missing defaulters or rejects biases any risk estimate. Double-check that your data frame contains both “survivors” and “non-survivors” from a cohort.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using only successfully repaid loans to model performance. This creates survivorship bias: only the “winners” are analyzed, making the portfolio look safer than it is.
-</Trap>
 
-<NeverConfuse a="Survivorship bias" b="Selection bias">
+### Never confuse
+
 **Survivorship bias** — only survivors of a process are seen (e.g. only extant accounts).
 ---
 **Selection bias** — systematic inclusion/exclusion during data collection (e.g. excluding denied applicants).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Data representativeness is a universal modeling principle. However, some jurisdictions explicitly emphasize these biases: e.g. the ECB’s IRB guidelines caution against using internal data that exclude defaulted obligors.
-</Rule>
 
 <Recall
   q="What is sampling bias? Give a credit example."

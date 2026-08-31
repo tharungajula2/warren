@@ -37,7 +37,7 @@ Risk measures must match this structure. A single duration assumes a parallel mo
 
 The practical test is always: which curve, built from which instruments, for which purpose? “The five-year rate” is incomplete unless the rate family and convention are known.
 
-<Flow>
+```text
 Market instruments by tenor
   1M  3M  1Y  2Y  5Y  10Y
    \   |   |   |   |    /
@@ -49,27 +49,27 @@ Market instruments by tenor
         +----+----+
         |         |
      pricing    forwards
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always name the curve and the rate type before interpreting a point on it.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming every yield-curve shock is parallel and therefore fully captured by one duration number.
-</Trap>
 
-<NeverConfuse a="Par yield" b="Zero rate">
+### Never confuse
+
 **Par yield** — coupon rate that makes a bond price at par for a given maturity under the curve.
 
 ---
 
 **Zero rate** — discount rate for a single cash flow at a specific maturity.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What are the three broad yield-curve risk dimensions?"

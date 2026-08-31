@@ -36,7 +36,7 @@ Derivatives also introduce counterparty, collateral, liquidity, legal and operat
 
 The practical starting point for any unfamiliar derivative is therefore to draw its contractual cash flows and payoff. Product names are less reliable than answering: what is referenced, what is exchanged, when, under what condition, and how does the payoff change when the market variable moves?
 
-<Flow>
+```text
 Underlying market variable
         |
         v
@@ -47,27 +47,27 @@ linear       non-linear
 forward      option
 future       changing delta
 swap         gamma / vega etc.
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Draw the payoff before naming the risk.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using notional as if it were current fair value or a direct measure of maximum loss.
-</Trap>
 
-<NeverConfuse a="Linear derivative" b="Non-linear derivative">
+### Never confuse
+
 **Linear derivative** — sensitivity is approximately constant with respect to the underlying over small moves.
 
 ---
 
 **Non-linear derivative** — sensitivity itself changes as the underlying or other inputs move.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="Why does an option need gamma as well as delta?"

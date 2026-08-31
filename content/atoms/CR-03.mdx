@@ -53,47 +53,49 @@ import_source: 02_CR_credit_risk_core.md
 
 Funded and non-funded positions can both create credit exposure. A commitment or guarantee may have little or no current loan balance while still creating future or contingent loss potential.
 
-<Flow>
+### Flow
+
+```text
 Account exposure → Facility exposure → Obligor exposure → Connected-group exposure → Portfolio exposure
     ↓
 Limits · Concentration · EAD / EL / capital views
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Accounts · Limits · Commitments · Transactions
 This:       Account → Facility → Obligor → Connected group → Portfolio
 Downstream: Limits · EAD · Concentration · Expected loss · Capital
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Every exposure number requires both a **measurement basis** and an **aggregation level**.
-</Rule>
 
-<NeverConfuse a="Outstanding balance" b="Exposure">
+### Never confuse [Outstanding balance] and [Exposure]
+
 **Outstanding balance** — the amount currently booked as drawn or owed.
 
 ---
 **Exposure** — the amount relevant to a stated credit-risk question; it can include future drawings, contingent claims or aggregation above account level.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Setting exposure equal to current drawn balance for revolving or committed facilities can omit the amount that may be drawn or become due before default.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 The RBI Commercial Banks IRACP Directions define exposure to include funded and non-funded exposures, including underwriting and similar commitments.
 
 #### UK (PRA)
-
 Detailed regulatory exposure values depend on the applicable prudential approach; the conceptual distinction between booked balance and risk exposure does not change.
 
 #### EU
-
 CRR exposure-value rules vary by exposure type and credit-risk approach; the aggregation principle is unchanged.
 
 #### US
-
 US regulatory capital rules define exposure measures by asset and approach; current balance is not a universal substitute for exposure at default.
 
 <Recall

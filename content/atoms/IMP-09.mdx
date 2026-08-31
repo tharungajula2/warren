@@ -51,7 +51,7 @@ Rebuttal should be evidence-based. A temporary administrative failure may suppor
 
 Past-due status also must be computed consistently. Data-quality errors around due dates, payment allocation, moratoria, restructurings and account-level versus borrower-level delinquency can cause false stage transfers or conceal genuine ones. The backstop is simple conceptually but operationally dependent on reliable delinquency data.
 
-<Flow>
+```text
 +----------------------+
 | More than 30 DPD?    |
 +----------------------+
@@ -77,38 +77,29 @@ Past-due status also must be computed consistently. Data-quality errors around d
           |         |  | full SICR|
           +---------+  | assessment|
                        +---------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A backstop catches deterioration missed by earlier indicators; it does not replace those indicators.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Calling 30 DPD “the Stage 2 trigger” causes late recognition because it turns an outer backstop into the primary staging rule.
-</Trap>
 
-<NeverConfuse a="Rebuttable presumption" b="Optional indicator">
+### Never confuse
+
 **Rebuttable presumption** — a default conclusion that stands unless supported evidence demonstrates otherwise.
 
 ---
 **Optional indicator** — a factor that may simply be ignored; the 30-DPD presumption is not optional.
-</NeverConfuse>
 
-<Delta j="IN">
-— For Ind AS-implementing NBFCs, RBI reiterates the 30-DPD rebuttable presumption and additionally says exposures overdue beyond 60 days must not have SICR recognition deferred. Current scheduled-commercial-bank IRACP is different. RBI’s bank ECL Directions effective April 1, 2027 adopt a more-than-30-DPD rebuttable presumption, with a specific revolving-facility backstop. [RBI 2020 NBFC guidance; RBI 2026 ECL Directions, paragraphs 33–36]
-</Delta>
+### Jurisdiction variants
 
-<Delta j="UK">
-— UK IFRS 9 applies the more-than-30-DPD rebuttable SICR presumption. [IFRS 9 5.5.11]
-</Delta>
-
-<Delta j="EU">
-— EU-adopted IFRS 9 applies the same presumption. [Regulation (EU) 2023/1803; IFRS 9 5.5.11]
-</Delta>
-
-<Delta j="US">
-— CECL has no 30-DPD staging backstop because there is no Stage 1-to-Stage 2 lifetime-loss switch. Delinquency remains relevant credit information within allowance estimation and credit administration. [ASC 326]
-</Delta>
+**IN** — For Ind AS-implementing NBFCs, RBI reiterates the 30-DPD rebuttable presumption and additionally says exposures overdue beyond 60 days must not have SICR recognition deferred. Current scheduled-commercial-bank IRACP is different. RBI’s bank ECL Directions effective April 1, 2027 adopt a more-than-30-DPD rebuttable presumption, with a specific revolving-facility backstop. [RBI 2020 NBFC guidance; RBI 2026 ECL Directions, paragraphs 33–36]
+**UK** — UK IFRS 9 applies the more-than-30-DPD rebuttable SICR presumption. [IFRS 9 5.5.11]
+**EU** — EU-adopted IFRS 9 applies the same presumption. [Regulation (EU) 2023/1803; IFRS 9 5.5.11]
+**US** — CECL has no 30-DPD staging backstop because there is no Stage 1-to-Stage 2 lifetime-loss switch. Delinquency remains relevant credit information within allowance estimation and credit administration. [ASC 326]
 
 <Recall
   q="Does IFRS 9 require waiting until 30 DPD before recognising SICR?"

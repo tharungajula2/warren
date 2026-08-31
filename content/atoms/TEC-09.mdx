@@ -31,23 +31,23 @@ SELECT AccountID FROM Accounts WHERE OpenDate IS NULL;
 ```
 Regular operators (`=`, `&lt;`, etc.) cannot be used with NULL. Use `ISNULL()` or `COALESCE()` functions to substitute defaults when needed.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always use `IS NULL` or `IS NOT NULL` to check for NULL values.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating NULL as a value in conditions (e.g. `WHERE Balance != 0` won’t catch NULL balances). Also, when using `JOIN`, NULLs can cause unmatched rows.
-</Trap>
 
-<NeverConfuse a="NULL" b="0">
+### Never confuse
+
 **NULL** — absence/unknown value (three-valued logic).
 ---
 **0** — numeric zero, a definite number (not NULL).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** SQL’s handling of NULLs is universal.
-</Rule>
 
 <Recall
   q="How does SQL treat `NULL = NULL` in a WHERE clause?"

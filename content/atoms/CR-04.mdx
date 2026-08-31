@@ -51,19 +51,23 @@ import_source: 02_CR_credit_risk_core.md
 
 Connection for concentration purposes is not the same as default propagation. Two companies can be aggregated for a large-exposure limit yet retain separate ratings and default statuses if the applicable default rules assess them separately.
 
-<Flow>
+### Flow
+
+```text
 Legal entities
     ↓
 Control test OR economic-interdependence test
     ↓
 Connected group → Aggregate exposure → Concentration limit / monitoring
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Legal entities · Ownership · Funding links · Revenue dependencies
 This:       Test control OR economic interdependence → connected group
 Downstream: Aggregate exposure · Large-exposure limits · Concentration monitoring
-</Flow>
+```
 
 ### Ownership
 
@@ -74,35 +78,33 @@ Downstream: Aggregate exposure · Large-exposure limits · Concentration monitor
 | Consumes | Limits, portfolio risk, regulatory reporting and capital assessment |
 | Challenges | Independent risk, compliance and audit test completeness and consistency |
 
-<Rule label="PERMANENT RULE">
-Count common failure mechanisms, not merely legal names.
-</Rule>
+### Permanent rule
 
-<NeverConfuse a="Connected counterparties" b="Single obligor">
+Count common failure mechanisms, not merely legal names.
+
+### Never confuse [Connected counterparties] and [Single obligor]
+
 **Connected counterparties** — separate persons aggregated because their risks are linked by control or economic dependency.
 
 ---
 **Single obligor** — one legal or natural person responsible for obligations.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 “Same corporate group” does not automatically mean “same defaulted obligor”, and separate incorporation does not automatically mean independent concentration risk.
-</Trap>
+
+### Jurisdiction variants
 
 #### IN (RBI)
-
 RBI’s Large Exposures Framework applies Indian prudential aggregation and limits to single counterparties and groups of connected counterparties; use the RBI framework in force for the reporting date.
 
 #### UK (PRA)
-
 PRA SS3/25 sets expectations for groups of connected clients using control and economic dependency concepts.
 
 #### EU
-
 The CRR large-exposures framework uses groups of connected clients and tests based on control and economic interconnection.
 
 #### US
-
 US legal lending-limit and aggregation rules use US-specific control/common-enterprise tests; they should not be assumed identical to the Basel connected-counterparty test.
 
 <Recall

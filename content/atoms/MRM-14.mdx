@@ -32,24 +32,24 @@ Calibration is distinct from discrimination.  For example, two models with the s
 
 Banks typically expect models to be reasonably well-calibrated.  For example, EBA Pillar 2 guidance on IRB models requires checking that observed default rates closely match predicted PDs.  If not, the model may need adjustment (calibration).  If H-L rejects a model, analysts should judge if the deviation is economically material.  In summary, calibration assessment involves statistical tests and also human judgement on the materiality of any miscalibration.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Always check calibration in addition to discrimination.  A model that ranks well (high AUC) but systematically underestimates risk can still be dangerous.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Blindly trusting p-values in large samples.  A trivial discrepancy with millions of observations can yield a significant H-L test, leading to overreaction.  Instead, focus on practical significance (e.g. a small percentage point error in probabilities is often tolerable).
-</Trap>
 
-<NeverConfuse a="Calibration (Goodness-of-fit)" b="Discrimination (AUC/Gini)">
+### Never confuse
+
 **Calibration (Goodness-of-fit)** — how closely the model’s predicted probabilities match actual outcomes (tested by H-L, calibration plots).
 ---
 **Discrimination (AUC/Gini)** — how well the model orders outcomes (tested by AUC/KS).
 They address different qualities.  A model can discriminate well but still be mis-calibrated.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Calibration is universally required. Both PRA and Fed expect models to be well-calibrated for their intended use. RBI’s draft and IFRS9 guidance (for applicable NBFCs) also emphasize aligned predicted/actual losses.
-</Rule>
 
 <Recall
   q="Why might the Hosmer–Lemeshow test fail on a good model with large N?"

@@ -38,7 +38,7 @@ Reference choice matters. A spread to a sovereign curve, swap curve or matched g
 
 For bank trading and risk data, spread fields should therefore be treated as calculated measures with lineage: underlying price, reference curve, interpolation rule, optionality treatment and timestamp all matter.
 
-<Flow>
+```text
 Bond yield
    |
    +--&gt; reference-rate component
@@ -47,27 +47,27 @@ Bond yield
                |
                v
           credit spread
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A credit spread is a relative market price of risk, not a pure measure of default probability.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Reading a 300 bp spread as a 3% annual probability of default without specifying recovery, horizon and pricing model.
-</Trap>
 
-<NeverConfuse a="Credit spread" b="Expected credit loss">
+### Never confuse
+
 **Credit spread** — yield or pricing difference relative to a chosen reference.
 
 ---
 
 **Expected credit loss** — modelled loss from default risk, commonly driven by PD, LGD and exposure.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What can cause a credit spread to widen even without a change in the issuer’s expected cash flows?"

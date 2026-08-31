@@ -42,7 +42,7 @@ For analysis, identify four elements: who owns the choice, what action can be ta
 
 The durable insight is that products with the same headline maturity, coupon or notional can carry radically different risks if optionality differs. The option owner’s flexibility is an economic asset; somebody else is paying for it.
 
-<Flow>
+```text
 Contract cash flows
       |
       +--&gt; fixed? --------&gt; simple projected schedule
@@ -55,27 +55,27 @@ Contract cash flows
              |
              v
        state-dependent cash flows
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 If future cash flows can change because one party has discretion, model the option before trusting linear risk measures.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating a callable or prepayable instrument as a plain fixed-cash-flow bond merely because its coupon is fixed.
-</Trap>
 
-<NeverConfuse a="Explicit option" b="Embedded option">
+### Never confuse
+
 **Explicit option** — standalone contract whose main purpose is the exercise right.
 
 ---
 
 **Embedded option** — exercise right contained inside another instrument or financing contract.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What four questions expose optionality quickly?"

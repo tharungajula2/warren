@@ -27,29 +27,29 @@ Value at Risk (VaR) is a statistical risk measure.  For a chosen confidence leve
 
 Banks typically compute VaR daily for trading books to summarize total market risk exposure. Basel rules historically used 10-day 99% VaR (12-month window) for capital. FRTB replaces VaR with ES, but VaR remains key for backtesting and internal limits.
 
-<Flow>
+```text
 VaR computation (conceptual):
 1. Gather P&amp;L distribution over horizon (simulation or historical returns).
 2. Sort losses from smallest (best) to largest (worst).
 3. Identify the 1% quantile (for 99% VaR).
 4. VaR = loss at that quantile (not exceeded with 99% confidence).
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 VaRα is always defined as the (100−α)th percentile loss over the chosen horizon.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating VaR as the maximum possible loss or ignoring that beyond-VaR losses can be larger.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Value at Risk (VaR)** — the loss not exceeded at the confidence level (loss threshold); **Expected Shortfall (ES)** — the expected loss *beyond* the VaR threshold (average tail loss).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The mathematical definition of VaR is universal across regulatory regimes.
-</Rule>
 
 <Recall
   q="What is VaR at confidence level α?"

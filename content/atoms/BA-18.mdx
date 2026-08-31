@@ -29,18 +29,18 @@ Before decommissioning legacy processes, banks often run *both* systems in paral
 
 The *go-live plan* (cutover plan) is executed once parallel runs are complete. It is a detailed schedule: which data migration steps to perform, which systems to shut down/start up, and who is responsible for each action.  The plan must include *rollback procedures*: if a critical issue occurs, how to revert to the old system to prevent business impact. For example, ensure backups and change logs are ready. Roles (executive sponsor, IT lead, BA, etc.) must be assigned for go/no-go decisions and communication to stakeholders.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Include parallel running and dual-reporting as part of implementation. Plan go-live steps meticulously and always have a tested rollback strategy. Confirm decision criteria (e.g. “all parallel outputs match 99%”) before full cutover.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming go-live will succeed without rehearsal. A frequent mistake is not planning for failures – e.g. no rollback or contingency plan. Also failing to run both systems long enough to catch issues.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Parallel Run** vs **Dual Reporting**:
 A *Parallel Run* is running old and new systems at the same time to validate output. *Dual Reporting* is submitting reports in both old and new regimes (e.g. old accounting vs new) to regulators. They both involve duplication but serve different verification purposes.
-</NeverConfuse>
 
 ### No delta
 

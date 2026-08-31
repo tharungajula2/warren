@@ -33,23 +33,23 @@ merged = pd.merge(loans_df, customers_df, left_on='CustID', right_on='ID', how='
 ```
 This yields rows where `CustID` matches `ID`. A left join (`how='left'`) would keep all loans, adding customer info or NaN if missing.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Explicitly specify `how` and `on` parameters to avoid ambiguity. By default, `how='inner'` and pandas attempts to join on any common column names.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 If two DataFrames share column names besides the key, `merge` may join on all of them unintentionally. Rename or use `suffixes=` to disambiguate.
-</Trap>
 
-<NeverConfuse a="merge" b="concat">
+### Never confuse
+
 **merge** (pandas) — database-style join on keys (columns or index).
 ---
 **concat** (pandas) — stacks DataFrames (like SQL `UNION`), not a join on keys.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Pandas merge behavior is consistent across environments.
-</Rule>
 
 <Recall
   q="How to do a left join in pandas?"

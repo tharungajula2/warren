@@ -38,40 +38,40 @@ SELECT COUNT(*) FROM RecentLoans WHERE Principal &gt; 100000;
 ```
 This defines `RecentLoans` once, then queries it. A subquery approach would nest the SELECT inside another SELECT.
 
-<Flow>
+```text
 WITH cte_table AS (
     +------------------+
     | (complex query)  |
     +------------------+
 )
 SELECT * FROM cte_table;
-</Flow>
+```
 
-<Flow>
+```text
 SELECT * FROM (
     +------------------+
     | (complex query)  |
     +------------------+
 ) AS sub;
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 A CTE must be immediately followed by a SELECT (or INSERT/UPDATE/DELETE) that references it.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 A CTE’s scope is limited to one statement; it cannot be reused outside. Also, avoid overly deep nesting – break logic into multiple CTEs if needed.
-</Trap>
 
-<NeverConfuse a="Subquery" b="CTE (WITH)">
+### Never confuse
+
 **Subquery** — an unnamed SELECT inside another query (inline, not reusable).
 ---
 **CTE (WITH)** — a named temporary table defined for one query (improves clarity and reuse).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** CTEs and subqueries are standard SQL features everywhere.
-</Rule>
 
 <Recall
   q="Why use a CTE?"

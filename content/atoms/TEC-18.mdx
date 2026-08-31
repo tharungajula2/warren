@@ -30,23 +30,23 @@ import_source: 13_TEC_sql_python.md
 ---
 Key difference: `.loc` includes the ending label in slicing (`df.loc['A':'D']` includes 'D'), whereas `.iloc` excludes the endpoint (`df.iloc[0:3]` returns positions 0,1,2). Always ensure you pass the correct type of index (label vs integer) or you’ll get a KeyError/IndexError.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Use `.loc` when indexing by row/column name, and `.iloc` for numerical positions.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using `.iloc` on an index that’s not a RangeIndex can return unexpected rows. For instance, if the DataFrame index is strings, `.iloc[0]` still returns the first row, not row with label 0.
-</Trap>
 
-<NeverConfuse a="`.loc`" b="`.iloc`">
+### Never confuse
+
 **`.loc`** — label-based indexing (select by row/column names).
 ---
 **`.iloc`** — positional indexing (select by row/column integer location).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** These pandas behaviors are the same everywhere.
-</Rule>
 
 <Recall
   q="How to select rows 10 through 20 using labels?"

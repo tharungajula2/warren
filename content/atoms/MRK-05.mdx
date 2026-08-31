@@ -26,7 +26,7 @@ import_source: 11_MRK_market_risk.md
 ---
 **Historical simulation** VaR sorts actual historical portfolio returns (e.g. last 1,000 days) and picks the percentile loss. It assumes the future risk factor moves will resemble past moves (no distributional assumption). **Parametric (variance-covariance)** VaR assumes portfolio returns are multivariate normal and portfolios respond linearly to risk factors; it calculates VaR analytically from portfolio mean and covariance. This is computationally fast but can underestimate tail risk if returns are fat-tailed. **Monte Carlo simulation** VaR uses a risk model to generate many random return scenarios (e.g. from heavy-tailed or multi-factor distributions), revalues the portfolio under each, and then finds the loss percentile. It can capture complex distributions and non-linearities but is computation-intensive.
 
-<Flow>
+```text
 +---------------------------+
 |       VaR Methods         |
 +---------------------------+
@@ -44,23 +44,23 @@ import_source: 11_MRK_market_risk.md
 +---------------------------+
 |   (simulate future paths) |
 +---------------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Three main VaR methods: historical simulation, parametric (variance-covariance), and Monte Carlo.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using a parametric (normal) VaR model when returns are fat-tailed or portfolios are non-linear, thus underestimating actual risk.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Historical VaR** — derived from actual past return scenarios (no assumed distribution); **Parametric VaR** — calculated assuming normal returns (linearized portfolio).
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** The conceptual VaR methods are the same everywhere.
-</Rule>
 
 <Recall
   q="Name the three common VaR computation methods."

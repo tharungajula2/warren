@@ -37,7 +37,7 @@ Practitioners should ask: exposed to **what event**, over **what horizon**, meas
 
 Later credit-risk measures may distinguish current exposure, exposure at default, committed amounts and conversion of undrawn commitments. The foundational discipline comes first: the amount at risk must be identified before probability or severity can be calculated.
 
-<Flow>
+```text
 +----------------------+
 | Contract / position  |
 +----------------------+
@@ -60,25 +60,25 @@ Later credit-risk measures may distinguish current exposure, exposure at default
           |
           v
        Loss
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Exposure is an input to loss measurement, not a synonym for loss.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Using today's outstanding principal as exposure for an undrawn or revolving facility without asking whether further drawings can occur before default.
-</Trap>
 
-<NeverConfuse a="Exposure" b="Loss">
+### Never confuse
+
 **Exposure** — the amount or position subject to adverse change from a specified risk.
 ---
 **Loss** — the adverse economic outcome after the risk event and relevant recoveries or offsets; exposure can exist without an equal loss.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Regulatory definitions of particular exposure measures can differ, but the conceptual distinction between amount exposed and realised loss does not.
-</Rule>
 
 <Recall
   q="If exposure is 80 and recovery is 60, must loss equal 80?"

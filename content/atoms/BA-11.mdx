@@ -28,18 +28,18 @@ For data migrations or integration, a **Data Mapping Specification** lists every
 
 This document serves as the *golden source* for developers and testers to implement and verify data flow. In banking, precise mapping is critical (e.g. for customer data, transactions). Missing a transformation can lead to errors or compliance issues.
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Document every data element and its transformation explicitly. Include data types and any business rule (e.g. code-to-description mapping) for each field.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming simple copy (source to target) for all fields. Some fields require non-trivial transformation (format changes, code mappings) which must be written down, or testers cannot verify correctness.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **Source Field** vs **Target Field** in mapping:
 A *Source Field* is the field in the existing (origin) system. A *Target Field* is where it goes in the new system.  Keep straight which is which when writing the spec.
-</NeverConfuse>
 
 ### No delta
 

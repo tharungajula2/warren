@@ -47,21 +47,26 @@ import_source: 02_CR_credit_risk_core.md
 
 Correlation does not require equal PDs. A 1% PD firm and a 5% PD firm can still become riskier at the same time because both respond to recession, rates or a common customer base.
 
-<Flow>
+### Flow
+
+```text
 Idiosyncratic shock → One / few obligors → Diversification impact ↓
 
 Systematic shock → Many obligors deteriorate together → Correlated defaults
     ↓
 Clustered losses → Portfolio tail ↑ → Capital pressure ↑
-</Flow>
+```
 
-<Flow>
+### Flow
+
+```text
 Upstream:   Individual PDs · Common economic factors · Sector/geography links
 This:       Common shock → joint deterioration/default → clustered losses
 Downstream: Portfolio loss tail · Stress testing · Diversification benefit · Capital
-</Flow>
+```
 
-<Formula>
+### Formula
+
 For default indicators `D₁` and `D₂`, positive dependence means:
 
 `P(D₁ = 1 and D₂ = 1) &gt; P(D₁ = 1) × P(D₂ = 1)`
@@ -69,26 +74,25 @@ For default indicators `D₁` and `D₂`, positive dependence means:
 in the simple comparison to independence.
 
 Positive dependence ↑ → probability of clustered losses ↑ → tail loss ↑, all else equal.
-</Formula>
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Adding exposures diversifies risk only to the extent that their failure drivers are not the same.
-</Rule>
 
-<NeverConfuse a="Correlation" b="Concentration">
+### Never confuse [Correlation] and [Concentration]
+
 **Correlation** — dependence between credit outcomes.
 
 ---
 **Concentration** — disproportionate exposure to names or common drivers; concentration magnifies the consequence of dependence but is not the same concept.
-</NeverConfuse>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming legal independence implies default independence systematically understates loss clustering during common economic stress.
-</Trap>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.** Correlation and systematic risk are economic and statistical properties; prudential frameworks differ in how dependence is parameterised, stressed or capitalised.
-</Rule>
 
 <Recall
   q="Which credit risk is hardest to diversify away?"

@@ -32,7 +32,7 @@ The testing process is layered:
 
 Each test type requires different participants: developers own unit tests, QA owns system/integration tests, and business stakeholders perform UAT.  Testing each phase is critical: skipping system test and jumping to UAT, for instance, risks missing defects that developers should have caught.
 
-<Flow>
+```text
 +-------------+
 | Unit Test   |
 +-------------+
@@ -50,20 +50,20 @@ Each test type requires different participants: developers own unit tests, QA ow
 | User Acceptance  |
 |  Test (UAT)      |
 +------------------+
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Follow all test phases in order and involve the right people. Use unit and system tests to catch defects early, and let end users validate the solution in UAT.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Treating UAT as the first time the business sees the solution. If unit/integration tests are inadequate, UAT will be overwhelmed with obvious issues.
-</Trap>
 
-<NeverConfuse>
+### Never confuse
+
 **System Test** vs **User Acceptance Test (UAT)**:
 *System Test* is executed by QA/IT to verify the software meets the specified requirements. *UAT* is done by business users to verify the system meets their needs in real-world scenarios.
-</NeverConfuse>
 
 ### No delta
 

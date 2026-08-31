@@ -38,7 +38,7 @@ Neither contract is “safer” in all senses. Central clearing materially chang
 
 The BA test is to separate economic exposure from processing model: contract economics, trading venue, clearing status, margining, settlement method and legal documentation are distinct data attributes.
 
-<Flow>
+```text
 Same basic objective:
 lock future price
       |
@@ -50,27 +50,27 @@ lock future price
  bespoke             exchange
  collateral?         CCP clearing
  maturity P&amp;L        daily margin
-</Flow>
+```
 
-<Rule label="PERMANENT RULE">
+### Permanent rule
+
 Separate payoff equivalence from infrastructure differences.
-</Rule>
 
-<Trap label="PERMANENT TRAP">
+### Permanent trap
+
 Assuming an exchange-traded future and a bilateral forward with the same maturity must have identical operational cash flows.
-</Trap>
 
-<NeverConfuse a="Forward" b="Future">
+### Never confuse
+
 **Forward** — future transaction under bilaterally agreed terms.
 
 ---
 
 **Future** — standardised future transaction traded on an exchange and processed through its clearing framework.
-</NeverConfuse>
 
-<Rule label="NO DELTA">
+### Jurisdiction variants
+
 **No delta.**
-</Rule>
 
 <Recall
   q="What causes the biggest operational cash-flow difference between a forward and a future?"
