@@ -29,8 +29,8 @@ const DateOrStringSchema = z
 
 export const SourceSchema = z.object({
   label: z.string().min(1),
-  url: z.string().url(),
-  accessed: DateOrStringSchema.optional(),
+  url: z.string().url().nullable().optional(),
+  accessed: DateOrStringSchema.nullable().optional(),
 });
 export type SourceItem = z.infer<typeof SourceSchema>;
 

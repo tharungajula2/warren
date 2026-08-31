@@ -411,10 +411,13 @@ for (const seg of rawSegments) {
         const trimmed = sLine.trim().replace(/^-\s*/, "");
         if (!trimmed) continue;
         const urlMatch = trimmed.match(/(https?:\/\/[^\s,]+)/);
-        const url = urlMatch ? urlMatch[1] : "https://www.bis.org/bcbs/basel3.htm";
-        const label = trimmed.replace(url, "").replace(/,\s*accessed.*$/i, "").trim().replace(/,\s*$/, "");
+        const url = urlMatch ? urlMatch[1] : null;
+        const label = (url ? trimmed.replace(url, "") : trimmed)
+          .replace(/,\s*accessed.*$/i, "")
+          .trim()
+          .replace(/,\s*$/, "");
         const accessedMatch = trimmed.match(/accessed\s+([A-Za-z0-9,\s]+)/i);
-        const accessed = accessedMatch ? accessedMatch[1].trim() : "August 28, 2026";
+        const accessed = url && accessedMatch ? accessedMatch[1].trim() : null;
         sourcesList.push({ label: label || trimmed, url, accessed });
       }
     } else {

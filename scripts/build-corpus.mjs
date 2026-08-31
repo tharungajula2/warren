@@ -31,8 +31,8 @@ const DateOrStringSchema = z
 
 const SourceSchema = z.object({
   label: z.string().min(1),
-  url: z.string().url(),
-  accessed: DateOrStringSchema.optional(),
+  url: z.string().url().nullable().optional(),
+  accessed: DateOrStringSchema.nullable().optional(),
 });
 
 const AtomFrontmatterSchema = z

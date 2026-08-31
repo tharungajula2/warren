@@ -295,14 +295,18 @@ export default async function AtomPage({ params }: PageProps) {
                   >
                     <span className="text-[#C9711F] font-bold">[{idx + 1}]</span>
                     <div>
-                      <a
-                        href={src.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#E6E8EB] hover:text-[#C9711F] hover:underline font-medium"
-                      >
-                        {src.label}
-                      </a>
+                      {src.url ? (
+                        <a
+                          href={src.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#E6E8EB] hover:text-[#C9711F] hover:underline font-medium"
+                        >
+                          {src.label}
+                        </a>
+                      ) : (
+                        <span className="text-[#E6E8EB] font-medium">{src.label}</span>
+                      )}
                       {src.accessed && (
                         <span className="text-[#6B747E] ml-2 tabular-nums">
                           (ACCESSED: {src.accessed})
