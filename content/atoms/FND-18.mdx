@@ -1,16 +1,16 @@
 ---
 id: FND-18
-title: Quantiles and Tail Risk
+title: 'Exposure: What Is Actually at Risk'
 type: concept
 domain: foundation
 subdomain: risk-language
 one_screen: >-
-  A **quantile** is a threshold in a distribution: an \(\alpha\)-quantile has
-  approximately \(\alpha\) of probability at or below it under the stated
-  convention. **Tail risk is what happens in the extreme region beyond such
-  thresholds; a quantile is not a maximum possible loss.**
+  Exposure is the amount or position subject to adverse change from a specified
+  risk event; it is **not the loss itself**. For credit, today's drawn balance
+  can be only part of what is at risk because a facility may also contain
+  undrawn commitments that can become exposure before the relevant event.
 prerequisites:
-  - FND-16
+  - FND-15
   - FND-17
 jurisdictions:
   - universal
@@ -22,68 +22,98 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
-      of Statistical Methods — Percentiles and Critical Values*
-    url: 'https://www.itl.nist.gov/div898/handbook/prc/section4/prc471.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
-      of Statistical Methods — Distributional Shape and Tails*
-    url: 'https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm'
+      Basel Committee on Banking Supervision, *Basel Framework — CRE20
+      Standardised approach: individual exposures*, current framework,
+      off-balance-sheet treatment; cited only to evidence that undrawn
+      commitments can be converted into credit exposure under a defined
+      methodology.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-Take a modelled loss variable \(L\). A 99th-percentile loss quantile is a threshold such that roughly 99% of modelled losses lie at or below it and roughly 1% lie above it, subject to the precise quantile definition and whether the distribution is continuous or discrete. NIST illustrates percentiles through this cumulative-probability interpretation.
+### Core mechanism
 
-This is the foundation of **Value at Risk (VaR)**-type thinking: a high loss quantile gives a boundary associated with a selected confidence level. But the quantile says little by itself about the severity of losses once that boundary has been breached.
+| Facility component | What it means |
+| :--- | :--- |
+| Drawn amount | Amount already advanced or otherwise outstanding |
+| Undrawn commitment | Contractual capacity not yet drawn |
+| Total commitment | Drawn plus undrawn contractual amount |
+| Exposure measure | Amount treated as at risk under the stated purpose and measurement date |
 
-Consider two hypothetical loss distributions that both have a 99% quantile of 10. In one, the worst remaining 1% clusters around 11. In another, the remaining 1% includes losses of 100 or more. Their 99% quantiles can look similar while their tail severities are radically different.
-
-**Tail risk** concerns these extreme outcomes and their distribution. A heavier loss tail places relatively more probability or severity in extreme losses than a lighter-tailed alternative. Measures focusing on loss conditional on being beyond a quantile can therefore provide information that the quantile alone does not.
-
-A quantile also depends on horizon and model. A one-day 99% loss quantile and a one-year 99% loss quantile answer different questions. Changing the probability distribution, dependence assumptions or data window can change the estimated threshold.
-
-The phrase "99% confidence" is frequently miscommunicated as "there is only a 1% chance of any loss". That is wrong. It means approximately 1% of modelled outcomes exceed the stated loss threshold, not that the other 99% have zero loss.
+### Formula
 
 ```text
-Loss distribution
-0 ---------------------------------------&gt; severe loss
-|                         |
-|&lt;------ about 99% ------&gt;|&lt;-- tail --&gt;|
-                          ^
-                          |
-                    99% quantile
-                          |
-                          v
-                NOT maximum loss
+Total commitment = Drawn + Undrawn
+Total commitment = contractual facility amount in this simple identity
+Drawn = amount already used by the customer
+Undrawn = committed amount still available to draw
+
+The identity does not mean the full undrawn amount automatically equals exposure under every framework. The governing exposure methodology determines how undrawn commitments are treated and at what horizon.
+
+One-line reminder only: eventual loss severity also depends on what is recovered; recovery and loss-severity mechanics belong to the credit-risk pack.
+```
+
+### Flow
+
+```text
+Contract / position
+    ↓
+Drawn amount + possible undrawn component
+    ↓
+Choose measurement date / horizon
+    ↓
+Apply governing exposure definition
+    ↓
+Exposure amount
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-15 Probability · FND-17 Tail concepts
+This:       Amount at risk · Drawn vs undrawn
+Downstream: FND-19 Expected/unexpected loss · Credit-risk EAD mechanics
 ```
 
 ### Permanent rule
 
-A quantile identifies a distribution threshold; it does not cap outcomes beyond the threshold.
+Exposure is an input to loss measurement. It is never automatically equal to realised or expected loss.
 
-### Permanent trap
+### Never confuse [Exposure] and [Loss]
 
-Describing a 99% VaR-type number as "the most that can be lost with 99% certainty".
-
-### Never confuse
-
-**Quantile** — a threshold associated with a cumulative probability level.
+**Exposure** — amount or position subject to the specified risk event.
 
 ---
 
-**Tail risk** — the probability and severity of extreme outcomes beyond a chosen region; a single quantile does not describe the whole tail.
+**Loss** — adverse outcome after the event under the relevant loss definition; foundations does not own the downstream severity mechanics.
+
+### Never confuse [Drawn amount] and [Total commitment]
+
+**Drawn amount** — already used.
+
+---
+
+**Total commitment** — drawn plus contractual undrawn capacity; downstream methods decide how much undrawn capacity enters a risk exposure measure.
+
+### Permanent trap
+
+Using current outstanding principal as the complete exposure for a revolving or committed facility without checking whether further drawings can occur before the measurement event.
 
 ### Jurisdiction variants
 
-**No delta.** Quantiles and probability tails are mathematical concepts independent of jurisdiction.
+**No delta.** Specific regulatory exposure definitions and conversion factors can differ, but the distinction between amount at risk, current drawings, and contractual undrawn capacity is universal.
 
 <Recall
-  q="What does a 99% loss quantile leave beyond the threshold in a continuous model?"
-  a="Approximately 1% of modelled loss outcomes."
+  q="Is exposure the same as loss?"
+  a="No. Exposure is the amount at risk before the realised loss outcome is known."
 />
 
 <Recall
-  q="Is a 99% quantile the maximum possible loss?"
-  a="No."
+  q="Why can an undrawn facility matter to exposure?"
+  a="It may be drawn before the relevant measurement event."
+/>
+
+<Recall
+  q="Does total commitment automatically equal regulatory exposure?"
+  a="No. The governing methodology determines how drawn and undrawn amounts enter the exposure measure."
 />

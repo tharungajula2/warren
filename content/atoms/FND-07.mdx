@@ -1,17 +1,16 @@
 ---
 id: FND-07
-title: Reading a Bank Balance Sheet
-type: procedure
+title: Accrual Versus Cash
+type: concept
 domain: foundation
 subdomain: financial-statements
 one_screen: >-
-  Read a bank balance sheet by asking three questions in order: **what assets
-  generate or preserve value, how those assets are funded, and how much residual
-  loss absorption sits beneath the liabilities**. A bank's debtors are often its
-  customers, while its customers' deposits are its funding.
+  Accrual accounting records the economic effects of events when the applicable
+  recognition requirements are met, which can be earlier or later than cash
+  settlement. The foundational discipline is simple: **recognition timing and
+  cash timing are different dimensions.**
 prerequisites:
-  - FND-01
-  - FND-02
+  - FND-06
 jurisdictions:
   - universal
 perishable: false
@@ -21,85 +20,83 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4'
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/
+  - label: >-
+      IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised
+      March 2018, Chapters 3–5.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, DIS20 — Main
-      features of regulatory capital instruments and other disclosures*
-    url: 'https://www.bis.org/basel_framework/chapter/DIS/20.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Bank of England, *How is money created?*'
-    url: 'https://www.bankofengland.co.uk/explainers/how-is-money-created'
+      IFRS Foundation, *IAS 7 Statement of Cash Flows*, current standard through
+      31 August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-A useful first pass starts with **assets**. Cash and central-bank balances provide settlement capacity. Securities can provide income, liquidity or investment exposure depending on their nature and classification. Loans represent claims on borrowers and are commonly a major source of interest income and credit risk. Other financial and non-financial assets complete the asset side.
+### Core mechanism
 
-Next read **liabilities** as funding and payment obligations. Customer deposits can differ substantially in stability, interest rate and maturity. Wholesale borrowings are funds obtained from financial markets or institutional counterparties. Other liabilities can include settlement obligations, derivatives and accrued expenses. The maturity and behavioural characteristics of liabilities matter because an asset may remain economically sound while funding against it becomes unavailable.
+| Situation | Accounting effect | Cash effect at that moment |
+| :--- | :--- | :--- |
+| Interest earned but not yet received | Income and an asset/carrying-amount effect can arise | None yet |
+| Expense incurred but not yet paid | Expense and liability can arise | None yet |
+| Cash paid before service is consumed | Asset/prepayment can arise | Cash decreases now |
+| Borrowing received | Cash and liability increase | Cash increases without profit |
+| Non-cash impairment recognised | Expense / carrying-value effect | No equal current cash payment |
 
-Then read **equity** and, separately where relevant, prudential capital disclosures. Equity is the accounting residual. Regulatory capital applies regulatory eligibility, deductions and other adjustments and therefore should not be assumed to equal book equity.
+Accrual accounting does not mean “book whatever is expected”. Recognition and measurement must still follow the applicable accounting framework.
 
-A bank balance sheet should also be read by **quality**, not merely size. Two loan portfolios with equal carrying amounts may have different credit quality. Two security portfolios may have different market sensitivity or liquidity. Two deposit bases of equal size may behave differently under stress. Balance-sheet analysis therefore combines amounts with information about maturity, concentration, valuation, impairment and contractual terms.
-
-This differs from the intuitive reading of many non-financial corporates. Inventory and physical plant may dominate a corporate asset side, while bank assets are heavily financial claims. Debt is funding for both, but customer deposits are distinctive because they simultaneously represent funding to the bank and money-like assets to customers.
+### Flow
 
 ```text
-Read top to bottom
+Economic event
+    ↓
+Recognition criteria met?
+    ↓
+Accounting entry recorded
+    ↓
+Cash may occur earlier · same time · later
+    ↓
+Cash-flow statement records actual cash timing
+```
 
-+-----------------------+
-| ASSETS                |
-| What does the bank    |
-| own or have claims on?|
-+-----------------------+
-            |
-            v
-+-----------------------+
-| LIABILITIES           |
-| Who funds the bank?   |
-| What must be paid?    |
-+-----------------------+
-            |
-            v
-+-----------------------+
-| EQUITY / CAPITAL      |
-| What absorbs losses?  |
-+-----------------------+
-            |
-            v
-+-----------------------+
-| QUALITY + MATURITY +  |
-| CONCENTRATION         |
-+-----------------------+
+### Where it sits
+
+```text
+Upstream:   FND-06 Financial-statement linkage
+This:       Recognition timing · Settlement timing
+Downstream: Credit-loss allowances · Interest recognition · OCI · Cash-flow analysis
 ```
 
 ### Permanent rule
 
-Never assess a bank balance sheet from totals alone; composition, quality, maturity and funding structure determine what the totals mean.
+The absence of a cash movement does not prove that no income, expense, asset, or liability should be recognised.
 
-### Permanent trap
+### Never confuse [Accrual] and [Cash settlement]
 
-Treating a large deposit balance as evidence of a large liquid-asset buffer. Deposits are funding liabilities, not liquid assets.
-
-### Never confuse
-
-**Book equity** — the accounting residual of assets minus liabilities.
+**Accrual** — accounting recognition based on the economic event and applicable recognition rules.
 
 ---
 
-**Regulatory capital** — capital recognised under prudential rules after eligibility criteria and adjustments; it can differ from book equity.
+**Cash settlement** — transfer of cash; its date can differ from the recognition date.
+
+### Permanent trap
+
+Rejecting a valid non-cash expense because “nothing has been paid yet”. Accounting can recognise deterioration or consumption before the related cash consequence is realised.
 
 ### Jurisdiction variants
 
-**No delta.** Reporting templates differ, but the analytical sequence of assets, funding, residual loss absorption and balance-sheet quality is jurisdiction-neutral.
+**No delta.** Specific recognition rules differ between accounting frameworks, but the distinction between accrual recognition and cash timing is universal.
 
 <Recall
-  q="What should be read immediately after a bank's asset mix?"
-  a="How those assets are funded through liabilities and equity."
+  q="Can income be recognised before cash is received?"
+  a="Yes, when the applicable recognition requirements are met before cash settlement."
 />
 
 <Recall
-  q="Why is book equity not automatically regulatory capital?"
-  a="Prudential rules apply separate eligibility, deductions and adjustments."
+  q="Can cash increase without profit increasing?"
+  a="Yes. Borrowing can increase cash and liabilities without creating income."
+/>
+
+<Recall
+  q="What statement restores visibility over actual cash timing?"
+  a="The cash-flow statement."
 />

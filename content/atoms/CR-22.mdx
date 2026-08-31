@@ -55,17 +55,21 @@ At each step: cure / stay / worsen
 
 ### Where it sits
 
+```text
 Upstream:   Origination date · Account age · DPD/default states · Observation history
 This:       Cohort by vintage OR transition by state
 Downstream: Early warning · Collections capacity · Forecasting · Policy review · Model validation
+```
 
 ### Formula
 
+```text
 Illustrative one-step roll rate:
 
 `Roll rate(i → j) = count/exposure moving from state i to state j / starting count/exposure in state i`
 
 The numerator and denominator must use the same population basis and interval.
+```
 
 ### Permanent rule
 

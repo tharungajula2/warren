@@ -1,17 +1,19 @@
 ---
 id: FND-05
-title: Capital Versus Liquidity
+title: 'Capital, Liquidity and Solvency'
 type: concept
 domain: foundation
 subdomain: bank-mechanics
 one_screen: >-
-  **Capital absorbs losses; liquidity meets payments when due.** A bank can have
-  positive capital yet fail through a cash shortage, or hold abundant cash yet
-  be economically insolvent because its assets are worth less than its
-  obligations.
+  Capital, liquidity, and solvency answer different questions. **Capital absorbs
+  losses; liquidity enables payments when due; solvency concerns whether the
+  value of assets is sufficient relative to obligations.** Confusing them hides
+  the two distinct ways a bank can fail: loss of value and loss of payment
+  capacity.
 prerequisites:
   - FND-01
   - FND-02
+  - FND-04
 jurisdictions:
   - universal
 perishable: false
@@ -22,73 +24,97 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel III: international
-      regulatory framework for banks*
+      Basel Committee on Banking Supervision, *Basel Framework — CAP: Definition
+      of capital*, current framework (
     url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
+    accessed: 31 August 2026
   - label: >-
-      Bank of England, Prudential Regulation Authority, *Liquidity*, Prudential
-      and Resolution Policy Index
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/prudential-and-resolution-policy-index/banking/liquidity
-    accessed: 'August 28, 2026'
-  - label: 'European Banking Authority, *Liquidity risk*'
-    url: 'https://www.eba.europa.eu/regulation-and-policy/liquidity-risk'
+      Basel Committee on Banking Supervision, *Basel Framework — LCR: Liquidity
+      Coverage Ratio*, current framework (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework — NSF: Net Stable
+      Funding Ratio*, current framework.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-Bank **capital** is the loss-absorbing financial base protecting creditors and depositors against declines in asset value. Accounting equity and regulatory capital are related but not identical: prudential rules define eligible capital instruments and make regulatory deductions and adjustments. Basel standards therefore specify capital measures separately from ordinary financial-statement equity.
+### Core mechanism
 
-**Liquidity** is the ability to meet payment obligations when they fall due without unacceptable loss. Liquid assets can be converted into settlement cash quickly and reliably. A bank needs liquidity because deposit withdrawals, outgoing payments, maturing borrowings and other obligations can require cash before longer-term assets such as loans repay.
+| Question | Concept | Failure mode |
+| :--- | :--- | :--- |
+| Can losses be absorbed? | Capital | Losses exhaust loss-absorbing resources |
+| Can obligations be paid on time? | Liquidity | Usable cash/settlement resources are insufficient when needed |
+| Are assets worth enough relative to obligations? | Solvency | Economic asset value falls below obligations |
 
-The distinction can be seen numerically. A bank with assets economically worth 105 and liabilities of 100 has positive residual value of 5. But if almost all 105 is locked in long-dated, non-saleable assets while 20 of liabilities must be paid today, it can face a liquidity crisis despite being solvent in value terms. Conversely, a bank could hold 30 of immediately available cash but have total assets worth only 90 against liabilities of 100. It is liquid in the immediate sense but has negative economic net worth.
+Accounting equity and regulatory capital are related but not identical. Prudential frameworks apply eligibility criteria, deductions, and adjustments when deciding what counts as regulatory capital.
 
-Prudential frameworks therefore maintain distinct capital and liquidity requirements. Basel III includes risk-based capital and leverage requirements as well as liquidity standards. The UK PRA and EU framework likewise treat liquidity as a dedicated prudential risk rather than a synonym for capital.
+A solvent bank can still be illiquid: it may own valuable long-dated assets but lack immediately usable settlement resources. An institution can also hold cash and still be insolvent if total asset value is below total obligations.
 
-A capital injection may also improve liquidity if it brings in cash, but that transaction does not collapse the concepts into one. The capital describes loss-bearing capacity; the incoming cash describes an asset available for payments.
+### Flow
 
 ```text
-              BANK RESILIENCE
-                    |
-          +---------+---------+
-          |                   |
-          v                   v
-+------------------+  +------------------+
-| CAPITAL          |  | LIQUIDITY        |
-| absorbs losses   |  | meets cash       |
-|                  |  | outflows on time |
-+------------------+  +------------------+
-          |                   |
-          v                   v
-  solvency protection    payment capacity
+Asset loss
+    ↓
+Equity / eligible capital absorbs loss
+    ↓
+Loss capacity falls
+
+Payment outflow
+    ↓
+Liquid resources used
+    ↓
+Payment capacity falls
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-01 Equity · FND-02 Funding · FND-04 Earnings
+This:       Loss absorption · Payment capacity · Solvency
+Downstream: Prudential capital · Liquidity standards · Risk appetite · Supervision
 ```
 
 ### Permanent rule
 
-Capital answers **"Can losses be absorbed?"** Liquidity answers **"Can payments be made when due?"**
+A balance-sheet resource can improve more than one resilience dimension, but the dimensions remain conceptually separate.
 
-### Permanent trap
+### Never confuse [Capital] and [Liquidity]
 
-Calling a bank "well capitalised" because it has a large cash balance. Cash is an asset; capital is a loss-absorbing funding concept.
-
-### Never confuse
-
-**Solvency** — having sufficient asset value relative to obligations and an adequate loss-absorbing base.
+**Capital** — loss-absorbing financial resources defined under accounting or prudential rules.
 
 ---
 
-**Liquidity** — having resources available at the required time to settle obligations; a solvent institution can still become illiquid.
+**Liquidity** — capacity to meet cash and settlement obligations when they fall due.
+
+### Never confuse [Equity] and [Regulatory capital]
+
+**Equity** — the accounting residual.
+
+---
+
+**Regulatory capital** — the prudential measure after eligibility rules, deductions, and adjustments.
+
+### Permanent trap
+
+Calling a bank “well capitalised” because it has a large cash balance. Cash is an asset; capital describes loss absorption.
 
 ### Jurisdiction variants
 
-**No delta.** Regulatory calibration differs, but capital and liquidity remain economically distinct in every jurisdiction.
+**No delta.** Calibration and legal definitions vary, but capital, liquidity, and solvency remain distinct concepts in every jurisdiction.
 
 <Recall
-  q="Which protects primarily against asset losses: capital or liquidity?"
+  q="Which concept answers “can the bank pay today?”"
+  a="Liquidity."
+/>
+
+<Recall
+  q="Which answers “can losses be absorbed?”"
   a="Capital."
 />
 
 <Recall
-  q="Can a solvent bank face a liquidity crisis?"
-  a="Yes, if cash obligations arrive before usable liquidity is available."
+  q="Can a solvent bank become illiquid?"
+  a="Yes. Positive net worth does not guarantee usable cash when obligations fall due."
 />

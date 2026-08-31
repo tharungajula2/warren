@@ -5,10 +5,10 @@ type: mechanism
 domain: foundation
 subdomain: financial-statements
 one_screen: >-
-  The three-statement shorthand is **balance sheet, profit and loss statement,
-  and cash-flow statement**. Profit changes equity, cash flows explain movements
-  in cash, and every recognised closing balance must end up on the closing
-  balance sheet.
+  Financial statements separate **position**, **performance**, **cash
+  movement**, and **equity movement**. Profit can change equity without matching
+  cash, financing can change cash without creating profit, and every recognised
+  closing position ultimately appears in the closing balance sheet.
 prerequisites:
   - FND-01
   - FND-04
@@ -24,101 +24,107 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'IFRS Foundation, *IAS 1 Presentation of Financial Statements*'
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/
+  - label: >-
+      IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised
+      March 2018, Chapter 3.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'IFRS Foundation, *IAS 7 Statement of Cash Flows*'
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/
+  - label: 'IFRS Foundation, *IAS 7 Statement of Cash Flows* ('
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks —
+      Financial Statements: Presentation and Disclosures) Directions, 2025*,
+      RBI/DOR/2025-26/167, DOR.ACC.REC.No.86/21.04.018/2025-26, 28 November
+      2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Financial Statements: Presentation and Disclosures) Directions, 2025*
-    url: 'https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13143'
-    accessed: 'August 28, 2026'
-  - label: 'UK Endorsement Board, *Text by Standard 2024*'
-    url: >-
-      https://www.endorsement-board.uk/standards/text-by-standard/text-by-standard-2024/
+      UK Endorsement Board, *UK-Adopted International Accounting Standards
+      (Consolidated)*, text at 1 January 2026 (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
+  - label: >-
+      European Union, Commission Regulation (EU) 2023/1803 adopting certain
+      international accounting standards, consolidated text in force.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      European Union, *International accounting standards — IAS Regulation*,
-      Regulation (EC) No 1606/2002 and Regulation (EU) 2023/1803 summary
-    url: >-
-      https://eur-lex.europa.eu/EN/legal-content/summary/international-accounting-standards-ias-regulation.html
-    accessed: 'August 28, 2026'
-  - label: 'Financial Accounting Standards Board, *FASB Mission*'
-    url: 'https://www.fasb.org/about-us/about-the-fasb'
+      Financial Accounting Standards Board, *Accounting Standards Codification*
+      and FASB standard-setting mandate.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-The **balance sheet** reports financial position at a date. The **profit and loss statement** reports income and expenses over a period. The **cash-flow statement** reports cash inflows and outflows during the period, commonly classified into operating, investing and financing activities under IAS 7.
+### Core mechanism
 
-They measure different things. If interest income of 10 is accrued but only 8 has been received in cash, profit can include 10 while cash increases by only 8; the remaining 2 appears through a receivable or carrying amount elsewhere on the balance sheet. Similarly, depreciation or a credit-loss charge can reduce profit without producing an equal current-period cash payment.
+| Statement / component | Owns | Time basis |
+| :--- | :--- | :--- |
+| Balance sheet / statement of financial position | Assets · Liabilities · Equity | At a date |
+| Profit and loss / income statement | Recognised income · Expenses | Over a period |
+| Cash-flow statement | Cash receipts · Cash payments | Over a period |
+| Changes in equity | Movements among equity components | Over a period |
 
-Profit normally feeds equity through retained earnings after dividends and other equity movements. Cash movements change the closing cash balance. Transactions such as new borrowing can increase cash and liabilities without creating profit. Repaying principal can reduce cash and debt without creating an equivalent expense. The statements therefore reconcile economic performance, financial position and cash movement rather than repeating one another.
+“Three statements” is practitioner shorthand, not a claim that a complete statutory set contains only three documents.
 
-"Three statements" is practitioner shorthand, not a claim that a complete set of accounts literally contains only three documents. Under IFRS, a complete set also includes a statement of changes in equity, notes and comparative information, while profit or loss and other comprehensive income form part of the prescribed presentation.
-
-For banks, the linking logic is the same even though line items differ markedly from an industrial company's accounts. The applicable reporting framework determines recognition, measurement and presentation; prudential reports may use accounting values as a starting point and then apply regulatory definitions.
+### Flow
 
 ```text
-+-----------------------+
-| Opening balance sheet |
-+-----------------------+
-            |
-            v
-+-----------------------+
-| Profit or loss        |
-| income - expenses     |
-+-----------------------+
-            |
-            +---------&gt; changes equity
-            |
-            v
-+-----------------------+
-| Cash-flow statement   |
-| explains cash movement|
-+-----------------------+
-            |
-            v
-+-----------------------+
-| Closing balance sheet |
-+-----------------------+
+Opening balance sheet
+    ↓
+Transactions and economic events
+    ↓
+Profit / loss + Other recognised movements + Cash flows
+    ↓
+Asset / liability / equity changes
+    ↓
+Closing balance sheet
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-01 Balance sheet · FND-04 Earnings
+This:       Position · Performance · Cash · Equity linkage
+Downstream: Accruals · Provisions · OCI · Balance-sheet analysis
 ```
 
 ### Permanent rule
 
-Profit is not cash, and cash movement is not profit; both ultimately reconcile into closing balance-sheet positions.
+Profit is not cash, and a cash movement is not automatically income or expense. Recognition and cash timing are separate questions.
 
-### Permanent trap
+### Never confuse [Profit] and [Cash flow]
 
-Forcing the change in cash to equal reported profit and treating any difference as an error.
-
-### Never confuse
-
-**Profit and loss statement** — measures recognised income and expenses over a period.
+**Profit** — recognised income minus recognised expenses for a period.
 
 ---
 
-**Cash-flow statement** — measures cash movements over a period; accruals and non-cash items make it differ from profit.
+**Cash flow** — cash received or paid; accruals, non-cash items, financing, and investing transactions make it differ from profit.
+
+### Permanent trap
+
+Forcing the change in cash to equal profit. Borrowing can increase cash and liabilities without income; impairment can reduce profit without an equal current-period cash payment.
 
 ### Jurisdiction variants
 
-**IN** — Scheduled commercial banks prepare statutory financial statements under the Banking Regulation Act framework and RBI presentation/disclosure directions; this does not mean they apply Ind AS 109. [RBI, Commercial Banks – Financial Statements: Presentation and Disclosures Directions, 2025]
-
-**UK** — Entities reporting under UK-adopted international accounting standards use the applicable UK-endorsed IFRS requirements, including IAS 1/IFRS presentation requirements. [UK Endorsement Board, UK-adopted international accounting standards]
-
-**EU** — EU law requires EU-adopted international accounting standards for specified consolidated accounts, notably those of companies whose securities trade on an EU regulated market. [Regulation (EC) No 1606/2002; Regulation (EU) 2023/1803]
-
-**US** — Applicable US entities report under US GAAP; the FASB establishes and improves financial accounting and reporting standards for nongovernmental entities. [FASB Mission]
+| Jurisdiction | Reporting boundary |
+| :--- | :--- |
+| IN | Commercial banks follow the Banking Regulation Act framework and RBI financial-statement directions; Ind AS should not be assumed for scheduled commercial banks. |
+| UK | Entities within scope use the applicable UK-adopted accounting framework, including UK-adopted international accounting standards where relevant. |
+| EU | Accounts within the IAS Regulation's scope use EU-adopted international accounting standards. |
+| US | Entities subject to US GAAP use the FASB Accounting Standards Codification under their applicable reporting requirements. |
 
 <Recall
-  q="Which statement is a snapshot rather than a period flow?"
-  a="The balance sheet."
+  q="Which statement is a snapshot?"
+  a="The balance sheet, because it reports recognised position at a specified date."
 />
 
 <Recall
-  q="Why can profit differ from cash generated?"
-  a="Accruals, non-cash expenses and transactions outside profit or loss separate recognition from cash timing."
+  q="Why can borrowing increase cash without increasing profit?"
+  a="Borrowing increases an asset and a liability rather than creating income."
+/>
+
+<Recall
+  q="Does “three statements” mean a complete statutory set literally contains only three statements?"
+  a="No. Complete reporting sets can also include changes in equity, notes, and other required information."
 />

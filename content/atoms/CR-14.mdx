@@ -64,17 +64,21 @@ PD
 
 ### Where it sits
 
+```text
 Upstream:   Default definition · Observation date · Borrower/pool information · Score/rating
 This:       Estimate and calibrate probability over stated horizon
 Downstream: Pricing · Expected loss · Rating grades · Capital · Monitoring
+```
 
 ### Formula
 
+```text
 For a population observed at time `t`:
 
 `PD_h = P(default during horizon h | information available at t)`
 
 Horizon ↑ → cumulative probability of at least one default event generally ↑, all else equal. A one-year PD cannot be substituted mechanically for a lifetime probability.
+```
 
 ### Permanent rule
 

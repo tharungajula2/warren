@@ -1,97 +1,123 @@
 ---
 id: FND-08
-title: Accrual Versus Cash
-type: concept
+title: Credit-Loss Allowances and Provisions
+type: delta
 domain: foundation
 subdomain: financial-statements
 one_screen: >-
-  **Accrual accounting recognises economic effects when the recognition criteria
-  are met, not simply when cash moves.** Cash accounting asks when money moved;
-  accrual accounting asks what asset, liability, income or expense exists
-  because of what happened.
+  Credit-loss accounting and prudential provisioning recognise that contractual
+  claims may not be fully collected, but they are **not one universal
+  calculation**. Recognition trigger, horizon, measurement, terminology, and
+  prudential interaction come from the governing framework.
 prerequisites:
   - FND-06
+  - FND-07
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters
-      4–5
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/
+      Reserve Bank of India, *Deferral of Implementation of Indian Accounting
+      Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19,
+      22 March 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'IFRS Foundation, *IAS 7 Statement of Cash Flows*'
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*,
+      RBI/DOR/2025-26/164, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
+  - label: >-
+      IFRS Foundation, *IFRS 9 Financial Instruments*, impairment requirements
+      and application guidance.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Financial Accounting Standards Board, Accounting Standards Update 2016-13,
+      *Financial Instruments—Credit Losses (Topic 326)*, June 2016 (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Frequently Asked
+      Questions on the Current Expected Credit Losses Methodology*, Topic 326
+      guidance (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-Suppose a bank earns 10 of interest during December but receives the cash in January. Under accrual accounting, December can contain the interest income even though the corresponding cash receipt occurs later. The unpaid amount is reflected in a recognised asset or in the carrying amount of the financial instrument as required by the applicable accounting framework.
+### Core mechanism
 
-The opposite timing also occurs. A bank can pay cash before an expense belongs economically to the current period, creating a prepaid asset until the service is consumed. It can recognise an expense before paying the cash, creating or increasing a liability. The presence or absence of a current-period cash movement therefore does not determine whether income or expense exists.
+| Event | Reporting effect |
+| :--- | :--- |
+| Credit exposure exists | Contractual claim is recognised |
+| Loss estimate changes | Governing framework measures the change |
+| Allowance / provision changes | Carrying amount and/or liability changes as required |
+| Charge / release recognised | Profit or loss changes under the applicable rules |
 
-This distinction is especially important for **provisions and impairment**. A deterioration in expected recoveries can create an accounting loss before a borrower actually fails to pay cash. The financial statements are attempting to represent the changed economic value or expected collectability under the applicable measurement rules, rather than waiting for the final cash shortfall to become certain.
+The allowance is not cash placed in a separate reserve. Under US CECL, the allowance for applicable amortised-cost assets is a valuation account; under IFRS 9, impairment distinguishes 12-month and lifetime expected credit losses. Indian scheduled commercial banks sit under a different RBI provisioning framework.
 
-The cash-flow statement then restores visibility over actual cash movements. Under IAS 7, cash flows are presented by operating, investing and financing activities, while the balance sheet contains the resulting closing cash and cash-equivalent positions.
-
-Accrual accounting does not permit arbitrary forecasting to be booked as profit or loss. Recognition and measurement must follow the applicable accounting requirements. The foundational point is narrower: **timing of accounting recognition and timing of cash settlement can differ**. Understanding that separation prevents provisions, accrued interest, receivables and payables from being mistaken for cash transactions.
+### Where it sits
 
 ```text
-Economic event occurs
-         |
-         v
-+-----------------------+
-| Recognition criteria  |
-| satisfied?            |
-+-----------------------+
-         |
-         v
-+-----------------------+
-| Accrual accounting    |
-| records effect        |
-+-----------------------+
-         |
-         | cash may move
-         | earlier or later
-         v
-+-----------------------+
-| Cash-flow statement   |
-| records cash timing   |
-+-----------------------+
+Upstream:   FND-06 Statements · FND-07 Accrual
+This:       Credit-loss recognition · Accounting/prudential boundary
+Downstream: Credit-risk pack · Profit · Equity · Regulatory capital
 ```
+
+### Ownership
+
+| Role | Typical responsibility |
+| :--- | :--- |
+| Finance / accounting | Record allowance and statement effect |
+| Credit risk / modelling | Supply governed inputs where required |
+| Management / committees | Approve material estimates and judgements |
+| Assurance | Challenge controls, evidence, methodology, reporting |
 
 ### Permanent rule
 
-An income or expense can be recognised without an equal cash movement in the same reporting period.
+An allowance or provision is a recognised measurement or prudential amount, not a segregated pot of cash.
 
-### Permanent trap
+### Never confuse [Accounting allowance] and [Prudential provision]
 
-Reversing a valid provision merely because "no cash has been lost yet". The absence of cash settlement does not by itself invalidate accrual recognition.
-
-### Never confuse
-
-**Accrual** — recognition based on the economic event and applicable recognition requirements.
+**Accounting allowance** — credit-loss recognition under the applicable financial-reporting framework.
 
 ---
 
-**Cash movement** — settlement or transfer of cash; its date can differ from the accounting recognition date.
+**Prudential provision** — an amount required or recognised under supervisory rules; interaction does not make the two calculations identical.
+
+### Permanent trap
+
+Assuming that “expected loss”, “provision”, “stage”, or “allowance” carries identical mechanics across jurisdictions.
 
 ### Jurisdiction variants
 
-**No delta.** Specific recognition rules vary by accounting framework, but the distinction between accrual recognition and cash timing is universal.
+| Jurisdiction | Real delta |
+| :--- | :--- |
+| IN | RBI deferred Ind AS for scheduled commercial banks until further notice. Bank asset classification and provisioning follow RBI directions, including the 2025 IRACP Directions. |
+| UK | Entities applying UK-adopted IFRS 9 use the IFRS 9 expected-credit-loss model. |
+| EU | Accounts within EU-adopted IFRS scope use adopted IFRS 9 impairment requirements. |
+| US | ASC Topic 326 uses the CECL objective for applicable assets; no single estimation technique is universally mandated. |
 
 <Recall
-  q="Can income be recognised before cash is received?"
-  a="Yes, where the applicable accrual accounting requirements are satisfied."
+  q="Is a credit-loss allowance cash set aside?"
+  a="No. It is a recognised valuation or provisioning amount, not a segregated cash balance."
 />
 
 <Recall
-  q="Where are actual cash movements made visible?"
-  a="In the cash-flow statement and the resulting cash balance."
+  q="Why can two frameworks use “expected credit loss” language but produce different numbers?"
+  a="Their recognition triggers, horizons, measurement rules, and discounting conventions can differ."
+/>
+
+<Recall
+  q="Should IFRS 9 staging be assumed for an Indian scheduled commercial bank?"
+  a="No. RBI deferred Ind AS for scheduled commercial banks, so RBI bank provisioning directions govern instead."
 />

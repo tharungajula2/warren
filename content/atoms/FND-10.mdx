@@ -1,117 +1,112 @@
 ---
 id: FND-10
-title: Other Comprehensive Income
-type: concept
+title: How to Read a Bank Balance Sheet
+type: procedure
 domain: foundation
 subdomain: financial-statements
 one_screen: >-
-  **Other comprehensive income (OCI) is a reporting route for specified
-  recognised income and expense that the applicable accounting standard does not
-  put in current profit or loss.** It is not "less real" income, and it is not a
-  discretionary parking place for inconvenient volatility.
+  A bank balance sheet should be read as a funded risk position, not as a list
+  of totals. The efficient sequence is **assets → funding → loss absorption →
+  quality → maturity → concentration**, because each step asks what the
+  preceding number actually means.
 prerequisites:
+  - FND-01
+  - FND-02
+  - FND-05
   - FND-06
+  - FND-08
+  - FND-09
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
-perishable: true
-as_of: '2026-08-28'
+  - universal
+perishable: false
+as_of: null
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'IFRS Foundation, *IAS 1 Presentation of Financial Statements*'
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/
+  - label: >-
+      IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised
+      March 2018.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind
-      AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019
-    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Reserve Bank of India, *Classification, Valuation and Operation of
-      Investment Portfolio of Commercial Banks Directions, 2023*,
-      RBI/DOR/2023-24/104, DOR.MRG.36/21.04.141/2023-24, September 12, 2023,
-      updated April 1, 2025
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12534&Mode=0'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Financial Accounting Standards Board, *Accounting Standards Codification
-      Topic 220 — Comprehensive Income*, referenced in ASU 2018-02
-    url: >-
-      https://www.fasb.org/page/document?pdf=ASU+2018-02.pdf&title=ACCOUNTING+STANDARDS+UPDATE+2018-02%E2%80%94INCOME+STATEMENT%E2%80%94REPORTING+COMPREHENSIVE+INCOME+%28TOPIC+220%29%3A+RECLASSIFICATION+OF+CERTAIN+TAX+EFFECTS+FROM+ACCUMULATED+OTHER+COMPREHENSIVE+INCOME
-    accessed: 'August 28, 2026'
+      Basel Committee on Banking Supervision, *Basel Framework — CAP: Definition
+      of capital*, current framework (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-Under IFRS presentation requirements, **other comprehensive income** comprises items of income and expense that other IFRS requirements require or permit to be recognised outside profit or loss. Profit or loss and OCI together contribute to **total comprehensive income**. Accumulated effects generally sit within equity, subject to the classifications and reclassification rules applicable to each item.
+### Core mechanism
 
-Why does OCI exist? Some accounting standards distinguish between changes that belong in current profit or loss and specified changes whose presentation is outside current profit or loss. The classification can preserve information about different sources of performance and measurement without pretending that the recognised change did not occur.
+| Pass | Question | What to inspect |
+| :--- | :--- | :--- |
+| 1. Assets | What does the bank own or have claims on? | Cash, securities, loans, other assets |
+| 2. Funding | Who finances those assets and on what terms? | Deposits, wholesale funding, other liabilities |
+| 3. Loss absorption | What residual / eligible capital sits beneath liabilities? | Equity and prudential-capital disclosures |
+| 4. Quality | How reliable are the carrying values and cash flows? | Credit quality, impairment, valuation |
+| 5. Maturity | When do assets turn into cash versus liabilities fall due? | Contractual and behavioural maturity |
+| 6. Concentration | What could fail together? | Counterparty, sector, geography, product, funding source |
 
-The key discipline is that management cannot simply decide that an unpleasant loss belongs in OCI. The relevant accounting standard determines whether an item goes to profit or loss, OCI, or directly to equity and whether a later **reclassification** into profit or loss occurs. Different instruments and elections can therefore produce different treatments.
+Equal totals can conceal radically different risk. Two banks with the same loan balance can have different borrower quality; two banks with the same deposits can have different deposit stability; two banks with the same equity can have different risk intensity.
 
-Indian scheduled commercial banks require particular care. They are not on Ind AS 109. Under RBI's investment-portfolio directions, valuation movements on the bank's **Available for Sale (AFS)** portfolio are dealt with through an **AFS-Reserve** under RBI-prescribed mechanics; debt-instrument amounts can be recycled to profit and loss on derecognition, while other treatment depends on the instrument. RBI does not thereby convert scheduled commercial banks into Ind AS 109 reporters.
-
-US GAAP also contains other comprehensive income and accumulated other comprehensive income, but the detailed eligible items and recycling mechanics come from US GAAP rather than IFRS.
+### Flow
 
 ```text
-Recognised income / expense
-          |
-          v
-+--------------------------+
-| Applicable standard asks |
-| where it is presented    |
-+--------------------------+
-      |                |
-      v                v
-+-------------+   +-------------+
-| Profit or   |   | OCI         |
-| loss        |   | if required |
-+-------------+   +-------------+
-                       |
-                       v
-                +-------------+
-                | Equity /    |
-                | accumulated |
-                | OCI effects |
-                +-------------+
+Assets
+    ↓
+Funding
+    ↓
+Equity / capital
+    ↓
+Quality
+    ↓
+Maturity
+    ↓
+Concentration
+    ↓
+Economic interpretation
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-01 to FND-09 accounting and banking mechanics
+This:       Integrated balance-sheet reading procedure
+Downstream: Credit risk · ALM · Liquidity · Capital · Stress testing
 ```
 
 ### Permanent rule
 
-An item belongs in OCI only because the applicable accounting framework puts it there; management preference cannot create OCI eligibility.
+Never infer resilience from a balance-sheet total without reading composition, quality, timing, and concentration.
 
-### Permanent trap
+### Never confuse [Book equity] and [Regulatory capital]
 
-Calling every valuation change recorded outside a bank's profit and loss account "OCI", including the RBI AFS-Reserve of an Indian scheduled commercial bank.
-
-### Never confuse
-
-**OCI** — an accounting-framework category for specified recognised income and expense outside current profit or loss.
+**Book equity** — accounting residual.
 
 ---
 
-**AFS-Reserve under RBI bank directions** — an RBI-prescribed reserve mechanism for relevant bank investment valuation changes; it should not be relabelled automatically as Ind AS 109 OCI.
+**Regulatory capital** — prudentially eligible capital after regulatory definitions and adjustments.
+
+### Permanent trap
+
+Reading “large deposits” as “large liquidity”. Deposits are liabilities; the liquidity question concerns assets and funding behaviour under payment pressure.
 
 ### Jurisdiction variants
 
-**IN** — Scheduled commercial banks remain outside Ind AS implementation following RBI's deferment; RBI's investment-portfolio directions prescribe an AFS-Reserve for relevant AFS valuation movements. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; RBI/DOR/2023-24/104]
-
-**UK** — UK-adopted international accounting standards retain the IFRS architecture of profit or loss and OCI for entities within that reporting framework. [UK Endorsement Board, UK-adopted standards]
-
-**EU** — EU-adopted IFRS provides the applicable IFRS presentation architecture for entities and accounts within the IAS Regulation's scope. [Regulation (EC) No 1606/2002; Regulation (EU) 2023/1803]
-
-**US** — US GAAP contains comprehensive-income and accumulated-OCI requirements under Topic 220; detailed classifications are governed by US GAAP rather than IFRS. [FASB ASC Topic 220]
+**No delta.** Line-item names and disclosure templates differ, but this analytical sequence is jurisdiction-neutral.
 
 <Recall
-  q="Can management move an unwanted loss from profit or loss to OCI by choice?"
-  a="No; the applicable accounting standard determines presentation."
+  q="What should follow the first look at asset composition?"
+  a="How those assets are funded."
 />
 
 <Recall
-  q="Is an RBI AFS-Reserve proof that an Indian scheduled commercial bank applies Ind AS 109?"
-  a="No."
+  q="Why can two banks with identical total assets have different risk?"
+  a="Composition, quality, maturity, and concentration can differ."
+/>
+
+<Recall
+  q="Does book equity automatically equal regulatory capital?"
+  a="No. Prudential eligibility rules, deductions, and adjustments can make regulatory capital differ."
 />

@@ -64,12 +64,15 @@ EAD at default
 
 ### Where it sits
 
+```text
 Upstream:   Facility limit · Drawn balance · Undrawn amount · Behaviour · Default date
 This:       Convert relevant off-balance / undrawn amount → add to default exposure
 Downstream: Expected loss · LGD denominator · Regulatory RWA · Limit analysis
+```
 
 ### Formula
 
+```text
 Teaching decomposition:
 
 `CCF = additional pre-default drawing / undrawn amount at reference date`
@@ -77,6 +80,7 @@ Teaching decomposition:
 `EAD = current drawn amount + CCF × undrawn amount`
 
 CCF ↑ → EAD ↑, all else equal. This is not a universal regulatory formula; applicable frameworks prescribe treatment by exposure type and approach.
+```
 
 ### Permanent rule
 

@@ -1,15 +1,16 @@
 ---
 id: FND-17
-title: Variance and Volatility
+title: Quantiles and Tail Risk
 type: concept
 domain: foundation
 subdomain: risk-language
 one_screen: >-
-  **Variance measures average squared dispersion around a mean; standard
-  deviation is its square root.** In finance, volatility usually refers to a
-  standard-deviation measure over a stated horizon, so volatility is meaningless
-  without the variable, data frequency and time horizon.
+  A quantile is a threshold in a distribution associated with a cumulative
+  probability. Tail risk concerns the outcomes beyond an extreme threshold, so a
+  high quantile can locate the edge of a tail without telling you how severe the
+  tail becomes.
 prerequisites:
+  - FND-15
   - FND-16
 jurisdictions:
   - universal
@@ -22,90 +23,80 @@ reading_minutes: 3
 sources:
   - label: >-
       National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
-      of Statistical Methods — Measures of Scale*, Section 1.3.5.6
-    url: 'https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
-      of Statistical Methods*
-    url: 'https://www.itl.nist.gov/div898/handbook/'
-    accessed: 'August 28, 2026'
+      of Statistical Methods*, percentile and distributional-shape material
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-For a random variable \(X\) with mean \(\mu\), **variance** is:
+### Core mechanism
 
-\[
-Var(X)=E[(X-\mu)^2]
-\]
-
-It asks how far outcomes tend to lie from the mean, squares those deviations so positive and negative deviations do not cancel, and averages them according to the probability model.
-
-Variance has squared units. If \(X\) is measured in percentage points, variance is measured in squared percentage points. The **standard deviation** is:
-
-\[
-\sigma=\sqrt&#123;Var(X)&#125;
-\]
-
-Taking the square root restores the original units, which makes standard deviation easier to interpret alongside the variable itself. NIST makes this unit distinction explicitly when describing measures of scale.
-
-In financial usage, **volatility** usually means a standard deviation of price changes, returns, rates or another chosen variable over a defined interval and observation scheme. A daily volatility calculated from daily observations and an annual volatility are not automatically the same number. Conversion can require assumptions about how changes behave through time; multiplying by an arbitrary number of days is not a general solution.
-
-Variance also treats upside and downside deviations symmetrically. A return far above the mean increases variance just as a similarly distant return below the mean does. That can be useful for measuring dispersion but makes volatility different from a pure downside-loss measure.
-
-Finally, equal variance does not imply equal tail behaviour. Two distributions can have the same mean and variance yet place very different probability in extreme outcomes. Variance and volatility therefore summarise spread; they do not fully describe risk.
+Let L be a loss variable. A 99th-percentile loss quantile is a level at or below which approximately 99% of modelled loss outcomes fall under the stated convention, leaving approximately 1% beyond it in a continuous setting.
 
 ```text
-Outcomes X
-    |
-    v
-+----------------------+
-| Mean = mu            |
-+----------------------+
-    |
-    v
-+----------------------+
-| Deviations X - mu    |
-+----------------------+
-    |
-    v
-+----------------------+
-| Square and average   |
-| = variance           |
-+----------------------+
-    |
-    v
-+----------------------+
-| Square root          |
-| = standard deviation |
-+----------------------+
+Lower loss                                      Higher loss
+0 ----------------------------------------------------→
+|&lt;---------------- about 99% ----------------&gt;| tail |
+                                               ^
+                                               |
+                                         99% quantile
+```
+
+Two distributions can share the same 99% quantile while having radically different outcomes in the worst 1%. The quantile therefore answers **where the tail begins for the chosen probability level**, not **how bad every tail outcome is**.
+
+| Change | Effect on interpretation |
+| :--- | :--- |
+| Confidence level changes | Threshold changes |
+| Horizon changes | Distribution changes |
+| Model/data changes | Estimated threshold can change |
+| Tail shape changes | Severity beyond threshold can change even if quantile is similar |
+
+### Where it sits
+
+```text
+Upstream:   FND-15 Probability · FND-16 Dispersion
+This:       Percentile threshold · Tail region
+Downstream: Unexpected loss · VaR-style measures · Stress and capital concepts
 ```
 
 ### Permanent rule
 
-A volatility number is incomplete unless its underlying variable and measurement horizon are known.
+A quantile is a distribution threshold, never a hard cap on possible outcomes.
 
-### Permanent trap
+### Never confuse [Quantile] and [Maximum loss]
 
-Comparing a daily standard deviation directly with an annual standard deviation because both are labelled "volatility".
-
-### Never confuse
-
-**Variance** — expected squared dispersion around the mean, expressed in squared units.
+**Quantile** — threshold associated with a cumulative probability.
 
 ---
 
-**Standard deviation** — square root of variance, expressed in the original units and commonly called volatility in financial contexts.
+**Maximum loss** — greatest possible or defined loss under a separate assumption; it is not implied by a percentile.
+
+### Never confuse [High confidence] and [Low probability of any loss]
+
+**High-confidence quantile** — leaves a small probability of outcomes beyond the stated threshold.
+
+---
+
+**Probability of any loss** — probability that loss is greater than zero, which is a different question.
+
+### Permanent trap
+
+Saying a 99% loss quantile means “there is only a 1% chance of losing money”. It means roughly 1% of modelled outcomes exceed that particular loss threshold.
 
 ### Jurisdiction variants
 
-**No delta.** Variance and standard-deviation mathematics do not vary by jurisdiction.
+**No delta.** Quantiles and probability tails are mathematical concepts.
 
 <Recall
-  q="Why is standard deviation usually easier to interpret than variance?"
-  a="It is expressed in the same units as the underlying variable."
+  q="What lies beyond a 99% loss quantile in a continuous model?"
+  a="Approximately 1% of modelled outcomes."
 />
 
 <Recall
-  q="Does equal volatility guarantee equal tail risk?"
-  a="No."
+  q="Is the 99% quantile the maximum loss?"
+  a="No. Outcomes beyond the quantile remain possible and can be much more severe."
+/>
+
+<Recall
+  q="Why can two portfolios with the same quantile have different tail risk?"
+  a="Their loss distributions beyond the threshold can differ."
 />

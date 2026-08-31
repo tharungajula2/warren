@@ -1,17 +1,18 @@
 ---
 id: FND-09
-title: Provisions and Credit-Loss Allowances
-type: mechanism
+title: 'Profit, OCI and Equity'
+type: concept
 domain: foundation
 subdomain: financial-statements
 one_screen: >-
-  A credit-loss allowance recognises that the amount expected to be collected
-  from credit exposures may be less than their contractual amount. **The
-  economic idea is shared; the recognition and measurement rule is jurisdiction-
-  and reporting-framework-specific.**
+  Recognised gains and losses do not all have to travel through current profit
+  or loss. Accounting frameworks can require specified items to be presented in
+  **other comprehensive income (OCI)** or another reserve route, but that route
+  exists because the governing framework prescribes it—not because management
+  prefers less earnings volatility.
 prerequisites:
   - FND-06
-  - FND-08
+  - FND-07
 jurisdictions:
   - IN
   - UK
@@ -25,97 +26,104 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind
-      AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019
-    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks —
+      Classification, Valuation, and Operation of Investment Portfolio)
+      Directions, 2025*, RBI/DOR/2025-26/162,
+      DOR.MRG.REC.No.81/00-00-001/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning*, 2025 Directions as amended in 2026,
-      including RBI/2026-27/45, DOR.STR.REC.34/21-04-048/2026-27, April 29, 2026
-    url: 'https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0'
+      UK Endorsement Board, *UK-Adopted International Accounting Standards
+      (Consolidated)*, text at 1 January 2026 (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
+  - label: >-
+      European Union, Commission Regulation (EU) 2023/1803 adopting certain
+      international accounting standards, consolidated text in force.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Implementation of Indian Accounting Standards by
-      NBFCs and ARCs*, DOR(NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0'
-    accessed: 'August 28, 2026'
-  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*'
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/
-    accessed: 'August 28, 2026'
-  - label: >-
-      Board of Governors of the Federal Reserve System, *Frequently Asked
-      Questions on the Current Expected Credit Losses Methodology*, ASC Topic
-      326 / ASU 2016-13 guidance
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm
-    accessed: 'August 28, 2026'
+      IFRS Foundation, *IFRS 18 Presentation and Disclosure in Financial
+      Statements*, issued April 2024; effective for annual periods beginning on
+      or after 1 January 2027 and replacing IAS 1 from that date (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-A borrower can owe 100 contractually while the bank expects to recover less. Credit-loss accounting provides a mechanism for reflecting that deterioration before the final cash loss necessarily occurs. The resulting **allowance** is an accounting adjustment associated with expected credit losses; the related charge ordinarily affects profit or loss under the applicable framework.
+### Core mechanism
 
-The allowance must not be confused with cash placed in a separate account. Under US CECL, for example, the allowance for credit losses on financial assets measured at amortised cost is a **valuation account deducted from amortised cost** to present the amount expected to be collected. Under IFRS 9, expected credit losses are probability-weighted and the impairment model distinguishes 12-month and lifetime expected credit losses according to the applicable stage and conditions.
+| Route | Current-period effect | Where accumulation appears |
+| :--- | :--- | :--- |
+| Profit or loss | Included in current profit | Retained earnings after closing and distributions |
+| OCI under an applicable IFRS/US GAAP requirement | Outside current profit or loss | Accumulated within equity, subject to the framework |
+| Direct reserve/equity route under another framework | Depends on governing rule | Relevant reserve within equity |
 
-The Indian banking position requires special discipline. RBI deferred implementation of Ind AS for scheduled commercial banks in April 2019 **until further notice**. Their prudential asset classification and provisioning operate under RBI directions, not an assumption that Ind AS 109 applies to banks. Relevant NBFCs that are required to apply Ind AS have separate RBI guidance dealing explicitly with impairment allowances under **Ind AS 109**.
+Some OCI items are later **reclassified** (“recycled”) into profit or loss when the relevant standard requires it; others are not. The instrument and governing rule determine the treatment.
 
-This distinction matters operationally because "expected loss", "provision", "allowance", "stage" and "NPA" can belong to different rule systems. Similar economic concerns do not make the accounting mechanics interchangeable.
+India requires a naming discipline: the RBI **AFS-Reserve** used for commercial-bank investment valuation is a prescribed reserve mechanism. It should not automatically be relabelled “IFRS 9 OCI”.
+
+### Flow
 
 ```text
-Credit exposure
-      |
-      v
-+----------------------+
-| Estimate / determine |
-| loss under applicable|
-| framework            |
-+----------------------+
-      |
-      v
-+----------------------+
-| Allowance / provision|
-+----------------------+
-      |
-      v
-+----------------------+
-| Profit or loss effect|
-| + carrying-value /   |
-| regulatory treatment |
-+----------------------+
+Recognised gain / loss
+    ↓
+Applicable framework determines route
+    ├─→ Profit or loss
+    ├─→ OCI
+    └─→ Other prescribed reserve / equity route
+                 ↓
+           Equity changes
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-06 Statements · FND-07 Accrual
+This:       Profit route · OCI route · Equity accumulation
+Downstream: Balance-sheet analysis · Capital · Investment accounting
 ```
 
 ### Permanent rule
 
-A credit-loss allowance is a measurement or valuation mechanism, not a segregated pot of cash.
+Management preference cannot create OCI eligibility. Presentation follows the applicable accounting or regulatory framework.
 
-### Permanent trap
+### Never confuse [OCI] and [Any reserve outside P&L]
 
-Applying IFRS 9 staging and ECL rules to an Indian scheduled commercial bank merely because Ind AS 109 exists for other Indian financial entities.
-
-### Never confuse
-
-**Credit-loss allowance** — an accounting valuation adjustment reflecting credit losses under the applicable reporting framework.
+**OCI** — a defined financial-reporting category under frameworks that use it.
 
 ---
 
-**Regulatory provision** — an amount required by prudential rules; it may interact with accounting allowances but need not be calculated on the same basis.
+**Other reserve** — a separately prescribed equity route that may have different recognition and recycling mechanics.
+
+### Permanent trap
+
+Calling every valuation movement outside profit or loss “OCI”. That collapses distinct accounting and regulatory mechanisms into one label.
 
 ### Jurisdiction variants
 
-**IN** — RBI deferred Ind AS implementation for scheduled commercial banks until further notice; bank income recognition, asset classification and provisioning therefore operate under RBI prudential directions. Relevant Ind AS-applying NBFCs use Ind AS 109 subject to RBI regulatory guidance. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; RBI DOR(NBFC).CC.PD.No.109/22.10.106/2019-20; RBI Commercial Banks IRACP Directions]
+#### IN (RBI)
+RBI's 2025 commercial-bank investment directions prescribe an **AFS-Reserve** for qualifying AFS valuation gains and losses rather than routing those movements through profit or loss. Debt-instrument amounts are transferred to profit or loss on sale or maturity; designated equity treatment differs.
 
-**UK** — For entities reporting under UK-adopted IFRS, IFRS 9 contains the expected-credit-loss impairment model. [UK Endorsement Board, UK-adopted IFRS 9]
+#### UK
+UK-adopted international accounting standards use the IFRS architecture of profit or loss and OCI for entities applying that framework.
 
-**EU** — For reporting within the scope of EU-adopted IFRS, IFRS 9 is part of the EU-endorsed accounting framework. [Regulation (EU) 2023/1803]
+#### EU
+EU-adopted IFRS uses the same architecture for accounts within scope.
 
-**US** — ASC Topic 326 uses CECL for applicable financial assets; CECL estimates expected credit losses over the contractual term, considering specified historical, current and reasonable-and-supportable forecast information. [FASB ASU 2016-13; Federal Reserve CECL FAQ]
+#### US
+US GAAP contains comprehensive-income and accumulated-OCI requirements, but the qualifying items and reclassification rules come from US GAAP, not IFRS.
 
 <Recall
-  q="Is a provision a pile of cash reserved for future defaults?"
-  a="No; it is an accounting or prudential loss-recognition amount, depending on the framework."
+  q="Can management move an inconvenient loss to OCI by choice?"
+  a="No. The governing accounting framework determines whether an item enters OCI."
 />
 
 <Recall
-  q="Do Indian scheduled commercial banks apply Ind AS 109?"
-  a="No. RBI deferred Ind AS implementation for banks until further notice; RBI prudential provisioning norms apply."
+  q="Does every item outside profit or loss belong to OCI?"
+  a="No. Some items can go directly to equity or another framework-specific reserve instead."
+/>
+
+<Recall
+  q="What is the correct Indian bank label for relevant RBI AFS valuation movements?"
+  a="AFS-Reserve."
 />

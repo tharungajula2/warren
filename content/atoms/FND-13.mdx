@@ -5,10 +5,11 @@ type: mechanism
 domain: foundation
 subdomain: time-value
 one_screen: >-
-  The **effective interest rate (EIR)** is the single periodic rate that makes
-  the present value of the relevant contractual cash-flow stream equal to the
-  instrument's initial carrying amount under the stated methodology. It converts
-  price, interest, fees and timing into one internally consistent yield.
+  The effective interest rate (EIR) is the single rate that makes the present
+  value of a specified future cash-flow stream equal to a specified carrying
+  amount or price. It compresses amount, timing, interest, and qualifying fees
+  or costs into one internally consistent yield **for the cash-flow definition
+  being used**.
 prerequisites:
   - FND-11
   - FND-12
@@ -22,74 +23,91 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, effective
-      interest method and effective interest rate definitions
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html
+      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, definitions
+      of effective interest rate and effective interest method.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-A loan can contain more economics than its headline coupon. There may be an initial price different from principal, fees integral to the yield, transaction costs, instalment timing and a final repayment. The **effective interest rate** expresses those relevant cash flows as one rate that solves a present-value equation.
+### Core mechanism
 
-In simplified form, for an initial carrying amount \(P\) and future relevant cash flows \(CF_t\), EIR \(i\) solves:
 
-\[
-P=\sum_t\frac&#123;CF_t&#125;&#123;(1+i)^t&#125;
-\]
 
-This makes EIR an **internal rate of return** for the specified cash-flow definition.
-
-Suppose 100 is advanced and the only contractual receipt is 110 one year later. The EIR is 10%. If the initial amount and contractual cash flows differ because of qualifying fees or transaction costs, the EIR can differ from the stated coupon even when contractual interest payments use that coupon.
-
-Under IFRS 9, the effective interest method uses an EIR determined through the standard's specified estimated cash flows and incorporates fees, transaction costs and other premiums or discounts that are integral to that rate. The accounting definition controls which items enter the calculation. The general mathematical concept nevertheless remains the same: solve for the rate that equates a present value to the relevant carrying amount.
-
-EIR is therefore not merely "the interest rate printed on the contract". Nor is it automatically the market yield observed today. Once an accounting EIR has been established, the relevant framework determines when it remains fixed and when special rules apply.
+### Formula
 
 ```text
-+----------------------+
-| Initial carrying     |
-| amount               |
-+----------------------+
-          ^
-          |
-          | find rate i such that
-          |
-+----------------------+
-| PV of relevant       |
-| future cash flows    |
-| discounted at i      |
-+----------------------+
+P = sum of [CF_t / (1 + i)^t] across all t
+P = specified initial carrying amount
+CF_t = relevant cash flow at time t
+i = effective interest rate per period
+t = cash-flow timing in consistent periods
 
-PV = initial amount
-=&gt; i = effective interest rate
+Solve for i.
+
+The cash-flow definition matters: changing which fees, premiums, discounts, or transaction costs belong in CF_t can change the solved rate.
+```
+
+### Flow
+
+```text
+Define initial amount
+    ↓
+Define included future cash flows
+    ↓
+Place each on timeline
+    ↓
+Solve rate making PV = initial amount
+    ↓
+Effective interest rate
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-11 PV · FND-12 Rate conventions
+This:       Single yield solving a PV equality
+Downstream: Interest recognition · Discounted cash shortfalls · Valuation
 ```
 
 ### Permanent rule
 
-EIR is defined by a present-value equality across a specified set of cash flows; changing the cash-flow definition can change the rate.
+EIR has meaning only with a specified cash-flow definition. Change the included cash flows or timing and the solved rate can change.
 
-### Permanent trap
+### Never confuse [Coupon rate] and [Effective interest rate]
 
-Using the contractual coupon as the EIR without checking fees, premiums, discounts, transaction costs and timing.
-
-### Never confuse
-
-**Coupon rate** — the contractual rate or formula used to determine stated interest payments.
+**Coupon rate** — contractual rate or formula used to determine stated interest payments.
 
 ---
 
-**Effective interest rate** — the yield solving the relevant present-value equation; it can differ from the coupon.
+**Effective interest rate** — the rate solving the relevant present-value equation.
+
+### Never confuse [Effective interest rate] and [Current market yield]
+
+**Effective interest rate** — rate defined by the specified initial carrying amount and cash flows.
+
+---
+
+**Current market yield** — return implied by today's market price and expectations; it can move after origination.
+
+### Permanent trap
+
+Using the contractual coupon as EIR without checking price, fees, transaction costs, premiums, discounts, or payment timing.
 
 ### Jurisdiction variants
 
-**No delta.** The rate-solving mathematics is universal; accounting frameworks determine the precise cash flows included and subsequent accounting use.
+**No delta.** The rate-solving mathematics is universal. Accounting frameworks determine the exact cash-flow set and how a resulting EIR is subsequently used.
 
 <Recall
-  q="What equation defines an effective interest rate?"
-  a="It is the rate that equates the present value of the relevant future cash flows to the specified initial carrying amount."
+  q="What equation defines EIR?"
+  a="PV of the specified future cash flows equals the specified initial amount."
 />
 
 <Recall
-  q="Must EIR equal the contractual coupon?"
-  a="No."
+  q="Must EIR equal coupon?"
+  a="No. Included fees, price differences, costs, and timing can make the solved EIR differ."
+/>
+
+<Recall
+  q="Why can two EIR calculations differ for the same contract?"
+  a="They may use different included cash flows or timing conventions."
 />

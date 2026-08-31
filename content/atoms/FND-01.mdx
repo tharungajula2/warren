@@ -5,9 +5,10 @@ type: concept
 domain: foundation
 subdomain: bank-mechanics
 one_screen: >-
-  A bank is a balance sheet before it is a building, app, or lender. It owns
-  assets, owes liabilities, and has equity equal to the residual difference:
-  **Assets = Liabilities + Equity**.
+  A bank is first an accounting entity with resources, obligations, and a
+  residual claim. The identity **Assets = Liabilities + Equity** is the frame
+  through which every later banking concept—lending, deposits, profit, capital,
+  liquidity, and loss—must be read.
 prerequisites: []
 jurisdictions:
   - universal
@@ -19,76 +20,87 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters
-      4–5
-    url: >-
-      https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/
-    accessed: 'August 28, 2026'
-  - label: >-
-      Basel Committee on Banking Supervision, *Basel III: international
-      regulatory framework for banks*
+      IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised
+      March 2018, Chapters 3–5 (
     url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-A **balance sheet** is a snapshot of financial position at a particular date. An **asset** is a present economic resource controlled by an entity as a result of past events; a **liability** is a present obligation to transfer an economic resource; **equity** is the residual interest after liabilities are deducted from assets. Those definitions make the basic accounting identity unavoidable rather than optional.
+### Core mechanism
 
-For a bank, the labels can initially feel reversed. A loan made to a customer is normally an **asset of the bank** because the customer owes future payments to the bank. A customer deposit is normally a **liability of the bank** because the bank owes the depositor money and must honour valid withdrawals or payments. Cash, balances with central banks, securities and loans are common asset categories; deposits and wholesale borrowings are common liability categories. Equity sits beneath them as the residual claim.
+| Element | Meaning on the bank's balance sheet | Typical bank items |
+| :--- | :--- | :--- |
+| Assets | Economic resources or claims controlled by the bank | Cash, central-bank balances, securities, loans |
+| Liabilities | Present obligations of the bank | Customer deposits, wholesale borrowings, payables |
+| Equity | Residual after liabilities are deducted from assets | Share capital, retained earnings, reserves |
 
-Suppose a bank has assets of 110 and liabilities of 100. Its equity is 10. If an asset subsequently loses 4 in value and nothing else changes, assets become 106 and equity becomes 6. The loss does not disappear because it was non-cash; it reduces the residual available to absorb losses. This is the mechanical reason capital matters to a bank.
+A customer's loan is normally a **bank asset** because the customer owes the bank. A customer's deposit is normally a **bank liability** because the bank owes the customer. The label follows the reporting entity's perspective, not everyday language.
 
-The identity does **not** say that every asset is safe, every liability is payable immediately, or equity is a pile of cash. It only says that recognised resources and obligations must balance through the residual interest. Accounting recognition and measurement determine the amounts assigned to each item; prudential regulation may then make additional adjustments when determining regulatory capital.
+### Formula
 
 ```text
-+-----------------------+
-|        ASSETS         |
-| cash, securities,     |
-| loans, other claims   |
-+-----------------------+
-            |
-            | financed by
-            v
-+-----------------------+
-|      LIABILITIES      |
-| deposits, borrowings  |
-+-----------------------+
-            |
-            | plus residual
-            v
-+-----------------------+
-|        EQUITY         |
-| assets - liabilities  |
-+-----------------------+
-
 Assets = Liabilities + Equity
+Assets = recognised economic resources controlled by the bank
+Liabilities = present obligations of the bank
+Equity = residual interest after liabilities
+
+Equity = Assets - Liabilities
+Equity = residual amount after recognised liabilities are deducted from recognised assets
+
+If assets fall by 4 while liabilities are unchanged, equity falls by 4. Equity is not cash; it is the residual claim.
+```
+
+### Flow
+
+```text
+Economic event
+    ↓
+Recognition and measurement
+    ↓
+Asset / Liability amount
+    ↓
+Residual effect on Equity
+```
+
+### Where it sits
+
+```text
+Upstream:   None
+This:       Balance-sheet identity · Asset / liability perspective
+Downstream: Deposits · Loans · Earnings · Capital · Financial statements
 ```
 
 ### Permanent rule
 
-Every recognised balance-sheet amount must fit the identity **Assets = Liabilities + Equity**. A loss that reduces assets without reducing liabilities reduces equity.
+Read every item from the reporting bank's perspective. A customer's asset can be the bank's liability, and a customer's liability can be the bank's asset.
 
-### Permanent trap
+### Never confuse [Equity] and [Cash]
 
-Reading a customer's loan as the bank's liability because the bank "gave the money". The remaining repayment claim belongs to the bank, so the loan is the bank's asset.
-
-### Never confuse
-
-**Asset** — a recognised economic resource controlled by the bank.
+**Equity** — the residual interest after liabilities are deducted from assets.
 
 ---
 
-**Equity** — the residual after liabilities are deducted from assets; it is not another asset or a dedicated cash reserve.
+**Cash** — an asset available for payment; a bank can have substantial equity without holding the same amount as cash.
+
+### Permanent trap
+
+Treating a customer's deposit as a bank asset because the money is “at the bank”. The deposit is a claim the customer has against the bank, so it is normally the bank's liability.
 
 ### Jurisdiction variants
 
-**No delta.** The accounting identity and the asset-liability-equity relationship do not depend on jurisdiction.
+**No delta.** The balance-sheet identity and reporting-entity perspective do not change by banking regulator or jurisdiction.
 
 <Recall
   q="Why is a customer loan normally a bank asset?"
-  a="Because the customer owes contractual payments to the bank."
+  a="Because the borrower owes contractual payments to the bank."
 />
 
 <Recall
-  q="What absorbs a loss when assets fall but liabilities do not?"
-  a="Equity."
+  q="What happens to equity if assets fall while liabilities do not?"
+  a="Equity falls by the same amount."
+/>
+
+<Recall
+  q="Is equity a dedicated pool of cash?"
+  a="No. It is the residual accounting claim."
 />

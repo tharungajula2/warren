@@ -5,9 +5,10 @@ type: concept
 domain: foundation
 subdomain: time-value
 one_screen: >-
-  **Present value converts money at different dates into values at one common
-  date.** A discount factor is the multiplier that performs that conversion: for
-  one annual rate \(r\), the time-\(t\) factor is \(1/(1+r)^t\).
+  Present value puts cash flows occurring at different dates onto one valuation
+  date. A **discount factor** is the multiplier that translates a future amount
+  backward through time; the mathematics changes value for timing, not for
+  whether the cash flow will occur.
 prerequisites: []
 jurisdictions:
   - universal
@@ -19,80 +20,94 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix B, including
-      B5.5.44 on discounting expected credit losses
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html
+      IFRS Foundation, *IFRS 9 Financial Instruments*, application guidance on
+      effective interest and discounting; cited only as an applied use of
+      universal present-value mathematics.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-Money received now and the same nominal amount received later are not economically identical when a positive required return exists. Current money can be invested, while a future payment cannot be used until it arrives. **Present value (PV)** expresses a future cash flow in today's value using a **discount rate**.
+### Core mechanism
 
-For a cash flow \(CF_t\) received \(t\) annual periods from now at a constant annually compounded rate \(r\):
+For a future cash flow CF_t, annual discount rate r, and t annual periods:
 
-\[
-PV=\frac&#123;CF_t&#125;&#123;(1+r)^t&#125;
-\]
-
-The term
-
-\[
-DF_t=\frac&#123;1&#125;&#123;(1+r)^t&#125;
-\]
-
-is the **discount factor**. Thus \(PV=CF_t\times DF_t\).
-
-If 110 is certain to arrive one year from now and the relevant annual discount rate is 10%, its present value is \(110/1.10=100\). At the same rate, 110 due two years away is worth less today because it is discounted for two periods.
-
-Discounting is not synonymous with predicting whether payment occurs. A cash flow can first be probability-weighted for uncertainty and then discounted for timing. Probability changes the expected amount; discounting changes the value assigned to its timing. That distinction becomes essential in expected-loss calculations.
-
-The rate and cash-flow convention must match. Annual cash flows require a rate expressed consistently with annual periods. Monthly timing requires a compatible periodic or appropriately converted rate. Cash flows at the start versus end of a period also produce different results. A perfectly correct formula with mismatched timing assumptions still gives the wrong answer.
-
-Present value is mathematics rather than a banking-specific rule. Accounting standards, valuation frameworks and risk models decide **which** cash flows and **which** rate to use; the discounting operation itself does not change by jurisdiction.
+### Formula
 
 ```text
-Future cash flow CF_t
-          |
-          v
-+----------------------+
-| Discount factor      |
-| 1 / (1+r)^t          |
-+----------------------+
-          |
-          v
-+----------------------+
-| Present value        |
-| CF_t x discount      |
-| factor               |
-+----------------------+
+PV = CF_t / (1 + r)^t
+PV = present value
+CF_t = cash flow at future time t
+r = discount rate per stated period
+t = number of consistent periods
+
+DF_t = 1 / (1 + r)^t
+DF_t = discount factor to the valuation date
+
+PV = CF_t × DF_t
+PV = future cash flow translated to the valuation date
+
+If 110 is received in one year and r is 10% annually, PV is 100. The same 110 due later has a lower PV at the same positive rate.
+```
+
+### Flow
+
+```text
+Future cash flow
+    ↓
+Match rate to timing convention
+    ↓
+Apply discount factor
+    ↓
+Present value at common date
+```
+
+### Where it sits
+
+```text
+Upstream:   None
+This:       Time value · Present value · Discount factor
+Downstream: Compounding · EIR · NPV · Discounted loss measures
 ```
 
 ### Permanent rule
 
-Cash flows at different dates cannot be compared economically until timing has been put on a common basis.
+Cash flows at different dates are not economically comparable until their timing is put on a common basis.
 
-### Permanent trap
+### Never confuse [Discount rate] and [Discount factor]
 
-Discounting a monthly cash flow with an annual rate as though one month were one annual period.
-
-### Never confuse
-
-**Discount rate** — the rate used to translate value across time.
+**Discount rate** — the rate input used to translate value through time.
 
 ---
 
-**Discount factor** — the numerical multiplier produced from the rate and timing; the rate is an input, while the factor performs the multiplication.
+**Discount factor** — the numerical multiplier generated from the rate and timing.
+
+### Never confuse [Discounting] and [Probability weighting]
+
+**Discounting** — adjusts for timing.
+
+---
+
+**Probability weighting** — adjusts for uncertainty across outcomes.
+
+### Permanent trap
+
+Using an annual rate as though each monthly cash flow were one full annual period. Correct algebra with mismatched units still produces a wrong valuation.
 
 ### Jurisdiction variants
 
-**No delta.** Present-value mathematics does not change across jurisdictions.
+**No delta.** Present-value mathematics is universal; frameworks differ only in which cash flows and rate they instruct the user to apply.
 
 <Recall
-  q="What is the one-period discount factor at rate \(r\)?"
-  a="\(1/(1+r)\)."
+  q="What is the one-period discount factor at rate r?"
+  a="1/(1+r)."
 />
 
 <Recall
-  q="Does discounting by itself model default probability?"
-  a="No; discounting addresses timing, while probability addresses uncertainty."
+  q="Does discounting itself model default probability?"
+  a="No. Discounting adjusts value for timing; probability weighting addresses uncertainty."
+/>
+
+<Recall
+  q="What happens to PV when timing moves further out at a positive unchanged rate?"
+  a="PV falls."
 />

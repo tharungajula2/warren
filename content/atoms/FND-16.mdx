@@ -1,15 +1,17 @@
 ---
 id: FND-16
-title: Probability and Expected Value
+title: 'Variance, Standard Deviation and Volatility'
 type: concept
 domain: foundation
 subdomain: risk-language
 one_screen: >-
-  **Probability says how likely an outcome is; expected value combines each
-  possible outcome with its probability.** A 1% probability of losing 100 is not
-  a loss of 1%, but in a two-outcome example it contributes an expected loss of
-  1.
-prerequisites: []
+  Expected value describes the centre of a distribution; variance describes how
+  dispersed outcomes are around that centre. Standard deviation is the square
+  root of variance, and in finance **volatility** usually refers to a
+  standard-deviation measure whose meaning depends on the variable, observation
+  frequency, and horizon.
+prerequisites:
+  - FND-15
 jurisdictions:
   - universal
 perishable: false
@@ -21,83 +23,97 @@ reading_minutes: 2
 sources:
   - label: >-
       National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
-      of Statistical Methods*
-    url: 'https://www.itl.nist.gov/div898/handbook/'
-    accessed: 'August 28, 2026'
+      of Statistical Methods — Measures of Scale*, section 1.3.5.6 (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-A **probability** is a number between 0 and 1 representing the likelihood assigned to an event under a specified probability model. A probability of 0.01 corresponds to 1%; a probability of 1 corresponds to certainty within that model.
+### Core mechanism
 
-An **expected value** is a probability-weighted average of possible numerical outcomes. For a discrete random variable \(X\) with outcomes \(x_i\) and probabilities \(p_i\):
 
-\[
-E[X]=\sum_i p_i x_i
-\]
 
-Suppose a position loses 100 with probability 1% and loses zero with probability 99%. Expected loss is:
+### Formula
 
-\[
-0.01\times100+0.99\times0=1
-\]
+```text
+Var(X) = E[(X - mu)^2]
+Var(X) = variance of X
+X = random variable
+mu = mean of X
+E[ ] = expected value operator
 
-Nothing in that calculation predicts that a realised loss will equal 1. In an individual period, the simplified position loses either 0 or 100. The value 1 describes the probability-weighted mean across the modelled distribution or across repeated comparable situations.
+SD(X) = square root of Var(X)
+SD(X) = standard deviation of X
 
-That is why probability and expected loss must carry units correctly. Probability is dimensionless: 1%, 5%, 20%. Expected loss is measured in currency or another loss unit. Multiplying a probability by a loss amount can contribute to expected loss; the probability itself is never the amount of loss.
+Variance has squared units; standard deviation returns to the original units. In finance, “volatility” usually means a standard-deviation measure over a stated variable and horizon.
+```
 
-Expected value is also sensitive to the modelled outcome set and assigned probabilities. Missing a severe state or mis-estimating its probability changes the answer. A mathematically correct weighted average does not rescue incorrect assumptions.
-
-This distinction forms the base for credit-risk reasoning. Default probability describes likelihood. Exposure describes what is at risk. Loss severity describes what portion is lost if the event occurs. Combining such quantities can create an expected-loss measure, but each answers a different question.
+### Flow
 
 ```text
 Possible outcomes
-      |
-      v
-+----------------------+
-| Assign probability   |
-| p_i to each outcome  |
-+----------------------+
-      |
-      v
-+----------------------+
-| Multiply             |
-| p_i x outcome_i      |
-+----------------------+
-      |
-      v
-+----------------------+
-| Sum across outcomes  |
-+----------------------+
-      |
-      v
-   Expected value
+    ↓
+Expected value / mean
+    ↓
+Deviation from mean
+    ↓
+Square deviations
+    ↓
+Probability-weight / average
+    ↓
+Variance
+    ↓
+Square root
+    ↓
+Standard deviation
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-15 Probability and expected value
+This:       Dispersion · Standard deviation · Volatility
+Downstream: Quantiles · Tail risk · Market/risk models
 ```
 
 ### Permanent rule
 
-Probability is a likelihood; expected value is a probability-weighted amount.
+A volatility number is incomplete without the underlying variable and its time horizon.
 
-### Permanent trap
+### Never confuse [Variance] and [Standard deviation]
 
-Reporting "1% expected loss" when the calculation actually produced a 1% probability of a monetary loss event.
-
-### Never confuse
-
-**Probability** — likelihood of an event under the stated model.
+**Variance** — squared dispersion around the mean.
 
 ---
 
-**Expected value** — the probability-weighted average amount across possible outcomes.
+**Standard deviation** — square root of variance, restoring the variable's units.
+
+### Never confuse [Volatility] and [Downside loss]
+
+**Volatility** — dispersion in both directions under the chosen measure.
+
+---
+
+**Downside loss** — adverse outcome; high positive outcomes can raise volatility without being losses.
+
+### Permanent trap
+
+Comparing daily and annual volatility as if they were the same object merely because both are percentages.
 
 ### Jurisdiction variants
 
-**No delta.** Probability axioms and expected-value mathematics do not depend on jurisdiction.
+**No delta.** These statistical relationships do not vary by jurisdiction.
 
 <Recall
-  q="What is the expected loss from a 1% chance of losing 100 and otherwise losing zero?"
-  a="1."
+  q="Why is standard deviation easier to interpret than variance?"
+  a="It returns to the original units of the variable."
 />
 
 <Recall
-  q="Does an expected loss of 1 mean the realised loss will be 1?"
-  a="No."
+  q="Does volatility measure only downside?"
+  a="No. Standard deviation counts dispersion on both sides of the mean."
+/>
+
+<Recall
+  q="Can two distributions have equal volatility but different tail risk?"
+  a="Yes. The same dispersion measure can coexist with very different extreme-outcome shapes."
 />

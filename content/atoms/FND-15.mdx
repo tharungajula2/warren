@@ -1,16 +1,15 @@
 ---
 id: FND-15
-title: 'Exposure: What Is Actually at Risk'
+title: Probability and Expected Value
 type: concept
 domain: foundation
 subdomain: risk-language
 one_screen: >-
-  **Exposure is the amount or position whose value can be affected by a risk
-  event; it is not the loss itself.** The relevant exposure may include more
-  than today's booked principal because commitments, accrued amounts,
-  derivatives or future drawings can also be at risk.
-prerequisites:
-  - FND-01
+  Probability describes likelihood; expected value converts a set of possible
+  numerical outcomes into their probability-weighted average. An expected value
+  is a property of a modelled distribution—not a promise that the next realised
+  outcome will equal that average.
+prerequisites: []
 jurisdictions:
   - universal
 perishable: false
@@ -21,73 +20,86 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework — Credit Risk*,
-      consolidated framework
-    url: 'https://www.bis.org/basel_framework/'
-    accessed: 'August 28, 2026'
+      National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook
+      of Statistical Methods*, probability and statistical foundations
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-For a simple fully drawn loan, the first approximation to **credit exposure** is often the amount currently owed. If 80 of principal remains outstanding, 80 is an obvious starting point for asking what is exposed to borrower default.
+### Core mechanism
 
-But exposure and loss are different quantities. If the bank is exposed to 80 and ultimately recovers 60, the realised loss is 20, not 80. Collateral, guarantees, repayments and recoveries can reduce loss relative to exposure. Conversely, a facility can contain an undrawn amount that may be drawn before default, causing the exposure at the risk event to exceed today's drawn balance.
 
-The same distinction extends beyond loans. A derivative can create exposure when its replacement value becomes positive to the bank. A security position creates exposure to market-value changes. A foreign-currency position creates exposure to exchange-rate movements. Operational processes can create exposure to losses even without a conventional financial claim. "Exposure" therefore needs both a **risk type** and a **measurement date or horizon**.
 
-Practitioners should ask: exposed to **what event**, over **what horizon**, measured using **which amount**, and after **which recognised risk mitigants**? Without those qualifiers, an exposure number can look precise while referring to different economic concepts.
-
-Later credit-risk measures may distinguish current exposure, exposure at default, committed amounts and conversion of undrawn commitments. The foundational discipline comes first: the amount at risk must be identified before probability or severity can be calculated.
+### Formula
 
 ```text
-+----------------------+
-| Contract / position  |
-+----------------------+
-          |
-          v
-+----------------------+
-| What risk event?     |
-+----------------------+
-          |
-          v
-+----------------------+
-| What amount is       |
-| exposed at that time?|
-+----------------------+
-          |
-          v
-+----------------------+
-| What is recovered?   |
-+----------------------+
-          |
-          v
-       Loss
+E[X] = sum of (p_i × x_i) across all outcomes i
+E[X] = expected value of X
+p_i = probability assigned to outcome i
+x_i = numerical value of outcome i
+
+0 &lt;= p_i &lt;= 1
+p_i = a valid probability
+
+sum of p_i across all mutually exclusive exhaustive outcomes = 1
+1 = total probability mass
+
+Expected value is a probability-weighted mean, not a promise that the realised outcome will equal the mean.
+```
+
+### Flow
+
+```text
+Define possible outcomes
+    ↓
+Assign probabilities
+    ↓
+Multiply each outcome by its probability
+    ↓
+Sum weighted outcomes
+    ↓
+Expected value
+```
+
+### Where it sits
+
+```text
+Upstream:   None
+This:       Probability · Probability-weighted average
+Downstream: Variance · Quantiles · Expected loss · Scenario weighting
 ```
 
 ### Permanent rule
 
-Exposure is an input to loss measurement, not a synonym for loss.
+An expected value summarises a distribution. It does not identify which outcome will occur next.
 
-### Permanent trap
+### Never confuse [Probability] and [Expected amount]
 
-Using today's outstanding principal as exposure for an undrawn or revolving facility without asking whether further drawings can occur before default.
-
-### Never confuse
-
-**Exposure** — the amount or position subject to adverse change from a specified risk.
+**Probability** — likelihood assigned to an event.
 
 ---
 
-**Loss** — the adverse economic outcome after the risk event and relevant recoveries or offsets; exposure can exist without an equal loss.
+**Expected amount** — probability-weighted numerical outcome.
+
+### Permanent trap
+
+Reading a 1% chance of losing 100 as “the loss is 1%”. Likelihood and loss amount have different units and answer different questions.
 
 ### Jurisdiction variants
 
-**No delta.** Regulatory definitions of particular exposure measures can differ, but the conceptual distinction between amount exposed and realised loss does not.
+**No delta.** Probability and expected-value mathematics are universal.
 
 <Recall
-  q="If exposure is 80 and recovery is 60, must loss equal 80?"
-  a="No; in the simple example the loss is 20."
+  q="What is the expected loss from a 1% chance of losing 100 and otherwise losing zero?"
+  a="1."
 />
 
 <Recall
-  q="Why can an undrawn facility still create credit exposure?"
-  a="The borrower may draw funds before the relevant default event."
+  q="Does expected loss of 1 mean the next realised loss will be 1?"
+  a="No. Expected value is a probability-weighted mean, not a forecast of the next realised outcome."
+/>
+
+<Recall
+  q="What must probabilities across an exhaustive set of mutually exclusive states sum to?"
+  a="1."
 />

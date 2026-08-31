@@ -35,8 +35,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "AML-01.mdx",
-      "initialX": 418.7,
-      "initialY": -26.1
+      "initialX": 421,
+      "initialY": 0.6
     },
     "AML-02": {
       "id": "AML-02",
@@ -75,8 +75,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "AML-02.mdx",
-      "initialX": 366.7,
-      "initialY": 2.7
+      "initialX": 362.7,
+      "initialY": 9.5
     },
     "AML-03": {
       "id": "AML-03",
@@ -115,8 +115,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "AML-03.mdx",
-      "initialX": 417.6,
-      "initialY": 41.4
+      "initialX": 435.7,
+      "initialY": 14.3
     },
     "AML-04": {
       "id": "AML-04",
@@ -153,8 +153,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "AML-04.mdx",
-      "initialX": 390.2,
-      "initialY": -5.6
+      "initialX": 441.8,
+      "initialY": -21.9
     },
     "AML-05": {
       "id": "AML-05",
@@ -194,8 +194,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "AML-05.mdx",
-      "initialX": 451.8,
-      "initialY": 25.4
+      "initialX": 495.2,
+      "initialY": 0.3
     },
     "AML-06": {
       "id": "AML-06",
@@ -235,8 +235,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "AML-06.mdx",
-      "initialX": 489.2,
-      "initialY": -14.9
+      "initialX": 469.7,
+      "initialY": -37.3
     },
     "AML-07": {
       "id": "AML-07",
@@ -275,8 +275,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "AML-07.mdx",
-      "initialX": 441.1,
-      "initialY": -16.5
+      "initialX": 395.3,
+      "initialY": -19.4
     },
     "AML-08": {
       "id": "AML-08",
@@ -315,8 +315,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "AML-08.mdx",
-      "initialX": 453,
-      "initialY": -39.4
+      "initialX": 415.8,
+      "initialY": -21.5
     },
     "AML-09": {
       "id": "AML-09",
@@ -356,8 +356,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "AML-09.mdx",
-      "initialX": 431.9,
-      "initialY": 10.3
+      "initialX": 469.4,
+      "initialY": 12.9
     },
     "AML-10": {
       "id": "AML-10",
@@ -396,8 +396,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "AML-10.mdx",
-      "initialX": 362.3,
-      "initialY": 22.7
+      "initialX": 403.8,
+      "initialY": 30.6
     },
     "AML-11": {
       "id": "AML-11",
@@ -436,8 +436,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "AML-11.mdx",
-      "initialX": 479.6,
-      "initialY": 29.5
+      "initialX": 440.6,
+      "initialY": 50
     },
     "AML-12": {
       "id": "AML-12",
@@ -476,8 +476,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "AML-12.mdx",
-      "initialX": 411.9,
-      "initialY": 20.9
+      "initialX": 374.8,
+      "initialY": 29.8
     },
     "AML-13": {
       "id": "AML-13",
@@ -516,8 +516,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "AML-13.mdx",
-      "initialX": 415.4,
-      "initialY": -6
+      "initialX": 394.9,
+      "initialY": 7.1
     },
     "AML-14": {
       "id": "AML-14",
@@ -556,8 +556,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "AML-14.mdx",
-      "initialX": 386.6,
-      "initialY": 34.3
+      "initialX": 463,
+      "initialY": -11.1
     },
     "AML-15": {
       "id": "AML-15",
@@ -596,8 +596,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "AML-15.mdx",
-      "initialX": 451.3,
-      "initialY": 47.1
+      "initialX": 428,
+      "initialY": 35.1
     },
     "AML-16": {
       "id": "AML-16",
@@ -636,8 +636,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "AML-16.mdx",
-      "initialX": 497.2,
-      "initialY": 9.8
+      "initialX": 491.8,
+      "initialY": 23.6
     },
     "AML-17": {
       "id": "AML-17",
@@ -677,8 +677,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "AML-17.mdx",
-      "initialX": 350.7,
-      "initialY": -7.2
+      "initialX": 346,
+      "initialY": -2.1
     },
     "AML-18": {
       "id": "AML-18",
@@ -722,8 +722,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "AML-18.mdx",
-      "initialX": 458.6,
-      "initialY": 4.5
+      "initialX": 475.2,
+      "initialY": 43.4
     },
     "BA-01": {
       "id": "BA-01",
@@ -760,8 +760,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-01.mdx",
-      "initialX": 417.1,
-      "initialY": 198.1
+      "initialX": 412.3,
+      "initialY": 200.9
     },
     "BA-02": {
       "id": "BA-02",
@@ -798,8 +798,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-02.mdx",
-      "initialX": 335.7,
-      "initialY": 121
+      "initialX": 334.8,
+      "initialY": 110
     },
     "BA-03": {
       "id": "BA-03",
@@ -836,8 +836,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-03.mdx",
-      "initialX": 329.6,
-      "initialY": 150.2
+      "initialX": 339.5,
+      "initialY": 168.8
     },
     "BA-04": {
       "id": "BA-04",
@@ -874,8 +874,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-04.mdx",
-      "initialX": 379.2,
-      "initialY": 115.7
+      "initialX": 388.4,
+      "initialY": 117.2
     },
     "BA-05": {
       "id": "BA-05",
@@ -909,8 +909,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-05.mdx",
-      "initialX": 434.3,
-      "initialY": 137.4
+      "initialX": 452.3,
+      "initialY": 144.7
     },
     "BA-06": {
       "id": "BA-06",
@@ -947,8 +947,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-06.mdx",
-      "initialX": 407.4,
-      "initialY": 122.2
+      "initialX": 429.8,
+      "initialY": 124.3
     },
     "BA-07": {
       "id": "BA-07",
@@ -980,8 +980,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-07.mdx",
-      "initialX": 312.8,
-      "initialY": 114.6
+      "initialX": 303.9,
+      "initialY": 119.4
     },
     "BA-08": {
       "id": "BA-08",
@@ -1016,8 +1016,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-08.mdx",
-      "initialX": 407.1,
-      "initialY": 175.8
+      "initialX": 405.4,
+      "initialY": 176.4
     },
     "BA-09": {
       "id": "BA-09",
@@ -1051,8 +1051,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-09.mdx",
-      "initialX": 404.9,
-      "initialY": 152.5
+      "initialX": 428.3,
+      "initialY": 146.5
     },
     "BA-10": {
       "id": "BA-10",
@@ -1086,8 +1086,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-10.mdx",
-      "initialX": 363,
-      "initialY": 186.6
+      "initialX": 371.3,
+      "initialY": 161.3
     },
     "BA-11": {
       "id": "BA-11",
@@ -1121,8 +1121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-11.mdx",
-      "initialX": 455,
-      "initialY": 197.7
+      "initialX": 454,
+      "initialY": 202.4
     },
     "BA-12": {
       "id": "BA-12",
@@ -1156,8 +1156,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-12.mdx",
-      "initialX": 346.5,
-      "initialY": 167.5
+      "initialX": 374.9,
+      "initialY": 181.4
     },
     "BA-13": {
       "id": "BA-13",
@@ -1197,8 +1197,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-13.mdx",
-      "initialX": 357.9,
-      "initialY": 115.8
+      "initialX": 367,
+      "initialY": 122.9
     },
     "BA-14": {
       "id": "BA-14",
@@ -1237,8 +1237,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "BA-14.mdx",
-      "initialX": 304,
-      "initialY": 137.4
+      "initialX": 313.6,
+      "initialY": 148.5
     },
     "BA-15": {
       "id": "BA-15",
@@ -1272,8 +1272,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-15.mdx",
-      "initialX": 363.6,
-      "initialY": 144.2
+      "initialX": 355.9,
+      "initialY": 146.4
     },
     "BA-16": {
       "id": "BA-16",
@@ -1307,8 +1307,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-16.mdx",
-      "initialX": 428.4,
-      "initialY": 158.8
+      "initialX": 420,
+      "initialY": 162
     },
     "BA-17": {
       "id": "BA-17",
@@ -1348,8 +1348,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "BA-17.mdx",
-      "initialX": 389,
-      "initialY": 200.4
+      "initialX": 385.4,
+      "initialY": 202
     },
     "BA-18": {
       "id": "BA-18",
@@ -1383,8 +1383,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "BA-18.mdx",
-      "initialX": 443.1,
-      "initialY": 181.3
+      "initialX": 394.6,
+      "initialY": 143.5
     },
     "BA-19": {
       "id": "BA-19",
@@ -1418,8 +1418,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "BA-19.mdx",
-      "initialX": 459.3,
-      "initialY": 134.7
+      "initialX": 444.5,
+      "initialY": 177.6
     },
     "BA-20": {
       "id": "BA-20",
@@ -1454,8 +1454,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-20.mdx",
-      "initialX": 466,
-      "initialY": 166.3
+      "initialX": 471,
+      "initialY": 176.6
     },
     "BA-21": {
       "id": "BA-21",
@@ -1489,8 +1489,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-21.mdx",
-      "initialX": 381.4,
-      "initialY": 167.2
+      "initialX": 332.6,
+      "initialY": 133.2
     },
     "BA-22": {
       "id": "BA-22",
@@ -1525,8 +1525,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-22.mdx",
-      "initialX": 431.3,
-      "initialY": 213.5
+      "initialX": 429.8,
+      "initialY": 212.5
     },
     "CAP-01": {
       "id": "CAP-01",
@@ -1568,8 +1568,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 282.1,
-      "initialY": 237.8
+      "initialX": 281,
+      "initialY": 234.1
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -1608,8 +1608,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 235.1,
-      "initialY": 207.1
+      "initialX": 232,
+      "initialY": 206.3
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -1649,8 +1649,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 228.2,
-      "initialY": 255.9
+      "initialX": 223.3,
+      "initialY": 254
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -1689,8 +1689,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 255.4,
-      "initialY": 320.5
+      "initialX": 250.6,
+      "initialY": 308
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -1729,8 +1729,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 255.2,
-      "initialY": 253
+      "initialX": 253,
+      "initialY": 246.5
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -1777,8 +1777,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 307.7,
-      "initialY": 345.1
+      "initialX": 301.7,
+      "initialY": 344.5
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -1825,8 +1825,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 354.2,
-      "initialY": 373.6
+      "initialX": 345.2,
+      "initialY": 379.4
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -1874,8 +1874,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 288.3,
-      "initialY": 364.1
+      "initialX": 279.6,
+      "initialY": 357.4
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -1914,8 +1914,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 275.9,
-      "initialY": 304.5
+      "initialX": 271.6,
+      "initialY": 294.6
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -1959,8 +1959,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 325.7,
-      "initialY": 255.8
+      "initialX": 329.8,
+      "initialY": 258.6
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -2005,8 +2005,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 340.3,
-      "initialY": 307.5
+      "initialX": 341.9,
+      "initialY": 307.1
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -2054,8 +2054,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 303.1,
-      "initialY": 254.2
+      "initialX": 305.4,
+      "initialY": 252.8
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -2102,8 +2102,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 253.8,
-      "initialY": 222.1
+      "initialX": 253.6,
+      "initialY": 220
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -2150,8 +2150,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 220.7,
-      "initialY": 275.6
+      "initialX": 227.6,
+      "initialY": 277.8
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -2193,8 +2193,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 217.8,
-      "initialY": 225.9
+      "initialX": 216.1,
+      "initialY": 226.9
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -2243,8 +2243,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 245.4,
-      "initialY": 278.8
+      "initialX": 249.6,
+      "initialY": 275.8
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -2287,8 +2287,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 278.9,
-      "initialY": 264.8
+      "initialX": 282.2,
+      "initialY": 261
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -2327,8 +2327,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 256.6,
-      "initialY": 295.7
+      "initialX": 268.8,
+      "initialY": 318.6
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -2367,8 +2367,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 322.7,
-      "initialY": 287.8
+      "initialX": 326.4,
+      "initialY": 289.3
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -2407,8 +2407,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 335.7,
-      "initialY": 360.2
+      "initialX": 332.4,
+      "initialY": 361.9
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -2448,8 +2448,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 287.7,
-      "initialY": 284.6
+      "initialX": 289,
+      "initialY": 283.1
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -2488,8 +2488,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 341.7,
-      "initialY": 335.6
+      "initialX": 339.1,
+      "initialY": 337.3
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -2528,8 +2528,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 353.8,
-      "initialY": 281.7
+      "initialX": 359.2,
+      "initialY": 285.7
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -2568,8 +2568,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 382.9,
-      "initialY": 323.7
+      "initialX": 378.2,
+      "initialY": 335.7
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -2608,8 +2608,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 362.7,
-      "initialY": 304.7
+      "initialX": 367.1,
+      "initialY": 309.7
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -2651,8 +2651,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 299.2,
-      "initialY": 306.5
+      "initialX": 304.6,
+      "initialY": 302
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -2703,8 +2703,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 292.2,
-      "initialY": 324.2
+      "initialX": 295.3,
+      "initialY": 317.5
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -2758,8 +2758,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 316.8,
-      "initialY": 314.8
+      "initialX": 319.3,
+      "initialY": 315.6
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -2811,8 +2811,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 371,
-      "initialY": 350.5
+      "initialX": 364.1,
+      "initialY": 357.4
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -2888,8 +2888,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 317.3,
-      "initialY": 369.8
+      "initialX": 311.7,
+      "initialY": 368.3
     },
     "CCR-01": {
       "id": "CCR-01",
@@ -2931,8 +2931,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-01.mdx",
-      "initialX": 145.8,
-      "initialY": 415
+      "initialX": 156.9,
+      "initialY": 414.2
     },
     "CCR-02": {
       "id": "CCR-02",
@@ -2971,8 +2971,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-02.mdx",
-      "initialX": 149.5,
-      "initialY": 346.7
+      "initialX": 149.2,
+      "initialY": 348.4
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -3011,8 +3011,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-03.mdx",
-      "initialX": 123.2,
-      "initialY": 414.1
+      "initialX": 132.6,
+      "initialY": 411.9
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -3051,8 +3051,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-04.mdx",
-      "initialX": 177.2,
-      "initialY": 470.4
+      "initialX": 111.4,
+      "initialY": 442.2
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -3091,8 +3091,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-05.mdx",
-      "initialX": 112.1,
-      "initialY": 454
+      "initialX": 124.2,
+      "initialY": 464.4
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -3136,8 +3136,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-06.mdx",
-      "initialX": 172,
-      "initialY": 355
+      "initialX": 163.9,
+      "initialY": 363.8
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -3176,8 +3176,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-07.mdx",
-      "initialX": 211.4,
-      "initialY": 390.6
+      "initialX": 147.6,
+      "initialY": 311.2
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -3216,8 +3216,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-08.mdx",
-      "initialX": 211.9,
-      "initialY": 412.5
+      "initialX": 210.4,
+      "initialY": 407.5
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -3256,8 +3256,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-09.mdx",
-      "initialX": 132.2,
-      "initialY": 308
+      "initialX": 124.1,
+      "initialY": 311.2
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -3296,8 +3296,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-10.mdx",
-      "initialX": 129.2,
-      "initialY": 357.6
+      "initialX": 121.5,
+      "initialY": 362.4
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -3336,8 +3336,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-11.mdx",
-      "initialX": 157.9,
-      "initialY": 316.8
+      "initialX": 173.8,
+      "initialY": 341.3
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -3376,8 +3376,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-12.mdx",
-      "initialX": 161.9,
-      "initialY": 400.6
+      "initialX": 166.5,
+      "initialY": 392.1
     },
     "CCR-13": {
       "id": "CCR-13",
@@ -3416,8 +3416,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-13.mdx",
-      "initialX": 102,
-      "initialY": 407.4
+      "initialX": 107.1,
+      "initialY": 415.7
     },
     "CCR-14": {
       "id": "CCR-14",
@@ -3461,8 +3461,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-14.mdx",
-      "initialX": 130.3,
-      "initialY": 392.3
+      "initialX": 132.5,
+      "initialY": 391
     },
     "CCR-15": {
       "id": "CCR-15",
@@ -3501,8 +3501,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-15.mdx",
-      "initialX": 181.1,
-      "initialY": 418
+      "initialX": 186,
+      "initialY": 430.2
     },
     "CCR-16": {
       "id": "CCR-16",
@@ -3541,8 +3541,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-16.mdx",
-      "initialX": 105.3,
-      "initialY": 341.4
+      "initialX": 128.8,
+      "initialY": 335.5
     },
     "CCR-17": {
       "id": "CCR-17",
@@ -3581,8 +3581,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-17.mdx",
-      "initialX": 152.4,
-      "initialY": 442.7
+      "initialX": 157,
+      "initialY": 438.6
     },
     "CCR-18": {
       "id": "CCR-18",
@@ -3621,8 +3621,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CCR-18.mdx",
-      "initialX": 207.7,
-      "initialY": 458.5
+      "initialX": 204.5,
+      "initialY": 461.8
     },
     "CCR-19": {
       "id": "CCR-19",
@@ -3661,8 +3661,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-19.mdx",
-      "initialX": 139,
-      "initialY": 456.9
+      "initialX": 144.4,
+      "initialY": 456.3
     },
     "CCR-20": {
       "id": "CCR-20",
@@ -3701,8 +3701,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-20.mdx",
-      "initialX": 149.5,
-      "initialY": 477.2
+      "initialX": 155.9,
+      "initialY": 480.3
     },
     "CCR-21": {
       "id": "CCR-21",
@@ -3746,8 +3746,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CCR-21.mdx",
-      "initialX": 162.4,
-      "initialY": 377.7
+      "initialX": 217.1,
+      "initialY": 434.3
     },
     "CCR-22": {
       "id": "CCR-22",
@@ -3786,8 +3786,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-22.mdx",
-      "initialX": 109.8,
-      "initialY": 370.3
+      "initialX": 106.1,
+      "initialY": 380.3
     },
     "CCR-23": {
       "id": "CCR-23",
@@ -3824,8 +3824,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-23.mdx",
-      "initialX": 117.1,
-      "initialY": 322.6
+      "initialX": 104.9,
+      "initialY": 332.1
     },
     "CCR-24": {
       "id": "CCR-24",
@@ -3866,8 +3866,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-24.mdx",
-      "initialX": 174.9,
-      "initialY": 441.7
+      "initialX": 170.8,
+      "initialY": 454.1
     },
     "CCR-25": {
       "id": "CCR-25",
@@ -3912,8 +3912,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CCR-25.mdx",
-      "initialX": 188.1,
-      "initialY": 386.8
+      "initialX": 188.5,
+      "initialY": 401.1
     },
     "CCR-26": {
       "id": "CCR-26",
@@ -3953,8 +3953,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-26.mdx",
-      "initialX": 196.1,
-      "initialY": 430.7
+      "initialX": 191.5,
+      "initialY": 376.6
     },
     "CR-01": {
       "id": "CR-01",
@@ -3991,8 +3991,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": -36.3,
-      "initialY": 390
+      "initialX": -36.5,
+      "initialY": 389.7
     },
     "CR-02": {
       "id": "CR-02",
@@ -4031,8 +4031,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": -48.8,
-      "initialY": 308.6
+      "initialX": -48.2,
+      "initialY": 308.8
     },
     "CR-03": {
       "id": "CR-03",
@@ -4077,8 +4077,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "CR-03.mdx",
-      "initialX": -88.3,
-      "initialY": 308.8
+      "initialX": -91.1,
+      "initialY": 305.6
     },
     "CR-04": {
       "id": "CR-04",
@@ -4126,8 +4126,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": -99,
-      "initialY": 335.4
+      "initialX": -87.7,
+      "initialY": 331
     },
     "CR-05": {
       "id": "CR-05",
@@ -4174,8 +4174,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CR-05.mdx",
-      "initialX": -87.3,
-      "initialY": 366.7
+      "initialX": -89.8,
+      "initialY": 364.6
     },
     "CR-06": {
       "id": "CR-06",
@@ -4220,8 +4220,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": -33.6,
-      "initialY": 357.7
+      "initialX": -36,
+      "initialY": 362.5
     },
     "CR-07": {
       "id": "CR-07",
@@ -4290,8 +4290,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CR-07.mdx",
-      "initialX": -62.9,
-      "initialY": 338.9
+      "initialX": -62.8,
+      "initialY": 338.7
     },
     "CR-08": {
       "id": "CR-08",
@@ -4344,8 +4344,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": -15.1,
-      "initialY": 362.4
+      "initialX": -11.4,
+      "initialY": 359.7
     },
     "CR-09": {
       "id": "CR-09",
@@ -4404,8 +4404,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CR-09.mdx",
-      "initialX": -30.5,
-      "initialY": 311
+      "initialX": -30.2,
+      "initialY": 311.6
     },
     "CR-10": {
       "id": "CR-10",
@@ -4469,8 +4469,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CR-10.mdx",
-      "initialX": -136.1,
-      "initialY": 259.8
+      "initialX": -134.4,
+      "initialY": 260.2
     },
     "CR-11": {
       "id": "CR-11",
@@ -4528,8 +4528,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -110.9,
-      "initialY": 245.8
+      "initialX": -120.7,
+      "initialY": 252.6
     },
     "CR-12": {
       "id": "CR-12",
@@ -4593,8 +4593,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CR-12.mdx",
-      "initialX": -98.3,
-      "initialY": 283.3
+      "initialX": -86.7,
+      "initialY": 269.5
     },
     "CR-13": {
       "id": "CR-13",
@@ -4648,8 +4648,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CR-13.mdx",
-      "initialX": -47.5,
-      "initialY": 282
+      "initialX": -47,
+      "initialY": 283.5
     },
     "CR-14": {
       "id": "CR-14",
@@ -4693,8 +4693,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-14.mdx",
-      "initialX": -16.6,
-      "initialY": 339.2
+      "initialX": -20.2,
+      "initialY": 343
     },
     "CR-15": {
       "id": "CR-15",
@@ -4733,8 +4733,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 24.6,
-      "initialY": 406.2
+      "initialX": 24.4,
+      "initialY": 408.1
     },
     "CR-16": {
       "id": "CR-16",
@@ -4780,8 +4780,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "CR-16.mdx",
-      "initialX": -125.6,
-      "initialY": 273.3
+      "initialX": -132.6,
+      "initialY": 280.8
     },
     "CR-17": {
       "id": "CR-17",
@@ -4826,8 +4826,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-17.mdx",
-      "initialX": -157.3,
-      "initialY": 273.3
+      "initialX": -154.9,
+      "initialY": 269.2
     },
     "CR-18": {
       "id": "CR-18",
@@ -4878,8 +4878,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "CR-18.mdx",
-      "initialX": -62.1,
-      "initialY": 370.8
+      "initialX": -62.4,
+      "initialY": 368.6
     },
     "CR-19": {
       "id": "CR-19",
@@ -4920,8 +4920,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-19.mdx",
-      "initialX": 17.3,
-      "initialY": 382.4
+      "initialX": 16.9,
+      "initialY": 384.1
     },
     "CR-20": {
       "id": "CR-20",
@@ -4967,8 +4967,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-20.mdx",
-      "initialX": -21.7,
-      "initialY": 417.9
+      "initialX": -25.3,
+      "initialY": 420.9
     },
     "CR-21": {
       "id": "CR-21",
@@ -5009,8 +5009,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-21.mdx",
-      "initialX": -8,
-      "initialY": 437.4
+      "initialX": -9.7,
+      "initialY": 439.6
     },
     "CR-22": {
       "id": "CR-22",
@@ -5046,8 +5046,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 13.5,
-      "initialY": 454.5
+      "initialX": 18.2,
+      "initialY": 452
     },
     "CR-23": {
       "id": "CR-23",
@@ -5106,8 +5106,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CR-23.mdx",
-      "initialX": -15.6,
-      "initialY": 387.5
+      "initialX": -14.1,
+      "initialY": 384.7
     },
     "CR-24": {
       "id": "CR-24",
@@ -5147,8 +5147,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "CR-24.mdx",
-      "initialX": 17.8,
-      "initialY": 428.8
+      "initialX": -10.8,
+      "initialY": 459.7
     },
     "CR-25": {
       "id": "CR-25",
@@ -5199,8 +5199,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "CR-25.mdx",
-      "initialX": -18.5,
-      "initialY": 464.3
+      "initialX": 11.8,
+      "initialY": 428.7
     },
     "CR-26": {
       "id": "CR-26",
@@ -5274,8 +5274,8 @@
       "depth": 16,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": -42.6,
-      "initialY": 428.8
+      "initialX": -45.6,
+      "initialY": 428.6
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -5312,8 +5312,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -228.5,
-      "initialY": 406.6
+      "initialX": -222.9,
+      "initialY": 451.1
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -5347,8 +5347,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -187,
-      "initialY": 451.3
+      "initialX": -171.3,
+      "initialY": 465.1
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -5392,8 +5392,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -128.8,
-      "initialY": 434.1
+      "initialX": -132.1,
+      "initialY": 424
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -5537,8 +5537,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -138.3,
-      "initialY": 369.9
+      "initialX": -157.2,
+      "initialY": 363.2
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -5572,8 +5572,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -160.8,
-      "initialY": 477.8
+      "initialX": -151.8,
+      "initialY": 478.3
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -5612,8 +5612,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": -162.8,
-      "initialY": 374.6
+      "initialX": -190.4,
+      "initialY": 400
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -5652,8 +5652,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -121.5,
-      "initialY": 410.1
+      "initialX": -130.5,
+      "initialY": 392.2
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -5687,8 +5687,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": -132.1,
-      "initialY": 466.1
+      "initialX": -119.2,
+      "initialY": 449.2
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -5722,8 +5722,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -154.5,
-      "initialY": 410.7
+      "initialX": -170.7,
+      "initialY": 432
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -5757,8 +5757,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -209,
-      "initialY": 375.7
+      "initialX": -202.9,
+      "initialY": 373.7
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -5792,8 +5792,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": -228.3,
-      "initialY": 434
+      "initialX": -231.9,
+      "initialY": 424
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -5827,8 +5827,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -196.2,
-      "initialY": 427.6
+      "initialX": -193.6,
+      "initialY": 441
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -5862,8 +5862,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -186.9,
-      "initialY": 479.1
+      "initialX": -149.5,
+      "initialY": 406.1
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -5897,8 +5897,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -166.2,
-      "initialY": 428.3
+      "initialX": -216.3,
+      "initialY": 395.4
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -5937,8 +5937,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -180.5,
-      "initialY": 365.5
+      "initialX": -185.6,
+      "initialY": 346
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -5972,8 +5972,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -182.4,
-      "initialY": 397.4
+      "initialX": -171.3,
+      "initialY": 407.5
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -6007,8 +6007,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": -154.2,
-      "initialY": 452.2
+      "initialX": -141.5,
+      "initialY": 455.2
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -6042,8 +6042,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": -214.3,
-      "initialY": 459.1
+      "initialX": -195.3,
+      "initialY": 471.3
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -6082,8 +6082,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -205.3,
-      "initialY": 403.5
+      "initialX": -209.5,
+      "initialY": 421.3
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -6117,8 +6117,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": -194,
-      "initialY": 346.3
+      "initialX": -176.8,
+      "initialY": 376.8
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -6152,8 +6152,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -149.1,
-      "initialY": 338.4
+      "initialX": -165.3,
+      "initialY": 327.9
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -6205,8 +6205,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": -147.4,
-      "initialY": 393
+      "initialX": -135,
+      "initialY": 367.8
     },
     "FND-01": {
       "id": "FND-01",
@@ -6214,7 +6214,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "A bank is a balance sheet before it is a building, app, or lender. It owns assets, owes liabilities, and has equity equal to the residual difference: **Assets = Liabilities + Equity**.",
+      "one_screen": "A bank is first an accounting entity with resources, obligations, and a residual claim. The identity **Assets = Liabilities + Equity** is the frame through which every later banking concept—lending, deposits, profit, capital, liquidity, and loss—must be read.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
@@ -6229,30 +6229,25 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters 4–5",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised March 2018, Chapters 3–5 (",
           "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-01",
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -320.1,
-      "initialY": 259.2
+      "initialX": -324.2,
+      "initialY": 254.3
     },
     "FND-02": {
       "id": "FND-02",
-      "title": "Deposits and Loans: Opposite Sides of the Bank",
-      "type": "mechanism",
+      "title": "Deposits, Loans and Funding",
+      "type": "concept",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "**Deposits fund the bank and are liabilities; loans use the bank's balance sheet and are assets.** The words are usually spoken from the customer's perspective, which is why beginners instinctively put them on the wrong sides.",
+      "one_screen": "Deposits and loans are easiest to understand as opposite claims viewed from opposite sides of the same contracts. Deposits are normally bank liabilities, loans made by the bank are normally bank assets, and **funding** describes the liabilities and equity that support the asset side over time.",
       "prerequisites": [
         "FND-01"
       ],
@@ -6269,30 +6264,30 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Bank of England, *How is money created?*, Explainer",
-          "url": "https://www.bankofengland.co.uk/explainers/how-is-money-created",
-          "accessed": "August 28, 2026"
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised March 2018, Chapter 4 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         },
         {
-          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
-          "accessed": "August 28, 2026"
+          "label": "Bank of England, McLeay, Radia and Thomas, *Money creation in the modern economy*, Quarterly Bulletin 2014 Q1, published 14 March 2014 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-02",
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -283.7,
-      "initialY": 278.6
+      "initialX": -300.5,
+      "initialY": 273.3
     },
     "FND-03": {
       "id": "FND-03",
-      "title": "Loan Creation, Deposits and Funding",
+      "title": "How Bank Lending Creates Deposits",
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "When a bank grants a loan and credits the borrower's account, it can create a **loan asset and a deposit liability simultaneously**. That does not make funding irrelevant: payments out of the bank create settlement outflows, while liquidity, capital, risk and profitability constrain sustainable lending.",
+      "one_screen": "When a bank originates a loan and credits the borrower's account, it can create a loan asset and a deposit liability at the same moment. “Loans create deposits” describes that balance-sheet mechanism; it does **not** mean lending is unconstrained by funding, settlement liquidity, capital, risk, or profitability.",
       "prerequisites": [
         "FND-01",
         "FND-02"
@@ -6310,35 +6305,30 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Bank of England, *How is money created?*, Explainer",
-          "url": "https://www.bankofengland.co.uk/explainers/how-is-money-created",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Bank of England, Andrew Bailey, *The importance of central bank reserves*, speech, May 21, 2024",
-          "url": "https://www.bankofengland.co.uk/speech/2024/may/andrew-bailey-lecture-london-school-of-economics-charles-goodhart",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "label": "Bank of England, McLeay, Radia and Thomas, *Money creation in the modern economy*, Quarterly Bulletin 2014 Q1, published 14 March 2014 (",
           "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Bank of England, *How is money created?*, last updated 1 October 2019 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-03",
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -327.3,
-      "initialY": 325.2
+      "initialX": -332.4,
+      "initialY": 324.3
     },
     "FND-04": {
       "id": "FND-04",
-      "title": "Net Interest Income and Bank Earnings",
+      "title": "The Bank Earnings Engine",
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "A traditional bank earns a spread by receiving interest on interest-earning assets and paying interest on funding. **Net interest income = interest income − interest expense**, but final profit also reflects fees, market-related income, operating expenses, credit losses and taxes.",
+      "one_screen": "A traditional bank earns interest on many assets and pays interest on much of its funding. **Net interest income (NII) = interest income − interest expense**; profit then reflects non-interest income, operating costs, credit-loss charges, market or valuation effects where applicable, and tax.",
       "prerequisites": [
         "FND-01",
         "FND-02"
@@ -6356,33 +6346,34 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Board of Governors of the Federal Reserve System, *Banking System Conditions*, Supervision and Regulation Report, November 2023",
-          "url": "https://www.federalreserve.gov/publications/2023-november-supervision-and-regulation-report-banking-system-conditions.htm",
-          "accessed": "August 28, 2026"
+          "label": "Board of Governors of the Federal Reserve System, *Supervision and Regulation Report — Banking System Conditions*, November 2023, definition of NII and NIM (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         },
         {
-          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
-          "accessed": "August 28, 2026"
+          "label": "Board of Governors of the Federal Reserve System, *Supervision and Regulation Report*, June 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-04",
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -299.7,
-      "initialY": 340.6
+      "initialX": -375,
+      "initialY": 254.1
     },
     "FND-05": {
       "id": "FND-05",
-      "title": "Capital Versus Liquidity",
+      "title": "Capital, Liquidity and Solvency",
       "type": "concept",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "**Capital absorbs losses; liquidity meets payments when due.** A bank can have positive capital yet fail through a cash shortage, or hold abundant cash yet be economically insolvent because its assets are worth less than its obligations.",
+      "one_screen": "Capital, liquidity, and solvency answer different questions. **Capital absorbs losses; liquidity enables payments when due; solvency concerns whether the value of assets is sufficient relative to obligations.** Confusing them hides the two distinct ways a bank can fail: loss of value and loss of payment capacity.",
       "prerequisites": [
         "FND-01",
-        "FND-02"
+        "FND-02",
+        "FND-04"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -6397,27 +6388,27 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — CAP: Definition of capital*, current framework (",
           "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
+          "accessed": "31 August 2026"
         },
         {
-          "label": "Bank of England, Prudential Regulation Authority, *Liquidity*, Prudential and Resolution Policy Index",
-          "url": "https://www.bankofengland.co.uk/prudential-regulation/prudential-and-resolution-policy-index/banking/liquidity",
-          "accessed": "August 28, 2026"
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — LCR: Liquidity Coverage Ratio*, current framework (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         },
         {
-          "label": "European Banking Authority, *Liquidity risk*",
-          "url": "https://www.eba.europa.eu/regulation-and-policy/liquidity-risk",
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — NSF: Net Stable Funding Ratio*, current framework.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-05",
-      "depth": 2,
+      "depth": 3,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -362.6,
-      "initialY": 294.4
+      "initialX": -361.8,
+      "initialY": 294
     },
     "FND-06": {
       "id": "FND-06",
@@ -6425,7 +6416,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "The three-statement shorthand is **balance sheet, profit and loss statement, and cash-flow statement**. Profit changes equity, cash flows explain movements in cash, and every recognised closing balance must end up on the closing balance sheet.",
+      "one_screen": "Financial statements separate **position**, **performance**, **cash movement**, and **equity movement**. Profit can change equity without matching cash, financing can change cash without creating profit, and every recognised closing position ultimately appears in the closing balance sheet.",
       "prerequisites": [
         "FND-01",
         "FND-04"
@@ -6446,33 +6437,33 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *IAS 1 Presentation of Financial Statements*",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/",
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised March 2018, Chapter 3.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "IFRS Foundation, *IAS 7 Statement of Cash Flows*",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+          "label": "IFRS Foundation, *IAS 7 Statement of Cash Flows* (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Financial Statements: Presentation and Disclosures) Directions, 2025*, RBI/DOR/2025-26/167, DOR.ACC.REC.No.86/21.04.018/2025-26, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Financial Statements: Presentation and Disclosures) Directions, 2025*",
-          "url": "https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13143",
+          "label": "UK Endorsement Board, *UK-Adopted International Accounting Standards (Consolidated)*, text at 1 January 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "European Union, Commission Regulation (EU) 2023/1803 adopting certain international accounting standards, consolidated text in force.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "UK Endorsement Board, *Text by Standard 2024*",
-          "url": "https://www.endorsement-board.uk/standards/text-by-standard/text-by-standard-2024/",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "European Union, *International accounting standards — IAS Regulation*, Regulation (EC) No 1606/2002 and Regulation (EU) 2023/1803 summary",
-          "url": "https://eur-lex.europa.eu/EN/legal-content/summary/international-accounting-standards-ias-regulation.html",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Financial Accounting Standards Board, *FASB Mission*",
-          "url": "https://www.fasb.org/about-us/about-the-fasb",
+          "label": "Financial Accounting Standards Board, *Accounting Standards Codification* and FASB standard-setting mandate.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
@@ -6480,62 +6471,16 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -325.5,
-      "initialY": 300.9
+      "initialX": -352.6,
+      "initialY": 309.1
     },
     "FND-07": {
       "id": "FND-07",
-      "title": "Reading a Bank Balance Sheet",
-      "type": "procedure",
-      "domain": "foundation",
-      "subdomain": "financial-statements",
-      "one_screen": "Read a bank balance sheet by asking three questions in order: **what assets generate or preserve value, how those assets are funded, and how much residual loss absorption sits beneath the liabilities**. A bank's debtors are often its customers, while its customers' deposits are its funding.",
-      "prerequisites": [
-        "FND-01",
-        "FND-02"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 3,
-      "sources": [
-        {
-          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapter 4",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Basel Committee on Banking Supervision, *Basel Framework, DIS20 — Main features of regulatory capital instruments and other disclosures*",
-          "url": "https://www.bis.org/basel_framework/chapter/DIS/20.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Bank of England, *How is money created?*",
-          "url": "https://www.bankofengland.co.uk/explainers/how-is-money-created",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "fnd-07",
-      "depth": 2,
-      "currentness": "durable",
-      "filepath": "FND-07.mdx",
-      "initialX": -351.4,
-      "initialY": 319.1
-    },
-    "FND-08": {
-      "id": "FND-08",
       "title": "Accrual Versus Cash",
       "type": "concept",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "**Accrual accounting recognises economic effects when the recognition criteria are met, not simply when cash moves.** Cash accounting asks when money moved; accrual accounting asks what asset, liability, income or expense exists because of what happened.",
+      "one_screen": "Accrual accounting records the economic effects of events when the applicable recognition requirements are met, which can be earlier or later than cash settlement. The foundational discipline is simple: **recognition timing and cash timing are different dimensions.**",
       "prerequisites": [
         "FND-06"
       ],
@@ -6552,33 +6497,92 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, Chapters 4–5",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised March 2018, Chapters 3–5.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "IFRS Foundation, *IAS 7 Statement of Cash Flows*",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+          "label": "IFRS Foundation, *IAS 7 Statement of Cash Flows*, current standard through 31 August 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
-      "slug": "fnd-08",
+      "slug": "fnd-07",
       "depth": 4,
       "currentness": "durable",
+      "filepath": "FND-07.mdx",
+      "initialX": -302.3,
+      "initialY": 298.1
+    },
+    "FND-08": {
+      "id": "FND-08",
+      "title": "Credit-Loss Allowances and Provisions",
+      "type": "delta",
+      "domain": "foundation",
+      "subdomain": "financial-statements",
+      "one_screen": "Credit-loss accounting and prudential provisioning recognise that contractual claims may not be fully collected, but they are **not one universal calculation**. Recognition trigger, horizon, measurement, terminology, and prudential interaction come from the governing framework.",
+      "prerequisites": [
+        "FND-06",
+        "FND-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Deferral of Implementation of Indian Accounting Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19, 22 March 2019.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Income Recognition, Asset Classification and Provisioning) Directions, 2025*, RBI/DOR/2025-26/164, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, impairment requirements and application guidance.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Financial Accounting Standards Board, Accounting Standards Update 2016-13, *Financial Instruments—Credit Losses (Topic 326)*, June 2016 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Frequently Asked Questions on the Current Expected Credit Losses Methodology*, Topic 326 guidance (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        }
+      ],
+      "slug": "fnd-08",
+      "depth": 5,
+      "currentness": "fresh",
       "filepath": "FND-08.mdx",
-      "initialX": -378.5,
-      "initialY": 247
+      "initialX": -348,
+      "initialY": 251.8
     },
     "FND-09": {
       "id": "FND-09",
-      "title": "Provisions and Credit-Loss Allowances",
-      "type": "mechanism",
+      "title": "Profit, OCI and Equity",
+      "type": "concept",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "A credit-loss allowance recognises that the amount expected to be collected from credit exposures may be less than their contractual amount. **The economic idea is shared; the recognition and measurement rule is jurisdiction- and reporting-framework-specific.**",
+      "one_screen": "Recognised gains and losses do not all have to travel through current profit or loss. Accounting frameworks can require specified items to be presented in **other comprehensive income (OCI)** or another reserve route, but that route exists because the governing framework prescribes it—not because management prefers less earnings volatility.",
       "prerequisites": [
         "FND-06",
-        "FND-08"
+        "FND-07"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -6596,90 +6600,77 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
-          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Classification, Valuation, and Operation of Investment Portfolio) Directions, 2025*, RBI/DOR/2025-26/162, DOR.MRG.REC.No.81/00-00-001/2025-26, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Commercial Banks – Income Recognition, Asset Classification and Provisioning*, 2025 Directions as amended in 2026, including RBI/2026-27/45, DOR.STR.REC.34/21-04-048/2026-27, April 29, 2026",
-          "url": "https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0",
+          "label": "UK Endorsement Board, *UK-Adopted International Accounting Standards (Consolidated)*, text at 1 January 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "European Union, Commission Regulation (EU) 2023/1803 adopting certain international accounting standards, consolidated text in force.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards by NBFCs and ARCs*, DOR(NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Board of Governors of the Federal Reserve System, *Frequently Asked Questions on the Current Expected Credit Losses Methodology*, ASC Topic 326 / ASU 2016-13 guidance",
-          "url": "https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm",
-          "accessed": "August 28, 2026"
+          "label": "IFRS Foundation, *IFRS 18 Presentation and Disclosure in Financial Statements*, issued April 2024; effective for annual periods beginning on or after 1 January 2027 and replacing IAS 1 from that date (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-09",
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -332.2,
-      "initialY": 241.2
+      "initialX": -345.4,
+      "initialY": 238
     },
     "FND-10": {
       "id": "FND-10",
-      "title": "Other Comprehensive Income",
-      "type": "concept",
+      "title": "How to Read a Bank Balance Sheet",
+      "type": "procedure",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "**Other comprehensive income (OCI) is a reporting route for specified recognised income and expense that the applicable accounting standard does not put in current profit or loss.** It is not \"less real\" income, and it is not a discretionary parking place for inconvenient volatility.",
+      "one_screen": "A bank balance sheet should be read as a funded risk position, not as a list of totals. The efficient sequence is **assets → funding → loss absorption → quality → maturity → concentration**, because each step asks what the preceding number actually means.",
       "prerequisites": [
-        "FND-06"
+        "FND-01",
+        "FND-02",
+        "FND-05",
+        "FND-06",
+        "FND-08",
+        "FND-09"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "IN",
-        "UK",
-        "EU",
-        "US"
+        "universal"
       ],
-      "perishable": true,
-      "as_of": "2026-08-28",
+      "perishable": false,
+      "as_of": null,
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *IAS 1 Presentation of Financial Statements*",
-          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/",
+          "label": "IFRS Foundation, *Conceptual Framework for Financial Reporting*, revised March 2018.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
-          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Reserve Bank of India, *Classification, Valuation and Operation of Investment Portfolio of Commercial Banks Directions, 2023*, RBI/DOR/2023-24/104, DOR.MRG.36/21.04.141/2023-24, September 12, 2023, updated April 1, 2025",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12534&Mode=0",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Financial Accounting Standards Board, *Accounting Standards Codification Topic 220 — Comprehensive Income*, referenced in ASU 2018-02",
-          "url": "https://www.fasb.org/page/document?pdf=ASU+2018-02.pdf&title=ACCOUNTING+STANDARDS+UPDATE+2018-02%E2%80%94INCOME+STATEMENT%E2%80%94REPORTING+COMPREHENSIVE+INCOME+%28TOPIC+220%29%3A+RECLASSIFICATION+OF+CERTAIN+TAX+EFFECTS+FROM+ACCUMULATED+OTHER+COMPREHENSIVE+INCOME",
-          "accessed": "August 28, 2026"
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — CAP: Definition of capital*, current framework (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-10",
-      "depth": 4,
-      "currentness": "fresh",
+      "depth": 6,
+      "currentness": "durable",
       "filepath": "FND-10.mdx",
-      "initialX": -392.3,
-      "initialY": 301
+      "initialX": -390.7,
+      "initialY": 270.8
     },
     "FND-11": {
       "id": "FND-11",
@@ -6687,7 +6678,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "**Present value converts money at different dates into values at one common date.** A discount factor is the multiplier that performs that conversion: for one annual rate \\(r\\), the time-\\(t\\) factor is \\(1/(1+r)^t\\).",
+      "one_screen": "Present value puts cash flows occurring at different dates onto one valuation date. A **discount factor** is the multiplier that translates a future amount backward through time; the mathematics changes value for timing, not for whether the cash flow will occur.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
@@ -6702,8 +6693,8 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix B, including B5.5.44 on discounting expected credit losses",
-          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, application guidance on effective interest and discounting; cited only as an applied use of universal present-value mathematics.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
@@ -6711,16 +6702,16 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -339,
-      "initialY": 280
+      "initialX": -344.7,
+      "initialY": 353.9
     },
     "FND-12": {
       "id": "FND-12",
-      "title": "Compounding and Discounting Conventions",
+      "title": "Compounding, Rates and Timing Conventions",
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "**Compounding moves value forward through time; discounting moves it backward.** The mathematics only works when the rate, compounding frequency, day-count or period convention, and cash-flow dates are internally consistent.",
+      "one_screen": "Compounding moves value forward; discounting moves it backward. The formulas are simple, but financial models fail when the **rate frequency, compounding convention, cash-flow dates, and period count are inconsistent**.",
       "prerequisites": [
         "FND-11"
       ],
@@ -6737,8 +6728,8 @@
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A and application guidance on effective interest calculations",
-          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A and application guidance on the effective interest method; cited as an applied financial use of rate and timing consistency.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
@@ -6746,8 +6737,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -384.3,
-      "initialY": 327.7
+      "initialX": -391.1,
+      "initialY": 297
     },
     "FND-13": {
       "id": "FND-13",
@@ -6755,7 +6746,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "The **effective interest rate (EIR)** is the single periodic rate that makes the present value of the relevant contractual cash-flow stream equal to the instrument's initial carrying amount under the stated methodology. It converts price, interest, fees and timing into one internally consistent yield.",
+      "one_screen": "The effective interest rate (EIR) is the single rate that makes the present value of a specified future cash-flow stream equal to a specified carrying amount or price. It compresses amount, timing, interest, and qualifying fees or costs into one internally consistent yield **for the cash-flow definition being used**.",
       "prerequisites": [
         "FND-11",
         "FND-12"
@@ -6773,8 +6764,8 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, effective interest method and effective interest rate definitions",
-          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, definitions of effective interest rate and effective interest method.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
@@ -6782,18 +6773,18 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -324.8,
-      "initialY": 346.8
+      "initialX": -388.5,
+      "initialY": 339.3
     },
     "FND-14": {
       "id": "FND-14",
-      "title": "NPV and Discounting Expected Loss",
+      "title": "NPV and Discounted Cash Shortfalls",
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "**Net present value (NPV) adds cash flows after converting them to one valuation date.** Expected loss is time-sensitive when the applicable methodology discounts shortfalls: the same nominal shortfall occurring later has a different present value.",
+      "one_screen": "Net present value (NPV) aggregates dated amounts only after translating them to one valuation date. When a loss methodology discounts expected cash shortfalls, **probability determines how much is expected; discounting determines what the timing of that expected amount is worth today.**",
       "prerequisites": [
-        "FND-09",
+        "FND-08",
         "FND-11",
         "FND-13"
       ],
@@ -6813,23 +6804,18 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.44",
-          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.44 and related application guidance.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
-          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
-          "accessed": "August 28, 2026"
+          "label": "Board of Governors of the Federal Reserve System, *Frequently Asked Questions on the Current Expected Credit Losses Methodology* (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         },
         {
-          "label": "Reserve Bank of India, *Commercial Banks – Income Recognition, Asset Classification and Provisioning*, 2025 Directions as amended in 2026",
-          "url": "https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Board of Governors of the Federal Reserve System, *Frequently Asked Questions on the Current Expected Credit Losses Methodology*, ASC Topic 326 / ASU 2016-13 guidance",
-          "url": "https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm",
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
@@ -6837,19 +6823,17 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -279.9,
-      "initialY": 298.4
+      "initialX": -335.8,
+      "initialY": 301.5
     },
     "FND-15": {
       "id": "FND-15",
-      "title": "Exposure: What Is Actually at Risk",
+      "title": "Probability and Expected Value",
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "**Exposure is the amount or position whose value can be affected by a risk event; it is not the loss itself.** The relevant exposure may include more than today's booked principal because commitments, accrued amounts, derivatives or future drawings can also be at risk.",
-      "prerequisites": [
-        "FND-01"
-      ],
+      "one_screen": "Probability describes likelihood; expected value converts a set of possible numerical outcomes into their probability-weighted average. An expected value is a property of a modelled distribution—not a promise that the next realised outcome will equal that average.",
+      "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
@@ -6863,26 +6847,28 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, *Basel Framework — Credit Risk*, consolidated framework",
-          "url": "https://www.bis.org/basel_framework/",
-          "accessed": "August 28, 2026"
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods*, probability and statistical foundations",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-15",
-      "depth": 1,
+      "depth": 0,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -387.8,
-      "initialY": 274.6
+      "initialX": -294.9,
+      "initialY": 317
     },
     "FND-16": {
       "id": "FND-16",
-      "title": "Probability and Expected Value",
+      "title": "Variance, Standard Deviation and Volatility",
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "**Probability says how likely an outcome is; expected value combines each possible outcome with its probability.** A 1% probability of losing 100 is not a loss of 1%, but in a two-outcome example it contributes an expected loss of 1.",
-      "prerequisites": [],
+      "one_screen": "Expected value describes the centre of a distribution; variance describes how dispersed outcomes are around that centre. Standard deviation is the square root of variance, and in finance **volatility** usually refers to a standard-deviation measure whose meaning depends on the variable, observation frequency, and horizon.",
+      "prerequisites": [
+        "FND-15"
+      ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
@@ -6896,26 +6882,27 @@
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods*",
-          "url": "https://www.itl.nist.gov/div898/handbook/",
-          "accessed": "August 28, 2026"
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Measures of Scale*, section 1.3.5.6 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-16",
-      "depth": 0,
+      "depth": 1,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -365.5,
-      "initialY": 350.9
+      "initialX": -300.1,
+      "initialY": 352.3
     },
     "FND-17": {
       "id": "FND-17",
-      "title": "Variance and Volatility",
+      "title": "Quantiles and Tail Risk",
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "**Variance measures average squared dispersion around a mean; standard deviation is its square root.** In finance, volatility usually refers to a standard-deviation measure over a stated horizon, so volatility is meaningless without the variable, data frequency and time horizon.",
+      "one_screen": "A quantile is a threshold in a distribution associated with a cumulative probability. Tail risk concerns the outcomes beyond an extreme threshold, so a high quantile can locate the edge of a tail without telling you how severe the tail becomes.",
       "prerequisites": [
+        "FND-15",
         "FND-16"
       ],
       "see_also": [],
@@ -6931,32 +6918,27 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Measures of Scale*, Section 1.3.5.6",
-          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods*",
-          "url": "https://www.itl.nist.gov/div898/handbook/",
-          "accessed": "August 28, 2026"
+          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods*, percentile and distributional-shape material",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-17",
-      "depth": 1,
+      "depth": 2,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -318,
-      "initialY": 375.2
+      "initialX": -356.6,
+      "initialY": 369.7
     },
     "FND-18": {
       "id": "FND-18",
-      "title": "Quantiles and Tail Risk",
+      "title": "Exposure: What Is Actually at Risk",
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "A **quantile** is a threshold in a distribution: an \\(\\alpha\\)-quantile has approximately \\(\\alpha\\) of probability at or below it under the stated convention. **Tail risk is what happens in the extreme region beyond such thresholds; a quantile is not a maximum possible loss.**",
+      "one_screen": "Exposure is the amount or position subject to adverse change from a specified risk event; it is **not the loss itself**. For credit, today's drawn balance can be only part of what is at risk because a facility may also contain undrawn commitments that can become exposure before the relevant event.",
       "prerequisites": [
-        "FND-16",
+        "FND-15",
         "FND-17"
       ],
       "see_also": [],
@@ -6972,22 +6954,17 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Percentiles and Critical Values*",
-          "url": "https://www.itl.nist.gov/div898/handbook/prc/section4/prc471.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "National Institute of Standards and Technology, *NIST/SEMATECH e-Handbook of Statistical Methods — Distributional Shape and Tails*",
-          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — CRE20 Standardised approach: individual exposures*, current framework, off-balance-sheet treatment; cited only to evidence that undrawn commitments can be converted into credit exposure under a defined methodology.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-18",
-      "depth": 2,
+      "depth": 3,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -288.9,
-      "initialY": 327.5
+      "initialX": -320.1,
+      "initialY": 349.6
     },
     "FND-19": {
       "id": "FND-19",
@@ -6995,10 +6972,11 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "**Expected loss is the probability-weighted average loss built into the centre of the loss distribution; unexpected loss is adverse variation around and beyond that expectation.** Provisioning and pricing address expected loss in different ways, while prudential capital is fundamentally concerned with resilience to losses beyond the expected level.",
+      "one_screen": "Expected loss is the probability-weighted average loss at the centre of a modelled loss distribution; unexpected loss is the adverse variation around that expectation for which additional resilience may be needed. A low average loss can coexist with a dangerous tail.",
       "prerequisites": [
         "FND-15",
         "FND-16",
+        "FND-17",
         "FND-18"
       ],
       "see_also": [],
@@ -7014,35 +6992,30 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB approach: risk-weighted assets for credit risk*",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — CRE30 IRB approach: overview and asset class definitions*, paragraph 30.2, and *CRE31 IRB approach: risk weight functions*, paragraph 31.1, describing separate EL and UL treatment.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, *Basel Framework, CRE35 — Treatment of expected losses and provisions*",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Bank for International Settlements, Financial Stability Institute, *IFRS 9 and expected loss provisioning — Executive Summary*",
-          "url": "https://www.bis.org/fsi/fsisummaries/ifrs9.htm",
-          "accessed": "August 28, 2026"
+          "label": "Basel Committee on Banking Supervision, *Basel Framework — CRE35 IRB approach: treatment of expected losses and provisions*, current framework (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         }
       ],
       "slug": "fnd-19",
-      "depth": 3,
+      "depth": 4,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -344.5,
-      "initialY": 301.9
+      "initialX": -368,
+      "initialY": 322.9
     },
     "FND-20": {
       "id": "FND-20",
-      "title": "Risk Appetite",
-      "type": "concept",
+      "title": "Risk Capacity, Appetite, Limits and Profile",
+      "type": "mechanism",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "**Risk appetite is the aggregate level and types of risk an institution is willing to assume within its risk capacity while pursuing its objectives.** Appetite becomes operational only when translated into limits, monitored against the actual risk profile, and linked to escalation and decisions.",
+      "one_screen": "Risk governance turns resilience into choices. **Risk capacity** is how much risk the institution can bear; **risk appetite** is how much and what types it chooses to take within that capacity; **limits** translate appetite into operating boundaries; **risk profile** is the risk actually being run.",
       "prerequisites": [
         "FND-05",
         "FND-19"
@@ -7060,22 +7033,17 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Financial Stability Board, *Principles for an Effective Risk Appetite Framework*, November 18, 2013",
-          "url": "https://www.fsb.org/2013/11/r_131118/",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Financial Stability Board, *FSB releases guidance for more effective supervision of risk appetite and risk culture at financial institutions*, November 18, 2013",
-          "url": "https://www.fsb.org/2013/11/fsb-releases-guidance-for-more-effective-supervision-of-risk-appetite-and-risk-culture-at-financial-institutions/",
+          "label": "Financial Stability Board, *Principles for an Effective Risk Appetite Framework*, 18 November 2013.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-20",
-      "depth": 4,
+      "depth": 5,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -356.5,
-      "initialY": 250.6
+      "initialX": -317.9,
+      "initialY": 289.2
     },
     "FND-21": {
       "id": "FND-21",
@@ -7083,7 +7051,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "The Three Lines Model separates **management's ownership and management of risk**, specialist support and challenge, and **independent internal-audit assurance**. The lines are roles in governance, not walls that permit one function to outsource responsibility to another.",
+      "one_screen": "The Three Lines Model separates **management's action and ownership of risk**, specialist management support and challenge, and **independent internal-audit assurance**. It is a model of roles and accountability, not a rigid organisation chart and not permission for one line to outsource responsibility to another.",
       "prerequisites": [
         "FND-20"
       ],
@@ -7100,35 +7068,30 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Institute of Internal Auditors, *The IIA's Three Lines Model: An update of the Three Lines of Defense*, 2020, updated 2024",
-          "url": "https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/",
+          "label": "Institute of Internal Auditors, *Three Lines Model: Assurance and Advice in Support of Effective Governance*, Statement of Position, issued 8 July 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Institute of Internal Auditors, *Statements of Position — Three Lines and Internal Audit*",
-          "url": "https://www.theiia.org/en/resources/statements-of-position/",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Institute of Internal Auditors, *IIA Issues Important Update to Three Lines Model*, July 20, 2020",
-          "url": "https://www.theiia.org/en/content/communications/2020/july/20-july-2020-iia-issues-important-update-to-three-lines-model/",
+          "label": "Institute of Internal Auditors, *The IIA's Three Lines Model: An update of the Three Lines of Defense*, Position Paper, 2020, updated September 2024; superseded by the 2026 Statement of Position.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-21",
-      "depth": 5,
+      "depth": 6,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -304.6,
-      "initialY": 299.6
+      "initialX": -267.3,
+      "initialY": 310.1
     },
     "FND-22": {
       "id": "FND-22",
-      "title": "Policy, Standard and Procedure",
+      "title": "Policy, Standard, Procedure and Evidence",
       "type": "reference",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "A useful control hierarchy is **policy = required intent and principles; standard = mandatory control or design criteria; procedure = steps for execution**. The terminology is not legally universal, so authority and content matter more than the document label.",
+      "one_screen": "A useful internal-governance hierarchy is **policy → standard → procedure → evidence**: intent and mandatory outcomes become testable requirements, then execution steps, then proof that the steps occurred. The labels are not legally universal, so authority, scope, approval, and content matter more than the filename.",
       "prerequisites": [
         "FND-21"
       ],
@@ -7145,33 +7108,32 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Institute of Internal Auditors, *The IIA's Three Lines Model: An update of the Three Lines of Defense*, 2020, updated 2024",
-          "url": "https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/",
+          "label": "Institute of Internal Auditors, *Three Lines Model: Assurance and Advice in Support of Effective Governance*, Statement of Position, issued 8 July 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Financial Stability Board, *Principles for an Effective Risk Appetite Framework*, November 18, 2013",
-          "url": "https://www.fsb.org/2013/11/r_131118/",
+          "label": "Financial Stability Board, *Principles for an Effective Risk Appetite Framework*, 18 November 2013.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-22",
-      "depth": 6,
+      "depth": 7,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -344.5,
-      "initialY": 358.3
+      "initialX": -309.6,
+      "initialY": 368.2
     },
     "FND-23": {
       "id": "FND-23",
-      "title": "What a Regulator Actually Does",
+      "title": "What Regulators and Supervisors Actually Do",
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "A banking regulator turns law and statutory objectives into enforceable boundaries, while **supervision** tests how institutions actually operate inside those boundaries. Depending on the mandate, the toolkit can include authorisation, rules, reporting, examinations, remediation and enforcement.",
+      "one_screen": "**Regulation sets applicable requirements; supervision tests institutions against those requirements and supervisory objectives.** Authorisation, reporting, examination, remediation, and enforcement surround that core according to each authority's legal mandate.",
       "prerequisites": [
         "FND-05",
-        "FND-19",
         "FND-20"
       ],
       "see_also": [],
@@ -7190,53 +7152,53 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Reserve Bank of India, *Department of Banking Supervision — Functions and Legal Framework*",
-          "url": "https://www.rbi.org.in/commonman/english/scripts/DeptofBS.aspx",
+          "label": "Basel Committee on Banking Supervision, *Core Principles for effective banking supervision*, BCBS d573, 25 April 2024 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PRA Annual Report 2025/26*, 25 June 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Financial Conduct Authority, *About the FCA*, updated 9 July 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *EBA at a glance* and *Supervisory convergence*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Bank of England, Prudential Regulation Authority, *Prudential regulation*",
-          "url": "https://www.bankofengland.co.uk/prudential-regulation",
-          "accessed": "August 28, 2026"
+          "label": "Board of Governors of the Federal Reserve System, *Understanding Federal Reserve Supervision* (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
         },
         {
-          "label": "Financial Conduct Authority, *The FCA — mandate and regulatory responsibilities*",
-          "url": "https://www.fca.org.uk/about/what-we-do/the-fca",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "European Banking Authority, *Single Rulebook*",
-          "url": "https://www.eba.europa.eu/single-rulebook",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Board of Governors of the Federal Reserve System, *Understanding Federal Reserve Supervision*",
-          "url": "https://www.federalreserve.gov/supervisionreg/understanding-federal-reserve-supervision.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Office of the Comptroller of the Currency, *OCC mandate — chartering, regulating and supervising national banks*",
-          "url": "https://www.occ.treas.gov/about/index-about.html",
+          "label": "Office of the Comptroller of the Currency, *About Us*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-23",
-      "depth": 5,
+      "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -299,
-      "initialY": 254.3
+      "initialX": -302.1,
+      "initialY": 243.1
     },
     "FND-24": {
       "id": "FND-24",
-      "title": "Prudential Regulation, Conduct Regulation and Accounting Standards",
+      "title": "Prudential, Conduct and Accounting Frameworks",
       "type": "reference",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "**Prudential regulation asks whether a financial institution is safe and resilient; conduct regulation asks whether it behaves properly toward customers and markets; accounting standards determine how financial position and performance are recognised, measured and reported.** The three systems interact, but none is a substitute for another.",
+      "one_screen": "Prudential, conduct, and accounting frameworks can govern the same bank because they answer different questions. Their outputs interact; compliance in one never proves compliance in another.",
       "prerequisites": [
         "FND-06",
-        "FND-09",
+        "FND-08",
         "FND-23"
       ],
       "see_also": [],
@@ -7255,57 +7217,47 @@
       "reading_minutes": 4,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, *Basel III: international regulatory framework for banks*",
+          "label": "Basel Committee on Banking Supervision, *Core Principles for effective banking supervision*, BCBS d573, 25 April 2024 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, *PRA Annual Report 2025/26*, 25 June 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Financial Conduct Authority, *About the FCA*, updated 9 July 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "European Banking Authority, *Single Rulebook* and *Supervisory convergence*.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019",
-          "url": "https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506",
+          "label": "UK Endorsement Board, *UK-Adopted International Accounting Standards (Consolidated)*, text at 1 January 2026 (",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "31 August 2026"
+        },
+        {
+          "label": "Financial Accounting Standards Board, *Accounting Standards Codification* and FASB standard-setting mandate.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Reserve Bank of India, *Commercial Banks – Income Recognition, Asset Classification and Provisioning*, 2025 Directions as amended in 2026",
-          "url": "https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Reserve Bank of India, *Implementation of Indian Accounting Standards by NBFCs and ARCs*, DOR(NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Bank of England, Prudential Regulation Authority, *Prudential regulation*",
-          "url": "https://www.bankofengland.co.uk/prudential-regulation",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Financial Conduct Authority, *The FCA — mandate and regulatory responsibilities*",
-          "url": "https://www.fca.org.uk/about/what-we-do/the-fca",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "European Banking Authority, *Single Rulebook*",
-          "url": "https://www.eba.europa.eu/single-rulebook",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "European Banking Authority, *Consumer protection*",
-          "url": "https://www.eba.europa.eu/regulation-and-policy/consumer-protection",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Financial Accounting Standards Board, *FASB Mission*",
-          "url": "https://www.fasb.org/about-us/about-the-fasb",
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Financial Statements: Presentation and Disclosures) Directions, 2025*, RBI/DOR/2025-26/167, 28 November 2025; *Reserve Bank of India (Commercial Banks — Income Recognition, Asset Classification and Provisioning) Directions, 2025*, RBI/DOR/2025-26/164, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "fnd-24",
-      "depth": 6,
+      "depth": 7,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -261.5,
-      "initialY": 273.7
+      "initialX": -278.4,
+      "initialY": 278.2
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -7367,8 +7319,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -267.4,
-      "initialY": 205.4
+      "initialX": -266.2,
+      "initialY": 205.5
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -7418,8 +7370,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -332,
-      "initialY": 182.3
+      "initialX": -326.2,
+      "initialY": 179.6
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -7475,8 +7427,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -246.9,
-      "initialY": 193.7
+      "initialX": -243.1,
+      "initialY": 190.1
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -7525,8 +7477,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -408.1,
-      "initialY": 177.1
+      "initialX": -405.3,
+      "initialY": 180.2
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -7575,8 +7527,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -232.2,
-      "initialY": 140.6
+      "initialX": -285.7,
+      "initialY": 175.6
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -7632,8 +7584,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -219.2,
-      "initialY": 197.3
+      "initialX": -218.5,
+      "initialY": 196.3
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -7683,8 +7635,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -273,
-      "initialY": 189.3
+      "initialX": -266.2,
+      "initialY": 189.9
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -7735,8 +7687,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -251.1,
-      "initialY": 175.8
+      "initialX": -241.6,
+      "initialY": 169.7
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -7784,8 +7736,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -297.1,
-      "initialY": 203.5
+      "initialX": -289.4,
+      "initialY": 203.8
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -7835,8 +7787,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -215.6,
-      "initialY": 247.7
+      "initialX": -215,
+      "initialY": 246.4
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -7885,8 +7837,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -358.2,
-      "initialY": 179.1
+      "initialX": -357.3,
+      "initialY": 177.1
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -7936,8 +7888,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -271.1,
-      "initialY": 226.1
+      "initialX": -269.2,
+      "initialY": 225
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -7987,8 +7939,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -247.3,
-      "initialY": 151.7
+      "initialX": -258.2,
+      "initialY": 157
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -8038,8 +7990,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -199.1,
-      "initialY": 193.1
+      "initialX": -198.4,
+      "initialY": 189.7
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -8094,8 +8046,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -273.3,
-      "initialY": 165.6
+      "initialX": -251.7,
+      "initialY": 146.7
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -8150,8 +8102,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -290.6,
-      "initialY": 83.6
+      "initialX": -292.8,
+      "initialY": 84.2
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -8207,8 +8159,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -315.3,
-      "initialY": 100.3
+      "initialX": -316.4,
+      "initialY": 98.2
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -8263,7 +8215,7 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -353.5,
+      "initialX": -349.8,
       "initialY": 151.4
     },
     "IMP-19": {
@@ -8320,8 +8272,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -298,
-      "initialY": 138.1
+      "initialX": -297.1,
+      "initialY": 132.2
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -8383,8 +8335,8 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -331.7,
-      "initialY": 154.3
+      "initialX": -326.6,
+      "initialY": 152.9
     },
     "IND-01": {
       "id": "IND-01",
@@ -8421,8 +8373,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -445.3,
-      "initialY": 37.2
+      "initialX": -444.9,
+      "initialY": 44.1
     },
     "IND-02": {
       "id": "IND-02",
@@ -8461,8 +8413,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -453.9,
-      "initialY": -31.8
+      "initialX": -450.7,
+      "initialY": -16.7
     },
     "IND-03": {
       "id": "IND-03",
@@ -8496,8 +8448,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -457.6,
-      "initialY": 23.6
+      "initialX": -462.8,
+      "initialY": 33.7
     },
     "IND-04": {
       "id": "IND-04",
@@ -8531,8 +8483,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -406.7,
-      "initialY": 4.8
+      "initialX": -412,
+      "initialY": 10.3
     },
     "IND-05": {
       "id": "IND-05",
@@ -8572,8 +8524,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -501.3,
-      "initialY": 27.4
+      "initialX": -503.3,
+      "initialY": 27.5
     },
     "IND-06": {
       "id": "IND-06",
@@ -8613,8 +8565,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -427.2,
-      "initialY": -19.1
+      "initialX": -428.4,
+      "initialY": -17.4
     },
     "IND-07": {
       "id": "IND-07",
@@ -8653,8 +8605,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -371.5,
-      "initialY": -26.8
+      "initialX": -378.7,
+      "initialY": -30.9
     },
     "IND-08": {
       "id": "IND-08",
@@ -8694,8 +8646,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -420.5,
-      "initialY": 30.2
+      "initialX": -428.4,
+      "initialY": 27
     },
     "IND-09": {
       "id": "IND-09",
@@ -8736,8 +8688,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -372.7,
-      "initialY": 28.7
+      "initialX": -375.9,
+      "initialY": 29.5
     },
     "IND-10": {
       "id": "IND-10",
@@ -8778,7 +8730,7 @@
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
       "initialX": -425.7,
-      "initialY": 51.9
+      "initialY": 52.2
     },
     "IND-11": {
       "id": "IND-11",
@@ -8818,8 +8770,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -497.2,
-      "initialY": 3.5
+      "initialX": -489,
+      "initialY": 13.5
     },
     "IND-12": {
       "id": "IND-12",
@@ -8858,8 +8810,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -464.4,
-      "initialY": 58
+      "initialX": -463.8,
+      "initialY": 63.1
     },
     "IND-13": {
       "id": "IND-13",
@@ -8898,8 +8850,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -479.6,
-      "initialY": 30.5
+      "initialX": -502.4,
+      "initialY": -5.8
     },
     "IND-14": {
       "id": "IND-14",
@@ -8933,8 +8885,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -496,
-      "initialY": -25.8
+      "initialX": -482.2,
+      "initialY": -46.3
     },
     "IND-15": {
       "id": "IND-15",
@@ -8973,8 +8925,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -476.3,
-      "initialY": -36.7
+      "initialX": -464.2,
+      "initialY": -28.5
     },
     "IND-16": {
       "id": "IND-16",
@@ -9014,8 +8966,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -405.2,
-      "initialY": -26.8
+      "initialX": -405,
+      "initialY": -7
     },
     "IND-17": {
       "id": "IND-17",
@@ -9054,8 +9006,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -347.1,
-      "initialY": -17.7
+      "initialX": -348.6,
+      "initialY": -22.7
     },
     "IND-18": {
       "id": "IND-18",
@@ -9094,8 +9046,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -467.4,
-      "initialY": -14.9
+      "initialX": -453.5,
+      "initialY": -46
     },
     "IND-19": {
       "id": "IND-19",
@@ -9134,8 +9086,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -425.6,
-      "initialY": -48.5
+      "initialX": -404.7,
+      "initialY": -39.5
     },
     "IND-20": {
       "id": "IND-20",
@@ -9174,8 +9126,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -377.8,
-      "initialY": 9.2
+      "initialX": -374,
+      "initialY": 9.3
     },
     "IND-21": {
       "id": "IND-21",
@@ -9214,8 +9166,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -398.6,
-      "initialY": 37.2
+      "initialX": -401.6,
+      "initialY": 38.3
     },
     "IND-22": {
       "id": "IND-22",
@@ -9254,8 +9206,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -349.6,
-      "initialY": 5.5
+      "initialX": -347.8,
+      "initialY": 5.6
     },
     "IND-23": {
       "id": "IND-23",
@@ -9294,8 +9246,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -387.2,
-      "initialY": -15.9
+      "initialX": -381.5,
+      "initialY": -11
     },
     "IND-24": {
       "id": "IND-24",
@@ -9334,8 +9286,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -445,
-      "initialY": 2.3
+      "initialX": -458,
+      "initialY": 8.8
     },
     "MRK-01": {
       "id": "MRK-01",
@@ -9367,8 +9319,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRK-01.mdx",
-      "initialX": -398,
-      "initialY": -150.2
+      "initialX": -386.5,
+      "initialY": -151.3
     },
     "MRK-02": {
       "id": "MRK-02",
@@ -9402,8 +9354,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-02.mdx",
-      "initialX": -446.2,
-      "initialY": -172.9
+      "initialX": -434,
+      "initialY": -159.1
     },
     "MRK-03": {
       "id": "MRK-03",
@@ -9437,8 +9389,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-03.mdx",
-      "initialX": -325,
-      "initialY": -151.4
+      "initialX": -320.1,
+      "initialY": -154.7
     },
     "MRK-04": {
       "id": "MRK-04",
@@ -9472,8 +9424,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-04.mdx",
-      "initialX": -339.1,
-      "initialY": -137.4
+      "initialX": -334.8,
+      "initialY": -138.2
     },
     "MRK-05": {
       "id": "MRK-05",
@@ -9507,8 +9459,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-05.mdx",
-      "initialX": -381.3,
-      "initialY": -179.2
+      "initialX": -382.8,
+      "initialY": -184
     },
     "MRK-06": {
       "id": "MRK-06",
@@ -9543,8 +9495,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-06.mdx",
-      "initialX": -392.9,
-      "initialY": -125.7
+      "initialX": -397.5,
+      "initialY": -132.1
     },
     "MRK-07": {
       "id": "MRK-07",
@@ -9578,8 +9530,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-07.mdx",
-      "initialX": -351.8,
-      "initialY": -161.2
+      "initialX": -344.8,
+      "initialY": -157.4
     },
     "MRK-08": {
       "id": "MRK-08",
@@ -9614,8 +9566,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-08.mdx",
-      "initialX": -374.4,
-      "initialY": -112.4
+      "initialX": -378.2,
+      "initialY": -115.1
     },
     "MRK-09": {
       "id": "MRK-09",
@@ -9650,8 +9602,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-09.mdx",
-      "initialX": -443.8,
-      "initialY": -153.2
+      "initialX": -448.1,
+      "initialY": -177.6
     },
     "MRK-10": {
       "id": "MRK-10",
@@ -9686,8 +9638,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-10.mdx",
-      "initialX": -415,
-      "initialY": -124.4
+      "initialX": -419.7,
+      "initialY": -128.9
     },
     "MRK-11": {
       "id": "MRK-11",
@@ -9721,8 +9673,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-11.mdx",
-      "initialX": -467,
-      "initialY": -149.5
+      "initialX": -469.9,
+      "initialY": -157.6
     },
     "MRK-12": {
       "id": "MRK-12",
@@ -9757,8 +9709,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-12.mdx",
-      "initialX": -415.5,
-      "initialY": -212.3
+      "initialX": -427.8,
+      "initialY": -213.2
     },
     "MRK-13": {
       "id": "MRK-13",
@@ -9793,8 +9745,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-13.mdx",
-      "initialX": -354.4,
-      "initialY": -197.3
+      "initialX": -359.3,
+      "initialY": -199.7
     },
     "MRK-14": {
       "id": "MRK-14",
@@ -9828,8 +9780,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-14.mdx",
-      "initialX": -400.4,
-      "initialY": -225.7
+      "initialX": -408.8,
+      "initialY": -227.7
     },
     "MRK-15": {
       "id": "MRK-15",
@@ -9864,8 +9816,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-15.mdx",
-      "initialX": -410.3,
-      "initialY": -173.1
+      "initialX": -402.7,
+      "initialY": -175.7
     },
     "MRK-16": {
       "id": "MRK-16",
@@ -9899,8 +9851,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-16.mdx",
-      "initialX": -441.7,
-      "initialY": -225.7
+      "initialX": -459.6,
+      "initialY": -202.4
     },
     "MRK-17": {
       "id": "MRK-17",
@@ -9935,8 +9887,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-17.mdx",
-      "initialX": -464.6,
-      "initialY": -184.9
+      "initialX": -445.7,
+      "initialY": -142.6
     },
     "MRK-18": {
       "id": "MRK-18",
@@ -9972,8 +9924,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-18.mdx",
-      "initialX": -399.1,
-      "initialY": -195.1
+      "initialX": -405.8,
+      "initialY": -199.7
     },
     "MRK-19": {
       "id": "MRK-19",
@@ -10007,8 +9959,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-19.mdx",
-      "initialX": -429.7,
-      "initialY": -192.1
+      "initialX": -425.8,
+      "initialY": -189.4
     },
     "MRK-20": {
       "id": "MRK-20",
@@ -10042,8 +9994,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-20.mdx",
-      "initialX": -375.7,
-      "initialY": -153.5
+      "initialX": -369.2,
+      "initialY": -161
     },
     "MRK-21": {
       "id": "MRK-21",
@@ -10078,8 +10030,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-21.mdx",
-      "initialX": -328,
-      "initialY": -119.7
+      "initialX": -332.6,
+      "initialY": -117.8
     },
     "MRK-22": {
       "id": "MRK-22",
@@ -10132,8 +10084,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "MRK-22.mdx",
-      "initialX": -339.3,
-      "initialY": -178.6
+      "initialX": -347.9,
+      "initialY": -180.1
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -10175,8 +10127,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -270.9,
-      "initialY": -107.1
+      "initialX": -271.9,
+      "initialY": -107.9
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -10213,8 +10165,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -277.2,
-      "initialY": -279
+      "initialX": -282.9,
+      "initialY": -276.7
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -10253,8 +10205,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -323.8,
-      "initialY": -328.2
+      "initialX": -319.4,
+      "initialY": -329.1
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -10298,8 +10250,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -254.2,
-      "initialY": -206.1
+      "initialX": -254.4,
+      "initialY": -206.6
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -10343,8 +10295,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -275.2,
-      "initialY": -221.2
+      "initialX": -275.6,
+      "initialY": -222.5
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -10383,8 +10335,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -317.1,
-      "initialY": -279.3
+      "initialX": -315.8,
+      "initialY": -284.2
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -10423,8 +10375,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -285.2,
-      "initialY": -252
+      "initialX": -291.1,
+      "initialY": -251.6
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -10464,8 +10416,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -256.6,
-      "initialY": -290.3
+      "initialX": -254.2,
+      "initialY": -281.2
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -10504,8 +10456,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -299.7,
-      "initialY": -318.1
+      "initialX": -291,
+      "initialY": -326
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -10544,8 +10496,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -310.2,
-      "initialY": -350.5
+      "initialX": -307,
+      "initialY": -351.3
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -10584,8 +10536,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -286.6,
-      "initialY": -333.4
+      "initialX": -270.3,
+      "initialY": -304
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -10624,8 +10576,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -341.6,
-      "initialY": -288.9
+      "initialX": -341.1,
+      "initialY": -287.6
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -10664,8 +10616,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -337.3,
-      "initialY": -355.4
+      "initialX": -334.7,
+      "initialY": -356
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -10699,7 +10651,7 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -360.6,
+      "initialX": -362.1,
       "initialY": -307.7
     },
     "MRM-15": {
@@ -10735,8 +10687,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -325.9,
-      "initialY": -300.8
+      "initialX": -334.7,
+      "initialY": -305
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -10776,8 +10728,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -302.1,
-      "initialY": -291.9
+      "initialX": -303.1,
+      "initialY": -299
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -10816,8 +10768,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -361.7,
-      "initialY": -335.4
+      "initialX": -358.9,
+      "initialY": -336
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -10862,8 +10814,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -237.3,
-      "initialY": -246.4
+      "initialX": -237.8,
+      "initialY": -242.9
     },
     "OPR-01": {
       "id": "OPR-01",
@@ -10900,8 +10852,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "OPR-01.mdx",
-      "initialX": -161.1,
-      "initialY": -414.7
+      "initialX": -151.5,
+      "initialY": -420.2
     },
     "OPR-02": {
       "id": "OPR-02",
@@ -10935,8 +10887,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-02.mdx",
-      "initialX": -207.2,
-      "initialY": -424.4
+      "initialX": -200.7,
+      "initialY": -431
     },
     "OPR-03": {
       "id": "OPR-03",
@@ -10976,8 +10928,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-03.mdx",
-      "initialX": -172.4,
-      "initialY": -360.3
+      "initialX": -159.4,
+      "initialY": -364.8
     },
     "OPR-04": {
       "id": "OPR-04",
@@ -11016,8 +10968,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-04.mdx",
-      "initialX": -225,
-      "initialY": -424.7
+      "initialX": -218.9,
+      "initialY": -430.1
     },
     "OPR-05": {
       "id": "OPR-05",
@@ -11061,8 +11013,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-05.mdx",
-      "initialX": -174,
-      "initialY": -434.8
+      "initialX": -226.8,
+      "initialY": -378.5
     },
     "OPR-06": {
       "id": "OPR-06",
@@ -11102,8 +11054,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-06.mdx",
-      "initialX": -161.7,
-      "initialY": -389.3
+      "initialX": -165.8,
+      "initialY": -393.2
     },
     "OPR-07": {
       "id": "OPR-07",
@@ -11142,8 +11094,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-07.mdx",
-      "initialX": -220.4,
-      "initialY": -399.8
+      "initialX": -223.6,
+      "initialY": -409.4
     },
     "OPR-08": {
       "id": "OPR-08",
@@ -11183,8 +11135,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-08.mdx",
-      "initialX": -215,
-      "initialY": -369.5
+      "initialX": -202.6,
+      "initialY": -354.3
     },
     "OPR-09": {
       "id": "OPR-09",
@@ -11218,8 +11170,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-09.mdx",
-      "initialX": -195.3,
-      "initialY": -457.6
+      "initialX": -190.4,
+      "initialY": -465.3
     },
     "OPR-10": {
       "id": "OPR-10",
@@ -11262,8 +11214,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-10.mdx",
-      "initialX": -143.6,
-      "initialY": -358.9
+      "initialX": -179,
+      "initialY": -365.9
     },
     "OPR-11": {
       "id": "OPR-11",
@@ -11311,8 +11263,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-11.mdx",
-      "initialX": -151.7,
-      "initialY": -303.9
+      "initialX": -148.4,
+      "initialY": -309.4
     },
     "OPR-12": {
       "id": "OPR-12",
@@ -11358,8 +11310,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "OPR-12.mdx",
-      "initialX": -184.1,
-      "initialY": -326.6
+      "initialX": -177.4,
+      "initialY": -318.6
     },
     "OPR-13": {
       "id": "OPR-13",
@@ -11402,8 +11354,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-13.mdx",
-      "initialX": -132.5,
-      "initialY": -331
+      "initialX": -132.3,
+      "initialY": -337.2
     },
     "OPR-14": {
       "id": "OPR-14",
@@ -11442,8 +11394,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-14.mdx",
-      "initialX": -131.3,
-      "initialY": -376.3
+      "initialX": -168.9,
+      "initialY": -340.6
     },
     "OPR-15": {
       "id": "OPR-15",
@@ -11486,8 +11438,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-15.mdx",
-      "initialX": -159.4,
-      "initialY": -331.9
+      "initialX": -136.9,
+      "initialY": -368.8
     },
     "OPR-16": {
       "id": "OPR-16",
@@ -11526,8 +11478,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "OPR-16.mdx",
-      "initialX": -205.5,
-      "initialY": -346
+      "initialX": -203.8,
+      "initialY": -377.1
     },
     "OPR-17": {
       "id": "OPR-17",
@@ -11566,8 +11518,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-17.mdx",
-      "initialX": -148.8,
-      "initialY": -433
+      "initialX": -141.1,
+      "initialY": -394.9
     },
     "OPR-18": {
       "id": "OPR-18",
@@ -11610,8 +11562,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-18.mdx",
-      "initialX": -194.2,
-      "initialY": -372.5
+      "initialX": -190.5,
+      "initialY": -389.4
     },
     "OPR-19": {
       "id": "OPR-19",
@@ -11646,8 +11598,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "OPR-19.mdx",
-      "initialX": -184.9,
-      "initialY": -396.7
+      "initialX": -174.1,
+      "initialY": -425.4
     },
     "OPR-20": {
       "id": "OPR-20",
@@ -11693,8 +11645,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-20.mdx",
-      "initialX": -176.9,
-      "initialY": -463.7
+      "initialX": -173.3,
+      "initialY": -459.6
     },
     "QNT-01": {
       "id": "QNT-01",
@@ -11726,8 +11678,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-01.mdx",
-      "initialX": 16.3,
-      "initialY": -357
+      "initialX": 16.9,
+      "initialY": -354.4
     },
     "QNT-02": {
       "id": "QNT-02",
@@ -11766,8 +11718,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-02.mdx",
-      "initialX": 14.1,
-      "initialY": -427.4
+      "initialX": 18.6,
+      "initialY": -416.5
     },
     "QNT-03": {
       "id": "QNT-03",
@@ -11806,8 +11758,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-03.mdx",
-      "initialX": -11.6,
-      "initialY": -479.6
+      "initialX": -6.7,
+      "initialY": -474.3
     },
     "QNT-04": {
       "id": "QNT-04",
@@ -11842,8 +11794,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-04.mdx",
-      "initialX": -35.3,
-      "initialY": -399.2
+      "initialX": -31.4,
+      "initialY": -408
     },
     "QNT-05": {
       "id": "QNT-05",
@@ -11877,8 +11829,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-05.mdx",
-      "initialX": 24.4,
-      "initialY": -402.9
+      "initialX": 24.2,
+      "initialY": -393.2
     },
     "QNT-06": {
       "id": "QNT-06",
@@ -11913,8 +11865,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-06.mdx",
-      "initialX": -5.6,
-      "initialY": -360.6
+      "initialX": -4.9,
+      "initialY": -356
     },
     "QNT-07": {
       "id": "QNT-07",
@@ -11948,8 +11900,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-07.mdx",
-      "initialX": -31.6,
-      "initialY": -324.2
+      "initialX": -21.1,
+      "initialY": -316.5
     },
     "QNT-08": {
       "id": "QNT-08",
@@ -11983,8 +11935,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-08.mdx",
-      "initialX": 12.7,
-      "initialY": -491.7
+      "initialX": 25.3,
+      "initialY": -475.7
     },
     "QNT-09": {
       "id": "QNT-09",
@@ -12018,8 +11970,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-09.mdx",
-      "initialX": -43.3,
-      "initialY": -495.7
+      "initialX": -33.9,
+      "initialY": -495.2
     },
     "QNT-10": {
       "id": "QNT-10",
@@ -12053,8 +12005,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-10.mdx",
-      "initialX": 30.8,
-      "initialY": -440.3
+      "initialX": 35.8,
+      "initialY": -431.7
     },
     "QNT-11": {
       "id": "QNT-11",
@@ -12088,8 +12040,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-11.mdx",
-      "initialX": 11.2,
-      "initialY": -381.2
+      "initialX": 3.2,
+      "initialY": -380
     },
     "QNT-12": {
       "id": "QNT-12",
@@ -12123,8 +12075,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-12.mdx",
-      "initialX": 42.2,
-      "initialY": -463.4
+      "initialX": 0.8,
+      "initialY": -514.5
     },
     "QNT-13": {
       "id": "QNT-13",
@@ -12156,8 +12108,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-13.mdx",
-      "initialX": -5.5,
-      "initialY": -398.9
+      "initialX": -40.6,
+      "initialY": -390.4
     },
     "QNT-14": {
       "id": "QNT-14",
@@ -12196,8 +12148,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-14.mdx",
-      "initialX": -45.9,
-      "initialY": -446.1
+      "initialX": -59.4,
+      "initialY": -445.5
     },
     "QNT-15": {
       "id": "QNT-15",
@@ -12232,8 +12184,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-15.mdx",
-      "initialX": -47,
-      "initialY": -379.7
+      "initialX": 6.3,
+      "initialY": -449.3
     },
     "QNT-16": {
       "id": "QNT-16",
@@ -12268,8 +12220,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-16.mdx",
-      "initialX": -5,
-      "initialY": -418.4
+      "initialX": -13,
+      "initialY": -398.2
     },
     "QNT-17": {
       "id": "QNT-17",
@@ -12303,8 +12255,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-17.mdx",
-      "initialX": -32,
-      "initialY": -468.2
+      "initialX": -19.2,
+      "initialY": -457.2
     },
     "QNT-18": {
       "id": "QNT-18",
@@ -12341,8 +12293,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-18.mdx",
-      "initialX": -12.4,
-      "initialY": -505.5
+      "initialX": 1.3,
+      "initialY": -492.6
     },
     "QNT-19": {
       "id": "QNT-19",
@@ -12381,8 +12333,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-19.mdx",
-      "initialX": -59.5,
-      "initialY": -473
+      "initialX": -61.8,
+      "initialY": -478.5
     },
     "QNT-20": {
       "id": "QNT-20",
@@ -12417,8 +12369,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-20.mdx",
-      "initialX": 5.5,
-      "initialY": -461.6
+      "initialX": -39.6,
+      "initialY": -456.9
     },
     "QNT-21": {
       "id": "QNT-21",
@@ -12459,8 +12411,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-21.mdx",
-      "initialX": -19.1,
-      "initialY": -437.2
+      "initialX": -5.2,
+      "initialY": -430.2
     },
     "QNT-22": {
       "id": "QNT-22",
@@ -12501,8 +12453,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-22.mdx",
-      "initialX": -54.3,
-      "initialY": -413
+      "initialX": -61.6,
+      "initialY": -407.2
     },
     "QNT-23": {
       "id": "QNT-23",
@@ -12541,8 +12493,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-23.mdx",
-      "initialX": -52.2,
-      "initialY": -359.5
+      "initialX": -36,
+      "initialY": -363.1
     },
     "QNT-24": {
       "id": "QNT-24",
@@ -12581,8 +12533,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "QNT-24.mdx",
-      "initialX": -63.1,
-      "initialY": -430.9
+      "initialX": -42.9,
+      "initialY": -427.2
     },
     "QNT-25": {
       "id": "QNT-25",
@@ -12622,8 +12574,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-25.mdx",
-      "initialX": -31.7,
-      "initialY": -351.3
+      "initialX": -23.3,
+      "initialY": -342.2
     },
     "QNT-26": {
       "id": "QNT-26",
@@ -12660,8 +12612,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-26.mdx",
-      "initialX": -5.6,
-      "initialY": -328.5
+      "initialX": -47.2,
+      "initialY": -343.6
     },
     "TEC-01": {
       "id": "TEC-01",
@@ -12693,8 +12645,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-01.mdx",
-      "initialX": 110.5,
-      "initialY": -379.3
+      "initialX": 113.6,
+      "initialY": -373.7
     },
     "TEC-02": {
       "id": "TEC-02",
@@ -12738,8 +12690,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-02.mdx",
-      "initialX": 148.8,
-      "initialY": -419.8
+      "initialX": 143.9,
+      "initialY": -424.3
     },
     "TEC-03": {
       "id": "TEC-03",
@@ -12778,8 +12730,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-03.mdx",
-      "initialX": 208.3,
-      "initialY": -428.1
+      "initialX": 204.8,
+      "initialY": -443.6
     },
     "TEC-04": {
       "id": "TEC-04",
@@ -12814,8 +12766,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-04.mdx",
-      "initialX": 170.4,
-      "initialY": -361.3
+      "initialX": 175.6,
+      "initialY": -371.4
     },
     "TEC-05": {
       "id": "TEC-05",
@@ -12859,8 +12811,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-05.mdx",
-      "initialX": 106.2,
-      "initialY": -405.2
+      "initialX": 103.1,
+      "initialY": -398.4
     },
     "TEC-06": {
       "id": "TEC-06",
@@ -12894,8 +12846,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-06.mdx",
-      "initialX": 161.7,
-      "initialY": -474.2
+      "initialX": 170.6,
+      "initialY": -474.1
     },
     "TEC-07": {
       "id": "TEC-07",
@@ -12929,8 +12881,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-07.mdx",
-      "initialX": 149,
-      "initialY": -358.4
+      "initialX": 157.8,
+      "initialY": -362.3
     },
     "TEC-08": {
       "id": "TEC-08",
@@ -12964,8 +12916,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-08.mdx",
-      "initialX": 201.9,
-      "initialY": -450.1
+      "initialX": 190.8,
+      "initialY": -461.5
     },
     "TEC-09": {
       "id": "TEC-09",
@@ -12999,8 +12951,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-09.mdx",
-      "initialX": 134.3,
-      "initialY": -470.1
+      "initialX": 142.6,
+      "initialY": -476.8
     },
     "TEC-10": {
       "id": "TEC-10",
@@ -13034,8 +12986,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-10.mdx",
-      "initialX": 183.3,
-      "initialY": -466
+      "initialX": 203.9,
+      "initialY": -417.4
     },
     "TEC-11": {
       "id": "TEC-11",
@@ -13069,8 +13021,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-11.mdx",
-      "initialX": 128.6,
-      "initialY": -367.9
+      "initialX": 135.4,
+      "initialY": -366.8
     },
     "TEC-12": {
       "id": "TEC-12",
@@ -13105,8 +13057,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TEC-12.mdx",
-      "initialX": 188.6,
-      "initialY": -379.8
+      "initialX": 191.6,
+      "initialY": -389.7
     },
     "TEC-13": {
       "id": "TEC-13",
@@ -13140,8 +13092,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-13.mdx",
-      "initialX": 123.3,
-      "initialY": -307.9
+      "initialX": 134.3,
+      "initialY": -312
     },
     "TEC-14": {
       "id": "TEC-14",
@@ -13175,8 +13127,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-14.mdx",
-      "initialX": 107.8,
-      "initialY": -320.2
+      "initialX": 110.3,
+      "initialY": -308.3
     },
     "TEC-15": {
       "id": "TEC-15",
@@ -13208,8 +13160,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-15.mdx",
-      "initialX": 167,
-      "initialY": -398.8
+      "initialX": 159.7,
+      "initialY": -397
     },
     "TEC-16": {
       "id": "TEC-16",
@@ -13241,8 +13193,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-16.mdx",
-      "initialX": 142.4,
-      "initialY": -391.4
+      "initialX": 132.6,
+      "initialY": -398.9
     },
     "TEC-17": {
       "id": "TEC-17",
@@ -13281,8 +13233,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-17.mdx",
-      "initialX": 151.7,
-      "initialY": -327.1
+      "initialX": 152.5,
+      "initialY": -336.2
     },
     "TEC-18": {
       "id": "TEC-18",
@@ -13316,8 +13268,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-18.mdx",
-      "initialX": 122.9,
-      "initialY": -438.8
+      "initialX": 121,
+      "initialY": -447.5
     },
     "TEC-19": {
       "id": "TEC-19",
@@ -13351,8 +13303,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-19.mdx",
-      "initialX": 131.4,
-      "initialY": -333.7
+      "initialX": 128.2,
+      "initialY": -337.3
     },
     "TEC-20": {
       "id": "TEC-20",
@@ -13386,8 +13338,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-20.mdx",
-      "initialX": 177.2,
-      "initialY": -436
+      "initialX": 173.2,
+      "initialY": -438.5
     },
     "TEC-21": {
       "id": "TEC-21",
@@ -13421,8 +13373,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-21.mdx",
-      "initialX": 106.3,
-      "initialY": -349.2
+      "initialX": 104.9,
+      "initialY": -348.2
     },
     "TEC-22": {
       "id": "TEC-22",
@@ -13456,8 +13408,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-22.mdx",
-      "initialX": 150.4,
-      "initialY": -446.8
+      "initialX": 147.6,
+      "initialY": -451.2
     },
     "TEC-23": {
       "id": "TEC-23",
@@ -13492,8 +13444,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-23.mdx",
-      "initialX": 86.3,
-      "initialY": -324
+      "initialX": 89.2,
+      "initialY": -327.3
     },
     "TEC-24": {
       "id": "TEC-24",
@@ -13525,8 +13477,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-24.mdx",
-      "initialX": 188.9,
-      "initialY": -409.9
+      "initialX": 175.9,
+      "initialY": -415.6
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -13568,8 +13520,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 310.9,
-      "initialY": -260
+      "initialX": 313.9,
+      "initialY": -259.2
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -13616,8 +13568,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 246.5,
-      "initialY": -257.2
+      "initialX": 253.6,
+      "initialY": -258
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -13656,8 +13608,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 267.4,
-      "initialY": -243
+      "initialX": 275.5,
+      "initialY": -241.2
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -13696,8 +13648,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 290.1,
-      "initialY": -281.7
+      "initialX": 278.7,
+      "initialY": -289.7
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -13736,8 +13688,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 303,
-      "initialY": -346.7
+      "initialX": 318.3,
+      "initialY": -343.8
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -13776,8 +13728,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 355.3,
-      "initialY": -321.5
+      "initialX": 373.2,
+      "initialY": -350.2
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -13816,8 +13768,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 252.7,
-      "initialY": -314.4
+      "initialX": 288.3,
+      "initialY": -351.4
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -13870,8 +13822,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 223.7,
-      "initialY": -275.6
+      "initialX": 251.5,
+      "initialY": -303.9
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -13911,8 +13863,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 248.8,
-      "initialY": -333.5
+      "initialX": 235.6,
+      "initialY": -243.8
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -13966,8 +13918,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 270.3,
-      "initialY": -288.3
+      "initialX": 293.1,
+      "initialY": -266.4
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -14016,8 +13968,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 341.2,
-      "initialY": -297.8
+      "initialX": 347.4,
+      "initialY": -298.4
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -14057,8 +14009,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 316.5,
-      "initialY": -308.8
+      "initialX": 302.2,
+      "initialY": -303.9
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -14110,8 +14062,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 331.7,
-      "initialY": -394.6
+      "initialX": 348.6,
+      "initialY": -380.7
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -14164,8 +14116,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 341,
-      "initialY": -357.6
+      "initialX": 343.3,
+      "initialY": -330
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -14218,8 +14170,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 367.5,
-      "initialY": -295.1
+      "initialX": 338.7,
+      "initialY": -275.8
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -14259,8 +14211,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 273.6,
-      "initialY": -332.5
+      "initialX": 265.2,
+      "initialY": -330.5
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -14301,8 +14253,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 319.3,
-      "initialY": -364.5
+      "initialX": 313,
+      "initialY": -366.4
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -14349,8 +14301,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 298.5,
-      "initialY": -309.5
+      "initialX": 323.7,
+      "initialY": -305.4
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -14405,8 +14357,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 377.9,
-      "initialY": -337.6
+      "initialX": 375.1,
+      "initialY": -320.7
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -14452,8 +14404,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 250.9,
-      "initialY": -283.4
+      "initialX": 243.7,
+      "initialY": -277.5
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -14492,8 +14444,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 207.4,
-      "initialY": -224.3
+      "initialX": 219,
+      "initialY": -218.5
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -14532,8 +14484,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 207.3,
-      "initialY": -273
+      "initialX": 230.8,
+      "initialY": -294.7
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -14573,8 +14525,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 224.9,
-      "initialY": -228.8
+      "initialX": 205.2,
+      "initialY": -237.1
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -14620,8 +14572,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 245.6,
-      "initialY": -225.3
+      "initialX": 209,
+      "initialY": -261.9
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -14663,8 +14615,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 283.7,
-      "initialY": -235.6
+      "initialX": 261.7,
+      "initialY": -224.8
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -14705,8 +14657,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 358.1,
-      "initialY": -344.6
+      "initialX": 344.1,
+      "initialY": -343.7
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -14747,8 +14699,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 280.4,
-      "initialY": -350.2
+      "initialX": 265.4,
+      "initialY": -354.8
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -14801,8 +14753,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 285.5,
-      "initialY": -376.4
+      "initialX": 297.9,
+      "initialY": -381
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -14863,8 +14815,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 313.7,
-      "initialY": -327
+      "initialX": 300.7,
+      "initialY": -325.8
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -14920,8 +14872,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 317.7,
-      "initialY": -291.9
+      "initialX": 283.5,
+      "initialY": -310.6
     },
     "TRD-01": {
       "id": "TRD-01",
@@ -14953,8 +14905,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-01.mdx",
-      "initialX": 334,
-      "initialY": -128.3
+      "initialX": 340.9,
+      "initialY": -128.9
     },
     "TRD-02": {
       "id": "TRD-02",
@@ -14988,8 +14940,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-02.mdx",
-      "initialX": 274.6,
-      "initialY": -127.1
+      "initialX": 283.4,
+      "initialY": -142.4
     },
     "TRD-03": {
       "id": "TRD-03",
@@ -15023,8 +14975,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-03.mdx",
-      "initialX": 318.2,
-      "initialY": -173.2
+      "initialX": 325.9,
+      "initialY": -174.2
     },
     "TRD-04": {
       "id": "TRD-04",
@@ -15064,8 +15016,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-04.mdx",
-      "initialX": 309.7,
-      "initialY": -132.6
+      "initialX": 311.8,
+      "initialY": -114.3
     },
     "TRD-05": {
       "id": "TRD-05",
@@ -15099,8 +15051,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-05.mdx",
-      "initialX": 350.7,
-      "initialY": -97.7
+      "initialX": 353,
+      "initialY": -96.5
     },
     "TRD-06": {
       "id": "TRD-06",
@@ -15134,8 +15086,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-06.mdx",
-      "initialX": 368,
-      "initialY": -113.4
+      "initialX": 371.4,
+      "initialY": -101.2
     },
     "TRD-07": {
       "id": "TRD-07",
@@ -15170,8 +15122,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-07.mdx",
-      "initialX": 355.3,
-      "initialY": -165.9
+      "initialX": 342.7,
+      "initialY": -160.7
     },
     "TRD-08": {
       "id": "TRD-08",
@@ -15205,8 +15157,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-08.mdx",
-      "initialX": 319.7,
-      "initialY": -107.1
+      "initialX": 291.9,
+      "initialY": -97.3
     },
     "TRD-09": {
       "id": "TRD-09",
@@ -15241,8 +15193,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-09.mdx",
-      "initialX": 309.6,
-      "initialY": -87.4
+      "initialX": 316.8,
+      "initialY": -90
     },
     "TRD-10": {
       "id": "TRD-10",
@@ -15287,8 +15239,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TRD-10.mdx",
-      "initialX": 465.1,
-      "initialY": -202
+      "initialX": 467.6,
+      "initialY": -199.1
     },
     "TRD-11": {
       "id": "TRD-11",
@@ -15327,8 +15279,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-11.mdx",
-      "initialX": 436,
-      "initialY": -236.3
+      "initialX": 417.9,
+      "initialY": -230.3
     },
     "TRD-12": {
       "id": "TRD-12",
@@ -15371,8 +15323,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TRD-12.mdx",
-      "initialX": 404.3,
-      "initialY": -194.7
+      "initialX": 406.2,
+      "initialY": -176.5
     },
     "TRD-13": {
       "id": "TRD-13",
@@ -15404,8 +15356,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-13.mdx",
-      "initialX": 468,
-      "initialY": -155.6
+      "initialX": 456,
+      "initialY": -152.6
     },
     "TRD-14": {
       "id": "TRD-14",
@@ -15439,8 +15391,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-14.mdx",
-      "initialX": 440.3,
-      "initialY": -112.1
+      "initialX": 432.5,
+      "initialY": -106
     },
     "TRD-15": {
       "id": "TRD-15",
@@ -15474,8 +15426,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-15.mdx",
-      "initialX": 434.1,
-      "initialY": -202.1
+      "initialX": 427.2,
+      "initialY": -210.5
     },
     "TRD-16": {
       "id": "TRD-16",
@@ -15514,8 +15466,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-16.mdx",
-      "initialX": 382.1,
-      "initialY": -162.4
+      "initialX": 384.6,
+      "initialY": -181.5
     },
     "TRD-17": {
       "id": "TRD-17",
@@ -15555,8 +15507,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-17.mdx",
-      "initialX": 377.9,
-      "initialY": -213.8
+      "initialX": 453.6,
+      "initialY": -174.3
     },
     "TRD-18": {
       "id": "TRD-18",
@@ -15591,8 +15543,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-18.mdx",
-      "initialX": 410.6,
-      "initialY": -144.4
+      "initialX": 405.3,
+      "initialY": -142.2
     },
     "TRD-19": {
       "id": "TRD-19",
@@ -15639,8 +15591,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TRD-19.mdx",
-      "initialX": 468.3,
-      "initialY": -131.6
+      "initialX": 465.8,
+      "initialY": -127
     },
     "TRD-20": {
       "id": "TRD-20",
@@ -15675,8 +15627,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TRD-20.mdx",
-      "initialX": 451.8,
-      "initialY": -182.3
+      "initialX": 475.2,
+      "initialY": -170.9
     },
     "TRD-21": {
       "id": "TRD-21",
@@ -15711,8 +15663,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-21.mdx",
-      "initialX": 406.6,
-      "initialY": -167.4
+      "initialX": 387,
+      "initialY": -155.3
     },
     "TRD-22": {
       "id": "TRD-22",
@@ -15746,8 +15698,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-22.mdx",
-      "initialX": 393.8,
-      "initialY": -104.7
+      "initialX": 436,
+      "initialY": -128.6
     },
     "TRD-23": {
       "id": "TRD-23",
@@ -15781,8 +15733,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-23.mdx",
-      "initialX": 411.6,
-      "initialY": -120.7
+      "initialX": 398.2,
+      "initialY": -113.4
     },
     "TRD-24": {
       "id": "TRD-24",
@@ -15821,8 +15773,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-24.mdx",
-      "initialX": 337.4,
-      "initialY": -148.7
+      "initialX": 322.2,
+      "initialY": -137.4
     },
     "TRD-25": {
       "id": "TRD-25",
@@ -15880,8 +15832,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-25.mdx",
-      "initialX": 382.5,
-      "initialY": -186.6
+      "initialX": 362.9,
+      "initialY": -179.8
     },
     "TRD-26": {
       "id": "TRD-26",
@@ -15921,8 +15873,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-26.mdx",
-      "initialX": 361,
-      "initialY": -138.1
+      "initialX": 358.7,
+      "initialY": -139.9
     },
     "TRD-27": {
       "id": "TRD-27",
@@ -15956,8 +15908,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-27.mdx",
-      "initialX": 433.4,
-      "initialY": -140.4
+      "initialX": 422.2,
+      "initialY": -178.5
     },
     "TRD-28": {
       "id": "TRD-28",
@@ -15996,8 +15948,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-28.mdx",
-      "initialX": 344.9,
-      "initialY": -190
+      "initialX": 360.6,
+      "initialY": -200.8
     },
     "TRD-29": {
       "id": "TRD-29",
@@ -16048,7 +16000,7 @@
       "currentness": "durable",
       "filepath": "TRD-29.mdx",
       "initialX": 428.2,
-      "initialY": -168.3
+      "initialY": -155.9
     },
     "TRD-30": {
       "id": "TRD-30",
@@ -16092,8 +16044,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-30.mdx",
-      "initialX": 417,
-      "initialY": -221.2
+      "initialX": 394.4,
+      "initialY": -208.2
     },
     "TRD-31": {
       "id": "TRD-31",
@@ -16133,8 +16085,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TRD-31.mdx",
-      "initialX": 477.2,
-      "initialY": -184.6
+      "initialX": 450.8,
+      "initialY": -214.7
     },
     "TRD-32": {
       "id": "TRD-32",
@@ -16192,8 +16144,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-32.mdx",
-      "initialX": 386.9,
-      "initialY": -134.1
+      "initialX": 378.1,
+      "initialY": -126.7
     }
   },
   "reverseIndex": {
@@ -16681,40 +16633,46 @@
       "FND-04",
       "FND-05",
       "FND-06",
-      "FND-07",
-      "FND-15",
+      "FND-10",
       "IMP-01"
     ],
     "FND-02": [
       "FND-03",
       "FND-04",
       "FND-05",
-      "FND-07",
+      "FND-10",
       "IMP-01"
     ],
     "FND-03": [],
     "FND-04": [
+      "FND-05",
       "FND-06"
     ],
     "FND-05": [
+      "FND-10",
       "FND-20",
       "FND-23"
     ],
     "FND-06": [
+      "FND-07",
       "FND-08",
       "FND-09",
       "FND-10",
       "FND-24"
     ],
-    "FND-07": [],
+    "FND-07": [
+      "FND-08",
+      "FND-09"
+    ],
     "FND-08": [
-      "FND-09",
+      "FND-10",
+      "FND-14",
+      "FND-24",
       "IMP-02",
       "IMP-04"
     ],
     "FND-09": [
-      "FND-14",
-      "FND-24",
+      "FND-10",
       "IMP-02",
       "IMP-04",
       "IMP-11"
@@ -16733,22 +16691,24 @@
     ],
     "FND-14": [],
     "FND-15": [
-      "FND-19"
-    ],
-    "FND-16": [
+      "FND-16",
       "FND-17",
       "FND-18",
       "FND-19"
     ],
+    "FND-16": [
+      "FND-17",
+      "FND-19"
+    ],
     "FND-17": [
-      "FND-18"
+      "FND-18",
+      "FND-19"
     ],
     "FND-18": [
       "FND-19"
     ],
     "FND-19": [
-      "FND-20",
-      "FND-23"
+      "FND-20"
     ],
     "FND-20": [
       "FND-21",
@@ -18627,28 +18587,28 @@
             },
             {
               "id": "FND-02",
-              "title": "Deposits and Loans: Opposite Sides of the Bank",
-              "type": "mechanism",
+              "title": "Deposits, Loans and Funding",
+              "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-03",
-              "title": "Loan Creation, Deposits and Funding",
+              "title": "How Bank Lending Creates Deposits",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-04",
-              "title": "Net Interest Income and Bank Earnings",
+              "title": "The Bank Earnings Engine",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-05",
-              "title": "Capital Versus Liquidity",
+              "title": "Capital, Liquidity and Solvency",
               "type": "concept",
               "status": "draft",
               "verified": false
@@ -18667,29 +18627,29 @@
             },
             {
               "id": "FND-07",
-              "title": "Reading a Bank Balance Sheet",
-              "type": "procedure",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "FND-08",
               "title": "Accrual Versus Cash",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
+              "id": "FND-08",
+              "title": "Credit-Loss Allowances and Provisions",
+              "type": "delta",
+              "status": "draft",
+              "verified": false
+            },
+            {
               "id": "FND-09",
-              "title": "Provisions and Credit-Loss Allowances",
-              "type": "mechanism",
+              "title": "Profit, OCI and Equity",
+              "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-10",
-              "title": "Other Comprehensive Income",
-              "type": "concept",
+              "title": "How to Read a Bank Balance Sheet",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             }
@@ -18707,7 +18667,7 @@
             },
             {
               "id": "FND-12",
-              "title": "Compounding and Discounting Conventions",
+              "title": "Compounding, Rates and Timing Conventions",
               "type": "mechanism",
               "status": "draft",
               "verified": false
@@ -18721,7 +18681,7 @@
             },
             {
               "id": "FND-14",
-              "title": "NPV and Discounting Expected Loss",
+              "title": "NPV and Discounted Cash Shortfalls",
               "type": "mechanism",
               "status": "draft",
               "verified": false
@@ -18733,28 +18693,28 @@
           "atoms": [
             {
               "id": "FND-15",
-              "title": "Exposure: What Is Actually at Risk",
-              "type": "concept",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "FND-16",
               "title": "Probability and Expected Value",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
+              "id": "FND-16",
+              "title": "Variance, Standard Deviation and Volatility",
+              "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
               "id": "FND-17",
-              "title": "Variance and Volatility",
+              "title": "Quantiles and Tail Risk",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-18",
-              "title": "Quantiles and Tail Risk",
+              "title": "Exposure: What Is Actually at Risk",
               "type": "concept",
               "status": "draft",
               "verified": false
@@ -18773,8 +18733,8 @@
           "atoms": [
             {
               "id": "FND-20",
-              "title": "Risk Appetite",
-              "type": "concept",
+              "title": "Risk Capacity, Appetite, Limits and Profile",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
@@ -18787,21 +18747,21 @@
             },
             {
               "id": "FND-22",
-              "title": "Policy, Standard and Procedure",
+              "title": "Policy, Standard, Procedure and Evidence",
               "type": "reference",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-23",
-              "title": "What a Regulator Actually Does",
+              "title": "What Regulators and Supervisors Actually Do",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "FND-24",
-              "title": "Prudential Regulation, Conduct Regulation and Accounting Standards",
+              "title": "Prudential, Conduct and Accounting Frameworks",
               "type": "reference",
               "status": "draft",
               "verified": false
@@ -22340,14 +22300,14 @@
       "message": "Atom \"FND-15\" is unverified (draft). Displays development banner."
     },
     {
+      "rule": "ROOT_ATOM_NOTE",
+      "atomId": "FND-15",
+      "message": "Atom \"FND-15\" has 0 prerequisites (Depth 0 Root)."
+    },
+    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "FND-16",
       "message": "Atom \"FND-16\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "FND-16",
-      "message": "Atom \"FND-16\" has 0 prerequisites (Depth 0 Root)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -23915,5 +23875,5 @@
       "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-31T04:47:40.871Z"
+  "generatedAt": "2026-08-31T08:04:37.239Z"
 }

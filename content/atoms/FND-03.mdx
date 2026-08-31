@@ -1,14 +1,15 @@
 ---
 id: FND-03
-title: 'Loan Creation, Deposits and Funding'
+title: How Bank Lending Creates Deposits
 type: mechanism
 domain: foundation
 subdomain: bank-mechanics
 one_screen: >-
-  When a bank grants a loan and credits the borrower's account, it can create a
-  **loan asset and a deposit liability simultaneously**. That does not make
-  funding irrelevant: payments out of the bank create settlement outflows, while
-  liquidity, capital, risk and profitability constrain sustainable lending.
+  When a bank originates a loan and credits the borrower's account, it can
+  create a loan asset and a deposit liability at the same moment. “Loans create
+  deposits” describes that balance-sheet mechanism; it does **not** mean lending
+  is unconstrained by funding, settlement liquidity, capital, risk, or
+  profitability.
 prerequisites:
   - FND-01
   - FND-02
@@ -21,79 +22,85 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'Bank of England, *How is money created?*, Explainer'
-    url: 'https://www.bankofengland.co.uk/explainers/how-is-money-created'
-    accessed: 'August 28, 2026'
   - label: >-
-      Bank of England, Andrew Bailey, *The importance of central bank reserves*,
-      speech, May 21, 2024
-    url: >-
-      https://www.bankofengland.co.uk/speech/2024/may/andrew-bailey-lecture-london-school-of-economics-charles-goodhart
-    accessed: 'August 28, 2026'
-  - label: >-
-      Basel Committee on Banking Supervision, *Basel III: international
-      regulatory framework for banks*
+      Bank of England, McLeay, Radia and Thomas, *Money creation in the modern
+      economy*, Quarterly Bulletin 2014 Q1, published 14 March 2014 (
     url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
+    accessed: 31 August 2026
+  - label: 'Bank of England, *How is money created?*, last updated 1 October 2019 ('
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
 import_source: 01_FND_foundations.md
 ---
-Consider a new loan of 100 whose proceeds are credited to the borrower's account at the lending bank. At origination, the bank can record **+100 loan asset** and **+100 deposit liability**. Its balance sheet expands by 100 on each side. Commercial bank lending is therefore capable of creating deposit money; lending need not mechanically wait for a specific existing depositor's money to be reassigned first. The Bank of England describes bank lending as creating deposits in this manner.
+### Core mechanism
 
-That mechanism is frequently stretched into the false claim that a bank needs no funding. Suppose the borrower immediately pays 100 to somebody who banks elsewhere. The deposit created at the lending bank may leave it. Settlement between banks then requires an asset acceptable for interbank settlement, ordinarily central-bank money within the relevant payment system. The originating bank must manage the resulting liquidity position and may replace lost deposit funding with other deposits or wholesale funding.
+Suppose the bank grants a new loan of 100 and credits the proceeds to the borrower's deposit account:
 
-Lending is also constrained by more than settlement cash. The bank must expect the loan to compensate for funding costs, operating costs, credit losses and the use of scarce balance-sheet resources. Prudential capital requirements constrain how much risk can be supported by loss-absorbing resources, while liquidity requirements constrain vulnerability to cash outflows. Risk appetite and underwriting standards impose further limits. Basel standards therefore contain separate capital and liquidity frameworks rather than treating deposit creation as an unlimited process.
+| Bank entry | Change |
+| :--- | ---: |
+| Loan asset | +100 |
+| Deposit liability | +100 |
+| Total assets | +100 |
+| Total liabilities | +100 |
+| Equity at origination, before fees/costs | No mechanical change |
 
-"Loans create deposits" describes an accounting and monetary mechanism. "Banks need funding" describes the continuing requirement to finance assets and survive payment outflows. Both statements can be true at the same time.
+The key next step is payment. If the borrower pays someone who banks elsewhere, the newly created deposit can leave the originating bank. Interbank settlement then requires the originating bank to transfer settlement assets, normally central-bank money within the relevant payment system. The bank must manage the liquidity and funding position left behind.
+
+### Flow
 
 ```text
 Loan approved
-     |
-     v
-+------------------+     +------------------+
-| +100 Loan asset  |     | +100 Deposit     |
-|                  |     | liability        |
-+------------------+     +------------------+
-          \               /
-           \             /
-            v           v
-        Balance sheet expands
-                 |
-                 v
-        Customer pays away
-                 |
-                 v
-+--------------------------------+
-| Deposit may leave the bank;    |
-| settlement liquidity is needed |
-+--------------------------------+
+    ↓
++ Loan asset
++ Deposit liability
+    ↓
+Borrower spends
+    ↓
+Same-bank payment → deposits move internally
+Other-bank payment → settlement outflow
+    ↓
+Funding / liquidity position must be managed
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-01 Balance sheet · FND-02 Deposits and funding
+This:       Loan-and-deposit creation · Payment-away effect
+Downstream: Liquidity · Funding cost · Earnings · Credit exposure
 ```
 
 ### Permanent rule
 
-Loan origination can create a deposit, but a bank must still fund and settle the balance sheet that remains after customers move money.
+Creating a deposit at loan origination and funding the resulting balance sheet are compatible truths, not competing theories.
 
-### Permanent trap
+### Never confuse [Deposit creation] and [Funding]
 
-Interpreting "banks create deposits by lending" as "banks can lend without capital, liquidity, funding costs or settlement constraints".
-
-### Never confuse
-
-**Deposit creation** — the simultaneous balance-sheet creation of a loan asset and deposit liability.
+**Deposit creation** — the simultaneous increase in a loan asset and deposit liability when lending is booked in this form.
 
 ---
 
-**Funding** — the liabilities and equity supporting assets over time, including after newly created deposits are transferred elsewhere.
+**Funding** — the liabilities and equity that support assets over time, including after customers transfer newly created deposits elsewhere.
+
+### Permanent trap
+
+Turning “banks create deposits by lending” into “banks can lend without constraint”. A bank that cannot settle payments, fund its assets, absorb losses, satisfy constraints, or earn an adequate return cannot sustainably expand lending.
 
 ### Jurisdiction variants
 
-**No delta.** The double-entry mechanism is universal; local monetary, capital and liquidity rules determine the constraints around it.
+**No delta.** The double-entry mechanism is universal. Payment-system design and prudential calibration differ, but those differences do not alter the accounting logic.
 
 <Recall
-  q="What entries arise when a new loan is credited to an account at the same bank?"
+  q="What two entries arise when a new loan is credited to the borrower's account?"
   a="A loan asset and a deposit liability both increase."
 />
 
 <Recall
-  q="Why does deposit creation not eliminate funding risk?"
-  a="Deposits can leave through payments, creating settlement and replacement-funding needs."
+  q="Why can the new deposit create a liquidity need?"
+  a="The borrower may transfer it to another bank, requiring interbank settlement."
+/>
+
+<Recall
+  q="Does loan-created money remove the need for funding?"
+  a="No. Created deposits can leave, so settlement liquidity and ongoing funding still matter."
 />

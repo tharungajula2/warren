@@ -313,14 +313,14 @@ for (const seg of rawSegments) {
     const secTitle = rawSecTitle.toLowerCase();
     const secBody = (firstNewline === -1 ? "" : sec.substring(firstNewline + 1)).trim();
 
-    if (secTitle.startsWith("flow")) {
-      sectionStats.Flow++;
-      let flowContent = secBody;
+    if (secTitle.startsWith("flow") || secTitle.includes("formula") || secTitle.includes("where it sits")) {
+      if (secTitle.startsWith("flow")) sectionStats.Flow++;
+      let blockContent = secBody;
       const codeMatch = secBody.match(/```(?:text)?\s*\r?\n([\s\S]*?)\r?\n```/);
       if (codeMatch) {
-        flowContent = codeMatch[1];
+        blockContent = codeMatch[1];
       }
-      const codeLines = flowContent.split(/\r?\n/).map((l) => l.trimEnd());
+      const codeLines = blockContent.split(/\r?\n/).map((l) => l.trimEnd());
       const escapedCode = codeLines.map((l) => escapeJsx(l)).join("\n");
       bodyComponents.push(`### ${rawSecTitle}\n\n\`\`\`text\n${escapedCode}\n\`\`\``);
     } else if (secTitle.includes("jurisdiction variants")) {

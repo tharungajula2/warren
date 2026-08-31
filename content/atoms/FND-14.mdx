@@ -1,16 +1,16 @@
 ---
 id: FND-14
-title: NPV and Discounting Expected Loss
+title: NPV and Discounted Cash Shortfalls
 type: mechanism
 domain: foundation
 subdomain: time-value
 one_screen: >-
-  **Net present value (NPV) adds cash flows after converting them to one
-  valuation date.** Expected loss is time-sensitive when the applicable
-  methodology discounts shortfalls: the same nominal shortfall occurring later
-  has a different present value.
+  Net present value (NPV) aggregates dated amounts only after translating them
+  to one valuation date. When a loss methodology discounts expected cash
+  shortfalls, **probability determines how much is expected; discounting
+  determines what the timing of that expected amount is worth today.**
 prerequisites:
-  - FND-09
+  - FND-08
   - FND-11
   - FND-13
 jurisdictions:
@@ -25,103 +25,103 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.44'
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html
-    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Implementation of Indian Accounting Standards (Ind
-      AS)*, DBR.BP.BC.No.29/21.07.001/2018-19, April 5, 2019
-    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Reserve Bank of India, *Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning*, 2025 Directions as amended in 2026
-    url: 'https://rbi.org.in/Scripts/NotificationUser.aspx?Id=13409&Mode=0'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.44 and
+      related application guidance.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
       Board of Governors of the Federal Reserve System, *Frequently Asked
-      Questions on the Current Expected Credit Losses Methodology*, ASC Topic
-      326 / ASU 2016-13 guidance
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm
+      Questions on the Current Expected Credit Losses Methodology* (
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 31 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 01_FND_foundations.md
 ---
-For dated cash flows \(CF_t\) and a consistent discount rate \(r\), a simple NPV is:
+### Core mechanism
 
-\[
-NPV=\sum_t \frac&#123;CF_t&#125;&#123;(1+r)^t&#125;
-\]
 
-Inflows are usually represented with one sign and outflows with the opposite sign. Discounting prevents a loss or benefit occurring far in the future from being treated as economically identical to the same nominal amount occurring immediately.
 
-Consider an expected shortfall of 100 one year from today and a 10% annual discount rate. Its present value is \(100/1.10=90.91\). If the same 100 shortfall occurred two years away, its present value would be \(100/1.10^2=82.64\). The nominal loss is unchanged; its valuation date is not.
-
-Expected-credit-loss accounting adds another layer: **uncertainty**. Possible credit shortfalls can be probability-weighted, while discounting separately reflects the timing of those shortfalls. IFRS 9 explicitly requires expected credit losses to be discounted to the reporting date using the effective interest rate determined at initial recognition, or an approximation, subject to specified rules for particular instruments.
-
-That IFRS requirement must not be exported mechanically to every jurisdiction. US CECL does not prescribe one mandatory estimation technique; discounted cash-flow methods are available, but other compliant methods can be used. Indian scheduled commercial banks remain under RBI prudential provisioning rather than Ind AS 109.
-
-The permanent mathematical lesson is that timing matters. The regulatory or accounting question is **whether, how and at what rate the applicable framework requires that timing to enter the loss measure**.
+### Formula
 
 ```text
-Possible credit shortfalls
-          |
-          v
-+-----------------------+
-| Weight for uncertainty|
-| where methodology     |
-| requires              |
-+-----------------------+
-          |
-          v
-+-----------------------+
-| Place shortfalls on   |
-| their expected dates  |
-+-----------------------+
-          |
-          v
-+-----------------------+
-| Discount where the    |
-| framework requires    |
-+-----------------------+
-          |
-          v
- Present-value loss measure
+NPV = sum of [CF_t / (1 + r)^t] across all t
+NPV = net present value at the chosen valuation date
+CF_t = signed cash flow at time t
+r = discount rate per stated period
+t = number of consistent periods to each cash flow
+
+Probability weighting and discounting are separate operations: probability changes the expected amount; discounting changes the value of its timing.
+```
+
+### Flow
+
+```text
+Possible cash shortfalls
+    ↓
+Probability-weight where methodology requires
+    ↓
+Place on expected dates
+    ↓
+Discount where methodology requires
+    ↓
+Sum at reporting / valuation date
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-08 Loss recognition · FND-11 PV · FND-13 EIR
+This:       NPV · Timing of expected shortfalls
+Downstream: ECL methods · Valuation · Credit-risk measurement
 ```
 
 ### Permanent rule
 
-NPV compares dated amounts only after translating them to a common valuation date.
+Do not mix uncertainty and time value into one unexplained adjustment. They are separate operations even when one framework embeds both in a single measurement process.
 
-### Permanent trap
+### Never confuse [Nominal shortfall] and [Present value of shortfall]
 
-Applying IFRS 9's EIR discounting rule to an Indian scheduled commercial bank or assuming US CECL requires a discounted-cash-flow method in every case.
-
-### Never confuse
-
-**Expected cash shortfall** — the relevant difference in cash flows under a loss methodology.
+**Nominal shortfall** — difference in cash amounts at the future date.
 
 ---
 
-**Present value of a cash shortfall** — that shortfall after adjusting for its timing using the applicable discount rule.
+**Present value of shortfall** — that amount translated to the valuation date under the applicable discount rule.
+
+### Permanent trap
+
+Exporting one framework's discounting rule into another framework because both use “expected credit loss” language.
 
 ### Jurisdiction variants
 
-**IN** — Scheduled commercial banks use RBI prudential income-recognition, asset-classification and provisioning rules; Ind AS implementation for banks remains deferred until further notice. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; RBI Commercial Banks IRACP Directions]
+#### IN (RBI)
+Scheduled commercial-bank provisioning follows RBI prudential directions rather than an assumption that IFRS 9 EIR discounting governs bank IRACP provisioning.
 
-**UK** — For entities applying UK-adopted IFRS 9, ECL is discounted to the reporting date using the EIR determined at initial recognition or an approximation, subject to IFRS 9's instrument-specific rules. [IFRS 9 B5.5.44; UK-adopted IFRS 9]
+#### UK
+For entities applying UK-adopted IFRS 9, expected credit losses are discounted to the reporting date using the EIR determined at initial recognition or an approximation, subject to IFRS 9's instrument-specific rules.
 
-**EU** — The same IFRS 9 discounting principle applies where EU-adopted IFRS 9 governs the reporting entity and exposure. [IFRS 9 B5.5.44; Regulation (EU) 2023/1803]
+#### EU
+The same IFRS 9 principle applies where EU-adopted IFRS 9 governs the accounts.
 
-**US** — ASC Topic 326 CECL permits multiple estimation methods; a discounted-cash-flow approach is not universally mandatory. [FASB ASU 2016-13; Federal Reserve CECL FAQ]
+#### US
+CECL permits multiple reasonable estimation methods that achieve the Topic 326 objective; a discounted-cash-flow method is not mandatory in every case.
 
 <Recall
-  q="Why does the date of an expected loss matter?"
-  a="Because, where discounting applies, losses at different dates have different present values."
+  q="Why does the date of a shortfall matter?"
+  a="Discounting can give the same nominal amount a different present value at different dates."
 />
 
 <Recall
-  q="Does every expected-credit-loss framework require the IFRS 9 EIR discounting method?"
-  a="No."
+  q="Is probability weighting the same as discounting?"
+  a="No. Probability changes the expected amount; discounting changes the value of its timing."
+/>
+
+<Recall
+  q="Does CECL require one universal discounted-cash-flow method?"
+  a="No. Topic 326 permits multiple reasonable methods that achieve its measurement objective."
 />
