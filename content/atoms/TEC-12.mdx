@@ -1,69 +1,113 @@
 ---
 id: TEC-12
-title: Writing a Reconciliation Query
+title: Delinquency and DPD Sequences in SQL
 type: procedure
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  Data reconciliation means comparing two sources to ensure consistency. In SQL,
-  this often involves joining or aggregating data from two tables/reports and
-  highlighting mismatches. For instance, reconciling a daily loan balance
-  extract against the general ledger might involve summing balances by loan and
-  comparing. One approach is a full outer join on key columns to find rows
-  missing on either side. Alternatively, compare aggregates: ```sql SELECT
-  A.LoanID, A.Balance AS Balance_A, B.Balance AS Balance_B FROM LoansTable A
-  FULL OUTER JOIN GL_Loans B ON A.LoanID = B.LoanID WHERE A.Balance <> B.Balance
-  OR A.LoanID IS NULL OR B.LoanID IS NULL; ``` This returns loans where balances
-  differ or exist only in one source. Another common pattern is comparing totals
-  by category: sum balances in each source and `JOIN` or `UNION` to compare
-  totals.
+  Delinquency analysis is an ordered-history problem: each account observation
+  must be compared with earlier observations at the same grain. SQL windows let
+  the analyst derive prior DPD, roll direction, first delinquency, cure, and
+  consecutive-state behaviour without self-joining the snapshot table
+  repeatedly.
 prerequisites:
-  - TEC-02
-  - TEC-03
+  - TEC-11
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: 'Datafold, *“What is Data Reconciliation?”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
+### Core mechanism
+
+Start by exposing the previous DPD for each account:
+
+```sql
+WITH history AS (
+    SELECT
+        account_id,
+        reporting_date,
+        days_past_due,
+        LAG(days_past_due) OVER (
+            PARTITION BY account_id
+            ORDER BY reporting_date
+        ) AS prior_dpd
+    FROM loan_snapshots
+)
+SELECT
+    account_id,
+    reporting_date,
+    days_past_due,
+    prior_dpd,
+    CASE
+        WHEN prior_dpd IS NULL THEN 'FIRST_OBSERVATION'
+        WHEN days_past_due = 0 AND prior_dpd &gt; 0 THEN 'CURE'
+        WHEN days_past_due &gt; prior_dpd THEN 'WORSEN'
+        WHEN days_past_due &lt; prior_dpd THEN 'IMPROVE'
+        ELSE 'UNCHANGED'
+    END AS dpd_movement
+FROM history;
+```
+
+A first-delinquency date can be derived without collapsing the history by using a conditional window minimum:
+
+```sql
+SELECT
+    account_id,
+    reporting_date,
+    days_past_due,
+    MIN(CASE WHEN days_past_due &gt; 0 THEN reporting_date END) OVER (
+        PARTITION BY account_id
+    ) AS first_delinquency_date
+FROM loan_snapshots;
+```
+
+Consecutive delinquency needs an explicit sequence rule. One practical approach creates a reset group whenever the account returns to current, then counts rows inside each delinquent run. That logic assumes observations are regular enough that consecutive rows represent consecutive reporting periods. If a month is missing, row adjacency is not the same as calendar continuity and the gap must be detected.
+
+### Where it sits
+
 ```text
-TableA  Full Join  TableB  = Discrepancies (NULLs for missing)
+Upstream:   Ordered snapshots · DPD field · Reporting cadence
+This:       Prior state · Roll direction · Cure · First delinquency · Streaks
+Downstream: Migration views · Collections analysis · Credit state features
 ```
 
 ### Permanent rule
 
-Always match on a clear key (e.g. LoanID) and include all data sources needed. Use aggregates (sums, counts) to verify totals align as a quick check.
+A sequence metric is valid only if the observation order and cadence support the meaning of "previous" and "consecutive."
 
-### Permanent trap
+### Never confuse [Prior row] and [Prior period]
 
-Mismatched keys or joins hide differences. For example, an inner join drops unmatched rows, missing a discrepancy. To catch all differences, use a full outer join or compare aggregates.
-
-### Never confuse
-
-**INNER JOIN** — only matching rows (not useful alone for recon).
+**Prior row** - the immediately preceding record in the ordered data.
 
 ---
 
-**FULL OUTER JOIN** — includes mismatches from both sides (needed to find missing records).
+**Prior period** - the required earlier calendar observation, which may be missing from the data.
+
+### Permanent trap
+
+Treating adjacent rows as consecutive months without checking for gaps. An account with June and August observations has a prior row but no July observation.
 
 ### Jurisdiction variants
 
-**No delta.** Reconciliation logic is generic SQL.
+No delta. DPD sequence coding does not vary by regulator.
 
 <Recall
-  q="How to find records in A not in B?"
-  a="Use `FULL OUTER JOIN` and check for NULLs on B’s side."
+  q="What makes `LAG(days_past_due)` useful for delinquency analysis?"
+  a="It exposes the account's previous observed DPD on the same row, allowing movement and cure logic without collapsing history."
 />
 
 <Recall
-  q="How to quickly check totals match?"
-  a="Sum each side by category and compare (e.g. via a join or SELECT from two subqueries)."
+  q="Why can a missing month invalidate a delinquency streak?"
+  a="Row adjacency no longer proves calendar continuity, so two delinquent observations may not represent consecutive reporting periods."
+/>
+
+<Recall
+  q="How can first delinquency be retained on every history row?"
+  a="Use a conditional `MIN(reporting_date)` window partitioned by account rather than grouping the history down to one row."
 />

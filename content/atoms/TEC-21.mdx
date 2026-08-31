@@ -1,59 +1,105 @@
 ---
 id: TEC-21
-title: Handling Missing Data in pandas
-type: concept
+title: Filtering and Assigning Credit Data in pandas
+type: procedure
 domain: technical
 subdomain: python-vectorization-and-engineering
 one_screen: >-
-  Pandas represents missing data as `NaN` (for floats) or `NaT` (for datetimes)
-  or `None` in object columns. Use `df.isna()` (or `isnull()`) to detect missing
-  values, returning a boolean mask. You can drop rows or columns with missing
-  data via `df.dropna()`, or fill values with `df.fillna(value)`. For example,
-  `df['Balance'].fillna(0, inplace=True)` replaces missing balances with 0.
+  pandas filtering is the in-memory equivalent of defining a SQL population,
+  while assignment adds derived lending fields to that population. The safe
+  pattern is to build explicit boolean masks, select with `.loc`, and avoid
+  chained operations whose target is ambiguous.
 prerequisites:
-  - TEC-16
+  - TEC-20
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'pandas Official Docs, *“Series.isna()”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Always be careful: operations skip `NaN` by default (e.g. `sum()` treats `NaN` as zero, but `mean()` ignores it). Deciding to drop or fill depends on context. For instance, missing credit score might be imputed or flagged.
+### Core mechanism
+
+Filter an August loan book to active positive-balance accounts:
+
+```python
+import pandas as pd
+
+mask = (
+    loans["reporting_date"].eq("2026-08-31")
+    &amp; loans["status"].eq("ACTIVE")
+    &amp; loans["outstanding_balance"].gt(0)
+)
+
+active = loans.loc[
+    mask,
+    ["account_id", "outstanding_balance", "days_past_due"]
+].copy()
+```
+
+The parentheses make boolean precedence visible. The `.copy()` is useful when the filtered result will be modified independently of the source DataFrame.
+
+Create a lending flag with label-based assignment:
+
+```python
+active["arrears_flag"] = active["days_past_due"].gt(0)
+active.loc[active["days_past_due"].isna(), "arrears_flag"] = pd.NA
+```
+
+`.loc` selects by labels and boolean conditions. `.iloc` selects by integer position and is useful when the business meaning genuinely depends on position, not when the analyst merely happens to know a column is currently the fourth column.
+
+```python
+first_five = active.iloc[:5]
+selected = active.loc[:, ["account_id", "outstanding_balance"]]
+```
+
+Avoid chained assignment such as filtering a DataFrame and assigning into the temporary expression in one ambiguous operation. It can produce warnings or updates that do not affect the object you thought you were changing.
+
+Filtering cost is mostly proportional to rows and columns touched. Build masks from vectorized Series operations and select only the columns needed downstream rather than iterating row by row.
+
+### Where it sits
+
+```text
+Upstream:   DataFrame grain · Correct dtypes · Population rule
+This:       Boolean masks · loc · iloc · Safe assignment
+Downstream: Missing-data treatment · Aggregation · Credit flags
+```
+
+### Never confuse [loc] and [iloc]
+
+**loc** - selects by row or column labels and accepts boolean masks aligned to those labels.
+
+---
+
+**iloc** - selects by integer positions, independent of the business labels stored in the index or columns.
 
 ### Permanent rule
 
-Detect missing explicitly with `isna()`. Always decide on a strategy: either drop records or fill them (imputation).
+Use `.loc` for business-labelled filtering and assignment; use `.iloc` only when positional selection is genuinely intended.
 
 ### Permanent trap
 
-Mixing `None` and `NaN`: some pandas methods distinguish them, but generally `isna()` catches both. Beware that `df['col'] == np.nan` does not work (use `isna`).
-
-### Never confuse
-
-**NaN** — pandas float “Not a Number” for missing.
-
----
-
-**Empty string** — a valid string, not missing. `isna()` returns False for `''`.
+Writing chained assignment and assuming the source DataFrame changed. Work on an explicit DataFrame and assign through `.loc` or a direct column assignment.
 
 ### Jurisdiction variants
 
-**No delta.** pandas missing-value handling is the same everywhere.
+No delta. pandas filtering mechanics do not vary by regulator.
 
 <Recall
-  q="How to get only rows without any missing values?"
-  a="Use `df.dropna()`."
+  q="Why build a boolean mask with explicit parentheses?"
+  a="It makes the intended combination of conditions unambiguous and reduces errors when several `&` and `|` conditions are combined."
 />
 
 <Recall
-  q="How to replace missing credit ratings with “UNKNOWN”?"
-  a="`df['Rating'].fillna('UNKNOWN', inplace=True)`."
+  q="When is `.iloc` appropriate in credit analysis?"
+  a="When the required selection is genuinely positional, such as taking the first five displayed rows, not when a business field should be selected by name."
+/>
+
+<Recall
+  q="Why call `.copy()` on a filtered portfolio that will be modified?"
+  a="It creates an explicit independent object for later assignments and avoids ambiguity about whether changes should propagate to the original DataFrame."
 />

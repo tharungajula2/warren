@@ -1,72 +1,101 @@
 ---
 id: TEC-03
-title: Aggregation with GROUP BY and HAVING
-type: concept
+title: Credit Classification with CASE
+type: procedure
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  The `GROUP BY` clause groups rows by column values for aggregate calculations,
-  and the `HAVING` clause filters those groups.
+  `CASE` turns an already-defined credit rule into a derived field. It is ideal
+  for delinquency bands, active or closed indicators, exposure bands, and other
+  classifications where mutually understood business conditions must become
+  executable row-level labels.
 prerequisites:
   - TEC-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'W3Schools, *“SQL GROUP BY”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-  - label: 'W3Schools, *“SQL HAVING clause”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For instance, to summarize a loan portfolio, one might compute total outstanding by product:
+### Core mechanism
+
+A DPD bucket can be implemented directly from `days_past_due`:
+
 ```sql
-SELECT ProductType, SUM(OutstandingBalance) AS TotalBalance
-FROM Loans
-GROUP BY ProductType;
+SELECT
+    account_id,
+    days_past_due,
+    CASE
+        WHEN days_past_due IS NULL THEN 'UNKNOWN'
+        WHEN days_past_due = 0 THEN 'CURRENT'
+        WHEN days_past_due BETWEEN 1 AND 30 THEN 'DPD_1_30'
+        WHEN days_past_due BETWEEN 31 AND 60 THEN 'DPD_31_60'
+        WHEN days_past_due BETWEEN 61 AND 89 THEN 'DPD_61_89'
+        ELSE 'DPD_90_PLUS'
+    END AS dpd_bucket
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31';
 ```
-This splits the data by each `ProductType` (group), then `SUM` is applied per group. Often combined with `COUNT`, `AVG`, etc. To filter on aggregate values (e.g. only products with large totals), use `HAVING`:
+
+`CASE` is evaluated top to bottom. The first matching branch wins, so overlapping ranges can silently misclassify rows. Put exceptional states such as NULL first when they need their own treatment, then use non-overlapping conditions.
+
+A searched `CASE` can also encode flags used later in aggregation:
+
 ```sql
-SELECT ProductType, SUM(OutstandingBalance) AS TotalBalance
-FROM Loans
-GROUP BY ProductType
-HAVING SUM(OutstandingBalance) &gt; 1000000;
+SELECT
+    account_id,
+    CASE WHEN days_past_due &gt; 0 THEN 1 ELSE 0 END AS arrears_flag,
+    CASE WHEN outstanding_balance &gt;= 1000000 THEN 1 ELSE 0 END AS large_exposure_flag
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31';
 ```
-This returns only products where the summed balance exceeds a threshold. Note `HAVING` comes after grouping, unlike `WHERE` which filters rows before grouping.
+
+The code owns implementation, not policy. TEC can express `days_past_due &gt;= threshold`, but the threshold itself must come from the credit, impairment, capital, reporting, or jurisdiction-specific rule that owns it.
+
+### Where it sits
+
+```text
+Upstream:   Filtered rows · Defined business rule · Source fields
+This:       CASE classification · Flags · Buckets
+Downstream: Portfolio summaries · Migration analysis · Exceptions
+```
 
 ### Permanent rule
 
-All non-aggregated columns in the `SELECT` list must appear in `GROUP BY`.
+Make `CASE` branches mutually exclusive and collectively explicit for the values that matter, including NULL when it has business meaning.
 
-### Permanent trap
+### Never confuse [CASE rule] and [Business rule]
 
-Omitting required `GROUP BY` columns (or aggregating every column) causes SQL errors. Also, forgetting `HAVING` conditions when needed means large groups won’t be filtered.
-
-### Never confuse
-
-**WHERE** — filters individual rows before grouping.
+**CASE rule** - the SQL expression that implements a condition.
 
 ---
 
-**HAVING** — filters entire groups after aggregation.
+**Business rule** - the governed definition that determines what the condition should be.
+
+### Permanent trap
+
+Using `ELSE` as a silent garbage bucket. If unmatched values are possible and important, label them visibly so bad source values do not masquerade as a valid final category.
 
 ### Jurisdiction variants
 
-**No delta.** Aggregation with `GROUP BY`/`HAVING` is consistent across SQL dialects.
+No delta. `CASE` mechanics do not vary by regulator.
 
 <Recall
-  q="How to count loans by vintage?"
-  a="`SELECT Vintage, COUNT(*) FROM Loans GROUP BY Vintage`."
+  q="Why does branch order matter in a searched `CASE`?"
+  a="SQL returns the result from the first true branch, so overlapping conditions can produce different classifications depending on order."
 />
 
 <Recall
-  q="How to exclude groups with few members?"
-  a="Add `HAVING COUNT(*) > [threshold]`."
+  q="What should TEC do when a delinquency threshold is defined elsewhere?"
+  a="Implement the supplied threshold faithfully in code without redefining or re-justifying the policy that owns it."
+/>
+
+<Recall
+  q="Why handle NULL explicitly in a DPD bucket?"
+  a="Otherwise missing DPD can fall into an unintended branch or disappear into an ambiguous default category."
 />

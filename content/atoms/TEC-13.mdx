@@ -1,63 +1,113 @@
 ---
 id: TEC-13
-title: 'Data Quality Checks (Completeness, Duplicates, Referential Integrity)'
-type: concept
+title: 'First, Latest, and One-Row-per-Loan with ROW_NUMBER'
+type: procedure
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  Common SQL data quality checks ensure tables have no missing (NULL) values in
-  mandatory fields, no unexpected duplicates, and maintain referential
-  integrity. For **completeness**, verify required columns have no NULLs:
-  `SELECT COUNT(*) FROM Loans WHERE AccountID IS NULL;`. For **duplicates**,
-  check for duplicate keys (e.g. `SELECT LoanID, COUNT(*) FROM Loans GROUP BY
-  LoanID HAVING COUNT(*)>1;`). For **referential integrity**, ensure every
-  foreign key matches a primary key: `SELECT fk.col FROM ChildTable fk LEFT JOIN
-  ParentTable pk ON fk.col=pk.col WHERE pk.col IS NULL;` (rows returned have
-  broken links).
+  Analysts frequently need exactly one record from a repeated history: the
+  latest snapshot, first payment, most recent risk record, or preferred
+  duplicate candidate. `ROW_NUMBER` makes that choice explicit, but it is safe
+  only when the ordering rule fully determines which row should win.
 prerequisites:
   - TEC-01
+  - TEC-11
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: >-
-      DQOps, *“Data Quality Dimensions (completeness etc.)”* (accessed
-      2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
+### Core mechanism
+
+To select the latest snapshot for each account:
+
+```sql
+WITH ranked AS (
+    SELECT
+        account_id,
+        reporting_date,
+        outstanding_balance,
+        ROW_NUMBER() OVER (
+            PARTITION BY account_id
+            ORDER BY reporting_date DESC
+        ) AS rn
+    FROM loan_snapshots
+)
+SELECT account_id, reporting_date, outstanding_balance
+FROM ranked
+WHERE rn = 1;
+```
+
+For the first payment, reverse the order:
+
+```sql
+WITH ranked AS (
+    SELECT
+        account_id,
+        payment_date,
+        payment_amount,
+        ROW_NUMBER() OVER (
+            PARTITION BY account_id
+            ORDER BY payment_date, payment_id
+        ) AS rn
+    FROM payments
+)
+SELECT account_id, payment_date, payment_amount
+FROM ranked
+WHERE rn = 1;
+```
+
+The second ordering column matters when multiple payments can share a date. Without a stable tie-breaker, two equally eligible rows can swap between executions.
+
+`ROW_NUMBER` can also resolve a known hierarchy such as "prefer active source record, then latest update." It should not be used to conceal unexplained duplicates. If two source rows are supposed to be identical at the business key, investigate why both exist rather than arbitrarily assigning one `rn = 1`.
+
+`RANK` and `DENSE_RANK` are different tools: tied values receive the same rank, so filtering `rank = 1` may return multiple rows. Use them only when ties are intentionally retained.
+
+### Where it sits
+
+```text
+Upstream:   Repeated records · Deterministic ordering rule
+This:       ROW_NUMBER · Tie-breakers · First/latest selection
+Downstream: As-of matching · Deduplicated extracts · Point-in-time populations
+```
+
+### Never confuse [ROW_NUMBER] and [RANK]
+
+**ROW_NUMBER** - assigns a unique sequence number even when ordered values tie.
+
+---
+
+**RANK** - gives tied rows the same rank and may return several rows at rank one.
+
 ### Permanent rule
 
-Ensure primary/unique keys have no duplicates (they enforce uniqueness) and foreign keys match existing parent rows.
+Every one-row selection must have a business-valid ordering and a deterministic tie-breaker where ties are possible.
 
 ### Permanent trap
 
-Mistaking legitimate multiple entries (e.g. multiple payments per loan) for duplicates. Always confirm the correct key: a *primary key* versus a *natural unique*.
-
-### Never confuse
-
-**PRIMARY KEY** — key defined in schema, cannot have duplicates.
-
----
-
-**UNIQUE constraint/index** — also enforces uniqueness, but (unlike primary key) usually allows one NULL.
+Using `ROW_NUMBER` to make a broken key unique. Ranking can choose a survivor while hiding the fact that the source contains competing records at a supposedly unique grain.
 
 ### Jurisdiction variants
 
-**No delta.** Data quality principles (completeness, duplicates, referential checks) are universal.
+No delta. Ranking mechanics do not vary by regulator.
 
 <Recall
-  q="How to check for missing mandatory fields?"
-  a="Use `WHERE mandatory_col IS NULL`."
+  q="Why is `ROW_NUMBER` useful for latest-record selection?"
+  a="It ranks each entity's records in a defined order so the query can retain exactly the first-ranked row."
 />
 
 <Recall
-  q="How to find orphaned foreign keys?"
-  a="LEFT JOIN child to parent, filter where parent key is NULL."
+  q="What happens if the ordering columns tie and no tie-breaker exists?"
+  a="The winning row may be nondeterministic because the database has no complete rule for ordering the tied records."
+/>
+
+<Recall
+  q="Why is `RANK = 1` not a guaranteed one-row-per-account filter?"
+  a="`RANK` gives all tied best records rank one, so several rows can survive for the same account."
 />

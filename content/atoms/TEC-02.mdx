@@ -1,71 +1,102 @@
 ---
 id: TEC-02
-title: 'SELECT, WHERE, and ORDER BY Basics'
+title: Selecting a Reporting Population in SQL
 type: procedure
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  In SQL, `SELECT` chooses columns (fields) to return, `WHERE` filters rows
-  based on conditions, and `ORDER BY` sorts the output.
+  A reporting query is first a population definition expressed in code. `SELECT`
+  chooses the fields, `WHERE` decides which loan observations enter the
+  analysis, and `ORDER BY` makes output order deterministic when the order
+  itself matters.
 prerequisites:
   - TEC-01
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: 'Microsoft Docs, *“SELECT (Transact-SQL)”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-  - label: 'W3Schools, *“SQL WHERE clause”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-  - label: 'Microsoft, *“SORT order in Access”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, on an *Exposure* table, one might retrieve loan amounts and borrower IDs for high-risk loans:
-```sql
-SELECT LoanID, Principal, BorrowerID
-FROM Exposures
-WHERE RiskRating = 'High'
-ORDER BY Principal DESC;
-```
-Here `SELECT LoanID, Principal, BorrowerID` picks columns, `WHERE RiskRating = 'High'` filters rows to high-risk ones, and `ORDER BY Principal DESC` sorts the resulting loans by size (largest first).
+### Core mechanism
 
-The `WHERE` clause applies conditions (e.g. numerical comparisons, string matches) to each row; only rows meeting all conditions appear in the result. After filtering, `ORDER BY` arranges the rows by one or more columns. Without `ORDER BY`, SQL does not guarantee any specific row order.
+Suppose the analyst needs active accounts in the August 2026 month-end snapshot with positive drawn exposure:
+
+```sql
+SELECT
+    account_id,
+    reporting_date,
+    outstanding_balance,
+    days_past_due
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31'
+  AND status = 'ACTIVE'
+  AND outstanding_balance &gt; 0
+ORDER BY account_id;
+```
+
+The order of the written predicates does not create a business hierarchy; together they define the row population. Be explicit about inclusions and exclusions. A condition on a date, status, currency, or product can materially change the denominator of every later portfolio measure.
+
+Use parentheses when `AND` and `OR` are mixed so the intended logic is visible:
+
+```sql
+SELECT account_id, status, days_past_due
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31'
+  AND (
+      status = 'ACTIVE'
+      OR days_past_due &gt; 0
+  )
+ORDER BY account_id;
+```
+
+For date-time columns, prefer closed-open ranges rather than assuming every row sits exactly at midnight. The general pattern is `timestamp &gt;= start` and `timestamp &lt; next_start`.
+
+`ORDER BY` controls presentation or deterministic ranking input; it does not define table storage order. Without it, the database may return rows in any convenient order.
+
+### Where it sits
+
+```text
+Upstream:   Grain · Reporting date · Business population rule
+This:       SELECT · WHERE · Predicate logic · ORDER BY
+Downstream: CASE classifications · Aggregation · Joins
+```
 
 ### Permanent rule
 
-If a specific ordering is needed, always include an `ORDER BY` clause. By default, results are unordered.
+Write filters so another analyst can state the resulting population in one sentence without guessing at operator precedence or hidden defaults.
 
-### Permanent trap
+### Never confuse [WHERE] and [ORDER BY]
 
-Omitting a `WHERE` filter can return huge result sets. Ensure conditions are correct; unintended broad filters (e.g. `WHERE 1=1`) can slow the query and return irrelevant data.
-
-### Never confuse
-
-**WHERE** — filters rows before grouping or sorting (applies to individual rows).
+**WHERE** - changes which rows are included.
 
 ---
 
-**ORDER BY** — sorts the final result rows (after filtering).
+**ORDER BY** - changes the sequence of returned rows without changing membership.
+
+### Permanent trap
+
+Treating a query that runs as proof that the population is right. SQL validates syntax and types, not the business meaning of the filter.
 
 ### Jurisdiction variants
 
-**No delta.** The semantics of `SELECT`, `WHERE`, and `ORDER BY` are standard SQL across jurisdictions.
+No delta. SQL filtering semantics do not vary by regulator.
 
 <Recall
-  q="Which clause filters rows in a SQL query?"
-  a="The `WHERE` clause."
+  q="What does `WHERE` control in a loan-book query?"
+  a="It controls population membership; every included or excluded row changes the universe available to later calculations."
 />
 
 <Recall
-  q="How do you sort results by multiple columns?"
-  a="Use `ORDER BY col1, col2` (with optional ASC/DESC)."
+  q="Why add parentheses around mixed `AND` and `OR` conditions?"
+  a="They make precedence explicit and prevent a syntactically valid query from applying a broader or narrower population rule than intended."
+/>
+
+<Recall
+  q="Does a query have a guaranteed row order without `ORDER BY`?"
+  a="No. The engine may return rows in any physical or execution-dependent order unless the query requests one."
 />

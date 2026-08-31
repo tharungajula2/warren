@@ -1,63 +1,103 @@
 ---
 id: TEC-10
-title: Date Handling and Reporting Periods
-type: concept
+title: 'SQL Date Arithmetic for Reporting Periods, MOB, and Vintage'
+type: procedure
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  SQL provides date/time functions to manipulate and extract parts of dates.
-  Common functions include `YEAR(date)`, `MONTH(date)`, or `DATEPART` to group
-  or filter by time units. For example, to group loan originations by year:
-  ```sql SELECT YEAR(OriginationDate) AS Year, COUNT(*) FROM Loans GROUP BY
-  YEAR(OriginationDate); ``` This uses `YEAR()` to extract the year component.
-  One can similarly use `MONTH()`, or perform arithmetic (e.g. adding
-  intervals). Reporting often requires custom periods (e.g. fiscal year or
-  quarters) — these can be calculated with date functions or by joining a
-  calendar table.
+  Credit analysis repeatedly converts dates into reporting periods, origination
+  vintages, and months-on-book. The craft is less about memorizing vendor
+  functions than about using explicit boundaries and preserving the distinction
+  between a date, a month label, and elapsed tenure.
 prerequisites:
   - TEC-02
+  - TEC-08
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'Javatpoint, *“SQL DATE Function”* (example of YEAR) (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Dates can also be compared or ranged: e.g. `WHERE SaleDate BETWEEN '2025-01-01' AND '2025-12-31'` for a calendar year.
+### Core mechanism
+
+Use closed-open boundaries for reporting periods so timestamps at the next boundary do not leak backward:
+
+```sql
+SELECT account_id, payment_date, payment_amount
+FROM payments
+WHERE payment_date &gt;= '2026-08-01'
+  AND payment_date &lt; '2026-09-01';
+```
+
+Vintage is normally the origination period, not the snapshot period. If the database supports date truncation, derive a month label from `origination_date`:
+
+```sql
+SELECT
+    facility_id,
+    DATE_TRUNC('month', origination_date) AS vintage_month
+FROM facilities;
+```
+
+Months-on-book measures elapsed month boundaries between origination and observation. Exact syntax differs by SQL engine, so keep the business definition stable even when the function changes. In a dialect with `DATEDIFF` by month:
+
+```sql
+SELECT
+    s.account_id,
+    s.reporting_date,
+    f.origination_date,
+    DATEDIFF(month, f.origination_date, s.reporting_date) AS mob
+FROM loan_snapshots s
+JOIN loan_accounts a ON a.account_id = s.account_id
+JOIN facilities f ON f.facility_id = a.facility_id
+WHERE s.reporting_date = '2026-08-31';
+```
+
+Date arithmetic breaks when strings are mistaken for dates, timestamps are compared to inclusive end dates, or day differences are divided by 30 and called months. A calendar month is not a fixed number of days.
+
+### Where it sits
+
+```text
+Upstream:   Origination date · Observation date · Payment date
+This:       Period boundaries · Vintage · Months-on-book
+Downstream: Window sequences · Cohort analysis · Reconciliation periods
+```
+
+### Never confuse [Vintage] and [Reporting period]
+
+**Vintage** - the origination cohort to which the facility belongs.
+
+---
+
+**Reporting period** - the observation period in which balance or delinquency is measured.
 
 ### Permanent rule
 
-Convert strings to actual `DATE` or `DATETIME` types (using `STR_TO_DATE` or client-side parsing) to leverage date functions. Do not treat dates as plain text.
+Express reporting periods with explicit lower and upper boundaries, and define MOB as a calendar-period concept rather than an approximate day count.
 
 ### Permanent trap
 
-Ignoring the time component can yield unexpected results (e.g. missing same-day records). Always truncate times or use date boundaries.
-
-### Never confuse
-
-**DATE** — stores year-month-day (no time).
-
----
-
-**DATETIME/TIMESTAMP** — includes time (hours-min-sec). Make sure to use the correct type for dates versus full timestamps.
+Using `BETWEEN '2026-08-01' AND '2026-08-31'` on a timestamp and assuming every 31 August record is included. Values after midnight can be missed depending on the stored type and literal conversion.
 
 ### Jurisdiction variants
 
-**No delta.** Date arithmetic and functions follow SQL standards universally.
+No delta. Date calculations may differ by SQL engine, but not by regulator.
 
 <Recall
-  q="How to get quarterly totals?"
-  a="`GROUP BY YEAR(date), DATEPART(quarter, date)` (or a fiscal calendar table)."
+  q="Why is `date >= start AND date < next_start` safer for timestamp periods?"
+  a="It includes the full intended period while excluding every value at the next boundary, regardless of time-of-day precision."
 />
 
 <Recall
-  q="How to compare dates ignoring time?"
-  a="Use `CAST(datefield AS DATE)` or ensure the field is DATE type."
+  q="What does vintage represent in lending analysis?"
+  a="Vintage identifies the origination cohort, usually by month or quarter, and remains tied to origination rather than moving with reporting dates."
+/>
+
+<Recall
+  q="Why is days divided by 30 a poor MOB definition?"
+  a="Calendar months have different lengths, so an approximate day ratio can shift accounts into the wrong tenure bucket."
 />

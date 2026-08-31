@@ -1,68 +1,116 @@
 ---
 id: TEC-07
-title: 'Window Functions (ROW_NUMBER, RANK, LAG, LEAD, running totals)'
-type: concept
+title: 'Joining Customer, Account, Facility, and Repayment Tables Safely'
+type: procedure
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  SQL window functions perform calculations across rows related to the current
-  row without collapsing groups. For example, `ROW_NUMBER()` assigns a
-  sequential number to rows in a partition, while `RANK()` assigns equal numbers
-  to tied values. `LAG(col,1) OVER(...)` gets the previous row’s value, and
-  `LEAD` gets the next row’s. You must include an `OVER(PARTITION BY ... ORDER
-  BY ...)` clause. Window functions are ideal for credit roll-forwards: e.g.
-  computing a loan delinquency at each period and comparing to the prior period
-  using `LAG` or cumulative sums.
+  Safe lending joins begin from the table whose grain matches the required
+  output and add attributes only through relationships that preserve that grain.
+  When a child table contains multiple rows per account, aggregate or rank it to
+  the needed grain before attaching it.
 prerequisites:
-  - TEC-02
+  - TEC-01
+  - TEC-06
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'Microsoft Docs, *“ROW_NUMBER (Transact-SQL)”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Example: to assign row numbers within each product line:
+### Core mechanism
+
+For an August account-level portfolio, `loan_snapshots` is the base. `loan_accounts`, `facilities`, and `customers` are one-row lookups along the account-to-facility-to-customer path:
+
 ```sql
-SELECT LoanID, ProductType,
-       ROW_NUMBER() OVER (PARTITION BY ProductType ORDER BY StartDate) AS LoanSeq
-FROM Loans;
+SELECT
+    s.account_id,
+    f.facility_id,
+    c.customer_id,
+    c.segment,
+    f.product_type,
+    s.outstanding_balance,
+    s.days_past_due
+FROM loan_snapshots s
+JOIN loan_accounts a
+  ON a.account_id = s.account_id
+JOIN facilities f
+  ON f.facility_id = a.facility_id
+JOIN customers c
+  ON c.customer_id = f.customer_id
+WHERE s.reporting_date = '2026-08-31';
 ```
-Here `ROW_NUMBER` restarts count for each `ProductType` group. `RANK()` would give the same sequence number to ties.
+
+Now suppose the output also needs scheduled cash due during September. The raw schedule is many rows per account, so first reduce it to account grain:
+
+```sql
+WITH september_due AS (
+    SELECT
+        account_id,
+        SUM(scheduled_amount) AS scheduled_amount_sep
+    FROM repayment_schedule
+    WHERE due_date &gt;= '2026-09-01'
+      AND due_date &lt; '2026-10-01'
+    GROUP BY account_id
+)
+SELECT
+    s.account_id,
+    s.outstanding_balance,
+    d.scheduled_amount_sep
+FROM loan_snapshots s
+LEFT JOIN september_due d
+  ON d.account_id = s.account_id
+WHERE s.reporting_date = '2026-08-31';
+```
+
+The `LEFT JOIN` keeps all August accounts even when no September schedule exists. The pre-aggregation ensures at most one schedule row can match each account.
+
+After the join, validate the intended account-month key and a control total. Those checks belong in the analyst query or test harness rather than in memory.
+
+### Where it sits
+
+```text
+Upstream:   Grain · Cardinality · Reporting population
+This:       Multi-table joins · Pre-aggregation · Key preservation
+Downstream: Snapshot enrichment · Reconciliation · Portfolio extracts
+```
+
+### Never confuse [INNER JOIN] and [LEFT JOIN]
+
+**INNER JOIN** - keeps only base rows with a matching row on the other side.
+
+---
+
+**LEFT JOIN** - keeps every base row and supplies NULLs when no right-side match exists.
 
 ### Permanent rule
 
-Always specify an `ORDER BY` inside the window if using `LAG`, `LEAD`, or ranking; otherwise the result order is arbitrary.
+Choose the base table from the desired output grain and force every many-side input to the required matching grain before joining.
 
 ### Permanent trap
 
-Forgetting `PARTITION BY` leads to global ranking instead of per-group. Also, not knowing `RANK()` vs `ROW_NUMBER()` can miscount ties.
-
-### Never confuse
-
-**ROW_NUMBER()** — assigns unique sequential numbers (1,2,3...).
-
----
-
-**RANK()** — assigns the same rank to ties (1,2,2,4...).
+Starting from whichever table is easiest to type. The starting grain determines what can be duplicated or lost later.
 
 ### Jurisdiction variants
 
-**No delta.** Window function syntax is SQL-standard (though exact function names may vary slightly by dialect).
+No delta. Join construction does not vary by regulator.
 
 <Recall
-  q="How to get the previous period’s balance for each loan?"
-  a="Use `LAG(Balance,1) OVER (PARTITION BY LoanID ORDER BY Period)`."
+  q="Why aggregate `repayment_schedule` before attaching it to an account-month portfolio?"
+  a="The schedule has multiple rows per account; aggregation creates one matching row per account and prevents the snapshot balance from being repeated."
 />
 
 <Recall
-  q="How to compute a running total?"
-  a="Use `SUM(amount) OVER (ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)`."
+  q="When is a `LEFT JOIN` preferable to an `INNER JOIN` in enrichment work?"
+  a="When the base loan population must be preserved even if an optional attribute or child summary is missing."
+/>
+
+<Recall
+  q="What proves a join preserved account-month grain?"
+  a="The post-join key remains unique at `(account_id, reporting_date)` and controlled totals such as outstanding balance still tie to the base population."
 />

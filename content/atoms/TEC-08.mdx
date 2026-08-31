@@ -1,67 +1,107 @@
 ---
 id: TEC-08
-title: CASE Statements for Conditional Bucketing
-type: concept
+title: Month-End Snapshots and Point-in-Time Populations
+type: procedure
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  The SQL `CASE WHEN` expression assigns values based on conditions. It’s often
-  used to bucket or categorize data. For instance, creating delinquency buckets:
+  A snapshot table stores repeated observations of the same account through
+  time, so point-in-time analysis requires an explicit observation date. Mixing
+  dates creates a portfolio that never existed and can combine today's balance
+  with last month's delinquency or vice versa.
 prerequisites:
+  - TEC-01
   - TEC-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'Programiz, *“SQL CASE Statement”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
+### Core mechanism
+
+The simplest correct month-end query fixes one reporting date before any enrichment or aggregation:
+
 ```sql
-SELECT LoanID,
-  CASE
-    WHEN DaysPastDue = 0 THEN 'Current'
-    WHEN DaysPastDue BETWEEN 1 AND 30 THEN '1-30 days'
-    WHEN DaysPastDue BETWEEN 31 AND 60 THEN '31-60 days'
-    ELSE '90+ days'
-  END AS DelinqBucket
-FROM Loans;
+SELECT
+    account_id,
+    outstanding_balance,
+    undrawn_amount,
+    days_past_due,
+    status
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31';
 ```
 
-Each `WHEN` tests a condition and returns the corresponding label. An `ELSE` provides a default (for any values not matched). The result of `CASE` is a single column value.
+If the source can contain multiple intra-month dates but the task needs the latest observation in each month, derive that selection deliberately rather than assuming the calendar maximum exists for every account. One common shape is to rank observations within account and month:
+
+```sql
+WITH ranked AS (
+    SELECT
+        account_id,
+        reporting_date,
+        outstanding_balance,
+        ROW_NUMBER() OVER (
+            PARTITION BY account_id,
+                         EXTRACT(YEAR FROM reporting_date),
+                         EXTRACT(MONTH FROM reporting_date)
+            ORDER BY reporting_date DESC
+        ) AS rn
+    FROM loan_snapshots
+)
+SELECT account_id, reporting_date, outstanding_balance
+FROM ranked
+WHERE rn = 1;
+```
+
+That pattern selects the latest available observation per account-month, which is different from demanding a specific contractual month-end. The business requirement must say which one is intended.
+
+Point-in-time correctness also means every attached attribute must be valid for the same observation date. Joining an August snapshot to the customer's current risk grade in a table that has since changed introduces future information into historical analysis.
+
+### Where it sits
+
+```text
+Upstream:   Snapshot grain · Reporting date requirement
+This:       Observation-date selection · Month-end population
+Downstream: As-of joins · Delinquency history · Vintage analysis
+```
+
+### Never confuse [Calendar month-end] and [Latest available observation]
+
+**Calendar month-end** - a specifically required reporting date such as 31 August.
+
+---
+
+**Latest available observation** - the maximum date present for the account or period, which may be earlier or later than the contractual cut-off.
 
 ### Permanent rule
 
-Always include an `ELSE` clause in `CASE` unless you intentionally want NULL for unmatched cases.
+Every point-in-time portfolio must have one explicit observation rule, and all later attributes must be aligned to that observation.
 
 ### Permanent trap
 
-Omitting `ELSE` yields NULL for rows that meet none of the `WHEN` conditions. Also, `CASE` is evaluated in order – once a condition matches, later ones are skipped.
-
-### Never confuse
-
-**CASE** — standard SQL conditional expression (multi-branch).
-
----
-
-**DECODE** (Oracle) — an older function only in Oracle SQL, similar to a simple `CASE`. Prefer `CASE` for portability.
+Using `MAX(reporting_date)` over the whole table and calling the result month-end. It returns the latest date present globally, not necessarily the required cut-off for every account.
 
 ### Jurisdiction variants
 
-**No delta.** `CASE WHEN` is ANSI SQL standard everywhere.
+No delta. Point-in-time query mechanics do not vary by regulator.
 
 <Recall
-  q="How to bucket a numeric score into categories in SQL?"
-  a="Use `CASE WHEN score >= 90 THEN 'High' WHEN score >= 50 THEN 'Medium' ELSE 'Low' END`."
+  q="Why is a snapshot table not safe to aggregate without a date filter?"
+  a="The same account appears at multiple reporting dates, so balances from different periods would be summed together."
 />
 
 <Recall
-  q="What does missing `ELSE` in a CASE do?"
-  a="Rows that meet no `WHEN` condition get NULL."
+  q="What is the difference between a required month-end and the latest available row?"
+  a="A required month-end is a defined cut-off; the latest available row is merely the newest observation present and may not represent that cut-off."
+/>
+
+<Recall
+  q="What else must be point-in-time aligned after selecting the snapshot?"
+  a="Effective-dated customer, facility, rating, or status attributes must be matched to the same observation date rather than to their current values."
 />

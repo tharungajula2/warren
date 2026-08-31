@@ -1,0 +1,110 @@
+---
+id: TEC-27
+title: 'Delinquency Sequences with GroupBy, Shift, and Rolling Operations'
+type: procedure
+domain: technical
+subdomain: tec
+one_screen: >-
+  Longitudinal credit work in pandas depends on sorting each account history
+  correctly and then using grouped operations that never cross account
+  boundaries. `shift`, cumulative calculations, and rolling windows reproduce
+  many SQL window patterns while keeping one row per account observation.
+prerequisites:
+  - TEC-12
+  - TEC-20
+  - TEC-26
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 10_TEC_sql_python.md
+---
+### Core mechanism
+
+Sort first, then expose the prior DPD within each account:
+
+```python
+history = history.sort_values(["account_id", "reporting_date"]).copy()
+
+history["prior_dpd"] = (
+    history.groupby("account_id")["days_past_due"].shift(1)
+)
+```
+
+Classify movement with vectorized conditions rather than a row loop:
+
+```python
+history["cure_flag"] = (
+    history["days_past_due"].eq(0)
+    &amp; history["prior_dpd"].gt(0)
+)
+
+history["worsen_flag"] = history["days_past_due"].gt(history["prior_dpd"])
+```
+
+To identify separate delinquent runs, create a reset whenever the row is current, then cumulatively count resets within account:
+
+```python
+history["current_flag"] = history["days_past_due"].eq(0)
+history["run_id"] = (
+    history.groupby("account_id")["current_flag"].cumsum()
+)
+
+history["delinquent_run_length"] = (
+    history["days_past_due"].gt(0)
+    .groupby([history["account_id"], history["run_id"]])
+    .cumsum()
+)
+```
+
+This counts observed consecutive delinquent rows, not necessarily consecutive calendar months. Check reporting-period gaps before interpreting it as a monthly streak. A gap test can compare the current reporting month with the prior reporting month by account.
+
+Rolling measures also require explicit ordering and window meaning. A three-observation rolling maximum of DPD is not automatically a three-calendar-month measure when observations are irregular.
+
+### Where it sits
+
+```text
+Upstream:   Ordered account history · Typed reporting periods · DPD
+This:       groupby · shift · cumsum · Rolling account history
+Downstream: Cure analysis · Migration views · Behavioural features
+```
+
+### Permanent rule
+
+Sort by account and observation time before grouped sequence operations, and distinguish observation count from elapsed calendar time.
+
+### Never confuse [shifted row] and [previous month]
+
+**Shifted row** - the previous observed record within the sorted account history.
+
+---
+
+**Previous month** - the immediately preceding calendar reporting period, which may be absent from the data.
+
+### Permanent trap
+
+Calling `shift(1)` on unsorted history. pandas will shift according to current row order, not according to the business chronology you intended.
+
+### Jurisdiction variants
+
+No delta. pandas sequence mechanics do not vary by regulator.
+
+<Recall
+  q="What must happen before grouped `shift(1)` is used for prior DPD?"
+  a="The data must be sorted by account and reporting date so the previous row is the previous observed account state."
+/>
+
+<Recall
+  q="Why can a delinquent run length overstate calendar continuity?"
+  a="It counts consecutive observed rows; if a reporting month is missing, adjacent rows are not necessarily adjacent months."
+/>
+
+<Recall
+  q="What is the advantage of grouped vectorized flags over a Python row loop?"
+  a="They preserve account boundaries while executing column operations efficiently and transparently across the full portfolio."
+/>

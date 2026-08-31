@@ -1,62 +1,115 @@
 ---
 id: TEC-09
-title: NULL Handling and Three-Valued Logic
-type: concept
+title: As-Of Joins to Effective-Dated Data
+type: procedure
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  In SQL, `NULL` represents missing or unknown data. Comparisons with `NULL`
-  yield *UNKNOWN*, not true or false. SQL employs three-valued logic (TRUE,
-  FALSE, UNKNOWN). For example, `NULL = NULL` is UNKNOWN, so a `WHERE` filter
-  excludes those rows. To test for missing data use `IS NULL` or `IS NOT NULL`.
+  An as-of join attaches the version of an attribute that was valid when the
+  loan observation occurred. It prevents future leakage by ensuring an August
+  2025 snapshot cannot see a customer risk grade assigned in 2026.
 prerequisites:
-  - TEC-02
+  - TEC-06
+  - TEC-08
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'PostgreSQL Wiki, *“ISNULL and THREE-VALUED LOGIC”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For instance, to find accounts without an open date:
+### Core mechanism
+
+Assume `customer_risk` contains `customer_id`, `valid_from`, `valid_to`, and `risk_grade`. If periods are non-overlapping, match the snapshot date inside the validity interval:
+
 ```sql
-SELECT AccountID FROM Accounts WHERE OpenDate IS NULL;
+SELECT
+    s.account_id,
+    s.reporting_date,
+    r.risk_grade
+FROM loan_snapshots s
+JOIN loan_accounts a
+  ON a.account_id = s.account_id
+JOIN facilities f
+  ON f.facility_id = a.facility_id
+LEFT JOIN customer_risk r
+  ON r.customer_id = f.customer_id
+ AND r.valid_from &lt;= s.reporting_date
+ AND (r.valid_to &gt; s.reporting_date OR r.valid_to IS NULL)
+WHERE s.reporting_date = '2026-08-31';
 ```
-Regular operators (`=`, `&lt;`, etc.) cannot be used with NULL. Use `ISNULL()` or `COALESCE()` functions to substitute defaults when needed.
+
+The half-open interval `valid_from &lt;= date &lt; valid_to` avoids double matching when one record ends on the same boundary at which the next begins.
+
+Some sources store only change dates, not `valid_to`. Then select the latest record on or before the observation date:
+
+```sql
+WITH candidates AS (
+    SELECT
+        s.account_id,
+        s.reporting_date,
+        r.risk_grade,
+        ROW_NUMBER() OVER (
+            PARTITION BY s.account_id, s.reporting_date
+            ORDER BY r.valid_from DESC
+        ) AS rn
+    FROM loan_snapshots s
+    JOIN loan_accounts a ON a.account_id = s.account_id
+    JOIN facilities f ON f.facility_id = a.facility_id
+    LEFT JOIN customer_risk r
+      ON r.customer_id = f.customer_id
+     AND r.valid_from &lt;= s.reporting_date
+)
+SELECT account_id, reporting_date, risk_grade
+FROM candidates
+WHERE rn = 1;
+```
+
+This assumes at most one effective record for a customer at a given start time. Duplicate or overlapping effective periods must be treated as a data problem, not resolved by arbitrary ranking.
+
+### Where it sits
+
+```text
+Upstream:   Point-in-time snapshot · Effective-dated attributes
+This:       Validity interval · Latest-on-or-before matching
+Downstream: Historical segmentation · Model inputs · Reproducible backtests
+```
 
 ### Permanent rule
 
-Always use `IS NULL` or `IS NOT NULL` to check for NULL values.
+A historical observation may use only information effective on or before its observation date unless the analysis explicitly requires hindsight.
 
-### Permanent trap
+### Never confuse [As-of join] and [Current-state join]
 
-Treating NULL as a value in conditions (e.g. `WHERE Balance != 0` won’t catch NULL balances). Also, when using `JOIN`, NULLs can cause unmatched rows.
-
-### Never confuse
-
-**NULL** — absence/unknown value (three-valued logic).
+**As-of join** - attaches the version valid at the historical observation date.
 
 ---
 
-**0** — numeric zero, a definite number (not NULL).
+**Current-state join** - attaches whichever version is current now, regardless of when the loan observation occurred.
+
+### Permanent trap
+
+Joining history to a dimension table that contains only the latest customer record. The query runs cleanly but rewrites the past with present information.
 
 ### Jurisdiction variants
 
-**No delta.** SQL’s handling of NULLs is universal.
+No delta. Effective-dated join mechanics do not vary by regulator.
 
 <Recall
-  q="How does SQL treat `NULL = NULL` in a WHERE clause?"
-  a="As UNKNOWN (neither TRUE nor FALSE), so the row is not returned."
+  q="What problem does an as-of join solve?"
+  a="It prevents future or current information from being attached to a historical loan observation when that information was not yet effective."
 />
 
 <Recall
-  q="How to select rows where `InterestRate` is missing?"
-  a="Use `WHERE InterestRate IS NULL`."
+  q="Why use a half-open validity interval?"
+  a="`valid_from <= date < valid_to` gives one clean boundary and avoids matching both an ending record and its successor on the same date."
+/>
+
+<Recall
+  q="What should happen if two effective records overlap?"
+  a="Treat the overlap as a data-quality or source-history problem; arbitrary ranking can conceal an invalid history."
 />

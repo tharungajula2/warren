@@ -1,61 +1,98 @@
 ---
 id: TEC-18
-title: Selection and Filtering in pandas (`loc` vs `iloc`)
-type: procedure
+title: Query Performance on Large Loan Tables
+type: mechanism
 domain: technical
 subdomain: pandas-analytics-and-dataframes
 one_screen: >-
-  In pandas, `.loc` and `.iloc` index/select data differently. `.loc` uses
-  labels (row index or column names), whereas `.iloc` uses integer positions.
-  For example, `df.loc['C345']` selects the row with index `'C345'`, while
-  `df.iloc[5]` selects the 6th row by position. For conditional filtering, use
-  boolean indexing: `df.loc[df['Balance'] > 100000]` returns rows where Balance
-  exceeds 100k. Both `.loc` and `.iloc` accept row and column indexers:
-  `df.loc[row_labels, col_labels]` and `df.iloc[row_nums, col_nums]`.
+  Correct SQL still fails operationally if it scans unnecessary history,
+  multiplies rows, sorts huge intermediate results, or repeats expensive work.
+  Analyst-level tuning starts with reducing data early, preserving useful join
+  keys, and reading the execution plan instead of guessing from query
+  appearance.
 prerequisites:
-  - TEC-16
+  - TEC-07
+  - TEC-14
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'DataCamp, *“loc vs iloc in Pandas”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Key difference: `.loc` includes the ending label in slicing (`df.loc['A':'D']` includes 'D'), whereas `.iloc` excludes the endpoint (`df.iloc[0:3]` returns positions 0,1,2). Always ensure you pass the correct type of index (label vs integer) or you’ll get a KeyError/IndexError.
+### Core mechanism
+
+A common mistake is to transform a filtered column inside the predicate, which can make an otherwise usable index or partition less helpful. Prefer explicit date boundaries:
+
+```sql
+SELECT account_id, outstanding_balance
+FROM loan_snapshots
+WHERE reporting_date &gt;= '2026-08-01'
+  AND reporting_date &lt; '2026-09-01';
+```
+
+Rather than selecting every column through every stage, carry only fields needed downstream:
+
+```sql
+WITH month_end AS (
+    SELECT account_id, outstanding_balance, days_past_due
+    FROM loan_snapshots
+    WHERE reporting_date = '2026-08-31'
+)
+SELECT account_id, outstanding_balance
+FROM month_end
+WHERE days_past_due &gt; 0;
+```
+
+Execution plans reveal where the engine expects to spend work: scans, join methods, sorts, aggregations, and estimated row counts. If a join expects millions of rows where the business grain suggests thousands, first suspect cardinality or missing filters before asking for an index.
+
+Performance has costs beyond elapsed time. Sorting for window functions can be expensive; `UNION` may need duplicate elimination; repeated CTE logic may be recalculated; wide `SELECT *` results move more data than necessary. Conversely, forcing premature micro-optimizations can make code unreadable without improving execution.
+
+The analyst should understand the plan well enough to diagnose query shape, then involve database specialists for physical design decisions such as indexing, partitioning, statistics maintenance, and engine-specific configuration.
+
+### Where it sits
+
+```text
+Upstream:   Correct query · Expected row counts · Large lending tables
+This:       Filter pushdown · Narrow projections · Execution plans · Cost awareness
+Downstream: Reliable scheduled runs · Faster iteration · DBA escalation
+```
 
 ### Permanent rule
 
-Use `.loc` when indexing by row/column name, and `.iloc` for numerical positions.
+Optimize the amount of data processed before optimizing syntax: filter early, avoid accidental row multiplication, and inspect the plan.
 
-### Permanent trap
+### Never confuse [Logical correctness] and [Efficient execution]
 
-Using `.iloc` on an index that’s not a RangeIndex can return unexpected rows. For instance, if the DataFrame index is strings, `.iloc[0]` still returns the first row, not row with label 0.
-
-### Never confuse
-
-**`.loc`** — label-based indexing (select by row/column names).
+**Logical correctness** - the query returns the intended population and measures.
 
 ---
 
-**`.iloc`** — positional indexing (select by row/column integer location).
+**Efficient execution** - the engine produces that answer with acceptable scans, memory, sorting, and runtime.
+
+### Permanent trap
+
+Assuming an index is always the answer to a slow query. A wrong join grain or missing date filter can create far more work than any index can reasonably fix.
 
 ### Jurisdiction variants
 
-**No delta.** These pandas behaviors are the same everywhere.
+No delta. Performance mechanics differ by database engine, not by regulator.
 
 <Recall
-  q="How to select rows 10 through 20 using labels?"
-  a="`df.loc[10:20]` (if the index is numeric labels, includes 20)."
+  q="What should you inspect when a join suddenly processes far more rows than expected?"
+  a="Check join cardinality, missing predicates, and estimated versus expected row counts before assuming the problem is physical indexing."
 />
 
 <Recall
-  q="How to filter rows for a condition on a column?"
-  a="`df.loc[df['Status'] == 'Active']`."
+  q="Why avoid `SELECT *` in large analytical stages?"
+  a="It carries unnecessary columns through scans, joins, sorts, and data transfer, increasing work without helping the final result."
+/>
+
+<Recall
+  q="When should an analyst escalate to a database specialist?"
+  a="After query-shape issues are understood and the remaining solution depends on physical design such as indexes, partitions, statistics, or engine configuration."
 />

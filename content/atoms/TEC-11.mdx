@@ -1,61 +1,104 @@
 ---
 id: TEC-11
-title: 'Query Performance Basics (Indexes, Table Scans, Execution Plans)'
-type: concept
+title: Window Functions over Loan Histories
+type: mechanism
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  Indexes speed up queries by allowing the database to quickly locate rows on
-  indexed columns. A full table scan reads every row and is efficient only if a
-  large fraction of rows qualify. For example, if querying a small subset (e.g.
-  1% of rows) on an indexed column, the database will use the index; if ~10% or
-  more of rows match, a sequential scan may be faster.
+  Window functions calculate across related loan observations without collapsing
+  them into one aggregate row. Their power comes from three choices: which
+  account history forms the partition, how observations are ordered, and which
+  rows are included in the window frame.
 prerequisites:
-  - TEC-02
+  - TEC-08
+  - TEC-10
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Crunchy Data, *“WHEN TO CHOOSE SEQUENTIAL OVER INDEX SCAN”* (accessed
-      2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Use `EXPLAIN` (or equivalent) to view the execution plan of a query. This shows which indexes (if any) are used and the estimated cost. The plan also shows join methods (nested loop, hash join, etc.) and whether tables are scanned. A query running slowly often indicates missing indexes, inefficient joins, or large scans on big tables.
+### Core mechanism
+
+To compare each account with its prior reporting date, partition by account and order chronologically:
+
+```sql
+SELECT
+    account_id,
+    reporting_date,
+    outstanding_balance,
+    LAG(outstanding_balance) OVER (
+        PARTITION BY account_id
+        ORDER BY reporting_date
+    ) AS prior_balance
+FROM loan_snapshots;
+```
+
+`LAG` preserves every snapshot row while exposing the previous value. `LEAD` does the same for the next observation. Ranking functions such as `ROW_NUMBER` also operate over a partition and order rather than collapsing the data.
+
+Running calculations require attention to the frame. For a cumulative amount by account:
+
+```sql
+SELECT
+    account_id,
+    payment_date,
+    payment_amount,
+    SUM(payment_amount) OVER (
+        PARTITION BY account_id
+        ORDER BY payment_date
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS cumulative_paid
+FROM payments;
+```
+
+The explicit `ROWS` frame says to include all prior physical rows in the ordered account history. Omitting a frame can invoke engine defaults that behave differently when order values tie.
+
+Window functions assume the ordering column can establish the sequence needed by the business question. If an account can have multiple records on the same reporting date, add a deterministic tie-breaker or first resolve the duplicate grain problem.
+
+### Where it sits
+
+```text
+Upstream:   Repeated account observations · Date ordering
+This:       PARTITION BY · ORDER BY · Window frame · LAG · LEAD
+Downstream: DPD movement · Running balances · One-row selection
+```
 
 ### Permanent rule
 
-Put indexes on columns used frequently in `WHERE`, `JOIN`, or `ORDER BY` clauses (primary keys are automatically indexed).
+For every window expression, be able to state the partition, the order, and whether tied order values can occur.
 
-### Permanent trap
+### Never confuse [GROUP BY] and [Window function]
 
-Assuming an index will always be used: if statistics are outdated or the query doesn’t use the indexed column properly (e.g. function on column), the optimizer might do a full scan.
-
-### Never confuse
-
-**Index Scan** — uses an index to retrieve specific rows.
+**GROUP BY** - collapses many input rows into one row per group.
 
 ---
 
-**Sequential (Table) Scan** — reads every row of the table.
+**Window function** - calculates across related rows while preserving the original row grain.
+
+### Permanent trap
+
+Using `LAG` without a deterministic order. The database may return a prior row, but not necessarily the prior business observation you intended.
 
 ### Jurisdiction variants
 
-**No delta.** Index usage and execution plan analysis are general across RDBMS; the concept of cost-based optimization is universal.
+No delta. Window mechanics do not vary by regulator.
 
 <Recall
-  q="When would a sequential scan be faster than an index?"
-  a="When a query returns a large percentage of rows (e.g. >10%)."
+  q="What does `PARTITION BY account_id` do in a loan-history window?"
+  a="It restarts the calculation for each account so values from different borrowers or accounts cannot enter the same sequence."
 />
 
 <Recall
-  q="How to see if an index is used?"
-  a="Use `EXPLAIN QUERY` or execution plan tools in your database."
+  q="Why can an explicit window frame matter for a running total?"
+  a="It defines exactly which ordered rows contribute, avoiding surprises from engine defaults when order values tie."
+/>
+
+<Recall
+  q="How is a window calculation different from aggregation?"
+  a="A window adds context such as prior or cumulative values while keeping each original observation row; aggregation changes the result grain."
 />

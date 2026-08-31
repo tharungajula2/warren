@@ -1,68 +1,99 @@
 ---
 id: TEC-22
-title: Dates and Time Series Indexing in pandas
-type: concept
+title: Missing Data and Nullable Types in pandas
+type: mechanism
 domain: technical
 subdomain: python-vectorization-and-engineering
 one_screen: >-
-  Pandas has robust datetime support. Convert columns to datetime with
-  `pd.to_datetime()`, then you can use date methods. A `DatetimeIndex` (when you
-  set a datetime column as the index) enables time-based indexing and
-  resampling. To generate regular time sequences, `pd.date_range(start, end,
-  freq='M')` creates a monthly-end index. You can then align or reindex data by
-  time, and use `df.resample('M').sum()` to aggregate by month.
+  Missing data in pandas can appear as `NaN`, `NaT`, `None`, or `pd.NA`
+  depending on dtype. The analyst's job is not to make missing values disappear;
+  it is to detect them consistently and decide whether to preserve, flag, fill,
+  or exclude them without changing the credit meaning.
 prerequisites:
-  - TEC-16
+  - TEC-20
+  - TEC-21
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: >-
-      pandas Official Docs, *“Time series / date functionality”* (date_range
-      example) (accessed 2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, to analyze exposures by quarter:
+### Core mechanism
+
+Use `isna()` rather than equality comparisons to detect missing values:
+
 ```python
-df['Date'] = pd.to_datetime(df['Date'])
-df = df.set_index('Date')
-quarterly = df.resample('Q')['Exposure'].sum()
+import pandas as pd
+
+missing_balance = loans.loc[
+    loans["outstanding_balance"].isna(),
+    ["account_id", "reporting_date", "outstanding_balance"]
+]
 ```
-This handles the date alignment for reporting periods easily. Also, you can use `.dt` accessor: `df['Date'].dt.month` to get month, etc.
+
+A missing DPD should not automatically become zero, because zero means the account is known to be current. Preserve the unknown state with a nullable integer dtype:
+
+```python
+loans["days_past_due"] = loans["days_past_due"].astype("Int64")
+loans["dpd_missing"] = loans["days_past_due"].isna()
+```
+
+Fill values only when the replacement has a defined business meaning. For example, if a particular extract defines missing undrawn amount as no undrawn commitment, the implementation might be:
+
+```python
+loans["undrawn_amount_output"] = loans["undrawn_amount"].fillna(0)
+```
+
+But the original column should often be retained so the analyst can distinguish sourced zero from substituted zero.
+
+Aggregations commonly skip missing numeric values. That can be useful, but it means a mean or sum may be calculated from fewer observations than the row count suggests. Pair measures with non-missing counts when completeness matters.
+
+`NaT` is the datetime missing marker; `pd.NA` is pandas' scalar for nullable extension dtypes; Python `None` often appears in object data; NumPy `NaN` is common in floating-point columns. `isna()` provides one consistent detection interface across them.
+
+### Where it sits
+
+```text
+Upstream:   Loaded dtypes · Source completeness · Filtering
+This:       isna · Nullable dtypes · fillna · Missingness flags
+Downstream: GroupBy measures · Merge diagnostics · DQ outputs
+```
+
+### Never confuse [NaN] and [None]
+
+**NaN** - a floating-point missing marker commonly used in NumPy-backed numeric data.
+
+---
+
+**None** - Python's null object, often found in object-typed data; pandas generally detects both with `isna()`.
 
 ### Permanent rule
 
-Always convert date columns to `datetime64` dtype (using `to_datetime`) before analysis. This allows use of datetime methods and indexing.
+Preserve the distinction between unknown and known zero unless the business definition explicitly equates them.
 
 ### Permanent trap
 
-Forgetting `set_index` with a `DatetimeIndex` means you can’t use `.resample()`. Also, be mindful of time zones if mixing data from different regions.
-
-### Never confuse
-
-**Timestamp** — a single datetime (e.g. 2026-08-01 00:00).
-
----
-
-**Period** — a span (e.g. Aug 2026); use pandas `Period` if needed.
+Using `series == np.nan` to find missing values. Missing markers are not reliably found by ordinary equality; use `isna()`.
 
 ### Jurisdiction variants
 
-**No delta.** pandas date utilities are standard regardless of locale.
+No delta. pandas missing-data mechanics do not vary by regulator.
 
 <Recall
-  q="How to select all data from 2025?"
-  a="`df['2025']` if `df` is indexed by date, or `df[(df['Date']>= '2025-01-01') & (df['Date'] < '2026-01-01')]`."
+  q="Why is filling missing DPD with zero dangerous?"
+  a="Zero means known current status, while missing DPD means the delinquency state is unknown; filling changes the business meaning."
 />
 
 <Recall
-  q="How to create a daily date range?"
-  a="`pd.date_range('2025-01-01', '2025-12-31', freq='D')`."
+  q="Which method should detect `NaN`, `None`, `NaT`, and `pd.NA` consistently?"
+  a="Use pandas `isna()` on the Series or DataFrame rather than ordinary equality tests."
+/>
+
+<Recall
+  q="Why retain an original column after creating a filled output field?"
+  a="The source missingness remains visible for investigation, while the derived field can serve a specific downstream output rule."
 />

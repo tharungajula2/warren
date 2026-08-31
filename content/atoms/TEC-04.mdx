@@ -1,71 +1,117 @@
 ---
 id: TEC-04
-title: 'SQL Joins (inner, left, right, full)'
-type: concept
+title: 'Portfolio Aggregation, Distinct Counts, and HAVING'
+type: procedure
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  SQL `JOIN` combines rows from two tables based on matching column values. An
-  *INNER JOIN* yields only rows with matches in both tables, while
-  *LEFT/RIGHT/OUTER JOIN* include all rows from one side (and NULLs for the
-  other).
+  Aggregation changes grain. A loan-level snapshot can become one row per
+  product, vintage, delinquency bucket, or customer segment, but the analyst
+  must choose the grouping columns and the counting unit deliberately or the
+  resulting portfolio measures will answer the wrong question.
 prerequisites:
   - TEC-01
   - TEC-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: 'W3Schools, *“SQL JOIN”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, joining a *Facility* table to its *Account* table: each facility (one side) may link to multiple accounts (many side). An inner join lists only facilities that have accounts, whereas a left join lists all facilities with matching accounts (NULL account fields if none). Beware of **fan-out**: joining a 1:M relationship will duplicate the "one" side row for each "many" side row, potentially inflating counts. Always ensure join keys are correct and understand cardinality.
+### Core mechanism
 
-```text
-   +---------+      +---------+
-   | Table A |      | Table B |
-   +---------+      +---------+
-         \         /
-          \  JOIN /
-           \     /
-        +-----------+
-        | Result    |
-        +-----------+
+To summarize August balances by product, join the account to its facility and aggregate at product grain:
+
+```sql
+SELECT
+    f.product_type,
+    COUNT(*) AS account_rows,
+    SUM(s.outstanding_balance) AS outstanding_balance
+FROM loan_snapshots s
+JOIN loan_accounts a
+  ON a.account_id = s.account_id
+JOIN facilities f
+  ON f.facility_id = a.facility_id
+WHERE s.reporting_date = '2026-08-31'
+GROUP BY f.product_type
+ORDER BY f.product_type;
 ```
 
-### Permanent rule
+`COUNT(*)` counts result rows. `COUNT(column)` counts only non-NULL values in that column. `COUNT(DISTINCT customer_id)` answers a different question again: how many unique customers appear.
 
-Always specify an `ON` condition (join key) to match rows. For example: `ON Facilities.FacID = Accounts.FacID`.
+```sql
+SELECT
+    COUNT(*) AS account_rows,
+    COUNT(outstanding_balance) AS rows_with_balance,
+    COUNT(DISTINCT f.customer_id) AS customers
+FROM loan_snapshots s
+JOIN loan_accounts a
+  ON a.account_id = s.account_id
+JOIN facilities f
+  ON f.facility_id = a.facility_id
+WHERE s.reporting_date = '2026-08-31';
+```
+
+`WHERE` filters rows before aggregation. `HAVING` filters groups after aggregates exist:
+
+```sql
+SELECT f.product_type, SUM(s.outstanding_balance) AS balance
+FROM loan_snapshots s
+JOIN loan_accounts a ON a.account_id = s.account_id
+JOIN facilities f ON f.facility_id = a.facility_id
+WHERE s.reporting_date = '2026-08-31'
+GROUP BY f.product_type
+HAVING SUM(s.outstanding_balance) &gt; 10000000;
+```
+
+### Where it sits
+
+```text
+Upstream:   Correct row population · Preserved grain
+This:       GROUP BY · SUM · COUNT · DISTINCT · HAVING
+Downstream: Reconciliation totals · Portfolio views · Cohort summaries
+```
+
+### Never confuse [COUNT(*)] and [COUNT(column)]
+
+**COUNT(*)** - counts every result row in the group.
+
+---
+
+**COUNT(column)** - counts only rows where that column is not NULL.
+
+### Never confuse [WHERE] and [HAVING]
+
+**WHERE** - removes source rows before grouping.
+
+---
+
+**HAVING** - removes groups after aggregate values have been calculated.
 
 ### Permanent trap
 
-Forgetting the join condition (or typo) leads to a Cartesian product (every A with every B). Also, joining on the wrong key can cause hidden duplicates (fan-out).
-
-### Never confuse
-
-**INNER JOIN** — returns only rows where keys match in both tables.
-
----
-
-**CROSS JOIN** — returns Cartesian product (every row of A with every row of B), no key condition.
+Counting rows when the business question asks for customers or facilities. The SQL can be correct while the denominator is wrong because the table grain differs from the metric grain.
 
 ### Jurisdiction variants
 
-**No delta.** JOIN semantics (INNER, LEFT, RIGHT, FULL) are standard SQL.
+No delta. Aggregate semantics do not vary by regulator.
 
 <Recall
-  q="Which join shows all left-table rows even if no match?"
-  a="`LEFT JOIN`."
+  q="What changes when you add `GROUP BY product_type` to account-level data?"
+  a="The result grain becomes one row per product type, and measures must be interpreted at that new grain."
 />
 
 <Recall
-  q="How to join tables on multiple keys?"
-  a="Include all key conditions in the `ON` clause (e.g. `ON A.id = B.a_id AND A.date = B.date`)."
+  q="Why can `COUNT(outstanding_balance)` be lower than `COUNT(*)`?"
+  a="`COUNT(outstanding_balance)` ignores rows where the balance is NULL, while `COUNT(*)` counts every row."
+/>
+
+<Recall
+  q="When is `HAVING` required?"
+  a="Use it when the filtering condition depends on an aggregate such as `SUM`, `COUNT`, or `AVG` computed for each group."
 />

@@ -1,0 +1,106 @@
+---
+id: TEC-25
+title: Point-in-Time Matching in pandas
+type: procedure
+domain: technical
+subdomain: tec
+one_screen: >-
+  Point-in-time matching in pandas attaches the latest attribute known on or
+  before each loan observation. `merge_asof` is designed for this ordered
+  problem, but it requires sorted keys and a clear direction so a historical row
+  never matches a future risk record.
+prerequisites:
+  - TEC-09
+  - TEC-24
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 10_TEC_sql_python.md
+---
+### Core mechanism
+
+Assume `history` contains account snapshots and has already been enriched with `customer_id`. `risk_history` contains effective changes in customer risk grade:
+
+```python
+import pandas as pd
+
+history = history.sort_values(["customer_id", "reporting_date"])
+risk_history = risk_history.sort_values(["customer_id", "valid_from"])
+
+matched = pd.merge_asof(
+    history,
+    risk_history,
+    left_on="reporting_date",
+    right_on="valid_from",
+    by="customer_id",
+    direction="backward",
+    allow_exact_matches=True,
+)
+```
+
+`direction="backward"` means the matched `valid_from` must be at or before the reporting date. A forward direction would introduce information that becomes effective later.
+
+After matching, assert the temporal condition rather than trusting the call:
+
+```python
+valid = (
+    matched["valid_from"].isna()
+    | matched["valid_from"].le(matched["reporting_date"])
+)
+assert valid.all()
+```
+
+If `risk_history` also has `valid_to`, test that the reporting date is before the end of the interval. `merge_asof` chooses a nearest eligible start record; it does not by itself prove that effective-date intervals are non-overlapping or still valid.
+
+Sorting requirements matter. Both DataFrames must be ordered consistently for the as-of key, and grouping with `by` keeps different customers from matching each other's histories.
+
+Exact-date equality and as-of matching solve different problems. Use ordinary `merge` when both tables are keyed by the same reporting date; use `merge_asof` when one table records changes that occur irregularly through time.
+
+### Where it sits
+
+```text
+Upstream:   Historical snapshots · Effective-dated attributes · Sorted keys
+This:       merge_asof · Backward matching · Validity checks
+Downstream: Historical segmentation · Model datasets · Backtesting inputs
+```
+
+### Never confuse [Exact-date merge] and [As-of merge]
+
+**Exact-date merge** - requires equal date keys on both sides.
+
+---
+
+**As-of merge** - matches the nearest eligible effective record according to time direction and grouping keys.
+
+### Permanent rule
+
+Use backward matching for information known as of the observation date, then assert that no matched effective date lies in the future.
+
+### Permanent trap
+
+Using the nearest record without specifying direction. "Nearest" can be a future record and silently leak hindsight into historical analysis.
+
+### Jurisdiction variants
+
+No delta. pandas point-in-time matching mechanics do not vary by regulator.
+
+<Recall
+  q="Why is `direction=&quot;backward&quot;` appropriate for historical risk attributes?"
+  a="It restricts the match to records effective on or before the loan observation, preventing future information from entering the historical row."
+/>
+
+<Recall
+  q="What does the `by=&quot;customer_id&quot;` argument do?"
+  a="It confines as-of matching within each customer so one customer's dated record cannot match another customer's loan observation."
+/>
+
+<Recall
+  q="Why test `valid_to` separately when it exists?"
+  a="Matching the latest start date does not prove that the record remained valid through the observation date or that source intervals are well formed."
+/>

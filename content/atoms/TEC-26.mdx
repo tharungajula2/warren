@@ -1,0 +1,112 @@
+---
+id: TEC-26
+title: 'Reporting Dates, MOB, and Vintage Cohorts in pandas'
+type: procedure
+domain: technical
+subdomain: tec
+one_screen: >-
+  pandas date operations should preserve the same lending meanings used in SQL:
+  reporting period is the observation period, vintage is the origination cohort,
+  and months-on-book is elapsed calendar tenure. Converting dates once and
+  working with periods avoids fragile string slicing and approximate day
+  arithmetic.
+prerequisites:
+  - TEC-10
+  - TEC-20
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 10_TEC_sql_python.md
+---
+### Core mechanism
+
+Convert date columns before using them:
+
+```python
+import pandas as pd
+
+portfolio["reporting_date"] = pd.to_datetime(portfolio["reporting_date"])
+portfolio["origination_date"] = pd.to_datetime(portfolio["origination_date"])
+```
+
+Create month-level period labels for reporting and vintage:
+
+```python
+portfolio["reporting_month"] = portfolio["reporting_date"].dt.to_period("M")
+portfolio["vintage_month"] = portfolio["origination_date"].dt.to_period("M")
+```
+
+Months-on-book is the difference between those monthly periods. A clear integer implementation is:
+
+```python
+reporting = portfolio["reporting_month"]
+origination = portfolio["vintage_month"]
+
+portfolio["mob"] = (
+    (reporting.dt.year - origination.dt.year) * 12
+    + reporting.dt.month
+    - origination.dt.month
+)
+```
+
+This counts calendar month boundaries. If the business definition treats origination month as MOB 0, the result is already aligned to that convention. If another convention is specified, adjust the final label deliberately rather than changing the date arithmetic invisibly.
+
+Use date ranges or period comparisons for population selection:
+
+```python
+august_payments = payments.loc[
+    payments["payment_date"].ge("2026-08-01")
+    &amp; payments["payment_date"].lt("2026-09-01")
+].copy()
+```
+
+Period labels are useful for grouping and cohort views, while timestamps remain useful for exact effective-date matching. Keep both when both meanings are needed.
+
+### Where it sits
+
+```text
+Upstream:   Parsed dates · Origination date · Reporting date
+This:       Monthly periods · Vintage · MOB · Date-range filtering
+Downstream: Delinquency sequences · Vintage matrices · Cohort comparisons
+```
+
+### Never confuse [Timestamp] and [Period]
+
+**Timestamp** - a specific point in time such as 2026-08-31.
+
+---
+
+**Period** - a labelled interval such as August 2026, useful for cohort and reporting-month grouping.
+
+### Permanent rule
+
+Derive vintage and MOB from typed dates or periods, never from formatted text or days divided by an assumed month length.
+
+### Permanent trap
+
+Subtracting two dates, dividing days by 30, and calling the result MOB. Calendar months vary in length and that shortcut can misclassify tenure.
+
+### Jurisdiction variants
+
+No delta. pandas date mechanics do not vary by regulator.
+
+<Recall
+  q="Why convert reporting dates to monthly `Period` values for cohort work?"
+  a="Periods represent month-level intervals directly, making grouping and month-to-month comparisons clearer than repeated string formatting."
+/>
+
+<Recall
+  q="What does MOB 0 normally mean under the convention used here?"
+  a="The observation falls in the same calendar month as origination; later months increment as calendar month boundaries are crossed."
+/>
+
+<Recall
+  q="Why keep timestamps even after creating period labels?"
+  a="Exact dates are still needed for operations such as as-of matching, while period labels serve month-level grouping and cohort analysis."
+/>

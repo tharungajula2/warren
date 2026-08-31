@@ -1,69 +1,88 @@
 ---
 id: TEC-01
-title: Relational Model & Table Keys
+title: 'Lending Data Grain, Keys, and Row Meaning'
 type: concept
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  The relational model organizes data into structured tables (relations) with
-  rows and columns, using keys to connect data across tables. Each table
-  represents an entity (e.g. **Loan**, **Customer**), rows are records, and
-  columns are fields. A **primary key** is a unique identifier for each row
-  (cannot be NULL). A **foreign key** in one table references a primary key in
-  another to link related data (e.g. an *Account* table has a CustomerID
-  referencing the *Customer* table). This design avoids redundancy (no repeated
-  customer details in every loan row) and enforces data integrity through
-  relationships.
+  A lending table is meaningful only when you can say what one row represents.
+  Before writing a join or aggregate, fix the grain, identify the key that
+  should be unique at that grain, and distinguish customer, facility, account,
+  payment, schedule, and snapshot records.
 prerequisites: []
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Databricks, *“What Is a Relational Data Model? Key Concepts & Uses”*
-      (accessed 2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-The *Loan Book* in banking is not a single table: loans have borrowers, products, schedules, etc. Each aspect lives in its own table with keys linking them. For example, a *Facility* table may link to multiple *Account* rows (one-to-many), and accounts link to *Exposure* or *Transaction* tables. Keys ensure SQL queries join these tables reliably.
+### Core mechanism
+
+Use one mental schema throughout the pack:
+
+```sql
+SELECT account_id, reporting_date, outstanding_balance, days_past_due
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31';
+```
+
+Here `loan_snapshots` has grain **one row per account per reporting date**. The key is therefore `(account_id, reporting_date)`, not `account_id` alone. Other tables have different grains: `customers` is one row per customer; `facilities` is one row per facility; `loan_accounts` is one row per account; `repayment_schedule` is one row per account per due date; `payments` is one row per payment event identified by `payment_id`; `customer_risk` is one row per customer per effective-dated risk record. `finance_balances` is the comparison source used only for reconciliation, at account and reporting-date grain.
+
+A key question comes before every calculation: if two rows share the business identifier, are they duplicates or legitimate repeated observations? Two `loan_snapshots` rows for the same account on different month-ends are expected. Two rows for the same account and same reporting date are a duplicate at the declared grain.
+
+```sql
+SELECT account_id, reporting_date, COUNT(*) AS row_count
+FROM loan_snapshots
+GROUP BY account_id, reporting_date
+HAVING COUNT(*) &gt; 1;
+```
+
+The same logic protects monetary measures. If `outstanding_balance` is stored at account-month grain, any operation that changes that grain can change the total unless the transformation is deliberate.
+
+### Where it sits
 
 ```text
-+-----------+       +----------+       +-------------+
-| Facility  |       | Account  |       | Transaction |
-+-----------+       +----------+       +-------------+
-| FacilityID| 1   M | AccountID| 1   M | TransID     |
-| ...       |-------| FacID FK |-------| AccountID FK|
-+-----------+       +----------+       +-------------+
+Upstream:   Lending source tables · Business identifiers
+This:       Row grain · Candidate keys · Uniqueness
+Downstream: Filtering · Joins · Aggregation · Point-in-time analysis
 ```
 
 ### Permanent rule
 
-Every table should define a **primary key** column(s) that uniquely identifies each row.
+State the grain in words before writing the query. A key is correct only relative to that grain.
 
-### Permanent trap
+### Never confuse [Duplicate] and [Repeated observation]
 
-Putting unrelated data in one wide table (no keys) or not enforcing uniqueness can lead to corruption (e.g. duplicate loan records).
-
-### Never confuse
-
-**Primary Key** — uniquely identifies a row in its table (no duplicates, no NULLs).
+**Duplicate** - two or more rows occupy the same declared grain when only one should exist.
 
 ---
 
-**Foreign Key** — references a primary key in another table, establishing a link.
+**Repeated observation** - the same entity appears legitimately at different dates, events, or child records.
+
+### Permanent trap
+
+Using `DISTINCT` to hide unexplained duplicates. It removes identical result rows but does not prove that the underlying grain or join is correct.
+
+### Jurisdiction variants
+
+No delta. Row grain and key logic do not vary by regulator.
 
 <Recall
-  q="What uniquely identifies a row in a relational table?"
-  a="The primary key."
+  q="What is the grain of a monthly loan snapshot table keyed by account and reporting date?"
+  a="One row per account per reporting date; both columns are needed to identify a unique observation."
 />
 
 <Recall
-  q="How do tables link to each other?"
-  a="By foreign keys referencing primary keys."
+  q="Why is `account_id` alone not a valid key for `loan_snapshots`?"
+  a="The same account legitimately appears on many reporting dates, so `account_id` alone collapses repeated observations into apparent duplicates."
+/>
+
+<Recall
+  q="What should you test before trusting a supposed key?"
+  a="Group by the proposed key and search for counts above one; any returned row requires explanation before downstream analysis."
 />

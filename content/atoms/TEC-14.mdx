@@ -1,72 +1,110 @@
 ---
 id: TEC-14
-title: 'Data Mart Design: Fact and Dimension Tables'
-type: concept
+title: Building Lending Queries with CTEs
+type: procedure
 domain: technical
 subdomain: data-engineering-and-reconciliation
 one_screen: >-
-  In a data warehouse or risk data mart, tables are designed as *fact* or
-  *dimension*. A **fact table** contains measures (numeric data) and foreign
-  keys to dimensions. A **dimension table** contains descriptive attributes
-  (e.g. borrower name, product category) and a primary key. Dimension tables
-  (one side) are small and static (e.g. Time dimension, Product dimension). Fact
-  tables (many side) are large and growing, storing transactions or snapshots
-  (e.g. exposures, losses) with keys to link each record to its dimensions.
+  A common table expression turns a long credit query into named stages whose
+  populations and grains can be inspected. The goal is not to make SQL look
+  elegant; it is to make each transformation explicit enough that duplication,
+  filtering, and aggregate changes can be tested independently.
 prerequisites:
   - TEC-01
+  - TEC-07
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: 'Microsoft Docs, *“Star schema overview”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, a *Loan_Fact* table might have columns `(LoanKey, CustomerKey, ProductKey, Balance, InterestRate)`, where `CustomerKey` points to a *Customer_Dim* table with `(CustomerKey, Name, Segment, RiskRating)`, and `ProductKey` points to a *Product_Dim* table. This star schema lets analysts slice facts by any dimension attribute.
+### Core mechanism
+
+A month-end portfolio with September scheduled cash flow can be written as staged logic:
+
+```sql
+WITH month_end AS (
+    SELECT
+        account_id,
+        reporting_date,
+        outstanding_balance,
+        days_past_due
+    FROM loan_snapshots
+    WHERE reporting_date = '2026-08-31'
+),
+september_due AS (
+    SELECT
+        account_id,
+        SUM(scheduled_amount) AS scheduled_amount_sep
+    FROM repayment_schedule
+    WHERE due_date &gt;= '2026-09-01'
+      AND due_date &lt; '2026-10-01'
+    GROUP BY account_id
+),
+portfolio AS (
+    SELECT
+        m.account_id,
+        m.outstanding_balance,
+        m.days_past_due,
+        d.scheduled_amount_sep
+    FROM month_end m
+    LEFT JOIN september_due d
+      ON d.account_id = m.account_id
+)
+SELECT *
+FROM portfolio;
+```
+
+Each CTE has a declared shape: `month_end` is one row per account for the selected date; `september_due` is one row per account; therefore the final join should preserve account grain.
+
+CTEs do not automatically materialize data or make a query faster. Many optimizers inline them, and repeated references may still be expensive. Use them first for correctness and readability, then inspect the execution plan if performance matters.
+
+Avoid creating dozens of one-line CTEs that merely rename columns. A useful stage should correspond to a real population, grain change, aggregation, ranking, or business transformation that deserves inspection.
+
+### Where it sits
 
 ```text
-    +-------------+
-    |  Loan_Fact  |
-    +-------------+
-    | CustomerKey |--&gt; +-----------+
-    | ProductKey  |--&gt; |Customer_Dim|
-    | Balance     |    +-----------+
-    +-------------+      |   ...   |
-                        +-----------+
+Upstream:   Multi-step loan logic · Known intermediate grains
+This:       WITH clauses · Named stages · Inspectable transformations
+Downstream: Reconciliation queries · DQ checks · Maintainable extracts
 ```
+
+### Never confuse [CTE] and [Temporary table]
+
+**CTE** - a named result scoped to the statement and often optimized as part of that statement.
+
+---
+
+**Temporary table** - a separately created stored intermediate object with its own lifecycle and physical behaviour.
 
 ### Permanent rule
 
-Fact tables should contain only keys (foreign keys) and measure columns. All descriptive attributes belong in dimensions, not the fact.
+Name CTEs for the business stage they represent, and know the grain of each stage before joining it onward.
 
 ### Permanent trap
 
-Placing text or descriptive fields in the fact table (denormalization) is discouraged. It bloats the fact and complicates queries.
-
-### Never confuse
-
-**Fact Table** — contains numeric measurements and foreign keys linking to dimensions.
-
----
-
-**Dimension Table** — contains attributes (descriptions) and a primary key.
+Assuming a CTE fixes performance by itself. It improves structure, but execution cost still depends on the optimizer, data volume, filters, joins, and repeated work.
 
 ### Jurisdiction variants
 
-**No delta.** The star schema concept of fact vs dimension is standard in DW design.
+No delta. CTE usage does not vary by regulator.
 
 <Recall
-  q="What determines the grain of a fact table?"
-  a="The combination of all its foreign keys (e.g. one row per loan per month)."
+  q="What is the main analytical benefit of CTEs?"
+  a="They expose intermediate populations and grains as named stages, making complex lending logic easier to validate and maintain."
 />
 
 <Recall
-  q="Where do borrower names go?"
-  a="In a dimension table (e.g. `Customer_Dim`), not in the loan fact table."
+  q="Does a CTE guarantee materialization or faster execution?"
+  a="No. Many engines inline CTEs, so performance must be assessed from the actual execution plan rather than the syntax alone."
+/>
+
+<Recall
+  q="When does a CTE earn its place?"
+  a="When it represents a meaningful filter, grain change, aggregation, ranking, or transformation that would otherwise be hidden inside a larger statement."
 />

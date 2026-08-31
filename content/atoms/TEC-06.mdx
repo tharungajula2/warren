@@ -1,86 +1,104 @@
 ---
 id: TEC-06
-title: Subqueries vs. CTEs (Common Table Expressions)
-type: concept
+title: Join Cardinality and Exposure Fan-Out
+type: mechanism
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  A *subquery* (nested query) is an inline SELECT within another query, whereas
-  a *CTE* (WITH clause) defines a named temporary result set you can reference
-  in the main query. CTEs improve readability for complex logic and can be
-  referenced multiple times.
+  A join does not merely add columns; it can change row count and therefore
+  change monetary totals. Before joining loan tables, predict the relationship
+  between the keys on each side and decide whether one input row should match
+  zero, one, or many rows on the other side.
 prerequisites:
-  - TEC-02
+  - TEC-01
+  - TEC-04
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: >-
-      Real Python Blog, *“Introduction to Common Table Expressions (CTEs)”*
-      (accessed 2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, instead of nesting multiple subqueries, use a CTE:
+### Core mechanism
+
+A monthly account snapshot joined directly to a repayment schedule is a classic fan-out risk. One account-month row can match many scheduled instalments:
+
 ```sql
-WITH RecentLoans AS (
-  SELECT LoanID, Principal, SaleDate
-  FROM Loans
-  WHERE SaleDate &gt; '2025-01-01'
-)
-SELECT COUNT(*) FROM RecentLoans WHERE Principal &gt; 100000;
-```
-This defines `RecentLoans` once, then queries it. A subquery approach would nest the SELECT inside another SELECT.
-
-```text
-WITH cte_table AS (
-    +------------------+
-    | (complex query)  |
-    +------------------+
-)
-SELECT * FROM cte_table;
+SELECT
+    s.account_id,
+    s.reporting_date,
+    s.outstanding_balance,
+    r.due_date,
+    r.scheduled_amount
+FROM loan_snapshots s
+JOIN repayment_schedule r
+  ON r.account_id = s.account_id
+WHERE s.reporting_date = '2026-08-31';
 ```
 
+If account `A100` has one snapshot row and twelve schedule rows, its August balance appears twelve times. A later `SUM(outstanding_balance)` is then twelve times too large even though every join key technically matched.
+
+Diagnose cardinality before trusting measures:
+
+```sql
+SELECT
+    s.account_id,
+    COUNT(*) AS joined_rows
+FROM loan_snapshots s
+JOIN repayment_schedule r
+  ON r.account_id = s.account_id
+WHERE s.reporting_date = '2026-08-31'
+GROUP BY s.account_id
+HAVING COUNT(*) &gt; 1;
+```
+
+The safe shape depends on the intended result grain. If the output must remain one row per account-month, first reduce the schedule to one row per account for the required period, then join that result. A one-to-many relationship is not inherently wrong; it is wrong when the output grain was supposed to stay on the one side.
+
+Many-to-many joins are more dangerous because both sides contain repeated join keys. They can multiply rows combinatorially and often indicate that the join condition is incomplete or that one or both inputs need aggregation first.
+
+### Where it sits
+
 ```text
-SELECT * FROM (
-    +------------------+
-    | (complex query)  |
-    +------------------+
-) AS sub;
+Upstream:   Declared grain · Candidate keys · Monetary measures
+This:       Join cardinality · One-to-many · Many-to-many · Fan-out
+Downstream: Safe multi-table joins · Point-in-time joins · Reconciliation
 ```
 
 ### Permanent rule
 
-A CTE must be immediately followed by a SELECT (or INSERT/UPDATE/DELETE) that references it.
+Predict result cardinality before joining, then verify row counts and key uniqueness after the join.
 
-### Permanent trap
+### Never confuse [Valid one-to-many join] and [Fan-out error]
 
-A CTE’s scope is limited to one statement; it cannot be reused outside. Also, avoid overly deep nesting – break logic into multiple CTEs if needed.
-
-### Never confuse
-
-**Subquery** — an unnamed SELECT inside another query (inline, not reusable).
+**Valid one-to-many join** - repeated rows are required because the target grain is on the many side.
 
 ---
 
-**CTE (WITH)** — a named temporary table defined for one query (improves clarity and reuse).
+**Fan-out error** - repeated rows were created even though the target grain was supposed to remain on the one side.
+
+### Permanent trap
+
+Checking only whether the join returned the expected accounts. All accounts can be present while balances are silently multiplied.
 
 ### Jurisdiction variants
 
-**No delta.** CTEs and subqueries are standard SQL features everywhere.
+No delta. Join cardinality does not vary by regulator.
 
 <Recall
-  q="Why use a CTE?"
-  a="To break complex logic into steps or reuse a result set, making SQL easier to read."
+  q="Why can joining one snapshot row to twelve schedule rows inflate exposure?"
+  a="The snapshot balance is repeated once for every matching schedule row, so any later sum counts the same balance twelve times."
 />
 
 <Recall
-  q="How do you filter a subquery result?"
-  a="Wrap the subquery and apply WHERE in the outer SELECT or use a CTE as shown above."
+  q="Is every one-to-many join wrong?"
+  a="No. It is correct when the target result genuinely has one row per child record; it is a problem only when the intended grain should remain on the parent side."
+/>
+
+<Recall
+  q="What should be checked immediately after a risky join?"
+  a="Recheck row count, uniqueness at the intended key, and controlled monetary totals against the pre-join population."
 />

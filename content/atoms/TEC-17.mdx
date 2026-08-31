@@ -1,65 +1,111 @@
 ---
 id: TEC-17
-title: 'Reading and Writing Data (CSV, SQL, etc.)'
+title: Implementing Data-Quality Checks in SQL
 type: procedure
 domain: technical
 subdomain: pandas-analytics-and-dataframes
 one_screen: >-
-  Pandas provides I/O functions to read/write various formats. To load CSV:
-  `pd.read_csv('file.csv')` returns a DataFrame. To read from SQL: use
-  `pd.read_sql(query, connection)` which executes a SQL query or table and
-  returns a DataFrame. For example: ```python import pandas as pd import sqlite3
-  conn = sqlite3.connect('db.db') df_sql = pd.read_sql("SELECT * FROM
-  exposures", conn) df_csv = pd.read_csv("loans.csv") ``` To save a DataFrame:
-  `df.to_csv('out.csv', index=False)` or `df.to_sql('table_name', conn,
-  if_exists='replace')`.
+  A data-quality rule becomes useful to an analyst only when it can be executed
+  against the real lending grain and return clear exceptions. TEC owns the SQL
+  pattern for checking a supplied rule; DAT owns the governed rule, threshold,
+  severity, and control lifecycle.
 prerequisites:
-  - TEC-16
+  - TEC-01
+  - TEC-05
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'pandas Official Docs, *“pandas.read_sql”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-  - label: 'pandas Official Docs, *“pandas.read_csv”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-When loading, specify parsing options for dates (`parse_dates`), encodings, or chunk size for large files. Always close database connections or use context managers.
+### Core mechanism
+
+A uniqueness check for monthly snapshots tests the declared key:
+
+```sql
+SELECT
+    account_id,
+    reporting_date,
+    COUNT(*) AS row_count
+FROM loan_snapshots
+GROUP BY account_id, reporting_date
+HAVING COUNT(*) &gt; 1;
+```
+
+A mandatory-field rule returns records whose required value is absent:
+
+```sql
+SELECT account_id, reporting_date
+FROM loan_snapshots
+WHERE outstanding_balance IS NULL;
+```
+
+Referential integrity can be checked with an anti-join. This finds account records pointing to facilities that are absent:
+
+```sql
+SELECT a.account_id, a.facility_id
+FROM loan_accounts a
+LEFT JOIN facilities f
+  ON f.facility_id = a.facility_id
+WHERE f.facility_id IS NULL;
+```
+
+A domain check can detect impossible values supplied by the business rule:
+
+```sql
+SELECT account_id, reporting_date, days_past_due
+FROM loan_snapshots
+WHERE days_past_due &lt; 0;
+```
+
+The returned row count is not enough for investigation. Include the business key, reporting date, offending value, and where useful the rule identifier in the exception output so the result can be traced back to source data.
+
+Do not label every repeated child record a duplicate. `payments` legitimately has many rows per account; the test must use the actual expected key, such as a payment identifier or another event-level key.
+
+### Where it sits
+
+```text
+Upstream:   Governed DQ rule · Declared grain · Source fields
+This:       Duplicate checks · NULL checks · Orphans · Domain exceptions
+Downstream: Remediation · Control evidence · Trusted portfolio extract
+```
 
 ### Permanent rule
 
-Explicitly set parameters when reading data: e.g. `parse_dates=['date_col']` for dates, or `index_col=` if needed. This ensures correct dtypes.
+Translate each data-quality rule into a query whose zero or non-zero result has an unambiguous meaning at the declared grain.
 
-### Permanent trap
+### Never confuse [Business duplicate] and [Repeated child row]
 
-Loading very large files without chunksize can exhaust memory. Similarly, calling `to_sql` on millions of rows may time out or lock the DB; consider batch inserts.
-
-### Never confuse
-
-**read_csv** — reads a delimited text file into a DataFrame.
+**Business duplicate** - more than one row exists at a grain that should be unique.
 
 ---
 
-**to_sql** — writes a DataFrame to a SQL database table.
+**Repeated child row** - multiple rows are legitimate because the table grain is one row per event or schedule item.
+
+### Permanent trap
+
+Writing a DQ count without retaining exception keys. A failing count proves a problem exists but gives the investigator nothing to locate or repair.
 
 ### Jurisdiction variants
 
-**No delta.** Pandas I/O functions work the same regardless of jurisdiction.
+No delta. SQL implementation of DQ checks does not vary by regulator.
 
 <Recall
-  q="How do you read a SQL table into pandas?"
-  a="`pd.read_sql_table('TableName', con)` or `pd.read_sql('SELECT ...', con)`."
+  q="What determines the columns used in a duplicate check?"
+  a="The declared grain of the table; the grouped columns must represent the key that should be unique at that grain."
 />
 
 <Recall
-  q="How to append to a CSV instead of overwrite?"
-  a="Use `df.to_csv('file.csv', mode='a', header=False)`."
+  q="How do you find orphaned account-to-facility relationships?"
+  a="Left join accounts to facilities and keep rows where the parent facility key is NULL after the join."
+/>
+
+<Recall
+  q="Why should a DQ exception output contain business keys?"
+  a="The analyst or data owner needs traceable records to investigate; an aggregate failure count alone is not actionable."
 />

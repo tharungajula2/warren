@@ -1,0 +1,110 @@
+---
+id: TEC-28
+title: Reshaping Portfolios into Vintage and Migration Views
+type: procedure
+domain: technical
+subdomain: tec
+one_screen: >-
+  Credit portfolios often need to move between long account-history data and
+  compact cohort or migration matrices. Reshaping is safe only after the analyst
+  knows the source grain and whether duplicate combinations should be
+  impossible, aggregated, or counted.
+prerequisites:
+  - TEC-23
+  - TEC-26
+  - TEC-27
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 10_TEC_sql_python.md
+---
+### Core mechanism
+
+A vintage balance matrix can place vintage on rows and MOB on columns:
+
+```python
+vintage = portfolio.pivot_table(
+    index="vintage_month",
+    columns="mob",
+    values="outstanding_balance",
+    aggfunc="sum",
+    fill_value=0,
+)
+```
+
+`pivot_table` aggregates when several accounts occupy the same vintage-MOB cell. That is exactly what a portfolio balance view requires.
+
+A delinquency migration table can count accounts by prior and current bucket:
+
+```python
+migration = pd.crosstab(
+    history["prior_dpd_bucket"],
+    history["dpd_bucket"],
+    margins=True,
+)
+```
+
+If the input history contains duplicate account-period rows, migration counts are inflated. Validate the account-period key before reshaping.
+
+Use `pivot` rather than `pivot_table` when each row-column combination must already be unique and duplicates should cause an error rather than be aggregated. That failure can be useful because it exposes an unexpected grain problem.
+
+Moving from wide back to long form is often necessary before grouping or plotting:
+
+```python
+long_view = vintage.reset_index().melt(
+    id_vars="vintage_month",
+    var_name="mob",
+    value_name="outstanding_balance",
+)
+```
+
+A matrix is a representation of underlying records, not a new source of truth. Totals along rows, columns, and the whole matrix should tie back to the filtered source population where the reshaping is meant to be exhaustive.
+
+### Where it sits
+
+```text
+Upstream:   Cohort labels · DPD transitions · Correct source grain
+This:       pivot · pivot_table · crosstab · melt
+Downstream: Vintage curves · Migration matrices · Portfolio reporting
+```
+
+### Never confuse [pivot] and [pivot_table]
+
+**pivot** - reshapes unique row-column combinations and fails when duplicates prevent a single value per cell.
+
+---
+
+**pivot_table** - reshapes and aggregates multiple source rows into each cell using a specified function.
+
+### Permanent rule
+
+Choose the reshape function according to whether duplicate cell combinations are invalid or are meant to be aggregated.
+
+### Permanent trap
+
+Using `pivot_table(..., aggfunc="first")` to suppress duplicate cells. It can hide a broken account-period grain by arbitrarily choosing one record.
+
+### Jurisdiction variants
+
+No delta. pandas reshaping mechanics do not vary by regulator.
+
+<Recall
+  q="Why is `pivot_table` suitable for a vintage balance matrix?"
+  a="Many accounts legitimately belong to the same vintage and MOB cell, so their balances need to be aggregated into one matrix value."
+/>
+
+<Recall
+  q="When is plain `pivot` preferable?"
+  a="When each row-column combination should be unique and duplicate combinations should fail visibly instead of being aggregated."
+/>
+
+<Recall
+  q="What must be validated before building a migration matrix?"
+  a="The underlying account-period history must be unique at its intended grain so each transition contributes only once."
+/>

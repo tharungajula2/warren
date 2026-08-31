@@ -1,68 +1,101 @@
 ---
 id: TEC-23
-title: NumPy Vectorization and Portfolio Summary
-type: concept
+title: Portfolio Aggregation with pandas GroupBy
+type: procedure
 domain: technical
 subdomain: python-vectorization-and-engineering
 one_screen: >-
-  Python loops over DataFrame rows (or Python lists) are slow for large tables.
-  Instead, use NumPy/pandas vectorized operations, which run in optimized C. For
-  example, summing balances grouped by condition: ```python # slow (loop): total
-  = 0 for bal in df['Balance']: total += bal
+  `groupby` changes a loan-level DataFrame into a portfolio summary at a chosen
+  grouping grain. As in SQL, the hard part is not the syntax: it is deciding
+  whether the metric counts rows, accounts, facilities, customers, or
+  non-missing observations and making that choice visible.
 prerequisites:
-  - TEC-17
-  - QNT-01
+  - TEC-04
+  - TEC-20
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: pandas Tutorial and general knowledge (no direct source)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-# fast (vectorized):
-total = df['Balance'].sum()
-```
-Or summarizing a loan tape into segments:
-```python
-summary = df.groupby('Segment').agg(&#123;'Outstanding':'sum', 'LoanID':'count'&#125;)
-```
-This avoids explicit Python loops. Even custom functions can often be expressed as vectorized NumPy functions or pandas aggregations.
+### Core mechanism
 
-In short: treat DataFrames like in-memory tables and use built-in operations. This is akin to using `SUM` in SQL vs iterating rows in application code.
+Suppose `portfolio` contains one August row per account plus `product_type` and `customer_id`. Summarize by product with named aggregations:
+
+```python
+summary = (
+    portfolio.groupby("product_type", as_index=False)
+    .agg(
+        accounts=("account_id", "nunique"),
+        customers=("customer_id", "nunique"),
+        outstanding_balance=("outstanding_balance", "sum"),
+        average_dpd=("days_past_due", "mean"),
+    )
+)
+```
+
+Each output measure states its input column and aggregation. `nunique` is often preferable to row count when the business question asks for unique entities, but it is not a universal substitute: if the input grain is already one row per account, row count and account count should agree and that agreement itself can be checked.
+
+For multiple grouping dimensions, include all dimensions that define the desired result grain:
+
+```python
+vintage_summary = (
+    portfolio.groupby(["product_type", "vintage_month"], as_index=False)
+    .agg(
+        accounts=("account_id", "nunique"),
+        balance=("outstanding_balance", "sum"),
+    )
+)
+```
+
+Missing group keys are a deliberate choice. Depending on pandas version and parameters, missing keys may be dropped unless `dropna=False` is requested. If UNKNOWN segment is analytically meaningful, decide how it should appear rather than letting a default silently remove those rows.
+
+After aggregation, validate that balance totals tie to the input where the grouping is intended to partition rather than filter the portfolio.
+
+### Where it sits
+
+```text
+Upstream:   Correct DataFrame grain · Classification fields
+This:       groupby · Named aggregation · Unique counts
+Downstream: Vintage summaries · Migration views · Reconciliation outputs
+```
+
+### Never confuse [Row count] and [Entity count]
+
+**Row count** - number of DataFrame records at the current grain.
+
+---
+
+**Entity count** - number of unique accounts, facilities, or customers answering the business question.
 
 ### Permanent rule
 
-Always prefer pandas/NumPy vectorized methods (`.sum()`, `.mean()`, etc.) over manual Python loops for column-wise operations.
+Write every grouped output so its grouping grain and counting unit are obvious from the code.
 
 ### Permanent trap
 
-Using `df.apply()` with a Python function on rows can be as slow as loops. Test performance; often a group-by or built-in aggregate is much faster.
-
-### Never confuse
-
-**Vectorized operation** — an operation applied to entire array/column at once (fast, in C).
-
----
-
-**Python loop or apply** — iterates in Python for each row (slow).
+Using `.count()` as a general row count. It counts non-missing values in the selected column and can understate groups when that column contains missing data.
 
 ### Jurisdiction variants
 
-**No delta.** This is a general programming best practice, not jurisdiction-specific.
+No delta. pandas grouping mechanics do not vary by regulator.
 
 <Recall
-  q="Why is `df['x']*2` faster than a for-loop doubling each element?"
-  a="Because pandas/NumPy performs vectorized operations in optimized C."
+  q="Why use named aggregations in a credit portfolio summary?"
+  a="They make each output field's source column and aggregation explicit, reducing ambiguity when several measures are produced together."
 />
 
 <Recall
-  q="How to count loans > 100k without a loop?"
-  a="`df[df['Balance']>100000].shape[0]` or `(df['Balance']>100000).sum()`."
+  q="What does `nunique` answer that a row count may not?"
+  a="It counts distinct entities such as accounts or customers even when the DataFrame contains repeated rows for those entities."
+/>
+
+<Recall
+  q="What should be checked after a grouping that partitions the whole portfolio?"
+  a="Controlled measures such as total outstanding balance should tie back to the input unless the grouping intentionally excludes records."
 />

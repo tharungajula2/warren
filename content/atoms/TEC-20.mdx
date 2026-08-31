@@ -1,64 +1,95 @@
 ---
 id: TEC-20
-title: pandas Merge/Join vs SQL Join
+title: 'DataFrame Grain, Index, and Dtypes'
 type: concept
 domain: technical
 subdomain: pandas-analytics-and-dataframes
 one_screen: >-
-  Pandas `merge` function performs SQL-like joins. For example, `pd.merge(df1,
-  df2, on='key', how='inner')` is analogous to `SELECT * FROM df1 JOIN df2 ON
-  df1.key=df2.key`. The `how` parameter can be `'inner'`, `'left'`, `'right'`,
-  or `'outer'`, just like SQL joins. When merging, common columns (keys) must
-  match on name or be specified via `left_on`/`right_on`. After merge, index
-  labels are reset unless you preserve them.
+  A DataFrame is an in-memory table, but its index is not automatically a
+  business key and its dtypes are not cosmetic. Credit analysis remains safe
+  only when the analyst separately tracks row grain, key uniqueness, index
+  behaviour, and the storage type of each important field.
 prerequisites:
-  - TEC-16
+  - TEC-01
+  - TEC-19
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'pandas Official Docs, *“merge”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Example:
+### Core mechanism
+
+Check account-month uniqueness explicitly rather than assuming the default integer index proves anything:
+
 ```python
-merged = pd.merge(loans_df, customers_df, left_on='CustID', right_on='ID', how='inner')
+key = ["account_id", "reporting_date"]
+
+duplicates = loans.duplicated(key, keep=False)
+print(loans.loc[duplicates, key].sort_values(key))
 ```
-This yields rows where `CustID` matches `ID`. A left join (`how='left'`) would keep all loans, adding customer info or NaN if missing.
+
+The default `RangeIndex` merely labels row positions. You may set a meaningful index when it makes repeated operations clearer, but doing so does not enforce uniqueness by itself:
+
+```python
+indexed = loans.set_index(["account_id", "reporting_date"])
+print(indexed.index.is_unique)
+```
+
+Dtypes determine behaviour. `reporting_date` should be datetime-like for period operations; `outstanding_balance` numeric for arithmetic; `account_id` often string; low-cardinality labels such as `status` may be categorical when useful. Nullable integer types can represent missing DPD without forcing the entire column to floating point.
+
+```python
+loans["account_id"] = loans["account_id"].astype("string")
+loans["days_past_due"] = loans["days_past_due"].astype("Int64")
+loans["status"] = loans["status"].astype("category")
+```
+
+Changing the index can affect alignment in later arithmetic and assignment because pandas often aligns by labels. Resetting or merging without understanding that alignment can create missing values or unexpected row order even when array lengths match.
+
+### Where it sits
+
+```text
+Upstream:   Loaded portfolio · Declared business grain
+This:       DataFrame index · Uniqueness · Dtypes · Label alignment
+Downstream: Filtering · GroupBy · Merge · Time-series operations
+```
+
+### Never confuse [DataFrame index] and [Business key]
+
+**DataFrame index** - pandas row labels used for selection and alignment.
+
+---
+
+**Business key** - the field or fields that uniquely identify a record at the declared lending grain.
 
 ### Permanent rule
 
-Explicitly specify `how` and `on` parameters to avoid ambiguity. By default, `how='inner'` and pandas attempts to join on any common column names.
+Track business grain independently of the DataFrame index, and validate dtypes before relying on arithmetic, dates, or joins.
 
 ### Permanent trap
 
-If two DataFrames share column names besides the key, `merge` may join on all of them unintentionally. Rename or use `suffixes=` to disambiguate.
-
-### Never confuse
-
-**merge** (pandas) — database-style join on keys (columns or index).
-
----
-
-**concat** (pandas) — stacks DataFrames (like SQL `UNION`), not a join on keys.
+Treating a unique `RangeIndex` as evidence that the lending records are unique. Every DataFrame can have unique row positions while containing duplicated account-month business keys.
 
 ### Jurisdiction variants
 
-**No delta.** Pandas merge behavior is consistent across environments.
+No delta. pandas indexing and dtype mechanics do not vary by regulator.
 
 <Recall
-  q="How to do a left join in pandas?"
-  a="`pd.merge(df1, df2, how='left', on='key')`."
+  q="Does a default pandas index prove business-key uniqueness?"
+  a="No. It proves only that row positions have labels; duplicate account-month records can still exist in the DataFrame."
 />
 
 <Recall
-  q="How to merge on different column names?"
-  a="Use `left_on='colA', right_on='colB'`."
+  q="Why use nullable `Int64` for DPD when missing values are possible?"
+  a="It preserves integer semantics while allowing missing values, avoiding an unnecessary conversion of the column to floating point."
+/>
+
+<Recall
+  q="Why can index labels matter during assignment or arithmetic?"
+  a="pandas often aligns objects by labels, so mismatched indexes can create unexpected missing values or pair the wrong rows even when shapes look compatible."
 />

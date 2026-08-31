@@ -1,75 +1,112 @@
 ---
 id: TEC-05
-title: 'Set Operations (UNION, INTERSECT, EXCEPT)'
-type: concept
+title: NULL Semantics in Credit Queries
+type: mechanism
 domain: technical
 subdomain: sql-querying-and-window-functions
 one_screen: >-
-  SQL set operators combine result sets like mathematical sets. `UNION` stacks
-  rows from two queries (duplicates removed by default). `UNION ALL` includes
-  duplicates. `INTERSECT` returns only rows present in both queries. `EXCEPT`
-  (or `MINUS`) returns rows in the first query that are not in the second.
+  SQL NULL means unknown or missing, not zero, blank, or false. Because
+  comparisons involving NULL usually evaluate to UNKNOWN, missing values can
+  disappear from filters and alter aggregate results without generating any
+  error.
 prerequisites:
   - TEC-02
+  - TEC-04
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 1
-sources:
-  - label: 'W3Schools, *“SQL UNION”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-  - label: 'GeeksforGeeks, *“SQL INTERSECT”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-  - label: 'Microsoft Docs, *“EXCEPT (Transact-SQL)”* (accessed 2026-08-28)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-Example: to list all unique borrower IDs from two legacy loan tables:
+### Core mechanism
+
+This query does not return NULL balances:
+
 ```sql
-SELECT BorrowerID FROM Loans_Old
-UNION
-SELECT BorrowerID FROM Loans_New;
+SELECT account_id, outstanding_balance
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31'
+  AND outstanding_balance &lt;&gt; 0;
 ```
-This yields each ID once. To find IDs present in both tables:
+
+Rows where `outstanding_balance` is NULL are neither equal to zero nor unequal to zero in ordinary two-valued logic. Test missingness explicitly:
+
 ```sql
-SELECT BorrowerID FROM Loans_Old
-INTERSECT
-SELECT BorrowerID FROM Loans_New;
+SELECT account_id, outstanding_balance
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31'
+  AND outstanding_balance IS NULL;
 ```
+
+Aggregation has its own NULL behaviour. `COUNT(*)` counts rows, `COUNT(outstanding_balance)` skips NULL, and `SUM(outstanding_balance)` ignores NULL inputs but returns NULL if no non-NULL input exists for the group. Do not replace missing financial values with zero merely to make arithmetic convenient unless zero is genuinely the correct business meaning.
+
+`COALESCE` is useful when a fallback is deliberate:
+
+```sql
+SELECT
+    account_id,
+    COALESCE(undrawn_amount, 0) AS undrawn_amount_for_output
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31';
+```
+
+NULL also matters in anti-filters. `NOT IN` can behave unexpectedly when the compared set contains NULL. A correlated `NOT EXISTS` is usually clearer for population exclusion because it asks directly whether a matching row exists.
+
+```sql
+SELECT a.account_id
+FROM loan_accounts a
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM loan_snapshots s
+    WHERE s.account_id = a.account_id
+      AND s.reporting_date = '2026-08-31'
+);
+```
+
+### Where it sits
+
+```text
+Upstream:   Source completeness · Filter logic · Aggregation grain
+This:       NULL · Three-valued logic · COALESCE · NULL-aware counts
+Downstream: Safe joins · Reconciliation · Data-quality exceptions
+```
+
+### Never confuse [NULL] and [Zero]
+
+**NULL** - the value is absent or unknown.
+
+---
+
+**Zero** - the value is known and equals zero.
 
 ### Permanent rule
 
-All SELECTs combined by UNION/INTERSECT/EXCEPT must have the same number of columns and compatible types.
+Test missingness with `IS NULL` or `IS NOT NULL`, and substitute a default only when the default preserves business meaning.
 
 ### Permanent trap
 
-Forgetting that `UNION` removes duplicates; use `UNION ALL` if you need to preserve them. Also ensure column order and types match.
-
-### Never confuse
-
-**UNION** — appends rows from queries into one result (distinct by default).
-
----
-
-**JOIN** — combines columns from tables based on a key.
+Writing `column = NULL` or `column &lt;&gt; NULL`. Those predicates do not identify missing rows; they evaluate to UNKNOWN.
 
 ### Jurisdiction variants
 
-**No delta.** Set operations behave the same in standard SQL for all jurisdictions.
+No delta. NULL logic is an implementation concept, not a regulatory one.
 
 <Recall
-  q="How to find rows in A not in B?"
-  a="Use `EXCEPT` (or `MINUS`) in SQL: `SELECT * FROM A EXCEPT SELECT * FROM B`."
+  q="Why does `balance <> 0` not include NULL balances?"
+  a="A comparison with NULL evaluates to UNKNOWN rather than TRUE, so the row does not pass the `WHERE` filter."
 />
 
 <Recall
-  q="How to combine two tables’ rows, keeping duplicates?"
-  a="Use `UNION ALL`."
+  q="What is the difference between `COUNT(*)` and `COUNT(balance)` when balance can be NULL?"
+  a="`COUNT(*)` counts all rows, while `COUNT(balance)` counts only rows with a known non-NULL balance."
+/>
+
+<Recall
+  q="When is `COALESCE(balance, 0)` safe?"
+  a="Only when the business meaning of a missing balance is genuinely zero; otherwise the substitution destroys information about missingness."
 />

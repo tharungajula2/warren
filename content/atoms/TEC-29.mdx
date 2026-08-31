@@ -1,0 +1,112 @@
+---
+id: TEC-29
+title: Vectorized Credit Calculations
+type: mechanism
+domain: technical
+subdomain: tec
+one_screen: >-
+  Portfolio calculations should usually operate on whole pandas Series or NumPy
+  arrays rather than one Python row at a time. Vectorization is faster, easier
+  to test, and clearer when the rule can be expressed as column arithmetic,
+  boolean masks, grouped transforms, or array selection.
+prerequisites:
+  - TEC-21
+  - TEC-23
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 10_TEC_sql_python.md
+---
+### Core mechanism
+
+A simple exposure calculation can operate directly on columns:
+
+```python
+portfolio["total_commitment"] = (
+    portfolio["outstanding_balance"]
+    + portfolio["undrawn_amount"].fillna(0)
+)
+```
+
+Conditional bucketing can use `numpy.select` without a row-wise function:
+
+```python
+import numpy as np
+
+conditions = [
+    portfolio["days_past_due"].eq(0),
+    portfolio["days_past_due"].between(1, 30),
+    portfolio["days_past_due"].between(31, 89),
+    portfolio["days_past_due"].ge(90),
+]
+
+choices = ["CURRENT", "DPD_1_30", "DPD_31_89", "DPD_90_PLUS"]
+
+portfolio["dpd_bucket"] = np.select(
+    conditions,
+    choices,
+    default="UNKNOWN",
+)
+```
+
+Group-level quantities can often be returned to every row with `transform`:
+
+```python
+portfolio["customer_balance"] = (
+    portfolio.groupby("customer_id")["outstanding_balance"]
+    .transform("sum")
+)
+```
+
+A Python loop or `DataFrame.apply(axis=1)` is not forbidden. It is appropriate when the logic genuinely depends on row-wise Python objects or cannot be expressed clearly with built-in operations. But using row-wise apply for ordinary arithmetic or simple conditions pays Python-call overhead once per row and often obscures the underlying rule.
+
+Vectorized code can still be wrong. Missing values, dtype coercion, index alignment, and inconsistent units must be handled just as carefully as in any other calculation.
+
+### Where it sits
+
+```text
+Upstream:   Clean DataFrame · Defined calculation · Correct dtypes
+This:       Series arithmetic · Boolean arrays · numpy.select · transform
+Downstream: Portfolio features · Cohort metrics · Reusable analysis
+```
+
+### Never confuse [Vectorization] and [Correctness]
+
+**Vectorization** - expresses operations over arrays or Series efficiently.
+
+---
+
+**Correctness** - the calculation uses the right population, units, missing-value treatment, and business rule.
+
+### Permanent rule
+
+Prefer built-in column and group operations when they express the rule clearly; use row-wise Python only when the logic truly requires it.
+
+### Permanent trap
+
+Replacing every loop with dense vectorized code that nobody can review. Performance gains do not justify hiding the business rule in unreadable expressions.
+
+### Jurisdiction variants
+
+No delta. Vectorization mechanics do not vary by regulator.
+
+<Recall
+  q="Why is Series arithmetic usually preferable to iterating DataFrame rows?"
+  a="It executes the same column rule across the portfolio with less Python overhead and usually produces code that is easier to test and review."
+/>
+
+<Recall
+  q="What does `groupby(...).transform(&quot;sum&quot;)` provide?"
+  a="It calculates a group total and aligns that total back to every original row, preserving the DataFrame grain."
+/>
+
+<Recall
+  q="When can row-wise `apply` still be reasonable?"
+  a="When the rule genuinely requires per-row Python logic that cannot be expressed clearly with reliable vectorized operations."
+/>

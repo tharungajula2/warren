@@ -1,69 +1,111 @@
 ---
 id: TEC-19
-title: GroupBy and Aggregation (Split–Apply–Combine)
-type: concept
+title: Loading Portfolio Data into pandas
+type: procedure
 domain: technical
 subdomain: pandas-analytics-and-dataframes
 one_screen: >-
-  In pandas, use `groupby` to perform SQL-style GROUP BY operations. The process
-  is “split-apply-combine”: split the DataFrame into groups by some key, apply
-  an aggregate or transformation to each group, then combine the results. For
-  example, to sum balances by product:
-  `df.groupby('ProductType')['Balance'].sum()`. This yields a Series
-  (index=ProductType, values=Sum).
+  A pandas analysis is only as reliable as the data types and population loaded
+  into memory. Read only the fields and rows required, parse dates deliberately,
+  and check the shape immediately so a five-million-row extract does not become
+  a silent object-typed or memory-heavy mess.
 prerequisites:
-  - TEC-16
+  - TEC-18
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      pandas Official Docs, *“Group by: split-apply-combine”* (accessed
-      2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-After grouping, common aggregates include `.sum()`, `.count()`, `.mean()`, `.min()`, `.max()`. Pandas also has `.agg()` to apply multiple functions or custom ones. The result keys become the index by default (similar to GROUP BY making the group columns the new index).
+### Core mechanism
+
+A SQL extract can be loaded directly into a DataFrame:
 
 ```python
-grouped = df.groupby(['ProductType', 'Vintage'])
-result = grouped['Balance'].sum()
+import pandas as pd
+
+query = """
+SELECT
+    account_id,
+    reporting_date,
+    outstanding_balance,
+    days_past_due,
+    status
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31'
+"""
+
+loans = pd.read_sql(query, connection, parse_dates=["reporting_date"])
 ```
 
-This produces a MultiIndex Series with each (ProductType, Vintage) combination’s total balance. Use `reset_index()` if you want the keys as columns again.
+For a delivered CSV, specify the date fields and inspect inferred types rather than accepting them blindly:
+
+```python
+loans = pd.read_csv(
+    "loan_snapshot_2026_08.csv",
+    parse_dates=["reporting_date"]
+)
+
+print(loans.shape)
+print(loans.dtypes)
+```
+
+Large files may need chunked processing rather than a single in-memory load. The useful question is not "Can pandas open it?" but whether the working set, intermediate merges, and copies fit comfortably enough to complete the analysis reproducibly.
+
+Do not load identifiers as numbers when formatting matters. An account code such as `000123` can lose leading zeros if inferred as an integer. For file inputs, supply a string dtype for identifiers when necessary.
+
+```python
+loans = pd.read_csv(
+    "loan_snapshot_2026_08.csv",
+    dtype=&#123;"account_id": "string"&#125;,
+    parse_dates=["reporting_date"]
+)
+```
+
+### Where it sits
+
+```text
+Upstream:   SQL portfolio extract · Delivered file · Required columns
+This:       read_sql · read_csv · Date parsing · Dtype control
+Downstream: DataFrame grain · Filtering · Missing-data handling
+```
 
 ### Permanent rule
 
-By default, grouped keys become the index of the result. Use `as_index=False` in `groupby()` or `reset_index()` afterward to turn them back into columns.
+Inspect row count, column names, dtypes, and date range immediately after loading before performing credit calculations.
 
-### Permanent trap
+### Never confuse [Identifier] and [Numeric measure]
 
-Forgetting to aggregate: `df.groupby('X')` alone does not compute anything. Also, using `apply(lambda x: ...)` is often much slower than using built-in aggregates.
-
-### Never confuse
-
-**groupby** — aggregates data by keys (like SQL `GROUP BY`).
+**Identifier** - a label used to match records; arithmetic meaning is irrelevant and leading zeros may matter.
 
 ---
 
-**pivot** — reshapes (reorients) data without aggregating (or with separate logic). Pivot tables convert grouped results to a wide format, which is a distinct operation.
+**Numeric measure** - a quantity such as balance or DPD on which arithmetic or ordering is meaningful.
+
+### Permanent trap
+
+Trusting dtype inference for every delivered file. Mixed values, blank cells, or formatted identifiers can produce object columns or altered keys that later break joins.
 
 ### Jurisdiction variants
 
-**No delta.** The split-apply-combine paradigm is language-agnostic; pandas follows it consistently.
+No delta. pandas loading mechanics do not vary by regulator.
 
 <Recall
-  q="How to get average balance by region?"
-  a="`df.groupby('Region')['Balance'].mean()`."
+  q="Why parse reporting dates during or immediately after ingest?"
+  a="Datetime types support reliable period filtering and date arithmetic; string dates can sort or compare incorrectly when formats vary."
 />
 
 <Recall
-  q="How to count loans per product and vintage?"
-  a="`df.groupby(['ProductType','Vintage'])['LoanID'].count()`."
+  q="Why might `account_id` need a string dtype?"
+  a="It is a matching label rather than a quantity, and numeric inference can strip leading zeros or otherwise change the identifier."
+/>
+
+<Recall
+  q="What four checks should follow an initial load?"
+  a="Check row count and columns, inspect dtypes, confirm the date range, and verify the loaded population matches the intended extract."
 />

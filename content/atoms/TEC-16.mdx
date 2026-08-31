@@ -1,78 +1,109 @@
 ---
 id: TEC-16
-title: Pandas Series and DataFrame (Mental Model)
-type: concept
+title: Writing a Reconciliation Query
+type: procedure
 domain: technical
 subdomain: pandas-analytics-and-dataframes
 one_screen: >-
-  In pandas, a **Series** is a 1D labeled array of data (similar to a column),
-  and a **DataFrame** is a 2D table of data with labeled axes. You can think of
-  a DataFrame as equivalent to a spreadsheet or SQL table: each column in a
-  DataFrame is a Series, and all Series share the same index (row labels).
-prerequisites: []
+  A reconciliation query implements a comparison that has already been
+  specified: which two populations should agree, at what grain, on which
+  measures, and with what tolerance. TEC owns the executable alignment and
+  exception logic, not the governance decision that defines the control.
+prerequisites:
+  - TEC-04
+  - TEC-07
+  - TEC-15
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      pandas Official Docs, *“Intro to Data Structures (Series, DataFrame)”*
-      (accessed 2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, creating a loan DataFrame:
-```python
-import pandas as pd
-df = pd.DataFrame(&#123;
-    'LoanID': [101, 102, 103],
-    'Balance': [50000, 75000, 100000],
-    'Status': ['Current','Delinquent','Current']
-&#125;)
+### Core mechanism
+
+Assume `loan_snapshots` must reconcile to a delivered table `finance_balances` at account and reporting-date grain. Start by aggregating both sides to the same key before comparing:
+
+```sql
+WITH risk_side AS (
+    SELECT
+        account_id,
+        reporting_date,
+        SUM(outstanding_balance) AS balance
+    FROM loan_snapshots
+    WHERE reporting_date = '2026-08-31'
+    GROUP BY account_id, reporting_date
+),
+finance_side AS (
+    SELECT
+        account_id,
+        reporting_date,
+        SUM(balance_amount) AS balance
+    FROM finance_balances
+    WHERE reporting_date = '2026-08-31'
+    GROUP BY account_id, reporting_date
+)
+SELECT
+    COALESCE(r.account_id, f.account_id) AS account_id,
+    r.balance AS risk_balance,
+    f.balance AS finance_balance,
+    COALESCE(r.balance, 0) - COALESCE(f.balance, 0) AS difference
+FROM risk_side r
+FULL OUTER JOIN finance_side f
+  ON f.account_id = r.account_id
+ AND f.reporting_date = r.reporting_date
+WHERE r.account_id IS NULL
+   OR f.account_id IS NULL
+   OR ABS(r.balance - f.balance) &gt; 1.00;
 ```
-This yields a table with 3 rows and 3 columns. Under the hood, each column (LoanID, Balance, Status) is a pandas Series, and they all align on their index (0,1,2). You can access a column as `df['Balance']` (a Series) or a single value as `df.loc[1, 'Status']`.
+
+The full outer join exposes three exception classes: only on the risk side, only on the finance side, or present on both with a measure difference. The tolerance `1.00` is assumed to come from the control specification; TEC does not invent it.
+
+Always reconcile counts as well as amounts. Equal totals can hide offsetting record-level errors, while equal record counts can hide value differences. Where currencies differ, align currency treatment before comparison rather than relying on a single net total.
+
+### Where it sits
 
 ```text
-+--------+-----------+
-| LoanID | Balance   | ...
-+--------+-----------+
-|   101  |  50000    |
-|   102  |  75000    |
-|   103  | 100000    |
-+--------+-----------+
+Upstream:   Control specification · Aligned grain · Source populations
+This:       Side-by-side comparison · Missing records · Amount differences
+Downstream: Exception investigation · Control evidence · Reporting sign-off
 ```
 
 ### Permanent rule
 
-All columns in a DataFrame must have the same length (same index). A DataFrame cannot contain “ragged” columns of different lengths.
+Force both sides to the same key and measure definition before comparing them.
 
-### Permanent trap
+### Never confuse [Reconciliation specification] and [Reconciliation query]
 
-Passing a dict of lists of different lengths to `DataFrame()` will error. Always ensure input data dimensions align.
-
-### Never confuse
-
-**Series** — a one-dimensional labeled array (single column).
+**Reconciliation specification** - defines what must agree, the grain, measures, tolerance, and control expectation.
 
 ---
 
-**DataFrame** — a two-dimensional table, essentially a dict of Series, like a spreadsheet or SQL table.
+**Reconciliation query** - implements that definition and emits the exceptions or evidence.
+
+### Permanent trap
+
+Comparing only grand totals. Two sources can have the same net balance while containing different accounts or offsetting errors.
 
 ### Jurisdiction variants
 
-**No delta.** These pandas concepts do not vary by region.
+No delta. Reconciliation SQL mechanics do not vary by regulator.
 
 <Recall
-  q="What is the type of `df['LoanID']` if `df` is a DataFrame?"
-  a="A pandas Series."
+  q="Why aggregate both sides before a reconciliation join?"
+  a="The comparison is meaningful only when both sides are at the same declared grain; otherwise repeated records can create false differences or false matches."
 />
 
 <Recall
-  q="How to select the first row of a DataFrame?"
-  a="Use `df.iloc[0]` (positional) or `df.loc[index_value]` if an index is defined."
+  q="What are the three basic exceptions from a full outer reconciliation?"
+  a="A record exists only on the first side, only on the second side, or exists on both sides but has a measure outside the specified tolerance."
+/>
+
+<Recall
+  q="Why reconcile counts as well as balances?"
+  a="Equal balances can arise from offsetting errors, so population-level agreement is not proved by a single monetary total."
 />

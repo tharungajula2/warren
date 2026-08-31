@@ -1,63 +1,101 @@
 ---
 id: TEC-15
-title: Why Use Python (Not Excel) for Large Data
-type: concept
+title: Set Operations and Population Differences
+type: procedure
 domain: technical
 subdomain: pandas-analytics-and-dataframes
 one_screen: >-
-  Python can handle much larger datasets and reproducible workflows than Excel.
-  Excel is limited to about one million rows and often crashes on complex
-  models, whereas Python (pandas, numpy) can process “Big Data” in code. Python
-  code is also text-based and version-controllable, reducing manual errors
-  inherent in spreadsheets. In risk work, large loan tapes, exposure tables, or
-  simulation outputs often exceed Excel’s capacity. Python scripts (using
-  pandas) can load SQL extracts or CSV files into DataFrames and manipulate
-  millions of rows efficiently.
-prerequisites: []
+  Set operations combine or compare compatible query outputs by rows rather than
+  by columns. In credit work they are most useful for stacking like-for-like
+  extracts, finding accounts that appeared or disappeared between populations,
+  and checking whether two keyed sets agree.
+prerequisites:
+  - TEC-02
+  - TEC-04
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Cambridge Spark, *“Python vs Excel for Data Analysis”* (accessed
-      2026-08-28)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: '2026'
-import_source: 13_TEC_sql_python.md
+sources: []
+import_source: 10_TEC_sql_python.md
 ---
-For example, summarising a 5-million-row loan file by segment is trivial in Python (`df.groupby('Segment').sum()`), whereas in Excel it would require slow pivot operations or manual aggregations. Python’s libraries (pandas, NumPy, sklearn) also support advanced analytics and are open-source, making code sharable and auditable.
+### Core mechanism
+
+To stack two monthly exception files while preserving every row, use `UNION ALL`:
+
+```sql
+SELECT account_id, reporting_date, days_past_due
+FROM loan_snapshots
+WHERE reporting_date = '2026-07-31'
+  AND days_past_due &gt; 0
+UNION ALL
+SELECT account_id, reporting_date, days_past_due
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31'
+  AND days_past_due &gt; 0;
+```
+
+`UNION` performs an additional duplicate-removal step. That may be required, but it can also hide repeated rows that should have been investigated and usually costs more than `UNION ALL` because the engine must identify duplicates.
+
+To find July accounts absent from August, use a set difference where the SQL dialect supports it:
+
+```sql
+SELECT account_id
+FROM loan_snapshots
+WHERE reporting_date = '2026-07-31'
+EXCEPT
+SELECT account_id
+FROM loan_snapshots
+WHERE reporting_date = '2026-08-31';
+```
+
+A `NOT EXISTS` anti-join is a portable alternative and can preserve additional columns from the left-side population. `INTERSECT` returns rows present in both compatible sets.
+
+Set operations compare row values in corresponding column positions. The branches must return the same number of columns with compatible data types and the same semantic meaning. Matching technical types are not enough if, for example, one branch labels `balance` in local currency and the other in base currency.
+
+### Where it sits
+
+```text
+Upstream:   Defined populations · Compatible columns
+This:       UNION ALL · UNION · INTERSECT · EXCEPT
+Downstream: Population reconciliation · Change analysis · Exception files
+```
+
+### Never confuse [UNION ALL] and [UNION]
+
+**UNION ALL** - stacks all rows, including duplicates.
+
+---
+
+**UNION** - stacks rows and then removes duplicates from the combined result.
 
 ### Permanent rule
 
-For datasets much larger than a few hundred thousand rows, use Python (or similar) instead of Excel. Code-based analysis ensures reproducibility and auditability.
+Use `UNION ALL` unless duplicate removal is part of the business requirement, and make the semantic meaning of corresponding columns identical across branches.
 
 ### Permanent trap
 
-Trying to do complex analytics by dragging/clicking in Excel invites errors (wrong formula ranges, copy-paste mistakes). Don’t rely on untested spreadsheets for critical risk numbers.
-
-### Never confuse
-
-**Excel Workbook** — a spreadsheet with cells and formulas, suitable for small-scale, ad-hoc tasks.
-
----
-
-**Python Script** — text-based code (pandas/numpy) for large-scale or repeatable analysis.
+Using `UNION` to "clean" duplicate source records. The operation can conceal a grain problem by silently removing repeated result rows.
 
 ### Jurisdiction variants
 
-**No delta.** The limitations of Excel and advantages of code apply universally.
+No delta. Set-operation mechanics do not vary by regulator.
 
 <Recall
-  q="What happens if an Excel file with 2M rows is opened?"
-  a="It will likely fail or truncate (Excel limit ~1,048,576 rows)."
+  q="When should `UNION ALL` be preferred?"
+  a="When two compatible lending extracts need to be stacked and every source row must be preserved, including legitimate duplicates across periods."
 />
 
 <Recall
-  q="Why is Python more reliable for data analysis?"
-  a="Code can be tested, versioned, and handles large data without manual intervention."
+  q="What does `EXCEPT` answer?"
+  a="It returns rows present in the first query result but absent from the second, making it useful for population difference checks."
+/>
+
+<Recall
+  q="Why is matching data type alone insufficient for set operations?"
+  a="Corresponding columns must also represent the same business quantity or identifier; technically compatible but semantically different fields create meaningless results."
 />
