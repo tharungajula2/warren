@@ -1,87 +1,98 @@
 ---
 id: QNT-21
-title: ARIMA and SARIMA
+title: 'Leakage, Overfitting and Generalisation Error'
 type: concept
 domain: quantitative
 subdomain: time-series-and-forecasting
 one_screen: >-
-  An ARIMA(\(p,d,q\)) model combines autoregressive terms (AR), integration (I –
-  differencing), and moving average terms (MA) to model a time series. The
-  series is differenced \(d\) times to remove non-stationarity, then an
-  ARMA(\(p,q\)) model fits the result. SARIMA extends this by adding seasonal
-  AR, I, MA terms with seasonal period \(m\), allowing modeling of both trend
-  and seasonal dependencies.
+  A credit model can fail on new borrowers for three different reasons that must
+  not be collapsed into one label: leakage lets the model see information it
+  could not have at decision time, overfitting learns sample-specific noise, and
+  regime change alters the relationship after development. All can create
+  impressive historical results and disappointing deployment, but their remedies
+  differ.
 prerequisites:
-  - QNT-18
-  - QNT-19
   - QNT-20
+  - QNT-05
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      R.J. Hyndman and G. Athanasopoulos, *Forecasting: principles and
-      practice*, OTexts (2018), Ch. 8 (ARIMA models).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Rob J Hyndman (for Duke), *ARIMA models for forecasting*, University of
-      Washington/Duke (lecture notes)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 28 Aug
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-ARIMA stands for AutoRegressive Integrated Moving Average. In an ARIMA model, \(p\) is the number of AR terms (lags of the dependent variable), \(d\) is the number of differences to make the series stationary, and \(q\) is the number of MA terms (lags of the forecast error). For example, ARIMA(1,1,1) on default rates means first difference the series (to remove trend), then fit one AR and one MA component on the differenced series. SARIMA (Seasonal ARIMA) adds seasonal orders \((P,D,Q)_m\): \(P\) seasonal AR lags, \(D\) seasonal differences, and \(Q\) seasonal MA lags, with period \(m\) (e.g. 12 for monthly data).
+### Core mechanism
 
-For instance, SARIMA(0,1,1)\(\times\)(0,1,1)\(_&#123;12&#125;\) is a common model for monthly data: it differences once to remove trend and once seasonally (lag 12), with one AR and one MA at lag 12. The forecasting equation is linear in the lagged differenced series and lagged errors. If defaults show both a trend and an annual cycle, SARIMA can capture both. Model orders are typically chosen using ACF/PACF plots and information criteria (AIC/BIC).
+| Failure | What happened | Credit example |
+| :--- | :--- | :--- |
+| Target leakage | Predictor contains information created by or after the outcome | Post-default collection status used to predict default |
+| Time leakage | Future information enters an earlier prediction | Month-end bureau field used for a decision made mid-month |
+| Train-test contamination | Evaluation information influences fitting or selection | Same borrower appears across train and test with overlapping history |
+| Overfitting | Model learns unstable idiosyncrasies | Deep tree isolates tiny borrower pockets |
+| Underfitting | Model cannot represent real structure | Single linear effect where risk is strongly nonlinear |
+| Regime shift | Future data-generating process changes | New underwriting policy or recession changes borrower mix and outcomes |
 
 ```text
-Original series Y_t (possibly non-stationary)
-    |  (difference d times)
-    v
-Differenced series Δ^d Y_t
-    |  (if seasonal, difference every m)
-    v
-Stationary series
-    |
-    v
-Fit ARMA(p,q) (plus seasonal ARMA if SARIMA)
-    |
-    v
-Forecasts (by extrapolating lags of series and errors)
+Excellent development performance
+    ↓
+Check feature availability dates
+    ↓
+Check sample separation and repeated entities
+    ↓
+Check train-versus-OOT gap
+    ↓
+Separate leakage, variance and regime change
+```
+
+### Where it sits
+
+```text
+Upstream:   Sample splitting · Feature timing · Model complexity
+This:       Leakage · Overfitting · Generalisation error
+Downstream: Survival design · OOT metrics · Challenger comparison
+```
+
+### Formula
+
+```text
+Expected generalisation error = average loss on new observations from the deployment process
 ```
 
 ### Permanent rule
 
-ARIMA(p,d,q) = difference \(d\) times to stationarize, then fit ARMA(p,q). Seasonal ARIMA adds seasonal differences and terms for period \(m\). Always difference non-stationary series before modeling.
+Every feature must exist at the prediction timestamp, and every performance claim must be measured on data genuinely outside the decisions used to build the model.
 
-### Permanent trap
+### Never confuse [Data leakage] and [Overfitting]
 
-Forgetting to difference a non-stationary series (taking \(d=0\) when a trend exists) or neglecting seasonality. This leads to poor model fit and biased forecasts. Always test for unit roots and seasonal cycles.
-
-### Never confuse
-
-**ARIMA** — an ARIMA model always includes an integration (I) component; if \(d=0\), it reduces to ARMA.
+**Data leakage** - unavailable or evaluation information enters model development, creating artificial signal.
 
 ---
 
-**ARMA** — a special case of ARIMA with \(d=0\). ARMA assumes the series is already stationary (no differencing).
+**Overfitting** - the model uses legitimate training information but learns noise that does not generalise.
+
+### Permanent trap
+
+Diagnosing every OOT deterioration as overfitting. A clean model can deteriorate because portfolio mix or macro conditions changed, while a leaked model can look stable until the leaked signal disappears operationally.
 
 ### Jurisdiction variants
 
-**No delta.** The ARIMA framework is a mathematical model. Regulatory constraints (e.g. IRB validation) do not change its formulation, although practitioners may prefer simpler models if interpretability is required.
+No delta. Leakage and generalisation are statistical concepts.
 
 <Recall
-  q="What does the “I” (integrated) part of ARIMA do?"
-  a="It differences the series \(d\) times to remove trends or make it stationary. An ARIMA model with \(d=1\) forecasts the differences rather than the raw values."
+  q="What question detects many forms of target leakage in lending?"
+  a="Ask whether the exact feature value would have been known, in that form, at the actual scoring timestamp before the performance outcome unfolded."
 />
 
 <Recall
-  q="Why use SARIMA instead of ARIMA on monthly data?"
-  a="If the data have a seasonal pattern (e.g. monthly spikes), SARIMA includes seasonal differencing and terms (with period \(m=12\)) to model that cycle, which ARIMA cannot capture."
+  q="Why is a train-test performance gap not proof of overfitting?"
+  a="The gap can also reflect leakage in development, a later regime shift, different borrower mix or inconsistent measurement between periods."
+/>
+
+<Recall
+  q="What distinguishes underfitting from overfitting on evaluation data?"
+  a="Underfitting tends to perform poorly even on training because the model is too rigid; overfitting typically fits training much better than genuinely new data."
 />

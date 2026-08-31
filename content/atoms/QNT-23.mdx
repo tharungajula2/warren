@@ -1,72 +1,97 @@
 ---
 id: QNT-23
-title: Train / Validation / Test / Out-of-Time Samples
-type: concept
+title: 'Credit Time Series: Stationarity, Trend and Dependence'
+type: mechanism
 domain: quantitative
 subdomain: validation-leakage-and-governance
 one_screen: >-
-  Credit models must be evaluated on data that mimic real use. We split data
-  into training (for fitting), validation (for tuning), and test (for
-  performance). Crucially, one should hold out an **out-of-time** (future)
-  sample that the model never sees, to measure true predictive power. In credit,
-  using only random splits risks leakage across economic cycles, so time-based
-  splitting is preferred.
+  Portfolio default rates, delinquencies and application volumes arrive through
+  time, so nearby observations can share trend, seasonality and serial
+  dependence. Time-series modelling starts by asking whether the process is
+  stable enough for past relationships to repeat; if not, trend, seasonal
+  structure or differencing must be represented before lag relationships are
+  interpreted.
 prerequisites:
-  - QNT-22
+  - QNT-07
+  - QNT-11
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: 'Statohub, *“Forecast Accuracy Metrics: … Backtesting”*'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 28 Aug
-  - label: >-
-      Federal Reserve Board, *Supervisory Guidance on Model Risk Management (SR
-      11-7)* (2011).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-A **training** set is used to estimate model parameters. A **validation** set (or multiple cross-validation folds) is used to tune hyperparameters (e.g. depth, regularisation). A final **test** set (or sets) gives unbiased performance on data not used in fitting or tuning. An **out-of-time (OOT)** sample is a test set from a later period (e.g. loans originated in a later year) that simulates the model in production. For example, train on 2015–2017 loans, validate on 2018 loans, and test/OOT on 2019 loans. This ensures the model is evaluated on truly unseen, forward-looking data.
+### Core mechanism
 
-Because credit risk often varies over time (economic up/downturns), it is misleading to randomly shuffle all data. Instead, split chronologically: use earlier periods for training/validation and later periods as test. This avoids look-ahead: the model never “knows” future conditions during training. Regulators expect performance on an OOT sample; it reveals if the model generalises across vintage shifts (e.g. a model trained in growth must still score well in recession).
+| Feature | Credit example | Statistical implication |
+| :--- | :--- | :--- |
+| Trend | Defaults rise through a downturn | Mean changes over time |
+| Seasonality | Application volume repeats annual pattern | Fixed-period structure recurs |
+| Autocorrelation | This month's arrears resemble last month's | Observations are serially dependent |
+| Structural break | Underwriting rule changes suddenly | One historical process becomes another |
+| Stationarity | Mean, variance and lag structure stable enough over time | Past dynamics can be estimated more coherently |
 
 ```text
-Time-line:  [Train: 2015-2017]  [Validate: 2018]  [Test/OOT: 2019]
-                 build model       choose model    evaluate model
+Observed credit series
+    ↓
+Inspect level, trend and seasonal pattern
+    ↓
+Assess stationarity and breaks
+    ↓
+Transform or difference if needed
+    ↓
+Study lag dependence with ACF and PACF
+    ↓
+Fit parsimonious time-series structure
+```
+
+ACF measures correlation between the series and lagged versions of itself. PACF isolates the relationship at a particular lag after accounting for shorter lags, helping distinguish autoregressive from moving-average structure.
+
+### Where it sits
+
+```text
+Upstream:   Calendar effects · Portfolio aggregates · Serial observations
+This:       Stationarity · Trend · ACF/PACF · ARIMA structure
+Downstream: Macro conditioning · Rolling forecasts · Scenario paths
+```
+
+### Formula
+
+```text
+First difference at time t = value at t - value at t-1
+AR(1): value at t = constant + phi x value at t-1 + error at t
 ```
 
 ### Permanent rule
 
-Reserve the latest data (out-of-time) as the primary test. Use only past data for development and validation to mimic deployment.
+Do not interpret lag relationships until trend, seasonality and structural breaks have been considered; non-stationary level movement can create misleading autocorrelation.
 
-### Permanent trap
+### Never confuse [Seasonality] and [Credit cycle]
 
-Using future information in training. For example, randomly splitting data across years can mix up season/economy effects. Always ensure that validation and test sets occur later in time than training data.
-
-### Never confuse
-
-**Validation set** — used during model development (e.g. hyperparameter tuning).
+**Seasonality** - pattern repeating at a fixed calendar frequency.
 
 ---
 
-**Test (evaluation) set** — held out until final model is chosen, used for final performance. Out-of-time is one type of test set (a test period in the future).
+**Credit cycle** - broader expansion and contraction in credit conditions that need not repeat at fixed intervals.
+
+### Permanent trap
+
+Randomly shuffling a time series before evaluation. That removes the very chronological dependence and regime change the forecast must survive.
 
 ### Jurisdiction variants
 
-**No delta.** The principle of time-based splitting is universal. Banking regulators in all jurisdictions (e.g. Fed, RBI) emphasize out-of-time testing, as future prediction is the model’s true purpose.
+No delta. Time-series mathematics is universal.
 
 <Recall
-  q="What is an “out-of-time” sample and why use it?"
-  a="An out-of-time sample is data from a later period not seen by the model. In credit, it tests stability: a model might perform well in-sample but degrade in a new economic cycle, so OOT testing is critical."
+  q="Why can a trending default-rate series show high autocorrelation even without a useful short-run mechanism?"
+  a="Adjacent observations share the same moving trend, so common level movement can create strong lag correlation unless the non-stationarity is handled."
 />
 
 <Recall
-  q="Why is k-fold cross-validation discouraged for credit modeling?"
-  a="Standard k-fold randomly splits data, which can mix time periods. This lets information from future periods leak into training folds, overestimating performance. Always maintain chronological order."
+  q="What is the difference between ACF and PACF?"
+  a="ACF measures total correlation with a lagged series, while PACF isolates the direct relationship at a lag after controlling for intervening shorter lags."
 />

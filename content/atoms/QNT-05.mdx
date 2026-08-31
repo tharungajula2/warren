@@ -1,70 +1,94 @@
 ---
 id: QNT-05
-title: Confidence Intervals
+title: Rare Defaults and Class Imbalance
 type: concept
 domain: quantitative
 subdomain: statistical-foundations-and-sampling
 one_screen: >-
-  A confidence interval (CI) gives a range of values for an unknown parameter
-  (e.g. portfolio PD) such that, in repeated sampling, a specified percentage
-  (e.g. 95%) of such intervals will contain the true parameter. It quantifies
-  sampling uncertainty around an estimate.
+  Default is often a rare event relative to non-default, especially in
+  high-quality portfolios. That imbalance changes what accuracy means, how much
+  information each event contributes and how unstable estimates become; a model
+  can look excellent by predicting the majority class while learning almost
+  nothing about default.
 prerequisites:
-  - QNT-04
+  - QNT-02
+  - QNT-03
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: 'Wikipedia, *Confidence interval* (definition).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-After estimating a parameter, say the default rate of a loan grade, we compute a CI. A 95% CI from 1.8% to 2.4% means if we repeated the borrower selection many times, about 95% of those intervals would include the true default rate. Importantly, it doesn’t mean “95% chance the true rate lies in this specific interval.” The true rate is fixed (unknown); the CI’s endpoints are random from sample variance.
+### Core mechanism
 
-In credit risk, CIs are crucial. For example, IRB models often use confidence bounds on PDs or LGDs to ensure conservatism. When validating a new PD model, a regulator might require that observed default rates fall within the model’s forecast CI. If 2% forecast with ±0.2% margin, and observed is 2.3%, the interval check helps assess if deviation is within sampling noise or indicates miscalibration.
-
-**Calculation:** For large samples, a CI can be approximate normal: estimate ± z*SE, where SE is the standard error of the estimate. For proportion PD, SE = sqrt(p*(1-p)/n). For small samples or rare events, use exact (binomial) or bootstrap CIs. Also, always report confidence level (e.g. 95%) and sample size context.
-
-In summary, CI expresses estimation uncertainty: wider if data are sparse or variable, narrower with more/larger data. The permanent rule: always pair point estimates (like PD) with a CI to show reliability. Regulators often look at these intervals when backtesting models.
+| Consequence of rarity | Credit effect |
+| :--- | :--- |
+| Majority dominance | Overall accuracy can be high even with poor default detection |
+| Sparse-event uncertainty | Default-rate and coefficient estimates become noisy |
+| Thin segments | Some grades or bins contain too few defaults for stable estimation |
+| Threshold sensitivity | Small cutoff changes can move many non-defaults and few defaults |
+| Metric dependence | Precision changes strongly with prevalence even when ranking ability is unchanged |
 
 ```text
-Sample PD = 2.0%  (50 defaults/2500 loans)
-SE = sqrt(0.02*0.98/2500) ≈ 0.009
-95% CI ≈ 2.0% ± 1.96*0.9% = [0.22%, 3.78%]
+100,000 loans
+    ↓
+1,000 defaults + 99,000 non-defaults
+    ↓
+Predict every loan non-default
+    ↓
+99 percent accuracy
+    ↓
+Zero defaults detected
+```
+
+Rare-event learning is an information problem, not merely a data-volume problem. Ten million non-defaults cannot substitute perfectly for a small number of defaults because the event observations carry the information about how the default class differs.
+
+### Where it sits
+
+```text
+Upstream:   Label horizon · Portfolio quality · Event definition
+This:       Class prevalence · Sparse events · Imbalance
+Downstream: Resampling · Confidence intervals · Precision-recall analysis
+```
+
+### Formula
+
+```text
+Default prevalence = number of defaults / total labelled observations
+Accuracy = correct predictions / total predictions
 ```
 
 ### Permanent rule
 
-Report estimates with their confidence intervals. The interval indicates how much estimation error might exist due to finite data.
+Always interpret classification performance together with event prevalence. A metric that ignores class composition can hide failure on the event the credit model exists to distinguish.
 
-### Permanent trap
+### Never confuse [Rare event] and [Small dataset]
 
-Misinterpreting CI as probability of parameter. E.g. “We’re 95% sure true PD is between 1.8–2.4%” is wrong. Actually, if we repeated data collection, 95% of such intervals would contain the true PD.
-
-### Never confuse
-
-**95% confidence interval** — range capturing the true parameter in 95% of repeated samples.
+**Rare event** - the outcome of interest is scarce relative to the other class.
 
 ---
 
-**Credible interval (Bayesian)** — range where the parameter has 95% probability given the data (Bayesian concept). CI’s guarantee is about the method, not the single interval’s probability.
+**Small dataset** - the total number of observations is limited. A dataset can be enormous and still contain too few defaults for a narrow segment.
+
+### Permanent trap
+
+Using raw accuracy as the headline measure for a default model. In an imbalanced portfolio, a trivial majority-class rule can achieve impressive accuracy without useful risk discrimination.
 
 ### Jurisdiction variants
 
-**No delta.** Statistical confidence intervals are universal. Financial regulations (e.g. RBI or ECB validation) may stipulate certain confidence levels, but methodology is the same.
+No delta. Class imbalance is a property of the data-generating process, not the regulator.
 
 <Recall
-  q="A 90% CI for LGD is [30%, 50%]. What does this mean?"
-  a="If we repeated the portfolio loss sampling many times, 90% of those intervals would contain the true LGD. It doesn’t mean there’s a 90% chance the true LGD is in [30%,50%] in a single experiment."
+  q="Why can 99 percent classification accuracy be useless in a loan book?"
+  a="If only 1 percent of borrowers default, predicting non-default for everyone already achieves 99 percent accuracy while detecting no defaults."
 />
 
 <Recall
-  q="Why might an IRB model require a 99% CI instead of 95% for PD?"
-  a="A higher confidence (99%) yields a wider interval, reflecting conservatism. It acknowledges greater uncertainty allowance, fitting prudential conservatism."
+  q="What becomes unstable first when defaults are sparse inside a segment?"
+  a="Event-rate estimates and fitted relationships for that segment become uncertain because very few observations identify the default class."
 />

@@ -1,82 +1,100 @@
 ---
 id: QNT-24
-title: Data Leakage
-type: concept
+title: Macro Conditioning and Rolling-Origin Forecasts
+type: procedure
 domain: quantitative
 subdomain: validation-leakage-and-governance
 one_screen: >-
-  Data leakage happens when a model’s training data inadvertently includes
-  information that would not be available in practice at the time of prediction.
-  This gives misleadingly good performance on training and validation, but fails
-  in production. In credit, a common mistake is using future borrower
-  information (like a snapshot of end-of-year balance) to predict a loan’s early
-  default – this leaks the outcome into features.
+  Macro-conditioned credit forecasting links portfolio outcomes to variables
+  such as unemployment, rates or economic growth while respecting the direction
+  of time. IMP owns how forward-looking information enters ECL; QNT owns the
+  statistical lag structure, forecast design and rolling-origin evaluation used
+  to test whether macro relationships genuinely forecast credit outcomes.
 prerequisites:
+  - QNT-20
   - QNT-23
+  - IMP-01
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Kaufman, S., Rosset, S., Perlich, C., & Stitelman, O., *Leakage in data
-      mining: Formulation, detection, and avoidance*, KDD (2012).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Lecun, Y., *Preventing Data Leakage in Model Training*, credit industry
-      examples (2019) [unpublished]. (General principle: ensure time alignment.)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-There are two main leakage types: *target leakage*, where predictors include the outcome itself (or its proxies), and *train-test contamination*, where observations in the test period influence training (e.g. shuffling time series). For example, if we include “*ever defaulted*” status (logged after six months) as an input to predict one-year default, the model essentially sees part of the answer. Another example: mixing borrowers from 2019 (test year) into 2018 training can let the model indirectly learn future trends.
-
-To avoid leakage, ensure each feature is computable from information available at model decision time. In credit scoring, use only origination attributes or lagged variables. Rigorously align time: treat all data as of a cutoff date. For instance, if predicting default within a year, use only features known at loan issuance. Data pipelines should separate historical features from label construction. Finally, always evaluate on truly unseen data (see QNT-23) – a sharp drop from training to test performance is a red flag for leakage or overfitting.
+### Core mechanism
 
 ```text
-+--------------+       +---------------+
-| Raw Dataset  |       | Good Practice |
-+------+-------+       +-------+-------+
-       |                       |
-Select features (no future info)   Train/test split by time
-       |                       |
-       v                       v
-+--------------+       +---------------+
-| Model Build  |       | Prediction    |
-+--------------+       +---------------+
+Choose credit outcome and forecast horizon
+    ↓
+Align macro variables available at each forecast date
+    ↓
+Choose contemporaneous and lagged relationships
+    ↓
+Fit using history available at that origin
+    ↓
+Forecast next period or horizon
+    ↓
+Advance origin and repeat
+    ↓
+Compare errors with simple baseline
+```
+
+| Design issue | Credit consequence |
+| :--- | :--- |
+| Publication lag | Revised macro data may not have been known at forecast time |
+| Lag choice | Borrower stress may respond months after macro movement |
+| Regime dependence | Relationship estimated in benign years may change in recession |
+| Scenario extrapolation | Stress values may lie outside historical support |
+| Baseline comparison | Complex model may not beat persistence or seasonal naive forecasts |
+
+Rolling-origin testing preserves chronology: each forecast is generated using only information that would have existed at that historical forecast date.
+
+### Where it sits
+
+```text
+Upstream:   Credit time series · OOT design · Macro drivers
+This:       Macro conditioning · Lag alignment · Rolling-origin evaluation
+Downstream: Forecast error · Scenario sensitivity · ECL model inputs
+```
+
+### Formula
+
+```text
+Forecast error at time t = actual at t - forecast made for t
+RMSE = square root of [ sum over forecast errors of error squared / number of forecasts ]
+MAE = sum over forecasts of absolute error / number of forecasts
 ```
 
 ### Permanent rule
 
-Never include any variable that cannot be known at scoring time. Ask, “Would this feature be available in real-time?” If not, omit or shift it.
+A historical macro model must be evaluated using the information set that was actually available at each historical forecast origin.
 
-### Permanent trap
+### Never confuse [Scenario conditioning] and [Forecast accuracy]
 
-Including any proxy of the target. For example, “balance after 1 year” to predict default in that year looks innocent but is label leakage. Also beware of merging data incorrectly (e.g. including post-default loan closure status).
-
-### Never confuse
-
-**Data leakage** — model sees future or target-related information in training, giving overly optimistic accuracy.
+**Scenario conditioning** - model response given an assumed macro path.
 
 ---
 
-**Overfitting** — model is too complex for the signal in training data (but without artificial leaks). Both can cause test drop-offs, but leakage violates causality.
+**Forecast accuracy** - how close predictions made from information available at the time came to subsequently observed outcomes.
+
+### Permanent trap
+
+Backtesting with revised macroeconomic series that were unavailable when the historical forecast would have been made. This creates look-ahead information even when credit outcomes themselves are correctly time-split.
 
 ### Jurisdiction variants
 
-**No delta.** All jurisdictions expect no data leakage in model development. Regulatory model validation (e.g. AIRB guidance) specifically checks that feature timing is correct.
+No delta. The statistical mechanics do not vary; accounting use of forward-looking information belongs to IMP.
 
 <Recall
-  q="Give a credit example of data leakage."
-  a="Using a borrower’s credit score computed after loan disbursement or a balance at year-end (when predicting origination default risk) leaks future information into training, inflating accuracy."
+  q="Why use rolling-origin evaluation instead of one random train-test split for macro credit forecasts?"
+  a="Rolling origins reproduce repeated real forecasting decisions through changing regimes and prevent future macro and credit information from entering earlier model fits."
 />
 
 <Recall
-  q="How can you spot leakage?"
-  a="An unusually high training score and a large performance drop on test can indicate leakage. Also, check if any feature is derived from the outcome (even indirectly)."
+  q="Why should a macro model be compared with a simple baseline?"
+  a="Complexity is valuable only if it improves genuinely out-of-time forecasts over a rule such as persistence or a seasonal naive forecast."
 />

@@ -1,0 +1,92 @@
+---
+id: QNT-27
+title: Confusion Matrix and Threshold Metrics
+type: mechanism
+domain: quantitative
+subdomain: qnt
+one_screen: >-
+  A ranking model becomes a binary classifier only after a cutoff is chosen. The
+  confusion matrix counts the four resulting outcomes, and sensitivity,
+  specificity, precision and related metrics are different ratios built from
+  those same counts; QNT owns their mathematics, while MRM owns governed
+  thresholds and actions taken when performance breaches occur.
+prerequisites:
+  - QNT-05
+  - QNT-25
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 09_QNT_statistics_ml.md
+---
+### Core mechanism
+
+| Actual / predicted | Predict default | Predict non-default |
+| :--- | :--- | :--- |
+| Actual default | True positive | False negative |
+| Actual non-default | False positive | True negative |
+
+```text
+Move cutoff toward more borrowers classified default
+    ↓
+True positives usually ↑
+    ↓
+False positives usually ↑
+    ↓
+Sensitivity ↑ while specificity tends to ↓
+```
+
+No threshold metric is intrinsically best. The useful metric depends on which denominator answers the business question: all actual defaults, all actual non-defaults, or all predicted defaults.
+
+### Where it sits
+
+```text
+Upstream:   Model scores · Chosen cutoff · Actual outcomes
+This:       Confusion matrix · Sensitivity · Specificity · Precision
+Downstream: Precision-recall curve · Cutoff economics · Monitoring
+```
+
+### Formula
+
+```text
+Sensitivity = true positives / (true positives + false negatives)
+Specificity = true negatives / (true negatives + false positives)
+Precision = true positives / (true positives + false positives)
+False-positive rate = 1 - specificity
+F1 = 2 x precision x sensitivity / (precision + sensitivity)
+```
+
+### Permanent rule
+
+Every threshold metric must be read with its denominator. Two metrics using the same four counts can answer entirely different questions.
+
+### Never confuse [Sensitivity] and [Precision]
+
+**Sensitivity** - among actual defaults, how many the cutoff captures.
+
+---
+
+**Precision** - among cases flagged as default, how many actually default.
+
+### Permanent trap
+
+Optimizing a cutoff on F1 and calling it economically optimal. F1 assigns an implicit balance to precision and sensitivity but contains no loan margin, loss severity or operational cost.
+
+### Jurisdiction variants
+
+No delta. Confusion-matrix mathematics is universal; MRM owns governance around performance thresholds.
+
+<Recall
+  q="What happens to sensitivity when the model classifies more borrowers as risky, all else equal?"
+  a="It generally rises because fewer actual defaults are missed, although false positives also tend to rise and specificity tends to fall."
+/>
+
+<Recall
+  q="Why can precision collapse even when sensitivity remains high?"
+  a="In a very low-default population, large numbers of non-defaults can be flagged alongside the captured defaults, making actual defaults a small share of all positive predictions."
+/>

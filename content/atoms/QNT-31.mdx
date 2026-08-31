@@ -1,0 +1,104 @@
+---
+id: QNT-31
+title: Statistical Comparison of Incumbent and Challenger Models
+type: procedure
+domain: quantitative
+subdomain: qnt
+one_screen: >-
+  A challenger is statistically meaningful only when compared with the incumbent
+  on the same untouched lending observations, outcomes and horizons. QNT owns
+  paired performance differences, uncertainty around AUC, KS, calibration and
+  loss metrics, and the question of whether an observed improvement is credible
+  beyond sample noise; MRM owns why challengers are commissioned, acceptance
+  criteria, approvals and replacement decisions.
+prerequisites:
+  - QNT-20
+  - QNT-25
+  - QNT-26
+  - QNT-29
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 09_QNT_statistics_ml.md
+---
+### Core mechanism
+
+```text
+Freeze incumbent and challenger
+    ↓
+Score the same untouched borrowers
+    ↓
+Compute the same metrics on the same outcomes
+    ↓
+Take paired metric differences
+    ↓
+Estimate uncertainty by suitable resampling or sampling theory
+    ↓
+Separate credible improvement from noisy ranking reversal
+```
+
+| Comparison principle | Why it matters |
+| :--- | :--- |
+| Same cases | Removes portfolio-mix difference from the model comparison |
+| Same horizon and label | Prevents outcome-definition mismatch |
+| Paired predictions | Uses correlation between model errors rather than pretending samples are independent |
+| Multiple dimensions | AUC gain can coexist with calibration loss |
+| Confidence interval on difference | Shows whether observed superiority is statistically resolved |
+| OOT comparison | Tests whether the advantage survives later vintages and regimes |
+
+### Where it sits
+
+```text
+Upstream:   Untouched evaluation · Discrimination · Calibration
+This:       Paired model comparison · Difference uncertainty
+Downstream: MRM challenger decision · Model selection · Deployment testing
+```
+
+### Formula
+
+```text
+Metric difference = challenger metric - incumbent metric
+Bootstrap standard error = standard deviation of metric differences across paired bootstrap resamples
+Approximate confidence interval for difference = observed difference plus or minus critical value x standard error
+```
+
+### Permanent rule
+
+Compare models on identical cases and quantify uncertainty in the difference, not just uncertainty in each model separately.
+
+### Never confuse [Statistically detectable improvement] and [Decision-worthy improvement]
+
+**Statistically detectable improvement** - performance difference is unlikely to be sampling noise under the comparison method.
+
+---
+
+**Decision-worthy improvement** - gain is large and robust enough to justify operational, economic and governance consequences; MRM owns that decision framework.
+
+### Permanent trap
+
+Choosing the challenger because its AUC is 0.002 higher on one holdout sample without checking paired uncertainty, calibration, segment behavior or OOT stability.
+
+### Jurisdiction variants
+
+No delta. Statistical model-comparison mathematics is universal; MRM owns governance of challenger acceptance and replacement.
+
+<Recall
+  q="Why should incumbent and challenger be evaluated on exactly the same borrowers?"
+  a="Paired evaluation isolates model differences from differences in portfolio composition and allows uncertainty estimation to use the correlation between the two models' errors."
+/>
+
+<Recall
+  q="Why is a small positive AUC difference not enough to establish superiority?"
+  a="The difference may be within sampling noise, and a challenger can improve ranking while worsening calibration or specific portfolio segments."
+/>
+
+<Recall
+  q="What does paired bootstrap resampling preserve?"
+  a="It keeps each borrower's incumbent prediction, challenger prediction and observed outcome together while resampling cases, preserving the dependency needed for a fair comparison."
+/>

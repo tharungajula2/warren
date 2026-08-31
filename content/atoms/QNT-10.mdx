@@ -1,72 +1,95 @@
 ---
 id: QNT-10
-title: Logistic Regression and Credit Scoring
+title: 'Hypothesis Tests, p-values, Power and Effect Size'
 type: mechanism
 domain: quantitative
 subdomain: regression-and-scorecard-modelling
 one_screen: >-
-  Logistic regression is the workhorse for credit scoring (binary default
-  prediction). It models the log-odds of default as a linear function of
-  predictors. Coefficients translate into *odds ratios*, telling how predictors
-  change the odds of default.
+  A hypothesis test asks whether lending data are sufficiently incompatible with
+  a stated null model to justify rejecting it. The p-value measures extremeness
+  under that null, while power asks whether the test could detect a practically
+  important difference in the first place; neither replaces effect size.
 prerequisites:
-  - QNT-08
+  - QNT-09
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: >-
-      Standard credit scoring literature (no specific link). The concept is
-      fundamental.
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-For binary outcome *Y* (default=1, non-default=0), logistic regression assumes:
+### Core mechanism
+
+```text
+Define null and alternative
+    ↓
+Choose test statistic before seeing the result
+    ↓
+Compute statistic from credit sample
+    ↓
+Map statistic to p-value under null assumptions
+    ↓
+Compare with significance level
+    ↓
+Interpret together with effect size and power
 ```
-logit(p) = ln(p/(1-p)) = β₀ + β₁x₁ + ... + βₖxₖ.
+
+| Quantity | Meaning | Common credit mistake |
+| :--- | :--- | :--- |
+| Significance level | Long-run false-rejection tolerance under the null | Chosen after seeing results |
+| p-value | Probability under the null of data at least this extreme | Read as probability the null is true |
+| Effect size | Magnitude of the observed difference | Ignored when large n makes tiny effects significant |
+| Power | Probability of detecting a specified real effect | Ignored when sparse defaults make tests weak |
+
+### Where it sits
+
+```text
+Upstream:   Sampling distribution · Standard error · Null assumptions
+This:       Test statistic · p-value · Power · Effect size
+Downstream: Calibration tests · Drift comparison · Challenger comparison
 ```
-Here p = P(default|x). Solving gives p = exp(linear)/(1+exp(linear)). This keeps p between 0 and 1. In credit scoring, predictors x are often applicant attributes (income, delinquencies, etc.).
 
-**Interpretation:** β_j is the change in log-odds per unit increase in x_j. Exponentiating gives the *odds ratio* (OR): exp(β_j) is how many times the odds multiply when x_j increases by 1. For example, if β_income = -0.2, then OR=exp(-0.2)=0.82, meaning each extra $10k of income (if x_j scaled per 10k) multiplies odds of default by 0.82 (18% reduction). In scorecards, such coefficients are often translated to points.
+### Formula
 
-Logistic regression doesn’t assume normal residuals, but assumes linear logit and independent observations. It handles multicollinearity same as linear (high VIF is a problem). Sample size should be adequate: rule of thumb ~10 events per predictor.
-
-**Why it’s workhorse:** Because the output is a probability, intuitively meaningful. Regulators and credit officers can interpret “Probability of Default” directly. Also, logistic outputs are monotonic and unbounded in either direction (unlike linear which could predict &lt;0 or &gt;1). Many scorecards use logistic or simplified versions of it.
-
-**Industry bins &amp; WOE:** Often continuous predictors are binned and converted to Weight-of-Evidence (WOE) to ensure monotonic relationships. WOE transforms category’s default rates into log-odds, aligning with logistic assumptions. Then a logistic on WOE-encoded features is linear in log-odds, making the model easier to interpret in PD terms.
+```text
+Generic test statistic = estimated difference / standard error of that difference
+```
 
 ### Permanent rule
 
-Always express logistic coefficients in odds ratios for interpretation: OR = exp(β). For example, OR&lt;1 means higher x reduces default odds; OR&gt;1 means increases. Double-check that no predicted p&lt;0 or &gt;1 (should never happen in logistic).
+Statistical significance answers whether random sampling variation is a plausible explanation under the null; it does not answer whether the difference matters economically or operationally.
 
-### Permanent trap
+### Never confuse [p-value] and [Probability the null is true]
 
-Misreading coefficients: thinking β itself is the percentage point change in probability. It is not. Only the odds (exp(β)) have the multiplicative effect. E.g. β= -0.1 doesn’t mean 10% drop in PD; it means ~10% drop in odds (OR≈0.90).
-
-### Never confuse
-
-**Odds** — ratio p/(1-p) of default vs non-default probability.
+**p-value** - probability, assuming the null, of observing a result at least as extreme as the one obtained.
 
 ---
 
-**Probability** — p itself (0 to 1). Logistic uses odds in its link. People often mistakenly add β to p directly; the linearity is in log-odds, not in probability.
+**Probability the null is true** - not supplied by an ordinary frequentist p-value.
+
+### Permanent trap
+
+Treating "not significant" as proof of equality. A low-power test with few defaults may fail to reject large but poorly estimated differences.
 
 ### Jurisdiction variants
 
-**No delta.** Logistic regression is standard in all jurisdictions for credit scoring. Some regulators (e.g. RBI) allow logistic scorecards for retail IRB models, given interpretability needs. All use the same math.
+No delta. Hypothesis-testing mathematics is universal.
 
 <Recall
-  q="If a borrower’s scorecard logistic model yields logit = 1.0, what is the PD?"
-  a="p = e^1/(1+e^1) ≈ 0.73 (73% chance)."
+  q="What does a p-value of 0.03 mean in a test of unchanged portfolio default rate?"
+  a="If the null of no change and the test assumptions were correct, data at least this extreme would occur about 3 percent of the time; it does not mean there is a 97 percent probability that the rate changed."
 />
 
 <Recall
-  q="If income’s logistic coefficient = -0.04 (per $1k), what is the odds ratio per $1k?"
-  a="exp(-0.04)=0.96, meaning each $1k increase reduces default odds by ~4%."
+  q="Why should effect size accompany a p-value?"
+  a="Very large samples can make tiny, immaterial differences statistically significant, while effect size shows the magnitude that the business actually experienced."
+/>
+
+<Recall
+  q="Why does sparse default data reduce power?"
+  a="Fewer events increase uncertainty, making it harder for a test statistic to separate a real change from sampling noise."
 />

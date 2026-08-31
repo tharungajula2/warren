@@ -1,77 +1,88 @@
 ---
 id: QNT-07
-title: Sampling Biases in Lending
+title: 'Vintages, Cohorts and Seasoning'
 type: concept
 domain: quantitative
 subdomain: statistical-foundations-and-sampling
 one_screen: >-
-  In lending analytics, *sampling bias* occurs when collected data
-  systematically exclude certain outcomes. Common biases: **survivorship bias**
-  (ignoring lost/terminated loans) and **selection bias** (e.g. analyzing only
-  accepted applications). These distort estimates like default rates.
+  Credit performance depends on both calendar time and account age. Vintage
+  analysis fixes the origination cohort so loans are compared at similar
+  seasoning, preventing a new book from appearing safer merely because its
+  borrowers have not yet had enough time to default.
 prerequisites:
-  - QNT-01
+  - QNT-02
+  - QNT-03
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: 'CASRAI, *Sampling Bias: Types, Causes, and Detection*.'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-**Sampling bias:** A sample differs from the true population by design. In credit, a notorious case is “only current customers”: if a bank studies default rates using only customers who renewed their credit cards, it misses those who defaulted or left, underestimating risk. CASRAI warns that bias doesn’t shrink with more data – it leads precisely wrong estimates.
+### Core mechanism
 
-**Selection bias:** When the sample is chosen by outcome. For example, analyzing PD using only approved loans ignores applicants who were denied (who might be higher risk). This underestimates risk because we selected out lower-scoring individuals. Another example: surveying customers about repaying loans will naturally exclude those already delinquent or defaulted – giving an overly rosy repayment picture.
-
-**Survivorship bias:** A type of sampling bias where only “survivors” are seen. For instance, if a study of corporate bond defaults only includes companies still listed, it misses those that defaulted or delisted. In retail credit: if we only analyze auto loans that have not been repossessed, we ignore those lost deals, again biasing PD down. CASRAI’s classic example: looking only at airplanes that returned (survivors) misleads reinforcement strategy. Similarly, analyzing only ongoing loans ignores those that “didn’t survive” to be included.
-
-**Avoidance:** Always define a clear population: e.g. “all loans originated in 2018, tracking until 2021, including those closed by default, pay-off, or charge-off.” Use full origination data, not just current books. If data is truncated (e.g. only current borrowers), acknowledge bias and adjust (maybe via weight or external default statistics). Regulators (e.g. RBI IRB) expect PD models to account for these biases in historical data.
+| Time axis | Question answered | Typical distortion if ignored |
+| :--- | :--- | :--- |
+| Origination vintage | Which loans entered under the same underwriting and macro environment? | Mixes changing policies and borrower quality |
+| Months on book | How mature is each account? | New accounts receive less opportunity to fail |
+| Calendar period | What macro conditions affect all active vintages now? | Confuses cycle effects with origination quality |
+| Observation horizon | How long is performance measured? | Compares unequal event opportunities |
 
 ```text
-Loan Origination cohort 2018
-    +--------------------+
-    | All customers      |
-    +------+-------------+
-           |
-           +-&gt; Approved -&gt; Observed loans (used for modeling)
-           |
-           +-&gt; Declined -&gt; (no performance data)   &lt;-- selection bias
-           |
-           +-&gt; Never applied
+Vintage A originated Jan
+    ↓
+3 months → 6 months → 12 months seasoning
+Vintage B originated Jul
+    ↓
+3 months → 6 months → 12 months seasoning
+```
+
+A fair vintage comparison aligns account age. Comparing Vintage A at 12 months with Vintage B at 3 months confounds underwriting quality with exposure time. Conversely, comparing different vintages at the same calendar date can reveal common macro shocks but not pure seasoning effects.
+
+### Where it sits
+
+```text
+Upstream:   Origination date · Observation horizon · Portfolio exits
+This:       Vintage · Cohort · Seasoning
+Downstream: OOT design · Survival analysis · Macro conditioning
+```
+
+### Formula
+
+```text
+Cumulative vintage default rate at month m = defaults observed by month m / originated accounts eligible for that vintage measure
 ```
 
 ### Permanent rule
 
-Always include all relevant cases in your sample, especially failures. Missing defaulters or rejects biases any risk estimate. Double-check that your data frame contains both “survivors” and “non-survivors” from a cohort.
+Compare like seasoning with like seasoning unless the purpose is explicitly to measure calendar-time effects.
 
-### Permanent trap
+### Never confuse [Vintage effect] and [Calendar effect]
 
-Using only successfully repaid loans to model performance. This creates survivorship bias: only the “winners” are analyzed, making the portfolio look safer than it is.
-
-### Never confuse
-
-**Survivorship bias** — only survivors of a process are seen (e.g. only extant accounts).
+**Vintage effect** - difference associated with the cohort's origination conditions, underwriting or borrower mix.
 
 ---
 
-**Selection bias** — systematic inclusion/exclusion during data collection (e.g. excluding denied applicants).
+**Calendar effect** - condition affecting multiple active vintages at the same time, such as a macroeconomic shock.
+
+### Permanent trap
+
+Calling a recent vintage "better" because its cumulative default rate is lower before it has reached the age at which older vintages generated most of their defaults.
 
 ### Jurisdiction variants
 
-**No delta.** Data representativeness is a universal modeling principle. However, some jurisdictions explicitly emphasize these biases: e.g. the ECB’s IRB guidelines caution against using internal data that exclude defaulted obligors.
+No delta. Vintage and seasoning mathematics are universal.
 
 <Recall
-  q="What is sampling bias? Give a credit example."
-  a="Sampling bias is a systematic difference between the sampled data and true population. In credit, using only currently active borrowers (excludes defaulters) is sampling bias, underestimating PD."
+  q="Why is months-on-book alignment essential in vintage analysis?"
+  a="Default opportunity grows with time, so vintages must be compared at similar maturity to separate seasoning from true cohort quality."
 />
 
 <Recall
-  q="How is survivorship bias different from selection bias?"
-  a="Survivorship bias is a special case: analyzing only those that “survived” to be in the dataset (e.g. still in portfolio). Selection bias is a broader term for any systematic exclusion/inclusion (like excluding all applications with low income). Both cause distortion, but survivorship specifically implies ignoring failed cases."
+  q="What does a deterioration across many vintages in the same quarter suggest?"
+  a="A calendar-time or macro effect is plausible because multiple origination cohorts are worsening simultaneously."
 />

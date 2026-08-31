@@ -1,76 +1,99 @@
 ---
 id: QNT-22
-title: 'Forecast Backtesting (Rolling-Origin, MAPE/RMSE, Baseline)'
-type: procedure
+title: Survival Analysis and Time to Default
+type: mechanism
 domain: quantitative
 subdomain: time-series-and-forecasting
 one_screen: >-
-  Forecast backtesting evaluates a model’s predictions on hold-out future data
-  using time-aware cross-validation. Rolling-origin (a.k.a. walk-forward) splits
-  move the training end forward in time and test on the next period. Performance
-  is measured by metrics like Mean Absolute Percentage Error (MAPE) and Root
-  Mean Square Error (RMSE). Results must always be compared against a naive
-  baseline (e.g. last-period carry-forward) to gauge real improvement.
+  Binary default modelling asks whether an event occurs inside a chosen horizon;
+  survival analysis keeps the timing information and can use accounts whose full
+  future is not yet observed. It separates the probability of surviving beyond a
+  time from the conditional event intensity at that time, making censoring part
+  of the model rather than a reason to discard every incomplete account.
 prerequisites:
-  - QNT-19
-  - QNT-20
-  - QNT-21
+  - QNT-02
+  - QNT-07
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: >-
-      Statohub, *“Forecast Accuracy Metrics: MAE, RMSE, MAPE and When Each
-      Misleads”* (April 2020)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 28 Aug
-  - label: 'Hyndman, R.J., *Time Series Cross-Validation* (online; 2018).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-In rolling-origin evaluation, we simulate real forecasting: train on an initial window, predict the next \(h\) steps, record the error, then expand (or slide) the window forward and repeat. This avoids peeking into the future (random k-fold cross-validation would leak information). For example, use loans data from 2015–2018 to predict 2019 losses, then re-train on 2015–2019 to predict 2020 losses, etc. Errors from each fold are aggregated to assess model stability.
+### Core mechanism
 
-Common metrics include RMSE (root mean square error) and MAPE (mean absolute percentage error). RMSE = \(\sqrt&#123;\frac&#123;1&#125;&#123;n&#125;\sum (forecast - actual)^2&#125;\) penalises large errors more heavily. MAPE = \(\frac&#123;100\%&#125;&#123;n&#125;\sum |\frac&#123;forecast - actual&#125;&#123;actual&#125;|\) scales error by actual values; it is easy to interpret but blows up when actuals near zero. Always be aware of the failure modes: MAPE is undefined for zero actuals and may be skewed by small denominators.
-
-Crucially, compare the model’s scores to a simple benchmark. A typical naive baseline for time series is “no change” (e.g. forecast \(Y_&#123;t+1&#125; = Y_t\)) or “seasonal naive” (forecast equals last year’s value for seasonal data). If a model’s MAPE or RMSE is not substantially better than the baseline, it may not be useful. For instance, if credit volume declines by 1% each month, a model should beat the baseline forecast of “same as last month.”
+| Quantity | Credit interpretation |
+| :--- | :--- |
+| Event time | Time from defined start to default |
+| Censoring time | Time observation stops without recorded default |
+| Survival function | Probability the borrower remains event-free beyond time t |
+| Hazard | Instantaneous event intensity at t conditional on survival to t |
+| Cumulative incidence | Probability an event has occurred by a horizon under the stated event setup |
 
 ```text
-Time Axis: [Train (t=1..T)] =&gt; Forecast [T+1 .. T+h] =&gt; Evaluate error
-                      then Expand window to T+h, repeat
+Origination or observation start
+    ↓
+Borrower remains non-default
+    ↓
+At each time: survive or experience event
+    ↓
+Default observed → event time known
+Observation ends first → right-censored
+```
+
+A censored borrower still contributes information: the borrower is known to have survived event-free up to the censoring time. Survival methods use that partial information instead of pretending the borrower completed the entire horizon.
+
+### Where it sits
+
+```text
+Upstream:   Event definition · Censoring · Seasoning
+This:       Survival function · Hazard · Time to event
+Downstream: Lifetime risk curves · Vintage comparison · Macro-conditioned hazard
+```
+
+### Formula
+
+```text
+Survival function S(t) = probability that event time is greater than t
+Cumulative event probability by t = 1 - S(t)
+Discrete hazard at t = probability of event at t given survival just before t
 ```
 
 ### Permanent rule
 
-Always reserve future time for testing. Use a sequential backtesting (rolling-origin) that mimics real deployment. Compute forecast errors and compare to a naive model’s error. Metrics alone are meaningless without a baseline.
+Censoring is information about how long an account survived, not evidence that it was a non-default for every future horizon.
 
-### Permanent trap
+### Never confuse [Hazard] and [Cumulative default probability]
 
-Performing standard k-fold validation (random splits) on time series. This lets future information leak into training folds, giving overly optimistic error estimates. Always use time-ordered splits instead.
-
-### Never confuse
-
-**MAPE** — Mean Absolute Percentage Error: measures relative error (%). Can exaggerate errors when actual values are small.
+**Hazard** - conditional near-time event intensity among borrowers that have survived so far.
 
 ---
 
-**RMSE** — Root Mean Squared Error: measures absolute error magnitude. Penalises large deviations more.
+**Cumulative default probability** - probability the event has occurred by a stated horizon.
+
+### Permanent trap
+
+Reading a falling hazard as falling cumulative default probability. Cumulative event probability can continue to rise even when the instantaneous hazard declines.
 
 ### Jurisdiction variants
 
-**No delta.** Forecast evaluation is a general statistical procedure. Regulatory guidelines (e.g. IFRS 9 forecast validation) endorse testing forecasts against actuals and baselines, but the methods (rolling backtest, RMSE/MAPE) are the same everywhere.
+No delta. Survival-analysis mathematics is universal.
 
 <Recall
-  q="What is a rolling-origin forecast?"
-  a="It is a backtesting method where each fold uses data up to time \(t\) to forecast \(t+1\), then includes \(t+1\) into training and repeats. It respects time order and simulates real forecasts."
+  q="What useful information does a right-censored loan still provide?"
+  a="It establishes that the loan survived without the event up to its censoring time, which survival methods can include in estimation."
 />
 
 <Recall
-  q="Why compare to a naive baseline?"
-  a="Because a model must beat simple persistence. If forecasting last-month’s value has lower error than a complex model, the model is not valuable. Metrics should be reported *relative to a baseline*."
+  q="Why can survival analysis be preferable to a fixed binary label for immature vintages?"
+  a="It uses unequal observed follow-up times explicitly rather than discarding incomplete cases or mislabelling them as full-horizon non-defaults."
+/>
+
+<Recall
+  q="How are survival probability and cumulative event probability related in a single-event setup?"
+  a="Cumulative event probability by time t is one minus the probability of surviving event-free beyond t."
 />

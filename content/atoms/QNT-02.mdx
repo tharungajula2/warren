@@ -1,83 +1,95 @@
 ---
 id: QNT-02
-title: Key Distributions in Credit Risk
+title: 'Credit Labels, Observation Windows and Censoring'
 type: concept
 domain: quantitative
 subdomain: statistical-foundations-and-sampling
 one_screen: >-
-  In credit risk analytics, certain probability distributions recur: *normal*
-  (e.g. for rescaled aggregate losses), *lognormal* (e.g. for asset values),
-  *binomial* (for default counts), and *Poisson* (for rare-event counts).
-  Understanding their shapes and uses is crucial for modeling credit losses and
-  borrower behavior.
+  A binary credit label is not created merely by writing default = 1. The
+  analyst must define an observation start, a performance horizon and what
+  happens to accounts whose outcome is not fully observable; otherwise identical
+  borrowers can receive different labels only because one has been watched
+  longer.
 prerequisites:
   - QNT-01
+  - CR-01
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: 'Bank of England, *Modeling Credit Risk* (Vasicek framework).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'FRM study notes, credit loss variance (binomial).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-**Normal distribution:** Symmetric bell-curve, defined by mean (μ) and variance (σ²). In credit risk, many aggregated quantities (e.g. average credit score across many independent borrowers) tend toward normal by the Central Limit Theorem (CLT) (see QNT-03). Internal models like the Vasicek IRB model assume a normal latent variable for asset returns.
+### Core mechanism
 
-**Lognormal distribution:** A variable is lognormal if its logarithm is normal. It is right-skewed (long tail on right). Credit risk example: firm asset values or portfolio losses are often modeled as lognormal. The Vasicek/Merton framework assumes firm asset value follows lognormal growth, so log(asset) is normal. Many individual loss severities (e.g. loss given default) are positive and skewed, fitting a lognormal shape.
+CR owns default as a governed credit status. QNT owns the statistical construction of an analyzable outcome from that status across time.
 
-**Binomial distribution:** Models the number of defaults in *n* independent loans with default probability *p*. If defaults are independent, defaults ~ Binomial(n,p). Its mean np and variance np(1-p). A single loan’s annual loss (either full loss or none) is Bernoulli (a 0-1 loss), so a portfolio loss is the sum of Bernoullis, a binomial. FRM notes: “the probability distribution for the loss from the ith loan is... binomial”. Binomial is key for small portfolio loss estimation or mapping small default events.
-
-**Poisson distribution:** Models count of rare independent events over fixed exposure. If the chance of default is small (p ≪ 1) and number of loans large, Binomial(n,p) ≈ Poisson(λ=np). For portfolios with many small exposures and low default rate, default counts ≈ Poisson. Poisson also arises for counting loan prepayments or rare credit events. It has one parameter λ (mean=variance).
-
-Using the correct distribution is crucial for risk metrics: e.g. mis-specifying default count as normal (when events are rare) underestimates tail risk. Each distribution’s parameters should be estimated from data or expert priors, and used consistently in simulations or VaR calculations.
+| Case at observation date | Status after horizon | Statistical treatment |
+| :--- | :--- | :--- |
+| Default occurs within full horizon | Event observed | Label 1 |
+| Full horizon completes without default | Non-event observed | Label 0 |
+| Account has not yet completed horizon | Outcome incomplete | Right-censored or excluded under a governed rule |
+| Account exits for a competing reason | Outcome path interrupted | Requires explicit competing-risk or censoring treatment |
 
 ```text
-Loan defaults:     aggregate risk:
-+---------+       +---------+
-|Bernoulli|       | Binomial|
-| (0 or 1)|  ---&gt; |(n,p)    |
-+---------+       +---------+
-      |                 |
-      v                 v
- Defaults count  ~ Binomial
- (rare defaults, large n)
-             ≈ Poisson
+Observation date
+    ↓
+Feature snapshot fixed
+    ↓
+Performance window opens
+    ↓
+Default inside window? → Yes → Event observed
+    ↓ No
+Window fully completed? → Yes → Non-event observed
+    ↓ No
+Censored observation
+```
+
+### Where it sits
+
+```text
+Upstream:   Default status · Observation date · Feature timing
+This:       Label · Performance horizon · Censoring
+Downstream: Vintage design · Rare-event estimation · Survival analysis
+```
+
+### Formula
+
+```text
+Binary label Y = 1 if event occurs within horizon, otherwise 0 only when the horizon is fully observed
+Observed follow-up time = minimum(event time, censoring time)
 ```
 
 ### Permanent rule
 
-Each distribution’s assumptions must match the credit context (e.g. non-negative, skewed, independent events). Using a normal model for highly skewed or discrete data leads to wrong estimates.
+A non-default label requires enough observation time to know that default did not occur inside the defined horizon.
 
-### Permanent trap
+### Never confuse [Non-default] and [Censored]
 
-Treating an inherently skewed quantity (like loan loss amounts) as normally distributed can underestimate extreme losses. For example, assuming symmetric losses when actual losses (e.g. severe defaults) follow a long-tailed lognormal can understate required provisions.
-
-### Never confuse
-
-**Binomial distribution** — count of successes (e.g. defaults) in a fixed number of trials (loans) with success probability *p*.
+**Non-default** - the required performance window completed without the event.
 
 ---
 
-**Poisson distribution** — count of independent events (e.g. defaults) over fixed exposure/time when events are rare. Poisson can approximate binomial for large *n* and small *p* (np=λ).
+**Censored** - observation ended before the full event path became known.
+
+### Permanent trap
+
+Labelling every recently originated account as non-default because no default has happened yet. That converts lack of observation into evidence of good performance and biases event rates downward.
 
 ### Jurisdiction variants
 
-**No delta.** Probability distributions and their shapes are mathematical truths. Specific regulatory models (e.g. Basel IRB) may use these distributions (e.g. Vasicek’s normal-based model), but the underlying math is universal.
+No delta. The statistical treatment of incomplete observation is universal; the underlying default definition may be governed elsewhere.
 
 <Recall
-  q="When is a Poisson used instead of binomial for default counts?"
-  a="When defaults are rare and the number of loans is large (np small), Binomial(n,p) ≈ Poisson(λ=np)."
+  q="Why does a newly originated loan usually not qualify immediately as a clean non-default observation for a one-year model?"
+  a="Its one-year performance window has not finished, so absence of default so far is incomplete information rather than a fully observed non-event."
 />
 
 <Recall
-  q="Why model losses as lognormal?"
-  a="Because losses and asset values cannot be negative and often have a long right tail; lognormal captures this skew better than a normal model."
+  q="What statistical problem appears when observation ends before the borrower defaults or completes the horizon?"
+  a="The record is censored, meaning the available data reveal only that the event had not happened up to the censoring time."
 />

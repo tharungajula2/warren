@@ -1,76 +1,92 @@
 ---
 id: QNT-03
-title: Central Limit Theorem (CLT) and Credit Risk
+title: 'Selection, Survivorship and Truncation in Loan Books'
 type: concept
 domain: quantitative
 subdomain: statistical-foundations-and-sampling
 one_screen: >-
-  The CLT states that the sum (or average) of many independent, identically
-  distributed random variables approaches a normal distribution, regardless of
-  the original distribution. In credit, it justifies using normal approximations
-  for aggregated risks (like portfolio losses) when individual variations are
-  small.
+  Loan books are filtered histories, not neutral samples. Approval, payoff,
+  refinancing, sale, write-off, closure and data-retention rules determine which
+  accounts remain visible, so statistical relationships can be distorted even
+  when every surviving record is measured perfectly.
 prerequisites:
+  - QNT-01
   - QNT-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: Bank of England (Vasicek model explanation).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      *Forecasting and Analytics* (rolling origin illustration of CLT usage in
-      cross-validation) (for analogy).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-If a bank has a large, diversified loan portfolio, each loan’s default or loss contributes a little to total risk. By the CLT, the distribution of total loss approximates normal, even if individual loan losses are skewed. For example, if many similar small loans each have random loss, their average or sum will be near normal. This helps in risk capital models (e.g. using normal quantiles to set capital). However, the CLT has conditions: loans should be *independent* (or only weakly correlated) and none *too large* (“fine-grained” portfolio).
+### Core mechanism
 
-Credit portfolios often violate CLT ideal assumptions. Defaults can be correlated through economic cycles (violating independence), and large exposures (“lumpiness”) also break the identical small-size assumption. Basel’s IRB capital formula assumes infinite, independent loans (the “asymptotically fine-grained” condition). In reality, correlated defaults (systematic risk) mean aggregate losses can have fat tails. Thus, CLT only licenses normal approximations under strong diversification.
-
-**In practice:** one uses CLT as a guide but tests its validity. Risk managers might apply normal approximations to portfolio VaR only after verifying no extreme concentration. If not, alternative distributions (e.g. Vasicek distribution for correlated losses) are used. The *permanent rule*: use CLT for large, well-diversified groups, but check for correlation or large-exposure breaks.
+| Distortion | Lending example | Direction of risk bias can be |
+| :--- | :--- | :--- |
+| Selection bias | Only approved applicants have repayment outcomes | Usually makes applicant risk look safer than the full application pool |
+| Survivorship bias | Only currently active accounts are analyzed | Drops repaid, defaulted or exited paths |
+| Left truncation | Portfolio extract begins after some loans were originated | Early failures may never enter the observed sample |
+| Attrition bias | Customers leaving the bank disappear from later snapshots | Remaining customers may differ systematically |
+| Acquisition bias | Purchased portfolio lacks original underwriting fields | Missingness depends on source book |
 
 ```text
-Individual loan losses ~ any dist. (skewed)
-  + many independent exposures
-      |
-      v  (CLT: n large, similar loans)
-Total portfolio loss ≈ Normal dist. (mean=nμ, var=nσ²)
+Original application or origination cohort
+    ↓
+Approval and booking filter
+    ↓
+Performance and exit events
+    ↓
+Portfolio snapshot date
+    ↓
+Only surviving observable records remain
+```
+
+The critical issue is conditional observation. If inclusion depends on borrower risk or a downstream outcome, then sample averages and fitted coefficients describe the selected population, not automatically the population that generated the original applications.
+
+### Where it sits
+
+```text
+Upstream:   Sampling frame · Label construction · Portfolio history
+This:       Selection · Survivorship · Truncation
+Downstream: Reject inference · Vintage analysis · Generalisation testing
+```
+
+### Formula
+
+```text
+Observed event rate = observed events / observed eligible cases
 ```
 
 ### Permanent rule
 
-Large, independent loan portfolios produce approximately normal aggregate losses, but only if no single loan dominates and correlations are low. If not, explicitly model tail risk instead of relying on CLT.
+Define cohorts from an entry event such as application or origination, then follow all permitted exits. Do not define the cohort from who happens to remain visible later.
 
-### Permanent trap
+### Never confuse [Selection bias] and [Survivorship bias]
 
-Assuming CLT holds when loans are correlated or a few loans are huge. E.g. a bank with a $1B loan and many $1k loans is not “fine-grained” – CLT fails. Basel notes that violating these assumptions (lumpiness or multiple risk factors) “would result in an incorrect assessment of portfolio risk”.
-
-### Never confuse
-
-**Normal approximation (CLT)** — valid when summing many i.i.d. variables (small loans, independent).
+**Selection bias** - systematic inclusion or exclusion at any stage of sample formation.
 
 ---
 
-**Exact distribution** — e.g. Vasicek’s model or empirical simulation; needed if defaults correlate or portfolio is not fine-grained. CLT’s normal result is a special-case approximation, not always applicable.
+**Survivorship bias** - the special case where cases are visible because they survived long enough to remain in the observed set.
+
+### Permanent trap
+
+Using a current portfolio snapshot to estimate lifetime borrower behavior without reconstructing closed and failed accounts. The snapshot conditions on survival and therefore changes the population being measured.
 
 ### Jurisdiction variants
 
-**No delta.** CLT is a mathematical theorem. Regulatory models like Basel’s IRB build on CLT assumptions, but if portfolio deviates, banks must adjust (e.g. use RWA add-ons).
+No delta. These are statistical consequences of conditional observation, not jurisdiction-specific rules.
 
 <Recall
-  q="Why do regulators stress “fine-grained” portfolios?"
-  a="Because only then does the CLT normality assumption (one risk factor model) hold for capital formulas. Large lumps or extra factors break CLT reliability."
+  q="Why can an active-account extract understate risk even if every active record is correct?"
+  a="Accounts that defaulted, prepaid or exited may be missing, so the extract represents survivors rather than the original lending cohort."
 />
 
 <Recall
-  q="How to handle a portfolio failing CLT conditions?"
-  a="Use heavier-tailed models or stress testing (e.g. simulate default correlation, apply individual loan size in capital calculation)."
+  q="What distinguishes left truncation from ordinary right-censoring?"
+  a="Left truncation means some cases enter observation only after surviving an earlier period; right-censoring means observation begins correctly but ends before the final outcome is known."
 />

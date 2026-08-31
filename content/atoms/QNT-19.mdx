@@ -1,85 +1,96 @@
 ---
 id: QNT-19
-title: Trend and Seasonality (Decomposition)
-type: concept
+title: Feature Importance and SHAP Attribution
+type: mechanism
 domain: quantitative
 subdomain: time-series-and-forecasting
 one_screen: >-
-  A time series often contains a *trend* (long-term increase/decrease) and
-  *seasonality* (regular periodic fluctuations). Decomposing the series
-  separates these components plus a residual. For example, credit losses might
-  rise over years (trend) but have higher losses in certain months (seasonal).
-  Identifying and removing trend/seasonality yields a stationary residual
-  suitable for modeling.
+  Feature importance asks which variables matter to a model in aggregate; SHAP
+  attribution asks how the fitted model allocated one prediction relative to a
+  baseline. Neither statistic proves causality, and correlated lending variables
+  can make attribution depend strongly on the chosen importance definition and
+  background distribution.
 prerequisites:
+  - QNT-17
   - QNT-18
+  - QNT-11
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      R.J. Hyndman and G. Athanasopoulos, *Forecasting: principles and
-      practice*, OTexts (2018), Ch. 6 (decomposition).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Rob J Hyndman (for Duke), *ARIMA models for forecasting*, University of
-      Washington/Duke (lecture notes).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-The **trend** is the smooth, non-random movement over time (upward or downward). Seasonality is a pattern that repeats every fixed period (e.g. every 12 months or every quarter). Decomposition methods (additive or multiplicative) express the series as `Observed = Trend + Seasonality + Residual` (or multiplied if percentage effects). In practice, one might use moving averages or STL (seasonal-trend decomposition) to estimate these. For instance, a bank’s monthly default rate may show a small upward trend due to economic slowdown, plus spikes every year-end (seasonality). By isolating the trend, forecasters can model the remaining (stationary) part more easily.
+### Core mechanism
+
+| Quantity | Scope | What it can answer | What it cannot answer |
+| :--- | :--- | :--- | :--- |
+| Split/gain importance | Global | Which variables trees used to improve fit | Direction for one borrower |
+| Permutation importance | Global | How performance falls when a feature is disrupted | Causal effect of changing the feature |
+| Mean absolute SHAP | Global summary | Average size of local attributions | Direct causal importance |
+| SHAP value | Local | Contribution to one model output relative to baseline | What would happen under real-world intervention |
 
 ```text
-Original Series
-   |
-   v
-+-----------------+
-| Decompose into: |
-| - Trend         |
-| - Seasonality   |
-| - Remainder     |
-+--------+--------+
-         |
-    +----+----+
-    |         |
-Trend    Season + Residual
+Model + borrower + background reference
+    ↓
+Baseline model output
+    ↓
+Allocate prediction difference across features
+    ↓
+Feature contributions add back to model output
 ```
 
-Seasonality can be additive (constant amount) or multiplicative (proportional). When modeling, seasonal series may require seasonal differencing (e.g. subtract value from same month last year) or inclusion of seasonal ARIMA terms. Credit data with seasonal effects (e.g. holiday spending) must handle these patterns explicitly.
+The attribution is conditional on the fitted model and the treatment of missing or unknown feature combinations. When predictors are strongly correlated, distributing shared information between them is inherently delicate.
+
+### Where it sits
+
+```text
+Upstream:   Fitted tree model · Correlated predictors · Borrower features
+This:       Global importance · Local SHAP attribution
+Downstream: Model interpretation · Stability analysis · Challenger comparison
+```
+
+### Formula
+
+```text
+Model output for borrower = baseline output + sum over features of SHAP contribution
+```
 
 ### Permanent rule
 
-Trend is a long-term direction in the data; seasonality is a repeated cycle of fixed length. Always remove or model these before applying models that assume stationarity.
+An explanation method explains the model's calculation, not the world's causal mechanism.
 
-### Permanent trap
+### Never confuse [Feature importance] and [Feature attribution]
 
-Confusing a slowly changing trend for seasonality (or vice versa). For example, attributing a monotonically rising credit loss rate to seasonality can mislead forecasts. Always inspect plots at multiple time scales.
-
-### Never confuse
-
-**Trend** — a general upward or downward movement over time.
+**Feature importance** - aggregate measure of how much a variable matters to model behavior or performance.
 
 ---
 
-**Seasonality** — a periodic pattern repeating at fixed intervals (like higher purchases every Dec). Trend affects the baseline over time, seasonality oscillates around that baseline.
+**Feature attribution** - allocation of a particular prediction relative to a baseline across input features.
+
+### Permanent trap
+
+Saying "income caused the prediction to fall" because its SHAP value is negative. SHAP states how the model used income relative to its reference, not what would happen if the borrower's income were externally changed.
 
 ### Jurisdiction variants
 
-**No delta.** The concepts of trend and seasonality are mathematical. Forecasters in any jurisdiction must address them identically.
+No delta. Importance and SHAP mathematics are universal.
 
 <Recall
-  q="What is seasonal adjustment?"
-  a="Removing or modeling the repeating seasonal pattern so the remaining series is stationary, e.g. by subtracting the average value of each month/quarter from the observed values."
+  q="Why can two correlated predictors divide importance unpredictably?"
+  a="They carry overlapping information, so the model or explanation method must allocate shared predictive signal between variables that are partly substitutable."
 />
 
 <Recall
-  q="How might a multiplicative seasonal effect differ from an additive one?"
-  a="In multiplicative seasonality, the size of seasonal swings grows with the level of the series (e.g. 10% bump each December), whereas additive means constant swings (e.g. +2 default points each Dec regardless of baseline)."
+  q="What does the SHAP additivity property guarantee?"
+  a="On the explained model-output scale, the baseline plus all feature contributions reconstructs that borrower's model output."
+/>
+
+<Recall
+  q="Why does changing the SHAP background data matter?"
+  a="It changes the reference prediction and the feature combinations against which contributions are evaluated, so attribution values can change even when the fitted model does not."
 />

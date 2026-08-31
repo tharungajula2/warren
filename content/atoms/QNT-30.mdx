@@ -1,0 +1,87 @@
+---
+id: QNT-30
+title: 'PSI and CSI: Population and Characteristic Drift'
+type: mechanism
+domain: quantitative
+subdomain: qnt
+one_screen: >-
+  Population Stability Index and Characteristic Stability Index are bin-based
+  divergence summaries comparing a reference distribution with a later
+  distribution. QNT owns their logarithmic calculation, dependence on binning
+  and statistical limitations; MRM owns monitoring limits, breach escalation and
+  what the institution concludes from a PSI or CSI result.
+prerequisites:
+  - QNT-14
+  - QNT-20
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 09_QNT_statistics_ml.md
+---
+### Core mechanism
+
+PSI is usually applied to a model score or population-level distribution; CSI applies the same mathematical structure to an individual characteristic. Naming differs across institutions, but the core calculation compares bin shares between a reference sample and a comparison sample.
+
+| Driver | Effect on PSI or CSI |
+| :--- | :--- |
+| Larger bin-share shift | Increases contribution |
+| More extreme relative shift | Log ratio magnifies divergence |
+| Different bin boundaries | Can materially change the index |
+| Tiny or zero bin shares | Can create unstable or undefined log ratios without treatment |
+| Large sample size | Makes small shifts precisely measurable but does not make them economically important |
+
+### Where it sits
+
+```text
+Upstream:   Fixed bins · Reference sample · Comparison sample
+This:       PSI · CSI · Distribution shift
+Downstream: Root-cause analysis · Performance monitoring · Model review
+```
+
+### Formula
+
+```text
+Bin contribution = (comparison share - reference share) x ln(comparison share / reference share)
+PSI or CSI = sum over bins of bin contribution
+```
+
+### Permanent rule
+
+PSI and CSI detect distribution change, not its cause and not automatically model-performance deterioration.
+
+### Never confuse [Population drift] and [Concept drift]
+
+**Population drift** - distribution of model inputs or scores changes.
+
+---
+
+**Concept drift** - relationship between predictors and the credit outcome changes. Input distribution can move while performance remains sound, or relationships can deteriorate with little visible input drift.
+
+### Permanent trap
+
+Treating a PSI increase as proof the model is wrong. The shift may reflect a deliberate acquisition strategy, seasonality or benign mix change; performance and calibration must be checked separately.
+
+### Jurisdiction variants
+
+No delta. PSI and CSI mathematics are universal; MRM owns governed thresholds and escalation.
+
+<Recall
+  q="Why can the same two populations produce different PSI values under different binning schemes?"
+  a="PSI is computed from bin shares, so changing boundaries changes how distribution movement is discretized and therefore changes the summed divergence."
+/>
+
+<Recall
+  q="What does PSI establish when it rises?"
+  a="It establishes that the comparison distribution differs from the fixed reference distribution under the chosen bins; it does not establish why the shift occurred or whether predictive performance deteriorated."
+/>
+
+<Recall
+  q="Why are zero-share bins technically awkward?"
+  a="The calculation contains a logarithm of a share ratio, and a zero numerator or denominator makes that ratio or its logarithm undefined without a stated smoothing treatment."
+/>

@@ -1,80 +1,91 @@
 ---
 id: QNT-08
-title: Linear Regression for Credit Scoring
-type: mechanism
+title: Probability Distributions for Credit Events
+type: concept
 domain: quantitative
 subdomain: regression-and-scorecard-modelling
 one_screen: >-
-  Linear regression models a continuous outcome (like credit line utilization or
-  loss amount) as a weighted sum of predictors. Key assumptions include
-  linearity, independent errors, and homoscedasticity. Coefficients indicate the
-  average change in outcome per unit change in predictor, holding others
-  constant.
+  Credit data mix binary events, event counts and positive skewed quantities, so
+  distribution choice must follow the data-generating mechanism rather than
+  convenience. Bernoulli and binomial models describe binary default events
+  under strong independence assumptions; Poisson can approximate rare counts;
+  normal approximations require enough aggregation and weak dependence.
 prerequisites:
-  - QNT-02
+  - QNT-05
+  - QNT-07
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: >-
-      Standard econometrics textbooks (normality, homoscedasticity). (General
-      knowledge; no single citation).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-In regression, we fit a model `y = β₀ + β₁x₁ + ... + βₖxₖ + ε`. For credit analytics, `y` might be a continuous risk measure (e.g. loss given default, log of balance, etc.), and `x` variables could be borrower attributes. The fitting (ordinary least squares) finds β’s minimizing squared residuals.
+### Core mechanism
 
-**Assumptions:** (1) Linear relationship: each predictor adds/subtracts constant effect on mean `y`; (2) Independent errors: each loan’s deviation from model is not autocorrelated; (3) Homoscedasticity: error variance constant across `x` values; (4) Errors ~ Normal (for inference). In practice, check residual plots to validate these. If heteroscedastic, use robust SE or transform y (e.g. log).
-
-**Interpretation:** A coefficient β indicates that a one-unit increase in that predictor multiplies the outcome by β on the original scale (if y is raw), or adds β to log(y) if log-linear model. E.g., if modelling log-default-loss, `exp(β₁)` approximates multiplicative effect. Always contextualize: e.g. if `x` is credit score, β negative means higher score → lower loss on average.
-
-**Example:** Suppose modeling log(outstanding balance) = α + β*(age) + γ*(income) + ε. If β=0.01, each additional year of age raises balance by ~1% (on average). This could be plausible if older borrowers tend to have larger mortgages.
-
-**Use in scoring:** Linear regression is less common for binary outcomes (default/no default) – that is logistic (QNT-10). However, linear models help in predicting continuous risks (like loss given default or exposure). They are also a building block for scorecards (though credit scorecards often use logistic or point systems).
-
-**Validation:** Check R² (fit quality) but more importantly check predictions vs holdout data. For credit risk, regulators expect residual errors to be uncorrelated with key factors (no omitted variables with pattern).
+| Distribution | Credit anchor | Key condition |
+| :--- | :--- | :--- |
+| Bernoulli | One loan defaults or does not | One binary trial with event probability p |
+| Binomial | Number of defaults among n similar loans | Fixed n, common p, independent trials |
+| Poisson | Approximate rare-event count | Many opportunities, small event probability, weak dependence |
+| Normal approximation | Aggregated estimates or sums | Enough independent or weakly dependent contributions |
+| Right-skewed positive distribution | Exposure sizes or recovery amounts | Quantity bounded below with long upper tail |
 
 ```text
-     Age     Income    ...
-       |      |
-+------+------+
-|      |      |
-v      v      v
-Regression model: log(Loss) = β0 + β1*Age + β2*Income + ε
+Single loan event → Bernoulli
+Many similar independent loan events → Binomial count
+Rare events with large n and small p → Poisson approximation
+Large weakly dependent aggregate → Normal approximation may emerge
+```
+
+Credit portfolios often violate independence because borrowers share macro drivers. That is exactly why a distribution that works for independent coin-flip intuition can understate clustered default outcomes during stress.
+
+### Where it sits
+
+```text
+Upstream:   Event prevalence · Cohort definition · Dependence
+This:       Event distributions · Count approximations
+Downstream: Sampling uncertainty · Regression likelihoods · Portfolio inference
+```
+
+### Formula
+
+```text
+Expected binomial defaults = n x p
+Binomial variance = n x p x (1 - p)
+Poisson rate lambda = n x p
+Poisson variance = lambda
 ```
 
 ### Permanent rule
 
-Always verify regression assumptions. In credit context, it’s common to transform skewed variables (e.g. take log of balances) so that residuals are more normal/homoscedastic.
+Use a distribution because its assumptions match the credit process, not because its formula is familiar.
 
-### Permanent trap
+### Never confuse [Individual event distribution] and [Portfolio aggregate distribution]
 
-Interpreting linear model as implying causality. E.g., saying “higher X causes higher risk” just from regression correlation is incorrect without domain insight (see QNT-06). Also, forgetting to check residuals: a high R² does not guarantee unbiased estimates if assumptions fail.
-
-### Never confuse
-
-**Slope coefficient (β)** — change in the response per unit x, ceteris paribus.
+**Individual event distribution** - describes one loan or one event process.
 
 ---
 
-**Correlation coefficient (r)** — measures linear association between two variables, but is not a regression parameter. High `r` does not directly tell you the slope; regression gives β that predicts y from x.
+**Portfolio aggregate distribution** - describes a sum or count whose shape also depends on concentration and dependence across loans.
+
+### Permanent trap
+
+Applying an independent binomial model to a portfolio where defaults cluster through common economic conditions. The count variance can then be much larger than the independent model implies.
 
 ### Jurisdiction variants
 
-**No delta.** Regression math is universal. However, regulators (like RBI guidelines) may require special considerations (e.g. using macro variables for IFRS9 forecasting models), but that’s about inputs, not the regression method itself.
+No delta. Distributional mathematics is universal.
 
 <Recall
-  q="Why log-transform a skewed target in credit regression?"
-  a="To stabilize variance (homoscedasticity) and make residuals more normal. E.g. loan balances are right-skewed, so modeling log(balance) yields better linear-fit behavior."
+  q="When can Poisson approximate a binomial default count?"
+  a="When the portfolio has many comparable opportunities, each with a small event probability, and dependence is weak enough that rare events are approximately independent."
 />
 
 <Recall
-  q="What does β=−0.05 for a score variable mean in regression of log(loss)?"
-  a="A one-point increase in score reduces log(loss) by 0.05, i.e. each point lower score multiplies expected loss by e^(−0.05) ≈ 0.95 (5% lower)."
+  q="Why can a normal approximation fail in a credit portfolio even with many loans?"
+  a="Strong default dependence or concentration prevents diversification from smoothing the aggregate into the behavior implied by an independent large-sample approximation."
 />

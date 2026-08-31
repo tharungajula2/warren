@@ -1,65 +1,94 @@
 ---
 id: QNT-04
-title: Hypothesis Testing and p-values
-type: concept
+title: Reject Inference
+type: mechanism
 domain: quantitative
 subdomain: statistical-foundations-and-sampling
 one_screen: >-
-  Hypothesis testing assesses if observed data significantly differ from a
-  specified model (null hypothesis). A *p-value* measures the probability of
-  observing data as extreme as ours if the null hypothesis were true. It is
-  **not** the probability the hypothesis is true.
+  A lender observes repayment outcomes for booked applicants but normally not
+  for applicants it rejected. Reject inference addresses this missing-outcome
+  problem, but no statistical technique can recover rejected applicants' true
+  performance without assumptions about how approval relates to risk.
 prerequisites:
   - QNT-01
-  - QNT-02
+  - QNT-03
+  - CR-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: 'StatPearls, *Statistical Significance* (p-value interpretation).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-In credit analysis, one might test if a new scorecard has a higher default rate than historical average. The null hypothesis (H₀) could be "new model’s default rate = old rate." After collecting data, compute a test statistic (e.g. difference of proportions) and derive a p-value: the probability of seeing such a difference (or more extreme) by chance if H₀ holds. If p is below a chosen significance level (e.g. 5%), H₀ is rejected, suggesting a real difference.
+### Core mechanism
 
-**Common misinterpretation:** p &lt; 0.05 does *not* mean there’s only 5% chance H₀ is true. Instead, it means that if H₀ were true, only 5% of repeated experiments would yield data at least this extreme. StatPearls clarifies: “The p-value is not the probability of the null hypothesis itself. It is the probability that, if the study were repeated infinitely, one would get results at least as extreme as observed.” Thus, p informs us about data extreme-ness under H₀, not the truth of H₀.
+CR owns the credit approval decision. QNT owns the inference problem produced when that decision determines whose outcomes become observable.
 
-For example, testing “portfolio default rate &gt; 2%” with sample data: suppose sample default was 2.5%, p = 0.03. This means there’s a 3% chance of seeing ≥2.5% defaults if true rate =2%. We might then conclude rate &gt;2%. But if sample size is small, p can be misleading; also p=0.03 doesn’t prove a big effect, just that result is unlikely by chance.
+| Approach | Statistical idea | Main assumption or weakness |
+| :--- | :--- | :--- |
+| Approved-only model | Fit only where outcomes exist | Estimates performance conditional on historical approval |
+| Reweighting | Give approved cases weights representing similar rejected cases | Requires observable variables to explain selection sufficiently |
+| Augmentation | Infer expected outcomes for rejects from a preliminary model | Can reinforce the preliminary model's errors |
+| Parceling-style assignment | Allocate synthetic good/bad outcomes within score bands | Strong assumption about rejected performance inside each band |
+| External outcome data | Link rejects to later bureau or market performance | Coverage and outcome definitions may differ |
 
-Practically, credit risk model validators use hypothesis tests (often z-tests or chi-square) for things like comparing PDs across time or segments. The permanent rule: set significance (alpha) before testing; treat p-value &lt; alpha as evidence against H₀, but don’t over-interpret it. Statistical significance ≠ business significance: a tiny difference may be statistically significant with large data but irrelevant. Always interpret in context.
+```text
+Applications
+    ↓
+Historical approval rule
+    ↓
+Approved → repayment outcome observed
+Rejected → repayment outcome missing
+    ↓
+Inference requires assumptions about missing outcomes
+```
+
+The missingness is usually not random. Low-scoring applicants are rejected precisely because the lender believes their risk differs, so treating rejects as if they were a random subset of approved cases is structurally wrong.
+
+### Where it sits
+
+```text
+Upstream:   Application population · Historical approval rule · Selection bias
+This:       Missing rejected outcomes · Inference assumptions
+Downstream: Score development · Population calibration · Policy change analysis
+```
+
+### Formula
+
+```text
+Weighted loss = sum over observed cases of weight x case loss
+```
 
 ### Permanent rule
 
-Use p-values as a measure of data incompatibility with the null, not as proof of hypothesis truth. Treat p&lt;α as grounds to examine assumptions, but also check effect size and practical importance.
+Reject inference is assumption management, not hidden-data recovery. State what makes the missing rejected outcomes inferable before trusting the result.
 
-### Permanent trap
+### Never confuse [Missing at random] and [Missing by credit policy]
 
-Believing p=0.03 means “there’s 97% chance this model is superior.” Actually, p=0.03 means “if there were no real difference, only 3% of experiments yield this result”. Don’t confuse p-value with certainty about hypotheses.
-
-### Never confuse
-
-**p-value** — probability of observing data (or more extreme) under the null hypothesis.
+**Missing at random** - outcome absence can be explained without dependence on the unseen outcome after conditioning on observed information.
 
 ---
 
-**Confidence level** — (1–α), e.g. 95% CI means 5% significance; but CI is about parameter range (QNT-05), not the probability that H₀ is false.
+**Missing by credit policy** - outcome absence is created by a decision rule designed around perceived risk, making naive missing-data assumptions fragile.
+
+### Permanent trap
+
+Calling synthetic bad/good assignments "observed performance". They are model-based imputations and should remain distinguishable from realized repayment outcomes.
 
 ### Jurisdiction variants
 
-**No delta.** The logic of hypothesis testing and p-values is the same universally (frequentist inference). Regulatory models may stress statistical rigor (e.g. IRB model validations), but the math doesn’t change by locale.
+No delta. The identification problem is mathematical; lending and fair-treatment constraints on how models are used sit outside this atom.
 
 <Recall
-  q="What does a p-value of 0.02 indicate in a PD change test?"
-  a="If the null (no change) is true, there's a 2% chance to observe a change as big as we saw. It suggests rejecting the null at 5% level, but the real-world impact of the change still needs review."
+  q="Why is reject inference needed in application credit modelling?"
+  a="Historical repayment labels exist mainly for approved applicants, while the model may be intended to rank a broader future application population that includes applicants unlike those historically booked."
 />
 
 <Recall
-  q="Can a model be accepted just because p>0.05?"
-  a="No. Failing to reject H₀ (p>0.05) is not proof that the null is true; it just means insufficient evidence against H₀ given sample size."
+  q="What is the central weakness shared by reject-inference methods?"
+  a="They must assume something about unobserved rejected outcomes, and those assumptions cannot be proven from the approved-only performance data itself."
 />

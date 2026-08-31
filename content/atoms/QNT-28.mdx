@@ -1,0 +1,85 @@
+---
+id: QNT-28
+title: Precision-Recall and Discrimination Under Severe Imbalance
+type: mechanism
+domain: quantitative
+subdomain: qnt
+one_screen: >-
+  Precision-recall analysis focuses directly on the rare default class. It is
+  especially informative when defaults are scarce because precision exposes the
+  false-positive burden created by low prevalence, whereas ROC coordinates
+  normalize separately by each actual class and can look strong even when most
+  borrowers flagged as risky do not default.
+prerequisites:
+  - QNT-05
+  - QNT-25
+  - QNT-27
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 09_QNT_statistics_ml.md
+---
+### Core mechanism
+
+As the cutoff moves, recall is the same quantity as sensitivity, while precision asks how concentrated actual defaults are among flagged cases. Plotting precision against recall therefore shows the trade between capturing more defaults and diluting the flagged pool with non-defaults.
+
+| Metric view | Denominator emphasis | Imbalance behavior |
+| :--- | :--- | :--- |
+| ROC | Actual defaults and actual non-defaults separately | Can remain visually strong with huge non-default population |
+| Precision-recall | Predicted positives and actual defaults | Directly exposes low positive predictive value |
+| PR baseline | Event prevalence | Falls as defaults become rarer |
+
+### Where it sits
+
+```text
+Upstream:   Rare defaults · Confusion matrix · Score ranking
+This:       Precision · Recall · PR curve · PR-AUC
+Downstream: Cutoff choice · Model comparison · Rare-event monitoring
+```
+
+### Formula
+
+```text
+```text
+```
+
+### Permanent rule
+
+When the event is rare, report a metric that makes the false-positive burden visible; ROC alone can hide how thin the default concentration is among flagged borrowers.
+
+### Never confuse [ROC-AUC] and [PR-AUC]
+
+**ROC-AUC** - summarizes true-positive versus false-positive-rate ranking across cutoffs.
+
+---
+
+**PR-AUC** - summarizes precision versus recall and therefore changes materially with event prevalence.
+
+### Permanent trap
+
+Comparing PR-AUC across two portfolios with very different default prevalence as if the numbers were directly portable. The baseline precision itself changes with prevalence.
+
+### Jurisdiction variants
+
+No delta. Precision-recall mathematics is universal.
+
+<Recall
+  q="Why does low default prevalence directly depress precision?"
+  a="Even a modest false-positive rate applied to a very large non-default population can create many false positives relative to the small number of captured defaults."
+/>
+
+<Recall
+  q="What is the random-ranking baseline for precision?"
+  a="It is approximately the event prevalence, because a random flagged sample contains defaults at the same rate as the overall population."
+/>
+
+<Recall
+  q="Why might ROC-AUC remain unchanged while operational precision changes?"
+  a="Ranking between the two classes can be unchanged while the portfolio's class prevalence shifts, and precision depends on that prevalence."
+/>

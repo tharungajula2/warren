@@ -1,81 +1,87 @@
 ---
 id: QNT-16
-title: Feature Importance vs Explanation
-type: concept
+title: 'Multicollinearity, VIF and Regularisation'
+type: mechanism
 domain: quantitative
 subdomain: machine-learning-and-explainability
 one_screen: >-
-  Feature importance scores rank variables by their overall influence on model
-  predictions, but they do not explain individual decisions. In contrast, local
-  explanation methods (like SHAP values) allocate credit to features for a
-  specific prediction. Feature importance is a global summary metric; it does
-  not show how a change in a feature value will move the prediction for a
-  particular loan.
+  When lending predictors contain overlapping information, fitted coefficients
+  can become unstable even if overall prediction remains acceptable. VIF
+  quantifies how much linear dependence inflates coefficient variance, while
+  ridge and lasso regularisation deliberately trade some fitting bias for lower
+  variance or simpler models.
 prerequisites:
-  - QNT-14
-  - QNT-15
+  - QNT-12
+  - QNT-13
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
-sources:
-  - label: >-
-      Lundberg, S. M. et al., *From Local Explanations to Global Understanding
-      with Explainable AI for Trees*, Nat. Mach. Intell. 2(1):56–67 (2020).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-Global feature importance (e.g. total gain or split frequency in a tree, or magnitude of coefficients in a linear model) measures each feature’s average effect on model performance. For instance, a credit score might have the highest importance in predicting default rates on average across all borrowers. However, this does not explain why any one borrower was classified as default or not. Importance reflects correlation with the target, not causation or individual impact. Moreover, importance can be misleading if features are correlated: one might appear unimportant simply because another correlated feature “soaked up” its effect.
+### Core mechanism
 
-Local explanations, by contrast, break down a single prediction. For example, a SHAP (Shapley) value tells us how much a borrower’s income and history contribute to that borrower’s predicted default probability. Feature importance might list “Income: 0.4, Balance: 0.3, Age: 0.1”, meaning on average income was most influential. But it won’t reveal that in one case a high income actually lowered that borrower’s risk by 5%. Feature importance is useful for feature selection or understanding model trends; explanations are necessary for interpreting individual credit decisions (often a regulatory requirement).
+| Tool | Mechanism | Credit use |
+| :--- | :--- | :--- |
+| VIF | Regress one predictor on the others | Diagnose redundant linear information |
+| Ridge | Penalize squared coefficient size | Stabilize many correlated signals |
+| Lasso | Penalize absolute coefficient size | Shrink some coefficients exactly to zero |
+| Elastic net | Combine both penalties | Handle correlated groups while allowing sparsity |
+
+High collinearity does not necessarily destroy predictions; it destroys confidence that any one coefficient represents a separately identified effect. Small changes in sample composition can then move signs and magnitudes sharply.
+
+### Where it sits
 
 ```text
-Global model perspective:
-    Model training on full dataset
-           |
-    Compute feature importances (e.g. total gain per feature)
-           |
-      Importance ranking
+Upstream:   Linear predictor · Correlated lending variables
+This:       VIF · Ridge · Lasso · Bias-variance trade
+Downstream: Stable model fitting · Feature selection · Generalisation
+```
 
-Local prediction perspective:
-    Single borrower data -&gt; Model prediction
-           |
-    Explain prediction (SHAP values, etc.)
-           |
-    Contribution of each feature to this instance
+### Formula
+
+```text
+VIF for Xj = 1 / (1 - R-squared from regressing Xj on the other predictors)
+Ridge objective = fitting loss + lambda x sum over coefficients of coefficient squared
+Lasso objective = fitting loss + lambda x sum over coefficients of absolute coefficient
 ```
 
 ### Permanent rule
 
-Feature importance scores are an aggregate, global measure. They tell *which features matter most overall*, but not *how* they influence a given prediction.
+Stable prediction and stable coefficients are different objectives. Collinearity can leave the first acceptable while making the second unreliable.
 
-### Permanent trap
+### Never confuse [Multicollinearity] and [Correlation with the target]
 
-Assuming a high importance feature always increases predictions or that it explains individual cases. For example, “LoanAmount” might be important globally, but the importance metric alone cannot say if a particular high loan amount raises or lowers risk for a specific applicant.
-
-### Never confuse
-
-**Feature importance** — global ranking of features by average contribution to the model’s performance. It is an aggregate statistic, not an explanation of any single outcome.
+**Multicollinearity** - predictors explain one another.
 
 ---
 
-**SHAP (Shapley) values** — local explanation values that decompose a specific prediction into contributions from each feature. They explain individual decisions, unlike global importance.
+**Target correlation** - a predictor is associated with the outcome. A variable can be highly predictive and still be highly collinear with another predictor.
+
+### Permanent trap
+
+Using a universal VIF cutoff as if it were a law of nature. VIF is a diagnostic; materiality depends on whether coefficient stability, inference or only prediction is the modelling objective.
 
 ### Jurisdiction variants
 
-**No delta.** The distinction between global importance and local explanation is mathematical and does not vary by jurisdiction. Regulators universally want model explanations for individual decisions, even if different names are used.
+No delta. VIF and regularisation mathematics are universal.
 
 <Recall
-  q="If a feature has zero importance, is it safe to drop it?"
-  a="If importance is truly zero it had no predictive power globally, but be cautious: it might interact with other features. Also check if it was just masked by a correlated feature."
+  q="What happens to VIF as one predictor becomes almost perfectly explained by the others?"
+  a="The denominator approaches zero, so VIF becomes very large and the coefficient's sampling variance is strongly inflated."
 />
 
 <Recall
-  q="Does feature importance show whether increasing a feature raises the score?"
-  a="No. Importance is magnitude-based; it doesn’t indicate direction. A feature could be important because it has a strong negative relationship with defaults, but importance alone won’t show that."
+  q="How do ridge and lasso differ under strong penalty?"
+  a="Ridge shrinks coefficients toward zero but generally retains them; lasso can set some exactly to zero and therefore acts as a selection mechanism."
+/>
+
+<Recall
+  q="Why can lasso be unstable with highly correlated predictors?"
+  a="Several variables may contain nearly interchangeable signal, so small data changes can make lasso retain one and discard another without a meaningful economic distinction."
 />

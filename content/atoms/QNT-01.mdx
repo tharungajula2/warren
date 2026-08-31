@@ -1,70 +1,96 @@
 ---
 id: QNT-01
-title: Population vs Sample in Credit Data
+title: 'Lending Populations, Samples and Sampling Frames'
 type: concept
 domain: quantitative
 subdomain: statistical-foundations-and-sampling
 one_screen: >-
-  A *population* is the entire set of items of interest (e.g. all borrowers),
-  while a *sample* is the subset of that population used for analysis. In credit
-  data, sample bias can mislead risk estimates if the sampled loans
-  systematically differ from the full loan portfolio.
+  A credit model never learns from "all borrowers". It learns from a sampling
+  frame created by a lender's products, approval rules, geography, data
+  retention and observation period, so the first statistical question is whether
+  the development sample represents the lending population where the model will
+  be used.
 prerequisites: []
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: 'CASRAI, *Sampling Bias: Types, Causes, and Detection*, 24 Aug 2026'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 12_QNT_statistics_ml.md
+sources: []
+import_source: 09_QNT_statistics_ml.md
 ---
-Banks rarely have data on every possible borrower (the population). Instead, models use samples such as past borrowers or current customers. If the sample is unrepresentative, estimates of default rates or other risk measures will be biased. For instance, a credit bureau dataset may omit loans that did not originate (an *application bias*), or a portfolio dataset might lack information on people who were denied credit (a *selection bias*). Regulatory guidance emphasizes that models should be validated on a sample representative of current and future portfolios.
+### Core mechanism
 
-In practice, analysts must check if the training sample covers all customer segments and time periods. For example, if only performing clients are sampled, average default probability will be under-estimated. Oversampling defaulters can correct imbalance but must be done carefully to avoid altering the underlying distribution. As a rule, increasing sample size will not fix a biased sample – adding more biased data only tightens confidence around the wrong value. The *permanent rule* is: ensure your training data frame covers the same population characteristics as the real credit book.
+| Layer | Credit meaning | Failure mode |
+| :--- | :--- | :--- |
+| Target population | Borrowers or facilities about which an inference is required | Defined too broadly to match actual deployment |
+| Sampling frame | Cases the bank could observe and retrieve | Excludes rejects, closed accounts, acquired books or older vintages |
+| Realised sample | Records surviving filters, joins and cleaning | Further loss through missing data or eligibility rules |
+| Deployment population | Cases scored after implementation | Mix shifts away from development data |
+
+Sampling error is random variation from observing only part of the frame. Sampling bias is systematic distortion because some kinds of borrowers are more or less likely to appear. More data reduces sampling error but does not repair a biased frame.
 
 ```text
-+------------+                 +-------------+
-| Population |                 | Sample      |
-| (All loans)|                 | (Historic,  |
-|            |                 | current data)|
-+------+-----+                 +------+------+
-       |                            |
-       v                            v
-  Model input                 Model training
+Target population
+    ↓
+Observable lending frame
+    ↓
+Extracted and cleaned sample
+    ↓
+Estimated relationship
+    ↓
+Applied to deployment population
+```
+
+### Where it sits
+
+```text
+Upstream:   Lending scope · Product rules · Data availability
+This:       Population · Sampling frame · Realised sample
+Downstream: Bias analysis · Outcome construction · Model development
+```
+
+### Formula
+
+```text
+Sample mean = (sum of observed values) / n
+Sampling error = sample estimate - population quantity
 ```
 
 ### Permanent rule
 
-A larger sample cannot correct a sampling bias; validate models on data representative of the true credit population.
+Precision cannot rescue representativeness. A precisely estimated quantity from the wrong lending population is still the wrong quantity.
 
-### Permanent trap
+### Never confuse [Sampling error] and [Sampling bias]
 
-Assuming a large sample size eliminates bias. In fact, if the sampling frame is skewed (e.g. excludes declined applicants or past defaulters), even millions of records will give a precisely wrong answer.
-
-### Never confuse
-
-**Sampling bias** — distortion from how the sample is drawn.
+**Sampling error** - random difference caused by observing a finite sample.
 
 ---
 
-**Non-response bias** — when sampled applicants fail to provide data (e.g. survey participants differ from non-respondents). Both distort representativeness, but sampling bias is in frame selection, while non-response occurs post-selection.
+**Sampling bias** - systematic difference caused by who can enter or remain in the sample.
+
+### Permanent trap
+
+Treating the bank's available dataset as the population. Availability is a property of the data estate, not proof that the observed borrowers represent the cases the model will score.
 
 ### Jurisdiction variants
 
-**No delta.** The concept of population vs sample is a statistical fact, not subject to regulatory variation.
+No delta. Population, sampling-frame and bias concepts are mathematical and do not change by regulator.
 
 <Recall
-  q="Why can’t we just use all available loan data?"
-  a="Often you cannot due to evolving portfolios; also any excluded group (like denied customers) means your sample is biased."
+  q="Why can a million loan records still produce a biased estimate?"
+  a="Sample size reduces random noise, but it does not restore borrowers systematically excluded by approval, retention or extraction rules."
 />
 
 <Recall
-  q="How does sampling bias affect PD estimates?"
-  a="If riskier loans were under-sampled, the PD will be under-estimated relative to the true portfolio."
+  q="What is the practical difference between a target population and a sampling frame?"
+  a="The target population is where the inference is meant to apply; the sampling frame is the subset the lender can actually observe and sample from."
+/>
+
+<Recall
+  q="What should be checked before any model metric is interpreted?"
+  a="Check whether the realised development sample and the intended deployment population are aligned in product, borrower mix, time and observation rules."
 />

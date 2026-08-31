@@ -1,0 +1,96 @@
+---
+id: QNT-29
+title: 'Calibration Curves, O/E, Brier Score and Calibration Tests'
+type: mechanism
+domain: quantitative
+subdomain: qnt
+one_screen: >-
+  Calibration asks whether probability levels mean what they say: among loans
+  assigned similar predicted risk, do events occur at roughly that frequency?
+  QNT owns calibration curves, observed-to-expected ratios, probability scoring
+  rules and calibration-test mathematics; MRM owns tolerances, breach
+  classification, escalation and remediation governance.
+prerequisites:
+  - QNT-09
+  - QNT-13
+  - QNT-25
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 09_QNT_statistics_ml.md
+---
+### Core mechanism
+
+| Tool | Calculation idea | Main limitation |
+| :--- | :--- | :--- |
+| Calibration curve | Compare average prediction with observed event rate by bin | Depends on binning and sample size |
+| O/E ratio | Compare total observed events with total expected events | Can hide offsetting segment errors |
+| Brier score | Average squared probability error | Mixes calibration and discrimination information |
+| Statistical calibration test | Compare observed departures with sampling variability | Large samples can flag tiny differences; sparse samples have low power |
+
+```text
+Predicted probabilities
+    ↓
+Group comparable predictions or evaluate globally
+    ↓
+Compare predicted event mass with observed events
+    ↓
+Separate level error from sampling noise
+```
+
+### Where it sits
+
+```text
+Upstream:   Probability model · Sampling uncertainty · Observed outcomes
+This:       Calibration curve · O/E · Brier · Statistical tests
+Downstream: Recalibration · Monitoring · Challenger comparison
+```
+
+### Formula
+
+```text
+Expected events = sum over loans of predicted probability
+O/E ratio = observed events / expected events
+Brier score = sum over loans of (observed outcome - predicted probability) squared / n
+```
+
+### Permanent rule
+
+A model can discriminate well and calibrate badly, or calibrate the portfolio average while being badly miscalibrated within important segments.
+
+### Never confuse [Calibration-in-the-large] and [Segment calibration]
+
+**Calibration-in-the-large** - total or average predicted event level matches total or average observed level.
+
+---
+
+**Segment calibration** - predicted and observed frequencies align across relevant risk bands, products, vintages or other groups.
+
+### Permanent trap
+
+Declaring a model calibrated because O/E is near 1 for the whole portfolio. Overprediction in one segment can cancel underprediction in another.
+
+### Jurisdiction variants
+
+No delta. Calibration mathematics is universal; MRM owns governed interpretation of test results.
+
+<Recall
+  q="What does O/E greater than 1 indicate?"
+  a="The portfolio produced more observed events than the model predicted in aggregate, although sampling uncertainty and composition should be examined before calling the difference systematic."
+/>
+
+<Recall
+  q="Why is Brier score not a pure calibration statistic?"
+  a="Squared probability error rewards both assigning appropriate probability levels and separating event from non-event cases, so discrimination also affects the score."
+/>
+
+<Recall
+  q="Can perfect portfolio-level O/E coexist with poor calibration?"
+  a="Yes. Opposite errors across grades or segments can cancel in total while individual probability bands remain materially wrong."
+/>
