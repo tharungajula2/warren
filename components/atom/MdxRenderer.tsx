@@ -40,10 +40,10 @@ const mdxComponents = {
     <blockquote className="border-l-2 border-[#C9711F] pl-4 py-1.5 my-4 text-[#9AA3AD] italic text-[15px] leading-[1.65]" {...props} />
   ),
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
-    <pre className="bg-[#121417] border border-[#23272D] p-3.5 rounded-[3px] my-4 text-[11px] font-mono text-[#E6E8EB] leading-[17px] whitespace-pre-wrap break-words tabular-nums" {...props} />
+    <pre className="bg-[#121417] border border-[#23272D] p-4 rounded-[3px] my-4 text-[13.5px] font-mono text-[#E6E8EB] leading-[1.6] whitespace-pre-wrap break-words tabular-nums" {...props} />
   ),
   code: (props: React.HTMLAttributes<HTMLElement>) => (
-    <code className="font-mono text-[12px] bg-[#191C20] text-[#E6E8EB] px-1.5 py-0.5 rounded-[3px] border border-[#23272D]" {...props} />
+    <code className="font-mono text-[13px] bg-[#191C20] text-[#E6E8EB] px-1.5 py-0.5 rounded-[3px] border border-[#23272D]" {...props} />
   ),
   table: (props: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-5 w-full overflow-x-auto border border-[#23272D] rounded-[3px]">
