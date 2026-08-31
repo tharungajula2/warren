@@ -13,8 +13,8 @@ export function Flow({ children }: FlowProps) {
         </span>
         <span className="font-mono text-[10px] text-[#6B747E]">ASCII FLOW</span>
       </div>
-      <div className="p-4 overflow-x-auto">
-        <pre className="font-mono text-[12px] leading-[18px] text-[#E6E8EB] whitespace-pre tabular-nums m-0 select-text">
+      <div className="p-4">
+        <pre className="font-mono text-[11px] leading-[17px] text-[#E6E8EB] whitespace-pre-wrap break-words tabular-nums m-0 select-text">
           {children}
         </pre>
       </div>

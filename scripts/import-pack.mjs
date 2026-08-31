@@ -402,7 +402,8 @@ for (const seg of rawSegments) {
       }
 
       const cleaned = cleanProse(secBody);
-      if (cleaned.startsWith("**No delta.**")) {
+      const isNoDelta = cleaned.toLowerCase().includes("no delta") || (!cleaned.match(/####\s+(IN|UK|EU|US)/i) && !cleaned.match(/\*\*(IN|UK|EU|US)\*\*/));
+      if (isNoDelta) {
         bodyComponents.push(`<Rule label="NO DELTA">\n${escapeJsx(cleaned)}\n</Rule>`);
       } else {
         const jLines = cleaned.split(/\r?\n/);
