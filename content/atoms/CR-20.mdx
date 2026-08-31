@@ -68,13 +68,11 @@ Internal behaviour + refreshed bureau data
 Behavioural score → Calibration → PD / monitoring
 ```
 
-### Flow
+### Where it sits
 
-```text
 Upstream:   Decision date · Application data · Bureau snapshot · Internal account history
 This:       Define observation window → build score/ranking → calibrate if probability needed
 Downstream: Approve/decline · Limit/pricing · Behavioural monitoring · PD · Collections
-```
 
 ### Permanent rule
 
@@ -85,6 +83,7 @@ A model may use only information that was available at the point in time at whic
 **Application score** — risk ranking from information available around origination.
 
 ---
+
 **Behavioural score** — risk ranking from subsequent account-performance information.
 
 ### Never confuse [Clean bureau] and [Strong repayment capacity]
@@ -92,6 +91,7 @@ A model may use only information that was available at the point in time at whic
 **Clean bureau** — no adverse event observed in the covered reported history.
 
 ---
+
 **Strong repayment capacity** — sustainable ability to meet future obligations from cash flow or resources; bureau history is only one input.
 
 ### Permanent trap

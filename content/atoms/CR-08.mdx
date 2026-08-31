@@ -71,13 +71,11 @@ DPD clock starts → Delinquency bucket advances
 Collections / early warning → Governed default test
 ```
 
-### Flow
+### Where it sits
 
-```text
 Upstream:   Contractual due date · Required payment · Credits received
 This:       Due → Overdue → DPD count → Delinquency state
 Downstream: Collections · Early warning · Default test · Roll rates · Vintage analysis
-```
 
 ### Formula
 
@@ -94,6 +92,7 @@ Calculate delinquency from the contractual obligation and the specified counting
 **Arrears** — the unpaid amount.
 
 ---
+
 **Days past due** — elapsed time associated with an unpaid contractual obligation.
 
 ### Permanent trap

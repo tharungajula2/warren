@@ -44,13 +44,11 @@ import_source: 02_CR_credit_risk_core.md
 
 A simple term loan may be one facility with one account. A revolving facility can have several operational accounts. One obligor can hold facilities with different collateral, seniority and drawdown behaviour even when a common obligor PD is used.
 
-### Flow
+### Where it sits
 
-```text
 Upstream:   Obligor · Product design · Credit decision
 This:       Product → Facility → Account
 Downstream: Exposure · Delinquency · LGD · EAD · Collections · Reporting
-```
 
 ### Permanent rule
 
@@ -61,6 +59,7 @@ Every risk measure must state its level: product, facility, account, obligor or 
 **Facility** — the contractual grant or commitment of credit, including its limit and terms.
 
 ---
+
 **Account** — the operational record through which balances, payments and arrears are booked; one facility need not equal one account.
 
 ### Permanent trap

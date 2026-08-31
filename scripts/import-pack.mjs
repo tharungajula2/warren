@@ -363,7 +363,19 @@ for (const seg of rawSegments) {
         isPerishable = true;
       }
 
-      const cleaned = cleanProse(secBody);
+      // Format inline country markers onto separate lines for scannability
+      let formattedJurisdiction = secBody.replace(/(?<!^)\s*(\*\*(?:IN|UK|EU|US)\*\*)\s*/g, "\n\n$1 ");
+      const cleaned = cleanProse(formattedJurisdiction);
+      bodyComponents.push(`### ${rawSecTitle}\n\n${escapeJsx(cleaned)}`);
+    } else if (secTitle.includes("never confuse")) {
+      sectionStats.NeverConfuse++;
+      // Prevent Setext H2 heading parsing by ensuring blank lines before/after '---'
+      let formattedNeverConfuse = secBody
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .join("\n")
+        .replace(/\n*---+\n*/g, "\n\n---\n\n");
+      const cleaned = cleanProse(formattedNeverConfuse);
       bodyComponents.push(`### ${rawSecTitle}\n\n${escapeJsx(cleaned)}`);
     } else if (secTitle.includes("recall")) {
       sectionStats.Recall++;

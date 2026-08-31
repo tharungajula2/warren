@@ -53,13 +53,11 @@ Roll rate: Current → Early delinquency → Later delinquency → Default state
 At each step: cure / stay / worsen
 ```
 
-### Flow
+### Where it sits
 
-```text
 Upstream:   Origination date · Account age · DPD/default states · Observation history
 This:       Cohort by vintage OR transition by state
 Downstream: Early warning · Collections capacity · Forecasting · Policy review · Model validation
-```
 
 ### Formula
 
@@ -78,6 +76,7 @@ Compare like with like in time: equal seasoning for vintages, and fixed start/en
 **Vintage analysis** — follows origination cohorts through account age.
 
 ---
+
 **Roll-rate analysis** — follows transitions between credit or delinquency states through time.
 
 ### Permanent trap
