@@ -1,17 +1,18 @@
 ---
 id: MRM-08
-title: Independent Model Validation
+title: The Model Lifecycle and Its Control Gates
 type: mechanism
 domain: model-risk
 subdomain: governance-and-lifecycle
 one_screen: >-
-  Independent validation is a formal review of a model by someone outside the
-  development team.  It checks data, assumptions, methodology, and output
-  accuracy.  True independence (no conflicts with the model developer) is
-  required to ensure objectivity.
+  A model lifecycle is not a project plan; it is a sequence of governed states
+  in which evidence must be sufficient before the model can move forward. The
+  key control idea is the gate: development does not grant use, validation does
+  not grant approval, approval does not end monitoring, and change can reopen
+  earlier gates.
 prerequisites:
+  - MRM-05
   - MRM-06
-  - MRM-07
 jurisdictions:
   - universal
 perishable: true
@@ -22,53 +23,102 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      S&C memo on SR 26-2 (Apr. 2026), noting validation independence
-      requirement.
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation framework.'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Model validation is a crucial second-line control.  Its purpose is to give management confidence that the model is “fit for purpose.”  Validation should start by reviewing the model’s design (the conceptual soundness) and then testing performance.  Typical steps include checking whether inputs meet quality standards, verifying calculations, re-running parts of the model in a fresh environment (code review/backtest), and assessing outputs against outcomes.  The validator also reviews documentation and ensures compliance with policy.
+### Core mechanism
 
-**Independence is key.**  The reviewer must not be the same person (or team) who built the model.  Regulators insist on unbiased, competent validators.  For example, the U.S. Revised Guidance says effective challenge should be done by individuals “with sufficient independence to maintain objectivity”.  RBI requires each model be validated by a process “independent of model development”.  The validator typically reports to senior management or a separate risk committee.  Internal audit (third line) does not perform the day-to-day validation but will later audit the process.
+```text
+Selection / development
+    ↓
+Developer testing
+    ↓
+Independent validation
+    ↓
+Approval
+    ↓
+Deployment and use
+    ↓
+Ongoing monitoring
+    ↓
+Change / recalibration / redevelopment
+    ↓
+Revalidation and reapproval where required
+    ↓
+Retirement
+```
 
-Validation should occur before a model goes live and then periodically (e.g. annually or when triggered by events).  The Fed/OCC guidance now recommends a risk-based frequency rather than a fixed schedule.  RBI’s draft explicitly says each model must be validated before deployment and after any material change or annually.  In practice, validators produce a formal report summarizing findings and recommendations.  If issues are found, the model must be remediated before use.  Independent validation is non-negotiable: an unvalidated model should never enter production.
+| Gate | Minimum decision |
+| :--- | :--- |
+| Development complete | Is the evidence pack sufficient for independent challenge? |
+| Validation complete | Is the model reliable enough for its intended use, with known limitations? |
+| Approval | Is residual model risk acceptable and use authorised? |
+| Deployment | Does production reproduce the approved model? |
+| Monitoring | Does evidence still support continued use? |
+| Change | Does the change reopen validation or approval? |
+| Retirement | Can use cease without breaking dependencies or records? |
+
+Lifecycle controls are recursive. A material change can return an active model to development, validation and approval rather than allowing an informal production patch.
+
+### Where it sits
+
+```text
+Upstream:   Inventory · Tiering · Governance policy
+This:       Lifecycle states and gates
+Downstream: Development · Validation · Approval · Monitoring · Change · Retirement
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model owner | Coordinates the model through lifecycle stages |
+| Developer | Produces development and change evidence |
+| Validation / MRM | Independently challenges relevant stages |
+| Approval authority | Authorises use and material changes |
+| Business user | Operates only within approved conditions |
 
 ### Permanent rule
 
-The model validator must be independent of development (a separate person or team) and must rigorously test the model’s integrity before use.
+A lifecycle stage creates evidence; a gate creates authority. Evidence from one stage is not authority to skip the next.
 
-### Permanent trap
+### Never confuse [Validation] and [Approval]
 
-Letting the developer self-validate.  This destroys objectivity.  An independent validator is required by design, not merely someone “reviewing for mistakes.”
-
-### Never confuse
-
-**Independent validation** — a thorough check of the model by a second line (model risk or quant team).
+**Validation** - independent assessment of reliability, limitations and fitness for intended use.
 
 ---
 
-**Internal audit** — a separate (third line) review of the framework/process, not a substitute for the validation itself.
+**Approval** - governance decision to accept residual risk and authorise specified use, possibly with conditions.
+
+### Permanent trap
+
+Treating "live" as the final state. Production use begins a new control phase in which monitoring, issue management, change and eventual retirement remain governed.
 
 ### Jurisdiction variants
 
-**IN** — RBI requires independent vetting/validation of each model before deployment and at least annually.  All models (internal or third-party) must be independently validated.
-
-**UK** — PRA SS1/23 Principle 4 mandates ongoing, independent and effective challenge of every model.  The SS explicitly calls for a validation process separate from development.
-
-**US** — SR 26-2 emphasizes objectivity but does not dictate a specific validator role; it simply requires “effective challenge by individuals with sufficient independence”.  It allows flexibility in how firms organize independence (e.g. separate team or robust governance).
-
-**EU** — EBA and ECB Pillar 2 frameworks require internal model validation by an independent function.  ECB’s internal-model guide and the EBA IRB Validation Handbook both assume separate validator teams.  The concept of independent review is universal.
+No delta. The cited regimes use different language and degrees of prescription, but the lifecycle logic of development, challenge, approval, use, monitoring, change and exit is common.
 
 <Recall
-  q="Who should perform a model’s validation?"
-  a="Someone independent from development (often a second-line model risk or analytics team)."
+  q="Why is a lifecycle better understood as a sequence of gates than as a timeline?"
+  a="Because progression depends on evidence and authority, not merely elapsed time. A model cannot become acceptable just because development has finished."
 />
 
 <Recall
-  q="When is validation required?"
-  a="Before a model is put in use, after material changes, and periodically (e.g. yearly)."
+  q="What happens to the lifecycle after a material model change?"
+  a="The relevant earlier gates reopen. The changed model may require renewed testing, independent validation and approval before unrestricted use continues."
 />

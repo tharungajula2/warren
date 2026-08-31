@@ -1,68 +1,117 @@
 ---
 id: MRM-15
-title: Stability Metrics (PSI and CSI)
+title: 'Independent Validation: Mandate, Independence and Timing'
 type: mechanism
 domain: model-risk
 subdomain: validation-and-metrics
 one_screen: >-
-  Population Stability Index (PSI) and Characteristic Stability Index (CSI)
-  measure changes in distributions over time.  PSI compares a variable’s or
-  model-score distribution between the development period and current period. 
-  CSI is similar but often used for categorical variables (e.g. rating grades). 
-  In credit risk, PSI/CSI thresholds (e.g. >0.25) are used as a rule-of-thumb to
-  signal a “significant change” that may require model review.
+  Independent validation asks whether the model is reliable enough for its
+  intended use, what limitations remain, and what controls or corrective actions
+  are required. Independence is substantive, not ceremonial: validators need
+  technical competence, objective incentives, access to evidence and
+  organisational standing to challenge the model owner effectively.
 prerequisites:
-  - MRM-10
-  - MRM-13
+  - MRM-09
+  - MRM-14
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
   - label: >-
-      Risk.net Journal of RM Validation, *Statistical properties of the
-      population stability index* (Apr. 2022) – PSI thresholds.
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-PSI is calculated as Σ (actual - expected)*ln(actual/expected) over bins of the distribution.  It quantifies how much the data have shifted.  A common practice (from industry “rules of thumb”) is: **PSI &lt;0.10** = little change, **0.10–0.25** = moderate change, **&gt;0.25** = significant change requiring investigation.  For example, if the score distribution has more high-risk borrowers now than at development, PSI will rise.  CSI is a variant used when variables are categorical (like rating transitions).
+### Core mechanism
 
-Banks use these metrics in monitoring (MRM-10).  If PSI breaches its threshold, it often triggers a model review or recalibration.  Regulators expect banks to track such stability measures for key variables and scores.  (EBA/ECB Pillar 2 expectations and TRIM reviews included similar migration/stability checks.)
+```text
+Validation mandate
+    ↓
+Independent access to model, data and documentation
+    ↓
+Critical analysis and testing
+    ↓
+Reliability + limitations + required actions
+    ↓
+Validation opinion
+    ↓
+Approval decision
+```
 
-It is important not to treat PSI/CSI breaches as automatic model failure.  They are signals that something changed – perhaps the portfolio mix or economy – and model performance must be reassessed.  A sudden PSI increase could also come from a one-time data issue.  Nonetheless, including PSI/CSI in validation reports is good practice.
+| Independence dimension | What good looks like |
+| :--- | :--- |
+| Organisational | Validation is not controlled by model development or use |
+| Incentives | Validator is not rewarded for getting the model approved |
+| Expertise | Validator can understand and challenge the model's methods |
+| Access | Validator can obtain data, code, documentation and users |
+| Standing | Findings can reach decision-makers and delay or restrict use |
+| Scope | Validation can extend testing when developer evidence is weak |
+
+Timing should be risk-based. First-use validation is the normal control point; material changes, emerging weaknesses or changing conditions can trigger renewed validation. A fixed calendar alone is insufficient because a stable low-risk model and a rapidly changing material model should not receive identical attention.
+
+### Where it sits
+
+```text
+Upstream:   Developer evidence · Model tier · Governance roles
+This:       Independent validation mandate and timing
+Downstream: Validation work programme · Findings · Approval
+```
 
 ### Permanent rule
 
-Monitor variable and score shifts with PSI/CSI.  Significant drift (e.g. PSI &gt;0.25) should always prompt model review or action.
+Validation must be able to reach an unfavourable conclusion without organisational pressure to approve the model.
 
-### Permanent trap
+### Never confuse [Validation independence] and [Physical separation]
 
-Relying on fixed PSI thresholds without context.  A PSI just above 0.25 in a benign economic situation may not be as urgent as the same PSI during a crisis.  Also, using too many bins can artificially inflate PSI; ensure bins are consistent.
-
-### Never confuse
-
-**Population Stability Index (PSI)** — measures shift in the model *score* or numeric input distribution between time periods.
+**Validation independence** - sufficient objectivity, expertise, authority and freedom from conflicting incentives to challenge the model.
 
 ---
 
-**Characteristic Stability Index (CSI)** — measures shift in a *categorical* characteristic distribution (e.g. rating classes).
-Both flag distribution shifts, but PSI is for continuous scores/inputs, CSI for discrete categories.
+**Physical separation** - different desks, teams or reporting lines. It may support independence but does not guarantee it.
+
+### Permanent trap
+
+Using an annual validation calendar as proof of control. Frequency should respond to purpose, materiality, methodology, model change, data limitations and emerging evidence.
 
 ### Jurisdiction variants
 
-**No delta.** PSI/CSI are industry-standard techniques. Supervisors generally expect banks to check stability of model inputs and outputs over time.  ECB’s internal-model audits (TRIM) and Pillar 2 guidance include similar stability monitoring.
+| Jurisdiction | Timing / frequency | Independence / status |
+| :--- | :--- | :--- |
+| US | Scales with use, materiality, methodology, change, data limits and constraints. | Usually pre-use; urgent early use needs limits, stakeholder communication and heightened monitoring. |
+| UK | Proportionate to model risk. | Principle 4: independent validation, effective challenge, separation from development/use. |
+| EU | Ongoing assessment commensurate with prudential-model risk. | Independent validation embedded in CRR/ECB governance. |
+| IN | Proposed pre/post-deployment, after modifications/triggers and periodically. | All models; draft as at August 2026, not final. |
 
 <Recall
-  q="What PSI value typically signals “action required”?"
-  a="Over 0.25 (often indicated as “significant change”)."
+  q="Why can a validator be organisationally separate yet not truly independent?"
+  a="Separation fails if incentives, access or escalation power still discourage challenge. Independence requires the practical ability to reach and defend an adverse conclusion."
 />
 
 <Recall
-  q="If a model’s PSI is very high, what might that indicate?"
-  a="The population has changed (e.g. the borrower mix or economy changed) and the model may need recalibration or replacement."
+  q="What is the correct principle for validation timing?"
+  a="First-use validation is the normal gate, but subsequent timing should follow model risk, changes and new evidence rather than a blind fixed cadence."
 />

@@ -1,0 +1,130 @@
+---
+id: MRM-27
+title: 'AI/ML Validation: Generalisation, Drift and Robustness'
+type: mechanism
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  AI/ML validation extends ordinary model challenge. It retains purpose, data,
+  conceptual soundness, outcomes and use, while adding emphasis on
+  generalisation, overfitting, drift, robustness, subgroup behaviour,
+  explainability and post-deployment change.
+prerequisites:
+  - MRM-15
+  - MRM-17
+  - MRM-18
+  - MRM-26
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Parliament and Council, Regulation (EU) 2024/1689, Artificial
+      Intelligence Act, 13 June 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+| Validation lens | Validator asks |
+| :--- | :--- |
+| Generalisation | Does performance persist outside development data and familiar conditions? |
+| Overfitting | Has the model learned noise rather than durable relationships? |
+| Drift | Are inputs, outputs or relationships changing after deployment? |
+| Robustness | Do small plausible changes cause unstable outputs? |
+| Subgroup performance | Are weaknesses concentrated in relevant populations? |
+| Explainability | Are explanations sufficiently faithful and stable for their purpose? |
+| Dynamic behaviour | Can retraining or automatic updates alter the governed model? |
+| Stress / challenge testing | What happens under unusual or deliberately difficult inputs? |
+
+```text
+Development evidence
+    ↓
+Independent challenge
+    ↓
+Generalisation + robustness evidence
+    ↓
+Drift + subgroup analysis
+    ↓
+Explainability / behaviour challenge
+    ↓
+Validation opinion + monitoring conditions
+```
+
+Red-teaming intentionally seeks harmful, unstable or policy-breaking behaviour under realistic risk scenarios. It complements ordinary validation. This pack owns the validator's use of evidence, not ML mathematics or test derivation.
+
+### Where it sits
+
+```text
+Upstream:   AI/ML governance · Independent validation · Outcomes analysis
+This:       AI/ML-specific validation
+Downstream: Approval conditions · Enhanced monitoring · Change · Disable / retirement
+```
+
+### Permanent rule
+
+Average accuracy is weak evidence when failure concentrates in edge cases, subgroups or changed environments. Validation must look for where the model breaks.
+
+### Never confuse [Drift] and [Overfitting]
+
+**Drift** - live data or the relationship between inputs and outcomes changes after development.
+
+---
+
+**Overfitting** - the model learned development-specific noise or patterns that fail to generalise even without genuine external change.
+
+### Permanent trap
+
+Validating the explanation method but not the model behaviour it claims to explain. A plausible explanation can still be unstable, incomplete or unfaithful.
+
+### Jurisdiction variants
+
+| Jurisdiction | Scope | Delta/status |
+| :--- | :--- | :--- |
+| US | SR 26-2: qualifying non-generative/non-agentic AI. | Generative/agentic excluded as at August 2026. |
+| UK | SS1/23: in-scope AI/ML. | Independent-validation/MRM applies. |
+| EU | ECB-Guide-28-Jul-2025: prudential ML; AI-Act: high-risk AI. | Generally applies 2-Aug-2026 subject to transition. |
+| IN | Draft AI/ML validation. | Explainability/overfitting/bias/output-variability/data-risk/relevant-red-teaming/dynamic-updates proposed as at August 2026. |
+
+<Recall
+  q="Why can strong average test accuracy still leave serious AI/ML model risk?"
+  a="Average performance can hide failures in subgroups, edge cases or changed conditions. Validation must test generalisation, robustness and where errors concentrate."
+/>
+
+<Recall
+  q="How does drift differ from overfitting?"
+  a="Drift means the live environment or relationship moved; overfitting means the original model learned patterns that never generalised reliably."
+/>
+
+<Recall
+  q="What role does red-teaming play?"
+  a="It deliberately searches for failure under challenging inputs or interactions, supplementing ordinary performance and robustness testing rather than replacing the validation work programme."
+/>

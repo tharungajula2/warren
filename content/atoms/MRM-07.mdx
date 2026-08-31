@@ -1,69 +1,109 @@
 ---
 id: MRM-07
-title: Model Development
-type: procedure
+title: Aggregate Model Risk and Risk Appetite
+type: mechanism
 domain: model-risk
 subdomain: governance-and-lifecycle
 one_screen: >-
-  During development, the model’s purpose, data, and method are defined and
-  documented.  Firms must clearly state the model’s objectives, select
-  appropriate data and variables, choose a methodology suited to the problem,
-  and record all assumptions and design choices.  Good documentation ensures
-  transparency for later review.
+  Managing models one by one can miss the largest exposure: several individually
+  acceptable models may rely on the same data, assumptions, vendor or economic
+  relationship and fail together. Aggregate model risk therefore combines
+  model-level risk with concentration and dependency, then compares that
+  enterprise exposure with the institution's model risk appetite and tolerance.
 prerequisites:
+  - MRM-05
   - MRM-06
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'RBI, *Draft Principles for Model Risk in Credit* (Aug. 2024).'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      PRA SS1/23 (Apr. 2026) – Principle 3 (Model development and use) –
-      Overview.
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Model development starts with **problem definition**: what decision the model will support.  For example, a credit model might predict default probability for new loan applications.  The developer then assembles relevant data.  Input data should be adequate and of high quality (see MRM-13).  Next is choosing or building the mathematical/statistical method (e.g. logistic regression, decision tree, machine learning).  The methodology must fit the purpose (e.g. lifetime PD modeling requires a survival model, not simple linear regression).  All key **assumptions** and variables must be explicitly specified.
+### Core mechanism
 
-Regulators stress clear objectives and documentation.  RBI’s credit model principles, for instance, require “the objectives of the model” to be clearly defined, and that “inputs and assumptions… ensure adequate robustness”.  RBI also mandates detailed documentation including sensitivity of outputs to assumptions.  Likewise, firms should document model logic, training process, and expected limitations.  This documentation is crucial for later validation and audit.  PRA Principle 3 expects firms to have development standards and documentation (the PRA SS notes that firms should have model development and use governed under policies, with documentation).
+```text
+Individual model risk
+    ↓
+Common dependencies + correlated assumptions + shared vendors
+    ↓
+Aggregate model risk
+    ↓
+Risk appetite / tolerance
+    ↓
+Accept · Mitigate · Restrict · Diversify · Exit
+```
 
-Practically, development often involves statistical analysis and iterative testing.  Developers calibrate parameters on historical data, check intuitive plausibility (face validity), and may back-test on hold-out data before finalizing the model.  The key is to embed sound practice: clear target outcomes, robust data pipelines, explainable methodology, and retrievable code/documents.  Once development is done, no use is allowed until the model passes independent validation.
+| Aggregation lens | Example question |
+| :--- | :--- |
+| Common data | How many models depend on the same customer master or market feed? |
+| Common methodology | Would one invalid assumption impair several models? |
+| Model chains | Does an upstream output feed many downstream decisions? |
+| Vendor concentration | Could one provider outage or defect affect many models? |
+| Business concentration | Are critical decisions clustered around a small model set? |
+| Technology concentration | Do several models share one platform or implementation layer? |
+
+Risk appetite states how much model risk the institution is willing to accept in pursuit of its objectives. Tolerance converts that high-level appetite into actionable boundaries, escalation triggers or control expectations.
+
+### Where it sits
+
+```text
+Upstream:   Inventory · Dependencies · Tiering · Business strategy
+This:       Aggregate model risk and appetite
+Downstream: Governance priorities · Mitigation · Limits · Reporting
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model owners | Report model-level risk and dependencies |
+| Enterprise MRM | Aggregates risk and identifies concentration |
+| Senior management | Operates within approved appetite |
+| Board / relevant committee | Oversees appetite and material breaches |
 
 ### Permanent rule
 
-A model must have a defined use case, appropriate data, and complete documentation from the start.  Never proceed to validation or use without thorough development records.
+Portfolio diversification of financial exposures does not guarantee diversification of model risk. Shared models, data and assumptions can create hidden common-mode failure.
 
-### Permanent trap
+### Never confuse [Model tier] and [Model risk appetite]
 
-Creating a “black box” with no written spec.  Skipping documentation or ignoring model purpose can lead to validation failure.  (For example, training a model without stating its decision criteria or target population leaves validation teams clueless.)
-
-### Never confuse
-
-**Model purpose** — the business decision or metric the model is meant to support (e.g. predicting 1-year PD).
+**Model tier** - classification of one model used to scale its controls.
 
 ---
 
-**Model exposure** — the financial amount or scope to which the model applies.
-They are different: purpose is “what” the model does; exposure is “how big” its impact is.
+**Model risk appetite** - enterprise statement of how much model risk the institution is prepared to accept and under what constraints.
+
+### Permanent trap
+
+Adding model risk scores as though they were independent. Aggregation must recognise dependencies and correlated failure, not just arithmetic totals.
 
 ### Jurisdiction variants
 
-**No delta.** Development standards are similar worldwide.  RBI’s guidance explicitly lists development principles (clear objectives, robust inputs, documentation).  PRA and Fed guidance likewise stress that models should be developed in line with policy and in-house standards, though neither prescribes a specific development process beyond these principles.
+No delta. The exact appetite framework is institution-specific, but assessing model risk both individually and in aggregate and governing material exposures is a common MRM principle.
 
 <Recall
-  q="What should be documented during model development?"
-  a="The model’s objective, data sources, assumptions, methodology, parameters, and any transformations.  RBI requires documenting sensitivity to assumptions."
+  q="How can ten individually acceptable models create unacceptable enterprise model risk?"
+  a="They may share one dataset, vendor, assumption or upstream model, creating a common failure channel that is invisible in isolated assessments."
 />
 
 <Recall
-  q="Why define objectives clearly?"
-  a="So validation can check if the model solves the intended problem.  Ambiguity leads to scope creep or misuse."
+  q="What does model risk appetite add beyond tiering?"
+  a="Tiering scales controls for individual models; appetite determines whether the institution's total and concentrated model risk exposure is acceptable at enterprise level."
 />

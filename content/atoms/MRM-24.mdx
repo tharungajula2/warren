@@ -1,0 +1,115 @@
+---
+id: MRM-24
+title: Retirement and Decommissioning
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  Retirement is a controlled lifecycle transition, not deletion. Before a model
+  leaves service, the institution must understand why it is being retired, what
+  replaces it, which downstream processes depend on it, how historical decisions
+  remain reproducible and what records must be retained.
+prerequisites:
+  - MRM-05
+  - MRM-22
+  - MRM-23
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+Retirement trigger → dependency/use assessment → replacement/fallback → approval → production access removed → inventory updated → evidence archived
+
+| Question | Required answer |
+| :--- | :--- |
+| Why retire? | Obsolescence, replacement, poor performance, business exit or regulatory change |
+| Dependencies? | Models, reports, decisions, interfaces and users |
+| Replacement? | New model, manual process, vendor service or none |
+| Reproducibility? | Historical outputs, decisions and regulatory evidence |
+| Residual access? | Read-only archive versus production execution |
+| Open issues? | Transfer to replacement or close with use |
+| Closure owner? | Model owner plus technology/governance functions |
+
+Exit is incomplete while hidden spreadsheets, APIs or downstream processes still call the model; that leaves an ownerless orphan model.
+
+### Where it sits
+
+```text
+Upstream:   Monitoring · Change decision · Replacement readiness
+This:       Controlled model retirement
+Downstream: Archive · Historical lineage · Replacement model · Inventory closure
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model owner | Initiates and documents decommissioning |
+| Business / technology | Removes use and manages dependencies |
+| MRM function | Challenges retirement completeness |
+| Records / governance | Preserves required evidence |
+
+### Permanent rule
+
+Retired means no longer used for live decisions; it does not mean its evidence can immediately disappear.
+
+### Never confuse [Retirement] and [Deletion]
+
+**Retirement** - governed removal from active use while preserving required lineage, records and historical reproducibility.
+
+---
+
+**Deletion** - destruction of an artefact. It may be prohibited by retention requirements and is not itself a lifecycle process.
+
+### Permanent trap
+
+Decommissioning an upstream model without tracing downstream consumers. A successful technical shutdown can still break reports, challenger processes or other models that depended on its output.
+
+### Jurisdiction variants
+
+| Jurisdiction | Exit expectation | Retention / status |
+| :--- | :--- | :--- |
+| US | Principles-based decommissioning. | No universal retention period; legal, recordkeeping and risk needs govern. |
+| UK | Inventory/lifecycle governance through exit. | No Indian-style ten-year rule. |
+| EU | Internal retirement plus CRR/ECB processes where prudential models are replaced. | Permissions/replacement arrangements may apply. |
+| IN | Draft keeps decommissioned models in inventory at least ten years. | Proposed only; not in force as at August 2026. |
+
+<Recall
+  q="Why should a retired model remain identifiable?"
+  a="Historical decisions, regulatory calculations and downstream outputs may need to be reconstructed, and the institution must preserve lineage showing which model version was used."
+/>
+
+<Recall
+  q="What is the main control risk in model retirement?"
+  a="Hidden dependency: the bank may formally retire a model while downstream systems or users continue relying on its output or while no safe replacement exists."
+/>

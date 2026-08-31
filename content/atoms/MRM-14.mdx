@@ -1,64 +1,115 @@
 ---
 id: MRM-14
-title: Calibration and Goodness-of-Fit
-type: mechanism
+title: Developer Testing and the Pre-Validation Evidence Pack
+type: procedure
 domain: model-risk
 subdomain: validation-and-metrics
 one_screen: >-
-  Calibration measures how well predicted probabilities match observed
-  outcomes.  A common tool is the Hosmer–Lemeshow (H-L) test: it groups data
-  (e.g. deciles) and compares predicted vs actual frequencies using a chi-square
-  statistic.  Good calibration means predicted and actual rates align.  However,
-  large sample sizes can cause H-L to reject even small, practically unimportant
-  differences.  Validation should also include graphical plots of predicted vs
-  actual rates as a sanity check.
+  Developer testing is first-line evidence that the model behaves as intended
+  before independent validation begins. It should expose weaknesses rather than
+  manufacture a pass: the pre-validation pack must show what was tested, what
+  failed, what changed, what remains limited and why the developer still
+  believes the model is fit to be challenged for its intended use.
 prerequisites:
+  - MRM-10
+  - MRM-11
+  - MRM-12
   - MRM-13
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: Statistical modeling reference on calibration (for concept).
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Calibration is distinct from discrimination.  For example, two models with the same AUC could have different calibration.  In logistic regression models, analysts often use the Hosmer–Lemeshow test to quantify calibration.  If the H-L p-value is high, the model is said to fit well; a low p-value suggests poor fit.  But practitioners caution that with large test samples, the H-L test is too sensitive: trivial misalignments will become “statistically significant.”  In other words, a very large dataset may make almost any model fail H-L even if calibration is acceptable in business terms.  Therefore, one should inspect calibration plots (e.g. predicted vs actual by bucket) alongside or instead of relying solely on H-L statistics.
+### Core mechanism
 
-Banks typically expect models to be reasonably well-calibrated.  For example, EBA Pillar 2 guidance on IRB models requires checking that observed default rates closely match predicted PDs.  If not, the model may need adjustment (calibration).  If H-L rejects a model, analysts should judge if the deviation is economically material.  In summary, calibration assessment involves statistical tests and also human judgement on the materiality of any miscalibration.
+| Evidence area | Developer question |
+| :--- | :--- |
+| Data | Are quality, selection and transformations tested? |
+| Logic | Does implementation match the specification? |
+| Sensitivity | Do outputs move plausibly when important inputs or assumptions move? |
+| Robustness | Does performance depend excessively on one sample or choice? |
+| Generalisation | Does evidence hold outside the fitting sample where appropriate? |
+| Alternatives | Were reasonable competing assumptions or methods considered? |
+| Edge cases | What happens under unusual, missing or extreme inputs? |
+| Limitations | What known weakness remains after development? |
+
+```text
+Build
+    ↓
+Test
+    ↓
+Diagnose failure
+    ↓
+Revise or document limitation
+    ↓
+Freeze candidate version
+    ↓
+Submit evidence for independent validation
+```
+
+Out-of-sample and out-of-time tests may be useful, but this atom does not teach their statistics. The point is governance: development evidence must be relevant to the model's stated purpose and difficult enough to reveal failure.
+
+### Where it sits
+
+```text
+Upstream:   Purpose · Data · Method · Implementation
+This:       First-line developmental evidence
+Downstream: Independent validation · Findings · Approval
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Developer | Designs, executes and documents testing |
+| Model owner | Confirms evidence pack is complete |
+| Business user | Provides practical challenge and unusual-use cases |
+| Validation | Reviews and independently extends the testing where needed |
 
 ### Permanent rule
 
-Always check calibration in addition to discrimination.  A model that ranks well (high AUC) but systematically underestimates risk can still be dangerous.
+Developer testing is necessary evidence, but it is not independent validation. The person proving the model was built carefully is not the final challenger of that proof.
 
-### Permanent trap
+### Never confuse [Developer testing] and [Independent validation]
 
-Blindly trusting p-values in large samples.  A trivial discrepancy with millions of observations can yield a significant H-L test, leading to overreaction.  Instead, focus on practical significance (e.g. a small percentage point error in probabilities is often tolerable).
-
-### Never confuse
-
-**Calibration (Goodness-of-fit)** — how closely the model’s predicted probabilities match actual outcomes (tested by H-L, calibration plots).
+**Developer testing** - first-line testing used to design, debug and evidence the candidate model.
 
 ---
 
-**Discrimination (AUC/Gini)** — how well the model orders outcomes (tested by AUC/KS).
-They address different qualities.  A model can discriminate well but still be mis-calibrated.
+**Independent validation** - objective challenge of the model and the sufficiency of the developer's evidence, supplemented by independent analysis where warranted.
+
+### Permanent trap
+
+Removing failed tests from the final pack. A documented failure and reasoned remediation is evidence of control; a polished record that hides development weaknesses deprives validators of the most informative evidence.
 
 ### Jurisdiction variants
 
-**No delta.** Calibration is universally required. Both PRA and Fed expect models to be well-calibrated for their intended use. RBI’s draft and IFRS9 guidance (for applicable NBFCs) also emphasize aligned predicted/actual losses.
+No delta. The 2026 US guidance expressly recognises model testing as a core development activity and scales rigor to complexity and materiality; the underlying first-line versus independent-challenge distinction is universal.
 
 <Recall
-  q="Why might the Hosmer–Lemeshow test fail on a good model with large N?"
-  a="Because with a huge sample, even tiny deviations from perfect fit give a large chi-square, yielding a “reject” p-value.  So a significant H-L in large samples doesn’t always mean the model is practically bad."
+  q="What is the most important difference between developer testing and validation?"
+  a="Developer testing is evidence produced by the first line while building the model; validation independently challenges both the model and whether that evidence is sufficient for the intended use."
 />
 
 <Recall
-  q="How can we assess calibration if H-L is misleading?"
-  a="Use calibration plots or look at cumulative predicted vs actual defaults across score buckets."
+  q="Why should failed development tests remain visible?"
+  a="They reveal where the model was fragile, what was changed and which limitations may remain, giving validators better evidence about residual model risk."
 />

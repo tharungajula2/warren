@@ -1,0 +1,121 @@
+---
+id: MRM-19
+title: Validation Findings and Issue Disposition
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  Validation evidence must end in a decision-useful opinion, not a pile of
+  tests. Findings translate observed weaknesses into severity, required action,
+  ownership and closure evidence; the validation opinion then states whether the
+  model is fit for intended use, fit only with limitations or not fit, without
+  pretending that validation itself grants approval.
+prerequisites:
+  - MRM-16
+  - MRM-17
+  - MRM-18
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+```text
+Evidence
+    ↓
+Finding
+    ↓
+Severity and model-risk impact
+    ↓
+Remediation / compensating control
+    ↓
+Owner + due date
+    ↓
+Validation opinion
+    ↓
+Closure testing
+```
+
+| Finding field | What it must answer |
+| :--- | :--- |
+| Observation | What is wrong or uncertain? |
+| Consequence | Which output, use or decision can be affected? |
+| Severity | How material is the resulting model risk? |
+| Root cause | Data, method, implementation, use or governance? |
+| Action | What must change? |
+| Interim control | How is risk contained before permanent fix? |
+| Owner / due date | Who is accountable and by when? |
+| Closure evidence | What proves the issue is actually resolved? |
+
+A practical opinion scale can distinguish:
+- Fit for intended use.
+- Fit subject to defined limitations, controls or remediation.
+- Not fit for intended use.
+
+The labels are institution-specific; the essential point is that the conclusion reflects residual risk, not merely the number of findings.
+
+### Where it sits
+
+```text
+Upstream:   Conceptual review · Outcomes · Stability · Benchmarking
+This:       Findings, severity and validation opinion
+Downstream: Approval · Restrictions · Remediation · Issue closure
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Validator | Owns finding and independent closure assessment |
+| Model owner | Owns remediation |
+| Business user | Implements interim use restrictions |
+| Governance body | Oversees overdue or material issues |
+
+### Permanent rule
+
+The model owner fixes the problem; the independent challenger decides whether evidence supports closing the finding.
+
+### Never confuse [Validation opinion] and [Model approval]
+
+**Validation opinion** - independent conclusion on reliability, limitations and conditions.
+
+---
+
+**Model approval** - governance decision to authorise use and accept residual risk after considering validation and business context.
+
+### Permanent trap
+
+Closing findings because the due date arrived or management accepted the risk. Risk acceptance can permit continued use; it does not prove the technical weakness disappeared.
+
+### Jurisdiction variants
+
+No delta. Finding taxonomies differ across institutions, but translating validation weaknesses into accountable remediation and controlled closure is a universal governance mechanism.
+
+<Recall
+  q="What turns a technical observation into a useful validation finding?"
+  a="It must connect the weakness to model-risk consequence, severity, corrective action, ownership, timing and evidence required for closure."
+/>
+
+<Recall
+  q="Why can a model be &quot;fit with limitations&quot; rather than simply pass or fail?"
+  a="Some limitations are acceptable when bounded by use restrictions, monitoring or remediation; validation should expose residual risk rather than force false binary certainty."
+/>

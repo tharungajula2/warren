@@ -1,19 +1,21 @@
 ---
 id: MRM-09
-title: 'Approval, Governance, and Use'
-type: procedure
+title: 'Who Produces, Uses, Approves, Challenges and Audits'
+type: mechanism
 domain: model-risk
 subdomain: governance-and-lifecycle
 one_screen: >-
-  Before a validated model can be used, it must be formally approved by senior
-  management or the board (or a delegated committee).  The model’s intended use
-  must align with business needs and policy.  Governance roles (board oversight,
-  risk committees, internal audit) apply: boards must approve MRM policies and
-  receive reports on model issues.
+  Ownership is the load-bearing control in MRM because the same person should
+  not create evidence, decide whether that evidence is convincing, accept the
+  residual risk and audit the process. Effective governance separates
+  production, consumption, approval, independent challenge and assurance while
+  ensuring the challenger has expertise, standing and access to decision-makers.
 prerequisites:
   - MRM-08
 jurisdictions:
-  - universal
+  - IN
+  - UK
+  - US
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -22,56 +24,80 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), para 3
-      (Board approval requirement).
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      S&C memo on SR 26-2 (Apr. 2026), referencing board approvals and audit
-      reporting.
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Model approval is the gate after validation.  Typically, a model is presented to a **model governance committee** or **senior management** (often the Board’s Risk Management Committee) with documentation and validation results.  They evaluate whether the model is sound and fit for its intended use.  Only then is it authorized for production use.  Regulators historically required the board or its delegate to approve model risk policies and significant models.  For example, RBI’s circular mandates that new credit models (and material changes) be approved by the bank’s Risk Management Committee of the Board.  PRA SS1/23 requires that firms “allocate responsibility” for model governance to senior management, with clear accountability for model policies (principles) – implying top-level sign-off.
+### Core mechanism
 
-Once approved, **use test** considerations apply: regulators in risk frameworks often require that the model actually be used in day-to-day decisions.  A common regulatory expectation (especially in IRB models) is that models cannot just exist on paper – they must be integrated into decision processes.  (Though not explicitly in SS1/23 or SR 26-2, “use test” is a familiar concept from Basel/IRB validation.)  Practically, firms should document how a model’s output is used operationally (e.g. credit officers follow the scorecard outputs).
+| Role | Produces | Approves | Consumes | Challenges |
+| :--- | :--- | :--- | :--- | :--- |
+| Developer | Design, code, tests | No | Sometimes | No |
+| Owner / first line | Ownership, monitoring, remediation | Delegated non-validation decisions only | Yes | No |
+| Business user | Use evidence, feedback, overrides | Only if separately delegated | Yes | No |
+| Approval authority | Decision, conditions | Yes | May | Uses validation input |
+| MRM / validation | Validation evidence | No business approval | No routine first-line use | Yes |
+| Internal audit | Audit evidence | No | No | Framework effectiveness, not routine validation |
 
-Ongoing governance ties in here.  The Board is responsible for overall MRM framework oversight and must be informed of material model issues.  Regulators expect internal audit (third line) to review the MRM framework and report any findings.  For example, the U.S. original guidance stated that “[f]indings from internal audit related to models should be…reported to the board”.  Model risk appetite – the firm’s tolerance for model-related errors – should also be approved at the board level.
+```text
+Developer → owner/user → independent validation → approval authority → controlled use
+Internal audit ↓ framework assurance
+```
+
+Independence is functional: incentives, authority and escalation must permit genuine challenge.
+
+### Where it sits
+
+```text
+Upstream:   Lifecycle gates · Organisational design
+This:       Role separation and accountability
+Downstream: Development evidence · Validation · Approval · Audit
+```
 
 ### Permanent rule
 
-No model may enter production without final sign-off by the appropriate governance authority (Board or delegated committee). The model’s use must match its approved scope.
+No role title creates independence by itself. Independence requires objective incentives, sufficient expertise, organisational standing and authority to escalate or effect change.
 
-### Permanent trap
+### Never confuse [Independent validation] and [Internal audit]
 
-Using a model before board approval or outside its intended use.  For example, **rolling out a credit-scoring model without documented Board approval and policies** violates governance norms.
-
-### Never confuse
-
-**Model approval** — formal authorization by management/board to use a model.
+**Independent validation** - challenges specific model reliability, limitations and use as part of normal MRM.
 
 ---
 
-**Model validation** — the technical check of model accuracy.
-Approval is a governance step *after* validation; some people mistake a successful validation report for “approval,” but the board’s sign-off is a separate requirement.
+**Internal audit** - independently assesses whether the MRM framework, policies and controls are designed and operating effectively; it does not ordinarily duplicate development or validation.
+
+### Permanent trap
+
+Calling the second line "the model owner". The owner remains accountable for the model; independent challenge must not absorb first-line responsibility merely because it can block or condition use.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s guidance says deployment (and any changes) of credit models requires prior approval by the Board or its Risk Committee. The Board must also approve the MRM framework and model risk appetite, and internal audit findings must go to the Board.
-
-**UK** — PRA SS1/23 expects firms to assign overall MRM responsibility to senior management (SMFs) and for boards to oversee MRM policies.  High-tier models must be signed off by senior committees.  Internal audit is the third line (firm should ensure audit reviews MRM).
-
-**US** — SR 26-2 does not prescribe exact boards’ actions, but emphasizes clear roles and accountability in MRM.  The prior SR 11-7 (and S&amp;C memo) note that findings from audit should be reported to the board, and that boards should approve MRM policies.
-
-**EU** — ECB guidance on internal models similarly requires board or management body sign-off of key models and policies (e.g. in IRB models board approval of rating systems). The three-lines framework is expected (first line model owner, second line risk group, third line audit).
+| Jurisdiction | Accountability | Independence / status |
+| :--- | :--- | :--- |
+| US | Clear accountability; no prescribed organisation. | Objective effective challenge with independence, standing and influence; conflicts managed. |
+| UK | Board/senior-management accountability; appropriate SMF holder(s) own overall MRM. | Independent validation alongside accountable management. |
+| IN | Proposed three lines: owners; independent MRM/validation; internal audit, plus Board/RMCB duties. | Draft as at August 2026; not final. |
 
 <Recall
-  q="Who usually grants final approval for a model?"
-  a="A senior governance body (e.g. Board or delegated committee).  RBI specifies the bank’s Risk Management Committee of the Board for credit models."
+  q="Why is successful validation not the same as model approval?"
+  a="Validation supplies an independent opinion on reliability and limitations; approval is the separate governance act that accepts residual risk and authorises use."
 />
 
 <Recall
-  q="What is the “use test”?"
-  a="Demonstrating that the model is actually used in decisions for which it was designed (not just an academic exercise)."
+  q="What makes challenge independent if organisational separation is not enough?"
+  a="The challenger needs objective incentives, technical competence, access to information, organisational standing and the ability to escalate or drive change without first-line pressure."
 />

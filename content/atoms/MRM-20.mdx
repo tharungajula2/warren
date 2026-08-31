@@ -1,0 +1,117 @@
+---
+id: MRM-20
+title: Approval and Conditions of Use
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  Approval is the governance act that accepts or rejects residual model risk for
+  a defined use after considering validation, limitations and business need. It
+  can be unconditional, conditional or refused; a conditional approval is a
+  controlled risk decision with explicit restrictions and expiry or remediation,
+  not a way to bypass unresolved validation.
+prerequisites:
+  - MRM-19
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+```text
+Validation opinion + business need + residual risk
+    ↓
+Approval authority
+    ↓
+Approve · Approve with conditions · Reject
+    ↓
+Documented scope and conditions
+    ↓
+Controlled deployment
+```
+
+| Approval record | Required content |
+| :--- | :--- |
+| Model / version | Exact object authorised |
+| Intended use | Permitted decision and population |
+| Validation status | Findings and limitations considered |
+| Conditions | Limits, overlays, monitoring or remediation |
+| Exceptions | Rationale and compensating controls |
+| Authority | Person or committee with delegated power |
+| Duration | Expiry or review point where conditional |
+| Escalation | What triggers restriction or withdrawal |
+
+Urgent need may justify controlled exceptional use in some frameworks, but the logic remains the same: uncertainty is made explicit and compensated by stronger controls rather than silently ignored.
+
+### Where it sits
+
+```text
+Upstream:   Validation opinion · Business case · Residual model risk
+This:       Model approval and conditions
+Downstream: Deployment · Use · Monitoring · Remediation
+```
+
+### Permanent rule
+
+Approval authorises a specific model version for a specific use under stated conditions. It is not a permanent certificate of general correctness.
+
+### Never confuse [Conditional approval] and [Validation waiver]
+
+**Conditional approval** - governance accepts limited residual risk subject to explicit restrictions, remediation or enhanced monitoring.
+
+---
+
+**Validation waiver** - absence of required independent challenge. These are not equivalent; conditional use should not erase the need for validation where the framework requires it.
+
+### Permanent trap
+
+Treating executive urgency as evidence that model risk is acceptable. Urgency affects the risk decision and controls; it does not improve model reliability.
+
+### Jurisdiction variants
+
+| Jurisdiction | Approval / use | Exception / status |
+| :--- | :--- | :--- |
+| US | Validation generally before first use. | Urgent early use may proceed with limits, stakeholder awareness and closer monitoring. |
+| UK | Proportionate governance; clear approval/escalation. | Validation and senior accountability remain distinct. |
+| EU | Internal approval plus CRR controls. | Use/material changes may need supervisory permission/notification. |
+| IN | Draft: formal approval, documented exceptions, stronger high-risk approval including RMCB. | Draft as at August 2026; not binding. |
+
+<Recall
+  q="What exactly does model approval authorise?"
+  a="It authorises a defined model version for specified use under documented conditions; it does not certify that the model is correct for every future purpose."
+/>
+
+<Recall
+  q="Why is conditional approval not the same as ignoring a finding?"
+  a="Conditional approval makes residual risk explicit and attaches restrictions, remediation or heightened monitoring so continued use remains a governed decision."
+/>

@@ -1,0 +1,124 @@
+---
+id: MRM-26
+title: 'AI/ML Governance: Complexity, Explainability and Human Control'
+type: mechanism
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  AI/ML models remain models where the applicable framework puts them in scope,
+  but opacity, dynamic behaviour and automation can intensify familiar MRM
+  problems. Governance asks whether complexity is justified, decisions can be
+  explained, humans retain control, and the institution can stop or fall back
+  safely.
+prerequisites:
+  - MRM-09
+  - MRM-12
+  - MRM-21
+  - MRM-25
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Parliament and Council, Regulation (EU) 2024/1689, Artificial
+      Intelligence Act, 13 June 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+| AI/ML issue | Control question |
+| :--- | :--- |
+| Complexity | What decision benefit justifies harder challenge? |
+| Explainability | Can users and validators understand important drivers and limitations? |
+| Training data | Is provenance, quality and representativeness traceable? |
+| Bias / fairness | Are material outcome differences identified and governed? |
+| Automation | Can users recognise when output should not be accepted automatically? |
+| Human oversight | Who can review, override, suspend or escalate? |
+| Dynamic updating | Can behaviour change without an ordinary release event? |
+| Fallback | What happens if the model is unavailable or unsafe? |
+
+```text
+AI output
+    ↓
+Human or automated decision
+    ↓
+Outcome
+    ↓
+Monitoring and challenge
+    ↓
+Override · Restrict · Disable
+```
+
+Explainability is purpose-dependent: developers, decision users and validators need different kinds of explanation.
+
+### Where it sits
+
+```text
+Upstream:   Model definition · Method complexity · Production use
+This:       AI/ML governance and human control
+Downstream: AI/ML validation · Monitoring · Consumer / operational controls
+```
+
+### Permanent rule
+
+Higher predictive performance does not cancel governability. If a material model cannot be understood, challenged, controlled or stopped, performance alone is insufficient.
+
+### Never confuse [Explainability] and [Accuracy]
+
+**Explainability** - ability to communicate relevant factors, behaviour or reasons at the level needed by the use and audience.
+
+---
+
+**Accuracy** - degree to which outputs correspond to targets or realised outcomes. A model can be accurate yet insufficiently explainable.
+
+### Permanent trap
+
+Adding a post-hoc explanation tool and treating the model as fully understood. Explanation methods are analytical tools with their own faithfulness and limitations.
+
+### Jurisdiction variants
+
+| Jurisdiction | AI/ML scope | Governance / status |
+| :--- | :--- | :--- |
+| US | SR 26-2: qualifying non-generative/non-agentic AI; generative/agentic excluded. | Broader governance remains needed outside guidance; as at August 2026. |
+| UK | SS1/23: in-scope AI/ML. | Manage AI/ML model risk. |
+| EU | ECB Guide 28-Jul-2025: prudential ML; AI Act: specified natural-person creditworthiness/credit-scoring can be Annex III high-risk. | Both may apply; Act generally applies 2-Aug-2026 subject to staged provisions. |
+| IN | Draft: explainability/human-oversight/customer-disclosure-assistance/dynamic-update/override-suspend-deactivate controls. | Draft as at August 2026; consultation closed 24 July 2026; not final. |
+
+<Recall
+  q="Why is explainability not one universal metric?"
+  a="Different users need different explanations: validators need model-behaviour evidence, business users need decision drivers, and governance may require reasons suitable for affected customers."
+/>
+
+<Recall
+  q="What if an AI model cannot be safely controlled during failure?"
+  a="Stronger intervention, fallback or disable mechanisms are needed before material reliance; inability to stop the model is itself a governance weakness."
+/>

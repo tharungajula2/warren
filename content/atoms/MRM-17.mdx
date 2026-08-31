@@ -1,70 +1,108 @@
 ---
 id: MRM-17
-title: 'Backtesting, Use Test, and Overrides'
+title: 'Outcomes Analysis: Discrimination, Calibration and Backtesting'
 type: mechanism
 domain: model-risk
 subdomain: validation-and-metrics
 one_screen: >-
-  **Backtesting** compares a model’s historical forecasts to actual results
-  (e.g. predicted vs realized losses).  It’s a formal test of predictive
-  accuracy over time.  The **use test** checks that the model is being applied
-  in practice as intended (not just in name).  Banks must also track
-  **overrides** (manual deviations) to ensure that business judgment does not
-  mask model errors.
+  Outcomes analysis asks whether model outputs correspond to real-world outcomes
+  in the way the model's purpose requires. Discrimination tests ranking,
+  calibration tests level accuracy, and backtesting compares prior predictions
+  with realised outcomes; none of them alone establishes that the entire model
+  is sound.
 prerequisites:
-  - MRM-10
+  - MRM-16
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      RBI, *Draft Principles… in Credit* (Aug. 2024) – requires documentation of
-      overrides.
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: Basel II/III documents (conceptual).
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Backtesting is often part of monitoring (see MRM-10).  For example, a Value-at-Risk model would be backtested by counting how often actual losses exceed the VaR estimates.  In credit PD models, backtesting might look at how forecast default rates compare to observed defaults in each grade.  Regulators use backtesting to validate risk models: e.g. Basel committees prescribe backtesting rules for market VaR.  In a broader sense, backtesting any model ensures it worked as advertised.
+### Core mechanism
 
-The use test (a term from regulatory literature on internal ratings or IFRS9) ensures the model’s output influences decisions.  For example, an internal rating model satisfies the use test if credit officers actually use it for approvals.  If a model fails the use test (e.g. it was built but never integrated into processes), regulators may question why it was developed at all.  Firms should maintain evidence of model usage (audit trails, workflow integration).
+| Instrument | Question it answers | Breach means | It cannot prove |
+| :--- | :--- | :--- | :--- |
+| AUC / Gini / KS | Does the model separate or rank outcomes effectively? | Ranking power has weakened or is inadequate for use | Probability levels are accurate |
+| Calibration test / plot | Do predicted levels align with observed levels? | Systematic over- or under-prediction may exist | Cases are ranked well |
+| Backtesting | Did prior forecasts correspond to realised outcomes over the test period? | Forecast behaviour differs from expectation | Future validity under changed conditions |
 
-**Overrides** occur when human experts override a model’s result (e.g. credit underwriters adjusting a score).  Some level of overrides is expected (no model is perfect), but they must be tracked.  Regulators view systematic overrides as potential model risk.  For instance, RBI’s credit model guidance says that subjective overrides must be documented and justifiable.  Banks should monitor override frequency and reason codes.  An unusually high override rate may indicate the model is not trusted or is mis-calibrated, prompting review.  Ongoing monitoring of overrides (and requiring board-level reporting if excessive) is part of robust MRM.
+```text
+AUC → ranking discrimination, not calibration
+Gini / KS → alternative ranking instruments, not proof of level accuracy
+Calibration → predicted level versus realised level
+Backtesting → forecast versus subsequent outcome
+```
+
+```text
+Threshold breach
+    ↓
+Check data and test design
+    ↓
+Assess magnitude, persistence and business materiality
+    ↓
+Root-cause
+    ↓
+Continue with observation · Restrict use · Adjust · Recalibrate · Redevelop
+```
+
+Thresholds should be set for the model and use, not copied as universal regulatory numbers. Statistical significance also does not automatically equal economic significance; sample size, data quality and consequence matter.
+
+### Where it sits
+
+```text
+Upstream:   Validation work programme · Model purpose · Realised outcomes
+This:       Outcomes analysis
+Downstream: Findings · Monitoring thresholds · Change decision
+```
 
 ### Permanent rule
 
-Always measure model performance on historical data (backtest) and ensure the model’s output is actually used.  Track any manual overrides closely.
+Ranking and level accuracy are different properties. A model can rank cases correctly while consistently predicting the wrong absolute level.
 
-### Permanent trap
+### Never confuse [Discrimination] and [Calibration]
 
-Ignoring overrides.  For example, assuming the model is wrong because many underwriters ignore it, without investigating why.  (Frequent overrides themselves are a sign the model may be problematic.)
-
-### Never confuse
-
-**Backtesting** — evaluating model accuracy by comparing predictions to actual outcomes over time.
+**Discrimination** - ability to order observations so relatively higher-risk cases receive relatively higher-risk model outputs.
 
 ---
 
-**Use test** — verifying that model outputs are actively used in decision-making.
-The former is statistical validation; the latter is governance of model usage.
+**Calibration** - alignment between predicted levels and observed outcome frequencies or values.
+
+### Permanent trap
+
+Teaching a fixed AUC, KS or calibration threshold as a universal pass mark. Thresholds are model- and use-specific governance choices unless a particular applicable rule states otherwise.
 
 ### Jurisdiction variants
 
-**No delta.** All regimes recognize backtesting as a model validation tool (especially for VaR/market models).  The use test is a concept from Basel risk-weighted models and IFRS9, applicable in all advanced-model frameworks (incl. RBI’s IFRS9 NBFCs, PRA’s internal use requirement).
+No delta. Regulators differ in model scope and supervisory detail, but discrimination, calibration and backtesting are technical validation instruments; the mathematics does not change by jurisdiction.
 
 <Recall
-  q="What is a use test?"
-  a="A check that the model is actually used in business processes as intended (e.g. credit decisions follow model scores)."
+  q="Why can a model with strong AUC still be dangerous?"
+  a="AUC addresses ranking only. The model may systematically understate or overstate the absolute level of risk and therefore support poor pricing, provisioning or limits."
 />
 
 <Recall
-  q="Why should overrides be monitored?"
-  a="Because frequent overrides suggest the model may be misaligned with reality.  Regulators expect banks to document and review overrides (RBI draft explicitly requires documentation)."
+  q="What should happen after an outcomes threshold breach?"
+  a="Validate the data and test first, assess persistence and materiality, determine root cause, then choose a proportionate response such as closer monitoring, restriction, recalibration or redevelopment."
+/>
+
+<Recall
+  q="What does backtesting fail to prove?"
+  a="It cannot prove future validity when the population, relationships or operating environment have changed; it is evidence about realised historical performance."
 />

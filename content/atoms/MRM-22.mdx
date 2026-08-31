@@ -1,0 +1,113 @@
+---
+id: MRM-22
+title: 'Ongoing Monitoring, Thresholds and Escalation'
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  Ongoing monitoring asks whether a live model is still performing as expected
+  as products, exposures, customers, data and market conditions change. A
+  monitoring framework is complete only when each signal has an owner,
+  threshold, investigation path and escalation action; a metric dashboard
+  without decisions attached is observation, not control.
+prerequisites:
+  - MRM-17
+  - MRM-18
+  - MRM-21
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+| Monitoring lens | Typical evidence | What a breach asks |
+| :--- | :--- | :--- |
+| Outcomes | Realised versus predicted results | Has performance deteriorated? |
+| Discrimination / calibration | Relevant performance instruments | Is ranking or level accuracy weakening? |
+| Stability | Population and characteristic shifts | Has the model environment moved? |
+| Data | Quality, missingness, lineage changes | Is the input process still fit? |
+| Overrides / use | Frequency, direction and reason | Are users compensating for weakness or misusing output? |
+| Limitations | Known constraints and assumptions | Has a known limitation become more material? |
+| Operations | Failures, latency, dependencies | Is implementation or service reliability changing? |
+
+```text
+Signal
+    ↓
+Threshold breach
+    ↓
+Validate data / measurement
+    ↓
+Root-cause and materiality assessment
+    ↓
+Escalate
+    ↓
+Continue · Enhance controls · Restrict · Revalidate · Change · Retire
+```
+
+Thresholds can be hard limits, tolerance bands or qualitative triggers. They should be tied to the model's intended use and consequence, with escalation stronger when breaches are persistent, material or clustered across several indicators.
+
+### Where it sits
+
+```text
+Upstream:   Approved use · Outcomes analysis · Stability · Production evidence
+This:       Live monitoring and escalation
+Downstream: Findings · Change · Restrictions · Retirement
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model owner | Runs or coordinates monitoring and investigates breaches |
+| Business user | Reports use issues and decision impacts |
+| MRM / validation | Challenges thresholds, trends and remediation |
+| Governance body | Receives material or overdue escalations |
+
+### Permanent rule
+
+A threshold breach is a trigger for governed investigation, not an automatic diagnosis of model failure.
+
+### Never confuse [Monitoring] and [Validation]
+
+**Monitoring** - recurring first-line and governance surveillance of live performance, data, use and environment.
+
+---
+
+**Validation** - independent assessment of reliability and limitations, which can use monitoring evidence but is not replaced by it.
+
+### Permanent trap
+
+Resetting thresholds after repeated breaches merely to restore a green dashboard. Threshold changes themselves require rationale because they alter the institution's definition of acceptable model behaviour.
+
+### Jurisdiction variants
+
+No delta. The 2026 US guidance explicitly scales monitoring frequency and scope to model nature, new data, modelling approaches and materiality; that risk-based principle is consistent with sound MRM elsewhere.
+
+<Recall
+  q="Why is a dashboard without escalation rules incomplete?"
+  a="It can show deterioration without determining who investigates, how materiality is assessed or what use restrictions follow, so information does not become control."
+/>
+
+<Recall
+  q="What should happen before treating a breach as model deterioration?"
+  a="Confirm that the data, calculation and threshold application are correct, then determine root cause and business materiality before choosing the response."
+/>

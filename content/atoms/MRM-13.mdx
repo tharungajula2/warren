@@ -1,65 +1,113 @@
 ---
 id: MRM-13
-title: 'Discrimination Metrics (AUC, Gini, KS)'
-type: mechanism
+title: 'Implementation, Versioning and Reproducibility'
+type: procedure
 domain: model-risk
 subdomain: validation-and-metrics
 one_screen: >-
-  Discrimination measures how well a model ranks outcomes.  Common metrics are
-  **ROC-AUC** (area under the receiver operating curve), **Gini coefficient**
-  and **KS statistic**.  AUC (0.5–1) and Gini (0–1) quantify the model’s overall
-  ranking power, while KS is the maximum difference between cumulative
-  distributions of outcomes.  Higher values mean better separation of groups
-  (e.g. defaulters vs non-defaulters).
+  A validated methodology is useless if production executes something different.
+  Implementation control proves that approved logic, data transformations,
+  parameters, dependencies and configuration are faithfully reproduced, while
+  versioning and reproducibility make it possible to determine exactly which
+  model generated a past output.
 prerequisites:
+  - MRM-11
   - MRM-12
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: (Conceptual metrics – not directly quoted from regs)
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: A general model validation reference or textbook on ROC curves.
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-In credit models (and many risk models), validators assess ranking performance.  The ROC curve plots true positive rate vs false positive rate; the area under that curve (AUC) is a popular measure (1.0 = perfect, 0.5 = random).  The **Gini** index is closely related: Gini = 2*AUC–1 (so Gini ranges 0–1).  For example, a Gini of 0.6 corresponds to AUC 0.8.  These metrics summarize the model’s ability to order cases by risk.  The **KS statistic** is another measure – it finds the point where the difference between the cumulative default vs non-default curves is greatest; a larger KS indicates better lift.
+### Core mechanism
 
-However, none of these metrics tell the whole story.  They only measure discrimination (ranking), not calibration.  A model might have high AUC yet systematically under- or over-predict probabilities.  Therefore, regulators expect both discrimination and calibration checks in validation.  Typical thresholds vary by context, but as a rule of thumb (from industry practice): an AUC of 0.7–0.8 is moderate, &gt;0.8 is strong.  (Regulators do not set fixed benchmarks but may question models with unusually low discrimination.)
+```text
+Approved specification
+    ↓
+Code / configuration
+    ↓
+Independent implementation checks
+    ↓
+Controlled production release
+    ↓
+Versioned execution
+    ↓
+Reproducible output
+```
+
+| Control | What it prevents |
+| :--- | :--- |
+| Source control | Undocumented code changes |
+| Unique version | Ambiguity about which model was used |
+| Peer / independent code review | Logic and implementation errors |
+| Test cases | Silent calculation defects |
+| Development-production reconciliation | Different transformations or parameters |
+| Dependency pinning | Uncontrolled library or service changes |
+| Release approval | Unauthorised production updates |
+| Execution logs | Inability to reconstruct model behaviour |
+
+Reproducibility means that with the governed model version, relevant inputs and environment, the institution can reconstruct or adequately evidence how the output was produced. For stochastic models, reproducibility may require seeds, configuration and retained run metadata rather than identical output in every context.
+
+### Where it sits
+
+```text
+Upstream:   Method specification · Data lineage
+This:       Executable model and version control
+Downstream: Developer testing · Validation · Deployment · Change control
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Developer | Implements and unit-tests approved logic |
+| Technology / MLOps | Controls environments, release and dependencies |
+| Model owner | Ensures governed version matches authorised use |
+| Validation | Tests implementation consistency and reproducibility |
 
 ### Permanent rule
 
-Discrimination metrics must be reported for every predictive model.  High discrimination is necessary but not sufficient for model quality.
+A model version is part of the model identity. Change code, parameters, transformations or material configuration and the governance question is whether you still have the approved model.
 
-### Permanent trap
+### Never confuse [Methodology validation] and [Implementation verification]
 
-Focusing only on one metric.  For instance, a model with high AUC but very poor calibration can still misprice risk.  Always assess multiple performance aspects.
-
-### Never confuse
-
-**AUC (Area Under the ROC)** — overall probability that the model ranks a randomly chosen positive higher than a negative.
+**Methodology validation** - asks whether the model concept and assumptions are appropriate.
 
 ---
 
-**Gini coefficient** — derived from AUC (Gini=2*AUC–1).  They are different scales of the same information (Gini ~ 2×AUC minus 1), so they often get used interchangeably.
+**Implementation verification** - asks whether the executable system faithfully performs that approved concept.
+
+### Permanent trap
+
+Validating a development notebook and assuming production is identical. Differences in code, data transformation, libraries, interfaces or configuration can create a new failure mode after technical validation.
 
 ### Jurisdiction variants
 
-**No delta.** Discrimination metrics are standard in all regimes. Regulators (PRA, Fed, RBI, ECB) expect banks to use them in validating predictive models (especially PD/LGD models).
+No delta. Implementation assurance and reproducibility are general controls; exact technology standards vary by institution rather than by the core MRM principle.
 
 <Recall
-  q="What does an AUC of 0.9 indicate?"
-  a="Excellent discrimination; the model ranks almost all outcomes correctly (AUC=1 is perfect)."
+  q="Why is versioning an MRM control rather than just an IT practice?"
+  a="Model approval and validation attach to a defined implementation. Without version identity, the institution cannot know whether the output came from the model that was actually challenged and authorised."
 />
 
 <Recall
-  q="How is the Gini coefficient related to AUC?"
-  a="Gini = 2*AUC - 1.  So Gini 0.6 corresponds to AUC 0.8."
+  q="What does reproducibility require for a stochastic model?"
+  a="Enough retained code, configuration, data lineage and run metadata to reconstruct the governed process and explain the output; exact deterministic replication may not be the relevant standard."
 />

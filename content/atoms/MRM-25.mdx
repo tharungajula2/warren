@@ -1,0 +1,116 @@
+---
+id: MRM-25
+title: Third-Party and Vendor Models
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  Buying a model changes access and dependency, not accountability. The
+  institution still needs enough understanding, evidence and contractual rights
+  to judge suitability for its own use, validate it proportionately, monitor it,
+  control vendor changes and exit safely if the product or provider fails.
+prerequisites:
+  - MRM-04
+  - MRM-08
+  - MRM-15
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+Need → due diligence → method/data/limits understood → access/change rights → independent validation → approval → monitoring/change control → continuity/exit
+
+| Control | Core question |
+| :--- | :--- |
+| Provider | Can it support/govern the product? |
+| Transparency | Can the bank challenge suitability? |
+| Data | Relevant to bank population/use? |
+| Validation access | Enough evidence for independent challenge? |
+| Change notice | Will method/data/version changes be known? |
+| Outcomes | Can bank experience monitor performance? |
+| Concentration | Critical reliance on vendor/platform? |
+| Continuity/exit | Can the bank operate, replace or migrate? |
+
+Vendor certification or external assurance is evidence, not a substitute for the bank's own fitness-for-use judgement.
+
+### Where it sits
+
+```text
+Upstream:   Sourcing decision · Model perimeter · Third-party risk
+This:       Vendor-model MRM
+Downstream: Validation · Approval · Monitoring · Continuity · Exit
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Business / model owner | Remains accountable for use and outcomes |
+| Procurement / third-party risk | Supports due diligence and contracts |
+| Vendor | Supplies agreed documentation and change information |
+| MRM / validation | Independently challenges institution-specific use |
+
+### Permanent rule
+
+Outsourcing model development does not outsource model risk ownership.
+
+### Never confuse [Vendor due diligence] and [Model validation]
+
+**Vendor due diligence** - assesses provider capability, resilience, governance and contractual suitability.
+
+---
+
+**Model validation** - assesses whether the model is reliable and appropriate for the institution's intended use.
+
+### Permanent trap
+
+Accepting "proprietary" as a complete answer to validation questions. Where full internals cannot be disclosed, alternative evidence and stronger controls must still support a defensible use decision.
+
+### Jurisdiction variants
+
+| Jurisdiction | Accountability | Control / status |
+| :--- | :--- | :--- |
+| US | Dedicated vendor/third-party section; bank retains oversight. | May use vendor evidence, but must understand product and assess own-use performance. |
+| UK | In-scope vendor/external models remain under SS1/23. | Outsourcing does not transfer MRM responsibility. |
+| EU | Third-party components do not transfer prudential-model responsibility. | Institution remains responsible under CRR/ECB expectations. |
+| IN | Draft expressly covers third-party models; regulated entity remains accountable. | Proposed due diligence, validation documentation/access, continuity and exit; draft as at August 2026. |
+
+<Recall
+  q="Why is a vendor's validation report insufficient by itself?"
+  a="It may show general product quality but not fitness for the bank's population, data, purpose, implementation and risk tolerance."
+/>
+
+<Recall
+  q="What distinctive model-risk problem does vendor sourcing create?"
+  a="The bank remains accountable while having less access to methodology, data and change information, so contractual rights and alternative assurance become part of MRM."
+/>

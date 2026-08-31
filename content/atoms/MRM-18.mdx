@@ -1,19 +1,19 @@
 ---
 id: MRM-18
-title: AI and Machine Learning Models
-type: concept
+title: 'Stability, Benchmarking and Challenger Models'
+type: mechanism
 domain: model-risk
 subdomain: validation-and-metrics
 one_screen: >-
-  Models using AI/ML must be interpretable and transparent.  Regulators expect
-  that even non-linear models can be explained sufficiently to satisfy risk
-  controls.  New guidelines explicitly stress interpretability (e.g.
-  “explainability” requirements) and governance of AI.  Supervisory expectations
-  for AI in finance are still evolving (often marked as “developing”) but lean
-  toward strong oversight.
+  Stability analysis asks whether the population or model relationships have
+  moved; benchmarking asks whether an independent reference gives a materially
+  different view. These controls catch weaknesses that a model's own historical
+  performance can miss: a stable model can be consistently wrong, and a
+  challenger can reveal a better explanation without automatically becoming the
+  production model.
 prerequisites:
-  - MRM-07
-  - MRM-08
+  - MRM-16
+  - MRM-17
 jurisdictions:
   - universal
 perishable: true
@@ -24,59 +24,80 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      ECB press release (July 28, 2025) on revised internal models guide (new ML
-      section).
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Draft Guidance on MRM, 2026* (Jun 2026) – Chapter on AI/ML,
-      explainability and governance.
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: S&C (Apr. 2026) – OCC statement on upcoming AI measures.
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-AI and ML introduce additional complexity in model risk.  Unlike linear regressions, many ML models (neural nets, ensemble trees) are “black boxes” by default.  Yet regulators require that models be understood by the bank.  For example, the ECB’s 2025 guide to internal models adds a section on machine learning, specifying that ML models must be “adequately explainable” and that their performance must justify the added complexity.  Similarly, RBI’s draft guidance explicitly lists AI/ML models in scope and requires explainability, bias checks, and human oversight.  The new U.S. guidance acknowledges AI/ML as model risk (although it currently excludes “generative AI” from scope), and the OCC has signaled forthcoming guidance on AI.  In short, banks cannot claim “it’s just AI” to avoid validation – they must apply model risk principles to AI models too.
+### Core mechanism
 
-However, validating AI models is challenging.  Common practices include using SHAP values or LIME to explain predictions, simplifying models via surrogate linearizations, or requiring that final decisions be interpretable.  Backtesting, discrimination and calibration concepts still apply, but new tests (e.g. for concept drift) may be needed.  Given the complexity, the industry relies on “explainable AI” tools and rigorous documentation of how the model learns.
+| Instrument | Core question | Signal |
+| :--- | :--- | :--- |
+| PSI | Has a score or variable distribution shifted between reference and current populations? | Population drift |
+| CSI | Has the distribution of a characteristic shifted? | Feature-level drift |
+| Benchmark | Does an independent method, external reference or simpler estimate produce materially different results? | Possible bias, misspecification or hidden assumption |
+| Challenger | Can an alternative model explain or predict the target materially better or more robustly? | Incumbent may be stale or unnecessarily complex |
 
-Regulators are actively developing expectations for AI.  The PRA already includes AI risk in SS1/23 sub-principles.  In the U.S., OCC’s 2026 press release noted agencies will solicit input on AI use in banking.  RBI’s draft explicitly covers AI: it requires a Board-approved AI governance framework, human-in-the-loop, and the ability to “kill” or decommission high-risk AI models.  These emerging rules suggest strong scrutiny on AI: consider them “developing” expectations.
+Reference population → current population → stability measure → investigate shift
+
+```text
+Incumbent model
+    ↓
+Independent benchmark / challenger
+    ↓
+Difference
+    ↓
+Explainable? material? persistent?
+    ↓
+Retain · Recalibrate · Restrict · Redevelop
+```
+
+PSI and CSI are signals, not verdicts. A large distribution shift can arise from genuine business mix changes, economic movement or data defects. Conversely, low PSI does not prove correctness: the population can remain stable while the model is structurally biased or poorly calibrated.
+
+A challenger is evidence, not a replacement. Replacement requires its own development, validation, approval and implementation controls.
+
+### Where it sits
+
+```text
+Upstream:   Validation work programme · Current population · Incumbent model
+This:       Stability and independent comparison
+Downstream: Findings · Monitoring · Change / redevelopment decision
+```
 
 ### Permanent rule
 
-Treat AI/ML models as you would any model, with the added requirement that their logic must be interpretable to decision-makers and auditors. Regulatory agencies now often require explainability as a must-have.
+Stability asks "has it moved?", not "is it right?". Benchmarking asks "what does another credible lens say?", not "which model wins one metric?".
 
-### Permanent trap
+### Never confuse [Benchmark] and [Challenger]
 
-Tolerating a black box just because it performs well.  Ignoring regulations by calling a model “proprietary.”  For example, **simply citing vendor secrecy to avoid explaining an AI model** is unacceptable.
-
-### Never confuse
-
-**Interpretability** — the ability to explain how a model arrives at a result.
+**Benchmark** - independent reference used to test reasonableness, which may be simpler, external or non-production.
 
 ---
 
-**Predictive accuracy** — how well the model predicts outcomes.
-A model can be accurate but uninterpretable; regulators require both (accuracy and some level of interpretability).
+**Challenger** - alternative model deliberately developed to compete with or test the incumbent on relevant performance and robustness dimensions.
+
+### Permanent trap
+
+Using the common PSI rules of thumb as automatic regulatory limits. Bin design, sample size, business context and model purpose affect interpretation; a breach should trigger investigation, not mechanical model failure.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s draft explicitly includes AI/ML models. It requires explainability and bias/fairness controls.  The draft even suggests specialized oversight (e.g. AI governance board-level) for complex ML models.
-
-**UK** — The PRA notes that model risk framework should cover AI/Machine Learning where applicable.  Firms should ensure all models are well documented; the European Union is working on AI regulations (e.g. the EU AI Act) that will affect bank models.
-
-**US** — SR 26-2 excludes “generative AI” for now, but FCA/OCC guidance is forthcoming.  U.S. banking supervisors emphasize that ML models, like any models, must be validated and understandable.  OCC has announced future guidance addressing banks’ use of AI.
-
-**EU** — ECB’s updated internal-model guide (2025) explicitly adds explainability for ML.  The EU is also developing AI-specific regulations (e.g. the AI Act) that will impact financial institutions.
+No delta. Stability statistics and independent comparators are validation instruments; there is no jurisdiction-specific mathematics and no universal supervisory PSI threshold to manufacture.
 
 <Recall
-  q="Why must AI models be explainable?"
-  a="Regulators require understanding of model drivers to ensure responsibility and fairness.  For instance, ECB guidance says ML models must be “adequately explainable”."
+  q="Why can a model with very low PSI still be wrong?"
+  a="PSI says the population distribution has not moved much relative to the reference. It says nothing about whether the model's original relationships, calibration or assumptions were correct."
 />
 
 <Recall
-  q="What special controls might be needed for AI?"
-  a="Documentation of training process, bias checks, robustness tests, and procedures to disable a model if it misbehaves (human oversight)."
+  q="Why does a better challenger not automatically replace the incumbent?"
+  a="The challenger is evidence that merits investigation. Production replacement requires full development evidence, independent validation, approval, implementation controls and transition planning."
 />

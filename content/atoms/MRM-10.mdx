@@ -1,17 +1,18 @@
 ---
 id: MRM-10
-title: Ongoing Monitoring and Performance
+title: 'Purpose, Intended Use and Limitations'
 type: procedure
 domain: model-risk
 subdomain: governance-and-lifecycle
 one_screen: >-
-  After a model is in use, the firm must continuously monitor its performance
-  and environment.  This includes tracking key metrics (stability indexes,
-  backtests, outcomes) and ensuring the model remains accurate.  Oversight
-  bodies should set thresholds for action and require periodic performance
-  reports, with escalations if issues are detected.
+  Development begins by fixing the decision the model is supposed to support,
+  the population and conditions it covers, and the limitations users must
+  respect. Without that mandate, developers cannot choose evidence coherently
+  and validators cannot decide whether "good performance" is relevant to the
+  actual use.
 prerequisites:
-  - MRM-06
+  - MRM-08
+  - MRM-09
 jurisdictions:
   - universal
 perishable: true
@@ -21,59 +22,81 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: PRA SS1/23 (Apr. 2026) – Standards for monitoring model performance.
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      *Statistical Properties of the Population Stability Index*, Risk Journal
-      (Apr. 2022).
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-Models are dynamic; their performance can drift over time as data or conditions change.  Banks therefore establish an **ongoing monitoring program**.  This typically involves:
-- **Performance tracking:** comparing model predictions to actual results (backtesting). For example, periodically compare predicted default rates to realized defaults.
-- **Data drift checks:** computing stability metrics (PSI/CSI) on input variables or score distributions (see MRM-16).  Significant shifts in data distributions may signal model drift.
-- **Thresholds:** setting quantitative thresholds (e.g. maximum allowable PSI) that, if exceeded, trigger investigation or revalidation.  Common practice is PSI&lt;0.10 (little change), 0.10–0.25 moderate, &gt;0.25 significant.
-- **Periodic reviews:** formal re-validation cycles or ad-hoc reviews when performance degrades.  Regulators discourage fixed cadences; instead, use a risk-based approach to determine review frequency.
+### Core mechanism
 
-Regulators support strong monitoring.  PRA SS1/23 Principle 5 expects firms to have “model risk mitigants” including performance monitoring and expert overrides.  The PRA details standards for monitoring model performance (criteria, thresholds, back-testing).  RBI’s draft also requires “ongoing performance testing using backward-looking and forward-looking approaches”.  In the US, SR 26-2 lists monitoring as a governance activity (OCC noted monitoring and outcome analysis as sound practice in vendor models).
+| Development mandate | Question |
+| :--- | :--- |
+| Objective | What problem is the model solving? |
+| Output | What exactly will it estimate, rank, classify or optimise? |
+| Population | For which customers, products, markets or processes? |
+| Horizon | Over what time period is the output meaningful? |
+| Intended use | Which decisions may consume the output? |
+| Prohibited use | Where must it not be used without further analysis? |
+| Performance criteria | What evidence will count as adequate? |
+| Limitations | Which assumptions, data gaps or boundary conditions remain? |
+| Alternatives | What happens if the model is unavailable or unsuitable? |
 
-Senior management should review model performance at least annually or more often for top-tier models.  Reports summarizing key metrics and any breaches of thresholds should be provided to risk committees.  Any persistent performance shortfall must be remediated (perhaps via recalibration or new model).
+Purpose → data choice → methodology → testing → validation → use conditions
+
+A one-line reminder is enough where the model produces familiar risk parameters: PD, LGD and EAD are model outputs used in credit-risk contexts; their substantive estimation belongs elsewhere. MRM asks whether the model's stated purpose and permitted use match the evidence.
+
+### Where it sits
+
+```text
+Upstream:   Business need · Model tier · User requirements
+This:       Purpose, intended use and limitations
+Downstream: Data design · Method selection · Testing · Validation criteria
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Business user | Defines decision context and operational need |
+| Model owner | Owns documented purpose and use boundaries |
+| Developer | Designs consistently with that mandate |
+| Validation | Challenges whether mandate and evidence align |
 
 ### Permanent rule
 
-Always monitor a model in production.  A model’s validity is not one-time; it requires continuous checking.
+A model is fit for a use, not "fit" in the abstract. Change the use materially and the original evidence may no longer support the decision.
 
-### Permanent trap
+### Never confuse [Limitation] and [Defect]
 
-Assuming a validated model will stay valid forever.  For example, **ignoring a rising PSI that indicates data shift**, which could make the model obsolete.
-
-### Never confuse
-
-**Monitoring** — ongoing checks of model output/data (e.g. backtests, stability indices).
+**Limitation** - known boundary or uncertainty inherent in the model that may be acceptable with controls.
 
 ---
 
-**Validation** — formal, periodic re-assessment of the whole model.
-They are related but different stages.  Monitoring is continuous; validation is periodic/developer review (see MRM-08).
+**Defect** - error or failure that makes the model inconsistent with its approved design or required standard.
+
+### Permanent trap
+
+Writing broad purposes such as "risk management". Vague mandates make almost any data, method or later use appear defensible and prevent meaningful challenge.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s draft requires continuous oversight.  It even calls for backward/forward performance testing and benchmarking in monitoring. Excessive model risk must be reported to the Board.
-
-**UK** — The PRA expects firms to monitor model performance and use expert judgment or overrides as needed (SS1/23 Principle 5).  Monitoring standards should include criteria and thresholds.
-
-**US** — Fed/OCC guidance includes “ongoing monitoring and outcome analysis” as key practices (especially for vendor models).  The revised guidance emphasizes risk-based monitoring but is principles-based.
-
-**EU** — ECB supervisors require regular monitoring of internal models and use of backtesting (as in TRIM/ICAAP reviews).  EBA Pillar 2 practices include ongoing performance tracking.
+No delta. Clear purpose, intended use and understanding of limitations are universal development and use principles; regulators differ mainly in scope and prescription, not in this mechanism.
 
 <Recall
-  q="What does PSI > 0.25 indicate?"
-  a="A “significant change” in the data distribution, requiring investigation."
+  q="Why must prohibited uses be documented as well as intended uses?"
+  a="They convert known model boundaries into operational controls, preventing users from treating a validated model as reliable for every superficially similar decision."
 />
 
 <Recall
-  q="Who should receive model performance reports?"
-  a="The model owner, second-line model risk group, and governance bodies (e.g. risk committee or board).  Regulators expect at least annual high-level reporting."
+  q="Why does changing model use create model risk even if code is unchanged?"
+  a="Reliability evidence is conditional on the original population, horizon and decision context. A new use can introduce uncertainty the original testing never addressed."
 />

@@ -1,0 +1,115 @@
+---
+id: MRM-21
+title: 'Deployment, Use and Overrides'
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  A model is not controlled merely because the approved code reaches production.
+  Deployment must reproduce the approved model, users must understand what the
+  output means and where it is limited, and manual overrides must be visible
+  enough to distinguish healthy expert judgement from systematic evidence that
+  the model or its use is failing.
+prerequisites:
+  - MRM-13
+  - MRM-20
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+```text
+Approved version
+    ↓
+Production replication test
+    ↓
+Controlled release
+    ↓
+User applies model within approved scope
+    ↓
+Output accepted or overridden
+    ↓
+Decision + reason captured
+    ↓
+Override and use patterns monitored
+```
+
+| Use control | Question |
+| :--- | :--- |
+| Production reconciliation | Does live output match the approved implementation? |
+| Access | Who can run or alter the model? |
+| User guidance | Do users understand output, assumptions and limitations? |
+| Scope controls | Can prohibited uses be prevented or detected? |
+| Override authority | Who can depart from model output? |
+| Reason codes | Why was the override made? |
+| Outcome tracking | Did overrides improve or worsen decisions? |
+| Usage evidence | Is the model actually used where governance assumes it is? |
+
+Overrides are not inherently bad. Expert judgement can correct a known model limitation or incorporate information unavailable to the model. Risk rises when overrides are frequent, one-directional, poorly documented or concentrated by user or segment.
+
+### Where it sits
+
+```text
+Upstream:   Approval conditions · Approved implementation
+This:       Production use and overrides
+Downstream: Monitoring · Issue escalation · Change management
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Technology | Deploys the approved version and protects release controls |
+| Business user | Uses output within scope and documents overrides |
+| Model owner | Monitors usage and override patterns |
+| MRM / validation | Challenges misuse and systematic override behaviour |
+
+### Permanent rule
+
+A manual override changes the decision, not the model. If repeated overrides reveal structural weakness, fix or restrict the model rather than normalising permanent manual correction.
+
+### Never confuse [Override] and [Model adjustment]
+
+**Override** - case-specific human decision that departs from model output.
+
+---
+
+**Model adjustment** - systematic change to model output, logic or post-model treatment applied across defined cases and governed as model change or mitigation.
+
+### Permanent trap
+
+Monitoring only override frequency. Ten justified overrides can be healthier than two undocumented ones; direction, reason, user concentration and realised outcome matter.
+
+### Jurisdiction variants
+
+No delta. The use-control mechanism is universal even though particular sectors or models may have separate use-test or approval requirements.
+
+<Recall
+  q="When do overrides become evidence of model risk?"
+  a="When their frequency, direction or reasons show that users repeatedly correct the same model weakness or no longer trust the output, especially if outcomes confirm the pattern."
+/>
+
+<Recall
+  q="Why must deployment be reconciled to the approved version?"
+  a="Validation and approval attach to a specific implementation. A production difference in code, transformation or configuration can create an effectively unvalidated model."
+/>

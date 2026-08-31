@@ -1,0 +1,126 @@
+---
+id: MRM-23
+title: 'Model Change: Adjustment, Recalibration or Redevelopment'
+type: procedure
+domain: model-risk
+subdomain: mrm
+one_screen: >-
+  Model change begins with classification because different interventions solve
+  different problems and reopen different controls. An overlay or adjustment can
+  mitigate a known weakness, recalibration updates levels within an existing
+  structure, and redevelopment changes the model fundamentally; none should
+  become an undocumented production patch.
+prerequisites:
+  - MRM-19
+  - MRM-22
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Central Bank, ECB Guide to internal models, 28 July 2025.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 06_MRM_model_risk.md
+---
+### Core mechanism
+
+| Intervention | What changes | Appropriate when | Control question |
+| :--- | :--- | :--- | :--- |
+| Correction | Code, data mapping or implementation | Approved design was implemented wrongly | Was the defect removed and retested? |
+| Overlay / adjustment | Output outside the core model | Temporary limitation needs mitigation | Is scope and removal criterion controlled? |
+| Recalibration | Parameters or level alignment | Structure remains sound but levels drifted | Does evidence support retaining the model form? |
+| Redevelopment | Variables, architecture, method or core assumptions | Structural weakness or new purpose makes the old model inadequate | Is this effectively a new model? |
+
+```text
+Monitoring / finding
+    ↓
+Root cause
+    ↓
+Change classification
+    ↓
+Materiality assessment
+    ↓
+Development and testing
+    ↓
+Validation and approval gates reopened as required
+    ↓
+Controlled release
+```
+
+Change materiality follows effect on behaviour, assumptions, data, use, regulatory status and dependencies, not the size of the code change.
+
+### Where it sits
+
+```text
+Upstream:   Monitoring breach · Validation finding · Business change
+This:       Change classification and governance
+Downstream: Testing · Revalidation · Approval · Deployment
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model owner / developer | Proposes change and materiality |
+| MRM / validation | Challenges classification and validates as required |
+| Approval authority | Approves material changes or exceptions |
+| Technology | Releases authorised versions only |
+
+### Permanent rule
+
+A one-line parameter or transformation change can materially alter outputs. Technical size is not model-risk size.
+
+### Never confuse [Recalibration] and [Redevelopment]
+
+**Recalibration** - updates parameters or level alignment while preserving the essential structure and intended use.
+
+---
+
+**Redevelopment** - materially changes structure, drivers, architecture or assumptions and therefore creates substantially new development evidence.
+
+### Permanent trap
+
+Keeping an overlay indefinitely because it is easier than fixing the model. Temporary mitigation needs an owner, rationale, review point and exit criterion.
+
+### Jurisdiction variants
+
+| Jurisdiction | Change rule | Delta / status |
+| :--- | :--- | :--- |
+| US | Deviation can trigger adjustment/recalibration/redevelopment; validation follows change scope/frequency. | No fixed schedule. |
+| UK | Proportionate governance/validation/mitigants. | SS1/23 applies. |
+| EU | Internal control + CRR/ECB change process. | Approval/notification may apply. |
+| IN | Draft: post-change/trigger validation + formal approval. | Draft as at August 2026. |
+
+<Recall
+  q="When is recalibration the wrong response to deterioration?"
+  a="When the model structure, variables or assumptions are no longer sound; changing parameter levels cannot repair structural misspecification."
+/>
+
+<Recall
+  q="Why can a small technical change be material?"
+  a="Materiality follows the effect on model behaviour and decisions, not the number of code lines altered."
+/>

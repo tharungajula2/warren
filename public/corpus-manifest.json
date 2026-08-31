@@ -35,8 +35,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "AML-01.mdx",
-      "initialX": 352.9,
-      "initialY": 18
+      "initialX": 392.3,
+      "initialY": 38.3
     },
     "AML-02": {
       "id": "AML-02",
@@ -75,8 +75,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "AML-02.mdx",
-      "initialX": 400.8,
-      "initialY": 41.3
+      "initialX": 356,
+      "initialY": 11.1
     },
     "AML-03": {
       "id": "AML-03",
@@ -115,8 +115,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "AML-03.mdx",
-      "initialX": 456.8,
-      "initialY": 46.2
+      "initialX": 418.8,
+      "initialY": 38.3
     },
     "AML-04": {
       "id": "AML-04",
@@ -153,8 +153,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "AML-04.mdx",
-      "initialX": 442.1,
-      "initialY": 12.6
+      "initialX": 480.7,
+      "initialY": 17.9
     },
     "AML-05": {
       "id": "AML-05",
@@ -194,8 +194,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "AML-05.mdx",
-      "initialX": 393.3,
-      "initialY": -24.8
+      "initialX": 444,
+      "initialY": 58.4
     },
     "AML-06": {
       "id": "AML-06",
@@ -235,8 +235,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "AML-06.mdx",
-      "initialX": 398.4,
-      "initialY": 21.4
+      "initialX": 454,
+      "initialY": 21.7
     },
     "AML-07": {
       "id": "AML-07",
@@ -275,8 +275,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "AML-07.mdx",
-      "initialX": 448.5,
-      "initialY": -16
+      "initialX": 401.7,
+      "initialY": -15.2
     },
     "AML-08": {
       "id": "AML-08",
@@ -315,8 +315,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "AML-08.mdx",
-      "initialX": 463.9,
-      "initialY": 18.1
+      "initialX": 395.6,
+      "initialY": 8.2
     },
     "AML-09": {
       "id": "AML-09",
@@ -356,8 +356,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "AML-09.mdx",
-      "initialX": 430.6,
-      "initialY": -31.2
+      "initialX": 451.1,
+      "initialY": -26.9
     },
     "AML-10": {
       "id": "AML-10",
@@ -396,8 +396,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "AML-10.mdx",
-      "initialX": 493.3,
-      "initialY": -3.5
+      "initialX": 417.2,
+      "initialY": 17.9
     },
     "AML-11": {
       "id": "AML-11",
@@ -436,8 +436,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "AML-11.mdx",
-      "initialX": 482.7,
-      "initialY": -28.2
+      "initialX": 501.4,
+      "initialY": 21
     },
     "AML-12": {
       "id": "AML-12",
@@ -476,8 +476,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "AML-12.mdx",
-      "initialX": 417.8,
-      "initialY": -12.3
+      "initialX": 497.1,
+      "initialY": -27.4
     },
     "AML-13": {
       "id": "AML-13",
@@ -516,8 +516,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "AML-13.mdx",
-      "initialX": 419.3,
-      "initialY": 9.9
+      "initialX": 476.9,
+      "initialY": -28.6
     },
     "AML-14": {
       "id": "AML-14",
@@ -556,8 +556,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "AML-14.mdx",
-      "initialX": 471.2,
-      "initialY": -10.3
+      "initialX": 424.4,
+      "initialY": -21.7
     },
     "AML-15": {
       "id": "AML-15",
@@ -596,8 +596,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "AML-15.mdx",
-      "initialX": 427.9,
-      "initialY": 37.8
+      "initialX": 479.7,
+      "initialY": -4.1
     },
     "AML-16": {
       "id": "AML-16",
@@ -636,8 +636,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "AML-16.mdx",
-      "initialX": 482,
-      "initialY": 40.7
+      "initialX": 475.5,
+      "initialY": 48.7
     },
     "AML-17": {
       "id": "AML-17",
@@ -677,8 +677,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "AML-17.mdx",
-      "initialX": 373,
-      "initialY": -15.1
+      "initialX": 437.6,
+      "initialY": 4.2
     },
     "AML-18": {
       "id": "AML-18",
@@ -722,8 +722,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "AML-18.mdx",
-      "initialX": 502.9,
-      "initialY": 28.6
+      "initialX": 372.2,
+      "initialY": -3
     },
     "BA-01": {
       "id": "BA-01",
@@ -760,8 +760,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-01.mdx",
-      "initialX": 340,
-      "initialY": 126.9
+      "initialX": 472.9,
+      "initialY": 173.4
     },
     "BA-02": {
       "id": "BA-02",
@@ -798,8 +798,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-02.mdx",
-      "initialX": 426.6,
-      "initialY": 223.2
+      "initialX": 344.9,
+      "initialY": 128.5
     },
     "BA-03": {
       "id": "BA-03",
@@ -836,8 +836,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-03.mdx",
-      "initialX": 456.3,
-      "initialY": 140.6
+      "initialX": 411,
+      "initialY": 232.6
     },
     "BA-04": {
       "id": "BA-04",
@@ -874,8 +874,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-04.mdx",
-      "initialX": 376.2,
-      "initialY": 148.1
+      "initialX": 373.5,
+      "initialY": 211
     },
     "BA-05": {
       "id": "BA-05",
@@ -909,8 +909,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-05.mdx",
-      "initialX": 439.7,
-      "initialY": 156.7
+      "initialX": 427.1,
+      "initialY": 173.9
     },
     "BA-06": {
       "id": "BA-06",
@@ -947,8 +947,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-06.mdx",
-      "initialX": 406.3,
-      "initialY": 226.8
+      "initialX": 453.2,
+      "initialY": 137.4
     },
     "BA-07": {
       "id": "BA-07",
@@ -980,8 +980,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-07.mdx",
-      "initialX": 401.7,
-      "initialY": 148.8
+      "initialX": 455.2,
+      "initialY": 217.1
     },
     "BA-08": {
       "id": "BA-08",
@@ -1016,8 +1016,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-08.mdx",
-      "initialX": 355.6,
-      "initialY": 197.5
+      "initialX": 406.5,
+      "initialY": 167.9
     },
     "BA-09": {
       "id": "BA-09",
@@ -1051,8 +1051,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-09.mdx",
-      "initialX": 408.9,
-      "initialY": 184.7
+      "initialX": 394.7,
+      "initialY": 154.5
     },
     "BA-10": {
       "id": "BA-10",
@@ -1086,8 +1086,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-10.mdx",
-      "initialX": 467.3,
-      "initialY": 171.2
+      "initialX": 428.9,
+      "initialY": 202
     },
     "BA-11": {
       "id": "BA-11",
@@ -1121,8 +1121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-11.mdx",
-      "initialX": 464.1,
-      "initialY": 200.8
+      "initialX": 452.4,
+      "initialY": 162.8
     },
     "BA-12": {
       "id": "BA-12",
@@ -1156,8 +1156,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-12.mdx",
-      "initialX": 358.2,
-      "initialY": 165.2
+      "initialX": 360.9,
+      "initialY": 190.4
     },
     "BA-13": {
       "id": "BA-13",
@@ -1197,8 +1197,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-13.mdx",
-      "initialX": 419.4,
-      "initialY": 130.3
+      "initialX": 368.3,
+      "initialY": 120.1
     },
     "BA-14": {
       "id": "BA-14",
@@ -1237,8 +1237,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "BA-14.mdx",
-      "initialX": 439.6,
-      "initialY": 188.3
+      "initialX": 333.6,
+      "initialY": 160
     },
     "BA-15": {
       "id": "BA-15",
@@ -1272,8 +1272,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-15.mdx",
-      "initialX": 333.6,
-      "initialY": 150.2
+      "initialX": 458.1,
+      "initialY": 192.9
     },
     "BA-16": {
       "id": "BA-16",
@@ -1307,8 +1307,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-16.mdx",
-      "initialX": 379.3,
-      "initialY": 186.3
+      "initialX": 396.8,
+      "initialY": 192.7
     },
     "BA-17": {
       "id": "BA-17",
@@ -1348,8 +1348,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "BA-17.mdx",
-      "initialX": 387.2,
-      "initialY": 122.7
+      "initialX": 423.9,
+      "initialY": 141.4
     },
     "BA-18": {
       "id": "BA-18",
@@ -1383,8 +1383,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "BA-18.mdx",
-      "initialX": 419.6,
-      "initialY": 166.5
+      "initialX": 363.7,
+      "initialY": 149.6
     },
     "BA-19": {
       "id": "BA-19",
@@ -1418,8 +1418,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "BA-19.mdx",
-      "initialX": 364.3,
-      "initialY": 130.2
+      "initialX": 404.8,
+      "initialY": 125
     },
     "BA-20": {
       "id": "BA-20",
@@ -1454,8 +1454,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-20.mdx",
-      "initialX": 387.2,
-      "initialY": 234
+      "initialX": 392.4,
+      "initialY": 220.4
     },
     "BA-21": {
       "id": "BA-21",
@@ -1489,8 +1489,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-21.mdx",
-      "initialX": 401.2,
-      "initialY": 203.5
+      "initialX": 432.7,
+      "initialY": 230
     },
     "BA-22": {
       "id": "BA-22",
@@ -1525,8 +1525,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-22.mdx",
-      "initialX": 447.9,
-      "initialY": 224.9
+      "initialX": 351.5,
+      "initialY": 173.4
     },
     "CAP-01": {
       "id": "CAP-01",
@@ -1567,8 +1567,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CAP-01.mdx",
-      "initialX": 114,
-      "initialY": 102.5
+      "initialX": 115.8,
+      "initialY": 104.9
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -1608,8 +1608,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "CAP-02.mdx",
-      "initialX": 166.2,
-      "initialY": 179.8
+      "initialX": 166.7,
+      "initialY": 181.6
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -1648,8 +1648,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "CAP-03.mdx",
-      "initialX": 277.1,
-      "initialY": 242.6
+      "initialX": 276.6,
+      "initialY": 241.8
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -1689,8 +1689,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "CAP-04.mdx",
-      "initialX": 174.3,
-      "initialY": 234.9
+      "initialX": 174.7,
+      "initialY": 235
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -1730,8 +1730,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CAP-05.mdx",
-      "initialX": 299.9,
-      "initialY": 286.2
+      "initialX": 300.6,
+      "initialY": 286
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -1772,8 +1772,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CAP-06.mdx",
-      "initialX": 78.7,
-      "initialY": 191.2
+      "initialX": 79.5,
+      "initialY": 191.5
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -1815,8 +1815,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "CAP-07.mdx",
-      "initialX": 22.1,
-      "initialY": 201.6
+      "initialX": 22.7,
+      "initialY": 206.3
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -1862,8 +1862,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 74.9,
-      "initialY": 249.1
+      "initialX": 76.7,
+      "initialY": 253
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -1904,8 +1904,8 @@
       "depth": 19,
       "currentness": "future",
       "filepath": "CAP-09.mdx",
-      "initialX": 102.3,
-      "initialY": 211.4
+      "initialX": 100.2,
+      "initialY": 216.5
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -1946,8 +1946,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "CAP-10.mdx",
-      "initialX": 205.1,
-      "initialY": 234.6
+      "initialX": 207.7,
+      "initialY": 227.5
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -1987,8 +1987,8 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "CAP-11.mdx",
-      "initialX": 158.8,
-      "initialY": 254.5
+      "initialX": 162.1,
+      "initialY": 257.8
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -2032,8 +2032,8 @@
       "depth": 22,
       "currentness": "fresh",
       "filepath": "CAP-12.mdx",
-      "initialX": 252.4,
-      "initialY": 251.8
+      "initialX": 253.2,
+      "initialY": 251.5
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -2093,8 +2093,8 @@
       "depth": 23,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 194.8,
-      "initialY": 309.1
+      "initialX": 198.4,
+      "initialY": 315.4
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -2134,8 +2134,8 @@
       "depth": 24,
       "currentness": "fresh",
       "filepath": "CAP-14.mdx",
-      "initialX": 162.8,
-      "initialY": 323.4
+      "initialX": 162.4,
+      "initialY": 322.1
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -2174,8 +2174,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "CAP-15.mdx",
-      "initialX": 293.5,
-      "initialY": 325
+      "initialX": 296.8,
+      "initialY": 325.4
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -2240,8 +2240,8 @@
       "depth": 24,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 139.2,
-      "initialY": 325.8
+      "initialX": 139.7,
+      "initialY": 324.7
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -2289,8 +2289,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "CAP-17.mdx",
-      "initialX": 90.1,
-      "initialY": 319.2
+      "initialX": 92.5,
+      "initialY": 316.7
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -2335,8 +2335,8 @@
       "depth": 26,
       "currentness": "fresh",
       "filepath": "CAP-18.mdx",
-      "initialX": 226.6,
-      "initialY": 311.9
+      "initialX": 228.7,
+      "initialY": 311.3
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -2400,8 +2400,8 @@
       "depth": 27,
       "currentness": "future",
       "filepath": "CAP-19.mdx",
-      "initialX": 272.4,
-      "initialY": 310.5
+      "initialX": 275.2,
+      "initialY": 318.3
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -2449,8 +2449,8 @@
       "depth": 22,
       "currentness": "fresh",
       "filepath": "CAP-20.mdx",
-      "initialX": 258.6,
-      "initialY": 272.3
+      "initialX": 261.9,
+      "initialY": 273.4
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -2502,8 +2502,8 @@
       "depth": 23,
       "currentness": "fresh",
       "filepath": "CAP-21.mdx",
-      "initialX": 140.3,
-      "initialY": 225.6
+      "initialX": 144.7,
+      "initialY": 224.6
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -2545,8 +2545,8 @@
       "depth": 24,
       "currentness": "fresh",
       "filepath": "CAP-22.mdx",
-      "initialX": 243.9,
-      "initialY": 289.2
+      "initialX": 242.3,
+      "initialY": 287.5
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -2594,8 +2594,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "CAP-23.mdx",
-      "initialX": 111.7,
-      "initialY": 280.6
+      "initialX": 112.5,
+      "initialY": 279.4
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -2654,8 +2654,8 @@
       "depth": 26,
       "currentness": "future",
       "filepath": "CAP-24.mdx",
-      "initialX": 213,
-      "initialY": 270.2
+      "initialX": 231.1,
+      "initialY": 236.2
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -2713,8 +2713,8 @@
       "depth": 27,
       "currentness": "fresh",
       "filepath": "CAP-25.mdx",
-      "initialX": 108.9,
-      "initialY": 231.2
+      "initialX": 118.9,
+      "initialY": 221.2
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -2762,8 +2762,8 @@
       "depth": 26,
       "currentness": "fresh",
       "filepath": "CAP-26.mdx",
-      "initialX": 57.3,
-      "initialY": 217.4
+      "initialX": 57.7,
+      "initialY": 221.7
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -2821,8 +2821,8 @@
       "depth": 24,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 136.2,
-      "initialY": 192.5
+      "initialX": 132.1,
+      "initialY": 199.2
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -2880,8 +2880,8 @@
       "depth": 28,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 236.6,
-      "initialY": 243.8
+      "initialX": 228.2,
+      "initialY": 273.3
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -2935,8 +2935,8 @@
       "depth": 27,
       "currentness": "future",
       "filepath": "CAP-29.mdx",
-      "initialX": 135.7,
-      "initialY": 252.9
+      "initialX": 140.3,
+      "initialY": 253.4
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -2993,8 +2993,8 @@
       "depth": 27,
       "currentness": "fresh",
       "filepath": "CAP-30.mdx",
-      "initialX": 218.8,
-      "initialY": 218.3
+      "initialX": 202.3,
+      "initialY": 257.2
     },
     "CCR-01": {
       "id": "CCR-01",
@@ -3036,8 +3036,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-01.mdx",
-      "initialX": 198.4,
-      "initialY": 405.3
+      "initialX": 198.3,
+      "initialY": 458.2
     },
     "CCR-02": {
       "id": "CCR-02",
@@ -3076,8 +3076,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-02.mdx",
-      "initialX": 203.8,
-      "initialY": 452.6
+      "initialX": 212.2,
+      "initialY": 405.8
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -3116,8 +3116,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-03.mdx",
-      "initialX": 147.6,
-      "initialY": 465.7
+      "initialX": 153.6,
+      "initialY": 410.8
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -3156,8 +3156,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-04.mdx",
-      "initialX": 252.8,
-      "initialY": 432.3
+      "initialX": 248.3,
+      "initialY": 446.2
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -3196,8 +3196,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-05.mdx",
-      "initialX": 189.5,
-      "initialY": 470.7
+      "initialX": 238.9,
+      "initialY": 408.7
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -3241,8 +3241,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-06.mdx",
-      "initialX": 171.6,
-      "initialY": 446.8
+      "initialX": 151.4,
+      "initialY": 437.2
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -3281,8 +3281,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-07.mdx",
-      "initialX": 113.8,
-      "initialY": 423.3
+      "initialX": 116.4,
+      "initialY": 472.5
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -3321,8 +3321,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-08.mdx",
-      "initialX": 115.1,
-      "initialY": 455.2
+      "initialX": 113.4,
+      "initialY": 402.3
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -3361,8 +3361,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-09.mdx",
-      "initialX": 131.5,
-      "initialY": 483.3
+      "initialX": 148.3,
+      "initialY": 492
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -3401,8 +3401,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-10.mdx",
-      "initialX": 232.8,
-      "initialY": 448.4
+      "initialX": 132.6,
+      "initialY": 425.6
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -3441,8 +3441,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-11.mdx",
-      "initialX": 255.8,
-      "initialY": 396.2
+      "initialX": 154.1,
+      "initialY": 471.6
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -3481,8 +3481,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-12.mdx",
-      "initialX": 232,
-      "initialY": 391.8
+      "initialX": 175.3,
+      "initialY": 460.3
     },
     "CCR-13": {
       "id": "CCR-13",
@@ -3521,8 +3521,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-13.mdx",
-      "initialX": 209.7,
-      "initialY": 391
+      "initialX": 136,
+      "initialY": 370.5
     },
     "CCR-14": {
       "id": "CCR-14",
@@ -3566,8 +3566,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-14.mdx",
-      "initialX": 178.1,
-      "initialY": 399.3
+      "initialX": 147.7,
+      "initialY": 389.8
     },
     "CCR-15": {
       "id": "CCR-15",
@@ -3606,8 +3606,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-15.mdx",
-      "initialX": 154.2,
-      "initialY": 362.5
+      "initialX": 207,
+      "initialY": 385.1
     },
     "CCR-16": {
       "id": "CCR-16",
@@ -3646,8 +3646,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-16.mdx",
-      "initialX": 221.5,
-      "initialY": 366.5
+      "initialX": 182.4,
+      "initialY": 363.6
     },
     "CCR-17": {
       "id": "CCR-17",
@@ -3686,8 +3686,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-17.mdx",
-      "initialX": 136.3,
-      "initialY": 406.8
+      "initialX": 199.7,
+      "initialY": 424.3
     },
     "CCR-18": {
       "id": "CCR-18",
@@ -3726,8 +3726,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CCR-18.mdx",
-      "initialX": 188.3,
-      "initialY": 427.1
+      "initialX": 240.3,
+      "initialY": 380.8
     },
     "CCR-19": {
       "id": "CCR-19",
@@ -3766,8 +3766,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-19.mdx",
-      "initialX": 236.9,
-      "initialY": 417.7
+      "initialX": 224.2,
+      "initialY": 437.6
     },
     "CCR-20": {
       "id": "CCR-20",
@@ -3806,8 +3806,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-20.mdx",
-      "initialX": 134.1,
-      "initialY": 430.1
+      "initialX": 258.6,
+      "initialY": 426.7
     },
     "CCR-21": {
       "id": "CCR-21",
@@ -3851,8 +3851,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CCR-21.mdx",
-      "initialX": 184.5,
-      "initialY": 373.5
+      "initialX": 184.8,
+      "initialY": 485
     },
     "CCR-22": {
       "id": "CCR-22",
@@ -3891,8 +3891,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-22.mdx",
-      "initialX": 218.1,
-      "initialY": 466.9
+      "initialX": 176.9,
+      "initialY": 399
     },
     "CCR-23": {
       "id": "CCR-23",
@@ -3929,8 +3929,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-23.mdx",
-      "initialX": 167.9,
-      "initialY": 483.1
+      "initialX": 220.6,
+      "initialY": 469.1
     },
     "CCR-24": {
       "id": "CCR-24",
@@ -3971,8 +3971,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-24.mdx",
-      "initialX": 130.2,
-      "initialY": 373.2
+      "initialX": 181.5,
+      "initialY": 432.5
     },
     "CCR-25": {
       "id": "CCR-25",
@@ -4017,8 +4017,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CCR-25.mdx",
-      "initialX": 148.8,
-      "initialY": 443
+      "initialX": 202.9,
+      "initialY": 360.6
     },
     "CCR-26": {
       "id": "CCR-26",
@@ -4058,8 +4058,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-26.mdx",
-      "initialX": 123.2,
-      "initialY": 392.3
+      "initialX": 128.4,
+      "initialY": 449
     },
     "CR-01": {
       "id": "CR-01",
@@ -4096,8 +4096,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 28.7,
-      "initialY": 350.8
+      "initialX": 36,
+      "initialY": 363.1
     },
     "CR-02": {
       "id": "CR-02",
@@ -4136,8 +4136,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": 42.8,
-      "initialY": 371
+      "initialX": 43.6,
+      "initialY": 389.4
     },
     "CR-03": {
       "id": "CR-03",
@@ -4182,8 +4182,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "CR-03.mdx",
-      "initialX": -72.3,
-      "initialY": 329.4
+      "initialX": -69.8,
+      "initialY": 335.7
     },
     "CR-04": {
       "id": "CR-04",
@@ -4231,8 +4231,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": -41.8,
-      "initialY": 327.3
+      "initialX": -39.9,
+      "initialY": 331.5
     },
     "CR-05": {
       "id": "CR-05",
@@ -4279,8 +4279,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CR-05.mdx",
-      "initialX": -6.5,
-      "initialY": 373.4
+      "initialX": -5.6,
+      "initialY": 380.4
     },
     "CR-06": {
       "id": "CR-06",
@@ -4325,8 +4325,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
-      "initialX": 28.7,
-      "initialY": 403.9
+      "initialX": 19.4,
+      "initialY": 352.7
     },
     "CR-07": {
       "id": "CR-07",
@@ -4395,8 +4395,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CR-07.mdx",
-      "initialX": -34.1,
-      "initialY": 362.4
+      "initialX": -31.8,
+      "initialY": 365.9
     },
     "CR-08": {
       "id": "CR-08",
@@ -4449,8 +4449,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 23,
-      "initialY": 270.3
+      "initialX": 26.5,
+      "initialY": 276.7
     },
     "CR-09": {
       "id": "CR-09",
@@ -4509,8 +4509,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CR-09.mdx",
-      "initialX": -10.5,
-      "initialY": 305.3
+      "initialX": -8.9,
+      "initialY": 308.9
     },
     "CR-10": {
       "id": "CR-10",
@@ -4574,8 +4574,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CR-10.mdx",
-      "initialX": -104.8,
-      "initialY": 297.8
+      "initialX": -97.6,
+      "initialY": 297.1
     },
     "CR-11": {
       "id": "CR-11",
@@ -4633,8 +4633,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -104.6,
-      "initialY": 319.8
+      "initialX": -107.2,
+      "initialY": 312.9
     },
     "CR-12": {
       "id": "CR-12",
@@ -4698,8 +4698,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CR-12.mdx",
-      "initialX": -130.2,
-      "initialY": 320.1
+      "initialX": -130,
+      "initialY": 330.5
     },
     "CR-13": {
       "id": "CR-13",
@@ -4753,8 +4753,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CR-13.mdx",
-      "initialX": -135,
-      "initialY": 352.5
+      "initialX": -126.8,
+      "initialY": 362.4
     },
     "CR-14": {
       "id": "CR-14",
@@ -4798,8 +4798,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-14.mdx",
-      "initialX": -65,
-      "initialY": 365
+      "initialX": -69,
+      "initialY": 368.8
     },
     "CR-15": {
       "id": "CR-15",
@@ -4838,8 +4838,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": -87.6,
-      "initialY": 404.4
+      "initialX": -87.2,
+      "initialY": 410.5
     },
     "CR-16": {
       "id": "CR-16",
@@ -4886,7 +4886,7 @@
       "currentness": "fresh",
       "filepath": "CR-16.mdx",
       "initialX": -100.3,
-      "initialY": 353.4
+      "initialY": 343.5
     },
     "CR-17": {
       "id": "CR-17",
@@ -4931,8 +4931,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-17.mdx",
-      "initialX": -146.1,
-      "initialY": 309.9
+      "initialX": -140.1,
+      "initialY": 310.9
     },
     "CR-18": {
       "id": "CR-18",
@@ -4983,8 +4983,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "CR-18.mdx",
-      "initialX": -63.2,
-      "initialY": 421.9
+      "initialX": -54.7,
+      "initialY": 419.7
     },
     "CR-19": {
       "id": "CR-19",
@@ -5025,8 +5025,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-19.mdx",
-      "initialX": 1,
-      "initialY": 422.2
+      "initialX": 9.7,
+      "initialY": 432.9
     },
     "CR-20": {
       "id": "CR-20",
@@ -5072,8 +5072,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-20.mdx",
-      "initialX": -12,
-      "initialY": 453.1
+      "initialX": -21.6,
+      "initialY": 447.5
     },
     "CR-21": {
       "id": "CR-21",
@@ -5114,8 +5114,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-21.mdx",
-      "initialX": -43.4,
-      "initialY": 455.8
+      "initialX": -38,
+      "initialY": 451.4
     },
     "CR-22": {
       "id": "CR-22",
@@ -5151,8 +5151,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 13.4,
-      "initialY": 382.2
+      "initialX": 14.8,
+      "initialY": 390.7
     },
     "CR-23": {
       "id": "CR-23",
@@ -5211,8 +5211,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CR-23.mdx",
-      "initialX": -22.5,
-      "initialY": 404.8
+      "initialX": -16.4,
+      "initialY": 412
     },
     "CR-24": {
       "id": "CR-24",
@@ -5252,8 +5252,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "CR-24.mdx",
-      "initialX": 13.2,
-      "initialY": 447.3
+      "initialX": -45.5,
+      "initialY": 466.3
     },
     "CR-25": {
       "id": "CR-25",
@@ -5304,8 +5304,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "CR-25.mdx",
-      "initialX": -16.1,
-      "initialY": 487.8
+      "initialX": -6.4,
+      "initialY": 489.1
     },
     "CR-26": {
       "id": "CR-26",
@@ -5379,8 +5379,8 @@
       "depth": 16,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": -24.5,
-      "initialY": 445.2
+      "initialX": 8.2,
+      "initialY": 450.8
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -5417,8 +5417,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -216.1,
-      "initialY": 378.4
+      "initialX": -186.6,
+      "initialY": 365.2
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -5452,8 +5452,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -163.8,
-      "initialY": 415.5
+      "initialX": -173.6,
+      "initialY": 421.6
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -5497,8 +5497,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -209.1,
-      "initialY": 443.3
+      "initialX": -226.9,
+      "initialY": 437.6
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -5642,8 +5642,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -148.4,
-      "initialY": 441.4
+      "initialX": -192.7,
+      "initialY": 481.5
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -5677,8 +5677,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -170.3,
-      "initialY": 394.6
+      "initialX": -196.5,
+      "initialY": 387.4
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -5717,8 +5717,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": -166.1,
-      "initialY": 480.1
+      "initialX": -262.3,
+      "initialY": 391.2
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -5757,8 +5757,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -220.2,
-      "initialY": 464.4
+      "initialX": -215.9,
+      "initialY": 362.9
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -5792,8 +5792,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": -262.3,
-      "initialY": 424.6
+      "initialX": -165.9,
+      "initialY": 391.6
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -5827,8 +5827,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -239.6,
-      "initialY": 374.5
+      "initialX": -140.4,
+      "initialY": 457.7
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -5862,8 +5862,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -243.1,
-      "initialY": 445.8
+      "initialX": -155,
+      "initialY": 409.3
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -5897,8 +5897,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": -192.9,
-      "initialY": 472.9
+      "initialX": -204.1,
+      "initialY": 452
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -5932,8 +5932,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -256.2,
-      "initialY": 396.6
+      "initialX": -158.1,
+      "initialY": 478.5
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -5967,8 +5967,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -196.1,
-      "initialY": 392.3
+      "initialX": -140.6,
+      "initialY": 427.7
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -6002,8 +6002,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -177.7,
-      "initialY": 446.8
+      "initialX": -201.6,
+      "initialY": 414.1
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -6042,8 +6042,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -222.7,
-      "initialY": 403.4
+      "initialX": -252.5,
+      "initialY": 442.9
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -6077,8 +6077,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -229.3,
-      "initialY": 425.3
+      "initialX": -223.7,
+      "initialY": 392.6
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -6112,8 +6112,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": -264,
-      "initialY": 376.2
+      "initialX": -184.3,
+      "initialY": 441.4
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -6147,8 +6147,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": -208.4,
-      "initialY": 357.4
+      "initialX": -235.8,
+      "initialY": 414.7
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -6187,8 +6187,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -192.8,
-      "initialY": 420.7
+      "initialX": -244.1,
+      "initialY": 365.8
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -6222,8 +6222,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": -148.1,
-      "initialY": 465.8
+      "initialX": -262.6,
+      "initialY": 418.7
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -6257,8 +6257,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -141.1,
-      "initialY": 412.2
+      "initialX": -225.9,
+      "initialY": 465.1
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -6310,8 +6310,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": -180.4,
-      "initialY": 369.9
+      "initialX": -169,
+      "initialY": 459.6
     },
     "FND-01": {
       "id": "FND-01",
@@ -6343,8 +6343,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -134.5,
-      "initialY": 112.9
+      "initialX": -133.1,
+      "initialY": 115.2
     },
     "FND-02": {
       "id": "FND-02",
@@ -6383,8 +6383,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -106,
-      "initialY": 96.2
+      "initialX": -103.6,
+      "initialY": 99.1
     },
     "FND-03": {
       "id": "FND-03",
@@ -6424,8 +6424,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -111.5,
-      "initialY": 209.2
+      "initialX": -111.8,
+      "initialY": 212.5
     },
     "FND-04": {
       "id": "FND-04",
@@ -6465,8 +6465,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -78.6,
-      "initialY": 109.3
+      "initialX": -77,
+      "initialY": 111.8
     },
     "FND-05": {
       "id": "FND-05",
@@ -6512,8 +6512,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -158.8,
-      "initialY": 95.1
+      "initialX": -156.6,
+      "initialY": 98.7
     },
     "FND-06": {
       "id": "FND-06",
@@ -6576,8 +6576,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -171.5,
-      "initialY": 140.7
+      "initialX": -170.4,
+      "initialY": 143.4
     },
     "FND-07": {
       "id": "FND-07",
@@ -6616,8 +6616,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -118.4,
-      "initialY": 135.9
+      "initialX": -116.9,
+      "initialY": 136.9
     },
     "FND-08": {
       "id": "FND-08",
@@ -6675,8 +6675,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-08.mdx",
-      "initialX": -173.1,
-      "initialY": 101.7
+      "initialX": -172.1,
+      "initialY": 104
     },
     "FND-09": {
       "id": "FND-09",
@@ -6729,8 +6729,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -121.5,
-      "initialY": 76.3
+      "initialX": -119.4,
+      "initialY": 78.2
     },
     "FND-10": {
       "id": "FND-10",
@@ -6774,8 +6774,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-10.mdx",
-      "initialX": -180.3,
-      "initialY": 186
+      "initialX": -178.8,
+      "initialY": 188.4
     },
     "FND-11": {
       "id": "FND-11",
@@ -6807,8 +6807,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -125,
-      "initialY": 198.2
+      "initialX": -125.7,
+      "initialY": 203.9
     },
     "FND-12": {
       "id": "FND-12",
@@ -6842,8 +6842,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -90.4,
-      "initialY": 197.1
+      "initialX": -88.3,
+      "initialY": 201.3
     },
     "FND-13": {
       "id": "FND-13",
@@ -6878,8 +6878,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -151.2,
-      "initialY": 170.2
+      "initialX": -142,
+      "initialY": 171.2
     },
     "FND-14": {
       "id": "FND-14",
@@ -6928,8 +6928,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -218.4,
-      "initialY": 211.6
+      "initialX": -216.4,
+      "initialY": 217.2
     },
     "FND-15": {
       "id": "FND-15",
@@ -6961,8 +6961,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -120.1,
-      "initialY": 237.4
+      "initialX": -143.9,
+      "initialY": 241.9
     },
     "FND-16": {
       "id": "FND-16",
@@ -6996,8 +6996,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -140.3,
-      "initialY": 250.3
+      "initialX": -115.1,
+      "initialY": 248.8
     },
     "FND-17": {
       "id": "FND-17",
@@ -7032,8 +7032,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -85.1,
-      "initialY": 151.5
+      "initialX": -83.3,
+      "initialY": 153.7
     },
     "FND-18": {
       "id": "FND-18",
@@ -7068,8 +7068,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -122.9,
-      "initialY": 157.8
+      "initialX": -122,
+      "initialY": 158.5
     },
     "FND-19": {
       "id": "FND-19",
@@ -7111,8 +7111,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -155.5,
-      "initialY": 151.5
+      "initialX": -156.8,
+      "initialY": 156.7
     },
     "FND-20": {
       "id": "FND-20",
@@ -7147,8 +7147,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -270.2,
-      "initialY": 199.2
+      "initialX": -267,
+      "initialY": 204.1
     },
     "FND-21": {
       "id": "FND-21",
@@ -7187,8 +7187,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -339.9,
-      "initialY": 254.2
+      "initialX": -338.6,
+      "initialY": 258.9
     },
     "FND-22": {
       "id": "FND-22",
@@ -7227,8 +7227,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -363.2,
-      "initialY": 310.1
+      "initialX": -362,
+      "initialY": 314.7
     },
     "FND-23": {
       "id": "FND-23",
@@ -7291,8 +7291,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -300.1,
-      "initialY": 229.6
+      "initialX": -297.8,
+      "initialY": 235.4
     },
     "FND-24": {
       "id": "FND-24",
@@ -7361,8 +7361,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -241,
-      "initialY": 188.5
+      "initialX": -246.9,
+      "initialY": 187.6
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -7418,8 +7418,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "IMP-01.mdx",
-      "initialX": -152.3,
-      "initialY": 184.3
+      "initialX": -152,
+      "initialY": 186.1
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -7479,8 +7479,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "IMP-02.mdx",
-      "initialX": -295.1,
-      "initialY": 147.7
+      "initialX": -295,
+      "initialY": 152.2
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -7530,8 +7530,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "IMP-03.mdx",
-      "initialX": -235.7,
-      "initialY": 131.1
+      "initialX": -234.8,
+      "initialY": 134.8
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -7582,8 +7582,8 @@
       "depth": 11,
       "currentness": "future",
       "filepath": "IMP-04.mdx",
-      "initialX": -271,
-      "initialY": 173.5
+      "initialX": -270.7,
+      "initialY": 177
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -7638,8 +7638,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "IMP-05.mdx",
-      "initialX": -223.3,
-      "initialY": 238.5
+      "initialX": -221.7,
+      "initialY": 242.2
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -7689,8 +7689,8 @@
       "depth": 13,
       "currentness": "future",
       "filepath": "IMP-06.mdx",
-      "initialX": -252.3,
-      "initialY": 201.5
+      "initialX": -236.6,
+      "initialY": 197.8
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -7740,8 +7740,8 @@
       "depth": 13,
       "currentness": "future",
       "filepath": "IMP-07.mdx",
-      "initialX": -250.2,
-      "initialY": 275.9
+      "initialX": -245,
+      "initialY": 267.7
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -7796,8 +7796,8 @@
       "depth": 14,
       "currentness": "future",
       "filepath": "IMP-08.mdx",
-      "initialX": -218.3,
-      "initialY": 284.1
+      "initialX": -223.5,
+      "initialY": 292.1
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -7848,8 +7848,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-09.mdx",
-      "initialX": -183.5,
-      "initialY": 266.5
+      "initialX": -184.9,
+      "initialY": 274.1
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -7898,8 +7898,8 @@
       "depth": 16,
       "currentness": "future",
       "filepath": "IMP-10.mdx",
-      "initialX": -306.4,
-      "initialY": 200.8
+      "initialX": -305.7,
+      "initialY": 206.1
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -7957,8 +7957,8 @@
       "depth": 14,
       "currentness": "future",
       "filepath": "IMP-11.mdx",
-      "initialX": -279.2,
-      "initialY": 242.5
+      "initialX": -252.8,
+      "initialY": 240.1
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -8008,8 +8008,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-12.mdx",
-      "initialX": -241.3,
-      "initialY": 218.5
+      "initialX": -242.8,
+      "initialY": 211.2
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -8064,8 +8064,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-13.mdx",
-      "initialX": -266.6,
-      "initialY": 271.3
+      "initialX": -270.8,
+      "initialY": 279.3
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -8121,8 +8121,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-14.mdx",
-      "initialX": -246.4,
-      "initialY": 249.4
+      "initialX": -265.1,
+      "initialY": 261
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -8177,8 +8177,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-15.mdx",
-      "initialX": -260.8,
-      "initialY": 218.7
+      "initialX": -269.9,
+      "initialY": 219.4
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -8233,8 +8233,8 @@
       "depth": 16,
       "currentness": "future",
       "filepath": "IMP-16.mdx",
-      "initialX": -258.9,
-      "initialY": 134.5
+      "initialX": -258.7,
+      "initialY": 137.8
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -8291,8 +8291,8 @@
       "depth": 17,
       "currentness": "future",
       "filepath": "IMP-17.mdx",
-      "initialX": -309.9,
-      "initialY": 179.2
+      "initialX": -310.2,
+      "initialY": 184.1
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -8347,8 +8347,8 @@
       "depth": 18,
       "currentness": "future",
       "filepath": "IMP-18.mdx",
-      "initialX": -321.2,
-      "initialY": 145.7
+      "initialX": -320.3,
+      "initialY": 149.7
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -8399,8 +8399,8 @@
       "depth": 16,
       "currentness": "future",
       "filepath": "IMP-19.mdx",
-      "initialX": -338.5,
-      "initialY": 185
+      "initialX": -336.7,
+      "initialY": 190.2
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -8462,8 +8462,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -204.5,
-      "initialY": 177.9
+      "initialX": -204.8,
+      "initialY": 182.6
     },
     "IND-01": {
       "id": "IND-01",
@@ -8500,8 +8500,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -394.2,
-      "initialY": 46.1
+      "initialX": -510.2,
+      "initialY": 17.6
     },
     "IND-02": {
       "id": "IND-02",
@@ -8540,8 +8540,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -446.3,
-      "initialY": 62.4
+      "initialX": -462,
+      "initialY": -22
     },
     "IND-03": {
       "id": "IND-03",
@@ -8575,8 +8575,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -499.5,
-      "initialY": 40.2
+      "initialX": -400,
+      "initialY": -13.9
     },
     "IND-04": {
       "id": "IND-04",
@@ -8610,8 +8610,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -465.6,
-      "initialY": -11.8
+      "initialX": -444.9,
+      "initialY": 39.4
     },
     "IND-05": {
       "id": "IND-05",
@@ -8651,8 +8651,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -481,
-      "initialY": 82.7
+      "initialX": -415.9,
+      "initialY": 28.8
     },
     "IND-06": {
       "id": "IND-06",
@@ -8692,8 +8692,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -458,
-      "initialY": 13.6
+      "initialX": -451.6,
+      "initialY": 16.4
     },
     "IND-07": {
       "id": "IND-07",
@@ -8732,8 +8732,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -447.9,
-      "initialY": -45.7
+      "initialX": -488.6,
+      "initialY": 55.3
     },
     "IND-08": {
       "id": "IND-08",
@@ -8773,8 +8773,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -490.6,
-      "initialY": -19.4
+      "initialX": -439.2,
+      "initialY": 78.7
     },
     "IND-09": {
       "id": "IND-09",
@@ -8815,8 +8815,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -406.7,
-      "initialY": -11.4
+      "initialX": -406.3,
+      "initialY": 58.3
     },
     "IND-10": {
       "id": "IND-10",
@@ -8856,8 +8856,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -416.5,
-      "initialY": 50
+      "initialX": -390.8,
+      "initialY": 4.3
     },
     "IND-11": {
       "id": "IND-11",
@@ -8897,8 +8897,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -420.7,
-      "initialY": 1.5
+      "initialX": -467.5,
+      "initialY": 40.4
     },
     "IND-12": {
       "id": "IND-12",
@@ -8937,8 +8937,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -369.7,
-      "initialY": 23.6
+      "initialX": -425.1,
+      "initialY": -1.7
     },
     "IND-13": {
       "id": "IND-13",
@@ -8977,8 +8977,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -400.1,
-      "initialY": 23
+      "initialX": -407.1,
+      "initialY": -30.8
     },
     "IND-14": {
       "id": "IND-14",
@@ -9012,8 +9012,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -374.5,
-      "initialY": -24.6
+      "initialX": -360.4,
+      "initialY": -1
     },
     "IND-15": {
       "id": "IND-15",
@@ -9052,8 +9052,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -428.1,
-      "initialY": 73.8
+      "initialX": -373.8,
+      "initialY": 21.3
     },
     "IND-16": {
       "id": "IND-16",
@@ -9093,8 +9093,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -435.7,
-      "initialY": 11.2
+      "initialX": -428.6,
+      "initialY": 40.4
     },
     "IND-17": {
       "id": "IND-17",
@@ -9133,8 +9133,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -487.6,
-      "initialY": 22
+      "initialX": -464.6,
+      "initialY": 85.7
     },
     "IND-18": {
       "id": "IND-18",
@@ -9173,8 +9173,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -464.5,
-      "initialY": 46.9
+      "initialX": -458.6,
+      "initialY": -2.6
     },
     "IND-19": {
       "id": "IND-19",
@@ -9213,8 +9213,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -502.6,
-      "initialY": 3.2
+      "initialX": -507.9,
+      "initialY": -11.3
     },
     "IND-20": {
       "id": "IND-20",
@@ -9253,8 +9253,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -480.1,
-      "initialY": -40.3
+      "initialX": -468.7,
+      "initialY": 67.3
     },
     "IND-21": {
       "id": "IND-21",
@@ -9293,8 +9293,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -409.3,
-      "initialY": -32
+      "initialX": -438.1,
+      "initialY": -35.4
     },
     "IND-22": {
       "id": "IND-22",
@@ -9333,8 +9333,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -364.9,
-      "initialY": 0.6
+      "initialX": -488.8,
+      "initialY": -28.3
     },
     "IND-23": {
       "id": "IND-23",
@@ -9373,8 +9373,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -434.8,
-      "initialY": -26.9
+      "initialX": -387.8,
+      "initialY": 40.5
     },
     "IND-24": {
       "id": "IND-24",
@@ -9413,8 +9413,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -442.1,
-      "initialY": 30.7
+      "initialX": -484.1,
+      "initialY": 10.5
     },
     "MRK-01": {
       "id": "MRK-01",
@@ -9446,8 +9446,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRK-01.mdx",
-      "initialX": -411.9,
-      "initialY": -146
+      "initialX": -349.3,
+      "initialY": -109.8
     },
     "MRK-02": {
       "id": "MRK-02",
@@ -9481,8 +9481,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-02.mdx",
-      "initialX": -462.8,
-      "initialY": -135.2
+      "initialX": -399.8,
+      "initialY": -152.9
     },
     "MRK-03": {
       "id": "MRK-03",
@@ -9516,8 +9516,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-03.mdx",
-      "initialX": -372.3,
-      "initialY": -173
+      "initialX": -356.5,
+      "initialY": -161.4
     },
     "MRK-04": {
       "id": "MRK-04",
@@ -9551,8 +9551,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-04.mdx",
-      "initialX": -379.9,
-      "initialY": -190.4
+      "initialX": -354.9,
+      "initialY": -179.5
     },
     "MRK-05": {
       "id": "MRK-05",
@@ -9586,8 +9586,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-05.mdx",
-      "initialX": -341.5,
-      "initialY": -155.1
+      "initialX": -410.7,
+      "initialY": -180.9
     },
     "MRK-06": {
       "id": "MRK-06",
@@ -9622,8 +9622,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-06.mdx",
-      "initialX": -388.3,
-      "initialY": -131.1
+      "initialX": -366.6,
+      "initialY": -125.8
     },
     "MRK-07": {
       "id": "MRK-07",
@@ -9657,8 +9657,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-07.mdx",
-      "initialX": -409.5,
-      "initialY": -172.3
+      "initialX": -416.8,
+      "initialY": -129.6
     },
     "MRK-08": {
       "id": "MRK-08",
@@ -9693,8 +9693,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-08.mdx",
-      "initialX": -439.1,
-      "initialY": -218.1
+      "initialX": -341.3,
+      "initialY": -132.7
     },
     "MRK-09": {
       "id": "MRK-09",
@@ -9729,8 +9729,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-09.mdx",
-      "initialX": -338.8,
-      "initialY": -107.2
+      "initialX": -441.6,
+      "initialY": -127.9
     },
     "MRK-10": {
       "id": "MRK-10",
@@ -9765,8 +9765,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-10.mdx",
-      "initialX": -307.3,
-      "initialY": -144.6
+      "initialX": -388.2,
+      "initialY": -126
     },
     "MRK-11": {
       "id": "MRK-11",
@@ -9800,8 +9800,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-11.mdx",
-      "initialX": -370.9,
-      "initialY": -150.5
+      "initialX": -321.7,
+      "initialY": -125.9
     },
     "MRK-12": {
       "id": "MRK-12",
@@ -9836,8 +9836,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-12.mdx",
-      "initialX": -467.8,
-      "initialY": -181.5
+      "initialX": -408.1,
+      "initialY": -104.6
     },
     "MRK-13": {
       "id": "MRK-13",
@@ -9872,8 +9872,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-13.mdx",
-      "initialX": -436.7,
-      "initialY": -176.9
+      "initialX": -421.9,
+      "initialY": -162.1
     },
     "MRK-14": {
       "id": "MRK-14",
@@ -9907,8 +9907,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-14.mdx",
-      "initialX": -407.6,
-      "initialY": -223.4
+      "initialX": -475,
+      "initialY": -147.7
     },
     "MRK-15": {
       "id": "MRK-15",
@@ -9943,8 +9943,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-15.mdx",
-      "initialX": -350.4,
-      "initialY": -177.4
+      "initialX": -431.9,
+      "initialY": -190.1
     },
     "MRK-16": {
       "id": "MRK-16",
@@ -9978,8 +9978,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-16.mdx",
-      "initialX": -385.5,
-      "initialY": -112.4
+      "initialX": -473.4,
+      "initialY": -186.8
     },
     "MRK-17": {
       "id": "MRK-17",
@@ -10014,8 +10014,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-17.mdx",
-      "initialX": -351.1,
-      "initialY": -127.3
+      "initialX": -387.1,
+      "initialY": -181.5
     },
     "MRK-18": {
       "id": "MRK-18",
@@ -10051,8 +10051,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-18.mdx",
-      "initialX": -427.9,
-      "initialY": -127.9
+      "initialX": -433.2,
+      "initialY": -218.9
     },
     "MRK-19": {
       "id": "MRK-19",
@@ -10086,8 +10086,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-19.mdx",
-      "initialX": -415.8,
-      "initialY": -198.2
+      "initialX": -377.7,
+      "initialY": -149.4
     },
     "MRK-20": {
       "id": "MRK-20",
@@ -10121,8 +10121,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-20.mdx",
-      "initialX": -441.4,
-      "initialY": -154.5
+      "initialX": -444.4,
+      "initialY": -156.1
     },
     "MRK-21": {
       "id": "MRK-21",
@@ -10157,8 +10157,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-21.mdx",
-      "initialX": -387.7,
-      "initialY": -206.1
+      "initialX": -395,
+      "initialY": -205.4
     },
     "MRK-22": {
       "id": "MRK-22",
@@ -10211,21 +10211,24 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "MRK-22.mdx",
-      "initialX": -449.7,
-      "initialY": -193.5
+      "initialX": -457.2,
+      "initialY": -175
     },
     "MRM-01": {
       "id": "MRM-01",
-      "title": "What is a Model",
+      "title": "What Counts as a Model",
       "type": "concept",
       "domain": "model-risk",
       "subdomain": "model-risk-foundations",
-      "one_screen": "A model is a quantitative system that processes input data using statistical, economic or financial theory to produce an output.  This definition determines which tools fall under model risk controls.  Not all decision-support tools are “models” in every regime – for example, U.S. guidance explicitly excludes simple spreadsheets or rule-based calculators from the model category, whereas UK and Indian frameworks use broader definitions that include any system with material impact on decisions.",
+      "one_screen": "A model is a governed representation that transforms inputs into outputs using assumptions and quantitative or cognitive techniques. Classification is consequential: model status brings inventory, validation, approval, monitoring and change controls, while the legal boundary differs materially across jurisdictions.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "EU",
+        "US"
       ],
       "perishable": true,
       "as_of": "2026-08-28",
@@ -10235,17 +10238,22 @@
       "reading_minutes": 4,
       "sources": [
         {
-          "label": "Federal Reserve, *SR 26-2, Revised Guidance on Model Risk Management* (Apr. 17, 2026).",
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "PRA, *Supervisory Statement SS1/23 (Apr 2026)* (Model Risk Management).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI draft, *Guidance on Regulatory Principles for Model Risk Management, 2026* (Jun 2026).",
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
@@ -10254,54 +10262,56 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -327.3,
-      "initialY": -260.6
+      "initialX": -315.4,
+      "initialY": -242
     },
     "MRM-02": {
       "id": "MRM-02",
-      "title": "Model Risk versus Other Risks",
+      "title": "Model Risk as a Distinct Risk Type",
       "type": "concept",
       "domain": "model-risk",
       "subdomain": "model-risk-foundations",
-      "one_screen": "Model risk is the potential for adverse outcomes from using a model (e.g. losses or bad decisions), not a type of financial risk like credit or market risk.  It arises from model errors and misuses.  By contrast, credit risk refers to borrower default, and market risk to price moves.  Model risk can exist even if credit and market risk are unchanged.",
-      "prerequisites": [],
+      "one_screen": "Model risk is the potential for adverse consequences from relying on a model whose design, data, implementation, limitations or use make its output unreliable for the decision being taken. It is distinct from the underlying risk being measured: the borrower can be unchanged while a credit model is wrong, and the market can be unchanged while a valuation model is wrong.",
+      "prerequisites": [
+        "MRM-01"
+      ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Federal Reserve, SR 26-2 (Apr. 17, 2026).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 5, 2024).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-02",
-      "depth": 0,
-      "currentness": "durable",
+      "depth": 1,
+      "currentness": "fresh",
       "filepath": "MRM-02.mdx",
-      "initialX": -344.4,
-      "initialY": -287.5
+      "initialX": -284.1,
+      "initialY": -285
     },
     "MRM-03": {
       "id": "MRM-03",
-      "title": "Sources of Model Risk",
+      "title": "Where Model Risk Comes From",
       "type": "concept",
       "domain": "model-risk",
       "subdomain": "model-risk-foundations",
-      "one_screen": "Model risk arises from many causes: bad input data, flawed methodology or assumptions, coding/implementation errors, and model misuse or misinterpretation.  Any part of a model’s lifecycle can introduce risk – for example, if training data are biased, if key variables are omitted, or if the model is used in a way the developers didn’t intend.",
+      "one_screen": "Model risk is rarely one defect called \"bad modelling\". It can enter through data, assumptions, methodology, implementation, use or environmental change, and the same bad output can require a completely different remedy depending on which source failed.",
       "prerequisites": [
         "MRM-02"
       ],
@@ -10310,45 +10320,49 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "IBM, *What Is Model Risk Management?* (Tech briefing).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-03",
-      "depth": 1,
-      "currentness": "durable",
+      "depth": 2,
+      "currentness": "fresh",
       "filepath": "MRM-03.mdx",
-      "initialX": -293.3,
-      "initialY": -255.7
+      "initialX": -338.6,
+      "initialY": -319.6
     },
     "MRM-04": {
       "id": "MRM-04",
-      "title": "Deterministic Tools versus Models",
-      "type": "concept",
+      "title": "The Regulatory Perimeter: US, UK, EU and India",
+      "type": "delta",
       "domain": "model-risk",
       "subdomain": "model-risk-foundations",
-      "one_screen": "Regulators distinguish “models” from simpler rule-based tools.  A deterministic tool (e.g. a spreadsheet calculator or rules engine with fixed logic) is not considered a model if it has no underlying statistical or theoretical basis.  U.S. guidance explicitly excludes pure arithmetic spreadsheets from the model definition.  However, if such tools have “material bearing on decisions,” firms often still apply model risk controls to them.",
+      "one_screen": "There is no single global legal perimeter for MRM. The US uses broad, tailored supervisory guidance; the PRA applies SS1/23 to specified firms but across their model types; the EU prudential regime focuses on approved internal models; and India's proposed 2026 framework is broader but remains draft as at August 2026.",
       "prerequisites": [
-        "MRM-01"
+        "MRM-01",
+        "MRM-02"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "EU",
+        "US"
       ],
       "perishable": true,
       "as_of": "2026-08-28",
@@ -10358,42 +10372,56 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Fed/OCC, *Revised Guidance on Model Risk Management* (Apr. 2026).",
+          "label": "Federal Reserve Board, Federal Reserve SR 26-2, Revised Guidance on Model Risk Management, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "PRA, *SS1/23 – Model risk management principles* (Apr. 2026).",
+          "label": "Office of the Comptroller of the Currency, OCC Bulletin 2026-13, Model Risk Management: Revised Guidance, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI, *Draft Guidance on Model Risk Management* (Jun. 2026).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-04",
-      "depth": 1,
+      "depth": 2,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -266.9,
-      "initialY": -267.4
+      "initialX": -234.8,
+      "initialY": -245.9
     },
     "MRM-05": {
       "id": "MRM-05",
-      "title": "Model Inventory and Materiality Tiering",
+      "title": "Model Inventory and Dependency Map",
       "type": "procedure",
       "domain": "model-risk",
       "subdomain": "model-risk-foundations",
-      "one_screen": "Firms must catalogue all models in an inventory and classify them by materiality or “tier.”  This ensures that validation and controls are focused on the most critical models.  Materiality (e.g. impact on capital or decisions) typically determines whether a model is High-, Medium- or Low-tier. Regulators explicitly require a complete model inventory and risk-based tiering.",
+      "one_screen": "The model inventory is the authoritative record of what models exist, where they are in the lifecycle, who owns and uses them, and which other systems or models they depend on. A mere list of names is insufficient: the control value comes from linking identity, status, use, lineage, dependencies and governance state.",
       "prerequisites": [
-        "MRM-01"
+        "MRM-01",
+        "MRM-04"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "EU",
+        "US"
       ],
       "perishable": true,
       "as_of": "2026-08-28",
@@ -10403,76 +10431,85 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "PRA, *SS1/23 (Apr. 2026) Principle 1 (Model inventory & tiering)*.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Fed SR 26-2 Attachment (2026) – Fed/OCC press release on risk-based materiality.",
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI draft (Aug. 2024), section on governance (calls for model inventory).",
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-05",
-      "depth": 1,
+      "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -298.8,
-      "initialY": -314.2
+      "initialX": -259.9,
+      "initialY": -228.7
     },
     "MRM-06": {
       "id": "MRM-06",
-      "title": "Model Lifecycle",
-      "type": "concept",
+      "title": "Materiality and Risk Tiering",
+      "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "governance-and-lifecycle",
-      "one_screen": "A model’s lifecycle consists of development, independent validation, approval, deployment/use, ongoing monitoring, updates (recalibration/redevelopment), and eventually retirement.  Each stage has specific risk controls.  Regulators expect firms to manage model risk across the entire lifecycle, not just at inception.",
+      "one_screen": "Tiering converts model characteristics and business impact into proportional control intensity. The purpose is not to declare low-tier models harmless; it is to spend validation, approval, monitoring and governance effort where model failure can matter most while preserving a minimum control floor for every governed model.",
       "prerequisites": [
+        "MRM-03",
         "MRM-05"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "US"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "OCC, *Revised Guidance on Model Risk Management* (OCC Bulletin 2026-13).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI draft, *Guidance on MRM, 2026* (Jun 2026), Chapters on lifecycle.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-06",
-      "depth": 2,
-      "currentness": "durable",
+      "depth": 4,
+      "currentness": "fresh",
       "filepath": "MRM-06.mdx",
-      "initialX": -358.8,
-      "initialY": -310.3
+      "initialX": -298.5,
+      "initialY": -261.2
     },
     "MRM-07": {
       "id": "MRM-07",
-      "title": "Model Development",
-      "type": "procedure",
+      "title": "Aggregate Model Risk and Risk Appetite",
+      "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "governance-and-lifecycle",
-      "one_screen": "During development, the model’s purpose, data, and method are defined and documented.  Firms must clearly state the model’s objectives, select appropriate data and variables, choose a methodology suited to the problem, and record all assumptions and design choices.  Good documentation ensures transparency for later review.",
+      "one_screen": "Managing models one by one can miss the largest exposure: several individually acceptable models may rely on the same data, assumptions, vendor or economic relationship and fail together. Aggregate model risk therefore combines model-level risk with concentration and dependency, then compares that enterprise exposure with the institution's model risk appetite and tolerance.",
       "prerequisites": [
+        "MRM-05",
         "MRM-06"
       ],
       "see_also": [],
@@ -10480,41 +10517,41 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "RBI, *Draft Principles for Model Risk in Credit* (Aug. 2024).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "PRA SS1/23 (Apr. 2026) – Principle 3 (Model development and use) – Overview.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-07",
-      "depth": 3,
-      "currentness": "durable",
+      "depth": 5,
+      "currentness": "fresh",
       "filepath": "MRM-07.mdx",
-      "initialX": -299.3,
-      "initialY": -282.4
+      "initialX": -236,
+      "initialY": -270.9
     },
     "MRM-08": {
       "id": "MRM-08",
-      "title": "Independent Model Validation",
+      "title": "The Model Lifecycle and Its Control Gates",
       "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "governance-and-lifecycle",
-      "one_screen": "Independent validation is a formal review of a model by someone outside the development team.  It checks data, assumptions, methodology, and output accuracy.  True independence (no conflicts with the model developer) is required to ensure objectivity.",
+      "one_screen": "A model lifecycle is not a project plan; it is a sequence of governed states in which evidence must be sufficient before the model can move forward. The key control idea is the gate: development does not grant use, validation does not grant approval, approval does not end monitoring, and change can reopen earlier gates.",
       "prerequisites": [
-        "MRM-06",
-        "MRM-07"
+        "MRM-05",
+        "MRM-06"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -10529,37 +10566,44 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "S&C memo on SR 26-2 (Apr. 2026), noting validation independence requirement.",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation framework.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-08",
-      "depth": 4,
+      "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -296.3,
-      "initialY": -338.1
+      "initialX": -276.5,
+      "initialY": -309.8
     },
     "MRM-09": {
       "id": "MRM-09",
-      "title": "Approval, Governance, and Use",
-      "type": "procedure",
+      "title": "Who Produces, Uses, Approves, Challenges and Audits",
+      "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "governance-and-lifecycle",
-      "one_screen": "Before a validated model can be used, it must be formally approved by senior management or the board (or a delegated committee).  The model’s intended use must align with business needs and policy.  Governance roles (board oversight, risk committees, internal audit) apply: boards must approve MRM policies and receive reports on model issues.",
+      "one_screen": "Ownership is the load-bearing control in MRM because the same person should not create evidence, decide whether that evidence is convincing, accept the residual risk and audit the process. Effective governance separates production, consumption, approval, independent challenge and assurance while ensuring the challenger has expertise, standing and access to decision-makers.",
       "prerequisites": [
         "MRM-08"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "US"
       ],
       "perishable": true,
       "as_of": "2026-08-28",
@@ -10569,32 +10613,38 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), para 3 (Board approval requirement).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "S&C memo on SR 26-2 (Apr. 2026), referencing board approvals and audit reporting.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-09",
-      "depth": 5,
+      "depth": 6,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -256.5,
-      "initialY": -291
+      "initialX": -307.2,
+      "initialY": -380.8
     },
     "MRM-10": {
       "id": "MRM-10",
-      "title": "Ongoing Monitoring and Performance",
+      "title": "Purpose, Intended Use and Limitations",
       "type": "procedure",
       "domain": "model-risk",
       "subdomain": "governance-and-lifecycle",
-      "one_screen": "After a model is in use, the firm must continuously monitor its performance and environment.  This includes tracking key metrics (stability indexes, backtests, outcomes) and ensuring the model remains accurate.  Oversight bodies should set thresholds for action and require periodic performance reports, with escalations if issues are detected.",
+      "one_screen": "Development begins by fixing the decision the model is supposed to support, the population and conditions it covers, and the limitations users must respect. Without that mandate, developers cannot choose evidence coherently and validators cannot decide whether \"good performance\" is relevant to the actual use.",
       "prerequisites": [
-        "MRM-06"
+        "MRM-08",
+        "MRM-09"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -10609,32 +10659,32 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "PRA SS1/23 (Apr. 2026) – Standards for monitoring model performance.",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "*Statistical Properties of the Population Stability Index*, Risk Journal (Apr. 2022).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-10",
-      "depth": 3,
+      "depth": 7,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -313.4,
-      "initialY": -353.4
+      "initialX": -322.9,
+      "initialY": -344.8
     },
     "MRM-11": {
       "id": "MRM-11",
-      "title": "Change Management and Recalibration",
+      "title": "Data Lineage and Fitness for Use",
       "type": "procedure",
       "domain": "model-risk",
       "subdomain": "governance-and-lifecycle",
-      "one_screen": "If a model’s performance deteriorates or business conditions change, banks must update the model.  This can be done by **recalibration** (adjusting parameters) or full **redevelopment** (building a new model).  Any changes must follow the same validation and approval process as the original model.",
+      "one_screen": "Model data is not sound merely because it is clean. It must be traceable from source to model, correctly transformed, sufficiently complete, representative of the intended use and governed consistently between development and production; a perfectly coded model trained or run on unsuitable data remains unreliable.",
       "prerequisites": [
-        "MRM-06"
+        "MRM-10"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -10649,32 +10699,38 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "RBI, *Draft Principles for Model Risks in Credit* (Aug. 2024), on post-deployment validation.",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "PRA SS1/23 (Apr. 2026) – Requirements for model change management (see [52], standards for recalibration).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-11",
-      "depth": 3,
+      "depth": 8,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -336.2,
-      "initialY": -361.1
+      "initialX": -355,
+      "initialY": -291.6
     },
     "MRM-12": {
       "id": "MRM-12",
-      "title": "Conceptual Soundness and Data Quality",
-      "type": "mechanism",
+      "title": "Method, Assumptions and Complexity",
+      "type": "procedure",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "**Conceptual soundness** ensures the model’s design and assumptions are valid for its purpose.  Validators check that the model structure (type, variables, functional form) is appropriate.  **Data quality** ensures inputs are accurate and representative.  Validations review data sourcing, completeness, and relevance.  Both steps catch errors before performance testing.",
+      "one_screen": "Method selection is a governed judgement about whether the model structure, assumptions and complexity are appropriate for the stated purpose and available data. MRM does not own the derivation of statistical methods; it owns the evidence that the chosen method is defensible, its assumptions are visible, and added complexity earns its place.",
       "prerequisites": [
-        "MRM-07"
+        "MRM-10",
+        "MRM-11"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -10689,31 +10745,32 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation guidelines.",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "IBM Think article on model risk (for data risk examples).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-12",
-      "depth": 4,
+      "depth": 9,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -270.1,
-      "initialY": -237.8
+      "initialX": -354.8,
+      "initialY": -356.8
     },
     "MRM-13": {
       "id": "MRM-13",
-      "title": "Discrimination Metrics (AUC, Gini, KS)",
-      "type": "mechanism",
+      "title": "Implementation, Versioning and Reproducibility",
+      "type": "procedure",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "Discrimination measures how well a model ranks outcomes.  Common metrics are **ROC-AUC** (area under the receiver operating curve), **Gini coefficient** and **KS statistic**.  AUC (0.5–1) and Gini (0–1) quantify the model’s overall ranking power, while KS is the maximum difference between cumulative distributions of outcomes.  Higher values mean better separation of groups (e.g. defaulters vs non-defaulters).",
+      "one_screen": "A validated methodology is useless if production executes something different. Implementation control proves that approved logic, data transformations, parameters, dependencies and configuration are faithfully reproduced, while versioning and reproducibility make it possible to determine exactly which model generated a past output.",
       "prerequisites": [
+        "MRM-11",
         "MRM-12"
       ],
       "see_also": [],
@@ -10721,39 +10778,42 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "(Conceptual metrics – not directly quoted from regs)",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "A general model validation reference or textbook on ROC curves.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-13",
-      "depth": 5,
-      "currentness": "durable",
+      "depth": 10,
+      "currentness": "fresh",
       "filepath": "MRM-13.mdx",
-      "initialX": -277,
-      "initialY": -301.1
+      "initialX": -380.2,
+      "initialY": -317.8
     },
     "MRM-14": {
       "id": "MRM-14",
-      "title": "Calibration and Goodness-of-Fit",
-      "type": "mechanism",
+      "title": "Developer Testing and the Pre-Validation Evidence Pack",
+      "type": "procedure",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "Calibration measures how well predicted probabilities match observed outcomes.  A common tool is the Hosmer–Lemeshow (H-L) test: it groups data (e.g. deciles) and compares predicted vs actual frequencies using a chi-square statistic.  Good calibration means predicted and actual rates align.  However, large sample sizes can cause H-L to reject even small, practically unimportant differences.  Validation should also include graphical plots of predicted vs actual rates as a sanity check.",
+      "one_screen": "Developer testing is first-line evidence that the model behaves as intended before independent validation begins. It should expose weaknesses rather than manufacture a pass: the pre-validation pack must show what was tested, what failed, what changed, what remains limited and why the developer still believes the model is fit to be challenged for its intended use.",
       "prerequisites": [
+        "MRM-10",
+        "MRM-11",
+        "MRM-12",
         "MRM-13"
       ],
       "see_also": [],
@@ -10761,153 +10821,175 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "Statistical modeling reference on calibration (for concept).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-14",
-      "depth": 6,
-      "currentness": "durable",
+      "depth": 11,
+      "currentness": "fresh",
       "filepath": "MRM-14.mdx",
-      "initialX": -245.4,
-      "initialY": -251.1
+      "initialX": -307.4,
+      "initialY": -301
     },
     "MRM-15": {
       "id": "MRM-15",
-      "title": "Stability Metrics (PSI and CSI)",
+      "title": "Independent Validation: Mandate, Independence and Timing",
       "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "Population Stability Index (PSI) and Characteristic Stability Index (CSI) measure changes in distributions over time.  PSI compares a variable’s or model-score distribution between the development period and current period.  CSI is similar but often used for categorical variables (e.g. rating grades).  In credit risk, PSI/CSI thresholds (e.g. >0.25) are used as a rule-of-thumb to signal a “significant change” that may require model review.",
+      "one_screen": "Independent validation asks whether the model is reliable enough for its intended use, what limitations remain, and what controls or corrective actions are required. Independence is substantive, not ceremonial: validators need technical competence, objective incentives, access to evidence and organisational standing to challenge the model owner effectively.",
       "prerequisites": [
-        "MRM-10",
-        "MRM-13"
+        "MRM-09",
+        "MRM-14"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "EU",
+        "US"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "Risk.net Journal of RM Validation, *Statistical properties of the population stability index* (Apr. 2022) – PSI thresholds.",
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-15",
-      "depth": 6,
-      "currentness": "durable",
+      "depth": 12,
+      "currentness": "fresh",
       "filepath": "MRM-15.mdx",
-      "initialX": -333.7,
-      "initialY": -309.1
+      "initialX": -273.9,
+      "initialY": -343.5
     },
     "MRM-16": {
       "id": "MRM-16",
-      "title": "Benchmarking and Challenger Models",
-      "type": "mechanism",
+      "title": "The Validation Work Programme",
+      "type": "procedure",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "A **benchmark** (or reference) model is an alternate model used as a comparison.  A **challenger model** is a competing model built to test the primary model’s performance.  Banks may use simpler or differently-specified challenger models to sanity-check the primary model.  If the challenger outperforms, it signals the primary model may need improvement.",
+      "one_screen": "A validation work programme turns \"independent challenge\" into a reproducible examination of the whole model. It asks whether the concept is sound, the data are fit, implementation matches design, performance evidence is persuasive, limitations are understood and actual use stays inside the model's supported boundaries.",
       "prerequisites": [
-        "MRM-08",
-        "MRM-10"
+        "MRM-15"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "RBI, *Draft Guidance on MRM, 2026* – mentions benchmarking/model validation.",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "S&C memo (Apr. 2026) – mentions monitoring/outcome analysis (includes benchmarking).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-16",
-      "depth": 5,
-      "currentness": "durable",
+      "depth": 13,
+      "currentness": "fresh",
       "filepath": "MRM-16.mdx",
-      "initialX": -317.9,
-      "initialY": -291.4
+      "initialX": -333.3,
+      "initialY": -370.9
     },
     "MRM-17": {
       "id": "MRM-17",
-      "title": "Backtesting, Use Test, and Overrides",
+      "title": "Outcomes Analysis: Discrimination, Calibration and Backtesting",
       "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "**Backtesting** compares a model’s historical forecasts to actual results (e.g. predicted vs realized losses).  It’s a formal test of predictive accuracy over time.  The **use test** checks that the model is being applied in practice as intended (not just in name).  Banks must also track **overrides** (manual deviations) to ensure that business judgment does not mask model errors.",
+      "one_screen": "Outcomes analysis asks whether model outputs correspond to real-world outcomes in the way the model's purpose requires. Discrimination tests ranking, calibration tests level accuracy, and backtesting compares prior predictions with realised outcomes; none of them alone establishes that the entire model is sound.",
       "prerequisites": [
-        "MRM-10"
+        "MRM-16"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "RBI, *Draft Principles… in Credit* (Aug. 2024) – requires documentation of overrides.",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "Basel II/III documents (conceptual).",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-17",
-      "depth": 4,
-      "currentness": "durable",
+      "depth": 14,
+      "currentness": "fresh",
       "filepath": "MRM-17.mdx",
-      "initialX": -367.9,
-      "initialY": -337.9
+      "initialX": -305.4,
+      "initialY": -329.4
     },
     "MRM-18": {
       "id": "MRM-18",
-      "title": "AI and Machine Learning Models",
-      "type": "concept",
+      "title": "Stability, Benchmarking and Challenger Models",
+      "type": "mechanism",
       "domain": "model-risk",
       "subdomain": "validation-and-metrics",
-      "one_screen": "Models using AI/ML must be interpretable and transparent.  Regulators expect that even non-linear models can be explained sufficiently to satisfy risk controls.  New guidelines explicitly stress interpretability (e.g. “explainability” requirements) and governance of AI.  Supervisory expectations for AI in finance are still evolving (often marked as “developing”) but lean toward strong oversight.",
+      "one_screen": "Stability analysis asks whether the population or model relationships have moved; benchmarking asks whether an independent reference gives a materially different view. These controls catch weaknesses that a model's own historical performance can miss: a stable model can be consistently wrong, and a challenger can reveal a better explanation without automatically becoming the production model.",
       "prerequisites": [
-        "MRM-07",
-        "MRM-08"
+        "MRM-16",
+        "MRM-17"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -10922,27 +11004,486 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "ECB press release (July 28, 2025) on revised internal models guide (new ML section).",
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         },
         {
-          "label": "RBI, *Draft Guidance on MRM, 2026* (Jun 2026) – Chapter on AI/ML, explainability and governance.",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "S&C (Apr. 2026) – OCC statement on upcoming AI measures.",
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
           "url": "https://www.bis.org/bcbs/basel3.htm",
           "accessed": "August 28, 2026"
         }
       ],
       "slug": "mrm-18",
-      "depth": 5,
+      "depth": 15,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -344.4,
-      "initialY": -331.3
+      "initialX": -330.7,
+      "initialY": -298.6
+    },
+    "MRM-19": {
+      "id": "MRM-19",
+      "title": "Validation Findings and Issue Disposition",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "Validation evidence must end in a decision-useful opinion, not a pile of tests. Findings translate observed weaknesses into severity, required action, ownership and closure evidence; the validation opinion then states whether the model is fit for intended use, fit only with limitations or not fit, without pretending that validation itself grants approval.",
+      "prerequisites": [
+        "MRM-16",
+        "MRM-17",
+        "MRM-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-19",
+      "depth": 16,
+      "currentness": "fresh",
+      "filepath": "MRM-19.mdx",
+      "initialX": -369.7,
+      "initialY": -338
+    },
+    "MRM-20": {
+      "id": "MRM-20",
+      "title": "Approval and Conditions of Use",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "Approval is the governance act that accepts or rejects residual model risk for a defined use after considering validation, limitations and business need. It can be unconditional, conditional or refused; a conditional approval is a controlled risk decision with explicit restrictions and expiry or remediation, not a way to bypass unresolved validation.",
+      "prerequisites": [
+        "MRM-19"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-20",
+      "depth": 17,
+      "currentness": "fresh",
+      "filepath": "MRM-20.mdx",
+      "initialX": -378.4,
+      "initialY": -289.3
+    },
+    "MRM-21": {
+      "id": "MRM-21",
+      "title": "Deployment, Use and Overrides",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "A model is not controlled merely because the approved code reaches production. Deployment must reproduce the approved model, users must understand what the output means and where it is limited, and manual overrides must be visible enough to distinguish healthy expert judgement from systematic evidence that the model or its use is failing.",
+      "prerequisites": [
+        "MRM-13",
+        "MRM-20"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-21",
+      "depth": 18,
+      "currentness": "fresh",
+      "filepath": "MRM-21.mdx",
+      "initialX": -321.8,
+      "initialY": -279.5
+    },
+    "MRM-22": {
+      "id": "MRM-22",
+      "title": "Ongoing Monitoring, Thresholds and Escalation",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "Ongoing monitoring asks whether a live model is still performing as expected as products, exposures, customers, data and market conditions change. A monitoring framework is complete only when each signal has an owner, threshold, investigation path and escalation action; a metric dashboard without decisions attached is observation, not control.",
+      "prerequisites": [
+        "MRM-17",
+        "MRM-18",
+        "MRM-21"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Board of Governors of the Federal Reserve System, Federal Deposit Insurance Corporation and Office of the Comptroller of the Currency, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-22",
+      "depth": 19,
+      "currentness": "fresh",
+      "filepath": "MRM-22.mdx",
+      "initialX": -272.2,
+      "initialY": -263.2
+    },
+    "MRM-23": {
+      "id": "MRM-23",
+      "title": "Model Change: Adjustment, Recalibration or Redevelopment",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "Model change begins with classification because different interventions solve different problems and reopen different controls. An overlay or adjustment can mitigate a known weakness, recalibration updates levels within an existing structure, and redevelopment changes the model fundamentally; none should become an undocumented production patch.",
+      "prerequisites": [
+        "MRM-19",
+        "MRM-22"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-23",
+      "depth": 20,
+      "currentness": "fresh",
+      "filepath": "MRM-23.mdx",
+      "initialX": -340.8,
+      "initialY": -271.9
+    },
+    "MRM-24": {
+      "id": "MRM-24",
+      "title": "Retirement and Decommissioning",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "Retirement is a controlled lifecycle transition, not deletion. Before a model leaves service, the institution must understand why it is being retired, what replaces it, which downstream processes depend on it, how historical decisions remain reproducible and what records must be retained.",
+      "prerequisites": [
+        "MRM-05",
+        "MRM-22",
+        "MRM-23"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-24",
+      "depth": 21,
+      "currentness": "fresh",
+      "filepath": "MRM-24.mdx",
+      "initialX": -299.9,
+      "initialY": -226.8
+    },
+    "MRM-25": {
+      "id": "MRM-25",
+      "title": "Third-Party and Vendor Models",
+      "type": "procedure",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "Buying a model changes access and dependency, not accountability. The institution still needs enough understanding, evidence and contractual rights to judge suitability for its own use, validate it proportionately, monitor it, control vendor changes and exit safely if the product or provider fails.",
+      "prerequisites": [
+        "MRM-04",
+        "MRM-08",
+        "MRM-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-25",
+      "depth": 13,
+      "currentness": "fresh",
+      "filepath": "MRM-25.mdx",
+      "initialX": -237.3,
+      "initialY": -296.8
+    },
+    "MRM-26": {
+      "id": "MRM-26",
+      "title": "AI/ML Governance: Complexity, Explainability and Human Control",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "AI/ML models remain models where the applicable framework puts them in scope, but opacity, dynamic behaviour and automation can intensify familiar MRM problems. Governance asks whether complexity is justified, decisions can be explained, humans retain control, and the institution can stop or fall back safely.",
+      "prerequisites": [
+        "MRM-09",
+        "MRM-12",
+        "MRM-21",
+        "MRM-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Parliament and Council, Regulation (EU) 2024/1689, Artificial Intelligence Act, 13 June 2024.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-26",
+      "depth": 19,
+      "currentness": "fresh",
+      "filepath": "MRM-26.mdx",
+      "initialX": -290.2,
+      "initialY": -332.1
+    },
+    "MRM-27": {
+      "id": "MRM-27",
+      "title": "AI/ML Validation: Generalisation, Drift and Robustness",
+      "type": "mechanism",
+      "domain": "model-risk",
+      "subdomain": "mrm",
+      "one_screen": "AI/ML validation extends ordinary model challenge. It retains purpose, data, conceptual soundness, outcomes and use, while adding emphasis on generalisation, overfitting, drift, robustness, subgroup behaviour, explainability and post-deployment change.",
+      "prerequisites": [
+        "MRM-15",
+        "MRM-17",
+        "MRM-18",
+        "MRM-26"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk management principles for banks, April 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Central Bank, ECB Guide to internal models, 28 July 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Parliament and Council, Regulation (EU) 2024/1689, Artificial Intelligence Act, 13 June 2024.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, Draft Guidance on Regulatory Principles for Model Risk Management, Press Release 2026-2027/528, 24 June 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "mrm-27",
+      "depth": 20,
+      "currentness": "fresh",
+      "filepath": "MRM-27.mdx",
+      "initialX": -262.3,
+      "initialY": -283
     },
     "OPR-01": {
       "id": "OPR-01",
@@ -10979,8 +11520,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "OPR-01.mdx",
-      "initialX": -230.6,
-      "initialY": -411.3
+      "initialX": -147.8,
+      "initialY": -417.1
     },
     "OPR-02": {
       "id": "OPR-02",
@@ -11014,8 +11555,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-02.mdx",
-      "initialX": -169.2,
-      "initialY": -374.7
+      "initialX": -204,
+      "initialY": -426.2
     },
     "OPR-03": {
       "id": "OPR-03",
@@ -11055,8 +11596,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-03.mdx",
-      "initialX": -206.9,
-      "initialY": -346.3
+      "initialX": -178.5,
+      "initialY": -371.2
     },
     "OPR-04": {
       "id": "OPR-04",
@@ -11095,8 +11636,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-04.mdx",
-      "initialX": -179.3,
-      "initialY": -413.1
+      "initialX": -207.8,
+      "initialY": -402.5
     },
     "OPR-05": {
       "id": "OPR-05",
@@ -11140,8 +11681,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-05.mdx",
-      "initialX": -162.5,
-      "initialY": -346.4
+      "initialX": -156.4,
+      "initialY": -354.9
     },
     "OPR-06": {
       "id": "OPR-06",
@@ -11181,8 +11722,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-06.mdx",
-      "initialX": -134.3,
-      "initialY": -415
+      "initialX": -148.3,
+      "initialY": -397.2
     },
     "OPR-07": {
       "id": "OPR-07",
@@ -11221,8 +11762,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-07.mdx",
-      "initialX": -178,
-      "initialY": -450.6
+      "initialX": -181.6,
+      "initialY": -438.2
     },
     "OPR-08": {
       "id": "OPR-08",
@@ -11262,8 +11803,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-08.mdx",
-      "initialX": -155.3,
-      "initialY": -457.8
+      "initialX": -183.8,
+      "initialY": -347.2
     },
     "OPR-09": {
       "id": "OPR-09",
@@ -11297,8 +11838,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-09.mdx",
-      "initialX": -197.2,
-      "initialY": -464.6
+      "initialX": -153,
+      "initialY": -376.8
     },
     "OPR-10": {
       "id": "OPR-10",
@@ -11341,8 +11882,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-10.mdx",
-      "initialX": -215.9,
-      "initialY": -452.9
+      "initialX": -120.8,
+      "initialY": -354.9
     },
     "OPR-11": {
       "id": "OPR-11",
@@ -11390,8 +11931,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-11.mdx",
-      "initialX": -219.9,
-      "initialY": -397.5
+      "initialX": -143.5,
+      "initialY": -314.6
     },
     "OPR-12": {
       "id": "OPR-12",
@@ -11437,8 +11978,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "OPR-12.mdx",
-      "initialX": -193.6,
-      "initialY": -399.1
+      "initialX": -162.7,
+      "initialY": -330.8
     },
     "OPR-13": {
       "id": "OPR-13",
@@ -11481,8 +12022,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-13.mdx",
-      "initialX": -141.7,
-      "initialY": -356.7
+      "initialX": -203,
+      "initialY": -378.3
     },
     "OPR-14": {
       "id": "OPR-14",
@@ -11521,8 +12062,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-14.mdx",
-      "initialX": -183.5,
-      "initialY": -432.4
+      "initialX": -177.3,
+      "initialY": -464.4
     },
     "OPR-15": {
       "id": "OPR-15",
@@ -11565,8 +12106,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-15.mdx",
-      "initialX": -141.8,
-      "initialY": -387.5
+      "initialX": -180.2,
+      "initialY": -405
     },
     "OPR-16": {
       "id": "OPR-16",
@@ -11605,8 +12146,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "OPR-16.mdx",
-      "initialX": -169.7,
-      "initialY": -322.8
+      "initialX": -128.4,
+      "initialY": -376.8
     },
     "OPR-17": {
       "id": "OPR-17",
@@ -11645,8 +12186,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-17.mdx",
-      "initialX": -207.1,
-      "initialY": -376.5
+      "initialX": -226,
+      "initialY": -436.7
     },
     "OPR-18": {
       "id": "OPR-18",
@@ -11689,8 +12230,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-18.mdx",
-      "initialX": -187.6,
-      "initialY": -357.5
+      "initialX": -199,
+      "initialY": -458.4
     },
     "OPR-19": {
       "id": "OPR-19",
@@ -11725,8 +12266,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "OPR-19.mdx",
-      "initialX": -128.2,
-      "initialY": -329.7
+      "initialX": -139.8,
+      "initialY": -438.1
     },
     "OPR-20": {
       "id": "OPR-20",
@@ -11772,8 +12313,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-20.mdx",
-      "initialX": -164.8,
-      "initialY": -398.5
+      "initialX": -155.3,
+      "initialY": -467
     },
     "QNT-01": {
       "id": "QNT-01",
@@ -11805,8 +12346,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-01.mdx",
-      "initialX": 12.2,
-      "initialY": -484.3
+      "initialX": 50.4,
+      "initialY": -427.3
     },
     "QNT-02": {
       "id": "QNT-02",
@@ -11845,8 +12386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-02.mdx",
-      "initialX": 2.8,
-      "initialY": -438.3
+      "initialX": -8.9,
+      "initialY": -444.3
     },
     "QNT-03": {
       "id": "QNT-03",
@@ -11885,8 +12426,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-03.mdx",
-      "initialX": -41,
-      "initialY": -397.4
+      "initialX": 44.4,
+      "initialY": -480.9
     },
     "QNT-04": {
       "id": "QNT-04",
@@ -11921,8 +12462,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-04.mdx",
-      "initialX": -54.8,
-      "initialY": -453.6
+      "initialX": 12.3,
+      "initialY": -387.6
     },
     "QNT-05": {
       "id": "QNT-05",
@@ -11956,8 +12497,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-05.mdx",
-      "initialX": -24.3,
-      "initialY": -497.3
+      "initialX": 23.3,
+      "initialY": -449.9
     },
     "QNT-06": {
       "id": "QNT-06",
@@ -11992,8 +12533,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-06.mdx",
-      "initialX": -20.6,
-      "initialY": -391.7
+      "initialX": 46.2,
+      "initialY": -451.7
     },
     "QNT-07": {
       "id": "QNT-07",
@@ -12027,8 +12568,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-07.mdx",
-      "initialX": -50.4,
-      "initialY": -487.2
+      "initialX": 28.6,
+      "initialY": -368.8
     },
     "QNT-08": {
       "id": "QNT-08",
@@ -12062,8 +12603,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-08.mdx",
-      "initialX": 27.8,
-      "initialY": -498.9
+      "initialX": -54.4,
+      "initialY": -462.5
     },
     "QNT-09": {
       "id": "QNT-09",
@@ -12097,8 +12638,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-09.mdx",
-      "initialX": -11.5,
-      "initialY": -462.9
+      "initialX": -5.8,
+      "initialY": -408.1
     },
     "QNT-10": {
       "id": "QNT-10",
@@ -12132,8 +12673,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-10.mdx",
-      "initialX": 23,
-      "initialY": -436.7
+      "initialX": -50.9,
+      "initialY": -405.3
     },
     "QNT-11": {
       "id": "QNT-11",
@@ -12167,8 +12708,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-11.mdx",
-      "initialX": 25.4,
-      "initialY": -374.8
+      "initialX": -25.6,
+      "initialY": -349.6
     },
     "QNT-12": {
       "id": "QNT-12",
@@ -12202,8 +12743,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-12.mdx",
-      "initialX": 45.1,
-      "initialY": -451.8
+      "initialX": -28.2,
+      "initialY": -401.4
     },
     "QNT-13": {
       "id": "QNT-13",
@@ -12235,8 +12776,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-13.mdx",
-      "initialX": 25,
-      "initialY": -468.8
+      "initialX": 1,
+      "initialY": -517.9
     },
     "QNT-14": {
       "id": "QNT-14",
@@ -12275,8 +12816,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-14.mdx",
-      "initialX": -22.6,
-      "initialY": -433.7
+      "initialX": 27.2,
+      "initialY": -483.1
     },
     "QNT-15": {
       "id": "QNT-15",
@@ -12311,8 +12852,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-15.mdx",
-      "initialX": 24.2,
-      "initialY": -403.1
+      "initialX": -29.7,
+      "initialY": -467.9
     },
     "QNT-16": {
       "id": "QNT-16",
@@ -12347,8 +12888,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-16.mdx",
-      "initialX": -24.9,
-      "initialY": -368.8
+      "initialX": 14.6,
+      "initialY": -425.9
     },
     "QNT-17": {
       "id": "QNT-17",
@@ -12382,8 +12923,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-17.mdx",
-      "initialX": -45,
-      "initialY": -430.4
+      "initialX": 0.8,
+      "initialY": -488
     },
     "QNT-18": {
       "id": "QNT-18",
@@ -12420,8 +12961,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-18.mdx",
-      "initialX": -55.7,
-      "initialY": -368.5
+      "initialX": -3.4,
+      "initialY": -369.3
     },
     "QNT-19": {
       "id": "QNT-19",
@@ -12460,8 +13001,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-19.mdx",
-      "initialX": -56.6,
-      "initialY": -411.2
+      "initialX": -54.7,
+      "initialY": -434.3
     },
     "QNT-20": {
       "id": "QNT-20",
@@ -12496,8 +13037,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-20.mdx",
-      "initialX": 4.9,
-      "initialY": -368.1
+      "initialX": -40.9,
+      "initialY": -381.9
     },
     "QNT-21": {
       "id": "QNT-21",
@@ -12538,8 +13079,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-21.mdx",
-      "initialX": -28.2,
-      "initialY": -342.6
+      "initialX": -16.3,
+      "initialY": -422.5
     },
     "QNT-22": {
       "id": "QNT-22",
@@ -12580,8 +13121,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-22.mdx",
-      "initialX": -4.6,
-      "initialY": -410.6
+      "initialX": -1.1,
+      "initialY": -462.6
     },
     "QNT-23": {
       "id": "QNT-23",
@@ -12620,8 +13161,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-23.mdx",
-      "initialX": -35.9,
-      "initialY": -465.1
+      "initialX": 30.8,
+      "initialY": -403.9
     },
     "QNT-24": {
       "id": "QNT-24",
@@ -12660,8 +13201,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "QNT-24.mdx",
-      "initialX": -5.3,
-      "initialY": -509
+      "initialX": 4.6,
+      "initialY": -344.9
     },
     "QNT-25": {
       "id": "QNT-25",
@@ -12701,8 +13242,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-25.mdx",
-      "initialX": 45.9,
-      "initialY": -420.3
+      "initialX": -49.7,
+      "initialY": -490.3
     },
     "QNT-26": {
       "id": "QNT-26",
@@ -12739,8 +13280,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-26.mdx",
-      "initialX": -0.4,
-      "initialY": -342.7
+      "initialX": -23.5,
+      "initialY": -502.3
     },
     "TEC-01": {
       "id": "TEC-01",
@@ -12772,8 +13313,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-01.mdx",
-      "initialX": 161.1,
-      "initialY": -392.9
+      "initialX": 145.4,
+      "initialY": -440.3
     },
     "TEC-02": {
       "id": "TEC-02",
@@ -12817,8 +13358,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-02.mdx",
-      "initialX": 213.2,
-      "initialY": -386.2
+      "initialX": 203.6,
+      "initialY": -394.6
     },
     "TEC-03": {
       "id": "TEC-03",
@@ -12857,8 +13398,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-03.mdx",
-      "initialX": 147.3,
-      "initialY": -406.9
+      "initialX": 253.1,
+      "initialY": -418
     },
     "TEC-04": {
       "id": "TEC-04",
@@ -12893,8 +13434,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-04.mdx",
-      "initialX": 172.9,
-      "initialY": -340.5
+      "initialX": 154.1,
+      "initialY": -373
     },
     "TEC-05": {
       "id": "TEC-05",
@@ -12938,8 +13479,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-05.mdx",
-      "initialX": 146.8,
-      "initialY": -375.3
+      "initialX": 205.8,
+      "initialY": -461.7
     },
     "TEC-06": {
       "id": "TEC-06",
@@ -12973,8 +13514,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-06.mdx",
-      "initialX": 161.3,
-      "initialY": -361.2
+      "initialX": 185.5,
+      "initialY": -461.5
     },
     "TEC-07": {
       "id": "TEC-07",
@@ -13008,8 +13549,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-07.mdx",
-      "initialX": 250.8,
-      "initialY": -416.6
+      "initialX": 179.7,
+      "initialY": -347.4
     },
     "TEC-08": {
       "id": "TEC-08",
@@ -13043,8 +13584,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-08.mdx",
-      "initialX": 232.7,
-      "initialY": -441.7
+      "initialX": 141.9,
+      "initialY": -395.6
     },
     "TEC-09": {
       "id": "TEC-09",
@@ -13078,8 +13619,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-09.mdx",
-      "initialX": 194.4,
-      "initialY": -457.1
+      "initialX": 150,
+      "initialY": -418.4
     },
     "TEC-10": {
       "id": "TEC-10",
@@ -13113,8 +13654,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-10.mdx",
-      "initialX": 158.1,
-      "initialY": -426.8
+      "initialX": 167.1,
+      "initialY": -440.9
     },
     "TEC-11": {
       "id": "TEC-11",
@@ -13148,8 +13689,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-11.mdx",
-      "initialX": 212.6,
-      "initialY": -450.3
+      "initialX": 166,
+      "initialY": -461.1
     },
     "TEC-12": {
       "id": "TEC-12",
@@ -13184,8 +13725,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TEC-12.mdx",
-      "initialX": 184.2,
-      "initialY": -359.2
+      "initialX": 224.6,
+      "initialY": -454.1
     },
     "TEC-13": {
       "id": "TEC-13",
@@ -13219,8 +13760,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-13.mdx",
-      "initialX": 208.3,
-      "initialY": -422.5
+      "initialX": 201.5,
+      "initialY": -437.6
     },
     "TEC-14": {
       "id": "TEC-14",
@@ -13254,8 +13795,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-14.mdx",
-      "initialX": 176,
-      "initialY": -450.6
+      "initialX": 176.2,
+      "initialY": -383.8
     },
     "TEC-15": {
       "id": "TEC-15",
@@ -13287,8 +13828,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-15.mdx",
-      "initialX": 226.3,
-      "initialY": -405.8
+      "initialX": 176.8,
+      "initialY": -408.6
     },
     "TEC-16": {
       "id": "TEC-16",
@@ -13320,8 +13861,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-16.mdx",
-      "initialX": 122.6,
-      "initialY": -400.9
+      "initialX": 200.4,
+      "initialY": -366.5
     },
     "TEC-17": {
       "id": "TEC-17",
@@ -13360,8 +13901,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-17.mdx",
-      "initialX": 178.7,
-      "initialY": -422.1
+      "initialX": 198.1,
+      "initialY": -419.5
     },
     "TEC-18": {
       "id": "TEC-18",
@@ -13395,8 +13936,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-18.mdx",
-      "initialX": 115.7,
-      "initialY": -341.5
+      "initialX": 139.7,
+      "initialY": -353.2
     },
     "TEC-19": {
       "id": "TEC-19",
@@ -13430,8 +13971,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-19.mdx",
-      "initialX": 141.1,
-      "initialY": -455.1
+      "initialX": 228.2,
+      "initialY": -417.6
     },
     "TEC-20": {
       "id": "TEC-20",
@@ -13465,8 +14006,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-20.mdx",
-      "initialX": 187.2,
-      "initialY": -394.6
+      "initialX": 129.9,
+      "initialY": -375.3
     },
     "TEC-21": {
       "id": "TEC-21",
@@ -13500,8 +14041,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-21.mdx",
-      "initialX": 158.6,
-      "initialY": -462.2
+      "initialX": 240.1,
+      "initialY": -392.5
     },
     "TEC-22": {
       "id": "TEC-22",
@@ -13535,8 +14076,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-22.mdx",
-      "initialX": 139.2,
-      "initialY": -341.9
+      "initialX": 152.7,
+      "initialY": -334.3
     },
     "TEC-23": {
       "id": "TEC-23",
@@ -13571,8 +14112,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-23.mdx",
-      "initialX": 111.5,
-      "initialY": -444.9
+      "initialX": 123.6,
+      "initialY": -418.4
     },
     "TEC-24": {
       "id": "TEC-24",
@@ -13604,8 +14145,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-24.mdx",
-      "initialX": 116.9,
-      "initialY": -370.6
+      "initialX": 117.7,
+      "initialY": -342.2
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -13647,8 +14188,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-01.mdx",
-      "initialX": 30.8,
-      "initialY": -46.8
+      "initialX": 33.3,
+      "initialY": -44.8
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -13690,8 +14231,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 62.6,
-      "initialY": -62.8
+      "initialX": 66,
+      "initialY": -60.5
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -13733,8 +14274,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-03.mdx",
-      "initialX": 104.4,
-      "initialY": -101.6
+      "initialX": 110.2,
+      "initialY": -99
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -13770,8 +14311,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-04.mdx",
-      "initialX": 119.2,
-      "initialY": -158.3
+      "initialX": 126.1,
+      "initialY": -154.8
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -13825,8 +14366,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "TLM-05.mdx",
-      "initialX": 157.3,
-      "initialY": -100.3
+      "initialX": 160.4,
+      "initialY": -97.9
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -13866,8 +14407,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "TLM-06.mdx",
-      "initialX": 160.2,
-      "initialY": -166.7
+      "initialX": 163.4,
+      "initialY": -165.1
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -13909,8 +14450,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "TLM-07.mdx",
-      "initialX": 65.9,
-      "initialY": -81.8
+      "initialX": 67.3,
+      "initialY": -80.2
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -13945,8 +14486,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 150.4,
-      "initialY": -187.7
+      "initialX": 154.5,
+      "initialY": -185.8
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -13982,8 +14523,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "TLM-09.mdx",
-      "initialX": 58.4,
-      "initialY": -115.9
+      "initialX": 61.8,
+      "initialY": -114.1
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -14042,8 +14583,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 175.2,
-      "initialY": -214.4
+      "initialX": 180.8,
+      "initialY": -212.4
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -14084,8 +14625,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 219,
-      "initialY": -190
+      "initialX": 224.8,
+      "initialY": -187
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -14126,8 +14667,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "TLM-12.mdx",
-      "initialX": 203,
-      "initialY": -109.4
+      "initialX": 204.6,
+      "initialY": -109.8
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -14188,8 +14729,8 @@
       "depth": 17,
       "currentness": "future",
       "filepath": "TLM-13.mdx",
-      "initialX": 183.2,
-      "initialY": -140.9
+      "initialX": 182.8,
+      "initialY": -141.4
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -14230,8 +14771,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 124.6,
-      "initialY": -85.5
+      "initialX": 127.5,
+      "initialY": -82.3
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -14286,8 +14827,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 201.2,
-      "initialY": -157.2
+      "initialX": 207.2,
+      "initialY": -153
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -14327,8 +14868,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "TLM-16.mdx",
-      "initialX": 212.5,
-      "initialY": -244.9
+      "initialX": 231,
+      "initialY": -232.3
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -14391,8 +14932,8 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "TLM-17.mdx",
-      "initialX": 265.6,
-      "initialY": -279.3
+      "initialX": 287.8,
+      "initialY": -238.9
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -14445,8 +14986,8 @@
       "depth": 22,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 228.7,
-      "initialY": -222.4
+      "initialX": 206.4,
+      "initialY": -246.4
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -14510,8 +15051,8 @@
       "depth": 23,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 278.7,
-      "initialY": -234.6
+      "initialX": 264.1,
+      "initialY": -255.3
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -14569,8 +15110,8 @@
       "depth": 24,
       "currentness": "future",
       "filepath": "TLM-20.mdx",
-      "initialX": 284,
-      "initialY": -287.4
+      "initialX": 265.7,
+      "initialY": -301.4
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -14630,8 +15171,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "TLM-21.mdx",
-      "initialX": 195.5,
-      "initialY": -231.3
+      "initialX": 229.5,
+      "initialY": -207.6
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -14672,8 +15213,8 @@
       "depth": 26,
       "currentness": "fresh",
       "filepath": "TLM-22.mdx",
-      "initialX": 223.5,
-      "initialY": -277.3
+      "initialX": 238.9,
+      "initialY": -273.3
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -14714,8 +15255,8 @@
       "depth": 27,
       "currentness": "fresh",
       "filepath": "TLM-23.mdx",
-      "initialX": 290.4,
-      "initialY": -256.7
+      "initialX": 296.5,
+      "initialY": -269.9
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -14774,8 +15315,8 @@
       "depth": 28,
       "currentness": "fresh",
       "filepath": "TLM-24.mdx",
-      "initialX": 282.1,
-      "initialY": -311.9
+      "initialX": 293.5,
+      "initialY": -308
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -14816,8 +15357,8 @@
       "depth": 29,
       "currentness": "fresh",
       "filepath": "TLM-25.mdx",
-      "initialX": 233.5,
-      "initialY": -252.4
+      "initialX": 223.8,
+      "initialY": -258.2
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -14858,8 +15399,8 @@
       "depth": 30,
       "currentness": "fresh",
       "filepath": "TLM-26.mdx",
-      "initialX": 173.5,
-      "initialY": -190.6
+      "initialX": 176.5,
+      "initialY": -188.8
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -14899,8 +15440,8 @@
       "depth": 31,
       "currentness": "fresh",
       "filepath": "TLM-27.mdx",
-      "initialX": 257.9,
-      "initialY": -297.6
+      "initialX": 274.2,
+      "initialY": -284.8
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -14946,8 +15487,8 @@
       "depth": 32,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 255.5,
-      "initialY": -231.8
+      "initialX": 260.9,
+      "initialY": -224.4
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -14996,8 +15537,8 @@
       "depth": 31,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 112.8,
-      "initialY": -119.6
+      "initialX": 111.9,
+      "initialY": -118.7
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -15054,8 +15595,8 @@
       "depth": 32,
       "currentness": "future",
       "filepath": "TLM-30.mdx",
-      "initialX": 239.3,
-      "initialY": -207.8
+      "initialX": 205.7,
+      "initialY": -230.1
     },
     "TRD-01": {
       "id": "TRD-01",
@@ -15087,8 +15628,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-01.mdx",
-      "initialX": 361.9,
-      "initialY": -214.2
+      "initialX": 322.1,
+      "initialY": -134.4
     },
     "TRD-02": {
       "id": "TRD-02",
@@ -15122,8 +15663,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-02.mdx",
-      "initialX": 416.1,
-      "initialY": -231
+      "initialX": 371.1,
+      "initialY": -140.3
     },
     "TRD-03": {
       "id": "TRD-03",
@@ -15157,8 +15698,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-03.mdx",
-      "initialX": 367.2,
-      "initialY": -246.3
+      "initialX": 364.8,
+      "initialY": -92
     },
     "TRD-04": {
       "id": "TRD-04",
@@ -15198,8 +15739,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-04.mdx",
-      "initialX": 355.9,
-      "initialY": -191.2
+      "initialX": 421.3,
+      "initialY": -108.5
     },
     "TRD-05": {
       "id": "TRD-05",
@@ -15233,8 +15774,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-05.mdx",
-      "initialX": 324.6,
-      "initialY": -144.9
+      "initialX": 387.7,
+      "initialY": -152.3
     },
     "TRD-06": {
       "id": "TRD-06",
@@ -15268,8 +15809,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-06.mdx",
-      "initialX": 335.1,
-      "initialY": -123.9
+      "initialX": 365.1,
+      "initialY": -114.5
     },
     "TRD-07": {
       "id": "TRD-07",
@@ -15304,8 +15845,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-07.mdx",
-      "initialX": 381,
-      "initialY": -129.7
+      "initialX": 445.1,
+      "initialY": -162.1
     },
     "TRD-08": {
       "id": "TRD-08",
@@ -15339,8 +15880,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-08.mdx",
-      "initialX": 377.9,
-      "initialY": -186.3
+      "initialX": 385.7,
+      "initialY": -202.1
     },
     "TRD-09": {
       "id": "TRD-09",
@@ -15375,8 +15916,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-09.mdx",
-      "initialX": 417.3,
-      "initialY": -172.6
+      "initialX": 348.8,
+      "initialY": -190.7
     },
     "TRD-10": {
       "id": "TRD-10",
@@ -15421,8 +15962,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TRD-10.mdx",
-      "initialX": 352.7,
-      "initialY": -109.2
+      "initialX": 433.7,
+      "initialY": -132.7
     },
     "TRD-11": {
       "id": "TRD-11",
@@ -15461,8 +16002,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-11.mdx",
-      "initialX": 390.7,
-      "initialY": -159
+      "initialX": 483.3,
+      "initialY": -140.4
     },
     "TRD-12": {
       "id": "TRD-12",
@@ -15505,8 +16046,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TRD-12.mdx",
-      "initialX": 412.7,
-      "initialY": -110.1
+      "initialX": 474.1,
+      "initialY": -186.2
     },
     "TRD-13": {
       "id": "TRD-13",
@@ -15538,8 +16079,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-13.mdx",
-      "initialX": 395.9,
-      "initialY": -212.3
+      "initialX": 417.8,
+      "initialY": -145
     },
     "TRD-14": {
       "id": "TRD-14",
@@ -15573,8 +16114,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-14.mdx",
-      "initialX": 404.1,
-      "initialY": -143.9
+      "initialX": 415.8,
+      "initialY": -210.4
     },
     "TRD-15": {
       "id": "TRD-15",
@@ -15608,8 +16149,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-15.mdx",
-      "initialX": 448.4,
-      "initialY": -209
+      "initialX": 432.7,
+      "initialY": -199.4
     },
     "TRD-16": {
       "id": "TRD-16",
@@ -15648,8 +16189,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-16.mdx",
-      "initialX": 422,
-      "initialY": -259.4
+      "initialX": 455.9,
+      "initialY": -236.1
     },
     "TRD-17": {
       "id": "TRD-17",
@@ -15689,8 +16230,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-17.mdx",
-      "initialX": 386.4,
-      "initialY": -232.7
+      "initialX": 470.7,
+      "initialY": -164.4
     },
     "TRD-18": {
       "id": "TRD-18",
@@ -15725,8 +16266,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-18.mdx",
-      "initialX": 435.7,
-      "initialY": -164.6
+      "initialX": 381.9,
+      "initialY": -177.7
     },
     "TRD-19": {
       "id": "TRD-19",
@@ -15773,8 +16314,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TRD-19.mdx",
-      "initialX": 452.3,
-      "initialY": -118.7
+      "initialX": 337.3,
+      "initialY": -155.3
     },
     "TRD-20": {
       "id": "TRD-20",
@@ -15809,8 +16350,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TRD-20.mdx",
-      "initialX": 487.2,
-      "initialY": -172.3
+      "initialX": 356.4,
+      "initialY": -218.1
     },
     "TRD-21": {
       "id": "TRD-21",
@@ -15845,8 +16386,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-21.mdx",
-      "initialX": 338.3,
-      "initialY": -177.8
+      "initialX": 358.5,
+      "initialY": -167.5
     },
     "TRD-22": {
       "id": "TRD-22",
@@ -15880,8 +16421,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-22.mdx",
-      "initialX": 400.7,
-      "initialY": -191.9
+      "initialX": 339.4,
+      "initialY": -113.4
     },
     "TRD-23": {
       "id": "TRD-23",
@@ -15915,8 +16456,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-23.mdx",
-      "initialX": 460.5,
-      "initialY": -185.2
+      "initialX": 457.8,
+      "initialY": -198.3
     },
     "TRD-24": {
       "id": "TRD-24",
@@ -15955,8 +16496,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-24.mdx",
-      "initialX": 470.2,
-      "initialY": -220.6
+      "initialX": 413.8,
+      "initialY": -236.8
     },
     "TRD-25": {
       "id": "TRD-25",
@@ -16014,8 +16555,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-25.mdx",
-      "initialX": 467.3,
-      "initialY": -142.7
+      "initialX": 403.7,
+      "initialY": -184.4
     },
     "TRD-26": {
       "id": "TRD-26",
@@ -16055,8 +16596,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-26.mdx",
-      "initialX": 423.2,
-      "initialY": -200.1
+      "initialX": 429.5,
+      "initialY": -244.1
     },
     "TRD-27": {
       "id": "TRD-27",
@@ -16090,8 +16631,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-27.mdx",
-      "initialX": 369.6,
-      "initialY": -163.2
+      "initialX": 380.3,
+      "initialY": -226.2
     },
     "TRD-28": {
       "id": "TRD-28",
@@ -16130,8 +16671,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-28.mdx",
-      "initialX": 446.7,
-      "initialY": -244.6
+      "initialX": 474.6,
+      "initialY": -212.8
     },
     "TRD-29": {
       "id": "TRD-29",
@@ -16181,8 +16722,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-29.mdx",
-      "initialX": 426.4,
-      "initialY": -135.2
+      "initialX": 421.1,
+      "initialY": -171.6
     },
     "TRD-30": {
       "id": "TRD-30",
@@ -16226,8 +16767,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-30.mdx",
-      "initialX": 378.3,
-      "initialY": -101.1
+      "initialX": 458.5,
+      "initialY": -127.4
     },
     "TRD-31": {
       "id": "TRD-31",
@@ -16267,8 +16808,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TRD-31.mdx",
-      "initialX": 355.5,
-      "initialY": -145.4
+      "initialX": 396.2,
+      "initialY": -118.6
     },
     "TRD-32": {
       "id": "TRD-32",
@@ -16326,8 +16867,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-32.mdx",
-      "initialX": 461.1,
-      "initialY": -161.4
+      "initialX": 381.2,
+      "initialY": -255.8
     }
   },
   "reverseIndex": {
@@ -17200,52 +17741,111 @@
     "MRK-22": [],
     "MRM-01": [
       "MRK-21",
+      "MRM-02",
       "MRM-04",
       "MRM-05"
     ],
     "MRM-02": [
-      "MRM-03"
+      "MRM-03",
+      "MRM-04"
     ],
-    "MRM-03": [],
-    "MRM-04": [],
-    "MRM-05": [
+    "MRM-03": [
       "MRM-06"
+    ],
+    "MRM-04": [
+      "MRM-05",
+      "MRM-25"
+    ],
+    "MRM-05": [
+      "MRM-06",
+      "MRM-07",
+      "MRM-08",
+      "MRM-24"
     ],
     "MRM-06": [
       "MRM-07",
-      "MRM-08",
-      "MRM-10",
-      "MRM-11"
+      "MRM-08"
     ],
-    "MRM-07": [
-      "MRM-08",
-      "MRM-12",
-      "MRM-18"
-    ],
+    "MRM-07": [],
     "MRM-08": [
       "MRM-09",
-      "MRM-16",
-      "MRM-18"
+      "MRM-10",
+      "MRM-25"
     ],
-    "MRM-09": [],
-    "MRM-10": [
+    "MRM-09": [
+      "MRM-10",
       "MRM-15",
-      "MRM-16",
-      "MRM-17"
+      "MRM-26"
     ],
-    "MRM-11": [],
+    "MRM-10": [
+      "MRM-11",
+      "MRM-12",
+      "MRM-14"
+    ],
+    "MRM-11": [
+      "MRM-12",
+      "MRM-13",
+      "MRM-14"
+    ],
     "MRM-12": [
-      "MRM-13"
+      "MRM-13",
+      "MRM-14",
+      "MRM-26"
     ],
     "MRM-13": [
       "MRM-14",
+      "MRM-21"
+    ],
+    "MRM-14": [
       "MRM-15"
     ],
-    "MRM-14": [],
-    "MRM-15": [],
-    "MRM-16": [],
-    "MRM-17": [],
-    "MRM-18": [],
+    "MRM-15": [
+      "MRM-16",
+      "MRM-25",
+      "MRM-27"
+    ],
+    "MRM-16": [
+      "MRM-17",
+      "MRM-18",
+      "MRM-19"
+    ],
+    "MRM-17": [
+      "MRM-18",
+      "MRM-19",
+      "MRM-22",
+      "MRM-27"
+    ],
+    "MRM-18": [
+      "MRM-19",
+      "MRM-22",
+      "MRM-27"
+    ],
+    "MRM-19": [
+      "MRM-20",
+      "MRM-23"
+    ],
+    "MRM-20": [
+      "MRM-21"
+    ],
+    "MRM-21": [
+      "MRM-22",
+      "MRM-26"
+    ],
+    "MRM-22": [
+      "MRM-23",
+      "MRM-24"
+    ],
+    "MRM-23": [
+      "MRM-24"
+    ],
+    "MRM-24": [],
+    "MRM-25": [
+      "MRM-26"
+    ],
+    "MRM-26": [
+      "MRM-27"
+    ],
+    "MRM-27": [],
     "OPR-01": [
       "OPR-02",
       "OPR-03",
@@ -19586,35 +20186,35 @@
           "atoms": [
             {
               "id": "MRM-01",
-              "title": "What is a Model",
+              "title": "What Counts as a Model",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-02",
-              "title": "Model Risk versus Other Risks",
+              "title": "Model Risk as a Distinct Risk Type",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-03",
-              "title": "Sources of Model Risk",
+              "title": "Where Model Risk Comes From",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-04",
-              "title": "Deterministic Tools versus Models",
-              "type": "concept",
+              "title": "The Regulatory Perimeter: US, UK, EU and India",
+              "type": "delta",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-05",
-              "title": "Model Inventory and Materiality Tiering",
+              "title": "Model Inventory and Dependency Map",
               "type": "procedure",
               "status": "draft",
               "verified": false
@@ -19626,42 +20226,42 @@
           "atoms": [
             {
               "id": "MRM-06",
-              "title": "Model Lifecycle",
-              "type": "concept",
+              "title": "Materiality and Risk Tiering",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-07",
-              "title": "Model Development",
-              "type": "procedure",
+              "title": "Aggregate Model Risk and Risk Appetite",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-08",
-              "title": "Independent Model Validation",
+              "title": "The Model Lifecycle and Its Control Gates",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-09",
-              "title": "Approval, Governance, and Use",
-              "type": "procedure",
+              "title": "Who Produces, Uses, Approves, Challenges and Audits",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-10",
-              "title": "Ongoing Monitoring and Performance",
+              "title": "Purpose, Intended Use and Limitations",
               "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-11",
-              "title": "Change Management and Recalibration",
+              "title": "Data Lineage and Fitness for Use",
               "type": "procedure",
               "status": "draft",
               "verified": false
@@ -19673,50 +20273,118 @@
           "atoms": [
             {
               "id": "MRM-12",
-              "title": "Conceptual Soundness and Data Quality",
-              "type": "mechanism",
+              "title": "Method, Assumptions and Complexity",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-13",
-              "title": "Discrimination Metrics (AUC, Gini, KS)",
-              "type": "mechanism",
+              "title": "Implementation, Versioning and Reproducibility",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-14",
-              "title": "Calibration and Goodness-of-Fit",
-              "type": "mechanism",
+              "title": "Developer Testing and the Pre-Validation Evidence Pack",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-15",
-              "title": "Stability Metrics (PSI and CSI)",
+              "title": "Independent Validation: Mandate, Independence and Timing",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-16",
-              "title": "Benchmarking and Challenger Models",
-              "type": "mechanism",
+              "title": "The Validation Work Programme",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-17",
-              "title": "Backtesting, Use Test, and Overrides",
+              "title": "Outcomes Analysis: Discrimination, Calibration and Backtesting",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "MRM-18",
-              "title": "AI and Machine Learning Models",
-              "type": "concept",
+              "title": "Stability, Benchmarking and Challenger Models",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "mrm",
+          "atoms": [
+            {
+              "id": "MRM-19",
+              "title": "Validation Findings and Issue Disposition",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-20",
+              "title": "Approval and Conditions of Use",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-21",
+              "title": "Deployment, Use and Overrides",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-22",
+              "title": "Ongoing Monitoring, Thresholds and Escalation",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-23",
+              "title": "Model Change: Adjustment, Recalibration or Redevelopment",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-24",
+              "title": "Retirement and Decommissioning",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-25",
+              "title": "Third-Party and Vendor Models",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-26",
+              "title": "AI/ML Governance: Complexity, Explainability and Human Control",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "MRM-27",
+              "title": "AI/ML Validation: Generalisation, Drift and Robustness",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             }
@@ -23056,24 +23724,9 @@
       "message": "Atom \"MRM-01\" has 0 prerequisites (Depth 0 Root)."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-01",
-      "message": "one_screen in \"MRM-01\" contains 5 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-02",
       "message": "Atom \"MRM-02\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "MRM-02",
-      "message": "Atom \"MRM-02\" has 0 prerequisites (Depth 0 Root)."
-    },
-    {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-02",
-      "message": "one_screen in \"MRM-02\" contains 6 sentences (maximum 3 recommended)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -23086,19 +23739,9 @@
       "message": "Atom \"MRM-04\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-04",
-      "message": "one_screen in \"MRM-04\" contains 8 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-05",
       "message": "Atom \"MRM-05\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-05",
-      "message": "one_screen in \"MRM-05\" contains 6 sentences (maximum 3 recommended)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -23136,19 +23779,9 @@
       "message": "Atom \"MRM-12\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-12",
-      "message": "one_screen in \"MRM-12\" contains 5 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-13",
       "message": "Atom \"MRM-13\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-13",
-      "message": "one_screen in \"MRM-13\" contains 7 sentences (maximum 3 recommended)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -23156,19 +23789,9 @@
       "message": "Atom \"MRM-14\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-14",
-      "message": "one_screen in \"MRM-14\" contains 7 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-15",
       "message": "Atom \"MRM-15\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-15",
-      "message": "one_screen in \"MRM-15\" contains 9 sentences (maximum 3 recommended)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -23176,19 +23799,9 @@
       "message": "Atom \"MRM-16\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-16",
-      "message": "one_screen in \"MRM-16\" contains 4 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "MRM-17",
       "message": "Atom \"MRM-17\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-17",
-      "message": "one_screen in \"MRM-17\" contains 6 sentences (maximum 3 recommended)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -23196,9 +23809,49 @@
       "message": "Atom \"MRM-18\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "MRM-18",
-      "message": "one_screen in \"MRM-18\" contains 6 sentences (maximum 3 recommended)."
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-19",
+      "message": "Atom \"MRM-19\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-20",
+      "message": "Atom \"MRM-20\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-21",
+      "message": "Atom \"MRM-21\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-22",
+      "message": "Atom \"MRM-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-23",
+      "message": "Atom \"MRM-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-24",
+      "message": "Atom \"MRM-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-25",
+      "message": "Atom \"MRM-25\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-26",
+      "message": "Atom \"MRM-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "MRM-27",
+      "message": "Atom \"MRM-27\" is unverified (draft). Displays development banner."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -24106,5 +24759,5 @@
       "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-31T10:14:34.790Z"
+  "generatedAt": "2026-08-31T11:14:39.053Z"
 }

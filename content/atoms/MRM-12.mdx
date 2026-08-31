@@ -1,17 +1,18 @@
 ---
 id: MRM-12
-title: Conceptual Soundness and Data Quality
-type: mechanism
+title: 'Method, Assumptions and Complexity'
+type: procedure
 domain: model-risk
 subdomain: validation-and-metrics
 one_screen: >-
-  **Conceptual soundness** ensures the model’s design and assumptions are valid
-  for its purpose.  Validators check that the model structure (type, variables,
-  functional form) is appropriate.  **Data quality** ensures inputs are accurate
-  and representative.  Validations review data sourcing, completeness, and
-  relevance.  Both steps catch errors before performance testing.
+  Method selection is a governed judgement about whether the model structure,
+  assumptions and complexity are appropriate for the stated purpose and
+  available data. MRM does not own the derivation of statistical methods; it
+  owns the evidence that the chosen method is defensible, its assumptions are
+  visible, and added complexity earns its place.
 prerequisites:
-  - MRM-07
+  - MRM-10
+  - MRM-11
 jurisdictions:
   - universal
 perishable: true
@@ -21,53 +22,90 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'RBI, *Draft Principles… in Credit* (Aug. 2024) – Validation guidelines.'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      Supervisory Guidance on Model Risk Management, Federal Reserve SR 26-2 and
+      OCC Bulletin 2026-13, 17 April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: IBM Think article on model risk (for data risk examples).
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-In practice, conceptual review and data review are key initial steps in validation.  A **conceptual soundness review** looks at the model’s logic: does the methodology fit the problem?  Are the right variables included?  Are assumptions (e.g. linearity, stability) realistic?  For example, a default-probability model would fail conceptual validation if it omitted a key economic variable or used an inappropriate distribution.  The review also ensures that the model’s objectives and boundaries are clear.  This step guards against fundamental flaws that no amount of testing can fix.
+### Core mechanism
 
-Immediately after, **data quality checks** are done.  Validators verify that the data used in development accurately reflect the intended population.  They check for errors (typos, duplicate records), missing or inconsistent values, and sample bias.  For instance, if a credit scoring model was trained on a poor-quality dataset, its predictions will be off.  RBI’s guidance explicitly requires validation to “verify the accuracy of data used in the model and reliability of data sources”.  This means confirming data fields make sense (e.g. no negative loan amounts) and ensuring no systematic distortions.  Validators also ensure that development data cover a representative range of situations; if not, they may recommend additional adjustments or overlays.
+```text
+Purpose + data constraints
+    ↓
+Candidate methods
+    ↓
+Assumptions and trade-offs
+    ↓
+Chosen method
+    ↓
+Complexity justified by incremental value
+    ↓
+Documented limitations and tests
+```
 
-Together, conceptual and data reviews set the stage for performance testing.  A model with sound concept but bad data will still fail, and vice versa.  By treating both rigorously, firms ensure that models are fundamentally sensible before examining metrics like AUC or H-L.
+| Question | Evidence expected |
+| :--- | :--- |
+| Why this method? | Link to purpose, output and decision need |
+| What assumptions matter? | Explicit assumptions and conditions under which they fail |
+| What alternatives were considered? | Comparison sufficient to show selection was reasoned |
+| What does complexity add? | Better performance, stability, flexibility or decision usefulness |
+| What does complexity cost? | Explainability, data dependence, implementation and validation burden |
+| Where is judgement embedded? | Variable choices, segmentation, constraints, overrides or expert assumptions |
+
+A more complex model is not inherently superior. Complexity increases the number of ways assumptions, interactions, implementation and user understanding can fail.
+
+### Where it sits
+
+```text
+Upstream:   Purpose · Data fitness · Business constraints
+This:       Method, assumptions and complexity
+Downstream: Implementation · Developer testing · Conceptual validation
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Developer | Selects and documents method and assumptions |
+| Model owner | Accepts design rationale for intended use |
+| Business user | Provides practical context and challenges implausible behaviour |
+| Validation | Independently challenges conceptual soundness |
 
 ### Permanent rule
 
-Always start validation by scrutinizing the model’s design and data.  No model should proceed if either the conceptual framework or the input data is suspect.
+Complexity must be justified by useful model capability, not by technical sophistication alone.
 
-### Permanent trap
+### Never confuse [Assumption] and [Parameter]
 
-Skipping data checks because “it’s just the same raw inputs.”  Even minor data errors (wrong scale, outdated values) can corrupt outputs.  Likewise, not questioning assumptions leads to blind faith in a wrong model.
-
-### Never confuse
-
-**Data bias** — systematic error in inputs (e.g. non-representative sample).
+**Assumption** - proposition or simplification the model relies on, such as stability of a relationship or suitability of a data treatment.
 
 ---
 
-**Model misspecification** — a flaw in the model’s form or assumptions.
-They both hurt model results, but one is in the data, the other in the model logic.
+**Parameter** - estimated or set quantity within the chosen model structure. Updating a parameter does not necessarily repair a broken assumption.
+
+### Permanent trap
+
+Using strong historical fit as proof of conceptual soundness. A misspecified or over-complex model can fit development data very well while relying on unstable or spurious relationships.
 
 ### Jurisdiction variants
 
-**IN** — RBI validation guidance explicitly includes “verification of data accuracy and reliability of sources”, and checking assumptions.
-
-**UK** — PRA expects models to use accurate, reliable data and correctly specified methods (explicit guidance on development and validation covers data quality).
-
-**US** — SR 26-2 lists data and methodology review as core validation steps.  (The OCC press release highlights ongoing monitoring of vendor model data quality.)
-
-**EU** — EBA/ECB Pillar 2 requires robust data management for internal models.  ECB’s validation handbook also focuses on data completeness and consistency.
+No delta. The technical methods vary by model, but regulators consistently expect methodology, assumptions and judgement to be documented, challenged and proportionate to use and materiality.
 
 <Recall
-  q="Why is data representativeness important?"
-  a="If the data sample differs from the model’s application population, predictions will be biased.  Validation must ensure training data match current use."
+  q="When does extra model complexity become model risk rather than model improvement?"
+  a="When it adds assumptions, opacity or implementation burden without commensurate evidence that it improves the decision the model supports."
 />
 
 <Recall
-  q="What is a conceptual soundness check?"
-  a="Reviewing model assumptions and logic for appropriateness (e.g. “Why are these inputs chosen? Does the model capture the risk drivers?”)."
+  q="Why can recalibrating parameters fail to repair an assumption problem?"
+  a="Recalibration changes quantities inside the existing structure; if the underlying relationship or structural assumption is no longer valid, the model form itself may need redevelopment."
 />

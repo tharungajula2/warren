@@ -1,20 +1,23 @@
 ---
 id: MRM-05
-title: Model Inventory and Materiality Tiering
+title: Model Inventory and Dependency Map
 type: procedure
 domain: model-risk
 subdomain: model-risk-foundations
 one_screen: >-
-  Firms must catalogue all models in an inventory and classify them by
-  materiality or “tier.”  This ensures that validation and controls are focused
-  on the most critical models.  Materiality (e.g. impact on capital or
-  decisions) typically determines whether a model is High-, Medium- or Low-tier.
-  Regulators explicitly require a complete model inventory and risk-based
-  tiering.
+  The model inventory is the authoritative record of what models exist, where
+  they are in the lifecycle, who owns and uses them, and which other systems or
+  models they depend on. A mere list of names is insufficient: the control value
+  comes from linking identity, status, use, lineage, dependencies and governance
+  state.
 prerequisites:
   - MRM-01
+  - MRM-04
 jurisdictions:
-  - universal
+  - IN
+  - UK
+  - EU
+  - US
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -22,69 +25,91 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'PRA, *SS1/23 (Apr. 2026) Principle 1 (Model inventory & tiering)*.'
+  - label: >-
+      Prudential Regulation Authority, Supervisory Statement SS1/23, Model risk
+      management principles for banks, April 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Fed SR 26-2 Attachment (2026) – Fed/OCC press release on risk-based
-      materiality.
+      Federal Reserve Board, FDIC and OCC, Supervisory Guidance on Model Risk
+      Management, Federal Reserve SR 26-2 and OCC Bulletin 2026-13, 17 April
+      2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'RBI draft (Aug. 2024), section on governance (calls for model inventory).'
+  - label: >-
+      Reserve Bank of India, Draft Guidance on Regulatory Principles for Model
+      Risk Management, Press Release 2026-2027/528, 24 June 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 06_MRM_model_risk.md
 ---
-A comprehensive model inventory is a foundation of MRM.  Regulators expect banks to maintain a **complete, firm-wide list of all models** – those in use, in development, or even recently retired – with key attributes (purpose, owner, validation status, etc.).  The purpose is to “enable firms to identify the sources of model risk” and prioritize controls.  RBI’s credit-model circular similarly mandates that banks “maintain a Model Inventory of approved models, insourced or outsourced, with critical information on it”.  In practice, each line of business may track its own models, but the firm must compile a consolidated list for oversight and reporting.
+### Core mechanism
 
-Once inventoried, models are usually tiered by risk.  Regulators say this tiering should be **risk-based**, reflecting each model’s materiality.  Factors include financial exposure (e.g. how much money or capital depends on the model) and model purpose (e.g. credit approval vs internal analysis).  For example, the Fed guidance introduces a “materiality-based framework” where “model purpose and model exposure” determine materiality.  UK SS1/23 Principle 1 requires risk-based tiering so that “validation activities and other risk controls” focus on critical models.  RBI draft also requires risk-tiering and annual review of tier levels.  A typical approach is to label models Tier 1 (most critical), Tier 2, Tier 3, etc.  High-tier models trigger the strictest governance (e.g. board approvals, more frequent reviews), while lower-tier models have scaled-back oversight.
+| Inventory field | Control question |
+| :--- | :--- |
+| Model ID/version | Exact governed object? |
+| Purpose/use | Which decision depends on it? |
+| Owner/user | Who is accountable/consumes output? |
+| Risk tier | Required control intensity? |
+| Status | Development, validation, active, restricted, inactive or retired? |
+| Validation/approval | Authorised, with what conditions? |
+| Upstream dependencies | What can contaminate it? |
+| Downstream consumers | What fails if it fails? |
+| Third-party status | External dependency? |
+| Limitations/issues | Known open weaknesses? |
+
+Model A data → Model B estimate → Model C decision output
+
+Dependency mapping links inventory rows into chains, exposing propagation when upstream failure contaminates downstream models.
+
+### Where it sits
 
 ```text
-+---------------+
-| Model Tiers   |
-+-------+-------+
-| Tier 1 (High) |
-+-------+-------+
-| Tier 2 (Med)  |
-+-------+-------+
-| Tier 3 (Low)  |
-+---------------+
+Upstream:   Model perimeter · Ownership · Lifecycle states
+This:       Inventory and dependency map
+Downstream: Tiering · Aggregate risk · Validation scheduling · Change impact
 ```
 
-Tiering helps allocate resources.  For instance, a retail-credit scorecard impacting $1B loans (Tier 1) would get priority validation and senior oversight.  A small-scope risk indicator (Tier 3) might be reviewed less often.  Regardless, regulators expect that **no model is left untracked**.  The PRA says even decommissioned models should remain in the inventory for historical lessons.
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model owner | Keeps model record accurate |
+| Business / technology | Confirms actual use and dependencies |
+| MRM function | Sets inventory standards and challenges completeness |
+| Internal audit | Tests completeness and reconciliation |
 
 ### Permanent rule
 
-Maintain an up-to-date model inventory and use a risk-tiering scheme.  This is non-negotiable in MRM policies.
+One model has one governed identity, but it may have many uses, versions and dependencies. Inventory controls must preserve that distinction.
 
-### Permanent trap
+### Never confuse [Model inventory] and [Model repository]
 
-Thinking only big regulatory models matter.  Banks often miss models used for analytics or financial reporting that still drive decisions.  The rule is: **all** models must be inventoried, not just credit/market capital models.
-
-### Never confuse
-
-**Model inventory** — the list of all models, with details (owner, status, etc.).
+**Model inventory** - authoritative governance record showing models, status, ownership and control attributes.
 
 ---
 
-**Asset inventory** — list of financial assets (loans, etc.).  They serve different purposes: one tracks models, the other tracks financial exposures.
+**Model repository** - storage location for code, documentation, artefacts or files; it may support the inventory but does not replace it.
+
+### Permanent trap
+
+Keeping retired or restricted models invisible. Historical lineage matters for reproducing past decisions, understanding inherited outputs and managing transitions.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s 2024/2026 guidelines require a model inventory of all credit models (including third-party), with board oversight. Tiering by risk is required by draft Guidance (RBI).
-
-**UK** — PRA SS1/23 Principle 1 mandates a formal model inventory and risk-based tiering to focus validation on material models.
-
-**US** — The April 2026 guidance emphasizes a “materiality-based” approach: firms should define material models by purpose and exposure.  It does not prescribe fixed tiers, but many banks adopt a tiering scheme to implement the risk-based approach.
-
-**EU** — EBA/ECB expect banks to inventory all models used for IRB capital or risk management and to apply risk-based oversight. ECB’s internal models guide similarly uses materiality concepts. (No fundamental conflict with other jurisdictions on this point.)
+| Jurisdiction | Inventory expectation | Scope / status |
+| :--- | :--- | :--- |
+| US | Risk-based identification sufficient for individual and aggregate model-risk oversight; no fixed template. | 2026 guidance less prescriptive than predecessor. |
+| UK | SS1/23 Principle 1: identify models, maintain inventory, classify risk for proportionate controls. | Formal inventory expectation. |
+| EU | CRR/ECB governs prudential model scope, rating systems, changes and permissions. | No enterprise inventory mandate for every quantitative tool. |
+| IN | Proposed current inventory covering active, inactive, decommissioned, third-party and AI/ML models. | Draft as at August 2026; not final. |
 
 <Recall
-  q="What information must a model inventory contain?"
-  a="At minimum, model name, purpose, owner, development date, tier/materiality, last validation date, and usage."
+  q="Why is a dependency map more useful than a flat list?"
+  a="It reveals propagation risk: a common upstream dataset, model or service can impair several downstream models and decisions simultaneously."
 />
 
 <Recall
-  q="How are model tiers typically defined?"
-  a="By the model’s materiality – often combining its financial exposure and impact on decisions.  High-tier (Tier 1) means big impact or loss potential, requiring stringent controls; Tier 3 is lower impact."
+  q="What makes an inventory authoritative?"
+  a="It has governed identifiers, owners, lifecycle and control status, is reconciled to actual use, and is updated when models or dependencies change."
 />
