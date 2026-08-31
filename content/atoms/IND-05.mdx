@@ -1,23 +1,17 @@
 ---
 id: IND-05
-title: 'Banks vs. NBFCs: Key Distinctions'
-type: concept
+title: Housing Finance Companies under RBI
+type: delta
 domain: india-lending
 subdomain: regulatory-structure
 one_screen: >-
-  Commercial banks and NBFCs in India differ in core functions and regulation. 
-  Banks can accept demand deposits, offer cheque facilities, and participate in
-  the payment system – NBFCs cannot.  NBFCs rely mostly on wholesale/market
-  funding or term deposits (for deposit-taking NBFCs).  Banks have RBI-backed
-  deposit insurance (DICGC cover), maintain CRR/SLR, and access RBI liquidity;
-  NBFCs do not (except selective refinance schemes).  Banks require higher entry
-  capital and stricter licensing; NBFCs have a lower ₹2 crore equity norm but
-  face similar prudential norms scaled to their assets.  Because NBFCs cannot
-  create money via demand deposits, their funding costs and leverage limits
-  differ fundamentally from banks.
+  Housing Finance Companies are RBI-regulated non-bank lenders with a
+  housing-finance business focus. The key teaching point is not the historical
+  transfer from NHB itself, but the current position: HFCs sit inside RBI's NBFC
+  regulatory estate while retaining HFC-specific business and prudential
+  requirements.
 prerequisites:
-  - IND-02
-  - IND-03
+  - IND-04
 jurisdictions:
   - IN
 perishable: true
@@ -27,58 +21,69 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: RBI Act definitions and NBFC Directions (general principle).
+  - label: 'Parliament of India, Finance (No. 2) Act, 2019.'
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'RBI FAQs and master directions (see [25], [51]).'
+  - label: >-
+      Reserve Bank of India, regulatory framework for Housing Finance Companies
+      following transfer of regulation from NHB.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, entity-wise HFC/NBFC Directions issued 28 November
+      2025; exact post-consolidation reference UNVERIFIED as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-In practice, an Indian bank is licensed under the BR Act and can grant loans (including overdrafts, credit cards) directly funded by deposits. NBFCs (except certain rare deposit-taking ones) cannot open current accounts or offer cheque books. They can only accept term/lien-marked savings deposits with restrictions, and they must invest most deposits in government securities (e.g. PBs keep 75% in SLR securities). Banks contribute to CRR and SLR at set ratios; NBFC deposit-takers have their own (lower) CRR rates and no CRR if non-deposit NBFC. NBFCs access RBI refinancing schemes (e.g. MSE financing, mortgages) but cannot borrow directly through standard bank routes like repo.
+### Core mechanism
 
-Regulatory burdens also differ: banks need full Basel capital ratios and AML/KYC; NBFCs follow RBI NBFC Directions (now largely converging with Basel norms for larger NBFCs). NBFCs often face extra restrictions on leverage, lending (e.g. sub-limits on unsecured loans), and must maintain Asset-Liability limits. For example, only banks count as “scheduled banks” in inter-bank systems. Moreover, only banks have statutory liquidity injection roles (like government banking), whereas NBFCs do not.
+| Question | Current treatment |
+| :--- | :--- |
+| Who prudentially regulates HFCs? | RBI |
+| Are HFCs banks? | No; they are a distinct NBFC category |
+| Does SBR matter? | Yes; HFCs sit within the SBR architecture rather than outside it |
+| Do housing-specific conditions disappear? | No; HFC status carries activity-specific requirements |
+| What remains of NHB? | Policy, development and refinance functions continue, but HFC prudential supervision sits with RBI |
 
-```
-+----------+    vs     +------------+
-|    Bank (SCB)      |    NBFCs        |
-+----------+    +     +------------+
-| - Accept current/savings deposits    | - Mostly term deposits (no current a/c)
-| - Issue loans (OD, cards)             | - Issue loans but rely on other funding
-| - No external deposit cap             | - Regulatory deposit caps (if NBFC-D)
-| - Part of payment/clearing networks   | - Cannot directly clear payments
-| - Bank Rate refinancing, RBI liquidity| - No direct access to repo window
-| - Deposit insurance (DICGC)           | - No government deposit insurance
-+---------------------------------------+
+The Finance Act changes made in 2019 transferred HFC regulatory authority to RBI. Subsequent RBI harmonisation brought HFC prudential treatment closer to other NBFCs while preserving housing-finance-specific eligibility and business rules.
+
+RBI reorganised entity-wise instructions on 28 November 2025 and amended parts of the HFC/NBFC estate in 2026. The exact current post-consolidation HFC instrument reference is UNVERIFIED here as at 31 August 2026. The pack therefore states the regulatory position without importing any legacy threshold or ratio that has not been established.
+
+### Where it sits
+
+```text
+Upstream:   NBFC taxonomy · SBR
+This:       HFC regulatory treatment
+Downstream: Housing lending · Prudential classification · Conduct
 ```
 
 ### Permanent rule
 
-Banks are permitted to accept demand (current) deposits and to extend credit directly; NBFCs cannot accept current account deposits or create payment mechanisms.  Only SCBs hold RBI-guaranteed deposit insurance and use CRR/SLR facilities.
+An HFC is not outside NBFC regulation merely because its business is specialised housing finance.
 
-### Permanent trap
+### Never confuse [Housing Finance Company] and [National Housing Bank]
 
-Treating an NBFC like a small bank. For example, assuming an NBFC’s deposits are instantly withdrawable (like a current account) – this is false.  Also ignoring NBFC funding limits can lead to compliance errors (NBFCs must invest most deposits in govt bonds, etc.).
-
-### Never confuse
-
-**Bank** — a licensed entity that can take demand deposits (cheque/savings accounts) and provide a full suite of banking services.
+**Housing Finance Company** — an RBI-regulated lender whose business is predominantly housing finance under the applicable definition.
 
 ---
 
-**NBFC** — a non-bank financial firm that cannot accept demand deposits or issue cheques; funding comes via term liabilities, and it is generally outside central-bank clearing.
+**National Housing Bank** — a housing-finance development and refinance institution; it is not the prudential supervisor replacing RBI for HFCs.
 
 ### Jurisdiction variants
 
-**IN** — RBI delineates banks (BR Act) vs NBFCs (RBI Act) sharply. NBFCs have limits (no current accounts, limits on deposits) not found in US/UK banking.
-**No delta.** The general difference that banks take deposits and NBFCs do not is universal. But India’s deposit cap rules (e.g. ₹100k for PBs) are local details.
+#### HFCs
+Housing-specific business tests and applicable prudential requirements apply.
+
+#### Other NBFCs
+General NBFC rules apply unless another activity-specific category modifies them.
 
 <Recall
-  q="Can an NBFC open a current account or issue cheques for a customer?"
-  a="No. Only scheduled banks have that power. NBFCs can’t create demand deposit accounts."
+  q="Who is the prudential regulator of HFCs as at 31 August 2026?"
+  a="RBI. HFCs operate within RBI's NBFC regulatory architecture."
 />
 
 <Recall
-  q="What insurance covers bank deposits in India that does *not* cover NBFC deposits?"
-  a="DICGC insurance covers only bank deposits. NBFC depositors do not get RBI insurance protection."
+  q="Did the transfer to RBI erase HFC-specific rules?"
+  a="No. HFCs were integrated into RBI supervision, but housing-finance-specific business and prudential conditions remain."
 />

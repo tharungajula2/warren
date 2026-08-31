@@ -1,21 +1,18 @@
 ---
 id: IND-16
-title: Co-Lending Framework (Banks-NBFCs)
-type: concept
+title: Account Aggregator Consent Architecture
+type: mechanism
 domain: india-lending
 subdomain: co-lending-and-data-tech
 one_screen: >-
-  In 2018, RBI launched a co-lending scheme where banks and eligible NBFCs
-  jointly finance borrowers. Under this, the bank must retain at least 20% of
-  each co-lent loan portfolio (even if the NBFC originated most). Typically, the
-  bank holds the larger share (say 80%) to keep better assets. The NBFC services
-  the loan (e.g. documentation, collection) while sharing credit risk.
-  Co-lending requires both parties to reconcile accounts and operations
-  carefully, since each one-on-one partnership involves dual loan accounts and
-  revenue splits.
+  The Account Aggregator, or AA, framework lets a customer move financial
+  information between regulated participants through a standard consent
+  architecture. The AA is neither the lender nor the data owner: it manages
+  permissioned transmission between a Financial Information Provider and a
+  Financial Information User.
 prerequisites:
   - IND-02
-  - IND-03
+  - DAT-05
 jurisdictions:
   - IN
 perishable: true
@@ -25,48 +22,79 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'RBI Master Direction – Co-lending (2021, 2023 updates).'
+  - label: >-
+      Reserve Bank of India, Master Direction - Non-Banking Financial Company -
+      Account Aggregator, 2016, as amended.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI press release on co-lending revision (2023).
+  - label: >-
+      Reserve Bank of India, current post-consolidation Account Aggregator
+      directions; exact 2025-2026 reference UNVERIFIED as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Under the *Co-Lending Model* (CoL), a bank and an NBFC enter a formal agreement. They extend credit to a common borrower at a predetermined ratio. One pattern is 80:20 (bank:NBFC) or 70:30, but RBI’s 2023 updates mandate minimum bank share of 20% for this scheme. In practice, many big banks take 80% and partner with smaller NBFCs (especially MFIs) that originate and service the loan to micro customers.
+### Core mechanism
 
-All documentation must be in both names, and collections are shared. For example, the bank provides funds to NBFC (or directly to borrower), but NBFC handles field appraisal. The repayments are then split per the agreed ratio. This model aims to leverage NBFC outreach (last-mile distribution, quick appraisals) while giving banks a strong share of safer assets. Both parties must decide upfront on interest rate split, service fees to NBFC, and NPA handling.
+```text
+Customer creates consent artefact
+    ↓
+Financial Information User requests specified data
+    ↓
+Account Aggregator routes consent request
+    ↓
+Financial Information Provider releases permitted information
+    ↓
+AA transmits encrypted information to the FIU
+    ↓
+Lender uses the information for the consented purpose
+```
 
-Operationally, co-lending adds complexity: two sets of ledgers (bank’s book and NBFC’s), reconciliation of cashflows, dual KYC checks, etc. If a borrower defaults, both share the loss per their ratio. RBI requires co-lending accounts to be reported correctly in their prudential returns (assets doubled: one on each book).  Tax and accounting rules also reflect that a co-lent loan is partly a loan to NBFC (on bank book) and partly bank’s loan to borrower.
+| Role | Lending relevance |
+| :--- | :--- |
+| Customer | Controls consent |
+| Financial Information Provider (FIP) | Holds source financial information |
+| Account Aggregator | Consent and transmission intermediary |
+| Financial Information User (FIU) | Receives information for a permitted purpose, such as underwriting |
 
-The CoL framework was revised: initially introduced in 2018, it was formalized by Master Directions in 2021 and updated in 2023. The 2023 revision relaxed some earlier restrictions (like making NBFC proportion flexible up to 80%). It also allowed banks to lend their own share through partnerships (bank fraction can be higher). These policies aim to expand affordable credit (especially to underserved borrowers of NBFCs) by leveraging bank deposit base.
+Consent defines scope, purpose, data type and duration under the applicable framework. The AA is designed to avoid uncontrolled credential sharing and manual statement exchange.
+
+One-line reminder: BCBS 239 and enterprise data governance belong to DAT; this atom owns the Indian consent rail.
+
+### Where it sits
+
+```text
+Upstream:   Customer financial data · Consent
+This:       AA data-sharing rail
+Downstream: Underwriting · ULI · Credit decision
+```
 
 ### Permanent rule
 
-In any RBI-approved co-lending arrangement, the bank must retain at least 20% (and typically holds the majority) of the credit amount. Both parties share risk and ownership accordingly.
+The AA cannot convert customer consent for one defined purpose into unrestricted future access to the customer's financial information.
 
-### Permanent trap
+### Never confuse [Account Aggregator] and [Credit Bureau]
 
-Misunderstanding who owns the loan: both do. A common mistake is booking the entire amount on one balance sheet; instead, each books its share. Also, forgetting that two payment schedules exist – banks must get their share.
-
-### Never confuse
-
-**Co-lending** — joint financing by bank + NBFC on a single loan to a borrower. Each funds part (min. 20% by bank) and shares title.
+**Account Aggregator** — transmits customer-permissioned financial information for a defined consented purpose.
 
 ---
 
-**Syndication** — multiple banks lending separate portions to one borrower, each with own loan. (Co-lending keeps one loan, two lenders, not a consortium of loans.)
+**Credit Bureau** — stores and reports credit-information history under the Credit Information Companies framework.
+
+### Permanent trap
+
+Treating AA consent as a lender's right to scrape any available financial data. The consent artefact is scoped and purpose-bound.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s co-lending model is unique (though other countries have bank–nonbank partnerships, they are usually simpler).
+No within-India delta in the core AA role; participation obligations differ by whether an entity is acting as FIP, FIU or AA.
 
 <Recall
-  q="In a co-lent loan of ₹100 lakh with ratio 80:20, what does RBI mandate the bank to retain?"
-  a="At least ₹20 lakh (20%) in the co-lending partnership."
+  q="What does an Account Aggregator actually own?"
+  a="It owns the consent-and-transmission function, not the customer's underlying financial data and not the lending decision."
 />
 
 <Recall
-  q="Who services a co-lending loan with an end borrower?"
-  a="Typically the NBFC (or bank) as per agreement; both share underlying credit risk."
+  q="Why is AA different from handing a lender a bank-statement password?"
+  a="The AA uses a governed consent artefact and structured data transfer rather than unrestricted credential sharing."
 />

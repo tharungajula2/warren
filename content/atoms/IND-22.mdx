@@ -1,19 +1,14 @@
 ---
 id: IND-22
-title: Insolvency and Bankruptcy Code (IBC) and DRT
-type: concept
+title: 'NPA Recognition, Income Recognition and Asset Classes'
+type: mechanism
 domain: india-lending
 subdomain: enforcement-and-conduct
 one_screen: >-
-  The Insolvency and Bankruptcy Code (2016) provides a structured process for
-  resolving stressed corporate debts. If lenders collectively decide (typically
-  75% by value) that a default requires legal resolution, they can initiate
-  corporate insolvency. A *Resolution Professional* then manages the company’s
-  affairs, and creditors vote on a revival plan. The IBC has priority over
-  SARFAESI in that once an insolvency petition is admitted, SARFAESI proceedings
-  halt. For personal or small debtors, formal bankruptcy via IBC may not apply;
-  instead, DRTs (for bank debts above a threshold) and debt recovery tribunals
-  handle lower-value cases, including unsecured and smaller claims.
+  An NPA is a prudential status, not merely an internal "bad loan" label. Once
+  the applicable RBI trigger is met, income recognition changes and the exposure
+  moves through sub-standard, doubtful and loss categories according to the
+  current entity-specific IRACP rules.
 prerequisites:
   - IND-21
 jurisdictions:
@@ -25,43 +20,69 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'Insolvency and Bankruptcy Code, 2016 (Sections on initiation).'
+  - label: >-
+      Reserve Bank of India, Prudential Norms on Income Recognition, Asset
+      Classification and Provisioning pertaining to Advances, 1 April 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'Recovery of Debts Act, 1993 (DRT jurisdiction).'
+  - label: >-
+      Reserve Bank of India, entity-wise IRACP Directions issued 28 November
+      2025; exact post-consolidation product references UNVERIFIED as at 31
+      August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Under IBC, any financial creditor (bank, NBFC, or even a supplier if admitted) can initiate proceedings when payment default occurs. A strict timeline (330 days max) forces quick action. Successful resolution under IBC often involves structural changes (equity dilution, takeover by new promoters, etc.). Recoveries under IBC have exceeded SARFAESI recoveries historically because of its collective mechanism. But IBC is mostly for corporate debt. For individual/business borrowers, RBI relies on SARFAESI and DRT (established by RDDBFI Act, 1993) and lok adalats.
+### Core mechanism
 
-Debt Recovery Tribunals handle all debts of ₹10 lakh and above to banks/financial institutions. They can entertain cases on any credit, secured or not, and can order recovery from a debtor’s assets. There are separate DRTs for circular references from the RBI. The DRT process is formal (like a tribunal court), but faster than regular civil court. DRTs have been strengthened by digital filing and “DRAT” appeals.
+| Step | Prudential effect |
+| :--- | :--- |
+| NPA trigger reached | Exposure becomes non-performing under the applicable rule |
+| Income recognition restriction | Unrealised interest cannot continue to be treated like normal performing income |
+| Sub-standard | Initial NPA class under the prudential seasoning framework |
+| Doubtful | NPA remains unresolved beyond the prescribed period |
+| Loss | Asset is identified as uncollectible or of such little value that full recognition of loss is required |
 
-Banks usually prioritize SARFAESI for quick value, then DRT if borrower defends. IBC is the last resort for viable corporates or when persuasion fails. RBI’s provisions require reclassification of accounts when IBC is filed (they become NPA on petition filing). The IBC can wipe out shareholders; in one instance, leading to EMI refinance rather than further lending.
+For many term-loan exposures, the familiar trigger is more than 90 days overdue. Product-specific rules matter: cash credit/overdraft facilities use "out of order" criteria, and certain agricultural or other specialised exposures can follow different tests.
+
+RBI also applies borrower/account-level disciplines intended to prevent selective treatment of one facility while another exposure to the same borrower is non-performing, subject to the applicable Direction.
+
+Exact seasoning periods and special-product rules in the post-28 November 2025 entity-wise Directions are not restated here unless established; any unresolved reference is treated as UNVERIFIED as at 31 August 2026.
+
+### Where it sits
+
+```text
+Upstream:   SMA · Product-specific delinquency test
+This:       NPA and asset class
+Downstream: Provisioning · Upgrade · Resolution · Recovery
+```
 
 ### Permanent rule
 
-Under IBC, when a corporate borrower defaults, lenders may trigger insolvency proceedings with RBI filing specified asset classification. DRTs handle recovery suits for any loan above ₹10 lakh.
+Once an exposure is NPA, income recognition cannot continue as though contractual accrual automatically equals realised income.
 
-### Permanent trap
+### Never confuse [NPA status] and [Write-off]
 
-Missing the priority: initiating SARFAESI on a company after IBC has been filed – not allowed, since IBC is a binding multilateral process once admitted. Also, dismissing smaller claims (below 10 lakh) thinking only big debts go to DRTs – DRT jurisdiction starts at ₹10 lakh for banks.
+**NPA status** — prudential classification of a live credit exposure.
 
-### Never confuse
+---
 
-**IBC (Corporate)** — structured insolvency process for companies / FIs (time-bound, collective).
-**DRT (Debt Recovery)** — tribunal for creditor claims on individuals or businesses (₹10L+), including enforcement of guarantee by guarantors.
+**Write-off** — accounting removal of some or all of an exposure; legal recovery rights can continue.
 
 ### Jurisdiction variants
 
-**IN** — The IBC is India’s consolidated insolvency law (2016). Countries like the UK/US have different corporate insolvency regimes (Chapter 11, administration, etc.), but the IBC’s speed and creditor primacy are quite distinctive.
+#### Term lending
+More-than-90-days overdue is the core trigger for ordinary term-loan treatment.
+
+#### Revolving and specialised facilities
+Apply the product-specific "out of order" or other prescribed test.
 
 <Recall
-  q="A company defaults on ₹50 cr debt. Can a single banker force it into IBC?"
-  a="If 75% of financial creditors (by value) agree, they can invoke IBC. An RBI-prescribed default notice is needed first."
+  q="What changes immediately when an exposure becomes NPA?"
+  a="Prudential classification changes and income recognition becomes constrained; the loan then enters the applicable sub-standard/doubtful/loss path."
 />
 
 <Recall
-  q="What forum can recover a ₹20 lakh loan?"
-  a="Debt Recovery Tribunal – banks can file a recovery application in DRT for any loan ₹10 lakh or above."
+  q="Does every product use the same 90-day instalment test?"
+  a="No. Revolving and specialised exposures can use product-specific NPA criteria."
 />

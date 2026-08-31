@@ -1,14 +1,14 @@
 ---
 id: IND-07
-title: Special Mention Accounts (SMAs)
-type: concept
+title: Priority Sector Eligibility and Classification
+type: reference
 domain: india-lending
 subdomain: iracp-npa-norms
 one_screen: >-
-  **Special Mention Accounts (SMAs)** are categories for loans showing early
-  warning signals of stress, before becoming NPAs. RBI defines three SMA levels
-  by days past due or consistent irregular payments. SMAs ensure banks monitor
-  these exposures closely.
+  PSL is not a label a lender can attach to any socially useful loan. An
+  exposure counts only when it satisfies the RBI definition for an eligible
+  category, including borrower, purpose, size or activity conditions where the
+  current Directions prescribe them.
 prerequisites:
   - IND-06
 jurisdictions:
@@ -20,55 +20,66 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: RBI Master Directions and supervisory returns (SMA definitions).
+  - label: >-
+      Reserve Bank of India, Priority Sector Lending - Targets and
+      Classification Directions, 2025, RBI/FIDD/2024-25/128, 24 March 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI press commentaries on NPAs (SMAs).
+  - label: >-
+      Reserve Bank of India, Second Amendment to Priority Sector Lending -
+      Targets and Classification Directions, 2025, RBI/2026-27/232, 7 August
+      2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-SMAs serve as a watchlist under RBI’s framework. When a loan installment is overdue for 31–60 days, it is an **SMA-0**.  Overdue 61–90 days becomes **SMA-1**. Overdue 91–180 days is **SMA-2** (by then it is an NPA if &gt;90 days). These buckets help banks report accounts approaching NPA status. For example, a loan 45 days past due is SMA-0. Any payment beyond 90 days makes it automatically NPA (substandard category). SMAs capture loans at risk of slipping: if a borrower is regularly late or temporarily stressed, the account is flagged as SMA even if NPA threshold not crossed yet.
+### Core mechanism
 
-RBI introduced SMAs to improve risk monitoring and discourage “evergreening” accounts (extending new loans to cover interest on old ones). Banks must report SMA balances to RBI daily. Regulators use SMA data to assess sectoral asset quality and systemic risk.
+| Category family | Classification question |
+| :--- | :--- |
+| Agriculture | Is the borrower/activity within the permitted farm, allied, infrastructure or ancillary definitions? |
+| MSME | Does the enterprise meet the applicable MSME classification and is the credit eligible under PSL rules? |
+| Export credit | Is the exposure within the qualifying export-credit perimeter? |
+| Education | Does the loan satisfy the permitted education purpose and current conditions? |
+| Housing | Does the loan fit the qualifying housing purpose and applicable limits? |
+| Social infrastructure | Is the financed activity within the defined eligible infrastructure class? |
+| Renewable energy | Does the project or borrower fall within the prescribed renewable-energy category? |
+| Weaker sections | Does the borrower or exposure meet one of the specifically designated weaker-section conditions? |
 
-No additional provisioning is mandated for SMAs (they remain performing assets) but banks should increase watchful provisioning as accounts progress through SMA categories. When an SMA-2 account crosses 90 days, it is upgraded to NPA (sub-standard). Thus, SMAs act as intermediate flags.
+Classification is exposure-specific. A borrower can have one loan that qualifies and another that does not. The current Directions also distinguish direct lending, permitted on-lending and other structures, so the economic purpose alone is not enough.
 
-```
-Loan Days Past Due -&gt; Classification
-------------------------------------
-0–30 days        | Standard (Performing)
-31–60 days       | SMA-0 (Special Mention 0)
-61–90 days       | SMA-1 (Special Mention 1)
-&gt;90 days        | SMA-2 (Special Mention 2) -&gt; NPA (Sub-std)
+Every numerical eligibility threshold in the legacy pack is treated as unverified unless established from the current 2025 Directions as amended. This atom therefore teaches the classification logic without repeating stale rupee caps.
+
+### Where it sits
+
+```text
+Upstream:   PSL applicability
+This:       Exposure eligibility
+Downstream: PSL measurement · PSLC category · Reporting
 ```
 
 ### Permanent rule
 
-Accounts must be flagged in increasing SMA categories as soon as they cross due-date thresholds (31, 61, 91 days past due). This daily reporting is mandatory.
+PSL status follows the current RBI definition of the exposure, not the lender's internal product name or marketing label.
 
 ### Permanent trap
 
-Ignoring SMA flags or delaying them.  SMA classification is not a choice; banks must stamp accounts promptly at 31+ days overdue. Treating a stressed loan as “still standard” before 30 days beyond due violates rules.
-
-### Never confuse
-
-**SMA-0** — overdue 31–60 days (early warning, pre-NPA).
-**SMA-1** — overdue 61–90 days.
-**SMA-2** — overdue 91–180 days (immediately becomes NPA if not resolved)
-
-SMAs are *not* regulatory categories with prescribed provisioning; they’re managerial flags. Once past 90 days, any SMA becomes NPA (Sub-Standard asset).
+Assuming "MSME borrower" automatically means every loan to that borrower is PSL. Purpose, product structure and current classification conditions still matter.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s SMA classification is used; similar watch-lists exist in some countries but not all regulators formalize 30/60/90 day buckets.
+#### Commercial banks, SFBs and RRBs
+The same category definitions can feed different entity-specific target and sub-target structures.
+
+#### Cooperative banks
+Apply the category definitions together with the cooperative-bank PSL framework applicable to that entity.
 
 <Recall
-  q="What does SMA-1 signify?"
-  a="The account is 61–90 days past due on loan repayment (about to become NPA) – RBI’s early stress category."
+  q="What are the two levels of a PSL test?"
+  a="First identify the lender's applicable target framework; then test whether the specific exposure fits an RBI-defined qualifying category."
 />
 
 <Recall
-  q="Does a bank immediately provision for SMA-0 accounts?"
-  a="No mandatory provisioning for SMAs, but banks should closely monitor and may take higher general provisions in anticipation of risk."
+  q="Can a lender make a loan eligible by calling the product &quot;priority sector&quot;?"
+  a="No. Eligibility is determined by the Directions, not by internal product naming."
 />

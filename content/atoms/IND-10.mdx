@@ -1,21 +1,17 @@
 ---
 id: IND-10
-title: Upgrades and Write-offs
-type: concept
+title: 'Lending Rates: Benchmark, Spread, Reset and Prepayment'
+type: mechanism
 domain: india-lending
 subdomain: iracp-npa-norms
 one_screen: >-
-  **Upgrading** means moving an asset from NPA back to Standard after the
-  borrower cures delinquency. RBI requires strict criteria: the loan must be
-  fully repaid for a mandatory period post-default (e.g. 2 successive quarters
-  or 1 year) and provisions made. This prevents manipulating classification.
-  **Write-off** is when a bank formally removes an asset from its books, fully
-  providing for it. In India, write-off is a prudential (not tax) exercise:
-  losses are absorbed only after thorough review, and even then such loans may
-  be sold or recovered later.
+  RBI does not prescribe one universal lending-rate formula for every Indian
+  loan. Rate governance depends on lender and product, but the recurring
+  structure is benchmark plus contractual spread, with rules on reset, borrower
+  communication and, for specified floating-rate loans, prepayment treatment.
 prerequisites:
-  - IND-06
   - IND-09
+  - FND-06
 jurisdictions:
   - IN
 perishable: true
@@ -25,43 +21,66 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: RBI circular on SME loan upgrades (July 2015).
+  - label: >-
+      Reserve Bank of India, applicable extant Directions on interest rates and
+      fair practices for banks and NBFCs as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI IRACP directions (write-off guidelines).
+  - label: >-
+      Reserve Bank of India, draft Reserve Bank of India (Interest Rates on
+      Loans and Advances) Directions, 2026, consultation issued August 2026; not
+      in force as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Upon successful resolution of an NPA (e.g. borrower makes good on arrears or loan is restructured), banks may upgrade the asset to Standard. RBI’s 2015 clarification mandates a “cooling period”: for a restructured account to be classified as Standard again, repayments must meet conditions (like no defaults for two quarters).  Without that probation period, an upgrade is not allowed. This rule was highlighted by RBI when it cautioned banks against prematurely upgrading SME accounts in 2014-15.
+### Core mechanism
 
-**Write-offs** occur when a loan is deemed unrecoverable. RBI allows two types: *prudential write-off* (for banks, as per regulatory guidelines) and *technical write-off* (often a bookkeeping exercise after 2 years of NPA, for income recognition, but banks continue recovery efforts). After prudential write-off, a bank can still pursue the borrower or recover via SARFAESI/IBC. A write-off does not necessarily extinguish the debt legally (banks still have claim on assets). RBI’s rules require certain conditions (security realization attempts, etc.) before prudential write-off. Many NBFCs (like some housing finance) have their own write-off timelines but must adhere to RBI’s broad norms.
+Loan rate = benchmark + contractual spread
 
-Practically, write-off reduces a bank’s taxable income (since provisions were already made) but is a regulatory decision to clean balance sheets. The outstanding balance after write-off may be reported as ‘Outstanding written-off assets’ for supervisor attention. Only after full write-off can a new loan be given to that borrower under banking laws.
+Benchmark = the reference rate specified by the applicable RBI framework or lender methodology.
+
+Spread = borrower/product margin added to the benchmark under the lender's approved pricing policy.
+
+| Question | Regulatory control |
+| :--- | :--- |
+| What benchmark is permitted? | Depends on entity and product |
+| Can spread change arbitrarily? | No; changes must follow the permitted contractual and policy framework |
+| What happens at reset? | Rate or instalment/tenor implications must be handled under applicable borrower-protection rules |
+| Can prepayment attract charges? | Treatment depends on loan type, borrower class and current RBI directions |
+
+A draft Reserve Bank of India (Interest Rates on Loans and Advances) Directions, 2026 consultation was issued in August 2026. As at 31 August 2026 it is a proposal, not a rule in force. This atom therefore teaches the extant entity/product framework and does not treat the consultation text as implemented law.
+
+### Where it sits
+
+```text
+Upstream:   Funding economics · Product pricing
+This:       Benchmark and spread governance
+Downstream: KFS · Reset communication · Prepayment treatment
+```
 
 ### Permanent rule
 
-An NPA cannot be downgraded to Standard until RBI’s post-default performance period is satisfied. Banks may only write off loans after exhausting all recovery options and meeting prudential criteria.
+A floating-rate loan must follow the benchmark/reset mechanics that govern that product; "floating" does not mean the lender may reprice without a defined rule.
 
 ### Permanent trap
 
-Improper early upgrade. A common error is reclassifying a restructured NPA as Standard immediately. RBI’s circular forces a waiting period – skipping it breaks rules. Another mistake is treating a write-off as forgiveness: even after write-off, banks pursue the borrower.
-
-### Never confuse
-
-**Upgrade** — reclassification of an NPA to Standard after borrower cures. Requires RBI-mandated wait period (e.g. no default for 2 quarters).
-**Write-off** — formally removing the loan from active books (after full provision); often a tactical cleanup, but the borrower’s liability remains.
+Teaching the August 2026 consultation as already effective. Its proposed consolidation is future-facing as at 31 August 2026.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s detailed upgrade criteria are India-specific. Many jurisdictions similarly prevent immediate NPA cures, but RBI’s exact timelines (e.g. 2Q after restructure) are local.
+#### Scheduled commercial banks
+External-benchmark or other bank-specific benchmark requirements apply by product class.
+
+#### NBFCs and HFCs
+Pricing remains subject to their fair-practice and board-approved pricing framework; bank benchmark rules should not be imported automatically.
 
 <Recall
-  q="When can a restructured loan be upgraded to Standard?"
-  a="Only after meeting RBI’s probation requirement (e.g. 1 year of full performance without default)."
+  q="What are the two economic components of a benchmarked loan rate?"
+  a="A reference benchmark plus a contractual spread reflecting borrower, product and lender pricing."
 />
 
 <Recall
-  q="Does write-off cancel the borrower’s debt?"
-  a="No. Write-off is an accounting action. The bank still legally pursues recovery (via SARFAESI/IBC) even after write-off."
+  q="Is the August 2026 Interest Rates on Loans and Advances Directions consultation already binding?"
+  a="No. As at 31 August 2026 it remains a draft proposal and must be distinguished from the extant rules."
 />

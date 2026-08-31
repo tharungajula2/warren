@@ -1,20 +1,16 @@
 ---
 id: IND-09
-title: Restructuring and Resolution Framework
-type: concept
+title: 'Fair Lending: KFS, APR, Charges and Disclosure'
+type: mechanism
 domain: india-lending
 subdomain: iracp-npa-norms
 one_screen: >-
-  Banks follow RBI’s restructuring guidelines when a borrower’s credit stress is
-  resolved via concession. This includes Corporate Debt Restructuring (CDR),
-  5/25 refinancing, and more recently, the Resolution Frameworks (RBI’s COVID-19
-  and MSME frameworks). Under these, an NPAs may be restructured (terms changed)
-  and classified as Standard again if conditions are met. Special norms apply to
-  ensure loans aren’t “evergreened” without justification.
+  Indian lending conduct rules increasingly force price and key contractual
+  terms into a standard pre-contract disclosure. The Key Facts Statement, or
+  KFS, is the central customer-facing object: it makes the annual percentage
+  rate and material charges visible before the borrower is bound.
 prerequisites:
-  - IND-06
-  - IND-07
-  - IND-08
+  - IND-01
 jurisdictions:
   - IN
 perishable: true
@@ -24,50 +20,83 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: >-
-      RBI Guidelines on Restructuring, Resolution (various circulars, e.g. MSME
-      resolution, COVID frame).
+  - label: 'Reserve Bank of India, Key Facts Statement for Loans and Advances, 2024.'
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'RBI press notes on CDR, Resolution.'
+  - label: >-
+      Reserve Bank of India, entity-wise responsible business conduct and fair
+      practices Directions consolidated during 2025; exact post-consolidation
+      references UNVERIFIED as at 31 August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Digital Lending) Directions,
+      2025, RBI/2025-26/36, DOR.STR.REC.19/21.07.001/2025-26, 8 May 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Restructuring allows lenders to modify loan terms (extension of tenor, interest rate cut, etc.) for a viable borrower under stress. RBI has periodically issued frameworks: e.g. in 2014–15 the CDR mechanism (mostly phased out), and “5/25” for infrastructure. Post-COVID, RBI issued Resolution Frameworks (2020-21) letting banks restructure specified stressed loans with a benefit of preserving asset classification (subject to strict criteria). RBI also had schemes specifically for MSMEs (e.g. Mudra loans) and one-time restructuring packages for legacy stressed sectors.
+### Core mechanism
 
-Under RBI policy, when a loan is restructured, it can be upgraded out of NPA only if it meets specific performance criteria over a period. RBI’s circular in 2015 clarified that a restructured advance must perform for at least one year (or two quarters) after restructuring to be considered Standard again. This avoids immediate upgrade fraud. If those conditions aren’t satisfied, the account remains an NPA.
+```text
+Loan terms determined
+    ↓
+KFS prepared in prescribed form
+    ↓
+APR and material charges disclosed
+    ↓
+Borrower receives and acknowledges terms
+    ↓
+Loan agreement and servicing must remain consistent with disclosed terms
+```
 
-When restructuring occurs, banks must increase provisions (e.g. a minimum 5% on restructured standard loans, rising on restructured NPA). RBI’s norms spell out extra provisioning for restructured assets. Also, restructured loans carry enhanced reporting and are tagged on balance sheets.
+| Item | Conduct purpose |
+| :--- | :--- |
+| Interest rate | Shows the contractual borrowing rate |
+| APR | Captures the all-in annualised cost using the prescribed methodology |
+| Fees and charges | Prevents undisclosed price components |
+| Penal charges | Separates a contractual penalty from disguised compounding of interest |
+| Repayment schedule | Makes timing and total repayment obligations legible |
+| Grievance contact | Gives the borrower a route to challenge conduct or servicing |
 
-RBI’s resolution frameworks now overlap with the Insolvency and Bankruptcy Code (IBC). Banks can opt for IBC proceedings for large defaulters, or choose RBI’s guidelines for out-of-court settlement. Both routes have specific timelines and safeguards to protect creditors and equitable treatment of all lenders. Resolution under IBC requires strict timelines (270 days) and NCLT oversight. RBI’s preference is that viable debt should not require formal insolvency if banks can resolve it cooperatively.
+KFS requirements apply across specified retail and MSME lending contexts and are also built into digital-lending controls. This atom owns the disclosure object itself; a digital channel does not create a separate economics standard.
+
+RBI reorganised responsible-business-conduct instructions in 2025. The exact cross-entity post-consolidation reference set is UNVERIFIED here as at 31 August 2026, so no unestablished coverage threshold is stated.
+
+### Where it sits
+
+```text
+Upstream:   Product pricing · Sanction terms
+This:       KFS and all-in disclosure
+Downstream: Digital lending · Customer consent · Servicing conduct
+```
 
 ### Permanent rule
 
-When loans are restructured, they remain NPAs until strict conditions (specified by RBI) are met. Absent that, the classification stays NPA even if payments resume. Upgrading only happens after sustained performance post-restructuring.
+A fee that forms part of the borrower's cost cannot be made compliant by hiding it outside the stated interest rate.
 
-### Permanent trap
+### Never confuse [Interest rate] and [APR]
 
-Assuming a restructured loan is automatically ‘standard’. In India, a loan modified under a restructuring scheme must still run successfully for a mandatory period before being considered standard. Banks often mistakenly revert classification immediately.
-
-### Never confuse
-
-**Restructured loan** — a loan whose terms are modified to help a stressed borrower. It may still be NPA; upgrading depends on post-restructure performance.
+**Interest rate** — the contractual rate charged on the loan balance.
 
 ---
 
-**Write-off** — outright removal of an asset from books. (Covered next.)
+**APR** — the prescribed annualised measure of total borrowing cost, including covered charges.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s circulars on restructuring (e.g. Resolution Frameworks) are India-specific. Other countries have workout rules, but RBI’s emphasis on performance post-restructure is a local regulatory detail.
+#### Banks and covered NBFCs
+KFS and fair-practice requirements apply through the relevant RBI conduct Directions.
+
+#### Digital lending
+The same disclosure principle is reinforced through digital-lending-specific delivery and consent requirements.
 
 <Recall
-  q="After restructuring a stressed loan, when can it be reclassified as Standard?"
-  a="Only if it remains fully performing for the defined monitoring period (e.g. one year) under RBI’s terms. Otherwise it stays NPA."
+  q="Why does RBI use APR in addition to the nominal interest rate?"
+  a="APR exposes the borrower's all-in annualised cost, preventing fees from making a nominally low-rate loan materially more expensive."
 />
 
 <Recall
-  q="Is extra provisioning required on restructured loans?"
-  a="Yes, RBI mandates additional provisions on restructured assets (e.g. 5% on standard restructured) to buffer risk."
+  q="Is KFS only a digital-lending requirement?"
+  a="No. Digital lending uses it, but KFS is part of the broader RBI fair-lending disclosure architecture."
 />

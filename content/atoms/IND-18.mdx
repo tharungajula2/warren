@@ -1,20 +1,17 @@
 ---
 id: IND-18
-title: Account Aggregators and GST Data in Lending
+title: 'Credit Information Ecosystem: CIC, CIR and Bureau Score'
 type: concept
 domain: india-lending
 subdomain: co-lending-and-data-tech
 one_screen: >-
-  The Account Aggregator (AA) ecosystem enables customers to share financial
-  data from banks, investments and tax (GST) authorities with lenders upon
-  consent. An AA is an RBI-regulated NBFC that securely fetches a borrower’s
-  authenticated bank and other accounts data (like GST returns) to streamline
-  credit assessment. In practice, a borrower can allow a prospective lender to
-  view her bank statements and GST filings via the AA, replacing the need for
-  manual document submission. This enhances underwriting accuracy for cash-flow
-  lending.
+  India's Credit Information Companies, or CICs, collect regulated credit
+  information from lenders and return Credit Information Reports and related
+  scores. A bureau score is a proprietary risk signal derived from reported
+  history; it is not an RBI approval threshold and it does not replace
+  underwriting.
 prerequisites:
-  - IND-13
+  - CR-03
 jurisdictions:
   - IN
 perishable: true
@@ -24,46 +21,71 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: RBI’s AA Master Directions (2021).
+  - label: 'Parliament of India, Credit Information Companies (Regulation) Act, 2005.'
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI/Finance Ministry notifications on GSTN and lending.
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Credit Information
+      Reporting) Directions, 2025, issued 6 January 2025; exact reference number
+      UNVERIFIED as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Under AA rules, banks and NBFCs must obtain explicit consent through the AA network before accessing a customer’s data. For MSMEs, RBI and government agencies are pushing use of GST returns to gauge cash flows. RBI now permits lenders to use GST-tracking (via AAs) as part of their credit appraisal. This is a paradigm shift from collateral-based to data-driven lending: for example, instead of using fixed assets, a bank can underwrite a shop owner’s ₹20 lakh loan by analyzing 6 months of GST invoices and bank inflows via an AA platform. The RBI’s digital lending guidelines implicitly encourage such open data models (as long as privacy is protected).
+### Core mechanism
 
-Regulators (RBI, IBBI, GSTN) have jointly built frameworks: GSTN acts as a KYC and data provider (through Accounts Aggregator or NBFC-Factors). Lenders need to verify GSTIN status and utilization to validate turnover. The RBI’s 2022 standards require customer consent and confidentiality for all shared data. Meanwhile, data validation through GST filters out sham businesses.
+```text
+Lender reports account and repayment data
+    ↓
+CIC consolidates borrower credit history
+    ↓
+Credit Information Report is generated
+    ↓
+CIC may derive a proprietary score
+    ↓
+Lender uses report and score as underwriting inputs
+```
 
-The government’s Unified Lending Interface (ULI) is an upcoming initiative to integrate this: ULI would let a lender fetch customer data (from AAs or government sources) through APIs, assess eligibility and disburse quickly. As of 2026, ULI pilots (e.g. with NBFCs and fintechs) are underway under RBI and IBA supervision. The idea is a one-stop-shop for loan origination: borrower consents once, and multiple lenders can exchange standardized credit data.
+| Object | What it contains or represents |
+| :--- | :--- |
+| Credit Information Report (CIR) | Detailed reported credit accounts, balances, enquiries and repayment/default history |
+| Bureau score | Model-generated summary signal based on bureau data |
+| Lender credit decision | Broader assessment using bureau data plus income, cash flow, collateral, policy and other evidence |
+
+RBI regulates the reporting relationship between credit institutions and CICs, including data quality, update and customer correction expectations. A high score is not a guarantee of repayment; a low or missing score is not by itself a regulatory prohibition on lending.
+
+One-line reminder: model validation belongs to MRM. This atom owns what the bureau object is, not how its proprietary model is validated.
+
+### Where it sits
+
+```text
+Upstream:   Lender-reported credit data
+This:       CIC/CIR/score
+Downstream: Underwriting · Pricing · Credit monitoring
+```
 
 ### Permanent rule
 
-Customer data (bank statements, GST returns, etc.) may be shared with lenders only through RBI-authorised channels (Account Aggregators) and only with customer consent.
+Credit information is an input to a lender's decision, not a substitute for the lender's own credit assessment.
 
-### Permanent trap
+### Never confuse [Credit Information Report] and [Credit score]
 
-Assuming lenders can scrape GST data directly. In fact, only AAs or designated repositories (with consent) can transmit GST filings to banks. Also, neglecting to update borrower’s risk after changes in their GST activity can misstate credit risk.
-
-### Never confuse
-
-**Account Aggregator** — an RBI-regulated data intermediary that moves customer-permissioned data between institutions.
+**Credit Information Report** — the detailed borrower-level reported credit history.
 
 ---
 
-**GST data** — tax return data of businesses. (Accessible by banks only through AAs or GSTN APIs with consent.)
+**Credit score** — a model-generated summary indicator derived from bureau information.
 
 ### Jurisdiction variants
 
-**IN** — The AA framework is Indian (launched 2021) and unique in mandating customer consent for banking data sharing.  No similar centralized data sharing network is in place in UK/US.
+No material within-India delta in the concept; different CICs may use different proprietary score methodologies.
 
 <Recall
-  q="How can a lender get an SME’s GST return data?"
-  a="Via the account aggregator framework (or directly from GSTN API), with the SME’s consent. It cannot be obtained through the lender’s own portal directly."
+  q="Why can two CICs give different scores for the same borrower?"
+  a="They can use different data coverage, timing and proprietary models even when both operate under the same credit-information regulatory framework."
 />
 
 <Recall
-  q="What is ULI (Unified Lending Interface)?"
-  a="A forthcoming API-based system for sharing standardized credit data (including bank, GST info) across lenders with customer consent, to accelerate loan decisions."
+  q="Does RBI define a universal score above which a loan must be approved?"
+  a="No. Lenders use bureau information within their own governed underwriting policies."
 />

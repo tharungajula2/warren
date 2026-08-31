@@ -1,0 +1,104 @@
+---
+id: IND-28
+title: 'SARFAESI and DRT: Secured Enforcement and Tribunal Route'
+type: procedure
+domain: india-lending
+subdomain: ind
+one_screen: >-
+  SARFAESI gives eligible secured creditors a statutory route to enforce
+  qualifying security interests without first obtaining an ordinary civil-court
+  decree, while Debt Recovery Tribunals provide a specialised adjudicatory and
+  recovery forum. The two are connected but not interchangeable: SARFAESI is an
+  enforcement power; DRT is a tribunal route.
+prerequisites:
+  - IND-22
+  - IND-27
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Parliament of India, Securitisation and Reconstruction of Financial Assets
+      and Enforcement of Security Interest Act, 2002.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'Parliament of India, Recovery of Debts and Bankruptcy Act, 1993.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Directions applicable to Asset Reconstruction
+      Companies; exact current post-consolidation reference UNVERIFIED as at 31
+      August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+### Core mechanism
+
+```text
+Secured credit defaults and statutory conditions are met
+    ↓
+Creditor issues the required demand notice
+    ↓
+If default is not cured, permitted enforcement measures may follow
+    ↓
+Borrower may challenge qualifying measures before DRT
+    ↓
+Security is realised or dispute is adjudicated
+```
+
+| Route | Core object |
+| :--- | :--- |
+| SARFAESI | Enforcement of qualifying security interest by an eligible secured creditor |
+| DRT | Specialised recovery/adjudication forum under the debt-recovery statute |
+| DRAT | Appellate forum for DRT decisions |
+| ARC involvement | Acquisition/reconstruction and enforcement of stressed financial assets under the statutory framework |
+
+SARFAESI does not turn an unsecured personal loan into a secured claim. Eligibility, excluded security types and monetary/forum thresholds are statutory and can change; no legacy threshold is repeated here unless established.
+
+### Where it sits
+
+```text
+Upstream:   NPA/default · Security interest
+This:       Secured enforcement / tribunal route
+Downstream: Asset sale · Recovery · IBC interaction
+```
+
+### Permanent rule
+
+SARFAESI power depends on a qualifying secured interest and statutory eligibility; default alone is not enough.
+
+### Never confuse [SARFAESI] and [DRT]
+
+**SARFAESI** — statutory secured-creditor enforcement mechanism.
+
+---
+
+**DRT** — tribunal that hears recovery applications and challenges within its jurisdiction.
+
+### Permanent trap
+
+Using SARFAESI as shorthand for all Indian debt collection. Unsecured claims and other recovery routes sit outside that secured-enforcement mechanism.
+
+### Jurisdiction variants
+
+#### Eligible secured creditors
+May use SARFAESI where statutory conditions are met.
+
+#### Unsecured or otherwise excluded claims
+Must rely on other contractual, tribunal, insolvency or court routes as applicable.
+
+<Recall
+  q="Why can SARFAESI not be used for every defaulted loan?"
+  a="It is a secured-enforcement statute and applies only when the creditor, security and statutory conditions fit the Act."
+/>
+
+<Recall
+  q="What role does DRT play after SARFAESI action?"
+  a="It provides the specialised forum for qualifying borrower challenges and also handles debt-recovery matters within its statutory jurisdiction."
+/>

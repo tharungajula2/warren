@@ -1,0 +1,95 @@
+---
+id: IND-25
+title: NPA Cure and Upgrade
+type: procedure
+domain: india-lending
+subdomain: ind
+one_screen: >-
+  Upgrade reverses prudential NPA status only when the RBI cure conditions are
+  actually met. The core distinction is between curing ordinary arrears by
+  clearing overdue amounts and demonstrating satisfactory performance after a
+  restructuring, where additional monitoring conditions can apply.
+prerequisites:
+  - IND-22
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, Prudential Norms on Income Recognition, Asset
+      Classification and Provisioning pertaining to Advances, 1 April 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, entity-wise IRACP Directions issued 28 November
+      2025; exact post-consolidation upgrade references UNVERIFIED as at 31
+      August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, applicable current resolution framework for
+      stressed assets; exact entity-wise post-consolidation reference
+      UNVERIFIED.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+### Core mechanism
+
+| Situation | Upgrade logic |
+| :--- | :--- |
+| Ordinary arrears-driven NPA | Borrower must clear the amounts required by the current prudential rule so the account is no longer overdue in the prescribed manner |
+| Multiple facilities to same borrower | Borrower-level treatment can require all relevant arrears to be regularised before upgrade |
+| Restructured exposure | Upgrade depends on the post-restructuring performance conditions in the applicable resolution framework |
+| Technical write-off | Does not itself cure borrower default or restore standard status |
+
+The legacy pack's generic "two quarters or one year" cure rule is not carried forward. The correct performance period depends on the applicable current framework and exposure type.
+
+RBI's 28 November 2025 consolidation reorganised the prudential directions. Exact post-consolidation upgrade wording for every entity and restructured exposure is UNVERIFIED here as at 31 August 2026; no unsupported period is stated.
+
+### Where it sits
+
+```text
+Upstream:   NPA status · Borrower payments · Restructuring
+This:       Upgrade test
+Downstream: Standard classification · Income recognition · Monitoring
+```
+
+### Permanent rule
+
+A payment that reduces arrears is not automatically enough for upgrade; the account must satisfy the full applicable RBI cure condition.
+
+### Never confuse [Cure] and [Restructuring]
+
+**Cure** — borrower performance removes the prudential default condition.
+
+---
+
+**Restructuring** — contractual terms are modified because of borrower financial difficulty or resolution needs; separate upgrade conditions can follow.
+
+### Permanent trap
+
+Upgrading an account immediately because one overdue instalment was paid. The test is whether the account as a whole has been regularised under the applicable rule.
+
+### Jurisdiction variants
+
+#### Ordinary bank/NBFC exposures
+Apply the current entity-wise cure and borrower-level rules.
+
+#### Restructured exposures
+Apply the additional performance conditions in the relevant resolution framework.
+
+<Recall
+  q="Why is there no universal one-year upgrade rule in this atom?"
+  a="Upgrade conditions vary by exposure and resolution framework; the legacy generic period is not treated as current law without verification."
+/>
+
+<Recall
+  q="Does technical write-off make an NPA standard again?"
+  a="No. Write-off is an accounting action and does not by itself cure the borrower's prudential status."
+/>

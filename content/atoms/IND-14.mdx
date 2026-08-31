@@ -1,18 +1,17 @@
 ---
 id: IND-14
-title: 'Digital Lending: Flow, Guarantees, and Securitisation'
-type: concept
+title: 'Co-Lending Arrangements: Structure and Risk Retention'
+type: mechanism
 domain: india-lending
 subdomain: digital-lending
 one_screen: >-
-  Beyond transparency, RBI’s digital lending rules impose strict flow-of-funds
-  and guarantee limits. Loans must be disbursed directly, and repayments must go
-  to the original lender. The RBI also defined and capped “First Loss Default
-  Guarantees” (FLDG) by fintechs, clarifying these are not true securitisation.
-  Any arrangement where an app provider keeps collateral or routes funds
-  illegitimately is prohibited.
+  RBI's 2025 Co-Lending Arrangements Directions govern joint lending by eligible
+  regulated entities to a common borrower. The defining idea is genuine shared
+  exposure: each participating RE must hold an agreed portion of every loan and
+  retain at least the prescribed minimum share.
 prerequisites:
-  - IND-13
+  - IND-02
+  - IND-03
 jurisdictions:
   - IN
 perishable: true
@@ -22,44 +21,69 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: RBI Master Direction – Digital Lending (Dec 2022)..
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Co-Lending Arrangements)
+      Directions, 2025, RBI/DOR/2025-26/139, DOR.STR.REC.44/13.07.010/2025-26, 6
+      August 2025, effective 1 January 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-{/* KNOWN ERROR — DLG cap stated incorrectly. RBI caps DLG at 5% of the outstanding loan portfolio. Verify against RBI Guidelines on Default Loss Guarantee in Digital Lending, 8 June 2023, before publishing. */}
+### Core mechanism
 
-A key mandate: **Direct disbursal and repayment.** Any credit extended via a lending app must be paid into the customer’s own bank/PSP account – no money passes through the fintech or any third party. Similarly, loan repayments (EMIs) must be paid directly to the bank/NBFC. This is to prevent misappropriation. RBI explicitly forbids any “pooling or sweep accounts” that were used by some apps to skim funds.
+```text
+REs enter a co-lending agreement
+    ↓
+Borrower receives one coordinated credit arrangement
+    ↓
+Each RE funds and books its agreed share
+    ↓
+Each RE retains at least 10% of each loan
+    ↓
+Servicing and collections follow the agreed operating model
+```
 
-**Guarantee arrangements:** Fintechs used to offer to cover the bank’s losses (FLDG) up to some amount to motivate banks to lend. RBI treats an FLDG (capping around 20% of loan principal or ₹5 crore, whichever lower) as a credit enhancement, not traditional securitisation. Such guarantees must be explicit and capped by contract. They differ from securitisation: in a normal securitisation, credit risk is split among investors and not guaranteed by originator. Under RBI’s regime, if a fintech guarantees 20% of a loan’s loss, that fintech is effectively retaining part of credit risk (so regulator counts only 80% transfer as securitization). These agreements must be disclosed to borrowers. RBI’s limit (20%/₹5cr) prevents full risk transfer in a grey-camouflage way.
+| Feature | Current rule architecture |
+| :--- | :--- |
+| Minimum retention | Each participating RE retains at least 10% of each individual loan |
+| Effective date | Directions apply from 1 January 2026 |
+| Loan ownership | Each RE owns and records its share |
+| Customer terms | Agreement must make the co-lending structure and roles transparent |
+| Risk | Credit loss follows each RE's exposure, subject to any separately permitted support arrangement |
 
-RBI’s guidance also affirms that a fintech providing FLDG cannot park consumer funds. If a fintech receives payment from a borrower (say for processing), it must immediately route it to the bank. Collecting money and redisbursing it later is not allowed. Essentially, the fintech’s role is only origination &amp; tech; money flows directly between borrower and bank.
+This replaces the older shorthand that co-lending meant an 80:20 bank/NBFC structure. An 80:20 commercial split can still occur contractually, but it is not the current universal regulatory formula.
 
-**First Loss Guarantee vs. Securitisation:** RBI emphasises they are distinct. In a securitisation, the originator may sell a pool of loans (and risk) to investors; there is no party assuring losses beyond already sold tranches. In a FLDG, the fintech agrees to compensate the bank for first losses. Because the guarantee can distort borrowers’ incentives and hides the true risk, RBI caps and requires disclosure of FLDGs. A FLDG is treated prudentially – the lender must still provision if a guarantee is in place (it’s not risk-free).
+### Where it sits
+
+```text
+Upstream:   Entity eligibility · Joint underwriting
+This:       Co-lending structure
+Downstream: Booking · Servicing · CIC reporting · SMA/NPA synchronisation
+```
 
 ### Permanent rule
 
-No “pass-through” accounts in lending: funds must flow directly between borrower and lender. Any first-loss guarantee by a fintech must be contractually capped (max 20% of loan or ₹5 cr) and is **not** a pure securitisation.
+Co-lending is not a disguised loan from one RE to another; each participating RE must hold a real share of the end-borrower exposure.
 
-### Permanent trap
+### Never confuse [Co-lending] and [Syndication]
 
-Using agent accounts to disburse or collect loan money.  Some apps tried to appear as platforms but routed payments through their own accounts — RBI now explicitly forbids this. Also, fintechs believing they can guarantee entire losses – RBI caps such guarantees.
+**Co-lending** — a regulated joint-lending arrangement governed by RBI's co-lending Directions.
 
-### Never confuse
+---
 
-**FLDG (First-Loss Default Guarantee)** — a fintech’s commitment to cover an agreed fraction (max 20%) of losses on a loan. This is a credit support, not full securitisation.
-**Securitisation** — selling loan assets and credit risk to investors (no partial guarantee by originator).
+**Syndication** — a broader multi-lender financing structure that is not defined by the specific co-lending framework.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s treatment of fintech guarantees (FLDG) as limited and capping them is specific. Other countries allow fintech partnerships but often regulate them case-by-case (e.g. US banking regs). No identical cap is universal.
+#### Participating banks and NBFCs
+Each applies its own prudential rules to its retained share while complying with the common co-lending framework.
 
 <Recall
-  q="Can a lending app deduct its fee from the loan amount via an intermediary account?"
-  a="No. RBI requires the full loan be paid into the borrower’s account; any fintech fee must be separately disclosed and debited later."
+  q="What minimum share must each participating RE retain under the current framework?"
+  a="At least 10% of each individual loan under the 2025 Directions effective from 1 January 2026."
 />
 
 <Recall
-  q="What limit did RBI set on first-loss guarantees by fintechs?"
-  a="20% of the loan principal (or ₹5 crore), whichever is lower."
+  q="Why is the old 80:20 description unsafe?"
+  a="It confuses a common commercial structure with the current regulatory minimum, which is 10% for each participating RE."
 />

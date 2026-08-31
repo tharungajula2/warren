@@ -1,18 +1,17 @@
 ---
 id: IND-06
-title: Asset Classification and NPA Norms (IRACP)
-type: concept
+title: 'Priority Sector Lending: Obligation and Applicability'
+type: mechanism
 domain: india-lending
 subdomain: iracp-npa-norms
 one_screen: >-
-  Banks must classify each loan into Standard, Sub-standard, Doubtful or Loss
-  assets based on repayment delays. A loan becomes a Non-Performing Asset (NPA)
-  when interest/principal is overdue for 90 days.  The Income Recognition, Asset
-  Classification and Provisioning (IRACP) norms require daily monitoring
-  (stamping) of accounts, with more provisions for higher-risk categories.
+  Priority Sector Lending, or PSL, converts RBI's developmental mandate into
+  measurable lending obligations. It answers two questions before any category
+  test begins: which lender is subject to PSL, and what overall target framework
+  applies to that lender.
 prerequisites:
   - IND-01
-  - IND-03
+  - IND-02
 jurisdictions:
   - IN
 perishable: true
@@ -22,57 +21,70 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: RBI Master Direction on IRAC (updated 2024).
+  - label: >-
+      Reserve Bank of India, Priority Sector Lending - Targets and
+      Classification Directions, 2025, RBI/FIDD/2024-25/128, 24 March 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI Notification on External Benchmark Lending (mentions 90-day rule).
+  - label: >-
+      Reserve Bank of India, Second Amendment to Priority Sector Lending -
+      Targets and Classification Directions, 2025, RBI/2026-27/232, 7 August
+      2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Under RBI’s IRACP rules, a performing loan is **Standard** if not exhibiting any default and is repayable according to agreement. If a loan shows “signs of weakness” (like late payments but repaying) it may be classified as a **Special Mention Account** (SMA) first (see next atom) before becoming NPA. Once overdue beyond thresholds, it is classified as NPA with subcategories:
-- **Sub-standard**: NPA &lt; 12 months, or assets showing incipient credit weakness.
-- **Doubtful**: NPA ≥ 12 months, significant uncertainty about recovery (e.g. liquidation value &lt; book value).
-- **Loss**: NPA essentially uncollectible and fully written off (may be identified on a continuous basis and written off).
+### Core mechanism
 
-For practical purposes, RBI mandates the *90-day rule*: any loan (principal or interest) unpaid for more than 90 days is an NPA. In many exposures (e.g. credit cards) RBI requires monthly (or more frequent) couponing into NPA status by 90 days overdue. The classification is updated daily through stamping in loan accounting systems.
+PSL achievement is measured against the applicable RBI denominator, commonly expressed through Adjusted Net Bank Credit or the prescribed credit-equivalent base.
 
-Banks must provide (p ) as per IRACP. Standard assets carry minimal provisions (0.4% or 1% of outstanding depending on secured status). Sub-standard assets require a **minimum 15%** provision (further if unsecured). Doubtful assets require higher provisions (20%–100% depending on how long in the bucket and available security). Loss assets have 100% provision. These provisioning rates and classification criteria are laid down in RBI’s IRACP Master Directions (updated periodically).
+PSL ratio = qualifying priority-sector credit / applicable PSL denominator
+
+| Entity | Overall architecture as at 31 August 2026 |
+| :--- | :--- |
+| Domestic commercial banks and qualifying foreign banks | Overall target plus prescribed sub-targets |
+| Small Finance Banks | Overall target of 60% under the 2025 Directions, plus applicable sub-targets |
+| Regional Rural Banks | Separate overall target of 75%, plus applicable sub-targets |
+| Urban cooperative banks and other covered entities | Entity-specific target structure under applicable Directions |
+| NBFCs | No general bank-style PSL target merely because they lend; their loans may matter through permitted on-lending or partnership structures |
+
+The 2025 Directions refreshed the PSL framework and were amended on 7 August 2026. A lender must therefore identify its own entity category before applying any target percentage.
+
+This atom owns target applicability only. Whether a particular agriculture, MSME, housing or other exposure qualifies is a separate eligibility question.
+
+### Where it sits
+
+```text
+Upstream:   RBI developmental mandate · Entity type
+This:       PSL target applicability
+Downstream: Eligibility classification · PSLCs · Shortfall management
+```
 
 ### Permanent rule
 
-A credit exposure is an NPA if interest/principal is overdue for more than 90 days.  Once an asset is NPA, it must be classified as sub-standard, doubtful or loss according to RBI’s IRACP guidelines, and provisioning applied accordingly.
+A loan contributes to PSL only when both conditions hold: the lender is measuring against an applicable PSL obligation and the exposure satisfies a qualifying category rule.
 
 ### Permanent trap
 
-Delaying NPA classification beyond 90 days past due. RBI requires daily stamping; waiting months to mark NPA breaches guidelines.  Also, underestimating required provisioning for substandard and doubtful assets is a common mistake – RBI’s table mandates at least 15% for substandard, with more if unsecured.
-
-### Never confuse
-
-**Standard asset** — loan with no signs of default; provisioned at RBI’s base rate (often 0.4% or 1%).
-
----
-
-**Sub-standard asset** — NPA overdue &lt;1 year; shows weakness; provision ≥15%.
-
----
-
-**Doubtful asset** — NPA overdue ≥1 year; high uncertainty; provision much higher (up to 100%).
-
----
-
-**Loss asset** — uncollectible; fully provided.
+Assuming one headline target applies to every bank. SFBs, RRBs, commercial banks and cooperative banks can have different target structures.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s 90-day NPA rule and IRAC categories are India’s regulatory norm; UK/US use 90 days too, but account aging and provisioning differ.
+#### Small Finance Banks
+Overall PSL target is 60% under the 2025 Directions as at 31 August 2026.
+
+#### Regional Rural Banks
+A separate 75% overall target applies under the current framework.
+
+#### Other covered banks
+Apply the target and sub-target structure specified for that entity class.
 
 <Recall
-  q="When does a loan become an NPA in India?"
-  a="If any installment of principal or interest is overdue for more than 90 days (with daily compliance)."
+  q="Why must entity type be identified before calculating PSL compliance?"
+  a="Because the overall target, sub-targets and denominator treatment vary by bank category."
 />
 
 <Recall
-  q="What is the minimum provisioning for a sub-standard asset?"
-  a="15% of outstanding (higher if unsecured)."
+  q="Does every NBFC have a bank-style PSL quota?"
+  a="No. NBFC lending can interact with PSL through specific permitted structures, but NBFC status alone does not create the bank target framework."
 />

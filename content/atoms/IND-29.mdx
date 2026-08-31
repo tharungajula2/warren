@@ -1,0 +1,101 @@
+---
+id: IND-29
+title: 'IBC: Collective Insolvency and Competing Enforcement'
+type: mechanism
+domain: india-lending
+subdomain: ind
+one_screen: >-
+  The Insolvency and Bankruptcy Code, or IBC, shifts a stressed corporate
+  borrower from individual creditor enforcement into a collective insolvency
+  process once the statutory process is admitted. The central lending insight is
+  the moratorium: after admission, creditors cannot continue separate
+  enforcement as though the insolvency case did not exist.
+prerequisites:
+  - IND-28
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: 'Parliament of India, Insolvency and Bankruptcy Code, 2016, as amended.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Insolvency and Bankruptcy Board of India, regulations governing the
+      corporate insolvency resolution process, as amended; exact 2026
+      consolidated references UNVERIFIED as at 31 August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+### Core mechanism
+
+```text
+Corporate default occurs
+    ↓
+Eligible applicant files insolvency application
+    ↓
+Adjudicating Authority considers admission
+    ↓
+Admission triggers moratorium and insolvency process
+    ↓
+Resolution professional and committee of creditors govern the process
+    ↓
+Resolution plan or liquidation follows
+```
+
+| IBC object | Lending consequence |
+| :--- | :--- |
+| Admission | Starts the formal collective process |
+| Moratorium | Stays specified individual enforcement and recovery actions |
+| Committee of Creditors | Financial creditors exercise collective decision rights |
+| Resolution plan | Can restructure debt, ownership and recoveries |
+| Liquidation | Value is realised under the statutory waterfall if resolution fails |
+
+The legacy pack's voting percentages, default threshold and timetable figures are not carried forward here because they were specifically treated as unverified. The Code and amendments govern those details; this atom preserves the mechanism without guessing numbers.
+
+### Where it sits
+
+```text
+Upstream:   Failed resolution · Corporate default
+This:       Collective insolvency
+Downstream: Resolution plan · Liquidation · Recovery allocation
+```
+
+### Permanent rule
+
+Once the insolvency proceeding is admitted and the moratorium applies, individual enforcement routes cannot simply continue unaffected.
+
+### Never confuse [IBC filing] and [IBC admission]
+
+**IBC filing** — an application has been submitted.
+
+---
+
+**IBC admission** — the adjudicating authority has admitted the case, triggering the statutory insolvency process and moratorium consequences.
+
+### Permanent trap
+
+Assuming a creditor vote is required before any financial creditor can file an application. Filing rights and later committee voting are separate statutory questions.
+
+### Jurisdiction variants
+
+#### Corporate persons
+Corporate insolvency runs through the National Company Law Tribunal architecture.
+
+#### Individuals and other debtor categories
+Different insolvency/recovery provisions and forums can apply; this atom does not import the corporate process automatically.
+
+<Recall
+  q="What changes at IBC admission that matters most to a secured lender?"
+  a="The statutory moratorium constrains separate enforcement and moves the case into a collective creditor process."
+/>
+
+<Recall
+  q="Why are no voting or threshold figures stated here?"
+  a="Those legacy numbers were not verified against the current Code, so the atom preserves the legal mechanism without guessing."
+/>

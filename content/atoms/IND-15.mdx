@@ -1,17 +1,18 @@
 ---
 id: IND-15
-title: Digital Lending Grievance Redressal
-type: concept
+title: Co-Lending Operations and Classification Synchronisation
+type: procedure
 domain: india-lending
 subdomain: digital-lending
 one_screen: >-
-  RBI mandates that all regulated entities using digital lending have formal
-  grievance mechanisms. Lenders and fintechs must appoint nodal officers for
-  customer complaints. Borrowers must be informed of escalation paths (including
-  Banking Ombudsman). RBI also requires that both lenders and their tech
-  partners resolve complaints quickly, tracking them in regular reports.
+  The hardest part of co-lending is operational consistency across two regulated
+  balance sheets. Each RE books only its share, but the borrower experience,
+  servicing data, credit-information reporting and stress classification must be
+  coordinated so that one common loan does not become two contradictory
+  regulatory stories.
 prerequisites:
-  - IND-13
+  - IND-14
+  - IND-20
 jurisdictions:
   - IN
 perishable: true
@@ -21,43 +22,72 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: RBI Digital Lending Master Directions (customer protection clauses).
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Co-Lending Arrangements)
+      Directions, 2025, RBI/DOR/2025-26/139, DOR.STR.REC.44/13.07.010/2025-26, 6
+      August 2025, effective 1 January 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI circular on outsourcing/recovery agents (codes of conduct).
+  - label: >-
+      Reserve Bank of India, applicable entity-wise prudential Directions as at
+      31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-The digital lending directions specify that every app or digital lender must provide clear contact details for grievance redressal. This includes an official Nodal Officer name/contact who handles issues. If a borrower complains (overcharging, collection practice, etc.), the lender must address it as per RBI’s standard timelines (e.g. 3-4 weeks resolution). Firms must also publish details of the Banking Ombudsman scheme, since appellants can approach it if unsatisfied.
+### Core mechanism
 
-Moreover, under RBI’s 2016 Outsourcing guidelines (augmented in 2022 for recovery agents), banks must ensure their fintech partners and any recovery agents follow proper conduct. Customers should not face harassment or 24/7 calls. If needed, the customer’s complaint to the lender can be escalated through RBI’s Integrated Ombudsman Scheme. Tech-savvy customers often get quick redress via email or app, but the requirement is to maintain logs of all complaints and resolutions.
+| Operating object | Required discipline |
+| :--- | :--- |
+| Disbursement | Each RE's funded share must be traceable |
+| Servicing | Roles, collection channels and borrower communication are contractually defined |
+| Cash allocation | Principal, interest and charges are split under the agreed mechanism |
+| Reconciliation | Both REs reconcile balances, ageing and collections |
+| CIC reporting | Each RE reports its share consistently with the arrangement |
+| Stress status | Required SMA/NPA information is exchanged so classification is synchronised where the Directions require it |
 
-In effect, RBI’s digital lending rules tighten accountability. A startup cannot avoid RBI oversight by claiming to be a “technology platform” – it must still honor consumer protection rules. Consumers have the same rights (transparency, appeals) as with brick-and-mortar banks when dealing via an app. For example, if a fintech breaches RBI’s guidelines, the bank’s grievance cell must still be answerable. Some fintechs go further (e.g. fintech ombudsmen) but legally the RBI framework covers all.
+One-line reminder: IRACP determines Indian prudential stress status; ECL staging remains an IMP concept.
+
+The 2025 co-lending framework specifically addresses borrower-level information sharing and alignment. That does not mean the two REs necessarily hold identical provisions, because provisioning can depend on each entity's applicable prudential rulebook.
+
+### Where it sits
+
+```text
+Upstream:   Co-lending structure · Borrower performance
+This:       Dual-book operations
+Downstream: IRACP status · CIC data · Provisioning · Recovery
+```
 
 ### Permanent rule
 
-All digital lenders must publish and operate a grievance redress system.  Complaints must first go to a designated Nodal Officer. The Banking Ombudsman scheme covers digital loan disputes.
+Operational servicing may be centralised, but regulatory ownership remains divided according to each RE's retained exposure.
+
+### Never confuse [Classification synchronisation] and [Identical provisioning]
+
+**Classification synchronisation** — aligned recognition of borrower stress or NPA status where required.
+
+---
+
+**Identical provisioning** — the same provision percentage on both books; this does not automatically follow because entity-specific prudential rules can differ.
 
 ### Permanent trap
 
-Neglecting offline complaint channels. Assuming “if it’s digital, complaints must be emailed” – RBI requires accessible contact points and escalation. Also, sometimes start-ups think only their tech side is liable, but RBI holds the actual NBFC/bank accountable for the borrower’s redress.
-
-### Never confuse
-
-**Lending app support** — the platform or lender’s own customer service/email.
-**Banking Ombudsman** — RBI’s formal consumer forum. After exhausting internal redress, the borrower can approach it about digital loan issues (as with any bank).
+Booking the entire co-lent exposure in one RE and treating the other RE as only a funding provider. That defeats the borrower-level risk-sharing structure.
 
 ### Jurisdiction variants
 
-**IN** — RBI specifically requires digital loan grievance offices. Elsewhere, similar tech-lending regulations are nascent; EU has Digital Finance proposals, but no RBI-style scheme yet.
+#### Bank participant
+Applies bank prudential rules to its share.
+
+#### NBFC participant
+Applies the applicable NBFC prudential rules to its share, including any layer-based delta.
 
 <Recall
-  q="Who handles a customer’s complaint about a loan disbursed via an app?"
-  a="The borrower should first approach the lender’s/fintech’s nodal officer. If unresolved, the Banking Ombudsman (per RBI scheme) can be approached."
+  q="Why can two co-lenders share one NPA status but hold different provisions?"
+  a="Classification can be synchronised at borrower level while provisioning remains governed by each RE's entity-specific prudential rules."
 />
 
 <Recall
-  q="Are digital lending apps outside RBI’s customer-protection rules?"
-  a="No. RBI’s guidelines extend to all lending apps tied to banks. They must meet RBI’s grievance and conduct standards."
+  q="Who owns the servicing risk if one RE performs collections for both?"
+  a="The servicing RE performs the task, but each RE remains responsible for compliance on its own exposure under the co-lending arrangement."
 />

@@ -1,16 +1,14 @@
 ---
 id: IND-02
-title: 'Bank Categories in India (SCB, SFB, Payments, RRB, Coop)'
-type: concept
+title: Indian Lending Entity Taxonomy
+type: reference
 domain: india-lending
 subdomain: regulatory-structure
 one_screen: >-
-  India’s banking system has multiple specialized categories.  *Scheduled
-  Commercial Banks* (SCBs) – including public, private, foreign, regional rural,
-  scheduled payments banks, small finance banks, and co-operative banks – have
-  broad banking powers. Small Finance Banks focus on underserved segments;
-  Payments Banks can take small deposits but cannot lend.  Co-operative banks
-  and RRBs serve member or rural communities with limited geographic scope.
+  India uses several regulated entity classes that look similar from a
+  customer's perspective but have different lending permissions and supervisory
+  treatment. The useful taxonomy is therefore functional: who may lend, who may
+  accept deposits, and which RBI rulebook governs the exposure.
 prerequisites:
   - IND-01
 jurisdictions:
@@ -22,70 +20,74 @@ status: draft
 verified: false
 reading_minutes: 4
 sources:
-  - label: Ministry of Finance FAQs on banks.
+  - label: 'Parliament of India, Banking Regulation Act, 1949.'
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI Master Directions (payments banks) (deposit limit for PB).
+  - label: 'Parliament of India, Reserve Bank of India Act, 1934.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Guidelines for Licensing of Small Finance Banks in
+      the Private Sector and subsequent applicable directions.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Master Direction - Non-Banking Financial Company -
+      Account Aggregator, as amended; current post-consolidation reference
+      UNVERIFIED as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-A **Scheduled Commercial Bank (SCB)** is any bank included in the RBI Act’s Second Schedule. This umbrella covers public sector banks (like SBI), private sector banks (HDFC, ICICI, etc.), foreign banks’ Indian branches, plus scheduled RRBs, payments banks, SFBs and co-operative banks. SCBs can accept deposits (current, savings, term), lend, issue cards, participate in clearing, etc. They maintain CRR/SLR and have access to RBI facilities.
+### Core mechanism
 
-A **Small Finance Bank (SFB)** is a niche bank licensed under the Banking Regulation Act (in 2015-16) to advance financial inclusion. SFBs can do most banking activities (taking deposits, lending) similar to SCBs, but they must primarily serve small businesses, marginal farmers, micro and small enterprises and underserved areas. SFBs were often conversions of microfinance institutions or coops, subject to phased licensing and branch expansion norms. They can issue loans (with limits under MFI norms, etc.) and accept savings/current/term deposits.
+| Entity class | Lending role | Key perimeter point |
+| :--- | :--- | :--- |
+| Scheduled commercial banks | Full-service lending across retail, MSME and corporate segments | Bank prudential and conduct rules apply |
+| Small Finance Banks | Full-service banks with inclusion-oriented business constraints | Bank rules plus SFB-specific requirements |
+| Payments Banks | Payments and deposit services | They are not a general lending channel |
+| Regional Rural Banks | Rural and inclusion-focused banking | Separate statutory and RBI/NABARD-linked framework |
+| Cooperative banks | Member/community-oriented banking | Entity-specific cooperative-bank prudential treatment |
+| NBFCs | Non-bank lending and financial activity | RBI registration and NBFC Directions; SBR layer matters |
+| HFCs | Housing-finance-focused NBFC category | RBI-regulated and integrated into the NBFC prudential estate |
+| Account Aggregators | Consent-based financial-information intermediaries | They do not lend or hold the customer's financial information as their own asset |
 
-A **Payments Bank** (PB) is a special bank that can accept deposits and make payments/remittances, but **cannot lend out funds**. PBs are allowed only savings/current accounts with a maximum balance per customer (currently ₹100,000), issue debit cards or wallets, and offer payment services.  They often operate via agents/BCs.  Since PBs cannot issue loans or credit cards, they cannot earn interest income from lending.  They also hold large SLR portfolios because deposits are short-term.
+"Scheduled" is not a synonym for "commercial lender", and "NBFC" is not a small bank. The labels determine legal powers, funding model and applicable directions.
 
-**Regional Rural Banks (RRBs)** are co-owned by the central &amp; state governments and a sponsor bank, established under the RRB Act (1976). RRBs’ business area is restricted to specified rural districts. They aim to provide credit to agriculture and rural sectors (SMEs, etc.) in those areas. RRBs can take deposits and lend like other banks, but typically focus on small farmers and village enterprises.
+### Where it sits
 
-**Co-operative Banks** are member-owned banks (urban or rural cooperatives) registered under co-operative laws. They serve members of a local community (e.g. urban merchants’ coop banks or village credit cooperatives). Scheduled urban co-operative banks are also SCBs if in the Second Schedule; they abide by RBI’s banking regulations (though rural co-ops are jointly regulated with NABARD). Co-op banks can accept deposits and make loans, but usually within a limited area and to their members.
-
-Together, these categories create India’s banking architecture. For example, SCBs and SFBs have near-identical banking rights (except SFB branch restrictions), while Payments Banks are highly constrained. RRBs and coops have deposit/credit powers but are geographically or membership confined.
-
-```
-+----------------------+           +----------------------+
-|    Banks in India    |           | Non-Bank Entities    |
-+----------------------+           +----------------------+
-| +-- Scheduled Commercial Banks (SCBs) -------------+       |
-| |    (PSBs, Pvt, Foreign branches,           |       |
-| |    Scheduled RRBs, Scheduled SFBs,        |       |
-| |    Scheduled Payments Banks, Scheduled     |       |
-| |    Co-op Banks)                            |       |
-| +--------------------------------------------+       |
-| +-- Small Finance Banks (SFBs)               |       |
-| +-- Payments Banks (PBs, deposit-only ≤₹100k)|       |
-| +-- Regional Rural Banks (RRBs)              |       |
-| +-- Cooperative Banks (urban/rural coops)    |       |
-+------------------------------------------------------+
+```text
+Upstream:   RBI perimeter
+This:       Indian lender taxonomy
+Downstream: Bank/NBFC boundary · SBR · HFC rules · PSL applicability
 ```
 
-### Permanent rule
+### Never confuse [Payments Bank] and [Small Finance Bank]
 
-Only SCBs (including SFBs, coop banks, etc.) can accept deposits *and* make loans.  Payments Banks can accept deposits (₹100k limit per customer) but are **not permitted to lend**.
-
-### Permanent trap
-
-Treating payments banks like normal banks.  In reality, PBs cannot lend or issue loans – assuming they can leads to incorrect advice on their use. Likewise, assuming all SCBs have nationwide scope – RRBs and most coop banks have restricted areas/membership.
-
-### Never confuse
-
-**Small Finance Bank (SFB)** — a licensed bank focusing on underserved segments; it can take deposits and grant loans.
+**Payments Bank** — a restricted bank focused on deposits and payments and not a general credit originator.
 
 ---
 
-**Payments Bank (PB)** — a bank limited to deposit and payment services; cannot issue loans, has per-customer deposit cap.
+**Small Finance Bank** — a bank that can lend and take deposits but operates with an inclusion-oriented mandate and specific business requirements.
+
+### Permanent rule
+
+Before applying a lending rule, identify the regulated entity and the product. Similar customer journeys can sit on different legal and prudential estates.
 
 ### Jurisdiction variants
 
-**IN** — India defines these specific bank categories by law and RBI licensing.
-**No delta.** Other jurisdictions (US, UK, EU) do not have identical classes; they have full-service banks and separate non-bank lenders but no formal “payments bank” or “small finance bank” category.
+#### Commercial banks, SFBs, RRBs and cooperative banks
+They are banks, but entity-specific prudential and PSL treatment differs.
+
+#### NBFCs and HFCs
+They are non-bank lenders; NBFC layer and activity type can change the governing requirements.
 
 <Recall
-  q="What distinguishes a Payments Bank from a Small Finance Bank?"
-  a="A Payments Bank can accept only deposits (≤ ₹100,000 per customer) and provide remittance/payments, whereas a Small Finance Bank can also extend loans and services like an ordinary bank."
+  q="Why is &quot;bank versus NBFC&quot; more than a funding distinction?"
+  a="The classification changes legal powers, deposit-taking ability, prudential treatment and the RBI Directions that govern the loan."
 />
 
 <Recall
-  q="What is a Scheduled Commercial Bank (SCB)?"
-  a="Any bank listed in RBI’s Second Schedule, including PSBs, Pvt banks, foreign banks, RRBs, scheduled SFBs, scheduled payment banks and co-ops."
+  q="Is an Account Aggregator a lender?"
+  a="No. It is a regulated consent-based information intermediary; credit remains with a bank, NBFC or other permitted lender."
 />

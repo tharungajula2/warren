@@ -1,65 +1,106 @@
 ---
 id: IND-24
-title: Recovery Agents Code of Conduct
-type: concept
+title: 'IRACP versus Ind AS 109: Parallel Regimes and Prudential Floor'
+type: delta
 domain: india-lending
 subdomain: enforcement-and-conduct
 one_screen: >-
-  RBI’s 2022 guidelines reaffirm that financial institutions are fully
-  responsible for their recovery agents’ actions. Banks must ensure recovery
-  personnel treat borrowers respectfully, within prescribed hours, and without
-  intimidation. Agents must carry ID cards. Borrowers can record collection
-  calls and lodge complaints if the code is violated. This rule curbs the
-  excesses of aggressive recovery practices prevalent especially in
-  rural/tele-calling.
+  For Ind AS-applicable NBFCs and HFCs, accounting impairment and RBI prudential
+  asset-quality rules run in parallel. Ind AS 109 determines the accounting ECL
+  allowance; RBI IRACP still determines prudential classification and the
+  minimum regulatory requirement, with a prescribed treatment when the
+  prudential amount is higher.
 prerequisites:
-  - IND-21
+  - IND-20
+  - IND-23
+  - IMP-03
 jurisdictions:
   - IN
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'RBI Circular on Outsourcing – Recovery Agents (Aug 12, 2022).'
+  - label: >-
+      Ministry of Corporate Affairs, Indian Accounting Standard 109, Financial
+      Instruments.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: Earlier RBI guidelines on fair practices and recovery (2006-07).
+  - label: >-
+      Reserve Bank of India, prudential treatment for Ind AS-compliant NBFCs and
+      HFCs; current post-consolidation reference UNVERIFIED as at 31 August
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, future prudential ECL framework for commercial
+      banks effective 1 April 2027; exact reference UNVERIFIED here as at 31
+      August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-The key directives (2022) state that banks/NBFCs must not use agents to harass borrowers. No coercion is allowed: no making calls before 8 am or after 7 pm, no abuse/insults, no shame-tactics. Agents must have clear ID/name tags; they must follow written guidelines. The regulated entity (bank or NBFC) remains liable for any breach by its agents.
+### Core mechanism
 
-Prior RBI codes (2006 &amp; 2010) prohibited many misbehaviors (e.g. third-party visits to workplaces for small debts). The 2022 circular specifically supplements these with updated instructions under the outsourcing framework, emphasizing that violations can lead to supervisory action.
+One-line reminder: Ind AS 109 uses forward-looking ECL and staging; those mechanics belong to IMP.
 
-This is consumer protection in collections: borrowers have recourse to the bank’s grievance cell for any agent mis-step, and ultimately to the Ombudsman. Banks must train and monitor their agents (even if they are third-party contractors).
+```text
+Ind AS 109 ECL measured
+    ↓
+RBI prudential requirement measured separately
+    ↓
+Amounts compared under the applicable RBI framework
+    ↓
+Any prudential shortfall is handled through the prescribed reserve/floor mechanism
+```
+
+| Object | Owner | Purpose |
+| :--- | :--- | :--- |
+| ECL allowance | Ind AS 109 | Accounting impairment |
+| IRACP classification | RBI | Prudential asset-quality status |
+| Prudential minimum | RBI | Regulatory loss buffer |
+| Impairment reserve / prudential shortfall treatment | RBI framework for Ind AS entities | Prevents accounting ECL below the prudential floor from weakening regulatory protection |
+
+The exact post-consolidation entity-wise wording and reserve mechanics are UNVERIFIED here as at 31 August 2026 where not separately established. No percentage or formula is inferred.
+
+Commercial banks are in a separate transition: as at 31 August 2026 the current IRACP framework remains in force, with an RBI prudential ECL framework scheduled for 1 April 2027.
+
+### Where it sits
+
+```text
+Upstream:   Ind AS 109 ECL · IRACP provision
+This:       Parallel-regime comparison
+Downstream: Impairment reserve · Regulatory reporting
+```
 
 ### Permanent rule
 
-Banks/NBFCs must ensure recovery agents comply with RBI’s conduct rules: no threat, no personal harassment, call only between 8am-7pm, respectful behavior. ID cards are mandatory.
+Accounting ECL does not replace RBI prudential classification for entities that must comply with both regimes.
 
-### Permanent trap
+### Never confuse [Ind AS 109 staging] and [SMA/NPA]
 
-Assuming recovery can be “any means necessary.” RBI’s explicit code bans intimidation (Verbal/physical harassment, false claims, repeated late-hour calls). Non-compliance by agents is deemed violation by the lender.
+**Ind AS 109 staging** — accounting impairment status based on credit deterioration and default concepts.
 
-### Never confuse
+---
 
-**Recovery Agent** — hired agent or third-party who collects overdue loans. (Subject to RBI’s code of conduct.)
-**Debt Collector** — similar role; RBI’s rules apply equivalently, unlike unregulated field agents for non-financial debts.
+**SMA/NPA** — RBI prudential repayment-stress and non-performing classifications.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s Code for recovery agents is detailed and mandatory (2016/2022). Other countries regulate debt collectors (e.g. US Fair Debt Collection Practices Act) differently, but India’s code is specific to banking debts.
+#### Ind AS-applicable NBFCs and HFCs
+Run accounting ECL and RBI prudential requirements in parallel.
+
+#### Commercial banks
+Current IRACP remains in force on 31 August 2026; prudential ECL transition begins 1 April 2027.
 
 <Recall
-  q="My borrower agent called me at midnight. Is that allowed?"
-  a="No. RBI forbids calling debtors before 8:00 a.m. or after 7:00 p.m.."
+  q="If Ind AS ECL is lower than RBI's prudential requirement, which amount wins economically?"
+  a="The prudential floor cannot be ignored; the prescribed RBI shortfall or reserve treatment must bridge the difference."
 />
 
 <Recall
-  q="Can agents visit my home/work to demand payment?"
-  a="RBI guidelines discourage intrusive visits; agents should use approved communication channels and avoid harassment."
+  q="Does Stage 3 automatically equal NPA?"
+  a="No. Accounting staging and RBI prudential classification are related but legally distinct regimes."
 />

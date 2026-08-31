@@ -1,15 +1,14 @@
 ---
 id: IND-04
-title: Housing Finance Companies under RBI
-type: concept
+title: NBFC Scale-Based Regulation
+type: mechanism
 domain: india-lending
 subdomain: regulatory-structure
 one_screen: >-
-  As of August 2019, Housing Finance Companies (HFCs) were brought under RBI’s
-  regulation. The Central Bank is now the regulator of HFCs (lenders
-  specializing in home loans), integrating them into the NBFC framework.  During
-  the transition, HFCs were allowed to follow existing NHB guidelines until RBI
-  issues new rules.
+  Scale-Based Regulation, or SBR, makes "NBFC" only the starting label. RBI
+  places NBFCs into Base, Middle, Upper and potentially Top layers so that
+  regulatory intensity increases with size, activity, interconnectedness and
+  systemic significance.
 prerequisites:
   - IND-03
 jurisdictions:
@@ -21,54 +20,74 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'RBI Press Release (Aug 13, 2019) on transfer of HFC regulation.'
+  - label: >-
+      Reserve Bank of India, Scale Based Regulation framework for NBFCs, 2021,
+      effective from 2022.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, entity-wise NBFC Directions issued 28 November
+      2025; exact post-consolidation SBR reference UNVERIFIED as at 31 August
+      2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Prior to 2019, HFCs were regulated by the National Housing Bank (NHB) under the NHB Act. The Finance (No.2) Act 2019 amended the NHB Act to shift HFC regulation to RBI.  From Aug 9, 2019, HFCs are treated as a category of NBFCs for regulatory purposes. RBI announced that it would “carry out a review” of HFC regulations and issue a revised framework in due course. Until that new RBI framework is in place, HFCs continue to comply with NHB-issued directions and returns.
+### Core mechanism
 
-Under the new SBR regime (post-2022), all HFCs are to be classified either in the Middle Layer or Upper Layer (never Base Layer). In practice, this reflects that HFCs are treated as systemically important NBFCs.  They now follow RBI’s prudential norms (e.g. capital adequacy, ALM) as per their NBFC layer, and ultimately will migrate fully to RBI’s directions (for example, RBI’s NBFC regulations including IRACP, provisioning, etc.).  The NHB itself ceased primary supervision, though it continues as the housing finance policy body.
-
+```text
+NBFC registered with RBI
+    ↓
+Activity and balance-sheet characteristics assessed
+    ↓
+Base Layer or Middle Layer
+    ↓
+Systemic assessment may place selected NBFCs in Upper Layer
+    ↓
+Top Layer reserved for exceptional supervisory concern
 ```
-HFC Regulation (2019):
-      +------------------------------+
-      | NHB supervises HFCs (till Aug 9, 2019) |
-      +------------------------------+
-                    |
-         [ Finance Act 2019 ]
-                    |
-      +------------------------------+
-      | RBI regulates HFCs (from Aug 9, 2019) |
-      +------------------------------+
+
+| Layer | Regulatory idea | Lending consequence |
+| :--- | :--- | :--- |
+| Base | Lowest-intensity layer for eligible smaller or specified NBFCs | Lighter prudential requirements than higher layers |
+| Middle | Larger, deposit-taking or specified important categories | Stronger governance and prudential requirements |
+| Upper | RBI-selected systemically significant NBFCs | Enhanced bank-like prudential and supervisory expectations |
+| Top | Exceptional supervisory layer | Additional restrictions can be imposed if systemic risk warrants |
+
+The architecture matters because the same NBFC activity can face different governance, exposure, provisioning or supervisory requirements after layer classification.
+
+RBI reorganised entity-wise NBFC instructions on 28 November 2025. The exact current post-consolidation instrument title and reference for every SBR provision is UNVERIFIED in this pack as at 31 August 2026; no unstated number is inferred from the superseded legacy text.
+
+### Where it sits
+
+```text
+Upstream:   NBFC perimeter · Activity type · Scale
+This:       SBR layer
+Downstream: Prudential intensity · Governance · Entity-specific lending rules
 ```
 
 ### Permanent rule
 
-HFCs are now regulated by RBI as NBFCs.  Any housing finance company must register with RBI and follow RBI’s NBFC prudential norms once the transition is complete.
+Layer is a regulatory attribute of the NBFC, not of an individual loan.
 
 ### Permanent trap
 
-Ignoring the shift: continue treating HFC regulations as per NHB.  Post-2019, NHB guidelines apply only until RBI substitutes them.  Compliance advisors must confirm whether RBI has issued a master direction for HFCs.
-
-### Never confuse
-
-**Housing Finance Company (HFC)** — a financial institution primarily extending home loans. After 2019, HFCs are NBFCs regulated by RBI.
-
----
-
-**Mortgage Refinance (NHB)** — NHB continues as a refinancing institution and policy authority, but **no longer supervises HFC prudentially**.
+Treating Base, Middle and Upper Layer as credit ratings. They classify regulatory intensity and systemic importance, not the probability that a particular borrower defaults.
 
 ### Jurisdiction variants
 
-**IN** — HFCs = NBFCs under RBI since 2019. There is no analogous transfer in other jurisdictions covered.
+#### Base Layer
+Lower-intensity requirements apply where the entity is eligible for Base Layer treatment.
+
+#### Middle and Upper Layer
+Additional prudential and governance obligations apply; Upper Layer placement reflects RBI's supervisory assessment.
 
 <Recall
-  q="Who regulates HFCs as of 2020?"
-  a="The Reserve Bank of India; an amendment in 2019 moved HFCs under RBI’s supervision."
+  q="What question does SBR answer?"
+  a="It determines how intensively RBI regulates an NBFC based on size, activity and systemic significance."
 />
 
 <Recall
-  q="Until RBI issues new rules, which guidelines do HFCs follow?"
-  a="Existing NHB instructions (HFCs were to continue under NHB directions until RBI’s new framework)."
+  q="Does moving an NBFC to a higher layer reclassify its borrowers?"
+  a="No. The change is to the lender's regulatory treatment; borrower credit classification still follows the applicable prudential rules."
 />

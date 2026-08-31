@@ -1,19 +1,15 @@
 ---
 id: IND-19
-title: Open Credit Enablement Network (OCEN) and Unified Lending
-type: concept
+title: Credit Information Reporting and Correction Cycle
+type: procedure
 domain: india-lending
 subdomain: co-lending-and-data-tech
 one_screen: >-
-  OCEN is a public digital infrastructure initiated by RBI and others to promote
-  standardized lending processes. It provides open protocols so any bank or NBFC
-  can offer standardized lending products (LOAN service) to any borrower via
-  their preferred interface (called Loan App Provider). The **Unified Lending
-  Interface (ULI)** is an evolution of OCEN – a platform or API layer
-  (conceptualized by IBA/RBI) that allows multiple lenders and tech-entities to
-  interconnect seamlessly for loan origination. In practice, OCEN/ULI aims to
-  let a borrower initiate a loan request once, then multiple lenders can compete
-  or collaborate, all via technology rails.
+  Credit-information regulation is operational: lenders must submit accurate
+  borrower data, CICs must process it, and customers need a route to challenge
+  errors. The value of the bureau system depends on update discipline because
+  stale arrears, closed loans or incorrect balances can distort subsequent
+  lending decisions.
 prerequisites:
   - IND-18
 jurisdictions:
@@ -25,43 +21,78 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: RBI/IBA public documents on OCEN and ULI (pilots).
+  - label: 'Parliament of India, Credit Information Companies (Regulation) Act, 2005.'
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI Notices on OCEN as part of digital lending push.
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Credit Information
+      Reporting) Directions, 2025, issued 6 January 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, 2025-2026 amendments to credit-information
+      reporting and customer redress requirements; exact references UNVERIFIED
+      as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-OCEN’s idea: separate *procurement of borrowers* (handled by digital aggregators or apps, called LAPs) from *funding* (banks/NBFCs). Using open APIs (like rupee-instant-pay, AA), a Loan App can share borrower’s data with many lenders using OCEN. Each lender then provides loan quotes. Final loan issuance happens through UPI’s LTI (loan transfer initiation) or direct credit.
+### Core mechanism
 
-The OCEN framework is still evolving. It is mandated for certain government loan schemes (like for MSMEs). Under OCEN, lenders must publish their loan “schema” (min criteria) and pricing APIs. Borrowers see an offer comparison screen. Ongoing pilots involve fintech lending apps and major banks. The concept addresses fragmentation – instead of one bank-per-relationship, small borrowers can access many lenders digitally.
+```text
+Credit account created or updated
+    ↓
+Credit institution submits prescribed data to CIC
+    ↓
+CIC updates borrower record
+    ↓
+Borrower accesses CIR or raises dispute
+    ↓
+Lender and CIC investigate source data
+    ↓
+Correction or reasoned closure is recorded
+```
 
-Regulatory stance: RBI encourages this open network but underscores customer protection (same KFS, consent rules apply). OCEN/ULI bypass middlemen fees and aim for credit deepening. However, RBI has not mandated full roll-out; it’s voluntary with incentives. By 2026 RBI reports many pilots, but wide adoption is pending. Key point: OCEN/ULI are *not* separate entities, just infrastructure standards.
+| Control point | Failure it prevents |
+| :--- | :--- |
+| Regular reporting | Missing or stale credit history |
+| Standard data fields | Inconsistent borrower/account interpretation |
+| Data-quality checks | Wrong balances, status or identifiers |
+| Dispute workflow | Persistent customer harm from erroneous reporting |
+| Closure/update process | Accounts remaining incorrectly shown as active or delinquent |
+
+RBI strengthened credit-information reporting and customer compensation/correction expectations through recent directions. Further amendments took effect during the 2025-2026 period. The exact post-consolidation amendment references are UNVERIFIED in this pack as at 31 August 2026, so no unsupported reporting-frequency number is stated here.
+
+### Where it sits
+
+```text
+Upstream:   Loan servicing · Payment status
+This:       CIC reporting and correction
+Downstream: CIR · Underwriting · Customer grievance
+```
 
 ### Permanent rule
 
-Forthcoming RBI guideline: digital lenders can use the ULI (under OCEN) to interconnect, but all standard rules (KFS, KYC) still apply. For now, any participation is voluntary but encouraged for efficiency.
+A lender's obligation is not satisfied by submitting data once; reported credit information must remain accurate as the account changes.
 
 ### Permanent trap
 
-Thinking OCEN/ULI replaces banks. In fact, banks/NBFCs remain the credit providers. OCEN just standardizes the way loan requests flow to them. Another mistake: assuming an app can lend via OCEN without partnering a regulated lender – regulatory approval is still needed.
-
-### Never confuse
-
-**OCEN** — a framework of open APIs and data standards for credit enabling (no single “company”).
-**ULI** — proposed RBI/IBA interface for unified loan origination/decision (still under development).
+Treating a bureau error as solely the CIC's problem. The originating credit institution is responsible for the accuracy of the data it supplies and must participate in correction.
 
 ### Jurisdiction variants
 
-**IN** — India’s OCEN/ULI initiative is pioneering an open credit network; no identical global standard exists.
+#### Banks and NBFCs that are credit institutions
+Reporting obligations apply through the CIC framework.
+
+#### CICs
+They have separate duties for record handling, dispute management and customer access.
 
 <Recall
-  q="What is the main purpose of the Open Credit Enablement Network?"
-  a="To allow standardized, plug-and-play lending – letting any compliant loan app gather and share borrower data with multiple lenders under consent."
+  q="Why is credit-information reporting a servicing process rather than only an origination process?"
+  a="Because balances, delinquency, closure and restructuring statuses change over time and must be reflected accurately in the borrower's record."
 />
 
 <Recall
-  q="Can a borrower get competing loan offers simultaneously under OCEN/ULI?"
-  a="Yes – OCEN is designed to enable lender competition for loans by allowing multiple lenders to quote through the same digital channel."
+  q="Who must help correct wrong lender-supplied data?"
+  a="The reporting credit institution must investigate and correct its source data; the CIC cannot independently invent the correct loan facts."
 />

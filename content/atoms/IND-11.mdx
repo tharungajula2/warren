@@ -1,19 +1,17 @@
 ---
 id: IND-11
-title: Priority Sector Lending (PSL) Targets
+title: 'Digital Lending Perimeter: RE, LSP and DLA'
 type: concept
 domain: india-lending
 subdomain: priority-sector
 one_screen: >-
-  Indian banks must lend a mandated share of their credit to specified “priority
-  sectors” (agriculture, MSMEs, etc.) as defined by RBI, often 40% of net bank
-  credit for domestic banks. Within this, sub-targets exist (e.g. farm credit,
-  smaller loans, micro-enterprises, poorer sections). PSL quotas shape lending
-  portfolios: banks issue loans just to meet these percentages and may sell
-  excess obligation via certificates (PSLCs).
+  Digital lending changes the channel, not the identity of the regulated
+  creditor. RBI separates the Regulated Entity that owns the loan, the Lending
+  Service Provider that performs outsourced functions, and the Digital Lending
+  App through which the customer may interact.
 prerequisites:
-  - IND-01
   - IND-02
+  - IND-09
 jurisdictions:
   - IN
 perishable: true
@@ -23,53 +21,63 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: RBI Financial Inclusion page (PSL guidelines overview).
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: RBI annual PSL instructions (for details).
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Digital Lending) Directions,
+      2025, RBI/2025-26/36, DOR.STR.REC.19/21.07.001/2025-26, 8 May 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Under current RBI rules, domestic banks’ overall PSL target is 40% of Adjusted Net Bank Credit (with RRBs at 75%). Within that, there are sub-targets: at least 18% to agriculture (including 8% to small farmers), 7.5% to micro-enterprises, etc.  There is also a category of lending to weaker sections (10% of ANBC) and a target to small-scale industries (7.5%). Loans to export sectors, large industries, or corporates do NOT count.
+### Core mechanism
 
-PSL has grown to cover new areas (education, housing, renewable energy) as per RBI prescriptions.  Starting in 2016, RBI allowed banks that exceed PSL targets to sell Priority Sector Lending Certificates (PSLCs) to others who fall short. This “bank-on-bank trading” ensures goals are met system-wide. PSLCs come in types – e.g. Agriculture, Micro, General PSL – reflecting the underlying loan category.
+| Role | What it does | What it does not become |
+| :--- | :--- | :--- |
+| Regulated Entity (RE) | Sanctions, funds or owns the regulated credit exposure | It does not shed responsibility by outsourcing |
+| Lending Service Provider (LSP) | Performs one or more customer acquisition, underwriting-support, servicing or recovery functions under contract | It is not automatically the lender |
+| Digital Lending App (DLA) | Customer-facing digital interface operated by or for an RE/LSP | The app itself is not the regulatory creditor |
 
-Priority sector rules profoundly shape Indian bank books: banks fund many low-yield rural loans simply to comply with the 40% mandate. This constrains their liquidity and profitability (since many PSL segments demand concessional rates or higher risk). Unlike any developed-country system, India’s mandatory directed-credit framework ties national policy to banking regulation.
+The legal and prudential loan remains with the RE. RBI therefore focuses heavily on outsourcing accountability, disclosure of the RE, permitted data collection and customer treatment.
 
-```
-Adjust Net Bank Credit (ANBC):         = Total loans - (loans to foreign banks, etc.)
-Priority Sector target = 40% of ANBC
-    - Agriculture (including small farmers): 18%
-    - Micro enterprise: 7.5%
-    - Weaker sections: 10% of ANBC
-    - ... (sub-targets within)
-PSLC Market: surplus lender sells PSL credits to deficit lender
+An LSP can influence underwriting or servicing operationally, but the RE must perform due diligence on the LSP and remains responsible for compliance. A technology layer cannot be used to create an unregulated pass-through lender.
+
+### Where it sits
+
+```text
+Upstream:   Lender perimeter · KFS
+This:       RE/LSP/DLA roles
+Downstream: Digital transaction controls · DLG · Data use
 ```
 
 ### Permanent rule
 
-RBI-prescribed lending quotas (e.g. 40% to PSL) are mandatory. Banks must ensure each year’s lending meets or exceeds these sub-targets.
+The regulated lender remains responsible for acts performed through its LSP or DLA within the lending arrangement.
+
+### Never confuse [LSP] and [Lender]
+
+**LSP** — a service provider acting for a regulated lender under a contractual arrangement.
+
+---
+
+**Lender** — the regulated entity that owns or extends the credit under the applicable RBI perimeter.
 
 ### Permanent trap
 
-Ignoring sub-categories and PSL certificates. A bank might focus only on agriculture without meeting MSME or weaker section targets, risking non-compliance. Also, some assume PSL is optional – it is not.
-
-### Never confuse
-
-**PSL quotas** — mandatory lending targets (40% of bank credit to certain sectors).
-**PSLC (certificates)** — tradable certificates representing excess PSL achievement; used to buy compliance.
+Assuming a fintech brand shown to the customer is necessarily the balance-sheet lender. The underlying RE must be identified.
 
 ### Jurisdiction variants
 
-**IN** — Mandatory priority-sector quotas are unique to India’s financial system. (No similar directed-credit rules exist under PRA/Fed/FASB.)
+#### Banks and NBFCs
+Both can use LSPs and DLAs, but their underlying prudential treatment remains entity-specific.
+
+#### Non-regulated technology firms
+They may act as service providers where permitted, but they do not obtain lending powers merely by operating an app.
 
 <Recall
-  q="What percentage of bank lending must be to priority sectors?"
-  a="40% of adjusted net bank credit for most banks (with specified sub-targets)."
+  q="Who carries RBI accountability when an LSP mishandles a digital-lending process?"
+  a="The regulated entity remains responsible for the outsourced lending activity, in addition to any contractual remedies against the LSP."
 />
 
 <Recall
-  q="What are PSLCs?"
-  a="Tradable certificates; a bank that over-achieves PSL can sell PSLCs to one that falls short, ensuring compliance."
+  q="Does a DLA create a new category of lender?"
+  a="No. It is a digital interface; the credit must still sit with an entity permitted to lend."
 />

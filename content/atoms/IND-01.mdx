@@ -1,15 +1,15 @@
 ---
 id: IND-01
-title: RBI’s Mandate and Dual Role
+title: RBI's Lending Mandate and Regulatory Perimeter
 type: concept
 domain: india-lending
 subdomain: regulatory-structure
 one_screen: >-
-  The Reserve Bank of India (RBI) is India’s central bank with a broad mandate
-  that goes beyond prudential supervision. In addition to setting monetary
-  policy and ensuring banking stability, RBI has a statutory “developmental
-  role” – promoting national objectives like financial inclusion and credit to
-  agriculture and MSMEs.
+  RBI regulates Indian lending through a mix of prudential, conduct and
+  developmental mandates. For a lender, the first question is not only "what
+  risk rule applies?" but also "what type of regulated entity am I, what lending
+  permissions do I have, and what directed-credit or customer-protection
+  obligations attach to me?"
 prerequisites: []
 jurisdictions:
   - IN
@@ -20,60 +20,63 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: Reserve Bank of India – “Organisation and Functions” (official).
+  - label: 'Parliament of India, Reserve Bank of India Act, 1934.'
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI Financial Inclusion & Development Overview (section on PSL).
+  - label: 'Parliament of India, Banking Regulation Act, 1949.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, entity-wise regulatory Directions consolidated and
+      reissued during 2025; exact mapping depends on entity type as at 31 August
+      2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-The RBI Act (1934) empowers RBI as monetary authority and bank regulator, but also explicitly tasks it with supporting economic development. For example, RBI regularly revises the Priority Sector Lending norms to “ensure adequate flow of credit” to sectors crucial for socio-economic development. In practice, RBI issues prudential norms (capital, NPA rules, etc.) like any financial regulator, **and** enforces growth-oriented policies (such as mandatory loans to farmers, micro‐businesses, etc.). This dual mandate means RBI-issued guidelines often blend safety with directed targets. Unlike most central banks abroad, RBI’s charter includes credit-promotion – e.g. linking lending rates to an external benchmark to improve transmission – and priority targets for banks.
+### Core mechanism
 
-The RBI’s remit thus spans monetary policy, foreign exchange, currency issuance, system oversight, and development.  It supervises commercial banks, NBFCs, payments systems and more. The net effect is that Indian banking regulators regularly set both stability rules (asset classification, capital, audit) **and** development quotas (priority sectors, subsidies).  Internationally, counterparts like the U.S. Fed focus on macro‐stability, but RBI also directly steers credit allocation.  For India’s banks, this means compliance is both about risk control and social objectives.
+| Regulatory role | What it changes for lending |
+| :--- | :--- |
+| Prudential supervisor | Asset classification, provisioning, capital-related constraints, governance and supervisory expectations |
+| Conduct regulator | Pricing disclosure, fair practices, digital-lending controls, outsourcing and recovery conduct |
+| Developmental authority | Priority Sector Lending and inclusion-oriented credit architecture |
+| Licensing/perimeter authority | Which banks and non-banks may undertake lending and under what entity-specific rulebook |
 
-```
-          +---------------------+
-          |   Reserve Bank of   |
-          |       India         |
-          +---------------------+
-             |      |     |
-             v      v     v
-+------------+ +------------+ +-----------------+
-| Monetary   | | Banking    | | Developmental   |
-| Authority  | | Regulator  | | Functions       |
-| (inflation,| | (banks &amp;   | | (PSL, inclusion)|
-| currency)  | | NBFC norms)| +-----------------+
-+------------+ +------------+ +-----------------+
+RBI's lending estate sits across the Reserve Bank of India Act, 1934, the Banking Regulation Act, 1949, entity-specific Directions and subject-matter Directions. The same activity can therefore be governed by more than one instrument: a digital loan by an NBFC, for example, remains an NBFC exposure for prudential purposes while also falling under digital-lending conduct rules.
+
+This pack treats monetary policy only as an external input where a lending rule explicitly references it. Repo transmission, liquidity operations and balance-sheet liquidity are not re-taught here.
+
+### Where it sits
+
+```text
+Upstream:   Statutory mandate · Licensing perimeter
+This:       RBI lending regulation
+Downstream: Entity taxonomy · PSL · Conduct · IRACP · Resolution
 ```
 
 ### Permanent rule
 
-The RBI Act grants RBI objectives beyond bank supervision – including currency and monetary control **and** socio-economic development (e.g. credit to priority sectors).
+The regulated entity remains responsible for the lending activity even when origination, servicing, data collection or recovery is outsourced.
 
 ### Permanent trap
 
-Assuming RBI’s role is *only* prudential oversight.  In reality RBI imposes directed lending programs (priority sectors, subsidized refinancing, financial inclusion schemes) as part of its mandate.  Ignoring these developmental mandates leads to misreading RBI guidelines.
-
-### Never confuse
-
-**Monetary Authority** — The role of setting interest rates and controlling money supply (e.g. policy repo rate).
-
----
-
-**Developmental Regulator** — RBI’s role in promoting growth (e.g. enforcing priority‐sector lending to agriculture/MSMEs). They often overlap, but the former is macro management, the latter is directed credit policy.
+Treating an RBI circular as if it applied to every lender identically. Application usually depends on entity type, product and the specific Direction that governs that perimeter.
 
 ### Jurisdiction variants
 
-**IN** — RBI is legally charged with developmental mandates such as priority sector lending to agriculture, MSMEs, etc..
-**US/UK** — The Federal Reserve or Bank of England focus on monetary &amp; prudential stability; no formal equivalent of India’s PSL targets exists (no legislative mandate for sectoral quotas).
+#### Banks
+Banking Regulation Act licensing and bank-specific Directions apply.
+
+#### NBFCs and HFCs
+RBI Act registration and entity-specific NBFC/HFC Directions apply, with additional layer-based deltas for NBFCs.
 
 <Recall
-  q="What does RBI’s statutory mandate include beyond bank oversight?"
-  a="In addition to monetary stability, RBI’s mandate includes developmental goals – e.g. supporting agriculture and MSMEs by ensuring credit flow (via PSL rules)."
+  q="Why is entity type the first regulatory question in Indian lending?"
+  a="Because permissions, prudential treatment and conduct obligations are distributed across bank, NBFC, HFC and other entity-specific rulebooks."
 />
 
 <Recall
-  q="Why isn’t RBI a “pure prudential regulator”?"
-  a="Because it also enforces growth-oriented policies (like directing credit to underserved sectors), not just risk rules."
+  q="Does outsourcing a lending function transfer RBI responsibility to the service provider?"
+  a="No. The regulated lender remains accountable for compliance even when a third party performs operational work."
 />

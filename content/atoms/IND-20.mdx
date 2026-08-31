@@ -1,65 +1,108 @@
 ---
 id: IND-20
-title: Credit Information and CIBIL Scores
+title: 'IRACP: India''s Prudential Asset-Quality Regime'
 type: concept
 domain: india-lending
 subdomain: co-lending-and-data-tech
 one_screen: >-
-  Credit Information Companies (CICs) like CIBIL, Experian, Equifax (licensed by
-  RBI) collect borrowers’ credit data (loans, credit cards, defaults) from
-  banks/NBFCs and provide credit reports and scores. A bureau score (300–900
-  range) reflects an individual’s or firm’s credit history; lenders use it as a
-  risk indicator. Each loan or card issued is reported to CICs. A CIBIL (now
-  TransUnion CIBIL) *score* is a summary derived from one’s report; though
-  popular, RBI treats it as *one* input, not a sole decision factor.
+  IRACP is India's prudential regime for Income Recognition, Asset
+  Classification and Provisioning on advances. It answers whether a loan is
+  performing or non-performing for RBI purposes, what income may be recognised
+  and what minimum prudential provision is required; it is distinct from Ind AS
+  109 ECL.
 prerequisites:
-  - IND-06
+  - IND-03
+  - CR-04
 jurisdictions:
   - IN
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'Credit Information Companies (Regulation) Act, 2005.'
+  - label: >-
+      Reserve Bank of India, Prudential Norms on Income Recognition, Asset
+      Classification and Provisioning pertaining to Advances, RBI/2025-26/13,
+      DOR.STR.REC.9/21.04.048/2025-26, 1 April 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI regulations on credit reports and usage (Master Direction).
+  - label: >-
+      Reserve Bank of India, entity-wise IRACP Directions issued 28 November
+      2025; exact post-consolidation references vary by entity.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, prudential ECL framework for commercial banks
+      effective 1 April 2027; exact reference UNVERIFIED here as at 31 August
+      2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-CICs operate under the Credit Information Companies (Regulation) Act, 2005. By law, any institution granting loans above certain thresholds must report data (including repayment behaviour) to CICs. Thus, a “CIBIL report” may contain: outstanding loans, EMI payment history, credit inquiries, defaults or write-offs. A high credit score (e.g. 750+) typically leads to faster loan approval. However, some segments (like unsecured or newer forms of credit) still rely on alternate data, since CIC coverage has gaps (informal lending not always reported).
+### Core mechanism
 
-RBI mandates that lenders consult at least one CIC before sanctioning any loan. Lenders are also regulated on sharing the score with customers (ECIR/ ECI guidelines requiring justification for rejection). Over the past decade, refinements have been made: e.g. CRILC (Central Repository of Information on Large Credits) to flag large defaults, and securitisation of card limits for bureau reporting. Debenture data (various corporate loans) is less visible in consumer credit reports.
+```text
+Performing exposure
+    ↓
+Early stress may appear through SMA status
+    ↓
+Applicable NPA trigger is reached
+    ↓
+Income recognition restrictions apply
+    ↓
+Sub-standard, doubtful or loss classification develops
+    ↓
+Minimum prudential provisioning follows the applicable rulebook
+```
 
-For corporate or MSME borrowers, there is no single “CIBIL score” standard. Instead, banks rely on financial statements, promoter history, and sometimes the promoter’s personal credit scores. Commercial credit intelligence (like Dun &amp; Bradstreet ratings) complement it.
+| IRACP object | Question answered |
+| :--- | :--- |
+| SMA | Is the exposure showing pre-NPA repayment stress? |
+| NPA recognition | Has the prudential non-performing trigger been met? |
+| Asset class | How seasoned or impaired is the NPA for prudential purposes? |
+| Income recognition | Can accrued income still be recognised? |
+| Provision | What minimum prudential loss buffer is required? |
+
+RBI reorganised entity-wise prudential instructions on 28 November 2025. As at 31 August 2026 commercial banks remain on the current IRACP framework, while RBI has already issued a future ECL-based prudential framework scheduled to begin on 1 April 2027. That future framework is not treated as current law in this pack.
+
+The exact post-consolidation reference for every bank/NBFC/HFC IRACP provision is UNVERIFIED where not separately stated.
+
+### Where it sits
+
+```text
+Upstream:   Borrower payment performance
+This:       RBI prudential asset quality
+Downstream: SMA · NPA · Provisioning · Resolution
+```
+
+### Never confuse [IRACP] and [Ind AS 109 ECL]
+
+**IRACP** — RBI prudential classification, income-recognition and minimum-provisioning regime.
+
+---
+
+**Ind AS 109 ECL** — accounting impairment methodology owned by IMP.
 
 ### Permanent rule
 
-Banks and NBFCs must submit borrower data to CICs and use bureau reports in credit decisions. Borrowers have a right to one free credit report per year from each bureau.
-
-### Permanent trap
-
-Over-reliance on the numeric score. A common error is to treat a 750 CIBIL score as guarantee of repayment; lenders must still do underwriting. Conversely, a borrower’s poor score may have valid reasons (data errors or past minor defaults) – blindly rejecting such cases without manual review can be wrong.
-
-### Never confuse
-
-**Credit report** — detailed history of all borrowed accounts and repays (with any defaults) held by a CIC.
-**Credit score** — a numerical summary (e.g. CIBIL score) of that report.
+IRACP status does not disappear because an accounting ECL model produces a different loss estimate.
 
 ### Jurisdiction variants
 
-**IN** — System of multiple CICs (CIBIL, HDFC ERGO, etc.) is similar to US/UK bureau systems. But India’s credit scoring scale (300–900 for CIBIL) is proprietary (others use different ranges).
+#### Commercial banks
+Current 2025 entity-wise IRACP Directions apply as at 31 August 2026, with prudential ECL transition scheduled for 1 April 2027.
+
+#### NBFCs and HFCs
+Apply their current entity-wise prudential Directions; exact post-consolidation references are UNVERIFIED here.
 
 <Recall
-  q="What information is reflected in a CIBIL score of 800 vs 600?"
-  a="800 suggests a very good history (on-time EMIs, no defaults); 600 indicates past delays or defaults."
+  q="What three subjects are joined in IRACP?"
+  a="Income recognition, asset classification and prudential provisioning."
 />
 
 <Recall
-  q="Can a borrower check his credit score?"
-  a="Yes. RBI mandates CICs offer at least one free credit report and score per year upon request."
+  q="Is the 1 April 2027 prudential ECL framework already the current bank rule on 31 August 2026?"
+  a="No. It is a future-effective transition and must not be taught as already in force."
 />

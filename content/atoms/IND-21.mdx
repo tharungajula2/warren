@@ -1,19 +1,16 @@
 ---
 id: IND-21
-title: SARFAESI Act (Asset Enforcement)
-type: concept
+title: Special Mention Accounts
+type: mechanism
 domain: india-lending
 subdomain: enforcement-and-conduct
 one_screen: >-
-  The SARFAESI Act (2002) empowers banks/ARCs to enforce securities against
-  defaulting borrowers without court intervention. It allows a secured creditor
-  (bank/NBFC/ARC) to take possession of collateral (land, factories, financial
-  instruments) if a loan account is an NPA, subject to RBI’s prescribed
-  triggers. This mechanism dramatically speeds up recovery in contrast to civil
-  litigation. However, it only covers “secured” exposures: unsecured debts (like
-  credit cards, personal loans) cannot be directly taken under SARFAESI.
+  Special Mention Accounts, or SMAs, are RBI's pre-NPA stress buckets for
+  specified credit exposures. They create a disciplined early-warning ladder
+  before the standard 90-day NPA threshold, and the legacy pack's 31-60, 61-90
+  and 91-180 day sequence is incorrect.
 prerequisites:
-  - IND-06
+  - IND-20
 jurisdictions:
   - IN
 perishable: true
@@ -23,41 +20,79 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'SARFAESI Act, 2002 (Chapter II Enforcement of Security Interest).'
+  - label: >-
+      Reserve Bank of India, Prudential Norms on Income Recognition, Asset
+      Classification and Provisioning pertaining to Advances, 1 April 2025.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: RBI guidelines on asset reconstruction (e.g. Master Direction on ARCs).
+  - label: >-
+      Reserve Bank of India, entity-wise IRACP Directions issued 28 November
+      2025; exact post-consolidation references UNVERIFIED as at 31 August 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 08_IND_india_lending.md
 ---
-Under SARFAESI, upon default, an asset reconstruction company (or the bank itself) can issue a notice to the borrower (and guarantor) demanding payment within 60 days. If not paid, the creditor can auction the pledged assets (e.g. sell the mortgaged factory). The sale proceeds pay off the debt. Borrowers can appeal before DRTs (Debt Recovery Tribunals) if they believe wrongful action. SARFAESI’s enforcement is therefore final, with limited appeals – it is potent. Banks often syndicate bad loans to ARCs (Asset Reconstruction Companies) which use SARFAESI to reorganize or sell assets.
+### Core mechanism
 
-For lenders, SARFAESI provides collateral realisation. Practically, banks must follow RBI’s “change of management” norms if a corporate account being taken over exceeds a threshold. RBI also requires lenders to classify any SARFAESI-induced partial recovery appropriately (e.g. as standard if current, else further NPA reduction). In stress scenarios, SARFAESI is often a precursor to invocation of IBC or other legal recovery if needed.
+For term loans, the corrected delinquency sequence is:
+
+| Status | Days past due |
+| :--- | :--- |
+| SMA-0 | Up to 30 days |
+| SMA-1 | More than 30 days and up to 60 days |
+| SMA-2 | More than 60 days and up to 90 days |
+| NPA | More than 90 days, subject to the applicable prudential rule |
+
+The account's overdue status is determined from the contractual due date and day-end process under the applicable Directions. Other products, especially revolving facilities such as cash credit or overdraft, can use "out of order" or other product-specific tests rather than a simple instalment count.
+
+```text
+Due amount unpaid
+    ↓
+SMA-0
+    ↓
+SMA-1
+    ↓
+SMA-2
+    ↓
+NPA if the applicable NPA trigger is crossed
+```
+
+SMA is a stress-monitoring classification; it is not the same object as Stage 2 under Ind AS 109.
+
+### Where it sits
+
+```text
+Upstream:   Contractual due date · Payment status
+This:       SMA early-stress ladder
+Downstream: NPA recognition · Resolution monitoring
+```
+
+### Never confuse [SMA-2] and [NPA]
+
+**SMA-2** — the final pre-NPA delinquency bucket for the applicable exposure.
+
+---
+
+**NPA** — prudential non-performing status once the relevant RBI trigger is crossed.
 
 ### Permanent rule
 
-A secured lender can take possession of pledged collateral if the borrower defaults and does not repay after notice. The process must follow SARFAESI procedures (notice, sale, use funds to settle debt).
-
-### Permanent trap
-
-Trying to use SARFAESI on unsecured loans – it only applies to secured advances. Also, failing to issue the proper notice period (60 days) or not following RBI’s change-of-management rules when seizing a company.
-
-### Never confuse
-
-**SARFAESI** — enforcement law letting secured creditors seize and sell collateral after default (without courts).
-**Debt Recovery Tribunal (DRT)** — quasi-judicial body that borrowers can approach to challenge SARFAESI or other recovery actions.
+SMA categories are not optional watchlist labels; where the framework applies, they follow the prescribed repayment-status logic.
 
 ### Jurisdiction variants
 
-**IN** — Unique to India (introduced 2002). No direct analog in US/UK; other countries rely on normal foreclosure laws.
+#### Term loans
+Days-past-due buckets drive SMA status.
+
+#### Cash credit and overdraft facilities
+Product-specific "out of order" logic applies alongside the broader prudential framework.
 
 <Recall
-  q="Can SARFAESI be used to recover a car loan?"
-  a="Yes, since a car loan is secured by the vehicle. The bank can take and sell the car under SARFAESI after default and notice."
+  q="What is the corrected SMA sequence for a term loan?"
+  a="SMA-0 covers up to 30 days past due, SMA-1 covers more than 30 to 60 days, and SMA-2 covers more than 60 to 90 days."
 />
 
 <Recall
-  q="What happens if a borrower contests SARFAESI action?"
-  a="They can appeal to the DRT within 45 days of the creditor’s notice under the SARFAESI provisions."
+  q="Is SMA-2 already an NPA?"
+  a="No. It is the final pre-NPA stress bucket; NPA status begins only when the applicable prudential trigger is crossed."
 />

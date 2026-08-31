@@ -1,0 +1,86 @@
+---
+id: IND-27
+title: Compromise Settlements and Technical Write-Offs
+type: mechanism
+domain: india-lending
+subdomain: ind
+one_screen: >-
+  Compromise settlement and technical write-off are different exit tools. A
+  compromise changes the amount or terms the creditor agrees to accept in full
+  or partial settlement; a technical write-off removes an exposure from the
+  active books while legal recovery rights can continue.
+prerequisites:
+  - IND-26
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, Framework for Compromise Settlements and Technical
+      Write-offs, RBI/2023-24/40, DOR.STR.REC.20/21.04.048/2023-24, 8 June 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, current entity-wise prudential and conduct
+      Directions incorporating or interacting with the framework; exact
+      post-consolidation mapping UNVERIFIED as at 31 August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 08_IND_india_lending.md
+---
+### Core mechanism
+
+| Tool | What changes | What can remain |
+| :--- | :--- | :--- |
+| Compromise settlement | Contractual recovery outcome is agreed for less than or differently from the original dues | Governance, sacrifice recognition and any cooling-off conditions |
+| Technical write-off | Accounting carrying amount is removed after applicable provisioning/write-off process | Legal claim and recovery action may continue |
+| Waiver/forgiveness | Creditor intentionally gives up part of the legal claim | Only the residual claim, if any |
+| Recovery after write-off | Cash is collected after accounting removal | Legal enforcement remains possible if claim survives |
+
+RBI's 2023 framework formalised governance for compromise settlements and technical write-offs, including board-approved policies, delegation and treatment of fraud or wilful-default cases under the applicable conditions.
+
+A write-off is therefore not evidence that the borrower was "forgiven". Nor does a compromise erase the need to record the economic sacrifice and follow applicable credit-information and re-lending rules.
+
+### Where it sits
+
+```text
+Upstream:   Failed or negotiated resolution
+This:       Compromise / technical write-off
+Downstream: Recovery · CIC update · Legal enforcement
+```
+
+### Permanent rule
+
+Technical write-off changes accounting presentation, not automatically the borrower's legal liability.
+
+### Never confuse [Technical write-off] and [Debt waiver]
+
+**Technical write-off** — accounting removal while recovery can continue.
+
+---
+
+**Debt waiver** — creditor relinquishment of the legal claim to the waived amount.
+
+### Permanent trap
+
+Telling a borrower or stakeholder that "written off" means "no longer owed". That conclusion depends on the legal settlement, not the accounting entry.
+
+### Jurisdiction variants
+
+#### Banks and NBFCs
+Both apply the RBI governance framework subject to their entity-specific policy and prudential treatment.
+
+<Recall
+  q="Why can a lender continue recovery after a technical write-off?"
+  a="Because the accounting asset can be removed while the legal debt claim remains alive."
+/>
+
+<Recall
+  q="What is the defining economic feature of a compromise settlement?"
+  a="The lender accepts an agreed recovery outcome that differs from full enforcement of the original contractual dues."
+/>
