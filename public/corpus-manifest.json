@@ -279,7 +279,9 @@
         "BA-07",
         "BA-09"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-18"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -403,7 +405,9 @@
         "BA-13",
         "DAT-18"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-20"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -435,7 +439,9 @@
         "BA-10",
         "BA-14"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-11"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -595,7 +601,9 @@
         "DAT-21",
         "DAT-22"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-21"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -626,7 +634,9 @@
         "BA-20",
         "DAT-24"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-24"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -658,7 +668,9 @@
         "BA-21",
         "DAT-22"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-22"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -690,7 +702,9 @@
         "BA-22",
         "DAT-23"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-23"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -722,7 +736,9 @@
         "BA-21",
         "BA-22"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-25"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -1095,7 +1111,9 @@
         "FND-03",
         "CAP-06"
       ],
-      "see_also": [],
+      "see_also": [
+        "IMP-01"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -1137,8 +1155,12 @@
         "IMP-01",
         "CAP-07"
       ],
-      "see_also": [],
-      "contrast_with": [],
+      "see_also": [
+        "IMP-11"
+      ],
+      "contrast_with": [
+        "IMP-01"
+      ],
       "jurisdictions": [
         "universal"
       ],
@@ -1184,7 +1206,9 @@
         "CAP-07",
         "CAP-08"
       ],
-      "see_also": [],
+      "see_also": [
+        "IMP-05"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "IN"
@@ -1564,7 +1588,9 @@
         "CR-10",
         "CAP-16"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-25"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -3009,7 +3035,9 @@
         "CR-07"
       ],
       "see_also": [],
-      "contrast_with": [],
+      "contrast_with": [
+        "IMP-12"
+      ],
       "jurisdictions": [
         "universal"
       ],
@@ -3096,7 +3124,9 @@
         "CR-13"
       ],
       "see_also": [],
-      "contrast_with": [],
+      "contrast_with": [
+        "IMP-14"
+      ],
       "jurisdictions": [
         "universal"
       ],
@@ -3188,7 +3218,10 @@
         "CR-16",
         "CR-17"
       ],
-      "see_also": [],
+      "see_also": [
+        "IMP-11",
+        "CAP-08"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -4241,7 +4274,9 @@
         "DAT-14",
         "DAT-15"
       ],
-      "see_also": [],
+      "see_also": [
+        "TEC-16"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -4325,7 +4360,9 @@
         "DAT-11",
         "DAT-17"
       ],
-      "see_also": [],
+      "see_also": [
+        "BA-10"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -4491,7 +4528,9 @@
         "DAT-18",
         "DAT-21"
       ],
-      "see_also": [],
+      "see_also": [
+        "BA-22"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -6507,7 +6546,9 @@
         "FND-13"
       ],
       "see_also": [],
-      "contrast_with": [],
+      "contrast_with": [
+        "CR-14"
+      ],
       "jurisdictions": [
         "IN",
         "UK",
@@ -6615,7 +6656,9 @@
         "CR-17"
       ],
       "see_also": [],
-      "contrast_with": [],
+      "contrast_with": [
+        "CR-16"
+      ],
       "jurisdictions": [
         "IN",
         "UK",
@@ -6950,7 +6993,9 @@
         "IMP-19",
         "FND-03"
       ],
-      "see_also": [],
+      "see_also": [
+        "IND-24"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "IN",
@@ -7802,8 +7847,12 @@
         "IND-03",
         "CR-04"
       ],
-      "see_also": [],
-      "contrast_with": [],
+      "see_also": [
+        "IMP-02"
+      ],
+      "contrast_with": [
+        "IMP-05"
+      ],
       "jurisdictions": [
         "IN"
       ],
@@ -7888,7 +7937,9 @@
         "IND-21"
       ],
       "see_also": [],
-      "contrast_with": [],
+      "contrast_with": [
+        "IMP-09"
+      ],
       "jurisdictions": [
         "IN"
       ],
@@ -7928,7 +7979,9 @@
         "IND-22",
         "IMP-03"
       ],
-      "see_also": [],
+      "see_also": [
+        "IMP-01"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "IN"
@@ -7970,7 +8023,10 @@
         "IND-23",
         "IMP-03"
       ],
-      "see_also": [],
+      "see_also": [
+        "IMP-05",
+        "IMP-20"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "IN"
@@ -8736,7 +8792,10 @@
       "prerequisites": [
         "MRM-10"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-01",
+        "QNT-03"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -8782,7 +8841,9 @@
         "MRM-10",
         "MRM-11"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-21"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -8866,7 +8927,9 @@
         "MRM-12",
         "MRM-13"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-20"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -9000,7 +9063,11 @@
       "prerequisites": [
         "MRM-16"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-25",
+        "QNT-26",
+        "QNT-29"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -9041,7 +9108,10 @@
         "MRM-16",
         "MRM-17"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-30",
+        "QNT-31"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -9426,7 +9496,9 @@
         "MRM-21",
         "MRM-25"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-19"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "IN",
@@ -9487,7 +9559,10 @@
         "MRM-18",
         "MRM-26"
       ],
-      "see_also": [],
+      "see_also": [
+        "QNT-19",
+        "QNT-21"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "IN",
@@ -9573,7 +9648,9 @@
         "QNT-01",
         "CR-01"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-07"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -9724,7 +9801,9 @@
         "QNT-02",
         "QNT-03"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-22"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -9903,7 +9982,9 @@
         "QNT-12",
         "CR-03"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-14"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -9964,7 +10045,9 @@
         "QNT-13",
         "QNT-14"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-20"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10175,7 +10258,9 @@
         "QNT-02",
         "QNT-07"
       ],
-      "see_also": [],
+      "see_also": [
+        "IMP-12"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10236,7 +10321,9 @@
         "QNT-23",
         "IMP-01"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-15"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10266,7 +10353,9 @@
         "QNT-05",
         "QNT-20"
       ],
-      "see_also": [],
+      "see_also": [
+        "MRM-17"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10417,7 +10506,9 @@
         "QNT-14",
         "QNT-20"
       ],
-      "see_also": [],
+      "see_also": [
+        "MRM-18"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10476,7 +10567,9 @@
       "subdomain": "sql-querying-and-window-functions",
       "one_screen": "A lending table is meaningful only when you can say what one row represents. Before writing a join or aggregate, fix the grain, identify the key that should be unique at that grain, and distinguish customer, facility, account, payment, schedule, and snapshot records.",
       "prerequisites": [],
-      "see_also": [],
+      "see_also": [
+        "CR-02"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10803,7 +10896,10 @@
       "prerequisites": [
         "TEC-11"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-08",
+        "CR-12"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10924,7 +11020,9 @@
         "TEC-07",
         "TEC-15"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-16"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -10954,7 +11052,10 @@
         "TEC-01",
         "TEC-05"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-14",
+        "DAT-15"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -11223,7 +11324,9 @@
         "TEC-10",
         "TEC-20"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-22"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -11254,7 +11357,9 @@
         "TEC-20",
         "TEC-26"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-22"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -11285,7 +11390,9 @@
         "TEC-26",
         "TEC-27"
       ],
-      "see_also": [],
+      "see_also": [
+        "CR-21"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -11347,7 +11454,9 @@
         "TEC-24",
         "TEC-29"
       ],
-      "see_also": [],
+      "see_also": [
+        "DAT-17"
+      ],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
@@ -19022,5 +19131,5 @@
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-31T16:18:39.914Z"
+  "generatedAt": "2026-08-31T16:32:09.275Z"
 }
