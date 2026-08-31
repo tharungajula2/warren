@@ -73,15 +73,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <span>HOME OVERVIEW</span>
           <span className="text-xs">→</span>
         </Link>
-        <Link
-          href="/compile"
-          className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${
-            pathname === "/compile" ? "bg-accent-soft text-accent font-bold" : "text-accent hover:underline"
-          }`}
+        <div
+          className="flex items-center justify-between px-2.5 py-1.5 rounded-sm text-text-faint cursor-default"
         >
           <span>JD COMPILER</span>
-          <span className="text-xs">NEW</span>
-        </Link>
+          <span className="text-[10px] text-text-faint uppercase font-mono">SOON</span>
+        </div>
         <Link
           href="/roles"
           className={`flex items-center justify-between px-2.5 py-1.5 rounded-sm transition-colors ${

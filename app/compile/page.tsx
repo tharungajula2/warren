@@ -26,6 +26,8 @@ const JURISDICTION_CHIPS: Record<Jurisdiction, { label: string; border: string; 
   US: { label: "US (FED)", border: "border-[#6D4545]", text: "text-[#6D4545]", bg: "bg-[#6D4545]/10" },
 };
 
+const IS_COMPILER_LOCKED = true;
+
 export default function CompilePage() {
   const [manifest, setManifest] = useState<CorpusManifest | null>(null);
   const [examples, setExamples] = useState<ExampleJD[]>([]);
@@ -45,6 +47,33 @@ export default function CompilePage() {
       .then((data: ExampleJD[]) => setExamples(data))
       .catch((err) => console.error("Failed to load example JDs:", err));
   }, []);
+
+  if (IS_COMPILER_LOCKED) {
+    return (
+      <div className="max-w-[1024px] mx-auto px-4 py-8 space-y-8 font-sans min-w-0">
+        <div className="border-b border-[#23272D] pb-5 font-mono text-xs space-y-2">
+          <div className="flex items-center gap-2 text-[#9AA3AD]">
+            <Link href="/atoms" className="hover:text-[#E6E8EB]">
+              INDEX
+            </Link>
+            <span>&gt;</span>
+            <span className="text-[#E6E8EB]">JD COMPILER</span>
+          </div>
+
+          <h1 className="text-2xl font-bold text-[#E6E8EB] font-sans tracking-tight">
+            Job Description Capability Compiler
+          </h1>
+          <p className="text-xs text-[#9AA3AD] font-sans">
+            Paste any banking or finance job description to compile a personal capability map, topologically ordered reading path, jurisdiction variants, and content gap report.
+          </p>
+        </div>
+
+        <div className="border border-[#23272D] p-4 rounded-[3px] font-mono text-xs text-[#9AA3AD]">
+          In development. Not yet available.
+        </div>
+      </div>
+    );
+  }
 
   if (!manifest) {
     return (

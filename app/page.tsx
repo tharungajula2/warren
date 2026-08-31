@@ -62,19 +62,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Task 7: Bottom Right Plain Text Entry Links (No button shapes, accent used once) */}
+        {/* Bottom Right Plain Text Entry Links */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 flex flex-col items-end gap-1.5 text-right">
           <div className="flex flex-wrap items-center gap-4 font-mono font-bold text-xs uppercase">
             <Link
-              href="/compile"
-              className="text-accent hover:underline transition-colors"
-            >
-              COMPILE A JOB DESCRIPTION →
-            </Link>
-            <span className="text-border hidden sm:inline">·</span>
-            <Link
               href="/atoms"
-              className="text-text hover:underline transition-colors"
+              className="text-accent hover:underline transition-colors"
             >
               BROWSE CORPUS →
             </Link>
@@ -85,10 +78,13 @@ export default function HomePage() {
             >
               DELTA REGISTER →
             </Link>
-          </div>
-          {/* Helper Description Line with Muted Body Token */}
-          <div className="text-xs text-text-muted font-sans font-normal normal-case">
-            Paste a job description and get the reading path for it.
+            <span className="text-border hidden sm:inline">·</span>
+            <Link
+              href="/roles"
+              className="text-text hover:underline transition-colors"
+            >
+              ROLE FAMILIES →
+            </Link>
           </div>
         </div>
       </section>
