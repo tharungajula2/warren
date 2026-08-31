@@ -1,20 +1,19 @@
 ---
 id: IMP-12
-title: Transfers Back and Cure Asymmetry
+title: PD Term Structures
 type: mechanism
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  IFRS 9 allows transfer back from lifetime to 12-month ECL when the SICR
-  criterion is no longer met, but reversal is not simply the mirror image of
-  deterioration. The question is whether current lifetime default risk is no
-  longer significantly above the origination benchmark—not whether the latest
-  adverse symptom has merely disappeared.
+  Lifetime ECL needs default risk distributed through time, not one undated
+  lifetime percentage. Cumulative PD tells whether default has occurred by a
+  horizon; marginal PD allocates that risk to one future interval; conditional
+  PD measures default during that interval given survival to its start.
 prerequisites:
-  - IMP-06
-  - IMP-08
-  - IMP-10
-  - CR-05
+  - IMP-11
+  - CR-10
+  - CR-11
+  - FND-13
 jurisdictions:
   - IN
   - UK
@@ -22,96 +21,121 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraphs 5.5.7, 5.5.9
-      and B5.5 application guidance
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, Section 5.5 and
+      related application guidance, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      IFRS Foundation, *IFRS 7 Financial Instruments: Disclosures*, paragraph
-      35F(f)
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs7.html
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 78–81
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-IFRS 9 requires the loss allowance to revert from lifetime ECL to 12-month ECL when the criterion for lifetime ECL is no longer met. That makes staging two-way: exposures can deteriorate and later improve.
-
-The apparent asymmetry arises from the reference point. Suppose a borrower entered Stage 2 after a sharp internal-rating downgrade. Six months later, the rating improves by one grade. The original trigger has partly reversed, but current risk may still be substantially worse than at origination. Stage 2 therefore remains appropriate. “Cure” is not simply the opposite movement in the latest indicator; it requires reassessing current credit risk against the original benchmark.
-
-The same principle prevents automatic cure immediately after an arrears balance is paid. Payment can be strong evidence of improvement, but the borrower may remain financially weak, recently restructured or exposed to adverse forward-looking conditions. All relevant reasonable and supportable information remains part of SICR assessment. Conversely, IFRS 9 does not establish a universal mandatory probation period for every Stage 2-to-Stage 1 transfer. Policies that require sustained performance can be evidential tools, but the accounting test remains whether SICR persists.
-
-Stage 3 cure adds another layer: first determine whether the asset remains credit-impaired; then determine whether SICR relative to origination still exists. A cured Stage 3 exposure need not jump directly to Stage 1 if credit risk remains significantly elevated.
+### Formula
 
 ```text
-+--------------------+
-| Stage 2 / Stage 3  |
-+--------------------+
-          |
-          v
-+--------------------+
-| Has current risk   |
-| improved?          |
-+--------------------+
-          |
-          v
-+--------------------+
-| Compare again with |
-| origination risk   |
-+--------------------+
-      |          |
- SICR remains   SICR gone
-      |          |
-      v          v
-+---------+  +---------+
-| Stage 2 |  | Stage 1 |
-| lifetime|  | 12m ECL |
-+---------+  +---------+
+Marginal PD_t = Cumulative PD_t - Cumulative PD_(t-1)
+
+Survival to start of t = 1 - Cumulative PD_(t-1)
+
+Conditional PD_t = Marginal PD_t / Survival to start of t
+
+Cumulative PD_t = probability of default from the observation date through period t.
+
+Marginal PD_t = unconditional probability allocated specifically to period t.
+
+Conditional PD_t = probability of default during period t conditional on having survived to its start.
+```
+
+### Core mechanism
+
+| Horizon | Cumulative PD | Marginal PD |
+| :--- | ---: | ---: |
+| Year 1 | 2% | 2% |
+| Year 2 | 5% | 3% |
+| Year 3 | 9% | 4% |
+
+The year-3 cumulative 9% already contains the earlier 2% and 3%. Adding 2% + 5% + 9% would repeatedly count the same defaults.
+
+### Flow
+
+```text
+Origination / reporting-date risk
+    ↓
+Lifetime default curve
+    ↓
+Convert to mutually exclusive default periods
+    ↓
+Apply period EAD and LGD
+    ↓
+Discount
+    ↓
+Lifetime ECL
+```
+
+### Where it sits
+
+```text
+Upstream:   PD calibration · Expected life · Forward-looking information
+This:       Cumulative · Marginal · Conditional PD
+Downstream: Period ECL · Lifetime allowance
 ```
 
 ### Permanent rule
 
-A stage reversal must reapply the same underlying credit-risk assessment objective used for deterioration.
+A borrower can newly default only once. Period default probabilities must therefore be mutually consistent.
 
-### Permanent trap
+### Never confuse [Cumulative PD] and [Marginal PD]
 
-Automatically curing Stage 2 when DPD returns to zero can move an exposure to Stage 1 while its lifetime default risk remains materially above origination.
-
-### Never confuse
-
-**Symptom cure** — disappearance of a particular warning signal such as arrears.
+**Cumulative PD** — probability of default by a horizon.
 
 ---
 
-**SICR cure** — evidence that credit risk is no longer significantly increased relative to initial recognition.
+**Marginal PD** — probability of default specifically within one future interval.
+
+### Permanent trap
+
+Adding cumulative PDs across years double-counts defaults already included in earlier horizons.
 
 ### Jurisdiction variants
 
-**IN** — Current bank IRACP has its own NPA-upgradation rules rather than IFRS stage cure. RBI’s ECL Directions effective April 1, 2027 contain specific Stage 3 upgradation and restructuring conditions alongside SICR assessment, so their prudential cure mechanics must be applied on their own terms. [RBI 2025 IRACP; RBI 2026 ECL Directions, paragraphs 78–81]
+#### IN (RBI)
+Current IRACP does not require PD term structures. RBI’s bank ECL framework from 1 April 2027 requires 12-month and lifetime default-risk measurement appropriate to stage.
 
-**UK** — IFRS 9 permits reversion to 12-month ECL when lifetime-ECL criteria are no longer met; PRA expects robust monitoring rather than mechanical cures. [IFRS 9 5.5.7; PRA 2025]
+#### UK (UKEB)
+No prescribed IFRS 9 term-structure methodology; the measurement objective governs.
 
-**EU** — EU-adopted IFRS 9 follows the same accounting reversal principle, supplemented by EBA supervisory guidance. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+#### EU (European Commission / EBA)
+No accounting delta from IFRS 9.
 
-**US** — CECL has no Stage 2-to-Stage 1 cure because it has no staged allowance horizon; improved credit expectations reduce the lifetime allowance through remeasurement. [ASC 326]
+#### US (FASB)
+CECL permits PD-based methods but does not require them.
 
 <Recall
-  q="Does clearing arrears automatically return an IFRS 9 exposure to Stage 1?"
-  a="No. Current credit risk must no longer be significantly increased relative to origination."
+  q="Why can cumulative PDs not be added?"
+  a="Later cumulative values already contain earlier defaults."
 />
 
 <Recall
-  q="Does IFRS 9 impose one universal Stage 2 probation period?"
-  a="No. The governing accounting criterion is whether SICR continues to exist."
+  q="Which PD belongs naturally in a period-by-period ECL sum?"
+  a="Marginal default probability."
+/>
+
+<Recall
+  q="What is conditional PD conditioned on?"
+  a="Survival to the start of the period."
 />

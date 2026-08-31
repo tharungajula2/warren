@@ -1,20 +1,19 @@
 ---
 id: IMP-16
-title: Overlays and Post-Model Adjustments
+title: Overlays and Management Judgement
 type: mechanism
 domain: impairment
 subdomain: governance-and-jurisdictions
 one_screen: >-
-  An overlay or post-model adjustment changes model output when relevant credit
-  risk is not adequately captured by the model. It is necessary when models have
-  known blind spots, but dangerous when it becomes an undocumented plug,
-  double-counts modelled risk or persists after the underlying deficiency should
-  have been repaired.
+  An overlay or post-model adjustment addresses material credit risk the core
+  model does not capture adequately. It is a controlled correction for a named
+  limitation, not a reserve used to move the allowance toward a preferred
+  number.
 prerequisites:
-  - IMP-03
-  - IMP-05
   - IMP-15
-  - MRM-01
+  - FND-17
+  - FND-18
+  - FND-19
 jurisdictions:
   - IN
   - UK
@@ -22,107 +21,124 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      PRA, *Thematic feedback on accounting for IFRS 9 expected credit losses*,
-      September 30, 2025
-    url: >-
-      https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/letter/2025/thematic-feedback-on-accounting-for-ifrs-9-ecl-2025.pdf
-    accessed: '2026'
+      Reserve Bank of India, *Implementation of Indian Accounting Standards*,
+      RBI/2019-20/170, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, 13 March 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Implementation of Indian Accounting Standards*, DOR
-      (NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020, Annex paragraph 1.3
-    url: 'https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=11818&Mode=0&fn=14'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, Model Risk
-      Management chapter
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Prudential Regulation Authority, *Thematic feedback on accounting for IFRS
+      9 expected credit losses (ECL)*, Ref: none stated, 30 September 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Interagency Policy Statement on Allowances for Credit
-      Losses*, revised April 2023
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
-    accessed: '2026'
+      Board of Governors of the Federal Reserve System, FDIC, NCUA and OCC,
+      *Interagency Policy Statement on Allowances for Credit Losses*, SR 20-12,
+      8 May 2020, revised 21 April 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-Every ECL model has a boundary. New risks may emerge faster than data can support model redevelopment; structural breaks can make historical relationships unreliable; a portfolio may contain concentrations not represented in model variables. **Post-model adjustments (PMAs)** and **management overlays** provide a controlled way to incorporate material information that the core model does not yet capture adequately.
+### Core mechanism
 
-The correct logic starts with a named deficiency or omitted risk. Management should explain what is missing, why it matters, how the adjustment amount is estimated, which exposures it affects, what evidence supports the adjustment and what would cause it to be increased, reduced or removed. RBI’s 2020 Ind AS guidance for NBFCs expressly requires management overlays to be approved by the audit committee and their rationale and basis documented.
+| Condition | Action |
+| :--- | :--- |
+| Risk adequately captured | No overlay |
+| New risk outside model boundary | Quantify residual impact |
+| Structural break weakens calibration | Temporary adjustment + remediation |
+| Same risk already enters scenario PD/LGD/EAD | Do not count again |
+| Model repaired or risk disappears | Reduce or remove overlay |
 
-The danger is that an overlay can bypass the discipline of a model. A vague “economic uncertainty” adjustment can conceal model weakness, earnings management or excessive conservatism. Double-counting is another common failure: if weaker macroeconomic conditions already raise scenario-weighted PDs and LGDs, an additional overlay for the same deterioration needs evidence of residual risk not already captured.
-
-Overlays should therefore have an exit strategy. PRA’s 2025 thematic feedback emphasised identifying new and evolving risks, assessing whether models capture them, and reducing PMAs as models and data improve. RBI’s future bank ECL framework similarly requires PMAs or management overlays to address model limitations under a consistent governance framework.
+### Flow
 
 ```text
-+----------------------+
-| Core ECL model       |
-+----------------------+
-          |
-          v
-+----------------------+
-| Known missing risk   |
-| or model limitation? |
-+----------------------+
-      |           |
-     No          Yes
-      |           |
-      v           v
-+---------+  +------------------+
-| Model   |  | Quantify PMA /   |
-| output  |  | overlay          |
-+---------+  +------------------+
-                  |
-                  v
-          +------------------+
-          | Governance,      |
-          | validation, exit |
-          +------------------+
-                  |
-                  v
-          +------------------+
-          | Final ECL        |
-          +------------------+
+Core model output
+    ↓
+Specific omitted risk / limitation
+    ↓
+Material evidence?
+    ├─ No → no PMA
+    └─ Yes
+         ↓
+Quantify residual effect
+         ↓
+Challenge and approval
+         ↓
+Final ECL
+         ↓
+Exit when model or risk changes
 ```
+
+### Where it sits
+
+```text
+Upstream:   Core ECL model · Emerging risk · Model limitations
+This:       PMA · Management overlay
+Downstream: Final allowance · Validation · Disclosure
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Model / finance owners | Identify limitation; quantify adjustment |
+| Management | Approve rationale and amount |
+| Risk / validation | Challenge method and double-counting |
+| Audit committee / board where required | Oversee material judgement |
+| Assurance | Test evidence, controls and reporting |
 
 ### Permanent rule
 
-An overlay must correspond to identifiable residual risk or model limitation that is not already captured adequately.
+Every overlay needs a named residual risk, evidence, quantification method, owner and exit condition.
 
-### Permanent trap
+### Never confuse [Model recalibration] and [Post-model adjustment]
 
-Allowing an overlay to become a permanent unexplained percentage of the allowance converts judgement into an unvalidated parallel model.
-
-### Never confuse
-
-**Model calibration** — changing the model or its parameters so the model itself better represents risk.
+**Model recalibration** — changes the model so it better reflects risk.
 
 ---
 
-**Post-model adjustment** — an adjustment applied outside the core model because a specific limitation or emerging risk remains.
+**Post-model adjustment** — sits outside the model because a specific residual limitation remains.
+
+### Permanent trap
+
+A permanent unexplained percentage added to ECL is not prudent judgement. It is an unvalidated parallel model.
 
 ### Jurisdiction variants
 
-**IN** — RBI already requires governance and audit-committee approval for overlays used by Ind AS NBFCs; scheduled commercial banks remain under IRACP until March 31, 2027, while the 2026 bank ECL Directions expressly govern PMAs under the future framework. [RBI 2020 NBFC guidance; RBI 2026 ECL Directions]
+#### IN (RBI)
+RBI’s Ind AS guidance for NBFCs requires governed, documented management overlays, including audit-committee approval. RBI’s bank ECL framework from 1 April 2027 also addresses model limitations and PMAs.
 
-**UK** — PRA’s September 2025 thematic feedback specifically addresses PMAs, model operating boundaries, evolving risks and the expectation that PMAs reduce as underlying models improve. [PRA 2025 thematic feedback]
+#### UK (PRA)
+PRA thematic work in 2025 emphasised model boundaries, evolving risks, PMA governance and reducing adjustments as models improve.
 
-**EU** — IFRS 9’s measurement objective governs the final ECL; EBA supervisory guidance expects sound credit-risk and ECL practices, so overlays must remain consistent with unbiased accounting measurement. [IFRS 9 5.5.17; EBA/GL/2017/06]
+#### EU (EBA)
+EBA guidance requires sound governance; adjustments must remain consistent with unbiased accounting measurement.
 
-**US** — CECL permits qualitative and quantitative factors and management judgement, but the resulting allowance must remain well supported under Topic 326 and supervisory ACL governance. [Interagency CECL FAQ; Interagency ACL Policy Statement]
+#### US (Federal Reserve / FDIC / OCC / NCUA)
+CECL allows judgement and qualitative adjustments, but the allowance process must be documented, supported and validated.
 
 <Recall
-  q="What should exist before an overlay is booked?"
-  a="A specific identified model limitation or residual risk, evidence, quantified methodology and governance."
+  q="What must exist before an overlay?"
+  a="A specific material risk or model limitation not adequately captured."
 />
 
 <Recall
-  q="When should an overlay disappear?"
-  a="When the underlying risk disappears or the core model reliably captures it."
+  q="What prevents double-counting?"
+  a="Demonstrating the residual risk after existing model and scenario effects."
+/>
+
+<Recall
+  q="What is the required end-state for a temporary PMA?"
+  a="Exit when the risk disappears or the model captures it."
 />

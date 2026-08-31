@@ -1,21 +1,20 @@
 ---
 id: IMP-01
-title: Impairment and Expected Credit Loss
+title: 'Impairment, Allowance and Write-off'
 type: concept
 domain: impairment
 subdomain: ecl-foundations
 one_screen: >-
-  Impairment is the accounting recognition that contractual credit cash flows
-  will not all be collected. Expected-credit-loss accounting brings that
-  recognition forward: the allowance reflects losses expected from credit risk
-  before a loss event has necessarily occurred.
+  Impairment recognises that a financial asset is not expected to deliver all
+  contractual value. The loss allowance measures expected non-collection; it
+  changes accounting measurement without, by itself, changing what the borrower
+  legally owes.
 prerequisites:
-  - FND-01
   - FND-02
+  - FND-06
+  - FND-07
   - FND-24
-  - CR-10
-  - CR-16
-  - CR-17
+  - CR-03
 jurisdictions:
   - IN
   - UK
@@ -23,99 +22,109 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, Section 5.5'
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
-  - label: 'European Commission, Commission Regulation (EU) 2016/2067 adopting IFRS 9'
-    url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R2067'
-    accessed: '2026'
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, 24 July 2014.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      FASB, *ASU 2016-13, Financial Instruments—Credit Losses (Topic 326)*,
-      Credit Losses project
-    url: 'https://www.fasb.org/projects/current-projects/credit-losses'
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Deferral of Implementation of Indian Accounting Standards (Ind AS)*,
-      RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19, March 22, 2019
-    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*,
+      DOR.STR.REC.83./21.04.048/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*,
-      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, April 27, 2026
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-A loan may remain a legally valid claim for its full contractual amount while its accounting carrying amount is reduced by a **loss allowance**. Impairment is therefore not cancellation of the borrower’s obligation. It is recognition in the financial statements that some contractual cash flows are not expected to be collected. Under IFRS 9, the impairment model recognises expected credit losses (ECL) and updates the allowance as expectations and credit risk change. The standard replaced the IAS 39 incurred-loss approach; the move towards forward-looking loss recognition responded directly to concerns exposed by the financial crisis about delayed credit-loss recognition.
+### Core mechanism
 
-The change is fundamental. An incurred-loss model asks whether evidence of impairment has already emerged. An expected-loss model asks what credit loss is expected given information available at the reporting date, including relevant forecasts. Under IFRS 9, performing instruments generally carry an allowance from initial recognition: 12-month ECL where credit risk has not increased significantly, and lifetime ECL after a significant increase in credit risk.
+| Object | What happens | What does not happen |
+| :--- | :--- | :--- |
+| Gross carrying amount | Contractual asset remains recorded | Borrower debt is not automatically forgiven |
+| Loss allowance | Expected credit loss is recognised | It is not a pool of capital |
+| Net carrying amount | Asset is shown net of allowance where the framework requires | Contract is not extinguished |
+| Impairment gain/loss | Change in allowance affects earnings where required | It is not the same as a cash loss |
+| Write-off | Gross asset and allowance are reduced when recovery is no longer reasonably expected | Enforcement rights need not always disappear |
 
-Expected loss does not mean recognising every adverse economic possibility as though it were certain. IFRS 9 requires an unbiased, probability-weighted estimate using reasonable and supportable information and the time value of money. The allowance is therefore an estimate under uncertainty, not a hidden reserve and not a forecast of one inevitable outcome.
+Performing exposure → expected loss can still exist → allowance recognised
 
-The US reached the same broad destination—earlier expected-loss recognition—but with different architecture. ASC 326 CECL recognises lifetime expected credit losses for financial assets measured at amortised cost from initial recognition rather than using IFRS 9’s Stage 1/Stage 2 threshold.
+Default → expected loss usually rises → allowance rises
+
+No reasonable expectation of recovery → write-off
+
+### Where it sits
 
 ```text
-+---------------------+
-| Contractual asset   |
-+---------------------+
-          |
-          v
-+---------------------+
-| Expected collection |
-| assessed            |
-+---------------------+
-          |
-          v
-+---------------------+
-| Expected shortfall  |
-+---------------------+
-          |
-          v
-+---------------------+
-| Loss allowance /    |
-| impairment expense  |
-+---------------------+
+Upstream:   Loan asset · Contractual cash flows · Credit risk
+This:       Impairment · Loss allowance · Write-off
+Downstream: Net carrying amount · Earnings · Regulatory capital interaction
 ```
 
 ### Permanent rule
 
-Impairment changes the accounting measurement of expected recoverability; it does not by itself extinguish the contractual claim.
+Impairment measures expected recoverability. It does not by itself cancel the contractual claim.
 
-### Permanent trap
+### Never confuse [Loss allowance] and [Capital]
 
-Treating “performing” as equivalent to “zero impairment” is wrong under expected-loss accounting: credit loss can be expected before default or delinquency appears.
-
-### Never confuse
-
-**Impairment** — accounting recognition of expected credit loss on an asset or exposure.
+**Loss allowance** — a measured reduction in the carrying amount, or a provision for an off-balance-sheet exposure, reflecting expected credit loss.
 
 ---
 
-**Default** — a credit-risk event concerning the obligor or facility; impairment can exist before default.
+**Capital** — loss-absorbing financial resource supporting the institution against losses, including unexpected loss.
+
+They are different objects and are not substitutes.
+
+### Never confuse [Impairment] and [Default]
+
+**Impairment** — accounting or prudential recognition of expected credit loss.
+
+---
+
+**Default** — a governed credit-risk state of an obligor or facility. Impairment can exist before default.
+
+### Permanent trap
+
+“Performing” does not mean “zero allowance”. Expected-loss frameworks recognise credit loss before a borrower necessarily becomes delinquent or defaults.
 
 ### Jurisdiction variants
 
-**IN** — Scheduled commercial banks remain outside Ind AS implementation and, through March 31, 2027, are governed by RBI’s 2025 IRACP provisioning framework; RBI’s separate 2026 bank ECL Directions take effect April 1, 2027. Relevant Ind AS-implementing NBFCs apply Ind AS impairment requirements. [RBI 2019 Deferral; RBI 2025 IRACP; RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
+#### IN (RBI)
+Commercial banks currently use RBI’s IRACP provisioning regime; the separate RBI ECL framework starts on 1 April 2027. Ind AS-implementing NBFCs and ARCs apply Ind AS impairment subject to RBI prudential guidance.
 
-**UK** — UK-adopted IFRS 9 contains the ECL impairment model; PRA supervision concerns sound implementation rather than replacing IFRS measurement rules. [UK-adopted IFRS 9; PRA thematic feedback]
+#### UK (UKEB)
+No accounting-mechanics delta: UK-adopted IFRS 9 applies the expected-credit-loss model.
 
-**EU** — EU-adopted IFRS 9 supplies the accounting ECL model, supplemented for banks by EBA supervisory guidance. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+#### EU (European Commission)
+No accounting-mechanics delta: EU-adopted IFRS 9 applies, with EBA supervisory guidance for credit institutions.
 
-**US** — ASC 326 CECL uses expected credit losses but generally recognises lifetime expected loss from initial recognition for amortised-cost assets rather than IFRS 9 staging. [ASU 2016-13; Interagency CECL FAQ]
+#### US (FASB)
+ASC 326 uses an allowance for credit losses but generally measures lifetime expected losses for in-scope amortised-cost assets from initial recognition.
 
 <Recall
-  q="Does impairment mean the borrower’s contractual debt has been reduced?"
-  a="No. It is an accounting allowance for expected non-collection."
+  q="Does an impairment allowance reduce what the borrower legally owes?"
+  a="No — it changes accounting measurement of expected recoverability, not the contractual obligation."
 />
 
 <Recall
-  q="What was the central change from incurred-loss to expected-loss accounting?"
-  a="Credit losses are recognised using forward-looking expectations before an incurred-loss trigger necessarily exists."
+  q="Can a performing loan carry an allowance?"
+  a="Yes — expected-loss frameworks recognise credit loss before default."
+/>
+
+<Recall
+  q="Is an allowance capital?"
+  a="No — allowance measures expected loss; capital is loss-absorbing resource."
 />

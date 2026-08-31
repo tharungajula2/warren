@@ -1,20 +1,20 @@
 ---
 id: IMP-15
-title: Accounting LGD Versus Regulatory LGD
-type: concept
+title: Forward-Looking Information and Scenarios
+type: mechanism
 domain: impairment
 subdomain: lifetime-modelling
 one_screen: >-
-  Accounting LGD estimates the loss severity needed to satisfy an accounting ECL
-  measurement objective; regulatory LGD is calibrated for prudential capital
-  objectives. Regulatory parameters can be useful starting points, but they are
-  not interchangeable because horizon, cyclicality, conservatism and prescribed
-  floors can differ.
+  Expected loss must respond to relevant future conditions, not only historical
+  averages. Forward-looking information changes ECL through defensible links to
+  default, exposure, recovery or staging, and probability weighting must capture
+  material non-linearity rather than merely selecting one “most likely” macro
+  path.
 prerequisites:
-  - IMP-02
-  - IMP-05
-  - CR-12
-  - CR-17
+  - IMP-11
+  - FND-13
+  - CR-11
+  - CR-16
 jurisdictions:
   - IN
   - UK
@@ -22,106 +22,127 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework — CRE36: IRB
-      approach: minimum requirements*, LGD requirements
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, paragraph 5.5.17
+      and related application guidance, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Guidance on credit risk and
-      accounting for expected credit losses*, BCBS 350, December 2015
-    url: 'https://www.bis.org/bcbs/publ/d350.htm'
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Bank for International Settlements, *The new era of expected credit loss
-      provisioning*, BIS Quarterly Review, March 2017
-    url: 'https://www.bis.org/publ/qtrpdf/r_qt1703f.htm'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 82–95
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      European Banking Authority, *Guidelines on credit institutions’ credit
+      risk management practices and accounting for expected credit losses*,
+      EBA/GL/2017/06, 12 May 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-**Loss given default (LGD)** is the proportion of exposure lost if default occurs. In accounting ECL models, LGD is a modelling component used to represent expected discounted cash shortfalls conditional on default. It should therefore capture expected recoveries, their timing, collateral and guarantee effects where appropriate, workout costs and forward-looking conditions consistently with the accounting framework.
-
-Regulatory-capital LGD answers a different question. Under the Basel internal-ratings-based framework, a bank’s LGD must reflect economic-downturn conditions where necessary to capture relevant risk. Basel capital parameters also operate within prudential calibration rules designed to protect solvency against unexpected loss.
-
-That difference is not semantic. A downturn-calibrated regulatory LGD may be deliberately more conservative than a neutral probability-weighted accounting estimate at a particular reporting date. Basel analysis has explicitly noted that regulatory-capital models can be useful starting points for accounting ECL but may require adjustment because regulatory PD and LGD have different objectives and inputs; for example, Basel regulatory LGD reflects downturn economic conditions, whereas accounting ECL is intended to produce an unbiased expectation rather than a permanently stressed estimate.
-
-Other mismatches can arise from prescribed regulatory floors, definitions of default, cure treatment, collateral eligibility, recovery costs and discounting conventions. Therefore, a mapping from regulatory LGD to accounting LGD needs an explicit bridge showing which prudential adjustments remain relevant and which must be removed or recalibrated.
+### Flow
 
 ```text
-+-----------------------+
-| Recovery experience   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Regulatory objective  |
-| downturn / prudential |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Regulatory LGD        |
-+-----------------------+
+Historical experience
+    ↓
+Current conditions
+    ↓
+Reasonable and supportable forecasts
+    ↓
+Scenario-specific PD / EAD / LGD / staging
+    ↓
+Scenario-specific ECL
+    ↓
+Probability weighting
+    ↓
+Final forward-looking ECL
+```
 
-+-----------------------+
-| Recovery experience   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Accounting objective  |
-| unbiased expected     |
-| cash shortfall        |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Accounting LGD        |
-+-----------------------+
+### Formula
+
+```text
+Probability-weighted ECL = sum over s [Probability_s × ECL_s]
+
+Probability_s = probability assigned to economic scenario s.
+
+ECL_s = ECL calculated under internally consistent assumptions for scenario s.
+
+Scenario probabilities across the modelled set = 100%.
+```
+
+### Core mechanism
+
+| Design question | Required discipline |
+| :--- | :--- |
+| Which macro variables? | Use variables with defensible connection to portfolio credit outcomes |
+| How many scenarios? | Enough to capture material alternative outcomes and non-linearity |
+| How assign probabilities? | Governed economic judgement, not reverse-engineering a desired allowance |
+| What beyond supportable forecast horizon? | Use a disciplined extrapolation or reversion method |
+| Where does FLI enter? | PD, LGD, EAD, staging or combinations, without double-counting |
+
+### Where it sits
+
+```text
+Upstream:   Historical data · Current conditions · Macroeconomic forecasts
+This:       FLI · Scenarios · Probability weights
+Downstream: Scenario ECL · Overlays · Allowance
 ```
 
 ### Permanent rule
 
-A risk parameter inherits the objective and calibration rules of the framework for which it was built.
+Forward-looking information belongs in ECL through a demonstrable connection to expected credit outcomes.
 
-### Permanent trap
+### Never confuse [Forecast horizon] and [ECL horizon]
 
-Copying downturn regulatory LGD directly into accounting ECL without adjustment can embed prudential conservatism twice—once in the parameter and again in scenario weighting or overlays.
-
-### Never confuse
-
-**Accounting LGD** — expected loss severity calibrated to the financial-reporting ECL objective.
+**Forecast horizon** — period over which specific economic forecasts remain reasonable and supportable.
 
 ---
 
-**Regulatory LGD** — loss severity calibrated under prudential capital rules, potentially including downturn requirements and regulatory constraints.
+**ECL horizon** — period over which the framework requires expected losses to be measured.
+
+The ECL horizon can be longer.
+
+### Permanent trap
+
+Calculating ECL once using probability-weighted average macro inputs can miss non-linearity. Weighted inputs and weighted losses are not generally the same calculation.
 
 ### Jurisdiction variants
 
-**IN** — Current scheduled-commercial-bank IRACP uses prescribed prudential provisioning rather than accounting LGD-based ECL. RBI’s ECL Directions from April 1, 2027 introduce PD/LGD modelling but overlay it with RBI prudential ECL floors, so modelled accounting-style loss and regulatory minimum provision remain distinct concepts. [RBI 2026 ECL Directions, paragraphs 82–95]
+#### IN (RBI)
+Current commercial-bank IRACP is not a scenario-weighted ECL regime. RBI’s framework from 1 April 2027 requires forward-looking macroeconomic information and multiple scenarios.
 
-**UK** — IFRS 9 ECL measurement and PRA capital-model requirements serve different objectives; regulatory parameters should not be imported into accounting without an accounting-consistent bridge. [IFRS 9; BCBS guidance]
+#### UK (UKEB)
+No accounting delta from IFRS 9.
 
-**EU** — EU banks applying IFRS 9 also operate under prudential capital requirements; EBA has separate guidance for IRB PD/LGD estimation, reinforcing the distinction between accounting and regulatory parameter frameworks. [EBA PD/LGD Guidelines; EBA ECL Guidelines]
+#### EU (European Commission / EBA)
+No accounting delta; EBA guidance reinforces robust forward-looking estimation.
 
-**US** — CECL likewise measures accounting expected losses under Topic 326, while US regulatory-capital parameters and capital rules have separate prudential purposes. [ASC 326; Interagency ACL policy]
+#### US (FASB)
+CECL incorporates historical experience, current conditions and reasonable and supportable forecasts, with reversion to historical information beyond the supportable forecast period.
 
 <Recall
-  q="Can regulatory LGD always be used unchanged for accounting ECL?"
-  a="No. Different calibration objectives can require adjustments."
+  q="Is ECL the result under the most likely scenario?"
+  a="No — ECL reflects probability-weighted outcomes across relevant possible scenarios."
 />
 
 <Recall
-  q="What is a defining Basel regulatory-LGD feature?"
-  a="LGD must reflect economic-downturn conditions where necessary to capture relevant risks."
+  q="Why can average macro inputs be wrong?"
+  a="Credit loss can respond non-linearly."
+/>
+
+<Recall
+  q="Must detailed macro forecasts cover the full lifetime-ECL horizon?"
+  a="No — disciplined extrapolation or reversion can cover periods beyond the supportable forecast horizon."
 />

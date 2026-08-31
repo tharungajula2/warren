@@ -1,17 +1,20 @@
 ---
 id: IMP-09
-title: The Thirty-Day Past-Due Backstop
-type: reference
+title: 'Credit-Impaired Assets, Stage 3 and Interest'
+type: mechanism
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  More than 30 days past due creates a rebuttable IFRS 9 presumption that SICR
-  has occurred. It is a backstop, not the normal definition of Stage 2, and
-  rebuttal requires reasonable and supportable evidence rather than routine
-  policy.
+  Stage 3 means events have occurred that detrimentally affect expected future
+  cash flows. It is more than elevated risk: lifetime ECL continues, and for
+  assets that became credit-impaired after origination IFRS 9 also changes the
+  base on which interest revenue is calculated.
 prerequisites:
+  - IMP-05
   - IMP-08
+  - CR-03
   - CR-04
+  - CR-05
 jurisdictions:
   - IN
   - UK
@@ -19,98 +22,115 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph 5.5.11 and
-      B5.5.19–B5.5.20
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, Appendix A and
+      paragraph 5.4.1, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Implementation of Indian Accounting Standards*, DOR
-      (NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020, paragraphs 1.5–1.6
-      of Annex
-    url: 'https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=11818&Mode=0&fn=14'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*,
+      DOR.STR.REC.83./21.04.048/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 33–36
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-IFRS 9 contains a rebuttable presumption that credit risk has increased significantly since initial recognition when contractual payments are **more than 30 days past due**. “Rebuttable” matters: the presumption is strong but not irrebuttable. An entity may rebut it when reasonable and supportable information demonstrates that credit risk has not increased significantly despite the delinquency.
+### Core mechanism
 
-The equally important point is what the rule does **not** mean. An entity must not wait for day 31 when other reasonable and supportable information identifies SICR earlier. IFRS 9 explicitly treats the delinquency presumption as a backstop. A rating downgrade, worsening liquidity, adverse covenant information or relevant macro deterioration can trigger Stage 2 before any payment is missed.
+| Evidence of credit impairment can include | Why it matters |
+| :--- | :--- |
+| Significant borrower financial difficulty | Capacity to pay has weakened materially |
+| Breach such as default or serious delinquency | Contractual performance has failed |
+| Concession granted because of financial difficulty | Original cash flows are no longer expected |
+| Probable bankruptcy or financial reorganisation | Future collection is impaired |
+| Other detrimental event affecting expected cash flows | Substance governs, not one indicator |
 
-Rebuttal should be evidence-based. A temporary administrative failure may support rebuttal where credible historical and current evidence shows that it does not signal higher lifetime default risk. A blanket policy that all 30–59 DPD cases remain Stage 1 would invert the presumption and is inconsistent with its purpose.
+CR-03 → default is a governed credit event; it is not identical to Stage 3.
 
-Past-due status also must be computed consistently. Data-quality errors around due dates, payment allocation, moratoria, restructurings and account-level versus borrower-level delinquency can cause false stage transfers or conceal genuine ones. The backstop is simple conceptually but operationally dependent on reliable delinquency data.
+### Flow
 
 ```text
-+----------------------+
-| More than 30 DPD?    |
-+----------------------+
-      |           |
-     No          Yes
-      |           |
-      v           v
-+---------+  +------------------+
-| Use all |  | SICR presumed    |
-| SICR    |  +------------------+
-| evidence|          |
-+---------+          v
-             +------------------+
-             | Strong evidence  |
-             | to rebut?        |
-             +------------------+
-               |           |
-              No          Yes
-               |           |
-               v           v
-          +---------+  +---------+
-          | Stage 2 |  | Continue|
-          |         |  | full SICR|
-          +---------+  | assessment|
-                       +---------+
+Stage 2 or Stage 1
+    ↓
+Credit-impairment event
+    ↓
+Stage 3
+    ↓
+Lifetime ECL
+    ↓
+Interest on amortised cost for qualifying non-POCI assets
+
+Improvement
+    ↓
+No longer credit-impaired?
+    ↓
+Then reassess whether SICR still remains
+    ↓
+Stage 2 or Stage 1
+```
+
+### Where it sits
+
+```text
+Upstream:   Default · Delinquency · Restructuring · Financial difficulty
+This:       Credit impairment · Stage 3 · Cure
+Downstream: Lifetime ECL · Interest recognition · Recovery
 ```
 
 ### Permanent rule
 
-A backstop catches deterioration missed by earlier indicators; it does not replace those indicators.
+Leaving Stage 3 does not automatically mean Stage 1. Credit impairment may have cured while SICR relative to origination still remains.
 
-### Permanent trap
+### Never confuse [Stage 3] and [NPA]
 
-Calling 30 DPD “the Stage 2 trigger” causes late recognition because it turns an outer backstop into the primary staging rule.
-
-### Never confuse
-
-**Rebuttable presumption** — a default conclusion that stands unless supported evidence demonstrates otherwise.
+**Stage 3** — an IFRS 9 or similar ECL credit-impaired state.
 
 ---
 
-**Optional indicator** — a factor that may simply be ignored; the 30-DPD presumption is not optional.
+**NPA** — a prudential asset-classification status defined by the applicable regulator.
+
+They can be operationally related without being the same legal object.
+
+### Permanent trap
+
+Treating 90 DPD as the universal definition of Stage 3 misses credit impairment that becomes evident earlier and confuses an operational default backstop with the accounting concept.
 
 ### Jurisdiction variants
 
-**IN** — For Ind AS-implementing NBFCs, RBI reiterates the 30-DPD rebuttable presumption and additionally says exposures overdue beyond 60 days must not have SICR recognition deferred. Current scheduled-commercial-bank IRACP is different. RBI’s bank ECL Directions effective April 1, 2027 adopt a more-than-30-DPD rebuttable presumption, with a specific revolving-facility backstop. [RBI 2020 NBFC guidance; RBI 2026 ECL Directions, paragraphs 33–36]
+#### IN (RBI)
+Current commercial-bank IRACP uses NPA, substandard, doubtful and loss classifications rather than IFRS Stage 3. RBI’s ECL framework from 1 April 2027 introduces Stage 3 while explicitly retaining NPA classification.
 
-**UK** — UK IFRS 9 applies the more-than-30-DPD rebuttable SICR presumption. [IFRS 9 5.5.11]
+#### UK (UKEB)
+No accounting delta from IFRS 9.
 
-**EU** — EU-adopted IFRS 9 applies the same presumption. [Regulation (EU) 2023/1803; IFRS 9 5.5.11]
+#### EU (European Commission)
+No accounting delta from IFRS 9; prudential default remains a separate regulatory concept.
 
-**US** — CECL has no 30-DPD staging backstop because there is no Stage 1-to-Stage 2 lifetime-loss switch. Delinquency remains relevant credit information within allowance estimation and credit administration. [ASC 326]
+#### US (FASB)
+CECL has no Stage 3 allowance category. US nonaccrual and regulatory classifications remain separate from Topic 326 measurement.
 
 <Recall
-  q="Does IFRS 9 require waiting until 30 DPD before recognising SICR?"
-  a="No. SICR must be recognised earlier when other evidence identifies it."
+  q="Does a high PD by itself make an asset Stage 3?"
+  a="No — Stage 3 requires credit-impairment evidence, not merely elevated default probability."
 />
 
 <Recall
-  q="Can the 30-DPD presumption be rebutted routinely?"
-  a="No. Rebuttal requires reasonable and supportable evidence."
+  q="Can a cured Stage 3 asset move to Stage 2 rather than Stage 1?"
+  a="Yes — credit impairment can cease while SICR relative to origination still remains."
+/>
+
+<Recall
+  q="Are Stage 3 and NPA the same object?"
+  a="No — Stage 3 is an ECL credit-impaired state, while NPA is a prudential classification."
 />

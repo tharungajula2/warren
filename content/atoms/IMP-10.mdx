@@ -1,19 +1,18 @@
 ---
 id: IMP-10
-title: Stage Three and Credit-Impaired Assets
-type: concept
+title: Purchased or Originated Credit-Impaired Assets
+type: mechanism
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  Stage 3 means the financial asset is credit-impaired at the reporting date,
-  not merely that its risk has increased. Lifetime ECL remains the allowance
-  basis, while IFRS 9 changes interest recognition for assets that became
-  credit-impaired after origination.
+  A purchased or originated credit-impaired asset is already credit-impaired
+  when first recognised. IFRS 9 therefore does not treat its initial expected
+  loss as ordinary post-origination deterioration: the starting economics
+  already incorporate impaired expected cash flows.
 prerequisites:
-  - IMP-06
-  - CR-03
-  - CR-04
-  - CR-05
+  - IMP-04
+  - IMP-09
+  - FND-11
 jurisdictions:
   - IN
   - UK
@@ -21,95 +20,104 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, paragraph
-      5.4.1 and B5.5.37
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, Appendix A and
+      paragraphs 5.4.1, 5.5.13–5.5.14, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning) Directions, 2025*, updated through July
-      1, 2026
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-IFRS 9 defines a financial asset as **credit-impaired** when one or more events have occurred that have a detrimental impact on estimated future cash flows. Evidence can include significant financial difficulty of the borrower, breach of contract such as default or delinquency, a concession granted for financial difficulty, probable bankruptcy or disappearance of an active market because of financial difficulties.
+### Core mechanism
 
-Stage 3 therefore represents more than elevated probability of default. Stage 2 says risk has increased significantly but the asset is not yet credit-impaired; Stage 3 says impairment evidence has crystallised. IFRS 9 also contains a rebuttable operational presumption that default does not occur later than 90 days past due unless reasonable and supportable information justifies a more lagging criterion. The accounting definition still cannot be reduced to one DPD threshold.
+| Ordinary asset | POCI asset |
+| :--- | :--- |
+| Not credit-impaired at initial recognition | Credit-impaired at initial recognition |
+| Ordinary EIR | Credit-adjusted EIR |
+| Stage migration can occur after origination | Initial impairment is embedded in starting economics |
+| Allowance reflects required ECL under staging | Subsequent cumulative change in lifetime ECL is recognised |
 
-Both Stage 2 and Stage 3 carry lifetime ECL, but Stage 3 has an additional interest consequence. For a financial asset that was not credit-impaired when originated but later becomes credit-impaired, IFRS 9 calculates interest revenue by applying the original EIR to **amortised cost**, meaning the gross carrying amount net of the loss allowance, rather than to the gross carrying amount used for non-credit-impaired assets.
-
-That distinction prevents recognition of interest income on amounts the accounting measurement already expects not to collect. It is separate from the question of whether contractual interest remains legally due.
+### Flow
 
 ```text
-+-----------------------+
-| Performing / elevated |
-| risk                  |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Credit-impairment     |
-| evidence occurs       |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Stage 3               |
-| Lifetime ECL          |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| IFRS interest on      |
-| amortised cost        |
-+-----------------------+
+Credit-impaired at initial recognition?
+    ├─ No → ordinary IFRS 9 staging
+    └─ Yes
+         ↓
+       POCI
+         ↓
+Expected credit losses embedded in initial expected cash flows
+         ↓
+Credit-adjusted EIR
+         ↓
+Recognise subsequent changes in lifetime ECL
+```
+
+### Where it sits
+
+```text
+Upstream:   Acquisition / origination · Credit impairment · Purchase economics
+This:       POCI treatment
+Downstream: Credit-adjusted EIR · Subsequent ECL change
 ```
 
 ### Permanent rule
 
-Credit impairment concerns detrimental effects on expected cash flows, not merely a high risk score.
+POCI starts from an impaired credit state; it is not an ordinary new asset that happens to be placed directly into Stage 3.
 
-### Permanent trap
+### Never confuse [POCI] and [Asset that later becomes Stage 3]
 
-Equating Stage 3 mechanically with “90 DPD” misses borrowers that become credit-impaired before 90 days and misunderstands the default backstop.
-
-### Never confuse
-
-**SICR** — material deterioration in default risk since initial recognition.
+**POCI** — credit-impaired when first recognised by the reporting entity.
 
 ---
 
-**Credit-impaired** — evidence exists that events have detrimentally affected estimated future cash flows.
+**Later Stage 3 asset** — not credit-impaired initially, but becomes credit-impaired after recognition.
+
+### Permanent trap
+
+Adding a conventional Day-1 Stage 3 allowance on top of pricing that already reflects expected credit impairment can double-count the initial credit loss under IFRS 9.
 
 ### Jurisdiction variants
 
-**IN** — Current commercial-bank IRACP uses NPA, substandard, doubtful and loss-asset classifications rather than IFRS Stage 3; common NPA mechanics include 90-day overdue/out-of-order criteria. RBI’s ECL Directions from April 1, 2027 introduce Stage 3 while retaining prudential floors and specific income-recognition rules. [RBI 2025 IRACP; RBI 2026 ECL Directions]
+#### IN (RBI)
+Current commercial-bank IRACP has no Ind AS 109 POCI model. RBI’s bank ECL framework from 1 April 2027 separately identifies POCI-type treatment. Applicable Ind AS NBFCs follow Ind AS requirements.
 
-**UK** — UK-adopted IFRS 9 applies the credit-impaired definition and Stage 3 lifetime ECL/interest mechanics. [IFRS 9 Appendix A and 5.4.1]
+#### UK (UKEB)
+No delta from IFRS 9 POCI accounting.
 
-**EU** — EU-adopted IFRS 9 applies the same accounting definition; prudential default concepts remain separate regulatory concepts even where operational alignment is sought. [Regulation (EU) 2023/1803; EBA guidance]
+#### EU (European Commission)
+No delta from IFRS 9 POCI accounting.
 
-**US** — CECL has no Stage 3 allowance category. US nonaccrual and regulatory classification practices are separate from Topic 326’s lifetime expected-loss measurement. [ASC 326; Interagency CECL policy]
+#### US (FASB)
+ASC 326 uses purchased credit deteriorated, or PCD, accounting. The acquisition-date allowance is added to purchase price to establish the initial amortised-cost basis: a different architecture from IFRS 9 POCI.
 
 <Recall
-  q="Does a high PD automatically make an asset Stage 3?"
-  a="No. Stage 3 requires the asset to be credit-impaired."
+  q="What is special about POCI at initial recognition?"
+  a="The asset is already credit-impaired."
 />
 
 <Recall
-  q="What changes in IFRS 9 interest recognition after a non-POCI asset becomes credit-impaired?"
-  a="Interest is generally calculated using the original EIR on amortised cost rather than gross carrying amount."
+  q="Which interest rate is used under IFRS 9?"
+  a="A credit-adjusted effective interest rate."
+/>
+
+<Recall
+  q="Is US PCD accounting identical to POCI?"
+  a="No — US PCD uses an acquisition-date allowance gross-up rather than IFRS 9’s POCI architecture."
 />

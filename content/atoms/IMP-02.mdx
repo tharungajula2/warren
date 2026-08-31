@@ -1,19 +1,18 @@
 ---
 id: IMP-02
-title: Credit Loss Is a Discounted Cash Shortfall
-type: mechanism
+title: Three Expected-Loss Architectures
+type: delta
 domain: impairment
 subdomain: ecl-foundations
 one_screen: >-
-  Under IFRS 9, credit loss is fundamentally the present value of the difference
-  between contractual cash flows due and cash flows expected to be received. PD,
-  LGD and EAD are modelling components; the accounting target is the cash
-  shortfall.
+  IFRS 9, US CECL and RBI provisioning answer the same economic question—how
+  much credit loss should be recognised now—but they do not use the same
+  recognition architecture. Learn the framework before learning the calculation.
 prerequisites:
   - IMP-01
-  - FND-08
-  - FND-09
-  - CR-17
+  - FND-19
+  - FND-20
+  - FND-21
 jurisdictions:
   - IN
   - UK
@@ -21,101 +20,114 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, 24 July 2014.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A and Section
-      5.5
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, FDIC, OCC and NCUA, *Frequently Asked Questions on the
-      New Accounting Standard on Financial Instruments—Credit Losses*, ASC 326 /
-      ASU 2016-13
-    url: >-
-      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
-    accessed: '2026'
+      Reserve Bank of India, *Deferral of Implementation of Indian Accounting
+      Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19,
+      22 March 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 45–53
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Implementation of Indian Accounting Standards*,
+      RBI/2019-20/170, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, 13 March 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-A useful mental model for ECL starts with cash rather than risk parameters. IFRS 9 defines a **credit loss** through cash shortfalls: compare all contractual cash flows due under the contract with all cash flows the entity expects to receive, then discount the difference using the relevant effective interest rate. Timing matters as well as amount; receiving the full principal materially late can create a credit loss because delayed cash is worth less at the reporting date.
+### Core mechanism
 
-This definition explains why the common formula `PD × LGD × EAD` is a method rather than the accounting definition. Probability of default (PD) estimates the chance of default, loss given default (LGD) estimates loss severity conditional on default, and exposure at default (EAD) estimates the amount exposed when default occurs. A well-built parameter model should reproduce the expected discounted cash shortfall required by the accounting framework. If the parameterisation conflicts with that measurement objective, the model—not the accounting definition—must yield. IFRS 9 deliberately does not prescribe one modelling technique.
+| Framework | Initial performing exposure | Deteriorated exposure | Credit-impaired/defaulted exposure |
+| :--- | :--- | :--- | :--- |
+| IFRS 9 | Stage 1: 12-month ECL | Stage 2: lifetime ECL after SICR | Stage 3: lifetime ECL |
+| US CECL | Lifetime expected loss | Re-estimated lifetime loss | Re-estimated lifetime loss |
+| RBI commercial banks: current | IRACP classification and prescribed provisioning | IRACP rules | NPA classification and prescribed provisioning |
+| RBI commercial banks: from 1 Apr 2027 | Stage 1: 12-month ECL, subject to prudential floors | Stage 2: lifetime ECL | Stage 3: lifetime ECL, with NPA rules retained |
+| Ind AS-implementing NBFCs / ARCs | Ind AS 109 ECL | Ind AS 109 ECL | Ind AS 109 ECL, plus RBI prudential safeguards |
 
-Expected recoveries affect the shortfall. Cash expected from the borrower, collateral realisation, guarantees or other credit enhancements can reduce expected loss where those recoveries are appropriately included under the applicable measurement requirements. Their **timing**, costs and uncertainty still matter. A nominal recovery expected after several years is not equivalent to the same amount received today.
-
-The distinction also explains why market-price movements are not automatically credit losses. Credit impairment focuses on expected contractual collection. Market value may change because risk-free rates, liquidity premiums or other non-credit factors move even when expected contractual collection is unchanged.
+### Flow
 
 ```text
-+---------------------------+
-| Contractual cash flows    |
-| due                       |
-+---------------------------+
-             |
-             v
-+---------------------------+
-| Expected cash flows       |
-| actually collected        |
-+---------------------------+
-             |
-             v
-+---------------------------+
-| Difference in amount      |
-| and/or timing             |
-+---------------------------+
-             |
-             v
-+---------------------------+
-| Discount to measurement   |
-| date                      |
-+---------------------------+
-             |
-             v
-+---------------------------+
-| Credit loss               |
-+---------------------------+
+Economic credit risk
+    ↓
+Applicable accounting / prudential framework
+    ↓
+Recognition horizon
+    ↓
+Measurement method
+    ↓
+Loss allowance / provision
+    ↓
+Earnings and capital interaction
+```
+
+### Where it sits
+
+```text
+Upstream:   Accounting framework · Prudential framework · Entity type
+This:       IFRS 9 · CECL · RBI IRACP / RBI ECL
+Downstream: Staging · Measurement horizon · Provision · Capital effects
 ```
 
 ### Permanent rule
 
-The economic object being measured is expected non-collection of contractual value, including the effect of timing.
+Similar terminology does not make two frameworks equivalent. Recognition horizon, staging, scope and prudential floors can create materially different allowances on the same economics.
 
-### Permanent trap
+### Never confuse [Accounting standard] and [Prudential provisioning regime]
 
-Using `PD × LGD × EAD` mechanically without checking whether it reproduces discounted expected cash shortfalls can produce a technically elaborate but accounting-inconsistent allowance.
-
-### Never confuse
-
-**Credit loss** — the expected discounted contractual cash shortfall.
+**Accounting standard** — determines financial-statement recognition and measurement.
 
 ---
 
-**Fair-value loss** — a change in market value that may contain credit, interest-rate, liquidity and other effects.
+**Prudential provisioning regime** — regulatory requirements designed for safety and soundness, which may prescribe floors or classifications beyond accounting measurement.
+
+### Permanent trap
+
+Calling CECL “IFRS 9 without stage labels” misses the central difference: CECL generally recognises lifetime expected loss from initial recognition instead of waiting for SICR.
 
 ### Jurisdiction variants
 
-**IN** — Current scheduled-commercial-bank IRACP provisioning is rule-based rather than an Ind AS 109 cash-shortfall ECL regime; RBI’s bank ECL Directions effective April 1, 2027 introduce an ECL framework with PD/LGD mechanics and EIR discounting. Relevant Ind AS NBFCs already operate under Ind AS impairment requirements. [RBI 2025 IRACP; RBI 2026 ECL Directions; RBI 2020 NBFC guidance]
+#### IN (RBI)
+Three tracks coexist: current bank IRACP, Ind AS for applicable NBFCs/ARCs, and the final RBI bank ECL framework effective 1 April 2027.
 
-**UK** — UK-adopted IFRS 9 uses the IFRS cash-shortfall definition. [UK-adopted IFRS 9]
+#### UK (UKEB)
+UK-adopted IFRS 9 supplies the accounting architecture.
 
-**EU** — EU-adopted IFRS 9 uses the same cash-shortfall measurement principle. [Regulation (EU) 2023/1803]
+#### EU (European Commission / EBA)
+EU-adopted IFRS 9 supplies accounting measurement; EBA guidance overlays supervisory expectations.
 
-**US** — CECL defines the allowance for amortised-cost assets as the amount needed to reflect the net amount expected to be collected; it permits multiple estimation methods rather than requiring the IFRS 9 cash-shortfall technique in every case. [ASC 326; Interagency CECL FAQ]
+#### US (FASB)
+ASC 326 CECL uses lifetime expected-loss recognition for in-scope amortised-cost assets without an IFRS 9 SICR gateway.
 
 <Recall
-  q="What is the accounting target behind an IFRS 9 ECL model?"
-  a="The probability-weighted present value of expected contractual cash shortfalls."
+  q="Which framework starts an ordinary performing asset with 12-month ECL?"
+  a="IFRS 9, and RBI’s bank ECL framework from 1 April 2027."
 />
 
 <Recall
-  q="Is `PD × LGD × EAD` the definition of credit loss?"
-  a="No. It is one modelling architecture for estimating the accounting quantity."
+  q="Which framework generally starts with lifetime expected loss?"
+  a="US CECL."
+/>
+
+<Recall
+  q="Are Indian commercial banks currently applying Ind AS 109?"
+  a="No — RBI deferred bank Ind AS implementation, so current bank provisioning remains under IRACP."
 />

@@ -1,20 +1,19 @@
 ---
 id: IMP-06
-title: The IFRS 9 Three-Stage Architecture
-type: mechanism
+title: Twelve-Month ECL versus Lifetime ECL
+type: concept
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  IFRS 9 staging changes the horizon of loss recognition as credit risk changes:
-  Stage 1 carries 12-month ECL, Stage 2 lifetime ECL after significant
-  deterioration, and Stage 3 lifetime ECL once the asset is credit-impaired.
-  Stage is a credit-risk state, not simply an arrears bucket.
+  Twelve-month ECL is not twelve months of cash loss. It is the lifetime loss
+  consequence of default events that are possible within the next twelve months;
+  lifetime ECL instead considers defaults possible over the relevant remaining
+  life.
 prerequisites:
-  - IMP-01
   - IMP-05
-  - CR-02
-  - CR-03
+  - FND-13
   - CR-10
+  - CR-17
 jurisdictions:
   - IN
   - UK
@@ -22,102 +21,104 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, Section 5.5 and Appendix
-      A
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, paragraph B5.5.43
+      and Section 5.5, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      UK Endorsement Board, *Text by Standard 2026 — IFRS 9 Financial
-      Instruments*, March 11, 2026
-    url: >-
-      https://www.endorsement-board.uk/standards/text-by-standard/text-by-standard-2026/
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 25–26
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
-  - label: >-
-      Federal Reserve, *Frequently Asked Questions on the New Accounting
-      Standard on Financial Instruments—Credit Losses*
-    url: >-
-      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-At each reporting date, IFRS 9 asks whether credit risk has increased significantly since initial recognition and whether the asset is credit-impaired. Those two assessments create the familiar three-stage architecture. Stage 1 generally contains instruments without a significant increase in credit risk and carries **12-month ECL**. Stage 2 contains instruments with a significant increase in credit risk (SICR) that are not credit-impaired and carries **lifetime ECL**. Stage 3 contains credit-impaired assets and also carries lifetime ECL.
+### Core mechanism
 
-The jump from Stage 1 to Stage 2 is intentionally substantial: the allowance moves from losses associated with defaults possible in the next twelve months to losses associated with defaults over the remaining life. That makes staging economically important even if PD, LGD and EAD models themselves remain unchanged.
+| Question | 12-month ECL | Lifetime ECL |
+| :--- | :--- | :--- |
+| Which default events enter? | Defaults possible in next 12 months, or shorter remaining life | Defaults possible over relevant remaining life |
+| How much loss follows an included default? | Full discounted loss consequence | Full discounted loss consequence |
+| Can post-month-12 recoveries matter? | Yes | Yes |
+| Typical IFRS 9 use | Stage 1 | Stage 2 and Stage 3 |
 
-Stage 2 is not “30–89 days past due”. Arrears are one indicator and the 30-day rule is a backstop, but SICR can and should be identified earlier when reasonable and supportable information indicates material deterioration. Similarly, Stage 3 is not defined merely by one delinquency count; it reflects evidence that the financial asset is credit-impaired, with IFRS 9 listing events such as significant financial difficulty, breach of contract or concessions related to financial difficulty.
-
-Stage assignment therefore depends on both **relative deterioration** and **current credit condition**. The reference point for Stage 2 is risk at initial recognition; the reference for Stage 3 is whether the asset is credit-impaired now.
+### Flow
 
 ```text
-+-----------------------+
-| Initial recognition   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Stage 1               |
-| 12-month ECL          |
-+-----------------------+
-           |
-        SICR
-           v
-+-----------------------+
-| Stage 2               |
-| Lifetime ECL          |
-+-----------------------+
-           |
-   Credit-impaired
-           v
-+-----------------------+
-| Stage 3               |
-| Lifetime ECL          |
-+-----------------------+
+Reporting date
+    ↓
+Choose default-event horizon
+    ↓
+Identify defaults possible within that horizon
+    ↓
+Measure full cash-shortfall consequence of those defaults
+    ↓
+Probability-weight and discount
+    ↓
+ECL
+```
+
+### Where it sits
+
+```text
+Upstream:   Stage assignment · Expected life · Default timing
+This:       12-month ECL · Lifetime ECL
+Downstream: PD term structure · ECL amount
 ```
 
 ### Permanent rule
 
-Stage 1 versus Stage 2 determines **which default-event horizon feeds ECL**; Stage 3 additionally identifies credit impairment.
+“Twelve months” limits the default-event window, not the period over which resulting cash shortfalls and recoveries are measured.
 
-### Permanent trap
+### Never confuse [12-month ECL] and [Twelve months of losses]
 
-Building stages directly from delinquency bands and treating forward-looking SICR indicators as optional reverses IFRS 9’s logic.
-
-### Never confuse
-
-**Stage 2** — significant deterioration since initial recognition without current credit impairment.
+**12-month ECL** — lifetime consequences of defaults possible within the next twelve months.
 
 ---
 
-**Stage 3** — a financial asset that is credit-impaired at the reporting date.
+**Twelve months of losses** — only shortfalls occurring during the next year. That is not the IFRS 9 definition.
+
+### Permanent trap
+
+Cutting off post-default recoveries or losses at month twelve understates or distorts Stage 1 ECL whenever workout continues beyond one year.
 
 ### Jurisdiction variants
 
-**IN** — Scheduled commercial banks do not currently apply the IFRS 9 stage model. RBI’s final 2026 ECL Directions introduce a regulatory three-stage framework from April 1, 2027; relevant Ind AS NBFCs already operate under Ind AS 109-style ECL requirements. [RBI 2026 ECL Directions, paragraphs 25–26; RBI 2020 NBFC guidance]
+#### IN (RBI)
+Current commercial-bank IRACP has no 12-month-ECL concept. RBI’s bank ECL framework from 1 April 2027 adopts 12-month ECL for Stage 1 and lifetime ECL for Stage 2 and Stage 3.
 
-**UK** — UK-adopted IFRS 9 applies the three-stage model. [IFRS 9 5.5; UK-adopted IFRS 9]
+#### UK (UKEB)
+No delta from IFRS 9.
 
-**EU** — EU-adopted IFRS 9 applies the same accounting staging structure, with EBA supervisory guidance. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+#### EU (European Commission)
+No delta from IFRS 9.
 
-**US** — CECL has no Stage 1/Stage 2/Stage 3 architecture for amortised-cost assets: lifetime expected loss is recognised from initial recognition. [ASC 326; Federal Reserve CECL FAQ]
+#### US (FASB)
+CECL does not use a Stage 1 12-month allowance for amortised-cost assets; lifetime expected credit loss is recognised from initial recognition.
 
 <Recall
-  q="What changes when an IFRS 9 asset moves from Stage 1 to Stage 2?"
-  a="The allowance horizon changes from 12-month ECL to lifetime ECL."
+  q="What does “12-month” restrict?"
+  a="The set of default events included."
 />
 
 <Recall
-  q="Is Stage 2 defined as 30–89 DPD?"
-  a="No. SICR is the primary concept; past due status is a backstop and indicator."
+  q="Can a default in month nine generate losses in year three that enter 12-month ECL?"
+  a="Yes — the default occurs inside the 12-month window, so its full discounted loss consequence is included."
+/>
+
+<Recall
+  q="Which IFRS 9 stages use lifetime ECL?"
+  a="Stage 2 and Stage 3."
 />

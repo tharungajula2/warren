@@ -1,18 +1,19 @@
 ---
 id: IMP-07
-title: Twelve-Month ECL
-type: concept
+title: Significant Increase in Credit Risk
+type: mechanism
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  Twelve-month ECL is not the cash loss expected during the next twelve months.
-  It is the lifetime credit loss arising from default events that are possible
-  within the next twelve months, weighted by the probability of those defaults.
+  SICR asks whether the risk of default has increased significantly since
+  initial recognition. It is therefore principally a relative deterioration
+  test, not a test of whether current risk has crossed one universal “bad
+  borrower” threshold.
 prerequisites:
-  - IMP-02
-  - IMP-06
+  - IMP-05
   - CR-10
-  - CR-17
+  - CR-11
+  - CR-16
 jurisdictions:
   - IN
   - UK
@@ -20,98 +21,104 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph B5.5.43'
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, definition of
-      “12-month ECL”
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, paragraphs
+      5.5.9–5.5.11 and related application guidance, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Frequently Asked Questions on the New Accounting
-      Standard on Financial Instruments—Credit Losses*
-    url: >-
-      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
-    accessed: '2026'
+      European Banking Authority, *Guidelines on credit institutions’ credit
+      risk management practices and accounting for expected credit losses*,
+      EBA/GL/2017/06, 12 May 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-This is one of the most persistent IFRS 9 misunderstandings. Stage 1 does **not** estimate only cash shortfalls occurring during the next year. IFRS 9 defines 12-month ECL as the portion of lifetime expected credit losses representing losses resulting from default events that are possible within twelve months after the reporting date.
+### Core mechanism
 
-Consider a five-year loan. A default could occur nine months from today, followed by restructuring and collateral recovery over the next three years. If that default event lies within the relevant twelve-month default horizon, the ECL calculation includes the full discounted loss consequences of that default, including cash shortfalls occurring after month twelve. Conversely, a default expected only in year four is outside Stage 1’s 12-month default-event horizon even though it may enter lifetime ECL after SICR.
+CR-10 → PD = likelihood of default over a defined horizon.
 
-This also means 12-month ECL is not simply “lifetime ECL for loans expected to default within a year”. Every exposure can contribute through the probability that a default event occurs in the next twelve months, multiplied by the loss consequences if it occurs. IFRS 9’s application guidance explicitly distinguishes these concepts.
+| Step | Question |
+| :--- | :--- |
+| 1 | What was default risk at initial recognition? |
+| 2 | What is default risk at the reporting date over the relevant remaining life? |
+| 3 | Has the increase become significant? |
+| 4 | Do qualitative, forward-looking or collective indicators change the conclusion? |
+| 5 | If yes: Stage 2 and lifetime ECL; if no: Stage 1, subject to other rules |
 
-For an instrument with less than twelve months remaining, the relevant period cannot exceed the remaining exposure period. The term “12-month” therefore describes the maximum default-event horizon for Stage 1, not a requirement to manufacture risk beyond contractual exposure.
+### Flow
 
 ```text
-Reporting date
-      |
-      v
-+----------------------+
-| Next 12 months       |
-| Which defaults can   |
-| occur?               |
-+----------------------+
-      |
-      v
-+----------------------+
-| For each such        |
-| default, measure     |
-| full loss consequence|
-+----------------------+
-      |
-      v
-+----------------------+
-| Probability-weight   |
-| and discount         |
-+----------------------+
-      |
-      v
-+----------------------+
-| 12-month ECL         |
-+----------------------+
+Origination risk
+    ↓ compare with
+Current lifetime default risk
+    ↓
+No significant increase → Stage 1
+Significant increase    → Stage 2
+```
+
+### Where it sits
+
+```text
+Upstream:   Origination benchmark · Current PD · Credit indicators
+This:       SICR assessment
+Downstream: Stage 1 / Stage 2 · ECL horizon
 ```
 
 ### Permanent rule
 
-“Twelve months” limits the **default-event window**, not the timing of subsequent cash shortfalls caused by those defaults.
+SICR measures deterioration from the risk accepted at initial recognition.
 
-### Permanent trap
+### Never confuse [Relative deterioration] and [Absolute high risk]
 
-Truncating recoveries and losses at month twelve systematically misstates Stage 1 ECL on instruments whose post-default workout extends beyond a year.
-
-### Never confuse
-
-**12-month ECL** — lifetime loss consequences of defaults possible during the next twelve months.
+**Relative deterioration** — how far risk has moved from the starting point.
 
 ---
 
-**Twelve months of cash loss** — cash shortfalls physically occurring during the next year; this is not the IFRS 9 definition.
+**Absolute high risk** — how risky the exposure is today.
+
+A low-risk origination can experience SICR before becoming absolutely high risk.
+
+### Permanent trap
+
+One current-PD threshold for every exposure can miss severe deterioration in loans that began with very low risk and over-stage loans that were already risky at origination.
 
 ### Jurisdiction variants
 
-**IN** — Current bank IRACP has no Stage 1 12-month-ECL concept. RBI’s bank ECL framework effective April 1, 2027 adopts the same default-event-horizon definition of 12-month ECL. [RBI 2026 ECL Directions, definition of 12-month ECL]
+#### IN (RBI)
+Current commercial-bank IRACP does not use IFRS 9 SICR. RBI’s bank framework from 1 April 2027 requires assessment of significant deterioration for Stage 2. Ind AS-implementing NBFCs apply Ind AS ECL subject to RBI guidance.
 
-**UK** — UK-adopted IFRS 9 uses the IFRS definition. [IFRS 9 B5.5.43]
+#### UK (UKEB)
+No accounting delta from UK-adopted IFRS 9.
 
-**EU** — EU-adopted IFRS 9 uses the same definition. [Regulation (EU) 2023/1803; IFRS 9 B5.5.43]
+#### EU (European Commission / EBA)
+No accounting delta from EU-adopted IFRS 9; EBA guidance expects timely identification of deterioration.
 
-**US** — CECL does not use a 12-month Stage 1 allowance for amortised-cost assets; expected losses are measured over the contractual term, subject to Topic 326’s treatment of expected prepayments and other scope rules. [ASC 326; Interagency CECL FAQ]
+#### US (FASB)
+CECL has no SICR gateway determining whether lifetime loss begins.
 
 <Recall
-  q="Does 12-month ECL ignore losses occurring after month twelve?"
-  a="No, if those losses result from a default event possible within the twelve-month default horizon."
+  q="What is the reference point for SICR?"
+  a="Credit risk at initial recognition."
 />
 
 <Recall
-  q="What does the twelve-month horizon constrain?"
-  a="The set of possible default events included, not the post-default loss timeline."
+  q="Can a borrower with moderate current PD have SICR?"
+  a="Yes — a moderate current PD can represent a significant increase from a low origination benchmark."
+/>
+
+<Recall
+  q="Why is SICR absent from CECL?"
+  a="Lifetime expected loss is already recognised from initial recognition."
 />

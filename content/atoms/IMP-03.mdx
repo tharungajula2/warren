@@ -1,20 +1,19 @@
 ---
 id: IMP-03
-title: Probability-Weighted Outcomes
+title: Scope and Financial-Statement Presentation
 type: mechanism
 domain: impairment
 subdomain: ecl-foundations
 one_screen: >-
-  ECL is an expectation across possible credit outcomes, not the loss under the
-  single scenario management considers most likely. Non-linearity matters:
-  weighting scenario-specific losses can differ materially from calculating loss
-  once at probability-weighted average macroeconomic inputs.
+  Before measuring ECL, determine whether the instrument is inside the
+  impairment model and where the allowance is presented. The same expected-loss
+  idea can appear as a deduction from an asset, an OCI amount or a separate
+  provision depending on the instrument.
 prerequisites:
   - IMP-02
-  - FND-23
-  - CR-10
-  - CR-16
-  - CR-17
+  - FND-01
+  - FND-06
+  - FND-07
 jurisdictions:
   - IN
   - UK
@@ -22,101 +21,102 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, 24 July 2014.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraph 5.5.17 and
-      B5.5.41–B5.5.42
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
-  - label: 'FASB, *ASU 2016-13, Financial Instruments—Credit Losses (Topic 326)*'
-    url: 'https://www.fasb.org/projects/current-projects/credit-losses'
-    accessed: '2026'
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 47–49
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
-  - label: >-
-      PRA, *Thematic feedback on accounting for IFRS 9 expected credit losses*,
-      September 30, 2025
-    url: >-
-      https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/letter/2025/thematic-feedback-on-accounting-for-ifrs-9-ecl-2025.pdf
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-IFRS 9 requires expected credit losses to reflect an **unbiased and probability-weighted amount** determined by evaluating a range of possible outcomes. The aim is neither a worst-case provision nor a best-case provision. Where credit losses can arise in some possible outcomes but not others, the probability of both loss and no-loss outcomes matters even when the most likely single outcome would show no loss.
+### Core mechanism
 
-Suppose three internally coherent macroeconomic scenarios produce ECL estimates of 40, 100 and 250, with probabilities of 20%, 60% and 20%. Probability-weighted ECL is `0.20×40 + 0.60×100 + 0.20×250 = 118`. The calculation does not mean the entity predicts a loss of exactly 118. It means 118 is the expectation across the modelled distribution.
+| IFRS 9 exposure | ECL treatment | Presentation |
+| :--- | :--- | :--- |
+| Debt asset at amortised cost | In scope | Loss allowance reduces carrying amount |
+| Debt asset at FVOCI | In scope | Allowance recognised in OCI; fair-value carrying amount is not reduced |
+| Loan commitment in scope | In scope | Provision rather than asset deduction |
+| Financial guarantee contract in scope | In scope | Provision rather than asset deduction |
+| Trade receivable / contract asset | In scope | Simplified lifetime-ECL approach may apply |
+| Lease receivable | In scope | Simplified lifetime-ECL policy may apply |
+| Instrument at FVTPL | Generally outside ECL impairment model | Credit effects are reflected through fair-value measurement |
 
-A critical modelling issue is **non-linearity**. Credit risk often deteriorates disproportionately when unemployment, property values or borrower cash flows pass stress thresholds. Consequently, ECL evaluated under a single “average” macro path may not equal the weighted average of ECL calculated separately under multiple scenarios. IFRS 9 does not prescribe a fixed number of scenarios; the number and construction must be sufficient to capture material non-linear effects and satisfy the unbiased probability-weighted objective.
-
-Scenario probabilities are themselves estimates. They should correspond to coherent economic narratives, not be selected backwards to obtain a desired allowance. Governance therefore needs to address scenario design, probability setting, model sensitivity and changes from the previous reporting date.
+### Flow
 
 ```text
-+----------------+
-| Scenario A     |
-| ECL = 40       |
-| Weight = 20%   |
-+----------------+
-        |
-        v
-+----------------+
-| Scenario B     |
-| ECL = 100      |
-| Weight = 60%   |
-+----------------+
-        |
-        v
-+----------------+
-| Scenario C     |
-| ECL = 250      |
-| Weight = 20%   |
-+----------------+
-        |
-        v
-+----------------+
-| Weighted ECL   |
-| = 118          |
-+----------------+
+Instrument
+    ↓
+Classification and measurement basis
+    ↓
+Inside impairment scope?
+    ↓
+Yes → determine ECL horizon → recognise allowance / provision
+No  → apply governing measurement basis
+```
+
+### Where it sits
+
+```text
+Upstream:   Instrument type · Accounting classification · Measurement basis
+This:       ECL scope · Balance-sheet presentation
+Downstream: Staging · Measurement · Disclosure
 ```
 
 ### Permanent rule
 
-Probability weighting applies to possible credit-loss outcomes; it is not permission to select whichever scenario gives a comfortable provision.
+Do not calculate an ECL allowance until the instrument’s accounting classification and impairment scope are known.
 
-### Permanent trap
+### Never confuse [FVOCI allowance] and [Asset carrying amount reduction]
 
-Running ECL once on average macroeconomic variables and calling the result “probability weighted” can miss material non-linear loss behaviour.
-
-### Never confuse
-
-**Most-likely scenario** — the individual scenario with the highest assigned probability.
+**FVOCI allowance** — credit loss is recognised through the impairment mechanism and OCI.
 
 ---
 
-**Expected loss** — the probability-weighted result across relevant possible outcomes.
+**Asset carrying amount** — remains at fair value; the allowance does not reduce that reported fair-value amount.
+
+### Permanent trap
+
+Applying ECL to every item labelled “credit exposure” ignores instruments whose credit risk is already captured through another measurement basis.
 
 ### Jurisdiction variants
 
-**IN** — Current bank IRACP is not a probability-weighted ECL accounting regime. RBI’s final 2026 bank ECL framework, effective April 1, 2027, explicitly requires multiple scenarios and probability weights informed by historical experience and expert judgement; Ind AS NBFCs already apply expected-loss accounting. [RBI 2026 ECL Directions, paragraphs 47–49]
+#### IN (RBI)
+Current commercial-bank provisioning scope is governed by IRACP rather than IFRS 9 classification. From 1 April 2027, RBI’s bank ECL framework covers loans, investments, undrawn commitments and other specified credit exposures, with prudential floors.
 
-**UK** — IFRS 9 probability weighting applies; PRA’s 2025 thematic work additionally emphasises governance over model limitations and adjustments. [IFRS 9 5.5.17; PRA thematic feedback]
+#### UK (UKEB)
+No delta from UK-adopted IFRS 9.
 
-**EU** — EU-adopted IFRS 9 applies the same probability-weighted objective, with EBA supervisory expectations around robust ECL practices. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+#### EU (European Commission)
+No accounting delta from EU-adopted IFRS 9.
 
-**US** — CECL also incorporates reasonable and supportable expectations about future conditions, but Topic 326 does not impose the IFRS 9 scenario architecture or prescribe one estimation method. [ASU 2016-13; Interagency CECL FAQ]
+#### US (FASB)
+ASC 326 applies CECL to financial assets measured at amortised cost and has separate credit-loss requirements for available-for-sale debt securities. Off-balance-sheet credit exposures are also addressed where the entity is exposed to credit risk.
 
 <Recall
-  q="Is ECL the loss under the scenario with the highest probability?"
-  a="No. It is an expectation across relevant possible outcomes."
+  q="Does an IFRS 9 FVOCI loss allowance reduce the asset’s fair-value carrying amount?"
+  a="No — the asset remains at fair value while the allowance is recognised through OCI."
 />
 
 <Recall
-  q="Why can an “average macro scenario” be insufficient?"
-  a="Because ECL can respond non-linearly to economic variables, so loss at average inputs need not equal probability-weighted loss."
+  q="Are instruments measured at FVTPL normally given a separate IFRS 9 ECL allowance?"
+  a="No — credit effects are already reflected through fair-value measurement."
+/>
+
+<Recall
+  q="Why must scope come before modelling?"
+  a="Because the measurement and presentation rules depend on the instrument."
 />

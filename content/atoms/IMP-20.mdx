@@ -1,24 +1,20 @@
 ---
 id: IMP-20
-title: 'India: IRACP, Ind AS and the Bank ECL Transition'
-type: reference
+title: 'India: Parallel Regimes and the 2027 Bank ECL Transition'
+type: delta
 domain: impairment
 subdomain: governance-and-jurisdictions
 one_screen: >-
-  India must be read as three distinct tracks: scheduled commercial banks are
-  not on Ind AS and remain under RBI IRACP through March 31, 2027; relevant
-  NBFCs already apply Ind AS, including Ind AS 109 ECL; and RBI has issued a
-  separate final three-stage ECL framework for commercial banks that becomes
-  effective April 1, 2027. The January 2023 ECL discussion paper was a proposal;
-  the April 2026 Directions are final future rules, not current rules as of
-  August 28, 2026.
+  India has parallel regimes. At 31 August 2026, banks remain under RBI IRACP
+  through 31 March 2027; applicable NBFCs/ARCs use Ind AS with RBI safeguards;
+  banks move to RBI’s staged-ECL framework on 1 April 2027.
 prerequisites:
-  - IMP-01
-  - IMP-06
-  - IMP-08
-  - IMP-15
+  - IMP-02
+  - IMP-05
+  - IMP-14
   - IMP-17
   - IMP-19
+  - FND-03
 jurisdictions:
   - IN
   - UK
@@ -32,116 +28,141 @@ verified: false
 reading_minutes: 4
 sources:
   - label: >-
-      RBI, *Deferral of Implementation of Indian Accounting Standards (Ind AS)*,
-      RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19, March 22, 2019
-    url: 'https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11506'
-    accessed: '2026'
+      Reserve Bank of India, *Deferral of Implementation of Indian Accounting
+      Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19,
+      22 March 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Implementation of Indian Accounting Standards*, RBI/2019-20/170, DOR
-      (NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020
-    url: 'https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=11818&Mode=0&fn=14'
-    accessed: '2026'
+      Reserve Bank of India, *Implementation of Indian Accounting Standards*,
+      RBI/2019-20/170, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, 13 March 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Discussion Paper on Introduction of Expected Credit Loss Framework
-      for Provisioning by Banks*, January 16, 2023
-    url: 'https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=21629'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*,
+      DOR.STR.REC.83./21.04.048/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning) Directions, 2025*, updated through July
-      1, 2026
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*,
-      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, April 27, 2026
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Repeal Directions,
+      2026*, DOR.STR.REC.20/21.04.048/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-The first boundary is non-negotiable: **Indian scheduled commercial banks are not currently applying Ind AS 109**. RBI’s March 22, 2019 circular deferred implementation of Ind AS for scheduled commercial banks “till further notice”. As of August 28, 2026, commercial banks covered by RBI’s 2025 Income Recognition, Asset Classification and Provisioning Directions remain on prudential IRACP rules. Those rules classify problem assets through NPA, substandard, doubtful and loss categories and prescribe provisioning rather than operating an IFRS 9 accounting-stage model.
+### Core mechanism
 
-The second track is **Ind AS-implementing NBFCs and ARCs**. RBI’s March 13, 2020 guidance states that NBFCs covered by Rule 4 of the Companies (Indian Accounting Standards) Rules must prepare financial statements under Ind AS. RBI overlays prudential safeguards: such entities maintain Ind AS impairment allowances while also computing IRACP provisions, with any shortfall addressed through the prescribed impairment reserve mechanism. RBI also reinforces the 30-DPD SICR presumption and governance of ECL models and overlays.
+| Population / period | Regime | Recognition | Boundary |
+| :--- | :--- | :--- | :--- |
+| Banks through 31 Mar 2027 | RBI IRACP 2025 | Classification + prescribed provisions | Not Ind AS 109 |
+| Applicable NBFCs / ARCs | Ind AS + RBI guidance | Ind AS 109 ECL + prudential comparison / impairment reserve | Accounting + prudential measures |
+| Banks from 1 Apr 2027 | RBI ECL Directions 2026 | Stage 1 12-month; Stage 2/3 lifetime ECL + floors | RBI, not Ind AS |
+| Same banks | Retained NPA rules | NPA classification beside staging | Stage 3 ≠ NPA |
 
-The third track is the **commercial-bank transition to RBI ECL**. RBI’s January 16, 2023 Discussion Paper proposed a three-stage IFRS-9-influenced ECL approach for scheduled commercial banks. That document was a consultation proposal, not operative provisioning law.
-
-RBI subsequently issued final *Commercial Banks – Asset Classification, Provisioning and Income Recognition Directions, 2026* on April 27, 2026. They take effect **April 1, 2027**; until then, the 2025 IRACP Directions continue to govern. The final framework uses Stage 1 12-month ECL, Stage 2 lifetime ECL after SICR and Stage 3 lifetime ECL for credit-impaired assets, while adding RBI-specific prudential floors, transition rules, model-risk requirements and income-recognition provisions. This is an RBI prudential ECL framework—not adoption of Ind AS 109 for banks.
+### Flow
 
 ```text
-                    INDIA — 28 AUG 2026
+31 Mar 2027 IRACP provision
+    ↓ compare with
+1 Apr 2027 ECL
+    ↓
+Positive excess → opening earnings adjustment
+    ↓
+Optional CET1 transition
+```
 
-+--------------------------------+
-| Scheduled commercial banks     |
-+--------------------------------+
-              |
-              v
-+--------------------------------+
-| RBI IRACP 2025                 |
-| CURRENT through 31 Mar 2027    |
-| NOT Ind AS 109                 |
-+--------------------------------+
-              |
-              v
-+--------------------------------+
-| RBI ECL Directions 2026        |
-| FINAL, effective 1 Apr 2027    |
-+--------------------------------+
+### Formula
 
-+--------------------------------+
-| Relevant NBFCs / ARCs          |
-+--------------------------------+
-              |
-              v
-+--------------------------------+
-| Ind AS financial reporting     |
-| + RBI prudential safeguards    |
-+--------------------------------+
+```text
+Transitional adjustment = max(0, ECL at 1 Apr 2027 - IRACP provisions at 31 Mar 2027)
 
-+--------------------------------+
-| RBI Discussion Paper           |
-| 16 Jan 2023                    |
-+--------------------------------+
-              |
-              v
-+--------------------------------+
-| Historical proposal            |
-| NOT current rule               |
-+--------------------------------+
+Maximum CET1 add-back as fraction of transitional adjustment, net of applicable taxes:
+
+2027-28 = 4/5
+
+2028-29 = 3/5
+
+2029-30 = 2/5
+
+2030-31 = 1/5
+
+After 31 Mar 2031 = 0
+```
+
+### Where it sits
+
+```text
+Upstream:   RBI IRACP · Ind AS scope · Closing provisions
+This:       Parallel regimes · RBI ECL transition
+Downstream: ECL · Prudential floors · Opening earnings · CET1
 ```
 
 ### Permanent rule
 
-An accounting standard, a prudential provisioning regime and a proposed regulatory framework are different legal and conceptual objects even when they use similar ECL terminology.
+RBI bank ECL is not bank adoption of Ind AS 109.
 
-### Permanent trap
+### Never confuse [Loss allowance] and [Capital]
 
-Writing “India uses Ind AS 109 for banks” collapses three different regimes and is factually wrong: scheduled commercial-bank Ind AS implementation was deferred, current bank provisioning remains IRACP through March 31, 2027, and RBI’s April 2026 ECL Directions are a separate prudential framework effective April 1, 2027.
-
-### Never confuse
-
-**Ind AS 109 for relevant NBFCs** — Indian accounting-standard ECL applied by entities within the applicable Ind AS implementation scope, subject to RBI prudential guidance.
+**Loss allowance** — measures expected credit loss and reduces carrying value or creates a provision.
 
 ---
 
-**RBI bank ECL framework** — RBI’s separately issued commercial-bank prudential provisioning regime, finalised in April 2026 and effective April 1, 2027; it is not bank adoption of Ind AS 109.
+**Capital** — loss-absorbing resource.
+
+The CET1 add-back phases capital recognition of the transition; it does not turn ECL into capital.
+
+### Never confuse [Stage 3] and [NPA]
+
+**Stage 3** — credit-impaired ECL state.
+
+---
+
+**NPA** — classification under retained RBI rules.
+
+An exposure may satisfy both; they remain distinct.
+
+### Permanent trap
+
+“Banks adopt Ind AS 109 on 1 April 2027” is wrong. Ind AS remains deferred; RBI’s 2026 Directions create a separate staged-ECL regime with floors and NPA classification.
 
 ### Jurisdiction variants
 
-**IN** — Three-way position: current scheduled-commercial-bank IRACP through March 31, 2027; Ind AS 109 for relevant Ind AS-implementing NBFCs/ARCs; and final RBI commercial-bank ECL Directions effective April 1, 2027. The January 16, 2023 Discussion Paper is historical proposal material, superseded for implementation purposes by the final April 27, 2026 Directions. [RBI 2019 Deferral; RBI 2020 NBFC guidance; RBI 2023 Discussion Paper; RBI 2025 IRACP; RBI 2026 ECL Directions]
+#### IN (RBI)
+IRACP, Ind AS for applicable NBFCs/ARCs, and RBI bank ECL differ by entity and date.
 
-**UK** — UK companies within the relevant accounting scope use UK-adopted IFRS 9; there is no Indian-style IRACP/Ind AS split. [UK Endorsement Board, IFRS 9]
+#### UK (UKEB)
+UK-adopted IFRS 9 has no equivalent transition.
 
-**EU** — Relevant EU consolidated financial statements apply EU-adopted IFRS standards under Regulation (EC) No 1606/2002 and Regulation (EU) 2023/1803; banking supervision overlays accounting with EBA/CRR prudential requirements rather than replacing IFRS 9 with Indian IRACP. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+#### EU (European Commission)
+EU-adopted IFRS 9 does not use India’s entity split.
 
-**US** — US GAAP uses ASC 326 CECL rather than IFRS 9 or RBI IRACP; lifetime expected credit losses for in-scope amortised-cost assets are recognised from initial recognition without an IFRS-style SICR staging gateway. [ASU 2016-13]
+#### US (FASB)
+US GAAP uses CECL, not RBI staged ECL.
 
 <Recall
-  q="Are Indian scheduled commercial banks on Ind AS 109 as of August 28, 2026?"
-  a="No. RBI deferred bank Ind AS implementation till further notice; current covered commercial-bank provisioning remains under RBI IRACP until the new RBI ECL Directions commence on April 1, 2027."
+  q="Are Indian commercial banks on Ind AS 109 at 31 August 2026?"
+  a="No — bank Ind AS remains deferred and IRACP applies."
 />
 
 <Recall
-  q="Is the 2023 RBI ECL Discussion Paper the current bank provisioning rule?"
-  a="No. It was a proposal. RBI issued final bank ECL Directions on April 27, 2026, effective April 1, 2027."
+  q="When does RBI bank ECL start?"
+  a="1 April 2027."
+/>
+
+<Recall
+  q="Does the CET1 add-back make allowance capital?"
+  a="No — it only phases the regulatory-capital transition effect."
+/>
+
+<Recall
+  q="Does ECL abolish NPA classification?"
+  a="No — NPA classification continues beside staging."
 />

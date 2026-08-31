@@ -1,19 +1,18 @@
 ---
 id: IMP-08
-title: Significant Increase in Credit Risk
+title: 'SICR Evidence, Backstops and Collective Assessment'
 type: mechanism
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  SICR is principally a relative test: compare the risk of default over the
-  remaining life at the reporting date with that risk at initial recognition.
-  Absolute thresholds can operationalise or conservatively supplement the test,
-  but they must not erase the origination benchmark.
+  SICR must use reasonable and supportable information that becomes available
+  before default. Delinquency is one signal; the more-than-30-DPD rule is a
+  rebuttable backstop, while collective assessment catches deterioration that
+  individual borrower data has not yet revealed.
 prerequisites:
-  - IMP-05
-  - IMP-06
-  - CR-10
-  - CR-11
+  - IMP-07
+  - CR-04
+  - CR-15
   - CR-16
 jurisdictions:
   - IN
@@ -22,93 +21,114 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, paragraphs 5.5.9–5.5.11
-      and B5.5.5–B5.5.23
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, paragraph 5.5.11
+      and paragraphs B5.5.1–B5.5.5, 24 July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 25–37
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Implementation of Indian Accounting Standards*,
+      RBI/2019-20/170, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, 13 March 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Implementation of Indian Accounting Standards*, DOR
-      (NBFC).CC.PD.No.109/22.10.106/2019-20, March 13, 2020
-    url: 'https://www.rbi.org.in/scripts/FS_Notification.aspx?Id=11818&Mode=0&fn=14'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, *Guidelines on credit institutions’ credit
+      risk management practices and accounting for expected credit losses*,
+      EBA/GL/2017/06, 12 May 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-An IFRS 9 instrument moves to lifetime ECL when credit risk has increased significantly since initial recognition. The standard focuses on the **change in the risk of default**, not the change in the amount of ECL. The comparison is between default risk over the expected life at the reporting date and the corresponding risk at initial recognition.
+### Core mechanism
 
-That makes SICR a **relative** concept. A movement from very low risk to moderate risk can be significant even though the current absolute PD remains below a portfolio-level “high risk” threshold. Conversely, a borrower originated at high risk may show a high current PD without having deteriorated significantly relative to origination. IFRS 9 specifically notes that an identical absolute change in default risk can have different significance depending on the starting level of risk.
+| Evidence | Role |
+| :--- | :--- |
+| Internal rating / PD migration | Quantifies deterioration |
+| Watchlist or covenant deterioration | Borrower-specific early warning |
+| Forbearance / restructuring | May indicate financial difficulty |
+| Sector or macro stress | Forward-looking deterioration |
+| More than 30 DPD | Rebuttable SICR presumption under IFRS 9 |
+| Shared risk characteristics | Supports collective SICR assessment |
+| Low credit risk at reporting date | IFRS 9 practical expedient where its conditions are met |
 
-Practitioners nevertheless use **absolute indicators**: internal rating grades, watchlists, forbearance events, PD thresholds, pricing changes, sector stress or other risk signals. These can be useful operational triggers, particularly when they identify deterioration conservatively. They are not a licence to replace the IFRS 9 objective with a single current-risk cut-off. The design must still identify significant change since origination.
-
-IFRS 9 also permits a low-credit-risk practical expedient: where an instrument has low credit risk at the reporting date, an entity may assume credit risk has not increased significantly. “Low credit risk” concerns default risk and capacity to meet obligations; strong collateral alone does not make an otherwise weak borrower low risk.
+### Flow
 
 ```text
-+-----------------------+
-| Risk at origination   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Risk at reporting     |
-| date                  |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Compare change over   |
-| remaining life        |
-+-----------------------+
-      |             |
-      v             v
-+----------+   +----------+
-| No SICR  |   | SICR     |
-| Stage 1  |   | Stage 2  |
-+----------+   +----------+
+Forward-looking and borrower information
+    ↓
+Individual SICR identifiable?
+    ├─ Yes → assess Stage 2
+    └─ No
+         ↓
+Collective deterioration identifiable?
+    ├─ Yes → assess collectively
+    └─ No
+         ↓
+Past-due backstop
+         ↓
+More than 30 DPD → SICR presumed unless supported rebuttal
+```
+
+### Where it sits
+
+```text
+Upstream:   Risk grades · DPD · Watchlists · Macroeconomic information
+This:       SICR evidence · Backstops · Collective assessment
+Downstream: Stage 2 population · Lifetime ECL
 ```
 
 ### Permanent rule
 
-SICR is about deterioration relative to the credit risk accepted at initial recognition.
+A backstop catches deterioration that earlier information failed to identify. It does not replace earlier information.
 
-### Permanent trap
+### Never confuse [30-DPD presumption] and [Stage 2 definition]
 
-Using one absolute current-PD threshold for every exposure can leave initially low-risk borrowers in Stage 1 after a proportionately severe deterioration.
-
-### Never confuse
-
-**Relative SICR test** — measures deterioration from the asset’s origination risk benchmark.
+**30-DPD presumption** — a rebuttable backstop.
 
 ---
 
-**Absolute risk threshold** — measures the current level of risk without necessarily considering where the exposure started.
+**Stage 2 definition** — significant increase in credit risk since initial recognition.
+
+### Permanent trap
+
+Waiting until day 31 before considering Stage 2 turns an early-recognition framework into a delinquency framework.
 
 ### Jurisdiction variants
 
-**IN** — Current scheduled-commercial-bank IRACP does not use IFRS 9 SICR. RBI’s final bank ECL framework from April 1, 2027 requires a relative lifetime-risk comparison and allows documented operational parameters; relevant Ind AS NBFCs apply SICR requirements with RBI prudential guidance. [RBI 2026 ECL Directions, paragraphs 25–31; RBI 2020 NBFC guidance]
+#### IN (RBI)
+For Ind AS-implementing NBFCs, RBI reinforces the more-than-30-DPD rebuttable presumption and requires that recognition of SICR not be deferred beyond 60 days past due. RBI’s commercial-bank ECL framework from 1 April 2027 also contains SICR backstops.
 
-**UK** — IFRS 9 SICR applies; PRA supervision expects robust and timely recognition of credit deterioration. [IFRS 9 5.5; PRA 2025]
+#### UK (UKEB)
+No accounting delta from IFRS 9.
 
-**EU** — EU-adopted IFRS 9 provides the SICR test; EBA/GL/2017/06 supplements bank supervisory expectations. [Regulation (EU) 2023/1803; EBA/GL/2017/06]
+#### EU (European Commission / EBA)
+No accounting delta; EBA guidance reinforces timely, forward-looking and collective assessment.
 
-**US** — CECL has no SICR threshold controlling a switch from 12-month to lifetime allowance because lifetime expected losses are recognised from initial recognition. [ASC 326]
+#### US (FASB)
+No SICR or 30-DPD staging presumption exists under CECL, although delinquency remains relevant credit information.
 
 <Recall
-  q="Is SICR primarily an absolute or relative test?"
-  a="Relative: current default risk is compared with default risk at initial recognition."
+  q="Is more than 30 DPD the definition of SICR?"
+  a="No — it is a rebuttable backstop, while SICR is significant deterioration since initial recognition."
 />
 
 <Recall
-  q="Can absolute triggers still be useful?"
-  a="Yes, as operational or conservative indicators, provided they do not defeat the relative SICR objective."
+  q="Why use collective assessment?"
+  a="Portfolio deterioration may be visible before borrower-specific evidence emerges."
+/>
+
+<Recall
+  q="Can SICR occur before a missed payment?"
+  a="Yes — forward-looking or borrower-specific evidence can identify deterioration before delinquency."
 />

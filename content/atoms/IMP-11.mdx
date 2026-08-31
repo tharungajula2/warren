@@ -1,18 +1,22 @@
 ---
 id: IMP-11
-title: Purchased or Originated Credit-Impaired Assets
+title: 'The ECL Engine: Period-by-Period Expected Loss'
 type: mechanism
 domain: impairment
 subdomain: three-stage-architecture
 one_screen: >-
-  A POCI asset is already credit-impaired when first recognised, so ordinary
-  Stage 1-to-Stage 3 logic does not describe its economics. IFRS 9 embeds
-  initial expected credit losses in a credit-adjusted EIR and subsequently
-  recognises only changes in lifetime ECL.
+  A common ECL engine decomposes expected loss into default timing, exposure at
+  that time, loss severity and discounting. The decomposition is useful only if
+  its aggregate output remains consistent with the governing
+  expected-cash-shortfall objective.
 prerequisites:
   - IMP-04
-  - IMP-10
-  - FND-09
+  - IMP-06
+  - FND-13
+  - CR-10
+  - CR-12
+  - CR-13
+  - CR-17
 jurisdictions:
   - IN
   - UK
@@ -20,102 +24,132 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      IFRS Foundation, *IFRS 9 Financial Instruments*, Appendix A, paragraphs
-      5.4.1 and 5.5.13–5.5.14
-    url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs9.html
-    accessed: '2026'
+      IFRS Foundation, *IFRS 9 Financial Instruments*, IFRS 9, Section 5.5, 24
+      July 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Frequently Asked Questions on the New Accounting
-      Standard on Financial Instruments—Credit Losses*, Question 14
-    url: >-
-      https://www.federalreserve.gov/supervisionreg/topics/faq-new-accounting-standards-on-financial-instruments-credit-losses.htm
-    accessed: '2026'
+      European Banking Authority, *Guidelines on credit institutions’ credit
+      risk management practices and accounting for expected credit losses*,
+      EBA/GL/2017/06, 12 May 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 24 and
-      POCI provisions
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Financial Accounting Standards Board, *Accounting Standards Update
+      2016-13, Financial Instruments—Credit Losses (Topic 326): Measurement of
+      Credit Losses on Financial Instruments*, ASU 2016-13, 16 June 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-**Purchased or originated credit-impaired (POCI)** financial assets are credit-impaired at initial recognition. A purchase at a deep discount because the borrower is in severe financial difficulty is a common economic pattern, although the accounting test is credit impairment at initial recognition rather than the size of the discount alone.
-
-POCI accounting avoids recognising a conventional Day-1 loss allowance on top of a purchase price that already reflects expected credit losses. Instead, expected credit losses at initial recognition are incorporated into expected cash flows used to calculate the **credit-adjusted effective interest rate**. Interest revenue is subsequently based on that credit-adjusted EIR.
-
-After initial recognition, the entity recognises the cumulative change in **lifetime ECL** as an impairment gain or loss. This can produce an impairment gain if expected collections improve relative to the credit-adjusted expectations embedded at purchase or origination. The asset does not first enter “Stage 1” merely because it has just been recognised; the ordinary staging model assumes an initially non-credit-impaired asset and therefore does not fit POCI economics.
-
-The concept is particularly important when comparing purchased distressed assets with loans that deteriorate after origination. Two assets can have identical current expected cash flows but different accounting histories because one was purchased already impaired and the other became impaired after initial recognition.
+### Formula
 
 ```text
-+------------------------+
-| Credit-impaired at     |
-| initial recognition?   |
-+------------------------+
-          |
-         Yes
-          v
-+------------------------+
-| POCI                   |
-+------------------------+
-          |
-          v
-+------------------------+
-| Initial expected loss  |
-| embedded in expected   |
-| cash flows             |
-+------------------------+
-          |
-          v
-+------------------------+
-| Credit-adjusted EIR    |
-+------------------------+
-          |
-          v
-+------------------------+
-| Recognise subsequent   |
-| change in lifetime ECL |
-+------------------------+
+ECL = sum over t [Marginal PD_t × EAD_t × LGD_t × DF_t]
+
+Marginal PD_t = probability that default occurs in period t and has not occurred earlier.
+
+EAD_t = exposure expected at default in period t.
+
+LGD_t = expected loss severity conditional on default in period t.
+
+DF_t = discount factor bringing the period-t loss to the reporting date.
+
+t = each future period inside the applicable ECL horizon.
+```
+
+### Core mechanism
+
+| Stage / framework | Default periods entering the engine |
+| :--- | :--- |
+| IFRS 9 Stage 1 | Defaults possible within next 12 months |
+| IFRS 9 Stage 2 | Defaults possible over remaining relevant life |
+| IFRS 9 Stage 3 | Lifetime expected cash shortfalls on credit-impaired asset |
+| CECL | Expected losses over applicable contractual term |
+| RBI bank ECL from 1 Apr 2027 | Stage-dependent 12-month / lifetime structure |
+
+### Flow
+
+```text
+Stage / framework
+    ↓
+Default horizon
+    ↓
+Marginal PD by period
+    ↓
+EAD and LGD at each possible default date
+    ↓
+Discount each loss
+    ↓
+Sum expected losses
+    ↓
+Scenario weighting / adjustments
+    ↓
+Final ECL
+```
+
+### Where it sits
+
+```text
+Upstream:   Stage · PD · LGD · EAD · Discount factors
+This:       Period-by-period ECL aggregation
+Downstream: Scenario ECL · Allowance · Validation
 ```
 
 ### Permanent rule
 
-For POCI assets, initial credit deterioration is part of the asset’s starting economics rather than a post-origination stage migration.
+All model components must describe the same exposure, default definition, timing basis and economic scenario.
+
+### Never confuse [ECL formula] and [Accounting definition]
+
+```text
+**ECL formula** — a modelling architecture.
+
+---
+**Accounting definition** — the loss quantity the framework requires the model to estimate.
+```
 
 ### Permanent trap
 
-Booking a normal Day-1 Stage 3 allowance on top of a purchase price already reflecting credit impairment can double-count the initial expected loss under IFRS 9.
-
-### Never confuse
-
-**POCI** — an asset credit-impaired when first recognised by the reporting entity.
-
----
-
-**Stage 3 after origination** — an asset that was not credit-impaired initially but later became credit-impaired.
+Mixing a lifetime PD with current EAD and one-year LGD, or mixing conditional and unconditional default probabilities, can create a number that looks precise but has no coherent probabilistic meaning.
 
 ### Jurisdiction variants
 
-**IN** — Current scheduled-commercial-bank IRACP does not operate the Ind AS 109 POCI model. RBI’s final bank ECL framework from April 1, 2027 separately identifies POCI, embeds initial ECL in a credit-adjusted EIR and recognises subsequent cumulative lifetime-ECL changes; relevant Ind AS NBFCs follow applicable Ind AS requirements. [RBI 2026 ECL Directions, paragraphs 24 and related POCI provisions]
+#### IN (RBI)
+Current commercial-bank IRACP does not require this engine. RBI’s framework from 1 April 2027 uses a general PD/LGD/EAD-style approach within its ECL requirements.
 
-**UK** — UK-adopted IFRS 9 applies the POCI and credit-adjusted-EIR model. [IFRS 9 Appendix A, 5.4.1, 5.5.13]
+#### UK (UKEB)
+IFRS 9 does not prescribe PD/LGD/EAD as the only permissible technique.
 
-**EU** — EU-adopted IFRS 9 applies the same POCI treatment. [Regulation (EU) 2023/1803]
+#### EU (European Commission / EBA)
+Same accounting position as IFRS 9; EBA guidance focuses on sound implementation rather than one mandatory model form.
 
-**US** — ASC 326 uses **purchased credit deteriorated (PCD)** accounting rather than IFRS 9 POCI: the acquisition-date allowance is added to purchase price to establish the initial amortised-cost basis, producing a gross-up rather than IFRS 9’s POCI credit-adjusted-EIR model. [ASC 326; Interagency CECL FAQ]
+#### US (FASB)
+CECL is method-neutral: PD/LGD is permitted but not mandatory.
 
 <Recall
-  q="Why does IFRS 9 not treat initial POCI ECL like an ordinary Day-1 Stage 1 allowance?"
-  a="Because expected credit losses are already embedded in the asset’s initial pricing and credit-adjusted EIR."
+  q="What does marginal PD_t represent?"
+  a="Default in period t without prior default."
 />
 
 <Recall
-  q="Is US PCD accounting identical to IFRS 9 POCI accounting?"
-  a="No. The US uses an acquisition-date allowance gross-up approach."
+  q="Why is period alignment essential?"
+  a="PD, EAD, LGD and discounting must describe the same possible default event."
+/>
+
+<Recall
+  q="Does IFRS 9 mandate this exact formula?"
+  a="No — IFRS 9 specifies the measurement objective, not one compulsory modelling architecture."
 />

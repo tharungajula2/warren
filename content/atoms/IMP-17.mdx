@@ -1,21 +1,21 @@
 ---
 id: IMP-17
-title: ECL Model Validation and Backtesting
+title: 'Validation, Backtesting and Staging Challenge'
 type: procedure
 domain: impairment
 subdomain: governance-and-jurisdictions
 one_screen: >-
-  Validation asks whether an ECL model is conceptually sound, implemented
-  correctly and performing acceptably for its intended accounting use.
-  Backtesting is one part of validation: compare predictions with realised
-  outcomes, diagnose differences, and determine whether recalibration,
-  redevelopment or a controlled adjustment is needed.
+  Validation asks whether ECL is conceptually sound, correctly implemented and
+  performing appropriately. Backtesting is one component; staging needs separate
+  challenge because a good PD model can still produce late lifetime-loss
+  recognition.
 prerequisites:
+  - IMP-11
+  - IMP-12
   - IMP-13
   - IMP-14
-  - IMP-15
   - IMP-16
-  - MRM-01
+  - FND-18
 jurisdictions:
   - IN
   - UK
@@ -23,105 +23,129 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Federal Reserve, OCC, FDIC and NCUA, *Interagency Policy Statement on
-      Allowances for Credit Losses*, revised April 2023
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
-    accessed: '2026'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      PRA, *Thematic feedback on accounting for IFRS 9 expected credit losses*,
-      September 30, 2025
-    url: >-
-      https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/letter/2025/thematic-feedback-on-accounting-for-ifrs-9-ecl-2025.pdf
-    accessed: '2026'
+      Prudential Regulation Authority, *Thematic feedback on accounting for IFRS
+      9 expected credit losses (ECL)*, Ref: none stated, 30 September 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      EBA, *Guidelines on credit institutions’ credit risk management practices
-      and accounting for expected credit losses*, EBA/GL/2017/06, May 12, 2017
-    url: >-
-      https://www.eba.europa.eu/guidelines-credit-risk-management-practices-and-accounting-expected-credit-losses
-    accessed: '2026'
+      European Banking Authority, *Guidelines on credit institutions’ credit
+      risk management practices and accounting for expected credit losses*,
+      EBA/GL/2017/06, 12 May 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      RBI, *Reserve Bank of India (Commercial Banks – Asset Classification,
-      Provisioning and Income Recognition) Directions, 2026*, paragraphs 119–131
-    url: 'https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13400'
-    accessed: '2026'
+      Board of Governors of the Federal Reserve System, FDIC, NCUA and OCC,
+      *Interagency Policy Statement on Allowances for Credit Losses*, SR 20-12,
+      8 May 2020, revised 21 April 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 03_IMP_impairment_ecl.md
 ---
-ECL validation should cover more than a final allowance number. A model can produce a plausible aggregate ECL while its segmentation, PD term structure, LGD recovery timing or EAD behaviour is wrong. Validation therefore works from inputs through methodology to outputs.
+### Core mechanism
 
-A practical sequence begins with **conceptual soundness**: does the methodology correspond to the accounting objective, portfolio economics and available data? Next comes implementation testing: are source data, transformations, code, parameter mappings and aggregation correct? Quantitative performance testing then evaluates discrimination, calibration, stability and realised outcomes where relevant. Finally, governance testing checks documentation, change control, limitations, approval and whether users understand the model’s intended boundaries.
+| Validation layer | What is challenged |
+| :--- | :--- |
+| Conceptual soundness | Accounting objective and portfolio economics |
+| Data | Completeness, accuracy, representativeness |
+| Implementation | Code, transformations, mappings, aggregation |
+| PD | Discrimination, calibration, term structure, realised defaults |
+| LGD | Recovery amount, timing, costs, realised severity |
+| EAD | Drawdown, amortisation, exposure-at-default behaviour |
+| Staging | Migration timing, SICR triggers, rebuttals, cure |
+| Scenario / overlay | Sensitivity, weights, omitted risk, double-counting |
+| Governance | Approval, limitations, change control, challenge |
 
-**Backtesting** compares model predictions with realised outcomes over appropriately defined periods. A PD backtest may compare forecast defaults with realised defaults; an LGD backtest can compare expected discounted recoveries with actual recovery experience; an EAD backtest can test drawdowns before default. Aggregate ECL-versus-write-off comparison is useful but insufficient because timing and portfolio composition can obscure component errors.
-
-Repeated material overprediction or underprediction is evidence requiring investigation, not automatic proof that a particular calibration change is correct. US interagency guidance explicitly expects periodic validation independent of credit approval and ACL estimation, including conceptual-soundness review, ongoing monitoring and output analysis; it notes that persistent material forecast error may indicate weakness.
+### Flow
 
 ```text
-+----------------------+
-| Conceptual design    |
-+----------------------+
-          |
-          v
-+----------------------+
-| Data / implementation|
-| verification         |
-+----------------------+
-          |
-          v
-+----------------------+
-| Quantitative testing |
-+----------------------+
-          |
-          v
-+----------------------+
-| Backtest predicted   |
-| vs realised          |
-+----------------------+
-          |
-          v
-+----------------------+
-| Remediate / approve  |
-| / monitor            |
-+----------------------+
+Model design
+    ↓
+Independent conceptual review
+    ↓
+Implementation verification
+    ↓
+Performance testing
+    ↓
+Backtesting
+    ↓
+Staging challenge
+    ↓
+Findings
+    ↓
+Remediate · recalibrate · redevelop · monitor
 ```
+
+### Where it sits
+
+```text
+Upstream:   ECL models · Staging rules · Data · Overlays
+This:       Validation · Backtesting · Independent challenge
+Downstream: Model approval · Remediation · Allowance confidence
+```
+
+### Ownership
+
+| Role | Produces / challenges |
+| :--- | :--- |
+| Model owner | Model, data, documentation |
+| Independent validation | Conceptual and quantitative challenge |
+| Finance / credit risk | Use and interpretation |
+| Internal audit | Framework and control assurance |
+| Board / committees | Oversight of material models and findings |
 
 ### Permanent rule
 
-Validation must test the model against its intended use and underlying risk mechanics, not merely reproduce the developer’s calculation.
+Validation tests the model against its intended use, not merely whether the developer’s calculation can be reproduced.
 
-### Permanent trap
+### Never confuse [Backtesting] and [Validation]
 
-Declaring a model “validated” because aggregate provision is close to actual write-offs can hide offsetting PD, LGD, EAD or staging errors.
-
-### Never confuse
-
-**Validation** — independent challenge of conceptual soundness, implementation, performance and use.
+**Backtesting** — compares predictions with realised outcomes.
 
 ---
 
-**Backtesting** — outcomes analysis comparing model predictions with realised experience; it is a component of validation, not the whole process.
+**Validation** — broader independent challenge of design, implementation, performance and use.
+
+### Permanent trap
+
+A plausible aggregate allowance can hide offsetting PD, LGD, EAD or staging errors. “Total ECL looks reasonable” is not validation.
 
 ### Jurisdiction variants
 
-**IN** — Current commercial-bank IRACP requires automated classification controls and periodic system audit; RBI’s ECL Directions from April 1, 2027 add an explicit model inventory, independent validation, pre-implementation validation and post-implementation backtesting framework. [RBI 2025 IRACP; RBI 2026 ECL Directions, paragraphs 119–131]
+#### IN (RBI)
+RBI’s bank ECL framework from 1 April 2027 establishes model governance, independent validation and post-implementation backtesting.
 
-**UK** — PRA’s 2025 thematic feedback emphasises monitoring and validation of IFRS 9 ECL models and model operating boundaries. [PRA 2025 thematic feedback]
+#### UK (PRA)
+PRA’s 2025 thematic feedback emphasises monitoring, validation and model operating boundaries.
 
-**EU** — EBA/GL/2017/06 provides supervisory guidance on sound credit-risk-management and accounting-ECL practices alongside IFRS 9. [EBA/GL/2017/06]
+#### EU (EBA)
+EBA/GL/2017/06 sets expectations for sound ECL methodology and governance.
 
-**US** — Interagency ACL guidance expects periodic independent validation and initial and ongoing model-validation activities, including conceptual soundness, monitoring, benchmarking and model-output analysis. [Interagency ACL Policy Statement]
+#### US (Federal Reserve / FDIC / OCC / NCUA)
+Interagency guidance expects periodic validation independent of credit approval and allowance estimation, including conceptual soundness, monitoring and output analysis.
 
 <Recall
-  q="Is backtesting the same as model validation?"
-  a="No. It is one important part of a broader validation framework."
+  q="Is backtesting enough to validate an ECL model?"
+  a="No — validation also covers conceptual design, implementation, governance and intended use."
 />
 
 <Recall
-  q="What does persistent forecast bias indicate?"
-  a="A potential model or process weakness that requires diagnosis and remediation."
+  q="What does staging validation test?"
+  a="Whether lifetime-ECL treatment starts and ends at the right time."
+/>
+
+<Recall
+  q="Why can aggregate ECL look right while the model is wrong?"
+  a="Component errors can offset each other."
 />
