@@ -47,17 +47,17 @@ const mdxComponents = {
   ),
   table: (props: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-5 w-full overflow-x-auto border border-[#23272D] rounded-[3px]">
-      <table className="w-full text-left text-xs border-collapse font-sans" {...props} />
+      <table className="w-full text-left text-[14px] border-collapse font-sans" {...props} />
     </div>
   ),
   thead: (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
-    <thead className="bg-[#121417] border-b border-[#23272D] text-[#9AA3AD] font-mono uppercase text-[11px] tracking-wider" {...props} />
+    <thead className="bg-[#121417] border-b border-[#23272D] text-[#9AA3AD] font-mono uppercase text-[12px] tracking-wider font-semibold" {...props} />
   ),
   th: (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
-    <th className="px-3 py-2 font-medium border-r border-[#23272D] last:border-r-0" {...props} />
+    <th className="px-3.5 py-2.5 font-semibold border-r border-[#23272D] last:border-r-0" {...props} />
   ),
   td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
-    <td className="px-3 py-2 border-b border-r border-[#23272D] last:border-r-0 text-[#E6E8EB] tabular-nums" {...props} />
+    <td className="px-3.5 py-2.5 border-b border-r border-[#23272D] last:border-r-0 text-[#E6E8EB] tabular-nums leading-relaxed" {...props} />
   ),
   tr: (props: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr className="hover:bg-[#191C20]/50 transition-colors last:children:border-b-0" {...props} />
