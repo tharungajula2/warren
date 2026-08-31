@@ -98,7 +98,7 @@ export default function HomePage() {
           </div>
           <div className="space-y-4 text-body text-text-muted leading-relaxed">
             <p>
-              WARREN is a jurisdiction-aware technical operating manual and knowledge system built specifically for banking, credit risk, market risk, treasury, and regulatory professionals.
+              WARREN is a jurisdiction-aware technical operating manual and knowledge system built specifically for banking, credit risk, treasury, and regulatory professionals.
             </p>
             <p>
               It structures financial regulation around a single universal mathematical baseline core, linked directly to jurisdictional deltas across the RBI (India), PRA (UK), EBA (Europe), and Fed/OCC (US).

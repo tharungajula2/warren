@@ -19,22 +19,6 @@
     "title": "Treasury & ALM",
     "description": "Asset liability management, interest rate risk in the banking book (IRRBB), and liquidity ratios (LCR, NSFR)."
   },
-  "traded-products": {
-    "title": "Traded Products & Derivatives",
-    "description": "Financial derivatives pricing, interest rate swaps, credit default swaps, and trading book valuation."
-  },
-  "counterparty-risk": {
-    "title": "Counterparty Credit Risk",
-    "description": "Counterparty credit risk exposure, valuation adjustments (xVA), collateral management, and derivative settlement."
-  },
-  "market-risk": {
-    "title": "Market Risk & VaR",
-    "description": "Statistical loss estimation across trading books under normal and extreme market stress scenarios (FRTB, VaR, ES)."
-  },
-  "operational-risk": {
-    "title": "Operational Risk",
-    "description": "Capital quantification for inadequate internal processes, system failures, human error, and legal events."
-  },
   "model-risk": {
     "title": "Model Risk & Validation",
     "description": "Model risk management, SR 11-7 validation standards, backtesting, sensitivity analysis, and governance."
@@ -42,10 +26,6 @@
   "risk-data": {
     "title": "Risk Data Governance",
     "description": "BCBS 239 risk data aggregation principles, data lineage tracing, metadata governance, and quality management."
-  },
-  "financial-crime": {
-    "title": "Financial Crime & AML",
-    "description": "Anti-money laundering, know-your-customer (KYC) compliance, sanctions screening, and transaction monitoring."
   },
   "india-lending": {
     "title": "India Lending & Prudential Norms",

@@ -25,7 +25,7 @@ export default function AtomsIndexPage() {
           Knowledge Corpus Index
         </h1>
         <p className="text-sm text-[#9AA3AD] mt-1">
-          Structured teachable units across regulatory frameworks, credit risk, market risk, operational risk, legal netting, and quantitative foundations.
+          Structured teachable units across regulatory frameworks, credit risk, legal netting, and quantitative foundations.
         </p>
       </div>
 

@@ -127,7 +127,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="text-xs text-text-faint px-1">Loading tree...</div>
         ) : manifest.domainTree.length === 0 ? (
           <div className="space-y-1">
-            {["credit-risk", "counterparty-risk", "foundation", "legal-framework", "market-risk", "operational-risk", "quantitative", "regulatory", "risk-data"].map((domKey) => (
+            {["credit-risk", "foundation", "legal-framework", "quantitative", "regulatory", "risk-data"].map((domKey) => (
               <div key={domKey} className="px-2 py-1 bg-surface-2 border border-border rounded-sm text-text-muted text-xs">
                 <span className="font-bold uppercase tracking-wider text-accent">{domKey}</span>
                 <span className="block text-xs text-text-faint tabular-nums">0 ATOMS INDEXED</span>
