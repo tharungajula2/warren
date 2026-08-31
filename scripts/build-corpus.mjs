@@ -101,6 +101,15 @@ function computeCurrentness(frontmatter, buildDate = new Date("2026-08-28")) {
   }
 }
 
+function stripMarkdownFromOneScreen(text) {
+  if (!text) return "";
+  return text
+    .replace(/\*\*(.*?)\*\*/g, (m, p1) => p1)
+    .replace(/`(.*?)`/g, (m, p1) => p1)
+    .replace(/\[(.*?)\]\(.*?\)/g, (m, p1) => p1)
+    .trim();
+}
+
 function stripMdxToPlainText(rawMdx) {
   if (!rawMdx) return "";
   return rawMdx
@@ -348,6 +357,7 @@ function buildCorpus() {
 
       atomsManifest[id] = {
         ...frontmatter,
+        one_screen: stripMarkdownFromOneScreen(frontmatter.one_screen),
         slug: id.toLowerCase(),
         depth,
         currentness,

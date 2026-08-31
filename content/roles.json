@@ -17,7 +17,7 @@
     "atoms": [
       {
         "id": "MRM-01",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "MRM-08",
@@ -37,7 +37,7 @@
       },
       {
         "id": "MRM-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-04",
@@ -57,27 +57,27 @@
       },
       {
         "id": "QNT-25",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-26",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-29",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-30",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "MRM-17",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "MRM-18",
-        "weight": 1
+        "weight": 2
       }
     ]
   },
@@ -119,47 +119,47 @@
       },
       {
         "id": "QNT-10",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-11",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-14",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-15",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-16",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CR-14",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CR-21",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "QNT-20",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "MRM-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "MRM-14",
-        "weight": 1
+        "weight": 3
       }
     ]
   },
@@ -182,7 +182,7 @@
     "atoms": [
       {
         "id": "FND-08",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "IMP-01",
@@ -202,43 +202,43 @@
       },
       {
         "id": "IMP-08",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-09",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-11",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-12",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-14",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-15",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-16",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-18",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IMP-20",
-        "weight": 1
+        "weight": 3
       }
     ]
   },
@@ -281,35 +281,35 @@
       },
       {
         "id": "CAP-12",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-14",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-16",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-19",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-20",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-22",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-24",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-27",
@@ -317,11 +317,11 @@
       },
       {
         "id": "CAP-09",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CAP-30",
-        "weight": 1
+        "weight": 3
       }
     ]
   },
@@ -363,43 +363,43 @@
       },
       {
         "id": "TLM-08",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-10",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-14",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-15",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-17",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-18",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-19",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-20",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-21",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-29",
-        "weight": 1
+        "weight": 2
       }
     ]
   },
@@ -417,19 +417,19 @@
     "atoms": [
       {
         "id": "FND-02",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "TLM-01",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "TLM-02",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "TLM-03",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "TLM-10",
@@ -457,11 +457,11 @@
       },
       {
         "id": "TLM-28",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TLM-29",
-        "weight": 1
+        "weight": 2
       }
     ]
   },
@@ -483,7 +483,7 @@
     "atoms": [
       {
         "id": "FND-24",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "BA-01",
@@ -499,19 +499,19 @@
       },
       {
         "id": "BA-11",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "BA-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "BA-17",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "BA-18",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-19",
@@ -527,19 +527,19 @@
       },
       {
         "id": "DAT-22",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-25",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-26",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-27",
-        "weight": 1
+        "weight": 3
       }
     ]
   },
@@ -561,7 +561,7 @@
     "atoms": [
       {
         "id": "DAT-01",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "DAT-02",
@@ -581,7 +581,7 @@
       },
       {
         "id": "DAT-07",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-08",
@@ -597,7 +597,7 @@
       },
       {
         "id": "DAT-11",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-13",
@@ -605,11 +605,11 @@
       },
       {
         "id": "DAT-14",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-15",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "DAT-16",
@@ -617,7 +617,7 @@
       },
       {
         "id": "DAT-17",
-        "weight": 1
+        "weight": 2
       }
     ]
   },
@@ -659,15 +659,15 @@
       },
       {
         "id": "TEC-11",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TEC-12",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TEC-13",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TEC-14",
@@ -675,7 +675,7 @@
       },
       {
         "id": "TEC-16",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "TEC-17",
@@ -687,19 +687,19 @@
       },
       {
         "id": "TEC-20",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TEC-23",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TEC-24",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "TEC-30",
-        "weight": 1
+        "weight": 2
       }
     ]
   },
@@ -729,11 +729,11 @@
       },
       {
         "id": "IND-09",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CR-20",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "IND-16",
@@ -741,11 +741,11 @@
       },
       {
         "id": "IND-17",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IND-18",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IND-13",
@@ -757,23 +757,23 @@
       },
       {
         "id": "IND-15",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "CR-06",
-        "weight": 1
+        "weight": 2
       },
       {
         "id": "IND-20",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IND-21",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IND-22",
-        "weight": 2
+        "weight": 3
       }
     ]
   },
@@ -818,19 +818,19 @@
       },
       {
         "id": "BA-16",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "BA-17",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "BA-18",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "IND-16",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "IND-17",
@@ -842,19 +842,19 @@
       },
       {
         "id": "DAT-11",
-        "weight": 1
+        "weight": 2
       },
       {
         "id": "DAT-21",
-        "weight": 3
+        "weight": 2
       },
       {
         "id": "BA-20",
-        "weight": 2
+        "weight": 3
       },
       {
         "id": "BA-22",
-        "weight": 2
+        "weight": 3
       }
     ]
   }

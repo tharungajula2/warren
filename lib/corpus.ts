@@ -190,12 +190,22 @@ export function generateCorpusManifest(): CorpusManifest {
     return depth;
   }
 
+  function stripMarkdownFromOneScreen(text: string): string {
+    if (!text) return "";
+    return text
+      .replace(/\*\*(.*?)\*\*/g, (m, p1) => p1)
+      .replace(/`(.*?)`/g, (m, p1) => p1)
+      .replace(/\[(.*?)\]\(.*?\)/g, (m, p1) => p1)
+      .trim();
+  }
+
   const atomsManifest: Record<string, AtomManifestItem> = {};
   for (const [id, { frontmatter, filename }] of Object.entries(rawAtoms)) {
     const depth = computeDepth(id);
     const currentness = computeCurrentness(frontmatter);
     atomsManifest[id] = {
       ...frontmatter,
+      one_screen: stripMarkdownFromOneScreen(frontmatter.one_screen),
       slug: id.toLowerCase(),
       depth,
       currentness,

@@ -80,7 +80,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           }`}
         >
           <span>ROLE FAMILIES</span>
-          <span className="text-xs tabular-nums">12</span>
+          <span className="text-xs tabular-nums">{manifest?.roles?.length ?? 11}</span>
         </Link>
         <Link
           href="/atoms"

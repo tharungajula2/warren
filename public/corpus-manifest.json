@@ -1178,7 +1178,7 @@
       "type": "delta",
       "domain": "regulatory-capital",
       "subdomain": "rwa-and-pillars",
-      "one_screen": "A new ECL regime can create an immediate opening-equity hit before the underlying loans have changed overnight. Transitional capital relief smooths that prudential shock; it does not undo the allowance. **As at August 2026**, RBI's final ECL Directions are issued but not yet in force: they commence on **1 April 2027** and permit a declining CET1 add-back through **31 March 2031**.",
+      "one_screen": "A new ECL regime can create an immediate opening-equity hit before the underlying loans have changed overnight. Transitional capital relief smooths that prudential shock; it does not undo the allowance. As at August 2026, RBI's final ECL Directions are issued but not yet in force: they commence on 1 April 2027 and permit a declining CET1 add-back through 31 March 2031.",
       "prerequisites": [
         "IMP-20",
         "CAP-07",
@@ -1651,7 +1651,7 @@
       "type": "mechanism",
       "domain": "regulatory-capital",
       "subdomain": "mitigation",
-      "one_screen": "The output floor limits how far approved internal models can reduce aggregate RWA below a standardised benchmark. The fully phased Basel calibration is 72.5% of standardised RWA; it is not a 72.5% exposure risk weight. **As at August 2026**, phase-in status is jurisdiction-specific and future steps must be read by date.",
+      "one_screen": "The output floor limits how far approved internal models can reduce aggregate RWA below a standardised benchmark. The fully phased Basel calibration is 72.5% of standardised RWA; it is not a 72.5% exposure risk weight. As at August 2026, phase-in status is jurisdiction-specific and future steps must be read by date.",
       "prerequisites": [
         "CAP-13",
         "CAP-16",
@@ -2078,7 +2078,7 @@
       "type": "concept",
       "domain": "regulatory-capital",
       "subdomain": "pillar-2-and-jurisdictions",
-      "one_screen": "Basel is an international prudential standard, not a supranational banking statute. **As at August 2026**, the Basel Committee continues to set the common benchmark, while binding obligations arise through national or regional implementation. Every live capital question must therefore be dated and scoped before the formula is applied.",
+      "one_screen": "Basel is an international prudential standard, not a supranational banking statute. As at August 2026, the Basel Committee continues to set the common benchmark, while binding obligations arise through national or regional implementation. Every live capital question must therefore be dated and scoped before the formula is applied.",
       "prerequisites": [
         "FND-19",
         "CAP-21"
@@ -2137,7 +2137,7 @@
       "type": "delta",
       "domain": "regulatory-capital",
       "subdomain": "pillar-2-and-jurisdictions",
-      "one_screen": "The UK and EU share the Basel destination but not the same implementation clock or every implementation choice. **As at August 2026**, EU CRR3 has applied its main package since 1 January 2025, while the PRA's final UK Basel 3.1 rules are issued but commence on 1 January 2027.",
+      "one_screen": "The UK and EU share the Basel destination but not the same implementation clock or every implementation choice. As at August 2026, EU CRR3 has applied its main package since 1 January 2025, while the PRA's final UK Basel 3.1 rules are issued but commence on 1 January 2027.",
       "prerequisites": [
         "CAP-19",
         "CAP-23",
@@ -2196,7 +2196,7 @@
       "type": "delta",
       "domain": "regulatory-capital",
       "subdomain": "pillar-2-and-jurisdictions",
-      "one_screen": "India's binding capital ratios are not the Basel global minima, and its next credit-risk and provisioning changes share a commencement date but remain separate regimes. **As at August 2026**, current commercial-bank capital directions are in force; the revised credit-risk Standardised Approach and the new ECL provisioning Directions are both final but commence on **1 April 2027**.",
+      "one_screen": "India's binding capital ratios are not the Basel global minima, and its next credit-risk and provisioning changes share a commencement date but remain separate regimes. As at August 2026, current commercial-bank capital directions are in force; the revised credit-risk Standardised Approach and the new ECL provisioning Directions are both final but commence on 1 April 2027.",
       "prerequisites": [
         "IMP-20",
         "CAP-09",
@@ -2251,7 +2251,7 @@
       "type": "delta",
       "domain": "regulatory-capital",
       "subdomain": "pillar-2-and-jurisdictions",
-      "one_screen": "The United States must be read as a current rulebook plus live rulemaking, not as an implemented Basel-finalisation package. **As at August 2026, three notices of proposed rulemaking issued on 19 March 2026 remain proposals: comments closed 18 June 2026 and none has been finalised.**",
+      "one_screen": "The United States must be read as a current rulebook plus live rulemaking, not as an implemented Basel-finalisation package. As at August 2026, three notices of proposed rulemaking issued on 19 March 2026 remain proposals: comments closed 18 June 2026 and none has been finalised.",
       "prerequisites": [
         "CAP-20",
         "CAP-24",
@@ -2309,7 +2309,7 @@
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Credit risk attaches to a person that owes performance, not to a customer label. **Obligor** identifies the legal or natural person responsible for the credit obligation; **borrower** and **counterparty** describe roles that may coincide with the obligor but need not.",
+      "one_screen": "Credit risk attaches to a person that owes performance, not to a customer label. Obligor identifies the legal or natural person responsible for the credit obligation; borrower and counterparty describe roles that may coincide with the obligor but need not.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
@@ -2482,7 +2482,7 @@
       "type": "procedure",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Underwriting converts information about the obligor, facility and environment into a governed decision to approve, decline or reshape credit. The decision starts with a sustainable **primary source of repayment**; collateral and guarantees can reduce loss if repayment fails, but they do not repair weak repayment capacity.",
+      "one_screen": "Underwriting converts information about the obligor, facility and environment into a governed decision to approve, decline or reshape credit. The decision starts with a sustainable primary source of repayment; collateral and guarantees can reduce loss if repayment fails, but they do not repair weak repayment capacity.",
       "prerequisites": [
         "CR-01",
         "CR-02",
@@ -2530,7 +2530,7 @@
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Collateral, security interests and guarantees are credit-risk mitigants only to the extent that the bank can legally rely on them and realise value when needed. Their underwriting job is to provide a credible **secondary way out**; their later LGD role is separate and depends on realised recovery cash flows.",
+      "one_screen": "Collateral, security interests and guarantees are credit-risk mitigants only to the extent that the bank can legally rely on them and realise value when needed. Their underwriting job is to provide a credible secondary way out; their later LGD role is separate and depends on realised recovery cash flows.",
       "prerequisites": [
         "CR-02",
         "CR-05"
@@ -2760,7 +2760,7 @@
       "type": "reference",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "A past-due backstop is an outer mechanical trigger, not permission to wait for the clock when earlier evidence already establishes default. In the Basel wholesale reference definition, UTP and more-than-90-days-past-due are joined by **OR**, not by a sequence requiring both.",
+      "one_screen": "A past-due backstop is an outer mechanical trigger, not permission to wait for the clock when earlier evidence already establishes default. In the Basel wholesale reference definition, UTP and more-than-90-days-past-due are joined by OR, not by a sequence requiring both.",
       "prerequisites": [
         "CR-07",
         "CR-08",
@@ -3004,7 +3004,7 @@
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "Probability of default is the probability that a defined obligor, facility or pool enters a defined default state over a specified future horizon, conditional on information available at an observation date. A number labelled “PD” is incomplete until its **unit, event, horizon and conditioning information** are known.",
+      "one_screen": "Probability of default is the probability that a defined obligor, facility or pool enters a defined default state over a specified future horizon, conditional on information available at an observation date. A number labelled “PD” is incomplete until its unit, event, horizon and conditioning information are known.",
       "prerequisites": [
         "CR-07"
       ],
@@ -3089,7 +3089,7 @@
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "Loss given default is loss severity **conditional on default**. Collateral and guarantees influence LGD only through legally available, economically realised recovery value; an appraisal at origination is therefore an input to recovery expectations, not the LGD itself.",
+      "one_screen": "Loss given default is loss severity conditional on default. Collateral and guarantees influence LGD only through legally available, economically realised recovery value; an appraisal at origination is therefore an input to recovery expectations, not the LGD itself.",
       "prerequisites": [
         "CR-06",
         "CR-07",
@@ -3182,7 +3182,7 @@
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "`EL = PD × LGD × EAD` is a compact one-period loss decomposition only when the three inputs describe compatible default events, horizons, populations and economic conditions. The arithmetic is trivial; parameter alignment is the real mechanism.",
+      "one_screen": "EL = PD × LGD × EAD is a compact one-period loss decomposition only when the three inputs describe compatible default events, horizons, populations and economic conditions. The arithmetic is trivial; parameter alignment is the real mechanism.",
       "prerequisites": [
         "CR-14",
         "CR-16",
@@ -3276,7 +3276,7 @@
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "scorecards-and-ratings",
-      "one_screen": "Application models use information available at or before origination; behavioural models use information generated after the relationship exists; bureau or credit-information data add externally reported indebtedness and repayment history. Their common discipline is **time**: only information genuinely available at the decision or observation date may enter the prediction.",
+      "one_screen": "Application models use information available at or before origination; behavioural models use information generated after the relationship exists; bureau or credit-information data add externally reported indebtedness and repayment history. Their common discipline is time: only information genuinely available at the decision or observation date may enter the prediction.",
       "prerequisites": [
         "CR-05",
         "CR-14",
@@ -4852,7 +4852,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "A bank is first an accounting entity with resources, obligations, and a residual claim. The identity **Assets = Liabilities + Equity** is the frame through which every later banking concept—lending, deposits, profit, capital, liquidity, and loss—must be read.",
+      "one_screen": "A bank is first an accounting entity with resources, obligations, and a residual claim. The identity Assets = Liabilities + Equity is the frame through which every later banking concept—lending, deposits, profit, capital, liquidity, and loss—must be read.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
@@ -4885,7 +4885,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "Deposits and loans are easiest to understand as opposite claims viewed from opposite sides of the same contracts. Deposits are normally bank liabilities, loans made by the bank are normally bank assets, and **funding** describes the liabilities and equity that support the asset side over time.",
+      "one_screen": "Deposits and loans are easiest to understand as opposite claims viewed from opposite sides of the same contracts. Deposits are normally bank liabilities, loans made by the bank are normally bank assets, and funding describes the liabilities and equity that support the asset side over time.",
       "prerequisites": [
         "FND-01"
       ],
@@ -4925,7 +4925,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "When a bank originates a loan and credits the borrower's account, it can create a loan asset and a deposit liability at the same moment. “Loans create deposits” describes that balance-sheet mechanism; it does **not** mean lending is unconstrained by funding, settlement liquidity, capital, risk, or profitability.",
+      "one_screen": "When a bank originates a loan and credits the borrower's account, it can create a loan asset and a deposit liability at the same moment. “Loans create deposits” describes that balance-sheet mechanism; it does not mean lending is unconstrained by funding, settlement liquidity, capital, risk, or profitability.",
       "prerequisites": [
         "FND-01",
         "FND-02"
@@ -4966,7 +4966,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "A traditional bank earns interest on many assets and pays interest on much of its funding. **Net interest income (NII) = interest income − interest expense**; profit then reflects non-interest income, operating costs, credit-loss charges, market or valuation effects where applicable, and tax.",
+      "one_screen": "A traditional bank earns interest on many assets and pays interest on much of its funding. Net interest income (NII) = interest income − interest expense; profit then reflects non-interest income, operating costs, credit-loss charges, market or valuation effects where applicable, and tax.",
       "prerequisites": [
         "FND-01",
         "FND-02"
@@ -5007,7 +5007,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "bank-mechanics",
-      "one_screen": "Capital, liquidity, and solvency answer different questions. **Capital absorbs losses; liquidity enables payments when due; solvency concerns whether the value of assets is sufficient relative to obligations.** Confusing them hides the two distinct ways a bank can fail: loss of value and loss of payment capacity.",
+      "one_screen": "Capital, liquidity, and solvency answer different questions. Capital absorbs losses; liquidity enables payments when due; solvency concerns whether the value of assets is sufficient relative to obligations. Confusing them hides the two distinct ways a bank can fail: loss of value and loss of payment capacity.",
       "prerequisites": [
         "FND-01",
         "FND-02",
@@ -5054,7 +5054,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "Financial statements separate **position**, **performance**, **cash movement**, and **equity movement**. Profit can change equity without matching cash, financing can change cash without creating profit, and every recognised closing position ultimately appears in the closing balance sheet.",
+      "one_screen": "Financial statements separate position, performance, cash movement, and equity movement. Profit can change equity without matching cash, financing can change cash without creating profit, and every recognised closing position ultimately appears in the closing balance sheet.",
       "prerequisites": [
         "FND-01",
         "FND-04"
@@ -5118,7 +5118,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "Accrual accounting records the economic effects of events when the applicable recognition requirements are met, which can be earlier or later than cash settlement. The foundational discipline is simple: **recognition timing and cash timing are different dimensions.**",
+      "one_screen": "Accrual accounting records the economic effects of events when the applicable recognition requirements are met, which can be earlier or later than cash settlement. The foundational discipline is simple: recognition timing and cash timing are different dimensions.",
       "prerequisites": [
         "FND-06"
       ],
@@ -5158,7 +5158,7 @@
       "type": "delta",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "Credit-loss accounting and prudential provisioning recognise that contractual claims may not be fully collected, but they are **not one universal calculation**. Recognition trigger, horizon, measurement, terminology, and prudential interaction come from the governing framework.",
+      "one_screen": "Credit-loss accounting and prudential provisioning recognise that contractual claims may not be fully collected, but they are not one universal calculation. Recognition trigger, horizon, measurement, terminology, and prudential interaction come from the governing framework.",
       "prerequisites": [
         "FND-06",
         "FND-07"
@@ -5217,7 +5217,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "Recognised gains and losses do not all have to travel through current profit or loss. Accounting frameworks can require specified items to be presented in **other comprehensive income (OCI)** or another reserve route, but that route exists because the governing framework prescribes it—not because management prefers less earnings volatility.",
+      "one_screen": "Recognised gains and losses do not all have to travel through current profit or loss. Accounting frameworks can require specified items to be presented in other comprehensive income (OCI) or another reserve route, but that route exists because the governing framework prescribes it—not because management prefers less earnings volatility.",
       "prerequisites": [
         "FND-06",
         "FND-07"
@@ -5271,7 +5271,7 @@
       "type": "procedure",
       "domain": "foundation",
       "subdomain": "financial-statements",
-      "one_screen": "A bank balance sheet should be read as a funded risk position, not as a list of totals. The efficient sequence is **assets → funding → loss absorption → quality → maturity → concentration**, because each step asks what the preceding number actually means.",
+      "one_screen": "A bank balance sheet should be read as a funded risk position, not as a list of totals. The efficient sequence is assets → funding → loss absorption → quality → maturity → concentration, because each step asks what the preceding number actually means.",
       "prerequisites": [
         "FND-01",
         "FND-02",
@@ -5316,7 +5316,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "Present value puts cash flows occurring at different dates onto one valuation date. A **discount factor** is the multiplier that translates a future amount backward through time; the mathematics changes value for timing, not for whether the cash flow will occur.",
+      "one_screen": "Present value puts cash flows occurring at different dates onto one valuation date. A discount factor is the multiplier that translates a future amount backward through time; the mathematics changes value for timing, not for whether the cash flow will occur.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
@@ -5349,7 +5349,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "Compounding moves value forward; discounting moves it backward. The formulas are simple, but financial models fail when the **rate frequency, compounding convention, cash-flow dates, and period count are inconsistent**.",
+      "one_screen": "Compounding moves value forward; discounting moves it backward. The formulas are simple, but financial models fail when the rate frequency, compounding convention, cash-flow dates, and period count are inconsistent.",
       "prerequisites": [
         "FND-11"
       ],
@@ -5384,7 +5384,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "The effective interest rate (EIR) is the single rate that makes the present value of a specified future cash-flow stream equal to a specified carrying amount or price. It compresses amount, timing, interest, and qualifying fees or costs into one internally consistent yield **for the cash-flow definition being used**.",
+      "one_screen": "The effective interest rate (EIR) is the single rate that makes the present value of a specified future cash-flow stream equal to a specified carrying amount or price. It compresses amount, timing, interest, and qualifying fees or costs into one internally consistent yield for the cash-flow definition being used.",
       "prerequisites": [
         "FND-11",
         "FND-12"
@@ -5420,7 +5420,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "time-value",
-      "one_screen": "Net present value (NPV) aggregates dated amounts only after translating them to one valuation date. When a loss methodology discounts expected cash shortfalls, **probability determines how much is expected; discounting determines what the timing of that expected amount is worth today.**",
+      "one_screen": "Net present value (NPV) aggregates dated amounts only after translating them to one valuation date. When a loss methodology discounts expected cash shortfalls, probability determines how much is expected; discounting determines what the timing of that expected amount is worth today.",
       "prerequisites": [
         "FND-08",
         "FND-11",
@@ -5503,7 +5503,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "Expected value describes the centre of a distribution; variance describes how dispersed outcomes are around that centre. Standard deviation is the square root of variance, and in finance **volatility** usually refers to a standard-deviation measure whose meaning depends on the variable, observation frequency, and horizon.",
+      "one_screen": "Expected value describes the centre of a distribution; variance describes how dispersed outcomes are around that centre. Standard deviation is the square root of variance, and in finance volatility usually refers to a standard-deviation measure whose meaning depends on the variable, observation frequency, and horizon.",
       "prerequisites": [
         "FND-15"
       ],
@@ -5574,7 +5574,7 @@
       "type": "concept",
       "domain": "foundation",
       "subdomain": "risk-language",
-      "one_screen": "Exposure is the amount or position subject to adverse change from a specified risk event; it is **not the loss itself**. For credit, today's drawn balance can be only part of what is at risk because a facility may also contain undrawn commitments that can become exposure before the relevant event.",
+      "one_screen": "Exposure is the amount or position subject to adverse change from a specified risk event; it is not the loss itself. For credit, today's drawn balance can be only part of what is at risk because a facility may also contain undrawn commitments that can become exposure before the relevant event.",
       "prerequisites": [
         "FND-15",
         "FND-17"
@@ -5653,7 +5653,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "Risk governance turns resilience into choices. **Risk capacity** is how much risk the institution can bear; **risk appetite** is how much and what types it chooses to take within that capacity; **limits** translate appetite into operating boundaries; **risk profile** is the risk actually being run.",
+      "one_screen": "Risk governance turns resilience into choices. Risk capacity is how much risk the institution can bear; risk appetite is how much and what types it chooses to take within that capacity; limits translate appetite into operating boundaries; risk profile is the risk actually being run.",
       "prerequisites": [
         "FND-05",
         "FND-19"
@@ -5689,7 +5689,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "The Three Lines Model separates **management's action and ownership of risk**, specialist management support and challenge, and **independent internal-audit assurance**. It is a model of roles and accountability, not a rigid organisation chart and not permission for one line to outsource responsibility to another.",
+      "one_screen": "The Three Lines Model separates management's action and ownership of risk, specialist management support and challenge, and independent internal-audit assurance. It is a model of roles and accountability, not a rigid organisation chart and not permission for one line to outsource responsibility to another.",
       "prerequisites": [
         "FND-20"
       ],
@@ -5729,7 +5729,7 @@
       "type": "reference",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "A useful internal-governance hierarchy is **policy → standard → procedure → evidence**: intent and mandatory outcomes become testable requirements, then execution steps, then proof that the steps occurred. The labels are not legally universal, so authority, scope, approval, and content matter more than the filename.",
+      "one_screen": "A useful internal-governance hierarchy is policy → standard → procedure → evidence: intent and mandatory outcomes become testable requirements, then execution steps, then proof that the steps occurred. The labels are not legally universal, so authority, scope, approval, and content matter more than the filename.",
       "prerequisites": [
         "FND-21"
       ],
@@ -5769,7 +5769,7 @@
       "type": "mechanism",
       "domain": "foundation",
       "subdomain": "governance",
-      "one_screen": "**Regulation sets applicable requirements; supervision tests institutions against those requirements and supervisory objectives.** Authorisation, reporting, examination, remediation, and enforcement surround that core according to each authority's legal mandate.",
+      "one_screen": "Regulation sets applicable requirements; supervision tests institutions against those requirements and supervisory objectives. Authorisation, reporting, examination, remediation, and enforcement surround that core according to each authority's legal mandate.",
       "prerequisites": [
         "FND-05",
         "FND-20"
@@ -10501,7 +10501,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "sql-querying-and-window-functions",
-      "one_screen": "A reporting query is first a population definition expressed in code. `SELECT` chooses the fields, `WHERE` decides which loan observations enter the analysis, and `ORDER BY` makes output order deterministic when the order itself matters.",
+      "one_screen": "A reporting query is first a population definition expressed in code. SELECT chooses the fields, WHERE decides which loan observations enter the analysis, and ORDER BY makes output order deterministic when the order itself matters.",
       "prerequisites": [
         "TEC-01"
       ],
@@ -10530,7 +10530,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "sql-querying-and-window-functions",
-      "one_screen": "`CASE` turns an already-defined credit rule into a derived field. It is ideal for delinquency bands, active or closed indicators, exposure bands, and other classifications where mutually understood business conditions must become executable row-level labels.",
+      "one_screen": "CASE turns an already-defined credit rule into a derived field. It is ideal for delinquency bands, active or closed indicators, exposure bands, and other classifications where mutually understood business conditions must become executable row-level labels.",
       "prerequisites": [
         "TEC-02"
       ],
@@ -10828,7 +10828,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "data-engineering-and-reconciliation",
-      "one_screen": "Analysts frequently need exactly one record from a repeated history: the latest snapshot, first payment, most recent risk record, or preferred duplicate candidate. `ROW_NUMBER` makes that choice explicit, but it is safe only when the ordering rule fully determines which row should win.",
+      "one_screen": "Analysts frequently need exactly one record from a repeated history: the latest snapshot, first payment, most recent risk record, or preferred duplicate candidate. ROW_NUMBER makes that choice explicit, but it is safe only when the ordering rule fully determines which row should win.",
       "prerequisites": [
         "TEC-01",
         "TEC-11"
@@ -11068,7 +11068,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "python-vectorization-and-engineering",
-      "one_screen": "pandas filtering is the in-memory equivalent of defining a SQL population, while assignment adds derived lending fields to that population. The safe pattern is to build explicit boolean masks, select with `.loc`, and avoid chained operations whose target is ambiguous.",
+      "one_screen": "pandas filtering is the in-memory equivalent of defining a SQL population, while assignment adds derived lending fields to that population. The safe pattern is to build explicit boolean masks, select with .loc, and avoid chained operations whose target is ambiguous.",
       "prerequisites": [
         "TEC-20"
       ],
@@ -11097,7 +11097,7 @@
       "type": "mechanism",
       "domain": "technical",
       "subdomain": "python-vectorization-and-engineering",
-      "one_screen": "Missing data in pandas can appear as `NaN`, `NaT`, `None`, or `pd.NA` depending on dtype. The analyst's job is not to make missing values disappear; it is to detect them consistently and decide whether to preserve, flag, fill, or exclude them without changing the credit meaning.",
+      "one_screen": "Missing data in pandas can appear as NaN, NaT, None, or pd.NA depending on dtype. The analyst's job is not to make missing values disappear; it is to detect them consistently and decide whether to preserve, flag, fill, or exclude them without changing the credit meaning.",
       "prerequisites": [
         "TEC-20",
         "TEC-21"
@@ -11127,7 +11127,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "python-vectorization-and-engineering",
-      "one_screen": "`groupby` changes a loan-level DataFrame into a portfolio summary at a chosen grouping grain. As in SQL, the hard part is not the syntax: it is deciding whether the metric counts rows, accounts, facilities, customers, or non-missing observations and making that choice visible.",
+      "one_screen": "groupby changes a loan-level DataFrame into a portfolio summary at a chosen grouping grain. As in SQL, the hard part is not the syntax: it is deciding whether the metric counts rows, accounts, facilities, customers, or non-missing observations and making that choice visible.",
       "prerequisites": [
         "TEC-04",
         "TEC-20"
@@ -11188,7 +11188,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "tec",
-      "one_screen": "Point-in-time matching in pandas attaches the latest attribute known on or before each loan observation. `merge_asof` is designed for this ordered problem, but it requires sorted keys and a clear direction so a historical row never matches a future risk record.",
+      "one_screen": "Point-in-time matching in pandas attaches the latest attribute known on or before each loan observation. merge_asof is designed for this ordered problem, but it requires sorted keys and a clear direction so a historical row never matches a future risk record.",
       "prerequisites": [
         "TEC-09",
         "TEC-24"
@@ -11248,7 +11248,7 @@
       "type": "procedure",
       "domain": "technical",
       "subdomain": "tec",
-      "one_screen": "Longitudinal credit work in pandas depends on sorting each account history correctly and then using grouped operations that never cross account boundaries. `shift`, cumulative calculations, and rolling windows reproduce many SQL window patterns while keeping one row per account observation.",
+      "one_screen": "Longitudinal credit work in pandas depends on sorting each account history correctly and then using grouped operations that never cross account boundaries. shift, cumulative calculations, and rolling windows reproduce many SQL window patterns while keeping one row per account observation.",
       "prerequisites": [
         "TEC-12",
         "TEC-20",
@@ -11458,7 +11458,7 @@
       "type": "concept",
       "domain": "treasury-alm",
       "subdomain": "irrbb-and-mismatches",
-      "one_screen": "For most treasury numbers, the contractual schedule is only an input; the usable balance sheet is created by behavioural assumptions. Non-maturity deposit persistence, deposit beta and lag, loan prepayment and committed-line drawdown determine the cash flows that feed IRRBB, liquidity stress and FTP: **the model is the assumption set**.",
+      "one_screen": "For most treasury numbers, the contractual schedule is only an input; the usable balance sheet is created by behavioural assumptions. Non-maturity deposit persistence, deposit beta and lag, loan prepayment and committed-line drawdown determine the cash flows that feed IRRBB, liquidity stress and FTP: the model is the assumption set.",
       "prerequisites": [
         "TLM-02",
         "FND-02",
@@ -11634,7 +11634,7 @@
       "type": "concept",
       "domain": "treasury-alm",
       "subdomain": "irrbb-and-mismatches",
-      "one_screen": "FND-04 → NII is interest income minus interest expense; FND-08/09 → present value changes when discount rates or expected cash flows change. IRRBB hits **two different objects**: near-term earnings and the economic value of future banking-book cash flows, and the two measures can move in opposite directions because they use different horizons and cash-flow assumptions.",
+      "one_screen": "FND-04 → NII is interest income minus interest expense; FND-08/09 → present value changes when discount rates or expected cash flows change. IRRBB hits two different objects: near-term earnings and the economic value of future banking-book cash flows, and the two measures can move in opposite directions because they use different horizons and cash-flow assumptions.",
       "prerequisites": [
         "TLM-06",
         "FND-04",
@@ -11677,7 +11677,7 @@
       "type": "mechanism",
       "domain": "treasury-alm",
       "subdomain": "irrbb-and-mismatches",
-      "one_screen": "Repricing gap analysis puts rate-sensitive assets and liabilities into the period of their **next effective reset**, then shows where timing mismatch sits. It is a diagnostic map of gap risk, not a complete NII forecast and not a liquidity ladder.",
+      "one_screen": "Repricing gap analysis puts rate-sensitive assets and liabilities into the period of their next effective reset, then shows where timing mismatch sits. It is a diagnostic map of gap risk, not a complete NII forecast and not a liquidity ladder.",
       "prerequisites": [
         "TLM-07",
         "TLM-03"
@@ -11750,7 +11750,7 @@
       "type": "mechanism",
       "domain": "treasury-alm",
       "subdomain": "irrbb-and-mismatches",
-      "one_screen": "A non-maturity deposit can be legally withdrawable now yet behave as persistent funding whose administered rate reprices slowly. ALM must model **two separate objects**—balance persistence and rate response—because a stable balance can still be highly rate-sensitive, and a sticky rate does not prove the balance will remain.",
+      "one_screen": "A non-maturity deposit can be legally withdrawable now yet behave as persistent funding whose administered rate reprices slowly. ALM must model two separate objects—balance persistence and rate response—because a stable balance can still be highly rate-sensitive, and a sticky rate does not prove the balance will remain.",
       "prerequisites": [
         "TLM-03",
         "TLM-08",
@@ -11894,7 +11894,7 @@
       "type": "procedure",
       "domain": "treasury-alm",
       "subdomain": "liquidity-risk",
-      "one_screen": "IRRBB stress asks how one balance sheet behaves under severe rate paths **and changed behaviour**, then compares ΔNII and ΔEVE with appetite and supervisory screens. A supervisory outlier threshold is a trigger for attention, not a target and not proof that exposure just below it is safe.",
+      "one_screen": "IRRBB stress asks how one balance sheet behaves under severe rate paths and changed behaviour, then compares ΔNII and ΔEVE with appetite and supervisory screens. A supervisory outlier threshold is a trigger for attention, not a target and not proof that exposure just below it is safe.",
       "prerequisites": [
         "TLM-07",
         "TLM-10",
@@ -12213,7 +12213,7 @@
       "type": "mechanism",
       "domain": "treasury-alm",
       "subdomain": "liquidity-risk",
-      "one_screen": "LCR asks whether recognised HQLA can cover **standardised net stressed cash outflows over 30 calendar days**. It uses regulatory runoff, drawdown and inflow assumptions; it is not a forecast of the next month and not a linear survival clock.",
+      "one_screen": "LCR asks whether recognised HQLA can cover standardised net stressed cash outflows over 30 calendar days. It uses regulatory runoff, drawdown and inflow assumptions; it is not a forecast of the next month and not a linear survival clock.",
       "prerequisites": [
         "TLM-17",
         "TLM-18",
@@ -12626,7 +12626,7 @@
       "type": "mechanism",
       "domain": "treasury-alm",
       "subdomain": "systemic-and-jurisdictions",
-      "one_screen": "Matched-maturity FTP prices an exposure against the internal cost or value of funding with a comparable **effective** tenor rather than against one average funding rate. The transfer curve should represent marginal balance-sheet economics: what the next unit of funding or stable funding value costs now, not what historical liabilities happened to cost.",
+      "one_screen": "Matched-maturity FTP prices an exposure against the internal cost or value of funding with a comparable effective tenor rather than against one average funding rate. The transfer curve should represent marginal balance-sheet economics: what the next unit of funding or stable funding value costs now, not what historical liabilities happened to cost.",
       "prerequisites": [
         "TLM-26",
         "TLM-25"
@@ -12764,7 +12764,7 @@
       "type": "delta",
       "domain": "treasury-alm",
       "subdomain": "systemic-and-jurisdictions",
-      "one_screen": "Mechanics stay common across borders; deltas sit in scope, calibration, reporting, supervisory process and dates. **As at August 2026, RBI’s 2025 IRRBB framework is issued but not yet effective.**",
+      "one_screen": "Mechanics stay common across borders; deltas sit in scope, calibration, reporting, supervisory process and dates. As at August 2026, RBI’s 2025 IRRBB framework is issued but not yet effective.",
       "prerequisites": [
         "TLM-13",
         "TLM-15",
@@ -16602,7 +16602,7 @@
       "atoms": [
         {
           "id": "MRM-01",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "MRM-08",
@@ -16622,7 +16622,7 @@
         },
         {
           "id": "MRM-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-04",
@@ -16642,27 +16642,27 @@
         },
         {
           "id": "QNT-25",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-26",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-29",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-30",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "MRM-17",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "MRM-18",
-          "weight": 1
+          "weight": 2
         }
       ]
     },
@@ -16704,47 +16704,47 @@
         },
         {
           "id": "QNT-10",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-11",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-14",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-15",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-16",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CR-14",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CR-21",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "QNT-20",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "MRM-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "MRM-14",
-          "weight": 1
+          "weight": 3
         }
       ]
     },
@@ -16767,7 +16767,7 @@
       "atoms": [
         {
           "id": "FND-08",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "IMP-01",
@@ -16787,43 +16787,43 @@
         },
         {
           "id": "IMP-08",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-09",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-11",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-12",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-14",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-15",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-16",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-18",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IMP-20",
-          "weight": 1
+          "weight": 3
         }
       ]
     },
@@ -16866,35 +16866,35 @@
         },
         {
           "id": "CAP-12",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-14",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-16",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-19",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-20",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-22",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-24",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-27",
@@ -16902,11 +16902,11 @@
         },
         {
           "id": "CAP-09",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CAP-30",
-          "weight": 1
+          "weight": 3
         }
       ]
     },
@@ -16948,43 +16948,43 @@
         },
         {
           "id": "TLM-08",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-10",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-14",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-15",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-17",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-18",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-19",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-20",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-21",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-29",
-          "weight": 1
+          "weight": 2
         }
       ]
     },
@@ -17002,19 +17002,19 @@
       "atoms": [
         {
           "id": "FND-02",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "TLM-01",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "TLM-02",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "TLM-03",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "TLM-10",
@@ -17042,11 +17042,11 @@
         },
         {
           "id": "TLM-28",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TLM-29",
-          "weight": 1
+          "weight": 2
         }
       ]
     },
@@ -17068,7 +17068,7 @@
       "atoms": [
         {
           "id": "FND-24",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "BA-01",
@@ -17084,19 +17084,19 @@
         },
         {
           "id": "BA-11",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "BA-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "BA-17",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "BA-18",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-19",
@@ -17112,19 +17112,19 @@
         },
         {
           "id": "DAT-22",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-25",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-26",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-27",
-          "weight": 1
+          "weight": 3
         }
       ]
     },
@@ -17146,7 +17146,7 @@
       "atoms": [
         {
           "id": "DAT-01",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "DAT-02",
@@ -17166,7 +17166,7 @@
         },
         {
           "id": "DAT-07",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-08",
@@ -17182,7 +17182,7 @@
         },
         {
           "id": "DAT-11",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-13",
@@ -17190,11 +17190,11 @@
         },
         {
           "id": "DAT-14",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-15",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "DAT-16",
@@ -17202,7 +17202,7 @@
         },
         {
           "id": "DAT-17",
-          "weight": 1
+          "weight": 2
         }
       ]
     },
@@ -17244,15 +17244,15 @@
         },
         {
           "id": "TEC-11",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TEC-12",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TEC-13",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TEC-14",
@@ -17260,7 +17260,7 @@
         },
         {
           "id": "TEC-16",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "TEC-17",
@@ -17272,19 +17272,19 @@
         },
         {
           "id": "TEC-20",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TEC-23",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TEC-24",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "TEC-30",
-          "weight": 1
+          "weight": 2
         }
       ]
     },
@@ -17314,11 +17314,11 @@
         },
         {
           "id": "IND-09",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CR-20",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "IND-16",
@@ -17326,11 +17326,11 @@
         },
         {
           "id": "IND-17",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IND-18",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IND-13",
@@ -17342,23 +17342,23 @@
         },
         {
           "id": "IND-15",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "CR-06",
-          "weight": 1
+          "weight": 2
         },
         {
           "id": "IND-20",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IND-21",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IND-22",
-          "weight": 2
+          "weight": 3
         }
       ]
     },
@@ -17403,19 +17403,19 @@
         },
         {
           "id": "BA-16",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "BA-17",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "BA-18",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "IND-16",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "IND-17",
@@ -17427,19 +17427,19 @@
         },
         {
           "id": "DAT-11",
-          "weight": 1
+          "weight": 2
         },
         {
           "id": "DAT-21",
-          "weight": 3
+          "weight": 2
         },
         {
           "id": "BA-20",
-          "weight": 2
+          "weight": 3
         },
         {
           "id": "BA-22",
-          "weight": 2
+          "weight": 3
         }
       ]
     }
@@ -19022,5 +19022,5 @@
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-31T15:53:48.487Z"
+  "generatedAt": "2026-08-31T16:02:41.971Z"
 }
