@@ -62,16 +62,16 @@ export default function AtomsIndexPage() {
                     </h3>
 
                     <div className="overflow-x-auto max-w-full">
-                      <table className="w-full text-left font-mono text-xs border-collapse tabular-nums">
+                      <table className="w-full text-left font-mono text-[14px] border-collapse tabular-nums">
                         <thead>
-                          <tr className="border-b border-[#23272D] text-[#6B747E] text-[11px]">
-                            <th className="py-2 pr-4 font-semibold w-24">ID</th>
-                            <th className="py-2 px-4 font-semibold">TITLE</th>
-                            <th className="py-2 px-4 font-semibold w-28">TYPE</th>
-                            <th className="py-2 px-4 font-semibold w-32">CURRENTNESS</th>
-                            <th className="py-2 px-4 font-semibold w-20">DEPTH</th>
-                            <th className="py-2 px-4 font-semibold w-24">READ TIME</th>
-                            <th className="py-2 pl-4 font-semibold w-24">STATUS</th>
+                          <tr className="border-b border-[#23272D] text-[#6B747E] text-[12px]">
+                            <th className="py-2.5 pr-4 font-semibold w-24">ID</th>
+                            <th className="py-2.5 px-4 font-semibold">TITLE</th>
+                            <th className="py-2.5 px-4 font-semibold w-28">TYPE</th>
+                            <th className="py-2.5 px-4 font-semibold w-32">CURRENTNESS</th>
+                            <th className="py-2.5 px-4 font-semibold w-20">DEPTH</th>
+                            <th className="py-2.5 px-4 font-semibold w-24">READ TIME</th>
+                            <th className="py-2.5 pl-4 font-semibold w-24">STATUS</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-[#23272D]/50">
@@ -83,15 +83,15 @@ export default function AtomsIndexPage() {
                                 key={atom.id}
                                 className="hover:bg-[#191C20] transition-colors"
                               >
-                                <td className="py-2.5 pr-4">
+                                <td className="py-3 pr-4">
                                   <Link
                                     href={`/atom/${atom.id}`}
-                                    className="font-bold text-[#C9711F] hover:underline"
+                                    className="font-bold text-[#C9711F] text-[14px] hover:underline"
                                   >
                                     {atom.id}
                                   </Link>
                                 </td>
-                                <td className="py-2.5 px-4 font-sans font-medium text-[#E6E8EB]">
+                                <td className="py-3 px-4 font-sans font-medium text-[15px] text-[#E6E8EB] leading-snug">
                                   <Link
                                     href={`/atom/${atom.id}`}
                                     className="hover:text-[#C9711F] transition-colors"

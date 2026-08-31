@@ -197,7 +197,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                                   <li key={atomItem.id}>
                                     <Link
                                       href={`/atom/${atomItem.id}`}
-                                      className={`block px-2 py-1 rounded-sm text-xs leading-snug transition-colors line-clamp-2 ${
+                                      className={`block px-2 py-1.5 rounded-sm text-[13px] leading-snug transition-colors line-clamp-2 ${
                                         isCurrent
                                           ? "bg-accent-soft text-accent font-bold border border-accent/40"
                                           : "text-text-muted hover:text-text hover:bg-surface-2"
