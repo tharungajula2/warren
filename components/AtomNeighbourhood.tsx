@@ -125,47 +125,57 @@ export function AtomNeighbourhood({ atom, allAtoms, reverseIndex }: AtomNeighbou
       });
     });
 
-    // 3. See Also (Left side: x = 15, y = 110)
-    if (atom.see_also.length > 0) {
-      const saId = atom.see_also[0];
+    // 3. See Also (Left side: x = 10, y spaced vertically around center)
+    const seeAlsoList = (atom.see_also || []).slice(0, 3);
+    const saSpacing = 35;
+    const saStartY = centerY - ((seeAlsoList.length - 1) * saSpacing) / 2;
+
+    seeAlsoList.forEach((saId, idx) => {
       const saAtom = allAtoms[saId];
-      if (saAtom) {
-        nodesList.push({
-          id: saId,
-          type: "atomNode",
-          position: { x: 10, y: 110 },
-          data: { id: saId, type: saAtom.type, isTarget: false },
-        });
+      if (!saAtom) return;
 
-        edgesList.push({
-          id: `e-sa-${atom.id}-${saId}`,
-          source: atom.id,
-          target: saId,
-          style: { stroke: "#315F7D", strokeDasharray: "3,3", strokeWidth: 1.5 },
-        });
-      }
-    }
+      const y = saStartY + idx * saSpacing;
 
-    // 4. Contrast With (Right side: x = 210, y = 110)
-    if (atom.contrast_with.length > 0) {
-      const cwId = atom.contrast_with[0];
+      nodesList.push({
+        id: saId,
+        type: "atomNode",
+        position: { x: 10, y },
+        data: { id: saId, type: saAtom.type, isTarget: false },
+      });
+
+      edgesList.push({
+        id: `e-sa-${atom.id}-${saId}`,
+        source: atom.id,
+        target: saId,
+        style: { stroke: "#315F7D", strokeDasharray: "3,3", strokeWidth: 1.5 },
+      });
+    });
+
+    // 4. Contrast With (Right side: x = 210, y spaced vertically around center)
+    const cwList = (atom.contrast_with || []).slice(0, 3);
+    const cwSpacing = 35;
+    const cwStartY = centerY - ((cwList.length - 1) * cwSpacing) / 2;
+
+    cwList.forEach((cwId, idx) => {
       const cwAtom = allAtoms[cwId];
-      if (cwAtom) {
-        nodesList.push({
-          id: cwId,
-          type: "atomNode",
-          position: { x: 210, y: 110 },
-          data: { id: cwId, type: cwAtom.type, isTarget: false },
-        });
+      if (!cwAtom) return;
 
-        edgesList.push({
-          id: `e-cw-${atom.id}-${cwId}`,
-          source: atom.id,
-          target: cwId,
-          style: { stroke: "#8A6D2F", strokeDasharray: "6,4", strokeWidth: 1.5 },
-        });
-      }
-    }
+      const y = cwStartY + idx * cwSpacing;
+
+      nodesList.push({
+        id: cwId,
+        type: "atomNode",
+        position: { x: 210, y },
+        data: { id: cwId, type: cwAtom.type, isTarget: false },
+      });
+
+      edgesList.push({
+        id: `e-cw-${atom.id}-${cwId}`,
+        source: atom.id,
+        target: cwId,
+        style: { stroke: "#8A6D2F", strokeDasharray: "6,4", strokeWidth: 1.5 },
+      });
+    });
 
     return { nodes: nodesList, edges: edgesList };
   }, [atom, allAtoms, reverseIndex]);

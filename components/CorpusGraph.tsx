@@ -31,6 +31,8 @@ interface GraphNode {
 interface GraphEdge {
   source: GraphNode;
   target: GraphNode;
+  type: "prerequisite" | "related";
+  kind?: "prerequisite" | "see_also" | "contrast_with";
 }
 
 // Luminous, high-contrast domain palette for pitch-black canvas background
@@ -102,7 +104,7 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     return centroids;
   }, [atoms]);
 
-  // Build Graph Nodes (In-degree square-root mapping: 3.0px to 7.0px)
+  // Build Graph Nodes & Edges (Two-pass builder: Prerequisite + Related)
   const { nodes, edges } = useMemo(() => {
     const nMap: Record<string, GraphNode> = {};
     const nodeList: GraphNode[] = [];
@@ -130,14 +132,58 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     });
 
     const edgeList: GraphEdge[] = [];
+    const prereqPairSet = new Set<string>();
+    const edgePairSet = new Set<string>();
+
+    // Pass 1: Prerequisite Edges (strong relationships)
     Object.values(atoms).forEach((atom) => {
       const targetNode = nMap[atom.id];
       if (!targetNode) return;
       atom.prerequisites.forEach((pId) => {
         const sourceNode = nMap[pId];
         if (sourceNode) {
-          edgeList.push({ source: sourceNode, target: targetNode });
+          edgeList.push({
+            source: sourceNode,
+            target: targetNode,
+            type: "prerequisite",
+            kind: "prerequisite",
+          });
+          const unorientedKey = [pId, atom.id].sort().join("<->");
+          prereqPairSet.add(unorientedKey);
+          edgePairSet.add(unorientedKey);
         }
+      });
+    });
+
+    // Pass 2: Related Edges (see_also and contrast_with)
+    Object.values(atoms).forEach((atom) => {
+      const sourceNode = nMap[atom.id];
+      if (!sourceNode) return;
+
+      const crossRefs = [
+        ...(atom.see_also || []).map((id) => ({ id, kind: "see_also" as const })),
+        ...(atom.contrast_with || []).map((id) => ({ id, kind: "contrast_with" as const })),
+      ];
+
+      crossRefs.forEach(({ id: targetId, kind }) => {
+        const targetNode = nMap[targetId];
+        if (!targetNode) return;
+
+        const unorientedKey = [atom.id, targetId].sort().join("<->");
+
+        // Rule 1: Never draw a related-to edge where a prerequisite edge already exists between the same two atoms
+        if (prereqPairSet.has(unorientedKey)) return;
+
+        // Rule 2: Deduplicate (e.g. QNT-25 references MRM-17 and MRM-17 references QNT-25; draw once)
+        if (edgePairSet.has(unorientedKey)) return;
+
+        edgePairSet.add(unorientedKey);
+        edgeList.push({
+          source: sourceNode,
+          target: targetNode,
+          type: "related",
+          kind,
+        });
       });
     });
 
@@ -252,8 +298,8 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
         "link",
         forceLink(edges as any)
           .id((d: any) => d.id)
-          .distance(70)
-          .strength(0.25)
+          .distance((d: any) => (d.type === "prerequisite" ? 70 : 120))
+          .strength((d: any) => (d.type === "prerequisite" ? 0.25 : 0.08))
       )
       .force("charge", forceManyBody().strength(-180))
       .force(
@@ -325,39 +371,52 @@ export function CorpusGraph({ atoms, isEmbedded = false, syntheticCount }: Corpu
     // Determine state mode: IDLE vs FOCUSED
     const isFocused = !!(activeHoverId || selectedDomain || qLower);
 
-    // 1. EDGES RENDER
+    // 1. EDGES RENDER (Distinct styling: prerequisite = solid/strong, related = dashed/lighter)
     edges.forEach((edge) => {
       const isConnectedToHover =
         activeHoverId && (edge.source.id === activeHoverId || edge.target.id === activeHoverId);
       const isEdgeInSelectedDomain =
         selectedDomain && (edge.source.domain === selectedDomain || edge.target.domain === selectedDomain);
 
-      let edgeAlpha = 0.25;
-      let strokeColor = "#333940";
-      let lineWidth = 1.0;
+      const isRelated = edge.type === "related";
+
+      let edgeAlpha = isRelated ? 0.10 : 0.25;
+      let strokeColor = isRelated ? "#315F7D" : "#333940";
+      let lineWidth = isRelated ? 0.8 : 1.0;
 
       if (isFocused) {
         if (isConnectedToHover) {
-          edgeAlpha = 0.85;
-          strokeColor = "#C9711F";
-          lineWidth = 1.8;
+          edgeAlpha = isRelated ? 0.60 : 0.85;
+          strokeColor = isRelated
+            ? edge.kind === "contrast_with"
+              ? "#8A6D2F"
+              : "#315F7D"
+            : "#C9711F";
+          lineWidth = isRelated ? 1.3 : 1.8;
         } else if (isEdgeInSelectedDomain) {
-          edgeAlpha = 0.75;
+          edgeAlpha = isRelated ? 0.30 : 0.75;
           strokeColor = DOMAIN_COLORS[selectedDomain] || "#C9711F";
-          lineWidth = 1.5;
+          lineWidth = isRelated ? 1.0 : 1.5;
         } else {
           edgeAlpha = 0.02; // Unfocused edges drop low so selected cluster pops
           strokeColor = "#23272D";
         }
       }
 
+      ctx.save();
       ctx.beginPath();
+      if (isRelated) {
+        ctx.setLineDash(edge.kind === "contrast_with" ? [6, 4] : [3, 3]);
+      } else {
+        ctx.setLineDash([]);
+      }
       ctx.moveTo(edge.source.x, edge.source.y);
       ctx.lineTo(edge.target.x, edge.target.y);
       ctx.strokeStyle = strokeColor;
       ctx.globalAlpha = edgeAlpha;
       ctx.lineWidth = lineWidth;
       ctx.stroke();
+      ctx.restore();
     });
 
     // 2. NODES RENDER (High Contrast Highlight for Selected Cluster)
