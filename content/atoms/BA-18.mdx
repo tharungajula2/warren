@@ -1,57 +1,98 @@
 ---
 id: BA-18
-title: Parallel Running & Go-Live Planning
-type: concept
+title: 'The Immovable Deadline: Scope, Resources and Risk'
+type: mechanism
 domain: business-analysis
 subdomain: testing-uat-and-cutover
 one_screen: >-
-  *Parallel running* means operating the old and new systems side-by-side for a
-  period to compare outputs. *Go-live planning* (cutover) details how to switch
-  to the new system, including rollback steps if needed.  Both are critical in
-  regulated transitions.
+  When a required implementation date cannot move, time stops being the
+  balancing variable. The programme must make explicit choices among mandatory
+  outcome, discretionary scope, sequencing, credible capacity and accepted risk
+  rather than pretending the original plan remains achievable.
 prerequisites:
+  - BA-02
+  - BA-09
+  - BA-15
   - BA-17
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: OCM Solution – “Cutover and rollback steps” in go-live checklist
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Before decommissioning legacy processes, banks often run *both* systems in parallel to ensure the new one works correctly. For example, a bank might process a day’s transactions in both the old system and the new IFRS-compliant system and compare the results.  This parallel run period (sometimes months) builds confidence and provides audit evidence that the new outputs are accurate. It also allows real data to exercise the system without immediate risk.
+### Core mechanism
 
-The *go-live plan* (cutover plan) is executed once parallel runs are complete. It is a detailed schedule: which data migration steps to perform, which systems to shut down/start up, and who is responsible for each action.  The plan must include *rollback procedures*: if a critical issue occurs, how to revert to the old system to prevent business impact. For example, ensure backups and change logs are ready. Roles (executive sponsor, IT lead, BA, etc.) must be assigned for go/no-go decisions and communication to stakeholders.
+Protect the mandatory outcome first; then choose among delivery levers without hiding their cost.
+
+```text
+Fixed date + Pressure -&gt; Reassess work -&gt; Protect mandatory outcome -&gt; Choose credible lever -&gt; Escalate residual risk
+```
+
+| Lever | Valid use | Boundary |
+| :--- | :--- | :--- |
+| De-scope | Discretionary, separable work | Mandatory obligations stay mandatory |
+| Re-sequence | Stages preserve the required end-state | Incomplete dependency is not a harmless phase |
+| Add resources | Work is parallelisable and capacity arrives in time | Onboarding and coordination can consume the gain |
+| Simplify | Simpler design still meets requirement and controls | Lower quality is not simplification |
+| Temporary control | Exposure is understood, time-bounded and owned | Workaround is not the target state |
+| Escalate | No credible plan meets date and obligation | Red status exposes the conflict; it does not solve it |
+| Decision pack | Authority must choose | Show requirement, outcome, control, dependency, evidence gap, owner and decision date |
+
+This makes consequences comparable and prevents "protect the date" from becoming permission to conceal unfinished mandatory work.
+
+### Where it sits
+
+```text
+Upstream:   Fixed mandate · Current scope · Delivery status · Dependencies
+This:       Scope-capacity-risk trade-off
+Downstream: Change decisions · Test focus · Readiness · Residual-risk acceptance
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA frames scope and consequence options; project management supplies delivery capacity and schedule evidence |
+| Approves | Sponsor and relevant business or risk authorities approve trade-offs within mandate |
+| Consumes | Delivery, testing and operations execute the revised priorities |
+| Independently challenges | Control functions challenge weakened controls, unsupported deferrals or residual risk |
 
 ### Permanent rule
 
-Include parallel running and dual-reporting as part of implementation. Plan go-live steps meticulously and always have a tested rollback strategy. Confirm decision criteria (e.g. “all parallel outputs match 99%”) before full cutover.
+A fixed deadline does not make all other constraints disappear. It forces earlier, clearer decisions about what is protected, what is deferred and who owns the resulting risk.
+
+### Never confuse [Priority] and [Mandatory scope]
+
+**Priority** - the order in which work should receive attention.
+
+---
+
+**Mandatory scope** - the minimum outcome that must be delivered for the governing obligation to be satisfied.
 
 ### Permanent trap
 
-Assuming go-live will succeed without rehearsal. A frequent mistake is not planning for failures – e.g. no rollback or contingency plan. Also failing to run both systems long enough to catch issues.
+Adding people as the default recovery plan. Late capacity helps only where work can be separated, knowledge transfer is feasible and coordination cost does not consume the gain.
 
-### Never confuse
+### Jurisdiction variants
 
-**Parallel Run** vs **Dual Reporting**:
-A *Parallel Run* is running old and new systems at the same time to validate output. *Dual Reporting* is submitting reports in both old and new regimes (e.g. old accounting vs new) to regulators. They both involve duplication but serve different verification purposes.
-
-### No delta
-
-These deployment practices are standard in banking globally, especially for compliance transitions.
+No delta. The actual date or externally required evidence can vary by authority; the delivery discipline does not.
 
 <Recall
-  q="What is the purpose of a parallel run before go-live?"
-  a="To compare legacy vs new system results, ensuring the new process is correct and building confidence."
+  q="What is protected first under a fixed-date squeeze?"
+  a="The mandatory outcome and essential controls; discretionary scope is challenged first."
 />
 
 <Recall
-  q="What must a cutover plan include?"
-  a="Detailed execution steps, final data migration, communication plans, and a rollback procedure."
+  q="When can a temporary manual control be valid?"
+  a="When exposure, operation, evidence, exit date and ownership are explicit and time-bounded."
+/>
+
+<Recall
+  q="Why can added resources fail to recover time?"
+  a="Sequential work, scarce expertise, onboarding and coordination can leave the critical path unchanged."
 />

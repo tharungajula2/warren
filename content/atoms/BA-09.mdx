@@ -1,63 +1,99 @@
 ---
 id: BA-09
-title: Business Requirements Document (BRD)
+title: 'Scope: In, Out, Assumed and Deferred'
 type: mechanism
 domain: business-analysis
 subdomain: brd-functional-specs-and-user-stories
 one_screen: >-
-  The BRD captures *what* the business wants and *why*, including objectives,
-  scope, stakeholders, and high-level requirements. It **must not** include
-  solution design or technical details. Each requirement should have acceptance
-  criteria.
+  Scope is a boundary around the outcome, not a list of things the project
+  happens to discuss. A bank change is controllable only when in-scope
+  obligations, explicit exclusions, assumptions and deliberately deferred work
+  are all visible enough that later discovery cannot masquerade as an old
+  commitment.
 prerequisites:
-  - BA-04
+  - BA-02
+  - BA-05
+  - BA-08
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Monday.com – capturing requirements with acceptance criteria
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-A **Business Requirements Document (BRD)** is the formal specification of business needs. It typically contains an executive summary, background, business objectives (e.g. compliance goals), scope, assumptions, and a list of requirements from the business perspective. Requirements in a BRD may include functional needs (e.g. “system shall generate monthly reports by day 5”) and non-functional needs (e.g. performance, audit trails). Importantly, the BRD states *what* is needed, not *how* to build it. It avoids technical solution detail (that belongs in a functional spec).
+### Core mechanism
 
-Each requirement in the BRD should be clear and include acceptance criteria (conditions for success). For instance, instead of saying “system should be fast,” a BRD requirement would say “System must respond to user queries within 2 seconds” (with that criterion). This precision avoids ambiguity and ensures testability. Also include references to regulatory rules if applicable, and note any impacts (e.g. compliance reporting).
+Four categories prevent most scope disputes.
+
+| Category | Meaning | Required discipline |
+| :--- | :--- | :--- |
+| In scope | Must be delivered in this change | Trace to requirements and acceptance |
+| Out of scope | Explicitly excluded | State why and confirm no mandatory outcome depends on it |
+| Assumed | Treated as true for current planning | Name owner and resolution date |
+| Deferred | Valid need intentionally moved to later delivery | Record authority, consequence and target owner |
+
+Scope should be bounded by business outcomes and affected capabilities, not by documents. "All fields in report X" is not sufficient if the change also alters upstream approval, reconciliation or production support.
+
+Use interfaces as scope tests: what enters the changed process, what leaves it, and which team owns each side? A system can be technically out of scope but operationally dependent on the change. That dependency belongs in impact analysis even if no build is planned there.
 
 ```text
-Sample BRD section:
-Objective: Improve AML screening efficiency.
-Requirement: System should screen 100% of new accounts for PEP status within 1 hour of creation (Acceptance: Demonstrate 1-hour turnaround in test).
+Mandate -&gt; Scope boundary -&gt; Requirements baseline
+                     |
+                     -&gt; Exclusions · Assumptions · Deferrals
 ```
+
+### Where it sits
+
+```text
+Upstream:   Mandate · Problem framing · Stakeholder decisions
+This:       Scope boundary · Exclusions · Assumptions · Deferrals
+Downstream: Requirements · Impact analysis · Change control
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA structures scope and records boundary decisions |
+| Approves | Sponsor or accountable business owner approves scope baseline |
+| Consumes | Delivery, finance, governance, testing and operations use it to control commitments |
+| Independently challenges | Risk or compliance challenge exclusions that may undermine mandatory obligations |
 
 ### Permanent rule
 
-A BRD defines *business needs and constraints*. It must not prescribe the solution. Document each requirement with its own acceptance criteria to make it verifiable.
+An exclusion is safe only if its effect on the required outcome is understood. "Out of scope" cannot be used to make a dependency disappear.
+
+### Never confuse [Out of scope] and [Deferred]
+
+**Out of scope** - not part of the committed change.
+
+---
+
+**Deferred** - a recognised need intentionally postponed, with an owner and consequence.
 
 ### Permanent trap
 
-Mixing requirements with design. For example, writing “the system shall use rule X to calculate fee” (that’s a design decision) instead of “calculate fee per business rule.” Also avoid low-level detail or UI mockups in the BRD.
+Using assumptions as permanent scope shortcuts. An unresolved assumption can invalidate estimates, design and testing; if it matters, it needs an owner and resolution date.
 
-### Never confuse
+### Jurisdiction variants
 
-**Business Requirements** vs **Functional Specification**:
-A *Business Requirement* describes what the business must have (high-level need or rule). A *Functional Specification* details how the system will fulfill those needs. They are different deliverables; the BRD should not become a development spec.
-
-### No delta
-
-What goes into a business requirements document (objectives, scope, requirements with criteria) is the same everywhere. Regulators may want documentation, but the BRD itself is a project artifact, not jurisdiction-specific.
+No delta.
 
 <Recall
-  q="What should you never include in a BRD?"
-  a="Solution design or technical details. For example, omit UI designs or code logic."
+  q="Why record out-of-scope items?"
+  a="It prevents implied commitments and reveals excluded items that are still dependencies."
 />
 
 <Recall
-  q="What makes a requirement in a BRD testable?"
-  a="Including clear acceptance criteria (conditions for success)."
+  q="What makes a deferral controlled?"
+  a="It has an authorised decision, stated consequence, named owner and later delivery destination."
+/>
+
+<Recall
+  q="Why can an out-of-scope system still appear in impact analysis?"
+  a="Its code may stay unchanged while its inputs, outputs, timing or users are affected."
 />

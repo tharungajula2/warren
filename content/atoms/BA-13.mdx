@@ -1,60 +1,94 @@
 ---
 id: BA-13
-title: Testable Acceptance Criteria
-type: concept
+title: 'Requirements Sign-Off: Authority, Meaning and Evidence'
+type: mechanism
 domain: business-analysis
 subdomain: brd-functional-specs-and-user-stories
 one_screen: >-
-  Acceptance criteria are the specific, testable conditions that define when a
-  requirement is met.  Well-crafted criteria are clear, concise, and objectively
-  verifiable.
+  Requirements sign-off is not proof that a document was circulated; it is an
+  authorised commitment to a defined baseline. The BA makes clear who is
+  signing, what their signature means, what remains outside that commitment, and
+  what durable evidence will survive later claims that approval was never given.
 prerequisites:
-  - BA-09
+  - BA-03
+  - BA-10
   - BA-12
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Atlassian – “Acceptance criteria are... testable statements”
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: Atlassian – acceptance criteria must be “objectively verifiable”
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Each requirement (or user story) needs acceptance criteria that describe exactly what “done” means.  They are written from the user’s perspective: e.g. “The search function returns results that match 100% or partially matching the query” (as in one example). According to Atlassian, acceptance criteria are “clear, concise, and testable statements” that define what success looks like.  They should be measurable: instead of vague terms (“fast”, “user-friendly”), use objective thresholds (e.g. “90% of transactions processed within 2 seconds”). Each criterion should map to one or more executable tests.
+### Core mechanism
 
-Good acceptance criteria eliminate ambiguity.  They align development and QA teams and allow stakeholders to verify requirements. As one guide puts it, they define *“what success looks like”* and “translate the purpose into explicit, verifiable requirements”. For regulators, acceptance criteria often double as test cases to demonstrate compliance.
+Sign-off has four dimensions.
+
+| Dimension | Required question |
+| :--- | :--- |
+| Authority | Is this person authorised to approve this requirement or baseline? |
+| Object | Exactly which version, requirements and assumptions are being approved? |
+| Meaning | Is the approver confirming business correctness, control adequacy, funding, design, or something else? |
+| Evidence | What durable record proves approval and its conditions? |
+
+A single "approved" status can conceal different commitments. A business owner may approve requirement meaning; a risk function may provide challenge or control approval; technology may confirm feasibility. Do not collapse those into one generic sign-off.
+
+Conditional approval must name the condition. "Approved subject to reconciliation evidence before go-live" is a real state; "approved with comments" is not useful unless the comments and ownership are explicit.
+
+After sign-off, clarification can still occur without reopening the baseline if it does not change meaning. A change to obligation, boundary, acceptance condition or constraint is a scope or requirement change and belongs in change control.
+
+### Where it sits
+
+```text
+Upstream:   Requirements · Decisions · Assumptions · Authority map
+This:       Baseline approval · Approval evidence · Conditions
+Downstream: Traceability · Design · Change control · Acceptance
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA prepares the baseline, approval statement and evidence trail |
+| Approves | Named requirement or control owners approve within their mandates |
+| Consumes | Delivery and governance rely on the approved baseline |
+| Independently challenges | Independent functions challenge whether required owners or conditions are missing |
 
 ### Permanent rule
 
-Write acceptance criteria that are specific and measurable. Each criterion must be objectively verifiable (e.g. through a test or demo). If you can’t define a pass/fail condition, refine the requirement.
+Sign-off commits an authorised person to a specific object and meaning. An email reaction, meeting attendance or silence is not equivalent unless the agreed governance explicitly makes it so.
+
+### Never confuse [Sign-off] and [Acceptance]
+
+**Sign-off** - approves a requirement, scope, design input or other baseline before or during delivery.
+
+---
+
+**Acceptance** - decides that the delivered change is suitable for business use against agreed evidence and disclosed limitations.
 
 ### Permanent trap
 
-Vague criteria. For example, “The system must be user-friendly” or “Reports should load quickly” are not testable. Also avoid combining multiple conditions into one criterion. Each criterion should stand alone (independent).
+Requesting approval with no statement of what approval means. Later disputes are often not about whether someone clicked "approve", but about whether they thought they were approving completeness, wording, feasibility or production readiness.
 
-### Never confuse
+### Jurisdiction variants
 
-**Acceptance Criteria** vs **Test Case**:
-*Acceptance Criteria* are the high-level conditions to meet for a requirement to be accepted. A *Test Case* is a detailed script with steps to verify those criteria. They serve related purposes (criteria shape tests) but are not the same thing.
-
-### No delta
-
-The practice of defining testable acceptance criteria is universal across methodologies and jurisdictions.
+No delta. A specific supervisory or internal governance process may impose particular evidence or approval requirements, but the discipline remains the same.
 
 <Recall
-  q="What makes an acceptance criterion “testable”?"
-  a="It must be clearly measurable, allowing a pass/fail result (e.g. “results within 2s” rather than “fast”)."
+  q="What must defensible sign-off prove?"
+  a="The approver's authority, the exact object approved, what approval means and any conditions."
 />
 
 <Recall
-  q="How do acceptance criteria help align teams?"
-  a="They spell out exactly what success looks like, ensuring developers, QA, and stakeholders have the same understanding."
+  q="Does sign-off freeze every word?"
+  a="No; clarification may continue, but changes to obligation, boundary, constraint or acceptance condition require control."
+/>
+
+<Recall
+  q="Why is one generic &quot;approved&quot; status dangerous?"
+  a="Different functions approve different responsibilities, so a single label can conceal missing authority."
 />

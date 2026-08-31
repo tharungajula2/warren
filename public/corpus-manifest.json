@@ -2,271 +2,188 @@
   "atoms": {
     "BA-01": {
       "id": "BA-01",
-      "title": "Role of the Business Analyst (vs Product/Project Manager)",
+      "title": "The BA in a Bank Change Programme",
       "type": "concept",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "A BA in a bank translates business needs into requirements, focusing on *what* and *why*, unlike a product manager (who defines product strategy and features) or a project manager (who plans the *how* and *when* of delivery).",
+      "one_screen": "A banking BA turns a required business outcome into a chain of explicit requirements, decisions, approvals, acceptance and operational ownership. The BA makes the chain visible and durable, but does not absorb the accountability of the sponsor, business owner, project manager, architect, engineer, risk owner or production owner.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Harvard Business Review (via Medium) – role distinctions",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "ICS Learn – BA vs PM (“what/why” vs “how/when”)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
+      "sources": [],
       "slug": "ba-01",
       "depth": 0,
-      "currentness": "durable",
+      "currentness": "fresh",
       "filepath": "BA-01.mdx",
-      "initialX": 391.9,
-      "initialY": 44.4
+      "initialX": 495.9,
+      "initialY": -15.1
     },
     "BA-02": {
       "id": "BA-02",
-      "title": "Change Landscape: Regulatory vs Strategic vs Remediation",
-      "type": "concept",
+      "title": "Change Mandate, Deadline and Non-Negotiables",
+      "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "Banks undertake strategic initiatives (growth or efficiency) and remediation (fixing defects), but *regulatory-driven* change is mandatory, with fixed deadlines and external oversight, requiring full compliance and auditability.",
-      "prerequisites": [],
+      "one_screen": "Every banking change starts with a mandate: an external obligation, remediation commitment, strategic objective or operational need. Before requirements begin, the BA separates what must be achieved from what is merely the current preferred solution, and identifies which date, outcome and constraints are genuinely non-negotiable.",
+      "prerequisites": [
+        "BA-01"
+      ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Walper & Winter (ISACA Journal) – regulatory change maturity (Audit trails, exam readiness)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Ramki Ravulapalli – “Regulatory Projects” (waterfall, deadlines)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
+      "sources": [],
       "slug": "ba-02",
-      "depth": 0,
-      "currentness": "durable",
+      "depth": 1,
+      "currentness": "fresh",
       "filepath": "BA-02.mdx",
-      "initialX": 480.5,
-      "initialY": 9.8
+      "initialX": 463.7,
+      "initialY": -57
     },
     "BA-03": {
       "id": "BA-03",
-      "title": "Stakeholders in Bank Change Programs",
-      "type": "concept",
+      "title": "Stakeholders, Mandates and Decision Rights",
+      "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "Successful change requires early and ongoing involvement of all impacted groups: business owners (front-line and process managers), risk and compliance, finance, IT/operations, data/model owners, internal audit and (where needed) the regulator.",
-      "prerequisites": [],
+      "one_screen": "A stakeholder list is not enough in a bank because people attend for different reasons and hold different authority. The BA must distinguish knowledge, impact, decision rights, approval rights, acceptance rights and challenge rights so that the loudest participant does not accidentally become the owner.",
+      "prerequisites": [
+        "BA-01",
+        "BA-02"
+      ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Yethi Consulting – Core banking UAT participants and coverage",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "RiskSpan – model owner vs validator roles and documentation",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
+      "sources": [],
       "slug": "ba-03",
-      "depth": 0,
-      "currentness": "durable",
+      "depth": 2,
+      "currentness": "fresh",
       "filepath": "BA-03.mdx",
-      "initialX": 473.4,
-      "initialY": 37.3
+      "initialX": 449,
+      "initialY": -19
     },
     "BA-04": {
       "id": "BA-04",
-      "title": "Requirements Elicitation Techniques",
-      "type": "procedure",
+      "title": "Governance Forums, Escalation and Decision Authority",
+      "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "Elicitation is gathering information on what stakeholders need.  Techniques include structured interviews, workshops, observation, document analysis, surveys, and prototyping, chosen based on context and participant availability.",
-      "prerequisites": [],
+      "one_screen": "Bank change creates decisions that no single workstream can settle: business value may conflict with control expectations, technology feasibility with deadlines, or two functions may interpret the same obligation differently. Governance works when each question reaches the smallest forum that actually has authority to decide it.",
+      "prerequisites": [
+        "BA-03"
+      ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Bridging the Gap – “5 Best Requirement Elicitation Techniques” (interviews, observation, etc.)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Bridging the Gap – Eliciting from Busy Stakeholders (importance of agenda, homework)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
+      "sources": [],
       "slug": "ba-04",
-      "depth": 0,
-      "currentness": "durable",
+      "depth": 3,
+      "currentness": "fresh",
       "filepath": "BA-04.mdx",
-      "initialX": 408.3,
-      "initialY": -9.7
+      "initialX": 470.2,
+      "initialY": 29.8
     },
     "BA-05": {
       "id": "BA-05",
-      "title": "Interviewing Time-Pressed Subject Matter Experts",
-      "type": "procedure",
+      "title": "Problem Framing and Root Cause in Bank Change",
+      "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "SMEs are often busy and short on time.  Always prepare an agenda and pre-reads, ask targeted questions, and build credibility so even a short meeting is productive.",
+      "one_screen": "A reported problem is usually a symptom: a regulatory return breaks, reconciliations require manual repair, or an impairment run finishes too late. The BA frames the problem so the programme changes the causal mechanism rather than spending money to automate or relocate the symptom.",
       "prerequisites": [
-        "BA-04"
+        "BA-02",
+        "BA-03"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Bridging the Gap – “Interviewing a Subject Matter Expert” (be prepared, agenda)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
+      "sources": [],
       "slug": "ba-05",
-      "depth": 1,
-      "currentness": "durable",
+      "depth": 3,
+      "currentness": "fresh",
       "filepath": "BA-05.mdx",
-      "initialX": 359.7,
-      "initialY": 7.2
+      "initialX": 416.8,
+      "initialY": -67.9
     },
     "BA-06": {
       "id": "BA-06",
-      "title": "Process Mapping (As-Is vs To-Be)",
-      "type": "mechanism",
-      "domain": "business-analysis",
-      "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "Process mapping diagrams the workflow of a process.  Mapping the current “as-is” process clarifies existing steps and bottlenecks; the “to-be” map lays out the improved future workflow.  Visualizing both highlights where changes are needed.",
-      "prerequisites": [],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "IBM Blueprint (IBM KB) – “A process map outlines steps... reveals areas of improvement”",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "IBM – definition of process mapping for clarity",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-06",
-      "depth": 0,
-      "currentness": "durable",
-      "filepath": "BA-06.mdx",
-      "initialX": 385.8,
-      "initialY": -36
-    },
-    "BA-07": {
-      "id": "BA-07",
-      "title": "Root Cause Analysis",
+      "title": "Discovering the As-Is Process and Control Reality",
       "type": "procedure",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "Root Cause Analysis (RCA) is a method to find the underlying cause of a problem or error, not just its symptoms.  Techniques like “5 Whys” and fishbone diagrams are used to dig down to the true source of an issue.",
-      "prerequisites": [],
+      "one_screen": "The documented process is often cleaner than the live process. In banking change, the BA must discover the real sequence of work, decisions, controls, exceptions, handoffs and manual repairs because the hidden step is often the step that fails after migration or at period-end.",
+      "prerequisites": [
+        "BA-03",
+        "BA-05"
+      ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "BA Times – “Root Cause Analysis is a method of identifying the underlying cause of a problem... using cause-and-effect diagrams, flowcharts, etc.”",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-07",
-      "depth": 0,
-      "currentness": "durable",
-      "filepath": "BA-07.mdx",
-      "initialX": 466.2,
-      "initialY": -46.1
+      "sources": [],
+      "slug": "ba-06",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "BA-06.mdx",
+      "initialX": 411.4,
+      "initialY": -11
     },
-    "BA-08": {
-      "id": "BA-08",
-      "title": "Requirements Traceability (Matrix)",
-      "type": "mechanism",
+    "BA-07": {
+      "id": "BA-07",
+      "title": "Eliciting from a Time-Pressed SME",
+      "type": "procedure",
       "domain": "business-analysis",
       "subdomain": "ba-foundations-and-elicitation",
-      "one_screen": "A traceability matrix links each requirement through design, code and testing.  It ensures every requirement (especially regulatory ones) is accounted for and verified.  This audit trail of requirements-to-tests is vital for regulators and audits.",
+      "one_screen": "A banking SME may control twenty minutes of knowledge that the programme cannot safely guess. The BA earns that time by doing the document work first, asking questions that require expert judgement rather than lookup, and leaving with explicit confirmations, owners and unresolved points.",
       "prerequisites": [
-        "BA-04",
+        "BA-03",
         "BA-06"
       ],
       "see_also": [],
@@ -274,255 +191,61 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Visure Solutions – “Traceability Matrix... traces and maps requirements to project artifacts... gives a clear audit trail to demonstrate compliance”",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
+      "sources": [],
+      "slug": "ba-07",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "BA-07.mdx",
+      "initialX": 481.1,
+      "initialY": 11.7
+    },
+    "BA-08": {
+      "id": "BA-08",
+      "title": "Conflicting Stakeholders and Requirement Negotiation",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "ba-foundations-and-elicitation",
+      "one_screen": "Bank stakeholders can disagree while all being locally rational: operations wants speed, risk wants stronger controls, finance wants stable close, and technology wants a feasible design. The BA does not \"find the middle\"; the BA exposes the decision, evidence, consequences and authority so the conflict can be resolved without hiding the trade-off.",
+      "prerequisites": [
+        "BA-03",
+        "BA-04",
+        "BA-07"
       ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
       "slug": "ba-08",
-      "depth": 1,
-      "currentness": "durable",
+      "depth": 6,
+      "currentness": "fresh",
       "filepath": "BA-08.mdx",
-      "initialX": 373.9,
-      "initialY": 30.7
+      "initialX": 445.9,
+      "initialY": -51.2
     },
     "BA-09": {
       "id": "BA-09",
-      "title": "Business Requirements Document (BRD)",
+      "title": "Scope: In, Out, Assumed and Deferred",
       "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "brd-functional-specs-and-user-stories",
-      "one_screen": "The BRD captures *what* the business wants and *why*, including objectives, scope, stakeholders, and high-level requirements. It **must not** include solution design or technical details. Each requirement should have acceptance criteria.",
+      "one_screen": "Scope is a boundary around the outcome, not a list of things the project happens to discuss. A bank change is controllable only when in-scope obligations, explicit exclusions, assumptions and deliberately deferred work are all visible enough that later discovery cannot masquerade as an old commitment.",
       "prerequisites": [
-        "BA-04"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Monday.com – capturing requirements with acceptance criteria",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-09",
-      "depth": 1,
-      "currentness": "durable",
-      "filepath": "BA-09.mdx",
-      "initialX": 447.5,
-      "initialY": 32.7
-    },
-    "BA-10": {
-      "id": "BA-10",
-      "title": "Functional Specifications vs Business Requirements",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "brd-functional-specs-and-user-stories",
-      "one_screen": "**Business requirements** state *what* is needed, while **functional specifications** describe *how* the system will meet those needs.  A business requirement is high-level (e.g. “produce regulatory report X”), whereas a functional spec details the software logic, screens, or data elements to implement it. The BRD avoids technical detail.",
-      "prerequisites": [
-        "BA-09"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Monday.com – “no excessive technical detail” in BRD template",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-10",
-      "depth": 2,
-      "currentness": "durable",
-      "filepath": "BA-10.mdx",
-      "initialX": 420.1,
-      "initialY": 74.2
-    },
-    "BA-11": {
-      "id": "BA-11",
-      "title": "Data Mapping Specification",
-      "type": "mechanism",
-      "domain": "business-analysis",
-      "subdomain": "brd-functional-specs-and-user-stories",
-      "one_screen": "A data mapping spec is a field-by-field table linking each source field to a target field, including data type and the transformation rule.  It documents exactly how data moves or is converted from the old system to the new.",
-      "prerequisites": [
-        "BA-09"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "BA Careers – Definition of data mapping and example mapping table",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-11",
-      "depth": 2,
-      "currentness": "durable",
-      "filepath": "BA-11.mdx",
-      "initialX": 439.6,
-      "initialY": -28.9
-    },
-    "BA-12": {
-      "id": "BA-12",
-      "title": "Non-Functional Requirements (Performance, Retention, Auditability)",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "brd-functional-specs-and-user-stories",
-      "one_screen": "Non-functional requirements define *how* the system performs: its quality attributes like speed, security, data retention, and audit capabilities. In banking, **auditability** (e.g. full logging and data retention) is often mandated for compliance.",
-      "prerequisites": [
-        "BA-09"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "LinkedIn (Rosmary Okordion) – banking NFRs including Auditability requirement",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-12",
-      "depth": 2,
-      "currentness": "durable",
-      "filepath": "BA-12.mdx",
-      "initialX": 455.9,
-      "initialY": -17.3
-    },
-    "BA-13": {
-      "id": "BA-13",
-      "title": "Testable Acceptance Criteria",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "brd-functional-specs-and-user-stories",
-      "one_screen": "Acceptance criteria are the specific, testable conditions that define when a requirement is met.  Well-crafted criteria are clear, concise, and objectively verifiable.",
-      "prerequisites": [
-        "BA-09",
-        "BA-12"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Atlassian – “Acceptance criteria are... testable statements”",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Atlassian – acceptance criteria must be “objectively verifiable”",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-13",
-      "depth": 3,
-      "currentness": "durable",
-      "filepath": "BA-13.mdx",
-      "initialX": 397,
-      "initialY": 14.5
-    },
-    "BA-14": {
-      "id": "BA-14",
-      "title": "User Stories and Acceptance in a Regulated Context",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "brd-functional-specs-and-user-stories",
-      "one_screen": "In agile development, user stories (“As a user, I want…”) drive increments.  In a regulated project, each story’s acceptance criteria must tie back to formal requirements and evidence.  You may still use stories, but supplement them with thorough documentation and approvals for audit purposes.",
-      "prerequisites": [
-        "BA-13"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Atlassian – importance of acceptance criteria as requirements verification (contextual)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "Industry best practice – agile in banking still requires traceability and approvals. (No specific cite)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-14",
-      "depth": 4,
-      "currentness": "durable",
-      "filepath": "BA-14.mdx",
-      "initialX": 447.5,
-      "initialY": 55
-    },
-    "BA-15": {
-      "id": "BA-15",
-      "title": "Testing Lifecycle (Unit, System, Integration, UAT)",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "testing-uat-and-cutover",
-      "one_screen": "A typical banking IT change goes through multiple test phases: Unit testing (by developers), Integration/System testing (by QA/IT), and User Acceptance Testing (by business).  Each phase has different owners and objectives.",
-      "prerequisites": [
+        "BA-02",
+        "BA-05",
         "BA-08"
       ],
       "see_also": [],
@@ -530,181 +253,30 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Yethi Consulting – Core banking UAT (business-led)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-15",
-      "depth": 2,
-      "currentness": "durable",
-      "filepath": "BA-15.mdx",
-      "initialX": 380.4,
-      "initialY": -16
+      "sources": [],
+      "slug": "ba-09",
+      "depth": 7,
+      "currentness": "fresh",
+      "filepath": "BA-09.mdx",
+      "initialX": 397.7,
+      "initialY": -23.4
     },
-    "BA-16": {
-      "id": "BA-16",
-      "title": "Test Planning and Test Packs",
-      "type": "procedure",
+    "BA-10": {
+      "id": "BA-10",
+      "title": "Business Requirements and Business Rules",
+      "type": "mechanism",
       "domain": "business-analysis",
-      "subdomain": "testing-uat-and-cutover",
-      "one_screen": "A test plan defines the scope, approach, resources, and schedule of testing. Test packs (test cases and data) list the specific scenarios with expected outcomes.  For each requirement, predefined test cases and datasets must be prepared before testing begins.",
+      "subdomain": "brd-functional-specs-and-user-stories",
+      "one_screen": "A business requirement states the outcome or behaviour the business needs; a business rule states the condition that governs a decision, calculation, classification or action. The BA makes both precise enough to implement and accept without prescribing technical design that belongs to specialist solution owners.",
       "prerequisites": [
-        "BA-15"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "OCM Solution – outlines cutover/go-live steps (implied planning)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-16",
-      "depth": 3,
-      "currentness": "durable",
-      "filepath": "BA-16.mdx",
-      "initialX": 419.3,
-      "initialY": -54.8
-    },
-    "BA-17": {
-      "id": "BA-17",
-      "title": "UAT Coverage and Defect Management",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "testing-uat-and-cutover",
-      "one_screen": "Ensure UAT covers all critical business and regulatory scenarios. Use metrics (e.g. scenario coverage %) to argue sufficiency.  Manage defects by classifying each by *severity* (technical impact) and *priority* (business urgency).",
-      "prerequisites": [
-        "BA-15",
-        "BA-16"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Yethi Consulting – Core banking UAT includes metrics like scenario coverage",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        },
-        {
-          "label": "GeeksforGeeks – severity vs priority definitions",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-17",
-      "depth": 4,
-      "currentness": "durable",
-      "filepath": "BA-17.mdx",
-      "initialX": 445,
-      "initialY": 6.3
-    },
-    "BA-18": {
-      "id": "BA-18",
-      "title": "Parallel Running & Go-Live Planning",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "testing-uat-and-cutover",
-      "one_screen": "*Parallel running* means operating the old and new systems side-by-side for a period to compare outputs. *Go-live planning* (cutover) details how to switch to the new system, including rollback steps if needed.  Both are critical in regulated transitions.",
-      "prerequisites": [
-        "BA-17"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "OCM Solution – “Cutover and rollback steps” in go-live checklist",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-18",
-      "depth": 5,
-      "currentness": "durable",
-      "filepath": "BA-18.mdx",
-      "initialX": 414.1,
-      "initialY": 53.5
-    },
-    "BA-19": {
-      "id": "BA-19",
-      "title": "Post-Implementation Review and Benefits Realisation",
-      "type": "procedure",
-      "domain": "business-analysis",
-      "subdomain": "testing-uat-and-cutover",
-      "one_screen": "After go-live, conduct a formal review comparing actual outcomes to planned objectives. Capture lessons learned and track whether expected benefits (cost savings, efficiency gains, compliance) are realized.",
-      "prerequisites": [
-        "BA-18"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Project Delivery (UK government) – benefits management and review principles (general reference)",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-19",
-      "depth": 6,
-      "currentness": "durable",
-      "filepath": "BA-19.mdx",
-      "initialX": 424.3,
-      "initialY": 8.6
-    },
-    "BA-20": {
-      "id": "BA-20",
-      "title": "Waterfall vs Agile in Banking",
-      "type": "concept",
-      "domain": "business-analysis",
-      "subdomain": "project-delivery-and-scope-governance",
-      "one_screen": "Waterfall (stage-gate) and Agile (iterative) are both used in banks.  Regulatory changes often lean waterfall: fixed scope and deadlines drive sequential phases (requirements→design→build→test). Agile is better for evolving requirements, but must be adapted for compliance needs.",
-      "prerequisites": [
-        "BA-08",
+        "BA-06",
+        "BA-07",
         "BA-09"
       ],
       "see_also": [],
@@ -712,96 +284,556 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Ramki Ravulapalli – “Banks deal with regulatory initiatives by setting up Waterfall style... finalise requirements, then design, then build and test”",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
-      "slug": "ba-20",
-      "depth": 2,
-      "currentness": "durable",
-      "filepath": "BA-20.mdx",
-      "initialX": 416.4,
-      "initialY": -25.4
+      "sources": [],
+      "slug": "ba-10",
+      "depth": 8,
+      "currentness": "fresh",
+      "filepath": "BA-10.mdx",
+      "initialX": 434.1,
+      "initialY": 42.9
     },
-    "BA-21": {
-      "id": "BA-21",
-      "title": "Prioritisation & Estimation in Banking Projects",
+    "BA-11": {
+      "id": "BA-11",
+      "title": "Operational and Non-Functional Constraints",
+      "type": "concept",
+      "domain": "business-analysis",
+      "subdomain": "brd-functional-specs-and-user-stories",
+      "one_screen": "A banking change can be functionally correct and still be unusable because it misses the operating conditions under which the bank must run it. The BA captures operational and non-functional constraints as business obligations: availability, capacity, access, auditability, recoverability, support, processing windows and other qualities that determine whether the change works in production.",
+      "prerequisites": [
+        "BA-06",
+        "BA-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-11",
+      "depth": 9,
+      "currentness": "fresh",
+      "filepath": "BA-11.mdx",
+      "initialX": 468.2,
+      "initialY": -6.5
+    },
+    "BA-12": {
+      "id": "BA-12",
+      "title": "Assumptions, Open Questions and the Decision Log",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "brd-functional-specs-and-user-stories",
+      "one_screen": "Unanswered questions do not disappear; they harden into assumptions inside design, estimates and test evidence. The BA keeps uncertainty visible by separating assumptions from facts, assigning every material open question to an owner, and recording decisions with enough context that the programme can later prove what was decided and why.",
+      "prerequisites": [
+        "BA-04",
+        "BA-07",
+        "BA-10"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-12",
+      "depth": 9,
+      "currentness": "fresh",
+      "filepath": "BA-12.mdx",
+      "initialX": 415.6,
+      "initialY": 9.8
+    },
+    "BA-13": {
+      "id": "BA-13",
+      "title": "Requirements Sign-Off: Authority, Meaning and Evidence",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "brd-functional-specs-and-user-stories",
+      "one_screen": "Requirements sign-off is not proof that a document was circulated; it is an authorised commitment to a defined baseline. The BA makes clear who is signing, what their signature means, what remains outside that commitment, and what durable evidence will survive later claims that approval was never given.",
+      "prerequisites": [
+        "BA-03",
+        "BA-10",
+        "BA-12"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-13",
+      "depth": 10,
+      "currentness": "fresh",
+      "filepath": "BA-13.mdx",
+      "initialX": 378.9,
+      "initialY": -0.4
+    },
+    "BA-14": {
+      "id": "BA-14",
+      "title": "Traceability Through Change",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "brd-functional-specs-and-user-stories",
+      "one_screen": "Traceability in BA is the survival of business meaning as requirements split, merge, change, defer and pass through specialist delivery artefacts. Data teams own the internal content of mapping and test-control artefacts; BA owns the chain that shows which mandate and approved requirement each delivery and acceptance decision serves.",
+      "prerequisites": [
+        "BA-10",
+        "BA-12",
+        "BA-13",
+        "DAT-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-14",
+      "depth": 13,
+      "currentness": "fresh",
+      "filepath": "BA-14.mdx",
+      "initialX": 342.2,
+      "initialY": 86.3
+    },
+    "BA-15": {
+      "id": "BA-15",
+      "title": "Impact and Dependency Analysis",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "testing-uat-and-cutover",
+      "one_screen": "A requirement can be small while its blast radius is large. Impact analysis follows the change across processes, controls, systems, data, reports, models, users, vendors, support teams and business-calendar dependencies so that an apparently local decision does not break an upstream source or downstream obligation.",
+      "prerequisites": [
+        "BA-06",
+        "BA-09",
+        "BA-10",
+        "BA-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-15",
+      "depth": 14,
+      "currentness": "fresh",
+      "filepath": "BA-15.mdx",
+      "initialX": 364.5,
+      "initialY": 31.2
+    },
+    "BA-16": {
+      "id": "BA-16",
+      "title": "Solution Challenge Without Solution Ownership",
+      "type": "concept",
+      "domain": "business-analysis",
+      "subdomain": "testing-uat-and-cutover",
+      "one_screen": "The BA must challenge whether a proposed solution satisfies the approved business need without becoming the architect or engineer. The discipline is to test design decisions against requirements, constraints, impacts and operating reality, while leaving technical implementation accountability with the specialist owner.",
+      "prerequisites": [
+        "BA-10",
+        "BA-11",
+        "BA-15"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-16",
+      "depth": 15,
+      "currentness": "fresh",
+      "filepath": "BA-16.mdx",
+      "initialX": 418.9,
+      "initialY": -28
+    },
+    "BA-17": {
+      "id": "BA-17",
+      "title": "Baselines, Scope Change and Change Control",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "testing-uat-and-cutover",
+      "one_screen": "Once scope and requirements are approved, later changes must preserve the history of what was committed and why it changed. Change control is not bureaucracy around wording; it is the mechanism that prevents a new obligation, exclusion or constraint from entering delivery without visible impact and authorised ownership.",
+      "prerequisites": [
+        "BA-09",
+        "BA-12",
+        "BA-13",
+        "BA-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-17",
+      "depth": 14,
+      "currentness": "fresh",
+      "filepath": "BA-17.mdx",
+      "initialX": 418.8,
+      "initialY": 56.5
+    },
+    "BA-18": {
+      "id": "BA-18",
+      "title": "The Immovable Deadline: Scope, Resources and Risk",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "testing-uat-and-cutover",
+      "one_screen": "When a required implementation date cannot move, time stops being the balancing variable. The programme must make explicit choices among mandatory outcome, discretionary scope, sequencing, credible capacity and accepted risk rather than pretending the original plan remains achievable.",
+      "prerequisites": [
+        "BA-02",
+        "BA-09",
+        "BA-15",
+        "BA-17"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-18",
+      "depth": 15,
+      "currentness": "fresh",
+      "filepath": "BA-18.mdx",
+      "initialX": 441.1,
+      "initialY": 8.2
+    },
+    "BA-19": {
+      "id": "BA-19",
+      "title": "Iterative Delivery Without Losing Regulatory Completeness",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "testing-uat-and-cutover",
+      "one_screen": "A bank may deliver through sequential phases, agile iterations or a hybrid, but the control invariant is the same: mandatory scope, decision authority, traceability, evidence and final business acceptance must survive the delivery method. Iteration changes how work is sliced; it does not make obligations optional or ownership informal.",
+      "prerequisites": [
+        "BA-13",
+        "BA-14",
+        "BA-17",
+        "BA-18"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
+      "slug": "ba-19",
+      "depth": 16,
+      "currentness": "fresh",
+      "filepath": "BA-19.mdx",
+      "initialX": 378.7,
+      "initialY": 51.6
+    },
+    "BA-20": {
+      "id": "BA-20",
+      "title": "Test Governance and Evidence Handoffs",
       "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "project-delivery-and-scope-governance",
-      "one_screen": "Prioritize work using clear criteria (business value, risk, regulatory urgency) and defend choices with data.  Estimate tasks realistically using ranges or past data, accounting for optimism bias.",
+      "one_screen": "BA does not own the structure of test packs or the mechanics of UAT evidence; those are data and testing controls. BA owns the change discipline around testing: whether the requirement is ready to test, who supplies business truth, whether evidence maps to the current requirement, and how gaps are escalated before acceptance.",
       "prerequisites": [
-        "BA-04"
+        "BA-14",
+        "BA-15",
+        "BA-19",
+        "DAT-21",
+        "DAT-22"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Planning fallacy (behavioral economics) – people underestimate tasks",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
+      "sources": [],
+      "slug": "ba-20",
+      "depth": 17,
+      "currentness": "fresh",
+      "filepath": "BA-20.mdx",
+      "initialX": 293.6,
+      "initialY": 116.6
+    },
+    "BA-21": {
+      "id": "BA-21",
+      "title": "Defects, Release Blockers and Residual-Risk Decisions",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "project-delivery-and-scope-governance",
+      "one_screen": "A defect becomes a BA concern when it creates a business decision: does it violate a mandatory requirement, block an operating process, weaken a control, require a workaround or leave risk that someone must own at release? DAT owns defect-record, retest and closure mechanics; BA owns the requirement, impact and release consequence around that record.",
+      "prerequisites": [
+        "BA-17",
+        "BA-20",
+        "DAT-24"
       ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 2,
+      "sources": [],
       "slug": "ba-21",
-      "depth": 1,
-      "currentness": "durable",
+      "depth": 19,
+      "currentness": "fresh",
       "filepath": "BA-21.mdx",
-      "initialX": 442.7,
-      "initialY": -59.8
+      "initialX": 342,
+      "initialY": 102.5
     },
     "BA-22": {
       "id": "BA-22",
-      "title": "Managing Scope Change with Fixed Deadlines",
-      "type": "concept",
+      "title": "Business Acceptance and the Meaning of UAT Sign-Off",
+      "type": "mechanism",
       "domain": "business-analysis",
       "subdomain": "project-delivery-and-scope-governance",
-      "one_screen": "In projects with immovable regulatory deadlines, handle scope changes through a formal change control process.  Assess each new requirement’s impact on timeline and scope. If the deadline cannot move, negotiate resources or de-scope non-critical items rather than slipping the date.",
+      "one_screen": "Business acceptance is the authorised judgement that the delivered change is suitable for business use against the approved requirements, available evidence and disclosed limitations. UAT evidence informs that judgement, but a collection of passed tests does not itself decide who accepts the changed process or what residual risk is being taken.",
       "prerequisites": [
-        "BA-09",
-        "BA-20"
+        "BA-13",
+        "BA-20",
+        "BA-21",
+        "DAT-22"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
-      "sources": [
-        {
-          "label": "Monday.com – formal change request process with impact assessment",
-          "url": "https://www.bis.org/bcbs/basel3.htm",
-          "accessed": "August 28, 2026"
-        }
-      ],
+      "sources": [],
       "slug": "ba-22",
-      "depth": 3,
-      "currentness": "durable",
+      "depth": 20,
+      "currentness": "fresh",
       "filepath": "BA-22.mdx",
-      "initialX": 479.5,
-      "initialY": -18.3
+      "initialX": 328.3,
+      "initialY": 60
+    },
+    "BA-23": {
+      "id": "BA-23",
+      "title": "Parallel Run, Coexistence and Migration Confidence",
+      "type": "mechanism",
+      "domain": "business-analysis",
+      "subdomain": "ba",
+      "one_screen": "A parallel run operates old and new states together so the bank can compare outcomes under live-like conditions before relying solely on the new process. BA owns why coexistence is needed, which business discrepancies matter, who resolves them and what exit decision ends the parallel period; DAT owns detailed downstream extract-validation mechanics.",
+      "prerequisites": [
+        "BA-15",
+        "BA-20",
+        "BA-22",
+        "DAT-23"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "ba-23",
+      "depth": 21,
+      "currentness": "fresh",
+      "filepath": "BA-23.mdx",
+      "initialX": 283.2,
+      "initialY": 80.8
+    },
+    "BA-24": {
+      "id": "BA-24",
+      "title": "Operational Readiness and the Banking Calendar",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "ba",
+      "one_screen": "A system can pass testing while the business is still not ready to operate it. Operational readiness proves that people, procedures, access, controls, support, reconciliations, communications and critical calendar dependencies are prepared for day one and for the high-risk cycles that follow.",
+      "prerequisites": [
+        "BA-11",
+        "BA-15",
+        "BA-21",
+        "BA-22"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "ba-24",
+      "depth": 21,
+      "currentness": "fresh",
+      "filepath": "BA-24.mdx",
+      "initialX": 410,
+      "initialY": 34.3
+    },
+    "BA-25": {
+      "id": "BA-25",
+      "title": "Cutover, Go/No-Go and Fallback Authority",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "ba",
+      "one_screen": "Cutover is the controlled transition from the old operating state to the new one. The BA's role is to make decision conditions and ownership explicit: what must be true before starting, who can proceed or stop, what business checks determine success, and who controls fallback if the transition becomes unsafe.",
+      "prerequisites": [
+        "BA-22",
+        "BA-23",
+        "BA-24"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "ba-25",
+      "depth": 22,
+      "currentness": "fresh",
+      "filepath": "BA-25.mdx",
+      "initialX": 357.1,
+      "initialY": 9.4
+    },
+    "BA-26": {
+      "id": "BA-26",
+      "title": "Hypercare, Stabilisation and BAU Handover",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "ba",
+      "one_screen": "Go-live does not end the change; it starts the period in which production evidence replaces test assumptions. Hypercare is temporary enhanced support, stabilisation is the evidence-based judgement that the new state behaves within agreed tolerances, and BAU handover transfers enduring ownership away from the programme.",
+      "prerequisites": [
+        "BA-21",
+        "BA-24",
+        "BA-25"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "ba-26",
+      "depth": 23,
+      "currentness": "fresh",
+      "filepath": "BA-26.mdx",
+      "initialX": 414.6,
+      "initialY": 74.9
+    },
+    "BA-27": {
+      "id": "BA-27",
+      "title": "Post-Implementation Review, Benefits and Closure",
+      "type": "procedure",
+      "domain": "business-analysis",
+      "subdomain": "ba",
+      "one_screen": "A banking change is not complete because the release succeeded or the project budget closed. Post-implementation review asks whether the required outcome and promised benefits actually exist in production, whether controls operate as intended, and whether every residual action, temporary measure and accepted risk has a durable owner outside the programme.",
+      "prerequisites": [
+        "BA-14",
+        "BA-18",
+        "BA-22",
+        "BA-26"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [],
+      "slug": "ba-27",
+      "depth": 24,
+      "currentness": "fresh",
+      "filepath": "BA-27.mdx",
+      "initialX": 387.5,
+      "initialY": 22.4
     },
     "CAP-01": {
       "id": "CAP-01",
@@ -842,8 +874,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "CAP-01.mdx",
-      "initialX": 169.2,
-      "initialY": 84.3
+      "initialX": 162,
+      "initialY": 83
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -883,8 +915,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "CAP-02.mdx",
-      "initialX": 220.5,
-      "initialY": 150.1
+      "initialX": 214.7,
+      "initialY": 153
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -923,8 +955,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "CAP-03.mdx",
-      "initialX": 335.2,
-      "initialY": 183.4
+      "initialX": 336.3,
+      "initialY": 193.9
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -964,8 +996,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "CAP-04.mdx",
-      "initialX": 226,
-      "initialY": 195.2
+      "initialX": 220.5,
+      "initialY": 215.4
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -1005,8 +1037,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CAP-05.mdx",
-      "initialX": 356.2,
-      "initialY": 220.6
+      "initialX": 342.3,
+      "initialY": 241.3
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -1047,7 +1079,7 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CAP-06.mdx",
-      "initialX": 113.3,
+      "initialX": 108.1,
       "initialY": 169.9
     },
     "CAP-07": {
@@ -1090,8 +1122,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "CAP-07.mdx",
-      "initialX": 52.9,
-      "initialY": 141.6
+      "initialX": 46.2,
+      "initialY": 142.3
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -1137,8 +1169,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 123.4,
-      "initialY": 153.6
+      "initialX": 117.6,
+      "initialY": 151.2
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -1179,8 +1211,8 @@
       "depth": 19,
       "currentness": "future",
       "filepath": "CAP-09.mdx",
-      "initialX": 154.4,
-      "initialY": 154.6
+      "initialX": 149.7,
+      "initialY": 154.1
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -1221,8 +1253,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "CAP-10.mdx",
-      "initialX": 261.3,
-      "initialY": 184
+      "initialX": 258.2,
+      "initialY": 183.5
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -1262,8 +1294,8 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "CAP-11.mdx",
-      "initialX": 218.2,
-      "initialY": 220
+      "initialX": 215.1,
+      "initialY": 200.1
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -1307,8 +1339,8 @@
       "depth": 22,
       "currentness": "fresh",
       "filepath": "CAP-12.mdx",
-      "initialX": 311.3,
-      "initialY": 187.3
+      "initialX": 308.4,
+      "initialY": 188.1
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -1368,8 +1400,8 @@
       "depth": 23,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 273,
-      "initialY": 233.6
+      "initialX": 267.3,
+      "initialY": 225.6
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -1409,8 +1441,8 @@
       "depth": 24,
       "currentness": "fresh",
       "filepath": "CAP-14.mdx",
-      "initialX": 272.7,
-      "initialY": 289.9
+      "initialX": 271.1,
+      "initialY": 288.4
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -1449,8 +1481,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "CAP-15.mdx",
-      "initialX": 368,
-      "initialY": 263.9
+      "initialX": 368.9,
+      "initialY": 269.2
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -1515,8 +1547,8 @@
       "depth": 24,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 241.6,
-      "initialY": 272.8
+      "initialX": 242.7,
+      "initialY": 274
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -1564,8 +1596,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "CAP-17.mdx",
-      "initialX": 196.6,
-      "initialY": 263.6
+      "initialX": 196.4,
+      "initialY": 264.4
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -1610,8 +1642,8 @@
       "depth": 26,
       "currentness": "fresh",
       "filepath": "CAP-18.mdx",
-      "initialX": 317.4,
-      "initialY": 274.1
+      "initialX": 320.8,
+      "initialY": 277.7
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -1675,8 +1707,8 @@
       "depth": 27,
       "currentness": "future",
       "filepath": "CAP-19.mdx",
-      "initialX": 350.8,
-      "initialY": 245.8
+      "initialX": 357.4,
+      "initialY": 242.3
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -1724,8 +1756,8 @@
       "depth": 22,
       "currentness": "fresh",
       "filepath": "CAP-20.mdx",
-      "initialX": 319.5,
-      "initialY": 209.2
+      "initialX": 317.6,
+      "initialY": 209.4
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -1777,8 +1809,8 @@
       "depth": 23,
       "currentness": "fresh",
       "filepath": "CAP-21.mdx",
-      "initialX": 195.4,
-      "initialY": 186.4
+      "initialX": 189.1,
+      "initialY": 189.9
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -1820,8 +1852,8 @@
       "depth": 24,
       "currentness": "fresh",
       "filepath": "CAP-22.mdx",
-      "initialX": 307.1,
-      "initialY": 234.8
+      "initialX": 306.6,
+      "initialY": 235.9
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -1869,8 +1901,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "CAP-23.mdx",
-      "initialX": 183.4,
-      "initialY": 247.8
+      "initialX": 179.4,
+      "initialY": 254.4
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -1929,8 +1961,8 @@
       "depth": 26,
       "currentness": "future",
       "filepath": "CAP-24.mdx",
-      "initialX": 288.1,
-      "initialY": 193.1
+      "initialX": 274.6,
+      "initialY": 237.3
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -1988,8 +2020,8 @@
       "depth": 27,
       "currentness": "fresh",
       "filepath": "CAP-25.mdx",
-      "initialX": 171.6,
-      "initialY": 184.8
+      "initialX": 165.5,
+      "initialY": 198.2
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -2037,8 +2069,8 @@
       "depth": 26,
       "currentness": "fresh",
       "filepath": "CAP-26.mdx",
-      "initialX": 105.5,
-      "initialY": 199.2
+      "initialX": 105.2,
+      "initialY": 194.2
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -2096,8 +2128,8 @@
       "depth": 24,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 182.3,
-      "initialY": 222.1
+      "initialX": 189.4,
+      "initialY": 227
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -2155,8 +2187,8 @@
       "depth": 28,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 295.2,
-      "initialY": 251.8
+      "initialX": 301.8,
+      "initialY": 263.3
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -2210,8 +2242,8 @@
       "depth": 27,
       "currentness": "future",
       "filepath": "CAP-29.mdx",
-      "initialX": 203.8,
-      "initialY": 171.3
+      "initialX": 197.8,
+      "initialY": 175.4
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -2268,8 +2300,8 @@
       "depth": 27,
       "currentness": "fresh",
       "filepath": "CAP-30.mdx",
-      "initialX": 261.6,
-      "initialY": 221.7
+      "initialX": 271.8,
+      "initialY": 196.6
     },
     "CR-01": {
       "id": "CR-01",
@@ -2306,8 +2338,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": 117.8,
-      "initialY": 219.6
+      "initialX": 114.5,
+      "initialY": 218.7
     },
     "CR-02": {
       "id": "CR-02",
@@ -2347,7 +2379,7 @@
       "currentness": "durable",
       "filepath": "CR-02.mdx",
       "initialX": 146.5,
-      "initialY": 261
+      "initialY": 259.8
     },
     "CR-03": {
       "id": "CR-03",
@@ -2392,8 +2424,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "CR-03.mdx",
-      "initialX": 30.8,
-      "initialY": 197.7
+      "initialX": 26.3,
+      "initialY": 198.3
     },
     "CR-04": {
       "id": "CR-04",
@@ -2441,8 +2473,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": 43.7,
-      "initialY": 251.7
+      "initialX": 39.5,
+      "initialY": 252.4
     },
     "CR-05": {
       "id": "CR-05",
@@ -2489,8 +2521,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CR-05.mdx",
-      "initialX": 122.5,
-      "initialY": 299.1
+      "initialX": 122.9,
+      "initialY": 301.4
     },
     "CR-06": {
       "id": "CR-06",
@@ -2536,7 +2568,7 @@
       "currentness": "fresh",
       "filepath": "CR-06.mdx",
       "initialX": 169.9,
-      "initialY": 337.8
+      "initialY": 339.1
     },
     "CR-07": {
       "id": "CR-07",
@@ -2605,8 +2637,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CR-07.mdx",
-      "initialX": 95.3,
-      "initialY": 312.4
+      "initialX": 93.3,
+      "initialY": 309.5
     },
     "CR-08": {
       "id": "CR-08",
@@ -2659,8 +2691,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": 132,
-      "initialY": 221.5
+      "initialX": 128.5,
+      "initialY": 217.7
     },
     "CR-09": {
       "id": "CR-09",
@@ -2719,8 +2751,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CR-09.mdx",
-      "initialX": 98.3,
-      "initialY": 262.1
+      "initialX": 91.1,
+      "initialY": 259.1
     },
     "CR-10": {
       "id": "CR-10",
@@ -2784,8 +2816,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CR-10.mdx",
-      "initialX": -1.7,
-      "initialY": 248.1
+      "initialX": -7.4,
+      "initialY": 248.8
     },
     "CR-11": {
       "id": "CR-11",
@@ -2843,8 +2875,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -8.7,
-      "initialY": 290.5
+      "initialX": -17.4,
+      "initialY": 291.3
     },
     "CR-12": {
       "id": "CR-12",
@@ -2908,8 +2940,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CR-12.mdx",
-      "initialX": -26.6,
-      "initialY": 241.2
+      "initialX": -33,
+      "initialY": 240
     },
     "CR-13": {
       "id": "CR-13",
@@ -2963,8 +2995,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CR-13.mdx",
-      "initialX": 8.4,
-      "initialY": 274.9
+      "initialX": -1.4,
+      "initialY": 274
     },
     "CR-14": {
       "id": "CR-14",
@@ -3008,8 +3040,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-14.mdx",
-      "initialX": 60.1,
-      "initialY": 320.3
+      "initialX": 58.4,
+      "initialY": 325.4
     },
     "CR-15": {
       "id": "CR-15",
@@ -3048,8 +3080,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CR-15.mdx",
-      "initialX": 70.7,
-      "initialY": 363.6
+      "initialX": 63.8,
+      "initialY": 376.5
     },
     "CR-16": {
       "id": "CR-16",
@@ -3095,8 +3127,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "CR-16.mdx",
-      "initialX": 20.5,
-      "initialY": 316
+      "initialX": 11.2,
+      "initialY": 315.9
     },
     "CR-17": {
       "id": "CR-17",
@@ -3141,8 +3173,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-17.mdx",
-      "initialX": -34.3,
-      "initialY": 263.6
+      "initialX": -38.1,
+      "initialY": 265.9
     },
     "CR-18": {
       "id": "CR-18",
@@ -3193,8 +3225,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "CR-18.mdx",
-      "initialX": 107.3,
-      "initialY": 366.4
+      "initialX": 103.8,
+      "initialY": 375.2
     },
     "CR-19": {
       "id": "CR-19",
@@ -3235,8 +3267,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CR-19.mdx",
-      "initialX": 151.7,
-      "initialY": 332
+      "initialX": 151.4,
+      "initialY": 337.6
     },
     "CR-20": {
       "id": "CR-20",
@@ -3282,8 +3314,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-20.mdx",
-      "initialX": 152.8,
-      "initialY": 376.7
+      "initialX": 149.3,
+      "initialY": 384.1
     },
     "CR-21": {
       "id": "CR-21",
@@ -3324,8 +3356,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-21.mdx",
-      "initialX": 151.6,
-      "initialY": 395
+      "initialX": 137.3,
+      "initialY": 404.1
     },
     "CR-22": {
       "id": "CR-22",
@@ -3361,8 +3393,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "CR-22.mdx",
-      "initialX": 202,
-      "initialY": 343.4
+      "initialX": 201.1,
+      "initialY": 347.1
     },
     "CR-23": {
       "id": "CR-23",
@@ -3421,8 +3453,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "CR-23.mdx",
-      "initialX": 126.2,
-      "initialY": 324.6
+      "initialX": 125.6,
+      "initialY": 330
     },
     "CR-24": {
       "id": "CR-24",
@@ -3462,8 +3494,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "CR-24.mdx",
-      "initialX": 135.2,
-      "initialY": 399.3
+      "initialX": 162.8,
+      "initialY": 396
     },
     "CR-25": {
       "id": "CR-25",
@@ -3514,8 +3546,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "CR-25.mdx",
-      "initialX": 189.8,
-      "initialY": 404.3
+      "initialX": 181.9,
+      "initialY": 420.3
     },
     "CR-26": {
       "id": "CR-26",
@@ -3589,8 +3621,8 @@
       "depth": 16,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": 175.7,
-      "initialY": 366.2
+      "initialX": 174.8,
+      "initialY": 367.5
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -3627,8 +3659,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -74.3,
-      "initialY": 389.4
+      "initialX": -130.3,
+      "initialY": 440.5
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -3662,8 +3694,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -129,
-      "initialY": 372.2
+      "initialX": -114.6,
+      "initialY": 377
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -3702,8 +3734,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -73,
-      "initialY": 408.9
+      "initialX": -103.2,
+      "initialY": 441.6
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -3743,8 +3775,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -152.5,
-      "initialY": 401.7
+      "initialX": -150.2,
+      "initialY": 389.8
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -3779,8 +3811,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -182.2,
-      "initialY": 308.8
+      "initialX": -189.7,
+      "initialY": 318
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -3832,8 +3864,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "DAT-06.mdx",
-      "initialX": -98,
-      "initialY": 362.1
+      "initialX": -157,
+      "initialY": 420.6
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -3872,8 +3904,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -120.5,
-      "initialY": 417.7
+      "initialX": -31,
+      "initialY": 478
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -3912,8 +3944,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": -85.2,
-      "initialY": 468.4
+      "initialX": -67.5,
+      "initialY": 475.7
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -3952,8 +3984,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -29.7,
-      "initialY": 470.9
+      "initialX": -14.4,
+      "initialY": 429.2
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -3992,8 +4024,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": 14.1,
-      "initialY": 466.6
+      "initialX": -79.4,
+      "initialY": 459.2
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -4033,8 +4065,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": -136.8,
-      "initialY": 460.2
+      "initialX": -33.1,
+      "initialY": 408.7
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -4073,8 +4105,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -133.2,
-      "initialY": 393
+      "initialX": -50.3,
+      "initialY": 458.1
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -4113,8 +4145,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -151.2,
-      "initialY": 441.2
+      "initialX": -83.4,
+      "initialY": 496.7
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -4155,8 +4187,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -96.6,
-      "initialY": 414.1
+      "initialX": -118.5,
+      "initialY": 462.8
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -4195,8 +4227,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -57.2,
-      "initialY": 453.5
+      "initialX": -85.4,
+      "initialY": 402.9
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -4236,8 +4268,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -58.4,
-      "initialY": 376.5
+      "initialX": -58.1,
+      "initialY": 437.7
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -4278,8 +4310,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": -16.6,
-      "initialY": 403.5
+      "initialX": -18.8,
+      "initialY": 379.6
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -4320,8 +4352,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": -73.3,
-      "initialY": 433.1
+      "initialX": 54.4,
+      "initialY": 349.6
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -4362,8 +4394,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -99.8,
-      "initialY": 485.2
+      "initialX": 9.7,
+      "initialY": 441.7
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -4404,8 +4436,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": -124.8,
-      "initialY": 442.1
+      "initialX": -1.1,
+      "initialY": 398.7
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -4445,8 +4477,8 @@
       "depth": 15,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -79.1,
-      "initialY": 492.3
+      "initialX": 84.3,
+      "initialY": 333.4
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -4486,8 +4518,8 @@
       "depth": 16,
       "currentness": "durable",
       "filepath": "DAT-22.mdx",
-      "initialX": -38.8,
-      "initialY": 491
+      "initialX": 117,
+      "initialY": 264.8
     },
     "DAT-23": {
       "id": "DAT-23",
@@ -4528,8 +4560,8 @@
       "depth": 17,
       "currentness": "durable",
       "filepath": "DAT-23.mdx",
-      "initialX": -92.7,
-      "initialY": 447.3
+      "initialX": 30.7,
+      "initialY": 330.7
     },
     "DAT-24": {
       "id": "DAT-24",
@@ -4571,8 +4603,8 @@
       "depth": 18,
       "currentness": "durable",
       "filepath": "DAT-24.mdx",
-      "initialX": -34,
-      "initialY": 447
+      "initialX": 64.7,
+      "initialY": 297.9
     },
     "DAT-25": {
       "id": "DAT-25",
@@ -4614,8 +4646,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "DAT-25.mdx",
-      "initialX": -52.8,
-      "initialY": 432.5
+      "initialX": -60.3,
+      "initialY": 386.9
     },
     "DAT-26": {
       "id": "DAT-26",
@@ -4662,8 +4694,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "DAT-26.mdx",
-      "initialX": -34.8,
-      "initialY": 387.5
+      "initialX": -83.9,
+      "initialY": 438.4
     },
     "DAT-27": {
       "id": "DAT-27",
@@ -4714,8 +4746,8 @@
       "depth": 20,
       "currentness": "future",
       "filepath": "DAT-27.mdx",
-      "initialX": -7.9,
-      "initialY": 453.2
+      "initialX": -111.9,
+      "initialY": 400.1
     },
     "DAT-28": {
       "id": "DAT-28",
@@ -4760,8 +4792,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "DAT-28.mdx",
-      "initialX": 4.6,
-      "initialY": 415.9
+      "initialX": -123.6,
+      "initialY": 415.2
     },
     "DAT-29": {
       "id": "DAT-29",
@@ -4811,8 +4843,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "DAT-29.mdx",
-      "initialX": 2,
-      "initialY": 435.2
+      "initialX": -30.4,
+      "initialY": 449.7
     },
     "FND-01": {
       "id": "FND-01",
@@ -4844,8 +4876,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -116.4,
-      "initialY": 113.3
+      "initialX": -121.5,
+      "initialY": 112.8
     },
     "FND-02": {
       "id": "FND-02",
@@ -4884,8 +4916,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -66.7,
-      "initialY": 111.7
+      "initialX": -71.4,
+      "initialY": 112.8
     },
     "FND-03": {
       "id": "FND-03",
@@ -4925,8 +4957,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -85.2,
-      "initialY": 198
+      "initialX": -97.4,
+      "initialY": 207.2
     },
     "FND-04": {
       "id": "FND-04",
@@ -4966,8 +4998,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -48.3,
-      "initialY": 133.5
+      "initialX": -52.9,
+      "initialY": 133
     },
     "FND-05": {
       "id": "FND-05",
@@ -5013,8 +5045,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -118.6,
-      "initialY": 144.7
+      "initialX": -121.2,
+      "initialY": 144
     },
     "FND-06": {
       "id": "FND-06",
@@ -5077,8 +5109,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -158,
-      "initialY": 151.7
+      "initialX": -162.1,
+      "initialY": 150.5
     },
     "FND-07": {
       "id": "FND-07",
@@ -5117,8 +5149,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -104,
-      "initialY": 150.3
+      "initialX": -109.5,
+      "initialY": 152.6
     },
     "FND-08": {
       "id": "FND-08",
@@ -5176,8 +5208,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-08.mdx",
-      "initialX": -134.4,
-      "initialY": 128
+      "initialX": -136.6,
+      "initialY": 127.8
     },
     "FND-09": {
       "id": "FND-09",
@@ -5230,8 +5262,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -83.2,
-      "initialY": 104.7
+      "initialX": -87.1,
+      "initialY": 104.1
     },
     "FND-10": {
       "id": "FND-10",
@@ -5275,8 +5307,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-10.mdx",
-      "initialX": -149.7,
-      "initialY": 207.2
+      "initialX": -153.3,
+      "initialY": 206.7
     },
     "FND-11": {
       "id": "FND-11",
@@ -5308,8 +5340,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -93.8,
-      "initialY": 216
+      "initialX": -82.7,
+      "initialY": 197.1
     },
     "FND-12": {
       "id": "FND-12",
@@ -5343,8 +5375,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -56.9,
-      "initialY": 208
+      "initialX": -77.6,
+      "initialY": 230.4
     },
     "FND-13": {
       "id": "FND-13",
@@ -5379,8 +5411,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -101.1,
-      "initialY": 174.4
+      "initialX": -108,
+      "initialY": 176.2
     },
     "FND-14": {
       "id": "FND-14",
@@ -5429,8 +5461,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -196.7,
-      "initialY": 250.3
+      "initialX": -195.3,
+      "initialY": 249.9
     },
     "FND-15": {
       "id": "FND-15",
@@ -5462,8 +5494,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -94.9,
-      "initialY": 250.3
+      "initialX": -102.9,
+      "initialY": 254.3
     },
     "FND-16": {
       "id": "FND-16",
@@ -5497,8 +5529,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -91.9,
-      "initialY": 275.3
+      "initialX": -97.7,
+      "initialY": 279.7
     },
     "FND-17": {
       "id": "FND-17",
@@ -5533,8 +5565,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -50.7,
-      "initialY": 166.6
+      "initialX": -56,
+      "initialY": 169.1
     },
     "FND-18": {
       "id": "FND-18",
@@ -5569,8 +5601,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -87.8,
-      "initialY": 156.2
+      "initialX": -92.9,
+      "initialY": 157.5
     },
     "FND-19": {
       "id": "FND-19",
@@ -5612,8 +5644,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -127.7,
-      "initialY": 183.6
+      "initialX": -131.4,
+      "initialY": 186.1
     },
     "FND-20": {
       "id": "FND-20",
@@ -5648,8 +5680,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -246.3,
-      "initialY": 236.9
+      "initialX": -249.3,
+      "initialY": 239.9
     },
     "FND-21": {
       "id": "FND-21",
@@ -5688,8 +5720,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -308.6,
-      "initialY": 262.9
+      "initialX": -311.5,
+      "initialY": 265.7
     },
     "FND-22": {
       "id": "FND-22",
@@ -5728,8 +5760,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -316.9,
-      "initialY": 323.6
+      "initialX": -317.1,
+      "initialY": 327
     },
     "FND-23": {
       "id": "FND-23",
@@ -5792,8 +5824,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -246.9,
-      "initialY": 278.2
+      "initialX": -246.7,
+      "initialY": 281.4
     },
     "FND-24": {
       "id": "FND-24",
@@ -5862,8 +5894,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -224.3,
-      "initialY": 217.7
+      "initialX": -227.3,
+      "initialY": 219.7
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -5919,7 +5951,7 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "IMP-01.mdx",
-      "initialX": -129.2,
+      "initialX": -134.3,
       "initialY": 89.9
     },
     "IMP-02": {
@@ -5980,8 +6012,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "IMP-02.mdx",
-      "initialX": -277,
-      "initialY": 134.5
+      "initialX": -281,
+      "initialY": 136.5
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -6031,8 +6063,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "IMP-03.mdx",
-      "initialX": -240.9,
-      "initialY": 96.1
+      "initialX": -245.1,
+      "initialY": 96.4
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -6083,8 +6115,8 @@
       "depth": 11,
       "currentness": "future",
       "filepath": "IMP-04.mdx",
-      "initialX": -244.1,
-      "initialY": 163.6
+      "initialX": -244.8,
+      "initialY": 159.9
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -6139,8 +6171,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "IMP-05.mdx",
-      "initialX": -169.9,
-      "initialY": 173.5
+      "initialX": -174.1,
+      "initialY": 170.9
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -6190,8 +6222,8 @@
       "depth": 13,
       "currentness": "future",
       "filepath": "IMP-06.mdx",
-      "initialX": -208.8,
-      "initialY": 155.1
+      "initialX": -210,
+      "initialY": 200.1
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -6241,8 +6273,8 @@
       "depth": 13,
       "currentness": "future",
       "filepath": "IMP-07.mdx",
-      "initialX": -169.8,
-      "initialY": 231.1
+      "initialX": -175.2,
+      "initialY": 230.9
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -6297,8 +6329,8 @@
       "depth": 14,
       "currentness": "future",
       "filepath": "IMP-08.mdx",
-      "initialX": -141.6,
-      "initialY": 249.5
+      "initialX": -148.2,
+      "initialY": 252.8
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -6349,8 +6381,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-09.mdx",
-      "initialX": -119.7,
-      "initialY": 203.3
+      "initialX": -123.9,
+      "initialY": 206.2
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -6399,8 +6431,8 @@
       "depth": 16,
       "currentness": "future",
       "filepath": "IMP-10.mdx",
-      "initialX": -280.2,
-      "initialY": 182.4
+      "initialX": -278.7,
+      "initialY": 178.5
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -6458,8 +6490,8 @@
       "depth": 14,
       "currentness": "future",
       "filepath": "IMP-11.mdx",
-      "initialX": -193.6,
-      "initialY": 174.1
+      "initialX": -201.6,
+      "initialY": 165
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -6509,8 +6541,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-12.mdx",
-      "initialX": -212.8,
-      "initialY": 190.9
+      "initialX": -219.5,
+      "initialY": 189.3
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -6565,8 +6597,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-13.mdx",
-      "initialX": -182.1,
-      "initialY": 213.6
+      "initialX": -196.1,
+      "initialY": 219.5
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -6622,8 +6654,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-14.mdx",
-      "initialX": -194.2,
-      "initialY": 213.3
+      "initialX": -186.4,
+      "initialY": 205.2
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -6678,8 +6710,8 @@
       "depth": 15,
       "currentness": "future",
       "filepath": "IMP-15.mdx",
-      "initialX": -224.8,
-      "initialY": 202.2
+      "initialX": -232.7,
+      "initialY": 202.7
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -6734,8 +6766,8 @@
       "depth": 16,
       "currentness": "future",
       "filepath": "IMP-16.mdx",
-      "initialX": -237.4,
-      "initialY": 129.7
+      "initialX": -240.8,
+      "initialY": 130.8
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -6792,8 +6824,8 @@
       "depth": 17,
       "currentness": "future",
       "filepath": "IMP-17.mdx",
-      "initialX": -278.6,
-      "initialY": 156.2
+      "initialX": -284.5,
+      "initialY": 156.7
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -6848,8 +6880,8 @@
       "depth": 18,
       "currentness": "future",
       "filepath": "IMP-18.mdx",
-      "initialX": -306.8,
-      "initialY": 126.5
+      "initialX": -309,
+      "initialY": 124.8
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -6900,8 +6932,8 @@
       "depth": 16,
       "currentness": "future",
       "filepath": "IMP-19.mdx",
-      "initialX": -307.9,
-      "initialY": 153.5
+      "initialX": -314.2,
+      "initialY": 152.7
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -6963,8 +6995,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -179.8,
-      "initialY": 126.1
+      "initialX": -185,
+      "initialY": 126.2
     },
     "IND-01": {
       "id": "IND-01",
@@ -7006,8 +7038,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -382,
-      "initialY": -118.2
+      "initialX": -408.1,
+      "initialY": -144.2
     },
     "IND-02": {
       "id": "IND-02",
@@ -7056,8 +7088,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -413.3,
-      "initialY": -70.4
+      "initialX": -414.9,
+      "initialY": -62.9
     },
     "IND-03": {
       "id": "IND-03",
@@ -7101,8 +7133,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -351.2,
-      "initialY": -98.4
+      "initialX": -356.3,
+      "initialY": -77.2
     },
     "IND-04": {
       "id": "IND-04",
@@ -7141,8 +7173,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -411.9,
-      "initialY": -151.6
+      "initialX": -383.4,
+      "initialY": -145.7
     },
     "IND-05": {
       "id": "IND-05",
@@ -7186,8 +7218,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -462,
-      "initialY": -124.8
+      "initialX": -441.8,
+      "initialY": -153.2
     },
     "IND-06": {
       "id": "IND-06",
@@ -7227,8 +7259,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -440.4,
-      "initialY": -139.7
+      "initialX": -452.9,
+      "initialY": -122.4
     },
     "IND-07": {
       "id": "IND-07",
@@ -7267,8 +7299,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -383.4,
-      "initialY": -155.3
+      "initialX": -457.1,
+      "initialY": -61.5
     },
     "IND-08": {
       "id": "IND-08",
@@ -7313,8 +7345,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -401.9,
-      "initialY": -98
+      "initialX": -414.1,
+      "initialY": -97.9
     },
     "IND-09": {
       "id": "IND-09",
@@ -7358,8 +7390,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -412,
-      "initialY": -50.7
+      "initialX": -393.1,
+      "initialY": -82.8
     },
     "IND-10": {
       "id": "IND-10",
@@ -7399,8 +7431,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -316,
-      "initialY": 3.1
+      "initialX": -312.4,
+      "initialY": -5
     },
     "IND-11": {
       "id": "IND-11",
@@ -7435,8 +7467,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -351.5,
-      "initialY": -76.7
+      "initialX": -345.9,
+      "initialY": -106.8
     },
     "IND-12": {
       "id": "IND-12",
@@ -7471,8 +7503,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -412.4,
-      "initialY": -118
+      "initialX": -420.8,
+      "initialY": -130.7
     },
     "IND-13": {
       "id": "IND-13",
@@ -7507,8 +7539,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -190.1,
-      "initialY": -3.3
+      "initialX": -192.5,
+      "initialY": -11.1
     },
     "IND-14": {
       "id": "IND-14",
@@ -7543,8 +7575,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -395,
-      "initialY": -135.2
+      "initialX": -397.5,
+      "initialY": -120.3
     },
     "IND-15": {
       "id": "IND-15",
@@ -7584,8 +7616,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -329.4,
-      "initialY": -96.7
+      "initialX": -335.2,
+      "initialY": -86.9
     },
     "IND-16": {
       "id": "IND-16",
@@ -7625,8 +7657,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -352.2,
-      "initialY": 36.8
+      "initialX": -355.9,
+      "initialY": 40.9
     },
     "IND-17": {
       "id": "IND-17",
@@ -7671,8 +7703,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -323.9,
-      "initialY": 72
+      "initialX": -328.8,
+      "initialY": 75.9
     },
     "IND-18": {
       "id": "IND-18",
@@ -7711,8 +7743,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -207.2,
-      "initialY": 10.2
+      "initialX": -208.9,
+      "initialY": 10.1
     },
     "IND-19": {
       "id": "IND-19",
@@ -7756,8 +7788,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -306.5,
-      "initialY": -76.3
+      "initialX": -307.9,
+      "initialY": -77.9
     },
     "IND-20": {
       "id": "IND-20",
@@ -7802,8 +7834,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "IND-20.mdx",
-      "initialX": -247.2,
-      "initialY": -5.8
+      "initialX": -250.9,
+      "initialY": -1.5
     },
     "IND-21": {
       "id": "IND-21",
@@ -7842,8 +7874,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -331.3,
-      "initialY": -61.1
+      "initialX": -334.7,
+      "initialY": -59.3
     },
     "IND-22": {
       "id": "IND-22",
@@ -7882,8 +7914,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -378.9,
-      "initialY": -68.4
+      "initialX": -383.2,
+      "initialY": -60.9
     },
     "IND-23": {
       "id": "IND-23",
@@ -7923,8 +7955,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -358.6,
-      "initialY": -10.4
+      "initialX": -361.7,
+      "initialY": -7.5
     },
     "IND-24": {
       "id": "IND-24",
@@ -7970,8 +8002,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "IND-24.mdx",
-      "initialX": -319.3,
-      "initialY": -29.1
+      "initialX": -323.8,
+      "initialY": -28.7
     },
     "IND-25": {
       "id": "IND-25",
@@ -8015,8 +8047,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-25.mdx",
-      "initialX": -442.8,
-      "initialY": -65.3
+      "initialX": -375.5,
+      "initialY": -124.6
     },
     "IND-26": {
       "id": "IND-26",
@@ -8057,8 +8089,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "IND-26.mdx",
-      "initialX": -281.7,
-      "initialY": 4.8
+      "initialX": -286.4,
+      "initialY": 8.3
     },
     "IND-27": {
       "id": "IND-27",
@@ -8097,8 +8129,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "IND-27.mdx",
-      "initialX": -384.9,
-      "initialY": -48.4
+      "initialX": -391.6,
+      "initialY": -41.3
     },
     "IND-28": {
       "id": "IND-28",
@@ -8143,8 +8175,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "IND-28.mdx",
-      "initialX": -428,
-      "initialY": -102.2
+      "initialX": -440.5,
+      "initialY": -75.8
     },
     "IND-29": {
       "id": "IND-29",
@@ -8183,8 +8215,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "IND-29.mdx",
-      "initialX": -469.6,
-      "initialY": -77
+      "initialX": -472.2,
+      "initialY": -115
     },
     "IND-30": {
       "id": "IND-30",
@@ -8229,8 +8261,8 @@
       "depth": 12,
       "currentness": "future",
       "filepath": "IND-30.mdx",
-      "initialX": -447.8,
-      "initialY": -93.7
+      "initialX": -445,
+      "initialY": -95.8
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -8280,8 +8312,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -315.8,
-      "initialY": -369.8
+      "initialX": -335.1,
+      "initialY": -329.8
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -8320,8 +8352,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-02.mdx",
-      "initialX": -340.6,
-      "initialY": -320
+      "initialX": -295.9,
+      "initialY": -382.7
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -8360,8 +8392,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "MRM-03.mdx",
-      "initialX": -334.6,
-      "initialY": -272.3
+      "initialX": -243,
+      "initialY": -368.9
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -8419,8 +8451,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -276.3,
-      "initialY": -343.2
+      "initialX": -277.5,
+      "initialY": -342.1
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -8468,8 +8500,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -329.7,
-      "initialY": -296.9
+      "initialX": -287.1,
+      "initialY": -285.7
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -8516,8 +8548,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-06.mdx",
-      "initialX": -288.9,
-      "initialY": -325.1
+      "initialX": -234,
+      "initialY": -308.4
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -8557,8 +8589,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-07.mdx",
-      "initialX": -344.6,
-      "initialY": -347.6
+      "initialX": -242.8,
+      "initialY": -250.6
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -8603,8 +8635,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -267.3,
-      "initialY": -270.8
+      "initialX": -269.2,
+      "initialY": -361.3
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -8650,8 +8682,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -274.6,
-      "initialY": -228.5
+      "initialX": -316.4,
+      "initialY": -363.6
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -8691,8 +8723,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -317.3,
-      "initialY": -265.3
+      "initialX": -276.5,
+      "initialY": -308.8
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -8736,8 +8768,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -321.6,
-      "initialY": -343.8
+      "initialX": -267.5,
+      "initialY": -265.3
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -8777,8 +8809,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -267.1,
-      "initialY": -305.8
+      "initialX": -314.5,
+      "initialY": -323.3
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -8818,8 +8850,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "MRM-13.mdx",
-      "initialX": -276.3,
-      "initialY": -371.8
+      "initialX": -310.2,
+      "initialY": -246.4
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -8861,8 +8893,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "MRM-14.mdx",
-      "initialX": -313.5,
-      "initialY": -313
+      "initialX": -336.9,
+      "initialY": -280
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -8915,8 +8947,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "MRM-15.mdx",
-      "initialX": -263.4,
-      "initialY": -287.4
+      "initialX": -293,
+      "initialY": -323
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -8955,8 +8987,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "MRM-16.mdx",
-      "initialX": -299,
-      "initialY": -353.3
+      "initialX": -242.2,
+      "initialY": -346.5
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -8995,8 +9027,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "MRM-17.mdx",
-      "initialX": -246.7,
-      "initialY": -358.7
+      "initialX": -262.4,
+      "initialY": -297.1
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -9036,8 +9068,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -257.1,
-      "initialY": -322.5
+      "initialX": -236.9,
+      "initialY": -274.8
     },
     "MRM-19": {
       "id": "MRM-19",
@@ -9078,8 +9110,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "MRM-19.mdx",
-      "initialX": -293.4,
-      "initialY": -290
+      "initialX": -209.5,
+      "initialY": -317.4
     },
     "MRM-20": {
       "id": "MRM-20",
@@ -9131,8 +9163,8 @@
       "depth": 17,
       "currentness": "fresh",
       "filepath": "MRM-20.mdx",
-      "initialX": -241,
-      "initialY": -269.6
+      "initialX": -259,
+      "initialY": -326.5
     },
     "MRM-21": {
       "id": "MRM-21",
@@ -9172,8 +9204,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "MRM-21.mdx",
-      "initialX": -234.5,
-      "initialY": -337.1
+      "initialX": -312.2,
+      "initialY": -299.2
     },
     "MRM-22": {
       "id": "MRM-22",
@@ -9214,8 +9246,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "MRM-22.mdx",
-      "initialX": -224.6,
-      "initialY": -285.8
+      "initialX": -285.2,
+      "initialY": -245.9
     },
     "MRM-23": {
       "id": "MRM-23",
@@ -9268,8 +9300,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "MRM-23.mdx",
-      "initialX": -247.3,
-      "initialY": -238.3
+      "initialX": -218.6,
+      "initialY": -268.4
     },
     "MRM-24": {
       "id": "MRM-24",
@@ -9323,8 +9355,8 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "MRM-24.mdx",
-      "initialX": -291.1,
-      "initialY": -255.7
+      "initialX": -245.6,
+      "initialY": -230.2
     },
     "MRM-25": {
       "id": "MRM-25",
@@ -9378,8 +9410,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "MRM-25.mdx",
-      "initialX": -226.2,
-      "initialY": -319.2
+      "initialX": -333.6,
+      "initialY": -357.6
     },
     "MRM-26": {
       "id": "MRM-26",
@@ -9439,8 +9471,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "MRM-26.mdx",
-      "initialX": -223.7,
-      "initialY": -258.7
+      "initialX": -358,
+      "initialY": -308
     },
     "MRM-27": {
       "id": "MRM-27",
@@ -9500,8 +9532,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "MRM-27.mdx",
-      "initialX": -207.9,
-      "initialY": -308.7
+      "initialX": -309.2,
+      "initialY": -270.1
     },
     "QNT-01": {
       "id": "QNT-01",
@@ -9527,8 +9559,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "QNT-01.mdx",
-      "initialX": -63.1,
-      "initialY": -289.7
+      "initialX": -1.7,
+      "initialY": -318.1
     },
     "QNT-02": {
       "id": "QNT-02",
@@ -9557,8 +9589,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "QNT-02.mdx",
-      "initialX": -8.7,
-      "initialY": -234.1
+      "initialX": -4.2,
+      "initialY": -233.8
     },
     "QNT-03": {
       "id": "QNT-03",
@@ -9587,8 +9619,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "QNT-03.mdx",
-      "initialX": -30,
-      "initialY": -306.8
+      "initialX": -37.2,
+      "initialY": -302.5
     },
     "QNT-04": {
       "id": "QNT-04",
@@ -9618,8 +9650,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "QNT-04.mdx",
-      "initialX": 4.7,
-      "initialY": -160
+      "initialX": 12.8,
+      "initialY": -165.3
     },
     "QNT-05": {
       "id": "QNT-05",
@@ -9648,8 +9680,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "QNT-05.mdx",
-      "initialX": -45.5,
-      "initialY": -378
+      "initialX": -34.4,
+      "initialY": -376.2
     },
     "QNT-06": {
       "id": "QNT-06",
@@ -9678,8 +9710,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "QNT-06.mdx",
-      "initialX": -101.9,
-      "initialY": -380
+      "initialX": -2.9,
+      "initialY": -407.4
     },
     "QNT-07": {
       "id": "QNT-07",
@@ -9708,8 +9740,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "QNT-07.mdx",
-      "initialX": -25.4,
-      "initialY": -373.1
+      "initialX": -17.9,
+      "initialY": -366.7
     },
     "QNT-08": {
       "id": "QNT-08",
@@ -9738,8 +9770,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "QNT-08.mdx",
-      "initialX": -67.7,
-      "initialY": -444.2
+      "initialX": -38.4,
+      "initialY": -443.7
     },
     "QNT-09": {
       "id": "QNT-09",
@@ -9768,8 +9800,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "QNT-09.mdx",
-      "initialX": -17.4,
-      "initialY": -423.3
+      "initialX": -90.4,
+      "initialY": -410.8
     },
     "QNT-10": {
       "id": "QNT-10",
@@ -9797,8 +9829,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "QNT-10.mdx",
-      "initialX": -63.2,
-      "initialY": -474.2
+      "initialX": -108.4,
+      "initialY": -470.1
     },
     "QNT-11": {
       "id": "QNT-11",
@@ -9827,8 +9859,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "QNT-11.mdx",
-      "initialX": -23.8,
-      "initialY": -438.2
+      "initialX": -92.2,
+      "initialY": -430.5
     },
     "QNT-12": {
       "id": "QNT-12",
@@ -9857,8 +9889,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "QNT-12.mdx",
-      "initialX": -16.8,
-      "initialY": -354.2
+      "initialX": -82.1,
+      "initialY": -345.6
     },
     "QNT-13": {
       "id": "QNT-13",
@@ -9887,8 +9919,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "QNT-13.mdx",
-      "initialX": -32,
-      "initialY": -219.4
+      "initialX": -43.2,
+      "initialY": -219.5
     },
     "QNT-14": {
       "id": "QNT-14",
@@ -9918,8 +9950,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "QNT-14.mdx",
-      "initialX": -29.6,
-      "initialY": -331.6
+      "initialX": -46.8,
+      "initialY": -334
     },
     "QNT-15": {
       "id": "QNT-15",
@@ -9948,8 +9980,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "QNT-15.mdx",
-      "initialX": -78.6,
-      "initialY": -309.4
+      "initialX": -88.7,
+      "initialY": -309.5
     },
     "QNT-16": {
       "id": "QNT-16",
@@ -9978,8 +10010,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "QNT-16.mdx",
-      "initialX": -15.1,
-      "initialY": -308.9
+      "initialX": -61.4,
+      "initialY": -303.6
     },
     "QNT-17": {
       "id": "QNT-17",
@@ -10008,8 +10040,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "QNT-17.mdx",
-      "initialX": -79.8,
-      "initialY": -402.3
+      "initialX": -45.6,
+      "initialY": -410.2
     },
     "QNT-18": {
       "id": "QNT-18",
@@ -10038,8 +10070,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "QNT-18.mdx",
-      "initialX": -49,
-      "initialY": -336.1
+      "initialX": -63.8,
+      "initialY": -331.6
     },
     "QNT-19": {
       "id": "QNT-19",
@@ -10069,8 +10101,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "QNT-19.mdx",
-      "initialX": -14.6,
-      "initialY": -397.6
+      "initialX": -109.7,
+      "initialY": -388.9
     },
     "QNT-20": {
       "id": "QNT-20",
@@ -10099,8 +10131,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "QNT-20.mdx",
-      "initialX": -98.7,
-      "initialY": -362.2
+      "initialX": -85.8,
+      "initialY": -375.2
     },
     "QNT-21": {
       "id": "QNT-21",
@@ -10129,8 +10161,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "QNT-21.mdx",
-      "initialX": -88.1,
-      "initialY": -427.9
+      "initialX": -29,
+      "initialY": -428.3
     },
     "QNT-22": {
       "id": "QNT-22",
@@ -10159,8 +10191,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "QNT-22.mdx",
-      "initialX": -63.9,
-      "initialY": -324.9
+      "initialX": -24.9,
+      "initialY": -324.2
     },
     "QNT-23": {
       "id": "QNT-23",
@@ -10189,8 +10221,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "QNT-23.mdx",
-      "initialX": -79.6,
-      "initialY": -361.4
+      "initialX": -98.7,
+      "initialY": -355.7
     },
     "QNT-24": {
       "id": "QNT-24",
@@ -10220,8 +10252,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "QNT-24.mdx",
-      "initialX": -92.8,
-      "initialY": -225.9
+      "initialX": -95,
+      "initialY": -228.5
     },
     "QNT-25": {
       "id": "QNT-25",
@@ -10250,8 +10282,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "QNT-25.mdx",
-      "initialX": -61.1,
-      "initialY": -425.3
+      "initialX": -63.2,
+      "initialY": -431.1
     },
     "QNT-26": {
       "id": "QNT-26",
@@ -10279,8 +10311,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "QNT-26.mdx",
-      "initialX": -122.7,
-      "initialY": -401
+      "initialX": -68.6,
+      "initialY": -478.9
     },
     "QNT-27": {
       "id": "QNT-27",
@@ -10309,8 +10341,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "QNT-27.mdx",
-      "initialX": -32.6,
-      "initialY": -459.5
+      "initialX": -18.3,
+      "initialY": -453.8
     },
     "QNT-28": {
       "id": "QNT-28",
@@ -10340,8 +10372,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "QNT-28.mdx",
-      "initialX": -92.7,
-      "initialY": -455
+      "initialX": -78.1,
+      "initialY": -456.3
     },
     "QNT-29": {
       "id": "QNT-29",
@@ -10371,8 +10403,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "QNT-29.mdx",
-      "initialX": -59.1,
-      "initialY": -357.3
+      "initialX": -60.8,
+      "initialY": -358.8
     },
     "QNT-30": {
       "id": "QNT-30",
@@ -10401,8 +10433,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "QNT-30.mdx",
-      "initialX": -48.5,
-      "initialY": -405.5
+      "initialX": -61.2,
+      "initialY": -411
     },
     "QNT-31": {
       "id": "QNT-31",
@@ -10433,8 +10465,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "QNT-31.mdx",
-      "initialX": -109.9,
-      "initialY": -431.2
+      "initialX": -115.6,
+      "initialY": -425.8
     },
     "TEC-01": {
       "id": "TEC-01",
@@ -10460,8 +10492,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TEC-01.mdx",
-      "initialX": 181.8,
-      "initialY": -378.7
+      "initialX": 166.7,
+      "initialY": -364.1
     },
     "TEC-02": {
       "id": "TEC-02",
@@ -10489,8 +10521,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TEC-02.mdx",
-      "initialX": 219.3,
-      "initialY": -347.8
+      "initialX": 214.2,
+      "initialY": -428.1
     },
     "TEC-03": {
       "id": "TEC-03",
@@ -10518,8 +10550,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TEC-03.mdx",
-      "initialX": 247.5,
-      "initialY": -396.1
+      "initialX": 165.3,
+      "initialY": -426.3
     },
     "TEC-04": {
       "id": "TEC-04",
@@ -10548,8 +10580,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TEC-04.mdx",
-      "initialX": 150.1,
-      "initialY": -323.9
+      "initialX": 157.4,
+      "initialY": -409.4
     },
     "TEC-05": {
       "id": "TEC-05",
@@ -10578,8 +10610,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TEC-05.mdx",
-      "initialX": 164.7,
-      "initialY": -385.9
+      "initialX": 191.9,
+      "initialY": -358.2
     },
     "TEC-06": {
       "id": "TEC-06",
@@ -10608,8 +10640,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TEC-06.mdx",
-      "initialX": 201.2,
-      "initialY": -327.6
+      "initialX": 112.3,
+      "initialY": -400.7
     },
     "TEC-07": {
       "id": "TEC-07",
@@ -10638,8 +10670,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TEC-07.mdx",
-      "initialX": 244.1,
-      "initialY": -348.5
+      "initialX": 113.2,
+      "initialY": -352.1
     },
     "TEC-08": {
       "id": "TEC-08",
@@ -10668,8 +10700,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TEC-08.mdx",
-      "initialX": 149.8,
-      "initialY": -344.4
+      "initialX": 202,
+      "initialY": -396.2
     },
     "TEC-09": {
       "id": "TEC-09",
@@ -10698,8 +10730,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TEC-09.mdx",
-      "initialX": 154.4,
-      "initialY": -294.3
+      "initialX": 150.6,
+      "initialY": -438.7
     },
     "TEC-10": {
       "id": "TEC-10",
@@ -10728,8 +10760,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TEC-10.mdx",
-      "initialX": 196.3,
-      "initialY": -400.7
+      "initialX": 251,
+      "initialY": -375.7
     },
     "TEC-11": {
       "id": "TEC-11",
@@ -10758,8 +10790,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TEC-11.mdx",
-      "initialX": 136.7,
-      "initialY": -413.9
+      "initialX": 226,
+      "initialY": -333.1
     },
     "TEC-12": {
       "id": "TEC-12",
@@ -10787,8 +10819,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TEC-12.mdx",
-      "initialX": 181.3,
-      "initialY": -446.2
+      "initialX": 182.5,
+      "initialY": -301.8
     },
     "TEC-13": {
       "id": "TEC-13",
@@ -10817,8 +10849,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TEC-13.mdx",
-      "initialX": 208.9,
-      "initialY": -424.9
+      "initialX": 227.5,
+      "initialY": -384.8
     },
     "TEC-14": {
       "id": "TEC-14",
@@ -10847,8 +10879,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TEC-14.mdx",
-      "initialX": 173.5,
-      "initialY": -327.6
+      "initialX": 131.8,
+      "initialY": -311.2
     },
     "TEC-15": {
       "id": "TEC-15",
@@ -10877,8 +10909,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TEC-15.mdx",
-      "initialX": 216.8,
-      "initialY": -307.6
+      "initialX": 170,
+      "initialY": -460
     },
     "TEC-16": {
       "id": "TEC-16",
@@ -10908,8 +10940,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TEC-16.mdx",
-      "initialX": 196.8,
-      "initialY": -361.4
+      "initialX": 121.5,
+      "initialY": -424.8
     },
     "TEC-17": {
       "id": "TEC-17",
@@ -10938,8 +10970,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TEC-17.mdx",
-      "initialX": 117.4,
-      "initialY": -368.6
+      "initialX": 224.2,
+      "initialY": -405.9
     },
     "TEC-18": {
       "id": "TEC-18",
@@ -10968,8 +11000,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TEC-18.mdx",
-      "initialX": 197.1,
-      "initialY": -299.9
+      "initialX": 179.7,
+      "initialY": -331.5
     },
     "TEC-19": {
       "id": "TEC-19",
@@ -10997,8 +11029,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TEC-19.mdx",
-      "initialX": 173.5,
-      "initialY": -355.9
+      "initialX": 149,
+      "initialY": -379.4
     },
     "TEC-20": {
       "id": "TEC-20",
@@ -11027,8 +11059,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TEC-20.mdx",
-      "initialX": 185.6,
-      "initialY": -420.4
+      "initialX": 215.6,
+      "initialY": -358
     },
     "TEC-21": {
       "id": "TEC-21",
@@ -11056,8 +11088,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TEC-21.mdx",
-      "initialX": 144.3,
-      "initialY": -446.9
+      "initialX": 248.1,
+      "initialY": -408.9
     },
     "TEC-22": {
       "id": "TEC-22",
@@ -11086,8 +11118,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "TEC-22.mdx",
-      "initialX": 212.9,
-      "initialY": -451.3
+      "initialX": 260.1,
+      "initialY": -351.4
     },
     "TEC-23": {
       "id": "TEC-23",
@@ -11116,8 +11148,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TEC-23.mdx",
-      "initialX": 141.3,
-      "initialY": -392.2
+      "initialX": 140,
+      "initialY": -350
     },
     "TEC-24": {
       "id": "TEC-24",
@@ -11147,8 +11179,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "TEC-24.mdx",
-      "initialX": 141.9,
-      "initialY": -358.8
+      "initialX": 173.8,
+      "initialY": -397.5
     },
     "TEC-25": {
       "id": "TEC-25",
@@ -11177,8 +11209,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "TEC-25.mdx",
-      "initialX": 113.3,
-      "initialY": -322.2
+      "initialX": 121.9,
+      "initialY": -380.6
     },
     "TEC-26": {
       "id": "TEC-26",
@@ -11207,8 +11239,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TEC-26.mdx",
-      "initialX": 246.6,
-      "initialY": -372.7
+      "initialX": 209.6,
+      "initialY": -314.9
     },
     "TEC-27": {
       "id": "TEC-27",
@@ -11238,8 +11270,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "TEC-27.mdx",
-      "initialX": 240.3,
-      "initialY": -422.1
+      "initialX": 155.4,
+      "initialY": -340.2
     },
     "TEC-28": {
       "id": "TEC-28",
@@ -11269,8 +11301,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "TEC-28.mdx",
-      "initialX": 205.8,
-      "initialY": -382.9
+      "initialX": 153.9,
+      "initialY": -295.9
     },
     "TEC-29": {
       "id": "TEC-29",
@@ -11299,8 +11331,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "TEC-29.mdx",
-      "initialX": 105.6,
-      "initialY": -404.4
+      "initialX": 192.6,
+      "initialY": -380.2
     },
     "TEC-30": {
       "id": "TEC-30",
@@ -11331,8 +11363,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "TEC-30.mdx",
-      "initialX": 160.5,
-      "initialY": -417.1
+      "initialX": 190.7,
+      "initialY": -444.2
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -11374,8 +11406,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-01.mdx",
-      "initialX": 77.2,
-      "initialY": -11.9
+      "initialX": 73.3,
+      "initialY": -13.9
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -11417,8 +11449,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 100.1,
-      "initialY": -39.3
+      "initialX": 95.2,
+      "initialY": -42.1
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -11460,8 +11492,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-03.mdx",
-      "initialX": 164.4,
-      "initialY": -60.3
+      "initialX": 163.7,
+      "initialY": -59.6
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -11497,8 +11529,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-04.mdx",
-      "initialX": 181.3,
-      "initialY": -111.1
+      "initialX": 178.3,
+      "initialY": -111.4
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -11552,8 +11584,8 @@
       "depth": 10,
       "currentness": "fresh",
       "filepath": "TLM-05.mdx",
-      "initialX": 209.1,
-      "initialY": -73.5
+      "initialX": 205.1,
+      "initialY": -78
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -11593,8 +11625,8 @@
       "depth": 11,
       "currentness": "fresh",
       "filepath": "TLM-06.mdx",
-      "initialX": 212.3,
-      "initialY": -133.8
+      "initialX": 203.9,
+      "initialY": -140.2
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -11636,8 +11668,8 @@
       "depth": 12,
       "currentness": "fresh",
       "filepath": "TLM-07.mdx",
-      "initialX": 123.4,
-      "initialY": -37.4
+      "initialX": 117.5,
+      "initialY": -40.2
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -11672,8 +11704,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 237.3,
-      "initialY": -122
+      "initialX": 225.5,
+      "initialY": -132.9
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -11709,8 +11741,8 @@
       "depth": 13,
       "currentness": "fresh",
       "filepath": "TLM-09.mdx",
-      "initialX": 114.8,
-      "initialY": -73.8
+      "initialX": 118.4,
+      "initialY": -73
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -11769,8 +11801,8 @@
       "depth": 14,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 242.4,
-      "initialY": -165.9
+      "initialX": 268.5,
+      "initialY": -141.7
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -11811,8 +11843,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 285.4,
-      "initialY": -143.1
+      "initialX": 261.8,
+      "initialY": -169
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -11853,8 +11885,8 @@
       "depth": 16,
       "currentness": "fresh",
       "filepath": "TLM-12.mdx",
-      "initialX": 277.7,
-      "initialY": -71.6
+      "initialX": 275.9,
+      "initialY": -80
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -11915,8 +11947,8 @@
       "depth": 17,
       "currentness": "future",
       "filepath": "TLM-13.mdx",
-      "initialX": 246.9,
-      "initialY": -97.6
+      "initialX": 240.7,
+      "initialY": -103.3
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -11957,8 +11989,8 @@
       "depth": 18,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 182.2,
-      "initialY": -44.5
+      "initialX": 183.2,
+      "initialY": -51.5
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -12013,8 +12045,8 @@
       "depth": 19,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 263.6,
-      "initialY": -115.6
+      "initialX": 257.9,
+      "initialY": -120.4
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -12054,8 +12086,8 @@
       "depth": 20,
       "currentness": "fresh",
       "filepath": "TLM-16.mdx",
-      "initialX": 288.4,
-      "initialY": -193
+      "initialX": 271.4,
+      "initialY": -199.2
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -12118,8 +12150,8 @@
       "depth": 21,
       "currentness": "fresh",
       "filepath": "TLM-17.mdx",
-      "initialX": 364.9,
-      "initialY": -210
+      "initialX": 330.6,
+      "initialY": -224.1
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -12172,8 +12204,8 @@
       "depth": 22,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 305.2,
-      "initialY": -164.8
+      "initialX": 303.3,
+      "initialY": -171.8
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -12238,7 +12270,7 @@
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
       "initialX": 361.1,
-      "initialY": -169
+      "initialY": -170.3
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -12296,8 +12328,8 @@
       "depth": 24,
       "currentness": "future",
       "filepath": "TLM-20.mdx",
-      "initialX": 349.9,
-      "initialY": -222
+      "initialX": 357.7,
+      "initialY": -216.6
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -12357,8 +12389,8 @@
       "depth": 25,
       "currentness": "fresh",
       "filepath": "TLM-21.mdx",
-      "initialX": 268.3,
-      "initialY": -172.8
+      "initialX": 297.2,
+      "initialY": -143.3
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -12399,8 +12431,8 @@
       "depth": 26,
       "currentness": "fresh",
       "filepath": "TLM-22.mdx",
-      "initialX": 296,
-      "initialY": -219.4
+      "initialX": 309.7,
+      "initialY": -198.3
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -12441,8 +12473,8 @@
       "depth": 27,
       "currentness": "fresh",
       "filepath": "TLM-23.mdx",
-      "initialX": 338.4,
-      "initialY": -192.2
+      "initialX": 365.6,
+      "initialY": -190.2
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -12501,8 +12533,8 @@
       "depth": 28,
       "currentness": "fresh",
       "filepath": "TLM-24.mdx",
-      "initialX": 350.2,
-      "initialY": -243.1
+      "initialX": 362.4,
+      "initialY": -235.2
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -12543,8 +12575,8 @@
       "depth": 29,
       "currentness": "fresh",
       "filepath": "TLM-25.mdx",
-      "initialX": 306.1,
-      "initialY": -185.8
+      "initialX": 291.1,
+      "initialY": -204.2
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -12585,8 +12617,8 @@
       "depth": 30,
       "currentness": "fresh",
       "filepath": "TLM-26.mdx",
-      "initialX": 233.9,
-      "initialY": -142.9
+      "initialX": 230.9,
+      "initialY": -150.3
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -12626,8 +12658,8 @@
       "depth": 31,
       "currentness": "fresh",
       "filepath": "TLM-27.mdx",
-      "initialX": 324.8,
-      "initialY": -231
+      "initialX": 334.3,
+      "initialY": -238.5
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -12673,8 +12705,8 @@
       "depth": 32,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 335.5,
-      "initialY": -169.2
+      "initialX": 339.7,
+      "initialY": -173.2
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -12723,8 +12755,8 @@
       "depth": 31,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 170.5,
-      "initialY": -76.1
+      "initialX": 166.4,
+      "initialY": -79
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -12781,65 +12813,137 @@
       "depth": 32,
       "currentness": "future",
       "filepath": "TLM-30.mdx",
-      "initialX": 312.2,
-      "initialY": -149.4
+      "initialX": 287.9,
+      "initialY": -180.2
     }
   },
   "reverseIndex": {
-    "BA-01": [],
-    "BA-02": [],
-    "BA-03": [],
-    "BA-04": [
+    "BA-01": [
+      "BA-02",
+      "BA-03"
+    ],
+    "BA-02": [
+      "BA-03",
       "BA-05",
-      "BA-08",
       "BA-09",
-      "BA-21"
+      "BA-18"
     ],
-    "BA-05": [],
+    "BA-03": [
+      "BA-04",
+      "BA-05",
+      "BA-06",
+      "BA-07",
+      "BA-08",
+      "BA-13"
+    ],
+    "BA-04": [
+      "BA-08",
+      "BA-12"
+    ],
+    "BA-05": [
+      "BA-06",
+      "BA-09"
+    ],
     "BA-06": [
-      "BA-08"
+      "BA-07",
+      "BA-10",
+      "BA-11",
+      "BA-15"
     ],
-    "BA-07": [],
+    "BA-07": [
+      "BA-08",
+      "BA-10",
+      "BA-12"
+    ],
     "BA-08": [
-      "BA-15",
-      "BA-20"
+      "BA-09"
     ],
     "BA-09": [
       "BA-10",
+      "BA-15",
+      "BA-17",
+      "BA-18"
+    ],
+    "BA-10": [
       "BA-11",
       "BA-12",
       "BA-13",
-      "BA-20",
-      "BA-22"
+      "BA-14",
+      "BA-15",
+      "BA-16"
     ],
-    "BA-10": [],
-    "BA-11": [],
+    "BA-11": [
+      "BA-16",
+      "BA-24"
+    ],
     "BA-12": [
-      "BA-13"
+      "BA-13",
+      "BA-14",
+      "BA-17"
     ],
     "BA-13": [
-      "BA-14"
-    ],
-    "BA-14": [],
-    "BA-15": [
-      "BA-16",
-      "BA-17"
-    ],
-    "BA-16": [
-      "BA-17"
-    ],
-    "BA-17": [
-      "BA-18"
-    ],
-    "BA-18": [
-      "BA-19"
-    ],
-    "BA-19": [],
-    "BA-20": [
+      "BA-14",
+      "BA-17",
+      "BA-19",
       "BA-22"
     ],
-    "BA-21": [],
-    "BA-22": [],
+    "BA-14": [
+      "BA-15",
+      "BA-17",
+      "BA-19",
+      "BA-20",
+      "BA-27"
+    ],
+    "BA-15": [
+      "BA-16",
+      "BA-18",
+      "BA-20",
+      "BA-23",
+      "BA-24"
+    ],
+    "BA-16": [],
+    "BA-17": [
+      "BA-18",
+      "BA-19",
+      "BA-21"
+    ],
+    "BA-18": [
+      "BA-19",
+      "BA-27"
+    ],
+    "BA-19": [
+      "BA-20"
+    ],
+    "BA-20": [
+      "BA-21",
+      "BA-22",
+      "BA-23"
+    ],
+    "BA-21": [
+      "BA-22",
+      "BA-24",
+      "BA-26"
+    ],
+    "BA-22": [
+      "BA-23",
+      "BA-24",
+      "BA-25",
+      "BA-27"
+    ],
+    "BA-23": [
+      "BA-25"
+    ],
+    "BA-24": [
+      "BA-25",
+      "BA-26"
+    ],
+    "BA-25": [
+      "BA-26"
+    ],
+    "BA-26": [
+      "BA-27"
+    ],
+    "BA-27": [],
     "CAP-01": [
       "CAP-02",
       "TLM-05",
@@ -13190,6 +13294,7 @@
       "DAT-25"
     ],
     "DAT-18": [
+      "BA-14",
       "DAT-19",
       "DAT-20",
       "DAT-21",
@@ -13204,19 +13309,25 @@
       "DAT-25"
     ],
     "DAT-21": [
+      "BA-20",
       "DAT-22",
       "DAT-23",
       "DAT-24"
     ],
     "DAT-22": [
+      "BA-20",
+      "BA-22",
       "DAT-23",
       "DAT-24"
     ],
     "DAT-23": [
+      "BA-23",
       "DAT-24",
       "DAT-25"
     ],
-    "DAT-24": [],
+    "DAT-24": [
+      "BA-21"
+    ],
     "DAT-25": [
       "DAT-26",
       "DAT-27",
@@ -14026,57 +14137,57 @@
           "atoms": [
             {
               "id": "BA-01",
-              "title": "Role of the Business Analyst (vs Product/Project Manager)",
+              "title": "The BA in a Bank Change Programme",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-02",
-              "title": "Change Landscape: Regulatory vs Strategic vs Remediation",
-              "type": "concept",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "BA-03",
-              "title": "Stakeholders in Bank Change Programs",
-              "type": "concept",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "BA-04",
-              "title": "Requirements Elicitation Techniques",
-              "type": "procedure",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "BA-05",
-              "title": "Interviewing Time-Pressed Subject Matter Experts",
-              "type": "procedure",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "BA-06",
-              "title": "Process Mapping (As-Is vs To-Be)",
+              "title": "Change Mandate, Deadline and Non-Negotiables",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
+              "id": "BA-03",
+              "title": "Stakeholders, Mandates and Decision Rights",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-04",
+              "title": "Governance Forums, Escalation and Decision Authority",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-05",
+              "title": "Problem Framing and Root Cause in Bank Change",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-06",
+              "title": "Discovering the As-Is Process and Control Reality",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
               "id": "BA-07",
-              "title": "Root Cause Analysis",
+              "title": "Eliciting from a Time-Pressed SME",
               "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-08",
-              "title": "Requirements Traceability (Matrix)",
-              "type": "mechanism",
+              "title": "Conflicting Stakeholders and Requirement Negotiation",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             }
@@ -14087,43 +14198,43 @@
           "atoms": [
             {
               "id": "BA-09",
-              "title": "Business Requirements Document (BRD)",
+              "title": "Scope: In, Out, Assumed and Deferred",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-10",
-              "title": "Functional Specifications vs Business Requirements",
-              "type": "concept",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "BA-11",
-              "title": "Data Mapping Specification",
+              "title": "Business Requirements and Business Rules",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
-              "id": "BA-12",
-              "title": "Non-Functional Requirements (Performance, Retention, Auditability)",
+              "id": "BA-11",
+              "title": "Operational and Non-Functional Constraints",
               "type": "concept",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-12",
+              "title": "Assumptions, Open Questions and the Decision Log",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-13",
-              "title": "Testable Acceptance Criteria",
-              "type": "concept",
+              "title": "Requirements Sign-Off: Authority, Meaning and Evidence",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-14",
-              "title": "User Stories and Acceptance in a Regulated Context",
-              "type": "concept",
+              "title": "Traceability Through Change",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             }
@@ -14134,36 +14245,36 @@
           "atoms": [
             {
               "id": "BA-15",
-              "title": "Testing Lifecycle (Unit, System, Integration, UAT)",
-              "type": "concept",
+              "title": "Impact and Dependency Analysis",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-16",
-              "title": "Test Planning and Test Packs",
-              "type": "procedure",
+              "title": "Solution Challenge Without Solution Ownership",
+              "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-17",
-              "title": "UAT Coverage and Defect Management",
-              "type": "concept",
+              "title": "Baselines, Scope Change and Change Control",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-18",
-              "title": "Parallel Running & Go-Live Planning",
-              "type": "concept",
+              "title": "The Immovable Deadline: Scope, Resources and Risk",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-19",
-              "title": "Post-Implementation Review and Benefits Realisation",
-              "type": "procedure",
+              "title": "Iterative Delivery Without Losing Regulatory Completeness",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             }
@@ -14174,22 +14285,62 @@
           "atoms": [
             {
               "id": "BA-20",
-              "title": "Waterfall vs Agile in Banking",
-              "type": "concept",
+              "title": "Test Governance and Evidence Handoffs",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-21",
-              "title": "Prioritisation & Estimation in Banking Projects",
+              "title": "Defects, Release Blockers and Residual-Risk Decisions",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "BA-22",
-              "title": "Managing Scope Change with Fixed Deadlines",
-              "type": "concept",
+              "title": "Business Acceptance and the Meaning of UAT Sign-Off",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "subdomain": "ba",
+          "atoms": [
+            {
+              "id": "BA-23",
+              "title": "Parallel Run, Coexistence and Migration Confidence",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-24",
+              "title": "Operational Readiness and the Banking Calendar",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-25",
+              "title": "Cutover, Go/No-Go and Fallback Authority",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-26",
+              "title": "Hypercare, Stabilisation and BAU Handover",
+              "type": "procedure",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "BA-27",
+              "title": "Post-Implementation Review, Benefits and Closure",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             }
@@ -17026,24 +17177,9 @@
       "message": "Atom \"BA-01\" has 0 prerequisites (Depth 0 Root)."
     },
     {
-      "rule": "ORPHAN_ATOM",
-      "atomId": "BA-01",
-      "message": "Orphan Atom \"BA-01\": no other atom lists it as prerequisite, see_also, or contrast_with."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-02",
       "message": "Atom \"BA-02\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "BA-02",
-      "message": "Atom \"BA-02\" has 0 prerequisites (Depth 0 Root)."
-    },
-    {
-      "rule": "ORPHAN_ATOM",
-      "atomId": "BA-02",
-      "message": "Orphan Atom \"BA-02\": no other atom lists it as prerequisite, see_also, or contrast_with."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -17051,24 +17187,9 @@
       "message": "Atom \"BA-03\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "BA-03",
-      "message": "Atom \"BA-03\" has 0 prerequisites (Depth 0 Root)."
-    },
-    {
-      "rule": "ORPHAN_ATOM",
-      "atomId": "BA-03",
-      "message": "Orphan Atom \"BA-03\": no other atom lists it as prerequisite, see_also, or contrast_with."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-04",
       "message": "Atom \"BA-04\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "BA-04",
-      "message": "Atom \"BA-04\" has 0 prerequisites (Depth 0 Root)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -17081,24 +17202,9 @@
       "message": "Atom \"BA-06\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "BA-06",
-      "message": "Atom \"BA-06\" has 0 prerequisites (Depth 0 Root)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-07",
       "message": "Atom \"BA-07\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ROOT_ATOM_NOTE",
-      "atomId": "BA-07",
-      "message": "Atom \"BA-07\" has 0 prerequisites (Depth 0 Root)."
-    },
-    {
-      "rule": "ORPHAN_ATOM",
-      "atomId": "BA-07",
-      "message": "Orphan Atom \"BA-07\": no other atom lists it as prerequisite, see_also, or contrast_with."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -17116,11 +17222,6 @@
       "message": "Atom \"BA-10\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "BA-10",
-      "message": "one_screen in \"BA-10\" contains 5 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-11",
       "message": "Atom \"BA-11\" is unverified (draft). Displays development banner."
@@ -17129,11 +17230,6 @@
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-12",
       "message": "Atom \"BA-12\" is unverified (draft). Displays development banner."
-    },
-    {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "BA-12",
-      "message": "one_screen in \"BA-12\" contains 4 sentences (maximum 3 recommended)."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -17161,11 +17257,6 @@
       "message": "Atom \"BA-17\" is unverified (draft). Displays development banner."
     },
     {
-      "rule": "ONE_SCREEN_LENGTH",
-      "atomId": "BA-17",
-      "message": "one_screen in \"BA-17\" contains 5 sentences (maximum 3 recommended)."
-    },
-    {
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-18",
       "message": "Atom \"BA-18\" is unverified (draft). Displays development banner."
@@ -17189,6 +17280,31 @@
       "rule": "UNVERIFIED_CONTENT",
       "atomId": "BA-22",
       "message": "Atom \"BA-22\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "BA-23",
+      "message": "Atom \"BA-23\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "BA-24",
+      "message": "Atom \"BA-24\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "BA-25",
+      "message": "Atom \"BA-25\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "BA-26",
+      "message": "Atom \"BA-26\" is unverified (draft). Displays development banner."
+    },
+    {
+      "rule": "UNVERIFIED_CONTENT",
+      "atomId": "BA-27",
+      "message": "Atom \"BA-27\" is unverified (draft). Displays development banner."
     },
     {
       "rule": "UNVERIFIED_CONTENT",
@@ -18626,5 +18742,5 @@
       "message": "Atom \"TLM-30\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-31T13:56:09.129Z"
+  "generatedAt": "2026-08-31T14:21:41.929Z"
 }

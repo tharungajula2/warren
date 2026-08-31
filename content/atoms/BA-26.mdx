@@ -1,0 +1,101 @@
+---
+id: BA-26
+title: 'Hypercare, Stabilisation and BAU Handover'
+type: procedure
+domain: business-analysis
+subdomain: ba
+one_screen: >-
+  Go-live does not end the change; it starts the period in which production
+  evidence replaces test assumptions. Hypercare is temporary enhanced support,
+  stabilisation is the evidence-based judgement that the new state behaves
+  within agreed tolerances, and BAU handover transfers enduring ownership away
+  from the programme.
+prerequisites:
+  - BA-21
+  - BA-24
+  - BA-25
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 11_BA_business_analysis.md
+---
+### Core mechanism
+
+The exit from project mode should be controlled like entry to production.
+
+| Stabilisation question | Required evidence |
+| :--- | :--- |
+| Are critical processes completing? | Production outcomes and cutoff performance |
+| Are incidents understood? | Trend, root cause and ownership |
+| Are reconciliations stable? | Break volumes, ageing and resolution |
+| Are temporary controls working? | Execution evidence and exceptions |
+| Can BAU support the service? | Named support route and knowledge transfer |
+| Are users operating without project dependency? | Reduced project intervention |
+| Are open defects and actions owned? | BAU owner, target date and escalation route |
+| Can hypercare end? | Exit criteria approved by service/business owner |
+
+```text
+Go-live -&gt; Hypercare -&gt; Production evidence -&gt; Stabilisation decision -&gt; BAU ownership
+```
+
+Do not let the programme become permanent shadow support. If users still need developers or project SMEs for normal decisions, the operating model is not fully handed over.
+
+Production incidents can reveal requirements, design or training gaps. Classify them rather than reopening project scope automatically. A defect follows defect governance; a new need follows change control; an operating issue belongs to the BAU process owner.
+
+### Where it sits
+
+```text
+Upstream:   Successful cutover · Production incidents · Temporary controls
+This:       Hypercare · Stabilisation · Ownership transfer
+Downstream: BAU service · Residual actions · Post-implementation review
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Programme and BAU teams produce stabilisation evidence; BA tracks unresolved ownership |
+| Approves | Business or service owner approves hypercare exit and handover |
+| Consumes | BAU operations, support, risk and control teams inherit enduring obligations |
+| Independently challenges | Control functions challenge premature closure of material temporary controls or issues |
+
+### Permanent rule
+
+Handover is complete when BAU can operate, support and own the changed process without hidden dependence on the project team.
+
+### Never confuse [Hypercare] and [BAU support]
+
+**Hypercare** - temporary enhanced support immediately after production transition.
+
+---
+
+**BAU support** - the enduring operating model that owns incidents, decisions, maintenance and controls after stabilisation.
+
+### Permanent trap
+
+Using low incident count as the only stabilisation criterion. Some failures are silent and appear first in reconciliation, close, exception handling or delayed downstream processes.
+
+### Jurisdiction variants
+
+No delta.
+
+<Recall
+  q="What should end hypercare?"
+  a="Evidence that critical processes, reconciliations, support routes and temporary controls are stable enough for BAU ownership."
+/>
+
+<Recall
+  q="Why is dependence on project SMEs a warning sign?"
+  a="It suggests knowledge, procedures, decision rights or support ownership have not transferred."
+/>
+
+<Recall
+  q="How should a production issue be classified?"
+  a="As defect, new change need or BAU operating issue, because each follows a different owner and governance route."
+/>

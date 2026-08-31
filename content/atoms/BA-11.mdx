@@ -1,56 +1,97 @@
 ---
 id: BA-11
-title: Data Mapping Specification
-type: mechanism
+title: Operational and Non-Functional Constraints
+type: concept
 domain: business-analysis
 subdomain: brd-functional-specs-and-user-stories
 one_screen: >-
-  A data mapping spec is a field-by-field table linking each source field to a
-  target field, including data type and the transformation rule.  It documents
-  exactly how data moves or is converted from the old system to the new.
+  A banking change can be functionally correct and still be unusable because it
+  misses the operating conditions under which the bank must run it. The BA
+  captures operational and non-functional constraints as business obligations:
+  availability, capacity, access, auditability, recoverability, support,
+  processing windows and other qualities that determine whether the change works
+  in production.
 prerequisites:
-  - BA-09
+  - BA-06
+  - BA-10
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: BA Careers – Definition of data mapping and example mapping table
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-For data migrations or integration, a **Data Mapping Specification** lists every data element to be transferred. Each row typically has: source table/field, source data type, target table/field, target data type, and *Transformation Logic/Business Rules*.  For example, a mapping might say `SRC.CUST_ID (VARCHAR)` maps to `CUST.ACCOUNT_NUMBER (String)` with rule “pad with leading zeros to length 15”. Or “DOB (YYYYMMDD) → Birthdate (YYYY-MM-DD)” to reformat dates.
+### Core mechanism
 
-This document serves as the *golden source* for developers and testers to implement and verify data flow. In banking, precise mapping is critical (e.g. for customer data, transactions). Missing a transformation can lead to errors or compliance issues.
+Treat each constraint as an observable condition, not an adjective.
+
+| Constraint | Weak wording | Decision-ready wording asks |
+| :--- | :--- | :--- |
+| Availability | "Highly available" | During which business windows must service be available, and what interruption is tolerable? |
+| Performance | "Fast" | Which transaction or batch must finish by what operational cutoff? |
+| Capacity | "Scalable" | What volume, peak pattern and growth assumption must be supported? |
+| Access | "Secure" | Which roles may perform which actions, and who approves access? |
+| Auditability | "Fully auditable" | Which actions and decisions must leave retrievable evidence? |
+| Recoverability | "Resilient" | What business state must be restorable after failure and within what operating tolerance? |
+| Support | "Supported" | Who owns incidents, data questions and business decisions after go-live? |
+| Calendar | "Meets close" | Which day-end, month-end, quarter-end or filing cutoff must not be breached? |
+
+Specialist teams may translate these obligations into technical measures. BA owns the business meaning and the owner who can judge whether the constraint is sufficient.
+
+Do not manufacture numerical thresholds. If the business has not decided one, record an open decision rather than writing a convenient number into a requirement.
+
+### Where it sits
+
+```text
+Upstream:   As-is process · Business calendar · Requirements
+This:       Operational constraints · Service qualities · Control needs
+Downstream: Design challenge · Impact analysis · Readiness · Acceptance
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA elicits and structures business-facing constraints |
+| Approves | Service, process, control or business owner approves the required level |
+| Consumes | Architecture, technology, operations and testing translate constraints into implementation and evidence |
+| Independently challenges | Information security, operational risk, compliance or resilience functions challenge within mandate |
 
 ### Permanent rule
 
-Document every data element and its transformation explicitly. Include data types and any business rule (e.g. code-to-description mapping) for each field.
+If a quality matters to business acceptance, it is a requirement even when it is "non-functional". Unstated operational expectations are still capable of breaking go-live.
+
+### Never confuse [Functional behaviour] and [Operational constraint]
+
+**Functional behaviour** - what the process or system must do.
+
+---
+
+**Operational constraint** - the conditions under which that behaviour must remain usable, controlled and supportable.
 
 ### Permanent trap
 
-Assuming simple copy (source to target) for all fields. Some fields require non-trivial transformation (format changes, code mappings) which must be written down, or testers cannot verify correctness.
+Assuming technology will "handle" capacity, logging, recovery or access later. Without business-defined needs, technical teams can implement a reasonable solution that is still wrong for close, control or support.
 
-### Never confuse
+### Jurisdiction variants
 
-**Source Field** vs **Target Field** in mapping:
-A *Source Field* is the field in the existing (origin) system. A *Target Field* is where it goes in the new system.  Keep straight which is which when writing the spec.
-
-### No delta
-
-Data mapping documentation is the same process in any country or system. The need for clear source-to-target definitions is universal.
+No delta.
 
 <Recall
-  q="What is included in a data mapping spec?"
-  a="Each source field, target field, types, and transformation (e.g. “convert code X→Y or reformat date”)."
+  q="Why do operational constraints belong in business analysis?"
+  a="They determine whether correct functionality can operate safely; a correct result delivered after cutoff can still fail the outcome."
 />
 
 <Recall
-  q="Why is a data mapping spec needed?"
-  a="It’s the blueprint for data migration/integration, ensuring all data is correctly moved and transformed."
+  q="What if no threshold is known?"
+  a="Record it as an owned decision with a due date rather than inventing precision."
+/>
+
+<Recall
+  q="Who translates the constraint into design?"
+  a="Architecture, engineering or control specialists; BA preserves the business meaning and traceability."
 />

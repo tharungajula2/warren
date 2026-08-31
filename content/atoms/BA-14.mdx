@@ -1,64 +1,103 @@
 ---
 id: BA-14
-title: User Stories and Acceptance in a Regulated Context
-type: concept
+title: Traceability Through Change
+type: mechanism
 domain: business-analysis
 subdomain: brd-functional-specs-and-user-stories
 one_screen: >-
-  In agile development, user stories (“As a user, I want…”) drive increments. 
-  In a regulated project, each story’s acceptance criteria must tie back to
-  formal requirements and evidence.  You may still use stories, but supplement
-  them with thorough documentation and approvals for audit purposes.
+  Traceability in BA is the survival of business meaning as requirements split,
+  merge, change, defer and pass through specialist delivery artefacts. Data
+  teams own the internal content of mapping and test-control artefacts; BA owns
+  the chain that shows which mandate and approved requirement each delivery and
+  acceptance decision serves.
 prerequisites:
+  - BA-10
+  - BA-12
   - BA-13
+  - DAT-18
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Atlassian – importance of acceptance criteria as requirements verification
-      (contextual)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Industry best practice – agile in banking still requires traceability and
-      approvals. (No specific cite)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-User stories are a popular agile format to describe functionality. However, in regulated banking change, “just” having user stories is not enough for audit evidence.  For example, a story like “As an accountant I want to generate report X” must be backed by a formal requirement in the BRD or similar doc for traceability.  The acceptance criteria for each story should explicitly cover any regulatory rule or business rule involved.
+### Core mechanism
 
-In practice, BAs in banks often write user stories for the development team, but also maintain a requirements traceability matrix linking each story to the original business requirement or regulation.  All acceptance criteria must be documented and tested; regulators may request proof that each story’s scope was approved by risk/compliance. If agile ceremonies (like demos) are used, capture their sign-off too.  In short, use user stories for agile development, but never skip the required artifacts (requirements docs, trace matrix, approvals) needed in the regulated context.
+The minimum business chain is bidirectional.
+
+```text
+Mandate -&gt; Scope item -&gt; Requirement -&gt; Decision or change -&gt; Delivery evidence -&gt; Acceptance
+Acceptance -&gt; Evidence -&gt; Requirement -&gt; Scope item -&gt; Mandate
+```
+
+| Trace question | Why it matters |
+| :--- | :--- |
+| Why does this requirement exist? | Prevents orphan scope |
+| What changed its meaning? | Preserves decision history |
+| Which delivery item implements it? | Exposes missing implementation |
+| Which evidence supports acceptance? | Exposes untested or unevidenced obligations |
+| What happened if it was deferred? | Prevents silent loss |
+| Which requirement does this build item serve? | Exposes gold-plating and accidental scope |
+
+A data mapping specification must carry the data-control content needed for lineage; a test pack must carry the evidence mechanics needed for testing. BA does not duplicate those structures. BA keeps the business link into and out of them.
+
+Traceability must support versioning. If requirement R4 becomes R4a and R4b after a policy decision, preserve the relationship rather than deleting R4 and pretending the children always existed.
+
+Coverage is not just "every requirement has a link". A link to the wrong version or an obsolete test is false comfort. Status must reflect the current baseline.
+
+### Where it sits
+
+```text
+Upstream:   Signed requirements · Decision history · Scope
+This:       Business trace chain · Version continuity
+Downstream: Design · Test governance · Acceptance · Closure
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA maintains business-level traceability and change relationships |
+| Approves | Requirement owners confirm material changes to meaning |
+| Consumes | Delivery, data, testing, governance and assurance teams use the chain |
+| Independently challenges | Assurance or control functions challenge gaps in required evidence or ownership |
 
 ### Permanent rule
 
-When using agile user stories in a regulated project, ensure each story and criterion has formal backing. Treat each as “level 1” requirements in the traceability matrix, and secure formal approval on them.
+Traceability is about meaning, not hyperlinks. A complete-looking matrix is useless if it connects obsolete versions or artefacts that no longer prove the approved requirement.
+
+### Never confuse [Traceability] and [Data lineage]
+
+**Traceability** - connects mandate, requirement, decision, delivery and acceptance through change.
+
+---
+
+**Data lineage** - connects data origin, transformation and use so the movement and meaning of data can be followed.
 
 ### Permanent trap
 
-Assuming “agile = no documentation.”  In regulated change, you cannot omit documentation. Don’t rely solely on Jira tickets or casual “demo approval”; record story acceptance formally.
+Rebuilding traceability just before acceptance. By then, scope decisions and version history have been lost, and the matrix becomes a reconstruction rather than a control.
 
-### Never confuse
+### Jurisdiction variants
 
-**User Story** vs **Regulatory Requirement**:
-A *User Story* is a short description of a feature from an end-user’s perspective (agile format). A *Regulatory Requirement* is an explicit compliance mandate that must be met. User stories may implement a regulatory requirement, but the regulator cares about proof of the requirement being met, not just the story text.
-
-### No delta
-
-This principle applies everywhere. Whether in India, US, or EU, using agile in regulation-heavy projects requires additional documentation.
+No delta.
 
 <Recall
-  q="Are user stories sufficient evidence for auditors?"
-  a="No – you must tie them back to approved requirements and maintain an audit trail of acceptance criteria and sign-offs."
+  q="What does BA own when traceability touches specialist artefacts?"
+  a="The business chain into and out of them: mandate, requirement, decision and acceptance relationship."
 />
 
 <Recall
-  q="How can a BA ensure agile work meets compliance?"
-  a="Map each user story to its business/regulatory requirement, include clear acceptance criteria, and get formal approval."
+  q="Why preserve superseded requirements?"
+  a="Earlier design or testing may depend on them, so history identifies downstream reassessment."
+/>
+
+<Recall
+  q="When is a trace link misleading?"
+  a="When it points to obsolete requirements, superseded decisions or evidence that no longer tests the current obligation."
 />

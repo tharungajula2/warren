@@ -1,63 +1,98 @@
 ---
 id: BA-02
-title: 'Change Landscape: Regulatory vs Strategic vs Remediation'
-type: concept
+title: 'Change Mandate, Deadline and Non-Negotiables'
+type: mechanism
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  Banks undertake strategic initiatives (growth or efficiency) and remediation
-  (fixing defects), but *regulatory-driven* change is mandatory, with fixed
-  deadlines and external oversight, requiring full compliance and auditability.
-prerequisites: []
+  Every banking change starts with a mandate: an external obligation,
+  remediation commitment, strategic objective or operational need. Before
+  requirements begin, the BA separates what must be achieved from what is merely
+  the current preferred solution, and identifies which date, outcome and
+  constraints are genuinely non-negotiable.
+prerequisites:
+  - BA-01
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Walper & Winter (ISACA Journal) – regulatory change maturity (Audit
-      trails, exam readiness)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Ramki Ravulapalli – “Regulatory Projects” (waterfall, deadlines)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Bank change programs fall into categories: **Strategic** (business-driven goals like new services or cost reduction), **Remediation** (fixing problems found by audit), and **Regulatory** (mandated by laws or regulators). Regulatory changes are unique: their deadlines are *unmovable* and non-negotiable, and failure to comply can incur penalties and license risk.  These projects carry high visibility, involve many functions, and have huge impact. Because regulators require proof of compliance, regulatory programs demand rigorous documentation, traceability, and audit trails.  For example, a compliance program like IFRS 9 transition is closely monitored by supervisors; banks often run parallel regimes to validate results before the fixed effective date.
+### Core mechanism
 
-Strategic initiatives, by contrast, prioritize internal business value and have more flexible timelines. Remediation projects respond to issues (e.g. a control failure) and may have urgency but usually less external scrutiny. Regulatory projects behave differently: teams often use waterfall governance and stage gates to meet the firm deadlines.  Cutting corners or missing details is dangerous; regulators expect complete traceability from each regulatory requirement to the implemented solution. Audit findings often arise when banks discover a gap between knowing the rule and effectively applying it.
+A usable mandate separates what must be achieved from what delivery may still trade.
+
+| Element | Mandate must establish |
+| :--- | :--- |
+| Required outcome | Condition that must be true after change |
+| Trigger | Regulation, finding, strategy, incident or dependency |
+| Deadline | Setter and authority to move it: fixed external, internal commitment or target |
+| Mandatory scope | Work without which the outcome fails |
+| Discretionary scope | Improvement that can be traded without defeating the outcome |
+| Constraints | Calendar, platform, control, funding or resource limits |
+| Evidence | What must be demonstrable, and by whom |
+| Delivery pressure | Consequences for scope, resources, sequence and residual risk |
+
+```text
+Ambiguous mandate -&gt; False assumptions -&gt; Mis-scoped requirements -&gt; Late conflict
+Clear mandate -&gt; Explicit non-negotiables -&gt; Defensible requirements -&gt; Controlled trade-offs
+```
+
+Delivery difficulty does not move a date. Only the authority that set an external, executive or strategic commitment can change it.
+
+### Where it sits
+
+```text
+Upstream:   Regulation or commitment · Finding · Strategy · Operational need
+This:       Mandate · Deadline · Non-negotiables
+Downstream: Stakeholders · Scope · Requirements · Delivery trade-offs
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA converts the initiating statement into explicit outcome, constraints and open questions |
+| Approves | Sponsor, business owner or accountable control owner confirms the mandate |
+| Consumes | Governance, delivery, architecture, testing and operations use it to judge later choices |
+| Independently challenges | Risk, compliance or internal audit challenge where the initiating obligation falls within their mandate |
 
 ### Permanent rule
 
-Treat regulatory change as mandatory, with fixed deadlines and senior oversight. Plan for full documentation and testing of compliance. Never assume you can shift a regulatory date to accommodate project delays.
+A deadline is fixed only because an authority outside the delivery team has made it fixed. The project cannot silently redefine the obligation to fit its plan.
 
-### Permanent trap
+### Never confuse [Mandate] and [Solution]
 
-Treating a regulatory deadline like a usual internal deadline (i.e. deferring it or deprioritizing compliance tasks). Missing that fixed deadline invites exam findings and fines.
-
-### Never confuse
-
-**Strategic Change** — voluntary, business-driven initiatives (may adjust scope/deadlines based on ROI).
+**Mandate** - the outcome, obligation and constraints that must be satisfied.
 
 ---
 
-**Regulatory Change** — mandatory compliance projects, externally imposed with firm deadlines and audit requirements.
+**Solution** - one proposed way of satisfying them.
 
-### No delta
+### Permanent trap
 
-Across jurisdictions, the nature of regulatory projects is the same: non-negotiable effective dates and mandatory compliance. Each regulator may set different dates, but the principle of fixed deadline and required audit evidence does not change.
+Starting detailed requirements from a solution name. "Build a new engine" can hide the real objective, preserve avoidable design assumptions and make later alternatives look like scope changes when the mandate never required that design.
+
+### Jurisdiction variants
+
+No delta. A specific regulator may impose a particular implementation date or evidence obligation, but the change discipline for interpreting it is the same.
 
 <Recall
-  q="How do regulatory projects differ from other projects?"
-  a="They have fixed regulatory deadlines and high external scrutiny; banks must fully document and trace all steps to demonstrate compliance."
+  q="What must be clear before detailed requirements begin?"
+  a="Outcome, trigger, deadline authority, mandatory and discretionary scope, constraints and evidence expectations."
 />
 
 <Recall
-  q="Why is a traceability matrix crucial in regulatory changes?"
-  a="It provides the required audit trail proving each regulation’s requirements have been implemented and tested."
+  q="Why separate mandatory from discretionary scope?"
+  a="Delivery pressure then has a defensible trade space without weakening the required outcome."
+/>
+
+<Recall
+  q="When can a fixed date move?"
+  a="Only when the authority that owns the date changes it; delivery difficulty alone does not."
 />

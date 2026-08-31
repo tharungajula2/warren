@@ -1,63 +1,108 @@
 ---
 id: BA-17
-title: UAT Coverage and Defect Management
-type: concept
+title: 'Baselines, Scope Change and Change Control'
+type: procedure
 domain: business-analysis
 subdomain: testing-uat-and-cutover
 one_screen: >-
-  Ensure UAT covers all critical business and regulatory scenarios. Use metrics
-  (e.g. scenario coverage %) to argue sufficiency.  Manage defects by
-  classifying each by *severity* (technical impact) and *priority* (business
-  urgency).
+  Once scope and requirements are approved, later changes must preserve the
+  history of what was committed and why it changed. Change control is not
+  bureaucracy around wording; it is the mechanism that prevents a new
+  obligation, exclusion or constraint from entering delivery without visible
+  impact and authorised ownership.
 prerequisites:
-  - BA-15
-  - BA-16
+  - BA-09
+  - BA-12
+  - BA-13
+  - BA-14
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Yethi Consulting – Core banking UAT includes metrics like scenario
-      coverage
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: GeeksforGeeks – severity vs priority definitions
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-**UAT Coverage:** The BA must confirm that UAT scenarios collectively cover all key requirements and risk areas. Typically, this is demonstrated by linking each requirement (and sub-case) to one or more UAT scenarios.  In practice, teams track *scenario coverage percentage*. For example, Yethi’s core banking UAT practice uses end-to-end business scenarios (account opening, loan origination, payments) to ensure coverage. They measure how many of those planned scenarios have been executed successfully. To argue coverage is sufficient, present traceability: “Requirement X is covered by test cases TC1, TC2.” Focus on risk: prioritize testing of critical flows first.
+### Core mechanism
 
-**Defect Management:** Each defect discovered in testing is logged with details. Importantly, classify it by **Severity** (the technical impact: *Critical* = system-blocker, *Major*, etc.) and **Priority** (how urgent the fix is to the business: high=must-fix, low=can wait). For example, a calculation error in a capital ratio (high severity) might also be high priority. Lowering defect list by severity/priority and reaching “0 critical open” is usually a go-live criterion.  Track defects transparently: who fixes them, retest after fixes, and ensure no showstoppers remain before sign-off.
+Classify the incoming request before opening change control.
+
+| Incoming item | Meaning | Treatment |
+| :--- | :--- | :--- |
+| Clarification | Same approved meaning, expressed more clearly | Update wording with traceable confirmation |
+| Correction | Baseline inaccurately captured already-approved meaning | Correct with owner evidence |
+| Scope change | Adds, removes or moves committed outcome | Impact assessment and approval |
+| Requirement change | Alters behaviour, rule, boundary or acceptance condition | Impact assessment and approval |
+| Design change | Alters solution while requirement remains stable | Solution governance; BA assesses business impact |
+| Defect | Delivered behaviour fails agreed expectation | Defect process; release consequence assessed separately |
+
+For a material change, assess effect before approval: mandate, requirements, design, data, testing, controls, dependencies, cost, schedule, readiness and evidence. The answer may be "no impact" for some dimensions, but it should be considered rather than assumed.
+
+```text
+Change request -&gt; Classify -&gt; Impact assess -&gt; Decision authority -&gt; Baseline/version update -&gt; Trace downstream effects
+```
+
+Never replace the prior baseline. Preserve what was approved, the approved change and which downstream artefacts must be revisited.
+
+### Where it sits
+
+```text
+Upstream:   Signed baseline · New information · Design constraint · Policy decision
+This:       Change classification · Impact · Approval · Version control
+Downstream: Revised requirements · Delivery plan · Traceability · Evidence
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA documents business change and coordinates impact assessment |
+| Approves | Scope or requirement authority approves within mandate |
+| Consumes | Delivery, testing, governance and operations consume the revised baseline |
+| Independently challenges | Risk or control functions challenge changes affecting their mandates |
 
 ### Permanent rule
 
-Build UAT scenarios that cover *every* business requirement, especially regulatory ones. Use traceability and coverage metrics to justify adequacy. Classify and fix defects based on agreed severity/priority rules.
+A baseline is allowed to change; it is not allowed to change invisibly. Material changes require preserved history, assessed consequences and authorised approval.
+
+### Never confuse [Scope change] and [Requirement clarification]
+
+**Scope change** - changes what outcome or obligation is committed.
+
+---
+
+**Requirement clarification** - makes the existing approved meaning clearer without changing the obligation.
+
+### Never confuse [Defect] and [Change request]
+
+**Defect** - delivered behaviour fails an agreed requirement or expected result.
+
+---
+
+**Change request** - proposes a different requirement, scope or solution from the current approved baseline.
 
 ### Permanent trap
 
-Overconfidence that “we tested enough” without proof. Always use coverage measures or sign-offs on critical scenarios. Also, don’t mix up severity and priority – a minor typo may be low severity but could be high priority if it affects reporting.
+Calling a late request a "clarification" to avoid governance. If it changes expected behaviour, acceptance conditions, boundaries or constraints, it changes the baseline regardless of the label.
 
-### Never confuse
+### Jurisdiction variants
 
-**Severity** vs **Priority**:
-*Severity* gauges the impact of a defect on system functionality. *Priority* indicates how quickly the defect should be fixed (a business decision). They are separate measures, not synonyms.
-
-### No delta
-
-The need for clear UAT coverage and defect triage is the same in all banks. Regulatory or not, rigorous UAT and defect classification prevent missed issues.
+No delta.
 
 <Recall
-  q="What metrics can show UAT sufficiency?"
-  a="Scenario coverage % (e.g., % of planned UAT scenarios executed) and ensuring no high-severity defects remain."
+  q="What separates clarification from change?"
+  a="If the approved obligation changes in behaviour, boundary, constraint or acceptance condition, it is controlled change."
 />
 
 <Recall
-  q="Who typically executes UAT in a bank?"
-  a="Business representatives (branch, loans, treasury, compliance), since they validate business scenarios."
+  q="Why preserve the old baseline?"
+  a="Earlier design, estimates and evidence may depend on it, so history shows what needs reassessment."
+/>
+
+<Recall
+  q="Is every design change a requirement change?"
+  a="No, but BA must still test whether the new design affects outcomes, controls or dependencies."
 />

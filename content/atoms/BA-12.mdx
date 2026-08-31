@@ -1,64 +1,98 @@
 ---
 id: BA-12
-title: 'Non-Functional Requirements (Performance, Retention, Auditability)'
-type: concept
+title: 'Assumptions, Open Questions and the Decision Log'
+type: procedure
 domain: business-analysis
 subdomain: brd-functional-specs-and-user-stories
 one_screen: >-
-  Non-functional requirements define *how* the system performs: its quality
-  attributes like speed, security, data retention, and audit capabilities. In
-  banking, **auditability** (e.g. full logging and data retention) is often
-  mandated for compliance.
+  Unanswered questions do not disappear; they harden into assumptions inside
+  design, estimates and test evidence. The BA keeps uncertainty visible by
+  separating assumptions from facts, assigning every material open question to
+  an owner, and recording decisions with enough context that the programme can
+  later prove what was decided and why.
 prerequisites:
-  - BA-09
+  - BA-04
+  - BA-07
+  - BA-10
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      LinkedIn (Rosmary Okordion) – banking NFRs including Auditability
-      requirement
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Non-functional requirements (NFRs) cover attributes not captured by functional specs. Key NFRs in banking projects include:
-- **Performance:** e.g. “System must handle 1000 concurrent users with response &lt;2s.”
-- **Security &amp; Compliance:** data encryption, access controls, KYC/AML checks, GDPR or similar data privacy.
-- **Availability:** e.g. “99.9% uptime required.”
-- **Data Retention:** how long data (or logs) must be kept (often 5–7 years or more).
-- **Auditability:** ability to trace actions – full logging of transactions and changes. Regulators explicitly require audit trails on changes. For example, a BA noted for a bank onboarding project that auditability (full action logs retained 7+ years) was a key NFR.
+### Core mechanism
 
-Non-functional requirements are critical: even if the functionality is correct, failure in security or audit logging can invalidate a project. In regulated change, treat NFRs like compliance: put them in the requirement list and test for them.
+Use three distinct objects.
+
+| Object | Meaning | Minimum content |
+| :--- | :--- | :--- |
+| Assumption | A proposition temporarily treated as true | Statement · impact if false · owner · resolution date |
+| Open question | Information or decision still required | Question · decision authority · due date · dependency |
+| Decision | An authorised choice that constrains future work | Decision · authority · date · rationale · consequences |
+
+```text
+Unknown -&gt; Assumption or open question -&gt; Owner -&gt; Decision -&gt; Requirement or scope updated
+```
+
+A decision log is not meeting minutes. Minutes record discussion; the log records the outcome that delivery must rely on. Capture enough rationale to distinguish a conscious trade-off from an accidental omission.
+
+When a decision changes, do not overwrite history. Record the superseding decision and identify what earlier requirement, design, test or plan is affected. This makes traceability survive scope change.
+
+Time matters. An unanswered question needed before design freeze is different from one needed before go-live. The due date should be the latest safe decision point, not the next convenient committee meeting.
+
+### Where it sits
+
+```text
+Upstream:   Elicitation · Governance · Requirements · Constraints
+This:       Assumptions · Open questions · Decisions
+Downstream: Sign-off · Traceability · Design · Change control
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA records assumptions, open questions and durable decision entries |
+| Approves | Named decision authority approves each material decision |
+| Consumes | Delivery, testing, governance and operations rely on the current decision state |
+| Independently challenges | Control functions challenge assumptions or decisions within their mandate |
 
 ### Permanent rule
 
-Always capture NFRs explicitly (security, performance, reliability, legal/policy requirements). In banking, *auditability* (e.g. detailed logs and retention policies) is first-class: include it as a requirement early.
+Material uncertainty must have a visible state: unresolved, assumed, decided or superseded. It must never be allowed to look accidentally final.
+
+### Never confuse [Decision log] and [Meeting minutes]
+
+**Decision log** - the durable record of authorised choices that constrain delivery.
+
+---
+
+**Meeting minutes** - a record of discussion, actions and events in a meeting.
 
 ### Permanent trap
 
-Assuming NFRs will be “obvious” or handled later. A common error is neglecting to require sufficient audit logging or forgetting to enforce retention, only to fail compliance checks later.
+Marking an issue "closed" because it was discussed. Closure requires either an authoritative answer or an accepted assumption with explicit consequences.
 
-### Never confuse
+### Jurisdiction variants
 
-**Functional Requirement** vs **Non-Functional Requirement**:
-A *Functional Requirement* describes what the system does (specific features). A *Non-Functional Requirement* describes constraints or qualities (like speed, security). For example, “generate monthly report” is functional; “report generation shall complete within 5 minutes” is non-functional.
-
-### No delta
-
-The categories of performance, security, retention and audit requirements are the same across banks worldwide. Regulatory laws differ (e.g. GDPR vs CCPA), but the concept of NFRs is universal.
+No delta.
 
 <Recall
-  q="Give an example of a non-functional requirement in banking."
-  a="“System must retain transaction logs for 7 years and provide audit trails for all deletions”."
+  q="What makes a temporary assumption governable?"
+  a="Its statement, owner, impact if false and resolution date are visible."
 />
 
 <Recall
-  q="Why is auditability a “first-class” requirement?"
-  a="Regulators need proof of actions. Detailed logging and retention are mandated (e.g. “full action logs retained for 7+ years” in one banking case)."
+  q="Why supersede rather than overwrite decisions?"
+  a="Earlier delivery may have relied on them, so history reveals what needs reassessment."
+/>
+
+<Recall
+  q="How should an open-question due date be set?"
+  a="Use the latest point before the answer would cause avoidable rework, evidence gaps or unsafe release decisions."
 />

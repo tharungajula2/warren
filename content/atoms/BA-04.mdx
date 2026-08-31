@@ -1,70 +1,96 @@
 ---
 id: BA-04
-title: Requirements Elicitation Techniques
-type: procedure
+title: 'Governance Forums, Escalation and Decision Authority'
+type: mechanism
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  Elicitation is gathering information on what stakeholders need.  Techniques
-  include structured interviews, workshops, observation, document analysis,
-  surveys, and prototyping, chosen based on context and participant
-  availability.
-prerequisites: []
+  Bank change creates decisions that no single workstream can settle: business
+  value may conflict with control expectations, technology feasibility with
+  deadlines, or two functions may interpret the same obligation differently.
+  Governance works when each question reaches the smallest forum that actually
+  has authority to decide it.
+prerequisites:
+  - BA-03
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Bridging the Gap – “5 Best Requirement Elicitation Techniques”
-      (interviews, observation, etc.)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: >-
-      Bridging the Gap – Eliciting from Busy Stakeholders (importance of agenda,
-      homework)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Requirements elicitation is the process of discovering and collecting requirements from stakeholders. Common techniques:
+### Core mechanism
 
-- **Interviews:**  One-on-one meetings with SMEs or users to dig into specific needs. Structured interviews (with a prepared agenda and questions) are most common for detailed requirements.
-- **Workshops/JAD sessions:** Facilitated group sessions where stakeholders discuss processes or brainstorm solutions. Good for aligning different groups.
-- **Observation:** Watch users perform their real tasks (e.g. via screen-share or on-site). This uncovers implicit knowledge (like workarounds) that users might not mention.
-- **Document analysis:** Review existing documents, process flows, reports or contracts. This can elicit requirements without taking too much stakeholder time.
-- **Surveys/questionnaires:** Useful when many stakeholders are involved or geographically distributed. A survey can quickly gather input (quantitative or qualitative) from a broad group.
-- **Prototyping or demos:** Using mock-ups or existing systems to elicit feedback. Stakeholders react to a design, refining requirements.
+Escalation is not failure. It is the mechanism for moving a decision to the correct level of authority.
 
-Each technique suits different situations. For example, if requirements are unclear and stakeholders are decentralized, a workshop may help align everyone. If SMEs are few but busy, thorough interviews with prepared questions are best. Observing users can catch missing steps in processes.  The BA should mix and match techniques as needed, rather than relying on one method.
+| Decision | Keep local when | Escalate when |
+| :--- | :--- | :--- |
+| Requirement wording | Owner and SMEs agree within approved scope | Meaning changes obligation or creates cross-function conflict |
+| Design choice | Solution owner can satisfy agreed constraints | Choice changes business outcome, control or accepted risk |
+| Scope trade-off | Within delegated tolerance | Mandatory outcome, deadline or major dependency is affected |
+| Defect disposition | Existing tolerance clearly covers it | Release consequence or residual risk requires new acceptance |
+| Go-live readiness | Criteria are met | Criteria are waived, evidence is incomplete or material risk remains |
+
+```text
+Question -&gt; Named owner -&gt; Decision within mandate
+                    |
+                    -&gt; Outside mandate -&gt; Escalation -&gt; Authorised forum -&gt; Recorded decision
+```
+
+The BA prepares escalation so governance receives a decision, not a data dump: issue, options, consequences, recommendation if appropriate, decision required, owner and latest decision date. The decision date matters because an answer delivered after build or test has already depended on it is not governance; it is retrospective documentation.
+
+### Where it sits
+
+```text
+Upstream:   Stakeholder mandates · Open issues · Delivery constraints
+This:       Governance routing · Escalation · Decision authority
+Downstream: Decision log · Requirements baseline · Scope control · Release decisions
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA frames decision papers and records outcomes |
+| Approves | Forum chair or authorised decision-maker approves within delegated mandate |
+| Consumes | Workstreams consume the decision and resulting constraints |
+| Independently challenges | Relevant control functions challenge decisions affecting their risk or control mandate |
 
 ### Permanent rule
 
-Select elicitation methods that fit the situation. Always prepare thoroughly (set agendas, define questions). Use multiple techniques for cross-checking: e.g. interview a user and verify by process observation.
+Every escalation must ask for a specific decision from a forum authorised to make it. Escalating information without a decision request creates visibility, not resolution.
+
+### Never confuse [Escalation] and [Delegation]
+
+**Escalation** - moves a decision upward or across because the current owner lacks mandate, agreement or tolerance.
+
+---
+
+**Delegation** - grants decision authority downward within defined boundaries.
 
 ### Permanent trap
 
-Relying on a single method in isolation. For example, skipping document review and inundating busy stakeholders with questions they already answered in existing documentation, or doing only interviews and missing contradictory data in systems.
+Using senior governance to settle every detailed question. That slows delivery and weakens accountability because people stop making decisions within their own mandate.
 
-### Never confuse
+### Jurisdiction variants
 
-**Interview** vs **Workshop**:
-An *Interview* is a one-on-one or small-group discussion for in-depth detail; a *Workshop* is a facilitated group meeting to reach consensus or brainstorm. They both gather input but are different formats and scopes.
-
-### No delta
-
-Elicitation techniques are the same globally; only local languages or frameworks vary, not the methods themselves.
+No delta.
 
 <Recall
-  q="What elicitation technique is best when you have many remote users?"
-  a="Surveys or questionnaires – they gather broad input asynchronously."
+  q="What makes an escalation decision-ready?"
+  a="State the issue, options, consequences, decision required, authority and decision deadline."
 />
 
 <Recall
-  q="When is observation useful?"
-  a="When you need to see how work actually happens (especially for undocumented processes), since users can’t tell you everything."
+  q="When does a design issue become governance?"
+  a="When it changes an approved outcome, control, deadline, material dependency or risk beyond the solution owner's mandate."
+/>
+
+<Recall
+  q="Why record decision timing?"
+  a="It shows whether governance controlled delivery before build, test or cutover rather than documenting events afterward."
 />

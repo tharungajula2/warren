@@ -1,0 +1,96 @@
+---
+id: BA-25
+title: 'Cutover, Go/No-Go and Fallback Authority'
+type: procedure
+domain: business-analysis
+subdomain: ba
+one_screen: >-
+  Cutover is the controlled transition from the old operating state to the new
+  one. The BA's role is to make decision conditions and ownership explicit: what
+  must be true before starting, who can proceed or stop, what business checks
+  determine success, and who controls fallback if the transition becomes unsafe.
+prerequisites:
+  - BA-22
+  - BA-23
+  - BA-24
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 11_BA_business_analysis.md
+---
+### Core mechanism
+
+Cutover governance must distinguish the decision to go, the trigger to stop and the conditions for fallback.
+
+```text
+Entry -&gt; Go -&gt; Execute -&gt; Checkpoint -&gt; Continue, stop or fallback -&gt; Stabilisation
+```
+
+| State | Condition | Authority or action |
+| :--- | :--- | :--- |
+| Go | Acceptance, readiness, access, data and support criteria met or waived | Go/no-go authority starts transition |
+| Continue | Business checkpoint passes | Cutover lead proceeds |
+| Stop | Defined trigger breaches tolerance or creates unsafe uncertainty | Stop authority halts sequence |
+| Fallback | New state is unsafe and fallback remains viable | Restore coherent business state |
+| Complete | Final checkpoints pass and ownership is clear | Declare cutover complete; hand to stabilisation |
+| Communicate | State, delay or fallback affects others | Inform users, executives, dependencies and support |
+
+Technology and data owners own detailed migration steps; BA owns the business checkpoints and dependencies they must protect. Fallback covers transactions, reconciliation, procedures, controls and reversals, not merely infrastructure. Agree criteria, authorities and permitted waivers before the go/no-go meeting.
+
+### Where it sits
+
+```text
+Upstream:   Business acceptance · Parallel-run exit · Operational readiness
+This:       Go/no-go · Cutover checkpoints · Stop and fallback authority
+Downstream: Production state · Stabilisation · BAU handover
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Technology/data teams produce execution plan; BA integrates business checkpoints and decision conditions |
+| Approves | Named go/no-go authority authorises production transition |
+| Consumes | Cutover command, operations, support and business owners execute decisions |
+| Independently challenges | Risk or control functions challenge unresolved material readiness or fallback gaps |
+
+### Permanent rule
+
+Go-live authority must be named before cutover begins, including who can stop the transition. Ambiguous authority becomes most dangerous when time pressure is highest.
+
+### Never confuse [Go-live] and [Stabilisation]
+
+**Go-live** - the transition point at which the new state becomes production-active.
+
+---
+
+**Stabilisation** - the controlled period after go-live in which production behaviour, incidents and temporary controls are monitored before normal support is declared.
+
+### Permanent trap
+
+Treating fallback as a technical-only plan. If business state, transactions, controls and user procedures cannot be restored coherently, the fallback is not operationally viable.
+
+### Jurisdiction variants
+
+No delta.
+
+<Recall
+  q="What must precede a go/no-go meeting?"
+  a="Agreed entry criteria, authorities, waivers, stop conditions, fallback viability and required evidence."
+/>
+
+<Recall
+  q="Why does BA care about technical cutover?"
+  a="Technical steps alter business state, controls and dependencies, so BA protects business checkpoints and decision rights."
+/>
+
+<Recall
+  q="What makes fallback operational?"
+  a="It restores coherent transactions, data, procedures, controls and ownership, not merely infrastructure."
+/>

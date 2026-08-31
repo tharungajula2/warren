@@ -1,77 +1,99 @@
 ---
 id: BA-06
-title: Process Mapping (As-Is vs To-Be)
-type: mechanism
+title: Discovering the As-Is Process and Control Reality
+type: procedure
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  Process mapping diagrams the workflow of a process.  Mapping the current
-  “as-is” process clarifies existing steps and bottlenecks; the “to-be” map lays
-  out the improved future workflow.  Visualizing both highlights where changes
-  are needed.
-prerequisites: []
+  The documented process is often cleaner than the live process. In banking
+  change, the BA must discover the real sequence of work, decisions, controls,
+  exceptions, handoffs and manual repairs because the hidden step is often the
+  step that fails after migration or at period-end.
+prerequisites:
+  - BA-03
+  - BA-05
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      IBM Blueprint (IBM KB) – “A process map outlines steps... reveals areas of
-      improvement”
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: IBM – definition of process mapping for clarity
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-A **process map** is a visual diagram of the steps in a business process.  Common forms include flowcharts or swimlane diagrams.  To create one, identify all activities, decisions, and participants.  An *As-Is* map documents how things currently work; it may reveal inefficiencies, handoffs or delays.  For example, an As-Is map of loan approval might show multiple manual checks.  A *To-Be* map sketches the proposed future process, reflecting improvements (automation, parallel steps, elimination of waste).  For instance, automating checks in the loan process would be shown as a direct flow to approval.
+### Core mechanism
+
+Reconstruct the present state before designing the future state, using evidence from both policy and operation.
 
 ```text
-+-----------+       +------------+       +-----------+
-| Customer  | ---&gt;  | Check      | ---&gt;  | End       |
-| Request   |       | manually   |       |           |
-+-----------+       +------------+       +-----------+
-
-+-----------+       +------------+       +-----------+
-| Customer  | ---&gt;  | Auto-      | ---&gt;  | End       |
-| Request   |       | check      |       |           |
-+-----------+       +------------+       +-----------+
+Documents -&gt; SME walkthrough -&gt; User observation -&gt; Exceptions and controls -&gt; Reconciled as-is
 ```
 
-In practice, start with an As-Is map to ensure everyone agrees on the current process.  Then discuss the To-Be process: ask how tasks can be done more efficiently or with fewer steps.  Document both maps and annotate issues.  The difference between As-Is and To-Be shows exactly what will change.
+| Examine | What to establish |
+| :--- | :--- |
+| Trigger and inputs | What starts work and what must already exist |
+| Activities | What actually happens, in sequence |
+| Decisions | Who chooses, under which rule |
+| Handoffs | Where ownership moves |
+| Controls | What prevents or detects error |
+| Exceptions | What happens when normal flow fails |
+| Manual work | Spreadsheets, email or adjustments keeping the process alive |
+| Calendar | Day-end, month-end and reporting-cutoff differences |
+| Policy versus practice | Authorised process and reason for live deviation |
+| Evidence base | Documents, walkthroughs, observation and records |
+
+Seniority does not settle factual contradictions. Reconcile owner and operator accounts into an approved process, accepted workaround or explicit change problem; this also protects hidden controls and peak-period dependencies from being designed away.
+
+### Where it sits
+
+```text
+Upstream:   Problem framing · Stakeholders · Existing process evidence
+This:       As-is process · Controls · Exceptions · Handoffs
+Downstream: Scope · Requirements · Impact analysis · Operational readiness
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA reconstructs and validates the as-is view |
+| Approves | Process owner confirms the governed baseline and known deviations |
+| Consumes | Requirements, design, testing and operations teams use the baseline |
+| Independently challenges | Control functions challenge omitted controls or unrecognised workarounds where relevant |
 
 ### Permanent rule
 
-Always create an accurate As-Is process map first, then derive the To-Be. The As-Is baseline is needed to measure improvement and avoid missing steps.
+A future-state design is unsafe until the current controls and exceptions are understood. Removing a manual step can remove a manual control at the same time.
 
-### Permanent trap
+### Never confuse [Documented process] and [Operating process]
 
-Jumping straight to designing the new process without fully mapping the As-Is. This often leads to overlooking current constraints or hidden steps, resulting in gaps in the solution.
-
-### Never confuse
-
-**As-Is Process** — the current state workflow (often flawed or manual).
+**Documented process** - the approved or described way work is intended to happen.
 
 ---
 
-**To-Be Process** — the future, improved workflow.
-They are frequently mixed up if one tries to innovate without understanding the current process.
+**Operating process** - the way work is actually completed, including exceptions and workarounds.
 
-### No delta
+### Permanent trap
 
-Process mapping methodology is the same everywhere. Tools or notation (BPMN vs simple flowchart) may vary, but the concept of As-Is vs To-Be does not.
+Treating undocumented work as irrelevant because it "should not happen". If the bank depends on it today, migration must either preserve the outcome or deliberately eliminate the dependency.
+
+### Jurisdiction variants
+
+No delta.
 
 <Recall
-  q="Why map the current (“As-Is”) process?"
-  a="To understand all existing steps and identify inefficiencies before redesigning."
+  q="Why investigate exceptions and workarounds?"
+  a="They expose hidden dependencies and controls that happy-path documentation misses."
 />
 
 <Recall
-  q="What does a “To-Be” process map show?"
-  a="The redesigned, improved process after changes, highlighting the differences needed from the As-Is map."
+  q="What if policy and operator descriptions conflict?"
+  a="Preserve both as evidence, identify the authorised process and classify the deviation as accepted exception or control problem."
+/>
+
+<Recall
+  q="Why include the business calendar?"
+  a="Cutoffs and close periods change workload and tolerance, so normal-day success may not prove operational safety."
 />

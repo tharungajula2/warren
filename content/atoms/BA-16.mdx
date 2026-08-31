@@ -1,57 +1,97 @@
 ---
 id: BA-16
-title: Test Planning and Test Packs
-type: procedure
+title: Solution Challenge Without Solution Ownership
+type: concept
 domain: business-analysis
 subdomain: testing-uat-and-cutover
 one_screen: >-
-  A test plan defines the scope, approach, resources, and schedule of testing.
-  Test packs (test cases and data) list the specific scenarios with expected
-  outcomes.  For each requirement, predefined test cases and datasets must be
-  prepared before testing begins.
+  The BA must challenge whether a proposed solution satisfies the approved
+  business need without becoming the architect or engineer. The discipline is to
+  test design decisions against requirements, constraints, impacts and operating
+  reality, while leaving technical implementation accountability with the
+  specialist owner.
 prerequisites:
+  - BA-10
+  - BA-11
   - BA-15
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: OCM Solution – outlines cutover/go-live steps (implied planning)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Before execution, the BA (often with QA) creates a **Test Plan**: it includes test objectives, types of testing, environment details, schedule, and responsibilities.  The plan ensures everyone knows what will be tested and when. Key to this is preparing **test packs**: collections of test cases and test data with expected results.  For example, a pack for a regulatory report change might include sample transactions (input data) and the exact numbers expected in the output.
+### Core mechanism
 
-In regulated projects, predefined test data is especially important: you must demonstrate that for each scenario, you know the “right answer” in advance.  This way, testers (or auditors reviewing UAT) can verify correctness efficiently.  The BA’s role is to help identify all required scenarios and define the expected results (often consulting SMEs or model owners for calculations). Testers then use this pack during UAT to systematically execute tests.
+Challenge the design through business consequences.
+
+| Design question | BA challenge |
+| :--- | :--- |
+| Coverage | Which approved requirements does this option satisfy, and which does it not? |
+| Assumptions | What business assumption does the design depend on? |
+| Exceptions | What happens outside the normal path? |
+| Controls | Which existing control is preserved, moved, automated or removed? |
+| Dependencies | Which upstream or downstream process changes because of this choice? |
+| Operations | How will users support, reconcile and recover the solution? |
+| Evidence | What will later demonstrate that the business obligation is met? |
+| Trade-off | What business outcome, risk or deadline changes if this option is chosen? |
+
+A BA can describe a business rule in enough detail to remove ambiguity. That does not make the BA owner of SQL, Python, database structures, API design or source-to-target mappings. TEC owns SQL and Python implementation; DAT owns data-control specifications. The BA should ask whether those artefacts preserve the approved business meaning.
+
+When a proposed design cannot satisfy a requirement, do not quietly rewrite the requirement to fit feasibility. Surface the gap as a decision: change solution, change requirement through authorised control, or accept the consequence through the correct owner.
+
+### Where it sits
+
+```text
+Upstream:   Approved requirements · Constraints · Impact analysis
+This:       Business challenge of solution choices
+Downstream: Design decisions · Change control · Test governance
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Solution owner produces design; BA produces requirement and impact challenge |
+| Approves | Architecture or technology authority approves solution design within mandate |
+| Consumes | Build, data, testing and operations teams consume the design |
+| Independently challenges | Control functions challenge design impacts within their mandates |
 
 ### Permanent rule
 
-Develop detailed test cases and data (test packs) for all requirements. Each test should have the input data and the precise expected result documented.
+The BA may challenge the "how" because the "how" can violate the "what". Challenging a design does not transfer design accountability to the BA.
+
+### Never confuse [Requirement clarification] and [Solution design]
+
+**Requirement clarification** - removes ambiguity from the business obligation without changing its approved meaning.
+
+---
+
+**Solution design** - chooses the technical or operational mechanism used to satisfy that obligation.
 
 ### Permanent trap
 
-Assuming testers will figure out expected outcomes on the fly. Without a predefined expected result, testers cannot conclusively pass/fail a case, and auditors will challenge the validity of the test.
+Accepting "the system cannot do that" as an automatic requirement change. Technical constraint is an input to a business decision, not authority to rewrite the need.
 
-### Never confuse
+### Jurisdiction variants
 
-**Test Plan** vs **Test Case/Test Pack**:
-A *Test Plan* is the high-level strategy and timeline for testing. A *Test Case* (in a pack) is a specific scenario with steps and expected result. The plan is “what/when”, test cases are “how/results”.
-
-### No delta
-
-The discipline of planning tests and defining expected results is a best practice everywhere.
+No delta.
 
 <Recall
-  q="What is a test pack?"
-  a="A set of test cases (inputs + expected outputs) prepared in advance for execution."
+  q="How can BA challenge design without owning it?"
+  a="Test it against requirements, constraints, exceptions, controls, dependencies and operating outcomes while specialists own the mechanism."
 />
 
 <Recall
-  q="Why include expected results in test packs?"
-  a="So testers can objectively verify each test (knowing the correct outcome)."
+  q="What if design cannot meet an approved requirement?"
+  a="Change the solution, formally change the requirement, or have an authorised owner accept the consequence."
+/>
+
+<Recall
+  q="Why challenge control impacts?"
+  a="Redesign can remove a manual step that was also a control, so functional completion alone is insufficient."
 />

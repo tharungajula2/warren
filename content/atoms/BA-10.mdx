@@ -1,63 +1,97 @@
 ---
 id: BA-10
-title: Functional Specifications vs Business Requirements
-type: concept
+title: Business Requirements and Business Rules
+type: mechanism
 domain: business-analysis
 subdomain: brd-functional-specs-and-user-stories
 one_screen: >-
-  **Business requirements** state *what* is needed, while **functional
-  specifications** describe *how* the system will meet those needs.  A business
-  requirement is high-level (e.g. “produce regulatory report X”), whereas a
-  functional spec details the software logic, screens, or data elements to
-  implement it. The BRD avoids technical detail.
+  A business requirement states the outcome or behaviour the business needs; a
+  business rule states the condition that governs a decision, calculation,
+  classification or action. The BA makes both precise enough to implement and
+  accept without prescribing technical design that belongs to specialist
+  solution owners.
 prerequisites:
+  - BA-06
+  - BA-07
   - BA-09
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Monday.com – “no excessive technical detail” in BRD template
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Once the business requirements are agreed, the next step is often a detailed functional specification (or functional requirements document). In the functional spec, analysts or developers spell out how each business need will be met technically: database fields, algorithms, screen designs, API calls, etc.  For example, a business requirement might be “notify managers of high-risk trades.” The functional spec would describe the notification module, threshold parameters, and user interface.
+### Core mechanism
 
-In practice, keep these separate: the BA focuses on business needs, while solution designers write the functional spec. The BRD should remain at a business level “without excessive technical detail”. Any technical content needed for implementation goes into the functional specification.
+Requirements become usable when each statement has one obligation, an owner and a clear condition of satisfaction.
+
+| Element | Requirement question |
+| :--- | :--- |
+| Actor or process | Who or what needs the capability? |
+| Required behaviour | What must happen? |
+| Trigger | When does it apply? |
+| Business rule | Under what condition or logic? |
+| Boundary | What cases are included or excluded? |
+| Constraint | What operational limit must hold? |
+| Owner | Who confirms the meaning? |
+| Acceptance condition | What evidence will show the need is met? |
+
+A lending migration requirement might say the servicing process must preserve the approved repayment schedule and account status through migration. The detailed source-to-target mapping is a data control owned elsewhere; BA carries only the business obligation and the impact of any mapping decision.
+
+A good rule is deterministic where the business is deterministic: "If condition X holds at cutoff, classify as Y." If judgement is intended, say who exercises it, what evidence they use and what approval applies. Do not convert real judgement into fake algorithmic precision.
+
+### Where it sits
+
+```text
+Upstream:   As-is process · SME knowledge · Scope
+This:       Business requirements · Business rules
+Downstream: Sign-off · Design challenge · Traceability · Acceptance
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA drafts and structures requirement statements and business rules |
+| Approves | Requirement owner confirms business meaning |
+| Consumes | Architecture, technology, data, testing and operations consume the approved obligation |
+| Independently challenges | Control functions challenge requirements affecting their mandate |
 
 ### Permanent rule
 
-Business requirements (in the BRD) and functional specifications are distinct.  The BRD should capture *what and why*. Details of *how* to meet those requirements (logic, UIs, data formats) belong in the functional spec after the BRD is approved.
+A requirement states what must be true for the business; design states how the solution will make it true. Precision does not require the BA to take design ownership.
 
-### Permanent trap
+### Never confuse [Business requirement] and [Functional specification]
 
-Allowing design to creep into the BRD or holding back needed functional detail. For instance, adding a database table definition to the BRD is mixing layers.
-
-### Never confuse
-
-**Business Requirement** — a high-level need or rule that the solution must satisfy (e.g., “report X must include all customers over 60 days delinquent”).
+**Business requirement** - states the required business outcome, behaviour, rule or constraint.
 
 ---
 
-**Functional Specification** — the technical design documenting how the system will achieve that requirement (e.g., database queries, user interface fields, business logic).
+**Functional specification** - states how solution components will implement that requirement.
 
-They get mixed up if a BA starts writing implementation detail in the BRD.
+### Permanent trap
 
-### No delta
+Hiding an unresolved decision inside passive language such as "appropriate", "where required" or "as necessary". If the condition matters to implementation or acceptance, define the rule or name the authority that decides it.
 
-This separation of concerns is standard practice everywhere. Every bank’s BA should follow the principle regardless of jurisdiction.
+### Jurisdiction variants
+
+No delta.
 
 <Recall
-  q="What goes into a functional spec that doesn’t belong in a BRD?"
-  a="Technical details like data field mappings, calculations, UAT scripts – things that implement the requirement."
+  q="How can a requirement be precise without becoming design?"
+  a="Define actor, trigger, behaviour, rule, boundary, constraint and acceptance condition while leaving implementation choices to specialists."
 />
 
 <Recall
-  q="Can one document be both the BRD and the functional spec?"
-  a="No. The BRD states needs (no tech detail); the functional spec provides solution details."
+  q="How should genuine judgement appear?"
+  a="Name who exercises it, the evidence or conditions considered and any approval required."
+/>
+
+<Recall
+  q="What does BA retain around a data mapping?"
+  a="The business obligation, ownership, traceability and impact; field-level mapping remains data-owned."
 />

@@ -1,63 +1,94 @@
 ---
 id: BA-03
-title: Stakeholders in Bank Change Programs
-type: concept
+title: 'Stakeholders, Mandates and Decision Rights'
+type: mechanism
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  Successful change requires early and ongoing involvement of all impacted
-  groups: business owners (front-line and process managers), risk and
-  compliance, finance, IT/operations, data/model owners, internal audit and
-  (where needed) the regulator.
-prerequisites: []
+  A stakeholder list is not enough in a bank because people attend for different
+  reasons and hold different authority. The BA must distinguish knowledge,
+  impact, decision rights, approval rights, acceptance rights and challenge
+  rights so that the loudest participant does not accidentally become the owner.
+prerequisites:
+  - BA-01
+  - BA-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Yethi Consulting – Core banking UAT participants and coverage
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: RiskSpan – model owner vs validator roles and documentation
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-A bank change program involves many stakeholders.  **Business owners** (line-of-business managers, product owners) define requirements. **Risk management** teams (credit, market, operational risk) must approve changes affecting risk profile. **Finance** stakeholders (finance, accounting) need to assess cost, budget impact, and reporting changes. **Technology/IT** teams design and build the solution.  **Data owners** or **model owners** must be involved when data or risk models change, to align logic and validation.  **Internal Audit** should be aware early – auditors will later review that controls and procedures were properly implemented. Finally, the **Regulator** (or compliance team, if working with external regulators) often signs off on regulatory changes or reviews evidence to ensure requirements are met.
+### Core mechanism
 
-A BA bridges all these groups, collecting input and keeping them aligned.  For example, a new risk-reporting requirement needs review by business (for accuracy), risk (for methodology), finance (for impact on reports), IT (for system changes), and model validation (for calculations).  Missing a key stakeholder can derail a project; for instance, if IT or audit are not included until late, critical requirements (like data lineage or evidence logs) might be missed.
+Map people by mandate, not title, visibility or meeting attendance.
+
+| Role | Owns or supplies |
+| :--- | :--- |
+| Need owner | Required business outcome |
+| SME | Process, rule or system knowledge; no automatic approval right |
+| Requirement owner | Meaning of the business obligation |
+| Decision authority | Choice between legitimate competing interests |
+| Approver | Formal approval within a defined mandate |
+| Acceptance authority | Fitness for business use and disclosed limitations |
+| Go/no-go authority | Permission to start production transition |
+| Residual-risk owner | Acceptance and monitoring of known post-release exposure |
+| Independent challenger | Challenge to risk or control weakness without first-line ownership |
+
+One person may hold several roles, but name each role separately because authority changes with the decision. Low attendance can coexist with veto authority; high visibility can coexist with none. Where policy owner and operator disagree, preserve both inputs until policy, practice and authority are reconciled. A reporting head may own need, requirement and acceptance without becoming architect or test owner.
+
+### Where it sits
+
+```text
+Upstream:   Mandate · Organisational mandates
+This:       Stakeholders · Roles · Decision rights
+Downstream: Governance · Elicitation · Sign-off · Acceptance · Go-live
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA drafts the role and decision-right map |
+| Approves | Sponsor or programme governance confirms decision authorities |
+| Consumes | All workstreams use it to route questions, approvals and escalations |
+| Independently challenges | Control functions challenge omissions where their mandate is affected |
 
 ### Permanent rule
 
-Include all relevant stakeholders early and often. Document each group’s inputs and approvals.  If a group (e.g. internal audit, model validation) is required to sign off on compliance, involve them from the start to avoid rework.
+Presence in a meeting is not authority. Authority comes from the role's organisational mandate and must be explicit before a material decision is treated as settled.
 
-### Permanent trap
+### Never confuse [SME] and [Decision authority]
 
-Assuming one person can “speak for” multiple stakeholder groups or ignoring a group’s needs.  A common mistake is treating the business as the only stakeholder and failing to involve risk or audit until late in the project.
-
-### Never confuse
-
-**Internal Audit** — the bank’s own independent check on controls and procedures (internal governance function).
+**SME** - provides deep knowledge about a process, rule, system or control.
 
 ---
 
-**Regulator** — the external authority enforcing compliance.
-Both review the project, but Internal Audit is part of the bank’s governance, whereas the Regulator is an external enforcer.
+**Decision authority** - has the mandate to choose when options or stakeholder positions conflict.
 
-### No delta
+### Permanent trap
 
-Stakeholder categories are universal in banking. All regulators expect a bank’s project to involve line management, risk/compliance, IT, finance, audit, etc. The names of groups may vary (e.g. FCA vs SEC), but the roles are similar.
+Writing "business to confirm" as an owner. "Business" is a population, not an accountable person or role; unresolved collective ownership becomes delayed sign-off and disputed decisions.
+
+### Jurisdiction variants
+
+No delta.
 
 <Recall
-  q="Who typically leads a bank’s User Acceptance Testing (UAT)?"
-  a="Business line stakeholders such as branch operations, loan processing, treasury, and compliance teams."
+  q="Why is an attendance or RACI list insufficient?"
+  a="Participation does not prove authority to decide, approve, accept or own residual risk."
 />
 
 <Recall
-  q="What is the role of a model owner vs a model validator?"
-  a="The *Model Owner* uses and maintains the model, while the *Model Validator* independently tests and approves the model; confusion arises because both deal with the model’s details, but one is the user and the other is the checker."
+  q="Can an SME approve a requirement?"
+  a="Only if the SME also holds the relevant approval mandate; expertise alone is knowledge authority."
+/>
+
+<Recall
+  q="Why name residual-risk ownership before go-live?"
+  a="Releasing a known limitation transfers exposure, so an authorised owner must knowingly accept and monitor it."
 />

@@ -1,57 +1,94 @@
 ---
 id: BA-07
-title: Root Cause Analysis
+title: Eliciting from a Time-Pressed SME
 type: procedure
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  Root Cause Analysis (RCA) is a method to find the underlying cause of a
-  problem or error, not just its symptoms.  Techniques like “5 Whys” and
-  fishbone diagrams are used to dig down to the true source of an issue.
-prerequisites: []
+  A banking SME may control twenty minutes of knowledge that the programme
+  cannot safely guess. The BA earns that time by doing the document work first,
+  asking questions that require expert judgement rather than lookup, and leaving
+  with explicit confirmations, owners and unresolved points.
+prerequisites:
+  - BA-03
+  - BA-06
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      BA Times – “Root Cause Analysis is a method of identifying the underlying
-      cause of a problem... using cause-and-effect diagrams, flowcharts, etc.”
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-When a process fails or a requirement isn’t met, RCA helps prevent recurrence by fixing the core issue. The BA collects data about the problem, then uses a structured approach: for example, the **5 Whys** technique simply asks “Why?” repeatedly until the fundamental cause is found.  Or use a **Fishbone (Ishikawa) diagram**, where the team brainstorms possible causes in categories (People, Process, Systems, etc.) and traces them back to root factors.
+### Core mechanism
 
-For instance, if a loan payment is missed, an RCA might reveal that data mismatches caused a calculation error (one of many possible answers). The BA should lead the team through questioning until the real cause (e.g. a misconfigured data field) is identified.  Document findings in an action plan to resolve the root issue and not just the symptom.
+The scarce resource is not meeting time; it is expert attention.
+
+| Before | During | After |
+| :--- | :--- | :--- |
+| Read policies, existing requirements, reports and process evidence | State the decision or knowledge needed | Send a concise confirmation of conclusions |
+| Mark what is already known | Ask highest-risk questions first | Separate confirmed facts from assumptions |
+| Prepare scenarios and contradictions | Use concrete examples and exceptions | Assign unanswered questions to named owners |
+| Send a short pre-read | Reflect back the answer in business language | Record decisions in the durable log |
+| Know what can be answered without the SME | Stop when the required knowledge is obtained | Re-book only for genuinely new expert questions |
+
+A strong question is bounded: "When an account cures after the reporting cutoff, which status should the report use and who approves an override?" A weak question is "Can you explain the process?"
+
+Use scenario walkthroughs when rules are tacit. Ask for normal case, boundary case, failure case and override. If the SME says "it depends", the next question is what it depends on: a rule, judgement, system limitation, approval or convention.
+
+Do not force consensus from one SME where authority belongs elsewhere. Capture expert interpretation, then route the decision to the requirement owner or authorised forum.
+
+### Where it sits
+
+```text
+Upstream:   As-is evidence · Open questions · SME knowledge
+This:       Focused elicitation · Confirmation · Unresolved points
+Downstream: Requirements · Business rules · Decision log
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA prepares questions, captures answers and distinguishes fact from interpretation |
+| Approves | Requirement or process owner approves conclusions requiring formal commitment |
+| Consumes | Delivery, design and testing teams consume clarified business knowledge |
+| Independently challenges | Relevant control functions challenge interpretations within their mandate |
 
 ### Permanent rule
 
-Always go deeper: fix the root cause, not just the immediate error. Use structured RCA (5 Whys, fishbone, flow analysis) to uncover underlying factors.
+Never spend SME time discovering information available in documents you could have read. Use expert time for judgement, exceptions, ambiguity and decisions.
+
+### Never confuse [Expert input] and [Formal approval]
+
+**Expert input** - explains how a rule, process, product or system works.
+
+---
+
+**Formal approval** - commits an authorised owner to the requirement or decision.
 
 ### Permanent trap
 
-Stopping the analysis when a temporary fix is found. For example, just patching a software bug (symptom) without discovering that it was caused by a flawed business rule mapping.
+Leaving the meeting with notes but no distinction between what was confirmed, what was assumed and what remains open. Ambiguous notes become false requirements once circulated.
 
-### Never confuse
+### Jurisdiction variants
 
-**Symptom** vs **Root Cause**:
-A *Symptom* is the visible error (e.g. a broken report). The *Root Cause* is the underlying reason (e.g. a missing data mapping rule). They are often mistakenly treated as the same.
-
-### No delta
-
-RCA techniques apply in all industries. The concept of probing “why” multiple times or using a fishbone diagram is universal.
+No delta.
 
 <Recall
-  q="Name a common RCA technique."
-  a="5 Whys – repeatedly asking why a problem occurred until reaching the root cause."
+  q="What should a short SME meeting prioritise?"
+  a="High-risk questions that existing evidence cannot answer; routine facts should be resolved beforehand."
 />
 
 <Recall
-  q="Why do a root cause analysis instead of just fixing the issue?"
-  a="To prevent the problem from recurring by addressing the fundamental cause."
+  q="What should follow &quot;it depends&quot;?"
+  a="Identify the rule, threshold, scenario, judgement, approval or constraint creating the dependency."
+/>
+
+<Recall
+  q="Why can an SME answer still need escalation?"
+  a="Expertise explains the subject but does not confer authority to choose between business, control or scope options."
 />

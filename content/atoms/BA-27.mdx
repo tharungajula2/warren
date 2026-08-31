@@ -1,0 +1,103 @@
+---
+id: BA-27
+title: 'Post-Implementation Review, Benefits and Closure'
+type: procedure
+domain: business-analysis
+subdomain: ba
+one_screen: >-
+  A banking change is not complete because the release succeeded or the project
+  budget closed. Post-implementation review asks whether the required outcome
+  and promised benefits actually exist in production, whether controls operate
+  as intended, and whether every residual action, temporary measure and accepted
+  risk has a durable owner outside the programme.
+prerequisites:
+  - BA-14
+  - BA-18
+  - BA-22
+  - BA-26
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 11_BA_business_analysis.md
+---
+### Core mechanism
+
+Closure tests the original mandate against production reality and prevents unfinished obligations from becoming ownerless.
+
+| Review dimension | Closure test |
+| :--- | :--- |
+| Required outcome | Original mandate works in operation |
+| Requirements | Accepted requirements function in production |
+| Benefits | Mandated efficiency, quality, control, service or compliance outcome appears |
+| Controls | Changed controls operate and are evidenced |
+| Residual defects | Owner, date and escalation exist |
+| Temporary controls | Reason, owner and exit plan remain valid |
+| Accepted risks | Owners monitor what they accepted |
+| Dependencies | Delayed or downstream impacts are addressed |
+| Decisions | Material approval and change history are preserved |
+| Ownership | No material obligation is orphaned |
+| Minor open actions | Safe BAU transfer has owner, due date and escalation route |
+
+```text
+Mandate -&gt; Delivered change -&gt; Production outcome -&gt; Review -&gt; Residual actions owned -&gt; Programme closure
+```
+
+Benefits come from the mandate, not post-hoc success metrics: regulatory change may primarily deliver compliance; migration may reduce operational risk or remove unsupported infrastructure. Closure can precede minor action completion, but not transfer without durable accountability.
+
+### Where it sits
+
+```text
+Upstream:   Stable production · Original mandate · Acceptance · Residual actions
+This:       Outcome review · Benefits · Control effectiveness · Closure ownership
+Downstream: BAU improvement · Future change · Audit and governance evidence
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA assembles trace from mandate to production outcome and residual actions |
+| Approves | Sponsor or accountable business owner approves programme closure |
+| Consumes | BAU owners, governance and assurance functions consume the final evidence |
+| Independently challenges | Risk, compliance, internal audit or other assurance challenge closure where their mandate applies |
+
+### Permanent rule
+
+The programme can close with open work only when every material open obligation has transferred to an accountable owner who has accepted it.
+
+### Never confuse [Project closure] and [Outcome realisation]
+
+**Project closure** - ends the temporary delivery organisation and its governance.
+
+---
+
+**Outcome realisation** - confirms that the required business, control or strategic result exists and continues in production.
+
+### Permanent trap
+
+Archiving the project while temporary controls and deferred actions still depend on programme names or mailing lists. Once the programme disappears, those obligations become orphaned.
+
+### Jurisdiction variants
+
+No delta. Where an external authority requires specific post-implementation evidence, that requirement becomes part of the closure evidence set.
+
+<Recall
+  q="What is the central closure test?"
+  a="The required outcome operates in production and every material residual obligation has a durable BAU owner."
+/>
+
+<Recall
+  q="Can closure occur with open actions?"
+  a="Yes, when they are understood, authorised, transferred to named owners and governed by dates and escalation."
+/>
+
+<Recall
+  q="Why compare benefits with the mandate?"
+  a="It prevents declaring success against convenient metrics that were never the intended outcome."
+/>

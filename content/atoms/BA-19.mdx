@@ -1,58 +1,100 @@
 ---
 id: BA-19
-title: Post-Implementation Review and Benefits Realisation
-type: procedure
+title: Iterative Delivery Without Losing Regulatory Completeness
+type: mechanism
 domain: business-analysis
 subdomain: testing-uat-and-cutover
 one_screen: >-
-  After go-live, conduct a formal review comparing actual outcomes to planned
-  objectives. Capture lessons learned and track whether expected benefits (cost
-  savings, efficiency gains, compliance) are realized.
+  A bank may deliver through sequential phases, agile iterations or a hybrid,
+  but the control invariant is the same: mandatory scope, decision authority,
+  traceability, evidence and final business acceptance must survive the delivery
+  method. Iteration changes how work is sliced; it does not make obligations
+  optional or ownership informal.
 prerequisites:
+  - BA-13
+  - BA-14
+  - BA-17
   - BA-18
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Project Delivery (UK government) – benefits management and review
-      principles (general reference)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Once the system is live and stable, a **Post-Implementation Review (PIR)** evaluates success. The BA should gather the project team and business stakeholders to review metrics and outcomes. Did the system meet the business objectives outlined in the BRD? For example, if the goal was a 50% reduction in report prep time, measure the actual improvement. Regulatory objectives (e.g. no compliance violations) must also be confirmed.
+### Core mechanism
 
-Part of the PIR is **Benefits Realisation**: compare the business case predictions (e.g. lower costs, better risk metrics) to reality. If benefits fall short, identify why. Lessons from the review should feed back into process improvements for future changes.  A formal PIR also provides closure: documenting success and issues demonstrates to auditors and leadership that the project delivered as intended (or what corrective actions are taken).
+Separate delivery cadence from governance completeness.
+
+| Delivery practice | Safe when | Failure mode |
+| :--- | :--- | :--- |
+| Incremental build | Each increment traces to approved scope | Stories become the only source of requirement truth |
+| Evolving detail | Detail clarifies within authorised boundaries | Scope changes enter as backlog refinement |
+| Demonstrations | Feedback is captured and routed to decisions | Demo comments are mistaken for formal approval |
+| Backlog reprioritisation | Mandatory coverage remains protected | Low-visibility obligations continually slip |
+| Sprint acceptance | Increment meets its agreed conditions | Local acceptance is mistaken for final business acceptance |
+| Hybrid gates | Gates protect material decisions and evidence | Ceremony exists without a real decision right |
+
+```text
+Mandate -&gt; Approved scope -&gt; Delivery slices -&gt; Integrated evidence -&gt; Business acceptance
+```
+
+A user story may be useful to a delivery team, but it is not automatically the full regulatory or business obligation. The BA maintains the relationship between slices and the approved baseline so that the programme can prove completeness at the end.
+
+"Agile" never means material decisions can remain oral. If a decision changes scope, control or acceptance, record and approve it through the same authority model used elsewhere.
+
+### Where it sits
+
+```text
+Upstream:   Approved baseline · Traceability · Change control
+This:       Iterative delivery with control invariants
+Downstream: Test governance · Acceptance · Release readiness
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Delivery teams produce increments; BA maintains business completeness and decision continuity |
+| Approves | Requirement and scope owners approve material changes |
+| Consumes | Product, project, technology, testing and governance teams use the shared baseline |
+| Independently challenges | Control functions challenge gaps in mandatory coverage or evidence |
 
 ### Permanent rule
 
-Always schedule a post-launch review. It should include all key stakeholders, revisit requirements and scope, and check actual performance and risk metrics against targets.
+Methodology can change the rhythm of delivery, not the existence of accountability. Every mandatory obligation still needs an owner, implementation, evidence and acceptance.
+
+### Never confuse [Sprint acceptance] and [Business acceptance]
+
+**Sprint acceptance** - confirms that an increment meets its local agreed conditions.
+
+---
+
+**Business acceptance** - authorises the delivered change for business use against the complete approved obligation and disclosed limitations.
 
 ### Permanent trap
 
-Skipping the review or only doing technical validation. Don’t forget to measure business impact. For example, installing a new compliance module but never checking if compliance reporting is actually more accurate counts as incomplete implementation.
+Allowing backlog tools to become a substitute for governed scope. A backlog can organise work brilliantly while still losing the link to why the bank had to change.
 
-### Never confuse
+### Jurisdiction variants
 
-**Post-Implementation Review** vs **Project Closure**:
-A *PIR* examines project outcomes and lessons. *Project Closure* is the administrative final step (sign-offs, documentation archive). Both are needed, but PIR focuses on evaluation and benefits tracking.
-
-### No delta
-
-Reviewing outcomes and realising benefits is a recommended practice worldwide, not specific to one jurisdiction.
+No delta.
 
 <Recall
-  q="What is a key purpose of a post-implementation review?"
-  a="To verify that the project’s objectives were met and to capture lessons learned."
+  q="What remains invariant across delivery methods?"
+  a="Mandatory scope, decision rights, traceability, evidence and authorised final acceptance."
 />
 
 <Recall
-  q="What is benefits realisation?"
-  a="Tracking and confirming that the expected business benefits (e.g. efficiency, risk reduction) actually occurred after implementation."
+  q="Why is a demo not automatically sign-off?"
+  a="Feedback is not approval unless the object, meaning and authorised approver are explicit."
+/>
+
+<Recall
+  q="How does BA preserve completeness in iterative delivery?"
+  a="Trace each delivery slice to the approved baseline and control material backlog changes through scope governance."
 />

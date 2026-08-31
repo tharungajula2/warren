@@ -1,0 +1,100 @@
+---
+id: BA-23
+title: 'Parallel Run, Coexistence and Migration Confidence'
+type: mechanism
+domain: business-analysis
+subdomain: ba
+one_screen: >-
+  A parallel run operates old and new states together so the bank can compare
+  outcomes under live-like conditions before relying solely on the new process.
+  BA owns why coexistence is needed, which business discrepancies matter, who
+  resolves them and what exit decision ends the parallel period; DAT owns
+  detailed downstream extract-validation mechanics.
+prerequisites:
+  - BA-15
+  - BA-20
+  - BA-22
+  - DAT-23
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 11_BA_business_analysis.md
+---
+### Core mechanism
+
+Parallel run, dry run and phased cutover answer different transition questions.
+
+| Pattern | What it tests | Limitation |
+| :--- | :--- | :--- |
+| Parallel run | Old and new states on comparable live periods | Dual people, controls and reconciliation burden |
+| Dry run | Timing, roles and execution sequence without authoritative transition | Does not prove sustained live equivalence |
+| Phased cutover | Controlled movement by valid population, process or capability slice | Hidden dependencies can make a phase incomplete, not safer |
+
+| Parallel-run decision | Define before starting |
+| :--- | :--- |
+| Purpose and scope | Uncertainty, populations, outputs and periods being compared |
+| Tolerance | Expected, explainable and unacceptable differences |
+| Ownership | Who investigates and decides each discrepancy class |
+| Duration | Meaningful cycles that must be observed |
+| Exit | Who decides evidence is sufficient for replacement |
+| Fallback | Whether the old state can still support production |
+
+Identical outputs are unnecessary when approved logic, policy or timing changes; differences must instead be understood and authorised. QNT owns statistics, MRM model governance, and DAT detailed extract validation. BA owns the business comparison, discrepancy decision, temporary operating burden and exit authority.
+
+### Where it sits
+
+```text
+Upstream:   Integrated test evidence · Acceptance conditions · Migration plan
+This:       Coexistence · Business comparison · Exit decision
+Downstream: Operational readiness · Go/no-go · Cutover
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA defines business comparison questions and discrepancy ownership with relevant teams |
+| Approves | Business or transition authority approves exit criteria and completion |
+| Consumes | Release governance and production owners use the confidence evidence |
+| Independently challenges | Risk, finance, model or control functions challenge unexplained differences within mandate |
+
+### Permanent rule
+
+A parallel run is complete when its defined uncertainty has been reduced enough for an authorised exit decision, not merely when a calendar period ends.
+
+### Never confuse [Parallel run] and [Dry run]
+
+**Parallel run** - old and new operating states run against comparable activity so outcomes can be assessed side by side.
+
+---
+
+**Dry run** - a rehearsal of process, cutover or execution steps without necessarily operating both states as live alternatives.
+
+### Permanent trap
+
+Declaring success because aggregate totals are close. Material population-level, control or classification differences can cancel out in totals and still make the new process unsafe.
+
+### Jurisdiction variants
+
+No delta.
+
+<Recall
+  q="What should a parallel run prove?"
+  a="That defined uncertainty about replacing the old state has been reduced through relevant comparisons and explained discrepancies."
+/>
+
+<Recall
+  q="Why need old and new outputs not match exactly?"
+  a="Approved logic, policy or timing may change; differences must be expected, understood and authorised."
+/>
+
+<Recall
+  q="What does BA own around extract comparison?"
+  a="Business purpose, impact, discrepancy decision and exit authority; DAT owns detailed extract-validation control."
+/>

@@ -1,56 +1,108 @@
 ---
 id: BA-21
-title: Prioritisation & Estimation in Banking Projects
+title: 'Defects, Release Blockers and Residual-Risk Decisions'
 type: mechanism
 domain: business-analysis
 subdomain: project-delivery-and-scope-governance
 one_screen: >-
-  Prioritize work using clear criteria (business value, risk, regulatory
-  urgency) and defend choices with data.  Estimate tasks realistically using
-  ranges or past data, accounting for optimism bias.
+  A defect becomes a BA concern when it creates a business decision: does it
+  violate a mandatory requirement, block an operating process, weaken a control,
+  require a workaround or leave risk that someone must own at release? DAT owns
+  defect-record, retest and closure mechanics; BA owns the requirement, impact
+  and release consequence around that record.
 prerequisites:
-  - BA-04
+  - BA-17
+  - BA-20
+  - DAT-24
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Planning fallacy (behavioral economics) – people underestimate tasks
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-BAs often help decide what to do first in a change program. Common prioritisation methods include *weighted scoring* (scoring features by value, cost, risk), *MoSCoW* (Must/Should/Could/Won’t), or simple *risk-first* (fix highest compliance risk first). For regulatory projects, items explicitly tied to required dates are usually top priority. Always document how you prioritized: for example, “Requirement A scored 9/10 on impact because it directly addresses a mandatory regulation” provides rationale. This transparency makes prioritisation defensible to management and auditors.
+### Core mechanism
 
-For estimation, acknowledge that BAs and teams are naturally optimistic (the “planning fallacy”). Use historical data or three-point estimates (best/likely/worst) to capture uncertainty. Include a buffer for testing and integration complexities. For instance, if developing a new report took 10 days in a past project, plan 15 days for similar complexity. Clear estimation methods (e.g. story points, function points, or t-shirt sizes) help set realistic schedules and avoid last-minute scope cuts.
+Move from defect description to disposition decision.
+
+```text
+Observed failure -&gt; Current requirement -&gt; Business impact -&gt; Workaround/control -&gt; Release consequence -&gt; Owner decision
+```
+
+| Question | Why it matters |
+| :--- | :--- |
+| What requirement or expected behaviour failed? | Separates defect from enhancement |
+| Which process or output is affected? | Establishes business consequence |
+| Is mandatory scope compromised? | Determines whether release can satisfy mandate |
+| Is there a controlled workaround? | Tests temporary operability |
+| What control or evidence is weakened? | Makes hidden risk visible |
+| By when can it be fixed and retested? | Connects defect to release timing |
+| Who can accept the residual exposure? | Prevents project team from self-accepting risk |
+
+Severity and priority can inform the discussion, but labels do not make the decision. A technically minor issue can be a release blocker if it invalidates a required disclosure; a severe issue in an unused deferred component may have a different release consequence.
+
+If the proposed "fix" changes approved behaviour, it is also a change request and must follow change control.
+
+### Where it sits
+
+```text
+Upstream:   Test evidence · Requirements · Defect record
+This:       Business impact · Release consequence · Residual risk
+Downstream: Retest · Acceptance · Go/no-go · Post-go-live action
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Test team records defect; BA links it to requirement and business impact |
+| Approves | Product, business, control or release authority decides disposition within mandate |
+| Consumes | Delivery, testing, operations and go/no-go governance consume the decision |
+| Independently challenges | Risk or control functions challenge unacceptable residual exposure |
 
 ### Permanent rule
 
-Use objective criteria (value to business, compliance risk, regulatory deadline) in a documented prioritisation model. When estimating, always allow contingencies – it’s normal to be optimistic, so plan for known unknowns.
+A project team cannot make risk disappear by changing a defect status. Release with a known limitation requires an authorised owner for the resulting business or control exposure.
+
+### Never confuse [Defect] and [Change request]
+
+**Defect** - the delivered solution does not meet the current approved expectation.
+
+---
+
+**Change request** - proposes to alter the approved expectation or scope.
+
+### Never confuse [Severity] and [Release consequence]
+
+**Severity** - a classification of the defect's impact under the defect scheme.
+
+---
+
+**Release consequence** - the decision about whether and under what conditions the change may proceed to production.
 
 ### Permanent trap
 
-Letting “priority” be decided by the loudest stakeholder or an incorrect assumption that all items are equally urgent. Also, giving point estimates (e.g. “5 days”) without ranges ignores uncertainty; this often leads to schedule overrun.
+Using "workaround available" as automatic permission to release. The workaround itself has capacity, control, evidence, training and duration consequences that must be assessed.
 
-### Never confuse
+### Jurisdiction variants
 
-**Urgency** vs **Importance**:
-An *Urgent* task has a tight deadline (often regulatory or external). An *Important* task has high business value or impact. They can differ (e.g. a bug might be urgent but low importance). Prioritisation should consider both, not mistake one for the other.
-
-### No delta
-
-Banks use the same prioritisation logic everywhere. CFOs and regulators expect clear rationale for why one feature was delayed and another accelerated.
+No delta.
 
 <Recall
-  q="How can you justify a prioritisation decision?"
-  a="By scoring features on impact and risk; for example, regulatory requirements get high weight and are done first."
+  q="When does a defect become a residual-risk decision?"
+  a="When release is proposed while its consequence remains, requiring authorised acceptance of the exposure."
 />
 
 <Recall
-  q="Why do BAs add time buffers to estimates?"
-  a="Because of optimism bias (planning fallacy) – experience shows tasks often take longer than the best-case estimate."
+  q="Why is severity not release priority?"
+  a="Release priority also depends on mandatory scope, controls, timing, workaround and risk context."
+/>
+
+<Recall
+  q="What if the fix changes an approved requirement?"
+  a="The behaviour change must enter change control; a defect ticket cannot bypass requirement authority."
 />

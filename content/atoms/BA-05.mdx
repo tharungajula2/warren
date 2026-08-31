@@ -1,58 +1,97 @@
 ---
 id: BA-05
-title: Interviewing Time-Pressed Subject Matter Experts
-type: procedure
+title: Problem Framing and Root Cause in Bank Change
+type: mechanism
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  SMEs are often busy and short on time.  Always prepare an agenda and
-  pre-reads, ask targeted questions, and build credibility so even a short
-  meeting is productive.
+  A reported problem is usually a symptom: a regulatory return breaks,
+  reconciliations require manual repair, or an impairment run finishes too late.
+  The BA frames the problem so the programme changes the causal mechanism rather
+  than spending money to automate or relocate the symptom.
 prerequisites:
-  - BA-04
+  - BA-02
+  - BA-03
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Bridging the Gap – “Interviewing a Subject Matter Expert” (be prepared,
-      agenda)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-When interviewing an SME who “does not have time,” preparation is key. Before the meeting, research the topic, study any existing documentation, and send a concise agenda or questionnaire in advance. Start by explaining the project’s purpose and how their input will be used; this shows respect and gains their cooperation.
+### Core mechanism
 
-In the meeting, ask clear, focused questions. Prioritize questions so the most critical ones get asked first. If possible, schedule short, focused sessions (e.g. 30 minutes) and stick to that time. Always come with an agenda and demonstrate that you’ve “done your homework” — SMEs should not hear questions that could have been answered by your own prep.  Use techniques like the *5 Whys* or scenario walkthroughs to get deep insight quickly. If an SME can’t meet face-to-face, consider email questions or quick confirmations to capture their knowledge.
+Separate the observed failure from the condition that allows it to recur.
+
+```text
+Symptom -&gt; Immediate cause -&gt; Contributing condition -&gt; Controllable root cause -&gt; Required change
+```
+
+| Layer | Reporting example | BA test |
+| :--- | :--- | :--- |
+| Symptom | Late manual adjustment | What failed or needed intervention? |
+| Immediate cause | Source arrived after freeze | What directly produced it? |
+| Contributing condition | Source timing owner unclear | What allowed it to persist? |
+| Root cause | No accountable cutoff control | What would prevent recurrence? |
+| Required outcome | Source completion owned and evidenced before freeze | What must become true? |
+| Evidence | Logs, steps, exceptions, reconciliations, decisions, workarounds | Does evidence support causality? |
+| Multiple causes | Several conditions contribute | Preserve the chain; do not force one neat cause |
+| Remediation | Today's output corrected | Was the enabling process or control weakness removed? |
+
+"Five whys" can prompt inquiry but does not prove causality. Correction restores today's output; remediation removes the recurring condition.
+
+### Where it sits
+
+```text
+Upstream:   Mandate · Incident · Finding · User pain
+This:       Problem statement · Cause · Required outcome
+Downstream: As-is discovery · Scope · Requirements
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA structures the problem and evidence chain |
+| Approves | Business or control owner confirms the problem definition and required outcome |
+| Consumes | Delivery and design teams use it to avoid solving the wrong problem |
+| Independently challenges | Risk, compliance, operational risk or audit challenge root cause where relevant |
 
 ### Permanent rule
 
-Treat every SME meeting as valuable and limited. Go in prepared and respectful of their time. Always document answers immediately, and confirm understanding before ending.
+A root cause must explain why the symptom occurred and identify something the change can act on. A label such as "human error" is not sufficient if the process made the error likely or undetectable.
+
+### Never confuse [Symptom] and [Root cause]
+
+**Symptom** - the visible failure, delay, error or workaround that triggered attention.
+
+---
+
+**Root cause** - the underlying controllable condition whose correction materially reduces recurrence.
 
 ### Permanent trap
 
-Entering an SME meeting without preparation, or hoping to get detailed answers by casually catching them off guard. Another mistake is not validating their time constraints; for example, scheduling an hour when only 15 minutes is feasible.
+Writing the desired solution into the problem statement. "The problem is that we do not have platform X" closes solution space before the actual process or control failure has been established.
 
-### Never confuse
+### Jurisdiction variants
 
-**Project Sponsor** vs **Subject Matter Expert (SME)**:
-A *Sponsor* is the executive or business champion who funds the project. An *SME* is a technical or functional expert providing detailed knowledge. A sponsor’s role is strategic; an SME’s is informational. They are often mixed up by new BAs.
-
-### No delta
-
-These interpersonal techniques are universal. Bank SMEs in any country have limited time, so the approach to interviewing them is the same.
+No delta.
 
 <Recall
-  q="What should you always bring to an SME interview?"
-  a="A clear agenda with questions and evidence you’ve done preliminary research (homework)."
+  q="Why is a manual adjustment not automatically the root cause?"
+  a="It may be the recovery action; the cause can sit in timing, ownership, data, control or upstream process."
 />
 
 <Recall
-  q="Who is an SME vs a Sponsor?"
-  a="An SME provides detailed process or system knowledge. A Sponsor is an executive who ensures the project has resources."
+  q="What should support root-cause analysis?"
+  a="Process evidence, exceptions, logs, reconciliations, decisions and observed workarounds must support the causal chain."
+/>
+
+<Recall
+  q="When is remediation incomplete?"
+  a="When today's output is corrected but the condition that allowed recurrence remains."
 />

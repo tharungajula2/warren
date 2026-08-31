@@ -1,0 +1,103 @@
+---
+id: BA-24
+title: Operational Readiness and the Banking Calendar
+type: procedure
+domain: business-analysis
+subdomain: ba
+one_screen: >-
+  A system can pass testing while the business is still not ready to operate it.
+  Operational readiness proves that people, procedures, access, controls,
+  support, reconciliations, communications and critical calendar dependencies
+  are prepared for day one and for the high-risk cycles that follow.
+prerequisites:
+  - BA-11
+  - BA-15
+  - BA-21
+  - BA-22
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources: []
+import_source: 11_BA_business_analysis.md
+---
+### Core mechanism
+
+Readiness is a set of owned operating conditions.
+
+| Readiness area | Evidence question |
+| :--- | :--- |
+| People | Are the required roles staffed and aware of new responsibilities? |
+| Procedures | Are operating and exception procedures current and usable? |
+| Access | Do users and support teams have approved entitlements? |
+| Controls | Are new or changed controls assigned, executable and evidenced? |
+| Reconciliation | Can outputs be checked and breaks owned? |
+| Support | Is incident, query and escalation ownership live? |
+| Training | Can affected users perform the changed process? |
+| Communications | Do dependent teams know what changes and when? |
+| Calendar | Has the release been assessed against close, filing and peak processing? |
+| Contingency | Can the business operate if a key component fails? |
+
+```text
+Technical readiness + Business readiness + Control readiness + Support readiness -&gt; Go-live candidate
+```
+
+Month-end matters because operational tolerance changes. A credit migration that is safe on a quiet Tuesday may be unsafe before statement production, provisioning, finance close or a reporting cutoff. The BA does not impose a universal blackout calendar; the BA identifies which business events make the chosen date risky and who may accept that risk.
+
+Readiness should distinguish "complete" from "waived". A missing procedure signed off as a controlled temporary condition is not the same state as a completed procedure.
+
+### Where it sits
+
+```text
+Upstream:   Acceptance · Defect decisions · Parallel evidence · Operating constraints
+This:       People · Process · Control · Support readiness
+Downstream: Go/no-go · Cutover · Stabilisation
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA coordinates readiness evidence; each operational owner produces domain evidence |
+| Approves | Business and service owners approve readiness within their areas |
+| Consumes | Go/no-go authority uses the integrated readiness view |
+| Independently challenges | Operational risk, compliance or control functions challenge material gaps |
+
+### Permanent rule
+
+"System ready" and "business ready" are different states. Production transition requires both, plus explicit ownership of any waived readiness condition.
+
+### Never confuse [Readiness gap] and [Defect]
+
+**Readiness gap** - an operating prerequisite such as training, access, procedure or support is incomplete.
+
+---
+
+**Defect** - delivered behaviour fails an agreed requirement or expected result.
+
+### Permanent trap
+
+Treating training completion percentages as proof of readiness. Attendance does not prove that critical roles can execute new decisions, controls and exceptions.
+
+### Jurisdiction variants
+
+No delta.
+
+<Recall
+  q="Why must readiness include the banking calendar?"
+  a="Close, reporting and peak periods raise disruption cost and can reduce fallback tolerance."
+/>
+
+<Recall
+  q="Completed versus waived readiness item?"
+  a="Completed satisfies the condition; waived leaves a known gap explicitly accepted by authorised ownership."
+/>
+
+<Recall
+  q="Who owns readiness evidence?"
+  a="Each domain owner owns its evidence; BA integrates the cross-functional view for go/no-go governance."
+/>

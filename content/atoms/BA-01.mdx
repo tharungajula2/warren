@@ -1,68 +1,96 @@
 ---
 id: BA-01
-title: Role of the Business Analyst (vs Product/Project Manager)
+title: The BA in a Bank Change Programme
 type: concept
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  A BA in a bank translates business needs into requirements, focusing on *what*
-  and *why*, unlike a product manager (who defines product strategy and
-  features) or a project manager (who plans the *how* and *when* of delivery).
+  A banking BA turns a required business outcome into a chain of explicit
+  requirements, decisions, approvals, acceptance and operational ownership. The
+  BA makes the chain visible and durable, but does not absorb the accountability
+  of the sponsor, business owner, project manager, architect, engineer, risk
+  owner or production owner.
 prerequisites: []
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Harvard Business Review (via Medium) – role distinctions
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: ICS Learn – BA vs PM (“what/why” vs “how/when”)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Business Analysts (BAs) gather business requirements and ensure that solutions address true business needs.  They act as the liaison between business stakeholders and technical teams.  BAs **do not** own product strategy or delivery schedules.  A *Product Manager* (or Product Owner) is outward-facing – they define the product vision, customer needs, and high-level features.  A *Project Manager* is responsible for planning, coordinating, and tracking the project timeline, budget, and resources.  In contrast, the BA identifies *what* must be done (the requirements) and *why* (the business objective), but generally not *how* to build it or *when* to schedule tasks.
+### Core mechanism
 
-For example, if a regulator mandates a new report, the Product Manager ensures the business values it and fits into the roadmap, the Project Manager schedules the implementation, and the BA defines the report’s data requirements and rules.  The BA does **not** decide how the report is coded or which team builds it, nor do they own the release date – those are the project manager’s concerns.
+The BA preserves meaning as work crosses organisational boundaries; documenting the change is only one part of that job.
 
 ```text
-+-----------------+        +----------------------+        +----------------+
-|  Product Owner  | -----&gt; |   Business Analyst   | -----&gt; | Development Team|
-+-----------------+ vision | (defines requirements) | spec  +----------------+
-                          +----------------------+
+Mandate -&gt; Need -&gt; Requirement -&gt; Decision -&gt; Build -&gt; Evidence -&gt; Acceptance -&gt; Production ownership
 ```
+
+| Change point | BA contribution | Accountable owner |
+| :--- | :--- | :--- |
+| Problem | Frame and test the need | Sponsor or business owner |
+| Requirement | Elicit, structure, trace | Requirement or process owner |
+| Design | Challenge against approved need | Architect or technology owner |
+| Evidence | Connect to requirement; expose gaps | Test, control or acceptance owner |
+| Go-live | Expose readiness and unresolved issues | Go/no-go authority |
+| Live outcome | Force explicit handover | BAU process or service owner |
+| Disputed decision | Frame options and consequences | Authorised decision-maker |
+| Missing owner | Surface and escalate the gap | Role holding the mandate |
+
+Facilitation never transfers accountability. Resolve an unowned decision before it becomes an implied BA choice, informal approval or production risk.
+
+### Where it sits
+
+```text
+Upstream:   Change mandate · Sponsor · Business objective
+This:       Requirement and decision discipline
+Downstream: Design challenge · Acceptance · Go-live · BAU ownership
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA produces structured requirements, decision records, traceability and impact analysis |
+| Approves | Business or control owners approve what falls within their mandate |
+| Consumes | Delivery, testing, operations, risk, finance and control teams consume the agreed meaning |
+| Independently challenges | Risk, compliance, model validation, internal audit or other independent functions where their mandate applies |
 
 ### Permanent rule
 
-A BA defines *what* needs to be done and *why*, but does **not** dictate the *how* (that’s the domain of solution architects or developers) or *when* (that’s the project manager’s schedule).
+Facilitation does not transfer accountability. Every material requirement, acceptance decision and residual risk needs a named owner with authority to own it.
 
-### Permanent trap
+### Never confuse [Facilitation] and [Accountability]
 
-Confusing the BA role with the project or product manager role. For instance, asking the BA to manage the project budget or delivery schedule, or to own product strategy, leads to failure. The BA must resist the urge to become a mini–project manager.
-
-### Never confuse
-
-**Product Manager** — owns the product vision, market needs, and feature roadmap (external focus).
+**Facilitation** - frames the question, brings the right people together, records the decision and keeps the chain coherent.
 
 ---
 
-**Project Manager** — owns the project plan, schedule, and budget (execution focus).
+**Accountability** - carries the authority and consequence for the decision or outcome.
 
-### No delta
+### Permanent trap
 
-This distinction holds across jurisdictions: BAs globally focus on requirements gathering, whereas product/project management roles are organizational, not regulatory, differences.
+The competent BA becomes the unofficial owner of everything because everyone relies on them. That feels efficient during delivery and fails at sign-off, go-live or audit because the person who prepared the decision was never authorised to make it.
+
+### Jurisdiction variants
+
+No delta.
 
 <Recall
-  q="What do BAs focus on vs project managers?"
-  a="BAs document *what* is needed and *why* (requirements), while PMs coordinate *how* and *when* it will be delivered."
+  q="What is the BA's core contribution in banking change?"
+  a="Preserve the change's meaning across handoffs while accountable owners retain their decisions."
 />
 
 <Recall
-  q="Who defines regulatory requirements vs who schedules their implementation?"
-  a="The BA documents the regulatory *requirements* in business terms; the project manager schedules the implementation tasks."
+  q="Why is &quot;the BA owns the requirement&quot; incomplete?"
+  a="The BA may structure it, but the business or control owner must own the obligation and its meaning."
+/>
+
+<Recall
+  q="What if nobody owns a decision?"
+  a="Surface and escalate the gap until the role with the relevant mandate is named."
 />

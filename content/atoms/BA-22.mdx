@@ -1,58 +1,99 @@
 ---
 id: BA-22
-title: Managing Scope Change with Fixed Deadlines
-type: concept
+title: Business Acceptance and the Meaning of UAT Sign-Off
+type: mechanism
 domain: business-analysis
 subdomain: project-delivery-and-scope-governance
 one_screen: >-
-  In projects with immovable regulatory deadlines, handle scope changes through
-  a formal change control process.  Assess each new requirement’s impact on
-  timeline and scope. If the deadline cannot move, negotiate resources or
-  de-scope non-critical items rather than slipping the date.
+  Business acceptance is the authorised judgement that the delivered change is
+  suitable for business use against the approved requirements, available
+  evidence and disclosed limitations. UAT evidence informs that judgement, but a
+  collection of passed tests does not itself decide who accepts the changed
+  process or what residual risk is being taken.
 prerequisites:
-  - BA-09
+  - BA-13
   - BA-20
+  - BA-21
+  - DAT-22
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: Monday.com – formal change request process with impact assessment
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Scope changes are inevitable, but on a regulatory program the deadline is set by law. Every requested change must go through a structured change request process. The BA must document the change, analyze its impact on schedule and cost, and present to the Change Control Board. If adding new requirements, either find efficiency elsewhere or request additional resources (often hard to get). The key is *trade-offs*: for example, if a late rule change is issued, you might push some non-essential enhancements to the next phase. All approved changes and their rationales should be logged in a change control log.
+### Core mechanism
 
-No unapproved scope creep should occur: formal approval (by business, risk, audit) is required for anything beyond original scope. In practice, regulators expect that the project was baselined and any changes are traceable. A formal change control ensures auditors see an audit trail of decisions (who approved a change and why).
+Acceptance combines evidence with authority.
+
+| Acceptance dimension | Required question |
+| :--- | :--- |
+| Authority | Who is authorised to accept the changed business capability? |
+| Baseline | Which requirement and scope version is being accepted? |
+| Evidence | Which test, reconciliation, readiness and control evidence supports the decision? |
+| Exceptions | Which requirements are not fully evidenced or met? |
+| Limitations | Which workarounds, defects or temporary controls remain? |
+| Conditions | What must happen before or after release? |
+| Residual risk | Who owns each known exposure? |
+
+DAT owns UAT coverage and business evidence as a data control. BA does not restate test-case mechanics; BA ensures the acceptance authority knows what the evidence proves, what it does not prove, and which open items are being consciously accepted.
+
+A single business sign-off may be insufficient where different owners hold different mandates. The reporting owner may accept business output while operations accepts process readiness and a risk owner accepts a temporary control. Combine those decisions only if the governance model gives one role authority over all of them.
+
+Conditional acceptance must be actionable: condition, owner, due date and consequence if unmet.
+
+### Where it sits
+
+```text
+Upstream:   Approved requirements · UAT evidence · Defect decisions · Readiness evidence
+This:       Business acceptance · Conditions · Residual limitations
+Downstream: Go/no-go · Cutover · BAU ownership
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA assembles the acceptance decision view and links evidence to obligations |
+| Approves | Named business acceptance authority accepts within mandate |
+| Consumes | Release governance, operations and production owners rely on the acceptance |
+| Independently challenges | Risk, compliance or assurance challenge acceptance gaps within their mandates |
 
 ### Permanent rule
 
-Always process scope changes formally. Do not slip regulatory deadlines. If new items arise late, escalate them to executives and re-prioritize or delay less-critical work.
+Acceptance is a decision by an authorised owner, not a test status. Evidence supports acceptance; it does not replace accountability.
+
+### Never confuse [Sign-off] and [Acceptance]
+
+**Sign-off** - approves an earlier baseline, requirement or delivery artefact within a defined mandate.
+
+---
+
+**Acceptance** - authorises use of the delivered change against current evidence and known limitations.
 
 ### Permanent trap
 
-Allowing uncontrolled additions to scope (scope creep) because of “just this one change.” Each change must consider the fixed deadline. Avoid informal side agreements to implement extra features without updating the project plan.
+Asking business users to "sign UAT" without telling them whether they are confirming test execution, requirement coverage, operational readiness or production acceptance. Different commitments need different authority.
 
-### Never confuse
+### Jurisdiction variants
 
-**Scope Change** vs **Scope Creep**:
-*Scope Change* is a formally approved modification with documented impact analysis. *Scope Creep* is uncontrolled expansion of scope. A regulated project should only have intentional scope changes through proper channels.
-
-### No delta
-
-Change control discipline is standard in every banking regulation project. What varies by jurisdiction is the regulatory author, not how change is managed.
+No delta. Where an authority requires specific implementation evidence, that evidence becomes an input to acceptance but does not change the ownership discipline.
 
 <Recall
-  q="What steps should follow when a new requirement is requested mid-project?"
-  a="Submit a change request, document impact on timeline/budget, and get formal approval before proceeding."
+  q="Why are passed UAT tests not business acceptance?"
+  a="Tests show results against conditions; acceptance is an authorised judgement on the whole change and its limitations."
 />
 
 <Recall
-  q="Can the deadline be extended to accommodate scope?"
-  a="Usually not for regulatory dates. If something is added, scope must be reprioritized."
+  q="What makes conditional acceptance usable?"
+  a="Every condition has an action, owner, due date and consequence if missed."
+/>
+
+<Recall
+  q="Why might several acceptance authorities be needed?"
+  a="Business output, operations, controls and residual risk may sit under different mandates."
 />

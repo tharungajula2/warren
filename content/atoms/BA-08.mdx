@@ -1,67 +1,99 @@
 ---
 id: BA-08
-title: Requirements Traceability (Matrix)
-type: mechanism
+title: Conflicting Stakeholders and Requirement Negotiation
+type: procedure
 domain: business-analysis
 subdomain: ba-foundations-and-elicitation
 one_screen: >-
-  A traceability matrix links each requirement through design, code and
-  testing.  It ensures every requirement (especially regulatory ones) is
-  accounted for and verified.  This audit trail of requirements-to-tests is
-  vital for regulators and audits.
+  Bank stakeholders can disagree while all being locally rational: operations
+  wants speed, risk wants stronger controls, finance wants stable close, and
+  technology wants a feasible design. The BA does not "find the middle"; the BA
+  exposes the decision, evidence, consequences and authority so the conflict can
+  be resolved without hiding the trade-off.
 prerequisites:
+  - BA-03
   - BA-04
-  - BA-06
+  - BA-07
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Visure Solutions – “Traceability Matrix... traces and maps requirements to
-      project artifacts... gives a clear audit trail to demonstrate compliance”
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-A **Requirements Traceability Matrix (RTM)** is usually a table or tool output mapping each requirement to its related artifacts (design specifications, code modules, test cases, test results). The BA or project manager creates/maintains the RTM. It guarantees that each requirement was implemented and tested. In banking, this is critical: regulators or auditors will want proof that every regulation-driven requirement has been satisfied.
+### Core mechanism
 
-For example, if a requirement says “calculate capital ratio per Basel rules,” the RTM will show the design document section that implements it, the code module or report name, and the test cases that verify it.  At audit time, the RTM provides a single view showing “Basel Cap Ratio req ➔ System Design ➔ Code ➔ Test Passed”.
+Separate disagreements by type before negotiating them.
 
-Traceability enforces discipline: if a requirement lacks test coverage, the matrix shows it. Banks often use the RTM to prove compliance. A comprehensive RTM helps avoid scope leakage and missed requirements.
+| Conflict type | What is really disputed | BA response |
+| :--- | :--- | :--- |
+| Fact | What happens today or what evidence shows | Establish evidence |
+| Interpretation | What a rule or policy means | Obtain authoritative interpretation |
+| Objective | Which outcome matters more | Escalate to business authority |
+| Constraint | What is feasible by date or platform | Validate constraint and options |
+| Risk appetite | Which exposure may be accepted | Route to authorised risk owner |
+| Preference | Which option is more convenient | Decide against agreed criteria |
 
 ```text
-Requirement ID → Design Doc  → Code Module → Test Case → Status
-R1: Basel Cap. → Design Sec 2.1 → Mod_Capital → TC01, TC02 → All passed
+Positions -&gt; Underlying interests -&gt; Evidence -&gt; Options -&gt; Consequences -&gt; Authorised decision
 ```
+
+Do not translate disagreement into vague wording that lets each side believe it won. A requirement that says "timely processing with appropriate controls" may conceal an unresolved cutoff, approval rule or tolerance. Write the unresolved decision explicitly.
+
+Where possible, create options that preserve mandatory outcomes while varying discretionary features, sequencing or operating model. If no option satisfies all mandates, the conflict belongs in governance.
+
+### Where it sits
+
+```text
+Upstream:   Stakeholder mandates · SME evidence · Constraints
+This:       Conflict classification · Options · Negotiation
+Downstream: Decision log · Requirements · Scope · Escalation
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | BA frames conflict, criteria, options and consequences |
+| Approves | Named decision authority selects the option |
+| Consumes | All affected stakeholders and delivery teams consume the recorded outcome |
+| Independently challenges | Control functions challenge options that weaken controls or exceed tolerances |
 
 ### Permanent rule
 
-Maintain full end-to-end traceability of every requirement, especially regulatory ones. The RTM must be started early and updated continuously.  Each requirement should map to at least one test case that passes.
+Consensus is useful but authority is decisive. A material requirement is settled when the authorised owner decides, not when the meeting becomes quiet.
+
+### Never confuse [Consensus] and [Decision]
+
+**Consensus** - participants broadly agree with an outcome.
+
+---
+
+**Decision** - an authorised role commits the organisation to an outcome.
 
 ### Permanent trap
 
-Trying to build traceability after the fact or only partially tracing requirements. For example, failing to link a regulatory requirement to a specific test, then being unable to show auditors how it was verified.
+Writing compromise language to avoid escalation. Ambiguity moves the conflict downstream, where developers, testers or operators make the decision accidentally.
 
-### Never confuse
+### Jurisdiction variants
 
-**Requirements Traceability Matrix** vs **Test Plan**:
-The *Traceability Matrix* maps requirements to tests and design. A *Test Plan* outlines the overall testing approach and schedule. They are different documents: the RTM is evidence, the test plan is strategy.
-
-### No delta
-
-Banks in every jurisdiction must provide evidence of testing against requirements. The RTM concept is universal; differences lie only in which regulations’ requirements are in scope.
+No delta.
 
 <Recall
-  q="What does a traceability matrix do?"
-  a="It shows how each requirement links to design and test artifacts, ensuring nothing is missed."
+  q="Why classify a disagreement first?"
+  a="Facts need evidence, policy interpretations need authority, and risk trade-offs need an authorised owner."
 />
 
 <Recall
-  q="Why is a traceability matrix important in banking?"
-  a="It provides the audit trail to prove compliance — regulators look at it to verify each requirement is implemented and tested."
+  q="Why is meeting consensus weak evidence?"
+  a="Attendees may lack decision rights or accountability; material decisions must tie to an authorised role."
+/>
+
+<Recall
+  q="When should conflict escalate?"
+  a="When delegated authority cannot reconcile the mandates, or the choice changes material scope, control, risk or deadline commitments."
 />

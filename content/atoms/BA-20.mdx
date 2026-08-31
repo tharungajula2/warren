@@ -1,61 +1,96 @@
 ---
 id: BA-20
-title: Waterfall vs Agile in Banking
-type: concept
+title: Test Governance and Evidence Handoffs
+type: mechanism
 domain: business-analysis
 subdomain: project-delivery-and-scope-governance
 one_screen: >-
-  Waterfall (stage-gate) and Agile (iterative) are both used in banks. 
-  Regulatory changes often lean waterfall: fixed scope and deadlines drive
-  sequential phases (requirements→design→build→test). Agile is better for
-  evolving requirements, but must be adapted for compliance needs.
+  BA does not own the structure of test packs or the mechanics of UAT evidence;
+  those are data and testing controls. BA owns the change discipline around
+  testing: whether the requirement is ready to test, who supplies business
+  truth, whether evidence maps to the current requirement, and how gaps are
+  escalated before acceptance.
 prerequisites:
-  - BA-08
-  - BA-09
+  - BA-14
+  - BA-15
+  - BA-19
+  - DAT-21
+  - DAT-22
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
-sources:
-  - label: >-
-      Ramki Ravulapalli – “Banks deal with regulatory initiatives by setting up
-      Waterfall style... finalise requirements, then design, then build and
-      test”
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-import_source: 16_BA_business_analysis.md
+sources: []
+import_source: 11_BA_business_analysis.md
 ---
-Many banks use waterfall for compliance projects because regulators expect detailed plans and sign-offs. As one analyst notes, banks “generally set up regulatory projects in a sequential manner—finalize requirements, then design, then build, then test”. This ensures all regulatory criteria are identified and reviewed upfront. However, waterfall can struggle if requirements change mid-project (which happens frequently). Agile frameworks allow incremental development and frequent feedback, which can help manage changes. In reality, banks often use hybrids: they may scope and plan a regulatory change in detail (waterfall style) but develop components iteratively, or run multiple agile sprints for low-risk modules.
+### Core mechanism
 
-If using Agile, the BA still needs to document and get approval for requirements. Sprints will produce user stories, but the overall scope cannot drift beyond what’s compliant. Regulators may allow iterative delivery internally, but they expect evidence that all parts of the regulation were handled. For a fixed regulatory date, waterfall gating provides clear go/no-go points (though it risks corner-cutting under pressure). Agile’s visibility (working demos) can reassure stakeholders, but BAs must reconcile it with the formal change control needed.
+Testing needs governed handoffs, not only execution.
+
+| Handoff | BA question | Owner outside BA |
+| :--- | :--- | :--- |
+| Requirement to test design | Is the current requirement unambiguous and approved? | Test owner designs coverage |
+| Business rule to expected result | Who can state the correct business outcome? | SME or requirement owner supplies truth |
+| Data need to test data | What business scenario must be represented? | Data/test team prepares controlled data |
+| Test result to requirement | Does the evidence address the current approved requirement? | Test owner records result |
+| Evidence gap to governance | What acceptance decision is blocked by missing evidence? | Decision authority resolves or accepts consequence |
+
+DAT owns what a test strategy, test pack and UAT evidence set must contain for data-control purposes. BA carries a one-line reminder of those objects and focuses on readiness, ownership, traceability and decision consequence.
+
+A requirement is not test-ready because it has been signed off if key rules remain assumed. Conversely, testing can reveal a requirement ambiguity rather than a software defect. Classify that outcome correctly before raising a defect or changing scope.
+
+### Where it sits
+
+```text
+Upstream:   Approved requirements · Traceability · Delivery increments
+This:       Test entry · Business truth · Evidence handoffs · Escalation
+Downstream: Defect decisions · Business acceptance · Readiness
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Test owners produce test artefacts; BA produces requirement clarification and evidence linkage |
+| Approves | Test governance approves test readiness and completion; requirement owners approve business meaning |
+| Consumes | Business acceptance and release governance consume the evidence |
+| Independently challenges | Assurance or control functions challenge evidence sufficiency where mandated |
 
 ### Permanent rule
 
-Choose methodology based on project nature. Regulatory changes usually require upfront planning and documentation, so use waterfall or a controlled hybrid. If adopting Agile elements, ensure deliverables and approvals still meet compliance scrutiny.
+Test evidence is useful only against the current approved requirement. Passing obsolete requirements is not evidence that the bank is ready to accept the change.
+
+### Never confuse [Test evidence] and [Acceptance decision]
+
+**Test evidence** - demonstrates observed results against defined conditions.
+
+---
+
+**Acceptance decision** - an authorised business judgement that the delivered change is suitable for use given the evidence and known limitations.
 
 ### Permanent trap
 
-Attempting a pure agile approach for a fixed-scope regulatory program without adapting (e.g. without documentation or formal sign-off). Conversely, ignoring agile techniques entirely can lead to last-minute rework.
+Letting testers decide ambiguous business rules because execution needs an answer. That converts a test assumption into an undocumented requirement decision.
 
-### Never confuse
+### Jurisdiction variants
 
-**Waterfall** vs **Agile**:
-*Waterfall* is sequential, with completed phases (requirements→design→build→test). *Agile* is iterative and incremental, allowing requirements to evolve. They both aim to deliver systems, but differ in process: Agile values working software over docs, whereas Waterfall emphasizes planning and documentation. In banking, the line blurs, but they remain distinct approaches.
-
-### No delta
-
-The trade-offs of waterfall vs agile are the same worldwide. Choice depends on project uncertainty and constraints, not jurisdiction. However, strict regulators may influence banks to favour waterfall-like controls.
+No delta.
 
 <Recall
-  q="Why might a bank use waterfall for a regulatory project?"
-  a="Because of fixed deadlines and the need to lock down requirements and design for compliance."
+  q="What does BA own around a test pack?"
+  a="Requirement readiness, business truth, traceability and decision consequences; test teams own test-control mechanics."
 />
 
 <Recall
-  q="When is agile more suitable?"
-  a="When requirements are unclear or evolving, allowing flexibility. Regulatory projects with evolving rules can benefit from agile iterations."
+  q="What if testing exposes requirement ambiguity?"
+  a="Route it as a requirement question to the proper owner and assess downstream impact, rather than assuming a defect."
+/>
+
+<Recall
+  q="Why can passed tests still be insufficient?"
+  a="They may cover obsolete requirements, omit material obligations or leave unresolved evidence gaps."
 />
