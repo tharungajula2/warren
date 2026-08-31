@@ -1,23 +1,20 @@
 ---
 id: TLM-28
-title: 'India’s SLR, MSF, FALLCR and LCR interaction'
-type: reference
+title: FTP for behavioural and contingent products
+type: mechanism
 domain: treasury-alm
 subdomain: systemic-and-jurisdictions
 one_screen: >-
-  India’s distinctive feature is that specified government securities held
-  within the mandatory SLR can also receive LCR HQLA recognition through the MSF
-  and FALLCR carve-outs. SLR and LCR are different requirements, but RBI
-  deliberately permits overlap so qualifying statutory holdings can provide
-  recognised stress liquidity.
+  Behavioural products cannot be priced correctly from legal maturity alone. NMD
+  FTP needs a governed replication of stable balances and repricing behaviour;
+  prepayable assets need effective tenor that changes with expected exercise;
+  commitments need a charge for standby liquidity even before cash is drawn.
 prerequisites:
-  - TLM-13
-  - TLM-14
+  - TLM-10
+  - TLM-12
+  - TLM-27
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -26,100 +23,102 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, *Basel III Framework on Liquidity Standards – LCR*,
-      RBI/2022-23/25, DOR.LRG.REC.19/21.04.098/2022-23
-    url: 'https://www.rbi.org.in/scripts/BS_CircularIndexDisplay.aspx?Id=12291'
-    accessed: 28 August 2026
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10, December 2011.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off
-      Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0'
-    accessed: 28 August 2026
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Interagency Guidance on Funds Transfer Pricing Related to Funding and
+      Contingent Liquidity Risks*, SR 16-3, 1 March 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Annual Report 2025-26 — Amendments to Liquidity
-      Coverage Ratio Framework*
-    url: 'https://rbi.org.in/scripts/PublicationsView.aspx?Id=23638'
-    accessed: 28 August 2026
-  - label: >-
-      Prudential Regulation Authority, *The PRA’s approach to supervising
-      liquidity and funding risks*, SS24/15, January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-**Statutory Liquidity Ratio (SLR)** is an Indian statutory liquidity requirement based on Net Demand and Time Liabilities (NDTL). **LCR** is the Basel-style ratio of recognised HQLA to 30-day stressed net cash outflows. They answer different questions: SLR requires specified liquid-asset holdings; LCR tests short-term stressed liquidity adequacy.
+### Core mechanism
 
-The crucial interaction is HQLA recognition. RBI permits government securities held **above** mandatory SLR to qualify as Level 1 HQLA subject to the rules. It also permits government securities **within** mandatory SLR to be counted as Level 1 HQLA to the extent allowed under the **Marginal Standing Facility (MSF)** and the **Facility to Avail Liquidity for Liquidity Coverage Ratio (FALLCR)**.
+#### Non-maturity deposits
+NMD balance
+    ↓ segment
+Volatile component + stable component
+    ↓                         ↓
+short-tenor FTP         behavioural maturity ladder
+                              ↓
+                         blended FTP credit
 
-In April 2022, RBI noted that the MSF component had fallen to 2% of NDTL and increased FALLCR from 15% to 16% of NDTL. The total HQLA carve-out from mandatory SLR therefore became 18% of NDTL: 2% through MSF plus 16% through FALLCR.
+The stable balance model says how long funding remains. The beta/lag model says how quickly the customer rate moves. A long-lived balance with a high beta supplies stable funding but less interest-rate benefit than a similarly stable deposit whose administered rate is sticky.
 
-This does **not** mean “SLR equals LCR”. The denominator, purpose and operational rules remain separate. Nor does it mean every rupee of statutory holdings automatically enters LCR at full value. The asset must satisfy applicable HQLA conditions, and RBI’s April 2025 final amendments—effective 1 April 2026—require Level 1 government securities to be valued for LCR at no more than market value adjusted for applicable LAF/MSF haircuts.
+#### Prepayable assets
+Contractual amortisation
+    ↓
+Scenario-dependent prepayment
+    ↓
+Effective cash-flow tenor
+    ↓
+Matched FTP charge
 
-The practitioner’s mental model is overlap, not addition: the same qualifying security can help satisfy a statutory holding requirement and, within RBI’s defined accessibility framework, contribute to the LCR numerator.
+#### Undrawn commitments
+Committed amount
+    ↓
+Stress drawdown / collateral / liquidity need
+    ↓
+Standby HQLA or funding requirement
+    ↓
+Contingent-liquidity FTP charge
+
+### Where it sits
 
 ```text
-+----------------------+
-| Government securities|
-+----------------------+
-          |
-          v
-+----------------------+
-| Mandatory SLR stock  |
-+----------------------+
-     |             |
-     v             v
-+----------+ +-----------+
-| MSF      | | FALLCR    |
-| carve-out| | carve-out |
-| 2% NDTL  | |16% NDTL  |
-+----------+ +-----------+
-      \         /
-       v       v
-+----------------------+
-| Up to 18% NDTL      |
-| HQLA carve-out      |
-+----------------------+
-          |
-          v
-+----------------------+
-| Apply current LCR   |
-| eligibility/haircut |
-+----------------------+
+Upstream:   NMD behaviour · commitments · matched-maturity FTP
+This:       FTP where effective tenor or funding need is behavioural
+Downstream: Product pricing · model reconciliation · ALCO
+```
+
+### Formula
+
+```text
+NMD FTP credit = sum of (behavioural weight_j × FTP rate_j)
+
+Behavioural weight_j — proportion replicated to tenor j.
+
+FTP rate_j — transfer rate for tenor j.
+
+Longer stable weights can raise the credit, but only if the same behavioural position is genuinely transferred to treasury and governed consistently.
 ```
 
 ### Permanent rule
 
-SLR and LCR are separate requirements; RBI’s MSF/FALLCR rules determine how specified securities within mandatory SLR can also count as LCR HQLA.
+FTP, IRRBB and liquidity may use purpose-specific overlays, but their underlying behavioural story must reconcile; otherwise the bank can manufacture profit from contradictory assumptions.
 
-### Permanent trap
+### Never confuse [Stable balance] and [Sticky rate]
 
-Adding “18% SLR liquidity” to the HQLA buffer as though they were separate pools when the same securities have already been counted through the MSF/FALLCR overlap.
-
-### Never confuse
-
-**SLR** — India’s statutory liquid-asset holding requirement linked to NDTL.
+**Stable balance** — funding amount persists.
 
 ---
 
-**FALLCR** — the RBI facility permitting specified securities within mandatory SLR to be reckoned as HQLA for LCR purposes; it is not a second SLR requirement.
+**Sticky rate** — administered price responds slowly or partially to market rates. One does not imply the other.
+
+### Permanent trap
+
+Giving the deposit franchise a five-year transfer credit while treasury’s risk model assumes the same balances disappear in months. The inconsistency creates internal profit without economic value.
 
 ### Jurisdiction variants
 
-**IN** — RBI permits an 18% of NDTL HQLA carve-out from mandatory SLR through 2% MSF plus 16% FALLCR; government-security LCR valuation is subject to the revised haircut treatment effective 1 April 2026. [RBI/2022-23/25; RBI/2025-26/27]
-
-**UK** — no SLR/FALLCR construct equivalent to this Indian RBI mechanism; UK firms follow the PRA liquidity/HQLA framework. [PRA SS24/15]
-
-**EU** — no Indian-style statutory SLR/FALLCR overlay exists in the CRR LCR architecture; EU HQLA treatment follows CRR and Delegated Regulation (EU) 2015/61. [CRR Part Six]
-
-**US** — no Indian SLR/FALLCR construct applies; US HQLA and LCR requirements are governed through the US liquidity rules and tailoring framework. [OCC Bulletin 2019-52]
+No delta. Supervisory constraints on behavioural models can affect allowable assumptions, but the FTP logic is internal and universal.
 
 <Recall
-  q="Does RBI require banks simply to add SLR assets and LCR HQLA as two independent buffers?"
-  a="No. Specified government securities within mandatory SLR can overlap with LCR HQLA through MSF/FALLCR."
+  q="Why can an NMD not simply receive overnight FTP?"
+  a="A stable portion may supply multi-period funding value even though the legal withdrawal right is immediate."
 />
 
 <Recall
-  q="What is the post-2022 total MSF plus FALLCR carve-out?"
-  a="18% of NDTL: 2% MSF plus 16% FALLCR."
+  q="Why charge an undrawn line before the customer draws?"
+  a="The bank may need to maintain standby liquidity today for a cash demand that appears in stress."
 />

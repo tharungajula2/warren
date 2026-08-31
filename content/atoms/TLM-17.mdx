@@ -1,106 +1,136 @@
 ---
 id: TLM-17
-title: Survival horizon and liquidity stress testing
-type: procedure
+title: 'The liquidity inventory: cash, HQLA and monetisable assets'
+type: concept
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  Liquidity stress testing converts a scenario into daily cash needs and
-  monetisable resources; survival horizon is the time until the bank can no
-  longer meet obligations under that scenario without prohibited or
-  extraordinary assumptions. Unlike LCR, it is institution-specific and can span
-  multiple phases of stress.
+  A liquidity buffer is not the nominal value of “safe securities”; it is the
+  cash value of assets that are eligible, unencumbered, operationally available
+  and monetisable in the required currency under stress. HQLA is the regulatory
+  LCR subset; internal counterbalancing capacity may be broader but must reflect
+  real execution constraints.
 prerequisites:
-  - TLM-12
-  - TLM-13
   - TLM-16
+  - TLM-15
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Liquidity Coverage Ratio —
+      High-quality liquid assets*, Basel Framework LCR30, consolidated
+      framework.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Liquidity risk monitoring
-      metrics*, Basel Framework SRP50
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/50.htm'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Basel III Framework on Liquidity Standards –
+      Liquidity Coverage Ratio (LCR)*, RBI/2022-23/25,
+      DOR.LRG.REC.19/21.04.098/2022-23, 18 April 2022.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Basel III Framework on Liquidity Standards – LCR –
+      Review of haircuts on HQLA and review of composition and run-off rates on
+      certain categories of deposits*, RBI/2025-26/27,
+      DOR.LRG.REC.18/03.10.001/2025-26, 21 April 2025; effective 1 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Commission, *Commission Delegated Regulation (EU) 2015/61 with
+      regard to liquidity coverage requirement for Credit Institutions*, 10
+      October 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Office of the Comptroller of the Currency, Board of Governors of the
+      Federal Reserve System and Federal Deposit Insurance Corporation,
+      *Applicability Thresholds for Regulatory Capital and Liquidity
+      Requirements: Final Rule*, OCC Bulletin 2019-52, 1 November 2019;
+      effective 31 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026; effective 20 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-The exercise begins with **contractual cash flows** and then replaces normal assumptions with stressed behaviour. Retail deposits may run faster, wholesale funding may cease to roll, committed facilities may be drawn, secured-funding haircuts may rise, derivatives may require collateral, asset sales may incur discounts and some contingent funding sources may disappear.
+### Core mechanism
 
-Scenarios should separate **idiosyncratic stress**, where confidence in the bank deteriorates; **market-wide stress**, where funding and asset markets are disrupted generally; and a **combined stress**, where both happen together. Basel liquidity principles expressly call for severe stress scenarios and contingency funding plans linked to the resulting liquidity needs.
+| Gate | What must hold before value counts as usable liquidity |
+| :--- | :--- |
+| Availability | eligible · unencumbered · legally available |
+| Execution | positioned/transferable · settlement arrives in time |
+| Value | credible market/repo depth · manageable concentration · haircut applied |
+| Location | cash emerges in required currency and legal entity |
 
-For each day or time band, treasury calculates stressed inflows, outflows and available liquidity. Cumulative net outflow is compared with the liquidity buffer and other credible counterbalancing capacity. The **survival horizon** is the point at which available resources cease to cover cumulative needs under the assumptions.
+Fail any gate → nominal value overstates liquidity.
 
-The word “credible” matters. A funding source should not be counted merely because it exists in normal markets. Monetisation capacity must consider haircuts, settlement timing, operational readiness, legal-entity location and whether several actions compete for the same collateral. Management actions can be incorporated only where they are sufficiently executable within the stress horizon.
-
-Stress testing is therefore more informative than a single ratio. It shows the path to failure: which day, currency, entity or funding source causes the breach. It can also expose cliffs—a stable profile for ten days followed by a large wholesale maturity on day eleven.
+### Where it sits
 
 ```text
-+------------------+
-| Stress scenario  |
-+------------------+
-        |
-        v
-+------------------+
-| Stressed inflows |
-| and outflows     |
-+------------------+
-        |
-        v
-+------------------+
-| Counterbalancing |
-| liquidity        |
-+------------------+
-        |
-        v
-+------------------+
-| Cumulative cash  |
-| position by day  |
-+------------------+
-        |
-        v
-+------------------+
-| First shortfall  |
-| = survival limit |
-+------------------+
+Upstream:   Funding/market liquidity · structural FX
+This:       Inventory of usable liquidity resources
+Downstream: Liquidity ladder · LCR · stress · collateral
+```
+
+### Formula
+
+```text
+Usable liquidity value ≈ market value × (1 − applicable haircut)
+
+Market value ↑ → potential liquidity ↑, subject to eligibility and caps.
+
+Haircut ↑ → usable liquidity ↓.
 ```
 
 ### Permanent rule
 
-Survival horizon is scenario-dependent; there is no meaningful survival-horizon number without stated assumptions.
+Liquidity value is what can actually become spendable cash in the required place and currency within the horizon.
 
-### Permanent trap
+### Never confuse [HQLA] and [All monetisable assets]
 
-Counting an asset sale, secured borrowing and central-bank borrowing simultaneously when all three rely on the same collateral.
-
-### Never confuse
-
-**LCR horizon** — a standardised 30-calendar-day regulatory stress window.
+**HQLA** — assets meeting applicable LCR eligibility and composition rules.
 
 ---
 
-**Survival horizon** — the institution-specific time until liquidity resources are exhausted in a defined stress.
+**All monetisable assets** — broader assets that may generate cash but with larger haircuts, delays or uncertainty.
+
+### Permanent trap
+
+Counting the same security at full value in several funding channels. Once pledged, sold or committed, residual capacity changes.
 
 ### Jurisdiction variants
 
-**No delta.** Supervisory specifications vary, but institution-specific cash-flow stress and survival analysis are common liquidity-risk tools.
+#### IN (RBI)
+Specified government securities within mandatory SLR can count as Level 1 HQLA through MSF/FALLCR. **As at August 2026: 2% of NDTL through MSF + 16% through FALLCR = 18% total carve-out.** RBI’s revised government-security haircut treatment has been in force since **1 April 2026**.
+
+#### UK (PRA)
+UK firms follow PRA liquidity/LCR rules plus Pillar 2 liquidity assessment. No economic delta.
+
+#### EU
+EU HQLA eligibility and composition follow CRR and Commission Delegated Regulation (EU) 2015/61, as amended.
+
+#### US
+US LCR defines HQLA for covered firms; applicability is tailored rather than universal.
 
 <Recall
-  q="What determines survival horizon?"
-  a="The stressed timing of cash flows compared with credible available liquidity under a specified scenario."
+  q="Why is an eligible security not automatically usable liquidity?"
+  a="It may be encumbered, in the wrong currency/entity, operationally unavailable or haircut heavily."
 />
 
 <Recall
-  q="Why must management actions be constrained?"
-  a="Actions may be operationally impossible, too slow or mutually dependent on the same liquidity resources."
+  q="Does India’s 18% MSF/FALLCR figure create a second separate buffer?"
+  a="No — it permits specified securities within mandatory SLR to overlap with LCR HQLA."
 />

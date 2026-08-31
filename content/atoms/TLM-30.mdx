@@ -1,124 +1,112 @@
 ---
 id: TLM-30
-title: The integrated ALM decision cycle
-type: procedure
+title: 'One balance sheet, four regulatory implementations'
+type: delta
 domain: treasury-alm
 subdomain: systemic-and-jurisdictions
 one_screen: >-
-  ALM is the repeated process of converting the balance sheet into risk
-  measures, comparing them with appetite and constraints, changing pricing,
-  funding or hedges, and then measuring again. The decisive skill is
-  understanding that capital, liquidity, IRRBB and FTP are different views of
-  one evolving balance sheet rather than separate regulatory exercises.
+  Mechanics stay common across borders; deltas sit in scope, calibration,
+  reporting, supervisory process and dates. **As at August 2026, RBI’s 2025
+  IRRBB framework is issued but not yet effective.**
 prerequisites:
-  - TLM-05
-  - TLM-10
-  - TLM-14
+  - TLM-13
   - TLM-15
-  - TLM-17
+  - TLM-19
   - TLM-20
-  - TLM-26
-  - TLM-27
+  - TLM-21
+  - TLM-29
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Reserve Bank of India — *LCR review of HQLA haircuts and deposit run-off
+      rates*, RBI/2025-26/27, 21 April 2025, effective 1 April 2026; *LCR*,
+      RBI/2022-23/25, 18 April 2022; *NSFR*, RBI/2020-21/95, 5 February 2021,
+      effective 1 October 2021; *Commercial Banks – Forthcoming Instructions
+      Directions, 2025*, RBI/DoR/2025-26/173, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Interest rate risk in the banking
-      book*, Basel Framework SRP31
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
-    accessed: 28 August 2026
+      Prudential Regulation Authority — *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026, effective 20 January
+      2026; *Low Impact Amendments Consultation July 2026*, LIAC02/26, 29 July
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
+      European Banking Authority — *Guidelines on IRRBB and CSRBB*,
+      EBA/GL/2022/14, 20 October 2022, applicable 31 December 2023. European
+      Commission — *Delegated Regulation (EU) 2024/856* and *Delegated
+      Regulation (EU) 2024/857*, 1 December 2023, applicable 14 May 2024.
+      European Parliament and Council — *Regulation (EU) No 575/2013*,
+      consolidated 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Office of the Comptroller of the Currency, Board of Governors of the
+      Federal Reserve System and Federal Deposit Insurance Corporation —
+      *Applicability Thresholds for Regulatory Capital and Liquidity
+      Requirements: Final Rule*, OCC Bulletin 2019-52, 1 November 2019,
+      effective 31 December 2019; *Net Stable Funding Ratio: Final Rule*, 86 FR
+      9120, 11 February 2021, effective 1 July 2021. Board of Governors of the
+      Federal Reserve System — *Regulation YY*, 12 CFR 252.34–252.35, as amended
+      1 November 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-The cycle starts with positions and behavioural assumptions. Assets, liabilities and off-balance-sheet exposures are mapped by maturity, repricing date, currency, rate basis and option characteristics. Non-maturity deposits, prepayments and contingent draws require models because contractual schedules alone do not describe their economic behaviour.
+### Core mechanism
 
-The same balance sheet is then viewed through multiple lenses. **IRRBB** produces EVE and NII sensitivities. **Liquidity analysis** produces cash-flow gaps, LCR, NSFR, intraday requirements and internal stress survival. **Capital analysis** asks how losses and valuation changes interact with available loss-absorbing resources. **FTP** converts those system-level costs and benefits into business-level prices.
+| Dimension | IN — RBI | UK — PRA | EU — CRR/EBA | US — agencies |
+| :--- | :--- | :--- | :--- | :--- |
+| Liquidity | local LCR + SLR/MSF/FALLCR; NSFR | PRA LCR/NSFR + ILAAP | CRR LCR/NSFR + ILAAP/SREP | tailored LCR/NSFR + Regulation YY |
+| IRRBB | forthcoming; **not effective Aug 2026** | Pillar 2 | EBA GL + 2024 RTS + CSRBB | interagency guidance |
 
-Management then compares the outputs with risk appetite, regulatory minima, internal limits and strategic objectives. A breach or undesirable trend can be addressed through several levers: change product pricing, alter origination mix, attract a different funding tenor, issue wholesale funding, change liquid-asset holdings, hedge interest-rate exposure, reduce commitments or adjust business limits.
-
-The key is to analyse side effects. Raising long-term funding can improve structural liquidity but reduce margin. Selling liquid assets to repay funding can change LCR and market-risk capacity. Extending deposit behavioural tenor may improve one measure only if the assumption is genuinely supportable. A derivative hedge can reduce EVE while altering NII or basis risk.
-
-Basel’s liquidity principles require liquidity costs and risks to enter pricing, stress testing and contingency planning, while IRRBB standards require both economic-value and earnings views. Integrated ALM is the governance mechanism that forces these views to reconcile before action is taken.
+### Where it sits
 
 ```text
-+----------------------+
-| Positions + behaviour|
-+----------------------+
-          |
-          v
-+----------------------+
-| Measure              |
-| EVE / NII / liquidity|
-| capital / FTP        |
-+----------------------+
-          |
-          v
-+----------------------+
-| Compare with         |
-| appetite + limits    |
-+----------------------+
-          |
-          v
-+----------------------+
-| Choose action        |
-| price/fund/hedge/mix |
-+----------------------+
-          |
-          v
-+----------------------+
-| Recalculate effects  |
-+----------------------+
-          |
-          +-------------&gt; back to measure
+Upstream:   Full treasury/ALM control loop
+This:       Dated local implementation
+Downstream: Entity policy · reporting · supervision
 ```
 
 ### Permanent rule
 
-No ALM action should be judged on a single metric when it materially changes another part of the balance-sheet risk profile.
+Never import another jurisdiction’s acronym, threshold or effective date merely because the mechanism is common.
 
 ### Permanent trap
 
-Fixing the metric that appears on the current committee dashboard while shifting the underlying risk into another horizon, legal entity, basis, liquidity bucket or accounting presentation.
-
-### Never confuse
-
-**ALM optimisation** — choosing a balance-sheet configuration that jointly respects risk appetite, liquidity, capital, earnings and strategic constraints.
-
----
-
-**Single-metric optimisation** — improving one ratio or sensitivity without accounting for the risk transferred elsewhere.
+Relabelling a foreign policy with the local regulator. Scope, calibration, terminology and transition status can differ.
 
 ### Jurisdiction variants
 
-**No delta.** Regulatory constraints differ, but the integrated decision logic is universal: measure the same balance sheet from multiple risk perspectives, act, and remeasure.
+#### IN (RBI)
+LCR changes are in force from **1 April 2026**; the SLR HQLA carve-out remains **2% MSF + 16% FALLCR** as at August 2026. NSFR applies since **1 October 2021**. RBI’s 28 November 2025 Forthcoming Instructions say IRRBB’s effective date will be communicated separately: **not implemented as at August 2026**.
+
+#### UK (PRA)
+SS24/15 has applied since **20 January 2026**. July 2026 liquidity amendments are **proposals**, with consultation closing **11 September 2026** and proposed implementation **1 January 2027**.
+
+#### EU
+EBA/GL/2022/14 applies from **31 December 2023**. Delegated Regulations (EU) 2024/856 and 2024/857 apply from **14 May 2024**. LCR/NSFR remain within the CRR framework.
+
+#### US
+The 2019 category-tailoring framework remains the LCR scope architecture as at August 2026; NSFR applies since **1 July 2021**. Regulation YY supplies liquidity governance for covered firms.
 
 <Recall
-  q="Why should an ALM action be recalculated across EVE, NII and liquidity?"
-  a="The action can improve one measure while worsening another because all are generated by the same balance sheet."
+  q="Where do jurisdiction deltas mostly sit?"
+  a="Scope, calibration, reporting, supervision, terminology and effective dates — not the mechanics."
 />
 
 <Recall
-  q="What connects business pricing to ALM?"
-  a="FTP, which transmits funding and liquidity economics from the central balance sheet into product-level decisions."
+  q="What is RBI IRRBB status as at August 2026?"
+  a="Issued on 28 November 2025 as forthcoming instructions, but not effective; RBI says the implementation date will be communicated separately."
 />

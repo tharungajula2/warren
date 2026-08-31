@@ -1,113 +1,141 @@
 ---
 id: TLM-20
-title: What funds transfer pricing solves
-type: concept
+title: The Net Stable Funding Ratio
+type: mechanism
 domain: treasury-alm
 subdomain: funds-transfer-pricing
 one_screen: >-
-  FTP gives each business an internal price for the funding and liquidity
-  consequences it creates, separating customer-product performance from
-  centrally managed balance-sheet risk. Without FTP, business profitability can
-  look strongest precisely where the bank is taking the most hidden maturity and
-  liquidity risk.
+  NSFR asks whether the bank’s asset and off-balance-sheet profile is supported
+  by sufficiently stable funding over a one-year structural horizon. LCR
+  protects against a short stress using a liquid-asset stock; NSFR constrains
+  the funding structure that can create excessive dependence on short-term
+  refinancing.
 prerequisites:
-  - TLM-01
-  - TLM-03
-  - TLM-12
+  - TLM-19
+  - TLM-18
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Net Stable Funding Ratio —
+      Available and required stable funding*, Basel Framework NSF30,
+      consolidated framework.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net
+      Stable Funding Ratio*, RBI/2020-21/95, DOR.No.LRG.BC.40/21.04.098/2020-21,
+      5 February 2021; effective 1 October 2021.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      European Parliament and Council, *Regulation (EU) No 575/2013 on
+      prudential requirements for credit institutions and investment firms*,
+      Part Six, consolidated version current as at 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency, *Net
+      Stable Funding Ratio: Liquidity Risk Measurement Standards and Disclosure
+      Requirements — Final Rule*, 20 October 2020; effective 1 July 2021.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, *Modernising the liquidity policy
+      framework*, CP5/26, March 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Suppose a business originates a five-year fixed-rate loan at 8%. Calling 8% its revenue ignores the fact that somebody must fund the loan for five years or bear refinancing risk. Conversely, a stable deposit business creates funding value that should not disappear inside a central treasury result.
+### Core mechanism
 
-**Funds transfer pricing (FTP)** solves this allocation problem. Treasury or another central function applies an internal transfer charge to funding-consuming assets and an internal transfer credit to funding-providing liabilities. The business then sees a margin after recognising the balance-sheet resources it consumes or supplies.
+| Side | Meaning | More weight generally goes to |
+| :--- | :--- | :--- |
+| ASF | stability value of capital and liabilities | capital, longer-term liabilities, more stable deposits |
+| RSF | stable funding required by assets/OBS | longer-dated, less-liquid or encumbered assets |
 
-For a simplified loan:
+ASF and RSF are prudential weights, not a one-year cash-flow ladder: legal maturity alone does not determine either side.
 
-`Customer yield − FTP charge = business spread before other costs`
-
-For a deposit:
-
-`FTP credit − customer deposit rate = business funding spread before other costs`
-
-The transfer price is internal; it is not an external cash transaction with a customer. Its purpose is managerial economics and risk allocation.
-
-Good FTP transfers centrally manageable funding and liquidity risks away from the originating unit while leaving that unit accountable for the risks it controls, such as customer pricing or credit decisions. Treasury can then aggregate mismatches, hedge them centrally and observe the bank-wide funding position.
-
-The Federal Reserve’s interagency FTP guidance defines FTP as a central process allocating the costs and benefits associated with funding and contingent liquidity risks to business lines, products and activities. It states that FTP influences new-business volumes and terms and can align risk-taking incentives with the institution’s risk appetite. Basel liquidity principles similarly require allocation of liquidity costs, benefits and risks to significant business activities.
+### Flow
 
 ```text
-+------------------+
-| Customer business|
-+------------------+
-   | asset    | deposit
-   v          v
-+--------+ +--------+
-| FTP    | | FTP    |
-| charge | | credit |
-+--------+ +--------+
-     \       /
-      v     v
-+------------------+
-| Central treasury |
-+------------------+
-        |
-        v
-+------------------+
-| Aggregate funding|
-| + liquidity risk |
-+------------------+
+Liabilities + capital
+    ↓ ASF factors
+Available Stable Funding
+
+Assets + specified OBS exposures
+    ↓ RSF factors
+Required Stable Funding
+
+ASF / RSF
+    ↓
+Structural funding resilience
+```
+
+### Where it sits
+
+```text
+Upstream:   LCR · liquidity ladder
+This:       One-year stable-funding structure
+Downstream: Internal stress · funding strategy · FTP
+```
+
+### Formula
+
+```text
+NSFR = ASF / RSF
+
+ASF ↑ → NSFR ↑.
+
+RSF ↑ → NSFR ↓, all else equal.
 ```
 
 ### Permanent rule
 
-FTP should make the originating business economically accountable for the funding and liquidity consequences it creates.
+LCR and NSFR solve different horizons: immediate stress coverage versus structural funding stability.
 
-### Permanent trap
+### Never confuse [NSFR] and [One-year liquidity gap]
 
-Judging product profitability from customer rate minus direct operating cost while leaving funding tenor and contingent liquidity cost in treasury.
-
-### Never confuse
-
-**FTP rate** — an internal transfer price used to allocate funding/liquidity economics.
+**NSFR** — weighted stable funding available relative to weighted stable funding required.
 
 ---
 
-**Customer rate** — the contractual interest rate charged to or paid to the external customer.
+**One-year liquidity gap** — projected cash inflows minus outflows over time; it is a cash-flow construct.
+
+### Permanent trap
+
+Calling NSFR a “one-year LCR”. It does not compare a liquid buffer with one-year net cash outflows.
 
 ### Jurisdiction variants
 
-**No delta.** FTP methodology is an internal-management mechanism; supervisory expectations vary in detail, but its economic allocation problem is universal.
+#### IN (RBI)
+RBI NSFR requirements for covered commercial banks have been in force since **1 October 2021**.
+
+#### UK (PRA)
+UK firms are subject to the applicable PRA stable-funding requirements within the UK prudential framework. Current liquidity rules are in force as at August 2026; separate 2026 PRA proposals concerning parts of the liquidity framework have a proposed 1 January 2027 implementation date and are not treated here as current rules.
+
+#### EU
+CRR Part Six contains the binding NSFR architecture; current consolidated CRR remains the applicable EU legal framework as at August 2026.
+
+#### US
+The interagency NSFR final rule became effective **1 July 2021** and is tailored by firm category, with full and reduced calibrations aligned broadly to the LCR tailoring architecture.
 
 <Recall
-  q="Why does FTP exist?"
-  a="To allocate funding and liquidity costs or benefits to the businesses that create them."
+  q="Can a bank have strong LCR and weak NSFR?"
+  a="Yes — it can hold enough 30-day HQLA while relying excessively on short-term funding for longer-dated assets."
 />
 
 <Recall
-  q="What happens if a five-year loan is evaluated without a five-year funding cost?"
-  a="Its apparent profitability is overstated and maturity transformation becomes underpriced."
+  q="Why is NSFR not a contractual one-year matching test?"
+  a="ASF and RSF are weighted prudential measures rather than cash flows scheduled strictly by maturity."
 />

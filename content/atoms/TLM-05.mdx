@@ -1,20 +1,26 @@
 ---
 id: TLM-05
-title: Economic value of equity versus net interest income
+title: The banking-book perimeter
 type: concept
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  EVE asks how interest-rate shocks change the present value of the banking
-  book; NII asks how they change near-term interest earnings and expense.
-  Neither dominates the other because they expose different parts of the same
-  balance-sheet risk.
+  The banking-book/trading-book boundary determines which prudential risk
+  machinery applies; it is not shorthand for “held long term” versus “traded
+  often”. Interest-rate sensitivity exists economically on either side, but
+  structural ALM and IRRBB focus on banking-book positions while
+  foreign-exchange capital rules can reach currency positions across the bank.
 prerequisites:
-  - TLM-04
+  - TLM-01
+  - TLM-02
+  - CAP-01
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
@@ -22,78 +28,96 @@ reading_minutes: 3
 sources:
   - label: >-
       Basel Committee on Banking Supervision, *Interest rate risk in the banking
-      book*, Basel Framework SRP31
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
-    accessed: 28 August 2026
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
       Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*, Chapter V paragraphs 46–50
-      and 84–89
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
+      Forthcoming Instructions) Directions, 2025*, RBI/DoR/2025-26/173,
+      DoR.MRG.REC.92/00-00-003/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, *Guidelines on IRRBB and CSRBB*,
+      EBA/GL/2022/14, 20 October 2022; applicable from 31 December 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System and other federal banking
+      regulators, *Interagency Advisory on Interest Rate Risk*, SR 10-1, 11
+      January 2010.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-**Economic value of equity (EVE)** is an economic-value perspective. Conceptually, expected interest-rate-sensitive asset cash flows are discounted to present value, expected liability cash flows are deducted, and relevant off-balance-sheet cash flows are incorporated. **ΔEVE** compares that value under a rate shock with the base value. Long-dated fixed-rate exposures can create large EVE sensitivity even when next year’s accounting earnings move little.
+### Core mechanism
 
-**Net interest income (NII)** is an earnings measure: interest income minus interest expense over a defined projection horizon. **ΔNII** compares projected NII under a rate scenario with a base projection. It is particularly sensitive to which assets and liabilities reprice during that horizon, how deposit rates are assumed to respond and what replacement-business assumptions are used.
+| Question | Banking book | Trading book |
+| :--- | :--- | :--- |
+| Main structural lens here | IRRBB / ALM | trading market risk |
+| Typical positions | customer loans, deposits, term funding, structural securities | positions meeting trading-book assignment criteria |
+| Accounting category determines it? | No | No |
+| Rate movement changes value economically? | Yes | Yes |
 
-The distinction is easiest through a long fixed-rate asset funded by a short-reset liability. A rate rise can increase funding expense quickly, reducing NII. It also increases discount rates applied to the fixed asset’s distant cash flows, reducing its economic value. Both perspectives identify risk, but they measure different manifestations and time horizons.
+A fixed-rate bond does not become economically insensitive because it is placed in the banking book. The classification changes how risk is governed, measured and capitalised; it does not create the underlying sensitivity.
 
-Conversely, exposures can look benign in one metric. A position with favourable one-year NII after a rate rise can still lose substantial economic value beyond the projection horizon. Optimising exclusively to EVE can also produce an earnings profile management finds unacceptable. Basel therefore treats both economic-value and earnings perspectives as important to IRRBB management. RBI’s forthcoming directions require ΔEVE and ΔNII and specify, for disclosure, a run-off balance sheet for EVE and a rolling twelve-month constant-balance-sheet projection for NII.
-
-The practical discipline is not to reconcile the two metrics into one number. Their disagreement is information: it reveals which horizon, cash-flow assumption or exposure is driving the risk.
+### Flow
 
 ```text
-+------------------+
-| Rate scenario    |
-+------------------+
-      |       |
-      v       v
-+----------+ +----------+
-| Present- | | Earnings |
-| value    | | horizon  |
-| effect   | | effect   |
-+----------+ +----------+
-      |       |
-      v       v
-+----------+ +----------+
-| Delta    | | Delta    |
-| EVE      | | NII      |
-+----------+ +----------+
-      \       /
-       \     /
-        v   v
-+------------------+
-| Full IRRBB view  |
-+------------------+
+Instrument / position
+    ↓
+Prudential assignment rules
+    ↓
+Banking book ───────────── Trading book
+    ↓                          ↓
+IRRBB / structural ALM        market-risk framework
+```
+
+### Where it sits
+
+```text
+Upstream:   Treasury mandate · ALM map · capital architecture
+This:       Prudential perimeter for structural rate analysis
+Downstream: IRRBB sources · structural FX boundary · hedging
 ```
 
 ### Permanent rule
 
-EVE is a value perspective and NII is an earnings perspective; a sound IRRBB framework needs both.
+Prudential book classification selects the regulatory framework; it does not determine whether market prices or rates can affect economic value.
 
-### Permanent trap
+### Never confuse [Prudential book classification] and [Accounting classification]
 
-Choosing whichever metric shows the smaller risk and treating the other as redundant.
-
-### Never confuse
-
-**ΔEVE** — change in the present economic value of rate-sensitive banking-book cash flows under a shock.
+**Prudential book classification** — regulatory assignment for risk and capital purposes.
 
 ---
 
-**ΔNII** — change in projected net interest earnings over a specified horizon under a scenario.
+**Accounting classification** — financial-reporting recognition and measurement basis.
+
+### Permanent trap
+
+Using “banking book” as a synonym for “held to maturity”. A banking-book item can be sold, fair-valued or hedged; the concepts answer different questions.
 
 ### Jurisdiction variants
 
-**No delta.** The two-perspective mental model is common; regulators differ in prescribed shock, horizon and modelling details.
+#### IN (RBI)
+RBI’s prudential capital framework distinguishes trading and banking treatment, while its 2025 forthcoming IRRBB chapter applies to banking-book positions. The forthcoming IRRBB Directions are **not yet in force as at August 2026**; RBI/DoR/2025-26/173 states that the effective date will be communicated separately.
+
+#### UK (PRA)
+No mechanism delta. PRA supervision distinguishes traded market risk from IRRBB/non-trading-book risk; local rule scope and permissions govern assignment.
+
+#### EU
+No mechanism delta. CRR/CRD and EBA IRRBB rules distinguish non-trading-book IRRBB from trading market risk.
+
+#### US
+No mechanism delta. US capital and supervisory frameworks separately address market risk and structural interest-rate risk; institution-specific scope follows applicable US rules and guidance.
 
 <Recall
-  q="Why can EVE be large when one-year NII risk is small?"
-  a="EVE captures discounted cash flows beyond the near-term earnings horizon."
+  q="Does “banking book” mean an asset is held to maturity?"
+  a="No — prudential book assignment and accounting intent are different classifications."
 />
 
 <Recall
-  q="What does disagreement between EVE and NII tell an ALM practitioner?"
-  a="It reveals differences in horizon, cash-flow timing and behavioural or replacement assumptions."
+  q="What does the boundary change?"
+  a="The prudential framework used to measure, govern and, where applicable, capitalise the risk."
 />

@@ -1,105 +1,139 @@
 ---
 id: TLM-21
-title: Matched-maturity FTP
-type: mechanism
+title: Liquidity stress testing and survival horizon
+type: procedure
 domain: treasury-alm
 subdomain: funds-transfer-pricing
 one_screen: >-
-  Matched-maturity FTP prices each asset or liability against internal funding
-  of a comparable effective tenor rather than against one pooled average funding
-  rate. It removes the accidental subsidy that otherwise makes long-dated assets
-  look as cheap to fund as short-dated ones.
+  Internal liquidity stress testing replaces normal behavioural and market
+  assumptions with severe but plausible ones, then follows the bank’s cash
+  position through time. Survival horizon is the first point at which credible
+  usable resources no longer cover required cash; it is scenario-specific and is
+  not implied by LCR or NSFR.
 prerequisites:
+  - TLM-18
+  - TLM-19
   - TLM-20
+  - TLM-03
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026; effective 20 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Regulation YY —
+      Enhanced Prudential Standards for Bank Holding Companies and Foreign
+      Banking Organizations*, 12 CFR 252.34–252.35, as amended 1 November 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, *Guidelines on ICAAP and ILAAP information
+      collected for SREP purposes*, EBA/GL/2016/10, 3 November 2016; applicable
+      from 1 January 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Assume treasury can raise three-month funds at one internal cost and five-year funds at a higher cost. A flat FTP rate would charge both a three-month asset and a five-year asset the same amount, despite the longer asset creating substantially more refinancing and liquidity exposure.
+### Core mechanism
 
-Under **matched-maturity FTP**, the internal rate is selected from the FTP curve at the product’s effective funding tenor. A five-year bullet loan is therefore charged an internal five-year transfer rate; a shorter exposure receives a shorter rate. Amortising assets can be decomposed into cash-flow strips or assigned a blended rate reflecting their repayment profile.
+| Stress channel | Recalculate under the scenario |
+| :--- | :--- |
+| Funding behaviour | deposit runoff · wholesale rollover |
+| Contingent outflows | commitment draws · derivative/collateral calls |
+| Asset monetisation | sale/repo capacity after stressed haircuts and market depth |
+| Transferability | currency · legal entity · encumbrance · settlement timing |
+| Management actions | only actions executable inside the horizon |
 
-On the liability side, a stable source of funding receives a credit related to the tenor of funding value it provides. A long-term issued liability can therefore earn a higher transfer credit than unstable overnight funding if the term structure and liquidity economics warrant it.
+Run idiosyncratic, market-wide and combined scenarios; combined = institution pressure + market dysfunction.
 
-The critical word is **effective**. Contractual maturity is appropriate only when contractual cash flows reasonably represent economic behaviour. Prepayable loans require expected prepayment assumptions. Non-maturity deposits require behavioural tenor. Revolving commitments require contingent rather than simply funded treatment.
-
-The FSI’s liquidity transfer-pricing work identifies matched-maturity marginal funding costs as better practice and notes that amortising and non-maturing products require blended marginal rates. It specifically criticises one-average-rate approaches because they fail to penalise longer-term funding commitments or reward longer-term funding benefits.
-
-Matched-maturity FTP does not mean treasury actually issues an external bond matching every customer transaction. The transfer is a pricing construct: it allocates the economic cost of the tenor while treasury centrally optimises the actual funding portfolio.
+### Flow
 
 ```text
-+------------------+
-| Product cash     |
-| flows            |
-+------------------+
-        |
-        v
-+------------------+
-| Effective tenor  |
-+------------------+
-        |
-        v
-+------------------+
-| FTP curve point /|
-| blended strip    |
-+------------------+
-        |
-        v
-+------------------+
-| Transfer charge  |
-| or credit        |
-+------------------+
-        |
-        v
-+------------------+
-| Business margin  |
-+------------------+
+Stress narrative
+    ↓
+Behavioural + market assumptions worsen
+    ↓
+Stressed cash inflows/outflows
+    ↓
+Usable counterbalancing capacity
+    ↓
+Cumulative liquidity position
+    ↓
+First uncovered obligation = survival-horizon breach
+```
+
+### Where it sits
+
+```text
+Upstream:   Liquidity ladder · LCR · NSFR · behavioural model
+This:       Institution-specific stressed cash path
+Downstream: Intraday stress · collateral · CFP · funding strategy
+```
+
+### Formula
+
+```text
+Stressed liquidity position_t = opening liquidity + stressed inflows_t − stressed outflows_t + executable counterbalancing actions_t
+
+Survival horizon = first t where stressed liquidity position_t &lt; 0
+
+Outflows ↑ or haircuts ↑ → survival horizon shortens.
+
+Credible available liquidity ↑ → survival horizon extends.
 ```
 
 ### Permanent rule
 
-Funding cost should follow the effective tenor of the exposure, not the accounting period in which profitability is reported.
+There is no meaningful survival-horizon number without the scenario, currencies, assumptions and permitted management actions that generate it.
 
 ### Permanent trap
 
-Charging every asset the current overnight funding rate because treasury happens to be funding the bank overnight today.
-
-### Never confuse
-
-**Matched-maturity FTP** — internal pricing against funding economics of comparable effective tenor.
-
----
-
-**Matched external funding** — actually issuing external funding that mirrors an individual asset’s cash flows.
+Counting the same collateral in a repo, asset sale and central-bank facility at once, or assuming a management action can be executed instantly because it appears in the contingency plan.
 
 ### Jurisdiction variants
 
-**No delta.** Matched-maturity pricing is an economic allocation principle rather than a jurisdiction-specific formula.
+#### IN (RBI)
+RBI liquidity guidance requires regular stress testing across bank-specific and market-wide stresses, use of results in liquidity strategy and contingency planning, and allows risk tolerance to be expressed through minimum survival horizons.
+
+#### UK (PRA)
+PRA supervision combines firm ILAAP assessment with Pillar 2 liquidity. The PRA explicitly assesses liquidity risks beyond LCR, including cash-flow mismatch and intraday risk.
+
+#### EU
+No mechanism delta. CRD/CRR and supervisory review require internal liquidity adequacy and stress assessment beyond minimum ratios.
+
+#### US
+Regulation YY requires covered firms to conduct liquidity stress tests and maintain a liquidity buffer based on those tests; assumptions and methodologies are subject to governance and independent review.
 
 <Recall
-  q="Why is a flat FTP rate dangerous?"
-  a="It underprices long-tenor assets and overprices some short-tenor assets, distorting business incentives."
+  q="What creates a survival-horizon breach?"
+  a="The first point at which stressed obligations exceed credible usable resources under the specified scenario."
 />
 
 <Recall
-  q="Does matched-maturity FTP require one external borrowing for every loan?"
-  a="No. It is an internal pricing mechanism; actual funding remains centrally managed."
+  q="Why should behavioural assumptions worsen in liquidity stress?"
+  a="Depositor, borrower and market behaviour changes under stress; holding base-case behaviour constant understates the cash problem."
 />

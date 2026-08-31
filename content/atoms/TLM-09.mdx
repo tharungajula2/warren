@@ -1,21 +1,23 @@
 ---
 id: TLM-09
-title: 'Prepayment, early redemption and pipeline risk'
+title: 'Duration, present-value sensitivity and its limits'
 type: mechanism
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  Customer and business options make future banking-book cash flows conditional
-  rather than fixed. Prepayments shorten assets, early withdrawals shorten
-  liabilities, and pipeline commitments can create exposure before an instrument
-  has even reached the balance sheet.
+  Duration compresses a stream of cash flows into a first-order estimate of
+  value sensitivity to yield changes. It is useful EVE intuition, but a bank
+  balance sheet cannot be reduced safely to one duration gap when curves move
+  non-parallel, bases differ and behavioural cash flows change with the
+  scenario.
 prerequisites:
-  - TLM-04
-  - TLM-08
+  - TLM-07
+  - FND-08
+  - FND-09
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
@@ -23,81 +25,94 @@ reading_minutes: 3
 sources:
   - label: >-
       Basel Committee on Banking Supervision, *Application guidance on interest
-      rate risk in the banking book*, Basel Framework SRP98
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
-    accessed: 28 August 2026
-  - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*, Chapter V
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
+      rate risk in the banking book*, Basel Framework SRP98, updated 16 July
+      2024, effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A fixed-rate loan may permit a borrower to repay principal early. When market rates fall, refinancing becomes attractive, so prepayments may accelerate precisely when the bank would prefer to retain the higher-yielding asset. The bank receives cash back sooner and may have to reinvest it at lower rates. This is **prepayment risk**.
+### Core mechanism
 
-A term deposit can contain the opposite option. If market rates rise and early withdrawal is permitted at an acceptable penalty, the customer may redeem the old deposit and seek a higher rate. The bank loses funding earlier than the contractual maturity assumed in a static schedule. This is **early-redemption risk**.
+For a small yield move:
 
-**Pipeline risk** arises before expected business is fully booked. A bank can commit to lend at a fixed rate while the customer retains a period in which to draw or complete the transaction. If market rates change before funding or hedging is finalised, the economic value of the commitment changes. Forecast origination volumes can also fail to materialise, leaving anticipatory hedges larger than the eventual exposure.
+ΔP / P ≈ −Dmod × Δy
 
-These are forms of optionality because the amount or timing of future cash flows changes with rates or customer choices. Modelling requires an exercise function: how prepayment, withdrawal or drawdown probability changes under different scenarios. Purely historical averages are insufficient when current incentives differ from the historical sample.
+| Component | Meaning |
+| :--- | :--- |
+| P | current economic value |
+| Dmod | modified duration |
+| Δy | change in yield |
+| ΔP / P | approximate percentage value change |
 
-The practitioner must also distinguish **automatic options**, whose contractual payoff follows a formula, from **behavioural options**, whose exercise depends on human decisions and operational frictions. Basel and RBI IRRBB frameworks explicitly require embedded options and behavioural assumptions to be captured and stressed. RBI’s forthcoming framework addresses loan prepayments, term-deposit redemption and option-sensitive cash flows.
+If modified duration is 5, a +1 percentage-point yield move gives a first-order price change of approximately −5%, before convexity and other effects.
+
+At bank level, asset and liability value sensitivities can be compared, but four limits matter:
+
+1. **Local approximation** — large shocks need curvature/convexity effects.
+2. **Curve shape** — one duration number is closest to a parallel-shift intuition.
+3. **Behavioural cash flows** — prepayment and NMD assumptions make effective duration scenario-dependent.
+4. **Basis** — equal durations against different curves do not create a perfect hedge.
+
+### Flow
 
 ```text
-+------------------+
-| Rate movement    |
-+------------------+
-        |
-        v
-+------------------+
-| Customer/business|
-| incentive changes|
-+------------------+
-   |       |       |
-   v       v       v
-+------+ +------+ +------+
-|Loan  | |Deposit| |Pipe- |
-|prepay| |redeem | |line  |
-+------+ +------+ +------+
-   |       |       |
-   v       v       v
-+------------------+
-| Cash-flow timing |
-| changes          |
-+------------------+
-        |
-        v
-+------------------+
-| EVE / NII changes|
-+------------------+
+Expected cash flows
+    ↓
+Discount to present value
+    ↓
+Weight by timing
+    ↓
+Duration sensitivity
+    ↓
+Add curve + convexity + basis + options
+    ↓
+Full EVE scenario result
+```
+
+### Where it sits
+
+```text
+Upstream:   EVE perspective · PV foundations
+This:       First-order economic-value sensitivity
+Downstream: NMD duration · optionality · IRRBB stress and hedging
+```
+
+### Formula
+
+```text
+ΔP / P ≈ −Dmod × Δy
+
+Dmod ↑ → value becomes more sensitive to a given small yield move.
+
+|Δy| ↑ → linear approximation becomes less reliable as curvature matters more.
 ```
 
 ### Permanent rule
 
-Where exercise behaviour depends on interest rates, cash-flow timing must be scenario-dependent.
+Duration is a sensitivity approximation, not a complete IRRBB model.
 
-### Permanent trap
+### Never confuse [Duration] and [Maturity]
 
-Projecting prepayments or deposit redemptions from a single historical average and holding that rate constant across all interest-rate scenarios.
-
-### Never confuse
-
-**Prepayment risk** — an existing asset returns principal earlier than expected.
+**Duration** — present-value-weighted sensitivity to rates.
 
 ---
 
-**Pipeline risk** — expected or committed future business changes exposure before final booking or funding.
+**Maturity** — contractual or behavioural time until principal/cash flow returns; it does not directly measure price sensitivity.
+
+### Permanent trap
+
+Treating a small aggregate duration gap as proof the balance sheet is hedged. Curve twists, basis and behavioural options can leave large residual EVE risk.
 
 ### Jurisdiction variants
 
-**No delta.** Option exercise economics are universal; prescribed regulatory modelling parameters can vary.
+No delta. Duration mathematics is universal.
 
 <Recall
-  q="Why do falling rates often increase prepayment risk on fixed-rate assets?"
-  a="Borrowers gain an incentive to refinance and repay higher-rate debt early."
+  q="What does modified duration approximate?"
+  a="The percentage value change for a small yield change, before higher-order effects."
 />
 
 <Recall
-  q="What creates pipeline risk?"
-  a="A gap between commitment or hedging and the eventual timing, amount or completion of new business."
+  q="Why is duration fragile for NMDs and prepayable loans?"
+  a="Their effective cash-flow timing changes with behavioural assumptions and scenarios."
 />

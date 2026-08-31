@@ -1,110 +1,101 @@
 ---
 id: TLM-25
-title: How bad FTP distorts behaviour
+title: 'Funding strategy, maturity concentration and rollover risk'
 type: mechanism
 domain: treasury-alm
 subdomain: funds-transfer-pricing
 one_screen: >-
-  FTP is a behavioural control disguised as an internal price. Set it wrongly
-  and rational business lines will optimise the wrong objective—creating
-  excessive maturity transformation, unstable funding, cheap commitments or
-  artificial deposit growth while reported product profitability still looks
-  attractive.
+  Funding strategy determines which liabilities support the asset base before
+  stress begins: source, tenor, currency, instrument and counterparty
+  concentration all shape resilience. The central danger is rollover
+  dependence—assets remain outstanding while funding reaches maturity and must
+  be replaced at a price or in a market the bank does not control.
 prerequisites:
   - TLM-20
   - TLM-21
-  - TLM-23
   - TLM-24
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Consider a flat FTP curve. A five-year loan and a three-month loan receive the same funding charge. The longer asset earns more customer spread without paying for its extra funding commitment, so the business is incentivised to originate long-duration assets. The balance sheet accumulates structural mismatch even if every individual transaction passes its profitability hurdle.
+### Core mechanism
 
-Now suppose all deposits receive the same FTP credit. A highly rate-sensitive deposit that disappears quickly in stress can look as valuable as a stable operating balance. The business is then rewarded for volume rather than funding quality.
+| Funding dimension | More resilient pattern | Fragile pattern |
+| :--- | :--- | :--- |
+| Tenor | staggered maturities | maturity wall / cliff |
+| Source | diversified deposits and wholesale channels | one market or counterparty type |
+| Currency | natural or durable currency funding | repeated FX-swap rollover |
+| Secured/unsecured | multiple executable channels | dependence on one collateral class |
+| Investor base | broad and tested | concentrated / confidence-sensitive |
 
-A third distortion appears when undrawn commitments receive no contingent liquidity charge. The business earns fees while treasury bears the cost of liquidity needed if customers draw during stress. Rational behaviour is to create more commitments than the bank would choose if their liquidity cost were visible.
+Rollover risk mechanism:
 
-FTP can also distort behaviour through stale curves. If market funding costs rise sharply but FTP updates slowly, businesses continue originating assets at yesterday’s internal cost. The reported margin becomes an accounting artefact. Federal Reserve guidance specifically warns that failure to apply FTP effectively can misalign business incentives and lead to excessive on-balance-sheet asset growth or off-balance-sheet commitments because funding and contingent liquidity are mispriced.
+Long-lived asset
+    ↓ funded with
+Shorter liability
+    ↓
+Liability matures before asset returns cash
+    ↓
+Need to refinance
+    ↓
+Market unavailable or spread ↑
+    ↓
+Liquidity shortfall or margin compression
 
-FSI research similarly found that average-rate transfer pricing failed to penalise longer-term asset commitments, failed to reward longer-term funding and encouraged risky maturity transformation.
+A funding plan therefore looks forward: expected asset growth, deposit behaviour, debt maturities, planned issuance, collateral capacity and stress alternatives must fit together rather than be managed one maturity at a time.
 
-The diagnostic question is therefore not merely whether the FTP calculation is mathematically correct. It is: **what transaction would a rational business produce more of because of this price?** If that behaviour is inconsistent with the bank’s risk appetite, the FTP design is wrong or incomplete.
+### Where it sits
 
 ```text
-+------------------+
-| FTP signal       |
-+------------------+
-        |
-        v
-+------------------+
-| Product economics|
-| seen by business |
-+------------------+
-        |
-        v
-+------------------+
-| Origination /    |
-| deposit behaviour|
-+------------------+
-        |
-        v
-+------------------+
-| Balance-sheet    |
-| composition      |
-+------------------+
-        |
-        v
-+------------------+
-| Actual liquidity |
-| and funding risk |
-+------------------+
+Upstream:   NSFR · liquidity stress · CFP
+This:       Ex ante liability structure and refinancing dependence
+Downstream: FTP · ALCO · integrated jurisdictional constraints
 ```
 
 ### Permanent rule
 
-The quality of FTP should be judged partly by the behaviour it incentivises, not only by the elegance of its calculation.
+A funding source is not stable merely because it is available today; resilience depends on its tenor, concentration and behaviour when the bank or market is under stress.
 
-### Permanent trap
+### Never confuse [Funding concentration] and [Maturity concentration]
 
-Treating an FTP model as a finance-allocation exercise and failing to test which products become artificially profitable under its assumptions.
-
-### Never confuse
-
-**FTP accuracy** — economic faithfulness of the internal funding and liquidity signal.
+**Funding concentration** — excessive dependence on a source, counterparty, market, currency or instrument type.
 
 ---
 
-**Accounting allocation accuracy** — whether internal revenue and cost mechanically reconcile; reconciliation alone cannot prove incentives are correct.
+**Maturity concentration** — too much funding comes due in the same time window, even if raised from several sources.
+
+### Permanent trap
+
+Optimising current funding cost by repeatedly issuing at the shortest cheap tenor. The apparent margin gain can be payment for taking hidden refinancing risk.
 
 ### Jurisdiction variants
 
-**No delta.** Incentive distortion from mispricing is an economic mechanism independent of jurisdiction.
+No delta in mechanism. Supervisory limits, reporting and acceptable concentration metrics vary.
 
 <Recall
-  q="What happens if all tenors receive the same FTP charge?"
-  a="Longer-term assets become undercharged and businesses are incentivised to create excess maturity transformation."
+  q="What is rollover risk?"
+  a="The risk that funding matures before the asset and cannot be replaced on acceptable terms when needed."
 />
 
 <Recall
-  q="What is the most useful practical test of an FTP design?"
-  a="Ask what behaviour becomes rationally more attractive because of the transfer price."
+  q="Why can diversified counterparties still leave a maturity problem?"
+  a="Many different funders can all mature in the same week, creating one refinancing cliff."
 />

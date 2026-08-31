@@ -1,103 +1,97 @@
 ---
 id: TLM-06
-title: Duration and its limits
+title: Where IRRBB comes from
 type: mechanism
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  Duration compresses a stream of cash flows into an approximate first-order
-  sensitivity to interest rates. It is powerful for intuition and dangerous when
-  treated as a complete model of a bank balance sheet.
+  IRRBB is one structural risk with several mechanisms: repricing mismatch,
+  yield-curve shape, basis and optionality. Closing one mechanism does not close
+  the others, so an apparently “matched” banking book can still move materially
+  in earnings or economic value.
 prerequisites:
   - TLM-05
+  - TLM-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Application guidance on interest
-      rate risk in the banking book*, Basel Framework SRP98
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*, Chapter V
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98, updated 16 July
+      2024, effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-**Macaulay duration** is a present-value-weighted average time to cash flow. **Modified duration** converts that timing concept into approximate price sensitivity. For a small yield change, the familiar approximation is:
+### Core mechanism
 
-`ΔP / P ≈ −Dmod × Δy`
+| Mechanism | What is mismatched | Typical failure of intuition |
+| :--- | :--- | :--- |
+| Repricing / gap risk | reset timing | fixed asset funded by fast-reset liability |
+| Yield-curve risk | movement at different tenors | hedge works for parallel move but not twist |
+| Basis risk | different indices / bases | both sides float, but not one-for-one |
+| Optionality risk | cash-flow amount/timing changes with behaviour | prepayment or deposit behaviour changes in scenario |
 
-where `P` is value, `Dmod` is modified duration and `Δy` is the change in yield. A position with modified duration five therefore loses approximately 5% for a one-percentage-point rise in yield, before allowing for curvature.
+A three-month floating asset and three-month floating liability can have almost no timing gap and still have basis risk if one references a different benchmark or reprices with different conventions. A five-year fixed loan and five-year fixed funding can appear maturity matched but retain optionality if the borrower can prepay.
 
-A bank can compare the rate sensitivity of assets and liabilities using duration concepts. If the economic value and duration of assets are much greater than those of liabilities, rising rates can reduce asset value more than liability value and therefore reduce economic equity.
-
-The approximation has strict limits. First, duration is local: it is most accurate for small changes around the current curve. **Convexity** captures second-order curvature ignored by the linear approximation. Second, a single duration often assumes a parallel movement in rates, whereas yield curves twist. Third, cash flows may not be fixed. Loan prepayments, deposit withdrawals, early redemption and embedded caps or floors can change cash flows as rates change, making effective duration scenario-dependent. Fourth, instruments linked to different indices introduce basis risk that one duration number cannot capture.
-
-For banks, the most dangerous limitation is behavioural optionality. A non-maturity deposit does not possess an economically useful long duration merely because a modeller assigns one. The duration emerges from assumptions about stability and repricing behaviour, which must be validated and stressed. Basel and RBI IRRBB frameworks therefore require richer scenario analysis and behavioural assumptions rather than relying only on a duration-gap statistic.
+### Flow
 
 ```text
-+------------------+
-| Cash flows       |
-+------------------+
-        |
-        v
-+------------------+
-| Present-value    |
-| weighting        |
-+------------------+
-        |
-        v
-+------------------+
-| Duration         |
-+------------------+
-        |
-        v
-+------------------+
-| Approx. rate     |
-| sensitivity      |
-+------------------+
-        |
-        v
-+------------------+
-| Add curve, basis,|
-| options, convexity|
-+------------------+
+Banking-book positions
+    ↓
+Repricing + curve + basis + option exposures
+    ↓
+Scenario changes cash flows / discount rates / margins
+    ↓
+NII and economic value change
+```
+
+### Where it sits
+
+```text
+Upstream:   Banking-book perimeter · ALM map
+This:       Economic sources of IRRBB
+Downstream: NII/EVE dual view · gaps · duration · behavioural options · stress
 ```
 
 ### Permanent rule
 
-Duration is a sensitivity approximation, not a complete description of IRRBB.
+Matching reset dates removes only timing gap risk; curve, basis and option risks can remain.
 
-### Permanent trap
+### Never confuse [Repricing risk] and [Basis risk]
 
-Interpreting a low aggregate duration gap as proof that the balance sheet is hedged without testing non-parallel shocks and behavioural options.
-
-### Never confuse
-
-**Duration** — first-order sensitivity derived from the timing and present value of cash flows.
+**Repricing risk** — rates reset at different times.
 
 ---
 
-**Maturity** — the date principal is contractually or behaviourally expected to return; it does not directly measure value sensitivity.
+**Basis risk** — rates reset on different reference bases that do not move together, even when timing is similar.
+
+### Permanent trap
+
+Calling two floating-rate positions a hedge because they share the same tenor. Index, spread behaviour, floors, caps and reset conventions can leave material residual exposure.
 
 ### Jurisdiction variants
 
-**No delta.** Duration mathematics does not change across jurisdictions.
+No delta. Basel and major national frameworks recognise the same underlying mechanisms; prescribed shocks and measurement constraints vary.
 
 <Recall
-  q="What does modified duration approximate?"
-  a="The percentage change in value for a small change in yield."
+  q="What four mechanisms create IRRBB?"
+  a="Repricing, yield-curve, basis and optionality risk."
 />
 
 <Recall
-  q="Why is duration especially fragile for non-maturity deposits?"
-  a="Their effective cash-flow timing and repricing are behavioural rather than contractually fixed."
+  q="Why can a matched contractual maturity still leave IRRBB?"
+  a="Rates may reset differently and behavioural options can change the effective cash flows."
 />

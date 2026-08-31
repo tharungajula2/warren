@@ -1,110 +1,145 @@
 ---
 id: TLM-24
-title: FTP for non-maturity deposits
-type: mechanism
+title: Contingency funding and liquidity crisis execution
+type: procedure
 domain: treasury-alm
 subdomain: funds-transfer-pricing
 one_screen: >-
-  NMD FTP is difficult because the product has no contractual term from which to
-  select a transfer rate. The transfer credit must be built from a governed
-  behavioural replication of stable balances and repricing behaviour, not from
-  either overnight maturity or an arbitrary long-term tenor.
+  A contingency funding plan turns stress analysis into an executable crisis
+  playbook: triggers, decision rights, funding actions, collateral,
+  communication and escalation. “Sell securities” or “use the central bank” is
+  not a plan unless amount, currency, haircut, timing, documentation, ownership
+  and operational readiness are known.
 prerequisites:
-  - TLM-08
   - TLM-21
   - TLM-22
+  - TLM-23
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Application guidance on interest
-      rate risk in the banking book*, Basel Framework SRP98
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
-    accessed: 28 August 2026
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026; effective 20 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Regulation YY —
+      Enhanced Prudential Standards for Bank Holding Companies and Foreign
+      Banking Organizations*, 12 CFR 252.34(f), as amended 1 November 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, *Guidelines on ICAAP and ILAAP information
+      collected for SREP purposes*, EBA/GL/2016/10, 3 November 2016; applicable
+      from 1 January 2017.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A non-maturity deposit can be withdrawn quickly but may provide persistent aggregate funding. Crediting it purely at an overnight FTP rate ignores that stable funding value. Crediting the entire balance at a long-term rate assumes stability the bank may not actually possess.
+### Core mechanism
 
-A common conceptual approach begins by segmenting the portfolio and separating a **volatile** component from a **core or stable** component. The volatile portion receives short-tenor treatment. The stable portion is assigned to a ladder or **replicating portfolio** of maturities based on estimated balance persistence and repricing behaviour. Its FTP credit becomes a weighted blend of transfer rates across those maturities.
+| CFP layer | What must be executable |
+| :--- | :--- |
+| Detect + invoke | warnings · triggers · activation authority |
+| Act | prioritised funding/buffer/asset/business actions |
+| Quantify | amount · currency · haircut · tenor · settlement |
+| Operate | collateral · documentation · systems · counterparties |
+| Govern | communications · escalation · drills/testing |
 
-The model must distinguish balance stability from deposit-rate behaviour. A balance can remain in the bank for years but reprice rapidly when market rates change. Such a deposit supplies stable funding but less interest-rate benefit than one whose administered rate moves slowly. Combining the two assumptions into one “duration” obscures the economics.
-
-This methodology also links FTP to IRRBB. If the NMD desk is credited with a five-year funding value, treasury effectively accepts the corresponding behavioural position and must manage the resulting interest-rate exposure. The NMD model used for FTP, ALM and risk should therefore be reconcilable even when the exact purposes require different conservative overlays.
-
-FSI better-practice work states that non-maturing products require blended marginal transfer rates rather than a single average funding rate. The modelling challenge is not to find one objectively “correct” maturity; it is to establish a stable, validated and stressable representation of how the portfolio actually behaves.
+### Flow
 
 ```text
-+------------------+
-| NMD portfolio    |
-+------------------+
-        |
-        v
-+------------------+
-| Segment balances |
-+------------------+
-     |          |
-     v          v
-+---------+ +---------+
-| Volatile| | Stable  |
-| portion | | portion |
-+---------+ +---------+
-     |          |
-     v          v
-+---------+ +---------+
-|Short FTP| |Replicate|
-|tenor    | |maturity |
-+---------+ +---------+
-      \        /
-       v      v
-+------------------+
-| Blended FTP      |
-| credit           |
-+------------------+
+Early-warning signal
+    ↓
+Trigger / management judgement
+    ↓
+Crisis governance activated
+    ↓
+Prioritised funding and liquidity actions
+    ↓
+Execution + communication
+    ↓
+Recalculate survival horizon
+    ↓
+Escalate / de-escalate
 ```
+
+### Where it sits
+
+```text
+Upstream:   Liquidity stress · intraday · collateral capacity
+This:       Operational response to liquidity crisis
+Downstream: Funding strategy lessons · ALCO governance
+```
+
+### Ownership
+
+| Role | Owns |
+| :--- | :--- |
+| Treasury | liquidity execution and market actions |
+| Crisis/ALCO governance | invocation and prioritisation |
+| Operations | settlement and collateral movement |
+| Communications / senior management | stakeholder messaging |
+| Independent risk | challenge of assumptions and triggers |
+| Board / risk committee | plan oversight and approval as applicable |
 
 ### Permanent rule
 
-NMD transfer value must come from behavioural assumptions that are explicit, governed and consistent with the risk transferred to treasury.
+A contingency funding source counts only to the extent it can be accessed in the stress, currency, entity and time horizon in which it is claimed.
 
-### Permanent trap
+### Never confuse [Liquidity stress test] and [Contingency funding plan]
 
-Rewarding a deposit franchise with long-term FTP credit while ALM independently models the same deposits as short-lived, creating profits from inconsistent assumptions.
-
-### Never confuse
-
-**Behavioural tenor** — modelled persistence used to represent how long funding effectively remains.
+**Liquidity stress test** — quantifies the stressed cash problem.
 
 ---
 
-**Contractual tenor** — legal maturity; for an NMD it may provide almost no information about aggregate funding persistence.
+**Contingency funding plan** — specifies who does what, when and with which executable resources to address it.
+
+### Permanent trap
+
+Adding every theoretical funding source together without recognising that several actions may rely on the same collateral, market or decision window.
 
 ### Jurisdiction variants
 
-**No delta.** Regulatory behavioural constraints may influence model boundaries, but the FTP problem itself is universal.
+#### IN (RBI)
+RBI requires a formal CFP with responsibilities, escalation procedures and regular testing within its liquidity-risk framework.
+
+#### UK (PRA)
+CFP capability forms part of the broader PRA liquidity/ILAAP supervisory assessment.
+
+#### EU
+No mechanism delta. Contingency planning is part of internal liquidity adequacy and supervisory expectations.
+
+#### US
+Regulation YY expressly requires covered bank holding companies to maintain and update a CFP, define stress events and invocation circumstances, identify funding sources and test operational components.
 
 <Recall
-  q="Why can an NMD not simply receive overnight FTP?"
-  a="A stable portion may provide funding value well beyond the contractual withdrawal horizon."
+  q="What turns a list of funding sources into a CFP?"
+  a="Triggers, decision rights, quantified executable capacity, operations, communications and testing."
 />
 
 <Recall
-  q="Why must FTP and IRRBB assumptions be reconcilable?"
-  a="The transfer credit implicitly transfers a behavioural interest-rate and funding position to treasury."
+  q="Why must the survival horizon be recalculated after a CFP action?"
+  a="The action changes cash resources, encumbrance or future obligations and may create new constraints."
 />

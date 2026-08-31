@@ -1,16 +1,20 @@
 ---
 id: TLM-13
-title: High-quality liquid assets
-type: concept
+title: 'IRRBB scenarios, limits and supervisory outliers'
+type: procedure
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  HQLA are not simply “safe securities”; they are assets that the liquidity
-  framework recognises as capable of generating cash rapidly under stress with
-  little loss. Eligibility, operational availability, encumbrance, haircut and
-  portfolio composition all matter.
+  IRRBB stress asks how one balance sheet behaves under severe rate paths **and
+  changed behaviour**, then compares ΔNII and ΔEVE with appetite and supervisory
+  screens. A supervisory outlier threshold is a trigger for attention, not a
+  target and not proof that exposure just below it is safe.
 prerequisites:
+  - TLM-07
+  - TLM-10
+  - TLM-11
   - TLM-12
+  - CAP-01
 jurisdictions:
   - IN
   - UK
@@ -18,106 +22,101 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *High-quality liquid assets*,
-      Basel Framework LCR30
-    url: 'https://www.bis.org/basel_framework/chapter/LCR/30.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Recalibration of shocks in the
+      interest rate risk in the banking book standard*, BCBS d578, 16 July 2024;
+      effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Basel III Framework on Liquidity Standards – LCR*,
-      RBI/2022-23/25, DOR.LRG.REC.19/21.04.098/2022-23
-    url: 'https://www.rbi.org.in/scripts/BS_CircularIndexDisplay.aspx?Id=12291'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Forthcoming Instructions) Directions, 2025*, RBI/DoR/2025-26/173,
+      DoR.MRG.REC.92/00-00-003/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off
-      Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0'
-    accessed: 28 August 2026
+      European Commission, *Commission Delegated Regulation (EU) 2024/856*, 1
+      December 2023; applicable from 14 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Office of the Comptroller of the Currency, *Applicability Thresholds for
-      Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52
-    url: >-
-      https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html
-    accessed: 28 August 2026
+      Prudential Regulation Authority, *The PRA’s methodologies for setting
+      Pillar 2 capital*, SoP5/15, May 2026 update; effective 1 January 2027.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System and other federal banking
+      regulators, *Interagency Advisory on Interest Rate Risk*, SR 10-1, 11
+      January 2010.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-The Liquidity Coverage Ratio requires a stock of **high-quality liquid assets (HQLA)** against stressed net cash outflows. Basel describes HQLA as assets that can be easily and immediately converted into cash at little or no loss of value.
+### Core mechanism
 
-Three questions therefore precede the label. First, is the asset intrinsically liquid enough under the regulatory eligibility criteria? Second, is it **unencumbered**, meaning it is not already pledged or otherwise unavailable for monetisation? Third, can the bank operationally sell or repo it when needed? A qualifying security trapped in the wrong legal entity, pledged elsewhere or operationally inaccessible is not equivalent to immediately usable liquidity.
+| Element | What the test does |
+| :--- | :--- |
+| Six Basel EVE shocks | parallel up/down · steepener · flattener · short-rate up/down |
+| Calibration | recalibrated shock sizes effective **1 January 2026** |
+| Currency | apply currency-specific shocks to material currencies |
+| Behaviour | stress NMD beta/decay, prepayment, redemption, pipeline and drawdown where scenario-sensitive |
+| Internal scenarios | add bank-specific stresses beyond prescribed screens where exposures require |
 
-Basel distinguishes levels of HQLA because assets have different liquidity characteristics. Level 1 assets receive the most favourable treatment; lower HQLA levels are subject to haircuts and composition caps. A **haircut** reduces the amount of liquidity value recognised relative to the asset’s market value. Its purpose is to allow for value uncertainty and monetisation risk.
-
-HQLA management therefore involves more than holding a target nominal amount. Treasury monitors market value, regulatory value after haircuts, encumbrance, currency, legal-entity location, settlement access and concentration. The buffer must also remain usable in stress: a liquidity regime that requires assets never to decline would defeat the purpose of a stress buffer.
-
-India adds a distinctive interaction because qualifying government securities held for statutory liquidity purposes can, within RBI-defined MSF and FALLCR carve-outs, also be recognised as Level 1 HQLA for LCR purposes. The overlap is governed rather than automatic. RBI also revised valuation of Level 1 government securities for LCR purposes from 1 April 2026 to incorporate applicable LAF/MSF haircuts.
+### Flow
 
 ```text
-+------------------+
-| Asset            |
-+------------------+
-        |
-        v
-+------------------+
-| HQLA eligible?   |
-+------------------+
-        |
-        v
-+------------------+
-| Unencumbered and |
-| operationally    |
-| monetisable?     |
-+------------------+
-        |
-        v
-+------------------+
-| Apply haircut /  |
-| composition rules|
-+------------------+
-        |
-        v
-+------------------+
-| Recognised HQLA  |
-| value            |
-+------------------+
+Base positions + assumptions
+    ↓
+Rate-shape and behavioural stresses
+    ↓
+ΔNII + ΔEVE
+    ↓
+Internal limits + supervisory outlier tests
+    ↓
+Hedge / reprice / fund / reduce exposure / capital response
+```
+
+### Where it sits
+
+```text
+Upstream:   NII/EVE · NMDs · options · commitments
+This:       Scenario measurement and limit comparison
+Downstream: Hedging · ALCO · jurisdictional reporting
 ```
 
 ### Permanent rule
 
-HQLA status is based on stressed monetisability under regulatory conditions, not merely credit quality.
+A supervisory outlier threshold is a supervisory screen; internal risk appetite must be set from the bank’s own vulnerability and capacity.
 
 ### Permanent trap
 
-Using the market value of an eligible security as its LCR value without checking encumbrance, haircut and composition treatment.
-
-### Never confuse
-
-**HQLA** — assets meeting prudential liquidity eligibility and operational requirements.
-
----
-
-**Liquid asset in ordinary language** — any asset thought readily saleable; it may not qualify as regulatory HQLA.
+Managing to sit just inside a regulatory threshold while ignoring earnings risk, basis risk, behavioural stress or concentrations not captured by the prescribed screen.
 
 ### Jurisdiction variants
 
-**IN** — RBI allows specified government securities within mandatory SLR to count as Level 1 HQLA through MSF/FALLCR carve-outs; revised Level 1 government-security haircut treatment is effective from 1 April 2026. [RBI/2022-23/25; RBI/2025-26/27]
+#### IN (RBI)
+RBI’s 2025 forthcoming Directions specify ΔEVE and ΔNII measurement and a supervisory outlier architecture including a maximum ΔEVE decline threshold of 15% of Tier 1 capital. **As at August 2026 these requirements are not yet in force**; RBI/DoR/2025-26/173 says the effective date will be communicated separately.
 
-**UK** — the PRA liquidity regime applies UK prudential HQLA requirements; precise eligibility and haircut rules should be checked against the current PRA Rulebook. [PRA SS24/15]
+#### UK (PRA)
+IRRBB is supervised through the PRA’s Pillar 2 framework and firm-specific assessment. The PRA’s May 2026 revised Pillar 2 methodology is published but becomes effective **1 January 2027**; as at August 2026 that future version is not yet effective.
 
-**EU** — EU LCR requirements are contained in CRR Part Six and Delegated Regulation (EU) 2015/61. [CRR/Delegated Regulation 2015/61]
+#### EU
+Commission Delegated Regulation (EU) 2024/856 has applied since **14 May 2024** and specifies supervisory shock scenarios and common assumptions for EVE/NII outlier testing; the EVE architecture includes the 15% of Tier 1 threshold.
 
-**US** — US LCR rules use regulatory HQLA categories and apply the LCR according to the tailoring framework rather than uniformly to all banks. [OCC Bulletin 2019-52]
+#### US
+US interagency guidance requires robust IRR measurement, stress and governance but does not impose the EU/Basel supervisory-outlier package as a single universal domestic template for all banks.
 
 <Recall
-  q="Why is an unencumbered requirement important?"
-  a="An asset already pledged or otherwise unavailable cannot reliably provide new cash in stress."
+  q="Why are non-parallel shocks necessary?"
+  a="A hedge that works for a parallel move can fail when short and long rates move differently."
 />
 
 <Recall
-  q="Does every government security automatically count at full market value as HQLA?"
-  a="No; eligibility, availability and applicable haircut rules must be checked."
+  q="What does breaching an EVE outlier threshold mean?"
+  a="Supervisory attention is triggered; it is not a mechanical declaration of insolvency or the bank’s proper risk appetite."
 />

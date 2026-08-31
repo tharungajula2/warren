@@ -1,22 +1,21 @@
 ---
 id: TLM-14
-title: The Liquidity Coverage Ratio
+title: Hedging structural interest-rate risk
 type: mechanism
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  LCR asks whether a bank has enough recognised HQLA to withstand modelled net
-  cash outflows over a severe 30-calendar-day stress period. It is a
-  standardised short-horizon resilience test, not a forecast of the bank’s
-  actual next 30 days.
+  A hedge changes the bank’s exposure only if its sensitivity offsets the risk
+  being managed; matching derivative notional is not enough. ALM hedging
+  therefore aligns tenor, curve point, benchmark, optionality and scenario
+  behaviour, then checks both NII and EVE because reducing one can worsen the
+  other.
 prerequisites:
-  - TLM-12
   - TLM-13
+  - TLM-09
+  - FND-11
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -25,102 +24,83 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Calculation of the LCR*, Basel
-      Framework LCR20
-    url: 'https://www.bis.org/basel_framework/chapter/LCR/20.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *High-quality liquid assets*,
-      Basel Framework LCR30
-    url: 'https://www.bis.org/basel_framework/chapter/LCR/30.htm'
-    accessed: 28 August 2026
-  - label: >-
-      Reserve Bank of India, *LCR – Review of Haircuts on HQLA and Run-off
-      Rates*, RBI/2025-26/27, DOR.LRG.REC.18/03.10.001/2025-26
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12836&Mode=0'
-    accessed: 28 August 2026
-  - label: >-
-      Office of the Comptroller of the Currency, *Applicability Thresholds for
-      Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52
-    url: >-
-      https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98, updated 16 July
+      2024, effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Conceptually:
+### Core mechanism
 
-`LCR = stock of HQLA / total net cash outflows over 30 days`
+| Lever | Changes |
+| :--- | :--- |
+| Change asset mix | asset repricing and duration |
+| Change funding tenor/rate basis | liability repricing and duration |
+| Interest-rate swap | fixed/floating sensitivity without replacing principal funding |
+| Options / optional hedges | non-linear sensitivity where justified |
+| Securities repositioning | EVE, NII and liquidity simultaneously |
 
-Under the Basel architecture, the ratio is calibrated around a 30-calendar-day stress horizon and a 100% minimum in ordinary conditions. Net outflows are not simply contractual maturities. Liability and off-balance-sheet categories receive regulatory **run-off rates** representing assumed stressed withdrawals or draws, while eligible inflows receive prescribed recognition subject to limits.
+Stylised swap logic for a bank exposed to rising funding rates against fixed-rate assets:
 
-The question is therefore: after applying the rulebook’s stress assumptions, can the recognised liquid-asset stock cover the resulting net cash requirement for 30 days?
+Receive floating / pay fixed swap
+    ↓
+Floating receipts rise when reference rates rise
+    ↓
+Offsets part of rising floating funding cost
 
-A stable retail deposit may receive a lower assumed run-off than a less stable or certain wholesale balance because their stressed behaviour is assumed to differ. An undrawn commitment can generate a contingent outflow even though no cash is owed today. Contractual receivables can generate inflows, but the framework prevents a bank from treating unlimited expected inflows as a substitute for a liquidity buffer.
+But the hedge can leave basis risk if the funding index differs, and it can become imperfect if NMD beta or loan prepayment changes.
 
-LCR is intentionally stylised. An actual crisis can last longer than 30 days, run-off rates can exceed regulatory assumptions, liquidity can be trapped by currency or legal entity and intraday settlement demands can arise even when the end-of-day LCR looks comfortable. Basel explicitly treats intraday liquidity separately from the original LCR calibration.
-
-India’s current framework follows the Basel architecture but has local calibrations. RBI’s April 2025 amendments, effective 1 April 2026, add 2.5 percentage points to run-off rates for internet/mobile-enabled retail deposits, producing 7.5% for qualifying stable balances and 12.5% for less-stable balances, and revise government-security HQLA valuation.
+### Where it sits
 
 ```text
-+----------------------+
-| 30-day stress inputs |
-+----------------------+
-     |             |
-     v             v
-+-----------+ +-----------+
-| Stressed  | | Eligible  |
-| outflows  | | inflows   |
-+-----------+ +-----------+
-     \             /
-      v           v
-+----------------------+
-| Net cash outflows    |
-+----------------------+
-          ^
-          |
-+----------------------+
-| Recognised HQLA      |
-+----------------------+
-          |
-          v
-+----------------------+
-| LCR = HQLA / net     |
-| stressed outflows    |
-+----------------------+
+Upstream:   IRRBB scenarios · duration · behavioural options
+This:       Transfer or reshape structural rate sensitivity
+Downstream: Structural FX · liquidity/funding side effects · ALCO
 ```
+
+### Ownership
+
+| Role | Owns |
+| :--- | :--- |
+| ALM / treasury | hedge design and execution proposal |
+| Markets execution | transaction execution where separately organised |
+| ALCO / delegated authority | position and hedge decisions |
+| Independent risk | limit and effectiveness challenge |
+| Finance | accounting treatment and P&amp;L/OCI consequences |
 
 ### Permanent rule
 
-LCR measures standardised 30-day stressed liquidity coverage, not long-term funding stability.
+Hedge the sensitivity you own, not the notional you can see.
 
-### Permanent trap
+### Never confuse [Economic hedge] and [Hedge accounting]
 
-Reading a 110% LCR as “the bank can survive exactly 33 days”; the ratio is based on prescribed stress assumptions, not a linear survival clock.
-
-### Never confuse
-
-**LCR** — HQLA relative to standardised net stressed cash outflows over 30 days.
+**Economic hedge** — changes the bank’s financial risk under relevant scenarios.
 
 ---
 
-**Survival horizon** — the modelled time until available liquidity is exhausted under a particular internal stress scenario.
+**Hedge accounting** — governs accounting recognition for a qualifying relationship; it does not itself reduce risk.
+
+### Permanent trap
+
+Optimising the accounting presentation first and calling the resulting transaction a good hedge. The risk question is whether ΔNII/EVE and residual basis/option exposure improve.
 
 ### Jurisdiction variants
 
-**IN** — RBI uses the Basel LCR architecture with Indian calibrations and SLR/FALLCR interaction; revised digital-deposit run-offs and government-security haircut rules are effective 1 April 2026. [RBI/2025-26/27]
-
-**UK** — PRA-supervised firms operate under the UK liquidity framework, with LCR embedded alongside broader liquidity supervision and ILAAP. [PRA SS24/15]
-
-**EU** — LCR is a binding CRR liquidity requirement supplemented by Delegated Regulation (EU) 2015/61. [CRR Part Six, Title I]
-
-**US** — LCR applicability is category-based rather than universal: the tailoring framework applies full, reduced or no LCR depending on firm category and specified risk indicators. [OCC Bulletin 2019-52]
+No delta in economic mechanism. Accounting eligibility and prudential recognition differ by jurisdiction and reporting framework, so this atom does not re-teach those accounting rules.
 
 <Recall
-  q="What is LCR fundamentally testing?"
-  a="Whether recognised HQLA can cover modelled net stressed cash outflows over 30 calendar days."
+  q="Why is equal derivative notional not proof of a hedge?"
+  a="Sensitivity depends on tenor, benchmark, cash-flow profile and options, not notional alone."
 />
 
 <Recall
-  q="Why is LCR not a survival-horizon calculation?"
-  a="It uses a standardised 30-day regulatory stress rather than asking the first day a specific internal scenario exhausts liquidity."
+  q="Can a hedge improve EVE and worsen NII?"
+  a="Yes — hedging shifts the timing and basis of sensitivity, so both perspectives must be recalculated."
 />

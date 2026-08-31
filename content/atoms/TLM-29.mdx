@@ -1,27 +1,25 @@
 ---
 id: TLM-29
-title: Cross-jurisdiction liquidity and IRRBB architecture
-type: reference
+title: 'ALCO, risk appetite and the treasury control loop'
+type: procedure
 domain: treasury-alm
 subdomain: systemic-and-jurisdictions
 one_screen: >-
-  Basel supplies the common LCR, NSFR and IRRBB architecture, but national
-  implementation is not identical: India has the SLR/FALLCR overlay and a
-  forthcoming 2025 IRRBB regime; the UK embeds liquidity adequacy in PRA ILAAP
-  supervision; the EU combines CRR liquidity ratios with EBA IRRBB/CSRBB
-  standards; the US tailors LCR/NSFR by firm category and uses
-  liquidity-risk/CFP terminology rather than a universal ILAAP label.
+  ALCO is where the bank turns measurements into balance-sheet decisions: what
+  mismatch to retain, which limit to tighten, what to fund, hedge, reprice or
+  stop originating. FND-18/19 → risk appetite and policy hierarchy set the
+  boundaries; treasury produces the integrated view, while independent risk
+  challenges whether assumptions, limits and actions actually control the
+  exposure.
 prerequisites:
-  - TLM-10
-  - TLM-14
-  - TLM-15
-  - TLM-19
-  - TLM-28
+  - TLM-13
+  - TLM-21
+  - TLM-25
+  - TLM-26
+  - FND-18
+  - FND-19
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -30,98 +28,73 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework — LCR, NSFR and
-      IRRBB*
-    url: 'https://www.bis.org/basel_framework/'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Prudential Regulation Authority, *The PRA’s approach to supervising
-      liquidity and funding risks*, SS24/15, January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
-    accessed: 28 August 2026
-  - label: >-
-      European Banking Authority, *Guidelines on IRRBB and CSRBB*,
-      EBA/GL/2022/14
-    url: >-
-      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0
-    accessed: 28 August 2026
-  - label: >-
-      Office of the Comptroller of the Currency, *Applicability Thresholds for
-      Regulatory Capital and Liquidity Requirements*, Bulletin 2019-52
-    url: >-
-      https://www.occ.treas.gov/news-issuances/bulletins/2019/bulletin-2019-52.html
-    accessed: 28 August 2026
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-The common core makes cross-border work look deceptively uniform. LCR asks about 30-day stressed liquidity; NSFR asks about structural stable funding; IRRBB measures banking-book exposure from adverse interest-rate movements. Basel provides the international architecture, but each jurisdiction determines legal scope, local calibration and supervisory process.
+### Core mechanism
 
-India implements Basel-style LCR and NSFR but overlays LCR with the statutory SLR and MSF/FALLCR mechanism. NSFR has applied to covered commercial banks since 1 October 2021. RBI’s November 2025 consolidated “forthcoming” Directions place the new IRRBB framework in Pillar 2/ICAAP, require ΔEVE and ΔNII, prescribe stress testing and use the 15% Tier 1 EVE outlier threshold; as of the current Directions, the implementation date is still to be communicated.
+Positions + assumptions → integrated measures → limits/appetite → ALCO decision → execution → remeasurement → escalation.
 
-The UK’s PRA framework explicitly uses ILAAP as a formal supervisory construct. Current SS24/15, effective 20 January 2026, sets out the PRA’s approach to supervising liquidity and funding risks.
+### Ownership
 
-In the EU, LCR and NSFR sit in CRR Part Six, while EBA/GL/2022/14 addresses IRRBB and **credit spread risk in the banking book (CSRBB)**, with associated technical standards for supervisory outlier tests and standardised approaches.
+| Function | Produces | Approves / decides | Consumes | Challenges |
+| :--- | :--- | :--- | :--- | :--- |
+| Treasury / ALM | NII/EVE, funding, liquidity, FTP analysis | delegated execution | ALCO decisions | — |
+| ALCO | integrated balance-sheet view | funding/hedging/pricing actions within mandate | risk and finance analysis | assumptions through committee debate |
+| Business lines | forecasts and product behaviour | customer decisions within limits | FTP and limits | economics/feasibility |
+| Finance | earnings/accounting/capital effects | finance policies | treasury forecasts | reconciliation |
+| Independent risk | risk measures/limit monitoring as designed | risk limits within delegation | ALM data | models, assumptions, breaches |
+| Board / board risk committee | appetite-level reporting | risk appetite and key policies | escalation | senior-management effectiveness |
 
-The US adopts LCR and NSFR for covered large organisations through a tailoring framework rather than imposing identical requirements on every bank. US liquidity supervision also uses explicit liquidity-risk management and CFP requirements rather than adopting ILAAP as the universal regulatory label.
+### Where it sits
 
 ```text
-+--------------------+
-| Basel architecture |
-| LCR / NSFR / IRRBB |
-+--------------------+
-          |
-          v
-+--------------------+
-| National adoption  |
-+--------------------+
- |        |       |        |
- v        v       v        v
-+------+ +------+ +------+ +------+
-| IN   | | UK   | | EU   | | US   |
-+------+ +------+ +------+ +------+
-|SLR/ | |PRA   | |CRR + | |Tailor|
-|FALL | |ILAAP | |EBA   | |scope |
-|CR   | |      | |CSRBB | |CFP   |
-+------+ +------+ +------+ +------+
+Upstream:   All treasury/ALM measures · FND risk appetite
+This:       Governance converting measurement into action
+Downstream: Jurisdiction-specific requirements · recurring balance-sheet cycle
 ```
 
 ### Permanent rule
 
-Basel comparability does not eliminate jurisdiction-specific legal scope, calibration or supervisory vocabulary.
+No material ALM action should be approved on one favourable metric when it worsens another material constraint on the same balance sheet.
 
-### Permanent trap
+### Never confuse [First-line treasury control] and [Independent risk challenge]
 
-Copying an EU or UK policy into India or the US by changing the regulator name while leaving ILAAP terminology, scope assumptions and local liquidity mechanics unchanged.
-
-### Never confuse
-
-**Basel standard** — international prudential architecture produced by the Basel Committee.
+**First-line treasury control** — manages the bank’s structural positions within authority.
 
 ---
 
-**Local rule** — the legally applicable national or regional implementation, which may tailor scope, calibration and supervisory process.
+**Independent risk challenge** — sets/challenges risk standards and assesses whether first-line measurement and actions remain within appetite; it does not become the dealing owner.
+
+### Permanent trap
+
+Running ALCO as a dashboard meeting. A committee that reviews ratios without making or escalating balance-sheet decisions is observing risk, not governing it.
 
 ### Jurisdiction variants
 
-**IN** — LCR includes the SLR/MSF/FALLCR interaction; NSFR has applied since 1 October 2021; RBI’s November 2025 IRRBB Directions place the forthcoming regime in Pillar 2/ICAAP but state that implementation date will be communicated separately. [RBI/2020-21/95; RBI/2022-23/25; RBI 2025 Directions]
-
-**UK** — PRA SS24/15 explicitly supervises liquidity and funding through an ILAAP/LSREP architecture; the current version became effective 20 January 2026. [PRA SS24/15]
-
-**EU** — CRR Part Six contains LCR/NSFR requirements; EBA/GL/2022/14 addresses IRRBB and CSRBB with related technical standards. [CRR; EBA/GL/2022/14]
-
-**US** — LCR/NSFR requirements are tailored by firm risk category rather than uniform across banks; liquidity-risk management and contingency funding are formal supervisory constructs without a universal ILAAP label. [OCC Bulletin 2019-52; Federal Reserve NSFR final rule; 12 CFR 252.34]
+No delta in core governance logic. Legal committee mandates, board responsibilities and supervisory documentation differ.
 
 <Recall
-  q="Which jurisdiction in this pack has the distinctive SLR/FALLCR interaction?"
-  a="India."
+  q="What makes ALCO a control rather than a reporting forum?"
+  a="It converts integrated measures into accountable pricing, funding, hedging, limit or balance-sheet actions and remeasures the result."
 />
 
 <Recall
-  q="Which jurisdictions formally use ILAAP terminology?"
-  a="The UK and EU; it should not be assumed as the universal India or US label."
+  q="Why must an action be remeasured across metrics?"
+  a="One transaction can improve liquidity while hurting earnings, EVE, capital, currency concentration or funding cost."
 />

@@ -1,22 +1,24 @@
 ---
 id: TLM-26
-title: Why a solvent bank can fail
-type: mechanism
+title: What FTP transfers — and what bad FTP creates
+type: concept
 domain: treasury-alm
 subdomain: systemic-and-jurisdictions
 one_screen: >-
-  Solvency is about whether assets ultimately cover liabilities with adequate
-  capital; liquidity is about whether cash is available when payment is due. A
-  bank can possess positive economic net worth yet fail if it cannot monetise
-  assets or obtain funding fast enough to settle immediate obligations.
+  Funds transfer pricing gives business lines an internal price for the funding
+  and contingent-liquidity consequences they create, while treasury manages
+  those risks centrally. It is also a behavioural control: if FTP is flat, stale
+  or incomplete, rational businesses will originate the wrong assets, gather the
+  wrong deposits or sell commitments whose hidden balance-sheet cost sits in
+  treasury.
 prerequisites:
-  - TLM-12
-  - TLM-13
-  - TLM-17
+  - TLM-01
+  - TLM-03
+  - TLM-25
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
@@ -24,85 +26,88 @@ reading_minutes: 3
 sources:
   - label: >-
       Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *High-quality liquid assets*,
-      Basel Framework LCR30
-    url: 'https://www.bis.org/basel_framework/chapter/LCR/30.htm'
-    accessed: 28 August 2026
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Interagency Guidance on Funds Transfer Pricing Related to Funding and
+      Contingent Liquidity Risks*, SR 16-3, 1 March 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Imagine a bank with long-term assets worth 110 in an orderly valuation and liabilities of 100. Economically it has positive net worth of 10. If 30 of liabilities must be repaid today but the bank has only 10 of immediate cash, it needs to raise another 20.
+### Core mechanism
 
-If markets will lend against the assets, or the assets can be sold near their orderly value, the timing mismatch can be bridged. If funding markets close and buyers demand a severe fire-sale discount, the bank may be unable to raise 20 without crystallising large losses. A liquidity problem has now become a solvency problem.
+Simplified asset economics:
 
-Banks are particularly exposed because maturity transformation is central to intermediation: shorter or withdrawable funding supports assets that often return cash over longer horizons. Basel’s liquidity principles explicitly recognise this structural vulnerability.
+Customer yield − FTP charge = business spread before other costs
 
-Capital does not mechanically solve the timing problem. Equity absorbs losses and protects creditors from asset-value deterioration, but it is not a pile of settlement cash. A well-capitalised bank still needs immediately usable liquidity, collateral and access to payment systems. Conversely, holding liquidity does not cure true negative net worth: cash can postpone but not erase losses exceeding capital.
+Simplified deposit economics:
 
-This distinction explains why bank resilience requires both capital and liquidity frameworks. Capital absorbs unexpected losses; liquidity buffers and funding arrangements bridge cash-flow timing under stress. Treasury and ALM must therefore ask both questions whenever stress appears: **what is the value loss?** and **when is cash needed?**
+FTP credit − customer deposit rate = business funding spread before other costs
+
+| Bad FTP design | Business sees | Behaviour it encourages |
+| :--- | :--- | :--- |
+| One flat rate for all asset tenors | long loans appear cheap to fund | excess maturity transformation |
+| Same credit for all deposits | unstable deposits look as valuable as sticky funding | volume over quality |
+| No contingent charge | undrawn lines appear nearly free | excess commitments |
+| Stale curve | yesterday’s funding cost | mispriced new business |
+| Inconsistent behavioural assumptions | artificial transfer profit | model arbitrage between treasury and business |
+
+FTP centralises risk **execution**, not risk **economics**. Treasury can recognise natural offsets across businesses while the originating desk still sees the correct incremental cost or benefit in product pricing and performance.
+
+### Flow
 
 ```text
-+------------------+
-| Assets &gt; debts   |
-| economically     |
-+------------------+
-        |
-        v
-+------------------+
-| Cash due now     |
-+------------------+
-        |
-        v
-+------------------+
-| Immediate cash   |
-| sufficient?      |
-+------------------+
-   | yes       | no
-   v           v
-+------+ +----------------+
-|Pay   | | Borrow / sell  |
-+------+ +----------------+
-             |
-             v
-      +----------------+
-      | Market access? |
-      +----------------+
-        | yes    | no
-        v        v
-      +------+ +--------+
-      |Bridge| | Failure|
-      +------+ +--------+
+Business product decision
+    ↓
+Funding / contingent liquidity consequence
+    ↓
+FTP charge or credit
+    ↓
+Risk-adjusted product economics
+    ↓
+Origination / deposit / commitment behaviour
+    ↓
+Future balance-sheet composition
+```
+
+### Where it sits
+
+```text
+Upstream:   Funding strategy · behavioural balance sheet
+This:       Internal transfer of funding/liquidity economics and incentives
+Downstream: Matched-maturity curve · behavioural FTP · ALCO
 ```
 
 ### Permanent rule
 
-Positive net worth cannot substitute for cash at the moment an obligation must settle.
+The best test of FTP is not whether internal accounts reconcile; it is whether the price makes risk-taking incentives consistent with the bank’s funding and liquidity appetite.
 
-### Permanent trap
+### Never confuse [Risk-originating business] and [Risk-execution owner]
 
-Answering a liquidity challenge by pointing to a strong capital ratio without demonstrating how the next cash obligation will actually be paid.
-
-### Never confuse
-
-**Solvency** — adequacy of asset value and loss-absorbing resources relative to liabilities.
+**Risk-originating business** — creates the product decision that consumes or supplies funding/liquidity.
 
 ---
 
-**Liquidity** — ability to obtain cash in time to meet obligations without unacceptable loss.
+**Risk-execution owner** — treasury centrally funds, hedges or offsets the aggregate position.
+
+### Permanent trap
+
+Treating FTP as an after-the-fact profitability allocation. If the transfer price does not influence new-business pricing and volume, it is not performing its control function.
 
 ### Jurisdiction variants
 
-**No delta.** The distinction follows balance-sheet economics, not jurisdiction.
+No delta in economic mechanism. Some supervisors impose more explicit expectations on FTP governance for larger firms.
 
 <Recall
-  q="Why is equity not the same as liquidity?"
-  a="Equity absorbs losses but is not itself necessarily immediately spendable cash."
+  q="Why does FTP exist if treasury funds the bank centrally?"
+  a="Central funding captures portfolio offsets, while FTP returns the economic cost or benefit to the business decision that created it."
 />
 
 <Recall
-  q="How can a liquidity event destroy solvency?"
-  a="Forced funding or asset sales at severe discounts can crystallise losses that consume capital."
+  q="What happens when five-year assets receive overnight FTP?"
+  a="Long assets are underpriced internally, so businesses are rewarded for creating maturity transformation."
 />

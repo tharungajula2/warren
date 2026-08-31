@@ -1,96 +1,104 @@
 ---
 id: TLM-03
-title: The balance sheet as a set of mismatches
-type: mechanism
+title: 'The behavioural balance sheet: the model is the assumptions'
+type: concept
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  ALM begins by discarding accounting labels and viewing the balance sheet as
-  dated cash flows and repricing events. Risk appears because the timing, rate
-  basis, optionality and liquidity characteristics of assets do not line up
-  perfectly with those of liabilities.
+  For most treasury numbers, the contractual schedule is only an input; the
+  usable balance sheet is created by behavioural assumptions. Non-maturity
+  deposit persistence, deposit beta and lag, loan prepayment and committed-line
+  drawdown determine the cash flows that feed IRRBB, liquidity stress and FTP:
+  **the model is the assumption set**.
 prerequisites:
-  - TLM-01
+  - TLM-02
+  - FND-02
+  - FND-13
+  - FND-17
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Application guidance on interest
-      rate risk in the banking book*, Basel Framework SRP98
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A bank can be balanced in the accounting sense—assets equal liabilities plus equity—while remaining heavily mismatched economically. A long fixed-rate loan funded by a deposit that can reprice tomorrow creates no accounting imbalance, but it creates **repricing risk**. A five-year asset funded by three-month wholesale debt creates a **maturity mismatch** because the funding must be renewed before the asset returns cash.
+### Core mechanism
 
-Four clocks matter. **Contractual maturity** is when principal is legally due. **Behavioural maturity** is when cash is realistically expected to leave or return after considering customer behaviour. **Repricing maturity** is when the interest rate can next reset. **Liquidity horizon** asks when cash must actually be available under stress. These dates can differ sharply for the same product.
+| Product | Contract says | ALM must estimate | Measures affected |
+| :--- | :--- | :--- | :--- |
+| Non-maturity deposit | withdrawable on demand | stable balance, decay, beta, lag | NII, EVE, LCR/internal stress, FTP |
+| Fixed-rate loan with prepayment right | maturity date fixed | scenario-dependent prepayment | EVE, NII, funding tenor, FTP |
+| Term deposit with early break | stated maturity | redemption propensity | NII, EVE, liquidity |
+| Revolving credit line | undrawn until customer acts | stress drawdown | liquidity, funding, FTP |
+| Origination pipeline | expected future booking | fallout, draw timing, final notional | hedge requirement, NII/EVE |
 
-Consider a nominally overnight deposit. Contractually it can leave immediately. Behaviourally, a stable portion may remain for years. Its administered rate may reprice only gradually when market rates move. For liquidity stress, however, some portion may run off within days. One liability therefore occupies different positions in contractual, behavioural, interest-rate and liquidity analyses.
+Model governance therefore focuses on assumptions, not merely code. Each material behavioural assumption needs a definition, segmentation, evidence, owner, validation, sensitivity and stress treatment. A model can calculate perfectly and still be wrong because it gives contractual certainty to behaviour that disappears in stress.
 
-ALM maps these dimensions across the balance sheet, then asks which mismatches the institution wants to retain. Basel notes that maturity transformation—funding longer-term assets with shorter-term liabilities—is fundamental to banking and makes banks inherently exposed to liquidity risk. The same transformation also creates interest-rate sensitivity where repricing dates differ.
-
-This is why a single “average maturity” cannot describe a bank’s balance sheet. The useful representation is a collection of cash flows, reset dates and options allocated across time buckets, currencies and rate bases. From that map emerge gap analysis, duration, EVE, NII, liquidity stress testing and FTP.
+### Flow
 
 ```text
-+---------------------+
-| Balance-sheet item  |
-+---------------------+
-          |
-          v
-+---------------------+
-| Decompose cash flows|
-+---------------------+
-  |       |       |       |
-  v       v       v       v
-+------+ +------+ +------+ +------+
-|Legal | |Behav.| |Rate  | |Cash  |
-|matur.| |matur.| |reset | |need  |
-+------+ +------+ +------+ +------+
-  \       |       |       /
-   \      |       |      /
-    v     v       v     v
-+-------------------------+
-| ALM mismatch profile    |
-+-------------------------+
+Contractual position
+    ↓
+Behavioural assumption set
+    ↓
+Scenario-specific effective cash flows
+    ↓
+NII / EVE / liquidity / FTP outputs
+    ↓
+Validation + stress + management challenge
 ```
+
+### Where it sits
+
+```text
+Upstream:   ALM map · probability/variance/tail-risk foundations
+This:       Governed transformation from contract to expected behaviour
+Downstream: NMD model · prepayment · commitments · stress testing · FTP
+```
+
+### Ownership
+
+| Role | Produces / challenges |
+| :--- | :--- |
+| Treasury / ALM | economic specification and use |
+| Model development / analytics | estimation and implementation |
+| Business | product behaviour evidence |
+| Independent model risk / risk | validation and challenge |
+| ALCO / relevant committee | material assumptions and overlays within policy |
 
 ### Permanent rule
 
-Accounting balance does not imply economic matching.
+If a metric depends materially on customer behaviour, the assumption is part of the risk position, not a technical footnote.
 
 ### Permanent trap
 
-Using contractual maturity as the universal time axis for deposits, prepayable loans and other products whose behavioural or repricing dates differ.
-
-### Never confuse
-
-**Maturity mismatch** — assets and liabilities return principal on different effective horizons.
-
----
-
-**Repricing mismatch** — asset and liability interest rates reset at different times, even if principal maturities match.
+Calling a behavioural estimate “the maturity” as though it were contractual fact. It is a governed hypothesis that can fail precisely when stress changes customer incentives.
 
 ### Jurisdiction variants
 
-**No delta.** The cash-flow logic is economic; supervisors may prescribe different measurement assumptions, but the underlying mismatch does not change.
+No delta in mechanism. Regulatory frameworks differ in the constraints, reporting and prescribed parameters applied to behavioural models.
 
 <Recall
-  q="Can a perfectly balanced accounting balance sheet have large ALM risk?"
-  a="Yes; accounting equality says nothing about timing, repricing, optionality or liquidity."
+  q="What is the single most important modelling idea in this pack?"
+  a="For behavioural products, the model is the assumption set that converts legal cash flows into effective cash flows."
 />
 
 <Recall
-  q="Why can one deposit have several different “maturities”?"
-  a="Contractual withdrawal rights, expected behaviour, rate repricing and stressed liquidity treatment answer different questions."
+  q="Why must assumptions be scenario-dependent?"
+  a="Rates, competition and stress change customer incentives, so balances, prepayments and drawdowns need not behave as in the base case."
 />

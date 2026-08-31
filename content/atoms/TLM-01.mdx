@@ -1,20 +1,24 @@
 ---
 id: TLM-01
-title: What a bank treasury actually does
+title: Treasury as the balance-sheet control centre
 type: concept
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  Bank treasury is the balance-sheet control centre that converts customer
-  activity into managed funding, liquidity, interest-rate and market positions.
-  Unlike a corporate treasury, it does not merely finance an operating business:
-  maturity transformation and financial intermediation are themselves part of
-  the bank’s business model.
-prerequisites: []
+  Bank treasury is the control centre for the consequences created by the whole
+  balance sheet: funding, liquidity, structural interest-rate risk, structural
+  foreign exchange, collateral and the internal price of balance-sheet
+  resources. Customer businesses originate assets and liabilities; treasury
+  makes the combined result fundable, liquid and inside risk appetite.
+prerequisites:
+  - FND-01
+  - FND-02
+  - FND-04
+  - FND-05
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
@@ -22,81 +26,76 @@ reading_minutes: 3
 sources:
   - label: >-
       Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
-  - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Interagency Guidance on Funds Transfer Pricing Related to Funding and
+      Contingent Liquidity Risks*, SR 16-3, 1 March 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A corporate treasury primarily raises funding, manages surplus cash, foreign-exchange exposures and financing risks created by a non-financial operating business. A bank treasury sits inside a financial intermediary whose assets and liabilities are largely financial claims. Deposits arrive with one pattern of tenor, optionality and repricing; loans and securities create another. Treasury must make the aggregate balance sheet fundable and liquid while controlling the resulting risks.
+### Core mechanism
 
-The exact organisational split differs, but four functions recur. **Funding** obtains wholesale or internal funding and manages the liability structure. **Liquidity management** ensures cash obligations can be met, maintains liquid-asset buffers and manages collateral. **Asset-liability management (ALM)** measures structural mismatches in maturity and interest-rate repricing. **Markets activity** executes transactions used to invest liquidity, raise funding or hedge exposures. Basel liquidity principles explicitly require banks to identify the full range of liquidity risks, maintain a liquid-asset cushion and allocate liquidity costs, benefits and risks to significant business activities.
+FND-01 → balance sheet = assets funded by liabilities and equity.
 
-Treasury therefore sees customer businesses differently from the customer-facing unit. A lending desk sees an asset earning a customer rate. Treasury sees a stream of cash flows requiring funding for a particular behavioural tenor, consuming liquidity under stress and potentially creating interest-rate risk. A deposit business sees a product margin. Treasury sees a funding source whose stability, repricing behaviour and withdrawal risk must be estimated.
+| Customer activity creates | Treasury sees | Treasury response |
+| :--- | :--- | :--- |
+| Fixed-rate loan | funding need + repricing mismatch | fund, hedge, price through FTP |
+| Non-maturity deposit | uncertain tenor + administered-rate behaviour | model stability, beta and lag |
+| Undrawn facility | contingent cash need | hold/price standby liquidity |
+| Foreign-currency asset | currency funding + FX mismatch | fund/hedge by currency |
+| Securities portfolio | liquidity buffer + collateral + rate sensitivity | optimise usability and risk |
 
-Treasury normally acts within limits rather than trying to eliminate every mismatch. Some maturity transformation is intrinsic to banking. The objective is to decide which risks the bank is willing and able to retain, which should be transferred internally through funds transfer pricing, and which should be hedged or funded externally.
+Treasury does not try to remove every mismatch. Banking earns partly by transforming maturity and liquidity; the control problem is deciding which mismatches are intended, priced and supportable, and which must be transferred or hedged.
+
+### Where it sits
 
 ```text
-+------------------+
-| Customer assets  |
-| loans, securities|
-+------------------+
-         |
-         v
-+------------------+
-| Bank treasury /  |
-| ALM centre       |
-+------------------+
-   |      |      |
-   v      v      v
-+------+ +------+ +------+
-|Fund- | |Liquid| |IRR / |
-|ing   | |ity   | |hedge |
-+------+ +------+ +------+
-         ^
-         |
-+------------------+
-| Customer funding |
-| deposits, debt   |
-+------------------+
+Upstream:   FND-01 balance sheet · FND-04 earnings engine · FND-05 capital/liquidity/solvency
+This:       Central balance-sheet risk and resource management
+Downstream: Behavioural ALM map · IRRBB · liquidity · funding · FTP · ALCO
 ```
+
+### Ownership
+
+| Role | Owns |
+| :--- | :--- |
+| Business lines | customer pricing and origination within limits |
+| Treasury / ALM | aggregate funding, liquidity and structural positions |
+| ALCO | balance-sheet risk decisions and limits within delegated authority |
+| Independent risk | challenge, limit framework and independent monitoring |
+| Board / board risk committee | risk appetite and ultimate oversight |
 
 ### Permanent rule
 
-A bank treasury manages the consequences of the whole balance sheet, not merely a portfolio of securities.
+Treasury manages the consequences of the whole balance sheet, not merely a securities portfolio or a dealing desk.
 
-### Permanent trap
+### Never confuse [Bank treasury] and [Corporate treasury]
 
-Treating treasury profit as the objective and forgetting that treasury is also the bank’s central allocator and controller of funding and liquidity risk.
-
-### Never confuse
-
-**Bank treasury** — the function managing structural funding, liquidity, balance-sheet risk and related market execution.
+**Bank treasury** — manages structural risks created by financial intermediation itself.
 
 ---
 
-**Corporate treasury** — the function financing and managing financial risks of a primarily non-financial operating business.
+**Corporate treasury** — finances and manages financial risks of a primarily non-financial operating business.
+
+### Permanent trap
+
+Judging treasury only by its own profit. A central treasury can maximise its desk result while mispricing funding or allowing business lines to create risks that damage the bank.
 
 ### Jurisdiction variants
 
-**No delta.** Organisational charts vary, but the economic role arises from banking intermediation rather than jurisdiction-specific mathematics.
-
-<Recall
-  q="Why is bank treasury more central to the business model than corporate treasury?"
-  a="Because the bank’s core assets and liabilities themselves create funding, liquidity and repricing risks that treasury must transform and control."
-/>
+No delta. Organisational charts differ, but the economic control problem comes from banking intermediation.
 
 <Recall
   q="What does treasury see when a business originates a loan?"
-  a="A cash-flow stream that requires funding, consumes liquidity and may create interest-rate risk."
+  a="A customer asset plus funding, liquidity, repricing and possibly currency consequences that must be centrally managed."
+/>
+
+<Recall
+  q="Why does treasury not eliminate every maturity mismatch?"
+  a="Some maturity transformation is intrinsic to banking; treasury decides which transformation is intentional, priced and supportable."
 />

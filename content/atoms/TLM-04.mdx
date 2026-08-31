@@ -1,95 +1,111 @@
 ---
 id: TLM-04
-title: Where IRRBB comes from
+title: How a solvent bank runs out of cash
 type: mechanism
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  IRRBB is not one risk but four interacting mechanisms: repricing gap,
-  yield-curve shape, basis and optionality. A balance sheet can appear matched
-  against one mechanism and remain materially exposed to another.
+  FND-05 → solvency asks whether value and loss-absorbing resources cover
+  obligations; liquidity asks whether cash is available when payment is due. A
+  bank can be economically solvent and still fail because valuable assets cannot
+  be converted into the required cash, currency or settlement balance fast
+  enough without unacceptable loss.
 prerequisites:
+  - FND-05
+  - TLM-02
   - TLM-03
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Interest rate risk in the banking
-      book*, Basel Framework SRP31
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
-    accessed: 28 August 2026
-  - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*, Chapter V
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-**Repricing risk** arises when assets and liabilities reset at different times. A fixed-rate asset funded by a frequently repricing liability is the simplest example. **Yield-curve risk** arises because rates at different maturities do not necessarily move in parallel: the short end can rise while long rates barely move, or the curve can steepen, flatten or invert.
+### Core mechanism
 
-**Basis risk** appears where two rates have similar tenor but reference different pricing indices or otherwise move imperfectly together. A floating-rate asset and floating-rate liability therefore do not constitute a perfect hedge merely because both reset every three months. RBI’s forthcoming framework defines basis risk as the effect of changes in rates for instruments of similar tenor priced from different interest-rate indices.
+Suppose orderly asset value = 110 and liabilities = 100. Economic net worth is positive 10.
 
-**Optionality risk** comes from rights that change cash-flow timing when rates change. Borrowers may prepay fixed-rate loans; depositors may redeem term deposits; customers may leave non-maturity deposits in place or withdraw them; contractual caps and floors alter instrument sensitivity. Options can be explicit in contracts or behavioural in customer actions. Their defining feature is non-linearity: the cash-flow profile itself changes with the rate scenario.
+But if 30 must settle today and immediately available cash is 10:
 
-These mechanisms can offset or reinforce one another. A bank may close its simple repricing gap with a derivative but retain basis risk if the hedge references a different index. It may match contractual maturities yet remain exposed because customers prepay assets when rates fall. A parallel-rate hedge can still lose under a curve twist.
+Cash shortfall = cash due now − immediately available cash
 
-Basel’s IRRBB framework therefore expects identification of gap, basis and option risks and uses multiple standardised shock shapes rather than a single parallel rate shock. RBI’s forthcoming framework likewise requires scenarios capturing parallel and non-parallel gap risks and consideration of basis and embedded-option behaviour.
+Cash shortfall = 30 − 10 = 20
+
+The bank must bridge 20 through borrowing, collateralised funding, asset sale, incoming cash or another executable source.
+
+### Flow
 
 ```text
-+------------------+
-| Banking book     |
-+------------------+
-        |
-        v
-+------------------+
-| IRRBB sources    |
-+------------------+
- |       |       |       |
- v       v       v       v
-+------+ +------+ +------+ +------+
-|Re-   | |Curve | |Basis | |Option|
-|price | |shape | |risk  | |ality |
-+------+ +------+ +------+ +------+
-        \    |    /
-         \   |   /
-          v  v  v
-+------------------+
-| EVE and NII risk |
-+------------------+
+Payment obligation due
+    ↓
+Usable cash insufficient
+    ↓
+Borrow / repo / sell / transfer liquidity
+    ↓
+Market or operational access available?
+    ├─ Yes → payment settles
+    └─ No  → missed payment / resolution risk
+                 ↓
+          forced-sale losses + confidence loss
+                 ↓
+          liquidity stress can become solvency stress
+```
+
+### Where it sits
+
+```text
+Upstream:   FND-05 solvency/liquidity distinction · ALM map
+This:       Cash-timing failure mechanism
+Downstream: Funding liquidity · HQLA · stress testing · CFP
+```
+
+### Formula
+
+```text
+Cash shortfall_t = required cash outflows_t − usable cash inflows/resources_t
+
+Cash shortfall_t — amount that must be funded by time t.
+
+Required cash outflows_t ↑ → liquidity need ↑.
+
+Usable resources_t ↓ → liquidity need ↑.
 ```
 
 ### Permanent rule
 
-Matching reset dates eliminates only part of IRRBB; basis, curve and option risks can remain.
+Positive net worth cannot substitute for cash at the moment an obligation must settle.
 
-### Permanent trap
+### Never confuse [Capital] and [Liquidity]
 
-Declaring a floating-rate asset “hedged” because its funding is also floating-rate without checking whether the indices, reset conventions and embedded options match.
-
-### Never confuse
-
-**Repricing risk** — sensitivity created by different reset timing.
+**Capital** — loss-absorbing resources protecting against value losses; see FND-05 and CAP.
 
 ---
 
-**Basis risk** — sensitivity created by imperfect co-movement of different reference rates even when reset timing is similar.
+**Liquidity** — the capacity to produce the right cash at the right time without unacceptable loss.
+
+### Permanent trap
+
+Answering “we are well capitalised” to a liquidity question. The next payment is settled with cash or central-bank money, not with a capital ratio.
 
 ### Jurisdiction variants
 
-**No delta.** Basel and major national frameworks recognise the same fundamental economic sources, although prescribed scenario calibrations can differ.
+No delta. The failure mechanism is economic; access to facilities, resolution tools and supervisory triggers differ by jurisdiction.
 
 <Recall
-  q="What four mechanisms generate IRRBB?"
-  a="Repricing, yield-curve, basis and optionality risk."
+  q="Why can a solvent bank fail today?"
+  a="Its assets may be worth more than its liabilities but not be monetisable quickly enough to meet cash due today."
 />
 
 <Recall
-  q="Why can two three-month floating rates still create IRRBB?"
-  a="They may reference different indices that do not move one-for-one."
+  q="How does liquidity stress become solvency stress?"
+  a="Fire-sale discounts, emergency funding costs and confidence effects can crystallise losses that consume capital."
 />

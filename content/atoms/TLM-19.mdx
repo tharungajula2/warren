@@ -1,20 +1,18 @@
 ---
 id: TLM-19
-title: ILAAP and the naming trap
-type: reference
+title: The Liquidity Coverage Ratio
+type: mechanism
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  ILAAP is the formal internal liquidity adequacy assessment terminology used in
-  UK and EU supervisory architecture; it is not the universal global name for
-  bank liquidity assessment. India and the US require liquidity-risk governance,
-  stress testing and contingency planning through their own frameworks without
-  universally relabelling that architecture “ILAAP”.
+  LCR asks whether recognised HQLA can cover **standardised net stressed cash
+  outflows over 30 calendar days**. It uses regulatory runoff, drawdown and
+  inflow assumptions; it is not a forecast of the next month and not a linear
+  survival clock.
 prerequisites:
-  - TLM-14
-  - TLM-15
   - TLM-17
   - TLM-18
+  - TLM-12
 jurisdictions:
   - IN
   - UK
@@ -28,87 +26,121 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Prudential Regulation Authority, *The PRA’s approach to supervising
-      liquidity and funding risks*, SS24/15, January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
-    accessed: 28 August 2026
-  - label: 'European Banking Authority, *Guidelines on ICAAP and ILAAP information*'
-    url: 'https://www.eba.europa.eu/guidelines-icaap-and-ilaap-information'
-    accessed: 28 August 2026
-  - label: 'Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*'
-    url: >-
-      https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Calculation of the LCR*, Basel
+      Framework LCR20, consolidated framework.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net
-      Stable Funding Ratio*, RBI/2020-21/95
-    url: 'https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=3268'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Basel III Framework on Liquidity Standards – LCR –
+      Review of haircuts on HQLA and review of composition and run-off rates on
+      certain categories of deposits*, RBI/2025-26/27,
+      DOR.LRG.REC.18/03.10.001/2025-26, 21 April 2025; effective 1 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, *The PRA’s approach to supervising
+      liquidity and funding risks*, SS24/15, January 2026; effective 20 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Commission, *Commission Delegated Regulation (EU) 2015/61 with
+      regard to liquidity coverage requirement for Credit Institutions*, 10
+      October 2014.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Office of the Comptroller of the Currency, Board of Governors of the
+      Federal Reserve System and Federal Deposit Insurance Corporation,
+      *Applicability Thresholds for Regulatory Capital and Liquidity
+      Requirements: Final Rule*, OCC Bulletin 2019-52, 1 November 2019;
+      effective 31 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Office of the
+      Comptroller of the Currency and Federal Deposit Insurance Corporation,
+      *Liquidity Coverage Ratio FAQs — rescission notice*, 10 February 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-The **Internal Liquidity Adequacy Assessment Process (ILAAP)** is a structured assessment of whether an institution has adequate liquidity and funding resources relative to its risks. A credible assessment integrates risk appetite, cash-flow mismatch analysis, stress tests, liquid-asset capacity, funding concentrations, intraday risk, contingency planning and governance. It is broader than proving compliance with LCR and NSFR.
+### Core mechanism
 
-The key practitioner point is linguistic as much as technical. In UK prudential supervision, ILAAP is an explicit formal term. The PRA’s current SS24/15 states that its liquidity and funding supervisory approach covers the Internal Liquidity Adequacy Assessment Process and the Liquidity Supervisory Review and Evaluation Process. The version confirmed final in January 2026 took effect on 20 January 2026.
+LCR = stock of HQLA / total net cash outflows over 30 days
 
-The term is also embedded in EU supervisory vocabulary; EBA has issued guidance specifically concerning ICAAP and ILAAP information.
+Basel minimum in ordinary conditions = 100%. The stock is a buffer: Basel permits its use in stress, including a ratio below 100%, subject to supervisory assessment.
 
-That does **not** mean every jurisdiction calls its internal liquidity assessment an ILAAP. Indian banks are subject to RBI liquidity standards, ALM, LCR, NSFR and supervisory risk-management requirements, but practitioners should not import a UK/EU label into an RBI rule unless the RBI text itself uses it. Likewise, the US uses formal liquidity-risk-management, stress-testing, liquidity-buffer and contingency-funding constructs. Regulation YY, for example, prescribes liquidity-risk management and CFP requirements without framing them as an EU-style ILAAP.
+Liabilities / commitments
+    ↓ runoff and drawdown factors
+Stressed outflows
 
-For cross-border roles, the right translation is functional rather than lexical: ask which local process performs internal liquidity adequacy assessment, not whether every regulator uses the same acronym.
+Receivables
+    ↓ inflow factors and caps
+Recognised inflows
+
+Stressed outflows − recognised inflows
+    ↓
+Net cash outflows
+
+HQLA after haircuts/caps
+    ↓
+LCR
+
+### Where it sits
 
 ```text
-+----------------------+
-| Internal liquidity   |
-| adequacy assessment  |
-+----------------------+
-          |
-          v
-+----------------------+
-| Risk + stress +      |
-| buffer + funding +   |
-| CFP + governance     |
-+----------------------+
-     |              |
-     v              v
-+------------+ +-------------+
-| UK / EU    | | IN / US     |
-| "ILAAP"    | | local terms |
-+------------+ +-------------+
+Upstream:   HQLA inventory · liquidity ladder · commitments
+This:       Standardised 30-day regulatory liquidity coverage
+Downstream: NSFR · internal stress · jurisdiction calibration
+```
+
+### Formula
+
+```text
+LCR = HQLA / 30-day net cash outflows
+
+HQLA ↑ → LCR ↑.
+
+Runoff/drawdown factors ↑ → net outflows ↑ → LCR ↓.
 ```
 
 ### Permanent rule
 
-ILAAP describes a formal UK/EU supervisory construct; internal liquidity adequacy is a universal problem, but the acronym is not a universal regulatory label.
+LCR is a standardised 30-day stress ratio; internal liquidity risk remains broader in horizon, currency, entity and scenario.
 
-### Permanent trap
+### Never confuse [LCR] and [Survival horizon]
 
-Writing “the bank submits its ILAAP” in an India or US procedure merely because that is what the equivalent process is called in a UK or EU entity.
-
-### Never confuse
-
-**ILAAP** — the formal Internal Liquidity Adequacy Assessment Process terminology used in UK/EU prudential supervision.
+**LCR** — regulatory HQLA divided by standardised 30-day net outflows.
 
 ---
 
-**Liquidity-risk framework** — the broader universal set of risk governance, stress, buffers and contingency processes, whatever the local regulator calls it.
+**Survival horizon** — first point an institution-specific stress exhausts usable resources.
+
+### Permanent trap
+
+Reading LCR 120% as “36 days of survival”. The numerator and denominator are regulatory constructs, not a linear clock.
 
 ### Jurisdiction variants
 
-**IN** — RBI has LCR, NSFR, ALM, liquidity stress and related prudential requirements, but “ILAAP” should not be assumed to be RBI’s universal formal naming convention. [RBI LCR/NSFR framework]
+#### IN (RBI)
+Final amendments dated 21 April 2025 became effective **1 April 2026**: IMB-enabled stable retail deposits receive 7.5% runoff and IMB-enabled less-stable retail deposits 12.5%, with revised treatment for specified deposits and government-security HQLA valuation.
 
-**UK** — ILAAP is an explicit PRA supervisory construct under SS24/15 and the Internal Liquidity Adequacy Assessment part of the PRA framework. [PRA SS24/15, January 2026]
+#### UK (PRA)
+UK LCR sits within PRA liquidity and ILAAP/Pillar 2 supervision; current SS24/15 has applied since **20 January 2026**.
 
-**EU** — ILAAP is established supervisory terminology and is addressed in EBA guidance on ICAAP/ILAAP information. [EBA ILAAP guidance]
+#### EU
+EU LCR is binding under CRR and Commission Delegated Regulation (EU) 2015/61, as amended.
 
-**US** — US rules use liquidity-risk management, stress-testing, buffer and CFP constructs rather than an EU-style universal “ILAAP” label. [12 CFR 252.34]
+#### US
+As at August 2026, 2019 tailoring remains the scope architecture: Categories I–II full LCR; Category III full or 85% depending on weighted short-term wholesale funding; some Category IV firms 70%, others no LCR. The agencies rescinded public FAQs on **10 February 2026** but said the rule itself was unchanged.
 
 <Recall
-  q="Is ILAAP a universal Basel naming convention used identically everywhere?"
-  a="No. It is formal UK/EU terminology; India and the US use different regulatory naming architectures."
+  q="What does LCR test?"
+  a="Whether recognised HQLA covers standardised 30-day stressed net cash outflows."
 />
 
 <Recall
-  q="Is ILAAP merely an LCR calculation?"
-  a="No. It is a broader assessment of liquidity and funding adequacy relative to the institution’s risks."
+  q="Why can LCR fall below 100% in stress without automatically meaning failure?"
+  a="The buffer is intended to be used in stress, with supervisory assessment of the circumstances."
 />

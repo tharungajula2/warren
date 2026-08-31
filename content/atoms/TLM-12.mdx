@@ -1,101 +1,113 @@
 ---
 id: TLM-12
-title: Funding liquidity risk versus market liquidity risk
-type: concept
+title: Pipeline and commitment behaviour
+type: mechanism
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  Funding liquidity risk is the risk that the bank cannot obtain cash when
-  obligations fall due without unacceptable loss; market liquidity risk is the
-  risk that an asset cannot be sold or financed quickly near its expected value.
-  One can trigger the other, but they are not the same risk.
+  Not every treasury exposure is already funded on the balance sheet. Fixed-rate
+  origination pipelines can create interest-rate exposure before drawdown, while
+  committed but undrawn facilities create contingent liquidity because the
+  customer controls whether and when cash is demanded.
 prerequisites:
-  - TLM-01
   - TLM-03
+  - TLM-11
+  - CR-08
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *High-quality liquid assets*,
-      Basel Framework LCR30
-    url: 'https://www.bis.org/basel_framework/chapter/LCR/30.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A bank has **funding liquidity** when it can meet payment obligations as they come due. Failure can occur because deposits leave, wholesale funding does not roll, collateral calls rise, committed credit lines are drawn or other cash needs exceed available resources. Basel defines bank liquidity as the ability to fund asset increases and meet obligations when due without unacceptable losses.
+### Core mechanism
 
-**Market liquidity** describes the ease with which an asset can be sold or monetised. An asset may be economically sound but difficult to sell quickly except at a steep discount. Bid-ask spreads can widen, market depth can disappear, secured lenders can increase haircuts and transactions large relative to market capacity can move prices.
+Two superficially “off-balance-sheet” objects create different risks:
 
-The risks interact. A funding outflow forces the bank to raise cash. If external borrowing is unavailable, it may sell securities. Forced selling into an illiquid market produces losses. Those losses can weaken confidence, trigger more funding withdrawals or reduce collateral capacity, creating a feedback loop.
+| Object | Uncertainty | Main treasury risk |
+| :--- | :--- | :--- |
+| Fixed-rate loan commitment / pipeline | whether, when and how much business closes | rate moves before booking; hedge may over/under-shoot |
+| Undrawn credit commitment | whether and when customer draws | stressed cash outflow and funding need |
 
-The distinction also explains why “assets exceed liabilities” does not settle a liquidity question. Solvency is principally about whether asset value is sufficient relative to obligations and capital. Liquidity is about whether cash can be produced at the required time. A bank can own valuable long-term assets and still be unable to convert them to immediate settlement cash without severe loss.
+**Pipeline risk** appears when treasury hedges expected future originations but actual completion differs. If 100 of expected fixed-rate loans are hedged and only 60 close, the hedge can become a 40 excess position.
 
-Treasury therefore manages both sources of cash and the monetisability of assets. A liquidity buffer must not merely look valuable on a normal-day balance sheet: assets need sufficient market depth, credit quality, operational availability and lack of encumbrance to generate cash in stress. Basel’s HQLA and liquidity principles are built around this distinction.
+**Drawdown risk** is different. CR-08 → commitments create exposure when customers use available limits. In liquidity stress, draw behaviour can rise exactly when market funding becomes scarce.
+
+### Flow
 
 ```text
-+------------------+
-| Cash obligation  |
-+------------------+
-        |
-        v
-+------------------+
-| Funding available?|
-+------------------+
-     | yes    | no
-     v        v
-+---------+ +----------------+
-| Pay     | | Monetise assets|
-+---------+ +----------------+
-                 |
-                 v
-        +----------------+
-        | Market liquid? |
-        +----------------+
-          | yes    | no
-          v        v
-        +------+ +--------+
-        |Cash  | |Loss /  |
-        |raised| |delay    |
-        +------+ +--------+
+Commitment / forecast exists
+    ↓
+Behavioural probability: close? draw? when? amount?
+    ↓
+Scenario-specific future balance
+    ↓
+Interest-rate hedge need + contingent cash need
+    ↓
+IRRBB / liquidity stress / FTP
+```
+
+### Where it sits
+
+```text
+Upstream:   Behavioural optionality · credit commitments
+This:       Uncertain future balance-sheet formation
+Downstream: IRRBB scenarios · liquidity stress · contingent FTP
+```
+
+### Formula
+
+```text
+Expected funded amount = committed amount × expected draw/close proportion
+
+Expected funded amount is a planning quantity, not a promise that the same proportion will hold in stress.
+
+Draw proportion ↑ → liquidity need ↑.
+
+Pipeline fallout ↑ after anticipatory hedging → residual hedge exposure ↑.
 ```
 
 ### Permanent rule
 
-Funding liquidity concerns obtaining cash on time; market liquidity concerns converting positions into cash at tolerable value.
+An unfunded position can still create a current risk if the bank has committed a price, capacity or future cash payment.
 
-### Permanent trap
+### Never confuse [Pipeline risk] and [Commitment drawdown risk]
 
-Calling a security “liquid” solely because it has a quoted market price in normal conditions.
-
-### Never confuse
-
-**Funding liquidity risk** — inability to meet cash obligations when due without unacceptable loss.
+**Pipeline risk** — future business may not book as forecast, leaving a rate or hedge mismatch.
 
 ---
 
-**Market liquidity risk** — inability to transact or monetise an asset quickly at a price close to its expected value.
+**Commitment drawdown risk** — a customer may convert an undrawn facility into a funded cash requirement.
+
+### Permanent trap
+
+Using base-case drawdown to size stress liquidity. Contingent facilities often become most valuable to customers during the same conditions in which the bank’s own funding is under pressure.
 
 ### Jurisdiction variants
 
-**No delta.** The economic distinction is universal.
+No delta in mechanism. Regulatory LCR and stress frameworks prescribe different drawdown factors by exposure type.
 
 <Recall
-  q="Can a solvent bank suffer a funding liquidity crisis?"
-  a="Yes; valuable assets may not produce cash quickly enough to meet immediate obligations."
+  q="How can a loan create IRRBB before it is on the balance sheet?"
+  a="A fixed-rate commitment can lock economics before funding, so market rates can move while the transaction remains in the pipeline."
 />
 
 <Recall
-  q="How can market liquidity amplify funding stress?"
-  a="Forced sales can require deep discounts, creating losses and reducing confidence or collateral capacity."
+  q="Why is an undrawn line not “zero liquidity risk”?"
+  a="The customer can demand funding later, potentially during stress."
 />

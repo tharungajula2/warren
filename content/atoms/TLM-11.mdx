@@ -1,24 +1,21 @@
 ---
 id: TLM-11
-title: Hedging IRRBB and hedge accounting
+title: 'Prepayment, early redemption and behavioural optionality'
 type: mechanism
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  An economic hedge changes the bank’s risk; hedge accounting changes how
-  qualifying hedge effects appear in financial statements. A hedge can be
-  economically effective without receiving hedge-accounting treatment, and
-  accounting treatment must never determine whether the underlying risk is
-  actually controlled.
+  Customer options make banking-book cash flows conditional on incentives rather
+  than fixed by contract. Borrowers can shorten assets through prepayment,
+  depositors can shorten liabilities through early redemption, and the option is
+  most valuable to the customer when exercising it is least convenient for the
+  bank.
 prerequisites:
-  - TLM-04
-  - TLM-05
+  - TLM-03
+  - TLM-06
   - TLM-10
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -27,89 +24,78 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, *Deferral of Implementation of Indian Accounting
-      Standards (Ind AS)*, RBI/2018-2019/146, DBR.BP.BC.No.29/21.07.001/2018-19
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0'
-    accessed: 28 August 2026
-  - label: >-
-      Reserve Bank of India, *Implementation of Indian Accounting Standards —
-      NBFCs and ARCs*, DOR (NBFC) circular, 13 March 2020
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
       Basel Committee on Banking Supervision, *Application guidance on interest
-      rate risk in the banking book*, Basel Framework SRP98
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
-    accessed: 28 August 2026
+      rate risk in the banking book*, Basel Framework SRP98, updated 16 July
+      2024, effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-IRRBB can be hedged by changing the balance sheet or adding derivatives. Treasury may raise longer-term fixed funding against fixed-rate assets, issue floating funding where asset income floats, alter securities holdings or use interest-rate swaps and other derivatives. The objective is to change the cash-flow or value sensitivity of the consolidated banking book.
+### Core mechanism
 
-Suppose a bank holds long fixed-rate assets and is exposed to rising rates. In a stylised swap hedge, it may receive floating and pay fixed. As market rates rise, the floating receipts increase and offset part of the asset/funding mismatch. The useful hedge quantity is therefore not derivative notional alone but the sensitivity offset: tenor, curve point, index, optionality and cash-flow profile must line up sufficiently with the exposure.
+| Behavioural option | Customer incentive | Bank effect |
+| :--- | :--- | :--- |
+| Fixed-rate loan prepayment | market rates fall / refinancing becomes cheaper | high-yield asset returns early; reinvestment yield falls |
+| Term-deposit break | market rates rise above deposit rate | funding leaves early; replacement funding may cost more |
+| NMD withdrawal | confidence or competing rates deteriorate | assumed stable funding shortens |
+| Contractual cap/floor | rate crosses option boundary | coupon sensitivity becomes non-linear |
 
-**Hedge effectiveness** is economic: does the hedge offset the intended risk under relevant scenarios? **Hedge accounting** is an accounting mechanism governing when and how gains and losses from a qualifying hedge relationship are recognised. It exists partly because the accounting timing or measurement of the hedging instrument and hedged item can otherwise differ.
+The model therefore cannot use one prepayment or redemption rate across all interest-rate scenarios. Exercise probability should respond to economic incentive, customer friction, seasoning, product terms and stress conditions.
 
-ALM must therefore run two conversations simultaneously. Risk management asks whether EVE, NII, basis and option exposures are reduced. Finance asks whether designation, documentation and accounting eligibility are met. Optimising the second while worsening the first is not sound hedging.
-
-There is a critical Indian accounting constraint. RBI deferred Ind AS implementation for scheduled commercial banks until further notice in March 2019. Therefore, Indian scheduled commercial banks must not be described as applying Ind AS 109 merely because IRRBB or hedge accounting is being discussed. RBI has separately issued Ind AS implementation guidance relevant to applicable NBFCs.
+### Flow
 
 ```text
-+------------------+
-| IRRBB exposure   |
-+------------------+
-        |
-        v
-+------------------+
-| Economic hedge   |
-| design           |
-+------------------+
-        |
-        v
-+------------------+
-| EVE / NII offset |
-+------------------+
-        |
-        +----------------+
-        |                |
-        v                v
-+----------------+ +----------------+
-| Risk outcome   | | Accounting     |
-| effectiveness  | | eligibility    |
-+----------------+ +----------------+
+Rate / market condition changes
+    ↓
+Customer incentive changes
+    ↓
+Option exercise probability changes
+    ↓
+Effective cash-flow timing changes
+    ↓
+ΔNII + ΔEVE + funding/liquidity profile change
+```
+
+### Where it sits
+
+```text
+Upstream:   Behavioural balance sheet · IRRBB sources · NMD behaviour
+This:       Scenario-dependent customer optionality
+Downstream: Pipeline/commitments · IRRBB stress · hedging · FTP
 ```
 
 ### Permanent rule
 
-Economic hedge effectiveness and hedge-accounting qualification are separate tests.
+When customer exercise depends on the scenario, the projected cash flow must also depend on the scenario.
 
-### Permanent trap
+### Never confuse [Contractual option] and [Behavioural option]
 
-Rejecting a sound economic hedge because its accounting presentation is inconvenient, or accepting a poor risk hedge because it produces desirable accounting treatment.
-
-### Never confuse
-
-**Economic hedge** — a position designed to offset financial risk.
+**Contractual option** — the legal right or payoff exists in the instrument terms.
 
 ---
 
-**Hedge accounting** — accounting treatment for a qualifying designated hedge relationship; it does not itself reduce risk.
+**Behavioural option** — the timing and probability of exercise must be estimated from customer behaviour.
+
+### Permanent trap
+
+Using a long-run average prepayment rate in every rate scenario. A historical mean destroys the very non-linearity the option creates.
 
 ### Jurisdiction variants
 
-**IN** — RBI deferred Ind AS implementation for scheduled commercial banks until further notice; do not equate Indian bank hedge accounting with Ind AS 109. Relevant Ind AS NBFCs are a different population. [RBI/2018-2019/146; RBI NBFC Ind AS guidance]
-
-**UK** — hedge-accounting treatment depends on the applicable UK accounting framework; specific designation rules should be verified against current accounting standards.
-
-**EU** — hedge-accounting treatment depends on the EU-adopted accounting framework applicable to the institution; specific designation rules should be verified against current standards.
-
-**US** — US GAAP hedge-accounting requirements differ from IFRS-based frameworks; specific qualification and presentation rules should be verified against current US accounting standards.
+No delta in mechanism. Supervisors differ in prescribed standardised assumptions, floors, caps and validation expectations.
 
 <Recall
-  q="Can a derivative reduce IRRBB without qualifying for hedge accounting?"
-  a="Yes; economic effectiveness and accounting qualification are separate."
+  q="Why do falling rates often increase prepayment risk on fixed-rate assets?"
+  a="Refinancing becomes attractive, so borrowers return high-yielding principal when the bank must reinvest at lower rates."
 />
 
 <Recall
-  q="Are Indian scheduled commercial banks on Ind AS 109?"
-  a="No. RBI deferred Ind AS implementation for those banks until further notice."
+  q="Why is a term deposit’s legal maturity not always its ALM maturity?"
+  a="An economically valuable early-redemption right can cause the customer to withdraw before contractual maturity."
 />

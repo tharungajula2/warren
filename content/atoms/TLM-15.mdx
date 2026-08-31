@@ -1,17 +1,20 @@
 ---
 id: TLM-15
-title: The Net Stable Funding Ratio
+title: Structural foreign exchange in the banking book
 type: mechanism
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  NSFR asks whether the bank’s longer-term assets and activities are supported
-  by sufficiently stable funding over a one-year structural horizon. Where LCR
-  is a short-term stress-buffer test, NSFR is a balance-sheet funding-structure
-  test.
+  Structural FX is the banking-book problem created when assets, liabilities,
+  capital interests and funding needs sit in different currencies. A bank can
+  hedge spot FX value yet remain dependent on FX-swap markets for funding, and
+  it can hold ample aggregate liquidity while being unable to deliver the
+  currency that must settle.
 prerequisites:
-  - TLM-12
+  - TLM-02
+  - TLM-04
   - TLM-14
+  - CAP-01
 jurisdictions:
   - IN
   - UK
@@ -25,103 +28,102 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Net Stable Funding Ratio*, Basel
-      Framework NSF30
-    url: 'https://www.bis.org/basel_framework/chapter/NSF/30.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Liquidity risk management and
+      supervision*, Basel Consolidated Guidelines LQY10, consolidated 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Financial Stability Institute, *Net Stable Funding Ratio — Executive
-      Summary*
-    url: 'https://www.bis.org/fsi/fsisummaries/nsfr.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Definitions and application of
+      market risk*, Basel Framework MAR11, 27 March 2020; effective 1 January
+      2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Basel III Framework on Liquidity Standards – Net
-      Stable Funding Ratio*, RBI/2020-21/95, DOR.No.LRG.BC.40/21.04.098/2020-21
-    url: 'https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=3268'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve, *Agencies issue final rule to strengthen resilience of
-      large banks*, 20 October 2020
-    url: 'https://www.federalreserve.gov/newsevents/pressreleases/bcreg20201020b.htm'
-    accessed: 28 August 2026
+      Board of Governors of the Federal Reserve System, *Regulation YY —
+      Enhanced Prudential Standards for Bank Holding Companies and Foreign
+      Banking Organizations*, 12 CFR 252.34, as amended 1 November 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Conceptually:
+### Core mechanism
 
-`NSFR = Available Stable Funding / Required Stable Funding`
+| Issue | Mechanism | Failure mode |
+| :--- | :--- | :--- |
+| Asset/liability currency mismatch | assets and liabilities denominated differently | FX value sensitivity |
+| Cross-currency funding | borrow currency A, swap into B | swap rollover/basis dependence |
+| Foreign investment capital | foreign net assets translate into home currency | capital-ratio volatility |
+| Currency liquidity mismatch | liquid resources sit in wrong currency | payment failure despite aggregate surplus |
 
-**Available Stable Funding (ASF)** assigns greater value to liabilities and capital expected to remain available over the relevant horizon. Long-term debt, capital and stable deposit categories generally provide more ASF than very short or unstable wholesale funding.
+USD asset
+    ↓ funded by
+INR borrowing + INR/USD FX swap
+    ↓
+Swap matures before asset
+    ↓
+Need swap rollover or USD funding
+    ↓
+Swap market closes / basis widens
+    ↓
+USD liquidity stress
 
-**Required Stable Funding (RSF)** reflects how much stable funding the bank’s assets and certain off-balance-sheet exposures are judged to require. Cash and highly liquid short-term assets require relatively little stable funding; longer-dated or less-liquid assets require more. The Basel standard requires NSFR of at least 100%, meaning ASF must be no less than RSF.
+Basel also permits national supervisors, subject to conditions, to exclude qualifying **structural** FX positions from net open FX capital calculations where the position genuinely hedges exchange-rate sensitivity of the capital ratio. That prudential treatment does not remove the economic position.
 
-The structural question is different from LCR. A bank could carry enough HQLA to pass a 30-day LCR while financing a large portfolio of long-dated assets with funding that matures shortly after that horizon. NSFR constrains that reliance on unstable maturity transformation. Conversely, a bank can have strong long-term funding and still face a severe immediate run that threatens its LCR.
-
-NSFR is also not the same as contractual one-year matching. ASF and RSF are weighted prudential constructs. A liability maturing inside a year can still receive some stable-funding recognition, while an asset’s RSF depends on more than contractual maturity.
-
-India’s final NSFR rules were issued earlier but implementation was deferred during the pandemic; RBI made them effective from 1 October 2021 for covered commercial banks. The US final rule became effective 1 July 2021 and applies on a tailored basis to large banking organisations.
+### Where it sits
 
 ```text
-+------------------+
-| Liabilities +    |
-| capital          |
-+------------------+
-        |
-        v
-+------------------+
-| ASF factors      |
-+------------------+
-        |
-        v
-+------------------+
-| Available Stable |
-| Funding          |
-+------------------+
-        |
-        v
-+------------------+
-| ASF / RSF &gt;= 100%|
-+------------------+
-        ^
-        |
-+------------------+
-| Required Stable  |
-| Funding from     |
-| assets/OBS       |
-+------------------+
+Upstream:   ALM map · cash-timing failure · structural rate hedging
+This:       Currency mismatch, cross-currency funding and capital hedging
+Downstream: Funding liquidity · HQLA by currency · stress · collateral
 ```
 
 ### Permanent rule
 
-LCR addresses short-term liquidity stress; NSFR addresses structural funding stability.
+Liquidity is currency-specific at payment: surplus currency A covers currency B only if conversion or transfer remains executable in time and in stress.
 
-### Permanent trap
+### Never confuse [FX position hedge] and [Currency funding hedge]
 
-Calling NSFR a “one-year LCR”; its numerator and denominator are stable-funding weights, not one-year cash inflows and outflows.
-
-### Never confuse
-
-**ASF** — regulatory measure of funding expected to be sufficiently stable.
+**FX position hedge** — reduces sensitivity of value to exchange-rate moves.
 
 ---
 
-**RSF** — regulatory measure of the stable funding required by assets and specified exposures.
+**Currency funding hedge** — secures the required currency over the required horizon; an FX swap can reduce spot exposure while creating rollover dependence.
+
+### Permanent trap
+
+Netting all currencies into one liquidity number. Convertibility, swap depth, legal-entity restrictions and settlement timing can prevent an apparent surplus from covering the short currency.
 
 ### Jurisdiction variants
 
-**IN** — RBI NSFR guidelines for covered commercial banks have applied since 1 October 2021. [RBI/2020-21/95]
+#### IN (RBI)
+RBI liquidity guidance requires monitoring across currencies and foreign-currency structural-liquidity reporting; local open-position/capital rules apply separately.
 
-**UK** — the UK prudential framework implements stable-funding requirements alongside PRA liquidity supervision; current scope must be checked against the PRA Rulebook. [PRA SS24/15]
+#### UK (PRA)
+No delta.
 
-**EU** — CRR contains the NSFR in Part Six, including Articles 413 and 428b. [Regulation (EU) No 575/2013, as amended]
+#### EU
+No delta.
 
-**US** — the interagency NSFR rule is tailored to large banking organisations, has a one-year structural focus and became effective 1 July 2021. [Federal Reserve final rule, 2020]
+#### US
+Regulation YY requires covered firms to reflect currency exposure in cash-flow projections and monitor significant-currency liquidity where appropriate.
 
 <Recall
-  q="What structural question does NSFR ask?"
-  a="Whether the asset and activity profile is supported by sufficiently stable funding."
+  q="How can a bank be liquid in aggregate but fail in USD?"
+  a="Its usable liquidity may be in another currency and the conversion, swap or transfer channel may fail before USD settlement."
 />
 
 <Recall
-  q="Can a bank have a strong LCR and weak NSFR?"
-  a="Yes; ample 30-day liquidity does not guarantee stable longer-term funding."
+  q="Why can FX-swap funding remain risky after spot FX is hedged?"
+  a="The swap may mature before the asset, forcing rollover in a market whose basis and availability can deteriorate."
+/>
+
+<Recall
+  q="What does a structural capital hedge protect?"
+  a="The home-currency capital ratio from exchange-rate changes in foreign operations or net assets."
 />

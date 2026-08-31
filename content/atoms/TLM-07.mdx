@@ -1,103 +1,116 @@
 ---
 id: TLM-07
-title: Gap analysis and repricing buckets
-type: procedure
+title: 'One rate shock, two objects: NII and EVE'
+type: concept
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  Repricing gap analysis places rate-sensitive assets and liabilities into the
-  periods when they next reprice, then compares the two sides. It is a map of
-  timing mismatch, not a complete forecast of earnings or value.
+  FND-04 → NII is interest income minus interest expense; FND-08/09 → present
+  value changes when discount rates or expected cash flows change. IRRBB hits
+  **two different objects**: near-term earnings and the economic value of future
+  banking-book cash flows, and the two measures can move in opposite directions
+  because they use different horizons and cash-flow assumptions.
 prerequisites:
-  - TLM-04
+  - TLM-06
+  - FND-04
+  - FND-08
+  - FND-09
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Application guidance on interest
-      rate risk in the banking book*, Basel Framework SRP98
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/98.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Interest rate risk in the banking
+      book*, Basel Framework SRP31, updated 16 July 2024, effective 1 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*, Chapter V
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98, updated 16 July
+      2024, effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A **repricing bucket** is a time interval such as overnight, one month, three months, one year or longer. A rate-sensitive asset is placed into the bucket containing its next effective repricing date; a rate-sensitive liability is treated the same way. The simple bucket gap is:
+### Core mechanism
 
-`Gap = rate-sensitive assets − rate-sensitive liabilities`
+| Lens | NII / ΔNII | EVE / ΔEVE |
+| :--- | :--- | :--- |
+| Object | earnings over projection horizon | present value of future rate-sensitive cash flows |
+| Main driver | what reprices during horizon, margins, replacement assumptions | full cash-flow timing, discounting, options |
+| Typical horizon | finite earnings horizon | remaining life of positions |
+| Can improve while other worsens? | Yes | Yes |
 
-A positive gap means more assets than liabilities reprice in that bucket. Under a simplified parallel-rate assumption, rising rates can increase income faster than expense. A negative gap suggests the reverse. A **cumulative gap** sums bucket gaps up to a selected horizon.
+Example mechanism without assuming a universal sign:
 
-The method is valuable because it makes concentration visible. Two banks can have the same total assets and liabilities while one has a large one-month liability reset against five-year fixed assets and the other is closely matched across buckets.
+Rate shock
+    ↓
+Asset and liability repricing speeds differ
+    ↓
+Near-term interest margin changes → ΔNII
 
-Yet the sign of a bucket gap is not an earnings forecast. Assets and liabilities may reprice by different amounts; deposit rates may respond only partially or with delay; yield-curve points may move differently; options may alter expected cash flows; new business can replace maturities. A bucket also loses information because every cash flow inside the interval is treated as though its timing were equivalent.
+Rate shock
+    ↓
+Discount factors + expected behavioural cash flows change
+    ↓
+Present value of assets, liabilities and OBS positions changes → ΔEVE
 
-Gap analysis is therefore best treated as a diagnostic layer. It identifies where timing mismatches reside and supports limit setting and scenario design. More sophisticated NII and EVE models then apply scenario-specific curves, behavioural assumptions, cash-flow timing and basis relationships. RBI’s forthcoming IRRBB directions explicitly recognise gap, basis and option risks and require both internally selected and prescribed stress scenarios.
+A bank can improve short-run NII because assets reprice upward faster than deposits while losing EVE because long-dated fixed cash flows fall in present value. The reverse pattern is also possible. Disagreement is information, not an error to be reconciled away.
+
+### Where it sits
 
 ```text
-+-------------------+
-| Assets/liabilities|
-+-------------------+
-          |
-          v
-+-------------------+
-| Next repricing    |
-| date              |
-+-------------------+
-          |
-          v
-+-------------------+
-| Time buckets      |
-+-------------------+
-          |
-          v
-+-------------------+
-| RSA - RSL         |
-| by bucket         |
-+-------------------+
-          |
-          v
-+-------------------+
-| Gaps -&gt; scenarios |
-| -&gt; NII / EVE      |
-+-------------------+
+Upstream:   IRRBB sources · NII and PV foundations
+This:       Two perspectives on the same structural exposure
+Downstream: Gap analysis · duration · behavioural modelling · IRRBB stress
+```
+
+### Formula
+
+```text
+ΔNII = NII_shock − NII_base
+
+ΔEVE = EVE_shock − EVE_base
+
+NII_shock/base — projected net interest income under shock/base assumptions.
+
+EVE_shock/base — economic value under shock/base curves and cash flows.
+
+More positive ΔNII does **not** imply more positive ΔEVE.
 ```
 
 ### Permanent rule
 
-Repricing gaps locate timing mismatches; they do not by themselves capture basis, curve or option risk.
+A sound IRRBB view needs both earnings and economic-value perspectives because each can hide risk visible in the other.
 
-### Permanent trap
+### Never confuse [ΔNII] and [ΔEVE]
 
-Multiplying each bucket gap by one assumed rate shock and calling the result a complete IRRBB measure.
-
-### Never confuse
-
-**Repricing gap** — difference between assets and liabilities scheduled to reset in a time bucket.
+**ΔNII** — change in projected interest earnings over a stated horizon.
 
 ---
 
-**Liquidity gap** — difference between cash inflows and cash outflows over time; an item can reprice without producing cash.
+**ΔEVE** — change in present economic value of rate-sensitive banking-book cash flows.
+
+### Permanent trap
+
+Choosing whichever metric shows less risk. A low ΔNII does not neutralise a large EVE loss, and a low ΔEVE does not guarantee acceptable earnings volatility.
 
 ### Jurisdiction variants
 
-**No delta.** Bucket definitions and regulatory templates may differ, but the analytical mechanism is universal.
+No delta in concept. Calibration, horizon and prescribed modelling assumptions differ by regulator.
 
 <Recall
-  q="What does a positive repricing gap mean?"
-  a="More rate-sensitive assets than liabilities reprice in that bucket."
+  q="Can NII improve while EVE falls after the same rate shock?"
+  a="Yes — short-run repricing can help earnings while higher discount rates reduce the value of longer-dated cash flows."
 />
 
 <Recall
-  q="Why can a positive gap still lose money after rates rise?"
-  a="Asset and liability rates may move by different amounts, or behavioural and curve effects may dominate."
+  q="What does disagreement between ΔNII and ΔEVE reveal?"
+  a="Which horizons, repricing patterns and behavioural assumptions are carrying the risk."
 />

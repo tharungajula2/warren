@@ -1,108 +1,113 @@
 ---
 id: TLM-22
-title: The FTP curve and its components
+title: Intraday liquidity and payment timing
 type: mechanism
 domain: treasury-alm
 subdomain: funds-transfer-pricing
 one_screen: >-
-  An FTP curve converts tenor into the bank’s internal marginal value or cost of
-  funding; it normally combines a reference-rate component with
-  institution-specific term-liquidity economics, while contingent liquidity
-  costs are allocated to exposures that can create stressed funding needs. The
-  components must remain interpretable or business behaviour cannot be
-  controlled.
+  A bank can end the day with enough cash and still fail during the day because
+  payments are time-specific. Intraday liquidity is the capacity to meet payment
+  and settlement obligations when they must settle, including in the right
+  currency, before offsetting receipts arrive.
 prerequisites:
+  - TLM-04
+  - TLM-17
   - TLM-21
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Monitoring tools for intraday
+      liquidity management*, BCBS 248, 11 April 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Financial Stability Institute, *Liquidity transfer pricing: a guide to
-      better practice*, FSI Occasional Paper No. 10
-    url: 'https://www.bis.org/fsi/fsipapers10.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A useful conceptual starting point is:
+### Core mechanism
 
-`FTP tenor rate ≈ base/reference rate + funding-liquidity premium`
+Suppose total daily receipts = 100 and total daily payments = 100.
 
-with a separate or embedded:
+| Time | Cash flow | Cumulative position |
+| :--- | ---: | ---: |
+| 09:00 | −60 | −60 |
+| 11:00 | −20 | −80 |
+| 14:00 | +30 | −50 |
+| 16:00 | +50 | 0 |
+| 17:00 | +20 | +20 |
 
-`contingent liquidity charge`
+Daily net flow looks comfortable, yet the bank needs at least 80 of intraday resources before 14:00 in this simplified example.
 
-The **base rate** represents the time value and benchmark interest-rate component appropriate to the relevant currency and tenor. The **liquidity or funding premium** represents the additional marginal cost associated with obtaining term funding for the bank rather than simply observing a benchmark risk-free curve. This premium can vary substantially by tenor and market condition.
-
-The **contingent liquidity charge** addresses exposures that may require cash in stress even though they are not fully funded today. Undrawn commitments, potential collateral calls and other contingent demands can force the bank to hold standby liquidity. The Federal Reserve’s FTP guidance explicitly describes contingent liquidity risk as the cost of holding standby unencumbered highly liquid assets and expects that cost to be allocated to the businesses creating the contingent funding need.
-
-The curve should be marginal rather than merely an average of historic funding costs. Average cost answers what past liabilities cost; marginal cost is closer to what incremental balance-sheet usage economically requires now. The FSI identifies marginal matched-maturity funding cost as better practice.
-
-Care is required when combining components. Credit spread, liquidity premium, interest-rate risk and contingent charges can overlap if definitions are vague. A well-governed FTP framework states exactly what each component transfers and prevents the same risk from being charged twice.
+### Flow
 
 ```text
-+------------------+
-| Base/reference   |
-| term curve       |
-+------------------+
-        |
-        v
-+------------------+
-| + Funding /      |
-| liquidity premium|
-+------------------+
-        |
-        v
-+------------------+
-| Matched-maturity |
-| FTP curve        |
-+------------------+
-        |
-        v
-+------------------+
-| + contingent     |
-| liquidity charge |
-| where relevant   |
-+------------------+
+Opening liquidity
+    ↓
+Time-stamped payments and receipts
+    ↓
+Cumulative intraday position
+    ↓
+Peak net outflow
+    ↓
+Intraday funding/collateral requirement
+    ↓
+End-of-day position
+```
+
+### Where it sits
+
+```text
+Upstream:   Cash-timing failure · liquidity inventory · survival stress
+This:       Within-day settlement liquidity
+Downstream: Collateral/pre-positioning · CFP · operational escalation
+```
+
+### Formula
+
+```text
+Peak intraday liquidity need = absolute value of the most negative cumulative intraday cash position
+
+Earlier outflows ↑ → peak need ↑.
+
+Earlier incoming payments ↑ → peak need ↓.
 ```
 
 ### Permanent rule
 
-Every FTP component should correspond to a distinct economic cost or benefit and have a defined risk owner.
+Liquidity must exist at the payment deadline, not merely by the reporting cut-off.
 
-### Permanent trap
+### Never confuse [Intraday liquidity] and [End-of-day liquidity]
 
-Adding a “liquidity spread”, “term premium” and “contingency premium” without checking whether two components charge the same underlying risk.
-
-### Never confuse
-
-**Funding-liquidity premium** — internal compensation for the marginal cost/value of term funding.
+**Intraday liquidity** — resources available through the day to settle time-critical obligations.
 
 ---
 
-**Contingent liquidity charge** — allocation for potential stressed cash needs that may arise from currently unfunded or conditional exposures.
+**End-of-day liquidity** — closing cash after all daily flows; it can hide a severe earlier deficit.
+
+### Permanent trap
+
+Using LCR or daily net cash flow as a proxy for intraday capacity. Basel developed separate intraday monitoring tools because the timing problem is different.
 
 ### Jurisdiction variants
 
-**No delta.** Curve construction is institution-specific; the economic components do not depend on jurisdictional naming.
+No delta in mechanism. Payment-system structures, central-bank facilities and reporting requirements differ by jurisdiction.
 
 <Recall
-  q="Why use marginal rather than average historic funding cost?"
-  a="Marginal cost better represents the economics of adding or retaining the next unit of balance-sheet exposure."
+  q="How can a bank with positive daily net cash still have an intraday crisis?"
+  a="Large outgoing payments can settle before the receipts that ultimately make the day positive."
 />
 
 <Recall
-  q="What should pay a contingent liquidity charge?"
-  a="Activities capable of creating stressed funding needs, such as undrawn commitments or collateral calls."
+  q="What operational asset feature matters especially intraday?"
+  a="Pre-positioning and settlement speed — collateral must be mobilisable before the payment deadline."
 />

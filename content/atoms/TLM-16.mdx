@@ -1,104 +1,99 @@
 ---
 id: TLM-16
-title: Intraday liquidity
-type: mechanism
+title: Funding liquidity versus market liquidity
+type: concept
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  A bank can end the day liquid and still fail during the day if payments arrive
-  before offsetting receipts. Intraday liquidity is the capacity to meet payment
-  and settlement obligations at the required time, not merely by the reporting
-  cut-off.
+  Funding liquidity risk is the risk that the bank cannot obtain the cash it
+  owes on time without unacceptable loss; market liquidity risk is the risk that
+  an asset cannot be sold or financed quickly near its expected value. Funding
+  stress can force asset sales, and poor market liquidity can turn those sales
+  into losses that worsen the funding run.
 prerequisites:
-  - TLM-12
-  - TLM-14
+  - TLM-04
+  - TLM-15
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Monitoring tools for intraday
-      liquidity management*, BCBS 248
-    url: 'https://www.bis.org/publ/bcbs248.htm'
-    accessed: 28 August 2026
-  - label: >-
       Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Bank cash flows are not synchronised. A large payment may need to settle at 10:00 while the cash inflow expected to fund it arrives at 15:00. The bank therefore needs intraday sources of liquidity: opening cash, central-bank balances, incoming payments, intraday credit, collateralised facilities or other immediately available resources.
+### Core mechanism
 
-The key metric is not simply net daily cash flow but the **timing profile** within the day. A bank can receive 100 and pay 100 during the same day yet need substantial liquidity if most payments occur before receipts. The maximum cumulative net outflow is therefore a useful conceptual measure of the day’s peak funding requirement.
+| Risk | Question | Typical stress |
+| :--- | :--- | :--- |
+| Funding liquidity | Can we raise the cash/currency when due? | deposit runoff, failed rollover, draws, collateral calls |
+| Market liquidity | Can we sell/repo the asset at tolerable value and size? | wide spreads, low depth, higher haircuts |
 
-Settlement systems make this operationally critical. Failure to settle can delay counterparties’ receipts, which can in turn impair their ability to make payments. Intraday liquidity risk can therefore propagate through payment and settlement networks even when institutions appear solvent on an end-of-day basis.
-
-Collateral management is inseparable from intraday liquidity. Securities may need to be pre-positioned before they can support central-bank or secured intraday credit. An asset technically eligible but not operationally positioned may be useless at the moment a payment queue builds.
-
-The Basel Committee developed seven quantitative intraday monitoring tools and explicitly stated that intraday liquidity management is a key element of overall liquidity risk management. It also noted that intraday liquidity was not included in the calibration of the original LCR. This means a healthy LCR cannot be treated as proof that settlement liquidity is adequate.
+### Flow
 
 ```text
-Start of day
-    |
-    v
-+------------------+
-| Opening liquidity|
-+------------------+
-    |
-    v
-+------------------+
-| Payments -       |
-| receipts by time |
-+------------------+
-    |
-    v
-+------------------+
-| Cumulative net   |
-| position         |
-+------------------+
-    |
-    v
-+------------------+
-| Peak intraday    |
-| liquidity need   |
-+------------------+
-    |
-    v
-End of day
+Funding outflow ↑
+    ↓
+Need to borrow or monetise assets ↑
+    ↓
+Market depth ↓ / haircut ↑
+    ↓
+Cash raised per asset ↓ + realised loss ↑
+    ↓
+Capital/confidence ↓
+    ↓
+Further funding outflow ↑
+
+This loop is why “the asset has a quoted price” is not enough. What matters is executable monetisation size, timing, haircut and settlement under stress.
+```
+
+### Where it sits
+
+```text
+Upstream:   Solvent-bank cash failure · structural FX
+This:       Two interacting liquidity mechanisms
+Downstream: Liquidity inventory · cash-flow ladders · stress · collateral
 ```
 
 ### Permanent rule
 
-Intraday liquidity is about having cash at the required settlement time, not merely sufficient cash by day-end.
+Funding liquidity is about obtaining cash on time; market liquidity is about converting positions into cash at tolerable value.
 
-### Permanent trap
+### Never confuse [Funding liquidity risk] and [Market liquidity risk]
 
-Using daily net cash flow or LCR as a proxy for peak intraday funding needs.
-
-### Never confuse
-
-**Intraday liquidity** — resources needed to settle obligations during the business day.
+**Funding liquidity risk** — inability to meet expected or unexpected cash and collateral needs efficiently.
 
 ---
 
-**End-of-day liquidity** — the closing cash position after that day’s receipts and payments have occurred.
+**Market liquidity risk** — inability to offset or monetise a position near prevailing value because market depth or functioning is inadequate.
+
+### Permanent trap
+
+Calling a security liquid because it traded yesterday. A stress buffer must work at the size, speed and market conditions in which the bank expects to use it.
 
 ### Jurisdiction variants
 
-**No delta.** Payment-system structures and reporting details differ, but the timing mechanism is universal.
+No delta. Regulatory definitions and monitoring templates differ, but the economic distinction is universal.
 
 <Recall
-  q="How can a bank with zero net daily outflow still need large intraday liquidity?"
-  a="Outgoing payments may settle hours before offsetting incoming payments."
+  q="How does market liquidity turn a funding problem into a capital problem?"
+  a="Forced sales or larger haircuts can crystallise losses, reducing capital and confidence."
 />
 
 <Recall
-  q="Is intraday liquidity captured completely by LCR?"
-  a="No; Basel explicitly treats intraday monitoring separately from LCR calibration."
+  q="Can a high-quality asset still be a poor immediate funding source?"
+  a="Yes — it may be encumbered, operationally inaccessible or illiquid at the required size and time."
 />

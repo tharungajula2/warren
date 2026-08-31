@@ -1,103 +1,121 @@
 ---
 id: TLM-23
-title: Charging liquidity to the business that consumes it
-type: procedure
+title: 'Collateral, encumbrance and secured funding capacity'
+type: mechanism
 domain: treasury-alm
 subdomain: funds-transfer-pricing
 one_screen: >-
-  Liquidity cost belongs with the activity that creates the need to fund or hold
-  a buffer, even when treasury centrally executes the funding. Central execution
-  without decentralised pricing hides the risk from the business decision that
-  created it.
+  Collateral converts asset value into borrowing capacity, but only after
+  eligibility, haircut, legal availability and operational timing are
+  recognised. Encumbrance is the record of liquidity already spoken for: the
+  more assets pledged to existing transactions or margin needs, the less
+  optionality treasury has when stress arrives.
 prerequisites:
-  - TLM-20
+  - TLM-17
   - TLM-22
+  - TLM-15
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Federal Reserve, *Interagency Guidance on Funds Transfer Pricing Related
-      to Funding and Contingent Liquidity Risks*, March 2016
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-guidance-on-funds-transfer-pricing-related-to-funding-and-contingent-liquidity-risks.htm
-    accessed: 28 August 2026
-  - label: >-
       Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Monitoring tools for intraday
+      liquidity management*, BCBS 248, 11 April 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-An asset consumes funding because cash leaves when the asset is originated and returns over time. The longer or less liquid the exposure, the greater the funding commitment it can impose. A committed but undrawn facility creates a different cost: there may be no cash outflow today, but stress can trigger a draw exactly when market funding is least available.
+### Core mechanism
 
-FTP should therefore trace each material funding or contingent-liquidity requirement back to its originating activity. The transfer charge then enters product pricing, profitability metrics, limits and new-product approval. Federal Reserve guidance explicitly expects FTP costs and benefits to be allocated based on funding risk and contingent liquidity risk and incorporated into product pricing and business metrics.
+Secured funding capacity for an asset is approximately:
 
-A useful sequence is: identify the cash-flow or contingent exposure; determine effective tenor and stressed liquidity behaviour; select the matched FTP rate; add the contingent-liquidity component where appropriate; then measure the customer business margin after those charges.
+Funding capacity = eligible collateral value × (1 − haircut)
 
-This attribution creates the correct question for a product manager. The question is no longer “does the customer yield exceed the coupon on deposits?” It becomes “does the customer return compensate for credit risk, operating cost, capital, matched funding and liquidity consumption?” Risks allocated elsewhere under the bank’s framework should not be double-counted, but none should disappear.
+Then reduce for assets already encumbered or operationally unavailable.
 
-Central treasury remains responsible for aggregation because a bank has natural offsets. One business can produce stable deposits while another originates loans. Central funding lets treasury recognise those offsets. FTP ensures that the economic benefit of the funding source and cost of the consuming asset are visible to the appropriate businesses even though no external borrowing is matched transaction by transaction.
+| Driver | Effect on capacity |
+| :--- | :--- |
+| Market value ↓ | capacity ↓ |
+| Haircut ↑ | capacity ↓ |
+| Asset becomes ineligible | capacity → zero for that channel |
+| Encumbrance ↑ | unpledged capacity ↓ |
+| Pre-positioning completed | executable capacity ↑ |
+| Currency mismatch | may require FX conversion/swap before use |
+
+Collateral calls create a second-order stress: market moves reduce asset values or derivative positions, more collateral must be posted, encumbrance rises, and the remaining pool available for emergency borrowing shrinks.
+
+### Flow
 
 ```text
-+------------------+
-| Business activity|
-+------------------+
-        |
-        v
-+------------------+
-| Funding / stress |
-| liquidity need   |
-+------------------+
-        |
-        v
-+------------------+
-| FTP allocation   |
-+------------------+
-        |
-        v
-+------------------+
-| Product pricing  |
-| and profitability|
-+------------------+
-        |
-        v
-+------------------+
-| Behaviour changes|
-+------------------+
+Asset inventory
+    ↓
+Eligibility by funding channel
+    ↓
+Market value × haircut
+    ↓
+Subtract encumbered / unavailable assets
+    ↓
+Operationally executable borrowing capacity
+    ↓
+Stress haircuts + margin calls
+    ↓
+Revised capacity
+```
+
+### Where it sits
+
+```text
+Upstream:   Liquidity inventory · intraday · structural FX
+This:       Translation from assets to secured cash capacity
+Downstream: CFP · funding strategy · stress management
+```
+
+### Formula
+
+```text
+Secured funding capacity = eligible collateral value × (1 − haircut)
+
+Haircut ↑ → cash advanced per unit of collateral ↓.
+
+Encumbrance ↑ → collateral optionality ↓.
 ```
 
 ### Permanent rule
 
-The central location of treasury execution does not justify centralising the economic cost away from the business that creates it.
+Collateral value is not liquidity until a specific funding channel can turn it into cash within the required time.
 
-### Permanent trap
+### Never confuse [Encumbered asset] and [Unencumbered HQLA]
 
-Charging funded loan balances for liquidity while giving undrawn commitments zero charge because they have not yet produced a cash outflow.
-
-### Never confuse
-
-**Risk execution owner** — the central function that funds or hedges aggregate exposure.
+**Encumbered asset** — already pledged, secured or otherwise constrained so it cannot freely support another liquidity action.
 
 ---
 
-**Risk-originating business** — the activity whose product decision created the funding or contingent-liquidity need.
+**Unencumbered HQLA** — qualifying liquid asset available to the bank subject to the applicable operational requirements.
+
+### Permanent trap
+
+Reporting a large “collateral pool” without showing which legal entity owns it, which currency it supports, how long mobilisation takes and which assets are already pledged.
 
 ### Jurisdiction variants
 
-**No delta.** Allocation design is institution-specific; the economic incentive principle is universal.
+No delta in mechanism. Eligibility schedules, central-bank collateral frameworks and supervisory reporting differ.
 
 <Recall
-  q="Why charge an undrawn commitment before it is drawn?"
-  a="Because it can create a contingent cash need in stress and may require standby liquidity today."
+  q="Why does a higher repo haircut reduce liquidity?"
+  a="The lender advances less cash against the same collateral market value."
 />
 
 <Recall
-  q="Why centralise funding if businesses still receive FTP charges?"
-  a="Centralisation captures portfolio offsets; FTP preserves correct business-level incentives."
+  q="Why can a margin call amplify funding stress?"
+  a="It consumes cash or unencumbered collateral and leaves fewer assets available for other funding channels."
 />

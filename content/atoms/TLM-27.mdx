@@ -1,110 +1,117 @@
 ---
 id: TLM-27
-title: The credit-liquidity feedback loop
+title: Matched-maturity FTP and the transfer curve
 type: mechanism
 domain: treasury-alm
 subdomain: systemic-and-jurisdictions
 one_screen: >-
-  Credit deterioration can create liquidity stress, and liquidity stress can
-  create additional credit losses; the loop runs through collateral, funding
-  confidence, asset sales and customer drawdowns. Stress models that shock
-  credit and liquidity independently can therefore miss the mechanism that makes
-  combined crises severe.
+  Matched-maturity FTP prices an exposure against the internal cost or value of
+  funding with a comparable **effective** tenor rather than against one average
+  funding rate. The transfer curve should represent marginal balance-sheet
+  economics: what the next unit of funding or stable funding value costs now,
+  not what historical liabilities happened to cost.
 prerequisites:
-  - TLM-12
-  - TLM-17
   - TLM-26
+  - TLM-25
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
-  - label: 'Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*'
-    url: >-
-      https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm
-    accessed: 28 August 2026
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Interagency Guidance on Funds Transfer Pricing Related to Funding and
+      Contingent Liquidity Risks*, SR 16-3, 1 March 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Financial Stability Institute, *Liquidity transfer pricing: a guide to
+      better practice*, FSI Occasional Paper No. 10, December 2011.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-Begin with declining credit quality. Expected losses rise and the market value of affected assets can fall. Securities or loans used as collateral may attract larger haircuts, reducing secured borrowing capacity. At the same time, creditors and depositors can become less willing to fund the bank, increasing withdrawals or shortening available funding tenor.
+### Core mechanism
 
-Liquidity stress then forces actions that can worsen credit and capital. Selling less-liquid assets rapidly may crystallise losses. Cutting new lending can weaken borrowers that were relying on refinancing. Drawing on committed credit lines can increase precisely when customers themselves are under stress, creating new funded exposures while the bank is trying to preserve cash.
+Conceptual transfer rate:
 
-Derivatives and secured funding can add another channel. Falling asset values or ratings can generate collateral demands. More collateral becomes encumbered, leaving fewer unpledged assets available for alternative funding. A funding problem therefore reduces balance-sheet flexibility.
+FTP tenor rate ≈ reference term rate + bank funding/liquidity premium
 
-This is a **feedback loop** because each round changes the starting point for the next. Credit loss weakens funding confidence; weaker funding forces asset monetisation; monetisation crystallises losses; losses further weaken confidence.
+Then add a distinct contingent-liquidity charge where the product can generate stressed cash needs.
 
-Basel’s liquidity principles require banks to consider institution-specific and market-wide stress, contingent obligations and the possibility that funding sources close during severe conditions. The Federal Reserve’s liquidity-risk framework similarly requires stress cash-flow projections and CFP assessment of alternative funding sources rather than assuming normal-market access.
+| Product | FTP mapping |
+| :--- | :--- |
+| Bullet five-year loan | five-year effective funding point |
+| Amortising loan | weighted cash-flow strip / blended tenor |
+| Short trade asset | short point consistent with effective life |
+| Term deposit | credit for effective stable funding supplied |
+| NMD | behavioural replication, not contractual overnight rate |
 
-The ALM implication is that a combined stress cannot be built by simply adding a credit loss number to a liquidity outflow number. Assumptions must interact: haircuts, funding availability, drawdowns, collateral requirements and asset-sale discounts should respond to the deteriorating state of the institution.
+Matched-maturity does **not** mean treasury externally issues a bond for each loan. It is an internal pricing representation while actual funding is optimised at portfolio level.
+
+### Flow
 
 ```text
-+------------------+
-| Credit quality   |
-| deteriorates     |
-+------------------+
-        |
-        v
-+------------------+
-| Losses / lower   |
-| collateral value |
-+------------------+
-        |
-        v
-+------------------+
-| Funding confidence|
-| weakens          |
-+------------------+
-        |
-        v
-+------------------+
-| Outflows / forced|
-| asset sales      |
-+------------------+
-        |
-        v
-+------------------+
-| More losses and  |
-| weaker credit    |
-+------------------+
-        |
-        +----------&gt; back to top
+Product cash flows
+    ↓
+Effective funding tenor
+    ↓
+Marginal FTP curve point / strip
+    ↓
+Transfer charge or credit
+    ↓
+Business margin
+```
+
+### Where it sits
+
+```text
+Upstream:   FTP purpose and incentives · funding strategy
+This:       Tenor-sensitive marginal internal funding price
+Downstream: Behavioural/contingent FTP · product pricing · ALCO
+```
+
+### Formula
+
+```text
+Business asset spread = customer yield − matched-maturity FTP charge
+
+Business deposit spread = matched-maturity FTP credit − customer deposit rate
+
+Effective tenor ↑ → FTP generally reflects the economics of committing funding for longer, rather than automatically staying at the overnight rate.
 ```
 
 ### Permanent rule
 
-Credit and liquidity stresses are endogenous to one another once confidence, collateral and forced transactions begin to interact.
+Funding cost follows effective cash-flow tenor, not the accounting period in which product profit is reported.
 
-### Permanent trap
+### Never confuse [Matched-maturity FTP] and [Matched external funding]
 
-Running a “combined” stress by adding independently modelled credit and liquidity outputs without changing funding, haircut or drawdown assumptions as credit quality deteriorates.
-
-### Never confuse
-
-**Credit loss** — loss caused by deterioration or default of an obligor or exposure.
+**Matched-maturity FTP** — internal pricing against comparable tenor economics.
 
 ---
 
-**Liquidity loss** — cost or failure arising from obtaining cash or monetising assets under stress; it can amplify credit losses without being the same risk.
+**Matched external funding** — actually borrowing externally with cash flows mirroring an asset; this is not required transaction by transaction.
+
+### Permanent trap
+
+Using average historical funding cost because it reconciles neatly to the general ledger. Average cost can make today’s incremental asset decision look profitable even when replacing the funding would be much more expensive.
 
 ### Jurisdiction variants
 
-**No delta.** The feedback mechanism is economic and appears across banking systems.
+No delta. Curve construction is institution-specific; the economic principle is universal.
 
 <Recall
-  q="How can credit deterioration reduce liquidity before default losses fully crystallise?"
-  a="Through lower collateral values, higher haircuts, reduced market access and confidence-driven outflows."
+  q="Why is marginal funding cost usually more decision-useful than historical average cost?"
+  a="It better represents the economics of adding or retaining the next unit of balance-sheet exposure."
 />
 
 <Recall
-  q="Why are customer commitments important in a combined stress?"
-  a="Customers may draw them during credit stress, converting contingent exposures into immediate funding needs."
+  q="Does matched-maturity FTP require the bank to issue matching external debt for every loan?"
+  a="No — it prices the tenor internally while treasury funds the aggregate portfolio."
 />

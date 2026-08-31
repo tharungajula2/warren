@@ -1,16 +1,17 @@
 ---
 id: TLM-18
-title: Contingency funding plans
-type: procedure
+title: Cash-flow ladders and liquidity gaps
+type: mechanism
 domain: treasury-alm
 subdomain: liquidity-risk
 one_screen: >-
-  A contingency funding plan converts liquidity stress analysis into an
-  executable crisis playbook: triggers, decision rights, funding actions,
-  collateral, communications and escalation. A list of theoretical funding
-  sources is not a CFP unless those sources can actually be mobilised under
-  stress.
+  A liquidity ladder places expected cash inflows and outflows into the periods
+  in which cash must actually move, then shows discrete and cumulative funding
+  gaps. Unlike a repricing gap, it cares about settlement cash; unlike LCR, it
+  can use institution-specific buckets and behavioural assumptions across
+  horizons longer or shorter than 30 days.
 prerequisites:
+  - TLM-03
   - TLM-17
 jurisdictions:
   - IN
@@ -25,93 +26,110 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
-      Risk Management and Supervision*, BCBS 144
-    url: 'https://www.bis.org/publ/bcbs144.htm'
-    accessed: 28 August 2026
-  - label: 'Federal Reserve, *12 CFR 252.34 — Liquidity Risk-Management Requirements*'
-    url: >-
-      https://www.federalreserve.gov/frrs/regulations/section-25234-liquidity-risk-management-requirements.htm
-    accessed: 28 August 2026
+      Reserve Bank of India, *Guidelines on Liquidity Risk Management, Liquidity
+      Risk Monitoring Tools and LCR Disclosure Standards*,
+      DBOD.BP.BC.No.56/21.04.098/2012-13, 7 November 2012.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
       Prudential Regulation Authority, *The PRA’s approach to supervising
-      liquidity and funding risks*, SS24/15, January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss
-    accessed: 28 August 2026
+      liquidity and funding risks*, SS24/15, January 2026; effective 20 January
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Regulation YY —
+      Enhanced Prudential Standards for Bank Holding Companies and Foreign
+      Banking Organizations*, 12 CFR 252.34, as amended 1 November 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Parliament and Council, *Regulation (EU) No 575/2013 on
+      prudential requirements for credit institutions and investment firms*,
+      consolidated 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-A **contingency funding plan (CFP)** begins before the crisis. It defines early-warning indicators such as deposit outflows, widening funding spreads, falling unencumbered collateral, unusual drawdowns, reduced market access or rapid deterioration in liquidity metrics. Thresholds escalate the issue to named decision-makers rather than relying on ad hoc judgement.
+### Core mechanism
 
-The plan then maps actions to stress severity. Early actions might shorten asset deployment or increase secured funding. More severe stages may involve monetising liquidity buffers, raising term funding where markets remain open, mobilising collateral, reducing new commitments or using available central-bank facilities subject to eligibility and internal governance.
+For each time bucket:
 
-Each funding source needs an operational dossier: amount, currency, haircut, settlement time, legal entity, pre-positioning requirement, documentation, counterparty capacity and any constraint created by using it. The same asset cannot support two independent actions simultaneously.
+Liquidity gap_i = cash inflows_i − cash outflows_i
 
-Governance is as important as funding capacity. A usable CFP identifies who can invoke it, who executes transactions, who communicates with supervisors and counterparties and how information is produced during fast-moving stress. Periodic testing should verify that access channels, collateral movements and communication trees work in practice.
+Cumulative liquidity gap_n = sum of Liquidity gap_i through bucket n
 
-Basel’s sound liquidity principles call for robust, operational contingency funding plans tied to stress-test results. In the US, Regulation YY requires covered bank holding companies to maintain a CFP addressing identified stress events, available and alternative funding sources, invocation triggers, a liquidity-event management process, communication, early-warning monitoring and periodic operational testing.
+| Input | Contractual starting point | Behavioural/stress adjustment |
+| :--- | :--- | :--- |
+| Deposits | legal withdrawal/maturity | runoff profile |
+| Loans | scheduled receipts | prepayment, delinquency where relevant |
+| Wholesale funding | maturity | rollover assumption |
+| Commitments | no funded cash today | drawdown assumption |
+| Derivatives | contractual settlements | margin/collateral calls |
+| Asset monetisation | not a contractual inflow | haircut + execution timing |
+
+A cumulative deficit says the bank must bridge cash by that horizon. It does not say the bank will fail: available buffers and credible funding actions may cover it.
+
+### Flow
 
 ```text
-+------------------+
-| Early-warning    |
-| indicators       |
-+------------------+
-        |
-        v
-+------------------+
-| Trigger breached |
-+------------------+
-        |
-        v
-+------------------+
-| Crisis governance|
-| invoked          |
-+------------------+
-        |
-        v
-+------------------+
-| Funding / buffer |
-| actions          |
-+------------------+
-        |
-        v
-+------------------+
-| Monitor + escalate|
-+------------------+
+Contractual cash schedule
+    ↓
+Behavioural assumptions
+    ↓
+Cash inflow/outflow buckets
+    ↓
+Discrete gaps
+    ↓
+Cumulative gap
+    ↓
+Compare with counterbalancing capacity
+```
+
+### Where it sits
+
+```text
+Upstream:   Behavioural model · liquidity inventory
+This:       Time profile of cash mismatch
+Downstream: LCR · NSFR contrast · survival horizon · CFP
 ```
 
 ### Permanent rule
 
-A contingency funding source is useful only to the extent it can be operationally accessed in the stress in which it is being counted.
+Liquidity measurement must follow expected cash timing, not simply accounting maturity labels.
 
-### Permanent trap
+### Never confuse [Liquidity gap] and [Repricing gap]
 
-Listing “sell securities” or “raise secured funding” without identifying haircuts, settlement time, collateral availability and responsible execution teams.
-
-### Never confuse
-
-**CFP** — the executable response plan for liquidity stress.
+**Liquidity gap** — cash entering minus cash leaving in a period.
 
 ---
 
-**Liquidity stress test** — the analytical scenario that quantifies the liquidity problem the CFP must address.
+**Repricing gap** — rate-sensitive assets minus liabilities resetting in a period.
+
+### Permanent trap
+
+Assuming every maturing wholesale liability rolls because it usually does. Rollover is a behavioural funding assumption and should deteriorate in relevant stresses.
 
 ### Jurisdiction variants
 
-**IN** — RBI liquidity-risk requirements use contingency funding and stress-management principles; precise current commercial-bank requirements should be verified against applicable RBI consolidated directions.
+#### IN (RBI)
+RBI’s liquidity-risk framework requires the Statement of Structural Liquidity and permits behavioural placement of cash flows. It prescribes short-bucket cumulative mismatch tolerance architecture and separate foreign-currency/overseas reporting.
 
-**UK** — CFP capability forms part of the broader PRA liquidity and ILAAP supervisory framework. [PRA SS24/15]
+#### UK (PRA)
+PRA liquidity supervision supplements LCR with cash-flow mismatch and firm-specific liquidity assessment, including Pillar 2 liquidity tools.
 
-**EU** — contingency planning sits within the EU liquidity-risk and ILAAP supervisory architecture; detailed requirements should be verified against current CRR/CRD and EBA guidance.
+#### EU
+No mechanism delta. CRR/EBA reporting and supervisory frameworks prescribe liquidity reporting beyond the simple LCR ratio.
 
-**US** — Regulation YY expressly requires covered firms to maintain, update and periodically test contingency funding plans with triggers, action plans and alternative funding sources. [12 CFR 252.34(f)]
+#### US
+Regulation YY requires covered bank holding companies to project short- and long-term cash flows, include behavioural assumptions and identify discrete and cumulative mismatches.
 
 <Recall
-  q="What makes a CFP operational rather than theoretical?"
-  a="Defined triggers, decision rights, executable funding sources, collateral readiness, communications and testing."
+  q="What does a cumulative negative liquidity gap mean?"
+  a="By that horizon, projected cash outflows exceed inflows and the deficit must be covered by usable liquidity or funding actions."
 />
 
 <Recall
-  q="How should a CFP relate to stress testing?"
-  a="The actions and resources in the CFP should address liquidity needs revealed by the stress scenarios."
+  q="Why is wholesale rollover not a contractual inflow?"
+  a="It depends on future market and counterparty willingness, so it is a behavioural funding assumption."
 />

@@ -1,22 +1,21 @@
 ---
 id: TLM-02
-title: Banking book versus trading book
-type: concept
+title: From accounting balance sheet to ALM map
+type: mechanism
 domain: treasury-alm
 subdomain: irrbb-and-mismatches
 one_screen: >-
-  The banking-book/trading-book boundary is not shorthand for “held long term”
-  versus “traded frequently”; it is a regulatory classification determining
-  which risk framework applies. Moving an exposure across that boundary can
-  change valuation, capital treatment, risk measurement, governance and
-  permissible hedging recognition.
+  ALM stops reading the balance sheet as accounting labels and starts reading it
+  as dated cash flows, repricing events, currencies, rate bases and options.
+  Assets can equal liabilities plus equity exactly while the bank remains
+  heavily mismatched in time, rate and currency.
 prerequisites:
   - TLM-01
+  - FND-01
+  - FND-06
+  - FND-07
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -25,87 +24,88 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Interest rate risk in the banking
-      book*, Basel Framework SRP31
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/31.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Principles for Sound Liquidity
+      Risk Management and Supervision*, BCBS 144, 25 September 2008.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
-      Forthcoming Instructions) Directions, 2025*, Chapter V
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13137&Mode=0'
-    accessed: 28 August 2026
-  - label: >-
-      European Banking Authority, *Guidelines on IRRBB and CSRBB*,
-      EBA/GL/2022/14
-    url: >-
-      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/supervisory-review-and-evaluation-process-srep-0
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, *Application guidance on interest
+      rate risk in the banking book*, Basel Framework SRP98, updated 16 July
+      2024, effective 1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 05_TLM_treasury_alm_liquidity.md
 ---
-The **trading book** contains positions assigned to the regulatory trading perimeter under applicable capital rules. The **banking book** is the non-trading portion of the balance sheet. The distinction matters because market risk in the trading book and interest-rate risk in the banking book are governed through different prudential machinery.
+### Core mechanism
 
-A fixed-rate bond illustrates the point. Economically, its value changes when interest rates change regardless of where it is booked. If it is a trading-book position, that risk is generally captured through the market-risk capital framework. If it sits in the banking book, the structural interest-rate exposure enters IRRBB measures such as economic value of equity and net interest income. The economic sensitivity exists before regulation; the boundary determines how that sensitivity is classified and supervised. Basel defines IRRBB as risk to capital and earnings from adverse interest-rate movements affecting banking-book positions.
+For each asset, liability and off-balance-sheet position, ask five different questions:
 
-This prevents a common conceptual error: accounting classification and prudential-book classification are related operationally but are not synonyms. A position's accounting measurement basis does not, by itself, answer which prudential risk framework applies. Nor can a bank freely relabel positions merely because one treatment appears more favourable; the boundary is governed by regulatory assignment criteria and controls.
+| Dimension | Question | Why it matters |
+| :--- | :--- | :--- |
+| Contractual cash flow | When is cash legally due? | starting maturity schedule |
+| Behavioural cash flow | When is cash realistically expected? | deposits, prepayment, drawdowns |
+| Repricing | When and to what benchmark can price reset? | NII and IRRBB |
+| Currency | In what currency must cash be delivered? | FX and currency liquidity |
+| Optionality | Who can change amount or timing? | scenario-dependent cash flows |
 
-For ALM, the consequence is practical. Structural customer loans, deposits, non-maturity balances, term funding and relevant off-balance-sheet positions feed the banking-book risk system. Treasury must identify which cash flows belong there, how they reprice and which embedded options affect them. RBI’s 2025 forthcoming IRRBB Directions similarly define IRRBB around banking-book positions and require measurement of both ΔEVE and ΔNII.
+A five-year fixed-rate loan funded by an overnight deposit creates no accounting imbalance. It does create a funding horizon mismatch and an interest-rate mismatch. If the loan is in USD and the deposit is in INR, it also creates a currency problem even if a derivative temporarily offsets the spot FX position.
+
+### Flow
 
 ```text
-+----------------------+
-| Bank positions       |
-+----------------------+
-           |
-           v
-+----------------------+
-| Regulatory boundary  |
-+----------------------+
-      |           |
-      v           v
-+-----------+ +-----------+
-| Trading   | | Banking   |
-| book      | | book      |
-+-----------+ +-----------+
-      |           |
-      v           v
-+-----------+ +-----------+
-| Market-   | | IRRBB /   |
-| risk      | | ALM       |
-| framework | | framework |
-+-----------+ +-----------+
+Position record
+    ↓
+Contractual cash flows
+    ↓
+Behavioural adjustments
+    ↓
+Repricing + currency + optionality map
+    ↓
+IRRBB · liquidity · funding · FX · FTP measures
+```
+
+### Where it sits
+
+```text
+Upstream:   Treasury mandate · accounting balance sheet
+This:       Economic decomposition of positions
+Downstream: Behavioural assumptions · IRRBB · FX · liquidity ladders · FTP
 ```
 
 ### Permanent rule
 
-Book classification determines the applicable prudential risk framework; economic interest-rate sensitivity exists irrespective of the label.
+Accounting balance does not imply economic matching.
 
-### Permanent trap
+### Never confuse [Maturity mismatch] and [Repricing mismatch]
 
-Using “banking book” to mean “held to maturity” or assuming an accounting category automatically determines the prudential book.
-
-### Never confuse
-
-**Prudential book classification** — regulatory allocation between trading and banking books for risk and capital purposes.
+**Maturity mismatch** — principal or cash returns on different effective horizons.
 
 ---
 
-**Accounting classification** — the financial-reporting basis used to recognise and measure an instrument.
+**Repricing mismatch** — interest rates reset at different times or on different bases, even if principal maturities match.
+
+### Never confuse [Repricing event] and [Cash flow]
+
+**Repricing event** — the rate changes while principal may stay outstanding.
+
+---
+
+**Cash flow** — cash actually enters or leaves the bank.
+
+### Permanent trap
+
+Using one “maturity” field for every ALM purpose. Contractual maturity, behavioural life, next repricing date and stressed liquidity horizon answer different questions.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s forthcoming 2025 IRRBB Directions measure banking-book interest-rate risk through ΔEVE and ΔNII; implementation date remains to be communicated. [RBI, Commercial Banks – Forthcoming Instructions Directions, 2025]
-
-**UK** — UK prudential rules retain a regulatory distinction between traded market risk and banking-book interest-rate risk; precise booking criteria must be verified against the current PRA Rulebook and UK capital framework.
-
-**EU** — CRR prudential rules and EBA IRRBB standards distinguish trading/non-trading activities; EBA/GL/2022/14 addresses IRRBB and CSRBB arising from non-trading book activities. [EBA/GL/2022/14]
-
-**US** — US capital and supervisory frameworks separately address trading-market risk and structural interest-rate risk; precise trading-book assignment must be verified against the current US capital rule.
+No delta. Supervisors prescribe different templates and assumptions, but the economic decomposition is common.
 
 <Recall
-  q="Is a banking-book asset necessarily held to maturity?"
-  a="No. Banking-book status is a prudential classification, not a synonym for an accounting holding intention."
+  q="Can an accounting-balanced bank have large ALM risk?"
+  a="Yes — equality of assets and liabilities says nothing about timing, repricing, currency or optionality."
 />
 
 <Recall
-  q="What changes when an exposure crosses the prudential boundary?"
-  a="The framework used to measure, capitalise and supervise its risk."
+  q="Why can one deposit appear in several different time buckets?"
+  a="Its legal withdrawal right, behavioural life, rate reset and stressed runoff can all occur on different horizons."
 />
