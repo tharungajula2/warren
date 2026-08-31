@@ -1,17 +1,17 @@
 ---
 id: CR-09
-title: Cure and re-default
+title: Unlikeliness to pay
 type: mechanism
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  Cure is the controlled transition from default back to non-default after the
-  conditions causing default have ceased and repayment performance is
-  sufficiently credible. Re-default is a subsequent return to default; treating
-  temporary payment as permanent cure understates both PD and workout risk.
+  Unlikeliness to pay identifies default from the substance of credit
+  deterioration before a delinquency clock necessarily reaches its backstop. It
+  asks whether full payment remains likely without extraordinary recovery
+  action; it is governed judgement, not a discretionary weakness label.
 prerequisites:
   - CR-05
-  - CR-06
+  - CR-07
   - CR-08
 jurisdictions:
   - IN
@@ -20,106 +20,123 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning Directions, 2025, paragraph 71
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
   - label: >-
-      European Banking Authority, Guidelines on application of the definition of
-      default, EBA/GL/2016/07 as amended by EBA/GL/2026/05
+      Prudential Regulation Authority, PS7/19, *Credit risk: The definition of
+      default*, 6 March 2019
     url: >-
-      https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-application-definition-default
-    accessed: 28 August 2026
-  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default
+    accessed: 30 August 2026
+  - label: >-
+      Prudential Regulation Authority, SS3/24, *Credit risk: definition of
+      default*, first published 12 September 2024; future version published 20
+      January 2026 and effective 1 January 2027
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
-    accessed: 28 August 2026
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement
+    accessed: 30 August 2026
+  - label: >-
+      European Banking Authority, EBA/GL/2026/05, *Guidelines amending
+      Guidelines EBA/GL/2016/07 on the application of the definition of default
+      under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application
+      date 19 October 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement
+      Approaches*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-Default need not be permanent. A borrower may restore arrears, recover financial capacity and resume sustainable contractual performance. A **cure** occurs when the applicable framework permits the exposure or obligor to return from default to non-default.
+### Core mechanism
 
-Cure is not simply "DPD became zero". A payment may eliminate current arrears while the obligor remains financially distressed, under restructuring, or otherwise unlikely to pay. Robust frameworks therefore require evidence that the original default conditions have ceased and that renewed performance is credible. Regulatory regimes may impose probation or monitoring periods before return to non-default.
+| Evidence | Question |
+| :--- | :--- |
+| Repayment capacity deterioration | Can expected cash flow still service the obligation in full? |
+| Distressed restructuring | Would the borrower fail or suffer material difficulty without a concession? |
+| Credit-related write-down / sale loss | Does the bank’s own action evidence material deterioration? |
+| Insolvency / bankruptcy event | Does legal distress indicate repayment will be avoided or delayed? |
+| Security dependence | Is repayment only credible through enforcement or realisation of collateral? |
 
-A **re-default** occurs when a cured exposure subsequently satisfies the default definition again. Re-default matters because a superficially high cure rate can conceal unstable cures. A portfolio in which half of cured borrowers fail again soon afterwards behaves differently from one in which cures are durable.
-
-The default lifecycle must therefore preserve dates and states rather than only a current flag. At minimum, useful history distinguishes first default, cure, subsequent re-default and recovery/write-off outcomes. Destroying prior-default history when an account cures biases default-rate estimation, obscures restructuring performance and weakens behavioural models.
-
-India illustrates the distinction between mere payment activity and prudential upgradation. RBI's commercial-bank rules state that, where a borrower has multiple facilities with a bank, NPA accounts are upgraded to standard only when entire arrears of interest and principal relating to all credit facilities have been repaid, subject to additional rules for specified restructuring cases.
+A watch-list flag, downgrade or adverse news item is an **input**, not automatically default. Documented triggers and evidence standards prevent UTP from drifting across teams or cycles.
 
 <Flow>
-+-----------+
-| Performing|
-+-----------+
-      |
-      v
-+-----------+
-| Default   |
-+-----------+
-      |
-      v
-+--------------------+
-| Default conditions |
-| cease + cure test  |
-+--------------------+
-      |
-      v
-+-----------+
-| Cured     |
-+-----------+
-      |
-      v
-+------------------+
-| New default test |
-+------------------+
-      |
-      v
-+-----------+
-| Re-default|
-+-----------+
+Adverse evidence
+    ↓
+Assess sustainable full payment without extraordinary recovery action
+    ↓
+Full payment likely → No UTP → Continue monitoring
+Full payment unlikely → UTP → Default
 </Flow>
 
+<Flow>
+Upstream:   Underwriting baseline · Monitoring · Adverse events · Financial information
+This:       Evidence → Assess full payment without extraordinary action → UTP yes/no
+Downstream: Default state · Collections/workout · PD labels · Provisioning/capital consequences
+</Flow>
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Relationship/credit monitoring identifies deterioration and evidence |
+| Approves | Credit risk or delegated default governance determines UTP status |
+| Consumes | Collections, restructuring, modelling, finance and regulatory reporting |
+| Challenges | Independent risk, model validation and audit test consistency |
+
 <Rule label="PERMANENT RULE">
-Cure must be defined independently of the original default trigger and must preserve the historical fact that default occurred.
+Assess UTP on the ability and likelihood to pay the credit obligation in full, not on how much the bank expects to recover after failure.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Resetting the customer's record to "never defaulted" after cure creates survivorship bias in PD, migration and recovery analysis.
-</Trap>
+<NeverConfuse a="Unlikely to pay" b="High LGD">
+**Unlikely to pay** — a default-likelihood conclusion about full contractual payment.
 
-<NeverConfuse>
-**Cure** — a qualifying return from default to non-default.
-
-**Temporary arrears clearance** — a payment that removes overdue amounts but may not satisfy broader cure or viability criteria.
+---
+**High LGD** — a severity conclusion about the size of loss conditional on default.
 </NeverConfuse>
 
-<Delta j="IN">
-— RBI commercial-bank upgradation from NPA to standard generally requires full repayment of arrears of interest and principal; where several facilities exist with the bank, arrears across all such facilities must be cleared, with special restructuring rules applying where relevant. [RBI IRACP Directions 2025]
-</Delta>
+<Trap label="PERMANENT TRAP">
+Calling a fully secured exposure “not defaulted” because collateral should cover the debt confuses borrower repayment with recovery from security.
+</Trap>
 
-<Delta j="UK">
-— PRA default guidance requires policies for return to non-default and continued consistency with the applicable regulatory definition. [PRA default framework]
-</Delta>
+#### IN (RBI)
 
-<Delta j="EU">
-— EBA definition-of-default Guidelines prescribe return-to-non-default criteria and probation requirements. The Guidelines were amended in May 2026; the current scenario-specific probation requirement must therefore be read from EBA/GL/2016/07 as amended by EBA/GL/2026/05 rather than from superseded versions. [EBA/GL/2026/05]
-</Delta>
+RBI commercial-bank NPA classification is its own prudential framework. Do not import a Basel IRB UTP label into RBI NPA reporting without an explicit mapping to the RBI rules in force.
 
-<Delta j="US">
-— under Federal Reserve Advanced Approaches rules, a wholesale obligor remains in default until the institution has reasonable assurance of repayment and performance for contractual principal and interest; corresponding retail rules use an exposure-level standard. [12 CFR Part 217 Subpart E]
-</Delta>
+#### UK (PRA)
+
+The current UK framework includes unlikeliness-to-pay indicators. PRA SS3/24 provides the future Basel 3.1 expectations from 1 January 2027.
+
+#### EU
+
+UTP is an independent limb of CRR Article 178. The May 2026 EBA amendments apply from 19 October 2026 and should be treated as future-effective until then.
+
+#### US
+
+Advanced Approaches wholesale default expressly includes a determination that the obligor is unlikely to pay in full without recourse to actions such as realising collateral.
 
 <Recall
-  q="Is zero DPD sufficient evidence of cure?"
-  a="Not necessarily; the applicable cure requirements and continuing UTP conditions must also be satisfied."
+  q="Can default occur at 0 DPD?"
+  a="Yes, if a qualifying UTP trigger establishes that full payment is unlikely."
 />
 
 <Recall
-  q="Why retain re-default history?"
-  a="Because durability of cure affects model calibration, recovery analysis and risk assessment."
+  q="Is a watch-list flag automatically UTP?"
+  a="No. It is evidence requiring assessment under the governed default criteria."
+/>
+
+<Recall
+  q="Why does strong collateral not negate UTP?"
+  a="Collateral affects recovery; UTP asks whether the obligor can pay without extraordinary recovery action."
 />

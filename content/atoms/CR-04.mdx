@@ -1,14 +1,14 @@
 ---
 id: CR-04
-title: Group and connected-party exposure
+title: Connected counterparties and economic groups
 type: mechanism
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  Legal separation does not guarantee economic independence. Connected-party
-  rules aggregate exposures where control or economic interdependence means that
-  trouble at one entity can transmit to another, preventing a bank from
-  disguising one concentrated risk as several separate names.
+  Legal separation does not guarantee independent credit risk.
+  Connected-counterparty analysis aggregates persons when control or economic
+  interdependence creates a common failure channel, so one concentrated risk
+  cannot be disguised as several names.
 prerequisites:
   - CR-01
   - CR-03
@@ -25,84 +25,85 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, LEX10, “Large
-      exposures”
-    url: 'https://www.bis.org/basel_framework/chapter/LEX/10.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, LEX10,
+      *Definitions and application*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/lex/10/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
   - label: >-
-      Prudential Regulation Authority, SS3/25, “Identification of groups of
-      connected clients”
+      Prudential Regulation Authority, SS3/25, *Identification of groups of
+      connected clients*, 17 July 2025
     url: >-
       https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement
-    accessed: 28 August 2026
-  - label: >-
-      Reserve Bank of India, Reserve Bank of India (Commercial Banks – Large
-      Exposures Framework) Directions, 2025
-    url: 'https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13152'
-    accessed: 28 August 2026
-  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 32, “Lending Limits”'
-    url: 'https://www.ecfr.gov/current/title-12/chapter-I/part-32'
-    accessed: 28 August 2026
+    accessed: 30 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 32, *Lending Limits*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-A bank normally begins concentration measurement with individual counterparties. That is insufficient where several legal persons form one risk because one controls another or because their financial survival is economically interdependent.
+### Core mechanism
 
-**Control connection** arises when one person controls another, or several counterparties are controlled by the same person. **Economic interdependence** arises where financial difficulties at one counterparty are likely to cause funding or repayment difficulties at another. Basel's large-exposures framework uses these two ideas to identify a group of connected counterparties.
+| Connection test | Core question | Credit consequence |
+| :--- | :--- | :--- |
+| Control | Does one person directly or indirectly control another, or are several under common control? | Treat connected exposures as one concentration where the rule requires |
+| Economic interdependence | Would financial difficulty at one likely cause funding or repayment difficulty at another? | Aggregate because apparent legal diversification is not economic diversification |
+| Mere commercial relationship | Are entities simply customers/suppliers without material dependency? | Investigate; do not aggregate automatically |
 
-The logic is economic rather than cosmetic. Suppose three companies have different legal names and separate loan agreements, but one operating company generates nearly all cash used to service the others' debt. Treating the three exposures as independent names would overstate diversification. Connected-group aggregation recognises the common failure channel.
-
-This does not mean every company in a corporate group must have the same internal rating or must automatically default simultaneously. Connection for concentration purposes and default propagation are distinct questions. One asks whether exposures should be aggregated when limiting large losses; the other asks whether a credit event at one entity constitutes default at another under the applicable default definition.
-
-Basel's supervisory concentration framework additionally recognises concentration by sector, geography, product or common risk factor, so connected-counterparty analysis is only one layer of concentration management.
+Connection for concentration purposes is not the same as default propagation. Two companies can be aggregated for a large-exposure limit yet retain separate ratings and default statuses if the applicable default rules assess them separately.
 
 <Flow>
-+-------------+       +-------------+
-| Entity A    |------&gt;| Entity B    |
-| controls B  |       | borrower    |
-+-------------+       +-------------+
-       |
-       v
-+-------------+
-| Entity C    |
-| dependent   |
-+-------------+
-       |
-       v
-+---------------------------+
-| Connected-counterparty    |
-| exposure aggregation      |
-+---------------------------+
+Legal entities
+    ↓
+Control test OR economic-interdependence test
+    ↓
+Connected group → Aggregate exposure → Concentration limit / monitoring
 </Flow>
 
+<Flow>
+Upstream:   Legal entities · Ownership · Funding links · Revenue dependencies
+This:       Test control OR economic interdependence → connected group
+Downstream: Aggregate exposure · Large-exposure limits · Concentration monitoring
+</Flow>
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Relationship teams and credit analysis identify ownership and dependency evidence |
+| Approves | Credit risk / designated governance confirms connected-group treatment |
+| Consumes | Limits, portfolio risk, regulatory reporting and capital assessment |
+| Challenges | Independent risk, compliance and audit test completeness and consistency |
+
 <Rule label="PERMANENT RULE">
-Separate legal entities must be aggregated when the applicable connected-counterparty test says their credit risks form a single concentration.
+Count common failure mechanisms, not merely legal names.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-A common mistake is to equate "same corporate group" with "same defaulted obligor", or the reverse. Large-exposure connectivity and default propagation serve different purposes.
-</Trap>
+<NeverConfuse a="Connected counterparties" b="Single obligor">
+**Connected counterparties** — separate persons aggregated because their risks are linked by control or economic dependency.
 
-<NeverConfuse>
-**Connected counterparties** — separate counterparties aggregated because control or economic dependency creates a common concentration.
-
-**Single obligor** — one legal or natural person responsible for obligations; connected entities remain legally distinct even when aggregated for concentration purposes.
+---
+**Single obligor** — one legal or natural person responsible for obligations.
 </NeverConfuse>
 
-<Delta j="IN">
-— RBI's Large Exposures Framework requires aggregation of groups of connected counterparties and applies prudential large-exposure limits; the current commercial-bank framework should be applied using the RBI directions in force for the reporting date. [RBI Commercial Banks Large Exposures Framework Directions 2025]
-</Delta>
+<Trap label="PERMANENT TRAP">
+“Same corporate group” does not automatically mean “same defaulted obligor”, and separate incorporation does not automatically mean independent concentration risk.
+</Trap>
 
-<Delta j="UK">
-— PRA policy identifies groups of connected clients using control and economic dependency concepts within its large-exposures framework. [PRA SS3/25]
-</Delta>
+#### IN (RBI)
 
-<Delta j="EU">
-— CRR large-exposure rules use the concept of a group of connected clients, including control and economic interconnection. [CRR Article 4(1)(39), Articles 387–395]
-</Delta>
+RBI’s Large Exposures Framework applies Indian prudential aggregation and limits to single counterparties and groups of connected counterparties; use the RBI framework in force for the reporting date.
 
-<Delta j="US">
-— national-bank legal lending-limit aggregation uses its own statutory and regulatory combination tests, including control/common-enterprise rules; it should not be assumed to be identical to the Basel connected-counterparty test. [12 CFR Part 32]
-</Delta>
+#### UK (PRA)
+
+PRA SS3/25 sets expectations for groups of connected clients using control and economic dependency concepts.
+
+#### EU
+
+The CRR large-exposures framework uses groups of connected clients and tests based on control and economic interconnection.
+
+#### US
+
+US legal lending-limit and aggregation rules use US-specific control/common-enterprise tests; they should not be assumed identical to the Basel connected-counterparty test.
 
 <Recall
   q="What are the two core Basel routes to connectedness?"
@@ -110,6 +111,11 @@ A common mistake is to equate "same corporate group" with "same defaulted obligo
 />
 
 <Recall
-  q="Does group aggregation mean every group member automatically shares one default status?"
-  a="No. Concentration aggregation and default recognition are separate tests."
+  q="Does connected-group aggregation force one common default status?"
+  a="No. Concentration aggregation and default recognition are different tests."
+/>
+
+<Recall
+  q="Why aggregate economically dependent entities?"
+  a="Because their losses can arise from the same underlying failure mechanism."
 />

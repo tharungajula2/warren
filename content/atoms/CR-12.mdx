@@ -1,104 +1,148 @@
 ---
 id: CR-12
-title: Probability of default
-type: concept
+title: 'Cure, probation and re-default'
+type: mechanism
 domain: credit-risk
 subdomain: risk-parameters
 one_screen: >-
-  Probability of default is the probability that a defined obligor or exposure
-  enters a defined default state over a specified future horizon, conditional on
-  a stated information set. A PD without a horizon, default definition and unit
-  of observation is not a complete parameter.
+  Cure is the governed transition from default back to non-default after the
+  default conditions have ceased and renewed performance is credible. Re-default
+  is a later return to default; a temporary payment or zero-DPD snapshot is not
+  enough to prove a durable cure.
 prerequisites:
-  - CR-05
+  - CR-07
+  - CR-09
+  - CR-11
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB
-      approach: minimum requirements”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131,
-      Advanced Approaches risk parameters
+      European Banking Authority, EBA/GL/2016/07, *Guidelines on the application
+      of the definition of default under Article 178 of Regulation (EU) No
+      575/2013*, 28 September 2016.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, EBA/GL/2026/05, *Guidelines amending
+      Guidelines EBA/GL/2016/07 on the application of the definition of default
+      under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application
+      date 19 October 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, PS7/19, *Credit risk: The definition of
+      default*, 6 March 2019
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
-    accessed: 28 August 2026
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default
+    accessed: 30 August 2026
+  - label: >-
+      Prudential Regulation Authority, SS3/24, *Credit risk: definition of
+      default*, first published 12 September 2024; future version published 20
+      January 2026 and effective 1 January 2027
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement
+    accessed: 30 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement
+      Approaches*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-A **probability of default (PD)** is a probability attached to a future default event. Four elements must accompany the number.
+### Core mechanism
 
-First is the **unit**: an obligor, facility or homogeneous retail pool. A 2% obligor PD and a 2% facility-level default probability need not describe the same event.
+Default
+    ↓
+Original trigger ceases
+    ↓
+Required arrears / viability conditions met
+    ↓
+Probation or observation requirement, where applicable
+    ↓
+Cured / non-default
+    ↓
+New qualifying trigger?
+    ↓
+Re-default
 
-Second is the **default definition**. A PD calibrated to regulatory default is not automatically interchangeable with a probability of 90 DPD, bankruptcy, charge-off or accounting impairment.
-
-Third is the **horizon**. Basel IRB PDs are fundamentally one-year measures, with regulatory estimates required to reflect long-run average one-year default experience subject to framework requirements. A lifetime default probability answers a different question from a 12-month PD.
-
-Fourth is the **information date** or conditioning set. Two identical borrowers observed in different macroeconomic environments may receive different point-in-time probabilities if the model conditions strongly on current conditions.
-
-PD is not a prediction that a particular borrower "will default". If 1,000 genuinely comparable exposures each have a well-calibrated 1% one-year PD, the interpretation is roughly that repeated comparable populations would default at a rate consistent with that probability, not that ten predetermined borrowers have already been identified.
-
-A rating grade can therefore contain many obligors with a common calibrated grade PD even though individual circumstances differ. Conversely, a credit score may rank borrowers well without its raw score being a probability. Calibration is the mapping from score or grade to an observed or estimated default frequency.
+A sound data model keeps the entire state history: first default date, cause, restructuring events, cure date, probation, re-default and recovery. Deleting default history after cure produces survivorship bias and makes weak restructurings look successful.
 
 <Flow>
-+---------------------+
-| Unit                |
-| obligor/facility    |
-+---------------------+
-          |
-          v
-+---------------------+
-| Default definition  |
-+---------------------+
-          |
-          v
-+---------------------+
-| Horizon             |
-| e.g. one year       |
-+---------------------+
-          |
-          v
-+---------------------+
-| Information set     |
-+---------------------+
-          |
-          v
-+---------------------+
-| PD                  |
-+---------------------+
+Default
+    ↓
+Original trigger ceases → Arrears / viability conditions met
+    ↓
+Probation / observation where required
+    ↓
+Cured / non-default
+    ↓
+New qualifying trigger → Re-default
+</Flow>
+
+<Flow>
+Upstream:   Default state · Payments · Financial recovery · Restructuring performance
+This:       Test exit conditions → probation where required → cure
+Downstream: Migration · Re-default · PD calibration · Recovery analysis · Monitoring
 </Flow>
 
 <Rule label="PERMANENT RULE">
-A PD is incomplete unless the event, unit, horizon and conditioning information are known.
+Cure removes the current default state; it does not remove the historical fact that default occurred.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Comparing two PDs solely because both are labelled "one-year PD" can be invalid when one uses regulatory default and the other uses a delinquency or accounting-loss target.
-</Trap>
+<NeverConfuse a="Cure" b="Arrears clearance">
+**Cure** — return to non-default under the complete exit criteria.
 
-<NeverConfuse>
-**PD** — a calibrated probability of a specified future default event.
-
-**Credit score** — a numerical ranking or predictive output that need not itself be a probability.
+---
+**Arrears clearance** — payment of overdue amounts; UTP or other default conditions may still remain.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** Probability mathematics does not change by jurisdiction; regulatory frameworks can prescribe different default definitions, floors, horizons or calibration requirements.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Resetting a cured customer to “never defaulted” inflates apparent portfolio quality and corrupts PD, transition and restructuring-performance analysis.
+</Trap>
+
+#### IN (RBI)
+
+Under the current commercial-bank IRACP Directions, an NPA may be upgraded to standard only when the **entire arrears of interest and principal are paid**; where the borrower has more than one facility with the bank, arrears across all those credit facilities must be repaid, subject to additional restructuring rules where relevant.
+
+#### UK (PRA)
+
+Return-to-non-default is governed under the current definition-of-default framework. The updated PRA SS3/24 sets the future Basel 3.1 expectations from 1 January 2027.
+
+#### EU
+
+EBA Guidelines govern return-to-non-default and probation concepts. The May 2026 amended version has an application date of 19 October 2026, so the applicable version must be identified by observation date.
+
+#### US
+
+Advanced Approaches rules provide return-from-default standards for wholesale obligors and retail exposures under the US framework; the relevant unit must be preserved.
 
 <Recall
-  q="What horizon underlies Basel IRB PD estimation?"
-  a="One-year default probability, calibrated using long-run default experience under the framework."
+  q="Is zero DPD sufficient for cure?"
+  a="Not necessarily. Other default conditions and any required exit/probation criteria must also be satisfied."
 />
 
 <Recall
-  q="Can a raw score be multiplied by LGD as though it were PD?"
-  a="No, unless the score has been validly transformed and calibrated into a probability."
+  q="Why track re-default separately?"
+  a="It reveals whether cures are durable and materially affects calibration and workout assessment."
+/>
+
+<Recall
+  q="What happens to the original default date after cure?"
+  a="It remains in history."
 />

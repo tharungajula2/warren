@@ -5,92 +5,94 @@ type: concept
 domain: credit-risk
 subdomain: scorecards-and-ratings
 one_screen: >-
-  Retail credit is usually managed through statistically homogeneous pools
-  because each exposure is small and there are many observations; wholesale
-  credit is usually assessed obligor by obligor because exposures are larger,
-  populations are smaller and information is more heterogeneous. Neither
-  approach eliminates judgement.
+  Retail credit is usually managed through large pools of comparatively
+  homogeneous exposures, making repeated statistical patterns powerful evidence.
+  Wholesale credit is usually more obligor-centred because exposures are larger,
+  populations are smaller and borrower-specific financial, structural and legal
+  information matters more.
 prerequisites:
   - CR-01
   - CR-02
-  - CR-12
+  - CR-14
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE30, “IRB
-      approach: categorisation of exposures”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/30.htm'
-    accessed: 28 August 2026
-  - label: 'Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131'
+      Basel Committee on Banking Supervision, Basel Framework, CRE30, *IRB
+      approach: overview and asset class definitions*
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement
+      Approaches*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-**Retail credit** consists of large numbers of comparatively small exposures with repeatable product structures and observable behavioural histories. These characteristics support statistical segmentation: borrowers with similar attributes and behaviour can be grouped and modelled using scorecards, transition models and pool-level parameters.
+### Core mechanism
 
-Basel's IRB architecture reflects this idea by requiring retail exposures, among other criteria, to be managed as part of large pools rather than purely as individually managed wholesale credits. US Advanced Approaches rules similarly define certain retail exposures as managed within segments of exposures with homogeneous risk characteristics.
+| Dimension | Retail tendency | Wholesale tendency |
+| :--- | :--- | :--- |
+| Number of exposures | Large | Smaller |
+| Individual exposure size | Comparatively small | Often material |
+| Homogeneity | Higher within designed segments | Lower |
+| Primary modelling unit | Pool / segment / facility behaviour | Obligor rating plus facility analysis |
+| Data evidence | Repeated behavioural observations | Financial statements, sector, management, structure, expert judgement |
+| Default application | Can permit facility/pool treatment under applicable rules | Generally obligor-centred in Basel-style wholesale frameworks |
 
-**Wholesale credit** covers corporate, sovereign, bank and other individually assessed exposures under relevant frameworks. A single exposure can be large enough that borrower-specific financial statements, industry structure, management, collateral, covenants and legal arrangements materially alter risk. The sample of comparable defaults may also be sparse. Wholesale systems therefore commonly combine quantitative analysis with expert judgement and assign obligors to rating grades.
-
-"Retail is statistical; wholesale is judgemental" is a useful orientation, not a law. Retail underwriting still uses policy rules, overrides, fraud controls and expert model governance. Wholesale rating systems can use sophisticated statistical models and external information. The real distinction is the **unit and density of evidence**: mass portfolios support estimation from repeated patterns; large idiosyncratic obligors demand greater case-specific interpretation.
-
-The modelling level follows the object hierarchy. Retail performance can often be assessed at facility or pool level under regulatory rules, while wholesale default is generally obligor-centred. This difference affects default tagging, validation samples and parameter estimation.
+“Retail = model” and “wholesale = judgement” is too crude. Retail systems still need policy, overrides and fraud controls; wholesale ratings can use powerful quantitative models. The difference is how much **repeatable population evidence** versus **case-specific information** can support the decision.
 
 <Flow>
-+----------------------+
-| Credit population    |
-+----------------------+
-       |          |
-       v          v
-+-----------+  +----------------+
-| Many small|  | Fewer large    |
-| exposures |  | exposures      |
-+-----------+  +----------------+
-       |          |
-       v          v
-+-----------+  +----------------+
-| Statistical| | Obligor rating |
-| pools      |  | + judgement   |
-+-----------+  +----------------+
-       |          |
-       v          v
-+-----------+  +----------------+
-| Retail    |  | Wholesale      |
-+-----------+  +----------------+
+Exposure population
+    ↓
+Size + homogeneity + data density + materiality
+    ↓
+Retail-like → Pool / segment statistical treatment
+Wholesale-like → Obligor-centred rating + facility analysis
+</Flow>
+
+<Flow>
+Upstream:   Exposure type · Population size · Homogeneity · Data density · Materiality
+This:       Choose pooled statistical treatment or obligor-centred assessment
+Downstream: Segmentation · Scorecards · Ratings · PD/LGD/EAD estimation · Validation
 </Flow>
 
 <Rule label="PERMANENT RULE">
 Choose the modelling unit and method to match the economic homogeneity, data density and materiality of the exposures.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Applying a mass-retail scorecard mechanically to a small set of large heterogeneous corporate borrowers creates statistical confidence without genuine comparability.
-</Trap>
+<NeverConfuse a="Retail modelling" b="Automated lending">
+**Retail modelling** — pool-oriented estimation using repeated observations with similar risk characteristics.
 
-<NeverConfuse>
-**Retail modelling** — pool- and segment-oriented modelling supported by repeated observations.
-
-**Wholesale rating** — obligor-centred assessment combining structured quantitative evidence and case-specific judgement.
+---
+**Automated lending** — an operational decision process; retail credit can include manual review, and wholesale credit can use automation.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** Regulatory boundary definitions differ, but the economic reason for statistical retail treatment versus more individual wholesale treatment is universal.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Applying a mass-retail scorecard to a small, heterogeneous set of large corporates creates apparent statistical precision without a genuinely comparable population.
+</Trap>
+
+**No delta in the economic logic.** Regulatory definitions determine which exposures qualify for retail or wholesale treatment and can impose size, pooling or management criteria.
 
 <Recall
-  q="Why is statistical modelling especially natural in retail?"
-  a="There are many comparatively homogeneous observations and repeatable behavioural patterns."
+  q="Why is statistical modelling especially natural in retail portfolios?"
+  a="Large numbers of similar exposures create repeatable observations."
 />
 
 <Recall
-  q="Does wholesale rating mean models are irrelevant?"
-  a="No. Quantitative models can be central, but individual obligor information and judgement usually carry greater weight."
+  q="Why does wholesale analysis rely more on borrower-specific evidence?"
+  a="Each exposure can be material and the population of truly comparable obligors is smaller and more heterogeneous."
+/>
+
+<Recall
+  q="Does wholesale modelling exclude quantitative models?"
+  a="No. Models can be central, but case-specific information and judgement usually carry more weight."
 />

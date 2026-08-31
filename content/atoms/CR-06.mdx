@@ -1,21 +1,19 @@
 ---
 id: CR-06
-title: 'Days past due, arrears and delinquency buckets'
+title: 'Collateral, security and guarantees'
 type: mechanism
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  Days past due measures elapsed time since a contractual amount became unpaid;
-  arrears measure the unpaid amount; a delinquency bucket groups accounts by
-  lateness. None of these is automatically the same thing as default.
+  Collateral, security interests and guarantees are credit-risk mitigants only
+  to the extent that the bank can legally rely on them and realise value when
+  needed. Their underwriting job is to provide a credible **secondary way out**;
+  their later LGD role is separate and depends on realised recovery cash flows.
 prerequisites:
   - CR-02
   - CR-05
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -24,84 +22,106 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning Directions, 2025, paragraphs 31–42
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, BCBS d595, *Principles for the
+      Management of Credit Risk*, 30 April 2025
+    url: 'https://www.bis.org/bcbs/publ/d595.htm'
+    accessed: 30 August 2026
   - label: >-
-      Reserve Bank of India, “Prudential norms on Income Recognition, Asset
-      Classification and Provisioning – Clarifications”, 12 November 2021
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12194&Mode=0'
-    accessed: 28 August 2026
-  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+      Basel Committee on Banking Supervision, Basel Framework, CRE22,
+      *Standardised approach: credit risk mitigation*
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/22/inforce/2023-01-01/published/2020-11-26
+    accessed: 30 August 2026
+  - label: >-
+      European Banking Authority, EBA/GL/2020/06, *Guidelines on loan
+      origination and monitoring*, 29 May 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-**Days past due (DPD)** is a clock. It counts how long a contractual payment has remained unpaid after its due date under the applicable convention. **Arrears** is an amount: the sum of required payments that remain unpaid. An account can therefore have ₹1 of arrears and 40 DPD, or a large arrears balance and a different DPD count.
+### Core mechanism
 
-A **delinquency bucket** converts continuous DPD into categories such as current, 1–30, 31–60 and 61–90 days. Bucketing makes operational monitoring, collections and migration analysis easier, but the cut-offs are conventions rather than laws of nature.
+| Mitigant | What must be true | Main failure mode |
+| :--- | :--- | :--- |
+| Collateral asset | Identifiable, valued, controllable and realisable | Value falls, asset disappears, sale is delayed |
+| Security interest | Validly created and perfected under applicable law | Priority or enforceability fails |
+| Guarantee | Legally effective claim on a capable guarantor | Guarantor lacks capacity or defaults with borrower |
+| Covenant / structural protection | Trigger and remedy are clear and monitorable | Breach occurs too late or remedy is weak |
 
-The starting point of the clock matters. RBI requires borrower accounts to be flagged overdue through the day-end process for the due date. Its current commercial-bank directions illustrate an amount due on 31 March becoming overdue on that date if not received before the day-end process, then reaching SMA-1 after 30 continuous days and SMA-2 after 60.
+**Eligible value is not appraisal value.** A lending or risk value normally considers valuation uncertainty, volatility, liquidation time, prior claims, currency mismatch, concentration and policy/regulatory haircuts.
 
-Revolving facilities require different logic because there may be no single scheduled principal instalment. RBI therefore uses an **out-of-order** concept for cash-credit and overdraft accounts, including conditions involving persistent excess over sanctioned limit/drawing power, absence of credits and insufficient credits to cover interest.
+<Formula>
+`Adjusted collateral value = Market / appraised value × (1 − haircut)`
 
-DPD should be treated as an observed behavioural state, not an estimate of ultimate loss. A borrower at 60 DPD may cure; another borrower at 0 DPD may already be unlikely to pay because of insolvency, fraud or another serious credit event.
+`Haircut` — reduction for uncertainty, volatility, liquidation and other prescribed risks.
+
+Haircut ↑ → recognised collateral value ↓ → unsecured exposure / loss severity pressure ↑.
+
+This is a teaching relationship; regulatory frameworks prescribe their own eligible collateral, valuation and haircut rules.
+</Formula>
 
 <Flow>
-+---------+
-| Due date|
-+---------+
-     |
-     v
-+---------+     +----------+     +----------+     +----------+
-| Overdue | --&gt; | 1-30 DPD | --&gt; |31-60 DPD| --&gt; |61-90 DPD|
-+---------+     +----------+     +----------+     +----------+
-                                                        |
-                                                        v
-                                           +---------------------+
-                                           | Default/NPA test     |
-                                           | applied separately  |
-                                           +---------------------+
+Collateral / guarantee identified
+    ↓
+Due diligence → Legal creation / perfection → Valuation → Haircut
+    ↓
+Monitoring
+    ↓
+Default / enforcement need
+    ↓
+Realisation / guarantor payment → Net recovery
 </Flow>
 
+<Flow>
+Upstream:   Approved structure · Asset/guarantor due diligence · Legal documentation
+This:       Create → Perfect → Value → Haircut → Monitor → Enforce if needed
+Downstream: Lending terms · Limit usage · Recovery strategy · LGD evidence
+</Flow>
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Credit, legal, valuation and collateral-management teams establish evidence |
+| Approves | Credit authority accepts the mitigant within policy |
+| Consumes | Operations, monitoring, workout, capital and LGD estimation |
+| Challenges | Legal, independent risk, valuation review and audit test perfection and values |
+
 <Rule label="PERMANENT RULE">
-DPD is a time-since-missed-payment measure; default status requires the applicable default rule.
+A mitigant is worth only what can be legally enforced and economically realised when the borrower is under stress.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-A common operational error is to calculate DPD from statement date, reporting date or month-end instead of the contractual due date and specified day-end convention.
-</Trap>
+<NeverConfuse a="Collateral value" b="Repayment capacity">
+**Collateral value** — secondary recovery value available if repayment fails.
 
-<NeverConfuse>
-**Arrears** — the unpaid contractual amount.
-
-**Days past due** — the elapsed delinquency time associated with an unpaid obligation.
+---
+**Repayment capacity** — the borrower’s ability to meet contractual payments from the primary repayment source.
 </NeverConfuse>
 
-<Delta j="IN">
-— RBI commercial-bank monitoring uses SMA-0 up to 30 days overdue, SMA-1 more than 30 and up to 60, and SMA-2 more than 60 and up to 90; revolving facilities use corresponding out-of-order logic. [RBI IRACP Directions 2025]
-</Delta>
+<NeverConfuse a="Guarantee" b="Collateral">
+**Guarantee** — a contractual promise by another person to perform or pay if the obligor does not.
 
-<Delta j="UK">
-— PRA default treatment uses material past-due obligations and a 90-day default criterion under the current CRR-derived framework; arrears reporting buckets are not themselves the complete definition of default. [PRA PS7/19]
-</Delta>
+---
+**Collateral** — an asset or property interest available to secure recovery.
+</NeverConfuse>
 
-<Delta j="EU">
-— CRR reporting distinguishes performing and non-performing exposures across past-due bands, including exposures that are unlikely to pay even when no more than 90 days past due. [CRR Article 178; Commission Implementing Regulation (EU) 2021/637]
-</Delta>
+<Trap label="PERMANENT TRAP">
+Counting a guarantee at face value without testing legal effectiveness, coverage and guarantor credit quality merely moves the credit risk to an unmeasured second obligor.
+</Trap>
 
-<Delta j="US">
-— US regulatory frameworks use multiple delinquency thresholds depending on purpose; Advanced Approaches retail default, for example, is not uniformly a 90-day rule. [12 CFR Part 217 Subpart E]
-</Delta>
+**No delta in the economics.** Perfection, priority, insolvency treatment, valuation standards and regulatory recognition are jurisdiction-specific; production treatment must follow local law and the applicable prudential framework.
 
 <Recall
-  q="What does 45 DPD tell a practitioner?"
-  a="A payment has remained past due for roughly 45 days under the governing counting convention; it does not alone determine default in every framework."
+  q="What makes a security interest useful beyond having signed documents?"
+  a="It must be valid, perfected where required, enforceable and attached to realisable value."
 />
 
 <Recall
-  q="What is the RBI analogue for delinquency monitoring before NPA?"
-  a="Special Mention Account categories, including SMA-0, SMA-1 and SMA-2."
+  q="What does a haircut do?"
+  a="Reduces recognised collateral value for uncertainty and risk."
+/>
+
+<Recall
+  q="Why is guarantor quality part of mitigation?"
+  a="A guarantee is only as useful as the guarantor’s legal obligation and capacity to pay."
 />

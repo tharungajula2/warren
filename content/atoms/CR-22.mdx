@@ -1,18 +1,16 @@
 ---
 id: CR-22
-title: Bureau data
-type: reference
+title: Vintage analysis and roll rates
+type: mechanism
 domain: credit-risk
 subdomain: scorecards-and-ratings
 one_screen: >-
-  Bureau data describe reported credit relationships and repayment history; they
-  are powerful evidence of external indebtedness and past behaviour, not a
-  complete statement of current income, assets, intentions or future ability to
-  pay. Absence of adverse bureau information is not evidence of low risk when
-  coverage is incomplete or the borrower has little history.
+  Vintage analysis follows exposures originated at similar times as they season;
+  roll-rate analysis follows movement between delinquency or credit states. Both
+  restore the time dimension that a portfolio snapshot destroys.
 prerequisites:
-  - CR-01
-  - CR-12
+  - CR-08
+  - CR-19
   - CR-20
 jurisdictions:
   - universal
@@ -24,81 +22,79 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, “Report of the High Level Task Force on Public
-      Credit Registry for India”, 2018
-    url: 'https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=895'
-    accessed: 28 August 2026
-  - label: 'Federal Reserve, “Credit Scoring”, report to Congress'
+      Board of Governors of the Federal Reserve System, *Estimation
+      Methodologies for Losses, Revenues, and Expenses*, August 2013
     url: >-
-      https://www.federalreserve.gov/boarddocs/rptcongress/creditscore/general.htm
-    accessed: 28 August 2026
+      https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-A **credit bureau** or credit-information system aggregates reported information on borrowing relationships, balances, repayment behaviour, enquiries and other permitted credit attributes. It helps a lender see credit activity outside its own books.
+### Core mechanism
 
-This reduces **information asymmetry**: without external credit information, an applicant could appear lightly indebted to one lender while carrying substantial obligations elsewhere. RBI's work on credit information explicitly identifies debt details and repayment history as important inputs to credit decisions and notes the value of wider credit reporting for screening and monitoring.
+| Method | Groups by | Compares | Best at revealing |
+| :--- | :--- | :--- | :--- |
+| Vintage | Origination period | Performance at the same months-on-book | Underwriting/channel/cohort changes |
+| Roll rate | Current credit state | Next-period movement to worse, same or better state | Direction and speed of delinquency |
+| Snapshot | Observation date | Stock in each state today | Current composition only |
 
-Bureau data are especially useful for retail scoring. Past delinquency, number and age of credit relationships, utilisation, recent enquiries and outstanding debt can carry predictive information. The same data can also identify inconsistencies between declared obligations and externally reported borrowing.
+A six-month-old cohort and a three-year-old cohort have had different time to season. Comparing their cumulative defaults on the same calendar date confounds credit quality with age. Vintage curves instead align performance at month 1, month 2, month 3 and so on.
 
-But a credit report is not a full financial statement. It generally describes credit supplied by participating reporters under the system's coverage rules. It may not capture every informal liability, non-credit expense, current income, liquid asset or future cash-flow shock. Data may also contain timing lags or errors.
-
-A **thin-file** borrower has little reported history. A low observed delinquency count for such a person does not carry the same evidence as a long, clean repayment history. "No adverse history" and "strong positive history" are therefore different states.
-
-Bureau scores must also be kept separate from internal PDs. An external score can be a powerful predictor, but an institution still needs to understand the score's population, observation date, target and calibration before using it as a probability.
+Roll rates answer a different question: of accounts now at 30–59 DPD, how many cure, stay, move to 60–89 DPD or default next period? Identical current delinquency stocks can therefore hide opposite future directions.
 
 <Flow>
-+-----------------------+
-| Reporting creditors   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Credit-information    |
-| system                |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Debt + repayment      |
-| history               |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Lender appraisal      |
-+-----------------------+
-       |          |
-       v          v
-+-----------+ +-----------+
-| Useful    | | Missing   |
-| evidence  | | non-credit|
-+-----------+ +-----------+
+Vintage: Origination cohort → MOB 1 → MOB 2 → MOB 3 → … → cumulative delinquency / default
+    ↓
+Compare later vintages at the same months-on-book
+
+Roll rate: Current → Early delinquency → Later delinquency → Default state
+    ↓
+At each step: cure / stay / worsen
 </Flow>
 
+<Flow>
+Upstream:   Origination date · Account age · DPD/default states · Observation history
+This:       Cohort by vintage OR transition by state
+Downstream: Early warning · Collections capacity · Forecasting · Policy review · Model validation
+</Flow>
+
+<Formula>
+Illustrative one-step roll rate:
+
+`Roll rate(i → j) = count/exposure moving from state i to state j / starting count/exposure in state i`
+
+The numerator and denominator must use the same population basis and interval.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-Bureau information is an input to credit assessment, never a complete substitute for borrower financial and affordability information.
+Compare like with like in time: equal seasoning for vintages, and fixed start/end states and intervals for roll rates.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Interpreting "no bureau delinquency" as "low risk" systematically misclassifies thin-file and incompletely covered borrowers.
-</Trap>
+<NeverConfuse a="Vintage analysis" b="Roll-rate analysis">
+**Vintage analysis** — follows origination cohorts through account age.
 
-<NeverConfuse>
-**Credit history** — recorded past and current credit relationships and repayment behaviour.
-
-**Repayment capacity** — the borrower's ability to meet future obligations from income, cash flow, assets or other resources.
+---
+**Roll-rate analysis** — follows transitions between credit or delinquency states through time.
 </NeverConfuse>
 
+<Trap label="PERMANENT TRAP">
+A fast-growing young book can look safer than a mature book simply because many accounts have not existed long enough to reach default.
+</Trap>
+
 <Rule label="NO DELTA">
-**No delta.** Coverage, permissible fields, consumer rights and reporting rules vary, but the informational limitation is universal.
+**No delta.** These are analytical methods; local definitions determine the delinquency and default states being tracked.
 </Rule>
 
 <Recall
-  q="What does bureau data primarily reduce?"
-  a="Information asymmetry about externally reported credit obligations and repayment behaviour."
+  q="Why compare vintages at the same months-on-book?"
+  a="To separate cohort credit quality from seasoning time."
 />
 
 <Recall
-  q="Why is a thin clean file weaker evidence than a long clean file?"
-  a="Absence of observed bad behaviour may result from limited observation rather than proven repayment performance."
+  q="What does a roll rate add to a 60+ DPD snapshot?"
+  a="Whether accounts are curing, remaining or migrating toward more severe states."
+/>
+
+<Recall
+  q="What can make a vintage curve change without underwriting quality changing?"
+  a="A change in DPD, default, write-off or data-extraction definitions."
 />

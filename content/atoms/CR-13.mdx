@@ -1,89 +1,135 @@
 ---
 id: CR-13
-title: Point-in-time and through-the-cycle PD
-type: concept
+title: 'Write-off, recovery and economic loss'
+type: mechanism
 domain: credit-risk
 subdomain: risk-parameters
 one_screen: >-
-  Point-in-time risk estimates move more strongly with current borrower and
-  economic conditions; through-the-cycle approaches deliberately damp temporary
-  cyclical variation and emphasise longer-run creditworthiness. They are
-  different conditioning philosophies, not simply "short horizon" versus "long
-  horizon".
+  Write-off changes the carrying amount or prudential treatment of an exposure;
+  recovery records value collected after credit failure; economic loss measures
+  what was ultimately lost after recoveries, costs and timing. None of these
+  events should erase the default lifecycle that produced them.
 prerequisites:
+  - CR-03
+  - CR-07
   - CR-12
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Bank for International Settlements, Financial Stability Institute,
-      “Stability of a ‘through-the-cycle’ rating system during a financial
-      crisis”, FSI Paper, 8 September 2006
-    url: 'https://www.bis.org/fsi/awp2006.htm'
-    accessed: 28 August 2026
-  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, DOR.STR.REC.No.6/21.06.011/2026-27, *Reserve Bank
+      of India (Commercial Banks – Asset Classification, Provisioning and Income
+      Recognition) Directions, 2026*, 27 April 2026, effective 1 April 2027.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'IFRS Foundation, *IFRS 9 Financial Instruments*, issued standard'
+    url: >-
+      https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/
+    accessed: 30 August 2026
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Interagency Policy
+      Statement on Allowances for Credit Losses*
+    url: >-
+      https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-A **point-in-time (PIT)** rating or PD seeks to reflect risk using information relevant to current conditions. When the economy deteriorates, otherwise similar borrowers may receive higher PIT PDs because unemployment, cash flow, leverage, market conditions or other current predictors have worsened.
+### Core mechanism
 
-A **through-the-cycle (TTC)** approach aims for greater stability across ordinary cyclical movement. It emphasises durable borrower characteristics or conditions averaged or stressed across the cycle, so ratings migrate less merely because the macroeconomic environment has temporarily changed. BIS research describes TTC systems as seeking relatively stable risk categories across business cycles, whereas PIT systems place greater weight on the current observation period.
+| Lifecycle item | What it means | What must stay in history |
+| :--- | :--- | :--- |
+| Default | Governed credit state begins | Default date, trigger, EAD |
+| Provision / allowance | Loss is recognised or reserved under the applicable framework | Amount, basis, date |
+| Write-off / charge-off | Carrying amount is reduced or removed under relevant rules | Written-off amount and date |
+| Recovery | Cash or value is collected after default/write-off | Gross proceeds, source and timing |
+| Workout cost | Legal, collection, maintenance and disposal costs | Cash outflow and timing |
+| Economic loss | Net shortfall measured on a consistent basis | Final discounted loss calculation |
 
-PIT versus TTC is not identical to one-year versus lifetime. A one-year PD can be PIT or more cycle-neutral depending on conditioning and calibration. Likewise, a long-horizon analysis can incorporate changing future macroeconomic conditions.
-
-The distinction also separates **ranking** from **calibration**. A rating system can rank obligors using relatively stable structural characteristics while mapping grades to PDs that respond more to current conditions. The labels therefore describe a spectrum rather than two perfectly separated model species.
-
-Uses differ. PIT estimates are naturally responsive for pricing, provisioning, stress testing and near-term risk monitoring where current conditions matter. More stable rating systems can reduce unnecessary grade volatility and support functions that value a durable measure of obligor quality. Regulatory IRB calibration, however, must follow its own long-run requirements rather than assuming that any internally labelled "TTC" measure automatically qualifies. Basel requires PD estimates consistent with long-run average one-year default rates under the applicable IRB rules.
+Post-write-off recoveries are economically real. A technical write-off can coexist with continuing collection activity and legal liability; the database therefore needs both accounting status and recovery status.
 
 <Flow>
-+-----------------------+
-| Current information   |
-+-----------------------+
-      |             |
-      v             v
-+-----------+   +---------------+
-| PIT view  |   | Cycle-neutral |
-| responsive|   | / TTC view    |
-+-----------+   +---------------+
-      |             |
-      v             v
-+-----------+   +---------------+
-| More PD   |   | More rating   |
-| variation |   | stability     |
-+-----------+   +---------------+
+Default → Workout → Recoveries + workout costs
+    ↓
+Discounted net recovery → Economic loss
+
+Default
+    ↓
+Provision / allowance → Write-off when required → Post-write-off recovery can continue
 </Flow>
 
+<Flow>
+Upstream:   Default · Exposure · Provisioning / accounting rules
+This:       Provision → Write-off if required → Recoveries and costs → Final economic loss
+Downstream: LGD estimation · Workout strategy · Finance · Tax / reporting
+</Flow>
+
+<Formula>
+`Economic loss = EAD − PV(net post-default recoveries)`
+
+`Net recoveries = borrower payments + collateral/guarantee proceeds − workout costs`
+
+Longer recovery time ↑ → present value of recovery ↓ → economic loss and LGD ↑, all else equal.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-PIT/TTC describes sensitivity to current versus cyclical conditions; it does not by itself specify the PD horizon.
+Never delete default, write-off or post-default recovery history merely because the balance sheet carrying amount has changed.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Calling a five-year average default rate "TTC PD" without examining how current information enters the rating and calibration process mistakes averaging for modelling philosophy.
-</Trap>
+<NeverConfuse a="Write-off" b="Debt forgiveness">
+**Write-off** — accounting or prudential reduction/removal of carrying amount under the applicable framework.
 
-<NeverConfuse>
-**Point-in-time** — risk measurement strongly responsive to conditions at the observation date.
-
-**Through-the-cycle** — risk measurement designed to damp temporary cyclical effects and represent more persistent credit quality.
+---
+**Debt forgiveness** — release of the debtor’s legal obligation; write-off does not necessarily produce forgiveness.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** The conceptual distinction is universal; particular regulatory and accounting uses of PD can impose different calibration requirements.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Using the write-off amount as “LGD” automatically ignores later recoveries, workout costs, timing and the exposure actually outstanding at default.
+</Trap>
+
+#### IN (RBI)
+
+The commercial-bank IRACP Directions recognise write-offs, technical write-offs and subsequent recoveries. A partial or technical write-off does not permit the remaining exposure to be shown as standard merely because part has been written off.
+
+The current IRACP provisioning regime is replaced for covered commercial banks from **1 April 2027** by RBI’s 2026 expected-credit-loss-based Asset Classification, Provisioning and Income Recognition Directions.
+
+#### UK (PRA)
+
+For IFRS reporters, IFRS 9 write-off requirements operate separately from prudential regulatory default. The two statuses must be mapped, not conflated.
+
+#### EU
+
+IFRS-reporting entities apply IFRS 9 write-off principles while CRR regulatory default remains a separate prudential state.
+
+#### US
+
+CECL allowance and charge-off practice is separate from regulatory default and nonaccrual classifications; modelling must preserve those distinctions.
 
 <Recall
-  q="Does TTC mean lifetime PD?"
-  a="No. TTC concerns cyclical conditioning, not the forecast horizon."
+  q="Can a bank recover cash after write-off?"
+  a="Yes. Write-off does not necessarily terminate the legal claim or collections process."
 />
 
 <Recall
-  q="Which approach normally moves more when current macroeconomic conditions deteriorate?"
-  a="Point-in-time."
+  q="Why discount recoveries in economic LGD?"
+  a="A delayed recovery is worth less at the default date than an immediate recovery."
+/>
+
+<Recall
+  q="What is lost if post-write-off recoveries disappear from data?"
+  a="LGD is biased upward and workout performance becomes unmeasurable."
 />

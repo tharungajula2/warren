@@ -1,17 +1,16 @@
 ---
 id: CR-10
-title: Restructuring and forbearance
-type: concept
+title: Past-due backstops and the 90-day rule
+type: reference
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  Restructuring changes contractual terms; forbearance is a concession
-  associated with a debtor's financial difficulty. Neither word is automatically
-  identical to default, but a distressed concession can be evidence that the
-  original obligation will not be repaid in full and can therefore trigger or
-  prolong default.
+  A past-due backstop is an outer mechanical trigger, not permission to wait for
+  the clock when earlier evidence already establishes default. In the Basel
+  wholesale reference definition, UTP and more-than-90-days-past-due are joined
+  by **OR**, not by a sequence requiring both.
 prerequisites:
-  - CR-05
+  - CR-07
   - CR-08
   - CR-09
 jurisdictions:
@@ -21,104 +20,117 @@ jurisdictions:
   - US
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
   - label: >-
-      Reserve Bank of India, Commercial Banks – Income Recognition, Asset
-      Classification and Provisioning Directions, 2025
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
-    accessed: 28 August 2026
-  - label: >-
-      Prudential Regulation Authority, PS9/24, “Implementation of the Basel 3.1
-      standards – near-final policy statement part 2”
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
     url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/implementation-of-the-basel-3-1-standards-near-final-policy-statement-part-2
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, PS7/19, *Credit risk: The definition of
+      default*, 6 March 2019
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default
+    accessed: 30 August 2026
+  - label: >-
+      Prudential Regulation Authority, SS3/24, *Credit risk: definition of
+      default*, first published 12 September 2024; future version published 20
+      January 2026 and effective 1 January 2027
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement
+    accessed: 30 August 2026
+  - label: >-
+      European Banking Authority, EBA/GL/2026/05, *Guidelines amending
+      Guidelines EBA/GL/2016/07 on the application of the definition of default
+      under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application
+      date 19 October 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement
+      Approaches*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-A **restructuring** changes the contractual terms of credit: maturity may be extended, instalments rescheduled, interest altered, principal reduced, repayment deferred or other terms modified. Restructuring can occur for many reasons, so the word alone does not identify credit quality.
+### Core mechanism
 
-**Forbearance** is narrower in prudential usage. It generally refers to a concession granted because the debtor is experiencing or is expected to experience financial difficulty. A commercially negotiated refinancing for a healthy borrower is therefore conceptually different from a concession that would not have been offered absent distress.
+UTP trigger met first → Default now
 
-The credit-risk question is whether the modification reveals that the original obligation is no longer expected to be paid in full. Under Basel-style default frameworks, **distressed restructuring** is an indicator of unlikeliness to pay where the restructuring is likely to result in a diminished financial obligation. EU and PRA frameworks provide detailed implementation expectations around that principle.
+Past-due clock reaches applicable material backstop first → Default now
 
-Restructuring also changes measurement. Extending maturity can reduce near-term instalments but increase exposure duration. Principal forgiveness directly affects economic loss. Capitalising arrears can make DPD look better without improving underlying repayment capacity. Models must therefore preserve the pre-restructure status, modification terms and subsequent performance rather than treating the new contract as an unrelated fresh loan.
+Neither met → Continue non-default monitoring
 
-India's commercial-bank framework directs banks to apply both the IRACP directions and the separate RBI directions governing resolution of stressed assets for restructured accounts. Current RBI rules also impose additional provisioning in specified resolution-plan and repeated-restructuring circumstances.
+The backstop constrains optimism. It preserves an objective point beyond which prolonged material non-payment cannot remain outside default merely because judgement has not acted.
 
 <Flow>
-+----------------------+
-| Existing obligation  |
-+----------------------+
-           |
-           v
-+----------------------+
-| Terms modified       |
-+----------------------+
-           |
-           v
-+----------------------+
-| Financial difficulty |
-| caused concession?   |
-+----------------------+
-      |            |
-     no           yes
-      |            |
-      v            v
-+-----------+  +-------------+
-| Ordinary  |  | Forbearance |
-| amendment |  | / distress  |
-+-----------+  +-------------+
-                    |
-                    v
-            +----------------+
-            | Default/UTP    |
-            | test separately|
-            +----------------+
+Qualifying UTP → Default now
+    ↓
+OR
+    ↓
+Past-due clock → Material backstop reached → Default now
+</Flow>
+
+<Flow>
+Upstream:   DPD · Materiality · UTP evidence
+This:       Earlier of qualifying UTP or applicable mechanical backstop
+Downstream: Default date · Cure clock · Model labels · Workout and reporting
 </Flow>
 
 <Rule label="PERMANENT RULE">
-A new payment schedule does not erase the credit deterioration that caused the old schedule to become unsustainable.
+The backstop is the latest mechanical trigger under its rule, not a grace period that overrides earlier qualitative default evidence.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-"Evergreen" restructuring can convert missed payments into a formally current contract while leaving economic repayment capacity unchanged.
-</Trap>
+<NeverConfuse a="Backstop" b="Definition of default">
+**Backstop** — an outer mechanical trigger based on elapsed delinquency under a specified rule.
 
-<NeverConfuse>
-**Restructuring** — any qualifying modification of contractual credit terms.
-
-**Forbearance** — a concession linked to the debtor's financial difficulty; it is a credit-quality concept, not merely a contract amendment.
+---
+**Definition of default** — the full set of qualitative and quantitative conditions governing entry to default.
 </NeverConfuse>
 
-<Delta j="IN">
-— commercial banks apply RBI's IRACP Directions together with the Reserve Bank of India (Commercial Banks – Resolution of Stressed Assets) Directions, 2025 for affected restructurings; specified resolution plans can attract additional prudential provisions. [RBI IRACP Directions 2025]
-</Delta>
+<Trap label="PERMANENT TRAP">
+Writing “default = 90 DPD” into data dictionaries suppresses early defaults, mixes products with different rules and trains models on a delayed target.
+</Trap>
 
-<Delta j="UK">
-— PRA policy distinguishes forbearance from default and treats distressed restructuring as a UTP issue where modification materially diminishes the financial obligation; not every forborne exposure automatically defaults. [PRA PS9/24 default policy]
-</Delta>
+#### IN (RBI)
 
-<Delta j="EU">
-— CRR/EBA rules distinguish forbearance, non-performing status and regulatory default; distressed restructuring can trigger UTP, but the categories are not synonyms. [CRR Article 178; EBA definition-of-default Guidelines]
-</Delta>
+For commercial banks, a term loan is classified NPA when interest and/or principal remains overdue for **more than 90 days**. RBI also prescribes distinct tests for OD/CC, working-capital irregularity, bills, agricultural exposures and other categories; asset classification is borrower-wise subject to specified exceptions.
 
-<Delta j="US">
-— restructuring, accounting treatment and regulatory default are separate determinations; Advanced Approaches default remains governed by the default tests in 12 CFR Part 217. [12 CFR Part 217 Subpart E]
-</Delta>
+#### UK (PRA)
+
+The current UK CRR-derived default framework uses past-due and materiality rules alongside UTP. The updated PRA Basel 3.1 package, including the January 2026 SS3/24 version, takes effect on 1 January 2027.
+
+#### EU
+
+CRR Article 178 uses a past-due limb alongside UTP, supported by materiality rules. The EBA’s May 2026 amended Guidelines become applicable on 19 October 2026.
+
+#### US
+
+Advanced Approaches wholesale default includes more than 90 days past due on a material obligation, while specified retail categories use different mechanical thresholds; “90 days everywhere” is therefore wrong.
 
 <Recall
-  q="Does every restructuring prove default?"
-  a="No. The reason and economic effect of the modification matter."
+  q="Why is 90 DPD called a backstop rather than the definition?"
+  a="Because default can occur earlier through UTP and some categories use different mechanical rules."
 />
 
 <Recall
-  q="Why can capitalising arrears be misleading?"
-  a="It can remove visible delinquency without restoring underlying repayment capacity."
+  q="What logical operator joins the two Basel wholesale default limbs?"
+  a="OR: either qualifying UTP or the material past-due trigger is sufficient."
+/>
+
+<Recall
+  q="Why must data retain the actual trigger date?"
+  a="Using a later 90-day date for an earlier UTP default distorts PD, cure and LGD timing."
 />

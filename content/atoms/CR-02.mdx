@@ -1,14 +1,14 @@
 ---
 id: CR-02
-title: 'Facility, account and product'
+title: 'Product, facility and account'
 type: concept
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  A product is a reusable commercial design, a facility is a particular
-  contractual grant of credit, and an account is an operational record through
-  which a facility may be booked or serviced. Credit decisions occur on real
-  facilities and obligors, not on abstract product labels.
+  A product is a reusable lending design, a facility is a specific contractual
+  grant of credit, and an account is an operational record used to book and
+  service activity. Credit risk measures become ambiguous unless they declare
+  which level they attach to.
 prerequisites:
   - CR-01
 jurisdictions:
@@ -21,81 +21,65 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB
-      approach: minimum requirements to use IRB approach”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, BCBS d595, *Principles for the
+      Management of Credit Risk*, 30 April 2025
+    url: 'https://www.bis.org/bcbs/publ/d595.htm'
+    accessed: 30 August 2026
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE20,
-      “Standardised approach: individual exposures”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/20.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-A **product** is a standardised commercial form of credit: for example, a term-loan structure, revolving line, overdraft or card structure. It defines broad contractual and operational characteristics but does not by itself identify a particular credit obligation.
+### Core mechanism
 
-A **facility** is the actual contractual availability of credit to a particular obligor or set of obligors. It has terms such as limit, currency, maturity, repayment schedule, pricing, security and covenants. One obligor can have many facilities, and each facility can have different loss severity and exposure behaviour even when the obligor's probability of default is common.
+| Level | Owns | Typical examples of fields |
+| :--- | :--- | :--- |
+| Product | Reusable commercial design | Product type, standard terms, target segment |
+| Facility | Actual contractual credit availability | Limit, currency, maturity, repayment schedule, covenants, security |
+| Account | Operational booking and servicing | Balance, postings, due dates, arrears, interest, fees |
+| Obligor | Person responsible for obligations | Rating, default state, aggregate limits |
 
-An **account** is an operational or accounting record used to book balances, payments, arrears, interest and other activity. A simple loan may have one facility and one account. More complex structures may have multiple accounts under one facility, while some operational architectures represent a single economic exposure across several ledgers.
-
-This distinction matters throughout credit risk. Probability of default is often principally associated with the obligor or homogeneous retail pool. Loss given default depends heavily on facility-specific collateral, seniority and recovery structure. Exposure at default depends on the particular facility's balance, limit and ability to draw further funds. Delinquency may first be observed on an account, while a regulatory default rule can propagate the consequence to the obligor or other facilities.
-
-Basel's IRB architecture explicitly separates borrower default risk from transaction-specific characteristics, and retail portfolios may, under applicable rules, permit default recognition at an individual facility rather than across every exposure to the obligor.
+A simple term loan may be one facility with one account. A revolving facility can have several operational accounts. One obligor can hold facilities with different collateral, seniority and drawdown behaviour even when a common obligor PD is used.
 
 <Flow>
-+----------------------+
-| Product design       |
-| reusable template    |
-+----------------------+
-           |
-           v
-+----------------------+
-| Facility             |
-| contractual credit   |
-+----------------------+
-       |          |
-       v          v
-+-----------+ +-----------+
-| Account A | | Account B |
-| postings  | | postings  |
-+-----------+ +-----------+
-       \          /
-        \        /
-         v      v
-+----------------------+
-| Facility exposure    |
-+----------------------+
-           |
-           v
-+----------------------+
-| Obligor exposure     |
-+----------------------+
+Upstream:   Obligor · Product design · Credit decision
+This:       Product → Facility → Account
+Downstream: Exposure · Delinquency · LGD · EAD · Collections · Reporting
 </Flow>
 
 <Rule label="PERMANENT RULE">
-Product, facility and account describe different levels. Any risk measure must declare the level to which it attaches.
+Every risk measure must state its level: product, facility, account, obligor or a defined aggregate.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-A delinquent account is sometimes treated as though it were automatically a delinquent obligor, without checking whether the applicable default framework is facility-level or obligor-level.
-</Trap>
+<NeverConfuse a="Facility" b="Account">
+**Facility** — the contractual grant or commitment of credit, including its limit and terms.
 
-<NeverConfuse>
-**Facility** — a specific contractual grant or commitment of credit.
-
-**Account** — an operational record used to book and service activity; it may represent all, part or more than one component of a facility.
+---
+**Account** — the operational record through which balances, payments and arrears are booked; one facility need not equal one account.
 </NeverConfuse>
 
+<Trap label="PERMANENT TRAP">
+Treating an account-level delinquency flag as automatically equivalent to an obligor-level credit state can misclassify other facilities when the governing default framework applies a different propagation rule.
+</Trap>
+
 <Rule label="NO DELTA">
-**No delta.** Regulatory systems differ in when facility-level status propagates to other facilities, but the underlying object hierarchy is universal.
+**No delta.** Regulatory rules differ on when account or facility events propagate to an obligor, but the object hierarchy itself is universal.
 </Rule>
 
 <Recall
-  q="Which object contains the contractual limit and maturity?"
+  q="Which object owns the sanctioned limit and contractual maturity?"
   a="The facility."
 />
 
 <Recall
-  q="Why can one obligor have different LGDs across facilities?"
-  a="Collateral, seniority, contractual structure and recovery prospects can differ facility by facility."
+  q="Which object normally records a missed instalment first?"
+  a="The servicing account."
+/>
+
+<Recall
+  q="Why can one obligor have several LGDs?"
+  a="Facility-specific collateral, seniority and recovery structures can differ."
 />

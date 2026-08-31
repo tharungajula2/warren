@@ -5,83 +5,102 @@ type: mechanism
 domain: credit-risk
 subdomain: scorecards-and-ratings
 one_screen: >-
-  A rating grade is a discrete risk class, a master scale defines the ordered
-  meaning of all grades, and migration records movements between them through
-  time. A rating system is useful only if grades consistently separate risk and
-  retain enough history to test how borrowers move and default.
+  A rating grade is a discrete class of borrower credit quality; a master scale
+  defines the ordered meaning of all grades; migration records movement through
+  that scale over time. A grade is not meaningful because it is called “4” or
+  “BBB-like”—its meaning comes from assignment criteria, ordering, default
+  boundary and calibrated risk.
 prerequisites:
-  - CR-12
-  - CR-13
+  - CR-14
+  - CR-15
   - CR-19
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE36,
-      rating-system requirements
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
   - label: >-
-      Federal Reserve, “Estimation Methodologies for Losses, Revenues, and
-      Expenses”, August 2013
+      Board of Governors of the Federal Reserve System, *Estimation
+      Methodologies for Losses, Revenues, and Expenses*, August 2013
     url: >-
       https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm
-    accessed: 28 August 2026
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-A **rating grade** places an obligor into an ordered category of credit quality. Better grades represent lower default risk; weaker grades represent higher risk. A **master scale** is the complete ordered set of grades and their risk meaning, often including one or more default categories.
+### Core mechanism
 
-A rating is not merely a label such as "Grade 4". Its meaning comes from its relationship to other grades, its assignment criteria and its calibrated PD. Basel requires qualifying wholesale rating systems to distinguish borrower default risk from transaction-specific characteristics, reinforcing why obligor rating should not be contaminated by facility collateral when the purpose is to estimate borrower default likelihood.
+| Element | Owns | Test of quality |
+| :--- | :--- | :--- |
+| Rating criteria | How an obligor is assigned | Consistent use of relevant risk drivers |
+| Master scale | Ordered risk states | Clear monotonic deterioration from strong to weak |
+| Grade PD | Probability attached to grade/pool | Calibration consistent with observed/default definition |
+| Override | Governed expert departure | Reason, authority and performance tracked |
+| Migration | Movement between grades | Stable state definitions through time |
+| Default grade | Terminal/default state for the relevant system | Aligned with governed default definition |
 
-**Rating migration** is movement between grades over time. An upgrade is movement to better credit quality; a downgrade is movement to worse credit quality. A **transition matrix** records the frequencies or probabilities of movements from each starting grade to each ending grade, including default.
-
-Migration data reveal information that a snapshot cannot. Two portfolios may both contain 10% weak-rated borrowers today, yet one may have been stable while the other has rapidly migrated downward. The latter carries different momentum and validation implications.
-
-Transition analysis needs adequate history. Federal Reserve supervisory work notes that sound rating-transition models require sufficiently robust time series and granular rating systems; sparse grades or too few transitions can make estimated matrices unreliable.
-
-Grades must also avoid artificial stickiness or excessive volatility. A supposedly TTC system that never downgrades before default fails to recognise deterioration; an excessively PIT system may move borrowers several grades for modest cyclical noise. The intended rating philosophy must be explicit.
+A transition matrix counts or estimates movement from each starting grade to each ending grade over a fixed interval, including default. Migration separates a static stock of weak borrowers from a portfolio actively deteriorating toward those grades.
 
 <Flow>
-+---------+   downgrade   +---------+   downgrade   +---------+
-| Grade 1 | ------------&gt; | Grade 2 | ------------&gt; | Grade 3 |
-+---------+               +---------+               +---------+
-     ^                         |                         |
-     | upgrade                 |                         v
-     +-------------------------+                   +---------+
-                                                   | Default |
-                                                   +---------+
+Borrower information → Rating assessment / score → Grade
+    ↓
+Master-scale position → Grade PD
+    ↓
+New information → Upgrade / downgrade / default
 </Flow>
 
+<Flow>
+Upstream:   Borrower information · Rating philosophy · PD calibration
+This:       Assign grade → map to master scale → observe migration through time
+Downstream: Limits · Pricing · Monitoring · PD validation · Capital · Early warning
+</Flow>
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Rating model/process assigns and documents the grade |
+| Approves | Credit authority or rating governance confirms assignment/override where required |
+| Consumes | Underwriting, portfolio monitoring, pricing, capital and reporting |
+| Challenges | Independent credit risk, model validation and audit test scale performance |
+
 <Rule label="PERMANENT RULE">
-A grade has no standalone meaning; it must be interpreted within a documented ordered scale and a defined rating philosophy.
+A grade must retain a stable, documented meaning if historical default and migration statistics are to remain comparable.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Recalibrating grade PDs while silently changing assignment criteria makes historical migration appear comparable when the grades no longer represent the same risk classes.
-</Trap>
+<NeverConfuse a="Rating migration" b="PD recalibration">
+**Rating migration** — the obligor moves from one risk grade to another.
 
-<NeverConfuse>
-**Rating migration** — movement of an obligor between risk grades.
-
-**PD calibration** — mapping a grade or score to a probability of default; PD can change even if the grade label does not.
+---
+**PD recalibration** — the probability mapped to a grade or score changes; the grade label can remain unchanged.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** Rating-scale and transition concepts are universal; regulatory rules differ on minimum granularity, estimation and model approval.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Changing grade criteria and then analysing the old and new labels as one continuous transition history produces false migration statistics.
+</Trap>
+
+**No delta in the concept.** Regulatory frameworks differ in rating-system granularity, approval, floors, use tests and validation requirements.
 
 <Recall
-  q="What does a transition matrix show?"
-  a="Movements from starting rating states to ending states, including default, over a defined period."
+  q="What gives a rating grade meaning?"
+  a="Its documented assignment criteria, position in the master scale and calibrated risk/default relationship."
 />
 
 <Recall
-  q="Why should collateral normally not determine an obligor's default grade?"
-  a="Collateral principally changes transaction loss severity, while the obligor grade is intended to represent borrower default risk."
+  q="What does a transition matrix preserve that a rating snapshot loses?"
+  a="The direction and frequency of movement between grades through time."
+/>
+
+<Recall
+  q="Can grade PD change without rating migration?"
+  a="Yes. Recalibration can alter the probability mapped to an unchanged grade."
 />

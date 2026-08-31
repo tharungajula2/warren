@@ -1,108 +1,107 @@
 ---
 id: CR-14
-title: Loss given default and recovery rate
-type: mechanism
+title: Probability of default
+type: concept
 domain: credit-risk
 subdomain: risk-parameters
 one_screen: >-
-  LGD is loss severity conditional on default; recovery rate is the
-  complementary recovered share only when both are defined on a consistent
-  economic basis. Economic LGD must capture recovery cash flows, costs and
-  timing rather than merely subtracting collateral value from balance.
+  Probability of default is the probability that a defined obligor, facility or
+  pool enters a defined default state over a specified future horizon,
+  conditional on information available at an observation date. A number labelled
+  “PD” is incomplete until its **unit, event, horizon and conditioning
+  information** are known.
 prerequisites:
-  - CR-05
+  - CR-07
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE36, LGD
-      estimation requirements
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
-  - label: >-
-      Electronic Code of Federal Regulations, 12 CFR 217.101, economic-loss
-      definition
+      Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB
+      approach: risk components*
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR 217.101, *Definitions*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-**Loss given default (LGD)** measures the proportion of exposure lost if default occurs. If exposure at default is 100 and the present value of net recoveries attributable to that exposure is 65, economic loss is 35 and LGD is 35%.
+### Core mechanism
 
-A simplified relationship is:
+| Component | Required statement | Why it matters |
+| :--- | :--- | :--- |
+| Unit | Obligor, facility or homogeneous pool | Changes what can default |
+| Event | Regulatory default, internal default or other defined target | Changes the outcome being predicted |
+| Horizon | One year, 12 months, lifetime or another period | Changes probability mechanically |
+| Observation date | Information available at prediction time | Prevents hindsight and leakage |
+| Calibration basis | Mapping from score/grade to probability | Turns ranking into a probability estimate |
 
-`LGD = 1 − recovery rate`
-
-but only when the recovery rate and LGD use the same exposure base, time horizon, costs and discounting convention.
-
-Recoveries can come from borrower payments, collateral realisation, guarantees or other workout proceeds. Costs of collection, legal action, asset maintenance and collateral disposal reduce net recovery. Delayed recovery is worth less than immediate recovery because the time value of money matters. US Advanced Approaches regulation explicitly requires economic loss on defaulted exposures to reflect the net present value of post-default cash flows, including collateral proceeds, workout costs and further drawings.
-
-Collateral is therefore an input to LGD, not LGD itself. A property appraised at 80 against a 100 exposure does not imply 20% LGD. The realised sale price may differ; enforcement may take years; senior claims and costs may reduce proceeds; and some borrower payments may occur independently of collateral.
-
-LGD also varies systematically with economic conditions. When defaults are unusually high, collateral values and recovery capacity can simultaneously deteriorate. Basel consequently requires IRB LGD estimates to incorporate downturn conditions where necessary and constrains them relative to long-run default-weighted loss experience.
+PD is not a declaration that a named borrower “will default”. It is a probability assigned before the outcome is known. Across repeated comparable populations, realised default frequencies should be consistent with well-calibrated probabilities within sampling and cyclical variation.
 
 <Flow>
-+-------------------+
-| Exposure at default|
-+-------------------+
-          |
-          v
-+-------------------+
-| Gross recoveries  |
-+-------------------+
-          |
-          v
-+-------------------+
-| Less workout costs|
-+-------------------+
-          |
-          v
-+-------------------+
-| Discount to       |
-| default date      |
-+-------------------+
-          |
-          v
-+-------------------+
-| Net recovery      |
-+-------------------+
-          |
-          v
-+-------------------+
-| Economic LGD      |
-+-------------------+
+Defined unit + default event + horizon + observation date
+    ↓
+Score / rating / model estimate
+    ↓
+Calibration
+    ↓
+PD
 </Flow>
 
+<Flow>
+Upstream:   Default definition · Observation date · Borrower/pool information · Score/rating
+This:       Estimate and calibrate probability over stated horizon
+Downstream: Pricing · Expected loss · Rating grades · Capital · Monitoring
+</Flow>
+
+<Formula>
+For a population observed at time `t`:
+
+`PD_h = P(default during horizon h | information available at t)`
+
+Horizon ↑ → cumulative probability of at least one default event generally ↑, all else equal. A one-year PD cannot be substituted mechanically for a lifetime probability.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-LGD is conditional on default and must use recoveries and exposure measured on a consistent economic basis.
+No PD is interpretable without its unit, default definition, horizon and observation date.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Estimating LGD as `1 − collateral value / current balance` ignores timing, recovery costs, seniority, collateral volatility and exposure changes before default.
-</Trap>
+<NeverConfuse a="PD" b="Credit score">
+**PD** — a calibrated probability of a specified future default event.
 
-<NeverConfuse>
-**LGD** — the proportion of exposure economically lost conditional on default.
-
-**Recovery rate** — the proportion recovered on the same consistent base; it is complementary to LGD only under aligned definitions.
+---
+**Credit score** — a ranking or predictive output that need not itself be a probability.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** The economic relationship between loss and recovery is universal; prudential frameworks can prescribe floors, downturn adjustments, discounting and eligible mitigation differently.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Multiplying a raw score by LGD and EAD because the score “looks like a probability” creates a loss number with no valid probabilistic interpretation.
+</Trap>
+
+**No delta in probability mathematics.** Regulatory frameworks can prescribe different default definitions, parameter floors, horizons and calibration standards; those rules change the parameter specification, not what probability means.
 
 <Recall
-  q="If discounted net recovery is 70% of EAD, what is economic LGD?"
-  a="30%, assuming consistent definitions."
+  q="What four items make a PD complete?"
+  a="Unit, default event, horizon and observation/conditioning information."
 />
 
 <Recall
-  q="Why is collateral value not the same as recovery?"
-  a="Realisation timing, costs, priority, market value and enforcement outcomes can all change what is actually recovered."
+  q="Can two 2% PDs describe different risks?"
+  a="Yes, if they use different horizons, populations or default definitions."
+/>
+
+<Recall
+  q="What turns a ranking score into a PD?"
+  a="Calibration to observed or otherwise governed default probability."
 />

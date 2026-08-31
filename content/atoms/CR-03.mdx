@@ -5,101 +5,108 @@ type: concept
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  Exposure is the amount or value subject to credit loss, but its meaning
-  changes with the aggregation level and measurement purpose. Account balance,
-  facility exposure, obligor exposure and portfolio exposure answer different
-  questions and must never be silently substituted.
+  Exposure is the amount or value subject to credit loss for a stated purpose;
+  it is not automatically today’s drawn balance. The same relationship can
+  produce different valid exposure numbers at account, facility, obligor,
+  connected-group and portfolio levels.
 prerequisites:
   - CR-01
   - CR-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, Reserve Bank of India (Commercial Banks – Income
-      Recognition, Asset Classification and Provisioning) Directions, 2025,
-      paragraph 5
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146'
-    accessed: 28 August 2026
-  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
-  - label: 'Electronic Code of Federal Regulations, 12 CFR 217.101'
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB
+      approach: risk components*
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-At the **account level**, exposure commonly begins with the recorded amount currently outstanding. That is an accounting or operational quantity, not necessarily the maximum amount that could be lost.
+### Core mechanism
 
-At the **facility level**, exposure includes the credit position attributable to the contractual facility. A funded term loan may be dominated by the outstanding principal. A revolving line also has an undrawn commitment that could be drawn before default. Guarantees and other non-funded commitments may create contingent exposures even though no loan balance has yet appeared.
+| Level | Question answered | What may be included |
+| :--- | :--- | :--- |
+| Account | What is booked here now? | Outstanding principal, accrued items |
+| Facility | What credit position belongs to this contract? | Drawn amount plus relevant undrawn or contingent exposure |
+| Obligor | How much depends on this legal person? | Relevant facilities to the same obligor |
+| Connected group | How much depends on one linked economic risk? | Exposures to connected counterparties |
+| Portfolio | How much exposure exists across the book? | All included obligors/groups under the chosen perimeter |
 
-At the **obligor level**, exposure is an aggregation across relevant facilities to the same obligor. This is the level required for questions such as: "How much could be lost if this legal person fails?" The answer can differ materially from any single account balance.
-
-At a **connected-group level**, exposures to legally separate obligors may be aggregated because control or economic interdependence makes their risks insufficiently independent. That issue is treated separately in CR-04.
-
-At the **portfolio level**, exposure is aggregated across obligors and groups. The resulting total is useful for portfolio composition but cannot by itself reveal concentration or dependence. A portfolio of many equal independent exposures has a different tail-loss profile from the same total exposure concentrated in a few correlated names.
-
-Regulatory definitions reinforce the need to specify measurement purpose. RBI's commercial-bank prudential directions define exposure broadly to include funded and non-funded exposures. Basel and US IRB frameworks separately define exposure at default as a risk parameter intended to capture the amount exposed when default occurs rather than merely today's balance.
+Funded and non-funded positions can both create credit exposure. A commitment or guarantee may have little or no current loan balance while still creating future or contingent loss potential.
 
 <Flow>
-+--------------------+
-| Account exposure   |
-+--------------------+
-          |
-          v
-+--------------------+
-| Facility exposure  |
-| funded + contingent|
-+--------------------+
-          |
-          v
-+--------------------+
-| Obligor exposure   |
-| all facilities     |
-+--------------------+
-          |
-          v
-+--------------------+
-| Connected group    |
-+--------------------+
-          |
-          v
-+--------------------+
-| Portfolio exposure |
-+--------------------+
+Account exposure → Facility exposure → Obligor exposure → Connected-group exposure → Portfolio exposure
+    ↓
+Limits · Concentration · EAD / EL / capital views
+</Flow>
+
+<Flow>
+Upstream:   Accounts · Limits · Commitments · Transactions
+This:       Account → Facility → Obligor → Connected group → Portfolio
+Downstream: Limits · EAD · Concentration · Expected loss · Capital
 </Flow>
 
 <Rule label="PERMANENT RULE">
-Every exposure number requires both a measurement basis and an aggregation level.
+Every exposure number requires both a **measurement basis** and an **aggregation level**.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Using current drawn balance as "exposure" for a revolving or committed facility understates risk when additional drawings can occur before default.
-</Trap>
+<NeverConfuse a="Outstanding balance" b="Exposure">
+**Outstanding balance** — the amount currently booked as drawn or owed.
 
-<NeverConfuse>
-**Outstanding balance** — the amount currently recorded as drawn or owed.
-
-**Exposure** — the credit amount relevant to a specified risk question; it may include contingent or future drawings and may be aggregated above account level.
+---
+**Exposure** — the amount relevant to a stated credit-risk question; it can include future drawings, contingent claims or aggregation above account level.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** Detailed regulatory exposure-value rules differ, but exposure always requires an explicit measurement basis and aggregation level.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Setting exposure equal to current drawn balance for revolving or committed facilities can omit the amount that may be drawn or become due before default.
+</Trap>
+
+#### IN (RBI)
+
+The RBI Commercial Banks IRACP Directions define exposure to include funded and non-funded exposures, including underwriting and similar commitments.
+
+#### UK (PRA)
+
+Detailed regulatory exposure values depend on the applicable prudential approach; the conceptual distinction between booked balance and risk exposure does not change.
+
+#### EU
+
+CRR exposure-value rules vary by exposure type and credit-risk approach; the aggregation principle is unchanged.
+
+#### US
+
+US regulatory capital rules define exposure measures by asset and approach; current balance is not a universal substitute for exposure at default.
 
 <Recall
-  q="Why is an undrawn line relevant to exposure?"
-  a="Because some of it may be drawn before the obligor defaults."
+  q="Why can an undrawn line be part of credit exposure?"
+  a="Some or all of it can be drawn before default or otherwise become a claim."
 />
 
 <Recall
-  q="Does portfolio exposure alone measure portfolio risk?"
-  a="No. Concentration, default likelihood, severity and dependence also matter."
+  q="Does total portfolio exposure by itself measure portfolio risk?"
+  a="No. Default likelihood, severity, concentration and dependence also matter."
+/>
+
+<Recall
+  q="What two labels must accompany any exposure number?"
+  a="Its measurement basis and aggregation level."
 />

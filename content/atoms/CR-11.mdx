@@ -1,17 +1,16 @@
 ---
 id: CR-11
-title: 'Write-off: accounting removal versus economic loss'
+title: 'Restructuring, forbearance and distressed concessions'
 type: concept
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  A write-off changes the carrying amount recognised on the balance sheet; it
-  does not necessarily mean the legal claim, recovery process or economic
-  history has vanished. Default, provision, write-off and recovery are separate
-  lifecycle states.
+  Restructuring changes contractual terms; forbearance is a concession
+  associated with the debtor’s financial difficulty. A modification can preserve
+  value, but cannot erase the deterioration that made the original terms
+  unsustainable.
 prerequisites:
-  - CR-03
-  - CR-05
+  - CR-07
   - CR-09
 jurisdictions:
   - IN
@@ -26,106 +25,114 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, DBR.BP.BC.No.29/21.07.001/2018-19, “Deferral of
-      Implementation of Indian Accounting Standards”, 22 March 2019
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0'
-    accessed: 28 August 2026
-  - label: >-
-      Reserve Bank of India, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20,
-      “Implementation of Indian Accounting Standards”, 13 March 2020
-    url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0'
-    accessed: 28 August 2026
-  - label: 'IFRS Foundation, IFRS 9 Financial Instruments, paragraph 5.4.4'
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
     url: >-
-      https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
   - label: >-
-      Federal Reserve, “Interagency Policy Statement on Allowances for Credit
-      Losses”
-    url: >-
-      https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
-    accessed: 28 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks –
+      Resolution of Stressed Assets) Directions, 2025*, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, *The EBA amends Guidelines on the definition
+      of default*, 7 May 2026, concerning EBA/GL/2026/05.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement
+      Approaches*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-An **accounting write-off** removes all or part of a financial asset's gross carrying amount when the applicable accounting framework concludes that the amount should no longer remain recognised as a receivable. Under IFRS 9, the gross carrying amount is directly reduced when there is no reasonable expectation of recovery, and the write-off is a derecognition event.
+### Core mechanism
 
-An **economic loss** is different. It asks how much value was actually lost after considering recoveries, collateral proceeds, costs and the timing of cash flows. A bank can write off an account and later collect money. Such post-write-off recoveries remain economically relevant and must not disappear from LGD history.
+| Situation | Credit interpretation |
+| :--- | :--- |
+| Healthy commercial amendment | Terms change for ordinary business reasons; distress not implied |
+| Concession because of financial difficulty | Forbearance / distressed modification analysis required |
+| Material forgiveness or postponement | Test whether diminished financial obligation indicates UTP/default |
+| New contract after old arrears are capitalised | Preserve pre-modification history; do not reset the borrower to “new” |
+| Repeated restructuring | Escalating evidence that apparent cure may be unstable |
 
-A **technical write-off** can remove the recognised balance from one accounting presentation while recovery action continues and the borrower remains liable. RBI explicitly recognises partial and technical write-offs and states that the remaining part of the loan cannot thereby be shown as a standard asset.
-
-Provisioning is also distinct. A **provision** or allowance recognises expected credit loss while the asset may remain on the balance sheet; a write-off removes carrying amount. Neither event by itself rewrites the historical default date.
-
-This distinction is especially important in India. Scheduled commercial banks have **not** been moved onto Ind AS 109: RBI deferred their Ind AS implementation until further notice in its 22 March 2019 circular. Their prudential asset classification and provisioning continue under RBI norms. Relevant NBFCs that apply Ind AS are subject to RBI's Ind AS implementation guidance, including parallel comparison with prudential IRACP requirements.
+The key question is **why terms changed and what risk the concession reveals**. Extending maturity may restore short-term affordability; capitalising arrears can clean DPD without improving cash generation; principal forgiveness changes expected recovery.
 
 <Flow>
-+-------------+
-| Exposure    |
-+-------------+
-      |
-      v
-+-------------+
-| Default     |
-+-------------+
-      |
-      v
-+-------------------+
-| Provision/allowance|
-+-------------------+
-      |
-      v
-+-------------+
-| Write-off   |
-+-------------+
-      |
-      v
-+----------------+
-| Recovery may   |
-| still occur    |
-+----------------+
-      |
-      v
-+----------------+
-| Final economic |
-| loss           |
-+----------------+
+Original terms → Financial difficulty → Concession / restructuring
+    ↓
+UTP / default test
+    ↓
+Revised cash flows → Performance monitoring
+    ↓
+Cure / probation OR re-default
 </Flow>
 
+<Flow>
+Upstream:   Deterioration · Missed/expected missed payments · Negotiation
+This:       Modify terms → Was concession driven by financial difficulty? → Default/forbearance test
+Downstream: Revised cash flows · Default status · Cure/probation · LGD and recovery history
+</Flow>
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Workout / relationship team documents distress, proposal and economics |
+| Approves | Restructuring authority / credit committee approves within policy |
+| Consumes | Operations, finance, default management, modelling and reporting |
+| Challenges | Independent credit risk and audit test classification and economic substance |
+
 <Rule label="PERMANENT RULE">
-Never delete default and recovery history because an accounting write-off has occurred.
+A new contractual schedule must not erase the borrower’s prior distress, default date or economic concession.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Treating write-off amount as LGD automatically ignores post-write-off recoveries, workout expenses and the time value of delayed collections.
-</Trap>
+<NeverConfuse a="Restructuring" b="Forbearance">
+**Restructuring** — a modification of contractual credit terms.
 
-<NeverConfuse>
-**Write-off** — reduction or removal of recognised carrying amount under the relevant accounting or prudential framework.
-
-**Debt forgiveness** — release of the debtor's legal obligation; a write-off does not necessarily forgive the debt.
+---
+**Forbearance** — a concession linked to the debtor’s financial difficulty; not every restructuring is forbearance.
 </NeverConfuse>
 
-<Delta j="IN">
-— RBI deferred Ind AS implementation for banks until further notice; commercial-bank provisioning continues under RBI prudential IRACP norms. Relevant NBFCs applying Ind AS maintain Ind AS impairment allowances while also computing the prudential IRACP floor required by RBI. [RBI DBR.BP.BC.No.29/21.07.001/2018-19; DOR (NBFC).CC.PD.No.109/22.10.106/2019-20]
-</Delta>
+<Trap label="PERMANENT TRAP">
+Evergreening converts unpaid amounts into a formally current contract while leaving repayment capacity unchanged; operational current status is not proof of economic cure.
+</Trap>
 
-<Delta j="UK">
-— entities applying UK-adopted IFRS 9 use the accounting write-off principle when no reasonable expectation of recovery remains; prudential default remains a separate regulatory concept. [IFRS 9 paragraph 5.4.4; PRA default framework]
-</Delta>
+#### IN (RBI)
 
-<Delta j="EU">
-— IFRS-reporting entities follow IFRS 9 write-off requirements while CRR regulatory default remains a separate prudential classification. [IFRS 9; CRR Article 178]
-</Delta>
+Commercial banks apply the IRACP Directions together with the RBI *Commercial Banks – Resolution of Stressed Assets Directions, 2025* where relevant; restructuring classification and provisioning must follow those rules rather than a generic Basel label.
 
-<Delta j="US">
-— CECL accounting recognises expected credit-loss allowances and retains charge-off guidance for amounts deemed uncollectible; regulatory default and nonaccrual classifications are separate concepts. [Interagency Policy Statement on Allowances for Credit Losses]
-</Delta>
+#### UK (PRA)
+
+Distressed restructuring can be an UTP indicator under the definition-of-default framework; forbearance and regulatory default remain distinct classifications.
+
+#### EU
+
+CRR/EBA rules distinguish forbearance, non-performing exposure and default. The May 2026 EBA amendment retains the 1% NPV-loss threshold in the relevant distressed-restructuring guidance and becomes applicable on 19 October 2026.
+
+#### US
+
+Accounting modification, troubled-credit treatment and regulatory default are separate determinations; Advanced Approaches default remains governed by 12 CFR Part 217.
 
 <Recall
-  q="Does accounting write-off mean collections must stop?"
-  a="No. A legal claim or recovery process may continue depending on the circumstances and applicable law."
+  q="Does every restructuring mean default?"
+  a="No. The reason for the modification and its economic effect determine the credit interpretation."
 />
 
 <Recall
-  q="Are Indian scheduled commercial banks on Ind AS 109?"
-  a="No. RBI deferred bank implementation of Ind AS until further notice; relevant NBFCs applying Ind AS are a different case."
+  q="Why preserve the old repayment schedule in data?"
+  a="It reveals the distress and concession that the new schedule may otherwise conceal."
+/>
+
+<Recall
+  q="What is the central forbearance question?"
+  a="Whether a concession was granted because the debtor is in or expected to face financial difficulty."
 />

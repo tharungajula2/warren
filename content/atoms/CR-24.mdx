@@ -1,121 +1,106 @@
 ---
 id: CR-24
-title: 'Concentration: single-name and sector risk'
-type: mechanism
+title: Correlation and systematic credit risk
+type: concept
 domain: credit-risk
 subdomain: portfolio-risk
 one_screen: >-
-  Concentration risk arises when too much exposure depends on the same obligor,
-  connected group, sector, geography or underlying risk driver. Diversification
-  is about independent sources of loss, not the number of rows in a portfolio
-  file.
+  Credit correlation means default and loss outcomes are not independent because
+  common economic forces move many borrowers together. Idiosyncratic risk can be
+  diversified across sufficiently independent exposures; systematic risk cannot
+  be removed by adding more borrowers exposed to the same underlying conditions.
 prerequisites:
-  - CR-03
-  - CR-04
-  - CR-18
+  - CR-14
+  - CR-23
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
-perishable: true
-as_of: '2026-08-28'
+  - universal
+perishable: false
+as_of: null
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit
-      risk concentration”
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/32.htm'
-    accessed: 28 August 2026
-  - label: 'Basel Committee on Banking Supervision, Basel Framework, LEX10'
-    url: 'https://www.bis.org/basel_framework/chapter/LEX/10.htm'
-    accessed: 28 August 2026
-  - label: 'Prudential Regulation Authority, SS3/25'
+      Basel Committee on Banking Supervision, Basel Framework, CRE31, *IRB
+      approach: risk weight functions*
     url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/31/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
   - label: >-
-      Reserve Bank of India, Commercial Banks – Large Exposures Framework
-      Directions, 2025
-    url: 'https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13152'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit
+      risk*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-**Single-name concentration** occurs when one obligor represents a material share of the bank's exposure or capital capacity. **Connected-group concentration** extends the same logic to entities whose risks are linked through control or economic dependency.
+### Core mechanism
 
-**Sector concentration** occurs when many legally independent obligors depend on the same industry conditions. A portfolio with 1,000 borrowers can still be highly concentrated if almost all rely on the same commodity price, property market or economic activity.
+| Risk source | Example | Diversification effect |
+| :--- | :--- | :--- |
+| Idiosyncratic | Fraud, plant failure, loss of one customer | Falls as many independent names are added |
+| Sector systematic | Commodity-price collapse, industry disruption | Persists across borrowers in the same sector |
+| Macro systematic | Recession, unemployment, rate shock | Can affect many sectors and borrowers together |
+| Recovery dependence | Property prices fall during mortgage defaults | Defaults and LGDs can worsen together |
+| Utilisation dependence | Revolvers draw in stress | Defaults and EAD can worsen together |
 
-Basel's supervisory framework explicitly treats concentrations to individual counterparties or connected groups, sectors, regions and other common risk factors as concentration risk.
-
-Concentration matters because loss capacity is nonlinear. Ten equal exposures to ten genuinely independent obligors provide more diversification than one exposure of the same total size to a single name. Likewise, 100 companies whose revenues fail together are less diversified than their legal-entity count suggests.
-
-A concentration metric must therefore declare its denominator and grouping rule. Exposure can be measured against total portfolio exposure, eligible capital or a specific subportfolio. Sector taxonomies must be stable enough that moving a borrower between labels does not become a way to manage the metric cosmetically.
-
-Large-exposure regulation places hard prudential constraints on some single-name and connected-group concentrations. Internal risk appetite normally goes further by addressing sectors and common risk factors that may remain below formal large-exposure limits.
+Correlation does not require equal PDs. A 1% PD firm and a 5% PD firm can still become riskier at the same time because both respond to recession, rates or a common customer base.
 
 <Flow>
-+-----------------------+
-| Portfolio exposures   |
-+-----------------------+
-       |          |
-       v          v
-+-----------+  +----------------+
-| Single    |  | Many names     |
-| obligors  |  |                |
-+-----------+  +----------------+
-       |          |
-       v          v
-+-----------+  +----------------+
-| Connected |  | Common sector  |
-| groups    |  | / risk driver  |
-+-----------+  +----------------+
-       \          /
-        \        /
-         v      v
-+-----------------------+
-| Concentration risk    |
-+-----------------------+
+Idiosyncratic shock → One / few obligors → Diversification impact ↓
+
+Systematic shock → Many obligors deteriorate together → Correlated defaults
+    ↓
+Clustered losses → Portfolio tail ↑ → Capital pressure ↑
 </Flow>
 
+<Flow>
+Upstream:   Individual PDs · Common economic factors · Sector/geography links
+This:       Common shock → joint deterioration/default → clustered losses
+Downstream: Portfolio loss tail · Stress testing · Diversification benefit · Capital
+</Flow>
+
+<Formula>
+For default indicators `D₁` and `D₂`, positive dependence means:
+
+`P(D₁ = 1 and D₂ = 1) &gt; P(D₁ = 1) × P(D₂ = 1)`
+
+in the simple comparison to independence.
+
+Positive dependence ↑ → probability of clustered losses ↑ → tail loss ↑, all else equal.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-Count common sources of failure, not merely legal names.
+Adding exposures diversifies risk only to the extent that their failure drivers are not the same.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-A portfolio can appear diversified after splitting one economic group across subsidiaries or one industry across several narrow sector codes.
-</Trap>
+<NeverConfuse a="Correlation" b="Concentration">
+**Correlation** — dependence between credit outcomes.
 
-<NeverConfuse>
-**Single-name concentration** — excessive dependence on one obligor or connected risk.
-
-**Sector concentration** — excessive dependence on a shared industry or economic factor across multiple names.
+---
+**Concentration** — disproportionate exposure to names or common drivers; concentration magnifies the consequence of dependence but is not the same concept.
 </NeverConfuse>
 
-<Delta j="IN">
-— RBI's Large Exposures Framework imposes limits and aggregation rules for single counterparties and groups of connected counterparties; internal concentration management must also address risks not exhausted by those legal limits. [RBI Commercial Banks Large Exposures Framework Directions 2025]
-</Delta>
+<Trap label="PERMANENT TRAP">
+Assuming legal independence implies default independence systematically understates loss clustering during common economic stress.
+</Trap>
 
-<Delta j="UK">
-— PRA large-exposure rules and SS3/25 govern identification of groups of connected clients; sector concentration additionally forms part of broader prudential risk management. [PRA SS3/25; Large Exposures policy]
-</Delta>
-
-<Delta j="EU">
-— CRR large-exposure provisions aggregate connected clients and impose exposure constraints, while broader concentration risk is addressed through supervisory risk management. [CRR Articles 387–395]
-</Delta>
-
-<Delta j="US">
-— legal lending limits and loan-combination rules, including 12 CFR Part 32 for national banks, use US-specific definitions and should not be assumed identical to Basel's connected-counterparty framework. [12 CFR Part 32]
-</Delta>
+<Rule label="NO DELTA">
+**No delta.** Correlation and systematic risk are economic and statistical properties; prudential frameworks differ in how dependence is parameterised, stressed or capitalised.
+</Rule>
 
 <Recall
-  q="Can 1,000 obligors still form a concentrated portfolio?"
-  a="Yes, if their ability to pay depends on the same sector or systematic risk driver."
+  q="Which credit risk is hardest to diversify away?"
+  a="Systematic risk driven by common economic factors."
 />
 
 <Recall
-  q="Why aggregate connected counterparties?"
-  a="Separate legal names may share one underlying failure mechanism."
+  q="Why can a sector-diversified portfolio still be correlated?"
+  a="Different sectors can share macro, geographic, customer, funding or currency drivers."
+/>
+
+<Recall
+  q="What happens to the loss distribution when defaults become more positively dependent?"
+  a="Its severe-loss tail becomes heavier because losses cluster."
 />

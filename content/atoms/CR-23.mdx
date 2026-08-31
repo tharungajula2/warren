@@ -1,88 +1,139 @@
 ---
 id: CR-23
-title: Vintage analysis and roll rates
+title: Concentration and diversification
 type: mechanism
 domain: credit-risk
 subdomain: scorecards-and-ratings
 one_screen: >-
-  Vintage analysis follows cohorts originated at similar times as they season;
-  roll-rate analysis follows movements between delinquency states. Both restore
-  the time dimension that a portfolio snapshot destroys.
+  Concentration risk arises when too much exposure depends on the same name,
+  connected group, sector, geography, collateral type or underlying economic
+  driver. Diversification comes from genuinely different sources of loss, not
+  from the number of rows, facilities or legal entities in a dataset.
 prerequisites:
-  - CR-06
-  - CR-19
-  - CR-20
+  - CR-03
+  - CR-04
+  - CR-18
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Federal Reserve, “Estimation Methodologies for Losses, Revenues, and
-      Expenses”, August 2013, roll-rate and transition-model sections
+      Basel Committee on Banking Supervision, Basel Framework, BCP40, *The Core
+      Principles and assessment criteria*
     url: >-
-      https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm
-    accessed: 28 August 2026
+      https://www.bis.org/committees/bcbs/basel-framework/standard/bcp/40/inforce/2024-04-25/published/2024-04-25
+    accessed: 30 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, LEX10,
+      *Definitions and application*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/lex/10/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit
+      risk*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Prudential Regulation Authority, SS3/25, *Identification of groups of
+      connected clients*, 17 July 2025
+    url: >-
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement
+    accessed: 30 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 32, *Lending Limits*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-A **vintage** is a cohort of exposures grouped by a common origination period, such as month or quarter. Vintage analysis compares performance at the same **months on book** rather than merely at the same calendar date.
+### Core mechanism
 
-Suppose one cohort is 12 months old and another is only three months old. Comparing their raw default percentages today is unfair because the older cohort has had four times as long to season. A vintage curve instead compares each cohort's cumulative delinquency or default at month 1, month 2, month 3 and so on.
+| Concentration form | Common failure source | Example diagnostic |
+| :--- | :--- | :--- |
+| Single name | One obligor | Exposure / capital or portfolio share |
+| Connected group | Control or economic dependency | Aggregated group exposure |
+| Sector | Common industry conditions | Sector share and stressed sector loss |
+| Geography | Local economy / law / property market | Regional exposure share |
+| Product / collateral | Common underwriting or recovery mechanism | Product or collateral-type share |
+| Hidden factor | Shared commodity, customer, currency or funding driver | Factor mapping / scenario analysis |
 
-This reveals underwriting changes. If later vintages deteriorate faster at the same age, something may have changed in applicant mix, policy, pricing, macroeconomic environment or channel quality.
-
-A **roll rate** measures movement from one delinquency state to another over a defined interval. For example, it may estimate the proportion of accounts at 30–59 DPD that move to 60–89 DPD next month, cure to current or remain in the same state. Federal Reserve supervisory material describes roll-rate models as estimating how current or delinquent loans transition into delinquent or default states in subsequent periods and emphasises adequate time-series history and granularity.
-
-A **snapshot** shows stock, not motion. A portfolio with 5% at 60+ DPD could be improving because many delinquent accounts are curing, or deteriorating because a large current population is rapidly rolling forward. Identical snapshots can therefore hide opposite dynamics.
-
-Vintage and roll-rate analysis must preserve consistent definitions. Changes in DPD calculation, default thresholds, write-off policy or data extraction can create false improvements or deterioration.
+Ten equal exposures to genuinely independent obligors diversify idiosyncratic failure better than one exposure of the same total size. One thousand borrowers can still be concentrated if most depend on the same property market or commodity price.
 
 <Flow>
-Vintage view:
-
-+-----------+ -&gt; +-----------+ -&gt; +-----------+
-| Month 0   |    | Month 3   |    | Month 6   |
-| cohort    |    | outcome   |    | outcome   |
-+-----------+    +-----------+    +-----------+
-
-Roll-rate view:
-
-+---------+ -&gt; +----------+ -&gt; +----------+ -&gt; +---------+
-| Current |    | 1-30 DPD |    |31-60 DPD|    | Default |
-+---------+    +----------+    +----------+    +---------+
-      ^             |               |
-      +-------------+---------------+
-                  cures
+Shared obligor / group / sector / geography / factor
+    ↓
+Common exposure dependence
+    ↓
+Concentration ↑ → Diversification benefit ↓
+    ↓
+Tail-loss sensitivity ↑
 </Flow>
 
+<Flow>
+Upstream:   Aggregated exposure · Connected groups · Sector/geography/factor tags
+This:       Identify common loss drivers → measure concentration → compare with limits/appetite
+Downstream: Limit actions · Portfolio steering · Stress testing · Pillar 2 / capital assessment
+</Flow>
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Produces | Risk data and portfolio teams aggregate exposures and common drivers |
+| Approves | Board/senior risk governance sets appetite and concentration limits |
+| Consumes | Underwriting, limits, strategy, stress testing and capital planning |
+| Challenges | Independent risk and audit test aggregation, taxonomy and limit exceptions |
+
 <Rule label="PERMANENT RULE">
-Credit performance is a process through time; any analysis that discards cohort age or state transitions loses material information.
+Diversification must be judged by independence of loss drivers, not by nominal borrower count.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Comparing a young fast-growing book with a mature book on current NPL percentage alone can make the young book appear safer simply because its loans have not had time to season.
-</Trap>
+<NeverConfuse a="Concentration" b="Large exposure">
+**Concentration** — dependence on a common source of loss, which may be name, sector, geography, collateral or another factor.
 
-<NeverConfuse>
-**Vintage analysis** — follows origination cohorts through age.
-
-**Roll-rate analysis** — follows transitions between delinquency or credit states through time.
+---
+**Large exposure** — an exposure or connected-group exposure meeting a defined regulatory or internal size threshold; concentration is broader.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** These are universal portfolio-analysis methods; local delinquency and default definitions determine the states being tracked.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Splitting one economic group across subsidiaries or one common sector across narrow industry codes can improve a report while leaving the underlying loss concentration unchanged.
+</Trap>
+
+#### IN (RBI)
+
+RBI’s Large Exposures Framework governs prudential single-counterparty and connected-counterparty aggregation and limits. Internal concentration management must still capture sector and common-factor risks outside the legal large-exposure perimeter.
+
+#### UK (PRA)
+
+PRA large-exposure rules and SS3/25 govern connected-client identification; concentration risk also feeds broader supervisory and Pillar 2 assessment.
+
+#### EU
+
+CRR large-exposure rules constrain single clients and groups of connected clients; broader concentration risk remains a risk-management and supervisory concern.
+
+#### US
+
+US legal lending limits use US-specific aggregation rules. Internal sector and factor concentration management is broader than statutory single-borrower limits.
 
 <Recall
-  q="Why compare vintages at the same months on book?"
-  a="To control for seasoning time."
+  q="Can 1,000 borrowers still be highly concentrated?"
+  a="Yes, if their repayment depends on the same sector or economic driver."
 />
 
 <Recall
-  q="What information does a roll rate add to a delinquency snapshot?"
-  a="Direction and speed of movement between states."
+  q="Why is connected-group concentration different from simple legal-entity counting?"
+  a="Separate entities can fail together through control or economic interdependence."
+/>
+
+<Recall
+  q="Is every concentration a regulatory large exposure?"
+  a="No. Sector, geography and common-factor concentrations may be material without any single name breaching a large-exposure threshold."
 />

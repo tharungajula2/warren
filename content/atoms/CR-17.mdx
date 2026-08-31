@@ -1,95 +1,109 @@
 ---
 id: CR-17
-title: Expected loss as PD × LGD × EAD
+title: Exposure at default and credit conversion factors
 type: mechanism
 domain: credit-risk
 subdomain: risk-parameters
 one_screen: >-
-  `EL = PD × LGD × EAD` is a useful one-period credit-loss decomposition only
-  when the three parameters describe compatible events, horizons, populations
-  and economic conditions. The multiplication is simple; obtaining coherent
-  inputs is not.
+  Exposure at default estimates or prescribes how much is exposed when default
+  occurs, not how much is drawn today. Credit conversion factors translate
+  undrawn or contingent amounts into exposure, making pre-default utilisation
+  behaviour part of credit risk.
 prerequisites:
-  - CR-12
-  - CR-14
-  - CR-15
+  - CR-03
+  - CR-07
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE32, “IRB
-      approach: risk components”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/32.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB
+      approach: risk components*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment
-      of expected losses and recognition of provisions”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/35.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
+  - label: 'Electronic Code of Federal Regulations, 12 CFR 217.101, *Definitions*.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-For a stylised exposure, expected monetary credit loss can be represented as:
+### Core mechanism
 
-`EL = PD × LGD × EAD`
+| Facility component | Credit question |
+| :--- | :--- |
+| Current drawn amount | What is already exposed? |
+| Undrawn commitment | How much can still be drawn before default? |
+| Contingent item | What amount can crystallise into a claim? |
+| Accrued interest/fees | What additional amount may be outstanding at default under the chosen basis? |
+| Limit cancellation / draw-stop behaviour | How much future drawdown is actually possible? |
 
-Suppose one-year PD is 2%, LGD is 40%, and EAD is 100. The expected loss is:
-
-`0.02 × 0.40 × 100 = 0.8`
-
-The result is an **expectation across possible outcomes**, not a forecast that this specific exposure will lose 0.8. In reality the borrower might not default and lose nothing, or might default and generate a much larger loss.
-
-The multiplication hides important assumptions. PD must refer to the same default definition that determines the LGD sample. LGD must be conditional on that default. EAD must be measured at the corresponding default event. Horizons must align. Currency and valuation bases must align.
-
-Dependence also matters. The neat product is exact under a conditional decomposition when LGD and EAD inputs are appropriate conditional expectations associated with default. A careless implementation that simply multiplies three independently estimated unconditional averages can be biased when exposure utilisation and recovery severity worsen around default or in common downturn conditions.
-
-For example, revolving borrowers may draw more just before default while collateral recoveries deteriorate in the same recession. Treating PD, LGD and EAD as unrelated constants can conceal this joint behaviour.
-
-Basel's IRB framework separates the risk components PD, LGD, EAD and maturity and calculates regulatory expected-loss amounts under prescribed rules rather than treating a generic spreadsheet identity as the whole capital framework.
+For a fully drawn amortising loan, EAD can be close to expected balance at default. For cards, overdrafts and revolving commitments, distressed borrowers may draw further before failure, so current utilisation can materially understate EAD.
 
 <Flow>
-+-----------+     +-----------+     +-----------+
-| PD        |  x  | LGD       |  x  | EAD       |
-| default   |     | severity  |     | amount    |
-+-----------+     +-----------+     +-----------+
-       \              |               /
-        \             |              /
-         v            v             v
-+---------------------------------------+
-| Expected credit loss                  |
-| under aligned definitions             |
-+---------------------------------------+
+Current drawn amount + Undrawn / contingent amount
+    ↓
+Apply drawdown / CCF logic
+    ↓
+Additional pre-default exposure
+    ↓
+EAD at default
 </Flow>
 
+<Flow>
+Upstream:   Facility limit · Drawn balance · Undrawn amount · Behaviour · Default date
+This:       Convert relevant off-balance / undrawn amount → add to default exposure
+Downstream: Expected loss · LGD denominator · Regulatory RWA · Limit analysis
+</Flow>
+
+<Formula>
+Teaching decomposition:
+
+`CCF = additional pre-default drawing / undrawn amount at reference date`
+
+`EAD = current drawn amount + CCF × undrawn amount`
+
+CCF ↑ → EAD ↑, all else equal. This is not a universal regulatory formula; applicable frameworks prescribe treatment by exposure type and approach.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-Never multiply PD, LGD and EAD until their default definition, horizon, observation point and population have been reconciled.
+EAD is anchored to the default event. Current balance is an input, not the definition.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Combining a 12-month regulatory PD, lifetime accounting LGD and today's balance produces a number with units but no coherent risk interpretation.
-</Trap>
+<NeverConfuse a="EAD" b="Current utilisation">
+**EAD** — exposure expected or prescribed at default.
 
-<NeverConfuse>
-**Expected loss** — probability-weighted average loss over the defined horizon.
-
-**Most likely loss** — the modal or most probable outcome; for a low-PD loan this may be zero even when expected loss is positive.
+---
+**Current utilisation** — amount drawn now, often expressed relative to the facility limit.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** The probability decomposition is universal; accounting and regulatory frameworks prescribe different parameter definitions, horizons and calculation rules.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Estimating revolving-credit loss on today’s balance while LGD is measured against default-date exposure creates a denominator mismatch and usually understates drawdown risk.
+</Trap>
+
+**No delta in the mechanism.** Regulatory conversion factors, modelling permissions and off-balance-sheet exposure rules differ by jurisdiction and prudential approach.
 
 <Recall
-  q="Why is the multiplication &quot;not innocent&quot;?"
-  a="Because the inputs must be aligned and may be dependent, especially around default and downturns."
+  q="Why can EAD exceed today’s drawn balance?"
+  a="Further drawings or contingent claims can arise before default."
 />
 
 <Recall
-  q="With PD 1%, LGD 50% and EAD 200, what is EL?"
-  a="1 monetary unit."
+  q="What does a CCF convert?"
+  a="An eligible undrawn or contingent amount into credit exposure under the stated method."
+/>
+
+<Recall
+  q="Why must the EAD reference date be preserved in model data?"
+  a="CCF depends on the undrawn amount and available limit before default, not only the final balance."
 />

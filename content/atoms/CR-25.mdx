@@ -1,98 +1,121 @@
 ---
 id: CR-25
-title: Correlation and systematic credit risk
-type: concept
+title: Unexpected loss and capital
+type: mechanism
 domain: credit-risk
 subdomain: portfolio-risk
 one_screen: >-
-  Credit correlation means borrowers' default outcomes are not independent
-  because common economic forces move their credit quality together.
-  Idiosyncratic risk can diversify away; systematic risk cannot be eliminated
-  simply by adding more borrowers exposed to the same underlying conditions.
+  Expected loss is the average credit cost under a defined measurement;
+  unexpected loss is adverse variation around that average. Capital protects
+  solvency against sufficiently severe outcomes above ordinary expected-loss
+  capacity, so portfolio dispersion and dependence matter even when
+  exposure-level EL is unchanged.
 prerequisites:
-  - CR-12
   - CR-18
+  - CR-23
   - CR-24
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB
-      approach: risk-weight functions”
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/31.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE30, *IRB
+      approach: overview and asset class definitions*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
   - label: >-
-      Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit
-      risk concentration”
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/32.htm'
-    accessed: 28 August 2026
+      Basel Committee on Banking Supervision, Basel Framework, CRE31, *IRB
+      approach: risk weight functions*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/31/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE35, *IRB
+      approach: treatment of expected losses and provisions*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/35/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit
+      risk*
+    url: >-
+      https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27
+    accessed: 30 August 2026
 import_source: 02_CR_credit_risk_core.md
 ---
-An individual borrower can default because of an **idiosyncratic** event: poor management, fraud, loss of a key customer or a local operational failure. Holding many independent borrowers reduces the effect of any one such event on the portfolio.
+### Core mechanism
 
-**Systematic risk** comes from common forces: recession, interest-rate shock, unemployment, commodity prices, property-market stress, exchange-rate moves or other economy-wide conditions. These forces can make many borrowers deteriorate simultaneously.
+| Layer | Question | Main drivers |
+| :--- | :--- | :--- |
+| Expected loss | What loss is anticipated on average? | PD, LGD, EAD and their aligned conditioning |
+| Loss volatility | How much can realised loss vary? | Granularity, parameter variation, migration |
+| Tail / unexpected loss | How severe can adverse loss become above the mean? | Concentration, correlation, systematic stress |
+| Capital | What loss-absorbing resources protect solvency? | Prudential/economic confidence standard and capital rules |
 
-Credit **correlation** describes this dependence. It does not require two borrowers to have identical PDs. One may have a 1% PD and another 5%, yet their default likelihoods can rise together in recession.
-
-This is why portfolio loss cannot be derived by adding expected losses and stopping there. If defaults were independent, a large diversified pool would exhibit relatively stable aggregate outcomes. Positive dependence thickens the loss tail because many defaults can cluster in the same adverse state.
-
-Correlation also explains the danger of hidden concentration. Two companies in different legal sectors may depend on the same property cycle or export market. Conversely, two firms with the same high-level sector label may have materially different geographic or customer exposures. Dependence must therefore be analysed economically, not solely through classification codes.
-
-Basel IRB capital formulas embody systematic dependence through prescribed risk-weight functions rather than assuming independent defaults, while supervisory concentration standards separately require banks to identify material common risk factors.
+Two portfolios can have identical EL but very different tail risk. One may contain thousands of diversified exposures; another may depend on a few correlated names. Their average loss can match while their severe-loss quantiles do not.
 
 <Flow>
-                 +-------------------+
-                 | Systematic factor |
-                 | recession/shock   |
-                 +-------------------+
-                    |      |      |
-                    v      v      v
-                 +----+ +----+ +----+
-                 | A  | | B  | | C  |
-                 +----+ +----+ +----+
-                    |      |      |
-                    v      v      v
-                 +-------------------+
-                 | Clustered defaults|
-                 +-------------------+
-                           |
-                           v
-                 +-------------------+
-                 | Portfolio tail    |
-                 | loss increases    |
-                 +-------------------+
+Exposure losses
+    ↓
+Expected loss = mean
+    ↓
+Concentration + correlation + systematic stress
+    ↓
+Loss distribution widens
+    ↓
+Tail above EL = unexpected loss
+    ↓
+Capital
 </Flow>
 
+<Flow>
+Upstream:   Exposure-level EL · Concentration · Correlation · Stress
+This:       Build portfolio loss distribution → identify adverse tail above EL
+Downstream: Regulatory/economic capital · Risk appetite · Pricing return-on-capital · Limits
+</Flow>
+
+<Formula>
+Conceptual decomposition:
+
+`Unexpected loss ≈ high loss quantile − expected loss`
+
+This is a mental model, not a universal regulatory capital formula. Basel IRB risk-weight functions incorporate prescribed dependence, confidence and other parameters rather than applying this subtraction mechanically.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-Diversification reduces borrower-specific risk only to the extent that exposures do not share the same failure drivers.
+Expected loss and capital answer different questions: average credit cost versus protection against adverse loss beyond that average.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Assuming default independence because borrowers are legally unrelated understates tail risk during systemic stress.
-</Trap>
+<NeverConfuse a="Expected loss" b="Capital">
+**Expected loss** — probability-weighted average credit loss for the defined measurement.
 
-<NeverConfuse>
-**Correlation** — statistical or economic dependence between credit outcomes.
-
-**Concentration** — disproportionate exposure to names or common risk factors; concentration often increases the consequences of correlation but the concepts are not identical.
+---
+**Capital** — loss-absorbing resources held under a regulatory or internal solvency framework; it is not simply `PD × LGD × EAD`.
 </NeverConfuse>
 
-<Rule label="NO DELTA">
-**No delta.** Dependence and systematic risk are mathematical and economic properties; regulatory frameworks differ in how correlation is parameterised or capitalised.
-</Rule>
+<Trap label="PERMANENT TRAP">
+Calling exposure-level EL “capital” ignores diversification, correlation, concentration and the shape of the portfolio loss distribution.
+</Trap>
+
+**No delta in the conceptual split.** Regulatory capital formulas, buffers, Pillar 2 practices and accounting/provision regimes vary materially across jurisdictions.
 
 <Recall
-  q="Which part of credit risk is hardest to diversify away?"
-  a="Systematic risk driven by common economic factors."
+  q="Can two portfolios with the same EL need different capital?"
+  a="Yes. Their concentration, correlation and loss volatility can create very different tails."
 />
 
 <Recall
-  q="Why does positive default dependence raise capital needs?"
-  a="It increases the probability of many losses occurring together, widening the portfolio-loss tail."
+  q="What does Basel IRB RWA principally target?"
+  a="Unexpected losses, with expected losses treated separately in the framework."
+/>
+
+<Recall
+  q="Why does concentration raise tail risk?"
+  a="A small number of common failures can produce a much larger share of total portfolio loss."
 />

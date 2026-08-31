@@ -1,17 +1,16 @@
 ---
 id: CR-08
-title: Unlikeliness to pay
+title: 'Arrears, days past due and delinquency states'
 type: mechanism
 domain: credit-risk
 subdomain: exposure-and-default
 one_screen: >-
-  Unlikeliness to pay recognises default from the substance of credit
-  deterioration before a delinquency clock necessarily reaches its backstop. It
-  is forward-looking judgement about full repayment without extraordinary
-  recovery action, not a discretionary excuse to classify whichever borrowers
-  appear weak.
+  Arrears measure unpaid contractual amounts; days past due measure how long
+  payment has remained unpaid; delinquency buckets convert that clock into
+  operational states. These are payment facts, not loss estimates or the
+  complete definition of default.
 prerequisites:
-  - CR-05
+  - CR-02
   - CR-07
 jurisdictions:
   - IN
@@ -25,93 +24,105 @@ status: draft
 verified: false
 reading_minutes: 3
 sources:
-  - label: 'Basel Committee on Banking Supervision, Basel Framework, CRE36'
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/36.htm'
-    accessed: 28 August 2026
   - label: >-
-      Prudential Regulation Authority, SS3/24, “Credit risk definition of
-      default”
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income
+      Recognition, Asset Classification and Provisioning) Directions, 2025*, 28
+      November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB
+      approach: minimum requirements to use IRB approach*
     url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement
-    accessed: 28 August 2026
-  - label: 'Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E'
+      https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08
+    accessed: 30 August 2026
+  - label: >-
+      Prudential Regulation Authority, PS7/19, *Credit risk: The definition of
+      default*, 6 March 2019
     url: >-
-      https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E
-    accessed: 28 August 2026
+      https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default
+    accessed: 30 August 2026
+  - label: >-
+      Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E,
+      *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement
+      Approaches*.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 02_CR_credit_risk_core.md
 ---
-**Unlikeliness to pay (UTP)** asks whether the obligor is likely to discharge its credit obligations in full without the lender having to rely on actions such as enforcing collateral. Basel and US wholesale-default rules expressly contain this concept.
+### Core mechanism
 
-UTP exists because payment history is lagging information. A borrower may still be contractually current on the observation date even though events have made full repayment implausible. Waiting for 90 days of arrears in such a case would make default identification systematically late.
+| Measure | What it answers | Typical mistake |
+| :--- | :--- | :--- |
+| Arrears | How much required payment is unpaid? | Treating amount as duration |
+| DPD | How long has the relevant payment been overdue? | Starting the clock from statement or month-end instead of due date |
+| Delinquency bucket | Which monitoring state does the DPD fall into? | Treating a bucket boundary as a universal default rule |
+| Out-of-order test | Is a revolving/OD/CC facility persistently irregular under its rule? | Applying instalment logic to revolving credit |
 
-Relevant evidence can arise from distressed restructuring, insolvency processes, severe deterioration in repayment capacity, credit-related write-downs or other well-defined indicators under the applicable framework. The point is not the name of the indicator but the inference: full repayment under the original credit obligation is no longer likely without exceptional intervention.
-
-UTP must nevertheless be governed. An internal watch-list flag, a negative news item or a rating downgrade is not automatically default. Those signals may lead to assessment, but the institution needs documented criteria that distinguish increased risk from the threshold for default. Basel minimum requirements and PRA supervisory materials place emphasis on consistency, documentation and defined indicators because uncontrolled judgement would make default rates incomparable through time and across portfolios.
-
-UTP also shows why collateral does not "prevent" default. A fully secured obligor can be unlikely to pay. Good collateral may produce a low LGD after default, but the need to realise security is itself central to the default concept in Basel-style formulations.
+DPD describes payment behaviour; the default definition determines when that behaviour, or separate qualitative evidence, becomes a governed credit state.
 
 <Flow>
-+-----------------------+
-| Adverse information   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Assess repayment      |
-| capacity and intent   |
-+-----------------------+
-           |
-           v
-+-----------------------+
-| Full payment likely   |
-| without enforcement?  |
-+-----------------------+
-       |           |
-      yes          no
-       |           |
-       v           v
-+-----------+  +-----------+
-| No UTP    |  | UTP       |
-| trigger   |  | default   |
-+-----------+  +-----------+
+Contractual due date → Unpaid amount = arrears
+    ↓
+DPD clock starts → Delinquency bucket advances
+    ↓
+Collections / early warning → Governed default test
 </Flow>
 
+<Flow>
+Upstream:   Contractual due date · Required payment · Credits received
+This:       Due → Overdue → DPD count → Delinquency state
+Downstream: Collections · Early warning · Default test · Roll rates · Vintage analysis
+</Flow>
+
+<Formula>
+`DPD = observation date − relevant unpaid contractual due date`
+
+The exact counting convention belongs to the governing policy or regulation. DPD ↑ → delinquency severity usually ↑, but default still requires the applicable rule.
+</Formula>
+
 <Rule label="PERMANENT RULE">
-UTP evaluates the likelihood of full payment, not the expected collateral recovery after payment failure.
+Calculate delinquency from the contractual obligation and the specified counting convention; do not infer default merely from an informal bucket label.
 </Rule>
 
-<Trap label="PERMANENT TRAP">
-Treating a well-secured exposure as non-defaulted because collateral should cover the debt confuses default likelihood with loss severity.
-</Trap>
+<NeverConfuse a="Arrears" b="Days past due">
+**Arrears** — the unpaid amount.
 
-<NeverConfuse>
-**Unlikely to pay** — the obligor is not expected to meet the credit obligation in full without qualifying recovery action.
-
-**High LGD** — a large loss severity conditional on default; an obligor can be UTP with either low or high LGD.
+---
+**Days past due** — elapsed time associated with an unpaid contractual obligation.
 </NeverConfuse>
 
-<Delta j="IN">
-— RBI commercial-bank NPA rules are not a word-for-word implementation of the Basel IRB UTP test; prudential classification follows RBI's product and stressed-asset rules. Specific Basel capital default concepts and RBI NPA classification therefore require separate mapping. [RBI IRACP Directions 2025]
-</Delta>
+<Trap label="PERMANENT TRAP">
+Changing due-date logic, allocation of payments or day-end convention can create apparent credit deterioration or improvement without any change in borrower behaviour.
+</Trap>
 
-<Delta j="UK">
-— the PRA's definition-of-default framework explicitly addresses indicators of unlikeliness to pay, including distressed restructuring. [PRA definition-of-default policy; SS3/24 framework]
-</Delta>
+#### IN (RBI)
 
-<Delta j="EU">
-— unlikeliness to pay is an independent limb of CRR Article 178 default and can identify default before more than 90 days past due. [CRR Article 178; EBA definition-of-default Guidelines]
-</Delta>
+RBI requires overdue, SMA and NPA status to be determined through the day-end process for the relevant date. Its illustration moves a continuously overdue account to SMA-1 after 30 days, SMA-2 after 60 days and NPA after the applicable 90-day progression; OD/CC products use the defined “out of order” test.
 
-<Delta j="US">
-— Advanced Approaches wholesale obligor default expressly includes a determination that the obligor is unlikely to pay in full without recourse to actions such as realising collateral. [12 CFR Part 217 Subpart E]
-</Delta>
+#### UK (PRA)
+
+Past-due status and materiality are inputs to the current regulatory default framework; arrears buckets used operationally are not themselves the complete definition of default.
+
+#### EU
+
+CRR/EBA rules distinguish days-past-due mechanics, materiality and unlikeliness-to-pay indicators; reporting past-due bands do not replace Article 178 default.
+
+#### US
+
+Different regulatory purposes and retail categories use different delinquency/default thresholds; there is no safe universal “90 DPD for everything” rule.
 
 <Recall
-  q="Can an exposure default while it is less than 90 DPD?"
-  a="Yes, where an applicable qualitative or UTP trigger is met."
+  q="Can two accounts have the same DPD but different arrears amounts?"
+  a="Yes. DPD measures time; arrears measure money."
 />
 
 <Recall
-  q="Does strong collateral eliminate UTP?"
-  a="No. Collateral mainly affects recovery and LGD; needing to realise it does not prove the obligor can pay."
+  q="Why does revolving credit need different delinquency logic?"
+  a="It may not have a single scheduled principal instalment, so persistent limit/credit behaviour can be the relevant test."
+/>
+
+<Recall
+  q="What does 60 DPD prove?"
+  a="A payment has remained overdue under the specified convention; it does not prove default in every framework."
 />

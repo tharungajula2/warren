@@ -35,8 +35,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "AML-01.mdx",
-      "initialX": 426.9,
-      "initialY": -24.3
+      "initialX": 418.7,
+      "initialY": -26.1
     },
     "AML-02": {
       "id": "AML-02",
@@ -75,8 +75,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "AML-02.mdx",
-      "initialX": 371.2,
-      "initialY": 16.3
+      "initialX": 366.7,
+      "initialY": 2.7
     },
     "AML-03": {
       "id": "AML-03",
@@ -115,8 +115,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "AML-03.mdx",
-      "initialX": 422.8,
-      "initialY": 47.4
+      "initialX": 417.6,
+      "initialY": 41.4
     },
     "AML-04": {
       "id": "AML-04",
@@ -153,8 +153,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "AML-04.mdx",
-      "initialX": 393,
-      "initialY": 7.3
+      "initialX": 390.2,
+      "initialY": -5.6
     },
     "AML-05": {
       "id": "AML-05",
@@ -194,8 +194,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "AML-05.mdx",
-      "initialX": 456.9,
-      "initialY": 28.4
+      "initialX": 451.8,
+      "initialY": 25.4
     },
     "AML-06": {
       "id": "AML-06",
@@ -235,8 +235,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "AML-06.mdx",
-      "initialX": 479.2,
-      "initialY": -24.8
+      "initialX": 489.2,
+      "initialY": -14.9
     },
     "AML-07": {
       "id": "AML-07",
@@ -275,8 +275,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "AML-07.mdx",
-      "initialX": 417.9,
-      "initialY": -2.6
+      "initialX": 441.1,
+      "initialY": -16.5
     },
     "AML-08": {
       "id": "AML-08",
@@ -315,8 +315,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "AML-08.mdx",
-      "initialX": 404.1,
-      "initialY": -26.7
+      "initialX": 453,
+      "initialY": -39.4
     },
     "AML-09": {
       "id": "AML-09",
@@ -356,8 +356,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "AML-09.mdx",
-      "initialX": 435.9,
-      "initialY": 11
+      "initialX": 431.9,
+      "initialY": 10.3
     },
     "AML-10": {
       "id": "AML-10",
@@ -396,8 +396,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "AML-10.mdx",
-      "initialX": 354.7,
-      "initialY": 12.4
+      "initialX": 362.3,
+      "initialY": 22.7
     },
     "AML-11": {
       "id": "AML-11",
@@ -436,8 +436,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "AML-11.mdx",
-      "initialX": 492.6,
-      "initialY": 24.6
+      "initialX": 479.6,
+      "initialY": 29.5
     },
     "AML-12": {
       "id": "AML-12",
@@ -476,8 +476,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "AML-12.mdx",
-      "initialX": 425.9,
-      "initialY": 26.5
+      "initialX": 411.9,
+      "initialY": 20.9
     },
     "AML-13": {
       "id": "AML-13",
@@ -516,8 +516,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "AML-13.mdx",
-      "initialX": 450.3,
-      "initialY": -17.1
+      "initialX": 415.4,
+      "initialY": -6
     },
     "AML-14": {
       "id": "AML-14",
@@ -556,8 +556,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "AML-14.mdx",
-      "initialX": 466.7,
-      "initialY": 45
+      "initialX": 386.6,
+      "initialY": 34.3
     },
     "AML-15": {
       "id": "AML-15",
@@ -596,8 +596,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "AML-15.mdx",
-      "initialX": 397.8,
-      "initialY": 33.5
+      "initialX": 451.3,
+      "initialY": 47.1
     },
     "AML-16": {
       "id": "AML-16",
@@ -636,8 +636,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "AML-16.mdx",
-      "initialX": 464.9,
-      "initialY": 6.2
+      "initialX": 497.2,
+      "initialY": 9.8
     },
     "AML-17": {
       "id": "AML-17",
@@ -677,8 +677,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "AML-17.mdx",
-      "initialX": 371.5,
-      "initialY": -13
+      "initialX": 350.7,
+      "initialY": -7.2
     },
     "AML-18": {
       "id": "AML-18",
@@ -722,8 +722,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "AML-18.mdx",
-      "initialX": 495.9,
-      "initialY": -4.5
+      "initialX": 458.6,
+      "initialY": 4.5
     },
     "BA-01": {
       "id": "BA-01",
@@ -760,8 +760,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-01.mdx",
-      "initialX": 407,
-      "initialY": 200.7
+      "initialX": 417.1,
+      "initialY": 198.1
     },
     "BA-02": {
       "id": "BA-02",
@@ -798,8 +798,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-02.mdx",
-      "initialX": 335.8,
-      "initialY": 110.2
+      "initialX": 335.7,
+      "initialY": 121
     },
     "BA-03": {
       "id": "BA-03",
@@ -836,8 +836,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-03.mdx",
-      "initialX": 358.7,
-      "initialY": 174.8
+      "initialX": 329.6,
+      "initialY": 150.2
     },
     "BA-04": {
       "id": "BA-04",
@@ -874,8 +874,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-04.mdx",
-      "initialX": 422.8,
-      "initialY": 128.7
+      "initialX": 379.2,
+      "initialY": 115.7
     },
     "BA-05": {
       "id": "BA-05",
@@ -909,8 +909,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-05.mdx",
-      "initialX": 470.1,
-      "initialY": 165.5
+      "initialX": 434.3,
+      "initialY": 137.4
     },
     "BA-06": {
       "id": "BA-06",
@@ -947,8 +947,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-06.mdx",
-      "initialX": 450.1,
-      "initialY": 137.7
+      "initialX": 407.4,
+      "initialY": 122.2
     },
     "BA-07": {
       "id": "BA-07",
@@ -980,8 +980,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "BA-07.mdx",
-      "initialX": 317.1,
-      "initialY": 127.1
+      "initialX": 312.8,
+      "initialY": 114.6
     },
     "BA-08": {
       "id": "BA-08",
@@ -1016,8 +1016,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-08.mdx",
-      "initialX": 406.5,
-      "initialY": 178.6
+      "initialX": 407.1,
+      "initialY": 175.8
     },
     "BA-09": {
       "id": "BA-09",
@@ -1051,8 +1051,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-09.mdx",
-      "initialX": 388.4,
-      "initialY": 169.5
+      "initialX": 404.9,
+      "initialY": 152.5
     },
     "BA-10": {
       "id": "BA-10",
@@ -1086,8 +1086,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-10.mdx",
-      "initialX": 329.7,
-      "initialY": 160.8
+      "initialX": 363,
+      "initialY": 186.6
     },
     "BA-11": {
       "id": "BA-11",
@@ -1121,8 +1121,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-11.mdx",
-      "initialX": 441.5,
-      "initialY": 202.2
+      "initialX": 455,
+      "initialY": 197.7
     },
     "BA-12": {
       "id": "BA-12",
@@ -1156,8 +1156,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-12.mdx",
-      "initialX": 397,
-      "initialY": 118.5
+      "initialX": 346.5,
+      "initialY": 167.5
     },
     "BA-13": {
       "id": "BA-13",
@@ -1197,8 +1197,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-13.mdx",
-      "initialX": 340,
-      "initialY": 138.2
+      "initialX": 357.9,
+      "initialY": 115.8
     },
     "BA-14": {
       "id": "BA-14",
@@ -1237,8 +1237,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "BA-14.mdx",
-      "initialX": 292.3,
-      "initialY": 127.4
+      "initialX": 304,
+      "initialY": 137.4
     },
     "BA-15": {
       "id": "BA-15",
@@ -1272,8 +1272,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-15.mdx",
-      "initialX": 361.9,
-      "initialY": 147.2
+      "initialX": 363.6,
+      "initialY": 144.2
     },
     "BA-16": {
       "id": "BA-16",
@@ -1307,8 +1307,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-16.mdx",
-      "initialX": 378.7,
-      "initialY": 197.3
+      "initialX": 428.4,
+      "initialY": 158.8
     },
     "BA-17": {
       "id": "BA-17",
@@ -1348,8 +1348,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "BA-17.mdx",
-      "initialX": 426.6,
-      "initialY": 170.9
+      "initialX": 389,
+      "initialY": 200.4
     },
     "BA-18": {
       "id": "BA-18",
@@ -1383,8 +1383,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "BA-18.mdx",
-      "initialX": 384.2,
-      "initialY": 140.1
+      "initialX": 443.1,
+      "initialY": 181.3
     },
     "BA-19": {
       "id": "BA-19",
@@ -1418,8 +1418,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "BA-19.mdx",
-      "initialX": 439.7,
-      "initialY": 155.9
+      "initialX": 459.3,
+      "initialY": 134.7
     },
     "BA-20": {
       "id": "BA-20",
@@ -1454,8 +1454,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "BA-20.mdx",
-      "initialX": 457.6,
-      "initialY": 184.7
+      "initialX": 466,
+      "initialY": 166.3
     },
     "BA-21": {
       "id": "BA-21",
@@ -1489,8 +1489,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "BA-21.mdx",
-      "initialX": 364.4,
-      "initialY": 117.2
+      "initialX": 381.4,
+      "initialY": 167.2
     },
     "BA-22": {
       "id": "BA-22",
@@ -1525,8 +1525,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "BA-22.mdx",
-      "initialX": 421.8,
-      "initialY": 220.4
+      "initialX": 431.3,
+      "initialY": 213.5
     },
     "CAP-01": {
       "id": "CAP-01",
@@ -1568,8 +1568,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CAP-01.mdx",
-      "initialX": 272.8,
-      "initialY": 230
+      "initialX": 282.1,
+      "initialY": 237.8
     },
     "CAP-02": {
       "id": "CAP-02",
@@ -1608,8 +1608,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-02.mdx",
-      "initialX": 211.2,
-      "initialY": 224.5
+      "initialX": 235.1,
+      "initialY": 207.1
     },
     "CAP-03": {
       "id": "CAP-03",
@@ -1649,8 +1649,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-03.mdx",
-      "initialX": 237.6,
-      "initialY": 260.5
+      "initialX": 228.2,
+      "initialY": 255.9
     },
     "CAP-04": {
       "id": "CAP-04",
@@ -1689,8 +1689,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-04.mdx",
-      "initialX": 297.2,
-      "initialY": 273.4
+      "initialX": 255.4,
+      "initialY": 320.5
     },
     "CAP-05": {
       "id": "CAP-05",
@@ -1729,8 +1729,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-05.mdx",
-      "initialX": 241.2,
-      "initialY": 300.4
+      "initialX": 255.2,
+      "initialY": 253
     },
     "CAP-06": {
       "id": "CAP-06",
@@ -1777,8 +1777,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-06.mdx",
-      "initialX": 290.4,
-      "initialY": 335.7
+      "initialX": 307.7,
+      "initialY": 345.1
     },
     "CAP-07": {
       "id": "CAP-07",
@@ -1825,8 +1825,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-07.mdx",
-      "initialX": 340.9,
-      "initialY": 368
+      "initialX": 354.2,
+      "initialY": 373.6
     },
     "CAP-08": {
       "id": "CAP-08",
@@ -1874,8 +1874,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CAP-08.mdx",
-      "initialX": 269.9,
-      "initialY": 339.1
+      "initialX": 288.3,
+      "initialY": 364.1
     },
     "CAP-09": {
       "id": "CAP-09",
@@ -1914,8 +1914,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CAP-09.mdx",
-      "initialX": 284.1,
-      "initialY": 294
+      "initialX": 275.9,
+      "initialY": 304.5
     },
     "CAP-10": {
       "id": "CAP-10",
@@ -1959,8 +1959,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CAP-10.mdx",
-      "initialX": 350,
-      "initialY": 312.9
+      "initialX": 325.7,
+      "initialY": 255.8
     },
     "CAP-11": {
       "id": "CAP-11",
@@ -2005,8 +2005,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-11.mdx",
-      "initialX": 346,
-      "initialY": 276.8
+      "initialX": 340.3,
+      "initialY": 307.5
     },
     "CAP-12": {
       "id": "CAP-12",
@@ -2054,8 +2054,8 @@
       "depth": 4,
       "currentness": "future",
       "filepath": "CAP-12.mdx",
-      "initialX": 293.8,
-      "initialY": 251.3
+      "initialX": 303.1,
+      "initialY": 254.2
     },
     "CAP-13": {
       "id": "CAP-13",
@@ -2102,8 +2102,8 @@
       "depth": 5,
       "currentness": "future",
       "filepath": "CAP-13.mdx",
-      "initialX": 251.7,
-      "initialY": 218.3
+      "initialX": 253.8,
+      "initialY": 222.1
     },
     "CAP-14": {
       "id": "CAP-14",
@@ -2150,8 +2150,8 @@
       "depth": 6,
       "currentness": "future",
       "filepath": "CAP-14.mdx",
-      "initialX": 216.8,
-      "initialY": 266.8
+      "initialX": 220.7,
+      "initialY": 275.6
     },
     "CAP-15": {
       "id": "CAP-15",
@@ -2193,8 +2193,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-15.mdx",
-      "initialX": 233.9,
-      "initialY": 220.7
+      "initialX": 217.8,
+      "initialY": 225.9
     },
     "CAP-16": {
       "id": "CAP-16",
@@ -2243,8 +2243,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-16.mdx",
-      "initialX": 248.5,
-      "initialY": 279.4
+      "initialX": 245.4,
+      "initialY": 278.8
     },
     "CAP-17": {
       "id": "CAP-17",
@@ -2287,8 +2287,8 @@
       "depth": 7,
       "currentness": "future",
       "filepath": "CAP-17.mdx",
-      "initialX": 271.3,
-      "initialY": 266.2
+      "initialX": 278.9,
+      "initialY": 264.8
     },
     "CAP-18": {
       "id": "CAP-18",
@@ -2327,8 +2327,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-18.mdx",
-      "initialX": 265.9,
-      "initialY": 308.2
+      "initialX": 256.6,
+      "initialY": 295.7
     },
     "CAP-19": {
       "id": "CAP-19",
@@ -2367,8 +2367,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-19.mdx",
-      "initialX": 314.3,
-      "initialY": 344.3
+      "initialX": 322.7,
+      "initialY": 287.8
     },
     "CAP-20": {
       "id": "CAP-20",
@@ -2407,8 +2407,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-20.mdx",
-      "initialX": 364.8,
-      "initialY": 360.8
+      "initialX": 335.7,
+      "initialY": 360.2
     },
     "CAP-21": {
       "id": "CAP-21",
@@ -2448,8 +2448,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CAP-21.mdx",
-      "initialX": 306.2,
-      "initialY": 239.2
+      "initialX": 287.7,
+      "initialY": 284.6
     },
     "CAP-22": {
       "id": "CAP-22",
@@ -2488,8 +2488,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CAP-22.mdx",
-      "initialX": 329.8,
-      "initialY": 268.7
+      "initialX": 341.7,
+      "initialY": 335.6
     },
     "CAP-23": {
       "id": "CAP-23",
@@ -2528,8 +2528,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "CAP-23.mdx",
-      "initialX": 375.8,
-      "initialY": 295.6
+      "initialX": 353.8,
+      "initialY": 281.7
     },
     "CAP-24": {
       "id": "CAP-24",
@@ -2568,8 +2568,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "CAP-24.mdx",
-      "initialX": 374.9,
-      "initialY": 341.7
+      "initialX": 382.9,
+      "initialY": 323.7
     },
     "CAP-25": {
       "id": "CAP-25",
@@ -2608,8 +2608,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CAP-25.mdx",
-      "initialX": 321.4,
-      "initialY": 373.5
+      "initialX": 362.7,
+      "initialY": 304.7
     },
     "CAP-26": {
       "id": "CAP-26",
@@ -2651,8 +2651,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-26.mdx",
-      "initialX": 297.8,
-      "initialY": 313.2
+      "initialX": 299.2,
+      "initialY": 306.5
     },
     "CAP-27": {
       "id": "CAP-27",
@@ -2703,8 +2703,8 @@
       "depth": 9,
       "currentness": "future",
       "filepath": "CAP-27.mdx",
-      "initialX": 314.2,
-      "initialY": 303.9
+      "initialX": 292.2,
+      "initialY": 324.2
     },
     "CAP-28": {
       "id": "CAP-28",
@@ -2758,8 +2758,8 @@
       "depth": 8,
       "currentness": "future",
       "filepath": "CAP-28.mdx",
-      "initialX": 329.5,
-      "initialY": 314.5
+      "initialX": 316.8,
+      "initialY": 314.8
     },
     "CAP-29": {
       "id": "CAP-29",
@@ -2811,8 +2811,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "CAP-29.mdx",
-      "initialX": 347.1,
-      "initialY": 335.9
+      "initialX": 371,
+      "initialY": 350.5
     },
     "CAP-30": {
       "id": "CAP-30",
@@ -2888,8 +2888,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "CAP-30.mdx",
-      "initialX": 285.5,
-      "initialY": 361.9
+      "initialX": 317.3,
+      "initialY": 369.8
     },
     "CCR-01": {
       "id": "CCR-01",
@@ -2931,8 +2931,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-01.mdx",
-      "initialX": 160.2,
-      "initialY": 422.1
+      "initialX": 145.8,
+      "initialY": 415
     },
     "CCR-02": {
       "id": "CCR-02",
@@ -2971,8 +2971,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-02.mdx",
-      "initialX": 133.7,
-      "initialY": 354
+      "initialX": 149.5,
+      "initialY": 346.7
     },
     "CCR-03": {
       "id": "CCR-03",
@@ -3011,8 +3011,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-03.mdx",
-      "initialX": 129.3,
-      "initialY": 423
+      "initialX": 123.2,
+      "initialY": 414.1
     },
     "CCR-04": {
       "id": "CCR-04",
@@ -3051,8 +3051,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-04.mdx",
-      "initialX": 104,
-      "initialY": 425.5
+      "initialX": 177.2,
+      "initialY": 470.4
     },
     "CCR-05": {
       "id": "CCR-05",
@@ -3091,8 +3091,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-05.mdx",
-      "initialX": 115.2,
-      "initialY": 457.4
+      "initialX": 112.1,
+      "initialY": 454
     },
     "CCR-06": {
       "id": "CCR-06",
@@ -3136,8 +3136,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-06.mdx",
-      "initialX": 147.4,
-      "initialY": 375.5
+      "initialX": 172,
+      "initialY": 355
     },
     "CCR-07": {
       "id": "CCR-07",
@@ -3176,8 +3176,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-07.mdx",
-      "initialX": 155.5,
-      "initialY": 319.9
+      "initialX": 211.4,
+      "initialY": 390.6
     },
     "CCR-08": {
       "id": "CCR-08",
@@ -3216,8 +3216,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-08.mdx",
-      "initialX": 206.1,
-      "initialY": 402.9
+      "initialX": 211.9,
+      "initialY": 412.5
     },
     "CCR-09": {
       "id": "CCR-09",
@@ -3256,8 +3256,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-09.mdx",
-      "initialX": 133.1,
-      "initialY": 318.9
+      "initialX": 132.2,
+      "initialY": 308
     },
     "CCR-10": {
       "id": "CCR-10",
@@ -3296,8 +3296,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-10.mdx",
-      "initialX": 155,
-      "initialY": 351.9
+      "initialX": 129.2,
+      "initialY": 357.6
     },
     "CCR-11": {
       "id": "CCR-11",
@@ -3336,8 +3336,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-11.mdx",
-      "initialX": 113.1,
-      "initialY": 311
+      "initialX": 157.9,
+      "initialY": 316.8
     },
     "CCR-12": {
       "id": "CCR-12",
@@ -3376,8 +3376,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-12.mdx",
-      "initialX": 163.4,
-      "initialY": 404.7
+      "initialX": 161.9,
+      "initialY": 400.6
     },
     "CCR-13": {
       "id": "CCR-13",
@@ -3416,8 +3416,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-13.mdx",
-      "initialX": 105.5,
-      "initialY": 392.5
+      "initialX": 102,
+      "initialY": 407.4
     },
     "CCR-14": {
       "id": "CCR-14",
@@ -3461,8 +3461,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "CCR-14.mdx",
-      "initialX": 131.6,
-      "initialY": 403.3
+      "initialX": 130.3,
+      "initialY": 392.3
     },
     "CCR-15": {
       "id": "CCR-15",
@@ -3501,8 +3501,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-15.mdx",
-      "initialX": 189.4,
-      "initialY": 433.6
+      "initialX": 181.1,
+      "initialY": 418
     },
     "CCR-16": {
       "id": "CCR-16",
@@ -3541,8 +3541,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-16.mdx",
-      "initialX": 174.4,
-      "initialY": 356.5
+      "initialX": 105.3,
+      "initialY": 341.4
     },
     "CCR-17": {
       "id": "CCR-17",
@@ -3581,8 +3581,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "CCR-17.mdx",
-      "initialX": 160.2,
-      "initialY": 447.4
+      "initialX": 152.4,
+      "initialY": 442.7
     },
     "CCR-18": {
       "id": "CCR-18",
@@ -3621,8 +3621,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "CCR-18.mdx",
-      "initialX": 205.7,
-      "initialY": 462.2
+      "initialX": 207.7,
+      "initialY": 458.5
     },
     "CCR-19": {
       "id": "CCR-19",
@@ -3661,8 +3661,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-19.mdx",
-      "initialX": 140.1,
-      "initialY": 454.4
+      "initialX": 139,
+      "initialY": 456.9
     },
     "CCR-20": {
       "id": "CCR-20",
@@ -3701,8 +3701,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "CCR-20.mdx",
-      "initialX": 149.9,
-      "initialY": 478.7
+      "initialX": 149.5,
+      "initialY": 477.2
     },
     "CCR-21": {
       "id": "CCR-21",
@@ -3746,8 +3746,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "CCR-21.mdx",
-      "initialX": 217.8,
-      "initialY": 430.7
+      "initialX": 162.4,
+      "initialY": 377.7
     },
     "CCR-22": {
       "id": "CCR-22",
@@ -3786,8 +3786,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "CCR-22.mdx",
-      "initialX": 116.4,
-      "initialY": 374.1
+      "initialX": 109.8,
+      "initialY": 370.3
     },
     "CCR-23": {
       "id": "CCR-23",
@@ -3824,8 +3824,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "CCR-23.mdx",
-      "initialX": 107.2,
-      "initialY": 343.6
+      "initialX": 117.1,
+      "initialY": 322.6
     },
     "CCR-24": {
       "id": "CCR-24",
@@ -3866,8 +3866,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-24.mdx",
-      "initialX": 172.5,
-      "initialY": 461.7
+      "initialX": 174.9,
+      "initialY": 441.7
     },
     "CCR-25": {
       "id": "CCR-25",
@@ -3912,8 +3912,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CCR-25.mdx",
-      "initialX": 185.4,
-      "initialY": 397.4
+      "initialX": 188.1,
+      "initialY": 386.8
     },
     "CCR-26": {
       "id": "CCR-26",
@@ -3953,8 +3953,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "CCR-26.mdx",
-      "initialX": 187.4,
-      "initialY": 376.3
+      "initialX": 196.1,
+      "initialY": 430.7
     },
     "CR-01": {
       "id": "CR-01",
@@ -3962,7 +3962,7 @@
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "An obligor owes the credit obligation, a borrower receives or uses borrowed funds, and a counterparty is the other party to a financial transaction. The labels often describe the same legal person, but they are not interchangeable because credit risk must attach to the entity that is legally or economically responsible for performance.",
+      "one_screen": "Credit risk attaches to a person that owes performance, not to a customer label. **Obligor** identifies the legal or natural person responsible for the credit obligation; **borrower** and **counterparty** describe roles that may coincide with the obligor but need not.",
       "prerequisites": [],
       "see_also": [],
       "contrast_with": [],
@@ -3977,30 +3977,30 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE50, “Counterparty credit risk”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/50.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, BCBS d595, *Principles for the Management of Credit Risk*, 30 April 2025",
+          "url": "https://www.bis.org/bcbs/publ/d595.htm",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, “Definitions”",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE50, *Counterparty credit risk definitions and terminology*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/50/inforce/2019-12-15/published/2024-07-05",
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-01",
       "depth": 0,
       "currentness": "durable",
       "filepath": "CR-01.mdx",
-      "initialX": -41.4,
-      "initialY": 390.9
+      "initialX": -36.3,
+      "initialY": 390
     },
     "CR-02": {
       "id": "CR-02",
-      "title": "Facility, account and product",
+      "title": "Product, facility and account",
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "A product is a reusable commercial design, a facility is a particular contractual grant of credit, and an account is an operational record through which a facility may be booked or serviced. Credit decisions occur on real facilities and obligors, not on abstract product labels.",
+      "one_screen": "A product is a reusable lending design, a facility is a specific contractual grant of credit, and an account is an operational record used to book and service activity. Credit risk measures become ambiguous unless they declare which level they attach to.",
       "prerequisites": [
         "CR-01"
       ],
@@ -4017,22 +4017,22 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB approach: minimum requirements to use IRB approach”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, BCBS d595, *Principles for the Management of Credit Risk*, 30 April 2025",
+          "url": "https://www.bis.org/bcbs/publ/d595.htm",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE20, “Standardised approach: individual exposures”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/20.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-02",
       "depth": 1,
       "currentness": "durable",
       "filepath": "CR-02.mdx",
-      "initialX": -54.4,
-      "initialY": 309.8
+      "initialX": -48.8,
+      "initialY": 308.6
     },
     "CR-03": {
       "id": "CR-03",
@@ -4040,7 +4040,7 @@
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Exposure is the amount or value subject to credit loss, but its meaning changes with the aggregation level and measurement purpose. Account balance, facility exposure, obligor exposure and portfolio exposure answer different questions and must never be silently substituted.",
+      "one_screen": "Exposure is the amount or value subject to credit loss for a stated purpose; it is not automatically today’s drawn balance. The same relationship can produce different valid exposure numbers at account, facility, obligor, connected-group and portfolio levels.",
       "prerequisites": [
         "CR-01",
         "CR-02"
@@ -4050,43 +4050,43 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Reserve Bank of India, Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025, paragraph 5",
-          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB approach: risk components*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-03",
       "depth": 2,
-      "currentness": "durable",
+      "currentness": "fresh",
       "filepath": "CR-03.mdx",
-      "initialX": -93,
-      "initialY": 302.2
+      "initialX": -88.3,
+      "initialY": 308.8
     },
     "CR-04": {
       "id": "CR-04",
-      "title": "Group and connected-party exposure",
+      "title": "Connected counterparties and economic groups",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Legal separation does not guarantee economic independence. Connected-party rules aggregate exposures where control or economic interdependence means that trouble at one entity can transmit to another, preventing a bank from disguising one concentrated risk as several separate names.",
+      "one_screen": "Legal separation does not guarantee independent credit risk. Connected-counterparty analysis aggregates persons when control or economic interdependence creates a common failure channel, so one concentrated risk cannot be disguised as several names.",
       "prerequisites": [
         "CR-01",
         "CR-03"
@@ -4107,43 +4107,133 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10, “Large exposures”",
-          "url": "https://www.bis.org/basel_framework/chapter/LEX/10.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10, *Definitions and application*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/lex/10/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Prudential Regulation Authority, SS3/25, “Identification of groups of connected clients”",
+          "label": "Prudential Regulation Authority, SS3/25, *Identification of groups of connected clients*, 17 July 2025",
           "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement",
-          "accessed": "28 August 2026"
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, Reserve Bank of India (Commercial Banks – Large Exposures Framework) Directions, 2025",
-          "url": "https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13152",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 32, “Lending Limits”",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-32",
-          "accessed": "28 August 2026"
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 32, *Lending Limits*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-04",
       "depth": 3,
       "currentness": "fresh",
       "filepath": "CR-04.mdx",
-      "initialX": -106.6,
-      "initialY": 336
+      "initialX": -99,
+      "initialY": 335.4
     },
     "CR-05": {
       "id": "CR-05",
-      "title": "Default: event before metric",
+      "title": "Underwriting and the credit decision",
+      "type": "procedure",
+      "domain": "credit-risk",
+      "subdomain": "exposure-and-default",
+      "one_screen": "Underwriting converts information about the obligor, facility and environment into a governed decision to approve, decline or reshape credit. The decision starts with a sustainable **primary source of repayment**; collateral and guarantees can reduce loss if repayment fails, but they do not repair weak repayment capacity.",
+      "prerequisites": [
+        "CR-01",
+        "CR-02",
+        "CR-03",
+        "CR-04"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, BCBS d595, *Principles for the Management of Credit Risk*, 30 April 2025",
+          "url": "https://www.bis.org/bcbs/publ/d595.htm",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, BCP40, *The Core Principles and assessment criteria*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/bcp/40/inforce/2024-04-25/published/2024-04-25",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "European Banking Authority, EBA/GL/2020/06, *Guidelines on loan origination and monitoring*, 29 May 2020.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "cr-05",
+      "depth": 4,
+      "currentness": "fresh",
+      "filepath": "CR-05.mdx",
+      "initialX": -87.3,
+      "initialY": 366.7
+    },
+    "CR-06": {
+      "id": "CR-06",
+      "title": "Collateral, security and guarantees",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "exposure-and-default",
+      "one_screen": "Collateral, security interests and guarantees are credit-risk mitigants only to the extent that the bank can legally rely on them and realise value when needed. Their underwriting job is to provide a credible **secondary way out**; their later LGD role is separate and depends on realised recovery cash flows.",
+      "prerequisites": [
+        "CR-02",
+        "CR-05"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-28",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, BCBS d595, *Principles for the Management of Credit Risk*, 30 April 2025",
+          "url": "https://www.bis.org/bcbs/publ/d595.htm",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE22, *Standardised approach: credit risk mitigation*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/22/inforce/2023-01-01/published/2020-11-26",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "European Banking Authority, EBA/GL/2020/06, *Guidelines on loan origination and monitoring*, 29 May 2020.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "cr-06",
+      "depth": 5,
+      "currentness": "fresh",
+      "filepath": "CR-06.mdx",
+      "initialX": -33.6,
+      "initialY": 357.7
+    },
+    "CR-07": {
+      "id": "CR-07",
+      "title": "Default: defining the event",
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Default is a rule-defined credit state, not a synonym for loss, arrears or bankruptcy. A PD, default rate, cure rate or LGD is meaningless until the population, level of application and exact events that constitute default have been fixed.",
+      "one_screen": "Default is a governed credit state, not a synonym for arrears, loss, bankruptcy or write-off. Every PD, default rate, cure rate and LGD inherits the unit and events used in the default definition, so the event must be fixed before the metric.",
       "prerequisites": [
         "CR-01",
-        "CR-02"
+        "CR-02",
+        "CR-05"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -4161,145 +4251,57 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025",
-          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Prudential Regulation Authority, PS7/19, “Credit risk: the definition of default”",
+          "label": "Reserve Bank of India, DOR.STR.REC.No.6/21.06.011/2026-27, *Reserve Bank of India (Commercial Banks – Asset Classification, Provisioning and Income Recognition) Directions, 2026*, 27 April 2026, effective 1 April 2027.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, PS7/19, *Credit risk: The definition of default*, 6 March 2019",
           "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
-          "accessed": "28 August 2026"
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
-        }
-      ],
-      "slug": "cr-05",
-      "depth": 2,
-      "currentness": "future",
-      "filepath": "CR-05.mdx",
-      "initialX": -90.6,
-      "initialY": 345.5
-    },
-    "CR-06": {
-      "id": "CR-06",
-      "title": "Days past due, arrears and delinquency buckets",
-      "type": "mechanism",
-      "domain": "credit-risk",
-      "subdomain": "exposure-and-default",
-      "one_screen": "Days past due measures elapsed time since a contractual amount became unpaid; arrears measure the unpaid amount; a delinquency bucket groups accounts by lateness. None of these is automatically the same thing as default.",
-      "prerequisites": [
-        "CR-02",
-        "CR-05"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "IN",
-        "UK",
-        "EU",
-        "US"
-      ],
-      "perishable": true,
-      "as_of": "2026-08-28",
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 3,
-      "sources": [
-        {
-          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025, paragraphs 31–42",
-          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
-          "accessed": "28 August 2026"
+          "label": "Prudential Regulation Authority, SS3/24, *Credit risk: definition of default*, first published 12 September 2024; future version published 20 January 2026 and effective 1 January 2027",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, “Prudential norms on Income Recognition, Asset Classification and Provisioning – Clarifications”, 12 November 2021",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12194&Mode=0",
-          "accessed": "28 August 2026"
+          "label": "European Banking Authority, EBA/GL/2026/05, *Guidelines amending Guidelines EBA/GL/2016/07 on the application of the definition of default under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application date 19 October 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
-        }
-      ],
-      "slug": "cr-06",
-      "depth": 3,
-      "currentness": "fresh",
-      "filepath": "CR-06.mdx",
-      "initialX": -15.7,
-      "initialY": 393.1
-    },
-    "CR-07": {
-      "id": "CR-07",
-      "title": "The ninety-day backstop",
-      "type": "reference",
-      "domain": "credit-risk",
-      "subdomain": "exposure-and-default",
-      "one_screen": "Ninety days past due is a backstop because credit can default before day 90 through unlikeliness-to-pay criteria. Waiting for the clock when evidence already shows non-payment is likely converts a maximum mechanical threshold into an unjustified grace period.",
-      "prerequisites": [
-        "CR-05",
-        "CR-06"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "IN",
-        "UK",
-        "EU",
-        "US"
-      ],
-      "perishable": true,
-      "as_of": "2026-08-28",
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 3,
-      "sources": [
-        {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025",
-          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Prudential Regulation Authority, PS7/19, “Credit risk: the definition of default”",
-          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-07",
-      "depth": 4,
-      "currentness": "fresh",
+      "depth": 5,
+      "currentness": "future",
       "filepath": "CR-07.mdx",
-      "initialX": -35.4,
-      "initialY": 440.6
+      "initialX": -62.9,
+      "initialY": 338.9
     },
     "CR-08": {
       "id": "CR-08",
-      "title": "Unlikeliness to pay",
+      "title": "Arrears, days past due and delinquency states",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Unlikeliness to pay recognises default from the substance of credit deterioration before a delinquency clock necessarily reaches its backstop. It is forward-looking judgement about full repayment without extraordinary recovery action, not a discretionary excuse to classify whichever borrowers appear weak.",
+      "one_screen": "Arrears measure unpaid contractual amounts; days past due measure how long payment has remained unpaid; delinquency buckets convert that clock into operational states. These are payment facts, not loss estimates or the complete definition of default.",
       "prerequisites": [
-        "CR-05",
+        "CR-02",
         "CR-07"
       ],
       "see_also": [],
@@ -4318,38 +4320,43 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Prudential Regulation Authority, SS3/24, “Credit risk definition of default”",
-          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "Prudential Regulation Authority, PS7/19, *Credit risk: The definition of default*, 6 March 2019",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-08",
-      "depth": 5,
+      "depth": 6,
       "currentness": "fresh",
       "filepath": "CR-08.mdx",
-      "initialX": -42.3,
-      "initialY": 370.8
+      "initialX": -15.1,
+      "initialY": 362.4
     },
     "CR-09": {
       "id": "CR-09",
-      "title": "Cure and re-default",
+      "title": "Unlikeliness to pay",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Cure is the controlled transition from default back to non-default after the conditions causing default have ceased and repayment performance is sufficiently credible. Re-default is a subsequent return to default; treating temporary payment as permanent cure understates both PD and workout risk.",
+      "one_screen": "Unlikeliness to pay identifies default from the substance of credit deterioration before a delinquency clock necessarily reaches its backstop. It asks whether full payment remains likely without extraordinary recovery action; it is governed judgement, not a discretionary weakness label.",
       "prerequisites": [
         "CR-05",
-        "CR-06",
+        "CR-07",
         "CR-08"
       ],
       "see_also": [],
@@ -4362,43 +4369,53 @@
       ],
       "perishable": true,
       "as_of": "2026-08-28",
-      "next_effective_date": null,
+      "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025, paragraph 71",
-          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "European Banking Authority, Guidelines on application of the definition of default, EBA/GL/2016/07 as amended by EBA/GL/2026/05",
-          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-application-definition-default",
-          "accessed": "28 August 2026"
+          "label": "Prudential Regulation Authority, PS7/19, *Credit risk: The definition of default*, 6 March 2019",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "Prudential Regulation Authority, SS3/24, *Credit risk: definition of default*, first published 12 September 2024; future version published 20 January 2026 and effective 1 January 2027",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "European Banking Authority, EBA/GL/2026/05, *Guidelines amending Guidelines EBA/GL/2016/07 on the application of the definition of default under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application date 19 October 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-09",
-      "depth": 6,
-      "currentness": "fresh",
+      "depth": 7,
+      "currentness": "future",
       "filepath": "CR-09.mdx",
-      "initialX": -34.5,
-      "initialY": 318
+      "initialX": -30.5,
+      "initialY": 311
     },
     "CR-10": {
       "id": "CR-10",
-      "title": "Restructuring and forbearance",
-      "type": "concept",
+      "title": "Past-due backstops and the 90-day rule",
+      "type": "reference",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "Restructuring changes contractual terms; forbearance is a concession associated with a debtor's financial difficulty. Neither word is automatically identical to default, but a distressed concession can be evidence that the original obligation will not be repaid in full and can therefore trigger or prolong default.",
+      "one_screen": "A past-due backstop is an outer mechanical trigger, not permission to wait for the clock when earlier evidence already establishes default. In the Basel wholesale reference definition, UTP and more-than-90-days-past-due are joined by **OR**, not by a sequence requiring both.",
       "prerequisites": [
-        "CR-05",
+        "CR-07",
         "CR-08",
         "CR-09"
       ],
@@ -4412,44 +4429,58 @@
       ],
       "perishable": true,
       "as_of": "2026-08-28",
-      "next_effective_date": null,
+      "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, Commercial Banks – Income Recognition, Asset Classification and Provisioning Directions, 2025",
-          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13146",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Prudential Regulation Authority, PS9/24, “Implementation of the Basel 3.1 standards – near-final policy statement part 2”",
-          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/implementation-of-the-basel-3-1-standards-near-final-policy-statement-part-2",
-          "accessed": "28 August 2026"
+          "label": "Prudential Regulation Authority, PS7/19, *Credit risk: The definition of default*, 6 March 2019",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, SS3/24, *Credit risk: definition of default*, first published 12 September 2024; future version published 20 January 2026 and effective 1 January 2027",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "European Banking Authority, EBA/GL/2026/05, *Guidelines amending Guidelines EBA/GL/2016/07 on the application of the definition of default under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application date 19 October 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-10",
-      "depth": 7,
-      "currentness": "fresh",
+      "depth": 8,
+      "currentness": "future",
       "filepath": "CR-10.mdx",
-      "initialX": -147.8,
-      "initialY": 265.2
+      "initialX": -136.1,
+      "initialY": 259.8
     },
     "CR-11": {
       "id": "CR-11",
-      "title": "Write-off: accounting removal versus economic loss",
+      "title": "Restructuring, forbearance and distressed concessions",
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "exposure-and-default",
-      "one_screen": "A write-off changes the carrying amount recognised on the balance sheet; it does not necessarily mean the legal claim, recovery process or economic history has vanished. Default, provision, write-off and recovery are separate lifecycle states.",
+      "one_screen": "Restructuring changes contractual terms; forbearance is a concession associated with the debtor’s financial difficulty. A modification can preserve value, but cannot erase the deterioration that made the original terms unsustainable.",
       "prerequisites": [
-        "CR-03",
-        "CR-05",
+        "CR-07",
         "CR-09"
       ],
       "see_also": [],
@@ -4468,86 +4499,216 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Reserve Bank of India, DBR.BP.BC.No.29/21.07.001/2018-19, “Deferral of Implementation of Indian Accounting Standards”, 22 March 2019",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, “Implementation of Indian Accounting Standards”, 13 March 2020",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "IFRS Foundation, IFRS 9 Financial Instruments, paragraph 5.4.4",
-          "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Resolution of Stressed Assets) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Federal Reserve, “Interagency Policy Statement on Allowances for Credit Losses”",
-          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm",
-          "accessed": "28 August 2026"
+          "label": "European Banking Authority, *The EBA amends Guidelines on the definition of default*, 7 May 2026, concerning EBA/GL/2026/05.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-11",
-      "depth": 7,
+      "depth": 8,
       "currentness": "fresh",
       "filepath": "CR-11.mdx",
-      "initialX": -122.3,
-      "initialY": 251.6
+      "initialX": -110.9,
+      "initialY": 245.8
     },
     "CR-12": {
       "id": "CR-12",
-      "title": "Probability of default",
-      "type": "concept",
+      "title": "Cure, probation and re-default",
+      "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "Probability of default is the probability that a defined obligor or exposure enters a defined default state over a specified future horizon, conditional on a stated information set. A PD without a horizon, default definition and unit of observation is not a complete parameter.",
+      "one_screen": "Cure is the governed transition from default back to non-default after the default conditions have ceased and renewed performance is credible. Re-default is a later return to default; a temporary payment or zero-DPD snapshot is not enough to prove a durable cure.",
       "prerequisites": [
-        "CR-05"
+        "CR-07",
+        "CR-09",
+        "CR-11"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
-        "universal"
+        "IN",
+        "UK",
+        "EU",
+        "US"
       ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": "2027-01-01",
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, “IRB approach: minimum requirements”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131, Advanced Approaches risk parameters",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "European Banking Authority, EBA/GL/2016/07, *Guidelines on the application of the definition of default under Article 178 of Regulation (EU) No 575/2013*, 28 September 2016.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "European Banking Authority, EBA/GL/2026/05, *Guidelines amending Guidelines EBA/GL/2016/07 on the application of the definition of default under Article 178 of Regulation (EU) No 575/2013*, 7 May 2026, application date 19 October 2026.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, PS7/19, *Credit risk: The definition of default*, 6 March 2019",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2018/credit-risk-the-definition-of-default",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, SS3/24, *Credit risk: definition of default*, first published 12 September 2024; future version published 20 January 2026 and effective 1 January 2027",
+          "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/credit-risk-definition-of-default-supervisory-statement",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-12",
-      "depth": 3,
-      "currentness": "durable",
+      "depth": 9,
+      "currentness": "future",
       "filepath": "CR-12.mdx",
-      "initialX": -69.1,
-      "initialY": 318.8
+      "initialX": -98.3,
+      "initialY": 283.3
     },
     "CR-13": {
       "id": "CR-13",
-      "title": "Point-in-time and through-the-cycle PD",
-      "type": "concept",
+      "title": "Write-off, recovery and economic loss",
+      "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "Point-in-time risk estimates move more strongly with current borrower and economic conditions; through-the-cycle approaches deliberately damp temporary cyclical variation and emphasise longer-run creditworthiness. They are different conditioning philosophies, not simply \"short horizon\" versus \"long horizon\".",
+      "one_screen": "Write-off changes the carrying amount or prudential treatment of an exposure; recovery records value collected after credit failure; economic loss measures what was ultimately lost after recoveries, costs and timing. None of these events should erase the default lifecycle that produced them.",
       "prerequisites": [
+        "CR-03",
+        "CR-07",
         "CR-12"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
+        "IN",
+        "UK",
+        "EU",
+        "US"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": "2027-04-01",
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Reserve Bank of India, *Reserve Bank of India (Commercial Banks – Income Recognition, Asset Classification and Provisioning) Directions, 2025*, 28 November 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Reserve Bank of India, DOR.STR.REC.No.6/21.06.011/2026-27, *Reserve Bank of India (Commercial Banks – Asset Classification, Provisioning and Income Recognition) Directions, 2026*, 27 April 2026, effective 1 April 2027.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "IFRS Foundation, *IFRS 9 Financial Instruments*, issued standard",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Interagency Policy Statement on Allowances for Credit Losses*",
+          "url": "https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm",
+          "accessed": "30 August 2026"
+        }
+      ],
+      "slug": "cr-13",
+      "depth": 10,
+      "currentness": "future",
+      "filepath": "CR-13.mdx",
+      "initialX": -47.5,
+      "initialY": 282
+    },
+    "CR-14": {
+      "id": "CR-14",
+      "title": "Probability of default",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "Probability of default is the probability that a defined obligor, facility or pool enters a defined default state over a specified future horizon, conditional on information available at an observation date. A number labelled “PD” is incomplete until its **unit, event, horizon and conditioning information** are known.",
+      "prerequisites": [
+        "CR-07"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB approach: risk components*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, *Definitions*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        }
+      ],
+      "slug": "cr-14",
+      "depth": 6,
+      "currentness": "fresh",
+      "filepath": "CR-14.mdx",
+      "initialX": -16.6,
+      "initialY": 339.2
+    },
+    "CR-15": {
+      "id": "CR-15",
+      "title": "Point-in-time and through-the-cycle PD",
+      "type": "concept",
+      "domain": "credit-risk",
+      "subdomain": "risk-parameters",
+      "one_screen": "Point-in-time and through-the-cycle describe how strongly a rating or PD responds to current versus cyclical conditions. They are conditioning philosophies on a spectrum, not synonyms for short-horizon and long-horizon probability.",
+      "prerequisites": [
+        "CR-14"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
         "universal"
       ],
       "perishable": false,
@@ -4558,195 +4719,126 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Bank for International Settlements, Financial Stability Institute, “Stability of a ‘through-the-cycle’ rating system during a financial crisis”, FSI Paper, 8 September 2006",
-          "url": "https://www.bis.org/fsi/awp2006.htm",
-          "accessed": "28 August 2026"
+          "label": "Bank for International Settlements, Financial Stability Institute, *Stability of a “through-the-cycle” rating system during a financial crisis*, 8 September 2006",
+          "url": "https://www.bis.org/publications/stability-a-through-the-cycle-rating-system-during-financial-crisis",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         }
       ],
-      "slug": "cr-13",
-      "depth": 4,
+      "slug": "cr-15",
+      "depth": 7,
       "currentness": "durable",
-      "filepath": "CR-13.mdx",
-      "initialX": -47.8,
-      "initialY": 275.5
+      "filepath": "CR-15.mdx",
+      "initialX": 24.6,
+      "initialY": 406.2
     },
-    "CR-14": {
-      "id": "CR-14",
+    "CR-16": {
+      "id": "CR-16",
       "title": "Loss given default and recovery rate",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "LGD is loss severity conditional on default; recovery rate is the complementary recovered share only when both are defined on a consistent economic basis. Economic LGD must capture recovery cash flows, costs and timing rather than merely subtracting collateral value from balance.",
+      "one_screen": "Loss given default is loss severity **conditional on default**. Collateral and guarantees influence LGD only through legally available, economically realised recovery value; an appraisal at origination is therefore an input to recovery expectations, not the LGD itself.",
       "prerequisites": [
-        "CR-05"
+        "CR-06",
+        "CR-07",
+        "CR-13"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 3,
-      "sources": [
-        {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, LGD estimation requirements",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, economic-loss definition",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
-          "accessed": "28 August 2026"
-        }
-      ],
-      "slug": "cr-14",
-      "depth": 3,
-      "currentness": "durable",
-      "filepath": "CR-14.mdx",
-      "initialX": -75.7,
-      "initialY": 282.2
-    },
-    "CR-15": {
-      "id": "CR-15",
-      "title": "Exposure at default and credit conversion factors",
-      "type": "mechanism",
-      "domain": "credit-risk",
-      "subdomain": "risk-parameters",
-      "one_screen": "Exposure at default estimates how much will be exposed when default occurs, not merely how much is drawn today. Credit conversion factors translate eligible undrawn or contingent amounts into expected or regulatory exposure, making drawdown behaviour part of credit risk.",
-      "prerequisites": [
-        "CR-03",
-        "CR-05"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 3,
-      "sources": [
-        {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, EAD estimation requirements",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101 and Subpart E, risk-parameter definitions",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E/section-217.101",
-          "accessed": "28 August 2026"
-        }
-      ],
-      "slug": "cr-15",
-      "depth": 3,
-      "currentness": "durable",
-      "filepath": "CR-15.mdx",
-      "initialX": -36.8,
-      "initialY": 343.3
-    },
-    "CR-16": {
-      "id": "CR-16",
-      "title": "Effective maturity",
-      "type": "reference",
-      "domain": "credit-risk",
-      "subdomain": "risk-parameters",
-      "one_screen": "Effective maturity converts the timing of an exposure's remaining contractual cash flows into a maturity measure relevant to credit risk. It is not always the calendar time until the final legal maturity date.",
-      "prerequisites": [
-        "CR-02",
-        "CR-03"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, “IRB approach: risk components”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB approach: risk components*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, effective-maturity definition",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, *Definitions*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-16",
-      "depth": 3,
-      "currentness": "durable",
+      "depth": 11,
+      "currentness": "fresh",
       "filepath": "CR-16.mdx",
-      "initialX": -146.5,
-      "initialY": 244.8
+      "initialX": -125.6,
+      "initialY": 273.3
     },
     "CR-17": {
       "id": "CR-17",
-      "title": "Expected loss as PD × LGD × EAD",
+      "title": "Exposure at default and credit conversion factors",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "`EL = PD × LGD × EAD` is a useful one-period credit-loss decomposition only when the three parameters describe compatible events, horizons, populations and economic conditions. The multiplication is simple; obtaining coherent inputs is not.",
+      "one_screen": "Exposure at default estimates or prescribes how much is exposed when default occurs, not how much is drawn today. Credit conversion factors translate undrawn or contingent amounts into exposure, making pre-default utilisation behaviour part of credit risk.",
       "prerequisites": [
-        "CR-12",
-        "CR-14",
-        "CR-15"
+        "CR-03",
+        "CR-07"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, “IRB approach: risk components”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/32.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB approach: risk components*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment of expected losses and recognition of provisions”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101, *Definitions*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-17",
-      "depth": 4,
-      "currentness": "durable",
+      "depth": 6,
+      "currentness": "fresh",
       "filepath": "CR-17.mdx",
-      "initialX": -147.3,
-      "initialY": 283.8
+      "initialX": -157.3,
+      "initialY": 273.3
     },
     "CR-18": {
       "id": "CR-18",
-      "title": "Unexpected loss and capital",
+      "title": "Expected loss: PD × LGD × EAD",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "risk-parameters",
-      "one_screen": "Expected loss is the average credit cost; unexpected loss is adverse variation around that average. Capital exists to absorb sufficiently severe unexpected losses and protect creditors when realised losses exceed ordinary expected-loss capacity.",
+      "one_screen": "`EL = PD × LGD × EAD` is a compact one-period loss decomposition only when the three inputs describe compatible default events, horizons, populations and economic conditions. The arithmetic is trivial; parameter alignment is the real mechanism.",
       "prerequisites": [
+        "CR-14",
+        "CR-16",
         "CR-17"
       ],
       "see_also": [],
@@ -4754,30 +4846,40 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": "2027-04-01",
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB approach: risk-weight functions”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE30, *IRB approach: overview and asset class definitions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment of expected losses and recognition of provisions”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB approach: risk components*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, *IRB approach: treatment of expected losses and provisions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/35/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Reserve Bank of India, DOR.STR.REC.No.6/21.06.011/2026-27, *Reserve Bank of India (Commercial Banks – Asset Classification, Provisioning and Income Recognition) Directions, 2026*, 27 April 2026, effective 1 April 2027.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-18",
-      "depth": 5,
-      "currentness": "durable",
+      "depth": 12,
+      "currentness": "future",
       "filepath": "CR-18.mdx",
-      "initialX": -63,
-      "initialY": 403.1
+      "initialX": -62.1,
+      "initialY": 370.8
     },
     "CR-19": {
       "id": "CR-19",
@@ -4785,51 +4887,52 @@
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "scorecards-and-ratings",
-      "one_screen": "Retail credit is usually managed through statistically homogeneous pools because each exposure is small and there are many observations; wholesale credit is usually assessed obligor by obligor because exposures are larger, populations are smaller and information is more heterogeneous. Neither approach eliminates judgement.",
+      "one_screen": "Retail credit is usually managed through large pools of comparatively homogeneous exposures, making repeated statistical patterns powerful evidence. Wholesale credit is usually more obligor-centred because exposures are larger, populations are smaller and borrower-specific financial, structural and legal information matters more.",
       "prerequisites": [
         "CR-01",
         "CR-02",
-        "CR-12"
+        "CR-14"
       ],
       "see_also": [],
       "contrast_with": [],
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE30, “IRB approach: categorisation of exposures”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/30.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE30, *IRB approach: overview and asset class definitions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.101 and 217.131",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 217 Subpart E, *Risk-Weighted Assets—Internal Ratings-Based and Advanced Measurement Approaches*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
       "slug": "cr-19",
-      "depth": 4,
-      "currentness": "durable",
+      "depth": 7,
+      "currentness": "fresh",
       "filepath": "CR-19.mdx",
-      "initialX": 6.4,
-      "initialY": 392.3
+      "initialX": 17.3,
+      "initialY": 382.4
     },
     "CR-20": {
       "id": "CR-20",
-      "title": "Application and behavioural scorecards",
+      "title": "Application, behavioural and bureau credit data",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "scorecards-and-ratings",
-      "one_screen": "Application scorecards estimate risk using information available around origination; behavioural scorecards use information generated after the credit relationship exists. Mixing their observation windows creates leakage and makes model performance look better than it really is.",
+      "one_screen": "Application models use information available at or before origination; behavioural models use information generated after the relationship exists; bureau or credit-information data add externally reported indebtedness and repayment history. Their common discipline is **time**: only information genuinely available at the decision or observation date may enter the prediction.",
       "prerequisites": [
-        "CR-12",
+        "CR-05",
+        "CR-14",
         "CR-19"
       ],
       "see_also": [],
@@ -4837,30 +4940,35 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 2,
       "sources": [
         {
-          "label": "Bank for International Settlements, Financial Stability Institute, “Stability of a ‘through-the-cycle’ rating system during a financial crisis”",
-          "url": "https://www.bis.org/fsi/awp2006.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, BCBS d595, *Principles for the Management of Credit Risk*, 30 April 2025",
+          "url": "https://www.bis.org/bcbs/publ/d595.htm",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Electronic Code of Federal Regulations, 12 CFR 217.122 and 217.131, Advanced Approaches retail segmentation and risk estimation requirements",
-          "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217/subpart-E",
-          "accessed": "28 August 2026"
+          "label": "Reserve Bank of India, *Reserve Bank of India (Credit Information Reporting) Directions, 2025*, 6 January 2025.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
+        },
+        {
+          "label": "Board of Governors of the Federal Reserve System, *Report to the Congress on Credit Scoring and Its Effects on the Availability and Affordability of Credit*, August 2007",
+          "url": "https://www.federalreserve.gov/boarddocs/rptcongress/creditscore/default.htm",
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-20",
-      "depth": 5,
-      "currentness": "durable",
+      "depth": 8,
+      "currentness": "fresh",
       "filepath": "CR-20.mdx",
-      "initialX": -11.5,
-      "initialY": 432.1
+      "initialX": -21.7,
+      "initialY": 417.9
     },
     "CR-21": {
       "id": "CR-21",
@@ -4868,10 +4976,10 @@
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "scorecards-and-ratings",
-      "one_screen": "A rating grade is a discrete risk class, a master scale defines the ordered meaning of all grades, and migration records movements between them through time. A rating system is useful only if grades consistently separate risk and retain enough history to test how borrowers move and default.",
+      "one_screen": "A rating grade is a discrete class of borrower credit quality; a master scale defines the ordered meaning of all grades; migration records movement through that scale over time. A grade is not meaningful because it is called “4” or “BBB-like”—its meaning comes from assignment criteria, ordering, default boundary and calibrated risk.",
       "prerequisites": [
-        "CR-12",
-        "CR-13",
+        "CR-14",
+        "CR-15",
         "CR-19"
       ],
       "see_also": [],
@@ -4879,82 +4987,40 @@
       "jurisdictions": [
         "universal"
       ],
-      "perishable": false,
-      "as_of": null,
+      "perishable": true,
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, rating-system requirements",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/36.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Federal Reserve, “Estimation Methodologies for Losses, Revenues, and Expenses”, August 2013",
+          "label": "Board of Governors of the Federal Reserve System, *Estimation Methodologies for Losses, Revenues, and Expenses*, August 2013",
           "url": "https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm",
-          "accessed": "28 August 2026"
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-21",
-      "depth": 5,
-      "currentness": "durable",
+      "depth": 8,
+      "currentness": "fresh",
       "filepath": "CR-21.mdx",
-      "initialX": 7.1,
-      "initialY": 340.5
+      "initialX": -8,
+      "initialY": 437.4
     },
     "CR-22": {
       "id": "CR-22",
-      "title": "Bureau data",
-      "type": "reference",
-      "domain": "credit-risk",
-      "subdomain": "scorecards-and-ratings",
-      "one_screen": "Bureau data describe reported credit relationships and repayment history; they are powerful evidence of external indebtedness and past behaviour, not a complete statement of current income, assets, intentions or future ability to pay. Absence of adverse bureau information is not evidence of low risk when coverage is incomplete or the borrower has little history.",
-      "prerequisites": [
-        "CR-01",
-        "CR-12",
-        "CR-20"
-      ],
-      "see_also": [],
-      "contrast_with": [],
-      "jurisdictions": [
-        "universal"
-      ],
-      "perishable": false,
-      "as_of": null,
-      "next_effective_date": null,
-      "status": "draft",
-      "verified": false,
-      "reading_minutes": 3,
-      "sources": [
-        {
-          "label": "Reserve Bank of India, “Report of the High Level Task Force on Public Credit Registry for India”, 2018",
-          "url": "https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=895",
-          "accessed": "28 August 2026"
-        },
-        {
-          "label": "Federal Reserve, “Credit Scoring”, report to Congress",
-          "url": "https://www.federalreserve.gov/boarddocs/rptcongress/creditscore/general.htm",
-          "accessed": "28 August 2026"
-        }
-      ],
-      "slug": "cr-22",
-      "depth": 6,
-      "currentness": "durable",
-      "filepath": "CR-22.mdx",
-      "initialX": 13.2,
-      "initialY": 375.8
-    },
-    "CR-23": {
-      "id": "CR-23",
       "title": "Vintage analysis and roll rates",
       "type": "mechanism",
       "domain": "credit-risk",
       "subdomain": "scorecards-and-ratings",
-      "one_screen": "Vintage analysis follows cohorts originated at similar times as they season; roll-rate analysis follows movements between delinquency states. Both restore the time dimension that a portfolio snapshot destroys.",
+      "one_screen": "Vintage analysis follows exposures originated at similar times as they season; roll-rate analysis follows movement between delinquency or credit states. Both restore the time dimension that a portfolio snapshot destroys.",
       "prerequisites": [
-        "CR-06",
+        "CR-08",
         "CR-19",
         "CR-20"
       ],
@@ -4971,25 +5037,25 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Federal Reserve, “Estimation Methodologies for Losses, Revenues, and Expenses”, August 2013, roll-rate and transition-model sections",
+          "label": "Board of Governors of the Federal Reserve System, *Estimation Methodologies for Losses, Revenues, and Expenses*, August 2013",
           "url": "https://www.federalreserve.gov/bankinforeg/stress-tests/ccar/august-2013-estimation-methodologies-for-losses-revenues-and-expenses.htm",
-          "accessed": "28 August 2026"
+          "accessed": "30 August 2026"
         }
       ],
-      "slug": "cr-23",
-      "depth": 6,
+      "slug": "cr-22",
+      "depth": 9,
       "currentness": "durable",
-      "filepath": "CR-23.mdx",
-      "initialX": 11.8,
-      "initialY": 465.7
+      "filepath": "CR-22.mdx",
+      "initialX": 13.5,
+      "initialY": 454.5
     },
-    "CR-24": {
-      "id": "CR-24",
-      "title": "Concentration: single-name and sector risk",
+    "CR-23": {
+      "id": "CR-23",
+      "title": "Concentration and diversification",
       "type": "mechanism",
       "domain": "credit-risk",
-      "subdomain": "portfolio-risk",
-      "one_screen": "Concentration risk arises when too much exposure depends on the same obligor, connected group, sector, geography or underlying risk driver. Diversification is about independent sources of loss, not the number of rows in a portfolio file.",
+      "subdomain": "scorecards-and-ratings",
+      "one_screen": "Concentration risk arises when too much exposure depends on the same name, connected group, sector, geography, collateral type or underlying economic driver. Diversification comes from genuinely different sources of loss, not from the number of rows, facilities or legal entities in a dataset.",
       "prerequisites": [
         "CR-03",
         "CR-04",
@@ -5004,51 +5070,55 @@
         "US"
       ],
       "perishable": true,
-      "as_of": "2026-08-28",
+      "as_of": "2026-08-30",
       "next_effective_date": null,
       "status": "draft",
       "verified": false,
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit risk concentration”",
-          "url": "https://www.bis.org/basel_framework/chapter/SRP/32.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, BCP40, *The Core Principles and assessment criteria*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/bcp/40/inforce/2024-04-25/published/2024-04-25",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10",
-          "url": "https://www.bis.org/basel_framework/chapter/LEX/10.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10, *Definitions and application*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/lex/10/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Prudential Regulation Authority, SS3/25",
+          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit risk*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Prudential Regulation Authority, SS3/25, *Identification of groups of connected clients*, 17 July 2025",
           "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/identification-of-groups-of-connected-clients-supervisory-statement",
-          "accessed": "28 August 2026"
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, Commercial Banks – Large Exposures Framework Directions, 2025",
-          "url": "https://m.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13152",
-          "accessed": "28 August 2026"
+          "label": "Electronic Code of Federal Regulations, 12 CFR Part 32, *Lending Limits*.",
+          "url": "https://www.bis.org/bcbs/basel3.htm",
+          "accessed": "August 28, 2026"
         }
       ],
-      "slug": "cr-24",
-      "depth": 6,
+      "slug": "cr-23",
+      "depth": 13,
       "currentness": "fresh",
-      "filepath": "CR-24.mdx",
-      "initialX": -14.1,
-      "initialY": 363.1
+      "filepath": "CR-23.mdx",
+      "initialX": -15.6,
+      "initialY": 387.5
     },
-    "CR-25": {
-      "id": "CR-25",
+    "CR-24": {
+      "id": "CR-24",
       "title": "Correlation and systematic credit risk",
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "portfolio-risk",
-      "one_screen": "Credit correlation means borrowers' default outcomes are not independent because common economic forces move their credit quality together. Idiosyncratic risk can diversify away; systematic risk cannot be eliminated simply by adding more borrowers exposed to the same underlying conditions.",
+      "one_screen": "Credit correlation means default and loss outcomes are not independent because common economic forces move many borrowers together. Idiosyncratic risk can be diversified across sufficiently independent exposures; systematic risk cannot be removed by adding more borrowers exposed to the same underlying conditions.",
       "prerequisites": [
-        "CR-12",
-        "CR-18",
-        "CR-24"
+        "CR-14",
+        "CR-23"
       ],
       "see_also": [],
       "contrast_with": [],
@@ -5063,33 +5133,87 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB approach: risk-weight functions”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, *IRB approach: risk weight functions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/31/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, “Credit risk concentration”",
-          "url": "https://www.bis.org/basel_framework/chapter/SRP/32.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit risk*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        }
+      ],
+      "slug": "cr-24",
+      "depth": 14,
+      "currentness": "durable",
+      "filepath": "CR-24.mdx",
+      "initialX": 17.8,
+      "initialY": 428.8
+    },
+    "CR-25": {
+      "id": "CR-25",
+      "title": "Unexpected loss and capital",
+      "type": "mechanism",
+      "domain": "credit-risk",
+      "subdomain": "portfolio-risk",
+      "one_screen": "Expected loss is the average credit cost under a defined measurement; unexpected loss is adverse variation around that average. Capital protects solvency against sufficiently severe outcomes above ordinary expected-loss capacity, so portfolio dispersion and dependence matter even when exposure-level EL is unchanged.",
+      "prerequisites": [
+        "CR-18",
+        "CR-23",
+        "CR-24"
+      ],
+      "see_also": [],
+      "contrast_with": [],
+      "jurisdictions": [
+        "universal"
+      ],
+      "perishable": true,
+      "as_of": "2026-08-30",
+      "next_effective_date": null,
+      "status": "draft",
+      "verified": false,
+      "reading_minutes": 3,
+      "sources": [
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE30, *IRB approach: overview and asset class definitions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, *IRB approach: risk weight functions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/31/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, *IRB approach: treatment of expected losses and provisions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/35/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit risk*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-25",
-      "depth": 7,
-      "currentness": "durable",
+      "depth": 15,
+      "currentness": "fresh",
       "filepath": "CR-25.mdx",
-      "initialX": -13.5,
-      "initialY": 416.5
+      "initialX": -18.5,
+      "initialY": 464.3
     },
     "CR-26": {
       "id": "CR-26",
-      "title": "The credit-loss architecture: expected loss as cost, unexpected loss as capital risk",
+      "title": "The credit-loss architecture",
       "type": "concept",
       "domain": "credit-risk",
       "subdomain": "portfolio-risk",
-      "one_screen": "Expected loss is the recurring average economic cost of taking credit risk; unexpected loss is the adverse deviation around that average that threatens solvency. Sound credit economics prices and provides for expected loss while capital protects the institution against severe unexpected loss.",
+      "one_screen": "Credit risk is one continuous system: identify the person and exposure, decide whether repayment is sustainable, recognise default consistently, measure probability, severity and exposure, then aggregate common loss drivers into portfolio tail risk. The architecture fails when adjacent layers are collapsed—for example, collateral into repayment capacity, DPD into default, score into PD, or expected loss into capital.",
       "prerequisites": [
-        "CR-17",
+        "CR-05",
+        "CR-07",
         "CR-18",
+        "CR-23",
         "CR-24",
         "CR-25"
       ],
@@ -5106,32 +5230,52 @@
       "reading_minutes": 3,
       "sources": [
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, “IRB approach: risk-weight functions”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/31.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, BCBS d595, *Principles for the Management of Credit Risk*, 30 April 2025",
+          "url": "https://www.bis.org/bcbs/publ/d595.htm",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, “Treatment of expected losses and recognition of provisions”",
-          "url": "https://www.bis.org/basel_framework/chapter/CRE/35.htm",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE30, *IRB approach: overview and asset class definitions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, DBR.BP.BC.No.29/21.07.001/2018-19, “Deferral of Implementation of Indian Accounting Standards”, 22 March 2019",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11506&Mode=0",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE31, *IRB approach: risk weight functions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/31/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         },
         {
-          "label": "Reserve Bank of India, DOR (NBFC).CC.PD.No.109/22.10.106/2019-20, “Implementation of Indian Accounting Standards”, 13 March 2020",
-          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11818&Mode=0",
-          "accessed": "28 August 2026"
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE32, *IRB approach: risk components*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE35, *IRB approach: treatment of expected losses and provisions*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/35/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, CRE36, *IRB approach: minimum requirements to use IRB approach*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/cre/36/inforce/2023-01-01/published/2022-12-08",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, LEX10, *Definitions and application*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/lex/10/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
+        },
+        {
+          "label": "Basel Committee on Banking Supervision, Basel Framework, SRP32, *Credit risk*",
+          "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/srp/32/inforce/2023-01-01/published/2020-03-27",
+          "accessed": "30 August 2026"
         }
       ],
       "slug": "cr-26",
-      "depth": 8,
+      "depth": 16,
       "currentness": "durable",
       "filepath": "CR-26.mdx",
-      "initialX": -59.3,
-      "initialY": 363
+      "initialX": -42.6,
+      "initialY": 428.8
     },
     "DAT-01": {
       "id": "DAT-01",
@@ -5168,8 +5312,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "DAT-01.mdx",
-      "initialX": -147.8,
-      "initialY": 444.4
+      "initialX": -228.5,
+      "initialY": 406.6
     },
     "DAT-02": {
       "id": "DAT-02",
@@ -5203,8 +5347,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "DAT-02.mdx",
-      "initialX": -212.6,
-      "initialY": 424.2
+      "initialX": -187,
+      "initialY": 451.3
     },
     "DAT-03": {
       "id": "DAT-03",
@@ -5248,8 +5392,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "DAT-03.mdx",
-      "initialX": -165.8,
-      "initialY": 463.2
+      "initialX": -128.8,
+      "initialY": 434.1
     },
     "DAT-04": {
       "id": "DAT-04",
@@ -5393,8 +5537,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-04.mdx",
-      "initialX": -144.6,
-      "initialY": 392.2
+      "initialX": -138.3,
+      "initialY": 369.9
     },
     "DAT-05": {
       "id": "DAT-05",
@@ -5428,8 +5572,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-05.mdx",
-      "initialX": -114.8,
-      "initialY": 446
+      "initialX": -160.8,
+      "initialY": 477.8
     },
     "DAT-06": {
       "id": "DAT-06",
@@ -5468,8 +5612,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "DAT-06.mdx",
-      "initialX": -182,
-      "initialY": 395
+      "initialX": -162.8,
+      "initialY": 374.6
     },
     "DAT-07": {
       "id": "DAT-07",
@@ -5508,8 +5652,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "DAT-07.mdx",
-      "initialX": -123.6,
-      "initialY": 403.8
+      "initialX": -121.5,
+      "initialY": 410.1
     },
     "DAT-08": {
       "id": "DAT-08",
@@ -5543,8 +5687,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "DAT-08.mdx",
-      "initialX": -136.9,
-      "initialY": 467.5
+      "initialX": -132.1,
+      "initialY": 466.1
     },
     "DAT-09": {
       "id": "DAT-09",
@@ -5578,8 +5722,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "DAT-09.mdx",
-      "initialX": -162.2,
-      "initialY": 408.6
+      "initialX": -154.5,
+      "initialY": 410.7
     },
     "DAT-10": {
       "id": "DAT-10",
@@ -5613,8 +5757,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "DAT-10.mdx",
-      "initialX": -212.7,
-      "initialY": 378.4
+      "initialX": -209,
+      "initialY": 375.7
     },
     "DAT-11": {
       "id": "DAT-11",
@@ -5648,8 +5792,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-11.mdx",
-      "initialX": -237,
-      "initialY": 429.4
+      "initialX": -228.3,
+      "initialY": 434
     },
     "DAT-12": {
       "id": "DAT-12",
@@ -5683,8 +5827,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "DAT-12.mdx",
-      "initialX": -199.4,
-      "initialY": 446.8
+      "initialX": -196.2,
+      "initialY": 427.6
     },
     "DAT-13": {
       "id": "DAT-13",
@@ -5718,8 +5862,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-13.mdx",
-      "initialX": -142.5,
-      "initialY": 420.8
+      "initialX": -186.9,
+      "initialY": 479.1
     },
     "DAT-14": {
       "id": "DAT-14",
@@ -5753,8 +5897,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-14.mdx",
-      "initialX": -207,
-      "initialY": 399.3
+      "initialX": -166.2,
+      "initialY": 428.3
     },
     "DAT-15": {
       "id": "DAT-15",
@@ -5793,8 +5937,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-15.mdx",
-      "initialX": -171.6,
-      "initialY": 349.8
+      "initialX": -180.5,
+      "initialY": 365.5
     },
     "DAT-16": {
       "id": "DAT-16",
@@ -5828,8 +5972,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "DAT-16.mdx",
-      "initialX": -184.7,
-      "initialY": 421.6
+      "initialX": -182.4,
+      "initialY": 397.4
     },
     "DAT-17": {
       "id": "DAT-17",
@@ -5863,8 +6007,8 @@
       "depth": 10,
       "currentness": "durable",
       "filepath": "DAT-17.mdx",
-      "initialX": -175.3,
-      "initialY": 481.8
+      "initialX": -154.2,
+      "initialY": 452.2
     },
     "DAT-18": {
       "id": "DAT-18",
@@ -5898,8 +6042,8 @@
       "depth": 11,
       "currentness": "durable",
       "filepath": "DAT-18.mdx",
-      "initialX": -222.2,
-      "initialY": 459.2
+      "initialX": -214.3,
+      "initialY": 459.1
     },
     "DAT-19": {
       "id": "DAT-19",
@@ -5938,8 +6082,8 @@
       "depth": 12,
       "currentness": "durable",
       "filepath": "DAT-19.mdx",
-      "initialX": -170.7,
-      "initialY": 440.8
+      "initialX": -205.3,
+      "initialY": 403.5
     },
     "DAT-20": {
       "id": "DAT-20",
@@ -5973,8 +6117,8 @@
       "depth": 13,
       "currentness": "durable",
       "filepath": "DAT-20.mdx",
-      "initialX": -164.2,
-      "initialY": 376.8
+      "initialX": -194,
+      "initialY": 346.3
     },
     "DAT-21": {
       "id": "DAT-21",
@@ -6008,8 +6152,8 @@
       "depth": 14,
       "currentness": "durable",
       "filepath": "DAT-21.mdx",
-      "initialX": -154.8,
-      "initialY": 331.6
+      "initialX": -149.1,
+      "initialY": 338.4
     },
     "DAT-22": {
       "id": "DAT-22",
@@ -6061,8 +6205,8 @@
       "depth": 15,
       "currentness": "fresh",
       "filepath": "DAT-22.mdx",
-      "initialX": -196.6,
-      "initialY": 359
+      "initialX": -147.4,
+      "initialY": 393
     },
     "FND-01": {
       "id": "FND-01",
@@ -6099,8 +6243,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-01.mdx",
-      "initialX": -302.1,
-      "initialY": 292.5
+      "initialX": -320.1,
+      "initialY": 259.2
     },
     "FND-02": {
       "id": "FND-02",
@@ -6139,8 +6283,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-02.mdx",
-      "initialX": -334.6,
-      "initialY": 259.5
+      "initialX": -283.7,
+      "initialY": 278.6
     },
     "FND-03": {
       "id": "FND-03",
@@ -6185,8 +6329,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-03.mdx",
-      "initialX": -356.9,
-      "initialY": 327.4
+      "initialX": -327.3,
+      "initialY": 325.2
     },
     "FND-04": {
       "id": "FND-04",
@@ -6226,8 +6370,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-04.mdx",
-      "initialX": -340.9,
-      "initialY": 341.2
+      "initialX": -299.7,
+      "initialY": 340.6
     },
     "FND-05": {
       "id": "FND-05",
@@ -6272,8 +6416,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-05.mdx",
-      "initialX": -372.3,
-      "initialY": 285.5
+      "initialX": -362.6,
+      "initialY": 294.4
     },
     "FND-06": {
       "id": "FND-06",
@@ -6336,8 +6480,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "FND-06.mdx",
-      "initialX": -355.3,
-      "initialY": 281.9
+      "initialX": -325.5,
+      "initialY": 300.9
     },
     "FND-07": {
       "id": "FND-07",
@@ -6382,8 +6526,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-07.mdx",
-      "initialX": -366,
-      "initialY": 309.3
+      "initialX": -351.4,
+      "initialY": 319.1
     },
     "FND-08": {
       "id": "FND-08",
@@ -6422,8 +6566,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-08.mdx",
-      "initialX": -379,
-      "initialY": 238.8
+      "initialX": -378.5,
+      "initialY": 247
     },
     "FND-09": {
       "id": "FND-09",
@@ -6481,8 +6625,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-09.mdx",
-      "initialX": -335.5,
-      "initialY": 237.4
+      "initialX": -332.2,
+      "initialY": 241.2
     },
     "FND-10": {
       "id": "FND-10",
@@ -6534,8 +6678,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "FND-10.mdx",
-      "initialX": -405,
-      "initialY": 280.3
+      "initialX": -392.3,
+      "initialY": 301
     },
     "FND-11": {
       "id": "FND-11",
@@ -6567,8 +6711,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-11.mdx",
-      "initialX": -281.2,
-      "initialY": 327.3
+      "initialX": -339,
+      "initialY": 280
     },
     "FND-12": {
       "id": "FND-12",
@@ -6602,8 +6746,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-12.mdx",
-      "initialX": -335.1,
-      "initialY": 324.5
+      "initialX": -384.3,
+      "initialY": 327.7
     },
     "FND-13": {
       "id": "FND-13",
@@ -6638,8 +6782,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-13.mdx",
-      "initialX": -318.1,
-      "initialY": 278.3
+      "initialX": -324.8,
+      "initialY": 346.8
     },
     "FND-14": {
       "id": "FND-14",
@@ -6693,8 +6837,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-14.mdx",
-      "initialX": -267.2,
-      "initialY": 266.6
+      "initialX": -279.9,
+      "initialY": 298.4
     },
     "FND-15": {
       "id": "FND-15",
@@ -6728,8 +6872,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-15.mdx",
-      "initialX": -386,
-      "initialY": 313.3
+      "initialX": -387.8,
+      "initialY": 274.6
     },
     "FND-16": {
       "id": "FND-16",
@@ -6761,8 +6905,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "FND-16.mdx",
-      "initialX": -381.2,
-      "initialY": 342.2
+      "initialX": -365.5,
+      "initialY": 350.9
     },
     "FND-17": {
       "id": "FND-17",
@@ -6801,8 +6945,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "FND-17.mdx",
-      "initialX": -347.7,
-      "initialY": 380
+      "initialX": -318,
+      "initialY": 375.2
     },
     "FND-18": {
       "id": "FND-18",
@@ -6842,8 +6986,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "FND-18.mdx",
-      "initialX": -319.3,
-      "initialY": 351.9
+      "initialX": -288.9,
+      "initialY": 327.5
     },
     "FND-19": {
       "id": "FND-19",
@@ -6889,8 +7033,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "FND-19.mdx",
-      "initialX": -341.7,
-      "initialY": 293.5
+      "initialX": -344.5,
+      "initialY": 301.9
     },
     "FND-20": {
       "id": "FND-20",
@@ -6930,8 +7074,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "FND-20.mdx",
-      "initialX": -308.2,
-      "initialY": 320.8
+      "initialX": -356.5,
+      "initialY": 250.6
     },
     "FND-21": {
       "id": "FND-21",
@@ -6975,8 +7119,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "FND-21.mdx",
-      "initialX": -262,
-      "initialY": 299.2
+      "initialX": -304.6,
+      "initialY": 299.6
     },
     "FND-22": {
       "id": "FND-22",
@@ -7015,8 +7159,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "FND-22.mdx",
-      "initialX": -299.6,
-      "initialY": 354.8
+      "initialX": -344.5,
+      "initialY": 358.3
     },
     "FND-23": {
       "id": "FND-23",
@@ -7080,8 +7224,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "FND-23.mdx",
-      "initialX": -304.8,
-      "initialY": 251.4
+      "initialX": -299,
+      "initialY": 254.3
     },
     "FND-24": {
       "id": "FND-24",
@@ -7160,8 +7304,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "FND-24.mdx",
-      "initialX": -283.9,
-      "initialY": 282.7
+      "initialX": -261.5,
+      "initialY": 273.7
     },
     "IMP-01": {
       "id": "IMP-01",
@@ -7220,11 +7364,11 @@
         }
       ],
       "slug": "imp-01",
-      "depth": 8,
+      "depth": 12,
       "currentness": "fresh",
       "filepath": "IMP-01.mdx",
-      "initialX": -280,
-      "initialY": 205.6
+      "initialX": -267.4,
+      "initialY": 205.4
     },
     "IMP-02": {
       "id": "IMP-02",
@@ -7271,11 +7415,11 @@
         }
       ],
       "slug": "imp-02",
-      "depth": 9,
+      "depth": 13,
       "currentness": "fresh",
       "filepath": "IMP-02.mdx",
-      "initialX": -325.5,
-      "initialY": 181.1
+      "initialX": -332,
+      "initialY": 182.3
     },
     "IMP-03": {
       "id": "IMP-03",
@@ -7328,11 +7472,11 @@
         }
       ],
       "slug": "imp-03",
-      "depth": 10,
+      "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-03.mdx",
-      "initialX": -253.9,
-      "initialY": 189.7
+      "initialX": -246.9,
+      "initialY": 193.7
     },
     "IMP-04": {
       "id": "IMP-04",
@@ -7378,11 +7522,11 @@
         }
       ],
       "slug": "imp-04",
-      "depth": 10,
+      "depth": 14,
       "currentness": "fresh",
       "filepath": "IMP-04.mdx",
-      "initialX": -406.9,
-      "initialY": 174
+      "initialX": -408.1,
+      "initialY": 177.1
     },
     "IMP-05": {
       "id": "IMP-05",
@@ -7428,11 +7572,11 @@
         }
       ],
       "slug": "imp-05",
-      "depth": 11,
+      "depth": 15,
       "currentness": "fresh",
       "filepath": "IMP-05.mdx",
-      "initialX": -249.5,
-      "initialY": 133.7
+      "initialX": -232.2,
+      "initialY": 140.6
     },
     "IMP-06": {
       "id": "IMP-06",
@@ -7485,11 +7629,11 @@
         }
       ],
       "slug": "imp-06",
-      "depth": 12,
+      "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-06.mdx",
-      "initialX": -224.7,
-      "initialY": 193.1
+      "initialX": -219.2,
+      "initialY": 197.3
     },
     "IMP-07": {
       "id": "IMP-07",
@@ -7536,11 +7680,11 @@
         }
       ],
       "slug": "imp-07",
-      "depth": 13,
+      "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-07.mdx",
-      "initialX": -263.6,
-      "initialY": 205.7
+      "initialX": -273,
+      "initialY": 189.3
     },
     "IMP-08": {
       "id": "IMP-08",
@@ -7588,11 +7732,11 @@
         }
       ],
       "slug": "imp-08",
-      "depth": 13,
+      "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-08.mdx",
-      "initialX": -271.2,
-      "initialY": 173.3
+      "initialX": -251.1,
+      "initialY": 175.8
     },
     "IMP-09": {
       "id": "IMP-09",
@@ -7637,11 +7781,11 @@
         }
       ],
       "slug": "imp-09",
-      "depth": 14,
+      "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-09.mdx",
-      "initialX": -307.8,
-      "initialY": 204.9
+      "initialX": -297.1,
+      "initialY": 203.5
     },
     "IMP-10": {
       "id": "IMP-10",
@@ -7688,11 +7832,11 @@
         }
       ],
       "slug": "imp-10",
-      "depth": 13,
+      "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-10.mdx",
-      "initialX": -217.1,
-      "initialY": 241
+      "initialX": -215.6,
+      "initialY": 247.7
     },
     "IMP-11": {
       "id": "IMP-11",
@@ -7738,11 +7882,11 @@
         }
       ],
       "slug": "imp-11",
-      "depth": 14,
+      "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-11.mdx",
-      "initialX": -356.9,
-      "initialY": 177.4
+      "initialX": -358.2,
+      "initialY": 179.1
     },
     "IMP-12": {
       "id": "IMP-12",
@@ -7789,11 +7933,11 @@
         }
       ],
       "slug": "imp-12",
-      "depth": 14,
+      "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-12.mdx",
-      "initialX": -272.7,
-      "initialY": 224.5
+      "initialX": -271.1,
+      "initialY": 226.1
     },
     "IMP-13": {
       "id": "IMP-13",
@@ -7840,11 +7984,11 @@
         }
       ],
       "slug": "imp-13",
-      "depth": 14,
+      "depth": 18,
       "currentness": "fresh",
       "filepath": "IMP-13.mdx",
-      "initialX": -259.7,
-      "initialY": 154.4
+      "initialX": -247.3,
+      "initialY": 151.7
     },
     "IMP-14": {
       "id": "IMP-14",
@@ -7891,11 +8035,11 @@
         }
       ],
       "slug": "imp-14",
-      "depth": 15,
+      "depth": 19,
       "currentness": "fresh",
       "filepath": "IMP-14.mdx",
-      "initialX": -210,
-      "initialY": 181.9
+      "initialX": -199.1,
+      "initialY": 193.1
     },
     "IMP-15": {
       "id": "IMP-15",
@@ -7947,11 +8091,11 @@
         }
       ],
       "slug": "imp-15",
-      "depth": 12,
+      "depth": 16,
       "currentness": "fresh",
       "filepath": "IMP-15.mdx",
-      "initialX": -246,
-      "initialY": 177.1
+      "initialX": -273.3,
+      "initialY": 165.6
     },
     "IMP-16": {
       "id": "IMP-16",
@@ -8003,11 +8147,11 @@
         }
       ],
       "slug": "imp-16",
-      "depth": 13,
+      "depth": 17,
       "currentness": "fresh",
       "filepath": "IMP-16.mdx",
-      "initialX": -292.5,
-      "initialY": 82.7
+      "initialX": -290.6,
+      "initialY": 83.6
     },
     "IMP-17": {
       "id": "IMP-17",
@@ -8060,11 +8204,11 @@
         }
       ],
       "slug": "imp-17",
-      "depth": 16,
+      "depth": 20,
       "currentness": "fresh",
       "filepath": "IMP-17.mdx",
-      "initialX": -316.2,
-      "initialY": 101.5
+      "initialX": -315.3,
+      "initialY": 100.3
     },
     "IMP-18": {
       "id": "IMP-18",
@@ -8116,11 +8260,11 @@
         }
       ],
       "slug": "imp-18",
-      "depth": 17,
+      "depth": 21,
       "currentness": "fresh",
       "filepath": "IMP-18.mdx",
-      "initialX": -361.7,
-      "initialY": 151.9
+      "initialX": -353.5,
+      "initialY": 151.4
     },
     "IMP-19": {
       "id": "IMP-19",
@@ -8173,11 +8317,11 @@
         }
       ],
       "slug": "imp-19",
-      "depth": 16,
+      "depth": 20,
       "currentness": "fresh",
       "filepath": "IMP-19.mdx",
-      "initialX": -305.7,
-      "initialY": 135.1
+      "initialX": -298,
+      "initialY": 138.1
     },
     "IMP-20": {
       "id": "IMP-20",
@@ -8236,11 +8380,11 @@
         }
       ],
       "slug": "imp-20",
-      "depth": 17,
+      "depth": 21,
       "currentness": "fresh",
       "filepath": "IMP-20.mdx",
-      "initialX": -335.3,
-      "initialY": 154.1
+      "initialX": -331.7,
+      "initialY": 154.3
     },
     "IND-01": {
       "id": "IND-01",
@@ -8277,8 +8421,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "IND-01.mdx",
-      "initialX": -447.8,
-      "initialY": 37.9
+      "initialX": -445.3,
+      "initialY": 37.2
     },
     "IND-02": {
       "id": "IND-02",
@@ -8317,8 +8461,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "IND-02.mdx",
-      "initialX": -450.3,
-      "initialY": -30.8
+      "initialX": -453.9,
+      "initialY": -31.8
     },
     "IND-03": {
       "id": "IND-03",
@@ -8352,7 +8496,7 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-03.mdx",
-      "initialX": -457.2,
+      "initialX": -457.6,
       "initialY": 23.6
     },
     "IND-04": {
@@ -8387,8 +8531,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-04.mdx",
-      "initialX": -406.9,
-      "initialY": 6.3
+      "initialX": -406.7,
+      "initialY": 4.8
     },
     "IND-05": {
       "id": "IND-05",
@@ -8428,8 +8572,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-05.mdx",
-      "initialX": -502.1,
-      "initialY": 22.2
+      "initialX": -501.3,
+      "initialY": 27.4
     },
     "IND-06": {
       "id": "IND-06",
@@ -8469,8 +8613,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-06.mdx",
-      "initialX": -427.3,
-      "initialY": -21.3
+      "initialX": -427.2,
+      "initialY": -19.1
     },
     "IND-07": {
       "id": "IND-07",
@@ -8509,8 +8653,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-07.mdx",
-      "initialX": -377.5,
-      "initialY": -27.4
+      "initialX": -371.5,
+      "initialY": -26.8
     },
     "IND-08": {
       "id": "IND-08",
@@ -8550,8 +8694,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-08.mdx",
-      "initialX": -429.1,
-      "initialY": 25.4
+      "initialX": -420.5,
+      "initialY": 30.2
     },
     "IND-09": {
       "id": "IND-09",
@@ -8592,8 +8736,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-09.mdx",
-      "initialX": -381.2,
-      "initialY": 31.3
+      "initialX": -372.7,
+      "initialY": 28.7
     },
     "IND-10": {
       "id": "IND-10",
@@ -8633,8 +8777,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "IND-10.mdx",
-      "initialX": -431.5,
-      "initialY": 51.7
+      "initialX": -425.7,
+      "initialY": 51.9
     },
     "IND-11": {
       "id": "IND-11",
@@ -8674,8 +8818,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-11.mdx",
-      "initialX": -495.6,
-      "initialY": 1.2
+      "initialX": -497.2,
+      "initialY": 3.5
     },
     "IND-12": {
       "id": "IND-12",
@@ -8714,8 +8858,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-12.mdx",
-      "initialX": -469,
-      "initialY": 57.2
+      "initialX": -464.4,
+      "initialY": 58
     },
     "IND-13": {
       "id": "IND-13",
@@ -8754,8 +8898,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "IND-13.mdx",
-      "initialX": -479.2,
-      "initialY": 24.3
+      "initialX": -479.6,
+      "initialY": 30.5
     },
     "IND-14": {
       "id": "IND-14",
@@ -8789,8 +8933,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-14.mdx",
-      "initialX": -498,
-      "initialY": -28.6
+      "initialX": -496,
+      "initialY": -25.8
     },
     "IND-15": {
       "id": "IND-15",
@@ -8829,8 +8973,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-15.mdx",
-      "initialX": -473,
-      "initialY": -25.9
+      "initialX": -476.3,
+      "initialY": -36.7
     },
     "IND-16": {
       "id": "IND-16",
@@ -8870,8 +9014,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-16.mdx",
-      "initialX": -402.3,
-      "initialY": -14.9
+      "initialX": -405.2,
+      "initialY": -26.8
     },
     "IND-17": {
       "id": "IND-17",
@@ -8910,8 +9054,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-17.mdx",
-      "initialX": -347.2,
-      "initialY": -25.1
+      "initialX": -347.1,
+      "initialY": -17.7
     },
     "IND-18": {
       "id": "IND-18",
@@ -8950,8 +9094,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "IND-18.mdx",
-      "initialX": -468.9,
-      "initialY": -45.2
+      "initialX": -467.4,
+      "initialY": -14.9
     },
     "IND-19": {
       "id": "IND-19",
@@ -8990,8 +9134,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-19.mdx",
-      "initialX": -412.5,
-      "initialY": -42.9
+      "initialX": -425.6,
+      "initialY": -48.5
     },
     "IND-20": {
       "id": "IND-20",
@@ -9030,8 +9174,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-20.mdx",
-      "initialX": -376.9,
-      "initialY": -2
+      "initialX": -377.8,
+      "initialY": 9.2
     },
     "IND-21": {
       "id": "IND-21",
@@ -9070,8 +9214,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "IND-21.mdx",
-      "initialX": -405.3,
-      "initialY": 37.6
+      "initialX": -398.6,
+      "initialY": 37.2
     },
     "IND-22": {
       "id": "IND-22",
@@ -9110,8 +9254,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-22.mdx",
-      "initialX": -349.7,
-      "initialY": 1.9
+      "initialX": -349.6,
+      "initialY": 5.5
     },
     "IND-23": {
       "id": "IND-23",
@@ -9150,8 +9294,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "IND-23.mdx",
-      "initialX": -366.7,
-      "initialY": 17.9
+      "initialX": -387.2,
+      "initialY": -15.9
     },
     "IND-24": {
       "id": "IND-24",
@@ -9190,8 +9334,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "IND-24.mdx",
-      "initialX": -448.8,
-      "initialY": -3.2
+      "initialX": -445,
+      "initialY": 2.3
     },
     "MRK-01": {
       "id": "MRK-01",
@@ -9223,8 +9367,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRK-01.mdx",
-      "initialX": -381.7,
-      "initialY": -193.5
+      "initialX": -398,
+      "initialY": -150.2
     },
     "MRK-02": {
       "id": "MRK-02",
@@ -9258,8 +9402,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-02.mdx",
-      "initialX": -445.9,
-      "initialY": -179.7
+      "initialX": -446.2,
+      "initialY": -172.9
     },
     "MRK-03": {
       "id": "MRK-03",
@@ -9293,8 +9437,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-03.mdx",
-      "initialX": -322.9,
-      "initialY": -164.2
+      "initialX": -325,
+      "initialY": -151.4
     },
     "MRK-04": {
       "id": "MRK-04",
@@ -9328,8 +9472,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRK-04.mdx",
-      "initialX": -330.4,
-      "initialY": -144.8
+      "initialX": -339.1,
+      "initialY": -137.4
     },
     "MRK-05": {
       "id": "MRK-05",
@@ -9363,8 +9507,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-05.mdx",
-      "initialX": -377.6,
-      "initialY": -171.9
+      "initialX": -381.3,
+      "initialY": -179.2
     },
     "MRK-06": {
       "id": "MRK-06",
@@ -9399,8 +9543,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-06.mdx",
-      "initialX": -389.1,
-      "initialY": -123.6
+      "initialX": -392.9,
+      "initialY": -125.7
     },
     "MRK-07": {
       "id": "MRK-07",
@@ -9434,8 +9578,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-07.mdx",
-      "initialX": -348.6,
-      "initialY": -158
+      "initialX": -351.8,
+      "initialY": -161.2
     },
     "MRK-08": {
       "id": "MRK-08",
@@ -9470,8 +9614,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-08.mdx",
-      "initialX": -367.5,
-      "initialY": -112.9
+      "initialX": -374.4,
+      "initialY": -112.4
     },
     "MRK-09": {
       "id": "MRK-09",
@@ -9506,8 +9650,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRK-09.mdx",
-      "initialX": -434.2,
-      "initialY": -164.9
+      "initialX": -443.8,
+      "initialY": -153.2
     },
     "MRK-10": {
       "id": "MRK-10",
@@ -9542,8 +9686,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRK-10.mdx",
-      "initialX": -415.3,
-      "initialY": -122.7
+      "initialX": -415,
+      "initialY": -124.4
     },
     "MRK-11": {
       "id": "MRK-11",
@@ -9577,8 +9721,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-11.mdx",
-      "initialX": -464.4,
-      "initialY": -156.6
+      "initialX": -467,
+      "initialY": -149.5
     },
     "MRK-12": {
       "id": "MRK-12",
@@ -9613,8 +9757,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-12.mdx",
-      "initialX": -429.1,
-      "initialY": -228.6
+      "initialX": -415.5,
+      "initialY": -212.3
     },
     "MRK-13": {
       "id": "MRK-13",
@@ -9649,8 +9793,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRK-13.mdx",
-      "initialX": -358.4,
-      "initialY": -202.9
+      "initialX": -354.4,
+      "initialY": -197.3
     },
     "MRK-14": {
       "id": "MRK-14",
@@ -9684,8 +9828,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRK-14.mdx",
-      "initialX": -406.6,
-      "initialY": -219.8
+      "initialX": -400.4,
+      "initialY": -225.7
     },
     "MRK-15": {
       "id": "MRK-15",
@@ -9720,8 +9864,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRK-15.mdx",
-      "initialX": -405.4,
-      "initialY": -167.6
+      "initialX": -410.3,
+      "initialY": -173.1
     },
     "MRK-16": {
       "id": "MRK-16",
@@ -9755,8 +9899,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-16.mdx",
-      "initialX": -461.6,
-      "initialY": -198.2
+      "initialX": -441.7,
+      "initialY": -225.7
     },
     "MRK-17": {
       "id": "MRK-17",
@@ -9791,8 +9935,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-17.mdx",
-      "initialX": -444.8,
-      "initialY": -139.1
+      "initialX": -464.6,
+      "initialY": -184.9
     },
     "MRK-18": {
       "id": "MRK-18",
@@ -9828,8 +9972,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-18.mdx",
-      "initialX": -408.8,
-      "initialY": -187.3
+      "initialX": -399.1,
+      "initialY": -195.1
     },
     "MRK-19": {
       "id": "MRK-19",
@@ -9863,8 +10007,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "MRK-19.mdx",
-      "initialX": -427.6,
-      "initialY": -200.4
+      "initialX": -429.7,
+      "initialY": -192.1
     },
     "MRK-20": {
       "id": "MRK-20",
@@ -9898,8 +10042,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "MRK-20.mdx",
-      "initialX": -384.6,
-      "initialY": -148.3
+      "initialX": -375.7,
+      "initialY": -153.5
     },
     "MRK-21": {
       "id": "MRK-21",
@@ -9934,8 +10078,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "MRK-21.mdx",
-      "initialX": -331.8,
-      "initialY": -122.3
+      "initialX": -328,
+      "initialY": -119.7
     },
     "MRK-22": {
       "id": "MRK-22",
@@ -9988,8 +10132,8 @@
       "depth": 10,
       "currentness": "future",
       "filepath": "MRK-22.mdx",
-      "initialX": -351.2,
-      "initialY": -179.4
+      "initialX": -339.3,
+      "initialY": -178.6
     },
     "MRM-01": {
       "id": "MRM-01",
@@ -10031,8 +10175,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "MRM-01.mdx",
-      "initialX": -272.5,
-      "initialY": -108
+      "initialX": -270.9,
+      "initialY": -107.1
     },
     "MRM-02": {
       "id": "MRM-02",
@@ -10069,8 +10213,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "MRM-02.mdx",
-      "initialX": -292.1,
-      "initialY": -285.2
+      "initialX": -277.2,
+      "initialY": -279
     },
     "MRM-03": {
       "id": "MRM-03",
@@ -10109,8 +10253,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "MRM-03.mdx",
-      "initialX": -333.3,
-      "initialY": -327.7
+      "initialX": -323.8,
+      "initialY": -328.2
     },
     "MRM-04": {
       "id": "MRM-04",
@@ -10154,8 +10298,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-04.mdx",
-      "initialX": -256.6,
-      "initialY": -207
+      "initialX": -254.2,
+      "initialY": -206.1
     },
     "MRM-05": {
       "id": "MRM-05",
@@ -10199,8 +10343,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "MRM-05.mdx",
-      "initialX": -278.7,
-      "initialY": -223.2
+      "initialX": -275.2,
+      "initialY": -221.2
     },
     "MRM-06": {
       "id": "MRM-06",
@@ -10239,8 +10383,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "MRM-06.mdx",
-      "initialX": -325.3,
-      "initialY": -278.3
+      "initialX": -317.1,
+      "initialY": -279.3
     },
     "MRM-07": {
       "id": "MRM-07",
@@ -10279,8 +10423,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "MRM-07.mdx",
-      "initialX": -289.3,
-      "initialY": -254.8
+      "initialX": -285.2,
+      "initialY": -252
     },
     "MRM-08": {
       "id": "MRM-08",
@@ -10320,8 +10464,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-08.mdx",
-      "initialX": -267.4,
-      "initialY": -289.7
+      "initialX": -256.6,
+      "initialY": -290.3
     },
     "MRM-09": {
       "id": "MRM-09",
@@ -10360,8 +10504,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-09.mdx",
-      "initialX": -239.1,
-      "initialY": -259.6
+      "initialX": -299.7,
+      "initialY": -318.1
     },
     "MRM-10": {
       "id": "MRM-10",
@@ -10400,8 +10544,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-10.mdx",
-      "initialX": -311,
-      "initialY": -338.6
+      "initialX": -310.2,
+      "initialY": -350.5
     },
     "MRM-11": {
       "id": "MRM-11",
@@ -10440,8 +10584,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "MRM-11.mdx",
-      "initialX": -293.5,
-      "initialY": -317.7
+      "initialX": -286.6,
+      "initialY": -333.4
     },
     "MRM-12": {
       "id": "MRM-12",
@@ -10480,8 +10624,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "MRM-12.mdx",
-      "initialX": -319.8,
-      "initialY": -301.5
+      "initialX": -341.6,
+      "initialY": -288.9
     },
     "MRM-13": {
       "id": "MRM-13",
@@ -10520,8 +10664,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-13.mdx",
-      "initialX": -323.1,
-      "initialY": -358.5
+      "initialX": -337.3,
+      "initialY": -355.4
     },
     "MRM-14": {
       "id": "MRM-14",
@@ -10555,8 +10699,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-14.mdx",
-      "initialX": -361.5,
-      "initialY": -318.6
+      "initialX": -360.6,
+      "initialY": -307.7
     },
     "MRM-15": {
       "id": "MRM-15",
@@ -10591,8 +10735,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "MRM-15.mdx",
-      "initialX": -349.5,
-      "initialY": -298.9
+      "initialX": -325.9,
+      "initialY": -300.8
     },
     "MRM-16": {
       "id": "MRM-16",
@@ -10632,8 +10776,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "MRM-16.mdx",
-      "initialX": -273,
-      "initialY": -328.2
+      "initialX": -302.1,
+      "initialY": -291.9
     },
     "MRM-17": {
       "id": "MRM-17",
@@ -10672,8 +10816,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "MRM-17.mdx",
-      "initialX": -359.3,
-      "initialY": -346.9
+      "initialX": -361.7,
+      "initialY": -335.4
     },
     "MRM-18": {
       "id": "MRM-18",
@@ -10718,8 +10862,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "MRM-18.mdx",
-      "initialX": -243.7,
-      "initialY": -241.4
+      "initialX": -237.3,
+      "initialY": -246.4
     },
     "OPR-01": {
       "id": "OPR-01",
@@ -10756,8 +10900,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "OPR-01.mdx",
-      "initialX": -192.4,
-      "initialY": -389.3
+      "initialX": -161.1,
+      "initialY": -414.7
     },
     "OPR-02": {
       "id": "OPR-02",
@@ -10791,8 +10935,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-02.mdx",
-      "initialX": -162.2,
-      "initialY": -445.9
+      "initialX": -207.2,
+      "initialY": -424.4
     },
     "OPR-03": {
       "id": "OPR-03",
@@ -10832,8 +10976,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-03.mdx",
-      "initialX": -137.1,
-      "initialY": -390.1
+      "initialX": -172.4,
+      "initialY": -360.3
     },
     "OPR-04": {
       "id": "OPR-04",
@@ -10872,8 +11016,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-04.mdx",
-      "initialX": -230.6,
-      "initialY": -408.8
+      "initialX": -225,
+      "initialY": -424.7
     },
     "OPR-05": {
       "id": "OPR-05",
@@ -10917,8 +11061,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-05.mdx",
-      "initialX": -183.3,
-      "initialY": -429.9
+      "initialX": -174,
+      "initialY": -434.8
     },
     "OPR-06": {
       "id": "OPR-06",
@@ -10958,8 +11102,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-06.mdx",
-      "initialX": -166.5,
-      "initialY": -385.6
+      "initialX": -161.7,
+      "initialY": -389.3
     },
     "OPR-07": {
       "id": "OPR-07",
@@ -10998,8 +11142,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-07.mdx",
-      "initialX": -213.4,
-      "initialY": -424
+      "initialX": -220.4,
+      "initialY": -399.8
     },
     "OPR-08": {
       "id": "OPR-08",
@@ -11039,8 +11183,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-08.mdx",
-      "initialX": -203.8,
-      "initialY": -345.6
+      "initialX": -215,
+      "initialY": -369.5
     },
     "OPR-09": {
       "id": "OPR-09",
@@ -11074,8 +11218,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "OPR-09.mdx",
-      "initialX": -210.9,
-      "initialY": -455.1
+      "initialX": -195.3,
+      "initialY": -457.6
     },
     "OPR-10": {
       "id": "OPR-10",
@@ -11118,8 +11262,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "OPR-10.mdx",
-      "initialX": -168.1,
-      "initialY": -345.1
+      "initialX": -143.6,
+      "initialY": -358.9
     },
     "OPR-11": {
       "id": "OPR-11",
@@ -11167,8 +11311,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "OPR-11.mdx",
-      "initialX": -130,
-      "initialY": -321.7
+      "initialX": -151.7,
+      "initialY": -303.9
     },
     "OPR-12": {
       "id": "OPR-12",
@@ -11214,8 +11358,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "OPR-12.mdx",
-      "initialX": -220.3,
-      "initialY": -379.4
+      "initialX": -184.1,
+      "initialY": -326.6
     },
     "OPR-13": {
       "id": "OPR-13",
@@ -11258,8 +11402,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-13.mdx",
-      "initialX": -177.3,
-      "initialY": -326.4
+      "initialX": -132.5,
+      "initialY": -331
     },
     "OPR-14": {
       "id": "OPR-14",
@@ -11298,8 +11442,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-14.mdx",
-      "initialX": -139.9,
-      "initialY": -352.2
+      "initialX": -131.3,
+      "initialY": -376.3
     },
     "OPR-15": {
       "id": "OPR-15",
@@ -11342,8 +11486,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "OPR-15.mdx",
-      "initialX": -157.2,
-      "initialY": -307
+      "initialX": -159.4,
+      "initialY": -331.9
     },
     "OPR-16": {
       "id": "OPR-16",
@@ -11382,8 +11526,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "OPR-16.mdx",
-      "initialX": -194.4,
-      "initialY": -362.3
+      "initialX": -205.5,
+      "initialY": -346
     },
     "OPR-17": {
       "id": "OPR-17",
@@ -11422,8 +11566,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-17.mdx",
-      "initialX": -174.6,
-      "initialY": -405.7
+      "initialX": -148.8,
+      "initialY": -433
     },
     "OPR-18": {
       "id": "OPR-18",
@@ -11466,8 +11610,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "OPR-18.mdx",
-      "initialX": -157,
-      "initialY": -424.6
+      "initialX": -194.2,
+      "initialY": -372.5
     },
     "OPR-19": {
       "id": "OPR-19",
@@ -11502,8 +11646,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "OPR-19.mdx",
-      "initialX": -147.5,
-      "initialY": -368.5
+      "initialX": -184.9,
+      "initialY": -396.7
     },
     "OPR-20": {
       "id": "OPR-20",
@@ -11549,8 +11693,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "OPR-20.mdx",
-      "initialX": -187.4,
-      "initialY": -453
+      "initialX": -176.9,
+      "initialY": -463.7
     },
     "QNT-01": {
       "id": "QNT-01",
@@ -11582,8 +11726,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-01.mdx",
-      "initialX": 15.5,
-      "initialY": -353
+      "initialX": 16.3,
+      "initialY": -357
     },
     "QNT-02": {
       "id": "QNT-02",
@@ -11622,8 +11766,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-02.mdx",
-      "initialX": 20.2,
-      "initialY": -413.5
+      "initialX": 14.1,
+      "initialY": -427.4
     },
     "QNT-03": {
       "id": "QNT-03",
@@ -11662,8 +11806,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-03.mdx",
-      "initialX": -1,
-      "initialY": -471.9
+      "initialX": -11.6,
+      "initialY": -479.6
     },
     "QNT-04": {
       "id": "QNT-04",
@@ -11698,8 +11842,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-04.mdx",
-      "initialX": -35.5,
-      "initialY": -402
+      "initialX": -35.3,
+      "initialY": -399.2
     },
     "QNT-05": {
       "id": "QNT-05",
@@ -11733,8 +11877,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-05.mdx",
-      "initialX": 21.7,
-      "initialY": -385.5
+      "initialX": 24.4,
+      "initialY": -402.9
     },
     "QNT-06": {
       "id": "QNT-06",
@@ -11769,8 +11913,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-06.mdx",
-      "initialX": -7.3,
-      "initialY": -352.2
+      "initialX": -5.6,
+      "initialY": -360.6
     },
     "QNT-07": {
       "id": "QNT-07",
@@ -11804,8 +11948,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-07.mdx",
-      "initialX": -37.3,
-      "initialY": -330.2
+      "initialX": -31.6,
+      "initialY": -324.2
     },
     "QNT-08": {
       "id": "QNT-08",
@@ -11839,8 +11983,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-08.mdx",
-      "initialX": 26.3,
-      "initialY": -472.2
+      "initialX": 12.7,
+      "initialY": -491.7
     },
     "QNT-09": {
       "id": "QNT-09",
@@ -11874,8 +12018,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-09.mdx",
-      "initialX": -31.1,
-      "initialY": -496.1
+      "initialX": -43.3,
+      "initialY": -495.7
     },
     "QNT-10": {
       "id": "QNT-10",
@@ -11909,8 +12053,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-10.mdx",
-      "initialX": 35.4,
-      "initialY": -429
+      "initialX": 30.8,
+      "initialY": -440.3
     },
     "QNT-11": {
       "id": "QNT-11",
@@ -11944,8 +12088,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-11.mdx",
-      "initialX": -3.4,
-      "initialY": -380.4
+      "initialX": 11.2,
+      "initialY": -381.2
     },
     "QNT-12": {
       "id": "QNT-12",
@@ -11979,8 +12123,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-12.mdx",
-      "initialX": -9.7,
-      "initialY": -509.1
+      "initialX": 42.2,
+      "initialY": -463.4
     },
     "QNT-13": {
       "id": "QNT-13",
@@ -12012,8 +12156,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-13.mdx",
-      "initialX": 1.6,
-      "initialY": -408.5
+      "initialX": -5.5,
+      "initialY": -398.9
     },
     "QNT-14": {
       "id": "QNT-14",
@@ -12052,8 +12196,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "QNT-14.mdx",
-      "initialX": -43.4,
-      "initialY": -433.4
+      "initialX": -45.9,
+      "initialY": -446.1
     },
     "QNT-15": {
       "id": "QNT-15",
@@ -12088,8 +12232,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-15.mdx",
-      "initialX": -29.7,
-      "initialY": -379.2
+      "initialX": -47,
+      "initialY": -379.7
     },
     "QNT-16": {
       "id": "QNT-16",
@@ -12124,8 +12268,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-16.mdx",
-      "initialX": 9.2,
-      "initialY": -442
+      "initialX": -5,
+      "initialY": -418.4
     },
     "QNT-17": {
       "id": "QNT-17",
@@ -12159,8 +12303,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-17.mdx",
-      "initialX": -42.1,
-      "initialY": -468.8
+      "initialX": -32,
+      "initialY": -468.2
     },
     "QNT-18": {
       "id": "QNT-18",
@@ -12197,8 +12341,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-18.mdx",
-      "initialX": 13.9,
-      "initialY": -491.4
+      "initialX": -12.4,
+      "initialY": -505.5
     },
     "QNT-19": {
       "id": "QNT-19",
@@ -12238,7 +12382,7 @@
       "currentness": "durable",
       "filepath": "QNT-19.mdx",
       "initialX": -59.5,
-      "initialY": -479.3
+      "initialY": -473
     },
     "QNT-20": {
       "id": "QNT-20",
@@ -12273,8 +12417,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "QNT-20.mdx",
-      "initialX": -20.3,
-      "initialY": -461.5
+      "initialX": 5.5,
+      "initialY": -461.6
     },
     "QNT-21": {
       "id": "QNT-21",
@@ -12315,8 +12459,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "QNT-21.mdx",
-      "initialX": -13.1,
-      "initialY": -426.9
+      "initialX": -19.1,
+      "initialY": -437.2
     },
     "QNT-22": {
       "id": "QNT-22",
@@ -12357,8 +12501,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "QNT-22.mdx",
-      "initialX": -63.7,
-      "initialY": -417.3
+      "initialX": -54.3,
+      "initialY": -413
     },
     "QNT-23": {
       "id": "QNT-23",
@@ -12397,8 +12541,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-23.mdx",
-      "initialX": -53.9,
-      "initialY": -372.4
+      "initialX": -52.2,
+      "initialY": -359.5
     },
     "QNT-24": {
       "id": "QNT-24",
@@ -12437,8 +12581,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "QNT-24.mdx",
-      "initialX": -60.1,
-      "initialY": -443
+      "initialX": -63.1,
+      "initialY": -430.9
     },
     "QNT-25": {
       "id": "QNT-25",
@@ -12478,8 +12622,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "QNT-25.mdx",
-      "initialX": -37.5,
-      "initialY": -357.6
+      "initialX": -31.7,
+      "initialY": -351.3
     },
     "QNT-26": {
       "id": "QNT-26",
@@ -12516,8 +12660,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "QNT-26.mdx",
-      "initialX": -10.4,
-      "initialY": -324.8
+      "initialX": -5.6,
+      "initialY": -328.5
     },
     "TEC-01": {
       "id": "TEC-01",
@@ -12549,8 +12693,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-01.mdx",
-      "initialX": 111.8,
-      "initialY": -378.2
+      "initialX": 110.5,
+      "initialY": -379.3
     },
     "TEC-02": {
       "id": "TEC-02",
@@ -12594,8 +12738,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-02.mdx",
-      "initialX": 156.4,
-      "initialY": -414.8
+      "initialX": 148.8,
+      "initialY": -419.8
     },
     "TEC-03": {
       "id": "TEC-03",
@@ -12634,8 +12778,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-03.mdx",
-      "initialX": 211.2,
-      "initialY": -423.9
+      "initialX": 208.3,
+      "initialY": -428.1
     },
     "TEC-04": {
       "id": "TEC-04",
@@ -12670,8 +12814,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-04.mdx",
-      "initialX": 115.8,
-      "initialY": -435.2
+      "initialX": 170.4,
+      "initialY": -361.3
     },
     "TEC-05": {
       "id": "TEC-05",
@@ -12715,8 +12859,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-05.mdx",
-      "initialX": 107.7,
-      "initialY": -406.3
+      "initialX": 106.2,
+      "initialY": -405.2
     },
     "TEC-06": {
       "id": "TEC-06",
@@ -12750,8 +12894,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-06.mdx",
-      "initialX": 165.5,
-      "initialY": -471.5
+      "initialX": 161.7,
+      "initialY": -474.2
     },
     "TEC-07": {
       "id": "TEC-07",
@@ -12785,8 +12929,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-07.mdx",
-      "initialX": 155,
-      "initialY": -364.5
+      "initialX": 149,
+      "initialY": -358.4
     },
     "TEC-08": {
       "id": "TEC-08",
@@ -12820,8 +12964,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-08.mdx",
-      "initialX": 185.4,
-      "initialY": -463.7
+      "initialX": 201.9,
+      "initialY": -450.1
     },
     "TEC-09": {
       "id": "TEC-09",
@@ -12855,8 +12999,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-09.mdx",
-      "initialX": 144.2,
-      "initialY": -467.8
+      "initialX": 134.3,
+      "initialY": -470.1
     },
     "TEC-10": {
       "id": "TEC-10",
@@ -12890,8 +13034,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-10.mdx",
-      "initialX": 203.5,
-      "initialY": -449.3
+      "initialX": 183.3,
+      "initialY": -466
     },
     "TEC-11": {
       "id": "TEC-11",
@@ -12925,8 +13069,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-11.mdx",
-      "initialX": 130.7,
-      "initialY": -366.7
+      "initialX": 128.6,
+      "initialY": -367.9
     },
     "TEC-12": {
       "id": "TEC-12",
@@ -12961,8 +13105,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TEC-12.mdx",
-      "initialX": 186.2,
-      "initialY": -372.8
+      "initialX": 188.6,
+      "initialY": -379.8
     },
     "TEC-13": {
       "id": "TEC-13",
@@ -12996,8 +13140,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-13.mdx",
-      "initialX": 133.8,
-      "initialY": -314.3
+      "initialX": 123.3,
+      "initialY": -307.9
     },
     "TEC-14": {
       "id": "TEC-14",
@@ -13031,8 +13175,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-14.mdx",
-      "initialX": 110.9,
-      "initialY": -309.7
+      "initialX": 107.8,
+      "initialY": -320.2
     },
     "TEC-15": {
       "id": "TEC-15",
@@ -13064,8 +13208,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-15.mdx",
-      "initialX": 168.9,
-      "initialY": -348.6
+      "initialX": 167,
+      "initialY": -398.8
     },
     "TEC-16": {
       "id": "TEC-16",
@@ -13097,8 +13241,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-16.mdx",
-      "initialX": 139.6,
-      "initialY": -397.7
+      "initialX": 142.4,
+      "initialY": -391.4
     },
     "TEC-17": {
       "id": "TEC-17",
@@ -13137,8 +13281,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-17.mdx",
-      "initialX": 147.8,
-      "initialY": -335.5
+      "initialX": 151.7,
+      "initialY": -327.1
     },
     "TEC-18": {
       "id": "TEC-18",
@@ -13172,8 +13316,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-18.mdx",
-      "initialX": 132,
-      "initialY": -450.9
+      "initialX": 122.9,
+      "initialY": -438.8
     },
     "TEC-19": {
       "id": "TEC-19",
@@ -13207,8 +13351,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-19.mdx",
-      "initialX": 123.4,
-      "initialY": -338.9
+      "initialX": 131.4,
+      "initialY": -333.7
     },
     "TEC-20": {
       "id": "TEC-20",
@@ -13242,8 +13386,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-20.mdx",
-      "initialX": 168.3,
-      "initialY": -441.1
+      "initialX": 177.2,
+      "initialY": -436
     },
     "TEC-21": {
       "id": "TEC-21",
@@ -13277,8 +13421,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-21.mdx",
-      "initialX": 102.6,
-      "initialY": -351.8
+      "initialX": 106.3,
+      "initialY": -349.2
     },
     "TEC-22": {
       "id": "TEC-22",
@@ -13312,8 +13456,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TEC-22.mdx",
-      "initialX": 187.7,
-      "initialY": -422
+      "initialX": 150.4,
+      "initialY": -446.8
     },
     "TEC-23": {
       "id": "TEC-23",
@@ -13348,8 +13492,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TEC-23.mdx",
-      "initialX": 88,
-      "initialY": -325
+      "initialX": 86.3,
+      "initialY": -324
     },
     "TEC-24": {
       "id": "TEC-24",
@@ -13381,8 +13525,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TEC-24.mdx",
-      "initialX": 177.1,
-      "initialY": -397.4
+      "initialX": 188.9,
+      "initialY": -409.9
     },
     "TLM-01": {
       "id": "TLM-01",
@@ -13424,8 +13568,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TLM-01.mdx",
-      "initialX": 313.1,
-      "initialY": -260.1
+      "initialX": 310.9,
+      "initialY": -260
     },
     "TLM-02": {
       "id": "TLM-02",
@@ -13472,8 +13616,8 @@
       "depth": 1,
       "currentness": "fresh",
       "filepath": "TLM-02.mdx",
-      "initialX": 256.6,
-      "initialY": -260.7
+      "initialX": 246.5,
+      "initialY": -257.2
     },
     "TLM-03": {
       "id": "TLM-03",
@@ -13512,8 +13656,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TLM-03.mdx",
-      "initialX": 274.2,
-      "initialY": -242.6
+      "initialX": 267.4,
+      "initialY": -243
     },
     "TLM-04": {
       "id": "TLM-04",
@@ -13552,8 +13696,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-04.mdx",
-      "initialX": 277.4,
-      "initialY": -292.2
+      "initialX": 290.1,
+      "initialY": -281.7
     },
     "TLM-05": {
       "id": "TLM-05",
@@ -13592,8 +13736,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-05.mdx",
-      "initialX": 319.4,
-      "initialY": -340.3
+      "initialX": 303,
+      "initialY": -346.7
     },
     "TLM-06": {
       "id": "TLM-06",
@@ -13632,8 +13776,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-06.mdx",
-      "initialX": 364.5,
-      "initialY": -298.8
+      "initialX": 355.3,
+      "initialY": -321.5
     },
     "TLM-07": {
       "id": "TLM-07",
@@ -13672,8 +13816,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-07.mdx",
-      "initialX": 293.7,
-      "initialY": -350.9
+      "initialX": 252.7,
+      "initialY": -314.4
     },
     "TLM-08": {
       "id": "TLM-08",
@@ -13726,8 +13870,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-08.mdx",
-      "initialX": 249.1,
-      "initialY": -305.3
+      "initialX": 223.7,
+      "initialY": -275.6
     },
     "TLM-09": {
       "id": "TLM-09",
@@ -13767,8 +13911,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-09.mdx",
-      "initialX": 237,
-      "initialY": -243.7
+      "initialX": 248.8,
+      "initialY": -333.5
     },
     "TLM-10": {
       "id": "TLM-10",
@@ -13822,8 +13966,8 @@
       "depth": 6,
       "currentness": "fresh",
       "filepath": "TLM-10.mdx",
-      "initialX": 292.8,
-      "initialY": -269.9
+      "initialX": 270.3,
+      "initialY": -288.3
     },
     "TLM-11": {
       "id": "TLM-11",
@@ -13872,8 +14016,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-11.mdx",
-      "initialX": 344.3,
-      "initialY": -300.7
+      "initialX": 341.2,
+      "initialY": -297.8
     },
     "TLM-12": {
       "id": "TLM-12",
@@ -13913,8 +14057,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TLM-12.mdx",
-      "initialX": 296,
-      "initialY": -307.2
+      "initialX": 316.5,
+      "initialY": -308.8
     },
     "TLM-13": {
       "id": "TLM-13",
@@ -13966,8 +14110,8 @@
       "depth": 3,
       "currentness": "fresh",
       "filepath": "TLM-13.mdx",
-      "initialX": 369.4,
-      "initialY": -355.7
+      "initialX": 331.7,
+      "initialY": -394.6
     },
     "TLM-14": {
       "id": "TLM-14",
@@ -14020,8 +14164,8 @@
       "depth": 4,
       "currentness": "fresh",
       "filepath": "TLM-14.mdx",
-      "initialX": 331.5,
-      "initialY": -357.4
+      "initialX": 341,
+      "initialY": -357.6
     },
     "TLM-15": {
       "id": "TLM-15",
@@ -14074,8 +14218,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-15.mdx",
-      "initialX": 332.3,
-      "initialY": -284.7
+      "initialX": 367.5,
+      "initialY": -295.1
     },
     "TLM-16": {
       "id": "TLM-16",
@@ -14115,8 +14259,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-16.mdx",
-      "initialX": 264.2,
-      "initialY": -348.5
+      "initialX": 273.6,
+      "initialY": -332.5
     },
     "TLM-17": {
       "id": "TLM-17",
@@ -14157,8 +14301,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-17.mdx",
-      "initialX": 322.4,
-      "initialY": -374.1
+      "initialX": 319.3,
+      "initialY": -364.5
     },
     "TLM-18": {
       "id": "TLM-18",
@@ -14205,8 +14349,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TLM-18.mdx",
-      "initialX": 318.9,
-      "initialY": -311.5
+      "initialX": 298.5,
+      "initialY": -309.5
     },
     "TLM-19": {
       "id": "TLM-19",
@@ -14261,8 +14405,8 @@
       "depth": 8,
       "currentness": "fresh",
       "filepath": "TLM-19.mdx",
-      "initialX": 370.6,
-      "initialY": -330.5
+      "initialX": 377.9,
+      "initialY": -337.6
     },
     "TLM-20": {
       "id": "TLM-20",
@@ -14308,8 +14452,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TLM-20.mdx",
-      "initialX": 241.9,
-      "initialY": -275.2
+      "initialX": 250.9,
+      "initialY": -283.4
     },
     "TLM-21": {
       "id": "TLM-21",
@@ -14348,8 +14492,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TLM-21.mdx",
-      "initialX": 220.1,
-      "initialY": -216.1
+      "initialX": 207.4,
+      "initialY": -224.3
     },
     "TLM-22": {
       "id": "TLM-22",
@@ -14388,8 +14532,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TLM-22.mdx",
-      "initialX": 232.6,
-      "initialY": -291.4
+      "initialX": 207.3,
+      "initialY": -273
     },
     "TLM-23": {
       "id": "TLM-23",
@@ -14429,8 +14573,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-23.mdx",
-      "initialX": 205.1,
-      "initialY": -235.2
+      "initialX": 224.9,
+      "initialY": -228.8
     },
     "TLM-24": {
       "id": "TLM-24",
@@ -14476,8 +14620,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TLM-24.mdx",
-      "initialX": 210,
-      "initialY": -260.1
+      "initialX": 245.6,
+      "initialY": -225.3
     },
     "TLM-25": {
       "id": "TLM-25",
@@ -14519,8 +14663,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-25.mdx",
-      "initialX": 262.8,
-      "initialY": -224.7
+      "initialX": 283.7,
+      "initialY": -235.6
     },
     "TLM-26": {
       "id": "TLM-26",
@@ -14561,8 +14705,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TLM-26.mdx",
-      "initialX": 340.6,
-      "initialY": -327.8
+      "initialX": 358.1,
+      "initialY": -344.6
     },
     "TLM-27": {
       "id": "TLM-27",
@@ -14603,8 +14747,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TLM-27.mdx",
-      "initialX": 279.8,
-      "initialY": -369.8
+      "initialX": 280.4,
+      "initialY": -350.2
     },
     "TLM-28": {
       "id": "TLM-28",
@@ -14657,8 +14801,8 @@
       "depth": 5,
       "currentness": "fresh",
       "filepath": "TLM-28.mdx",
-      "initialX": 305.9,
-      "initialY": -392
+      "initialX": 285.5,
+      "initialY": -376.4
     },
     "TLM-29": {
       "id": "TLM-29",
@@ -14719,8 +14863,8 @@
       "depth": 9,
       "currentness": "fresh",
       "filepath": "TLM-29.mdx",
-      "initialX": 295.9,
-      "initialY": -327.8
+      "initialX": 313.7,
+      "initialY": -327
     },
     "TLM-30": {
       "id": "TLM-30",
@@ -14776,8 +14920,8 @@
       "depth": 9,
       "currentness": "durable",
       "filepath": "TLM-30.mdx",
-      "initialX": 273.7,
-      "initialY": -321.5
+      "initialX": 317.7,
+      "initialY": -291.9
     },
     "TRD-01": {
       "id": "TRD-01",
@@ -14809,8 +14953,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-01.mdx",
-      "initialX": 338.1,
-      "initialY": -129.1
+      "initialX": 334,
+      "initialY": -128.3
     },
     "TRD-02": {
       "id": "TRD-02",
@@ -14844,8 +14988,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-02.mdx",
-      "initialX": 284.7,
-      "initialY": -136.2
+      "initialX": 274.6,
+      "initialY": -127.1
     },
     "TRD-03": {
       "id": "TRD-03",
@@ -14879,8 +15023,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-03.mdx",
-      "initialX": 325.2,
-      "initialY": -170.8
+      "initialX": 318.2,
+      "initialY": -173.2
     },
     "TRD-04": {
       "id": "TRD-04",
@@ -14920,8 +15064,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-04.mdx",
-      "initialX": 325.7,
-      "initialY": -106.7
+      "initialX": 309.7,
+      "initialY": -132.6
     },
     "TRD-05": {
       "id": "TRD-05",
@@ -14955,8 +15099,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-05.mdx",
-      "initialX": 368.4,
-      "initialY": -98.1
+      "initialX": 350.7,
+      "initialY": -97.7
     },
     "TRD-06": {
       "id": "TRD-06",
@@ -14990,8 +15134,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-06.mdx",
-      "initialX": 346.7,
-      "initialY": -161.6
+      "initialX": 368,
+      "initialY": -113.4
     },
     "TRD-07": {
       "id": "TRD-07",
@@ -15026,8 +15170,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-07.mdx",
-      "initialX": 319.5,
-      "initialY": -149.4
+      "initialX": 355.3,
+      "initialY": -165.9
     },
     "TRD-08": {
       "id": "TRD-08",
@@ -15061,8 +15205,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-08.mdx",
-      "initialX": 296.8,
-      "initialY": -98.6
+      "initialX": 319.7,
+      "initialY": -107.1
     },
     "TRD-09": {
       "id": "TRD-09",
@@ -15097,8 +15241,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-09.mdx",
-      "initialX": 315.6,
-      "initialY": -88
+      "initialX": 309.6,
+      "initialY": -87.4
     },
     "TRD-10": {
       "id": "TRD-10",
@@ -15143,8 +15287,8 @@
       "depth": 0,
       "currentness": "fresh",
       "filepath": "TRD-10.mdx",
-      "initialX": 437.2,
-      "initialY": -227.2
+      "initialX": 465.1,
+      "initialY": -202
     },
     "TRD-11": {
       "id": "TRD-11",
@@ -15183,8 +15327,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-11.mdx",
-      "initialX": 383.1,
-      "initialY": -209.1
+      "initialX": 436,
+      "initialY": -236.3
     },
     "TRD-12": {
       "id": "TRD-12",
@@ -15227,8 +15371,8 @@
       "depth": 2,
       "currentness": "fresh",
       "filepath": "TRD-12.mdx",
-      "initialX": 436.4,
-      "initialY": -174.6
+      "initialX": 404.3,
+      "initialY": -194.7
     },
     "TRD-13": {
       "id": "TRD-13",
@@ -15260,8 +15404,8 @@
       "depth": 0,
       "currentness": "durable",
       "filepath": "TRD-13.mdx",
-      "initialX": 467.7,
-      "initialY": -140.8
+      "initialX": 468,
+      "initialY": -155.6
     },
     "TRD-14": {
       "id": "TRD-14",
@@ -15295,8 +15439,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-14.mdx",
-      "initialX": 416.4,
-      "initialY": -102.8
+      "initialX": 440.3,
+      "initialY": -112.1
     },
     "TRD-15": {
       "id": "TRD-15",
@@ -15330,8 +15474,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-15.mdx",
-      "initialX": 443.6,
-      "initialY": -197.1
+      "initialX": 434.1,
+      "initialY": -202.1
     },
     "TRD-16": {
       "id": "TRD-16",
@@ -15370,8 +15514,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-16.mdx",
-      "initialX": 379.4,
-      "initialY": -167.2
+      "initialX": 382.1,
+      "initialY": -162.4
     },
     "TRD-17": {
       "id": "TRD-17",
@@ -15411,8 +15555,8 @@
       "depth": 3,
       "currentness": "durable",
       "filepath": "TRD-17.mdx",
-      "initialX": 404.9,
-      "initialY": -223.7
+      "initialX": 377.9,
+      "initialY": -213.8
     },
     "TRD-18": {
       "id": "TRD-18",
@@ -15447,8 +15591,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-18.mdx",
-      "initialX": 394.1,
-      "initialY": -145.3
+      "initialX": 410.6,
+      "initialY": -144.4
     },
     "TRD-19": {
       "id": "TRD-19",
@@ -15495,8 +15639,8 @@
       "depth": 7,
       "currentness": "fresh",
       "filepath": "TRD-19.mdx",
-      "initialX": 452,
-      "initialY": -119.7
+      "initialX": 468.3,
+      "initialY": -131.6
     },
     "TRD-20": {
       "id": "TRD-20",
@@ -15531,8 +15675,8 @@
       "depth": 8,
       "currentness": "durable",
       "filepath": "TRD-20.mdx",
-      "initialX": 461.1,
-      "initialY": -179.8
+      "initialX": 451.8,
+      "initialY": -182.3
     },
     "TRD-21": {
       "id": "TRD-21",
@@ -15567,8 +15711,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-21.mdx",
-      "initialX": 408.6,
-      "initialY": -170.6
+      "initialX": 406.6,
+      "initialY": -167.4
     },
     "TRD-22": {
       "id": "TRD-22",
@@ -15602,8 +15746,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-22.mdx",
-      "initialX": 388.5,
-      "initialY": -111.9
+      "initialX": 393.8,
+      "initialY": -104.7
     },
     "TRD-23": {
       "id": "TRD-23",
@@ -15637,8 +15781,8 @@
       "depth": 1,
       "currentness": "durable",
       "filepath": "TRD-23.mdx",
-      "initialX": 414.7,
-      "initialY": -127.5
+      "initialX": 411.6,
+      "initialY": -120.7
     },
     "TRD-24": {
       "id": "TRD-24",
@@ -15677,8 +15821,8 @@
       "depth": 2,
       "currentness": "durable",
       "filepath": "TRD-24.mdx",
-      "initialX": 363.2,
-      "initialY": -122.9
+      "initialX": 337.4,
+      "initialY": -148.7
     },
     "TRD-25": {
       "id": "TRD-25",
@@ -15736,8 +15880,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-25.mdx",
-      "initialX": 379.3,
-      "initialY": -187.4
+      "initialX": 382.5,
+      "initialY": -186.6
     },
     "TRD-26": {
       "id": "TRD-26",
@@ -15777,8 +15921,8 @@
       "depth": 4,
       "currentness": "durable",
       "filepath": "TRD-26.mdx",
-      "initialX": 359.8,
-      "initialY": -143.1
+      "initialX": 361,
+      "initialY": -138.1
     },
     "TRD-27": {
       "id": "TRD-27",
@@ -15812,8 +15956,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-27.mdx",
-      "initialX": 419.5,
-      "initialY": -150.9
+      "initialX": 433.4,
+      "initialY": -140.4
     },
     "TRD-28": {
       "id": "TRD-28",
@@ -15852,8 +15996,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-28.mdx",
-      "initialX": 348.2,
-      "initialY": -194.7
+      "initialX": 344.9,
+      "initialY": -190
     },
     "TRD-29": {
       "id": "TRD-29",
@@ -15903,8 +16047,8 @@
       "depth": 5,
       "currentness": "durable",
       "filepath": "TRD-29.mdx",
-      "initialX": 410.6,
-      "initialY": -192.2
+      "initialX": 428.2,
+      "initialY": -168.3
     },
     "TRD-30": {
       "id": "TRD-30",
@@ -15948,8 +16092,8 @@
       "depth": 6,
       "currentness": "durable",
       "filepath": "TRD-30.mdx",
-      "initialX": 471,
-      "initialY": -161.5
+      "initialX": 417,
+      "initialY": -221.2
     },
     "TRD-31": {
       "id": "TRD-31",
@@ -15989,8 +16133,8 @@
       "depth": 7,
       "currentness": "durable",
       "filepath": "TRD-31.mdx",
-      "initialX": 464.2,
-      "initialY": -213.5
+      "initialX": 477.2,
+      "initialY": -184.6
     },
     "TRD-32": {
       "id": "TRD-32",
@@ -16048,8 +16192,8 @@
       "depth": 3,
       "currentness": "future",
       "filepath": "TRD-32.mdx",
-      "initialX": 439.2,
-      "initialY": -144.3
+      "initialX": 386.9,
+      "initialY": -134.1
     }
   },
   "reverseIndex": {
@@ -16331,59 +16475,66 @@
       "CR-03",
       "CR-04",
       "CR-05",
-      "CR-19",
-      "CR-22"
+      "CR-07",
+      "CR-19"
     ],
     "CR-02": [
       "CR-03",
       "CR-05",
       "CR-06",
-      "CR-16",
+      "CR-07",
+      "CR-08",
       "CR-19",
       "IMP-06"
     ],
     "CR-03": [
       "CR-04",
-      "CR-11",
-      "CR-15",
-      "CR-16",
-      "CR-24",
+      "CR-05",
+      "CR-13",
+      "CR-17",
+      "CR-23",
       "IMP-06",
       "IMP-10"
     ],
     "CR-04": [
-      "CR-24",
+      "CR-05",
+      "CR-23",
       "IMP-09",
       "IMP-10"
     ],
     "CR-05": [
       "CR-06",
       "CR-07",
+      "CR-09",
+      "CR-20",
+      "CR-26",
+      "IMP-10",
+      "IMP-12"
+    ],
+    "CR-06": [
+      "CR-16"
+    ],
+    "CR-07": [
       "CR-08",
       "CR-09",
       "CR-10",
       "CR-11",
       "CR-12",
+      "CR-13",
       "CR-14",
-      "CR-15",
-      "IMP-10",
-      "IMP-12"
-    ],
-    "CR-06": [
-      "CR-07",
-      "CR-09",
-      "CR-23"
-    ],
-    "CR-07": [
-      "CR-08"
+      "CR-16",
+      "CR-17",
+      "CR-26"
     ],
     "CR-08": [
       "CR-09",
-      "CR-10"
+      "CR-10",
+      "CR-22"
     ],
     "CR-09": [
       "CR-10",
-      "CR-11"
+      "CR-11",
+      "CR-12"
     ],
     "CR-10": [
       "IMP-01",
@@ -16394,33 +16545,34 @@
       "IMP-13"
     ],
     "CR-11": [
+      "CR-12",
       "IMP-05",
       "IMP-08",
       "IMP-13"
     ],
     "CR-12": [
       "CR-13",
-      "CR-17",
-      "CR-19",
-      "CR-20",
-      "CR-21",
-      "CR-22",
-      "CR-25",
       "IMP-14",
       "IMP-15"
     ],
     "CR-13": [
-      "CR-21",
+      "CR-16",
       "IMP-14"
     ],
     "CR-14": [
-      "CR-17",
+      "CR-15",
+      "CR-18",
+      "CR-19",
+      "CR-20",
+      "CR-21",
+      "CR-24",
       "IMP-14"
     ],
     "CR-15": [
-      "CR-17"
+      "CR-21"
     ],
     "CR-16": [
+      "CR-18",
       "IMP-01",
       "IMP-03",
       "IMP-05",
@@ -16428,7 +16580,6 @@
     ],
     "CR-17": [
       "CR-18",
-      "CR-26",
       "IMP-01",
       "IMP-02",
       "IMP-03",
@@ -16436,22 +16587,25 @@
       "IMP-15"
     ],
     "CR-18": [
-      "CR-24",
+      "CR-23",
       "CR-25",
       "CR-26"
     ],
     "CR-19": [
       "CR-20",
       "CR-21",
-      "CR-23"
+      "CR-22"
     ],
     "CR-20": [
-      "CR-22",
-      "CR-23"
+      "CR-22"
     ],
     "CR-21": [],
     "CR-22": [],
-    "CR-23": [],
+    "CR-23": [
+      "CR-24",
+      "CR-25",
+      "CR-26"
+    ],
     "CR-24": [
       "CR-25",
       "CR-26"
@@ -18087,7 +18241,7 @@
             },
             {
               "id": "CR-02",
-              "title": "Facility, account and product",
+              "title": "Product, facility and account",
               "type": "concept",
               "status": "draft",
               "verified": false
@@ -18101,56 +18255,56 @@
             },
             {
               "id": "CR-04",
-              "title": "Group and connected-party exposure",
+              "title": "Connected counterparties and economic groups",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-05",
-              "title": "Default: event before metric",
-              "type": "concept",
+              "title": "Underwriting and the credit decision",
+              "type": "procedure",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-06",
-              "title": "Days past due, arrears and delinquency buckets",
+              "title": "Collateral, security and guarantees",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-07",
-              "title": "The ninety-day backstop",
-              "type": "reference",
+              "title": "Default: defining the event",
+              "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-08",
-              "title": "Unlikeliness to pay",
+              "title": "Arrears, days past due and delinquency states",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-09",
-              "title": "Cure and re-default",
+              "title": "Unlikeliness to pay",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-10",
-              "title": "Restructuring and forbearance",
-              "type": "concept",
+              "title": "Past-due backstops and the 90-day rule",
+              "type": "reference",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-11",
-              "title": "Write-off: accounting removal versus economic loss",
+              "title": "Restructuring, forbearance and distressed concessions",
               "type": "concept",
               "status": "draft",
               "verified": false
@@ -18162,49 +18316,49 @@
           "atoms": [
             {
               "id": "CR-12",
+              "title": "Cure, probation and re-default",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-13",
+              "title": "Write-off, recovery and economic loss",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
+              "id": "CR-14",
               "title": "Probability of default",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
-              "id": "CR-13",
+              "id": "CR-15",
               "title": "Point-in-time and through-the-cycle PD",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
-              "id": "CR-14",
+              "id": "CR-16",
               "title": "Loss given default and recovery rate",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
-              "id": "CR-15",
+              "id": "CR-17",
               "title": "Exposure at default and credit conversion factors",
               "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
-              "id": "CR-16",
-              "title": "Effective maturity",
-              "type": "reference",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "CR-17",
-              "title": "Expected loss as PD × LGD × EAD",
-              "type": "mechanism",
-              "status": "draft",
-              "verified": false
-            },
-            {
               "id": "CR-18",
-              "title": "Unexpected loss and capital",
+              "title": "Expected loss: PD × LGD × EAD",
               "type": "mechanism",
               "status": "draft",
               "verified": false
@@ -18223,7 +18377,7 @@
             },
             {
               "id": "CR-20",
-              "title": "Application and behavioural scorecards",
+              "title": "Application, behavioural and bureau credit data",
               "type": "mechanism",
               "status": "draft",
               "verified": false
@@ -18237,14 +18391,14 @@
             },
             {
               "id": "CR-22",
-              "title": "Bureau data",
-              "type": "reference",
+              "title": "Vintage analysis and roll rates",
+              "type": "mechanism",
               "status": "draft",
               "verified": false
             },
             {
               "id": "CR-23",
-              "title": "Vintage analysis and roll rates",
+              "title": "Concentration and diversification",
               "type": "mechanism",
               "status": "draft",
               "verified": false
@@ -18256,21 +18410,21 @@
           "atoms": [
             {
               "id": "CR-24",
-              "title": "Concentration: single-name and sector risk",
-              "type": "mechanism",
-              "status": "draft",
-              "verified": false
-            },
-            {
-              "id": "CR-25",
               "title": "Correlation and systematic credit risk",
               "type": "concept",
               "status": "draft",
               "verified": false
             },
             {
+              "id": "CR-25",
+              "title": "Unexpected loss and capital",
+              "type": "mechanism",
+              "status": "draft",
+              "verified": false
+            },
+            {
               "id": "CR-26",
-              "title": "The credit-loss architecture: expected loss as cost, unexpected loss as capital risk",
+              "title": "The credit-loss architecture",
               "type": "concept",
               "status": "draft",
               "verified": false
@@ -23761,5 +23915,5 @@
       "message": "Atom \"TRD-32\" is unverified (draft). Displays development banner."
     }
   ],
-  "generatedAt": "2026-08-29T12:27:05.642Z"
+  "generatedAt": "2026-08-31T03:52:29.223Z"
 }
