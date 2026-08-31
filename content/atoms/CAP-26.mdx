@@ -1,105 +1,123 @@
 ---
 id: CAP-26
-title: UK Basel 3.1 and the SDDT Regime
-type: reference
+title: Stress Testing and Capital Transmission
+type: procedure
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  **Perishable — final rules, pending commencement.** The PRA’s Basel 3.1
-  package takes effect on **1 January 2027**; the FRTB Internal Models Approach
-  is delayed separately to **1 January 2028**. Small Domestic Deposit Takers
-  enter the PRA’s simplified capital regime on **1 January 2027**, creating a
-  deliberately different domestic framework for eligible smaller firms.
+  A capital stress test is a causal model, not a haircut applied to today's
+  ratio. Scenario shocks change defaults, market values, revenues, expenses and
+  balance-sheet behaviour; those changes affect both capital resources and RWA
+  before the stressed ratio is recalculated.
 prerequisites:
-  - CAP-12
-  - CAP-16
-  - CAP-22
-  - CAP-25
+  - FND-10
+  - FND-11
+  - FND-13
+  - CAP-10
+  - CAP-23
 jurisdictions:
-  - UK
+  - universal
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: '2027-01-01'
+next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1:
-      Final rules*, 20 January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Stress testing principles*, BCBS
+      d450, 17 October 2018.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Prudential Regulation Authority, *PS4/26 — The Strong and Simple
-      Framework: The simplified capital regime for Small Domestic Deposit Takers
-      — final*, 20 January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/the-strong-and-simple-framework-final-policy-statement
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, SRP30 — Risk
+      management*, SRP30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key
+      principles*, SRP20, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-PRA Policy Statement PS1/26, published on 20 January 2026, contains the final Basel 3.1 rules. The main implementation date is 1 January 2027. The package revises credit risk, output-floor and other Basel 3.1 elements and updates the scope and operation of internal-model permissions.
-
-Market risk has a separate timing wrinkle. The PRA delayed the **FRTB Internal Models Approach** to 1 January 2028. During the interim beginning 1 January 2027, existing IMA permissions may continue for positions within their existing scope, while positions outside those permissions move to the new standardised market-risk approaches under the PRA’s final framework. This is a delay to FRTB-IMA, not a delay of the entire Basel 3.1 package.
-
-The UK also operates the **Strong and Simple Framework** for qualifying Small Domestic Deposit Takers. PS4/26 confirms that the SDDT capital regime takes effect on 1 January 2027, although specified changes concerning ICAAP, reverse-stress-testing and ILAAP update frequency took effect when the policy was published on 20 January 2026. The simplified regime is designed to reduce prudential complexity for eligible smaller domestic firms rather than forcing the full large-bank framework onto them.
-
-The practical UK question is therefore always scope first: ordinary Basel 3.1 firm, SDDT, or another relevant category.
+### Core mechanism
 
 ```text
-+-------------------------+
-| UK prudential firm      |
-+-------------------------+
-            |
-            v
-+-------------------------+
-| Determine PRA scope     |
-+-------------------------+
-      |              |
-      v              v
-+-----------+   +-----------+
-| Ordinary  |   | Eligible  |
-| Basel 3.1 |   | SDDT      |
-| regime    |   | regime    |
-+-----------+   +-----------+
-      |              |
-      v              v
-| 1 Jan 2027 | | 1 Jan 2027 |
-      |
-      v
-+-------------------------+
-| FRTB-IMA separately     |
-| from 1 Jan 2028         |
-+-------------------------+
+Adverse scenario
+    ↓
+Macroeconomic / market risk factors
+    ↓
+Credit losses · market losses · operational losses
+    ↓
+Revenue and expense effects
+    ↓
+Balance-sheet and exposure changes
+    ↓
+CET1 movement + RWA movement
+    ↓
+Stressed capital ratios
+    ↓
+Credible management actions
 ```
+
+Reverse stress testing runs backwards:
+
+```text
+Defined failure / non-viability condition
+    ↓
+What losses, funding events or risk concentrations could cause it?
+    ↓
+Which vulnerabilities permit that path?
+```
+
+Internal tests are bank-owned and tailored to the institution. Supervisory tests are authority-run or authority-specified and can support cross-bank comparison or formal capital consequences under local rules.
+
+### Where it sits
+
+```text
+Upstream:   ICAAP · risk appetite · capital-ratio anatomy
+This:       Stress-to-capital transmission
+Downstream: Management headroom · recovery actions · supervisory capital
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Risk | Scenario and risk transmission |
+| Finance | Earnings, balance sheet and capital projection |
+| Business | Credible behavioural assumptions |
+| Board / senior management | Challenge and action decisions |
+| Validation / audit | Independent testing of models and controls |
+| Supervisor | Challenge or prescribe supervisory exercises |
 
 ### Permanent rule
 
-UK implementation dates must be read by component: 1 January 2027 is the main Basel 3.1 date, while FRTB-IMA starts on 1 January 2028.
+A capital stress conclusion is incomplete until both numerator and denominator effects have been transmitted.
 
-### Permanent trap
+### Never confuse [Scenario stress test] and [Reverse stress test]
 
-Saying “UK Basel 3.1 was delayed to 2028” incorrectly converts the FRTB-IMA delay into a delay of the whole package.
-
-### Never confuse
-
-**Basel 3.1 commencement** — main PRA final-rule commencement on 1 January 2027.
+**Scenario stress test** — begins with adverse conditions and projects outcomes.
 
 ---
 
-**FRTB-IMA commencement** — separate UK implementation date of 1 January 2028 for the new market-risk internal-model approach.
+**Reverse stress test** — begins with failure and identifies conditions that could cause it.
+
+### Permanent trap
+
+Deducting one loss amount from CET1 while holding RWA and earnings constant can materially understate stress transmission.
 
 ### Jurisdiction variants
 
-**UK** — Final PRA Basel 3.1 rules: 1 January 2027; FRTB-IMA: 1 January 2028; SDDT simplified capital regime: 1 January 2027, with specified ICAAP/reverse-stress/ILAAP frequency changes effective 20 January 2026. [PRA PS1/26; PRA PS4/26]
+No delta in the mechanism. Scenarios, governance, supervisory consequences and management-action rules vary.
 
 <Recall
-  q="When do the UK’s main Basel 3.1 rules take effect?"
-  a="1 January 2027."
+  q="What two direct capital-ratio channels should every stress test examine?"
+  a="Capital resources can fall and RWA can rise."
 />
 
 <Recall
-  q="What UK Basel 3.1 component is delayed to 1 January 2028?"
-  a="The FRTB Internal Models Approach."
+  q="What is reverse stress testing designed to reveal?"
+  a="Combinations of events capable of breaking viability or the business model."
 />

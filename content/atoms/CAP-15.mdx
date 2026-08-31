@@ -1,110 +1,107 @@
 ---
 id: CAP-15
-title: IRB Input Floors and Parameter Constraints
+title: 'CRM Mechanics: Substitution, Netting and Haircuts'
 type: mechanism
 domain: regulatory-capital
 subdomain: credit-approaches
 one_screen: >-
-  Input floors stop internally estimated risk parameters from falling below
-  prudential lower bounds even when a model produces a smaller number. They
-  constrain the ingredients of the IRB calculation; the output floor constrains
-  the final aggregate RWA result.
+  Once protection passes the eligibility gate, the capital calculation must use
+  the right mechanism. Guarantees typically change whose credit quality drives
+  the protected portion; collateral changes recognised exposure value; netting
+  recognises enforceable offsets. Haircuts protect the calculation against value
+  movement before close-out or realisation.
 prerequisites:
   - CAP-14
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: '2027-01-01'
+next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB
-      approach: risk components*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/32.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CRE22 —
+      Standardised approach: credit risk mitigation*, CRE22, effective 1 January
+      2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
-      – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Capital
+      Charge for Credit Risk — Standardised Approach) Directions, 2026*,
+      RBI/DOR/2026-27/397, DOR.CRE.REC 5/21.06.201/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Internal models can generate extremely low PDs, LGDs or other parameters for portfolios with benign observed histories. That may reflect genuinely low risk, but it may also reflect limited defaults, favourable economic periods, data scarcity or model specification. Basel therefore imposes **parameter constraints**, including prescribed floors for relevant IRB inputs.
+### Core mechanism
 
-An input floor works before the risk-weight function. If the model estimates a parameter below the applicable regulatory floor, the floor is used for capital purposes. The model estimate may remain useful for internal risk management, but it is not allowed to drive regulatory capital below the prescribed prudential boundary.
-
-Parameter constraints also include rules on estimation horizon, downturn treatment, eligible exposure classes, maturity and the circumstances in which bank estimates may be used. Their collective purpose is to reduce excessive model variability and make capital less dependent on sparse or optimistic data.
-
-The **output floor** operates at a different level. Input floors constrain individual parameters; the output floor compares total internally modelled RWA with a percentage of standardised RWA after the model calculations have been performed. A bank can therefore satisfy every input floor and still be constrained by the output floor.
-
-**Perishable — India’s revised commercial-bank credit framework effective 1 April 2027 is standardised, so IRB input floors are not domestic Indian credit-capital parameters.**
+| Protection | First calculation effect |
+| :--- | :--- |
+| Eligible guarantee | Substitute eligible protection-provider treatment on protected portion |
+| Eligible financial collateral | Adjust exposure and collateral values, then recognise residual exposure |
+| Eligible netting | Replace qualifying gross claims with prescribed net exposure |
+| Currency / maturity mismatch | Reduce recognition through prescribed adjustment |
 
 ```text
-+----------------------+
-| Internal estimate    |
-| e.g. PD or LGD       |
-+----------------------+
-           |
-           v
-+----------------------+
-| Compare with         |
-| regulatory input floor|
-+----------------------+
-           |
-           v
-+----------------------+
-| Use permitted input  |
-+----------------------+
-           |
-           v
-+----------------------+
-| IRB risk function    |
-+----------------------+
-           |
-           v
-+----------------------+
-| Modelled RWA         |
-+----------------------+
+Collateral market value
+    ↓
+Apply collateral haircut
+    ↓
+Recognised collateral value
+    ↓
+Offset against adjusted exposure
+    ↓
+Residual exposure
+    ↓
+Risk weight
+```
+
+A haircut is not a predicted collateral loss. It is a prudential valuation adjustment for volatility, holding period, currency mismatch or related risk. A guarantee is therefore not "collateral with a zero haircut"; it follows a different risk-transfer mechanism.
+
+### Where it sits
+
+```text
+Upstream:   CRM eligibility
+This:       CRM calculation mechanics
+Downstream: Post-CRM exposure · credit RWA · capital ratio
+```
+
+### Formula
+
+```text
+Recognised collateral value = market value × (1 − applicable haircut), before any additional prescribed mismatch adjustment
+
+Residual exposure = adjusted exposure − recognised collateral value, floored as required by the applicable method
 ```
 
 ### Permanent rule
 
-An input floor changes or bounds a model parameter before the risk-weight calculation; it does not directly impose a percentage floor on total RWA.
+Use the prudential mechanism that matches the legal protection; do not mix substitution and collateral-value adjustment.
 
-### Permanent trap
+### Never confuse [Haircut] and [Risk weight]
 
-Calling the 72.5% output floor a “PD floor” mixes an aggregate RWA backstop with parameter-level constraints.
-
-### Never confuse
-
-**Input floor** — a lower bound on an IRB risk parameter or model input.
+**Haircut** — adjustment to recognised exposure or collateral value.
 
 ---
 
-**Output floor** — an aggregate lower bound on model-based RWA relative to standardised RWA.
+**Risk weight** — factor applied after exposure measurement to determine RWA.
+
+### Permanent trap
+
+Using the guarantor's risk weight for pledged securities simply because both are "security" applies the wrong CRM method.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s covered commercial-bank framework from 1 April 2027 uses the Standardised Approach, so Basel IRB parameter floors are not the domestic method for those credit exposures. [RBI 2026 SA Directions]
-
-**UK** — PRA Basel 3.1 implements revised IRB constraints from 1 January 2027 for exposures remaining eligible for IRB. [PRA PS1/26]
-
-**EU** — CRR3 implements revised model constraints alongside the output floor from 2025, subject to transition. [CRR3]
-
-**US** — The March 2026 package remains proposed; proposed model constraints are not final US rules. [Federal Reserve, 19 March 2026]
+No delta in the conceptual mechanics. Supervisory haircut tables, eligible instruments and national options differ.
 
 <Recall
-  q="At what stage does an input floor operate?"
-  a="Before the IRB risk function, by bounding a model parameter."
+  q="What changes first under guarantee substitution?"
+  a="The credit-risk treatment of the protected amount shifts to the eligible protection provider."
 />
 
 <Recall
-  q="Can a bank satisfy input floors and still be constrained by the output floor?"
-  a="Yes."
+  q="Why haircut collateral before netting it against exposure?"
+  a="Its value can move before the bank can close out or realise the protection."
 />

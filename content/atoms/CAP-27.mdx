@@ -1,22 +1,23 @@
 ---
 id: CAP-27
-title: EU CRR3 Implementation
-type: reference
+title: Basel Standard to Binding Rule
+type: concept
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  **Perishable — partially implemented with a pending market-risk date.** CRR3
-  has applied major Basel-finalisation reforms since **1 January 2025**; the
-  output floor is **55% during 2026** and reaches **72.5% on 1 January 2030**.
-  Binding FRTB market-risk own-funds requirements have been postponed to **1
-  January 2027**, while specified FRTB calculations continue to matter for the
-  output floor.
+  Basel is an international prudential standard, not a supranational banking
+  statute. **As at August 2026**, the Basel Committee continues to set the
+  common benchmark, while binding obligations arise through national or regional
+  implementation. Every live capital question must therefore be dated and scoped
+  before the formula is applied.
 prerequisites:
-  - CAP-12
-  - CAP-16
-  - CAP-25
+  - FND-19
+  - CAP-21
 jurisdictions:
+  - IN
+  - UK
   - EU
+  - US
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: '2027-01-01'
@@ -24,87 +25,97 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'European Union, *Regulation (EU) 2024/1623 (CRR3)*, 31 May 2024'
-    url: 'https://eur-lex.europa.eu/eli/reg/2024/1623/oj'
-    accessed: 27 August 2026
   - label: >-
-      European Commission, *Banking package — Questions and answers*, 24 July
-      2024
-    url: >-
-      https://finance.ec.europa.eu/news/banking-package-questions-and-answers-2024-07-24_en
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Committee Charter*, section
+      3 — Legal status, 5 June 2018.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      European Commission, *Commission Staff Working Document, SWD(2026) 615*,
-      output-floor transition
-    url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0615'
-    accessed: 27 August 2026
+      Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1:
+      Final rules*, PS1/26, 20 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Union, *Regulation (EU) 2024/1623*, CRR3, 31 May 2024.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      European Banking Authority, *Market, counterparty and CVA risk*, FRTB
-      implementation status
-    url: >-
-      https://www.eba.europa.eu/regulation-and-policy/market-counterparty-and-cva-risk
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Capital
+      Charge for Credit Risk — Standardised Approach) Directions, 2026*,
+      RBI/DOR/2026-27/397, DOR.CRE.REC 5/21.06.201/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Agencies request comment on proposals to modernize the regulatory capital
+      framework and maintain the strength of the banking system*, joint release,
+      19 March 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Regulation (EU) 2024/1623, commonly called **CRR3**, implements major elements of the final Basel III reforms in the EU capital framework. The main package began applying on 1 January 2025, including revised treatment across credit, operational and CVA risk and the introduction of the output-floor architecture.
-
-The output floor is intentionally phased. Article 465(1) CRR establishes a transition of 50% in 2025, **55% in 2026**, 60% in 2027, 65% in 2028, 70% in 2029 and **72.5% from 1 January 2030**. This means “EU output floor = 72.5%” is correct only as the fully phased destination, not the current 2026 calibration.
-
-Market risk follows a different timeline. The Commission initially postponed binding FRTB own-funds requirements by one year and subsequently adopted a further postponement to **1 January 2027**. During postponement, pre-FRTB methodologies continue for the binding market-risk own-funds requirement, while the FRTB Standardised Approach remains relevant to the market-risk component of the output-floor calculation.
-
-That distinction prevents a common implementation error: “FRTB postponed” does not mean every FRTB-derived calculation disappears from the EU prudential framework during the postponement.
+### Core mechanism
 
 ```text
-+-------------------------+
-| CRR3 main application   |
-| 1 Jan 2025              |
-+-------------------------+
-            |
-            v
-+-------------------------+
-| Output floor transition |
-+-------------------------+
-| 2025  50%               |
-| 2026  55%               |
-| 2027  60%               |
-| 2028  65%               |
-| 2029  70%               |
-| 2030  72.5%             |
-+-------------------------+
-            |
-            v
-+-------------------------+
-| Binding FRTB market     |
-| risk: 1 Jan 2027        |
-+-------------------------+
+Basel standard
+    ↓
+Jurisdiction chooses legal implementation
+    ↓
+National discretions / deviations / transitions
+    ↓
+Effective date and institutional scope
+    ↓
+Supervisory permissions / firm-specific requirements
+    ↓
+Binding treatment for the bank
+```
+
+Use this workflow:
+
+1. **Jurisdiction** — which legal regime applies?
+2. **Status** — final rule, future final rule, proposal, consultation or guidance?
+3. **As-at date** — what was true on the date being analysed?
+4. **Commencement** — already in force or future?
+5. **Scope** — which bank, exposure and consolidation level?
+6. **Transition** — fully loaded or phased?
+7. **Methodology** — standardised, modelled or special regime?
+
+Basel's Charter states that the Committee has no formal supranational authority and its decisions do not have legal force. Members commit to implement the standards domestically.
+
+### Where it sits
+
+```text
+Upstream:   Basel three-pillar architecture
+This:       International standard → local law
+Downstream: UK/EU · India · US implementation
 ```
 
 ### Permanent rule
 
-A postponed FRTB own-funds commencement does not repeal CRR3 or suspend the output floor.
+Never answer a bank-specific capital question from the Basel text alone when a domestic implementation exists.
 
-### Permanent trap
+### Never confuse [Basel standard] and [Binding rule]
 
-Applying 72.5% as the EU output-floor multiplier in 2026 overstates the current transitional floor, which is 55%.
-
-### Never confuse
-
-**CRR3 application date** — the main package began applying on 1 January 2025.
+**Basel standard** — international benchmark agreed by BCBS members.
 
 ---
 
-**FRTB binding market-risk date** — separately postponed to 1 January 2027.
+**Binding rule** — domestic or regional legal requirement applicable to the institution.
+
+### Permanent trap
+
+Saying "Basel is effective on date X, therefore every bank must use it on date X" ignores domestic transposition and transition.
 
 ### Jurisdiction variants
 
-**EU** — CRR3 applies from 1 January 2025; output floor 55% in 2026, fully phased to 72.5% on 1 January 2030; binding FRTB market-risk requirements postponed to 1 January 2027. [Regulation (EU) 2024/1623; CRR Article 465(1); Commission/EBA FRTB measures]
+**As at August 2026:** EU CRR3 is already substantially in application; UK Basel 3.1 final rules have a future 1 January 2027 commencement; India's revised SA and ECL rules have a future 1 April 2027 commencement; the US March 2026 capital package remains proposed after its comment period closed.
 
 <Recall
-  q="What is the EU output-floor percentage during 2026?"
-  a="55%."
+  q="What is the first question before applying a Basel capital formula to a bank?"
+  a="Which jurisdictional rule is legally binding for that bank and date."
 />
 
 <Recall
-  q="When is the EU output floor fully phased to 72.5%?"
-  a="1 January 2030."
+  q="Does BCBS itself make a Basel standard directly binding on a bank?"
+  a="No; domestic or regional implementation gives the requirement legal force."
 />

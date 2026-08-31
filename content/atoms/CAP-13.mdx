@@ -1,16 +1,19 @@
 ---
 id: CAP-13
-title: Foundation and Advanced IRB
-type: reference
+title: 'Standardised Credit Risk: Exposure to RWA'
+type: mechanism
 domain: regulatory-capital
 subdomain: credit-approaches
 one_screen: >-
-  IRB allows approved banks to use internal estimates for specified credit-risk
-  parameters, but the bank never owns the whole capital formula. Under
-  Foundation IRB the supervisor supplies more of the loss parameters; under
-  Advanced IRB the bank estimates more of them, subject to permission,
-  constraints and validation.
+  CR-01/02 → obligor and facility are different risk objects. Under the
+  standardised approach, the prudential rulebook classifies the exposure,
+  determines the regulatory exposure amount and applies prescribed risk drivers
+  and weights rather than allowing the bank's own PD/LGD model to generate the
+  core capital requirement.
 prerequisites:
+  - CR-01
+  - CR-02
+  - CAP-11
   - CAP-12
 jurisdictions:
   - IN
@@ -25,92 +28,108 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB
-      approach: risk-weight functions*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/31.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CRE20 —
+      Standardised approach: individual exposures*, CRE20, last update 10 June
+      2025, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB
-      approach: risk components*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/32.htm'
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Capital
+      Charge for Credit Risk — Standardised Approach) Directions, 2026*,
+      RBI/DOR/2026-27/397, DOR.CRE.REC 5/21.06.201/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
-      – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
-    accessed: 27 August 2026
+      Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1:
+      Final rules*, PS1/26, 20 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: 'European Union, *Regulation (EU) 2024/1623*, CRR3, 31 May 2024.'
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Regulatory Capital Rules: Regulatory Capital and Standardized Approach
+      for Risk-weighted Assets*, R-1888, notice of proposed rulemaking, 19 March
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-The **internal ratings-based approach**, or IRB, starts from borrower and facility risk estimates rather than a table of standardised risk weights. Basel then feeds those estimates into prescribed regulatory functions. The bank therefore models inputs; it does not freely choose the capital formula.
-
-For many corporate-type exposures under **Foundation IRB (F-IRB)**, an approved bank estimates probability of default while supervisory values govern specified other parameters such as loss given default and exposure at default, subject to the detailed Basel rules. Under **Advanced IRB (A-IRB)**, banks may estimate additional parameters where that approach remains permitted for the relevant exposure class.
-
-Permission is central. IRB is not an accounting method that a bank may elect simply because its internal models are sophisticated. Basel establishes minimum requirements covering rating systems, data, governance, validation and the use of internal ratings in risk management. Supervisors can restrict model scope, impose conditions or withdraw approval.
-
-Basel finalisation also narrows the areas in which advanced modelling may be used and applies input floors and an output floor. Those constraints address excessive variability and model risk.
-
-**Perishable — India’s domestic position changes under final Directions effective 1 April 2027; UK Basel 3.1 restrictions take effect 1 January 2027.** India must not be taught as an IRB domestic regime after that date.
+### Core mechanism
 
 ```text
-+----------------------+
-| Credit exposure      |
-+----------------------+
-           |
-           v
-+----------------------+
-| Internal rating      |
-| system               |
-+----------------------+
-           |
-       +---+---+
-       |       |
-       v       v
-+-----------+ +-----------+
-| F-IRB     | | A-IRB     |
-| bank      | | bank      |
-| estimates | | estimates |
-| fewer     | | more      |
-| inputs    | | inputs    |
-+-----------+ +-----------+
-       \       /
-        v     v
-+----------------------+
-| Basel risk function  |
-+----------------------+
+Facility / exposure
+    ↓
+Regulatory exposure class
+    ↓
+On-balance-sheet amount
+or off-balance-sheet conversion
+    ↓
+Eligible CRM
+    ↓
+Prescribed risk driver / rating where permitted
+    ↓
+Risk weight
+    ↓
+Credit RWA
+```
+
+Standardised does not mean one weight for every exposure. Sovereigns, banks, corporates, retail, real estate, defaulted exposures and specialised lending can follow different rulebook treatments. External ratings are only one possible input and are used only where the applicable framework permits them.
+
+### Where it sits
+
+```text
+Upstream:   Exposure objects · RWA arithmetic
+This:       Standardised credit-risk engine
+Downstream: CRM · IRB comparison · output-floor benchmark
+```
+
+### Formula
+
+```text
+Credit RWA = post-CRM regulatory exposure amount × prescribed risk weight
+
+For off-balance-sheet items, the regulatory exposure amount can first require a conversion factor.
 ```
 
 ### Permanent rule
 
-IRB means supervisory permission to estimate specified inputs inside a prescribed regulatory framework, not permission to set capital internally.
+The regulator standardises the methodology; the resulting RWA can still be highly risk-sensitive across exposure classes.
 
-### Permanent trap
+### Never confuse [Standardised approach] and [External rating]
 
-Calling an internal credit scorecard an “IRB model” because it estimates PD ignores the regulatory approval, use-test, data and governance requirements.
-
-### Never confuse
-
-**F-IRB** — IRB variant in which the bank estimates fewer regulatory risk components and supervisors prescribe more inputs.
+**Standardised approach** — supervisor-prescribed capital methodology.
 
 ---
 
-**A-IRB** — IRB variant permitting bank estimates for more risk components where the framework allows and the supervisor approves them.
+**External rating** — one permitted input for specified exposures under specified conditions.
+
+### Permanent trap
+
+Assigning one default weight to every unrated corporate exposure ignores exposure-class rules, due diligence and jurisdictional implementation.
 
 ### Jurisdiction variants
 
-**IN** — RBI has chosen the **Standardised Approach**, effective 1 April 2027, for covered commercial-bank banking-book credit risk; IRB should therefore be treated as international knowledge, not the Indian domestic credit-capital regime. [RBI 2026 SA Directions]
+#### IN (RBI)
+**As at August 2026:** RBI's final revised Standardised Approach was issued 27 April 2026 and comes into force **1 April 2027**. It is a final rule with future commencement, not a proposal.
 
-**UK** — Basel 3.1 retains IRB subject to PRA permission and revised modelling-scope restrictions from 1 January 2027. [PRA PS1/26]
+#### UK (PRA)
+**As at August 2026:** final Basel 3.1 rules are issued and commence **1 January 2027**.
 
-**EU** — CRR3 continues a permission-based IRB framework with Basel-finalisation restrictions and the output floor. [Regulation (EU) 2024/1623 / CRR3]
+#### EU
+**As at August 2026:** CRR3 standardised credit-risk reforms have applied since **1 January 2025**.
 
-**US** — The March 2026 package proposes a materially revised capital architecture for the largest banks; because it remains proposed, its final treatment of internally modelled credit-risk capital must not be presented as settled law. [Federal Reserve, 19 March 2026]
+#### US
+**As at August 2026:** revisions issued on 19 March 2026 are proposals, not implemented rules; the comment period closed 18 June 2026 and the proposals are not finalised.
 
 <Recall
-  q="Does an IRB bank design its own regulatory risk-weight formula?"
-  a="No. It estimates permitted inputs that enter supervisory formulas."
+  q="Who sets the core methodology under the standardised approach?"
+  a="The applicable prudential rulebook, not the bank's internal credit model."
 />
 
 <Recall
-  q="Is IRB the Indian domestic credit-risk regime from 1 April 2027?"
-  a="No. RBI’s final Directions prescribe the Standardised Approach."
+  q="Is RBI's revised SA already in force in August 2026?"
+  a="No; it is final but commences on 1 April 2027."
 />

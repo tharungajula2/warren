@@ -1,97 +1,92 @@
 ---
 id: CAP-02
-title: Solvency and Liquidity in a Capital Context
+title: 'Loss Absorption: Going Concern to Resolution'
 type: concept
 domain: regulatory-capital
 subdomain: capital-stack
 one_screen: >-
-  Solvency asks whether the value of the bank’s assets can absorb losses and
-  still cover its liabilities; liquidity asks whether cash obligations can be
-  met when due. Capital protects solvency, while liquidity resources protect
-  payment capacity, and a bank can fail either test without initially failing
-  the other.
+  FND-04 → capital is not liquidity: capital absorbs losses; liquidity meets
+  payments when due. Within capital itself, timing matters: going-concern
+  resources absorb loss while the bank remains viable, while gone-concern
+  resources support creditor protection and resolution after viability is lost.
 prerequisites:
+  - FND-04
   - CAP-01
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework*, capital and
-      liquidity standards
-    url: 'https://www.bis.org/basel_framework/'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
+      Definition of eligible capital*, CAP10, last update 5 June 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
-      Calculation of minimum risk-based capital requirements*
-    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, LEV20 —
+      Calculation*, LEV20, published 27 March 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Capital is a balance-sheet loss absorber. If an asset worth 100 suffers a loss of 10, that loss must ultimately reduce some claim on the bank. Deposits and senior liabilities are not intended to take ordinary going-concern losses, so equity and qualifying regulatory capital stand between asset losses and creditor impairment. That is the solvency function of capital. Basel expresses risk-based requirements as qualifying capital relative to risk-weighted assets and separately maintains liquidity standards rather than treating liquidity as another form of capital.
-
-Liquidity is different. A solvent bank may own assets whose economic value exceeds its liabilities but be unable to turn those assets into cash quickly enough to meet withdrawals or maturing obligations. Conversely, a deeply insolvent bank can temporarily remain liquid if it still has cash or funding access. The two conditions interact because forced asset sales made to obtain liquidity may crystallise losses, and doubts about solvency can cause funding to disappear.
-
-Capital ratios therefore do not answer the question “Can tomorrow’s payment be made?” A large CET1 balance cannot itself settle a payment unless the bank has cash, central-bank reserves, marketable assets or funding capacity. Likewise, a stock of liquid assets does not repair a balance sheet whose losses have exhausted equity.
-
-The regulatory architecture reflects the distinction: risk-based capital and leverage requirements address loss-bearing capacity, while liquidity requirements sit in separate Basel framework modules.
+### Core mechanism
 
 ```text
-+----------------------+
-| Bank under stress    |
-+----------------------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Losses on | | Cash      |
-| assets    | | outflows  |
-+-----------+ +-----------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Capital   | | Liquidity |
-| absorbs   | | meets     |
-| losses    | | payments  |
-+-----------+ +-----------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Solvency  | | Payment   |
-| test      | | capacity  |
-+-----------+ +-----------+
+Asset loss
+    ↓
+Retained earnings / CET1 absorb first
+    ↓
+Further going-concern loss absorption
+    ↓
+Viability threatened
+    ↓
+Resolution / non-viability mechanisms
+    ↓
+Subordinated gone-concern resources absorb loss before senior claims
+```
+
+Basel classifies CET1 and AT1 within Tier 1, its going-concern layer. Tier 2 is the lower-quality layer intended principally for loss absorption at non-viability or resolution. The legal trigger and write-down or conversion mechanism depend on the applicable instrument terms and resolution law.
+
+A solvent bank can still be illiquid, and an illiquid bank can temporarily remain solvent. Therefore a strong CET1 ratio does not mean the bank holds enough cash to meet tomorrow's withdrawals.
+
+### Where it sits
+
+```text
+Upstream:   Purpose of capital · FND-04 capital versus liquidity
+This:       Timing of loss absorption
+Downstream: CET1 · AT1 · Tier 2 · regulatory eligibility
 ```
 
 ### Permanent rule
 
-Capital is not cash. A capital ratio is a solvency measure, not a statement that the bank possesses an equivalent amount of immediately spendable liquidity.
+Regulatory quality depends on whether loss absorption is reliably available when required, not on whether an instrument is called equity or subordinated debt.
 
-### Permanent trap
+### Never confuse [Going-concern capital] and [Gone-concern capital]
 
-Calling a liquidity shortfall a “capital shortfall” because both occur during stress leads to the wrong remedial action: raising equity and raising immediately available funding solve different immediate problems.
-
-### Never confuse
-
-**Solvency** — sufficient loss-absorbing net worth to withstand asset losses and remain viable.
+**Going-concern capital** — absorbs loss while the institution remains viable and operating.
 
 ---
 
-**Liquidity** — sufficient cash or reliably monetisable resources to meet obligations when they fall due.
+**Gone-concern capital** — absorbs loss principally after non-viability, failure or resolution action.
+
+### Permanent trap
+
+Treating Tier 2 as equivalent to CET1 because both count in Total Capital ignores the timing and quality of their loss absorption.
 
 ### Jurisdiction variants
 
-**No delta.** The distinction follows balance-sheet and cash-flow mechanics and does not depend on jurisdiction.
+No delta in the Basel hierarchy. Resolution statutes and contractual non-viability mechanisms differ by jurisdiction.
 
 <Recall
-  q="Can a solvent bank be illiquid?"
-  a="Yes. Its assets may exceed liabilities in value while cash is unavailable when obligations fall due."
+  q="Why is CET1 the clearest going-concern absorber?"
+  a="Losses reduce retained earnings directly while the bank continues operating."
 />
 
 <Recall
-  q="Does CET1 equal cash available for withdrawals?"
-  a="No. CET1 is regulatory capital; liquidity requires cash or assets and funding that can generate cash in time."
+  q="Does capital prove that a bank can meet a cash payment tomorrow?"
+  a="No; payment capacity is a liquidity question, not a capital-ratio question."
 />

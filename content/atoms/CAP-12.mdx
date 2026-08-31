@@ -1,124 +1,94 @@
 ---
 id: CAP-12
-title: The Standardised Approach to Credit Risk
-type: mechanism
+title: The RWA Engines
+type: reference
 domain: regulatory-capital
 subdomain: credit-approaches
 one_screen: >-
-  Under the standardised approach, the regulator prescribes the exposure
-  classes, eligibility conditions and risk-weight rules instead of allowing the
-  bank to generate the core credit-risk capital requirement from its own PD/LGD
-  models. Revised Basel rules make this approach more granular and
-  risk-sensitive while retaining external ratings only where the framework
-  permits them.
+  Total RWA is not produced by one universal risk-weight formula. Separate
+  prudential engines measure credit, market, operational and CVA-related risks
+  under their own rules, then feed a common risk-based capital denominator.
 prerequisites:
-  - CAP-09
   - CAP-11
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: '2027-01-01'
+next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE20 —
-      Standardised approach: individual exposures*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/20.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
-      – Standardised Approach Directions, 2026*, RBI/DOR/2026-27/397, 27 April
-      2026
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, MAR50 — Credit
+      valuation adjustment framework*, MAR50, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1:
-      Final rules*, 20 January 2026
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/implementation-of-the-basel-3-1-final-rules-policy-statement
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, OPE25 —
+      Standardised approach*, OPE25, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-The first step is **exposure classification**. A banking-book exposure is assigned to the regulatory class that matches its counterparty and characteristics: for example sovereign, bank, corporate, retail or real-estate categories under the applicable framework. Classification matters because each class has its own rules.
-
-Next comes **risk-weight determination**. Depending on the exposure class and national implementation, the weight may depend on a permitted external credit assessment, loan-to-value measure, counterparty characteristics, repayment dependence or a prescribed fixed weight. Basel’s revised standardised approach does not simply map every loan to an external rating. Some classes use ratings, some use other risk drivers, and due-diligence requirements prevent blind mechanistic reliance where applicable.
-
-The **exposure amount** is then determined after relevant conversion and credit-risk-mitigation rules. Multiplying the adjusted exposure by its applicable weight produces credit RWA.
-
-The Basel finalisation strengthened the standardised approach partly because it also serves as the comparison basis for the output floor. A weak standardised approach would make that backstop ineffective.
-
-**Perishable — jurisdictional implementation dates below are current as at 27 August 2026. India’s revised standardised approach becomes effective on 1 April 2027; the UK Basel 3.1 rules become effective on 1 January 2027.**
+### Core mechanism
 
 ```text
-+----------------------+
-| Banking-book exposure|
-+----------------------+
-           |
-           v
-+----------------------+
-| Exposure class       |
-+----------------------+
-           |
-           v
-+----------------------+
-| Risk driver / rating |
-| where permitted      |
-+----------------------+
-           |
-           v
-+----------------------+
-| CRM + exposure amount|
-+----------------------+
-           |
-           v
-+----------------------+
-| Risk weight          |
-+----------------------+
-           |
-           v
-+----------------------+
-| Credit RWA           |
-+----------------------+
+Credit risk RWA ─────────┐
+Market risk RWA ─────────┤
+Operational risk RWA ────┼→ Total risk-based RWA
+CVA risk requirement ────┘   under the applicable framework
+```
+
+| Engine | Risk captured | Typical object |
+| :--- | :--- | :--- |
+| Credit risk | Obligor, issuer or counterparty failure to perform | Banking-book loans, securities, counterparty exposures |
+| Market risk | Adverse moves in market risk factors | Trading-book positions |
+| Operational risk | Failed processes, people, systems or external events | Bank-wide operational activity |
+| CVA risk | Change in credit valuation adjustment | Covered derivative counterparty positions |
+
+CVA risk is not merely default risk under another name. Counterparty default capital addresses failure to perform; CVA capital addresses valuation changes caused by counterparty credit spread and related risk before or without default.
+
+### Where it sits
+
+```text
+Upstream:   Risk weights · exposure measures
+This:       Multiple RWA engines
+Downstream: Standardised credit risk · IRB · market/operational/CVA aggregation
 ```
 
 ### Permanent rule
 
-Standardised does not mean uniform: the regulator standardises the methodology while allowing prescribed risk differentiation within it.
+Each risk engine must be measured under its own prudential methodology before aggregation.
 
-### Permanent trap
+### Never confuse [Counterparty default risk] and [CVA risk]
 
-Assuming every externally unrated exposure automatically receives the same risk weight ignores exposure-class-specific rules and non-rating risk drivers.
-
-### Never confuse
-
-**Standardised approach** — supervisor-prescribed methodology for exposure classification and risk weighting.
+**Counterparty default risk** — loss because the counterparty fails to perform.
 
 ---
 
-**External credit rating** — one possible input to specified standardised risk weights; it is not the standardised approach itself.
+**CVA risk** — loss from changes in the market value of the credit valuation adjustment.
+
+### Permanent trap
+
+Applying a loan-style risk weight to operational or market risk ignores that those risk types have separate capital methodologies.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s final 2026 Directions require the Standardised Approach for covered commercial-bank banking-book credit risk from **1 April 2027**; RWAs are exposure amount multiplied by prescribed standardised weights, using eligible ratings where the Directions specify. [RBI/DOR/2026-27/397, DOR.CRE.REC.5/21.06.201/2026-27]
-
-**UK** — PRA Basel 3.1 final rules revise the credit-risk standardised approach with effect from **1 January 2027**. [PRA PS1/26]
-
-**EU** — CRR3’s revised credit-risk framework has applied from **1 January 2025**, subject to CRR3 transitional provisions. [Regulation (EU) 2024/1623; European Commission banking-package Q&amp;A]
-
-**US** — The **19 March 2026** package proposes revisions to risk-based capital and standardised risk measurement; as at 27 August 2026 it remains a proposal, not a final rule. [Federal Reserve joint proposal; June 2026 Supervision and Regulation Report]
+No delta in the architecture. Implementation dates and detailed approaches can differ; those differences belong to local rulebooks.
 
 <Recall
-  q="Who sets the core risk-weight methodology under the standardised approach?"
-  a="The regulator or prudential rulebook."
+  q="Why is total RWA not one calculation?"
+  a="Different risk types require different prudential measurement engines before aggregation."
 />
 
 <Recall
-  q="Does standardised credit risk mean all exposures receive the same weight?"
-  a="No. Exposure classes and prescribed risk drivers produce different weights."
+  q="What distinguishes CVA risk from counterparty default risk?"
+  a="CVA captures valuation change from credit deterioration; default risk captures failure to perform."
 />

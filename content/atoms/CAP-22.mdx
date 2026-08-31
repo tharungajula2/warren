@@ -1,103 +1,115 @@
 ---
 id: CAP-22
-title: ICAAP and the Supervisory Review Process
-type: procedure
+title: 'Pillar 1: Minimum Risk-Based Capital'
+type: mechanism
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  ICAAP is the bank’s own disciplined assessment of how much capital it needs
-  for its actual risk profile and strategy; supervisory review tests whether
-  that assessment is credible. It is not a worksheet for reproducing regulatory
-  minima.
+  Pillar 1 converts prescribed risk measurement into minimum capital
+  requirements. It is deliberately standardised enough to be comparable across
+  banks, but it is not intended to describe every risk that could threaten a
+  particular institution.
 prerequisites:
+  - CAP-03
+  - CAP-10
+  - CAP-12
   - CAP-21
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key
-      principles of supervisory review*
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/20.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, SRP30 — Risk
-      management*
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/30.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
+      Definition of eligible capital*, CAP10, last update 5 June 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-The **Internal Capital Adequacy Assessment Process**, or ICAAP, begins with the bank’s risk inventory. Management identifies material risks arising from the balance sheet, business model, concentrations, operations and forward strategy. The bank then assesses how those risks could create losses or capital depletion and determines the capital resources needed to remain adequately capitalised.
-
-The process is broader than a point-in-time calculation. Basel expects capital assessment to be connected to risk management, governance and strategy. Supervisors review whether the bank has a sound process for assessing overall capital adequacy relative to its risk profile and whether the resulting capital position is sufficient.
-
-Stress testing is a central input. A base-case capital plan may show ample headroom, yet an adverse scenario can reveal that losses, lower earnings and rising RWA consume that headroom quickly. Basel’s supervisory-risk-management framework therefore links stress testing with internal capital assessment.
-
-The **supervisory review process** then challenges assumptions, risk coverage, governance, models, management actions and capital conclusions. A supervisor need not accept the amount management considers adequate. It may require remedial action, stronger controls or additional capital under the applicable domestic framework.
-
-ICAAP is therefore an argument supported by evidence: these are the risks, this is how severe they can become, these are available loss absorbers, this is the resulting capital need, and these are the actions available if conditions deteriorate.
+### Core mechanism
 
 ```text
-+----------------------+
-| Identify material    |
-| risks                |
-+----------------------+
-           |
-           v
-+----------------------+
-| Measure / assess     |
-| risk severity        |
-+----------------------+
-           |
-           v
-+----------------------+
-| Stress capital plan  |
-+----------------------+
-           |
-           v
-+----------------------+
-| Determine internal   |
-| capital adequacy     |
-+----------------------+
-           |
-           v
-+----------------------+
-| Supervisory review   |
-| and challenge        |
-+----------------------+
+Eligible regulatory capital
+           versus
+Prescribed RWA
+    ↓
+Minimum ratios
+    ↓
+CET1 minimum
+Tier 1 minimum
+Total Capital minimum
+    ↓
+Then Pillar 2 and buffers are considered
+```
+
+Under the Basel global standard, before buffers, the minimum ratios are:
+
+| Ratio | Basel minimum |
+| :--- | ---: |
+| CET1 / RWA | 4.5% |
+| Tier 1 / RWA | 6.0% |
+| Total Capital / RWA | 8.0% |
+
+These are nested quality requirements. The 8% Total Capital requirement includes the capital already satisfying the CET1 and Tier 1 minima; it is not an additional 8% on top of them.
+
+Pillar 1 also depends on the permitted approaches used to generate RWA. Standardised approaches create common benchmarks; internal-model approaches may be permitted for specified risks and exposures subject to constraints.
+
+### Where it sits
+
+```text
+Upstream:   Capital quality · RWA engines · three-pillar map
+This:       Formulaic minimum capital
+Downstream: Pillar 2 completeness check · buffers · capital headroom
+```
+
+### Formula
+
+```text
+Minimum CET1 amount = 4.5% × RWA under the Basel global minimum
+
+Minimum Tier 1 amount = 6.0% × RWA
+
+Minimum Total Capital amount = 8.0% × RWA
+
+Local binding ratios may be higher.
 ```
 
 ### Permanent rule
 
-ICAAP must start from the institution’s actual material risks, not from the desire to reverse-engineer a predetermined capital number.
+Pillar 1 is the common quantitative baseline, not proof that the bank has enough capital for every material risk.
 
-### Permanent trap
+### Never confuse [Basel minimum] and [Bank's binding requirement]
 
-Copying Pillar 1 capital into an ICAAP and adding a generic percentage defeats the process because it never identifies which residual risks require capital.
-
-### Never confuse
-
-**ICAAP** — management’s internal assessment and governance process for capital adequacy.
+**Basel minimum** — international standard agreed by BCBS members.
 
 ---
 
-**Supervisory review** — the authority’s independent evaluation of that assessment and the bank’s resulting prudential position.
+**Bank's binding requirement** — requirement under its jurisdictional rulebook plus applicable firm-specific decisions.
+
+### Permanent trap
+
+Quoting 8% as the bank's full required capital ignores CET1 quality constraints, Pillar 2, buffers and higher local minima.
 
 ### Jurisdiction variants
 
-**No delta.** “ICAAP” and the formal supervisory process are implemented differently in national law, but the Basel sequence of internal assessment followed by supervisory review is common.
+No delta in the conceptual role. Numerical binding minima can differ materially; India is a clear example in CAP-29.
 
 <Recall
-  q="Who owns the ICAAP?"
-  a="The bank, subject to governance and supervisory review."
+  q="Why are the three Basel minimum ratios not added together?"
+  a="They are nested capital-quality requirements measured against the same RWA."
 />
 
 <Recall
-  q="What does the supervisor do with the ICAAP?"
-  a="Reviews and challenges its risk coverage, assumptions, governance and capital conclusions."
+  q="What comes after Pillar 1 in the capital stack?"
+  a="The Pillar 2 assessment, then applicable buffers above requirements."
 />

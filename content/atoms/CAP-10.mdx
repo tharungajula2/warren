@@ -1,101 +1,109 @@
 ---
 id: CAP-10
-title: Basel’s Three Pillars
-type: reference
+title: Capital Ratio Anatomy
+type: mechanism
 domain: regulatory-capital
 subdomain: rwa-and-pillars
 one_screen: >-
-  Pillar 1 supplies minimum quantitative capital rules, Pillar 2 adds
-  bank-specific risk assessment and supervisory review, and Pillar 3 uses public
-  disclosure to strengthen market discipline. A complete capital framework
-  therefore asks not only “what does the formula require?” but also “what risks
-  did the formula miss?” and “what must outsiders be told?”
+  A capital ratio combines two governed quantities: qualifying capital in the
+  numerator and risk-weighted assets in the denominator. A bank can lose capital
+  adequacy because the numerator falls, because RWA rises, or because both move
+  against it at the same time.
 prerequisites:
+  - CAP-03
+  - CAP-06
   - CAP-09
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework*, supervisory
-      review and disclosure modules
-    url: 'https://www.bis.org/basel_framework/'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key
-      principles of supervisory review*
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/20.htm'
-    accessed: 27 August 2026
-  - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, DIS10 — Scope
-      and application of Pillar 3*
-    url: 'https://www.bis.org/basel_framework/chapter/DIS/10.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC30 — Buffers
+      above the regulatory minimum*, RBC30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-**Pillar 1** contains the prescribed methods for calculating minimum regulatory capital against defined risks. It creates comparability and a common quantitative baseline through rules governing eligible capital, RWA and minimum ratios.
-
-**Pillar 2** exists because no universal formula captures every material risk at every institution. The Basel supervisory review process requires banks to assess capital adequacy relative to their risk profile and strategy and requires supervisors to review that assessment and intervene where necessary. Pillar 2 is therefore not simply “extra Pillar 1”. It addresses risk coverage, governance, concentration, interest-rate risk and other vulnerabilities that may not be fully captured by the minimum formula, subject to the applicable local framework.
-
-**Pillar 3** promotes market discipline through regulatory disclosures. Basel describes it as complementing Pillars 1 and 2 by requiring information that allows market participants to assess regulatory capital, risk exposures and related prudential measures.
-
-The three pillars work together. A technically correct Pillar 1 ratio is not proof that the institution has adequate capital in every economic circumstance. Pillar 2 can identify additional needs. Pillar 3 makes material aspects of that risk and capital position observable to external stakeholders.
-
-The framework is thus formula, judgement and transparency rather than formula alone.
+### Core mechanism
 
 ```text
-+----------------------+
-| Pillar 1             |
-| Minimum quantitative |
-| requirements         |
-+----------------------+
-           |
-           v
-+----------------------+
-| Pillar 2             |
-| Internal assessment  |
-| + supervisory review |
-+----------------------+
-           |
-           v
-+----------------------+
-| Pillar 3             |
-| Public disclosure    |
-| + market discipline  |
-+----------------------+
+Capital resources
+    ↓
+CET1 / Tier 1 / Total Capital
+                    \
+                     → Capital ratio
+                    /
+Credit + market + operational + other prescribed RWA
+```
+
+| Change | Ratio effect, all else equal |
+| :--- | :--- |
+| CET1 decreases | CET1 ratio decreases |
+| RWA increases | All RWA-based ratios decrease |
+| New eligible capital issued | Relevant numerator increases |
+| Exposure runoff / lower risk weight | RWA may decrease |
+| Provision expense | CET1 may decrease through retained earnings |
+| Credit migration | RWA may increase |
+
+The Basel minima are expressed as ratios to RWA: 4.5% CET1, 6% Tier 1 and 8% Total Capital before buffers and local additions. Buffers do not change the denominator; they raise the amount of CET1 the bank must maintain above the minimum stack.
+
+### Where it sits
+
+```text
+Upstream:   Eligible capital · regulatory adjustments
+This:       Numerator / denominator mechanics
+Downstream: Risk weights · RWA engines · Pillar 1 · buffers
+```
+
+### Formula
+
+```text
+CET1 ratio = CET1 / RWA
+
+Tier 1 ratio = Tier 1 capital / RWA
+
+Total capital ratio = Total Capital / RWA
+
+Ratio movement is driven by both numerator and denominator.
 ```
 
 ### Permanent rule
 
-Pillar 1 is deliberately incomplete; Pillar 2 exists because material risk cannot be reduced to one universal minimum-capital formula.
+A capital ratio cannot be interpreted from the numerator alone; RWA is part of the prudential measurement.
 
-### Permanent trap
+### Never confuse [Capital amount] and [Capital ratio]
 
-Calling every supervisory capital add-on “Pillar 1” loses the distinction between formulaic minimum requirements and institution-specific supervisory assessment.
-
-### Never confuse
-
-**Pillar 2** — internal capital assessment plus supervisory review of risks and capital adequacy.
+**Capital amount** — currency value of qualifying regulatory capital.
 
 ---
 
-**Pillar 3** — disclosure and market discipline; it does not itself mean an additional capital charge.
+**Capital ratio** — qualifying regulatory capital divided by the prescribed RWA denominator.
+
+### Permanent trap
+
+Explaining a falling CET1 ratio only by "losses reduced CET1" can miss denominator inflation from credit migration, market moves or model changes.
 
 ### Jurisdiction variants
 
-**No delta.** Terminology and legal implementation vary, but the Basel three-pillar architecture is the common conceptual structure.
+No delta in the ratio mechanics. Binding minima, buffers and RWA methodologies vary by jurisdiction.
 
 <Recall
-  q="Which pillar contains minimum quantitative capital calculations?"
-  a="Pillar 1."
+  q="How can a bank's CET1 ratio fall without a CET1 loss?"
+  a="RWA can rise while CET1 stays unchanged."
 />
 
 <Recall
-  q="What is Pillar 3 principally intended to strengthen?"
-  a="Market discipline through public disclosure."
+  q="Does a buffer create a new RWA denominator?"
+  a="No; it requires additional CET1 above the same risk-based requirement stack."
 />

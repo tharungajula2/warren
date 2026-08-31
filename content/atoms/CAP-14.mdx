@@ -1,107 +1,110 @@
 ---
 id: CAP-14
-title: The IRB Risk-Weight Function
+title: 'Credit Risk Mitigation: Recognition Before Relief'
 type: mechanism
 domain: regulatory-capital
 subdomain: credit-approaches
 one_screen: >-
-  The IRB function turns PD, LGD, EAD and maturity into a capital measure while
-  applying a supervisory correlation structure. Higher default likelihood,
-  larger loss severity, larger exposure or longer effective maturity generally
-  increase capital, but the function is nonlinear because it is designed around
-  adverse portfolio loss rather than a simple PD × LGD calculation.
+  CR-07 → collateral mitigates loss severity; it does not replace repayment
+  capacity. Regulatory capital goes one step further: economic protection
+  reduces RWA only when the protection is eligible, legally effective and
+  recognised by the applicable prudential method.
 prerequisites:
+  - CR-07
   - CAP-13
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: '2027-01-01'
+next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE31 — IRB
-      approach: risk-weight functions*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/31.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CRE22 —
+      Standardised approach: credit risk mitigation*, CRE22, effective 1 January
+      2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE32 — IRB
-      approach: risk components*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/32.htm'
-    accessed: 27 August 2026
-  - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE30 — IRB
-      approach: overview and asset class definitions*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/30.htm'
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Capital
+      Charge for Credit Risk — Standardised Approach) Directions, 2026*,
+      RBI/DOR/2026-27/397, DOR.CRE.REC 5/21.06.201/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-**PD**, probability of default, measures the likelihood that the obligor defaults over the prescribed horizon. **LGD**, loss given default, measures the proportion of exposure lost if default occurs, after appropriate recoveries and costs under the regulatory definition. **EAD**, exposure at default, measures the amount expected to be outstanding if default occurs. **Maturity**, where applicable, adjusts for the period over which credit deterioration can affect the exposure. Basel specifies these as core IRB risk components.
-
-The function also includes a **correlation** assumption. Intuitively, two borrowers whose fortunes move closely with the same systematic economic factor create more common-tail risk than two independent borrowers. Basel does not ask each bank to choose this portfolio correlation freely; the supervisory function embeds prescribed relationships.
-
-The formula is intentionally not just expected loss. PD × LGD × EAD is a useful expected-loss intuition under simplified assumptions. IRB capital targets the unexpected-loss portion of the distribution at a high adverse confidence level, with maturity and systematic dependence affecting the tail.
-
-That is why a small change in PD need not produce the same percentage change in capital at every starting PD. The regulatory mapping is nonlinear.
-
-**Perishable — India’s final Standardised Approach becomes effective on 1 April 2027. The formula described here is therefore not the Indian domestic banking-book credit-capital method.**
+### Core mechanism
 
 ```text
-+------+  +------+  +------+  +----------+
-| PD   |  | LGD  |  | EAD  |  | Maturity |
-+------+  +------+  +------+  +----------+
-    \        |        /          /
-     \       |       /          /
-      v      v      v          v
-       +----------------------+
-       | Supervisory          |
-       | correlation + formula|
-       +----------------------+
-                  |
-                  v
-       +----------------------+
-       | Capital requirement  |
-       | / credit RWA         |
-       +----------------------+
+Exposure
+    ↓
+Protection exists?
+    ↓
+Eligible type?
+    ↓
+Legally enforceable?
+    ↓
+Operational conditions met?
+    ↓
+Valuation / maturity / currency rules met?
+    ↓
+Regulatory CRM relief
 ```
+
+| CRM form | Prudential effect |
+| :--- | :--- |
+| Financial collateral | Can reduce recognised exposure after prescribed adjustments |
+| Guarantee / eligible credit derivative | Can substitute protection-provider treatment for protected amount |
+| Enforceable netting | Can recognise qualifying offsets instead of gross exposure |
+| Ineligible security | May reduce economic risk but gives no regulatory relief |
+
+The legal-enforceability test matters because capital relief assumes the bank can actually realise or call the protection when the obligor fails.
+
+### Where it sits
+
+```text
+Upstream:   Standardised exposure · collateral as mitigant
+This:       CRM eligibility gate
+Downstream: Substitution · netting · haircuts · post-CRM RWA
+```
+
+### Ownership
+
+| Role | Responsibility |
+| :--- | :--- |
+| Front line / credit | Capture collateral and guarantee terms accurately |
+| Legal | Confirm enforceability and documentation |
+| Risk / capital | Apply eligibility and prudential treatment |
+| Independent assurance | Challenge data, legal opinions and calculation controls |
 
 ### Permanent rule
 
-IRB capital is a supervisory portfolio-tail calculation using modelled inputs; it is not the arithmetic product of PD, LGD and EAD.
+Protection reduces regulatory capital only to the extent the capital framework recognises it.
 
-### Permanent trap
+### Never confuse [Economic mitigation] and [Regulatory CRM]
 
-Using expected loss as a proxy for IRB capital misses correlation, maturity and the unexpected-loss calibration embedded in the risk-weight function.
-
-### Never confuse
-
-**Expected loss** — a central loss estimate often simplified as PD × LGD × EAD.
+**Economic mitigation** — protection that can reduce actual loss.
 
 ---
 
-**IRB capital requirement** — the regulatory unexpected-loss result generated by the prescribed function and applicable adjustments.
+**Regulatory CRM** — protection that also satisfies the prudential recognition conditions for capital relief.
+
+### Permanent trap
+
+Subtracting every pledged asset's market value from exposure ignores eligibility, legal enforceability, haircuts and mismatch rules.
 
 ### Jurisdiction variants
 
-**IN** — From 1 April 2027, covered commercial banks use RBI’s Standardised Approach rather than the Basel IRB function for domestic banking-book credit RWA. [RBI 2026 SA Directions]
-
-**UK** — The IRB function remains relevant to exposures permitted under the PRA Basel 3.1 IRB framework from 1 January 2027. [PRA PS1/26]
-
-**EU** — IRB remains within CRR3 subject to model restrictions, parameter constraints and the output floor. [CRR3]
-
-**US** — The March 2026 capital package remains proposed; no proposed feature should be treated as a final domestic IRB rule. [Federal Reserve, 19 March 2026]
+No delta in the principle. Eligible collateral, guarantors and detailed operational tests vary by jurisdiction.
 
 <Recall
-  q="What four bank/exposure parameters are central to IRB intuition?"
-  a="PD, LGD, EAD and maturity, together with the supervisory correlation structure."
+  q="Can valuable collateral receive zero regulatory recognition?"
+  a="Yes; economic protection can fail prudential eligibility or enforceability conditions."
 />
 
 <Recall
-  q="Why is IRB capital not simply PD × LGD × EAD?"
-  a="Because the capital function targets unexpected tail loss and incorporates correlation and, where applicable, maturity."
+  q="Why does legal enforceability matter for capital relief?"
+  a="The framework assumes the protection can actually be realised when needed."
 />

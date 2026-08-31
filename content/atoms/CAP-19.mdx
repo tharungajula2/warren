@@ -1,97 +1,142 @@
 ---
 id: CAP-19
-title: Substitution and Comprehensive CRM Approaches
+title: The Output Floor
 type: mechanism
 domain: regulatory-capital
 subdomain: mitigation
 one_screen: >-
-  Substitution changes whose credit quality drives the protected portion of an
-  exposure; the comprehensive collateral approach changes the exposure value
-  after recognising collateral and prescribed valuation adjustments. One changes
-  the relevant risk weight, the other changes the amount to which risk weighting
-  is applied.
+  The output floor limits how far approved internal models can reduce aggregate
+  RWA below a standardised benchmark. The fully phased Basel calibration is
+  72.5% of standardised RWA; it is not a 72.5% exposure risk weight. **As at
+  August 2026**, phase-in status is jurisdiction-specific and future steps must
+  be read by date.
 prerequisites:
+  - CAP-13
+  - CAP-16
   - CAP-18
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - UK
+  - EU
+  - US
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE22 —
-      Standardised approach: credit risk mitigation*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/22.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Commercial Banks – Capital Charge for Credit Risk
-      – Standardised Approach Directions, 2026*, Chapter V
-    url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13399'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC90 —
+      Transitional arrangements*, RBC90, published 27 March 2020, effective 1
+      January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, *PS1/26 — Implementation of Basel 3.1:
+      Final rules*, PS1/26, 20 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Union, *Regulation (EU) 2024/1623*, CRR3, Article 465, 31 May
+      2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Federal Deposit
+      Insurance Corporation and Office of the Comptroller of the Currency,
+      *Regulatory Capital Rule: Category I and II Banking Organizations, Banking
+      Organizations with Significant Trading Activity, and Optional Adoption for
+      Other Banking Organizations*, R-1887, notice of proposed rulemaking, 19
+      March 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Capital
+      Charge for Credit Risk — Standardised Approach) Directions, 2026*,
+      RBI/DOR/2026-27/397, DOR.CRE.REC 5/21.06.201/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Consider an eligible guarantee. If the rules permit **substitution**, the protected portion of the borrower exposure receives the prudential treatment associated with the eligible protection provider, subject to the framework’s conditions. The borrower is still the original obligor economically, but the capital calculation recognises that another eligible party bears the specified default risk.
-
-The **comprehensive approach** to eligible financial collateral works differently. Rather than merely replacing one counterparty risk weight with another, it adjusts the exposure and collateral values using regulatory haircuts and other prescribed adjustments. The resulting net exposure amount is then risk weighted. Basel’s CRM chapter sets out the recognised approaches and the requirements governing financial collateral and guarantees.
-
-A simple conceptual example makes the distinction clear. An exposure of 100 protected by an eligible sovereign guarantee on 60 may apply the guarantor’s treatment to the protected 60 and the borrower’s treatment to the residual 40 under a substitution structure. By contrast, eligible financial collateral worth 60 does not necessarily reduce exposure by exactly 60 under the comprehensive approach: haircuts can reduce the recognised collateral value or increase the effective exposure before netting.
-
-The methods therefore cannot be mixed casually. A guarantee is not “collateral with a zero haircut”, and collateral is not automatically a substitute counterparty. Each CRM instrument follows the method prescribed for its legal and risk characteristics.
+### Core mechanism
 
 ```text
-+----------------------+
-| Protected exposure   |
-+----------------------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Guarantee | | Financial |
-|           | | collateral|
-+-----------+ +-----------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Substitute| | Adjust    |
-| eligible  | | E and C   |
-| risk      | | by haircuts|
-| treatment | |           |
-+-----------+ +-----------+
-       |         |
-       v         v
-+----------------------+
-| Post-CRM credit RWA  |
-+----------------------+
+Model-based / nominated-approach RWA
+                  versus
+Standardised-approach RWA × applicable floor percentage
+                  ↓
+Higher amount
+                  ↓
+RWA used for capital requirements and buffers
+```
+
+Example:
+
+Model-based RWA = 60
+Standardised RWA = 100
+Floor percentage = 72.5%
+Floor amount = 72.5
+Binding RWA = 72.5
+
+If model-based RWA were 80, the floor would not bind.
+
+### Where it sits
+
+```text
+Upstream:   Standardised RWA · modelled RWA · input constraints
+This:       Aggregate model backstop
+Downstream: Pillar 1 ratios · buffers · jurisdiction implementation
+```
+
+### Formula
+
+```text
+Floored RWA = max(model-based RWA, floor percentage × standardised RWA)
 ```
 
 ### Permanent rule
 
-Substitution operates on the credit-risk treatment of the protected portion; comprehensive collateral recognition operates through adjusted exposure and collateral values.
+The floor percentage multiplies the prescribed standardised RWA benchmark, not each IRB exposure.
 
-### Permanent trap
+### Never confuse [Output floor] and [Risk weight]
 
-Applying a guarantor’s risk weight to collateral because both are “security” uses the wrong CRM mechanism.
-
-### Never confuse
-
-**Substitution approach** — replaces the original obligor’s risk treatment with that of an eligible protection provider for the protected amount.
+**Output floor** — aggregate lower bound on model-based RWA.
 
 ---
 
-**Comprehensive collateral approach** — adjusts exposure and eligible collateral values, including prescribed haircuts, before calculating the residual exposure.
+**Risk weight** — exposure-level or formula-derived scaling factor used within an RWA methodology.
+
+### Permanent trap
+
+Applying 72.5% to every modelled exposure discards the aggregate comparison the floor is designed to perform.
 
 ### Jurisdiction variants
 
-**No delta.** Detailed eligibility differs, but the conceptual distinction between unfunded-protection substitution and collateral-value adjustment is common to Basel-style CRM.
+#### UK (PRA)
+**As at August 2026:** final rules commence **1 January 2027**. The transitional multiplier is scheduled at **60% in 2027**, **65% in 2028**, **70% in 2029**, reaching **72.5% from 1 January 2030**. These are future phase-in steps under final rules, not proposals.
+
+#### EU
+**As at August 2026:** CRR3 is in force. The floor is **55% during 2026**, then **60% in 2027**, **65% in 2028**, **70% in 2029**, and **72.5% from 1 January 2030**.
+
+#### US
+**As at August 2026:** the 19 March 2026 large-bank proposal is not finalised. Do not teach a Basel output floor as an implemented US rule.
+
+#### IN
+**As at August 2026:** RBI has selected the Standardised Approach for the covered commercial-bank credit-risk framework effective 1 April 2027; an IRB-versus-SA credit output-floor mechanism is therefore not the domestic credit-risk architecture.
 
 <Recall
-  q="What changes under substitution?"
-  a="The relevant credit-risk treatment for the protected portion."
+  q="What does 72.5% multiply at full phase-in?"
+  a="The prescribed standardised RWA benchmark."
 />
 
 <Recall
-  q="What changes first under the comprehensive collateral approach?"
-  a="The recognised exposure and collateral values."
+  q="What is the EU output-floor percentage in 2026?"
+  a="55%, with future annual phase-in steps to 72.5% from 1 January 2030."
 />

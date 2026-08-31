@@ -1,95 +1,106 @@
 ---
 id: CAP-11
-title: The Four RWA Components
-type: reference
+title: Risk Weights and Risk-Weighted Assets
+type: concept
 domain: regulatory-capital
 subdomain: rwa-and-pillars
 one_screen: >-
-  Total RWA aggregates distinct prudential risk engines: credit risk, market
-  risk, operational risk and credit valuation adjustment risk. They share the
-  same capital denominator only after each component has been measured under its
-  own rules.
+  FND-11 → exposure is the amount at risk under a defined measurement basis. A
+  risk weight scales that exposure into regulatory RWA; it is not a forecast of
+  the percentage that will default or be lost.
 prerequisites:
-  - CAP-09
+  - FND-11
   - CAP-10
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
   - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, CRE20 —
+      Standardised approach: individual exposures*, CRE20, last update 10 June
+      2025, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
       Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
-      Calculation of minimum risk-based capital requirements*
-    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
-    accessed: 27 August 2026
-  - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, MAR50 — Credit
-      valuation adjustment framework*
-    url: 'https://www.bis.org/basel_framework/chapter/MAR/50.htm'
-    accessed: 27 August 2026
-  - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, OPE25 —
-      Standardised approach*
-    url: 'https://www.bis.org/basel_framework/chapter/OPE/25.htm'
-    accessed: 27 August 2026
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-**Credit risk RWA** captures the risk that borrowers, counterparties or issuers fail to perform as required. It is usually the largest RWA category in a traditional banking book and can be calculated through standardised or, where permitted, internal-ratings-based methods.
-
-**Market risk RWA** addresses losses arising from movements in market risk factors for positions within the applicable trading-book and market-risk perimeter. Its measurement is not the same as simply risk-weighting a loan.
-
-**Operational risk RWA** addresses losses arising from inadequate or failed processes, people and systems or from external events under the applicable operational-risk framework. The Basel finalisation replaced prior multiple operational-risk approaches with a standardised approach in the global standard.
-
-**Credit valuation adjustment risk**, or CVA risk, concerns changes in the market value of counterparty-credit adjustments for covered derivatives and similar transactions. It is related to counterparty credit risk but is not identical to the default-loss capital charge: one concerns mark-to-market changes in credit valuation, the other the counterparty’s failure to perform. Basel contains a separate CVA capital framework.
-
-Basel’s minimum-capital calculation aggregates the prescribed RWA components to produce the denominator against which capital ratios are measured. The calculation should therefore be visualised as several risk engines feeding one capital ratio, not as one universal risk-weight formula.
+### Core mechanism
 
 ```text
-+------------------+   +------------------+
-| Credit RWA       |   | Market RWA       |
-+------------------+   +------------------+
-          \              /
-           v            v
-         +------------------+
-         | Total RWA        |
-         +------------------+
-           ^            ^
-          /              \
-+------------------+   +------------------+
-| Operational RWA  |   | CVA RWA          |
-+------------------+   +------------------+
+Exposure amount
+    ↓
+Applicable regulatory treatment
+    ↓
+Risk weight
+    ↓
+RWA
+    ↓
+Capital ratio denominator
+```
+
+| Quantity | Meaning |
+| :--- | :--- |
+| Exposure amount | Regulatory amount to which the capital treatment applies |
+| Risk weight | Prudential scaling factor |
+| RWA | Exposure translated into the risk-based denominator |
+| RWA density | RWA divided by a chosen exposure measure |
+
+A 100% risk weight means one unit of exposure creates one unit of RWA before other adjustments. It does not mean 100% PD, 100% LGD or 100% expected loss. Likewise, a low risk weight can reduce risk-based capital without reducing the leverage exposure.
+
+### Where it sits
+
+```text
+Upstream:   Exposure measurement · capital-ratio anatomy
+This:       Exposure-to-RWA translation
+Downstream: RWA engines · standardised approach · IRB · output floor
+```
+
+### Formula
+
+```text
+RWA = exposure amount × applicable risk weight
+
+RWA density = RWA / exposure measure
+
+Higher risk weight → higher RWA → lower capital ratio, all else equal.
 ```
 
 ### Permanent rule
 
-The four RWA components measure different risk types before being aggregated into the common risk-based capital denominator.
+Risk weights calibrate prudential capital intensity; they do not estimate expected credit loss.
 
-### Permanent trap
+### Never confuse [Risk weight] and [Probability of default]
 
-Treating CVA risk as merely another name for counterparty default risk misses the mark-to-market credit-spread risk that the CVA framework is designed to capture.
-
-### Never confuse
-
-**Counterparty credit default risk** — risk of loss because the counterparty fails to perform.
+**Risk weight** — regulatory scaling factor used in calculating RWA.
 
 ---
 
-**CVA risk** — risk of loss from changes in the credit valuation adjustment before or without counterparty default.
+**Probability of default** — likelihood of default over a governed horizon.
+
+### Permanent trap
+
+Reading a 150% risk weight as "the regulator expects a 150% loss" confuses a capital calibration with a loss forecast.
 
 ### Jurisdiction variants
 
-**No delta.** Detailed implementation dates and methods vary, but credit, market, operational and CVA risk are the core risk-based capital components in the Basel finalisation architecture.
+No delta in the arithmetic. Exposure classes, prescribed weights and permitted methodologies differ by rulebook.
 
 <Recall
-  q="What four broad risk components feed Basel risk-based capital?"
-  a="Credit, market, operational and CVA risk."
+  q="What does a 50% risk weight do to an exposure of 100?"
+  a="It produces 50 of RWA before other applicable adjustments."
 />
 
 <Recall
-  q="Is operational RWA calculated by applying a loan risk weight?"
-  a="No. It has its own measurement framework."
+  q="Why can a low-risk-weight asset still matter to leverage?"
+  a="The leverage ratio uses a broad non-risk-weighted exposure measure."
 />

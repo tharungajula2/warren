@@ -1,20 +1,22 @@
 ---
 id: CAP-04
-title: The Regulatory Capital Stack
-type: reference
+title: Common Equity Tier 1
+type: concept
 domain: regulatory-capital
 subdomain: capital-stack
 one_screen: >-
-  Regulatory capital is a quality hierarchy: CET1 is the first and strongest
-  loss absorber, AT1 supplements going-concern capital, and Tier 2 provides
-  lower-ranking gone-concern capacity. Basel total regulatory capital is CET1
-  plus AT1 plus Tier 2, after applicable regulatory adjustments.
+  CET1 is the highest-quality regulatory capital because it bears losses
+  continuously and is not protected by a contractual promise of repayment.
+  FND-03 → retained earnings accumulate profit after distributions; losses run
+  through earnings and therefore reduce CET1 unless another qualifying capital
+  action offsets them.
 prerequisites:
+  - FND-03
   - CAP-03
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
@@ -22,77 +24,64 @@ reading_minutes: 3
 sources:
   - label: >-
       Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
-      Definition of eligible capital*
-    url: 'https://www.bis.org/basel_framework/chapter/CAP/10.htm'
-    accessed: 27 August 2026
+      Definition of eligible capital*, CAP10, last update 5 June 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
-      Calculation of minimum risk-based capital requirements*
-    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CAP30 —
+      Regulatory adjustments*, CAP30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-**Common Equity Tier 1** is the highest-quality layer. It centres on ordinary common equity and retained earnings, subject to eligibility rules and deductions. Because accounting losses reduce retained earnings, CET1 responds directly to deterioration in the bank’s net asset value.
+### Core mechanism
 
-**Additional Tier 1** consists of eligible instruments that are sufficiently permanent and loss absorbing to qualify as Tier 1 but do not meet all CET1 criteria. AT1 is therefore not “better debt”; it is a regulatory category whose instruments must satisfy restrictions concerning permanence, distributions, subordination and loss absorption. Basel treats CET1 plus AT1 as Tier 1 capital.
+CET1 begins with qualifying common equity instruments, associated share premium, retained earnings and other eligible disclosed reserves, then applies prudential criteria and adjustments.
 
-**Tier 2** sits below Tier 1 in regulatory quality. It may include eligible subordinated instruments meeting Basel’s criteria and is principally gone-concern capital. Total capital is the sum of Tier 1 and Tier 2 after regulatory adjustments.
+| CET1 property | Why it matters |
+| :--- | :--- |
+| Perpetual | No maturity that forces repayment |
+| Most subordinated claim | Losses reach common equity before senior creditors |
+| Distributions discretionary | Bank is not forced to pay a coupon or dividend |
+| Fully available for loss absorption | Capital can fall as losses are recognised |
+| Clear issue and repayment rules | Prevents capital disappearing through redemption |
 
-Basel’s global minima are 4.5% CET1, 6% Tier 1 and 8% total capital as percentages of risk-weighted assets, before capital buffers and jurisdictional additions. Those Basel percentages are standards rather than universally binding statutory ratios: national authorities may impose higher minima or additional requirements.
+A common share can fail regulatory eligibility if its terms weaken permanence or loss absorption. Conversely, an accounting equity line is not automatically CET1 merely because it sits within shareholders' equity.
 
-A crucial nesting rule follows from the hierarchy. CET1 can satisfy the CET1 minimum and, to the extent available beyond that need, higher-level Tier 1 or total-capital requirements. AT1 cannot satisfy CET1. Tier 2 cannot satisfy either CET1 or Tier 1. Quality therefore flows upward through the requirement stack; lower-quality capital cannot be substituted downward into a higher-quality requirement.
+### Where it sits
 
 ```text
-+---------------------------+
-| CET1                      |
-| highest quality           |
-+---------------------------+
-              |
-              v
-+---------------------------+
-| AT1                       |
-| + CET1 = Tier 1           |
-+---------------------------+
-              |
-              v
-+---------------------------+
-| Tier 2                    |
-| gone-concern layer        |
-+---------------------------+
-              |
-              v
-+---------------------------+
-| Total regulatory capital  |
-| CET1 + AT1 + Tier 2       |
-+---------------------------+
+Upstream:   Capital quality hierarchy · earnings
+This:       CET1 eligibility and economics
+Downstream: Regulatory adjustments · CET1 ratio · buffers
 ```
 
 ### Permanent rule
 
-Capital categories are nested by quality: Tier 2 cannot cure a CET1 shortfall, and AT1 cannot cure a CET1 shortfall.
+CET1 is defined by prudential eligibility and loss-absorption characteristics, not by the accounting label "equity".
 
-### Permanent trap
+### Never confuse [Common equity] and [CET1]
 
-Adding CET1, Tier 1 and total-capital percentages as though they were independent requirements triple-counts capital because the ratios are nested.
-
-### Never confuse
-
-**Tier 1 capital** — CET1 plus eligible AT1.
+**Common equity** — an accounting or corporate-law description of ownership interests.
 
 ---
 
-**Total capital** — Tier 1 plus eligible Tier 2; it is not an additional layer equal to the sum of three minimum percentages.
+**CET1** — the subset of highest-quality capital recognised after Basel eligibility criteria and regulatory adjustments.
+
+### Permanent trap
+
+Using total shareholders' equity as the CET1 numerator without checking eligibility, filters and deductions can overstate prudential capital.
 
 ### Jurisdiction variants
 
-**No delta.** The CET1–AT1–Tier 2 hierarchy is the common Basel architecture; numerical national minima can differ.
+No delta in the core Basel characteristics. National company law and local transposition determine the exact legal instruments that can meet those characteristics.
 
 <Recall
-  q="What comprises Tier 1 capital?"
-  a="CET1 plus AT1."
+  q="Why does a credit loss usually reduce CET1?"
+  a="The loss reduces earnings or retained earnings, which are part of the CET1 base."
 />
 
 <Recall
-  q="Can Tier 2 satisfy a CET1 requirement?"
-  a="No."
+  q="Is every item reported inside accounting equity CET1?"
+  a="No; prudential eligibility criteria and regulatory adjustments determine the recognised amount."
 />

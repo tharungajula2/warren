@@ -1,21 +1,20 @@
 ---
 id: CAP-03
-title: Going-Concern and Gone-Concern Capital
-type: concept
+title: The Capital Quality Hierarchy
+type: reference
 domain: regulatory-capital
 subdomain: capital-stack
 one_screen: >-
-  Going-concern capital absorbs losses while the bank remains operating;
-  gone-concern capital protects creditors and supports resolution once viability
-  has been lost. Basel places CET1 and AT1 in Tier 1 going-concern capital and
-  characterises Tier 2 as gone-concern capital.
+  Regulatory capital is nested by quality. CET1 is the highest-quality layer;
+  CET1 plus AT1 is Tier 1; Tier 1 plus Tier 2 is Total Capital. Because the
+  categories are nested, lower-quality capital cannot repair a shortfall in a
+  higher-quality requirement.
 prerequisites:
-  - CAP-01
   - CAP-02
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
@@ -23,81 +22,79 @@ reading_minutes: 3
 sources:
   - label: >-
       Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
-      Definition of eligible capital*
-    url: 'https://www.bis.org/basel_framework/chapter/CAP/10.htm'
-    accessed: 27 August 2026
+      Definition of eligible capital*, CAP10, last update 5 June 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Bank for International Settlements Financial Stability Institute,
-      *Strengthening the going-concern role of AT1: options and trade-offs*, FSI
-      Briefs No 32, 11 June 2026
-    url: 'https://www.bis.org/fsi/fsibriefs32.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Loss absorption has a timing dimension. **Going concern** means the institution continues operating: deposits are serviced, lending continues and the legal entity has not crossed into resolution or failure. Capital that absorbs losses at this stage must be sufficiently permanent and subordinated that losses can be imposed without creating an ordinary payment default.
+### Core mechanism
 
-Common Equity Tier 1 is the clearest example. Losses reduce retained earnings immediately, so CET1 bears deterioration continuously. Additional Tier 1 is also classified within Tier 1 and is designed for going-concern loss absorption, although its contractual and regulatory mechanisms differ from ordinary equity. Basel’s capital definition labels Tier 1 as going-concern capital and Tier 2 as gone-concern capital.
-
-**Gone concern** begins conceptually when ordinary private operation is no longer viable without resolution action or extraordinary support. Tier 2 is subordinated and designed to absorb losses before senior unsecured creditors and depositors in failure or resolution. The exact legal mechanism depends on national resolution law and instrument terms, so “gone concern” does not mean that every Tier 2 instrument automatically converts at the same accounting ratio.
-
-The distinction is about when and how reliably loss-bearing capacity is available. A funding instrument can be deeply subordinated yet still fail regulatory-capital eligibility if its maturity, redemption rights, incentives or contractual terms undermine the required permanence and loss absorption. Basel therefore uses detailed eligibility criteria rather than simply asking whether an instrument is called “equity” or “subordinated debt”.
+| Layer | What it contributes | Can satisfy |
+| :--- | :--- | :--- |
+| CET1 | Highest-quality, permanent going-concern loss absorption | CET1, Tier 1 and Total Capital requirements |
+| AT1 | Additional going-concern capacity meeting stricter permanence and loss-absorption rules than ordinary debt | Tier 1 and Total Capital, not CET1 |
+| Tier 2 | Lower-quality subordinated gone-concern capacity | Total Capital only |
 
 ```text
-+-----------------------+
-| Bank operating        |
-| as going concern      |
-+-----------------------+
-            |
-            v
-+-----------------------+
-| CET1 absorbs losses   |
-| continuously          |
-+-----------------------+
-            |
-            v
-+-----------------------+
-| AT1 provides further  |
-| going-concern capacity|
-+-----------------------+
-            |
-            v
-+-----------------------+
-| Point of non-viability|
-+-----------------------+
-            |
-            v
-+-----------------------+
-| Tier 2 / resolution   |
-| loss absorption       |
-+-----------------------+
+CET1
+  + AT1
+  = Tier 1
+      + Tier 2
+      = Total Capital
+```
+
+Basel global minimum ratios are themselves nested: 4.5% CET1, 6% Tier 1 and 8% Total Capital, before buffers and any jurisdictional or firm-specific additions. A bank therefore does not add 4.5 + 6 + 8 and hold 18.5% merely because three ratios are reported.
+
+### Where it sits
+
+```text
+Upstream:   Going-concern versus gone-concern absorption
+This:       Capital quality hierarchy
+Downstream: CET1 eligibility · AT1/Tier 2 eligibility · minimum ratios
+```
+
+### Formula
+
+```text
+Tier 1 = CET1 + AT1
+
+Total Capital = CET1 + AT1 + Tier 2
+
+Each component is measured after applicable regulatory adjustments.
 ```
 
 ### Permanent rule
 
-A capital instrument’s regulatory value comes from genuine loss-absorption capacity and permanence, not its accounting label or marketing name.
+Capital quality nests upward: CET1 can meet a broader requirement, but Tier 2 cannot meet a CET1 or Tier 1 shortfall.
 
-### Permanent trap
+### Never confuse [Tier 1] and [Total Capital]
 
-Describing Tier 2 as a normal operating-loss buffer equivalent to CET1 ignores the reason regulators distinguish going-concern from gone-concern quality.
-
-### Never confuse
-
-**Going-concern capital** — capital capable of absorbing losses while the institution remains viable and operating.
+**Tier 1** — CET1 plus eligible AT1.
 
 ---
 
-**Gone-concern capital** — loss-absorbing resources designed principally to protect creditors and support resolution after non-viability.
+**Total Capital** — Tier 1 plus eligible Tier 2.
+
+### Permanent trap
+
+Adding the CET1, Tier 1 and Total Capital minimum percentages as separate capital layers triple-counts the same higher-quality capital.
 
 ### Jurisdiction variants
 
-**No delta.** Legal resolution mechanisms differ, but Basel’s conceptual distinction between Tier 1 going-concern capital and Tier 2 gone-concern capital is common.
+No delta in the hierarchy. Jurisdictions may set higher ratios or additional layers above the Basel minima.
 
 <Recall
-  q="Which Basel capital tier is the principal going-concern layer?"
-  a="Tier 1, comprising CET1 and AT1."
+  q="What is Tier 1 capital?"
+  a="CET1 plus eligible AT1, after applicable regulatory adjustments."
 />
 
 <Recall
-  q="Why is Tier 2 lower quality than CET1?"
-  a="Its loss absorption is principally associated with gone-concern or non-viability conditions rather than continuous first-loss equity absorption."
+  q="Can Tier 2 cure a CET1 shortfall?"
+  a="No; Tier 2 qualifies only toward Total Capital."
 />

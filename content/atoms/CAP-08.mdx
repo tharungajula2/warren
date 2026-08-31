@@ -1,22 +1,20 @@
 ---
 id: CAP-08
-title: The Leverage Ratio Backstop
+title: Regulatory Expected Loss and Eligible Provisions
 type: mechanism
 domain: regulatory-capital
 subdomain: capital-stack
 one_screen: >-
-  The leverage ratio ignores most risk weights and compares Tier 1 capital with
-  a broad exposure measure. It is a deliberately blunt backstop: risk-based
-  models can change the measured riskiness of assets, but they cannot make the
-  underlying exposure disappear.
+  CR-09 → expected loss is a governed PD/LGD/EAD quantity; IMP-01 → an
+  accounting allowance is not capital. Under IRB, Basel nevertheless compares
+  regulatory expected loss with eligible provisions so expected credit loss is
+  not silently left uncovered or double-counted in the capital stack.
 prerequisites:
-  - CAP-04
-  - CAP-09
+  - CR-09
+  - IMP-01
+  - CAP-07
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
 next_effective_date: null
@@ -25,89 +23,92 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, LEV20 —
-      Calculation of the leverage ratio*
-    url: 'https://www.bis.org/basel_framework/chapter/LEV/20.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CRE35 — IRB
+      approach: treatment of expected losses and provisions*, CRE35, published
+      27 March 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Reserve Bank of India, *Commercial Banks – Prudential Norms on Capital
-      Adequacy Directions, 2025*, para 262, 28 November 2025
-    url: 'https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13159'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CAP30 —
+      Regulatory adjustments*, CAP30, paragraph 30.13, published 15 December
+      2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Bank of England, *Financial Stability in Focus: The FPC's assessment of
-      bank capital requirements*, 2 December 2025
-    url: >-
-      https://www.bankofengland.co.uk/financial-stability-in-focus/2025/fsif-the-fpcs-assessment-of-bank-capital-requirements
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CAP10 —
+      Definition of eligible capital*, CAP10, last update 5 June 2020.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Risk-weighted capital requirements depend on judgements about relative risk. A low-risk exposure receives less RWA than a high-risk exposure, which improves risk sensitivity but creates dependence on classifications, parameters and models. The leverage ratio places a floor under how far that process can reduce required capital.
-
-Basel defines the leverage ratio as Tier 1 capital divided by the leverage-ratio exposure measure and establishes a 3% minimum in the global framework. The denominator is broader than accounting assets because it also captures specified off-balance-sheet and derivative exposures under prescribed measurement rules.
-
-The leverage ratio is **non-risk-sensitive** in the relevant sense: a unit of qualifying exposure generally enters the denominator without first being multiplied by its credit risk weight. That makes the measure crude, but the crudeness is intentional. It limits model risk, classification arbitrage and the possibility that a portfolio judged extremely safe under the RWA framework supports excessive balance-sheet leverage.
-
-The ratio is therefore a backstop, not a replacement for RWA. A bank can be constrained by either measure. A high-risk portfolio may be bound by risk-based capital while a very large portfolio of low-risk assets may be more constrained by leverage requirements.
-
-A practitioner should calculate both lenses rather than converting one into the other. “Low RWA density” does not imply “low leverage exposure”.
+### Core mechanism
 
 ```text
-+----------------------+
-| Same bank exposures  |
-+----------------------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Risk-based| | Leverage  |
-| framework | | framework |
-+-----------+ +-----------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Apply risk| | Broad     |
-| weights   | | exposure  |
-+-----------+ +-----------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| RWA ratio | | Tier 1 /  |
-| constraint| | exposure  |
-+-----------+ +-----------+
+IRB regulatory expected loss
+           versus
+Eligible provisions assigned to IRB exposures
+              ↓
+      +-------+-------+
+      |               |
+EL &gt; provisions   Provisions &gt; EL
+      |               |
+      ↓               ↓
+Shortfall         Excess
+      |               |
+      ↓               ↓
+Deduct from       Limited Tier 2
+CET1              recognition, subject
+                  to Basel conditions/cap
+```
+
+Basel CRE35 defines total eligible provisions for IRB exposures and requires the comparison with total regulatory EL. CAP30 requires the full shortfall, where regulatory EL exceeds eligible provisions, to be deducted from CET1. Where provisions exceed EL, the excess may receive limited Tier 2 recognition subject to the framework.
+
+This is not an accounting true-up. Regulatory EL and accounting ECL can differ in horizon, parameter calibration, default treatment and objective.
+
+### Where it sits
+
+```text
+Upstream:   IRB expected loss · accounting provisions
+This:       EL-versus-provision comparison
+Downstream: CET1 deduction · Tier 2 recognition · regulatory capital ratios
+```
+
+### Formula
+
+```text
+Provision shortfall = max(0, regulatory EL − eligible provisions)
+
+Provision excess = max(0, eligible provisions − regulatory EL)
+
+Only the treatment permitted by the capital framework applies to those amounts.
 ```
 
 ### Permanent rule
 
-The leverage ratio complements rather than substitutes for risk-weighted capital requirements.
+A provision shortfall reduces CET1 because the prudential EL amount is not fully covered by eligible provisions.
 
-### Permanent trap
+### Never confuse [Regulatory expected loss] and [Accounting ECL]
 
-Using total accounting assets as an exact leverage-ratio denominator ignores regulatory treatment of derivatives and off-balance-sheet exposures.
-
-### Never confuse
-
-**Risk-based capital ratio** — qualifying capital divided by RWA.
+**Regulatory expected loss** — prudential quantity defined inside the IRB capital framework.
 
 ---
 
-**Leverage ratio** — Tier 1 capital divided by a broadly measured exposure amount without ordinary credit risk weighting.
+**Accounting ECL** — loss allowance measured under the applicable accounting or prudential provisioning architecture.
+
+### Permanent trap
+
+Comparing lifetime accounting ECL directly with one-year IRB EL as though the two should reconcile mechanically ignores different definitions and objectives.
 
 ### Jurisdiction variants
 
-**IN** — RBI prescribes a minimum leverage ratio of 4% for D-SIBs and 3.5% for other commercial banks. [RBI Capital Adequacy Directions 2025, para 262]
-
-**UK** — The UK applies its domestic leverage framework and leverage buffers to relevant firms; its design is not identical to the risk-based combined-buffer/MDA framework. [Bank of England, Financial Stability in Focus, December 2025]
-
-**EU** — The CRR leverage framework implements the leverage-ratio backstop alongside risk-based own-funds requirements; applicable overlays depend on institution type and current EU rules and must be checked in CRR. [Basel leverage principle; local CRR verification required]
-
-**US** — US capital rules use leverage requirements alongside risk-based ratios, with additional leverage requirements applying to specified large organisations; the exact requirement depends on regulatory category. [Federal Reserve capital framework; institution-specific scope must be verified]
+No delta in the Basel IRB mechanism. It is relevant only where the jurisdiction permits IRB for the exposure concerned.
 
 <Recall
-  q="Why is a leverage ratio needed if RWA already measures risk?"
-  a="To backstop model, parameter and classification risk and constrain excessive exposure even when risk weights are low."
+  q="What happens when IRB regulatory EL exceeds eligible provisions?"
+  a="The shortfall is deducted from CET1 under the Basel capital framework."
 />
 
 <Recall
-  q="What is the Basel leverage-ratio numerator?"
-  a="Tier 1 capital."
+  q="Does excess provision become CET1?"
+  a="No; any prudential recognition is limited and belongs in Tier 2, subject to the applicable rules."
 />

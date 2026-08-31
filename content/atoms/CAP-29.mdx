@@ -1,111 +1,138 @@
 ---
 id: CAP-29
-title: The US March 2026 Capital Reproposal and Stress Capital Buffer
-type: reference
+title: 'India: Capital, Credit Risk and the ECL Transition'
+type: delta
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  **Perishable — proposal, not rule.** On **19 March 2026** the US federal
-  banking agencies issued a new capital package, including a proposal for the
-  largest and most internationally active organisations, a broader
-  standardised-capital proposal and a Federal Reserve GSIB-surcharge proposal.
-  As at 27 August 2026, the package must be treated as **proposed**, while the
-  existing stress capital buffer architecture remains the operative large-bank
-  stress-capital mechanism.
+  India's binding capital ratios are not the Basel global minima, and its next
+  credit-risk and provisioning changes share a commencement date but remain
+  separate regimes. **As at August 2026**, current commercial-bank capital
+  directions are in force; the revised credit-risk Standardised Approach and the
+  new ECL provisioning Directions are both final but commence on **1 April
+  2027**.
 prerequisites:
-  - CAP-06
-  - CAP-11
-  - CAP-23
-  - CAP-25
+  - IMP-20
+  - CAP-09
+  - CAP-13
+  - CAP-20
+  - CAP-24
+  - CAP-27
 jurisdictions:
-  - US
+  - IN
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: null
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Board of Governors of the Federal Reserve System, FDIC and OCC, *Agencies
-      request comment on proposals to modernize the regulatory capital framework
-      and maintain the strength of the banking system*, 19 March 2026
-    url: 'https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260319a.htm'
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks —
+      Prudential Norms on Capital Adequacy) Directions, 2025*,
+      RBI/DOR/2025-26/151, DOR.CAP.REC.70/21-01-002/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve Board, *Supervision and Regulation Report — Regulatory
-      Developments*, June 2026
-    url: >-
-      https://www.federalreserve.gov/publications/2026-june-supervision-and-regulation-report-regulatory-developments.htm
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Capital
+      Charge for Credit Risk — Standardised Approach) Directions, 2026*,
+      RBI/DOR/2026-27/397, DOR.CRE.REC 5/21.06.201/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve Board, *Federal Reserve Board finalizes hypothetical
-      scenarios for its annual stress test and votes to maintain the current
-      stress test-related capital requirements until public feedback can be
-      considered*, 4 February 2026
-    url: 'https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm'
-    accessed: 27 August 2026
-  - label: 'Federal Reserve Board, *Supervision and Regulation*, 2023 Annual Report'
-    url: >-
-      https://www.federalreserve.gov/publications/2023-ar-supervision-and-regulation.htm
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Income
+      Recognition, Asset Classification and Provisioning) Repeal Directions,
+      2026*, RBI/DOR/2026-27/36, DOR.STR.REC.20/21.04.048/2026-27, 27 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-The first March proposal is aimed primarily at the largest, internationally active banking organisations. The agencies describe it as completing US implementation of final Basel III components while improving risk sensitivity and replacing the existing dual-stack calculation for covered firms with a single risk-based capital calculation if adopted.
+### Core mechanism
 
-The second proposal generally applies more broadly and revises the standardised capital treatment of traditional lending and other exposures. The third, issued by the Federal Reserve, revises the method for measuring systemic risk for the GSIB surcharge. Comments on the proposals were due by 18 June 2026. **A proposal does not change the binding capital rule merely because its intended implementation is described in detail.**
+| Item | India position as at August 2026 |
+| :--- | :--- |
+| CET1 minimum | 5.5% of RWA |
+| Tier 1 minimum | 7.0% of RWA |
+| Total Capital minimum | 9.0% of RWA |
+| Capital conservation buffer | 2.5% CET1 |
+| Leverage ratio | 4% for D-SIBs; 3.5% for other covered commercial banks |
+| Revised banking-book credit-risk approach | Final Standardised Approach; effective 1 Apr 2027 |
+| New ECL provisioning framework | Final Directions; effective 1 Apr 2027 |
+| ECL transition relief | Optional declining CET1 add-back through FY 2030-31 |
 
-The US architecture must also be separated from the European combined-buffer/MDA model. Since 2020 the Federal Reserve has integrated supervisory stress testing with non-stress capital requirements through the **stress capital buffer**. The buffer is forward-looking and firm-specific because supervisory stress results affect the applicable capital requirement for covered large banks.
-
-For the 2026 cycle, the Federal Reserve decided to maintain then-current stress capital buffer requirements until 2027 while it considers public feedback on supervisory stress-test models. Thus “US Basel finalisation proposal” and “current US SCB requirement” are separate objects.
+These are separate questions:
 
 ```text
-+-------------------------+
-| Binding US capital      |
-| framework              |
-+-------------------------+
-            |
-            +------------------+
-            |                  |
-            v                  v
-+------------------+   +----------------------+
-| Existing SCB     |   | 19 Mar 2026         |
-| architecture     |   | capital proposals    |
-+------------------+   +----------------------+
-            |                  |
-            v                  v
-+------------------+   +----------------------+
-| Current prudential|  | NOT binding unless  |
-| requirement       |  | finalised            |
-+------------------+   +----------------------+
+Credit exposure
+    ↓
+RBI Standardised Approach
+    ↓
+Credit RWA
+    ↓
+Capital requirement
+
+Same loan
+    ↓
+RBI ECL Directions
+    ↓
+Loss allowance
+    ↓
+Opening / ongoing earnings effect
+    ↓
+CET1 effect
+    ↓
+Temporary transition add-back if elected
+```
+
+RBI has explicitly selected the Standardised Approach for the revised commercial-bank credit-risk framework. IRB should therefore be taught as international architecture, not as India's new domestic method.
+
+### Where it sits
+
+```text
+Upstream:   Basel-to-law · SA · ECL transition
+This:       India's binding and future capital architecture
+Downstream: Indian capital planning · reporting · implementation
 ```
 
 ### Permanent rule
 
-A US notice of proposed rulemaking remains non-binding until the agencies complete the legally required rulemaking process and issue a final rule with an effective date.
+Do not substitute Basel minima, IRB or accounting rules from another jurisdiction for RBI's binding commercial-bank directions.
 
-### Permanent trap
+### Never confuse [RBI credit-risk SA] and [RBI ECL framework]
 
-Teaching the March 2026 reproposal as “the US Basel rule” converts an unsettled proposal into law and can produce the wrong capital calculation.
-
-### Never confuse
-
-**March 2026 capital reproposal** — proposed revisions to the US regulatory capital framework.
+**RBI credit-risk SA** — prudential methodology for banking-book credit RWA.
 
 ---
 
-**Stress capital buffer** — existing Federal Reserve large-bank capital mechanism tied to supervisory stress testing.
+**RBI ECL framework** — provisioning and income-recognition regime measuring loss allowances.
+
+### Permanent trap
+
+Saying "ECL lowers RWA" confuses the provisioning regime with the risk-weight framework; ECL primarily affects carrying amounts, earnings and CET1, while the SA separately determines RWA.
 
 ### Jurisdiction variants
 
-**US** — The 19 March 2026 package remains a proposal as at 27 August 2026; current SCB requirements were maintained until 2027 while stress-test-model feedback is considered. [Federal Reserve 19 March 2026 joint release; Federal Reserve 4 February 2026 stress-test release]
+#### IN (RBI)
+**As at August 2026:** capital adequacy Directions dated 28 November 2025 are in force. The SA Directions, RBI/DOR/2026-27/397, and ECL Directions, RBI/DOR/2026-27/398, are final and become effective 1 April 2027. The CET1 transition fractions then step down 4/5, 3/5, 2/5, 1/5 through FY 2030-31 and are nil thereafter.
 
 <Recall
-  q="Is the March 2026 US capital package a final rule?"
-  a="No. It must be treated as a proposal as at 27 August 2026."
+  q="What are India's current CET1, Tier 1 and Total Capital minima?"
+  a="5.5%, 7% and 9% of RWA respectively, before applicable buffers and additions."
 />
 
 <Recall
-  q="What links US supervisory stress testing to large-bank capital requirements?"
-  a="The stress capital buffer architecture."
+  q="What credit-risk method starts on 1 April 2027 under the final RBI Directions?"
+  a="The Standardised Approach, not IRB."
+/>
+
+<Recall
+  q="Does the ECL CET1 add-back cancel the allowance?"
+  a="No; it temporarily changes regulatory capital recognition while ECL remains fully measured."
 />

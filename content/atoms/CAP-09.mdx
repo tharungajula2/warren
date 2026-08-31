@@ -1,95 +1,118 @@
 ---
 id: CAP-09
-title: Risk Weights and Risk-Weighted Assets
-type: concept
+title: ECL Transition and Regulatory Capital Relief
+type: delta
 domain: regulatory-capital
 subdomain: rwa-and-pillars
 one_screen: >-
-  A risk weight converts an exposure amount into a regulatory risk measure:
-  exposure × risk weight = RWA under the basic standardised credit-risk logic.
-  The weight is a prudential calibration of relative risk, not a forecast that
-  the stated percentage of the exposure will be lost.
+  A new ECL regime can create an immediate opening-equity hit before the
+  underlying loans have changed overnight. Transitional capital relief smooths
+  that prudential shock; it does not undo the allowance. **As at August 2026**,
+  RBI's final ECL Directions are issued but not yet in force: they commence on
+  **1 April 2027** and permit a declining CET1 add-back through **31 March
+  2031**.
 prerequisites:
-  - CAP-01
+  - IMP-20
+  - CAP-07
+  - CAP-08
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-04-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, CRE20 —
-      Standardised approach: individual exposures*
-    url: 'https://www.bis.org/basel_framework/chapter/CRE/20.htm'
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Asset
+      Classification, Provisioning and Income Recognition) Directions, 2026*,
+      RBI/DOR/2026-27/398, DOR.STR.REC.No.6/21.06.011/2026-27, 27 April 2026,
+      paragraphs 106-112.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
-      Calculation of minimum risk-based capital requirements*
-    url: 'https://www.bis.org/basel_framework/chapter/RBC/20.htm'
-    accessed: 27 August 2026
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks — Income
+      Recognition, Asset Classification and Provisioning) Repeal Directions,
+      2026*, RBI/DOR/2026-27/36, DOR.STR.REC.20/21.04.048/2026-27, 27 April
+      2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-Suppose a qualifying exposure amount is 100 and the applicable standardised credit risk weight is 50%. Its credit RWA is 50. If a minimum total-capital ratio were applied to that RWA, the capital requirement would be calculated from 50, not directly from the 100 exposure. This two-stage structure separates the **risk measurement** step from the **capital ratio** step.
+### Core mechanism
 
-Risk weights therefore act as regulatory scaling factors. Higher weights make a unit of exposure consume more capital; lower weights make it consume less. Under the standardised approach, weights are specified through exposure classes, counterparty characteristics, collateral treatment, external credit assessments where permitted, loan-to-value measures and other criteria. Basel’s revised standardised approach deliberately increases granularity and risk sensitivity while retaining supervisor-prescribed rules.
-
-A 100% risk weight does not mean a 100% probability of default or a 100% expected loss. It means one unit of exposure creates one unit of RWA before other applicable adjustments. Similarly, a 20% weight does not mean that 20% of the exposure is expected to disappear.
-
-**RWA density** is a useful derived intuition: RWA divided by a relevant exposure measure. A portfolio with 40 of credit RWA against 100 of exposure has 40% RWA density. But density is an output of regulatory measurement, not an independent risk parameter.
-
-Risk weights also differ from provisions. Provisions reduce the carrying value or recognise expected loss under the applicable framework; risk weights determine the capital denominator used to support unexpected risk.
+RBI transition:
 
 ```text
-+----------------------+
-| Exposure amount 100  |
-+----------------------+
-           |
-           v
-+----------------------+
-| Applicable RW = 50%  |
-+----------------------+
-           |
-           v
-+----------------------+
-| Credit RWA = 50      |
-+----------------------+
-           |
-           v
-+----------------------+
-| Capital ratio applied|
-| to RWA               |
-+----------------------+
+31 Mar 2027 IRACP provisions
+            ↓ compare
+1 Apr 2027 ECL requirement
+            ↓
+Excess ECL over old provisions
+            ↓
+Opening retained earnings reduce
+            ↓
+Bank may elect regulatory CET1 add-back
+            ↓
+Add-back fraction declines each year
+            ↓
+Fully loaded by FY 2031-32
+```
+
+| Financial year | Maximum fraction of transitional adjustment added back to CET1 |
+| :--- | ---: |
+| 2027-28 | 4/5 |
+| 2028-29 | 3/5 |
+| 2029-30 | 2/5 |
+| 2030-31 | 1/5 |
+| 2031-32 onward | Nil |
+
+The add-back is net of applicable taxes. RBI states that the recognised amount flows through, as appropriate, to Tier 1 and Total Capital and therefore derived measures, but it is not Tier 2, cannot reduce standardised-approach exposure amounts and cannot reduce the leverage exposure measure.
+
+### Where it sits
+
+```text
+Upstream:   IMP-20 India ECL transition · opening retained earnings
+This:       Temporary prudential CET1 relief
+Downstream: Reported versus fully-loaded capital · leverage ratio · transition disclosures
+```
+
+### Formula
+
+```text
+Transitional adjustment base = max(0, ECL at 1 Apr 2027 − IRACP provisions at 31 Mar 2027)
+
+CET1 add-back = applicable fraction × transitional adjustment base, net of applicable taxes
 ```
 
 ### Permanent rule
 
-A risk weight is a prudential scaling factor used to calculate RWA; it is not PD, LGD or expected loss.
+Transition relief changes regulatory capital recognition; it does not reverse, defer or reduce the ECL allowance required by the provisioning framework.
 
-### Permanent trap
+### Never confuse [ECL transition adjustment] and [CET1 add-back]
 
-Reading a 150% risk weight as “the regulator expects to lose 150% of the loan” confuses a capital calibration with an economic loss forecast.
-
-### Never confuse
-
-**Risk weight** — the regulatory percentage or formula output applied to an exposure for RWA purposes.
+**ECL transition adjustment** — the opening-equity effect arising from the change in provisioning basis.
 
 ---
 
-**Capital ratio** — qualifying capital divided by RWA; it is applied after RWA has been determined.
+**CET1 add-back** — temporary prudential recognition of a declining fraction of that effect.
+
+### Permanent trap
+
+Reporting only the transitional CET1 ratio hides the fully-loaded economics. RBI therefore requires disclosure of the capital and leverage impact relative to the no-transition position.
 
 ### Jurisdiction variants
 
-**No delta.** Jurisdictions prescribe different detailed weights, but the standardised arithmetic of exposure amount multiplied by applicable risk weight is common.
+#### IN (RBI)
+**As at August 2026:** final rule issued 27 April 2026; effective 1 April 2027. Future phase-out steps run through 31 March 2031. This is a rule with a future commencement date, not a proposal.
 
 <Recall
-  q="If exposure is 100 and the risk weight is 50%, what is RWA before other adjustments?"
-  a="50."
+  q="Does the RBI CET1 add-back reduce the ECL allowance?"
+  a="No; the allowance remains recognised, while the add-back temporarily changes prudential capital."
 />
 
 <Recall
-  q="Does a 100% risk weight mean expected loss is 100%?"
-  a="No."
+  q="What is the maximum add-back fraction in FY 2029-30?"
+  a="Two-fifths of the transitional adjustment base, subject to the Directions."
 />

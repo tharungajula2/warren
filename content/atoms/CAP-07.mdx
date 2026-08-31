@@ -1,119 +1,99 @@
 ---
 id: CAP-07
-title: Distribution Constraints and Maximum Distributable Amount
+title: Where Allowances Meet Capital
 type: mechanism
 domain: regulatory-capital
 subdomain: capital-stack
 one_screen: >-
-  Buffers bite before minimums because entering the buffer restricts
-  distributions while the bank can still remain legally capitalised above
-  minimum requirements. The maximum distributable amount mechanism turns buffer
-  depletion into progressively stronger limits on dividends, variable
-  remuneration and other discretionary payouts.
+  IMP-01 owns the object distinction: allowance is a reduction in an asset's
+  carrying amount; capital is loss-absorbing resource. This atom owns the
+  transmission between them. A higher credit-loss allowance reduces earnings or
+  opening retained earnings, which usually reduces CET1; prudential rules can
+  then make further capital adjustments without turning the allowance itself
+  into capital.
 prerequisites:
+  - IMP-01
+  - IMP-03
+  - FND-03
   - CAP-06
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
+  - universal
 perishable: true
 as_of: '2026-08-28'
-next_effective_date: '2027-01-01'
+next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *The capital buffers in Basel III
-      — Executive Summary*, 28 November 2019
-    url: 'https://www.bis.org/fsi/fsisummaries/b3_capital.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CAP30 —
+      Regulatory adjustments*, CAP30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Prudential Regulation Authority, *CP9/24 — Streamlining the Pillar 2A
-      capital framework and the capital communications process*, 12 September
-      2024
-    url: >-
-      https://www.bankofengland.co.uk/prudential-regulation/publication/2024/september/streamlining-the-pillar-2a-setting-and-capital-consultation-paper
-    accessed: 27 August 2026
-  - label: >-
-      European Banking Authority, *EBA calls for more certainty and consistency
-      in the application of restrictions on distributions*, 18 December 2015
-    url: >-
-      https://www.eba.europa.eu/publications-and-media/press-releases/eba-calls-more-certainty-and-consistency-application
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, CRE35 — IRB
+      approach: treatment of expected losses and provisions*, CRE35, published
+      27 March 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-A usable capital buffer creates a design problem. If a bank can distribute capital freely after entering the buffer, shareholders or instrument holders may receive resources that supervisors intended to remain available to absorb losses. Conversely, if entering the buffer immediately creates the same consequences as breaching a minimum, management may avoid using the buffer even during legitimate stress.
-
-Basel solves this by imposing **capital conservation constraints** as CET1 falls through the conservation-buffer range. The deeper the bank moves into the buffer, the greater the share of earnings it must retain. Basel describes the buffer as usable while business continues, with automatic distribution restrictions increasing as capital approaches the minimum.
-
-In UK and EU terminology, the related calculation is commonly called the **maximum distributable amount**, or MDA. The MDA limits specified discretionary distributions when the combined buffer is not met. UK PRA materials identify affected distributions such as bonuses and AT1 coupons, while EU CRD Article 141 links failure to meet the combined-buffer requirement with restrictions on distributions.
-
-The important sequencing is therefore: first the bank uses excess management headroom; then it may enter regulatory buffers; distribution constraints intensify; only after further deterioration does it approach minimum capital requirements. A buffer is consequently neither “free capital” nor a second minimum.
-
-The US stress capital buffer reaches a similar objective through a different capital architecture, so European MDA terminology should not be mechanically imported into US requirements.
+### Core mechanism
 
 ```text
-+----------------------+
-| Capital above buffers|
-+----------------------+
-           |
-           v
-+----------------------+
-| Buffer entered       |
-+----------------------+
-           |
-           v
-+----------------------+
-| Distribution limits  |
-| begin / intensify    |
-+----------------------+
-           |
-           v
-+----------------------+
-| Minimum approached   |
-+----------------------+
-           |
-           v
-+----------------------+
-| Severe prudential    |
-| breach territory     |
-+----------------------+
+Expected credit loss increases
+    ↓
+Loss allowance increases
+    ↓
+Credit impairment expense or opening-equity adjustment increases
+    ↓
+Retained earnings decrease
+    ↓
+Accounting equity decreases
+    ↓
+CET1 usually decreases
+    ↓
+Apply any separate prudential treatment
+```
+
+The same economic deterioration can also raise RWA through rating migration, default treatment or changed exposure characteristics. Capital ratios can therefore weaken through both numerator and denominator.
+
+The prudential framework then asks a separate question: how much of the accounting provision is eligible for a specific regulatory-capital treatment? Under IRB, that question becomes the expected-loss-versus-eligible-provision comparison owned by CAP-08.
+
+### Where it sits
+
+```text
+Upstream:   IMP-01 allowance versus capital · impairment expense · retained earnings
+This:       Accounting-to-capital transmission
+Downstream: Provision shortfall/excess · ECL transition · stressed capital ratios
 ```
 
 ### Permanent rule
 
-Distribution restrictions are a conservation mechanism triggered before capital minima are exhausted.
+The allowance affects capital mainly by changing earnings or equity; any regulatory recognition of provisions is a second prudential step.
 
-### Permanent trap
+### Never confuse [Allowance effect on CET1] and [Allowance counted as capital]
 
-Treating MDA as the amount of capital a bank is permitted to lose confuses a distribution limit with a capital stock.
-
-### Never confuse
-
-**MDA** — the maximum amount permitted for specified distributions under the applicable conservation regime.
+**Allowance effect on CET1** — accounting loss recognition reduces retained earnings and therefore the CET1 base.
 
 ---
 
-**Capital buffer** — the CET1 cushion whose depletion can cause the MDA restriction to apply.
+**Allowance counted as capital** — a separate and limited prudential treatment that exists only where the capital rules permit it.
+
+### Permanent trap
+
+Saying "provisions increase capital because they absorb losses" misses the first-order accounting effect: creating the provision generally reduces profit and CET1.
 
 ### Jurisdiction variants
 
-**IN** — RBI applies graduated capital-conservation ratios to earnings as CET1 enters the prescribed buffer bands. [RBI Capital Adequacy Directions 2025, capital conservation standards]
-
-**UK** — Ordinary-regime firms face MDA restrictions when they do not meet the combined buffer; the SDDT capital regime effective 1 January 2027 uses a simplified structure and removes the ordinary automatic-MDA architecture for SDDTs. [PRA CP9/24; PS4/26 and finalised Strong and Simple policy]
-
-**EU** — CRD Article 141 requires an MDA calculation and distribution restrictions when the combined-buffer requirement is not met. [CRD Article 141 / EBA]
-
-**US** — The large-bank framework uses a stress capital buffer derived from supervisory stress testing rather than the EU-style combined-buffer/MDA architecture. [Federal Reserve Annual Report]
+No delta in the balance-sheet transmission. The regulatory treatment of provision shortfalls, excess provisions and transitional relief differs by approach and jurisdiction.
 
 <Recall
-  q="Why can distribution restrictions apply while minimum capital is still met?"
-  a="Because the restrictions begin when buffers above the minimum are used."
+  q="What is the first capital effect of a new impairment charge?"
+  a="Lower earnings or retained earnings, which normally lowers CET1."
 />
 
 <Recall
-  q="Is MDA a loss limit?"
-  a="No. It is a limit on specified distributions."
+  q="Can the same deterioration reduce CET1 and increase RWA?"
+  a="Yes; numerator loss and denominator migration can occur together."
 />

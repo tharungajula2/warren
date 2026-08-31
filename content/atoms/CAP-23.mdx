@@ -1,113 +1,115 @@
 ---
 id: CAP-23
-title: Stress Testing and Capital Transmission
+title: 'Pillar 2: ICAAP, Supervisory Review and Add-ons'
 type: procedure
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  A capital stress test is a causal chain: define an adverse scenario, translate
-  it into risk drivers and financial losses, project earnings and RWA, then
-  recalculate capital resources and ratios. Reverse stress testing runs the
-  chain backwards from failure to identify combinations of events capable of
-  breaking the business model.
+  Pillar 2 is the completeness check on Pillar 1. ICAAP is management's
+  disciplined argument that the bank's capital is adequate for its actual risk
+  profile and strategy; supervisory review independently tests that argument and
+  can require remediation or capital above the minimum.
 prerequisites:
+  - FND-15
+  - FND-16
+  - CR-14
+  - CAP-21
   - CAP-22
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Stress testing principles*, 17
-      October 2018
-    url: 'https://www.bis.org/bcbs/publ/d450.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key
+      principles*, SRP20, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
       Basel Committee on Banking Supervision, *Basel Framework, SRP30 — Risk
-      management*
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/30.htm'
-    accessed: 27 August 2026
+      management*, SRP30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Stress testing principles*, BCBS
+      d450, 17 October 2018.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-**Scenario design** defines the macroeconomic or idiosyncratic shock. Variables may include economic contraction, unemployment, asset prices, interest rates, exchange rates, funding conditions or sector-specific stresses. The scenario should be severe enough to reveal vulnerabilities without being mistaken for a forecast. Basel describes stress testing as a critical element of bank risk management and a core supervisory tool.
-
-The scenario must then be **transmitted** into the bank. Credit quality deteriorates, defaults increase, collateral values change, market positions revalue, operating losses may rise and funding or revenue can weaken. Those effects flow into profit and loss and the balance sheet.
-
-Capital is affected through both numerator and denominator. Losses reduce retained earnings and therefore CET1. At the same time, rating migration, defaults or market volatility can increase RWA. A bank can therefore suffer a larger decline in its capital ratio than would be inferred from losses alone.
-
-Credible management actions may then be considered under the governing framework, but actions must be feasible under the stressed environment. Assuming instant capital issuance, perfect hedging or unlimited balance-sheet reduction can make a stress test mechanically pass while providing little information.
-
-**Reverse stress testing** begins with a defined point of non-viability or business-model failure and asks what events could cause it. Its objective is vulnerability discovery, not prediction.
+### Core mechanism
 
 ```text
-+----------------------+
-| Adverse scenario     |
-+----------------------+
-           |
-           v
-+----------------------+
-| Risk-factor changes  |
-+----------------------+
-           |
-           v
-+----------------------+
-| Losses + lower income|
-| + RWA movement       |
-+----------------------+
-           |
-           v
-+----------------------+
-| Capital numerator    |
-| and denominator      |
-+----------------------+
-           |
-           v
-+----------------------+
-| Stressed ratios      |
-+----------------------+
-
-Reverse:
-+----------------------+
-| Failure condition    |
-+----------------------+
-           |
-           v
-+----------------------+
-| What combination of |
-| shocks could cause it|
-+----------------------+
+Risk inventory
+    ↓
+What Pillar 1 captures
+    ↓
+Residual / under-captured material risks
+    ↓
+Quantification and stress
+    ↓
+Internal capital adequacy assessment
+    ↓
+Board-approved capital plan
+    ↓
+Supervisory review and challenge
+    ↓
+Capital / governance / risk-management response
 ```
+
+Typical Pillar 2 concerns include concentration, interest-rate risk in the banking book, weaknesses in governance or risk management, model limitations and risks that are material but not fully captured by Pillar 1.
+
+The order prevents double counting: identify the risk, identify the Pillar 1 coverage already present, then assess the residual. Pillar 2 is not a generic percentage added because "Pillar 1 is conservative".
+
+### Where it sits
+
+```text
+Upstream:   Pillar 1 minimum · concentration · risk appetite
+This:       ICAAP and supervisory completeness check
+Downstream: Firm-specific capital · buffers · stress capital planning
+```
+
+### Ownership
+
+| Role | Produces / owns |
+| :--- | :--- |
+| Business and risk owners | Risk identification and credible management actions |
+| Finance / capital | Capital projections and resources |
+| Risk function | ICAAP methodology and challenge |
+| Board | Approves risk appetite and capital adequacy |
+| Supervisor | Independently reviews and intervenes |
+| Internal audit | Assesses governance and control effectiveness |
 
 ### Permanent rule
 
-A capital stress test must transmit scenario variables through losses, earnings, balance-sheet behaviour and RWA before drawing a capital conclusion.
+Management owns ICAAP; the supervisor reviews it. Supervisory review does not transfer responsibility for capital adequacy away from the bank.
 
-### Permanent trap
+### Never confuse [ICAAP] and [Pillar 1 calculation]
 
-Applying a single percentage loss directly to CET1 while leaving RWA and income unchanged can miss the most important transmission channels.
-
-### Never confuse
-
-**Scenario stress test** — starts with adverse events and projects their consequences.
+**ICAAP** — forward-looking assessment of overall capital adequacy for the bank's actual risks.
 
 ---
 
-**Reverse stress test** — starts with a failure condition and identifies events capable of producing it.
+**Pillar 1 calculation** — prescribed minimum capital methodology.
+
+### Permanent trap
+
+Starting ICAAP with a desired capital percentage and inventing risks to justify it reverses the process.
 
 ### Jurisdiction variants
 
-**No delta.** Scenario variables and regulatory exercises differ, but forward and reverse stress-testing logic is universal.
+No delta in the Basel principles. Local frameworks determine the legal form of Pillar 2 requirements, expectations and supervisory communications.
 
 <Recall
-  q="Through which two broad channels can a stress reduce a capital ratio?"
-  a="The capital numerator can fall and RWA can rise."
+  q="Why must Pillar 2 identify Pillar 1 coverage first?"
+  a="To assess residual risk without charging twice for the same risk."
 />
 
 <Recall
-  q="Where does reverse stress testing start?"
-  a="From a defined failure or non-viability outcome."
+  q="Who owns the ICAAP conclusion?"
+  a="The bank's management and board, subject to independent supervisory review."
 />

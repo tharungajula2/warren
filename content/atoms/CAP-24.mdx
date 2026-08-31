@@ -1,95 +1,128 @@
 ---
 id: CAP-24
-title: Supervisory and Internal Stress Tests
-type: reference
+title: The Buffer Stack
+type: mechanism
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  Internal stress tests are management tools tailored to the bank’s own
-  vulnerabilities; supervisory stress tests are authority-led or
-  authority-specified exercises designed to assess prudential resilience and
-  comparability. The same scenario can serve both purposes, but ownership,
-  objectives and consequences are different.
+  Buffers answer a different question from minimum requirements: how much CET1
+  should remain available above requirements so the bank can absorb stress
+  before breaching the prudential floor? Conservation, countercyclical and
+  systemic buffers have different triggers and purposes, even when they all add
+  CET1.
 prerequisites:
+  - CAP-21
+  - CAP-22
   - CAP-23
 jurisdictions:
-  - universal
-perishable: false
-as_of: null
-next_effective_date: null
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-01-01'
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Stress testing principles*, 17
-      October 2018
-    url: 'https://www.bis.org/bcbs/publ/d450.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC30 — Buffers
+      above the regulatory minimum*, RBC30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Federal Reserve Board, *Federal Reserve Board finalizes hypothetical
-      scenarios for its annual stress test and votes to maintain the current
-      stress test-related capital requirements until public feedback can be
-      considered*, 4 February 2026
-    url: 'https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC40 —
+      Systemically important bank buffers*, RBC40, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, *Reserve Bank of India (Commercial Banks —
+      Prudential Norms on Capital Adequacy) Directions, 2025*,
+      RBI/DOR/2025-26/151, DOR.CAP.REC.70/21-01-002/2025-26, 28 November 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, *PS4/26 — The Strong and Simple
+      Framework: The simplified capital regime for Small Domestic Deposit Takers
+      — final*, PS4/26, 20 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, *Regulation Q — Capital
+      Adequacy of Bank Holding Companies, Savings and Loan Holding Companies,
+      and State Member Banks*, 12 CFR Part 217, current as at August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-An **internal stress test** is designed and governed by the bank. It should reflect the institution’s particular concentrations, products, funding structure and strategic risks. Its value lies in decision-making: capital planning, risk limits, contingency actions and identification of vulnerabilities that broad industry scenarios may miss.
+### Core mechanism
 
-A **supervisory stress test** is conducted or specified by a prudential authority. Basel distinguishes banks’ own internal stress testing, bank-run supervisory tests and supervisor-run tests. Common scenarios or methodologies can improve comparability across institutions and allow supervisors to evaluate system-wide vulnerabilities.
-
-The distinction is not simply “private versus published”. A bank may execute calculations itself using a supervisory scenario, while the authority determines methodology or evaluates results. Conversely, an internal exercise can use public macroeconomic variables but remain a management-owned stress test.
-
-Consequences can also differ. An internal test may lead management to change limits or capital targets. A supervisory exercise may inform formal capital requirements, buffers, supervisory expectations or remediation depending on the jurisdiction.
-
-The United States provides a clear example: the Federal Reserve’s supervisory stress test feeds the stress capital buffer architecture for large banks. In February 2026 the Board maintained then-current stress capital buffer requirements until 2027 while model feedback is considered. That is a jurisdiction-specific capital consequence, not a universal feature of all internal tests.
+Generic stack:
 
 ```text
-+----------------------+
-| Stress testing       |
-+----------------------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Internal  | | Supervisory|
-| bank-owned| | authority- |
-|           | | led/set    |
-+-----------+ +-----------+
-       |         |
-       v         v
-+-----------+ +-----------+
-| Decisions | | Prudential |
-| + limits  | | assessment |
-+-----------+ +-----------+
+Management headroom
+        ↓
+Systemic / institution-specific buffers where applicable
+        ↓
+Countercyclical buffer where applicable
+        ↓
+Capital conservation buffer
+        ↓
+Applicable Pillar 2 capital requirement
+        ↓
+Pillar 1 minimum
+```
+
+| Buffer | Risk addressed | Typical character |
+| :--- | :--- | :--- |
+| Capital conservation buffer | General ability to absorb losses above minima | Standing |
+| Countercyclical buffer | System-wide cyclical build-up of credit risk | Time-varying |
+| G-SIB / D-SIB or systemic buffer | Externality from systemic importance | Institution/system-specific |
+
+The exact legal stacking order can differ. What does not change is that a buffer is intended to be entered in stress before the bank exhausts minimum capital. That usability is why distribution constraints intensify as buffers are consumed.
+
+### Where it sits
+
+```text
+Upstream:   Pillar 1 · Pillar 2
+This:       CET1 buffers above requirements
+Downstream: Distribution constraints · management headroom · stress use
 ```
 
 ### Permanent rule
 
-A bank cannot outsource understanding of its vulnerabilities to the supervisory stress test; internal stress testing must remain tailored to its own risk profile.
+A buffer is useful precisely because the bank can enter it before breaching minimum capital, with consequences designed to conserve resources.
 
-### Permanent trap
+### Never confuse [Pillar 2 requirement] and [Buffer]
 
-Treating the supervisory scenario as the bank’s only severe scenario can leave material institution-specific concentrations unstressed.
-
-### Never confuse
-
-**Internal stress test** — management-owned assessment designed for the institution’s risks and decisions.
+**Pillar 2 requirement** — capital required because Pillar 1 does not adequately capture a bank-specific risk or weakness.
 
 ---
 
-**Supervisory stress test** — authority-run or authority-specified assessment used for prudential oversight and, in some regimes, capital calibration.
+**Buffer** — CET1 cushion maintained above requirements for conservation, cyclical or systemic purposes.
+
+### Permanent trap
+
+Calling every amount above Pillar 1 a "buffer" hides the distinction between required institution-specific capital and deliberately usable cushion.
 
 ### Jurisdiction variants
 
-**No delta.** Supervisory consequences differ, but Basel expressly recognises internal, bank-run supervisory and supervisor-run stress tests as distinct uses of the same stress-testing discipline.
+#### IN
+**As at August 2026:** RBI applies a 2.5% CET1 capital conservation buffer above domestic minimum ratios, plus applicable countercyclical and systemic requirements.
+
+#### UK / EU
+**As at August 2026:** combined-buffer structures and firm-specific Pillar 2 arrangements follow local rules. The UK SDDT regime is final but has a future commencement of **1 January 2027** for eligible firms.
+
+#### US
+**As at August 2026:** large-bank capital uses the existing stress capital buffer architecture rather than reproducing the EU combined-buffer stack.
 
 <Recall
-  q="What is the principal advantage of an internal stress test?"
-  a="It can be tailored to the bank’s own concentrations and vulnerabilities."
+  q="Why does a buffer sit above Pillar 1 and Pillar 2 requirements?"
+  a="It provides usable CET1 that can absorb stress before hard capital requirements are breached."
 />
 
 <Recall
-  q="Can supervisory stress-test results affect formal capital?"
-  a="Yes, where the domestic framework links the exercise to capital requirements or buffers."
+  q="What makes the countercyclical buffer different from the conservation buffer?"
+  a="It changes with system-wide cyclical risk rather than remaining a standing fixed cushion."
 />

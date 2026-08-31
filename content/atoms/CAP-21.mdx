@@ -1,104 +1,111 @@
 ---
 id: CAP-21
-title: Pillar 1 and Pillar 2
-type: concept
+title: 'Three Pillars, One Capital Architecture'
+type: reference
 domain: regulatory-capital
 subdomain: pillar-2-and-jurisdictions
 one_screen: >-
-  Pillar 1 standardises minimum capital for risks that can be captured through
-  common formulas; Pillar 2 asks whether those formulas leave material
-  institution-specific risk uncovered. Pillar 2 is therefore the deliberate
-  completeness check on Pillar 1.
+  The three Basel pillars answer different questions. Pillar 1 asks what
+  prescribed quantitative minimum follows from the rulebook; Pillar 2 asks what
+  material risk and vulnerability that minimum does not fully capture; Pillar 3
+  asks what must be disclosed so outsiders can assess the prudential position.
+  Buffers are not a fourth pillar: they sit above capital requirements.
 prerequisites:
+  - FND-17
+  - FND-18
   - CAP-10
-  - CAP-11
+  - CAP-12
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key
-      principles of supervisory review*
-    url: 'https://www.bis.org/basel_framework/chapter/SRP/20.htm'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, RBC20 —
+      Calculation of minimum risk-based capital requirements*, RBC20, last
+      update 26 November 2020, effective 1 January 2023.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee on Banking Supervision, *Basel Framework*, Supervisory
-      Review Process
-    url: 'https://www.bis.org/basel_framework/'
-    accessed: 27 August 2026
+      Basel Committee on Banking Supervision, *Basel Framework, SRP20 — Four key
+      principles*, SRP20, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, DIS10 —
+      Definitions and applications*, DIS10, last update 17 July 2024, effective
+      1 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, *Basel Framework, RBC30 — Buffers
+      above the regulatory minimum*, RBC30, published 15 December 2019.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
 import_source: 04_CAP_regulatory_capital.md
 ---
-A common capital framework requires standardisation. Credit RWA, market risk, operational risk and CVA can be measured through prescribed approaches that allow comparison across institutions. That is the strength of **Pillar 1**.
+### Core mechanism
 
-Its weakness is equally important: no finite rulebook can anticipate every concentration, business-model vulnerability, governance weakness or emerging risk. Two banks with the same Pillar 1 ratio can have very different sensitivity to interest rates, concentration, pension risk, strategic risk or deficiencies in risk controls.
-
-**Pillar 2** addresses that gap through the supervisory review process. Basel requires banks to maintain a process for assessing overall capital adequacy in relation to risk profile and strategy, and supervisors must review that process, evaluate capital adequacy and take action where necessary.
-
-Pillar 2 can therefore affect capital even when a Pillar 1 calculation is perfectly correct. That does not mean Pillar 1 was “wrong”; it means its standardised scope was not intended to be exhaustive.
-
-The distinction also prevents double counting. A supervisor assessing Pillar 2 should understand which risks are already captured by Pillar 1 before adding capital for residual risk. Conversely, management should not exclude a material risk from internal capital assessment merely because no dedicated Pillar 1 formula exists.
-
-The conceptual sequence is formula first, residual-risk analysis second, supervisory judgement third.
+| Layer | Question | Output |
+| :--- | :--- | :--- |
+| Pillar 1 | What do prescribed capital formulas require? | Minimum risk-based capital |
+| Pillar 2 | What risks or weaknesses remain insufficiently captured? | Internal assessment, supervisory review and possible additional capital |
+| Buffers | How much usable CET1 should sit above requirements for conservation, cycle or systemic risk? | Additional CET1 cushion |
+| Pillar 3 | What must market participants be able to observe? | Regulatory disclosures |
 
 ```text
-+----------------------+
-| Pillar 1 calculation |
-+----------------------+
-           |
-           v
-+----------------------+
-| Identify material    |
-| risks and limitations|
-+----------------------+
-           |
-           v
-+----------------------+
-| What is not fully    |
-| captured?            |
-+----------------------+
-           |
-           v
-+----------------------+
-| Pillar 2 assessment  |
-+----------------------+
-           |
-           v
-+----------------------+
-| Supervisory response |
-+----------------------+
+Pillar 3 disclosure
+        observes
+           ↓
+Buffers / usable CET1
+           ↓
+Pillar 2 requirement or supervisory capital
+           ↓
+Pillar 1 minimum
+           ↓
+Capital quality minima within the stack
+```
+
+The exact legal order and labels differ locally, but the conceptual error to avoid is treating Pillar 1, Pillar 2 and buffers as three interchangeable topics. Pillar 1 is the baseline calculation; Pillar 2 is the completeness check; buffers are deliberately usable layers above requirements.
+
+### Where it sits
+
+```text
+Upstream:   RWA engines · capital ratios
+This:       Whole prudential capital architecture
+Downstream: Pillar 1 · Pillar 2 · buffers · distribution constraints
 ```
 
 ### Permanent rule
 
-Pillar 2 begins where standardised minimum requirements stop being a complete description of the bank’s material risk.
+Pillar 3 discloses the capital architecture; it does not itself add a capital layer.
 
-### Permanent trap
+### Never confuse [Pillar 2] and [Capital buffer]
 
-Adding capital under Pillar 2 without identifying what Pillar 1 already captures can create hidden double counting.
-
-### Never confuse
-
-**Pillar 1 requirement** — capital generated by prescribed minimum-risk methodologies.
+**Pillar 2** — institution-specific assessment and supervisory response to residual risks or weaknesses.
 
 ---
 
-**Pillar 2 requirement or supervisory assessment** — capital and supervisory response arising from risks or weaknesses not adequately captured by Pillar 1, according to the local framework.
+**Capital buffer** — CET1 cushion maintained above applicable capital requirements for a defined macroprudential or conservation purpose.
+
+### Permanent trap
+
+Saying "Pillar 1 + Pillar 2 + Pillar 3 = total capital requirement" wrongly turns disclosure into capital and ignores buffers.
 
 ### Jurisdiction variants
 
-**No delta.** Legal labels and calibration differ, but the conceptual function of Pillar 2 as a complement to Pillar 1 is common.
+No delta in the Basel conceptual architecture. Domestic law determines the exact Pillar 2 instruments, buffer order and disclosure implementation.
 
 <Recall
-  q="Why can two banks with identical Pillar 1 ratios need different capital?"
-  a="Their concentrations, business models, controls and other risks may differ under Pillar 2."
+  q="What question does Pillar 2 answer after Pillar 1?"
+  a="Whether material risks or weaknesses remain inadequately captured by the prescribed minimum."
 />
 
 <Recall
-  q="Does Pillar 2 imply that Pillar 1 calculations are erroneous?"
-  a="No. Pillar 1 is deliberately standardised and incomplete."
+  q="Where do buffers sit?"
+  a="Above applicable capital requirements; they are not another Basel pillar."
 />
