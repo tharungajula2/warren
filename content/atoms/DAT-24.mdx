@@ -1,0 +1,107 @@
+---
+id: DAT-24
+title: 'Defect Tracking, Retest and Closure'
+type: procedure
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  Delivery defects need a controlled lifecycle separate from long-term
+  enterprise data issues, while material defects can escalate into that issue
+  framework. A defect record links observed failure to requirement, mapping,
+  severity, fix, retest and regression evidence so release decisions are based
+  on known residual risk.
+prerequisites:
+  - DAT-17
+  - DAT-21
+  - DAT-22
+  - DAT-23
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      International Institute of Business Analysis, A Guide to the Business
+      Analysis Body of Knowledge, BABOK Guide Version 3, ISBN 9781927584026,
+      2015.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+| Defect field | Why it matters |
+| :--- | :--- |
+| Observed vs expected | States the failure objectively |
+| Requirement / mapping link | Identifies intended behaviour |
+| Severity and impact | Determines release and escalation consequence |
+| Root cause | Distinguishes requirement, data, code or environment failure |
+| Fix version | Identifies what changed |
+| Retest evidence | Proves the original failure is removed |
+| Regression impact | Proves the fix did not break adjacent logic |
+| Closure authority | Prevents self-declared completion |
+
+```text
+Test or UAT failure
+    ↓
+Log and triage defect
+    ↓
+Assess severity and affected requirements
+    ↓
+Fix or formally disposition
+    ↓
+Retest original scenario
+    ↓
+Run affected regression scope
+    ↓
+Close with evidence or escalate
+```
+
+Severity is based on impact, not development effort. A one-line mapping error can be critical if it contaminates a regulatory population; a complex cosmetic defect may be low severity.
+
+### Where it sits
+
+```text
+Upstream:   Test packs · UAT · Extract validation
+This:       Delivery defect lifecycle
+Downstream: Release decision · Enterprise issue management · Production readiness
+```
+
+### Never confuse [Defect] and [Data issue]
+
+**Defect** - a failure of delivered behaviour against an approved requirement or expected result during change delivery.
+
+---
+
+**Data issue** - a broader governed weakness in live enterprise data or controls. A defect can reveal or become a data issue when the cause extends beyond the change.
+
+### Permanent rule
+
+A fix is not closed until the failed scenario passes and the relevant regression scope remains sound.
+
+### Permanent trap
+
+Closing a defect because the developer cannot reproduce it. The correct next step is evidence-based triage of data, environment and scenario conditions, not deletion of the problem.
+
+### Jurisdiction variants
+
+**No delta.** Defect mechanics are delivery controls and do not change by jurisdiction.
+
+<Recall
+  q="Why is retest alone insufficient after a fix?"
+  a="The fix may solve the original case while breaking adjacent logic; regression testing checks the affected wider behaviour."
+/>
+
+<Recall
+  q="When should a delivery defect enter enterprise issue management?"
+  a="When it reveals a live, material or systemic weakness whose scope or remediation extends beyond the delivery release."
+/>

@@ -1,16 +1,18 @@
 ---
 id: DAT-17
-title: Data Governance Models
-type: concept
+title: Data Issue Management and Remediation
+type: procedure
 domain: risk-data
 subdomain: data-quality-and-governance
 one_screen: >-
-  Data governance models define how oversight is structured. Common models are
-  *centralized* (a single data governance committee sets policies for all) and
-  *federated* (each business unit has its own governance under corporate
-  guidelines). RBI notes typical models based on process, subject area, or
-  geography, but emphasizes business-function-based ownership.
+  A data issue is not closed when the immediate report is patched. Controlled
+  remediation separates containment from permanent correction, identifies the
+  root cause, assigns accountable ownership, validates the fix and retains
+  evidence that the defect no longer recurs or remains within an explicitly
+  accepted risk position.
 prerequisites:
+  - DAT-09
+  - DAT-15
   - DAT-16
 jurisdictions:
   - universal
@@ -21,65 +23,82 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: RBI Committee Report on Data Governance (2018).
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, Implementation of the Principles
+      for effective risk data aggregation and risk reporting, BCBS Newsletter, 6
+      January 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-In a centralized model, a bank-wide data council or steering committee makes decisions on data standards and conflicts. This ensures consistency but can be slow to react. In a federated model, each line of business governs its own data (loans, payments, etc.) with a chief data steward, under high-level corporate policy. This is more agile but risks inconsistent rules. Many banks use a hybrid: enterprise-wide standards set by a central group, with subcommittees or local owners refining for their area.
-
-Choosing a model depends on bank size and culture. Large global banks often need a strong central committee (reporting to the board) to coordinate regional offices. A smaller bank might use a subject-based structure (e.g. separate governance for retail vs corporate banking data). RBI’s guidance suggests ownership should follow business functions, with an executive data governance committee and clear roles.
-
-Regardless of model, a permanent rule is that the structure and responsibilities must be documented. A trap is letting data governance stay informal or ad hoc. Best practice: publish an operating model (committees, roles, processes), and review it periodically. The goal is a sustainable model where policies are enforced, quality is measured (e.g. via KPIs), and issue remediation is managed end-to-end.
+### Core mechanism
 
 ```text
-          Centralized Model
-    +-----------------------------+
-    | Corporate Data Governance   |
-    | Steering Committee (Board)  |
-    +------+----------------------+
-           |
-    +------+------+
-    | Department A | (Data Stewards)
-    +-------------+
-    | Department B |
-    +-------------+
-
-   Federated Model
-+---------------------+   +---------------------+
-| Dept A Governance   |   | Dept B Governance   |
-| (Loan Data Council) |   | (Market Data Council)|
-+---------------------+   +---------------------+
-          ^                         ^
-         Corporate Data Governance (policy framework)
+Detect defect or control breach
+    ↓
+Assess materiality, affected data and consumers
+    ↓
+Contain immediate reporting or decision risk
+    ↓
+Assign owner and perform root-cause analysis
+    ↓
+Design and implement permanent remediation
+    ↓
+Retest affected chain and regression scope
+    ↓
+Validate evidence → close or escalate
 ```
 
-### Permanent rule
+| Issue record must answer | Why it matters |
+| :--- | :--- |
+| What data and reports are affected? | Defines impact and consumers |
+| Since when? | Determines historical exposure and possible restatement |
+| What is the root cause? | Prevents cosmetic fixes |
+| What containment exists? | Controls current risk while remediation is open |
+| Who is accountable and by when? | Creates enforceable ownership |
+| What proves closure? | Stops tickets closing on assertion alone |
 
-Define and publish your data governance structure (committees, roles, processes) and measure its effectiveness.
+Root causes can sit at source capture, master/reference data, definition, interface, transformation, manual adjustment or governance. The issue should be assigned to the party able to remove the cause, while the data owner remains accountable for the risk to the governed domain.
 
-### Permanent trap
+### Where it sits
 
-Believing “one size fits all” – e.g. centralizing without business input can lead to resistance. Balance central oversight with local expertise.
+```text
+Upstream:   DQ breach · Reconciliation break · Consumer challenge · Production defect
+This:       Issue containment and root-cause remediation
+Downstream: Change requirements · Retest · Governance escalation · Restatement assessment
+```
 
-### Never confuse
+### Never confuse [Workaround] and [Remediation]
 
-**Centralized governance** — A single corporate body governs all data decisions.
+**Workaround** - temporary control or manual action that contains immediate impact while the defect remains.
 
 ---
 
-**Federated governance** — Each division/business unit has autonomy (within overall guidelines).
+**Remediation** - change that removes or durably controls the root cause and is validated before closure.
+
+### Permanent rule
+
+Closure evidence must demonstrate the root cause is resolved or that any residual risk is explicitly accepted through the proper governance route.
+
+### Permanent trap
+
+Measuring success by ticket closure rate. Fast closure can conceal recurring issues if fixes address symptoms rather than sources.
 
 ### Jurisdiction variants
 
-**No delta.** These are organizational choices; regulators expect some governance model, but don’t mandate a specific structure.
+**No delta.** Supervisory escalation mechanisms vary, but sound issue lifecycle mechanics do not.
 
 <Recall
-  q="What is a federated data governance model?"
-  a="Governance is handled by individual business units (with a corporate policy overlay)."
+  q="When is a manual report correction a valid response?"
+  a="It can be valid containment to protect an immediate decision or filing, but it is not permanent remediation unless it also removes the underlying cause."
 />
 
 <Recall
-  q="Who typically chairs a bank’s data governance steering committee?"
-  a="Often a senior executive such as the CIO, CRO or COO, with board oversight."
+  q="Why must issue scope include a &quot;since when&quot; assessment?"
+  a="A defect may have affected prior reports or submissions; historical impact determines whether consumers need notification, correction or restatement."
 />

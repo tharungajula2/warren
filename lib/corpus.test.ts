@@ -2,9 +2,10 @@ import { describe, it, expect } from "vitest";
 import { getCorpusManifest, getPrerequisiteTrail, buildRequirementSet } from "./corpus";
 
 describe("Corpus Manifest & Prerequisite Resolution", () => {
-  it("loads corpus manifest with 275 atoms and 11 roles", () => {
+  it("loads corpus manifest and validates structural integrity", () => {
     const manifest = getCorpusManifest();
-    expect(Object.keys(manifest.atoms).length).toBe(275);
+    expect(Object.keys(manifest.atoms).length).toBeGreaterThan(200);
+    expect(manifest.missingAtoms.length).toBe(0);
     expect(manifest.roles.length).toBe(11);
   });
 

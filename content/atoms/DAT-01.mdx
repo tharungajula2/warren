@@ -1,15 +1,15 @@
 ---
 id: DAT-01
-title: Risk Data as a Discipline
+title: Risk Data as an Enterprise Discipline
 type: concept
 domain: risk-data
 subdomain: bcbs239-and-aggregation
 one_screen: >-
-  In the 2007–2009 financial crisis, banks could not aggregate their risk
-  exposures quickly or accurately. This failure impaired timely decision-making,
-  prompting regulators to formalize risk data management as a discipline (e.g.
-  Basel BCBS 239) to ensure banks maintain accurate, timely, end-to-end risk
-  data aggregation and reporting.
+  Risk data management is the discipline of making risk information reliable
+  enough to steer a bank, not merely storing data or producing reports. It
+  connects governed source data to aggregation, decisions, internal risk
+  reporting and supervisory reporting, with evidence that the chain can still
+  work under stress.
 prerequisites: []
 jurisdictions:
   - universal
@@ -21,54 +21,80 @@ verified: false
 reading_minutes: 2
 sources:
   - label: >-
-      Basel Committee on Banking Supervision, *Principles for effective risk
-      data aggregation and risk reporting*, Jan 2013.
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
   - label: >-
-      Basel Committee press release, *Progress report on BCBS 239
-      implementation* (28 Nov 2023).
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Banks historically maintained data in silos and spreadsheets, impeding a holistic risk view. When Lehman Brothers collapsed in 2008, many institutions realized their systems could not tell the board or regulators the full picture of their exposures. The Basel Committee responded with BCBS 239 (2013) to “strengthen banks’ risk data aggregation capabilities and internal risk reporting practices”. Globally systemically important banks (G-SIBs) had to comply by 2016; supervisors applied similar standards to domestic SIBs. In practice, risk data discipline means implementing corporate-wide data governance, architecture and controls so that any material risk metric can be produced “fully, quickly and accurately.” This underpins effective risk management and regulatory compliance.
-
-Key outcomes of this discipline include board-level data governance, documented processes, and accountability for data quality. It also requires banks to invest in integrated data architectures and automation, since manual consolidation is deemed unacceptable. The discipline encompasses ongoing improvement: recent Basel progress reports note that, years on, many banks still need work to fully meet BCBS 239.
+### Core mechanism
 
 ```text
-+----------------+       +----------------+       +----------------+
-| Risk Data in   |-----&gt; | Data Governance|-----&gt; | Risk Decisions |
-| Siloes         |       | Frameworks     |       | and Reporting  |
-+----------------+       +----------------+       +----------------+
+Business events and positions
+    ↓
+Source data and reference data
+    ↓
+Governed definitions, ownership and controls
+    ↓
+Risk data aggregation
+    ↓
+Risk reports and regulatory returns
+    ↓
+Decisions, challenge and supervisory action
 ```
+
+A risk-data framework therefore controls four linked questions:
+
+| Question | Control objective |
+| :--- | :--- |
+| What does the datum mean? | Common definition, metadata and glossary |
+| Where did it come from? | Authoritative source and lineage |
+| Can it be relied on? | Data quality rules, reconciliation and issue management |
+| Who is accountable? | Owner, steward, producer, consumer and challenge roles |
+
+Risk measures themselves remain owned elsewhere: PD, LGD, EAD and RWA are credit and capital concepts; ECL staging is impairment; LCR and NSFR are liquidity. DAT owns the enterprise data chain that carries such measures into decisions and reporting.
+
+### Where it sits
+
+```text
+Upstream:   Business events · Source systems · Reference data
+This:       Enterprise risk data discipline
+Downstream: Risk aggregation · Management reporting · Regulatory returns · Decisions
+```
+
+### Ownership
+
+| Role | Core accountability |
+| :--- | :--- |
+| Producer | Creates or transforms data |
+| Data owner | Accountable for governed meaning and fitness for use |
+| Data steward | Operates standards, monitoring and remediation |
+| Consumer | Uses data and identifies fitness-for-use failures |
+| Challenge | Independently tests whether controls and evidence deserve reliance |
 
 ### Permanent rule
 
-Timely, accurate risk data is essential for sound decision-making and regulatory compliance.
+A report cannot be more trustworthy than the data, definitions, controls and accountability that produced it.
 
 ### Permanent trap
 
-Relying on last-minute, manual spreadsheet aggregations (especially during stress) can give a false sense of security.
-
-### Never confuse
-
-**Risk data** — Information on potential losses or exposures (e.g. credit, market risk metrics). It is forward-looking and used for risk management.
-
----
-
-**Accounting (financial) data** — Realized financial transactions (P&amp;L, balance sheets) as recorded in accounts. Risk data and accounting data serve different purposes and must be reconciled, not conflated.
+Treating risk data as an IT problem because systems store it. Technology operates the plumbing; business accountability determines meaning, materiality and acceptable quality.
 
 ### Jurisdiction variants
 
-**No delta.** The need for robust risk data aggregation and reporting is a universal lesson from the financial crisis.
+**No delta.** The enterprise mechanics do not change by jurisdiction; local regulators differ mainly in reporting requirements and supervisory enforcement.
 
 <Recall
-  q="Why did regulators formalize risk data discipline after 2008?"
-  a="Because banks’ inability to aggregate risk exposures during the crisis impaired decision-making."
+  q="What makes risk data management different from report production?"
+  a="It governs meaning, source, quality, lineage and accountability before a report exists, so the report can be reproduced and challenged rather than merely delivered."
 />
 
 <Recall
-  q="What is the goal of BCBS 239?"
-  a="To strengthen banks’ ability to collect, consolidate and report risk data quickly and accurately."
+  q="Who owns the calculation mechanics of RWA or LCR in this pack?"
+  a="Not DAT. DAT owns the enterprise data chain that supplies and reports those measures; CAP and TLM own their calculation mechanics."
 />

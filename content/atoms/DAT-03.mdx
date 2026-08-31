@@ -1,17 +1,14 @@
 ---
 id: DAT-03
-title: BCBS 239 Principles Overview
-type: concept
+title: BCBS 239 Governance and Data Architecture
+type: mechanism
 domain: risk-data
 subdomain: bcbs239-and-aggregation
 one_screen: >-
-  BCBS 239 comprises 14 principles organized in four groups: (I) Governance &
-  Infrastructure (board accountability, data architecture), (II) Risk Data
-  Aggregation Capabilities (accuracy, completeness, timeliness, adaptability),
-  (III) Risk Reporting Practices (comprehensiveness, clarity, frequency,
-  distribution), and (IV) Supervisory Review (how regulators assess banks).
-  Together they form a principles-based framework requiring banks to implement
-  robust data policies and systems.
+  BCBS 239 Principles 1-2 make risk data a management-body and
+  enterprise-architecture responsibility. The bank must be able to aggregate and
+  report material risk information despite legal-entity complexity,
+  organisational change, stress, acquisitions or fragmented technology.
 prerequisites:
   - DAT-02
 jurisdictions:
@@ -24,61 +21,73 @@ verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Basel Committee, *Principles for effective risk data aggregation and risk
-      reporting*, Jan 2013.
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'FluxForce, *BCBS 239: Requirements, Scope & Compliance* (2026).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: Basel Committee press release (28 Nov 2023).
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-BCBS 239’s purpose is to ensure banks can identify their risk exposures at any time. It mandates that the board of directors oversee data quality, and that the Chief Risk Officer is accountable day-to-day. Principle 1 demands “strong governance” consistent with other Basel standards, and Principle 2 requires a data architecture that supports aggregation in normal and stress conditions (avoiding last-minute spreadsheets). The second group (Principles 3–6) then focuses on aggregation: data must reconcile with accounting, cover all material sources (at least ~95%), be updated rapidly (daily or intraday for critical metrics), and support ad hoc queries under stress. The third group (Principles 7–11) covers reporting: risk reports must be “accurate, comprehensive, and written for their intended audience,” delivered at appropriate frequency, and distributed along the approved chain of command. Finally, Principles 12–14 describe supervisory review: they guide how regulators should evaluate compliance, require remediation plans for deficiencies, and address home/host coordination for global banks.
+### Core mechanism
 
-BCBS 239 is principles-based: it does not prescribe specific IT architectures but sets outcomes. National supervisors (e.g. PRA in the UK, Fed in the US, RBI in India) expect banks to meet these outcomes, potentially imposing Pillar 2 add-ons for serious shortcomings. The standard has no formal legal force by itself; compliance is enforced through local regulation and supervision.
+| Principle | Required capability | Evidence in practice |
+| :--- | :--- | :--- |
+| 1 Governance | Senior management and the board oversee risk data aggregation and reporting within the risk-management framework | Policy, scope, accountability, resources, independent review, issue escalation |
+| 2 Data architecture and IT infrastructure | Architecture supports accurate, complete and timely aggregation in normal and stressed conditions | Documented architecture, integrated taxonomies, controlled interfaces, resilience, change impact assessment |
 
 ```text
-+------------------------+  +----------------------------+
-| Governance &amp; Infra     |  | Risk Reporting Practices  |
-| (Principles 1–2)       |  | (Principles 7–11)         |
-+------------------------+  +----------------------------+
-             |                         ^
-             v                         |
-+------------------------+  +----------------------------+
-| Data Aggregation       |  | Supervisory Review        |
-| (Principles 3–6)       |  | (Principles 12–14)        |
-+------------------------+  +----------------------------+
+Business strategy or structural change
+    ↓
+Assess impact on data scope, architecture and reporting
+    ↓
+Assign accountable decisions and resources
+    ↓
+Integrate sources, definitions and controls
+    ↓
+Validate normal and stress capability
 ```
+
+A merger, new product or system replacement is therefore a risk-data event, not just a technology event. If the change creates a new source, mapping, identifier or legal-entity boundary, the reporting chain must absorb it without losing traceability.
+
+### Where it sits
+
+```text
+Upstream:   BCBS 239 architecture · Bank structure · Business and technology change
+This:       Governance and data architecture
+Downstream: Authoritative sources · Lineage · Aggregation capability · Reporting resilience
+```
+
+### Ownership
+
+| Role | Governance consequence |
+| :--- | :--- |
+| Board and senior management | Set direction, approve framework, demand remediation |
+| Business data owners | Account for meaning and fitness of governed data |
+| IT and data engineering | Build and operate architecture to approved requirements |
+| Independent challenge | Tests design, implementation and evidence |
 
 ### Permanent rule
 
-The board of directors must ultimately own the risk data framework, not just delegate it to IT – strong governance is mandatory.
+Architecture choices cannot be allowed to make material risk unknowable at the level where management or supervisors need it.
 
 ### Permanent trap
 
-Treating BCBS 239 as optional guidance; in practice, major regulators treat it as mandatory for significant banks.
-
-### Never confuse
-
-**BCBS 239** — Basel Committee principles for risk data aggregation and reporting. Its focus is data and reporting quality.
-
----
-
-**Basel III/CRR** — Regulatory framework for capital and liquidity. While related to risk, Basel III addresses capital adequacy, not data architecture.
+Treating a successful nightly load as proof of architecture adequacy. Principle 2 is about the end-to-end ability to aggregate under changing and stressed conditions, not batch completion alone.
 
 ### Jurisdiction variants
 
-**No delta.** The 14 principles and their objectives are identical globally; they were adopted for G-SIBs with the same intent by all major regulators.
+**No delta.** The principles are universal; local supervisors may impose different remediation mechanisms or additional expectations.
 
 <Recall
-  q="What are the four categories of BCBS 239 principles?"
-  a="Governance & infrastructure; risk data aggregation; risk reporting; supervisory review."
+  q="Why must a new product be assessed as a risk-data change?"
+  a="It can introduce new sources, classifications, transformations and reporting needs; if those are not integrated, group-wide aggregation becomes incomplete or inconsistent."
 />
 
 <Recall
-  q="Who is covered by BCBS 239?"
-  a="G-SIBs had a mandatory deadline; D-SIBs and large banks are expected to follow equivalent rules enforced by local supervisors."
+  q="What does Principle 1 add beyond naming a chief data officer?"
+  a="It requires governance embedded in risk management, with senior accountability, resources, scope, controls and escalation rather than a title without decision rights."
 />

@@ -1,15 +1,15 @@
 ---
 id: DAT-09
-title: Data Lineage (Business vs Technical)
+title: 'Data Owner, Steward, Producer, Consumer and Challenge'
 type: concept
 domain: risk-data
 subdomain: architecture-and-lineage
 one_screen: >-
-  Data lineage tracks the journey of data from its origin to its final use.
-  *Business lineage* is a high-level, user-friendly map of what data comes from
-  where for reporting purposes; *technical lineage* is the detailed breakdown of
-  data flows through systems and code. Both are essential for understanding and
-  troubleshooting data issues.
+  Risk data governance fails when accountability is collapsed into one vague
+  "data team". The owner, steward, producer, consumer and challenge function
+  answer different questions: who is accountable for meaning and fitness, who
+  operates governance, who creates or transforms the data, who relies on it, and
+  who independently tests the evidence.
 prerequisites:
   - DAT-08
 jurisdictions:
@@ -21,58 +21,70 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'Secoda blog, *Business vs Technical Data Lineage* (Dec 2024).'
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Business lineage answers “what data needed to produce a report and why.” It’s often documented in a business requirements document (BRD): e.g. a line item in a report is defined as “sum of loan commitments by country.” Technical lineage, by contrast, traces exactly how that sum is calculated: which tables in the core banking system, what transformations (aggregations, currency conversion) were applied, and how it moved into the data warehouse. Regulators and auditors require lineage evidence to trust reports. For instance, if a regulator sees a credit risk report, they may ask the bank to show the chain of systems and transformations leading to each number.
+### Core mechanism
 
-Clear lineage helps identify root causes of data discrepancies. If a report number is wrong, technical lineage lets data engineers pinpoint where the anomaly occurred in the pipeline. Business lineage helps managers understand the impact (e.g. which products are affected). Both together provide a “complete picture.” Under BCBS 239, documenting lineage is part of demonstrating data governance; many banks include lineage diagrams in their data management plans.
+| Role | Produces | Approves / decides | Consumes | Challenges |
+| :--- | :--- | :--- | :--- | :--- |
+| Data owner | Business decisions on the data domain | Definition, required quality, priorities and risk acceptance | Quality and issue information | Producer and steward performance |
+| Data steward | Metadata, monitoring and remediation coordination | Operational changes within delegated authority | DQ results and issue evidence | Day-to-day adherence to standards |
+| Producer | Source or transformed data | Operational production controls | Requirements and mappings | Upstream defects and unclear requirements |
+| Consumer | Use-specific outputs and feedback | Acceptance for intended use where assigned | Data, reports and extracts | Fitness for purpose and unexplained changes |
+| Independent challenge | Review evidence and findings | Independent assessment, not business ownership | Policies, lineage, tests and issue records | Design and operating effectiveness |
 
 ```text
-+---------------------+
-| Business Lineage    |
-+---------------------+
-| Loan Commitments --|
-| by Region -&gt; Report |
-+---------------------+
-      |
-      v
-+-------------------------------+
-| Technical Lineage             |
-+-------------------------------+
-| CoreBanking.Loans -&gt; ETL -&gt;   |
-| DataWarehouse -&gt; Report DB    |
-+-------------------------------+
+Owner sets accountable meaning and quality
+    ↓
+Producer supplies and steward governs operation
+    ↓
+Consumer tests usefulness in real use
+    ↓
+Challenge independently tests the control framework
 ```
 
-### Permanent rule
+The same person may wear more than one role in a small organisation, but decision rights must remain explicit and incompatible duties should not become self-approval.
 
-Always document both business and technical lineage when creating data flows or reports. This double perspective ensures clarity for both business and IT stakeholders.
+### Where it sits
 
-### Permanent trap
+```text
+Upstream:   CDEs · Golden sources · Risk-data governance
+This:       Five-role accountability model
+Downstream: Governance operating model · Quality control · Issue remediation · Delivery sign-off
+```
 
-Providing only high-level lineage (“loans come from system X”) without the technical detail needed for audit.
+### Never confuse [Data owner] and [Data steward]
 
-### Never confuse
-
-**Business lineage** — A high-level mapping (for example, “Loan system ⇒ (sum) ⇒ monthly risk report”), understandable by non-IT stakeholders.
+**Data owner** - accountable business authority for the governed data domain, including definition, required quality and prioritisation.
 
 ---
 
-**Technical lineage** — A precise record of ETL steps, database tables and transformations that produce the data.
+**Data steward** - operational custodian of standards, metadata, monitoring and remediation coordination; stewardship does not remove the owner's accountability.
+
+### Permanent trap
+
+Assigning "IT" as owner merely because IT hosts the system. System operation does not confer business authority to decide what exposure, customer, product or risk classification means.
 
 ### Jurisdiction variants
 
-**No delta.** Both forms of lineage are part of global data governance expectations (e.g. BCBS 239 Principle 2’s call for documented architecture).
+**No delta.** Organisational titles vary, but the separation of accountability, operation, production, use and independent challenge is a general governance need.
 
 <Recall
-  q="What is the purpose of technical data lineage?"
-  a="To trace exactly how report data was processed through systems and transformations."
+  q="Who decides whether the required quality threshold for a CDE is acceptable?"
+  a="The accountable owner, informed by consumers, stewards and risk context. The steward can operate monitoring but should not silently redefine acceptable risk."
 />
 
 <Recall
-  q="Who typically uses business lineage?"
-  a="Business managers, auditors and regulators to understand what data is being reported and why."
+  q="Why is the consumer a distinct role?"
+  a="Data can pass technical checks yet fail its intended use; the consumer is positioned to detect missing granularity, stale timing or semantic problems that production controls may not reveal."
 />

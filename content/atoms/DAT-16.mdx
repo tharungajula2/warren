@@ -1,16 +1,18 @@
 ---
 id: DAT-16
-title: Data Ownership vs Stewardship
-type: concept
+title: Reconciliation and Break Governance
+type: mechanism
 domain: risk-data
 subdomain: data-quality-and-governance
 one_screen: >-
-  **Data owners** are senior business managers who are accountable for data
-  assets; **data stewards** are specialists who manage data quality day-to-day.
-  The owner defines data policies and sets quality standards, while the steward
-  implements these standards and handles operational issues.
+  Reconciliation compares two governed populations or totals that should agree
+  after known differences are understood. Its value is not the act of matching
+  numbers; it is the disciplined classification, ownership, ageing and clearance
+  of breaks so unexplained differences cannot quietly enter risk reports or
+  returns.
 prerequisites:
-  - DAT-11
+  - DAT-14
+  - DAT-15
 jurisdictions:
   - universal
 perishable: false
@@ -20,41 +22,78 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: RBI Committee Report on Data Governance (2018).
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For each CDE or data domain, an owner is formally assigned (often at executive or business-unit level). The owner’s responsibilities include approving definitions and prioritizing data initiatives. A data steward (usually in risk or finance department) is then responsible for monitoring data quality, investigating issues, and coordinating fixes with IT and business teams. The Reserve Bank recommends clarifying these roles: assigning ownership of key data elements and requiring data stewards to update the data governance committee.
+### Core mechanism
 
-In practice, confusion between these roles is a trap. If nobody is accountable, issues languish; if too many claim ownership, governance muddles. Clear role definitions – documented in a data governance policy – are essential. For example, the data owner might be the Head of Credit Risk for loan data, while the data steward is a risk analyst reporting to them. Together they ensure questions like “Who decides loan classification rules?” have an answer.
+```text
+Define two populations and common cut-off
+    ↓
+Normalise known scope and timing differences
+    ↓
+Compare records, balances or aggregates
+    ↓
+Classify breaks
+    ↓
+Expected difference → evidence and explain
+Unexplained difference → investigate and remediate
+    ↓
+Clear, age or escalate outstanding breaks
+```
 
-### Permanent rule
+| Reconciliation | Typical comparison | What it can reveal |
+| :--- | :--- | :--- |
+| Front-to-back | Trading or origination records vs operations/accounting records | Missing, duplicated or mismapped transactions |
+| Risk-to-finance | Risk exposure or position totals vs finance/accounting totals | Scope, valuation, timing or transformation differences |
+| Source-to-report | Authoritative source population vs reporting extract | ETL, mapping, filter or aggregation defects |
+| Period-on-period | Current return vs prior period with explained movement | Unexpected discontinuity or reporting drift |
 
-Every critical data element must have a single business owner assigned (with ultimate accountability) and one or more stewards (with operational responsibilities).
+A difference is not automatically an error. Accounting and risk views can legitimately use different scope or measurement; the control requirement is that differences are defined, quantified and explainable.
 
-### Permanent trap
+### Where it sits
 
-Assigning ownership to IT or multiple owners by default. Ownership should reside in the business line that “owns” the risk.
+```text
+Upstream:   Authoritative sources · DQ rules · Reporting populations
+This:       Reconciliation and break governance
+Downstream: Root-cause analysis · Adjustments · Issue management · Submission sign-off
+```
 
-### Never confuse
+### Never confuse [Reconciliation break] and [Data error]
 
-**Data owner** — Business executive responsible for a domain or data set (e.g. loans, market data). Accountable for policies.
+**Reconciliation break** - an observed difference between populations that requires explanation.
 
 ---
 
-**Data steward** — Practitioner who enforces data standards and quality, reports to the owner.
+**Data error** - a confirmed defect. Some breaks are expected timing, scope or measurement differences and should be evidenced rather than "fixed".
+
+### Permanent rule
+
+A reconciliation is complete only when material breaks are explained, owned and dispositioned, not when the comparison file has run.
+
+### Permanent trap
+
+Netting breaks to zero. Equal and opposite errors can make totals agree while individual records remain wrong.
 
 ### Jurisdiction variants
 
-**No delta.** Defining data ownership and stewardship is a standard governance practice across banks globally.
+**No delta.** Reconciliation mechanics are universal; particular returns may prescribe additional validations.
 
 <Recall
-  q="Who should be a data owner in a bank?"
-  a="Typically a senior manager in the relevant business or risk department (e.g. Head of Operations for transaction data)."
+  q="Why should risk-to-finance differences not automatically be forced to zero?"
+  a="The two views can legitimately differ in scope, timing or measurement. The control objective is transparent explanation and governance of the difference."
 />
 
 <Recall
-  q="What does a data steward do?"
-  a="Monitors data quality, investigates errors, applies corrections, and liaises with IT and business owners."
+  q="What is wrong with reconciling only aggregate totals?"
+  a="Offsetting record-level errors can disappear in the net total; reconciliation should operate at the lowest practical level needed to expose material breaks."
 />

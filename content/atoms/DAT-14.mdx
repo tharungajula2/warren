@@ -1,16 +1,17 @@
 ---
 id: DAT-14
-title: 'Data Quality Rules, Thresholds, and Exception Management'
-type: concept
+title: Data Quality Dimensions
+type: reference
 domain: risk-data
 subdomain: data-quality-and-governance
 one_screen: >-
-  Data quality rules are specific checks or constraints (e.g. “loan amount ≥ 0”,
-  “interest date must not precede loan date”). Thresholds set acceptable levels
-  for quality metrics (e.g. “95% of records must be complete”). When data fails
-  a rule or threshold, it is flagged as an exception to be investigated and
-  resolved.
+  Data quality is not one score. A dataset can be complete but inaccurate, valid
+  but stale, or internally consistent while duplicating the same customer twice;
+  quality must therefore be assessed across distinct dimensions against the
+  needs of the specific risk or reporting use.
 prerequisites:
+  - DAT-08
+  - DAT-12
   - DAT-13
 jurisdictions:
   - universal
@@ -21,56 +22,65 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: Generic best practice (no specific cite).
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      DAMA International, DAMA-DMBOK: Data Management Body of Knowledge, second
+      edition, ISBN 9781634622486, 2017.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For example, a completeness rule might state that 99% of trade records must have an associated counterparty ID. If only 97% do, that misses the threshold and triggers an exception report. Exception management then enters: the issue is logged with severity, root causes are analyzed (e.g. missing entries in a source feed), and corrective action is taken (perhaps a process fix or data backfill). Exception tracking tools or ticket systems typically record these issues.
+### Core mechanism
 
-Banks document quality rules in their governance frameworks, often aligning with BCBS 239’s accuracy/integrity principle. At each reporting cycle, automated validators run the rules. Validations can be cross-checks (e.g. sum of sub-portfolios equals total) or plausibility checks (e.g. a ratio must lie in [0,100]). When thresholds are narrowly missed, some banks issue warnings; larger gaps may halt report submission until fixed.
+| Dimension | Test | Example failure |
+| :--- | :--- | :--- |
+| Accuracy | Does the value correctly represent the governed source or real-world fact? | Outstanding balance differs from authoritative record |
+| Completeness | Is the required population and required fields present? | One legal entity is absent from the exposure feed |
+| Consistency | Do equivalent concepts agree across systems or reports after allowed differences? | Same customer has conflicting sector classifications |
+| Timeliness | Is the data current and available when needed? | Position is accurate for yesterday but used for an intraday stress decision |
+| Validity | Does the value conform to defined type, range, format or code rules? | Country code is outside the approved list |
+| Uniqueness | Is each entity or event represented without unintended duplication? | One trade loaded twice |
 
-The **permanent expectation** is that no data anomaly goes unchecked. Adopting robust exception management means assigning issues to data stewards or owners, tracking SLA for fixes, and reporting status to management. Regulators have become wary of banks “papering over” persistent exceptions. Best practice is to classify and resolve high-impact exceptions immediately, while monitoring low-impact ones until clearance.
+Quality is always tied to use. A reporting field can require exact validity but allow a documented timing tolerance; another field can require near-real-time availability because the risk changes rapidly.
+
+### Where it sits
 
 ```text
-                Data Quality Framework
-+-------------------------+   +-------------+   +------------+
-| Data Quality Rules      |--&gt;| Data Checks |--&gt;| Reports    |
-+-------------------------+   +-------------+   +------------+
- Thresholds: 95% compliant         ^
-                                   |
-                                   v
-                        +--------------------------+
-                        | Exceptions (tickets)     |
-                        +--------------------------+
+Upstream:   CDEs · Metadata · Master and reference data · Consumer needs
+This:       Data-quality dimensions
+Downstream: DQ rules · Thresholds · Reconciliation · Issue prioritisation
 ```
 
-### Permanent rule
+### Never confuse [Accuracy] and [Consistency]
 
-Every failed quality check must be logged and owned; unresolved exceptions compromise report integrity.
-
-### Permanent trap
-
-Archiving known data issues without resolution, assuming they are “small” or won’t recur.
-
-### Never confuse
-
-**Data quality rule** — A specific constraint (e.g. a value range).
+**Accuracy** - the value is correct against the governed fact or authoritative source.
 
 ---
 
-**Threshold** — The allowable error rate (e.g. 1% missing data).
+**Consistency** - equivalent representations agree after legitimate scope, timing and accounting differences are understood. Two systems can be consistently wrong.
+
+### Permanent rule
+
+Quality is fit for purpose: the required dimensions and tolerances follow material use, not a universal enterprise score applied blindly to every datum.
+
+### Permanent trap
+
+Reporting a high overall DQ percentage that averages away a critical failure. A small number of wrong CDEs can matter more than millions of clean low-impact fields.
 
 ### Jurisdiction variants
 
-**No delta.** These practices are part of robust data governance everywhere; regulators everywhere expect strict validation and issue tracking.
+**No delta.** Quality dimensions do not change by regulator; return-specific tolerances and validation rules can.
 
 <Recall
-  q="What is an example of a data quality rule?"
-  a="“All loan IDs must be unique.”"
+  q="Can data be valid but inaccurate?"
+  a="Yes. A balance can have the correct numeric format and permitted sign while still containing the wrong amount."
 />
 
 <Recall
-  q="Why set thresholds in data checks?"
-  a="To define what level of error is tolerable before action; it prevents trivial issues from delaying reporting but ensures significant problems are caught."
+  q="Why should DQ metrics be linked to CDEs and use cases?"
+  a="Materiality differs by field and use, so aggregate percentages can conceal a small but decision-critical failure."
 />

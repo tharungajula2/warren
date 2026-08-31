@@ -1,16 +1,16 @@
 ---
 id: DAT-07
-title: Golden Source of Data
+title: Golden Source and Authoritative Data
 type: concept
 domain: risk-data
 subdomain: architecture-and-lineage
 one_screen: >-
-  A golden source is the single authoritative source of truth for a given data
-  element across the organization. It contains the most accurate and up-to-date
-  version of that data, and all systems reference this “one source” to avoid
-  discrepancies.
+  A golden source is the governed authority for a defined data element or
+  dataset, not simply the database with the newest copy. Authority means the
+  bank has decided which source wins, for what scope and time, with ownership,
+  controls and explicit treatment of downstream copies and exceptions.
 prerequisites:
-  - DAT-06
+  - DAT-03
 jurisdictions:
   - universal
 perishable: false
@@ -20,58 +20,76 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'Raw Knowledge blog, *Golden Source of Data* (2022).'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'Basel Committee BCBS 239, Principle 2 (data architecture).'
+  - label: >-
+      DAMA International, DAMA-DMBOK: Data Management Body of Knowledge, second
+      edition, ISBN 9781634622486, 2017.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For example, a bank might designate one system or database as the golden source for the exchange rate used in all risk reports, or the official customer master record. All downstream processes then draw from that gold record. This prevents situations where different departments have conflicting values for the same metric. Building a golden source requires strong data governance: clear ownership of the data field, defined quality rules, and processes to update the source whenever new information arrives.
+### Core mechanism
 
-The golden source concept is vital under BCBS 239 Principle 2 (Data Architecture): it supports reconciliation and ensures “a single, authoritative source” for each risk metric. Without it, banks often hit the trap of “multiple authorities” – e.g. one system reporting Value-at-Risk one way, another giving a different number. A common rule is that only the golden source can feed regulators; any other calculation must reconcile back to it.
-
-Golden source is sometimes synonymous with “source of truth” or “master dataset.” It is not static: it is updated continuously to reflect the latest true data. Achieving a golden source typically involves integrating data pipelines and may use technologies like master data management (MDM) tools. The permanent expectation is that *every key data field* has one golden source designated, so that accuracy and consistency are maintained.
+| Decision | Golden-source question |
+| :--- | :--- |
+| Scope | Which data element, entity, product or population does this authority cover? |
+| Authority | Which system or controlled record is the official source? |
+| Timing | At what event time, effective date or reporting cut-off is it authoritative? |
+| Control | How are updates, corrections and overrides governed? |
+| Consumption | Which downstream processes must source from it or reconcile to it? |
 
 ```text
-          +-------------------------+
-          | Golden Source Database  |
-          +-------------------------+
-           ^       ^        ^     ^
-           |       |        |     |
-     +-----+     +---+    +---+  +---+
-     | CRM |     | Trade   | Market| ...
-     | Sys |     | Sys     | Data  |
-     +-----+     +---+    +---+  +---+
+Business event
+    ↓
+Authoritative capture or approved master
+    ↓
+Controlled distribution
+    ↓
+Warehouse, risk engine and reporting copies
+    ↓
+Reconcile downstream use to governed authority
 ```
 
-### Permanent rule
+A bank can legitimately have different authoritative sources for different concepts: customer legal name, product classification, accounting balance and risk exposure may each belong to different controlled domains. The rule is not one database for the bank; it is one governed authority per defined purpose and scope.
 
-For each key data element, the bank must designate one authoritative source and use it consistently.
+### Where it sits
 
-### Permanent trap
+```text
+Upstream:   Data architecture · Business events · Ownership
+This:       Golden-source designation
+Downstream: CDE governance · Lineage · Mapping · Reconciliation
+```
 
-Allowing multiple “masters” for the same data field (e.g. one report using Core banking data, another using Risk system) causes conflicts and undermines trust.
+### Never confuse [Golden source] and [Data warehouse]
 
-### Never confuse
-
-**Golden source** — The official, authoritative dataset for a piece of information.
+**Golden source** - the governed authority for a defined datum or population.
 
 ---
 
-**Data lake** — A repository of raw data. A data lake is not by itself an authoritative source unless governance ensures it contains only validated data.
+**Data warehouse** - a repository that may contain integrated copies from many sources. It becomes authoritative only where governance explicitly assigns that role.
+
+### Permanent rule
+
+When two systems disagree, governance must determine which source is authoritative and why; report teams must not choose whichever value makes the reconciliation easier.
+
+### Permanent trap
+
+Using the phrase "single source of truth" without defining scope. Different data domains can have different authoritative sources without violating the golden-source principle.
 
 ### Jurisdiction variants
 
-**No delta.** The concept of a single authoritative source is best practice worldwide; regulators expect banks to avoid conflicting data sources.
+**No delta.** The concept is an enterprise data-governance mechanism, not a jurisdiction-specific return rule.
 
 <Recall
-  q="What is a “golden source” of data?"
-  a="The single, authoritative source for a data item that is most accurate and complete."
+  q="Can a warehouse be a golden source?"
+  a="Yes, but only if governance makes it authoritative for the defined purpose; storage or consolidation alone does not create authority."
 />
 
 <Recall
-  q="Why is a golden source important?"
-  a="It ensures consistency across reports; if all systems use the same source, risk metrics won’t conflict."
+  q="Why can one bank have multiple golden sources?"
+  a="Authority is assigned by data concept and scope. Customer identity, accounting balances and market reference data can each have different governed systems of record."
 />

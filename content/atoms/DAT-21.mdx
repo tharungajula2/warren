@@ -1,18 +1,16 @@
 ---
 id: DAT-21
-title: 'Delivery Layer: Requirements, Mapping, and Testing'
-type: mechanism
+title: Test Strategy and Test Packs
+type: procedure
 domain: risk-data
 subdomain: reporting-and-delivery
 one_screen: >-
-  The delivery layer in a data program consists of business requirements,
-  mapping specifications, and testing. A Business Requirements Document (BRD)
-  defines *what* reports/data are needed (with business context). A Data Mapping
-  Specification details *how* each target field is derived from source fields
-  with transformation logic. Testing involves pre-defined result sets and user
-  acceptance testing (UAT) to validate that the implemented mappings produce the
-  expected outputs.
+  Testing proves that approved requirements and mappings have been implemented,
+  not merely that code executes without error. A test strategy defines what must
+  be proven across the data chain; a test pack turns that strategy into
+  traceable scenarios, inputs, expected outcomes and retained evidence.
 prerequisites:
+  - DAT-18
   - DAT-20
 jurisdictions:
   - universal
@@ -23,62 +21,82 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: Standard project practice (no specific citation).
+  - label: >-
+      International Institute of Business Analysis, A Guide to the Business
+      Analysis Body of Knowledge, BABOK Guide Version 3, ISBN 9781927584026,
+      2015.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-**BRD:** In regulatory/risk contexts, the BRD describes needed data points, calculation methods, timing, and exceptions. It often cites regulatory definitions. The BRD ensures developers and analysts understand the objectives.
-**Data Mapping Spec:** This is the core deliverable. It is typically a spreadsheet or document listing: Source Field → Transformation Rule → Target Field. For example: “LoanBook.EndDate → Calendar Quarter End for report.” Each mapping should include any conversion (currency, units) and business rules applied. It serves as the blueprint for ETL developers.
-**Testing:** Test packs with known inputs and results are prepared. For example, a small dataset with calculated expected totals. During UAT, business users verify that outputs match these expectations. Automated regression tests and reconciliation reports are also built to compare results against legacy systems or previous runs. UAT covers functional correctness and edge cases.
+### Core mechanism
 
-A strong delivery approach uses examples: e.g. test that negative balances or unusual security types still produce correct report lines. Downstream extracts (e.g. FINREP extracts sent to ECB) should also be checked – that is, one might run a script on the final data extract to verify totals against source systems. The process is iterative: any discrepancies found in UAT or extracts feed back into the mapping (looping through the cycle again until clean).
+| Test layer | What it proves | Typical evidence |
+| :--- | :--- | :--- |
+| Field logic | Transformation implements the mapping | Known input -&gt; expected target value |
+| Population | Inclusion and exclusion rules work | In-scope and out-of-scope records |
+| Boundary | Thresholds, dates and edge conditions behave correctly | Values immediately around cut-offs |
+| Negative | Invalid or missing data is controlled | Rejection, exception or governed default |
+| Reconciliation | Aggregates and populations remain complete | Source-to-target counts and balances |
+| Regression | Existing behaviour not intended to change still works | Prior scenarios rerun after change |
 
 ```text
-Business Requirements
-    |
-    v
-Data Mapping Spec
-    |
-    v
-ETL/Development
-    |
-    v
-Unit Testing
-    |
-    v
-UAT (with test packs)
-    |
-    v
-Go-live and Parallel Runs
+Requirement and mapping
+    ↓
+Identify risks of wrong implementation
+    ↓
+Design scenarios and expected results
+    ↓
+Prepare controlled test data
+    ↓
+Execute and capture evidence
+    ↓
+Defect or pass conclusion linked to requirement
 ```
+
+Expected results should be calculated independently where practical. Repeating the developer's transformation in the test script can reproduce the same logic error and create false assurance.
+
+### Where it sits
+
+```text
+Upstream:   Requirements · Mapping · Build output
+This:       Test strategy and test packs
+Downstream: Defects · UAT · Regression evidence · Release decision
+```
+
+### Ownership
+
+| Role | Test responsibility |
+| :--- | :--- |
+| BA / test analyst | Designs scenarios from requirements and mappings |
+| Developer | Performs technical testing and fixes defects |
+| Business consumer | Confirms business scenarios and expected outcomes |
+| Data owner | Ensures material CDE and control coverage |
+| Challenge / control | Reviews adequacy where independent assurance is required |
 
 ### Permanent rule
 
-Every data transformation must be traceable (via the mapping spec) and tested with expected results before production use.
+Test coverage follows the risk of being wrong, not the number of fields changed.
 
 ### Permanent trap
 
-Skipping UAT or not involving actual report users. Testing by IT alone often misses business logic errors.
-
-### Never confuse
-
-**Business Requirements Document (BRD)** — Describes the *what* and *why* (business needs, regulatory requirements).
-
----
-
-**Mapping Specification** — Details the *how* (the exact field mappings and calculations).
+Testing only happy-path records. Reporting defects frequently occur at nulls, effective-date boundaries, joins, duplicated keys, unusual classifications and exception handling.
 
 ### Jurisdiction variants
 
-**No delta.** These delivery practices apply to any data/reporting project, regardless of jurisdiction.
+**No delta.** The testing method is universal; jurisdiction-specific rules simply create different scenarios and expected outcomes.
 
 <Recall
-  q="What is a data mapping specification?"
-  a="A detailed list of how each target report field is populated from source fields, including any formulas or conversions."
+  q="Why should expected results be independently derived where possible?"
+  a="Reusing the production logic in the test can copy the same defect into both sides of the comparison, making an incorrect implementation appear to pass."
 />
 
 <Recall
-  q="Why use predefined test packs?"
-  a="To ensure transformations yield correct known results, giving confidence that the logic matches requirements."
+  q="What does regression testing protect?"
+  a="It checks that changes intended for one requirement have not unintentionally altered existing mappings, populations, controls or downstream reports."
 />

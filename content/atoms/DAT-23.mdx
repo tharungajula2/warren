@@ -1,0 +1,100 @@
+---
+id: DAT-23
+title: Downstream Extract Validation
+type: procedure
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  A change can be correct in the warehouse and still be wrong in the file
+  actually consumed or submitted. Downstream extract validation proves that the
+  final population, fields, totals, formats and cut-off survive every
+  post-mapping transformation, aggregation and packaging step.
+prerequisites:
+  - DAT-20
+  - DAT-21
+  - DAT-22
+jurisdictions:
+  - universal
+perishable: false
+as_of: null
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+```text
+Governed upstream output
+    ↓
+Reporting transformations and aggregation
+    ↓
+Final extract or payload
+    ↓
+Validate population, fields, totals and format
+    ↓
+Reconcile to upstream control points
+    ↓
+Release only with explained differences
+```
+
+| Validation | What it catches |
+| :--- | :--- |
+| Record count / population | Dropped or duplicated rows |
+| Key-field comparison | Incorrect identifiers or classifications |
+| Aggregate reconciliation | Sign, unit or aggregation errors |
+| Reference-date check | Wrong reporting cut-off or stale load |
+| Format / schema check | Invalid datatype, length, enumeration or file structure |
+| Control-total check | Truncation or packaging failure after upstream testing |
+
+The final extract is a separate control point because downstream scripts, reporting tools and submission converters can contain logic not represented in the main ETL mapping. Validation should therefore compare back to governed upstream checkpoints rather than trusting that an earlier successful test remains valid after packaging.
+
+### Where it sits
+
+```text
+Upstream:   Approved mapping · Tested data product · UAT
+This:       Final extract and payload validation
+Downstream: Regulatory production · Submission · Defect management
+```
+
+### Never confuse [Extract validation] and [Schema validation]
+
+**Extract validation** - proves the content is the right population and values for the intended use.
+
+---
+
+**Schema validation** - proves the file conforms technically to a required structure. A perfectly valid file can contain the wrong numbers.
+
+### Permanent rule
+
+The artifact that leaves the bank or feeds the final report must be validated as an artifact in its own right.
+
+### Permanent trap
+
+Reconciling before the final reporting layer and assuming nothing can change afterwards. Late transformations, sign conventions, formatting or filters can introduce defects after upstream controls have passed.
+
+### Jurisdiction variants
+
+**No delta.** The validation mechanic is universal; technical schemas and submission formats vary by reporting estate.
+
+<Recall
+  q="Why can schema validation not replace content validation?"
+  a="Schema checks confirm structure and permitted formats, not whether the extract contains the correct records, classifications, balances or reference date."
+/>
+
+<Recall
+  q="What should a downstream extract reconcile to?"
+  a="Controlled upstream checkpoints with the same defined scope and cut-off, adjusted only for documented transformations that belong in the final reporting layer."
+/>

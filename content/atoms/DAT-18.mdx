@@ -1,15 +1,18 @@
 ---
 id: DAT-18
-title: Issue Management and Remediation
-type: mechanism
+title: Data Requirements and Acceptance Criteria
+type: procedure
 domain: risk-data
 subdomain: data-quality-and-governance
 one_screen: >-
-  Data issues must be formally managed: identified, tracked, and remediated
-  through a controlled process. This typically involves logging issues in an
-  issue-tracking system, prioritizing by severity, performing root-cause
-  analysis, and implementing fixes under governance oversight.
+  A data requirement converts a regulatory, risk or business need into a
+  statement precise enough to source, build and test. For a business analyst,
+  the critical move is from "produce this field" to governed meaning, grain,
+  population, timing, transformation, control and acceptance criteria that
+  different teams can implement consistently.
 prerequisites:
+  - DAT-09
+  - DAT-11
   - DAT-17
 jurisdictions:
   - universal
@@ -20,65 +23,84 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: Industry practice (implied by regulatory expectations).
+  - label: >-
+      International Institute of Business Analysis, A Guide to the Business
+      Analysis Body of Knowledge, BABOK Guide Version 3, ISBN 9781927584026,
+      2015.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-In practice, once a data validation or reconciliation uncovers an error (for example, a daily report mismatch), an issue ticket is created. The ticket includes description, severity (e.g. Critical if it affects a report submission), and owner (often a data steward). Root cause might be a system defect, a mapping error, or missing data. The solution plan is documented – e.g. code correction or process change – with milestones. Senior management tracks progress via dashboards or committee reports.
+### Core mechanism
 
-BCBS 239 requires that material data/reporting issues be escalated “to the highest appropriate level” and that timely action be taken. A bank’s “issue management” process is a key part of its data governance framework. A trap is failing to monitor slow fixes; regulators expect permanent resolution, not temporary workarounds. A permanent rule is that any critical data quality issue (especially those impacting regulatory reports) should be escalated through the risk committee or even board if needed.
-
-Remediation may involve multiple steps: short-term manual fixes (to enable report filing) and long-term system changes. Banks often set a standard (e.g. 30 days to fix a critical break). Progress is reported to risk committees, often via heatmaps of outstanding issues. Ultimately, management sign-off on the fix closes the loop.
+| Requirement dimension | Question to resolve |
+| :--- | :--- |
+| Business meaning | What exactly does the item represent, including inclusions and exclusions? |
+| Grain | One row per what: account, facility, trade, customer, legal entity or aggregate? |
+| Population | Which products, entities, statuses, dates and geographies are in scope? |
+| Source intent | What type of authoritative information is required? |
+| Transformation | What filters, joins, classifications or derivations are required? |
+| Timing | What reference date, cut-off, frequency and history apply? |
+| Controls | What validations, reconciliations and evidence are required? |
+| Acceptance | What observable result proves the requirement is satisfied? |
 
 ```text
-Issue Detected
-    |
-    v
-Log Ticket (ID, Owner, Severity)
-    |
-    v
-Root Cause Analysis
-    |
-    v
-Action Plan (short-term, long-term)
-    |
-    v
-Implement Fix -&gt; Test
-    |
-    v
-Verify Resolution
-    |
-    v
-Close Ticket
+Regulation or business need
+    ↓
+Clarify meaning, scope and grain
+    ↓
+Define data and control requirements
+    ↓
+Resolve assumptions and conflicts
+    ↓
+Write testable acceptance criteria
+    ↓
+Baseline and trace through delivery
 ```
+
+Acceptance criteria should state the expected outcome, not merely "UAT successful". A requirement for a counterparty country field might specify the governed definition, source authority, applicable code set, null treatment and reconciliation expectation.
+
+### Where it sits
+
+```text
+Upstream:   Regulatory text · Business policy · Data definitions · Known issues
+This:       Data requirements and acceptance criteria
+Downstream: Source analysis · Mapping · Test design · UAT · Traceability
+```
+
+### Ownership
+
+| Role | Delivery responsibility |
+| :--- | :--- |
+| BA / requirements lead | Elicits, resolves and documents testable need |
+| Data owner | Approves governed meaning and material requirements |
+| Producer / technology | Confirms implementability and source constraints |
+| Consumer | Confirms the requirement supports intended use |
+| Challenge / control | Tests whether control obligations are captured |
 
 ### Permanent rule
 
-Every significant data discrepancy or report error must be tracked until fully resolved, with evidence of the fix.
+If a requirement cannot be objectively tested, it is not yet sufficiently specified for controlled delivery.
 
 ### Permanent trap
 
-Treating issue tickets as “done” when a report is patched, rather than fixing the underlying data problem.
-
-### Never confuse
-
-**Remediation** — The corrective actions taken to fix a data defect (code fixes, process changes).
-
----
-
-**Workaround** — A temporary solution to allow reporting to proceed (e.g. manual data entry) before full remediation. Both need controls and tracking.
+Copying a regulatory label into a BRD and treating it as a definition. Regulatory terms still need scope, grain, source interpretation and handling rules before implementation.
 
 ### Jurisdiction variants
 
-**No delta.** All regulators expect banks to have formal issue remediation processes (though naming may vary).
+**No delta.** The BA method is universal; the underlying regulatory requirement can differ by jurisdiction.
 
 <Recall
-  q="Who is typically responsible for closing a data issue ticket?"
-  a="The designated data steward or IT analyst, under the governance framework."
+  q="Why is grain a first-class requirement?"
+  a="It determines keys, joins, aggregation and duplicate logic; two teams can implement the same field name differently if one assumes account grain and another customer grain."
 />
 
 <Recall
-  q="When does a data issue need to be escalated?"
-  a="If it cannot be resolved quickly and impacts a regulatory or risk report, it should go to senior management/committee."
+  q="What makes an acceptance criterion useful?"
+  a="It states an observable pass condition tied to the requirement, enabling testing and sign-off without relying on subjective statements such as &quot;looks correct&quot;."
 />

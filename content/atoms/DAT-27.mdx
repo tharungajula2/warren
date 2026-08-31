@@ -1,0 +1,88 @@
+---
+id: DAT-27
+title: EU COREP/FINREP and UK PRA Reporting
+type: delta
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  EU and UK prudential reporting share historical roots but are now separate
+  estates. EU institutions use EBA supervisory frameworks such as COREP and
+  FINREP with the EBA Data Point Model and taxonomies; PRA firms use applicable
+  UK data items and Bank of England taxonomies.
+prerequisites:
+  - DAT-25
+  - DAT-26
+jurisdictions:
+  - EU
+  - UK
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: '2027-01-01'
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      European Banking Authority, Consultation Paper - Revisions to the ITS on
+      supervisory reporting, EBA/CP/2026/07, 10 April 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Banking Authority, Reporting Framework 4.4, reference number 4.4,
+      status as at 31 August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Prudential Regulation Authority, Implementation of Basel 3.1: Final rules,
+      PS1/26, 20 January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Bank of England, Banking XBRL taxonomy version 4.1.1, reference number
+      v4.1.1, 27 August 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+| Dimension | EU | UK |
+| :--- | :--- | :--- |
+| Prudential reporting owner | EU legal framework with EBA technical standards | PRA Rulebook and PRA policy |
+| Core reporting families | COREP for prudential data; FINREP for supervisory financial reporting where applicable | PRA data items, including UK implementations and retained / restated reporting requirements |
+| Technical model | EBA DPM, validation rules and XBRL taxonomy packages | Bank of England Banking XBRL taxonomy and PRA instructions |
+| Change control | EBA reporting framework releases and EU legal adoption | PRA policy statements plus Bank of England taxonomy releases |
+
+As at August 2026, **EBA/CP/2026/07**, dated 10 April 2026, is a closed consultation, not a final rule: the general consultation closed 10 July 2026, with an earlier 10 May 2026 deadline for specified IFRS 18-related FINREP items. EBA Reporting Framework 4.4 applies by module with future first-reference dates; its July 2026 technical package was still draft ahead of final publication planned for September 2026.
+
+For the UK, **PS1/26**, published 20 January 2026, is final policy, not a consultation. Its Basel 3.1 reporting requirements take effect from 1 January 2027. Bank of England Banking XBRL taxonomy **v4.1.1**, published 27 August 2026, is a corrective release implementing policy intended to take effect from 1 January 2027; it is future-effective as at August 2026.
+
+### Where it sits
+
+```text
+Upstream:   Regulatory production · Submission controls
+This:       EU and UK reporting-estate delta
+Downstream: Jurisdiction-specific mappings · Taxonomy implementation · Filing calendar
+```
+
+### Permanent rule
+
+Use the framework and taxonomy applicable to the reporting reference date; current publication date and effective reporting date are not the same thing.
+
+### Jurisdiction variants
+
+#### EU (EBA)
+COREP and FINREP sit in the EBA supervisory reporting architecture. EBA/CP/2026/07 remains a closed consultation as at August 2026; draft or future framework content must not be taught as already effective.
+
+#### UK (PRA)
+The UK has its own PRA reporting and Bank of England taxonomy estate. PS1/26 is final, while its relevant Basel 3.1 reporting changes and taxonomy v4.1.1 are future-effective from 1 January 2027.
+
+<Recall
+  q="Is EBA/CP/2026/07 an implemented reporting rule as at August 2026?"
+  a="No. It is a consultation paper dated 10 April 2026 whose consultation periods have closed; proposed changes must remain labelled as proposals until finalised through the applicable process."
+/>
+
+<Recall
+  q="Why is Bank of England taxonomy v4.1.1 not a current-reference-date requirement in August 2026?"
+  a="It was published on 27 August 2026 as the technical implementation of policies intended to take effect from 1 January 2027, so publication precedes effective use."
+/>

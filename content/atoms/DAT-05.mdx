@@ -1,16 +1,18 @@
 ---
 id: DAT-05
-title: Risk Reporting Practices
-type: concept
+title: BCBS 239 Risk Reporting Practices
+type: mechanism
 domain: risk-data
 subdomain: bcbs239-and-aggregation
 one_screen: >-
-  BCBS 239 requires risk reports to be **accurate, comprehensive, clear,
-  frequent, and properly distributed**. Reports must be tailored to their
-  audience (e.g. board vs risk manager) and sufficiently granular. This ensures
-  stakeholders get the right information at the right time.
+  BCBS 239 Principles 7-11 govern the report after aggregation: it must
+  faithfully represent risk, cover the material picture, communicate it clearly,
+  arrive at the right frequency and reach the right recipients. A technically
+  correct dataset can still fail BCBS 239 if the report obscures the decision,
+  omits relevant context or is distributed too late.
 prerequisites:
-  - DAT-03
+  - DAT-02
+  - DAT-04
 jurisdictions:
   - universal
 perishable: false
@@ -20,39 +22,69 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'FluxForce, *BCBS 239 Principles* (2026).'
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-A bank’s risk reports should paint a complete picture: covering all major risk types (credit, market, liquidity, etc.) and including both totals and trend analysis. They must be error-free and understandable; jargon must be explained for non-experts. BCBS 239 (Principle 7–11) says reports should be of high quality (“comprehensive, timely, clear”) and delivered at the mandated frequency. For instance, daily and weekly dashboards for market risk, and periodic reports for portfolios, with exceptions escalated as needed. The reports must include documented definitions (so recipients know what each metric means) and must follow a regular schedule. Distribution (Principle 11) demands reports go to the right people (board, risk committee, regulators) and that escalation paths exist if limits are breached.
+### Core mechanism
 
-In summary, risk reporting is about governance of the report content and process: it involves standard templates, sign-off procedures, and validation checks (ensuring the report matches the aggregated data). A common failure (trap) is producing reports without reconciling them back to source data (so-called “data drift”). Another mistake is listing raw data without analysis. Regulators have noted banks sometimes produce stat sheets but not insightful narrative or exception lists. Under BCBS 239, the **permanent expectation** is that reports translate data into actionable intelligence, validated end-to-end.
+| Principle | Reporting test |
+| :--- | :--- |
+| 7 Accuracy | Report outputs faithfully represent aggregated risk data and are reconciled or otherwise controlled |
+| 8 Comprehensiveness | Material risks, concentrations and relevant forward-looking information are covered at suitable depth |
+| 9 Clarity and usefulness | Content is concise enough to support action, while definitions, limits, trends and exceptions are intelligible |
+| 10 Frequency | Production frequency matches the volatility of risk and recipient decision needs, including stress |
+| 11 Distribution | Reports reach authorised recipients through controlled channels with confidentiality preserved |
 
-### Permanent rule
+```text
+Aggregated risk data
+    ↓
+Select material measures and dimensions
+    ↓
+Add limits, trends, exceptions and context
+    ↓
+Review and control report output
+    ↓
+Distribute at decision-useful frequency
+    ↓
+Management action and challenge
+```
 
-Each risk report must be accompanied by context and definition, and approved by the appropriate officer; raw numbers alone are insufficient.
+Clarity is not cosmetic simplification. A board report may aggregate heavily, but it must preserve the information needed to identify concentrations, limit breaches and emerging risk. A desk-level report may be more granular because the consumer needs operational detail.
+
+### Where it sits
+
+```text
+Upstream:   Governed aggregation · Risk appetite and limits · Reporting definitions
+This:       Risk reporting practices
+Downstream: Board and committee decisions · Escalation · Supervisory evidence
+```
+
+### Never confuse [Data timeliness] and [Report frequency]
+
+**Data timeliness** - how quickly current data can be aggregated for the decision need.
+
+---
+
+**Report frequency** - how often a defined report is produced and distributed. A monthly report can depend on data that must still be available rapidly for ad-hoc stress analysis.
 
 ### Permanent trap
 
-Dumping large tables of figures in a report with no explanatory content or without ensuring they match the underlying data.
-
-### Never confuse
-
-**Frequency** vs **Response Time**:
-Frequency — how often reports are published (e.g. daily, monthly).
-Response Time (Timeliness) — how quickly updated data is produced during stress. Reporting frequency must align with decision needs but is not the same as intraday data availability.
+Equating more pages with comprehensiveness. A report can be large yet fail to expose the risk, exception or concentration that the recipient needs to act on.
 
 ### Jurisdiction variants
 
-**No delta.** These qualitative reporting expectations are set at the global level by BCBS 239; national supervisors typically echo them.
+**No delta.** The reporting-practice principles are universal; local return formats are covered later.
 
 <Recall
-  q="What qualities must risk reports have under BCBS 239?"
-  a="They must be accurate, comprehensive, clear/useful, and distributed at a suitable frequency to the right recipients."
+  q="Why can a report built from accurate data still fail BCBS 239?"
+  a="It can omit material risk, bury exceptions, use unclear definitions, arrive at the wrong frequency or fail to reach the authorised decision-maker."
 />
 
 <Recall
-  q="Why is distribution control important in risk reporting?"
-  a="To ensure that when risk metrics breach thresholds, the report reaches the relevant decision-makers promptly."
+  q="What determines report granularity?"
+  a="The recipient's decision need. Board reporting can aggregate, while operational risk management may require detailed drill-down, but both must preserve material information."
 />

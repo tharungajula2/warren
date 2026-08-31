@@ -1,22 +1,19 @@
 ---
 id: DAT-20
-title: 'Attestation, Restatements, and Reporting Change Programs'
-type: concept
+title: Source-to-Target Mapping Specification
+type: procedure
 domain: risk-data
 subdomain: reporting-and-delivery
 one_screen: >-
-  **Attestation and sign-off:** Senior management (often the board, CEO or Chief
-  Risk Officer) must formally attest that each regulatory report is accurate and
-  complete. This is both a legal requirement in many jurisdictions and an
-  internal control. **Restatements:** If a material error is discovered after
-  submission, the bank must correct (“restatement”) the return. Restatements can
-  impact capital calculations or regulatory standings, so timely correction and
-  explanation are critical. **Reporting change programs:** When regulations
-  change or new reports are added, a change program is launched. This involves
-  requirement analysis, mapping updates, system development, testing, and
-  parallel runs.
+  A source-to-target mapping specification is the field-level implementation
+  contract between a governed source and a target dataset, report or return. It
+  must make joins, filters, transformations, classifications, defaults and
+  lineage explicit enough that development and testing can independently
+  reproduce the intended result.
 prerequisites:
+  - DAT-18
   - DAT-19
+  - DAT-12
 jurisdictions:
   - universal
 perishable: false
@@ -26,41 +23,82 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: Common regulatory practice (e.g. RBI circulars).
+  - label: >-
+      International Institute of Business Analysis, A Guide to the Business
+      Analysis Body of Knowledge, BABOK Guide Version 3, ISBN 9781927584026,
+      2015.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-In practice, attestation is typically documented via a cover letter or checkbox in the submission portal. It holds senior officers legally responsible if the data is faulty. Restatements usually follow a defined protocol: e.g. notify the regulator, submit a corrected report, and explain the cause. Each restatement is logged to avoid repeat mistakes.
+### Core mechanism
 
-Reporting changes (like new BCBS rules or formats) require project management. For instance, moving from manual to XBRL filing or adding a new COREP schedule. Such projects demand coordination between IT, data teams, and regulators. They produce new mapping specs and update test packs. A common trap is underestimating the regression testing needed across old reports. Compliance requires that all related reports still match after change.
+| Mapping column | What it must establish |
+| :--- | :--- |
+| Requirement ID | Why the target field exists and which approved need it satisfies |
+| Target field | Name, definition, datatype, grain and mandatory status |
+| Source | System, object, field and authoritative-source status |
+| Join / key | How source records connect without duplication or loss |
+| Filter | Which records enter or leave the target population |
+| Transformation | Derivation, aggregation, sign, unit, date or currency treatment |
+| Reference mapping | Governed code conversion and version |
+| Null / default logic | What happens when source data is absent or invalid |
+| Control | Validation or reconciliation that proves implementation |
+| Version | Effective date and approved change history |
 
-### Permanent rule
+```text
+Approved requirement
+    ↓
+Governed source and grain
+    ↓
+Join + filter + transformation + reference mapping
+    ↓
+Target field at defined grain
+    ↓
+Control and traceability evidence
+```
 
-No report is final until attested. All corrections must be documented: one should never “forget” a restatement or leave an unexplained discrepancy.
+A mapping should avoid hidden logic such as "standard treatment" unless that treatment is separately controlled and versioned. If logic depends on a lookup table, the lookup source and effective version belong in the specification.
 
-### Permanent trap
+### Where it sits
 
-Thinking of reporting change as just a format switch; in reality it often involves changing data definitions, so deep validation is needed.
+```text
+Upstream:   Requirements · Source analysis · Metadata · Reference data
+This:       Field-level source-to-target contract
+Downstream: ETL development · Test packs · UAT · Downstream validation · Lineage
+```
 
-### Never confuse
+### Never confuse [Mapping rule] and [Business definition]
 
-**Attestation** — Management’s certification of a report’s accuracy.
+**Mapping rule** - how a defined concept is implemented from source fields into a target.
 
 ---
 
-**Audit** — Independent verification by internal or external auditors. Attestation is self-certification; audit is independent checking.
+**Business definition** - what the concept means. A technically perfect mapping to the wrong definition is still wrong.
+
+### Permanent rule
+
+Every target field that matters must be traceable to an approved requirement and governed source logic, including handling of missing and exceptional cases.
+
+### Permanent trap
+
+Documenting only Source Field -&gt; Target Field. Most material reporting defects live in the omitted joins, filters, transformations, reference mappings and defaults.
 
 ### Jurisdiction variants
 
-**No delta.** Attestation/sign-off processes and requirements for restatements are universal (though e.g. Indian banks may align with Companies Act and RBI letters).
+**No delta.** Mapping practice is universal; target templates and taxonomies differ by jurisdiction.
 
 <Recall
-  q="Who typically signs off on a bank’s regulatory returns?"
-  a="In most jurisdictions, a senior executive (often the CEO, CFO or CRO) must attest, making them personally responsible."
+  q="Why must a mapping specify join cardinality and keys?"
+  a="A correct source field can still produce wrong totals if joins duplicate or drop records; grain and key logic are part of the transformation."
 />
 
 <Recall
-  q="What steps should a bank take if it finds an error in a filed return?"
-  a="Issue a restatement: correct the data, resubmit, and report the error and fix to the regulator promptly."
+  q="What is the purpose of a requirement ID in the mapping?"
+  a="It creates vertical traceability from business or regulatory need through implementation and testing, making later change impact and defect analysis possible."
 />

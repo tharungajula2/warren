@@ -1,0 +1,109 @@
+---
+id: DAT-29
+title: 'RBI Returns, ADF and CIMS'
+type: delta
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  India's supervisory reporting architecture combines return-specific RBI
+  directions, the Automated Data Flow discipline and CIMS as a major filing
+  platform. The durable objective is governed system-to-regulator flow with
+  defined sources, reconciliation and increasing automation, while RBI's SDMX
+  element-based programme remains an evolving architecture as at August 2026.
+prerequisites:
+  - DAT-25
+  - DAT-26
+jurisdictions:
+  - IN
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Commercial Banks -
+      Supervisory Returns) Directions, 2026, RBI/DoS/2026-27/415 and
+      DoS.CO.DSG.9/33.01.001/2026-27, 31 July 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Master Direction - Reserve Bank of India (Filing of
+      Supervisory Returns) Directions - 2024, RBI/DoS.DSG/2023-24/110 and
+      DoS.DSG.No.10/33.01.001/2023-24, 27 February 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Automated Data Flow from Banks to Reserve Bank of
+      India - FAQs, reference number not stated, 27 September 2011.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Annual Report 2024-25, reference number not stated,
+      29 May 2025.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+| Layer | Owns |
+| :--- | :--- |
+| Supervisory-return directions | Applicability, governance, filing requirements, timelines and portals |
+| ADF | Controlled, increasingly automated sourcing from bank systems into RBI reporting |
+| CIMS | RBI online platform for return submission, data dissemination and related processes |
+| SDMX element-based programme | Phase-wise move toward standardised element-level collection |
+
+```text
+Governed bank source data
+    ↓
+ADF-oriented data flow
+    ↓
+Return logic, validation and reconciliation
+    ↓
+CIMS or other designated RBI portal
+    ↓
+Supervisory return
+```
+
+The regulatory baseline changed in 2026. The **Master Direction - Reserve Bank of India (Filing of Supervisory Returns) Directions - 2024**, RBI/DoS.DSG/2023-24/110 and DoS.DSG.No.10/33.01.001/2023-24, dated 27 February 2024, consolidated then-applicable instructions across several supervised-entity classes. For commercial banks, **Reserve Bank of India (Commercial Banks - Supervisory Returns) Directions, 2026**, RBI/DoS/2026-27/415 and DoS.CO.DSG.9/33.01.001/2026-27, was issued 31 July 2026 and took immediate effect. It addresses governance, data architecture, reconciliation, source records, automation and online filing.
+
+ADF predates CIMS. RBI's 27 September 2011 FAQ describes correct and consistent data through automated flow; CIMS is a later platform layer.
+
+As at August 2026, SDMX element-based reporting is **not complete**. RBI's Annual Report 2024-25 records application development, select-return testing and a pilot, with phase-wise rollout as the next step.
+
+### Where it sits
+
+```text
+Upstream:   Indian bank data governance · Regulatory production cycle
+This:       RBI returns · ADF · CIMS · evolving SDMX programme
+Downstream: Return mappings · CIMS submission · Data-quality remediation
+```
+
+### Never confuse [ADF] and [CIMS]
+
+**ADF** - the discipline of controlled, increasingly automated flow from bank systems into regulatory reporting.
+
+---
+
+**CIMS** - an RBI platform for return submission, dissemination and related purposes. Portal use alone does not prove the upstream flow is automated or well governed.
+
+### Permanent rule
+
+Portal submission is the end of the reporting chain, not evidence that upstream data architecture, reconciliation and automation are adequate.
+
+### Jurisdiction variants
+
+#### IN (RBI)
+As at August 2026, commercial banks are governed by the 31 July 2026 Commercial Banks - Supervisory Returns Directions. The 2024 Master Direction is the predecessor consolidation; SDMX element-based reporting remains a phase-wise programme, not a completed universal replacement of return-based reporting.
+
+<Recall
+  q="What is the difference between ADF and CIMS?"
+  a="ADF is the upstream discipline of controlled, increasingly automated regulatory data flow; CIMS is an RBI reporting platform through which returns and related data can be submitted and managed."
+/>
+
+<Recall
+  q="Is RBI's SDMX element-based programme complete as at August 2026?"
+  a="No. Development and select-return testing have progressed, but RBI describes the implementation path as a phase-wise rollout."
+/>

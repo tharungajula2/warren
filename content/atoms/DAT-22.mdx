@@ -1,95 +1,100 @@
 ---
 id: DAT-22
-title: Jurisdiction-Specific Reporting Frameworks
-type: concept
+title: UAT Coverage and Business Evidence
+type: procedure
 domain: risk-data
 subdomain: reporting-and-delivery
 one_screen: >-
-  Regulatory reporting frameworks differ by jurisdiction. BCBS 239 itself is a
-  global set of principles with **no direct legal force**. In practice:
+  User Acceptance Testing, or UAT, is the business decision that the delivered
+  data behaviour satisfies the approved need in realistic use. It is not a
+  duplicate of developer testing: UAT focuses on end-to-end business scenarios,
+  definitions, usability, exceptions and evidence that the consumer can rely on
+  the output.
 prerequisites:
+  - DAT-18
   - DAT-21
 jurisdictions:
-  - IN
-  - UK
-  - EU
-  - US
-perishable: true
-as_of: '2026-08-28'
+  - universal
+perishable: false
+as_of: null
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 3
 sources:
   - label: >-
-      Reserve Bank of India, *Executive Summary of Data Governance Committee
-      Report*, 2018.
+      International Institute of Business Analysis, A Guide to the Business
+      Analysis Body of Knowledge, BABOK Guide Version 3, ISBN 9781927584026,
+      2015.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'HCL Tech, *EBA Reporting Requirements (COREP, FINREP)*.'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Federal Reserve Board, *FR Y-14 Report* (July 2024).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Basel Committee press release, Nov 2023.'
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-**IN** — India’s RBI has instituted the *Automated Data Flow (ADF)* system. Since 2010, banks build a Centralised Data Repository (CDR) to consolidate required data elements, and submit many returns in XBRL format. RBI’s standards (e.g. on coding, unique IDs) govern data in this system.
+### Core mechanism
 
-**UK** — The Prudential Regulation Authority (PRA) expects UK banks (especially “significant institutions”) to apply BCBS 239 outcomes. Reporting is done under the UK Rulebook (Capital Requirements Regulations adapted from CRR). Banks submit COREP and FINREP returns (via PRA-run systems) consistent with EU rules, although UK now diverges post-Brexit. PRA Supervisory Statements reinforce BCBS 239 principles, and breaches can affect SREP.
-
-**EU** — Eurozone banks file EBA-developed COREP/FINREP returns under the CRR/CRD IV framework. COREP covers credit, market and operational risk and capital ratios. FINREP covers financial statements for IFRS-adopters. The EU is moving to an integrated framework (IReF) which by 2030 will unify multiple ECB statistical and supervisory returns.
-
-**US** — Banks file *Call Reports* (FFIEC 031/041) quarterly with regulators. Large bank holding companies (BHCs) file Federal Reserve FR Y series (e.g. FR Y-9C) and FR Y-14 for stress testing. These cover balance sheet, income and risk data. The Fed incorporates BCBS 239 expectations into its supervisory processes, especially for Systemically Important BHCs.
+| UAT control | Question |
+| :--- | :--- |
+| Requirement coverage | Has every material requirement been exercised or explicitly dispositioned? |
+| Scenario realism | Do cases reflect real products, populations and reporting conditions? |
+| Expected outcome | Is the pass result known before execution? |
+| Evidence | Can another reviewer reproduce what was tested and observed? |
+| Defect linkage | Are failures tied to requirements, mappings and impacted reports? |
+| Acceptance | Are residual limitations understood and approved by the right authority? |
 
 ```text
-BCBS 239 (Global principles)
-    |
-    v
-+-----+    +-----+    +-----+   +-----+
-| India|    | UK  |    | EU  |   | US  |
-+-----+    +-----+    +-----+   +-----+
- ADF/XBRL   PRA returns  EBA COREP/   FFIEC Call
-(central    (BCBS239 &amp;   FINREP,      Reports;
- data repo)  UK SREP)    integrated    Fed FR Y series
-                         (IReF)
+Approved requirements
+    ↓
+Business scenarios and coverage matrix
+    ↓
+Execute end-to-end output
+    ↓
+Compare with expected business result
+    ↓
+Defect → fix and retest
+Pass → documented acceptance
 ```
 
-### Permanent rule
+UAT should include consumers who understand the reporting or risk use. A technically correct field can still fail because the wrong definition was agreed, required history is absent or a downstream user cannot distinguish a legitimate null from missing data.
 
-Regulatory return taxonomies differ by jurisdiction, but underlying risk data governance expectations (BCBS 239) remain universal.
+### Where it sits
 
-### Permanent trap
+```text
+Upstream:   Requirements · Test packs · Integrated build
+This:       Business acceptance and evidence
+Downstream: Downstream validation · Release decision · Defect closure
+```
 
-Assuming a regulatory report mapping in one jurisdiction automatically satisfies the data definition rules of another.
+### Never confuse [UAT] and [System testing]
 
-### Never confuse
-
-**COREP/FINREP** — European Supervisory Authority (EBA) reporting frameworks for capital and financial statements.
+**UAT** - asks whether the solution satisfies the approved business need and can be relied on in use.
 
 ---
 
-**FFIEC Call Reports** — US prudential regulatory return filings required for insured depository institutions.
+**System testing** - asks whether the technical solution behaves according to specifications. Both are necessary when business meaning and technical implementation can diverge.
+
+### Permanent rule
+
+UAT sign-off is evidence of acceptance against defined criteria, not a ceremonial approval after a deadline has already forced go-live.
+
+### Permanent trap
+
+Using only production-like totals as UAT evidence. Aggregate agreement can hide wrong classifications, duplicated records or incorrect edge-case treatment.
 
 ### Jurisdiction variants
 
-**IN** — RBI’s ADF requires banks to channel return data into a centralized repository and submit XBRL filings.
-
-**UK** — The PRA expects banks to meet BCBS 239 outcomes; capital and risk data are reported via PRA’s forms (based on CRR/CRD) in the sub-set of COREP/FINREP where applicable.
-
-**EU** — Banks submit EBA COREP (capital/risk) and FINREP (financial statements) under CRR/CRD IV. The future Integrated Reporting Framework (ECB IReF) will consolidate data collection from 2030.
-
-**US** — Insured depository institutions file Call Reports (FFIEC 031/041) to regulators, and large BHCs file Fed FR Y-series (e.g. FR Y-9C for consolidated data).
+**No delta.** UAT practice is universal; the scenarios inherit jurisdiction-specific reporting requirements where relevant.
 
 <Recall
-  q="What is India’s Automated Data Flow (ADF)?"
-  a="A system where banks load required data into a central repository and use XBRL to submit returns to RBI."
+  q="Why is a UAT coverage matrix useful?"
+  a="It links material requirements to executed scenarios and results, exposing requirements that were never tested instead of assuming broad testing covered them."
 />
 
 <Recall
-  q="Name two main EU banking returns."
-  a="COREP (Common Reporting) and FINREP (Financial Reporting) for capital and financial statements."
+  q="Can UAT pass with known limitations?"
+  a="Only where the limitations are explicitly assessed, controlled and accepted by the proper authority; silence or schedule pressure is not risk acceptance."
 />

@@ -1,17 +1,18 @@
 ---
 id: DAT-11
-title: Data Dictionary and Data Model
+title: Business Lineage vs Technical Lineage
 type: concept
 domain: risk-data
 subdomain: architecture-and-lineage
 one_screen: >-
-  A data dictionary is a detailed catalog of all fields (data elements),
-  describing each one’s attributes (name, type, description, format, valid
-  values, etc.). A data model (conceptual or logical) is a diagram showing
-  entities and relationships between them. Together they help design systems and
-  prevent misinterpretation.
+  Data lineage explains how a data item moves from origin to use and what
+  happens to it on the way. Business lineage preserves meaning and dependency at
+  a level a risk or reporting user can challenge; technical lineage preserves
+  the physical systems, fields, transformations and interfaces needed to
+  reproduce and troubleshoot the result.
 prerequisites:
-  - DAT-10
+  - DAT-07
+  - DAT-08
 jurisdictions:
   - universal
 perishable: false
@@ -21,51 +22,82 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'RudderStack blog, *What is a Data Dictionary?* (Jan 2025).'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Basel Committee on Banking Supervision, Implementation of the Principles
+      for effective risk data aggregation and risk reporting, BCBS Newsletter, 6
+      January 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For instance, in a bank’s credit risk data model, entities might include `Customer`, `Loan`, `Collateral`. The data dictionary would list that `Loan.Amount` is a numeric field in rupees, defined as “principal outstanding.” The dictionary is a repository of these definitions for technical staff, while the model visualizes how `Loan` relates to `Customer` and `Collateral`.
+### Core mechanism
 
-Having a data model ensures database tables and fields align with business concepts (avoids missing fields). The dictionary ensures anyone writing queries or reports knows exactly what each field means. Both should be version-controlled. When regulations introduce new report items, the dictionary/model must be updated. Without them, even a simple mapping exercise is error-prone, and data integration between systems becomes guesswork.
+| Dimension | Business lineage | Technical lineage |
+| :--- | :--- | :--- |
+| Starts from | Business concept or reporting item | Physical field, table, file, message or API |
+| Shows | Source concept, key transformations, aggregation and use | System hops, joins, filters, code logic and target fields |
+| Main users | Owners, consumers, risk, finance, audit, supervisors | Engineers, analysts, testers, control teams |
+| Main question | "What feeds this number and why?" | "Exactly where and how was this value produced?" |
 
 ```text
-+----------------+     +--------------+     +--------------+
-|   Customer     |&lt;----|   Account    |----&gt;|   Product    |
-+----------------+     +--------------+     +--------------+
-   CustomerID           AccountID           ProductID
-   Name                 CustID (FK)         Name
-   DOB                  Balance             Type
-   ...                  ...                 ...
+Customer exposure concept
+    ↓
+Business rule: aggregate by connected counterparty
+    ↓
+Risk concentration report
 ```
 
-### Permanent rule
+```text
+LOAN.CPTY_ID + LIMIT.OUTSTANDING
+    ↓
+ETL join and mapping
+    ↓
+RISK_EXPOSURE.CONSOLIDATED_AMOUNT
+    ↓
+Reporting extract field C0170
+```
 
-Every data field in any regulatory report or risk system must be defined in the data dictionary and accounted for in the data model.
+Good lineage links the two views. A business definition without technical traceability cannot prove implementation; technical pipes without business meaning cannot prove that the right concept was implemented.
 
-### Permanent trap
+### Where it sits
 
-Skipping the dictionary for “obvious” fields; even basic terms like “balance” need precise definition in a banking context.
+```text
+Upstream:   Golden source · CDE · Business definition
+This:       Business and technical lineage
+Downstream: Metadata · Mapping · Impact analysis · Root-cause analysis · Testing
+```
 
-### Never confuse
+### Never confuse [Lineage] and [Source-to-target mapping]
 
-**Data dictionary** — A detailed list of fields and technical specs for developers and analysts.
+**Lineage** - the end-to-end dependency chain across sources, transformations and uses, often spanning several systems and mappings.
 
 ---
 
-**Data catalog** — A broader inventory (often tool-based) that may include the data dictionary and also lineage, quality metrics, etc.
+**Source-to-target mapping** - the implementation specification for a defined source-to-target transformation. It can be an important component of lineage without being the whole lineage.
+
+### Permanent rule
+
+For material risk data, a consumer should be able to move from reported value to business meaning and from that meaning down to the physical source and transformation evidence.
+
+### Permanent trap
+
+Calling a system list "lineage". "Core banking -&gt; warehouse -&gt; report" identifies locations but not fields, transformations, dependencies or governed business meaning.
 
 ### Jurisdiction variants
 
-**No delta.** The use of data dictionaries and models is a technical practice not dictated by law; best practices are common globally.
+**No delta.** Lineage mechanics are not jurisdiction-specific; supervisory depth of scrutiny can vary.
 
 <Recall
-  q="Why use a data dictionary?"
-  a="To provide a single source of technical metadata (names, formats) for all fields used in reports."
+  q="Why are both business and technical lineage necessary?"
+  a="Business lineage proves semantic dependency and intended use; technical lineage proves physical implementation and enables reproduction, troubleshooting and impact analysis."
 />
 
 <Recall
-  q="What does a conceptual data model show?"
-  a="The entities (e.g. Customer, Loan) and relationships (e.g. Customer→Loan) that structure the data."
+  q="What does technical lineage add to a mapping document?"
+  a="It connects mappings across the full chain, including intermediate systems and transformations, so a final reported value can be traced beyond one interface."
 />

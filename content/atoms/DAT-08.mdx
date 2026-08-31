@@ -1,15 +1,15 @@
 ---
 id: DAT-08
-title: Critical Data Elements (CDEs)
-type: concept
+title: Critical Data Elements
+type: mechanism
 domain: risk-data
 subdomain: architecture-and-lineage
 one_screen: >-
-  Critical Data Elements (CDEs) are the data points an organization deems
-  essential to its core operations, decision-making, and compliance. In banking,
-  CDEs include fields like customer ID, credit exposure amounts, collateral
-  valuations, etc. They require special governance attention since errors in
-  CDEs can have significant impact.
+  Critical Data Elements, or CDEs, are data elements whose failure could
+  materially impair risk management, financial or supervisory reporting,
+  customer or business decisions, or regulatory compliance. CDE designation is a
+  scoping mechanism: it concentrates stronger ownership, lineage, quality and
+  change controls where failure matters most.
 prerequisites:
   - DAT-07
 jurisdictions:
@@ -21,54 +21,80 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'Alation blog, *Critical Data Elements Explained* (Feb 2025).'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      DAMA International, DAMA-DMBOK: Data Management Body of Knowledge, second
+      edition, ISBN 9781634622486, 2017.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Organizations identify CDEs based on risk and business significance. For example, any data field that feeds risk-weight calculations or capital models would be a CDE. Under BCBS 239, regulators effectively treat all material risk data as CDEs. Good data governance frameworks inventory CDEs and assign them owners and stewards. The owner (often a senior business manager) is responsible for the definition and quality of each CDE; stewards implement controls and fixes.
-
-Marking data as “critical” means prioritizing quality rules, monitoring, and issue management for those fields. The idea is to avoid the opposite of the CDE philosophy: that all data gets equal, impractical scrutiny. By focusing on CDEs, banks can allocate resources to where mistakes matter most. Identifying CDEs is not a one-time task; it must be revisited as regulations and products change.
+### Core mechanism
 
 ```text
-                  +--------------+
-                  | Data Governance Framework |
-                  +--------------+
-                          |
-            +-----------------------------+
-            | Critical Data Elements List |
-            +-----------------------------+
-                   /       |        \
-                  /        |         \
-           [Customer ID] [Loan Amount] [FX Rate] ...
+Identify business or reporting use
+    ↓
+Assess materiality of wrong, missing or late data
+    ↓
+Designate CDE where impact is material
+    ↓
+Assign owner and steward
+    ↓
+Document definition, source and lineage
+    ↓
+Apply quality rules, monitoring and change controls
 ```
+
+| CDE test | Question |
+| :--- | :--- |
+| Regulatory dependency | Does the element directly determine a required reported value or classification? |
+| Risk-management dependency | Could an error distort exposure, concentration, limit or risk decision? |
+| Aggregation dependency | Is it a key identifier, amount, date or classification needed to consolidate correctly? |
+| Propagation | Would one defect contaminate many reports or downstream calculations? |
+| Recovery difficulty | Would late discovery make correction costly or impossible before a decision or filing? |
+
+A CDE is normally a governed field or business concept, not an entire database. "Counterparty identifier" may be critical because it drives legal-entity aggregation; every technical audit column in the same table need not become a CDE.
+
+### Where it sits
+
+```text
+Upstream:   Business materiality · Golden sources · Reporting obligations
+This:       CDE designation and control intensity
+Downstream: Ownership · Lineage · Data quality · Change impact assessment
+```
+
+### Ownership
+
+| Role | CDE responsibility |
+| :--- | :--- |
+| Owner | Approves meaning, scope and required quality |
+| Steward | Maintains metadata, controls and issue follow-up |
+| Producer | Supplies the element through the governed process |
+| Consumer | Confirms fitness for the material use |
+| Challenge | Tests whether designation and controls are credible |
 
 ### Permanent rule
 
-Banks must explicitly identify and govern their critical data elements (CDEs) to ensure governance efforts focus on high-impact fields.
+Criticality follows impact, not technical convenience or the number of reports containing the field.
 
 ### Permanent trap
 
-Treating all data elements alike; without highlighting CDEs, governance becomes spread too thin.
-
-### Never confuse
-
-**CDE** — A specific field deemed critical (e.g. a risk exposure amount).
-
----
-
-**Data catalog** — A comprehensive inventory of all data assets (it may list CDEs but also all other fields).
+Declaring every field critical. If everything receives the same control intensity, criticality no longer helps prioritise scarce remediation and monitoring capacity.
 
 ### Jurisdiction variants
 
-**No delta.** The notion of identifying and governing CDEs is best practice internationally (no one sets different rules on which fields count as “critical”).
+**No delta.** Regulators may use different terminology, but materiality-based scoping is not a country-specific mechanic.
 
 <Recall
-  q="How do banks decide what data is “critical”?"
-  a="By assessing which data points are essential for regulatory compliance, risk management, and core processes (e.g. exposure, collateral, customer IDs)."
+  q="Why is a counterparty identifier often a CDE?"
+  a="It can determine whether exposures are aggregated to the correct obligor or group; one identifier defect can propagate into concentrations, limits and reports."
 />
 
 <Recall
-  q="Who should decide CDEs?"
-  a="A data governance committee or chief data officer, in consultation with business units and risk managers; often formalized in policy."
+  q="Does CDE designation mean every non-CDE is uncontrolled?"
+  a="No. All data needs appropriate control; CDE status signals stronger governance because the consequence of failure is material."
 />

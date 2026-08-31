@@ -1,0 +1,121 @@
+---
+id: DAT-26
+title: 'Submission, Attestation and Restatement'
+type: procedure
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  Submission is the control boundary where a production-ready return becomes an
+  official filing. Attestation or authorised sign-off establishes accountable
+  approval where the applicable regime requires it; if a material error is
+  discovered afterwards, the bank must assess the affected filing, follow the
+  regulator's correction process and preserve a clear restatement trail.
+prerequisites:
+  - DAT-25
+jurisdictions:
+  - IN
+  - UK
+  - EU
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      European Banking Authority, Implementing Technical Standards on
+      supervisory reporting under Commission Implementing Regulation (EU)
+      2024/3117, reference number Commission Implementing Regulation (EU)
+      2024/3117, 29 November 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Federal Financial Institutions Examination Council, Consolidated Reports
+      of Condition and Income, FFIEC 031, FFIEC 041 and FFIEC 051, current
+      reporting forms and instructions, June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Commercial Banks -
+      Supervisory Returns) Directions, 2026, RBI/DoS/2026-27/415 and
+      DoS.CO.DSG.9/33.01.001/2026-27, 31 July 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+```text
+Submission-ready return
+    ↓
+Final review and authorised approval
+    ↓
+Submit through prescribed channel
+    ↓
+Retain receipt, version and submission evidence
+    ↓
+Post-submission error found?
+    ↓
+Assess materiality and affected periods
+    ↓
+Notify / correct / resubmit as required
+    ↓
+Root-cause remediation and restatement record
+```
+
+| Control point | Minimum evidence |
+| :--- | :--- |
+| Approval | Who approved, what version, when |
+| Transmission | Submitted file or form and technical identifier |
+| Receipt | Portal acknowledgement or equivalent evidence |
+| Correction | Original vs corrected values and reason |
+| Impact | Affected returns, periods and linked decisions |
+| Remediation | Root cause, issue owner and permanent fix |
+
+Attestation is not assumed to have one universal signatory. The required certification, maker-checker structure and correction mechanics depend on the specific return and jurisdiction.
+
+### Where it sits
+
+```text
+Upstream:   Regulatory production · Final validation · Exception disposition
+This:       Filing accountability and post-filing correction
+Downstream: Regulator receipt · Restatement · Issue remediation · Governance reporting
+```
+
+### Never confuse [Attestation] and [Independent assurance]
+
+**Attestation** - accountable management certification or approval required by the applicable filing process.
+
+---
+
+**Independent assurance** - separate review or audit that tests evidence. Management sign-off does not become independent because it is formal.
+
+### Permanent rule
+
+A correction does not erase the original filing history; the bank must preserve what was submitted, what changed, why and who approved the correction.
+
+### Jurisdiction variants
+
+#### EU (EBA / competent authority)
+Submission and correction mechanics follow the applicable supervisory reporting framework, national competent authority channel and taxonomy validations; there is no single universal EBA executive attestor for every return.
+
+#### UK (PRA)
+PRA data items and submission processes apply through the UK reporting estate; approval responsibilities are determined by the relevant return and firm's governance.
+
+#### US
+Call Reports and Federal Reserve reports have form-specific signature, certification and amendment instructions. These requirements must be read from the applicable form family rather than generalised across all US filings.
+
+#### IN (RBI)
+RBI supervisory returns are submitted through designated online portals under applicable directions and return instructions; maker-checker access and correction controls are governed by the relevant portal and return framework.
+
+<Recall
+  q="Why is &quot;the CRO signs every regulatory return&quot; unsafe as a universal rule?"
+  a="Signatory and certification requirements differ by return, institution and jurisdiction; the applicable form or instruction determines the requirement."
+/>
+
+<Recall
+  q="What should happen after a corrected return is submitted?"
+  a="The bank should retain the original and corrected versions, assess affected periods and consumers, document the reason, and remediate the root cause so correction does not become routine production practice."
+/>

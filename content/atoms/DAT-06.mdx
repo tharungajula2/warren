@@ -1,63 +1,111 @@
 ---
 id: DAT-06
-title: Supervisory Review and Compliance Record
-type: concept
+title: BCBS 239 Supervisory Review and Implementation Record
+type: reference
 domain: risk-data
 subdomain: bcbs239-and-aggregation
 one_screen: >-
-  The final BCBS 239 principles cover supervisory review (Principles 12–14) and
-  require banks to act on regulators’ findings. By 2023, global reports show
-  banks remain at “different stages” of compliance and need significant work to
-  meet the standard.
+  BCBS 239 does not end when a bank writes a policy: Principles 12-14 require
+  supervisors to assess implementation, demand remediation and cooperate across
+  home and host authorities. The implementation record remains active; a Basel
+  Committee newsletter dated 6 January 2026 describes persistent challenges and
+  expressly states that it creates no new supervisory guidance or expectations.
 prerequisites:
+  - DAT-02
   - DAT-03
+  - DAT-04
+  - DAT-05
 jurisdictions:
   - universal
-perishable: false
-as_of: null
+perishable: true
+as_of: '2026-08-30'
 next_effective_date: null
 status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: Basel Committee press release (28 Nov 2023).
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: 'FluxForce, *BCBS 239 Compliance* (2026).'
+  - label: >-
+      Basel Committee on Banking Supervision, Implementation of the Principles
+      for effective risk data aggregation and risk reporting, BCBS Newsletter, 6
+      January 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Reserve Bank of India, Reserve Bank of India (Commercial Banks -
+      Supervisory Returns) Directions, 2026, RBI/DoS/2026-27/415 and
+      DoS.CO.DSG.9/33.01.001/2026-27, 31 July 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Principles 12–14 instruct how supervisors should review the data framework and require remediation if the bank’s practices are deficient. They encourage cross-border coordination for global groups, and detail potential supervisory measures (e.g. requiring capital add-ons for data weaknesses). In effect, they push banks to treat risk data as a first-class issue. Recent Basel progress reports note that almost a decade after BCBS 239’s publication, no major bank is fully compliant. The press release observes “banks are at different stages of alignment” and “additional work is required at all banks to attain or sustain full compliance”. Supervisors worldwide (Fed, ECB, PRA, RBI, etc.) have been pressing banks via Stress Test frameworks and Pillar 2 dialogues to close gaps.
+### Core mechanism
 
-A critical point: BCBS 239 itself has no formal legal force (it relies on member commitments). In the UK, the PRA explicitly incorporates its expectations into SREP for major banks. The ECB can impose Pillar 2 guidance for data issues, and the Fed expects high-quality data for its FR Y-14 stress tests. Thus, compliance is enforced locally. Globally, the common narrative is that risk data deficiencies have been a repeat finding in audits and reviews. The **permanent expectation** is that any material data issue must be escalated and fixed, and supervisors will hold senior management accountable.
+| Principle | Supervisory function |
+| :--- | :--- |
+| 12 Review | Supervisors periodically assess compliance with the principles |
+| 13 Remedial actions and supervisory measures | Deficiencies require timely remediation; supervisors can use available tools where progress is inadequate |
+| 14 Home-host cooperation | Supervisors cooperate across jurisdictions for cross-border banking groups |
+
+```text
+Supervisory assessment
+    ↓
+Deficiency or gap identified
+    ↓
+Management action plan and accountable remediation
+    ↓
+Evidence of implementation and sustainability
+    ↓
+Supervisory follow-up and escalation where needed
+```
+
+The 2026 Basel newsletter identifies recurring themes including governance, lineage, cross-border implementation, changing operating environments, emerging technology and compensating controls. It describes implementation as continuous because mergers, new products, technology and risk landscapes keep changing the aggregation problem.
+
+### Where it sits
+
+```text
+Upstream:   BCBS 239 governance · Aggregation · Reporting
+This:       Supervisory review and implementation record
+Downstream: Remediation plans · Escalation · Sustainable control improvement
+```
 
 ### Permanent rule
 
-BCBS 239 principles must be embedded institution-wide and are enforced by national regulators. Formal remediation plans are expected when issues are found.
+BCBS 239 compliance is a sustained capability, not a one-time programme closure date.
 
 ### Permanent trap
 
-Treating audit comments on data as mere “to-dos” rather than core risk-control failures. Senior management must lead remediation.
-
-### Never confuse
-
-**BCBS 239** — A supervisory standard, not a law.
-
----
-
-**Accounting standard** — (e.g. IFRS) Rules for financial statements. BCBS 239 is about data systems, not accounting treatment.
+Treating a compensating control as evidence that the underlying defect is solved. A manual or detective control can contain risk while structural remediation remains open.
 
 ### Jurisdiction variants
 
-**No delta.** All major jurisdictions (UK PRA, ECB, Fed, RBI etc.) regard BCBS 239 outcomes as required for SIBs, though enforcement mechanisms vary.
+#### EU (ECB Banking Supervision)
+The ECB's May 2024 RDARR Guide clarifies supervisory expectations for significant institutions and is used in targeted reviews and remediation monitoring; it does not replace BCBS 239.
+
+#### UK (PRA)
+The PRA applies its supervisory toolkit through the UK prudential framework; this atom does not invent a separate UK version of the fourteen principles.
+
+#### US
+US agencies use their own supervisory processes and reporting expectations; the Basel principles remain a benchmark rather than a US form specification.
+
+#### IN (RBI)
+RBI's 31 July 2026 Commercial Banks - Supervisory Returns Directions contain explicit governance, architecture, reconciliation and automation requirements for commercial-bank supervisory reporting.
 
 <Recall
-  q="Ten years after BCBS 239’s publication, are banks fully compliant?"
-  a="No. The Basel Committee reports significant work is still needed; most G-SIBs are not fully compliant."
+  q="What changed in the 6 January 2026 Basel newsletter?"
+  a="It summarised implementation themes and challenges but explicitly did not create new supervisory guidance or expectations."
 />
 
 <Recall
-  q="How do supervisors enforce BCBS 239?"
-  a="Banks face supervisory reviews, required remediation plans, and possible capital penalties (Pillar 2) if they fall short."
+  q="Why does home-host cooperation belong in a data pack?"
+  a="A cross-border group must aggregate risk across entities and jurisdictions; supervisory assessment therefore depends on coordinated views of the same group-wide capability."
 />

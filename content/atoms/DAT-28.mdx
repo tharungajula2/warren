@@ -1,0 +1,92 @@
+---
+id: DAT-28
+title: US Regulatory Reports
+type: delta
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  US prudential reporting is organised around named form families with
+  respondent panels and form-specific instructions rather than one COREP-style
+  taxonomy estate. The bank must determine form applicability from institution
+  profile and current instructions, then preserve mappings to each required
+  schedule.
+prerequisites:
+  - DAT-25
+  - DAT-26
+jurisdictions:
+  - US
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Federal Financial Institutions Examination Council, Consolidated Reports
+      of Condition and Income, FFIEC 031, FFIEC 041 and FFIEC 051, current
+      reporting forms and instructions, June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Consolidated Financial
+      Statements for Holding Companies, FR Y-9C, current form and instructions,
+      June 2026.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      Board of Governors of the Federal Reserve System, Capital Assessments and
+      Stress Testing, FR Y-14A, FR Y-14Q and FR Y-14M, current forms and
+      instructions, March 2026 and subsequent 2026 updates.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+| Form | Who files it | What it covers | Cadence |
+| :--- | :--- | :--- | :--- |
+| FFIEC 031 | Banks with domestic and foreign offices | Call Report: condition, income and supporting schedules | Quarterly |
+| FFIEC 041 | Banks with domestic offices only that do not use FFIEC 051 | Call Report: condition, income and supporting schedules | Quarterly |
+| FFIEC 051 | Eligible banks with domestic offices only and total assets below the form's threshold; current FFIEC description states less than USD 5 billion | Streamlined Call Report: condition, income and supporting schedules | Quarterly |
+| FR Y-9C | BHCs, SLHCs, IHCs and SHCs meeting the respondent criteria; current page states generally USD 3 billion or more, subject to specified exceptions | Consolidated financial statements for holding companies | Quarterly |
+| FR Y-14A | Covered large firms in the FR Y-14 panel | Capital-assessment and stress-testing projections | Annual |
+| FR Y-14Q | Covered large firms in the FR Y-14 panel | Detailed asset, capital and PPNR data, with schedule-specific exceptions | Quarterly |
+| FR Y-14M | Applicable firms in the FR Y-14 panel with relevant portfolios | Detailed retail loan portfolio data | Monthly |
+
+As at August 2026, FFIEC 031/041/051 current materials include June 2026 forms or instructions.
+
+### Where it sits
+
+```text
+Upstream:   US institution profile · Regulatory production cycle
+This:       Form-family selection and cadence
+Downstream: Schedule mappings · Form-specific validations · Filing and amendments
+```
+
+### Never confuse [US form family] and [Taxonomy-driven reporting framework]
+
+**US form family** - a named collection with defined respondent panel, schedules and instructions; applicability is determined form by form.
+
+---
+
+**Taxonomy-driven reporting framework** - a broader technical reporting model where templates and data points are released through a common taxonomy architecture. The EU example is closer to this model.
+
+### Permanent rule
+
+Never infer US filing obligations from a bank label alone; use the current respondent panel and instructions for the specific form and reference date.
+
+### Jurisdiction variants
+
+#### US (FFIEC / Federal Reserve)
+The real delta is form selection, respondent panel and cadence. FFIEC Call Reports, FR Y-9C and FR Y-14 serve different entities and supervisory purposes and should not be treated as interchangeable versions of one return.
+
+<Recall
+  q="What determines whether FFIEC 031, 041 or 051 applies?"
+  a="Institution profile and the current Call Report eligibility instructions, including office structure and the FFIEC 051 asset criterion; the bank must use the form applicable to its reporting status."
+/>
+
+<Recall
+  q="Why is FR Y-14 not simply another Call Report?"
+  a="FR Y-14 is a Federal Reserve capital-assessment and stress-testing information collection for the covered large-firm panel, with annual, quarterly and monthly components; Call Reports are depository-institution condition and income reports."
+/>

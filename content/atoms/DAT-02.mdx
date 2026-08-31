@@ -1,15 +1,15 @@
 ---
 id: DAT-02
-title: Risk Data Aggregation vs Risk Reporting
-type: concept
+title: 'BCBS 239: The Fourteen-Principle Architecture'
+type: reference
 domain: risk-data
 subdomain: bcbs239-and-aggregation
 one_screen: >-
-  Risk data aggregation is the internal process of collecting and consolidating
-  all relevant risk data across the bank. Risk reporting is the output of that
-  process, conveying the aggregated data in reports. BCBS 239 treats them as
-  separate obligations: the former ensures data is accurate and complete; the
-  latter ensures reports are clear and delivered on time.
+  BCBS 239 is the Basel Committee's data aggregation and internal risk reporting
+  standard, not a capital calculation rule. Its fourteen principles form one
+  chain: governance and infrastructure enable reliable aggregation; reliable
+  aggregation enables useful reporting; supervisors assess whether the whole
+  capability works.
 prerequisites:
   - DAT-01
 jurisdictions:
@@ -21,51 +21,73 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'FluxForce, *BCBS 239: What It Requires* (2026).'
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-Risk data aggregation focuses on gathering data points (e.g. exposures, positions) from all business lines, legal entities and regions into a single view. It requires data warehousing, reconciliation with accounting systems, and automated controls to meet BCBS 239’s principles on accuracy, completeness, timeliness and adaptability. By contrast, risk reporting is about designing and distributing the reports themselves. It covers how aggregated data is formatted, explained and delivered to decision-makers and regulators. Reporting practices include ensuring reports are “accurate, comprehensive, and written for their intended audience” with appropriate frequency and escalation paths.
+### Core mechanism
 
-In effect, aggregation is about the data pipelines (the “back office” work) and reporting is about the presentation. For example, Principle 4 (completeness) demands data from *all* material sources be captured, whereas Principle 9 (clarity) demands that reports be understandable to non-technical users. A bank may have strong data pipelines but still produce poor reports if it fails the latter principle. BCBS 239 Group II (Principles 3–6) governs aggregation; Group III (Principles 7–11) governs reporting. Both must be in place: good aggregation without clear reporting fails to inform stakeholders, and good reports without sound data defeat regulators’ objectives.
+| Group | Principles | What the group owns |
+| :--- | :--- | :--- |
+| Governance and infrastructure | 1-2 | Governance; data architecture and IT infrastructure |
+| Risk data aggregation capabilities | 3-6 | Accuracy and integrity; completeness; timeliness; adaptability |
+| Risk reporting practices | 7-11 | Accuracy; comprehensiveness; clarity and usefulness; frequency; distribution |
+| Supervisory review, tools and cooperation | 12-14 | Review; remedial action and supervisory measures; home-host cooperation |
 
 ```text
-Data Aggregation          Data Reporting
-+--------+               +---------+
-| Systems|--extract/ETL--&gt;| Reports |---&gt; Stakeholders
-+--------+   mapping      +---------+
-    |                        ^
-    v                        |
-Aggregate, Reconcile        Validate (content, format)
+Governance and infrastructure
+    ↓
+Risk data aggregation capabilities
+    ↓
+Risk reporting practices
+    ↓
+Supervisory assessment and remediation
 ```
 
-### Permanent rule
+The standard was issued after the financial crisis exposed banks that could not identify group-wide exposures and concentrations fully, quickly and accurately. It initially targeted global systemically important banks, while supervisors and banks have since used its principles more broadly as a benchmark for risk-data governance.
 
-Aggregation and reporting are distinct steps: you must first consolidate all required data, then use it in reports designed for the audience.
+### Where it sits
 
-### Permanent trap
+```text
+Upstream:   Financial-crisis aggregation failures · Enterprise risk management
+This:       BCBS 239 fourteen-principle framework
+Downstream: Governance · Data architecture · Aggregation · Reporting · Supervision
+```
 
-Fixating on report templates or dashboards without ensuring the underlying data is comprehensive and reconciled leads to misleading outputs.
+### Never confuse [BCBS 239] and [Basel capital rules]
 
-### Never confuse
-
-**Risk data aggregation** — Internal consolidation of all risk data (the “what” and “how” data is collected).
+**BCBS 239** - sets principles for risk data aggregation and internal risk reporting capabilities.
 
 ---
 
-**Risk reporting** — The communication of aggregated risk metrics (the “presentation” of that data to management/regulators).
+**Basel capital rules** - determine prudential capital requirements and related calculations; DAT does not re-teach those mechanics.
+
+### Permanent rule
+
+The fourteen principles are not fourteen independent checklist items. Weakness in governance or architecture propagates into aggregation and then into reporting.
+
+### Permanent trap
+
+Reducing BCBS 239 to a data-quality programme. Data quality is essential, but the standard also owns governance, architecture, adaptability, report usefulness, distribution and supervisory remediation.
 
 ### Jurisdiction variants
 
-**No delta.** All jurisdictions distinguish between banks’ data-processing capabilities and the reports they deliver to supervisors.
+**No delta.** The BCBS principles themselves do not change by jurisdiction; their legal and supervisory implementation can.
 
 <Recall
-  q="Which BCBS 239 principles cover data aggregation?"
-  a="Principles 3–6 cover risk data aggregation (accuracy, integrity, completeness, timeliness, adaptability)."
+  q="Which BCBS 239 group comes before data quality and aggregation mechanics?"
+  a="Governance and infrastructure. Principles 1-2 create the accountability and architecture on which reliable aggregation depends."
 />
 
 <Recall
-  q="Which BCBS 239 principles cover risk reporting?"
-  a="Principles 7–11 cover risk reporting practices (accuracy, comprehensiveness, clarity/usefulness, frequency, distribution)."
+  q="Why is BCBS 239 not a capital atom?"
+  a="It governs the capability to aggregate and report risk information; it does not set RWA formulas, capital minima or liquidity ratios."
+/>
+
+<Recall
+  q="What do Principles 12-14 add to the bank-facing principles?"
+  a="They establish supervisory review, remedial action and cross-border cooperation so deficiencies become governed supervisory issues rather than optional improvements."
 />

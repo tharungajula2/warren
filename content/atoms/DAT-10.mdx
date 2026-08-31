@@ -1,14 +1,14 @@
 ---
 id: DAT-10
-title: Metadata and Business Glossary
-type: concept
+title: Data Governance Operating Models
+type: mechanism
 domain: risk-data
 subdomain: architecture-and-lineage
 one_screen: >-
-  Metadata is “data about data” – information that defines and describes data
-  elements. A business glossary is a centralized catalog of business terms and
-  their definitions. Together, they ensure everyone has a common understanding
-  of data definitions.
+  A data governance operating model turns roles into decision rights, forums,
+  escalation paths and repeatable processes. Centralised, federated and hybrid
+  models are organisational choices; none works if ownership is unclear or
+  enterprise standards can be bypassed without controlled exception.
 prerequisites:
   - DAT-09
 jurisdictions:
@@ -20,59 +20,78 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'RBI Committee Report on Data Standardization, *Executive Summary* (2018).'
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      DAMA International, DAMA-DMBOK: Data Management Body of Knowledge, second
+      edition, ISBN 9781634622486, 2017.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For example, a report might include a column “Non-Performing Asset Ratio.” Metadata would record that this is calculated as “Total NPA amount / Total advances” and has business unit “Retail Loans.” The business glossary would define “Non-Performing Asset” (e.g. a loan overdue &gt;90 days). Good metadata systems also track data source, format, and constraints for each field.
+### Core mechanism
 
-Under RBI guidance, banks are urged to use common taxonomies and sync metadata across systems. This means aligning internal definitions with external ones (e.g. RBI’s definition of NPA). A single business glossary prevents mismatches where one department uses one term differently from another. Both metadata and glossary entries should have clear ownership, and be updated when policies change. This is a cornerstone of data governance: without metadata, reports can’t be properly interpreted and controls on data validity are weak.
+| Model | Enterprise centre | Domain or business units | Main strength | Main failure mode |
+| :--- | :--- | :--- | :--- | :--- |
+| Centralised | Makes most data decisions and operates standards | Execute centrally set decisions | Consistency | Bottleneck and weak business ownership |
+| Federated | Sets minimum policy and coordination | Make substantial domain decisions | Domain expertise and speed | Conflicting definitions and duplicated controls |
+| Hybrid | Owns enterprise standards, architecture and escalation | Own definitions, quality and delivery within standards | Balance of consistency and accountability | Ambiguous decision boundary |
+
+A workable model assigns each decision before a dispute occurs:
 
 ```text
-+----------------------+
-| Business Glossary    |
-+----------------------+
-| Term | Definition    |
-| NPA  | ...           |
-| PD   | ...           |
-+----------------------+
-       |
-       v
-+-----------------------------+
-| Metadata Repository         |
-+-----------------------------+
-| Field | Source | Type | ... |
-| NPA_Amount | CoreBanking | Curr. | ... |
-+-----------------------------+
+Enterprise policy and architecture
+    ↓
+Domain ownership and stewardship
+    ↓
+Operational controls and delivery
+    ↓
+Issue escalation or cross-domain conflict
+    ↓
+Enterprise decision where local resolution fails
 ```
+
+Committees are mechanisms, not ownership. A data council can resolve cross-domain conflicts, but the committee should not become a place where accountability is diffused among attendees.
+
+### Where it sits
+
+```text
+Upstream:   Owner · Steward · Producer · Consumer · Challenge
+This:       Decision rights and governance forums
+Downstream: CDE standards · Data quality · Issue escalation · Change governance
+```
+
+### Ownership
+
+| Layer | Typical decision |
+| :--- | :--- |
+| Board / senior management | Framework, risk appetite, material remediation priorities |
+| Enterprise data governance | Common policy, taxonomy, architecture principles, cross-domain conflicts |
+| Domain owner | Definitions, quality requirements, local priorities and exceptions |
+| Stewardship | Metadata, monitoring, issue coordination and evidence |
+| Independent challenge | Whether design and operation are effective |
 
 ### Permanent rule
 
-All regulatory and risk data fields must have definitions and metadata documented, linked to the official business glossary.
+A governance model is complete only when a person can determine who decides, who executes, who must be consulted and where unresolved conflict escalates.
 
 ### Permanent trap
 
-Assuming everyone understands a term; failing to codify definitions causes inconsistent reporting and confusion.
-
-### Never confuse
-
-**Metadata** — Details about data fields (type, format, source, lineage).
-
----
-
-**Business glossary** — A dictionary of business terms with plain-language definitions (bridges business and technical meaning).
+Measuring governance maturity by committee count. More forums can increase delay while leaving the actual decision right undefined.
 
 ### Jurisdiction variants
 
-**No delta.** Standardizing metadata and glossaries is universally recommended (e.g. BIS mentions using international codes and definitions for RBI reporting).
+**No delta.** Regulators expect effective governance but do not impose one universal organisational design.
 
 <Recall
-  q="Why maintain a business glossary?"
-  a="To ensure a common vocabulary – e.g. that all departments use the term “customer exposure” identically."
+  q="What distinguishes federated governance from uncontrolled local ownership?"
+  a="Federation preserves enterprise policies, minimum standards and escalation while delegating defined decisions to domains; uncontrolled local ownership lacks that binding framework."
 />
 
 <Recall
-  q="Give an example of metadata content for a report field."
-  a="Field name, source system, update frequency, and allowed range or format (e.g. date format) are typical metadata."
+  q="Why should a data council not be the owner of every CDE?"
+  a="Collective forums are poor substitutes for named accountability. The council can set standards and resolve conflicts while a specific owner remains accountable for each governed domain."
 />

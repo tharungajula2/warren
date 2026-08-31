@@ -1,17 +1,17 @@
 ---
 id: DAT-12
-title: Reference Data vs Master Data
-type: concept
+title: Metadata and the Business Glossary
+type: mechanism
 domain: risk-data
 subdomain: architecture-and-lineage
 one_screen: >-
-  Master data consists of core business entities (e.g. customers, accounts,
-  products) that are critical to operations, while reference data consists of
-  standardized code sets or classifications (e.g. country codes, currency codes,
-  security identifiers). Master data changes as business grows; reference data
-  is relatively stable and often global (ISO codes, etc.).
+  Metadata makes data interpretable and governable; a business glossary makes
+  important business terms mean the same thing across functions and systems.
+  Together they connect a human concept such as "counterparty exposure" to the
+  fields, formats, owners, sources and lineage through which that concept is
+  implemented.
 prerequisites:
-  - DAT-10
+  - DAT-11
 jurisdictions:
   - universal
 perishable: false
@@ -21,50 +21,75 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: 'Dataversity, *Master Data vs Reference Data* (Apr 2024).'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      DAMA International, DAMA-DMBOK: Data Management Body of Knowledge, second
+      edition, ISBN 9781634622486, 2017.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-For example, a customer record (with name, KYC info) is master data; the country code “IN” used in an address is reference data. Master data is usually owned by business functions (e.g. front office), whereas reference data can be managed centrally (often by risk or finance teams). Both must be maintained carefully: a glitch in master data can misstate exposure for an entity; a stale reference code (like an outdated ISIN) can disrupt reporting.
+### Core mechanism
 
-Regulatory data reporting relies on reference data standards (e.g. RBI may mandate ISO country codes in returns). Master data alignment ensures all systems recognize the same legal entity (which ties into entity resolution and LEIs). In practice, data governance tracks both types. Tools like MDM systems often manage master data, while governance tools or data catalogs manage reference codes. But conceptually, **never confusing** them is key. Reference data supports interpretation of master data.
+| Layer | Typical contents | Governance purpose |
+| :--- | :--- | :--- |
+| Business glossary | Term, definition, scope, exclusions, owner, effective date | One governed business meaning |
+| Business metadata | CDE status, sensitivity, quality requirement, source authority, consumer | Control and accountability context |
+| Technical metadata | Field name, datatype, length, table, interface, code set, refresh | Precise implementation context |
+| Operational metadata | Load time, record count, control result, version | Evidence that the process ran as expected |
 
 ```text
-Master Data        Reference Data
-+------------+    +--------------------+
-| Customer   |    | Currency Codes     |
-| Product    |    | Country Codes      |
-| Account    |    | ISIN, Tickers      |
-+------------+    +--------------------+
+Governed business term
+    ↓
+Business metadata and owner
+    ↓
+Technical fields and allowed values
+    ↓
+Lineage and mappings
+    ↓
+Reports, controls and consumers
 ```
 
-### Permanent rule
+Definitions need version control. If "defaulted exposure" changes meaning because policy or regulation changes, the bank needs the old and new definitions, effective dates, impacted reports and corresponding technical changes rather than silently overwriting the glossary entry.
 
-Maintain a single master record for each core entity and use standard reference data sets (e.g. ISO codes) across the bank.
+### Where it sits
 
-### Permanent trap
+```text
+Upstream:   Business definitions · CDEs · Lineage
+This:       Glossary and metadata governance
+Downstream: Reference data · DQ rules · Requirements · Mapping · Impact analysis
+```
 
-Letting departments define their own “local” reference lists (e.g. local sector codes instead of international standards), leading to integration headaches.
+### Never confuse [Business glossary] and [Data dictionary]
 
-### Never confuse
-
-**Master data** — Business-critical records (customers, accounts) that the bank transacts with.
+**Business glossary** - governed business language: what a term means and where its scope begins and ends.
 
 ---
 
-**Reference data** — Shared classification codes and lists (currency codes, country codes, industry codes) used for categorizing data.
+**Data dictionary** - field-level description of how data is represented technically. In this pack, dictionary detail is carried through metadata and mapping rather than a separate atom.
+
+### Permanent rule
+
+A field name is not a definition. Meaning must be explicit enough that two independent teams would classify the same case the same way.
+
+### Permanent trap
+
+Publishing a glossary without ownership or effective dates. A dictionary of prose that nobody is accountable for does not control semantic change.
 
 ### Jurisdiction variants
 
-**No delta.** Distinction between master vs reference data is a general data management concept, not subject to regulatory variation.
+**No delta.** Common definitions and metadata are enterprise controls; jurisdiction-specific definitions enter through the governed terms, not through different metadata mechanics.
 
 <Recall
-  q="Give an example of master data in banking."
-  a="Customer information (name, ID, KYC details) or financial product definitions."
+  q="Why must metadata include ownership and effective dates?"
+  a="Those attributes show who can decide the meaning and which version applies to a given reporting period, preventing silent semantic drift."
 />
 
 <Recall
-  q="Give an example of reference data in banking."
-  a="Currency codes (e.g. “USD”), country codes (ISO 3166), security identifiers (ISIN)."
+  q="What happens when a regulatory definition changes?"
+  a="The glossary, impacted metadata, lineage, mappings, quality rules and tests should change together under version control so old and new reporting periods remain reproducible."
 />

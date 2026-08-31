@@ -1,19 +1,17 @@
 ---
 id: DAT-04
-title: >-
-  Risk Data Aggregation Capabilities (Accuracy, Completeness, Timeliness,
-  Adaptability)
-type: concept
+title: BCBS 239 Risk Data Aggregation Capabilities
+type: mechanism
 domain: risk-data
 subdomain: bcbs239-and-aggregation
 one_screen: >-
-  BCBS 239 mandates that a bank’s risk data aggregation be **accurate, complete,
-  timely, and adaptable**. In practice, this means automated data pipelines,
-  extensive reconciliations, and flexible reporting capabilities. Banks must
-  reconcile risk data with accounting records, cover ~95% of exposures across
-  all entities, refresh data fast (daily or intraday for critical metrics), and
-  be able to run ad-hoc reports on demand.
+  BCBS 239 Principles 3-6 define what a bank's aggregation engine must achieve:
+  accurate and integral data, complete coverage, decision-useful timeliness and
+  adaptability to new questions. The standard is outcomes-based; it does not
+  create a universal 95 percent completeness threshold or a universal daily or
+  intraday frequency.
 prerequisites:
+  - DAT-02
   - DAT-03
 jurisdictions:
   - universal
@@ -24,109 +22,72 @@ status: draft
 verified: false
 reading_minutes: 2
 sources:
-  - label: '|'
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
-  - label: v
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: +--------------+
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '| Data Warehouse|'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: +--------------+
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '|'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: v
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Checks: Reconcile with ledger (Accuracy)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '|'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: v
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Coverage: Ensure all entities, instruments (Completeness)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '|'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: v
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'Update: Nightly/daily loads, real-time where needed (Timeliness)'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '|'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: v
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: Flexible queries on demand (Adaptability)
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '|'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: v
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: Risk aggregation outputs
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: '```'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'FluxForce, *BCBS 239 Principles* (2026).'
-    url: 'https://www.bis.org/bcbs/basel3.htm'
-    accessed: 'August 28, 2026'
-  - label: 'BIS BCBS newsletter, *Improving risk data aggregation* (Jan 2026).'
+  - label: >-
+      Basel Committee on Banking Supervision, Implementation of the Principles
+      for effective risk data aggregation and risk reporting, BCBS Newsletter, 6
+      January 2026.
     url: 'https://www.bis.org/bcbs/basel3.htm'
     accessed: 'August 28, 2026'
 import_source: 07_DAT_risk_data_reporting.md
 ---
-The principle of **Accuracy and Integrity** (Principle 3) requires that risk data reconcile with the general ledger and management reports, and that automated checks minimize manual errors. Any manual adjustments must have documented rationale and approval. **Completeness** (Principle 4) means capturing data across all material business lines, legal entities and geographies. Supervisors typically expect banks to cover at least 95% of risk sources; any gaps trigger examination findings. **Timeliness** (Principle 5) demands that consolidated risk metrics be available fast enough for decision-making in stress; for example, daily VaR and credit portfolio reports as a baseline, potentially intraday for key measures. Finally, **Adaptability** (Principle 6) requires systems to produce new, ad-hoc reports quickly – for instance, answering a one-off supervisory query without months of coding.
+### Core mechanism
 
-Banking institutions implement these requirements by building data warehouses or data lakes that collect source-system data nightly (or more frequently) and standardizing it. They set quality rules so that any discrepancy (e.g. mismatched values) is flagged. Importantly, the infrastructure must operate in crisis scenarios as well (e.g. with market freezes or system outages) to ensure data is still deliverable. The perpetual struggle is that legacy siloed systems and manual processes often fall short of these standards, which is why many banks have ongoing data improvement programs. Nonetheless, under BCBS 239, the **permanent requirement** is clear: all material risk data must be consolidated accurately and on time.
+| Principle | Question it answers | Failure example |
+| :--- | :--- | :--- |
+| 3 Accuracy and integrity | Are values produced reliably, with controlled manual intervention and appropriate reconciliation? | Unexplained spreadsheet adjustments change exposure totals |
+| 4 Completeness | Are all material risks, entities, business lines and relevant dimensions captured? | A subsidiary or product is outside aggregation scope |
+| 5 Timeliness | Is information available quickly enough for the risk and decision being managed? | Stress exposure arrives after the decision window |
+| 6 Adaptability | Can the bank answer new or ad-hoc risk questions without rebuilding the data estate? | A supervisor asks for sector-by-country exposure and the bank cannot produce it promptly |
 
 ```text
+Authoritative source populations
+    ↓
+Controlled transformations and reconciliation
+    ↓
+Complete material scope
+    ↓
+Refresh at decision-useful speed
+    ↓
+Flexible aggregation by required dimensions
+```
 
-### Permanent rule
+Timeliness is contextual: a slowly changing structural metric and a fast-moving trading exposure can require different refresh speeds. Adaptability is likewise not limitless flexibility; the point is that common risk dimensions and detailed data are governed well enough to support credible new views.
 
-Risk aggregation must cover all material data and reconcile to accounting — incomplete or unverified data is unacceptable.
+### Where it sits
 
-### Permanent trap
+```text
+Upstream:   Governance · Architecture · Source data · Definitions
+This:       Accuracy · Completeness · Timeliness · Adaptability
+Downstream: Internal risk reports · Stress response · Supervisory requests
+```
 
-Assuming that old processes (e.g. monthly spreadsheet closes) are sufficient; BCBS 239 expects daily or intraday capabilities and automation.
+### Never confuse [Completeness] and [Accuracy]
 
-### Never confuse
-
-**Completeness** — capturing *all* relevant risk data (nearly 100% coverage).
+**Completeness** - the required material population and dimensions are present.
 
 ---
 
-**Consistency (or validity)** — ensuring data adheres to business rules. While related, completeness means no gaps, consistency means matching definitions.
+**Accuracy** - the values and transformations correctly represent the governed source and intended measure. A complete dataset can still be wrong.
+
+### Permanent rule
+
+Aggregation quality is fit-for-purpose across all four capabilities; excellence in one dimension does not cancel failure in another.
 
 ### Jurisdiction variants
 
-**No delta.** Data aggregation requirements (accuracy, completeness, etc.) are consistent under BCBS 239 across jurisdictions, as these are quantitative targets not subject to local modification.
+**No delta.** The aggregation principles do not change by jurisdiction.
 
 <Recall
-  q="What is a typical coverage target for completeness?"
-  a="Supervisors look for at least ~95% of relevant exposures included (Principle 4)."
+  q="Does BCBS 239 prescribe a universal 95 percent completeness threshold?"
+  a="No. Principle 4 requires complete material risk coverage, but a universal numerical tolerance should not be invented and attributed to the standard."
 />
 
 <Recall
-  q="Give an example of adaptability in risk data."
-  a="The ability to generate a new report on demand (e.g. an ad-hoc credit exposure breakdown) without major reprogramming."
+  q="What makes adaptability different from timeliness?"
+  a="Timeliness asks whether required information arrives soon enough; adaptability asks whether the bank can produce credible new views or respond to ad-hoc needs without disproportionate reconstruction."
 />

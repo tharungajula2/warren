@@ -1,0 +1,99 @@
+---
+id: DAT-25
+title: Regulatory Returns Production Cycle
+type: procedure
+domain: risk-data
+subdomain: dat
+one_screen: >-
+  A regulatory return is produced through a controlled recurring cycle, not a
+  one-off query at filing time. The cycle freezes the applicable requirement and
+  reference date, sources the governed population, transforms it into return
+  fields, validates and reconciles the output, resolves exceptions and creates a
+  submission-ready artifact with retained evidence.
+prerequisites:
+  - DAT-16
+  - DAT-17
+  - DAT-20
+  - DAT-23
+jurisdictions:
+  - universal
+perishable: true
+as_of: '2026-08-30'
+next_effective_date: null
+status: draft
+verified: false
+reading_minutes: 3
+sources:
+  - label: >-
+      Basel Committee on Banking Supervision, Principles for effective risk data
+      aggregation and risk reporting, BCBS 239, 9 January 2013.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+  - label: >-
+      European Central Bank Banking Supervision, Guide on effective risk data
+      aggregation and risk reporting, reference number not stated, 3 May 2024.
+    url: 'https://www.bis.org/bcbs/basel3.htm'
+    accessed: 'August 28, 2026'
+import_source: 07_DAT_risk_data_reporting.md
+---
+### Core mechanism
+
+```text
+Applicable return and reference date
+    ↓
+Freeze instructions, taxonomy or form version
+    ↓
+Source governed populations
+    ↓
+Transform, classify and aggregate
+    ↓
+Run validations and reconciliations
+    ↓
+Resolve or approve exceptions and adjustments
+    ↓
+Reviewer sign-off
+    ↓
+Submission-ready return and evidence pack
+```
+
+| Production control | Evidence |
+| :--- | :--- |
+| Version control | Applicable instructions, form or taxonomy at the reference date |
+| Completeness | Population counts and source coverage |
+| Transformation | Approved mappings and job versions |
+| Reconciliation | Source-to-return and risk-to-finance controls where relevant |
+| Adjustments | Reason, owner, approver and reversal or remediation path |
+| Exceptions | Impact assessment and disposition |
+| Review | Named preparer / checker or equivalent control |
+
+PD, LGD, EAD, RWA, ECL staging, LCR and NSFR may feed returns, but their calculation mechanics belong to CR, CAP, IMP and TLM. DAT owns whether the resulting data reaches the return accurately and traceably.
+
+### Where it sits
+
+```text
+Upstream:   Governed sources · Mapping · Reconciliation · Extract validation
+This:       Recurring regulatory return production
+Downstream: Submission · Attestation · Restatement · Supervisory use
+```
+
+### Permanent rule
+
+Every submitted field should be reproducible for its reference date from governed source data, approved transformation logic and retained control evidence.
+
+### Permanent trap
+
+Using the prior-period return as the primary source for the current return. Prior returns are useful for analytical comparison, not as a substitute for rebuilding from governed current-period data.
+
+### Jurisdiction variants
+
+**No delta in the production logic.** The forms, taxonomies, deadlines, validation rules and submission channels differ and are owned by the jurisdiction atoms.
+
+<Recall
+  q="Why must the applicable form or taxonomy version be frozen for each cycle?"
+  a="Reporting requirements change over time; reproducibility depends on proving which instructions and technical version governed the reference date."
+/>
+
+<Recall
+  q="What is the proper role of prior-period comparison?"
+  a="It is an analytical control for unexpected movement, not the authoritative source of current-period values."
+/>
