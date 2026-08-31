@@ -9,6 +9,7 @@ import {
   LintWarning,
   CurrentnessStatus,
   RoleFamily,
+  Jurisdiction,
 } from "./schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "atoms");
@@ -408,5 +409,126 @@ export function getPrerequisiteTrail(targetIds: string[]): PrerequisiteTrailResu
     trail: trailAtoms,
     totalAtoms: trailAtoms.length,
     totalReadingMinutes,
+  };
+}
+
+export interface CoveredRequirementAtom {
+  atom: AtomManifestItem;
+  weight: 3 | 2 | 1;
+  isPrerequisite: boolean;
+}
+
+export interface GapRequirementAtom {
+  id: string;
+  weight: 3 | 2 | 1;
+}
+
+export interface RequirementSet {
+  coveredAtoms: CoveredRequirementAtom[];
+  gapAtoms: GapRequirementAtom[];
+  totalReadingMinutes: number;
+  jurisdictionNotes: {
+    atomId: string;
+    jurisdiction: Jurisdiction;
+  }[];
+}
+
+export function buildRequirementSet(
+  matches: { role: RoleFamily; score?: number; matchedSignals?: string[] }[],
+  jurisdiction: Jurisdiction | null,
+  manifest: CorpusManifest
+): RequirementSet {
+  const topMatches = matches.slice(0, 3);
+  const targetAtomWeights: Record<string, { weight: 3 | 2 | 1; isDirect: boolean }> = {};
+
+  for (const match of topMatches) {
+    for (const item of match.role.atoms) {
+      const existing = targetAtomWeights[item.id];
+      if (!existing || item.weight > existing.weight) {
+        targetAtomWeights[item.id] = { weight: item.weight, isDirect: true };
+      }
+    }
+  }
+
+  const allNeededAtomIds = new Set<string>(Object.keys(targetAtomWeights));
+
+  function expandAncestors(atomId: string, parentWeight: 3 | 2 | 1) {
+    const atom = manifest.atoms[atomId];
+    if (!atom) return;
+
+    for (const prereqId of atom.prerequisites) {
+      if (!targetAtomWeights[prereqId]) {
+        const prereqWeight = (Math.min(parentWeight, 2)) as 3 | 2 | 1;
+        targetAtomWeights[prereqId] = { weight: prereqWeight, isDirect: false };
+      }
+      allNeededAtomIds.add(prereqId);
+      expandAncestors(prereqId, parentWeight);
+    }
+  }
+
+  for (const atomId of Array.from(allNeededAtomIds)) {
+    const entry = targetAtomWeights[atomId];
+    if (entry) {
+      expandAncestors(atomId, entry.weight);
+    }
+  }
+
+  const coveredAtomsMap: Record<string, CoveredRequirementAtom> = {};
+  const gapAtomsMap: Record<string, GapRequirementAtom> = {};
+
+  for (const atomId of Object.keys(targetAtomWeights)) {
+    const entry = targetAtomWeights[atomId];
+    const atom = manifest.atoms[atomId];
+
+    if (atom) {
+      coveredAtomsMap[atomId] = {
+        atom,
+        weight: entry.weight,
+        isPrerequisite: !entry.isDirect,
+      };
+    } else {
+      gapAtomsMap[atomId] = {
+        id: atomId,
+        weight: entry.weight,
+      };
+    }
+  }
+
+  const coveredAtoms = Object.values(coveredAtomsMap);
+  coveredAtoms.sort((a, b) => {
+    if (a.atom.depth !== b.atom.depth) {
+      return a.atom.depth - b.atom.depth;
+    }
+    if (a.weight !== b.weight) {
+      return b.weight - a.weight;
+    }
+    return a.atom.id.localeCompare(b.atom.id);
+  });
+
+  const gapAtoms = Object.values(gapAtomsMap);
+  gapAtoms.sort((a, b) => b.weight - a.weight || a.id.localeCompare(b.id));
+
+  const totalReadingMinutes = coveredAtoms.reduce(
+    (sum, item) => sum + item.atom.reading_minutes,
+    0
+  );
+
+  const jurisdictionNotes: { atomId: string; jurisdiction: Jurisdiction }[] = [];
+  if (jurisdiction && jurisdiction !== "universal") {
+    for (const item of coveredAtoms) {
+      if (item.atom.jurisdictions.includes(jurisdiction)) {
+        jurisdictionNotes.push({
+          atomId: item.atom.id,
+          jurisdiction,
+        });
+      }
+    }
+  }
+
+  return {
+    coveredAtoms,
+    gapAtoms,
+    totalReadingMinutes,
+    jurisdictionNotes,
   };
 }

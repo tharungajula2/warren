@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { getCorpusManifest } from "@/lib/corpus";
-import { buildRequirementSet, matchRoles } from "@/lib/jd-matcher";
+import { getCorpusManifest, buildRequirementSet } from "@/lib/corpus";
 
 export const metadata = {
   title: "Role Family Catalog — WARREN",
@@ -51,12 +50,6 @@ export default function RolesIndexPage() {
               Banking & Risk Role Families ({roles.length})
             </h1>
           </div>
-          <Link
-            href="/compile"
-            className="font-mono text-xs bg-[#C9711F] hover:bg-[#b06118] text-[#0B0C0E] font-bold px-4 py-2 rounded-[3px] transition-colors uppercase"
-          >
-            PASTE JOB DESCRIPTION TO COMPILE →
-          </Link>
         </div>
       </div>
 

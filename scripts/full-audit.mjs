@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { matchRoles, detectJurisdiction, buildRequirementSet } from "../lib/jd-matcher.js";
+import { buildRequirementSet } from "../lib/corpus.js";
 
 const MANIFEST_PATH = path.join(process.cwd(), "public", "corpus-manifest.json");
 const ROLES_PATH = path.join(process.cwd(), "content", "roles.json");

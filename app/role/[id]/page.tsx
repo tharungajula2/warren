@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCorpusManifest } from "@/lib/corpus";
-import { buildRequirementSet } from "@/lib/jd-matcher";
+import { getCorpusManifest, buildRequirementSet } from "@/lib/corpus";
 import { TypeBadge } from "@/components/TypeBadge";
 
 interface PageProps {
@@ -64,13 +63,6 @@ export default async function RolePage({ params }: PageProps) {
               {role.description}
             </p>
           </div>
-
-          <Link
-            href="/compile"
-            className="font-mono text-xs bg-[#191C20] border border-[#C9711F] text-[#C9711F] font-bold px-3 py-1.5 rounded-[3px] hover:bg-[#2A1D10] transition-colors"
-          >
-            COMPILE CUSTOM JD →
-          </Link>
         </div>
       </div>
 

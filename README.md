@@ -11,7 +11,6 @@ It structures complex financial regulations, mathematical models, and operationa
 1. **Dense Technical Typography**: Designed like an operating manual, using IBM Plex Mono and Source Sans 3 with tabular numerals and hairline borders (`#23272D`).
 2. **Zero Runtime Database**: Static build compiled directly from MDX fixtures (`/content/atoms/`) into `/public/corpus-manifest.json`.
 3. **Cross-Jurisdiction Matrix**: Core baseline treatments paired with jurisdiction-specific regulatory deltas (`IN`, `UK`, `EU`, `US`).
-4. **Deterministic Matcher & Compiler**: Pure client-side job description capability matching engine (`/lib/jd-matcher.ts`). Zero AI dependency.
 
 ---
 
@@ -49,7 +48,7 @@ sources:
 
 ## 🛡️ Trust Quarantine & Strict Verification Rule
 
-- **`verified: false`**: Required on all unverified fixtures and draft content. Displays an unmissable amber banner (`UNVERIFIED FIXTURE`) on atom pages, registers, comparison matrices, and compiler paths.
+- **`verified: false`**: Required on all unverified fixtures and draft content. Displays an unmissable amber banner (`UNVERIFIED FIXTURE`) on atom pages, registers, and comparison matrices.
 - **`verified: true`**: **May ONLY be set by a human domain expert** who has personally read and verified the primary regulatory source. No script, compiler, or AI agent may set `verified: true`.
 - **Production Build Gate**: `scripts/build-corpus.mjs` enforces that when `NODE_ENV=production`, any atom with `status: 'published'` and `verified: false` **BLOCKS AND FAILS THE BUILD IMMEDIATELY**.
 

@@ -55,10 +55,6 @@ export function KeyboardShortcuts() {
           e.preventDefault();
           setGPending(false);
           router.push("/deltas");
-        } else if (key === "c") {
-          e.preventDefault();
-          setGPending(false);
-          router.push("/compile");
         } else if (key === "a") {
           e.preventDefault();
           setGPending(false);
@@ -134,13 +130,6 @@ export function KeyboardShortcuts() {
             <span className="text-[#9AA3AD]">Go to Delta Register</span>
             <kbd className="bg-[#191C20] border border-[#333940] text-[#E6E8EB] px-2 py-0.5 rounded-[3px]">
               g then d
-            </kbd>
-          </div>
-
-          <div className="flex items-center justify-between py-1 border-b border-[#23272D]/50">
-            <span className="text-[#9AA3AD]">Go to JD Capability Compiler</span>
-            <kbd className="bg-[#191C20] border border-[#333940] text-[#E6E8EB] px-2 py-0.5 rounded-[3px]">
-              g then c
             </kbd>
           </div>
 
