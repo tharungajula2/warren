@@ -18,7 +18,7 @@ export function OneScreen({ children, text, isHeader }: OneScreenProps) {
       <div className="font-mono text-[11px] uppercase tracking-wider text-[#C9711F] font-semibold mb-1.5 select-none">
         COMPRESSED MENTAL MODEL
       </div>
-      <div className="text-sm text-[#E6E8EB] leading-relaxed font-sans">
+      <div className="text-[15px] text-[#E6E8EB] leading-[1.65] font-sans">
         {text || children}
       </div>
     </div>

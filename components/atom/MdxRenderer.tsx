@@ -22,13 +22,13 @@ const mdxComponents = {
     <h4 className="text-xs font-semibold uppercase tracking-wider text-[#9AA3AD] font-mono mt-4 mb-2" {...props} />
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="text-[14px] leading-[1.65] text-[#E6E8EB] my-3" {...props} />
+    <p className="text-[15px] leading-[1.7] text-[#E6E8EB] my-3.5" {...props} />
   ),
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className="list-disc list-inside space-y-1.5 my-3 text-[14px] text-[#E6E8EB]" {...props} />
+    <ul className="list-disc list-inside space-y-1.5 my-3.5 text-[15px] leading-[1.7] text-[#E6E8EB]" {...props} />
   ),
   ol: (props: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol className="list-decimal list-inside space-y-1.5 my-3 text-[14px] text-[#E6E8EB]" {...props} />
+    <ol className="list-decimal list-inside space-y-1.5 my-3.5 text-[15px] leading-[1.7] text-[#E6E8EB]" {...props} />
   ),
   li: (props: React.LiHTMLAttributes<HTMLLIElement>) => (
     <li className="leading-relaxed" {...props} />
@@ -37,7 +37,7 @@ const mdxComponents = {
     <hr className="border-t border-[#23272D] my-6" {...props} />
   ),
   blockquote: (props: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
-    <blockquote className="border-l-2 border-[#C9711F] pl-4 py-1 my-4 text-[#9AA3AD] italic text-[14px]" {...props} />
+    <blockquote className="border-l-2 border-[#C9711F] pl-4 py-1.5 my-4 text-[#9AA3AD] italic text-[15px] leading-[1.65]" {...props} />
   ),
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
     <pre className="bg-[#121417] border border-[#23272D] p-3.5 rounded-[3px] my-4 text-[11px] font-mono text-[#E6E8EB] leading-[17px] whitespace-pre-wrap break-words tabular-nums" {...props} />
