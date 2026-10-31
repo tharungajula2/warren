@@ -1,97 +1,35 @@
-# WARREN — Banking Risk & Regulatory Knowledge System
+# WARREN
 
-WARREN is a jurisdiction-aware, static technical operating manual for banking, credit risk, market risk, treasury, and regulatory professionals.
+**A structured learning and authoring prototype for banking risk and regulation.** WARREN turns an MDX corpus into linked knowledge atoms, prerequisite reading paths, role based curricula, search, and a visual graph. Its intended readers are banking, credit risk, treasury, model risk, data, and regulatory professionals.
 
-It structures complex financial regulations, mathematical models, and operational frameworks into discrete, teachable **Knowledge Atoms** connected in a Directed Acyclic Graph (DAG).
+> **Maturity:** The interface and corpus pipeline are implemented, but the knowledge base is in review. The checked-in corpus contains **304 draft atoms across 11 domains and 11 role families; all 304 are marked `verified: false`**. Treat financial and regulatory content as unverified educational draft material, not professional advice.
 
----
+## Explore the project
 
-## 🏛 Core Architecture & Philosophy
+| Experience | What the source implements |
+| --- | --- |
+| [Corpus index](app/atoms/page.tsx) and [atom reader](app/atom/%5Bid%5D/page.tsx) | Domain and subdomain browsing, MDX reading, source labels, prerequisites, reverse links, recall prompts, and sequential navigation. |
+| [Graph](components/CorpusGraph.tsx) | Interactive canvas map of prerequisite and related atom links, with domain and text filtering. |
+| [Search](components/CommandPalette.tsx) | Client side ranked search over a generated 304 entry JSON index. |
+| [Role curricula](app/roles/page.tsx) | 11 editorial role maps expanded with prerequisite atoms and estimated reading time. |
+| [Currentness register](app/currentness/page.tsx) and [comparison page](app/compare/%5Bid%5D/page.tsx) | Date badges and a four jurisdiction comparison layout. Currentness uses a fixed reference date, and the corpus currently has no structured `<Delta>` blocks for the comparison cards. |
+| [Author studio](app/studio/page.tsx) | Development only review queue, corpus counts, warnings, and heuristic completeness scoring. |
 
-1. **Dense Technical Typography**: Designed like an operating manual, using IBM Plex Mono and Source Sans 3 with tabular numerals and hairline borders (`#23272D`).
-2. **Zero Runtime Database**: Static build compiled directly from MDX fixtures (`/content/atoms/`) into `/public/corpus-manifest.json`.
-3. **Cross-Jurisdiction Matrix**: Core baseline treatments paired with jurisdiction-specific regulatory deltas (`IN`, `UK`, `EU`, `US`).
+The content lives in [`content/atoms/`](content/atoms/) and [`content/roles.json`](content/roles.json). [`scripts/build-corpus.mjs`](scripts/build-corpus.mjs) validates frontmatter and writes [`public/corpus-manifest.json`](public/corpus-manifest.json) plus [`public/search-index.json`](public/search-index.json). The UI uses Next.js 16, React 19, TypeScript, MDX, Zod, D3, and Tailwind CSS. There is no application database or account system in the repository.
 
----
-
-## 📋 Atom Frontmatter Schema
-
-Every knowledge unit is defined as an MDX file in `/content/atoms/{ID}.mdx` adhering to the Zod schema (`/lib/schema.ts`):
-
-```yaml
----
-id: CR-07
-title: Probability of Default
-type: concept                     # concept | mechanism | procedure | delta | example | reference
-domain: credit-risk
-subdomain: risk-parameters
-one_screen: >
-  PD is the likelihood a borrower fails to meet obligations over a defined horizon.
-prerequisites: [CR-03, FND-18]
-see_also: [CR-08, CR-09]
-contrast_with: [CR-08]
-jurisdictions: [universal, IN, UK, EU, US]
-perishable: false
-as_of: 2026-08-28
-next_effective_date: null
-status: fixture                   # draft | fixture | published
-verified: false                   # boolean: true | false (REQUIRED)
-reading_minutes: 4
-sources:
-  - label: Basel Committee on Banking Supervision CRE 36
-    url: https://www.bis.org/basel_framework/chapter/CRE/36.htm
-    accessed: 2026-08-28
----
-```
-
----
-
-## 🛡️ Trust Quarantine & Strict Verification Rule
-
-- **`verified: false`**: Required on all unverified fixtures and draft content. Displays an unmissable amber banner (`UNVERIFIED FIXTURE`) on atom pages, registers, and comparison matrices.
-- **`verified: true`**: **May ONLY be set by a human domain expert** who has personally read and verified the primary regulatory source. No script, compiler, or AI agent may set `verified: true`.
-- **Production Build Gate**: `scripts/build-corpus.mjs` enforces that when `NODE_ENV=production`, any atom with `status: 'published'` and `verified: false` **BLOCKS AND FAILS THE BUILD IMMEDIATELY**.
-
----
-
-## 🛠️ Authoring Tooling
-
-To scaffold a new knowledge atom:
+## Run locally
 
 ```bash
-npm run new-atom -- --id CR-12 --domain credit-risk --subdomain risk-parameters
-```
-
-Or using positional arguments:
-
-```bash
-node scripts/new-atom.mjs CR-12 credit-risk risk-parameters
-```
-
----
-
-## 🧪 Testing & Verification
-
-Run the Vitest unit test suite:
-
-```bash
-npm test
-```
-
-Build the static corpus manifest and Next.js static site:
-
-```bash
-npm run build
-```
-
-Start dev server:
-
-```bash
+npm ci
 npm run dev
 ```
 
----
+Open the local address printed by Next.js. To refresh generated indexes after editing MDX, run `npm run build-corpus`. `npm test` runs the small Vitest corpus tests; `npm run build` runs the corpus generator first. The repository has no `output: "export"` setting, so its earlier claim of a guaranteed `/out` static export was not supported by configuration. These commands describe the repository scripts; this documentation review did not install packages or execute a build.
 
-## 🚀 Production Deployment
+## Read before extending
 
-WARREN compiles to a 100% static Next.js production build (`/out` or standard Next.js Vercel deployment).
+- **[PROJECT_BLUEPRINT.md](PROJECT_BLUEPRINT.md)** explains the architecture, authoring workflow, data model, graph and curriculum algorithms, known gaps, and troubleshooting.
+- The 304 draft atoms contain 629 source *labels* but no populated source URLs in the checked-in manifest. A label is a provenance lead, not source verification.
+- The production build gate rejects atoms marked `published` while `verified: false`; it does not block draft atoms from appearing in the reader. The current corpus remains unpublished by its own status fields.
+
+WARREN is strongest as a transparent product and information architecture prototype: it makes dependencies, jurisdiction context, and editorial trust state visible while leaving expert verification as an explicit future step.
